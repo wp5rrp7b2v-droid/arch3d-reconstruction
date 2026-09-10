@@ -1,0 +1,149 @@
+name: P0.2 Blender 4.5 Full Roundtrip
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  blender-roundtrip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    env:
+      BLENDER_VERSION: "4.5.13"
+      BLENDER_ARCHIVE: blender-4.5.13-linux-x64.tar.xz
+      BLENDER_URL: https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
+      EXPECTED_INPUT_SHA256: 57d987893ea96e9178908107fb34d21a032cd46c1de0b9a0e1fe05fb7fbae05e
+      INPUT_PATH: poc/P0_2_cloud_roundtrip/input/P0_2_CLOUD_INPUT_V001.blend
+      CLOUD_SCRIPT: poc/P0_2_cloud_roundtrip/scripts/p0_2_gha_modify_v006.py
+      OUTPUT_DIR: poc/P0_2_cloud_roundtrip/cloud_output
+      RENDER_PATH: poc/P0_2_cloud_roundtrip/cloud_output/P0_2_GHA_RENDER_V001.png
+      RETURN_PATH: poc/P0_2_cloud_roundtrip/cloud_output/P0_2_GHA_RETURN_V001.blend
+      MANIFEST_PATH: poc/P0_2_cloud_roundtrip/cloud_output/P0_2_GHA_MANIFEST_V001.txt
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Report runner environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "ARCH3D_RUNNER_OS=${RUNNER_OS}"
+          echo "ARCH3D_RUNNER_ARCH=${RUNNER_ARCH}"
+          uname -a
+          lscpu
+          free -h
+
+      - name: Verify input SHA256
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s "${INPUT_PATH}"
+          ACTUAL_INPUT_SHA256="$(sha256sum "${INPUT_PATH}" | awk '{print $1}')"
+          echo "ARCH3D_INPUT_SHA256=${ACTUAL_INPUT_SHA256}"
+          test "${ACTUAL_INPUT_SHA256}" = "${EXPECTED_INPUT_SHA256}"
+          echo "INPUT_SHA256_ACTUAL=${ACTUAL_INPUT_SHA256}" >> "${GITHUB_ENV}"
+          echo "ARCH3D_INPUT_INTEGRITY=PASS"
+
+      - name: Download and verify Blender 4.5.13
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BLENDER_TEMP_DIR="${RUNNER_TEMP}/blender"
+          ARCHIVE_PATH="${BLENDER_TEMP_DIR}/${BLENDER_ARCHIVE}"
+          BLENDER_DIR="${BLENDER_TEMP_DIR}/blender-${BLENDER_VERSION}-linux-x64"
+          BLENDER_EXECUTABLE_PATH="${BLENDER_DIR}/blender"
+          VERSION_LOG="${RUNNER_TEMP}/blender-version.txt"
+
+          mkdir -p "${BLENDER_TEMP_DIR}"
+
+          curl \
+            --fail \
+            --location \
+            --show-error \
+            --output "${ARCHIVE_PATH}" \
+            "${BLENDER_URL}"
+
+          test -s "${ARCHIVE_PATH}"
+          echo "ARCH3D_BLENDER_ARCHIVE_SIZE=$(stat -c '%s' "${ARCHIVE_PATH}")"
+          echo "ARCH3D_BLENDER_DOWNLOAD=PASS"
+
+          tar -xf "${ARCHIVE_PATH}" -C "${BLENDER_TEMP_DIR}"
+          test -x "${BLENDER_EXECUTABLE_PATH}"
+
+          "${BLENDER_EXECUTABLE_PATH}" --version | tee "${VERSION_LOG}"
+          grep -Fq "Blender 4.5.13" "${VERSION_LOG}"
+          VERSION_LINE="$(head -n 1 "${VERSION_LOG}")"
+          BLENDER_VERSION_ACTUAL_VALUE="${VERSION_LINE#Blender }"
+
+          echo "ARCH3D_BLENDER_VERSION=${VERSION_LINE}"
+          echo "ARCH3D_BLENDER_EXECUTABLE=${BLENDER_EXECUTABLE_PATH}"
+          echo "BLENDER_EXECUTABLE=${BLENDER_EXECUTABLE_PATH}" >> "${GITHUB_ENV}"
+          echo "BLENDER_VERSION_ACTUAL=${BLENDER_VERSION_ACTUAL_VALUE}" >> "${GITHUB_ENV}"
+
+      - name: Modify, render, and save with Blender 4.5.13
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "${OUTPUT_DIR}"
+          "${BLENDER_EXECUTABLE}" \
+            --background "${INPUT_PATH}" \
+            --python-exit-code 10 \
+            --python "${CLOUD_SCRIPT}" \
+            -- --mode modify
+
+          test -s "${RENDER_PATH}"
+          test -s "${RETURN_PATH}"
+
+          INPUT_SHA_AFTER="$(sha256sum "${INPUT_PATH}" | awk '{print $1}')"
+          test "${INPUT_SHA_AFTER}" = "${EXPECTED_INPUT_SHA256}"
+          echo "ARCH3D_INPUT_UNCHANGED=PASS"
+          echo "ARCH3D_CLOUD_RENDER=PASS"
+          echo "ARCH3D_CLOUD_RETURN=PASS"
+
+      - name: Independently reopen Cloud return
+        shell: bash
+        run: |
+          set -euo pipefail
+          "${BLENDER_EXECUTABLE}" \
+            --background "${RETURN_PATH}" \
+            --python-exit-code 11 \
+            --python "${CLOUD_SCRIPT}" \
+            -- --mode reopen-check
+          echo "ARCH3D_CLOUD_REOPEN=PASS"
+
+      - name: Generate manifest
+        shell: bash
+        run: |
+          set -euo pipefail
+          RETURN_SHA256="$(sha256sum "${RETURN_PATH}" | awk '{print $1}')"
+          test -n "${RETURN_SHA256}"
+
+          {
+            echo "TASK=T-003"
+            echo "TASK_VERSION=V006"
+            echo "CLOUD_EXECUTOR=GitHub Actions"
+            echo "BLENDER_VERSION=${BLENDER_VERSION_ACTUAL}"
+            echo "INPUT_SHA256=${INPUT_SHA256_ACTUAL}"
+            echo "RETURN_SHA256=${RETURN_SHA256}"
+            echo "CLOUD_MARKER=PASS"
+            echo "CLOUD_RENDER=PASS"
+            echo "CLOUD_REOPEN=PASS"
+          } > "${MANIFEST_PATH}"
+
+          test -s "${MANIFEST_PATH}"
+          cat "${MANIFEST_PATH}"
+
+      - name: Upload roundtrip artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: P0_2_GHA_ROUNDTRIP_V001
+          if-no-files-found: error
+          path: |
+            poc/P0_2_cloud_roundtrip/cloud_output/P0_2_GHA_RENDER_V001.png
+            poc/P0_2_cloud_roundtrip/cloud_output/P0_2_GHA_RETURN_V001.blend
+            poc/P0_2_cloud_roundtrip/cloud_output/P0_2_GHA_MANIFEST_V001.txt
