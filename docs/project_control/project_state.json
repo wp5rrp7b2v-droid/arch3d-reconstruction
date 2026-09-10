@@ -3,8 +3,10 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R004",
+  "state_revision": "R005",
   "last_updated": "2026-09-10",
+  "session_status": "END_OF_DAY_CHECKPOINT",
+  "next_session_date": "2026-09-11",
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
   "phase": {"id": "P0", "name": "技术路线验证", "status": "ACTIVE"},
@@ -25,7 +27,8 @@
     "key": "PARAMETRIC_ARCHITECTURE_POC_V001",
     "name": "参数驱动建筑灰模POC",
     "status": "NOT_STARTED",
-    "think_level": "MEDIUM"
+    "think_level": "MEDIUM",
+    "start_policy": "NEXT_SESSION"
   },
   "current_baseline": {
     "local_blender": "Blender 3.6.23 macOS x64",
@@ -41,12 +44,19 @@
     "validation": "T-003 V007 Local Return Validation",
     "production_rule": "凡需回到Local Blender 3.6继续维护的核心资产，不得依赖未经验证的Blender 4.5-only数据结构或功能。"
   },
-  "latest_material_decision": {
-    "id": "D-012",
-    "date": "2026-09-10",
-    "decision": "Project Control文件集成为项目正式事实源；Dashboard改为由Project Control派生的可视化快照，不再承担历史档案。"
+  "project_control_sync": {
+    "status": "TRIAL",
+    "canonical_committed_state": "GitHub private repo main branch / docs/project_control",
+    "local_working_copy": "/Users/caroline/中国古建筑3D复原/docs/project_control",
+    "write_model": "ChatGPT可直接更新GitHub Project Control；本地Codex负责工程执行。进入本地Codex工作前先pull，避免同时修改同一Project Control文件。",
+    "reassessment_rule": "若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"
   },
-  "next_action": "P0.3 / T-004 PARAMETRIC_ARCHITECTURE_POC_V001：验证建筑参数驱动脚本生成最小结构模型。",
+  "latest_material_decision": {
+    "id": "D-013",
+    "date": "2026-09-10",
+    "decision": "Project Control采用GitHub main正式提交状态 + 本地working copy的同步试运行；ChatGPT优先直接维护Project Control，Codex聚焦工程执行。"
+  },
+  "next_action": "Next Session｜启动 P0.3 / T-004 PARAMETRIC_ARCHITECTURE_POC_V001。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v006",
