@@ -1,0 +1,62 @@
+name: P0.2 Blender 4.5 Bootstrap
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  blender-bootstrap:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      BLENDER_VERSION: "4.5.13"
+      BLENDER_ARCHIVE: blender-4.5.13-linux-x64.tar.xz
+      BLENDER_URL: https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
+
+    steps:
+      - name: Report runner environment
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "ARCH3D_RUNNER_OS=${RUNNER_OS}"
+          echo "ARCH3D_RUNNER_ARCH=${RUNNER_ARCH}"
+          uname -a
+          lscpu
+          free -h
+
+      - name: Download and verify Blender 4.5.13
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          BLENDER_TEMP_DIR="${RUNNER_TEMP}/blender"
+          ARCHIVE_PATH="${BLENDER_TEMP_DIR}/${BLENDER_ARCHIVE}"
+          BLENDER_DIR="${BLENDER_TEMP_DIR}/blender-${BLENDER_VERSION}-linux-x64"
+          BLENDER_EXECUTABLE="${BLENDER_DIR}/blender"
+          VERSION_LOG="${RUNNER_TEMP}/blender-version.txt"
+
+          mkdir -p "${BLENDER_TEMP_DIR}"
+
+          curl \
+            --fail \
+            --location \
+            --show-error \
+            --output "${ARCHIVE_PATH}" \
+            "${BLENDER_URL}"
+
+          test -s "${ARCHIVE_PATH}"
+          echo "ARCH3D_BLENDER_ARCHIVE_SIZE=$(stat -c '%s' "${ARCHIVE_PATH}")"
+          echo "ARCH3D_BLENDER_DOWNLOAD=PASS"
+
+          tar -xf "${ARCHIVE_PATH}" -C "${BLENDER_TEMP_DIR}"
+          test -x "${BLENDER_EXECUTABLE}"
+
+          "${BLENDER_EXECUTABLE}" --version | tee "${VERSION_LOG}"
+          grep -Fq "Blender 4.5.13" "${VERSION_LOG}"
+
+          echo "ARCH3D_BLENDER_VERSION=$(head -n 1 "${VERSION_LOG}")"
+          echo "ARCH3D_BLENDER_EXECUTABLE=${BLENDER_EXECUTABLE}"
+          echo "ARCH3D_BOOTSTRAP_RESULT=PASS"
