@@ -104,13 +104,31 @@
 - P0.3 的技术结论只覆盖参数驱动最小结构模型，不外推为历史正确性或正式古建构造精度。
 - 本次 Gate Review / Project Control 更新属于项目管理与验收，不创建新的 T-###。
 
-## Current Execution State｜2026-09-11
+## P1.2 Gate Review｜APPROVED｜2026-09-11
+
+- 正式案例：山西平遥镇国寺万佛殿。
+- `SRC-ZG-WF-001`《山西平遥镇国寺万佛殿与天王殿精细测绘报告》完整扫描PDF已纳入一级主来源并完成关键原页直接核读。
+- Direct Page Review V001：COMPLETE。
+- Parameter Candidate Matrix V002：COMPLETE / PRE-P1.3 / NOT PRODUCTION-LOCKED。
+- P1.2 Gate Review：10 / 10 PASS。
+- Product Owner 明确批准 P1.2 通过。
+- P1.2：**PASS**；P1 Gate：**3 / 4 PASS**。
+- P1.3 已解锁，下一步进行“已证实 / 高可信推断 / 合理补全 / 未知”分级与可复原性 Go / No-Go。
+- 仍未启动正式 Blender 参数化或 3D 生产。
+- 本次研究与 Gate Review 不创建新的 T-###。
+
+## Current Execution State｜2026-09-11 EOD
 
 - T-001：PASS
 - T-002：PASS
 - T-003：PASS / Class B
 - T-004：PASS
 - P0：CLOSED / APPROVED
-- P0.3 lightweight evidence archive：COMPLETE / commit `63a0c506f98d843376361421cf88e1e74c807dc7`
+- P1.0：PASS
+- P1.1：PASS
+- P1.2：PASS
+- P1.3：IN PROGRESS / NOT STARTED TODAY
+- P1 Gate：3 / 4 PASS
+- Formal Case：平遥镇国寺万佛殿
 - Current Phase：P1｜选题取证
 - 当前尚未创建新的 Codex 工程任务。
