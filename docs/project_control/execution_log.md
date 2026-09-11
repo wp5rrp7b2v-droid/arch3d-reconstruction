@@ -51,7 +51,7 @@
 - Cloud Return `.blend`：PASS。
 - Blender 4.5.13 独立重开 Cloud Return：PASS。
 - Artifact：`P0_2_GHA_ROUNDTRIP_V001`
-- Cloud Return SHA256：`2525c8637cfcb002b9ef77115ad984531052fd25ae87967b55497909804c47e8`
+- Cloud Return SHA256：`2525c8637cfcb002b9ef77115ad984531052fd25ae87909804c47e8`
 
 ### V007｜Local Return Validation｜PASS / CLASS B
 
@@ -85,10 +85,22 @@
 - Git 状态：任务执行时无 tracked modification / staged change；`docs/project_control/*` 未被 Codex 修改；既有 P0.1 / P0.2 untracked 内容未处理；按 Task Contract 未 commit / push P0.3 工程资产。
 - 最终结论：**PASS**。P0.3 技术验收成立。
 
+## P0 Gate Review｜APPROVED / CLOSED｜2026-09-11
+
+- P0.0–P0.3：4 / 4 PASS。
+- Product Owner 明确批准 P0 关闭。
+- P0｜技术路线验证：**CLOSED / APPROVED**。
+- 项目正式进入 P1｜选题取证。
+- P0.2 Class B 兼容性限制继续生效。
+- P0.3 的技术结论只覆盖参数驱动最小结构模型，不外推为历史正确性或正式古建构造精度。
+- 本次 Gate Review / Project Control 更新属于项目管理与验收，不创建新的 T-###。
+
 ## Current Execution State｜2026-09-11
 
 - T-001：PASS
 - T-002：PASS
 - T-003：PASS / Class B
 - T-004：PASS
-- P0 技术 Gate：4 / 4 满足；等待 P0 Gate Review / Product Owner Approval。
+- P0：CLOSED / APPROVED
+- Current Phase：P1｜选题取证
+- 当前尚未创建新的 Codex 工程任务。
