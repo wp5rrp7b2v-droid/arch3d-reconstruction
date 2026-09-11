@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R009",
+  "state_revision": "R010",
   "last_updated": "2026-09-11",
   "session_status": "ACTIVE_P1_SELECTION",
   "next_session_date": "2026-09-11",
@@ -14,15 +14,15 @@
   "current_gate": {
     "id": "P1",
     "status": "ACTIVE",
-    "passed": 0,
+    "passed": 1,
     "total": 4,
     "items": {
-      "P1.0": {"status": "IN_PROGRESS", "name": "选题标准锁定"},
-      "P1.1": {"status": "LOCKED", "name": "候选案例比较与定选"},
+      "P1.0": {"status": "PASS", "name": "选题标准锁定"},
+      "P1.1": {"status": "IN_PROGRESS", "name": "候选案例比较与定选"},
       "P1.2": {"status": "LOCKED", "name": "正式证据包建立"},
       "P1.3": {"status": "LOCKED", "name": "证据分级与可复原性 Go / No-Go"}
     },
-    "note": "Product Owner 已批准 P1 Gate 架构。P1.0 完成前不锁定首个正式案例；P1.3 PASS 前不进入正式 3D 生产。"
+    "note": "Product Owner 已批准 P1.0。P1.1 使用锁定后的统一标准比较候选对象；P1.3 PASS 前不进入正式 3D 生产。"
   },
   "decision_required": false,
   "blocker": null,
@@ -37,9 +37,22 @@
     "phase_archive": "docs/project_control/phase_archive/P0_closure.md"
   },
   "p1_selection_policy": {
-    "status": "DRAFT_FOR_P1_0",
+    "status": "LOCKED / P1.0 PASS",
     "principle": "首案优先选择证据充分、结构规模可控、可参数化、公开资料可获得且能够验证完整复原方法的现存或有高质量测绘资料的古代木构单体；不以知名度作为首要标准。",
-    "candidate_pool_target": 4,
+    "score_scale": "1-5",
+    "criteria": [
+      {"name": "证据链完整度", "weight": 0.30},
+      {"name": "测绘/尺寸资料可获得性", "weight": 0.25},
+      {"name": "结构规模与首案可控性", "weight": 0.20},
+      {"name": "历史状态歧义程度", "weight": 0.15, "scoring_note": "歧义越低得分越高"},
+      {"name": "参数化与展示价值", "weight": 0.10}
+    ],
+    "candidate_pool": [
+      "平遥镇国寺万佛殿",
+      "五台佛光寺东大殿",
+      "五台南禅寺大殿",
+      "宁波保国寺大殿"
+    ],
     "research_mode": "ChatGPT research / no Codex task yet"
   },
   "critical_hypothesis": {
@@ -56,11 +69,11 @@
     "reassessment_rule": "若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"
   },
   "latest_material_decision": {
-    "id": "D-015",
+    "id": "D-016",
     "date": "2026-09-11",
-    "decision": "Product Owner 批准 P1 Gate：P1.0 选题标准锁定；P1.1 候选案例比较与定选；P1.2 正式证据包建立；P1.3 证据分级与可复原性 Go / No-Go。P1.3 PASS 前不进入正式 3D 生产。"
+    "decision": "Product Owner 批准 P1.0。首案筛选标准锁定为五项加权指标：证据链完整度30%、测绘/尺寸资料可获得性25%、结构规模与首案可控性20%、历史状态歧义程度15%、参数化与展示价值10%。P1.1 解锁并启动。"
   },
-  "next_action": "P1.0｜锁定首案筛选标准，并研究 4 个候选古建筑；完成初步比较后再由 Product Owner 决定是否通过 P1.0 并进入 P1.1。",
+  "next_action": "P1.1｜对平遥镇国寺万佛殿、五台佛光寺东大殿、五台南禅寺大殿、宁波保国寺大殿按锁定标准正式评分比较，并提交首案推荐供 Product Owner 定选。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v006",
