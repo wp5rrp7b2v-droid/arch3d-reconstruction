@@ -3,46 +3,47 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R006",
+  "state_revision": "R007",
   "last_updated": "2026-09-11",
-  "session_status": "ACTIVE",
+  "session_status": "ACTIVE_GATE_REVIEW",
   "next_session_date": "2026-09-11",
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
-  "phase": {"id": "P0", "name": "技术路线验证", "status": "ACTIVE"},
+  "phase": {"id": "P0", "name": "技术路线验证", "status": "ACTIVE / GATE_REVIEW"},
   "current_gate": {
-    "passed": 3,
+    "passed": 4,
     "total": 4,
     "items": {
       "P0.0": {"status": "PASS", "name": "项目控制系统可跨Chat使用"},
       "P0.1": {"status": "PASS", "name": "本地Mac可稳定完成轻量Blender灰模、保存与审核"},
       "P0.2": {"status": "PASS", "class": "B", "name": "Local→Cloud→修改/渲染→Local，无关键资产丢失"},
-      "P0.3": {"status": "IN_PROGRESS", "name": "建筑参数能够驱动脚本生成最小结构模型"}
+      "P0.3": {"status": "PASS", "name": "建筑参数能够驱动脚本生成最小结构模型"}
     }
   },
-  "decision_required": false,
+  "decision_required": true,
+  "decision_type": "P0_GATE_APPROVAL",
   "blocker": null,
   "current_task": {
     "id": "T-004",
     "key": "PARAMETRIC_ARCHITECTURE_POC_V001",
     "name": "参数驱动建筑灰模POC",
-    "status": "IN_PROGRESS",
+    "status": "PASS",
     "think_level": "MEDIUM",
-    "start_policy": "STARTED_2026-09-11"
+    "start_policy": "COMPLETED_2026-09-11"
   },
   "current_baseline": {
     "local_blender": "Blender 3.6.23 macOS x64",
     "cloud_executor": "GitHub Actions Hosted Runner + Blender 4.5.13 LTS Linux x64",
     "roundtrip": "PASS / Class B｜ROUNDTRIP_WITH_LIMITATIONS",
     "roundtrip_limitation": "Blender 3.6会移除Blender 4.5文件中不支持的部分View3D/Image UI region数据；本次未发现核心几何、Marker或所需Metadata损失。",
-    "parameter_set": null,
-    "model_3d": "P0轻量灰模与Roundtrip验证资产"
+    "parameter_set": "P0.3 PARAMETRIC_ARCHITECTURE_POC_V001｜Baseline + Variant validated",
+    "model_3d": "参数驱动最小木构建筑灰模；Baseline/Variant均在Blender 3.6.23生成、保存、重开并验证"
   },
   "critical_hypothesis": {
-    "statement": "Local + Cloud混合工作流能够支持本项目的稳定3D生产。",
+    "statement": "P0 所需项目控制、本地轻量建模、Local↔Cloud往返及参数驱动建模技术链路能够成立。",
     "status": "VALIDATED_WITH_LIMITATIONS",
-    "validation": "T-003 V007 Local Return Validation",
-    "production_rule": "凡需回到Local Blender 3.6继续维护的核心资产，不得依赖未经验证的Blender 4.5-only数据结构或功能。"
+    "validation": "P0.0–P0.3 = 4/4 PASS；P0.2 保留 Class B 兼容性限制",
+    "production_rule": "凡需回到Local Blender 3.6继续维护的核心资产，不得依赖未经验证的Blender 4.5-only数据结构或功能；参数驱动能力已验证，但历史证据参数化与正式古建构造精度尚未验证。"
   },
   "project_control_sync": {
     "status": "TRIAL",
@@ -56,7 +57,7 @@
     "date": "2026-09-10",
     "decision": "Project Control采用GitHub main正式提交状态 + 本地working copy的同步试运行；ChatGPT优先直接维护Project Control，Codex聚焦工程执行。"
   },
-  "next_action": "执行 P0.3 / T-004 PARAMETRIC_ARCHITECTURE_POC_V001；先同步本地 main，再按 Task Contract 生成参数驱动的最小结构灰模并验证。",
+  "next_action": "P0 Gate Review｜由 Product Owner 决定是否批准关闭 P0。若批准，执行 P0 closure/checkpoint，并进入 P1｜选题取证。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v006",
