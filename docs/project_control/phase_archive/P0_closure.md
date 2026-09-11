@@ -28,6 +28,17 @@
 - T-003｜LOCAL_CLOUD_ROUNDTRIP_POC｜PASS / Class B
 - T-004｜PARAMETRIC_ARCHITECTURE_POC_V001｜PASS
 
+## P0.3 Reproducible Evidence Archive
+
+P0.3 在 Gate 关闭后完成轻量证据归档：
+
+- Evidence Commit：`63a0c506f98d843376361421cf88e1e74c807dc7`
+- Commit Message：`p0.3: archive lightweight reproducible evidence`
+- GitHub 保存：README、Baseline/Variant 两份 JSON、统一 Blender Python 生成脚本、Baseline/Variant 两张 PNG，共 6 个文件。
+- Blender `.blend / .blend1` 二进制工程文件不进入普通 Git，继续保留在本地 P0.3 工作区。
+- Commit 已核对，无 `.blend`、无 `.blend1`、无 P0.1 / P0.2 本地产物误提交。
+- 当前阶段采用 **GitHub + Local** 的轻量资产策略；不引入第三备份位置、Git LFS、NAS 或其他复杂资产管理层。待正式资产规模、复杂度或不可重建价值明显上升时再评估。
+
 ## Validated Capabilities
 
 1. Project Control 可以跨 Chat 作为正式 handoff 与状态事实源。
