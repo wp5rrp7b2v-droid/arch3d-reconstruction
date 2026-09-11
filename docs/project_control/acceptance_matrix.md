@@ -7,7 +7,7 @@
 | P0.0 | 项目控制系统可跨 Chat 使用 | **PASS** | Project Control 文件集可作为正式 handoff；Dashboard 是派生可视化。 |
 | P0.1 | 本地 Mac 可稳定完成轻量 Blender 灰模、保存与审核 | **PASS** | Blender 3.6.23；灰模生成、保存、独立重开、Geometry Integrity、PNG 审核全部通过。 |
 | P0.2 | Local → Cloud → 修改 / 渲染 → Local，无关键资产丢失 | **PASS / Class B** | Local 3.6.23 → GitHub → GitHub Actions Blender 4.5.13 → Artifact → Local 3.6.23 全链路通过。3.6 会移除部分不支持的 4.5 UI region 数据，但核心几何、Marker 与所需 Metadata 未损失。 |
-| P0.3 | 建筑参数能够驱动脚本生成一个最小结构模型 | **UNLOCKED / NEXT SESSION** | T-004｜PARAMETRIC_ARCHITECTURE_POC_V001 保持 NOT_STARTED；下一 Session 启动。 |
+| P0.3 | 建筑参数能够驱动脚本生成一个最小结构模型 | **IN PROGRESS** | 2026-09-11 已正式启动 T-004｜PARAMETRIC_ARCHITECTURE_POC_V001；等待参数集、脚本生成结果与验收证据。 |
 
 **P0 Gate Progress：3 / 4 PASS。**
 
