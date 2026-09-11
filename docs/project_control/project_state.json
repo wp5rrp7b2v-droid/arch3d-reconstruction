@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R015",
+  "state_revision": "R016",
   "last_updated": "2026-09-11",
   "session_status": "ACTIVE_P1_EVIDENCE",
   "next_session_date": "2026-09-11",
@@ -22,10 +22,10 @@
       "P1.2": {"status": "IN_PROGRESS", "name": "正式证据包建立"},
       "P1.3": {"status": "LOCKED", "name": "证据分级与可复原性 Go / No-Go"}
     },
-    "note": "平遥镇国寺万佛殿证据包已完成 Batch 01–04，并完成 Batch 05 的直接来源获取审计与参数候选矩阵 V001。Batch 05 未取得主报告购买/登录后的关键原页，因此不得标记为直接核读完成。P1.3 PASS 前不进入正式3D生产。"
+    "note": "平遥镇国寺万佛殿证据包已完成 Batch 01–04、Batch 05 来源审计与参数候选矩阵 V001。2026-09-11 Product Owner 已上传《山西平遥镇国寺万佛殿与天王殿精细测绘报告》完整扫描PDF；此前直接来源访问阻塞解除，下一步进入关键原页直接核读。P1.3 PASS 前不进入正式3D生产。"
   },
   "decision_required": false,
-  "blocker": "P1.2_DIRECT_REPORT_ACCESS_REQUIRED｜《山西平遥镇国寺万佛殿与天王殿精细测绘报告》关键原页尚未在当前环境合法直接取得；File Library无该书。关闭P1.2前需获得关键页/PDF并直接核读。",
+  "blocker": null,
   "current_task": null,
   "current_case": {
     "name": "平遥镇国寺万佛殿",
@@ -37,7 +37,20 @@
     "selection_scope_note": "该分数只表示首案适配度，不表示建筑历史价值排名。"
   },
   "p1_evidence_progress": {
-    "status": "IN_PROGRESS / SOURCE_ACCESS_BLOCKED",
+    "status": "IN_PROGRESS / DIRECT_SOURCE_AVAILABLE",
+    "primary_sources": [
+      {
+        "id": "SRC-ZG-WF-001",
+        "title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告",
+        "authors": "刘畅、廖慧农、李树盛",
+        "format": "完整扫描PDF",
+        "pdf_pages": 434,
+        "bytes": 84117628,
+        "sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+        "register": "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "status": "AVAILABLE_FOR_DIRECT_REVIEW"
+      }
+    ],
     "completed_batches": [
       "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_01.md",
       "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
@@ -51,20 +64,20 @@
       "path": "docs/evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V001.md",
       "status": "PRE-P1.3 / NOT PRODUCTION-LOCKED",
       "direct_verified_field_count": 0,
-      "rule": "正式参数候选按 observed_as_measured / reconstructed_design_candidate / topology_or_rule 三层语义保存；任何未直接核读主报告原页的字段不得标记 DIRECT_VERIFIED。"
+      "rule": "正式参数候选按 observed_as_measured / reconstructed_design_candidate / topology_or_rule 三层语义保存；原页取得后逐字段核读，只有直接核对成功的字段才升级为 DIRECT_VERIFIED。"
     },
     "batch_05_key_findings": [
-      "合法电子版入口已确认：当当读书和京东阅读均存在该书，但当前环境无法穿透购买/登录读取剩余正文。",
-      "用户 File Library 未检索到该报告PDF/扫描/图片，因此当前无法从既有上传直接核读。",
-      "第三方下载镜像授权与完整性无法确认且当前未取得正文，不作为A级直接来源。",
-      "参数候选矩阵 V001 已建立；平面、铺作、梁架拓扑和部分檐部尺度可进入P1.3候选审核，但Z轴、架道、举折、转角精确节点和历史构件分层仍不足。",
-      "当前没有任何字段升级为 DIRECT_VERIFIED；主报告关键原页仍是关闭P1.2的必要输入。"
+      "Batch 05 已完成来源访问审计和参数候选矩阵V001，但当时尚未取得主报告正文，因此没有字段被标记DIRECT_VERIFIED。",
+      "2026-09-11 Product Owner 随后上传完整扫描PDF，文件共434个PDF页面、84,117,628 bytes，SHA256=94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472。",
+      "主报告现在可以作为SRC-ZG-WF-001直接核读；此前P1.2_DIRECT_REPORT_ACCESS_REQUIRED阻塞解除。",
+      "取得整本报告不自动升级任何参数；仍需按PDF页码、书内印刷页码和图表编号逐字段核对。",
+      "参数矩阵V001继续有效，下一步直接核读关键原页并升级为V002。"
     ],
     "open_gaps": [
-      "GAP-04 BLOCKED_ON_DIRECT_SOURCE_ACCESS：主报告关键原页未取得；需合法PDF/截图/扫描后直接核读",
-      "GAP-05 PARTIAL / WAITING_DIRECT_PAGES：下平槫、上平槫、脊槫实测XY/Z、架道统计、出际与举折分段未锁定",
-      "GAP-06 PARTIAL / WAITING_DIRECT_PAGES：转角45度构件尺寸、角梁/递角栿/隐衬角栿断面与节点坐标未锁定",
-      "GAP-07 OPEN / HIGH-RISK：统一Z基准、963原设计柱高和原始地坪关系未建立",
+      "GAP-04 DIRECT_SOURCE_AVAILABLE / REVIEW_PENDING：完整主报告已取得；待逐页核读关键章节并升级DIRECT_VERIFIED字段",
+      "GAP-05 PARTIAL：下平槫、上平槫、脊槫实测XY/Z、架道统计、出际与举折分段待主报告2.3.1–2.3.4直接核读",
+      "GAP-06 PARTIAL：转角45度构件尺寸、角梁/递角栿/隐衬角栿断面与节点坐标待转角原图直接核读",
+      "GAP-07 OPEN / HIGH-RISK：统一Z基准、963原设计柱高和原始地坪关系待2.1.3、2.6直接核读",
       "GAP-08 OPEN：963原构与1151/1540/嘉庆修缮等后世构件替换尚未形成构件级历史分层矩阵"
     ]
   },
@@ -114,7 +127,7 @@
     "date": "2026-09-11",
     "decision": "Product Owner 批准平遥镇国寺万佛殿为首个正式复原案例。P1.1 PASS；P1.2 解锁并启动正式证据包建立。"
   },
-  "next_action": "P1.2｜取得《精细测绘报告》最小关键页集合：2.1.3角柱生起、2.3.1–2.3.4屋架实测、2.6.1/2.6.3理想模型与形变、第107页、第147页及转角铺作/角梁原图；直接核读后升级参数候选矩阵V002，并执行P1.2 Gate Review。",
+  "next_action": "P1.2｜直接核读SRC-ZG-WF-001关键原页：2.1.3角柱生起、2.3.1–2.3.4屋架实测、2.6.1/2.6.3理想模型与形变、第107页、第147页及转角铺作/角梁原图；升级参数候选矩阵V002，并执行P1.2 Gate Review。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v006",
@@ -129,6 +142,7 @@
       "governance.md",
       "rules_change_log.md",
       "phase_archive/P0_closure.md",
+      "../evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
       "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_01.md",
       "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
       "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_03.md",
