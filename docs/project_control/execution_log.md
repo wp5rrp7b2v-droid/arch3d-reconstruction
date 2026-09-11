@@ -51,7 +51,7 @@
 - Cloud Return `.blend`：PASS。
 - Blender 4.5.13 独立重开 Cloud Return：PASS。
 - Artifact：`P0_2_GHA_ROUNDTRIP_V001`
-- Cloud Return SHA256：`2525c8637cfcb002b9ef77115ad984531052fd25ae87909804c47e8`
+- Cloud Return SHA256：`2525c8637cfcb002b9ef77115ad984531052fd25ae87967b55497909804c47e8`
 
 ### V007｜Local Return Validation｜PASS / CLASS B
 
