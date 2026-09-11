@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R018",
+  "state_revision": "R019",
   "last_updated": "2026-09-11",
   "session_status": "PAUSED_END_OF_DAY_P1_3_READY",
   "next_session_date": null,
@@ -136,7 +136,7 @@
     "visualization_version": "v006",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "EOD_REFRESH_PENDING",
+    "refresh_status": "EOD_REFRESH_COMPLETE",
     "source_files": [
       "project_state.json",
       "decision_log.md",
