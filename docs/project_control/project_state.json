@@ -3,21 +3,26 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R008",
+  "state_revision": "R009",
   "last_updated": "2026-09-11",
-  "session_status": "ACTIVE_P1_ENTRY",
+  "session_status": "ACTIVE_P1_SELECTION",
   "next_session_date": "2026-09-11",
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
-  "phase": {"id": "P1", "name": "选题取证", "status": "ACTIVE / ENTRY"},
+  "phase": {"id": "P1", "name": "选题取证", "status": "ACTIVE"},
   "previous_phase": {"id": "P0", "name": "技术路线验证", "status": "CLOSED / APPROVED", "closed_date": "2026-09-11", "gate_result": "4/4 PASS"},
   "current_gate": {
     "id": "P1",
-    "status": "ENTRY / NOT_YET_DEFINED",
+    "status": "ACTIVE",
     "passed": 0,
-    "total": 0,
-    "items": {},
-    "note": "P1 的正式 Gate / 验收项尚未定义；P1 启动设计完成后再写入，避免预设未经批准的验收标准。"
+    "total": 4,
+    "items": {
+      "P1.0": {"status": "IN_PROGRESS", "name": "选题标准锁定"},
+      "P1.1": {"status": "LOCKED", "name": "候选案例比较与定选"},
+      "P1.2": {"status": "LOCKED", "name": "正式证据包建立"},
+      "P1.3": {"status": "LOCKED", "name": "证据分级与可复原性 Go / No-Go"}
+    },
+    "note": "Product Owner 已批准 P1 Gate 架构。P1.0 完成前不锁定首个正式案例；P1.3 PASS 前不进入正式 3D 生产。"
   },
   "decision_required": false,
   "blocker": null,
@@ -30,6 +35,12 @@
     "parameter_set": "P0.3 PARAMETRIC_ARCHITECTURE_POC_V001｜Baseline + Variant validated",
     "model_3d": "P0参数驱动最小木构建筑灰模能力已验证；正式历史复原模型尚未开始",
     "phase_archive": "docs/project_control/phase_archive/P0_closure.md"
+  },
+  "p1_selection_policy": {
+    "status": "DRAFT_FOR_P1_0",
+    "principle": "首案优先选择证据充分、结构规模可控、可参数化、公开资料可获得且能够验证完整复原方法的现存或有高质量测绘资料的古代木构单体；不以知名度作为首要标准。",
+    "candidate_pool_target": 4,
+    "research_mode": "ChatGPT research / no Codex task yet"
   },
   "critical_hypothesis": {
     "statement": "P0 所需项目控制、本地轻量建模、Local↔Cloud往返及参数驱动建模技术链路能够成立。",
@@ -45,11 +56,11 @@
     "reassessment_rule": "若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"
   },
   "latest_material_decision": {
-    "id": "D-014",
+    "id": "D-015",
     "date": "2026-09-11",
-    "decision": "Product Owner批准P0关闭；P0 4/4 PASS，项目正式进入P1｜选题取证。P0.2兼容性限制与P0.3验证边界继续生效。"
+    "decision": "Product Owner 批准 P1 Gate：P1.0 选题标准锁定；P1.1 候选案例比较与定选；P1.2 正式证据包建立；P1.3 证据分级与可复原性 Go / No-Go。P1.3 PASS 前不进入正式 3D 生产。"
   },
-  "next_action": "P1 Kickoff｜建立首个正式复原案例的候选选择与证据获取框架；先定义P1 Gate/验收标准，再决定首个案例与后续工程任务。",
+  "next_action": "P1.0｜锁定首案筛选标准，并研究 4 个候选古建筑；完成初步比较后再由 Product Owner 决定是否通过 P1.0 并进入 P1.1。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v006",
