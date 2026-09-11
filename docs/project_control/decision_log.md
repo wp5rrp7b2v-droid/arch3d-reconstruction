@@ -16,7 +16,8 @@
 | D-010 | 2026-09-10 | CP-001 APPROVED / CLOSED：Codex Cloud 因网络代理无法取得 Blender，不作为当前 Blender Executor；GitHub Actions Hosted Runner 成为替代执行节点。 | ACTIVE |
 | D-011 | 2026-09-10 | P0.2 Gate PASS，分类 Class B｜ROUNDTRIP_WITH_LIMITATIONS。 | ACTIVE |
 | D-012 | 2026-09-10 | Project Control 文件集成为项目正式事实源（SSOT）；Dashboard 改为从 Project Control 提取摘要生成的可视化快照。Dashboard 与控制文件统一放在 `docs/project_control/`。重要变化即时落档；Checkpoint 负责一致性检查、阶段压缩和 Dashboard 刷新，不再负责首次记录事实。 | ACTIVE / GOVERNANCE BASELINE 2.0 |
-| **D-013** | **2026-09-10** | **批准 Project Control 同步试运行：GitHub private repo `main` 上最新正式提交的 `docs/project_control/` 作为 canonical committed state；本地同路径作为 working copy。ChatGPT 优先直接维护 Project Control 并形成 Git commit；Codex 聚焦本地工程执行。进入本地 Codex 工作前先同步 main，且不得与 ChatGPT 同时修改同一 Project Control 文件。若后续发现同步成本、版本噪音、隐私风险或维护复杂度大于价值，可由 Product Owner 调整策略。** | **ACTIVE / TRIAL** |
+| D-013 | 2026-09-10 | 批准 Project Control 同步试运行：GitHub private repo `main` 上最新正式提交的 `docs/project_control/` 作为 canonical committed state；本地同路径作为 working copy。ChatGPT 优先直接维护 Project Control 并形成 Git commit；Codex 聚焦本地工程执行。进入本地 Codex 工作前先同步 main，且不得与 ChatGPT 同时修改同一 Project Control 文件。若后续发现同步成本、版本噪音、隐私风险或维护复杂度大于价值，可由 Product Owner 调整策略。 | ACTIVE / TRIAL |
+| **D-014** | **2026-09-11** | **Product Owner 批准 P0｜技术路线验证关闭。P0.0–P0.3 已达到 4/4 PASS；P0 正式 CLOSED，项目进入 P1｜选题取证。P0.2 的 Blender 4.5→3.6 兼容性限制继续作为生产规则；P0.3 仅证明参数驱动技术链路成立，不代表历史证据参数化或正式古建构造精度已验证。** | **ACTIVE / P0 CLOSED / P1 ENTERED** |
 
 ## D-012 直接影响
 
@@ -35,3 +36,10 @@
 - Project Control 不记录密码、Token、个人敏感资料或不应上云的信息。
 - ChatGPT 与 Codex 不并行修改同一控制文件；本地工程工作开始前先 pull。
 - 该同步方式为 TRIAL，可根据实际收益重新评估。
+
+## D-014 P0 Closure Carry-forward
+
+- P0 的技术目标已经完成，不再继续扩大 P0 范围。
+- P0.2 的 Class B 限制继续生效：需回到 Local Blender 3.6 维护的核心资产，不得默认依赖未经验证的 Blender 4.5-only 功能。
+- P0.3 的结论是“结构化参数 → 脚本 → 可重复最小结构模型”可行；历史取证、证据分层、正式古建参数体系和构造精度属于 P1 及后续 Phase。
+- P1 启动时不自动创建 Codex T-###；只有出现实际工程执行任务时再编号。
