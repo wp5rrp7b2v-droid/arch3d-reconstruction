@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R005",
-  "last_updated": "2026-09-10",
-  "session_status": "END_OF_DAY_CHECKPOINT",
+  "state_revision": "R006",
+  "last_updated": "2026-09-11",
+  "session_status": "ACTIVE",
   "next_session_date": "2026-09-11",
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
@@ -17,7 +17,7 @@
       "P0.0": {"status": "PASS", "name": "项目控制系统可跨Chat使用"},
       "P0.1": {"status": "PASS", "name": "本地Mac可稳定完成轻量Blender灰模、保存与审核"},
       "P0.2": {"status": "PASS", "class": "B", "name": "Local→Cloud→修改/渲染→Local，无关键资产丢失"},
-      "P0.3": {"status": "UNLOCKED_NEXT", "name": "建筑参数能够驱动脚本生成最小结构模型"}
+      "P0.3": {"status": "IN_PROGRESS", "name": "建筑参数能够驱动脚本生成最小结构模型"}
     }
   },
   "decision_required": false,
@@ -26,9 +26,9 @@
     "id": "T-004",
     "key": "PARAMETRIC_ARCHITECTURE_POC_V001",
     "name": "参数驱动建筑灰模POC",
-    "status": "NOT_STARTED",
+    "status": "IN_PROGRESS",
     "think_level": "MEDIUM",
-    "start_policy": "NEXT_SESSION"
+    "start_policy": "STARTED_2026-09-11"
   },
   "current_baseline": {
     "local_blender": "Blender 3.6.23 macOS x64",
@@ -56,7 +56,7 @@
     "date": "2026-09-10",
     "decision": "Project Control采用GitHub main正式提交状态 + 本地working copy的同步试运行；ChatGPT优先直接维护Project Control，Codex聚焦工程执行。"
   },
-  "next_action": "Next Session｜启动 P0.3 / T-004 PARAMETRIC_ARCHITECTURE_POC_V001。",
+  "next_action": "执行 P0.3 / T-004 PARAMETRIC_ARCHITECTURE_POC_V001；先同步本地 main，再按 Task Contract 生成参数驱动的最小结构灰模并验证。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v006",
