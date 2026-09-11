@@ -1,0 +1,14 @@
+{
+  "bay_count_x": 3,
+  "bay_count_y": 2,
+  "bay_width": 3.0,
+  "bay_depth": 2.6,
+  "platform_margin": 0.8,
+  "platform_height": 0.35,
+  "column_height": 3.2,
+  "column_radius": 0.18,
+  "beam_height": 0.3,
+  "beam_width": 0.22,
+  "roof_eave_overhang": 0.9,
+  "roof_height": 1.5
+}
