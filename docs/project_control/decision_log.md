@@ -18,7 +18,8 @@
 | D-012 | 2026-09-10 | Project Control 文件集成为项目正式事实源（SSOT）；Dashboard 改为从 Project Control 提取摘要生成的可视化快照。Dashboard 与控制文件统一放在 `docs/project_control/`。重要变化即时落档；Checkpoint 负责一致性检查、阶段压缩和 Dashboard 刷新，不再负责首次记录事实。 | ACTIVE / GOVERNANCE BASELINE 2.0 |
 | D-013 | 2026-09-10 | 批准 Project Control 同步试运行：GitHub private repo `main` 上最新正式提交的 `docs/project_control/` 作为 canonical committed state；本地同路径作为 working copy。ChatGPT 优先直接维护 Project Control 并形成 Git commit；Codex 聚焦本地工程执行。进入本地 Codex 工作前先同步 main，且不得与 ChatGPT 同时修改同一 Project Control 文件。若后续发现同步成本、版本噪音、隐私风险或维护复杂度大于价值，可由 Product Owner 调整策略。 | ACTIVE / TRIAL |
 | D-014 | 2026-09-11 | Product Owner 批准 P0｜技术路线验证关闭。P0.0–P0.3 已达到 4/4 PASS；P0 正式 CLOSED，项目进入 P1｜选题取证。P0.2 的 Blender 4.5→3.6 兼容性限制继续作为生产规则；P0.3 仅证明参数驱动技术链路成立，不代表历史证据参数化或正式古建构造精度已验证。 | ACTIVE / P0 CLOSED / P1 ENTERED |
-| **D-015** | **2026-09-11** | **Product Owner 批准 P1 Gate 架构：P1.0 选题标准锁定；P1.1 候选案例比较与定选；P1.2 正式证据包建立；P1.3 证据分级与可复原性 Go / No-Go。首案优先选择证据充分、规模可控、可参数化且公开资料可取得的古代木构单体；不以知名度作为首要标准。P1.3 PASS 前不进入正式 3D 生产。** | **ACTIVE / P1 GATE APPROVED / P1.0 STARTED** |
+| D-015 | 2026-09-11 | Product Owner 批准 P1 Gate 架构：P1.0 选题标准锁定；P1.1 候选案例比较与定选；P1.2 正式证据包建立；P1.3 证据分级与可复原性 Go / No-Go。首案优先选择证据充分、规模可控、可参数化且公开资料可取得的古代木构单体；不以知名度作为首要标准。P1.3 PASS 前不进入正式 3D 生产。 | ACTIVE / P1 GATE APPROVED |
+| **D-016** | **2026-09-11** | **Product Owner 批准 P1.0。首案筛选方法正式锁定为五项加权指标：证据链完整度30%、测绘/尺寸资料可获得性25%、结构规模与首案可控性20%、历史状态歧义程度15%（歧义越低得分越高）、参数化与展示价值10%；统一按1–5分评价。首案不以年代最早或知名度为优先。P1.1 解锁，候选池为平遥镇国寺万佛殿、五台佛光寺东大殿、五台南禅寺大殿、宁波保国寺大殿。** | **ACTIVE / P1.0 PASS / P1.1 STARTED** |
 
 ## D-012 直接影响
 
@@ -51,3 +52,10 @@
 - P1.1 必须使用统一标准比较 3–5 个候选，并由 Product Owner 明确定选。
 - P1.2 只记录可追溯证据；无来源的信息不得进入“已证实”。
 - P1.3 必须显式区分“已证实 / 高可信推断 / 合理补全 / 未知”，并形成进入正式参数化与 3D 复原的 Go / No-Go 结论。
+
+## D-016 P1.0 Locked Scoring Rule
+
+- 评分仅用于首案选择，不等同于建筑本身的历史价值排序。
+- 五项权重在当前 P1.1 中保持固定，避免“先看到喜欢的对象再调整评分规则”。
+- “历史状态歧义程度”单独计分；资料多不能自动抵消大修、后世改建或原状不确定性。
+- 候选评分必须说明依据与不确定性，不使用无法追溯来源的精确分值作为事实。
