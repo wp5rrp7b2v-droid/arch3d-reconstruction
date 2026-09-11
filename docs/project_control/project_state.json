@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R013",
+  "state_revision": "R014",
   "last_updated": "2026-09-11",
   "session_status": "ACTIVE_P1_EVIDENCE",
   "next_session_date": "2026-09-11",
@@ -22,7 +22,7 @@
       "P1.2": {"status": "IN_PROGRESS", "name": "正式证据包建立"},
       "P1.3": {"status": "LOCKED", "name": "证据分级与可复原性 Go / No-Go"}
     },
-    "note": "平遥镇国寺万佛殿证据包已完成 Batch 01 / Batch 02 / Batch 03。Batch 03 已收敛屋架、垂直控制与转角铺作的证据边界；下一步切换为《精细测绘报告》主报告直接取证。P1.3 PASS 前不进入正式 3D 生产。"
+    "note": "平遥镇国寺万佛殿证据包已完成 Batch 01–04。Batch 04 完成主报告直接取证路线审计与高等级页码桥接，但418页主报告尚未在当前环境逐页直接核读；P1.3 PASS 前不进入正式 3D 生产。"
   },
   "decision_required": false,
   "blocker": null,
@@ -41,21 +41,22 @@
     "completed_batches": [
       "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_01.md",
       "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
-      "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_03.md"
+      "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_03.md",
+      "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_04.md"
     ],
-    "batch_03_key_findings": [
-      "主体梁架拓扑已较清楚：下六椽栿—上六椽栿—四椽栿—平梁—脊槫及隔架铺作/托脚/蜀柱/叉手的连接层级可以建立拓扑骨架，但尺寸与Z标高仍未锁定。",
-      "机构数字展示给出撩檐槫至脊槫13.62m、举高3.51m、举折1:3.88；二手资料常见举高3.60m、檐高5.27m、总高8.87m，存在测量口径差异，不能直接拼成正式立面。",
-      "侧脚与生起机制可以确认存在；3.42m柱高、0.46m柱径、0.05m角柱生起仍缺主报告原页复核，不能锁为963年设计参数。",
-      "转角铺作拓扑已较清楚：45度角华栱两跳托双昂，再出由昂；里转三跳，第三跳承角梁；前后檐与山面柱头铺作后尾连接目标不同。",
-      "角梁后尾存在‘隐衬角栿’与‘不设隐角梁’的文献冲突，必须回主报告角部图版解决。",
-      "Batch 03 后继续普通网页搜索的边际价值很低，下一步必须直接读取《精细测绘报告》的角柱生起、屋架实测、架道、出际、举折、理想模型与形变分析。"
+    "batch_04_key_findings": [
+      "已确认主报告第二章万佛殿木作直接覆盖角柱生起、外檐铺作、屋架构件尺度、架道、出际、举折、理想模型与形变分析；当前缺口是原页未直接核读，而不是报告缺少这些内容。",
+      "正式论文回指镇国寺测量研究第147页，给出檐部三段尺度：椽头至檐柱柱心2677.5mm、椽头至橑檐枋1224mm、铺作外跳1453.5mm；1224+1453.5=2677.5。",
+      "‘檐出’必须按起止点拆字段，公开资料常见2.94m不能与1224mm/2677.5mm直接比较或替代。",
+      "正式论文直接转载《镇国寺报告》万佛殿横断面图，支持托脚主要支撑梁侧/槫下襻间系统，而非简单直顶槫。",
+      "转角研究表明镇国寺万佛殿属于递角栿型高等级殿堂系统；‘隐衬角栿’与‘无隐角梁’可能是不同构件概念，不应继续作为简单文献矛盾。",
+      "《镇国寺报告》第107页被正式论文引用：原始设计中散斗、齐心斗、交互斗可能同规格；这是设计推论而非现存实测完全一致。"
     ],
     "open_gaps": [
-      "GAP-04 主报告正文/关键图版尚未逐页直接读取",
-      "GAP-05 屋架与举折已部分关闭，但各槫XY/Z、架道高差、出际及13.62m测量口径仍未锁定",
-      "GAP-06 转角铺作拓扑已部分关闭，但45度尺寸、角梁中心线/槫交点及隐角梁问题仍未锁定",
-      "GAP-07 垂直控制需建立统一Z基准和测量起止面；禁止用3.42m/5.27m/8.87m等二手标量直接拼装正式立面"
+      "GAP-04 PARTIAL：合法数字阅读入口与页码桥接已确认，但主报告关键原页尚未逐页直接核读",
+      "GAP-05 PARTIAL：檐部水平控制显著推进，但下平槫/上平槫/脊槫实测XY/Z、架道统计、出际和举折分段仍未锁定",
+      "GAP-06 PARTIAL：转角拓扑与术语冲突部分解决，但45度构件尺寸、角梁/递角栿/隐衬角栿断面及节点坐标仍未锁定",
+      "GAP-07 OPEN：统一Z基准仍未建立；3.42m柱高继续受原始地坪不明影响"
     ]
   },
   "current_baseline": {
@@ -104,7 +105,7 @@
     "date": "2026-09-11",
     "decision": "Product Owner 批准平遥镇国寺万佛殿为首个正式复原案例。P1.1 PASS；P1.2 解锁并启动正式证据包建立。"
   },
-  "next_action": "P1.2 Batch 04｜停止继续堆普通网页资料，直接读取《山西平遥镇国寺万佛殿与天王殿精细测绘报告》关键章节/图版：2.1.3角柱生起、2.3.1构件尺度、2.3.2架道、2.3.3出际、2.3.4举折、2.6.1理想模型、2.6.3形变分析及转角铺作/角梁图版。",
+  "next_action": "P1.2 Batch 05｜获取并直接核读《精细测绘报告》关键原页；优先2.1.3角柱生起、2.3.1构件尺度、2.3.2架道、2.3.3出际、2.3.4举折、2.6理想模型/形变分析及第107页、第147页、转角节点图版。若取得合法截图/扫描/PDF，再形成P1.3前正式参数候选矩阵。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v006",
@@ -120,7 +121,8 @@
       "phase_archive/P0_closure.md",
       "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_01.md",
       "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
-      "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_03.md"
+      "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_03.md",
+      "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_04.md"
     ]
   }
 }
