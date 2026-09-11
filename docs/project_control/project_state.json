@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R011",
+  "state_revision": "R012",
   "last_updated": "2026-09-11",
   "session_status": "ACTIVE_P1_EVIDENCE",
   "next_session_date": "2026-09-11",
@@ -22,7 +22,7 @@
       "P1.2": {"status": "IN_PROGRESS", "name": "正式证据包建立"},
       "P1.3": {"status": "LOCKED", "name": "证据分级与可复原性 Go / No-Go"}
     },
-    "note": "Product Owner 已批准平遥镇国寺万佛殿为首个正式复原案例。P1.2 开始建立可追溯证据包；P1.3 PASS 前不进入正式 3D 生产。"
+    "note": "平遥镇国寺万佛殿证据包已完成 Batch 01 / Batch 02。P1.2 继续补齐屋架、举折、柱网垂直控制与转角铺作；P1.3 PASS 前不进入正式 3D 生产。"
   },
   "decision_required": false,
   "blocker": null,
@@ -35,6 +35,26 @@
     "selection_basis": "按 P1.0 五项锁定权重比较四个候选后，由 Product Owner 批准定选。",
     "selection_score": 4.80,
     "selection_scope_note": "该分数只表示首案适配度，不表示建筑历史价值排名。"
+  },
+  "p1_evidence_progress": {
+    "status": "IN_PROGRESS",
+    "completed_batches": [
+      "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_01.md",
+      "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md"
+    ],
+    "batch_02_key_findings": [
+      "正式论文提供《镇国寺报告》派生精测值：正面心间4481.3mm、正面次间3505.7mm、侧面心间3676.8mm、通面阔11492.7mm、通进深10688.2mm。",
+      "公开常用11.58m×10.78m不再作为控制尺寸；后续优先采用精测层数据并等待主报告测点定义复核。",
+      "《镇国寺报告》推定营造尺约306mm、单材广约214mm、材厚约153mm、足材广约321mm；这些属于设计推定，不是直接实测事实。",
+      "柱高约3.42m受原始地坪/柱础不明影响，暂列高风险参数，不锁定963年原设计值。",
+      "已获得带报告页码的斗、栱、出跳桥接数据，但转角铺作、屋架举折和完整垂直控制仍不足。",
+      "后续参数体系必须分离 observed_as_measured 与 reconstructed_design_candidate 两套语义。"
+    ],
+    "open_gaps": [
+      "GAP-04 主报告正文/关键图版尚未逐页直接读取",
+      "GAP-05 总高、檐出、屋架各槫标高与举折仍不足",
+      "GAP-06 转角铺作完整45度几何与角梁关系仍不足"
+    ]
   },
   "current_baseline": {
     "local_blender": "Blender 3.6.23 macOS x64",
@@ -82,7 +102,7 @@
     "date": "2026-09-11",
     "decision": "Product Owner 批准平遥镇国寺万佛殿为首个正式复原案例。P1.1 PASS；P1.2 解锁并启动正式证据包建立。"
   },
-  "next_action": "P1.2｜为平遥镇国寺万佛殿建立正式证据包：优先获取并登记纪年/身份、精细测绘、总体尺寸、平面柱网、立面屋顶、主体木构、关键构件、修缮史及图像资料；所有关键事实必须可追溯来源。",
+  "next_action": "P1.2 Batch 03｜集中补齐屋架与举折、柱网垂直控制、转角铺作三组直接决定3D几何的证据；在这些数据到位前不启动正式参数化。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v006",
@@ -95,7 +115,9 @@
       "acceptance_matrix.md",
       "governance.md",
       "rules_change_log.md",
-      "phase_archive/P0_closure.md"
+      "phase_archive/P0_closure.md",
+      "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_01.md",
+      "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md"
     ]
   }
 }
