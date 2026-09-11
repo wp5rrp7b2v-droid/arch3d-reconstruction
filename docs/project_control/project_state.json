@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R010",
+  "state_revision": "R011",
   "last_updated": "2026-09-11",
-  "session_status": "ACTIVE_P1_SELECTION",
+  "session_status": "ACTIVE_P1_EVIDENCE",
   "next_session_date": "2026-09-11",
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
@@ -14,19 +14,28 @@
   "current_gate": {
     "id": "P1",
     "status": "ACTIVE",
-    "passed": 1,
+    "passed": 2,
     "total": 4,
     "items": {
       "P1.0": {"status": "PASS", "name": "选题标准锁定"},
-      "P1.1": {"status": "IN_PROGRESS", "name": "候选案例比较与定选"},
-      "P1.2": {"status": "LOCKED", "name": "正式证据包建立"},
+      "P1.1": {"status": "PASS", "name": "候选案例比较与定选"},
+      "P1.2": {"status": "IN_PROGRESS", "name": "正式证据包建立"},
       "P1.3": {"status": "LOCKED", "name": "证据分级与可复原性 Go / No-Go"}
     },
-    "note": "Product Owner 已批准 P1.0。P1.1 使用锁定后的统一标准比较候选对象；P1.3 PASS 前不进入正式 3D 生产。"
+    "note": "Product Owner 已批准平遥镇国寺万佛殿为首个正式复原案例。P1.2 开始建立可追溯证据包；P1.3 PASS 前不进入正式 3D 生产。"
   },
   "decision_required": false,
   "blocker": null,
   "current_task": null,
+  "current_case": {
+    "name": "平遥镇国寺万佛殿",
+    "location": "山西省平遥县镇国寺",
+    "selection_status": "LOCKED / P1.1 PASS",
+    "selection_date": "2026-09-11",
+    "selection_basis": "按 P1.0 五项锁定权重比较四个候选后，由 Product Owner 批准定选。",
+    "selection_score": 4.80,
+    "selection_scope_note": "该分数只表示首案适配度，不表示建筑历史价值排名。"
+  },
   "current_baseline": {
     "local_blender": "Blender 3.6.23 macOS x64",
     "cloud_executor": "GitHub Actions Hosted Runner + Blender 4.5.13 LTS Linux x64",
@@ -69,11 +78,11 @@
     "reassessment_rule": "若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"
   },
   "latest_material_decision": {
-    "id": "D-016",
+    "id": "D-017",
     "date": "2026-09-11",
-    "decision": "Product Owner 批准 P1.0。首案筛选标准锁定为五项加权指标：证据链完整度30%、测绘/尺寸资料可获得性25%、结构规模与首案可控性20%、历史状态歧义程度15%、参数化与展示价值10%。P1.1 解锁并启动。"
+    "decision": "Product Owner 批准平遥镇国寺万佛殿为首个正式复原案例。P1.1 PASS；P1.2 解锁并启动正式证据包建立。"
   },
-  "next_action": "P1.1｜对平遥镇国寺万佛殿、五台佛光寺东大殿、五台南禅寺大殿、宁波保国寺大殿按锁定标准正式评分比较，并提交首案推荐供 Product Owner 定选。",
+  "next_action": "P1.2｜为平遥镇国寺万佛殿建立正式证据包：优先获取并登记纪年/身份、精细测绘、总体尺寸、平面柱网、立面屋顶、主体木构、关键构件、修缮史及图像资料；所有关键事实必须可追溯来源。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v006",
