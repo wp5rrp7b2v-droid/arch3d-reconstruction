@@ -68,10 +68,27 @@
 - 未发现核心几何、Cloud Marker、Local Marker 或所需 Metadata 损失。
 - 最终分类：**Class B｜ROUNDTRIP_WITH_LIMITATIONS**。
 
-## Current Execution State｜2026-09-10 EOD
+## T-004｜PARAMETRIC_ARCHITECTURE_POC_V001｜PASS
+
+- Think Level: MEDIUM
+- Local Blender：3.6.23 macOS x64。
+- 目标：验证独立建筑参数能够驱动同一 Blender Python 脚本稳定生成最小结构灰模。
+- 工作区：`poc/P0_3_parametric_architecture/`
+- Baseline 参数：3×2 开间；`bay_width=3.0`、`bay_depth=2.6`、`column_height=3.2`、`roof_height=1.5`。
+- Baseline：12 柱、21 个主要结构对象；主体 9.0 m × 5.2 m；总宽 10.8 m；总进深 7.0 m；总高 5.35 m；独立重开 PASS。
+- Variant 仅修改 JSON 参数：4×3 开间；`bay_width=2.7`、`column_height=3.6`、`roof_height=1.8`，建模脚本未修改。
+- Variant：20 柱、31 个主要结构对象；主体 10.8 m × 7.8 m；总宽 12.6 m；总进深 9.6 m；总高 6.05 m；独立重开 PASS。
+- 参数驱动证据：柱位由开间数量与尺寸循环计算；梁数量/长度、台基尺寸和屋顶尺寸均从参数自动推导，无逐柱坐标硬编码。
+- Determinism：Baseline 重跑后对象名称、数量、位置与尺寸一致；核心结构签名 `269702aa81abed07770550e3b4bd1b6288e526a6fc119630a218bac2b37f716d` 一致。
+- 人工审核：Baseline / Variant PNG 均能清楚辨识台基、柱网、梁架与屋顶，且结构变化符合参数变化。
+- 上传复核：两份 `.blend` 文件头均为 Blender 3.6 格式；两份 JSON 与生成脚本经独立检查，与 Codex 汇报一致。
+- Git 状态：任务执行时无 tracked modification / staged change；`docs/project_control/*` 未被 Codex 修改；既有 P0.1 / P0.2 untracked 内容未处理；按 Task Contract 未 commit / push P0.3 工程资产。
+- 最终结论：**PASS**。P0.3 技术验收成立。
+
+## Current Execution State｜2026-09-11
 
 - T-001：PASS
 - T-002：PASS
 - T-003：PASS / Class B
-- T-004｜PARAMETRIC_ARCHITECTURE_POC_V001：**NOT_STARTED / NEXT SESSION**
-- 今日不启动 T-004；下一 Session 再进入 P0.3。
+- T-004：PASS
+- P0 技术 Gate：4 / 4 满足；等待 P0 Gate Review / Product Owner Approval。
