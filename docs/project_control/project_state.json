@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R014",
+  "state_revision": "R015",
   "last_updated": "2026-09-11",
   "session_status": "ACTIVE_P1_EVIDENCE",
   "next_session_date": "2026-09-11",
@@ -22,10 +22,10 @@
       "P1.2": {"status": "IN_PROGRESS", "name": "正式证据包建立"},
       "P1.3": {"status": "LOCKED", "name": "证据分级与可复原性 Go / No-Go"}
     },
-    "note": "平遥镇国寺万佛殿证据包已完成 Batch 01–04。Batch 04 完成主报告直接取证路线审计与高等级页码桥接，但418页主报告尚未在当前环境逐页直接核读；P1.3 PASS 前不进入正式 3D 生产。"
+    "note": "平遥镇国寺万佛殿证据包已完成 Batch 01–04，并完成 Batch 05 的直接来源获取审计与参数候选矩阵 V001。Batch 05 未取得主报告购买/登录后的关键原页，因此不得标记为直接核读完成。P1.3 PASS 前不进入正式3D生产。"
   },
   "decision_required": false,
-  "blocker": null,
+  "blocker": "P1.2_DIRECT_REPORT_ACCESS_REQUIRED｜《山西平遥镇国寺万佛殿与天王殿精细测绘报告》关键原页尚未在当前环境合法直接取得；File Library无该书。关闭P1.2前需获得关键页/PDF并直接核读。",
   "current_task": null,
   "current_case": {
     "name": "平遥镇国寺万佛殿",
@@ -37,26 +37,35 @@
     "selection_scope_note": "该分数只表示首案适配度，不表示建筑历史价值排名。"
   },
   "p1_evidence_progress": {
-    "status": "IN_PROGRESS",
+    "status": "IN_PROGRESS / SOURCE_ACCESS_BLOCKED",
     "completed_batches": [
       "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_01.md",
       "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
       "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_03.md",
       "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_04.md"
     ],
-    "batch_04_key_findings": [
-      "已确认主报告第二章万佛殿木作直接覆盖角柱生起、外檐铺作、屋架构件尺度、架道、出际、举折、理想模型与形变分析；当前缺口是原页未直接核读，而不是报告缺少这些内容。",
-      "正式论文回指镇国寺测量研究第147页，给出檐部三段尺度：椽头至檐柱柱心2677.5mm、椽头至橑檐枋1224mm、铺作外跳1453.5mm；1224+1453.5=2677.5。",
-      "‘檐出’必须按起止点拆字段，公开资料常见2.94m不能与1224mm/2677.5mm直接比较或替代。",
-      "正式论文直接转载《镇国寺报告》万佛殿横断面图，支持托脚主要支撑梁侧/槫下襻间系统，而非简单直顶槫。",
-      "转角研究表明镇国寺万佛殿属于递角栿型高等级殿堂系统；‘隐衬角栿’与‘无隐角梁’可能是不同构件概念，不应继续作为简单文献矛盾。",
-      "《镇国寺报告》第107页被正式论文引用：原始设计中散斗、齐心斗、交互斗可能同规格；这是设计推论而非现存实测完全一致。"
+    "partial_batches": [
+      "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_05.md"
+    ],
+    "parameter_candidate_matrix": {
+      "path": "docs/evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V001.md",
+      "status": "PRE-P1.3 / NOT PRODUCTION-LOCKED",
+      "direct_verified_field_count": 0,
+      "rule": "正式参数候选按 observed_as_measured / reconstructed_design_candidate / topology_or_rule 三层语义保存；任何未直接核读主报告原页的字段不得标记 DIRECT_VERIFIED。"
+    },
+    "batch_05_key_findings": [
+      "合法电子版入口已确认：当当读书和京东阅读均存在该书，但当前环境无法穿透购买/登录读取剩余正文。",
+      "用户 File Library 未检索到该报告PDF/扫描/图片，因此当前无法从既有上传直接核读。",
+      "第三方下载镜像授权与完整性无法确认且当前未取得正文，不作为A级直接来源。",
+      "参数候选矩阵 V001 已建立；平面、铺作、梁架拓扑和部分檐部尺度可进入P1.3候选审核，但Z轴、架道、举折、转角精确节点和历史构件分层仍不足。",
+      "当前没有任何字段升级为 DIRECT_VERIFIED；主报告关键原页仍是关闭P1.2的必要输入。"
     ],
     "open_gaps": [
-      "GAP-04 PARTIAL：合法数字阅读入口与页码桥接已确认，但主报告关键原页尚未逐页直接核读",
-      "GAP-05 PARTIAL：檐部水平控制显著推进，但下平槫/上平槫/脊槫实测XY/Z、架道统计、出际和举折分段仍未锁定",
-      "GAP-06 PARTIAL：转角拓扑与术语冲突部分解决，但45度构件尺寸、角梁/递角栿/隐衬角栿断面及节点坐标仍未锁定",
-      "GAP-07 OPEN：统一Z基准仍未建立；3.42m柱高继续受原始地坪不明影响"
+      "GAP-04 BLOCKED_ON_DIRECT_SOURCE_ACCESS：主报告关键原页未取得；需合法PDF/截图/扫描后直接核读",
+      "GAP-05 PARTIAL / WAITING_DIRECT_PAGES：下平槫、上平槫、脊槫实测XY/Z、架道统计、出际与举折分段未锁定",
+      "GAP-06 PARTIAL / WAITING_DIRECT_PAGES：转角45度构件尺寸、角梁/递角栿/隐衬角栿断面与节点坐标未锁定",
+      "GAP-07 OPEN / HIGH-RISK：统一Z基准、963原设计柱高和原始地坪关系未建立",
+      "GAP-08 OPEN：963原构与1151/1540/嘉庆修缮等后世构件替换尚未形成构件级历史分层矩阵"
     ]
   },
   "current_baseline": {
@@ -105,12 +114,13 @@
     "date": "2026-09-11",
     "decision": "Product Owner 批准平遥镇国寺万佛殿为首个正式复原案例。P1.1 PASS；P1.2 解锁并启动正式证据包建立。"
   },
-  "next_action": "P1.2 Batch 05｜获取并直接核读《精细测绘报告》关键原页；优先2.1.3角柱生起、2.3.1构件尺度、2.3.2架道、2.3.3出际、2.3.4举折、2.6理想模型/形变分析及第107页、第147页、转角节点图版。若取得合法截图/扫描/PDF，再形成P1.3前正式参数候选矩阵。",
+  "next_action": "P1.2｜取得《精细测绘报告》最小关键页集合：2.1.3角柱生起、2.3.1–2.3.4屋架实测、2.6.1/2.6.3理想模型与形变、第107页、第147页及转角铺作/角梁原图；直接核读后升级参数候选矩阵V002，并执行P1.2 Gate Review。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v006",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
+    "refresh_status": "PENDING_END_OF_DAY_CHECKPOINT",
     "source_files": [
       "project_state.json",
       "decision_log.md",
@@ -122,7 +132,9 @@
       "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_01.md",
       "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
       "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_03.md",
-      "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_04.md"
+      "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_04.md",
+      "../evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_05.md",
+      "../evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V001.md"
     ]
   }
 }
