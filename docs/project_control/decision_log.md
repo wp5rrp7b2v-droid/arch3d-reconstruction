@@ -17,7 +17,8 @@
 | D-011 | 2026-09-10 | P0.2 Gate PASS，分类 Class B｜ROUNDTRIP_WITH_LIMITATIONS。 | ACTIVE |
 | D-012 | 2026-09-10 | Project Control 文件集成为项目正式事实源（SSOT）；Dashboard 改为从 Project Control 提取摘要生成的可视化快照。Dashboard 与控制文件统一放在 `docs/project_control/`。重要变化即时落档；Checkpoint 负责一致性检查、阶段压缩和 Dashboard 刷新，不再负责首次记录事实。 | ACTIVE / GOVERNANCE BASELINE 2.0 |
 | D-013 | 2026-09-10 | 批准 Project Control 同步试运行：GitHub private repo `main` 上最新正式提交的 `docs/project_control/` 作为 canonical committed state；本地同路径作为 working copy。ChatGPT 优先直接维护 Project Control 并形成 Git commit；Codex 聚焦本地工程执行。进入本地 Codex 工作前先同步 main，且不得与 ChatGPT 同时修改同一 Project Control 文件。若后续发现同步成本、版本噪音、隐私风险或维护复杂度大于价值，可由 Product Owner 调整策略。 | ACTIVE / TRIAL |
-| **D-014** | **2026-09-11** | **Product Owner 批准 P0｜技术路线验证关闭。P0.0–P0.3 已达到 4/4 PASS；P0 正式 CLOSED，项目进入 P1｜选题取证。P0.2 的 Blender 4.5→3.6 兼容性限制继续作为生产规则；P0.3 仅证明参数驱动技术链路成立，不代表历史证据参数化或正式古建构造精度已验证。** | **ACTIVE / P0 CLOSED / P1 ENTERED** |
+| D-014 | 2026-09-11 | Product Owner 批准 P0｜技术路线验证关闭。P0.0–P0.3 已达到 4/4 PASS；P0 正式 CLOSED，项目进入 P1｜选题取证。P0.2 的 Blender 4.5→3.6 兼容性限制继续作为生产规则；P0.3 仅证明参数驱动技术链路成立，不代表历史证据参数化或正式古建构造精度已验证。 | ACTIVE / P0 CLOSED / P1 ENTERED |
+| **D-015** | **2026-09-11** | **Product Owner 批准 P1 Gate 架构：P1.0 选题标准锁定；P1.1 候选案例比较与定选；P1.2 正式证据包建立；P1.3 证据分级与可复原性 Go / No-Go。首案优先选择证据充分、规模可控、可参数化且公开资料可取得的古代木构单体；不以知名度作为首要标准。P1.3 PASS 前不进入正式 3D 生产。** | **ACTIVE / P1 GATE APPROVED / P1.0 STARTED** |
 
 ## D-012 直接影响
 
@@ -43,3 +44,10 @@
 - P0.2 的 Class B 限制继续生效：需回到 Local Blender 3.6 维护的核心资产，不得默认依赖未经验证的 Blender 4.5-only 功能。
 - P0.3 的结论是“结构化参数 → 脚本 → 可重复最小结构模型”可行；历史取证、证据分层、正式古建参数体系和构造精度属于 P1 及后续 Phase。
 - P1 启动时不自动创建 Codex T-###；只有出现实际工程执行任务时再编号。
+
+## D-015 P1 Gate Boundary
+
+- P1.0 负责锁定筛选逻辑，不直接决定最终对象。
+- P1.1 必须使用统一标准比较 3–5 个候选，并由 Product Owner 明确定选。
+- P1.2 只记录可追溯证据；无来源的信息不得进入“已证实”。
+- P1.3 必须显式区分“已证实 / 高可信推断 / 合理补全 / 未知”，并形成进入正式参数化与 3D 复原的 Go / No-Go 结论。
