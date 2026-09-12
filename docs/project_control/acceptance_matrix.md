@@ -35,14 +35,16 @@
 
 ---
 
-## P2｜正式参数化与3D复原｜ACTIVE
+## P2｜正式参数化与3D复原｜CLOSED / APPROVED 2026-09-12
 
-| Gate | 验收标准 | 当前状态 | 关键边界 |
+| Gate | 验收标准 | 最终状态 | 关键边界 |
 |---|---|---|---|
 | P2.0｜Evidence-aware Parameter Schema | Evidence-aware parameter contract | **PASS / APPROVED** | CG-01 satisfied. |
 | P2.1｜Formal Production Parameter Set | 85/85 formal set + dependency + preflight | **PASS / APPROVED / CLOSED** | Z-006 remains UNKNOWN; RC-01 replaceable. |
 | P2.2｜Parametric Structural Skeleton | Complete medium-LOD structural skeleton | **PASS / APPROVED / CLOSED** | 217 = machine objects, not historical component count. |
-| P2.3｜Integrated Reconstruction Candidate & QC | Component-library-driven integrated candidate + final engineering / visual QC | **IN PROGRESS / ENGINEERING PASS / PO REVIEW REQUIRED** | Preliminary Gate Review = **8 PASS + 1 PENDING**；V004 corrected Evidence Diagnostic engineering compliance PASS，待 Product Owner 直接审核 V002 图片。 |
+| P2.3｜Integrated Reconstruction Candidate & QC | Component-library-driven integrated candidate + final engineering / visual QC | **PASS / APPROVED / CLOSED** | DoD 9/9；six-view visual/evidence review PASS；D-028。 |
+
+**P2 Gate Final：4 / 4 PASS / CLOSED。**
 
 ### P2.1 Gate Final｜APPROVED / PASS / CLOSED
 
@@ -56,19 +58,19 @@
 - 6/6 structural scope；machine validation / deterministic rebuild / reopen / Product Owner structural review 全部 PASS。
 - 217 仅为 Blender 机器结构/控制对象数。
 
-### P2.3 Definition of Done V001｜LOCKED
+### P2.3 Definition of Done V001｜LOCKED / FINAL 9 OF 9 PASS
 
 正式 DoD：`docs/production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md`
 
-1. Integration Manifest；
-2. Component Library → Parametric Variant → Placement / Instance → Evidence Metadata；
-3. 完整整合候选几何；
-4. Evidence Metadata / historical claim boundary；
-5. 参数驱动、RC可替换、无不可追溯核心手工漂移；
-6. Integrated Machine QC；
-7. Deterministic rebuild + independent reopen + Local 3.6 → Cloud 4.5 → Local 3.6 roundtrip QC；
-8. 六类视觉 QC / Evidence Diagnostic + Product Owner review；
-9. 最终归档、Known Limitations 与 P2 Closure Evidence。
+1. Integration Manifest：PASS；
+2. Component Library → Parametric Variant → Placement / Instance → Evidence Metadata：PASS；
+3. 完整整合候选几何：PASS；
+4. Evidence Metadata / historical claim boundary：PASS；
+5. 参数驱动、RC可替换、无不可追溯核心手工漂移：PASS；
+6. Integrated Machine QC：PASS；
+7. Deterministic rebuild + independent reopen + Local 3.6 → Cloud 4.5 → Local 3.6 roundtrip QC：PASS；
+8. 六类视觉 QC / Evidence Diagnostic + Product Owner review：PASS；
+9. 最终归档、Known Limitations 与 P2 Closure Evidence：PASS。
 
 ### T-008 Engineering Result｜PASS / COMPLETE
 
@@ -80,47 +82,33 @@
 - GitHub Actions run `34695870243`：SUCCESS；Cloud Blender 4.5.13 input / reopen semantic QC PASS。
 - Artifact `P2_3_CLOUD_ROUNDTRIP_V001`：PASS；returned blend SHA256 `d2c80c4e2e0ae278ad4b7055df6871e00bfb85ecf981fbc796ddd2f5e919efc0`。
 - Local Blender 3.6 return semantic QC PASS / machine QC 34/34 PASS；core semantic diff NONE。
-- Canonical T-008 V003 commit：`c18945c52da6666ac9dbe6842fb3d51422fd440a`。
 
-### P2.3 Visual Review｜5 PASS + 1 ORIGINAL HOLD
-
-首轮六图审核：
+### P2.3 Final Visual Review｜6 / 6 PASS
 
 - PLAN：PASS
 - ELEVATION：PASS
 - AXON：PASS
 - EXTERIOR_3Q：PASS
 - STRUCTURE_DETAIL：PASS
-- 原 EVIDENCE_DIAGNOSTIC：HOLD
+- EVIDENCE_DIAGNOSTIC_V002：PASS
 
-原 diagnostic 不能区分 HCI / RC / UNKNOWN-placeholder 四级边界，因此进入 T-008 V004 修正。
+原 Evidence Diagnostic 首轮 HOLD 后，T-008 V004 只读修正四级证据映射；canonical `.blend` SHA、11/40/365、33/33 tests、34/34 machine QC、V003 roundtrip 与其余五张审核图全部保持不变。
 
-### T-008 V004｜EVIDENCE DIAGNOSTIC CORRECTION｜ENGINEERING PASS / COMPLETE
+最终 V002 diagnostic：
 
-- canonical `.blend` SHA256 before/after 相同：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
-- 11 families / 40 variants / 365 stable instances 不变；geometry changed = NO。
-- 33/33 tests PASS；34/34 machine QC PASS。
-- 新 renderer：`production/zhenguo_wanfo/scripts/render_p2_3_evidence_diagnostic_v002.py`。
-- 新 diagnostic：`production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_EVIDENCE_DIAGNOSTIC_V002.png`。
-- diagnostic SHA256：`998739c5c93e5d835c563bfdcaea4552749427d3511dfd9258d22bb67f719d9c`。
-- 四级优先级：`UNKNOWN / PLACEHOLDER > REASONABLE COMPLETION / APPROVED OVERRIDE > HIGH CONFIDENCE INFERENCE > CONFIRMED`。
-- 分类以 Integration Manifest stable instances 为 authoritative mapping；显式使用 `bounded_placeholder` / `evidence_class` / `override_ids`。
-- counts：CONFIRMED 0 / HCI 0 / RC 35 / UNKNOWN-placeholder 330；0-count 类别仍保留 legend。
-- Canonical V004 commit：`93aef4803d2c0d3f7e3e3d29e9ab235c2f92d8f3`。
-- ChatGPT 独立工程复核：PASS。Product Owner 尚未直接审核新版 V002 图片。
+- priority = `UNKNOWN / PLACEHOLDER > REASONABLE COMPLETION / APPROVED OVERRIDE > HIGH CONFIDENCE INFERENCE > CONFIRMED`；
+- counts = CONFIRMED 0 / HCI 0 / RC 35 / UNKNOWN-placeholder 330；
+- 0-count 类别保留 legend；
+- Product Owner 直接审核 PASS。
 
-### P2.3 Preliminary Gate Review｜8 PASS + 1 PENDING
+该图正式解释为 **Conservative Risk Map**；`0 / 0 / 35 / 330` 不表示参数证据中没有 CONFIRMED / HCI。
+
+后续 Evidence Visualization 双层规则：`docs/production/zhenguo_wanfo/EVIDENCE_VISUALIZATION_CARRY_FORWARD_V001.md`。
+
+### P2.3 Final Gate Review｜9 / 9 PASS
 
 Gate Review：`docs/production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md`
 
-- DoD-01：PASS
-- DoD-02：PASS
-- DoD-03：PASS
-- DoD-04：PASS
-- DoD-05：PASS
-- DoD-06：PASS
-- DoD-07：PASS
-- DoD-08：**PENDING PRODUCT OWNER REVIEW OF EVIDENCE_DIAGNOSTIC_V002**
-- DoD-09：PASS
+Product Owner 明确批准：`P2.3｜PASS`。Decision：D-028。
 
-**P2.3 Gate 尚未 PASS。当前无工程 blocker。** Product Owner 直接审核新版 diagnostic 并明确批准后方可关闭 P2.3 / P2。
+P2 Closure Archive：`docs/project_control/phase_archive/P2_closure.md`。
