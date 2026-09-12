@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R032",
+  "state_revision": "R033",
   "last_updated": "2026-09-12",
-  "session_status": "ACTIVE_P2_2_DOD_DEFINITION_REQUIRED",
+  "session_status": "ACTIVE_P2_2_T007_READY_FOR_LOCAL_EXECUTION",
   "next_session_date": null,
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
@@ -13,21 +13,29 @@
   "previous_phase": {"id": "P1", "name": "选题取证", "status": "CLOSED / APPROVED / CONDITIONAL GO", "closed_date": "2026-09-12", "gate_result": "4/4 PASS"},
   "current_gate": {
     "id": "P2",
-    "status": "ACTIVE / P2.2 CURRENT / DOD DEFINITION REQUIRED",
+    "status": "ACTIVE / P2.2 CURRENT / T-007 READY",
     "passed": 2,
     "total": 4,
-    "architecture_status": "P2.0 PASS / P2.1 PASS / P2.2 UNLOCKED / P2.3 LOCKED",
+    "architecture_status": "P2.0 PASS / P2.1 PASS / P2.2 DOD LOCKED / T007 READY / P2.3 LOCKED",
     "items": {
       "P2.0": {"status": "PASS / APPROVED", "name": "Evidence-aware Parameter Schema", "approved_date": "2026-09-12"},
       "P2.1": {"status": "PASS / APPROVED / CLOSED", "name": "正式生产参数集锁定｜Formal Production Parameter Set", "approved_date": "2026-09-12", "gate_review": "docs/production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md", "dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "dod_result": "9/9 PASS"},
-      "P2.2": {"status": "UNLOCKED / CURRENT / DOD_DEFINITION_REQUIRED", "name": "参数化主体结构候选模型｜Parametric Structural Skeleton"},
+      "P2.2": {"status": "IN_PROGRESS / DOD_LOCKED / T007_READY_FOR_LOCAL_EXECUTION", "name": "参数化主体结构候选模型｜Parametric Structural Skeleton", "dod": "docs/production/zhenguo_wanfo/P2_2_DEFINITION_OF_DONE_V001.md", "dod_count": 9},
       "P2.3": {"status": "LOCKED / WAITING_FOR_P2_2_PASS", "name": "整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC"}
     },
-    "note": "D-024 已批准 P2.1 PASS。P2.2 现为当前 Gate；第一项正式 Blender 几何任务创建前必须先明确并锁定 P2.2 Definition of Done。"
+    "note": "D-025 已批准并锁定 P2.2 Definition of Done V001。T-007 已创建并可本地执行，目标为第一版完整中等LOD主体结构候选模型。"
   },
   "decision_required": false,
   "blocker": null,
-  "current_task": null,
+  "current_task": {
+    "id": "T-007",
+    "formal_name": "【中国古建筑3D复原｜T-007｜P2_2_STRUCTURAL_SKELETON_V001｜第一版正式主体结构候选模型】",
+    "name": "P2_2_STRUCTURAL_SKELETON_V001",
+    "status": "READY_FOR_LOCAL_EXECUTION",
+    "think_level": "HIGH",
+    "task_spec": "docs/tasks/T-007_P2_2_STRUCTURAL_SKELETON_V001.md",
+    "scope": "P2.1正式输入读取 + build manifest + 完整主体六大范围中等LOD Blender生成 + machine geometry validation + deterministic rebuild + independent reopen + 至少三张结构审核图；不得进入P2.3精细整合"
+  },
   "current_case": {
     "name": "平遥镇国寺万佛殿",
     "location": "山西省平遥县镇国寺",
@@ -57,7 +65,7 @@
     "CG-06 historical authenticity claims must remain bounded by component-level uncertainty"
   ],
   "p2_entry": {
-    "status": "ACTIVE / P2.2 CURRENT / DOD DEFINITION REQUIRED",
+    "status": "ACTIVE / P2.2 DOD LOCKED / T007 READY",
     "completed_gate": "P2.1",
     "completed_gate_result": "PASS / PRODUCT_OWNER_APPROVED / CLOSED",
     "gate_architecture_decision": "D-021",
@@ -66,6 +74,8 @@
     "p2_1_dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md",
     "z006_resolution_decision": "D-023",
     "p2_1_approval_decision": "D-024",
+    "p2_2_dod_decision": "D-025",
+    "p2_2_dod": "docs/production/zhenguo_wanfo/P2_2_DEFINITION_OF_DONE_V001.md",
     "production_path": ["P2.1 Formal Production Parameter Set", "P2.2 Parametric Structural Skeleton", "P2.3 Integrated Reconstruction Candidate & QC"],
     "p2_1_result": {
       "status": "PASS / APPROVED / CLOSED",
@@ -117,8 +127,21 @@
       "roof control geometry/profile",
       "main eave/gable relations"
     ],
-    "p2_2_boundary": "First formal Blender geometry Gate. Must consume P2.1 formal parameters plus approved override sidecar; no naked historical constants. Unresolved 45-degree corner geometry, mortise and hidden-angle conflicts remain topology-only under CG-05.",
-    "next_action": "Define and lock P2.2 Definition of Done before creating the first formal Blender geometry T-### task"
+    "p2_2_dod_summary": [
+      "formal input contract + build manifest",
+      "complete six-system structural scope",
+      "parameter-driven geometry / no naked historical constants",
+      "machine geometry validation",
+      "replaceable RC/override behavior",
+      "UNKNOWN/corner/authenticity boundaries preserved",
+      "geometry metadata + evidence traceability",
+      "deterministic rebuild + independent reopen + human structural review",
+      "canonical engineering archive"
+    ],
+    "p2_2_pass_rule": "DoD 9/9 + complete structural scope + machine validation PASS + deterministic rebuild PASS + no unapproved geometry-critical input + no naked historical constants + Product Owner structural review approval",
+    "p2_2_boundary": "First formal Blender geometry Gate. Medium-LOD structural skeleton only. Must consume P2.1 formal parameters plus approved override sidecar; unresolved 45-degree corner geometry, mortise and hidden-angle conflicts remain topology-only under CG-05.",
+    "t007_task": "docs/tasks/T-007_P2_2_STRUCTURAL_SKELETON_V001.md",
+    "next_action": "Execute T-007 locally under locked P2.2 DoD; generate the first complete medium-LOD structural skeleton candidate and its machine validation evidence"
   },
   "p1_evidence_progress": {
     "status": "CLOSED / CLASSIFIED / APPROVED FOR CONDITIONAL PRODUCTION",
@@ -133,7 +156,7 @@
     "roundtrip": "PASS / Class B｜ROUNDTRIP_WITH_LIMITATIONS",
     "roundtrip_limitation": "Blender 3.6会移除Blender 4.5文件中不支持的部分View3D/Image UI region数据；未发现P0验证范围内核心几何、Marker或所需Metadata损失。",
     "parameter_set": "P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001｜85/85 + Z-006-RC-01 APPROVED / VALIDATED OVERRIDE",
-    "model_3d": "正式历史复原几何尚未开始；P2.2 已解锁，但需先锁定 P2.2 DoD 才创建第一项正式几何任务"
+    "model_3d": "P2.2 第一版正式历史候选主体几何尚未生成；T-007 已 READY_FOR_LOCAL_EXECUTION"
   },
   "project_control_sync": {
     "status": "TRIAL",
@@ -143,17 +166,17 @@
     "reassessment_rule": "若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"
   },
   "latest_material_decision": {
-    "id": "D-024",
+    "id": "D-025",
     "date": "2026-09-12",
-    "decision": "Product Owner批准P2.1 PASS；P2.1正式关闭，P2.2解锁为当前Gate；第一项正式Blender几何任务前必须先锁定P2.2 Definition of Done。"
+    "decision": "Product Owner批准并锁定P2.2 Definition of Done V001；T-007作为第一项正式Blender主体结构工程任务获得授权。"
   },
-  "next_action": "明确并锁定 P2.2 Definition of Done；在 DoD 锁定前不创建第一项正式 Blender 几何 T-###。",
+  "next_action": "执行 T-007｜P2_2_STRUCTURAL_SKELETON_V001，生成第一版完整中等LOD主体结构候选模型并完成机器验证与确定性重建证据。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v008",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R032_REFRESH_COMPLETE",
-    "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "../production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md", "../../production/zhenguo_wanfo/validation/P2_1_VALIDATION_REPORT_V002.md"]
+    "refresh_status": "STALE_AFTER_D025_PENDING_R033_REFRESH",
+    "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "../production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_2_DEFINITION_OF_DONE_V001.md", "../../tasks/T-007_P2_2_STRUCTURAL_SKELETON_V001.md", "../../production/zhenguo_wanfo/validation/P2_1_VALIDATION_REPORT_V002.md"]
   }
 }
