@@ -188,7 +188,8 @@ def validate_data(parameter_set: dict, matrix: dict, schema: dict,
 
 def check_read_only_python() -> list[str]:
     errors = []
-    for path in (CASE / "scripts/validate_p2_1_parameter_set.py", CASE / "scripts/p2_1_production_preflight.py"):
+    for path in (CASE / "scripts/validate_p2_1_parameter_set.py", CASE / "scripts/p2_1_production_preflight.py",
+                 CASE / "scripts/validate_p2_1_approved_override.py"):
         if not path.exists():
             errors.append(f"missing read-only script: {path.name}")
             continue

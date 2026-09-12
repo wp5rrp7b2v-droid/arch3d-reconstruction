@@ -1,0 +1,23 @@
+{
+  "override_set_version": "V001",
+  "overrides": {
+    "Z-006-RC-01": {
+      "candidate_id": "Z-006-RC-01",
+      "target_parameter_id": "Z-006",
+      "target_parameter_key": "column_height_963_design_mm",
+      "classification": "REASONABLE_COMPLETION",
+      "time_layer": "reconstructed_963_candidate",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "formula": "11 * MOD-006",
+      "depends_on": ["MOD-006"],
+      "multiplier": 11,
+      "unit": "mm",
+      "current_resolved_value": 3534.3,
+      "is_replaceable": true,
+      "approval_decision_id": "D-023",
+      "status": "APPROVED_FOR_P2_2_CANDIDATE_USE",
+      "evidence_basis": ["E-018", "HR-01A", "D-023"],
+      "historical_claim_boundary": "仅为reconstructed_963_candidate的可替换生产解析值，不是已证实的963年原设计柱高。"
+    }
+  }
+}
