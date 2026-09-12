@@ -21,7 +21,8 @@
 | D-015 | 2026-09-11 | Product Owner 批准 P1 Gate 架构：P1.0 选题标准锁定；P1.1 候选案例比较与定选；P1.2 正式证据包建立；P1.3 证据分级与可复原性 Go / No-Go。首案优先选择证据充分、规模可控、可参数化且公开资料可取得的古代木构单体；不以知名度作为首要标准。P1.3 PASS 前不进入正式 3D 生产。 | ACTIVE / P1 GATE APPROVED |
 | D-016 | 2026-09-11 | Product Owner 批准 P1.0。首案筛选方法正式锁定为五项加权指标：证据链完整度30%、测绘/尺寸资料可获得性25%、结构规模与首案可控性20%、历史状态歧义程度15%（歧义越低得分越高）、参数化与展示价值10%；统一按1–5分评价。首案不以年代最早或知名度为优先。P1.1 解锁，候选池为平遥镇国寺万佛殿、五台佛光寺东大殿、五台南禅寺大殿、宁波保国寺大殿。 | ACTIVE / P1.0 PASS |
 | D-017 | 2026-09-11 | Product Owner 批准“山西平遥镇国寺万佛殿”为首个正式复原案例。P1.1 正式 PASS；P1.2 解锁并启动。四候选按 P1.0 锁定权重比较后，镇国寺万佛殿获得最高首案适配度。该选择只代表项目首案适配性，不构成对四座建筑历史价值的排序。正式 3D 生产继续受 P1.3 Gate 约束。 | ACTIVE / CASE LOCKED / P1.1 PASS / P1.2 STARTED |
-| **D-018** | **2026-09-11** | **Product Owner 批准 P1.2｜正式证据包建立通过。完整《精细测绘报告》已纳入主来源并完成关键原页直接核读；参数候选矩阵升级为 V002；P1.2 Gate Review 10/10 PASS。P1.2 正式 PASS，P1 Gate 进度变为 3/4；P1.3 解锁进入证据分级与可复原性 Go / No-Go。** | **ACTIVE / P1.2 PASS / P1.3 ENTERED** |
+| D-018 | 2026-09-11 | Product Owner 批准 P1.2｜正式证据包建立通过。完整《精细测绘报告》已纳入主来源并完成关键原页直接核读；参数候选矩阵升级为 V002；P1.2 Gate Review 10/10 PASS。P1.2 正式 PASS，P1 Gate 进度变为 3/4；P1.3 解锁进入证据分级与可复原性 Go / No-Go。 | ACTIVE / P1.2 PASS / P1.3 ENTERED |
+| **D-019** | **2026-09-12** | **Product Owner 正式批准 `P1.3｜CONDITIONAL GO`。P1.3 PASS，P1 Gate = 4/4 PASS，P1｜选题取证正式关闭。项目允许进入正式参数化与3D候选复原，但 CG-01～CG-06 全部成为跨阶段强制生产规则。P2 第一项强制 Gate 为 `P2.0｜Evidence-aware Parameter Schema`；P2.0 PASS 前不得启动第一项正式 Blender 几何生产。** | **ACTIVE / P1 CLOSED / P2 ENTRY / CONDITIONAL GO** |
 
 ## D-012 直接影响
 
@@ -75,3 +76,14 @@
 - `P1_2_PARAMETER_CANDIDATE_MATRIX_V002.md` 是 P1.3 的主输入，不是正式 Blender 生产参数。
 - `DIRECT_VERIFIED` 只表示已直接核读主报告原页；若原报告本身属于推算、猜测或理想模型，该字段仍必须在 P1.3 按相应不确定性等级处理。
 - P1.3 在形成 Go 结论以前，正式 3D 生产继续禁止启动。
+
+## D-019 P1.3 Conditional Go Approval Boundary
+
+- P1.3 PASS 的含义是：证据足以支持**受控的963候选复原**，不是“所有963历史参数已经确定”。
+- CG-01：第一项正式几何生产前必须建立 Evidence-aware Parameter Schema。
+- CG-02：UNKNOWN / DO_NOT_LOCK 不得静默硬编码；需要临时值时必须新增显式 REASONABLE_COMPLETION 决策。
+- CG-03：REASONABLE_COMPLETION 必须独立参数化、可替换、可追踪。
+- CG-04：`observed_as_measured` / `report_ideal_model` / `reconstructed_963_candidate` 三层长期分离。
+- CG-05：转角45°精确节点、榫卯落位、隐衬角栿/隐角梁等未解决项只能进入中等LOD拓扑骨架，不得宣称历史精确复原。
+- CG-06：逐构件原真性不足时，禁止“完全还原963原貌 / 全部963原构”的过度真实性声明。
+- P2.0 是 CONDITIONAL GO 的第一项强制前置 Gate；在其 PASS 前不得创建第一项正式 Blender 几何生产任务。
