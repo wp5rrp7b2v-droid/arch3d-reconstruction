@@ -70,7 +70,7 @@ P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段。P2.0 已完成 CG-01 
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
 | P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **PASS / APPROVED 2026-09-12** | T-005 V001+V002 工程验证全部 PASS；Gate Review 7/7 PASS；工程证据归档至 GitHub canonical repo，commit `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`。Product Owner 已批准 P2.0。 |
-| P2.1｜正式生产参数集锁定｜Formal Production Parameter Set | 将 P1 已分类参数转为 P2.0 Schema 下的正式 production parameter set；完成 85/85 迁移、Geometry Dependency Matrix、UNKNOWN 几何阻断判定、机器 preflight 与 canonical version lock | **IN PROGRESS / ENGINEERING HOLD / BLOCKED BY Z-006** | T-006 V001 已完成 85/85 参数迁移与 85/85 dependency matrix；机器验证 PASS、测试 11/11 PASS，但 `Z-006 / column_height_963_design_mm` = `BLOCKS_P2_2_GEOMETRY`，geometry-critical unresolved blocker count = 1。P2.1 不得 PASS。 |
+| P2.1｜正式生产参数集锁定｜Formal Production Parameter Set | 将 P1 已分类参数转为 P2.0 Schema 下的正式 production parameter set；完成 85/85 迁移、Geometry Dependency Matrix、UNKNOWN 几何阻断判定、机器 preflight 与 canonical version lock | **IN PROGRESS / Z-006 RC-01 APPROVED / T-006 V002 READY** | T-006 V001 的唯一 blocker 是 Z-006。D-023 已批准独立 production override `Z-006-RC-01 = 11 × MOD-006`，当前解析值3534.3mm；Z-006本体仍保持 UNKNOWN/null/DO_NOT_LOCK。必须由 T-006 V002 验证后才可清零 unresolved blocker。 |
 | P2.2｜参数化主体结构候选模型｜Parametric Structural Skeleton | 由 P2.1 正式参数集驱动生成主体结构候选模型，覆盖柱网、柱、主要梁架、斗栱拓扑骨架、屋顶控制几何及主要空间关系，并验证可重复生成与参数响应 | **LOCKED / WAITING FOR P2.1 PASS** | 第一项正式 Blender 几何 Gate；CG-05 未解决转角精确节点/榫卯/隐角梁仅允许中等LOD拓扑骨架。 |
 | P2.3｜整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC | 整合结构、屋面、斗栱体系与 evidence metadata，完成可追溯性、确定性重建、兼容性、可替换性与视觉 QC，形成正式963候选复原模型 | **LOCKED / WAITING FOR P2.2 PASS** | PASS 表示“工程可复现、证据可追溯、不确定性透明的963候选复原模型成立”，不等于完全还原963原貌。 |
 
@@ -141,4 +141,16 @@ P2.1 必须 9 / 9 全部通过：
 - geometry-critical unresolved blocker count：**1**；
 - canonical engineering commit：`1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0`。
 
-当前唯一 P2.1 生产 blocker：**Z-006｜963原设计柱高**。下一步先做 Z-006 定向证据复核；若现有证据仍不足，再由 Product Owner 决定是否批准一个独立、可替换、可追溯的 REASONABLE_COMPLETION。P2.1 PASS 前不得进入 P2.2。
+### D-023｜Z-006-RC-01 Approved Production Candidate
+
+Product Owner 已批准：
+
+- `Z-006` 本体继续保持 `UNKNOWN / null / DO_NOT_LOCK`；
+- 独立候选 `Z-006-RC-01` = `11 × MOD-006`；
+- 当前 `MOD-006 ≈ 321.3mm`，因此当前生产解析值 = **3534.3mm**；
+- classification = `REASONABLE_COMPLETION`；
+- time layer = `reconstructed_963_candidate`；
+- `is_replaceable = true`；
+- RC-01 不计入原85项 classification counts，不得被描述为已证实963历史柱高。
+
+下一步继续同一工程任务 **T-006 V002**。V002 必须验证 Z-006 历史未知状态不变、RC-01 独立且可重算，并证明 `geometry-critical unresolved blocker count = 0` 后，才可提交 P2.1 Gate Review。P2.2 在此之前继续 LOCKED。
