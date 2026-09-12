@@ -139,7 +139,7 @@
     "status": "TRIAL",
     "canonical_committed_state": "GitHub private repo main branch / docs/project_control",
     "local_working_copy": "/Users/caroline/中国古建筑3D复原/docs/project_control",
-    "write_model": "ChatGPT优先直接更新GitHub Project Control；本地Codex负责工程执行。Project Control更新后，本地工作前执行git pull --ff-only origin main；避免同时修改同一Project Control文件。",
+    "write_model": "ChatGPT优先直接更新GitHub Project Control；本地Codex负责工程执行。Project Control更新后，本地工作前执行git pull --ff-only origin main；避免同时修改同一 Project Control 文件。",
     "reassessment_rule": "若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"
   },
   "latest_material_decision": {
@@ -153,7 +153,7 @@
     "visualization_version": "v008",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_D024_PENDING_R032_REFRESH",
+    "refresh_status": "R032_REFRESH_COMPLETE",
     "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "../production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md", "../../production/zhenguo_wanfo/validation/P2_1_VALIDATION_REPORT_V002.md"]
   }
 }
