@@ -2,15 +2,9 @@ name: P2.3 Integrated Candidate Blender 4.5 Roundtrip
 
 on:
   workflow_dispatch:
-    inputs:
-      transport_tag:
-        description: Temporary tag pointing directly to the local-only T-008 blend blob
-        required: true
-        type: string
-      expected_sha256:
-        description: SHA256 of the approved local input blend
-        required: true
-        type: string
+  push:
+    tags:
+      - 'p2-3-roundtrip-run-*'
 
 permissions:
   contents: read
@@ -20,35 +14,56 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      TRANSPORT_TAG: ${{ inputs.transport_tag }}
-      EXPECTED_SHA256: ${{ inputs.expected_sha256 }}
+      GITHUB_TOKEN: ${{ github.token }}
+      TRANSPORT_EVIDENCE: production/zhenguo_wanfo/validation/P2_3_V002_TRANSPORT_QC_V001.json
       INPUT_BLEND: transport/P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001.blend
       RETURN_BLEND: transport/P2_3_CLOUD_4_5_RETURN_V001.blend
       SNAPSHOT: production/zhenguo_wanfo/validation/P2_3_LOCAL_SEMANTIC_SNAPSHOT_V001.json
       QC_SCRIPT: production/zhenguo_wanfo/scripts/p2_3_roundtrip_semantic_qc_v001.py
     steps:
       - uses: actions/checkout@v4
-      - name: Fetch verified temporary transport blob
+      - name: Authenticated Git Blobs API retrieval and SHA256 verification
         shell: bash
         run: |
           set -euo pipefail
-          [[ "${TRANSPORT_TAG}" =~ ^[a-zA-Z0-9._-]+$ ]]
-          [[ "${EXPECTED_SHA256}" =~ ^[0-9a-f]{64}$ ]]
           mkdir -p transport
-          git fetch --force --no-tags origin "refs/tags/${TRANSPORT_TAG}:refs/tags/${TRANSPORT_TAG}"
-          BLOB_SHA="$(git rev-parse "refs/tags/${TRANSPORT_TAG}")"
-          test "$(git cat-file -t "${BLOB_SHA}")" = blob
-          git cat-file blob "${BLOB_SHA}" > "${INPUT_BLEND}"
-          echo "${EXPECTED_SHA256}  ${INPUT_BLEND}" | sha256sum --check --status
-          echo "ARCH3D_TRANSPORT_BLOB_SHA=${BLOB_SHA}"
-          test -s "${INPUT_BLEND}"
+          BLOB_SHA="$(python3 -c 'import json,os; print(json.load(open(os.environ["TRANSPORT_EVIDENCE"]))["local_canonical_blend"]["git_blob_sha"])')"
+          EXPECTED_SHA256="$(python3 -c 'import json,os; print(json.load(open(os.environ["TRANSPORT_EVIDENCE"]))["local_canonical_blend"]["sha256"])')"
+          [[ "${BLOB_SHA}" =~ ^[0-9a-f]{40}$ ]]
+          [[ "${EXPECTED_SHA256}" =~ ^[0-9a-f]{64}$ ]]
+          curl --fail --silent --show-error --location --retry 3 --retry-all-errors \
+            --header "Authorization: Bearer ${GITHUB_TOKEN}" \
+            --header 'Accept: application/vnd.github+json' \
+            --header 'X-GitHub-Api-Version: 2022-11-28' \
+            --output "${RUNNER_TEMP}/p2_3_blob_response.json" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/git/blobs/${BLOB_SHA}"
+          python3 - "${BLOB_SHA}" "${EXPECTED_SHA256}" <<'PY'
+          import base64, hashlib, json, os, pathlib, sys
+          expected_blob, expected_sha256 = sys.argv[1:]
+          payload = json.loads((pathlib.Path(os.environ["RUNNER_TEMP"]) / "p2_3_blob_response.json").read_text())
+          if payload.get("sha") != expected_blob or payload.get("encoding") != "base64":
+              raise SystemExit("Git Blobs API identity or encoding mismatch")
+          data = base64.b64decode("".join(payload["content"].split()), validate=True)
+          computed_blob = hashlib.sha1(b"blob " + str(len(data)).encode() + b"\0" + data).hexdigest()
+          decoded_sha256 = hashlib.sha256(data).hexdigest()
+          if computed_blob != expected_blob or decoded_sha256 != expected_sha256 or len(data) != payload.get("size"):
+              raise SystemExit("Decoded blob SHA, SHA256, or size mismatch")
+          pathlib.Path(os.environ["INPUT_BLEND"]).write_bytes(data)
+          record = {"task":"T-008 V003", "status":"PASS", "expected_blob_sha":expected_blob,
+                    "api_returned_sha":payload["sha"], "computed_blob_sha":computed_blob,
+                    "expected_sha256":expected_sha256, "decoded_sha256":decoded_sha256,
+                    "size_bytes":len(data), "authentication":"GitHub Actions github.token"}
+          pathlib.Path("transport/P2_3_BLOB_RETRIEVAL_QC_V003.json").write_text(json.dumps(record,sort_keys=True,indent=2)+"\n")
+          print("P2_3_BLOB_RETRIEVAL_PASS", computed_blob, decoded_sha256, len(data))
+          PY
+          rm "${RUNNER_TEMP}/p2_3_blob_response.json"
       - name: Download Blender 4.5.13 using the P0.2 verified distribution route
         shell: bash
         run: |
           set -euo pipefail
           curl --fail --location --show-error --output /tmp/blender-4.5.13-linux-x64.tar.xz https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
           tar -xf /tmp/blender-4.5.13-linux-x64.tar.xz -C /tmp
-          /tmp/blender-4.5.13-linux-x64/blender --version | head -1 | grep -F 'Blender 4.5.13'
+          /tmp/blender-4.5.13-linux-x64/blender --version | head -1 | tee transport/P2_3_CLOUD_BLENDER_VERSION_V003.txt | grep -F 'Blender 4.5.13'
       - name: Reopen, compare core semantics, and save in Blender 4.5
         shell: bash
         run: |
@@ -70,3 +85,5 @@ jobs:
             transport/P2_3_CLOUD_INPUT_QC_V001.json
             transport/P2_3_CLOUD_REOPEN_QC_V001.json
             transport/P2_3_CLOUD_RETURN_SHA256_V001.txt
+            transport/P2_3_BLOB_RETRIEVAL_QC_V003.json
+            transport/P2_3_CLOUD_BLENDER_VERSION_V003.txt
