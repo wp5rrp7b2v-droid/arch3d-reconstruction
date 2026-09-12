@@ -124,63 +124,70 @@
 - Replacement / mutation：PASS；deterministic rebuild：PASS；independent reopen：PASS / PASS。
 - Naked historical constant / manual drift audit：PASS。
 - `Z-006` 继续 UNKNOWN / null / DO_NOT_LOCK；`Z-006-RC-01` 继续独立可替换；DG-114 / HIS-002 / 45°转角等边界未升级。
-- 六张正式审核图已生成：PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC；Product Owner 尚未完成正式 P2.3 视觉审核。
+- 六张正式审核图已生成：PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC。
 - Local-only final candidate SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
 - Canonical engineering commit：`5bd6ca1f8300a170b74c3a9058352768800b56a6`。
-- **HOLD blocker：DoD-07 Cloud roundtrip 未执行。** Workflow 与语义快照已准备，但尚无 Blender 4.5.13 cloud run、artifact return 或 Local Blender 3.6 返回验证。
-- 不使用被拒绝的 credential extraction / custom API upload 路线。
+- **HOLD blocker：DoD-07 Cloud roundtrip 未执行。**
 
 ## T-008 V002｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V002｜ENGINEERING HOLD
 
 - V001 frozen baseline 回归：33/33 automated tests PASS；34/34 local machine QC PASS；semantic snapshot compare PASS。
 - Candidate 保持 11 families / 40 variants / 365 stable mesh instances；历史证据边界不变。
-- Local canonical `.blend` SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
-- Git blob SHA：`23797dbd360ba67b8195d988f2161ff9eaf37d48`。
-- 临时 transport tag：`p2-3-transport-v001`；push PASS；remote advertisement 返回精确 blob SHA。
+- Git blob SHA：`23797dbd360ba67b8195d988f2161ff9eaf37d48`；临时 transport tag push PASS。
 - 两次独立临时仓库 fetch 均 FAIL：`Empty reply from server`。
-- 按 V002 Task Contract 立即 HOLD；Cloud Blender 4.5.13 workflow 未运行，artifact 未生成，Local 3.6 return QC 未运行。
-- transport tag 按合同暂不清理，等待 roundtrip 真正完成后统一删除。
+- Cloud Blender 4.5.13 workflow 未运行；按合同 HOLD。
 - Canonical engineering commit：`d88fa5e1ebed56bb3ec2d79f903697baf1155091`。
-- V002 失败发生在本机 Git HTTP binary fetch 路径，不代表 V001 模型或本地 QC 退化。
 
-## T-008 V003｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003｜ENGINEERING PASS RECOMMENDED
+## T-008 V003｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003｜ENGINEERING PASS / COMPLETE
 
-- 同一 T-008 目标继续，不创建 T-009。
-- V001 candidate 与全部本地 PASS 证据继续冻结。
-- 不再依赖本机/runner 通过 Git fetch 读取 transport tag binary。
-- GitHub Actions 使用其自动提供的 `github.token`，通过 GitHub REST Git Blobs API 按已知 blob SHA 读取 binary；runner 解码后必须重新验证 canonical SHA256 才可启动 Blender。
-- 使用普通 Git `p2-3-roundtrip-run-*` tag（指向正常 main commit）触发 workflow，不需要本机 GitHub API credential 或 `gh`。
-- Cloud 4.5 QC PASS 后取回 artifact，并由 Local Blender 3.6.23 做最终返回验证；必要时允许 Product Owner 从 Actions 页面手工下载 artifact，安全规则优先于全自动化。
-- 完成后更新 manifest / validation evidence，并清理 transport tag + workflow trigger tag。
-- Task Contract：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003.md`。
-- Workflow commit `d595a587c72dc4e76afac249d8a4e667ac772fd0`；run tag `p2-3-roundtrip-run-v003-001` push PASS；[Actions run 34695870243](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/34695870243) SUCCESS。
-- Runner `github.token` Git Blobs API retrieval PASS；blob SHA `23797dbd360ba67b8195d988f2161ff9eaf37d48` 与 decoded input SHA256 `ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512` 均匹配冻结候选。
-- Cloud Blender 4.5.13 input / independent reopen semantic QC PASS；artifact `P2_3_CLOUD_ROUNDTRIP_V001` 下载与 SHA256 核验 PASS；Local Blender 3.6.23 return semantic QC PASS、full machine QC 34/34 PASS，无新增核心语义差异。
-- V001 frozen baseline 回归：33/33 automated tests PASS、34/34 machine QC PASS；11 families / 40 variants / 365 stable instances 与历史边界不变。
-- Canonical validation evidence 首次推送 commit `496ddb62fd095e63c49c719e906ea6244dd76f38`；其后 remote/local transport tag 和 run-trigger tag 均已删除；清理结果见 `production/zhenguo_wanfo/validation/P2_3_V003_ROUNDTRIP_QC_V001.json`。
-- DoD-07 工程阻断已清零。P2.3 Gate 仍待 ChatGPT 独立工程复核与 Product Owner 六图正式审核、明确决策；本条不宣布 Gate PASS 或 P2 Phase CLOSED。
+- V001 candidate 与全部本地 PASS 证据冻结。
+- GitHub Actions 使用 runner `github.token` + Git Blobs API 按已知 blob SHA 读取 binary，不读取本机凭据或 PAT。
+- Workflow commit `d595a587c72dc4e76afac249d8a4e667ac772fd0`；Actions run `34695870243` SUCCESS。
+- Cloud Blender 4.5.13 input / independent reopen semantic QC PASS。
+- Artifact `P2_3_CLOUD_ROUNDTRIP_V001` 下载与 SHA256 核验 PASS。
+- Local Blender 3.6.23 return semantic QC PASS；full machine QC 34/34 PASS；core semantic diff NONE。
+- V001 regression：33/33 automated tests PASS、34/34 machine QC PASS；11/40/365 与历史边界不变。
+- temporary transport / trigger tags 全部清理。
+- Canonical final evidence commit：`c18945c52da6666ac9dbe6842fb3d51422fd440a`。
+- DoD-07 blocker 清零。
 
-## Current Execution State｜2026-09-12
+## T-008 V004｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V004｜ENGINEERING PASS / COMPLETE
 
-- T-001：PASS
-- T-002：PASS
-- T-003：PASS / Class B
-- T-004：PASS
-- T-005 V002：ENGINEERING PASS / COMPLETE / canonical evidence archived
-- T-006 V002：ENGINEERING PASS / COMPLETE / canonical evidence archived
-- T-007 V001：ENGINEERING PASS / COMPLETE / canonical evidence archived
-- T-008 V001：**ENGINEERING HOLD / LOCAL ENGINEERING COMPLETE / CLOUD ROUNDTRIP PENDING**
-- T-008 V002：**ENGINEERING HOLD / TRANSPORT BLOB PUSHED / CLOUD NOT RUN**
-- T-008 V003：**ROUNDTRIP PASS / ENGINEERING PASS RECOMMENDED / GATE REVIEW PENDING**
+- Think Level: MEDIUM。
+- 首轮六图审核中五张结构图 PASS；原 Evidence Diagnostic 因四级证据边界不可区分而 HOLD。
+- V004 只新增只读 diagnostic renderer / sidecar / review evidence，不修改 canonical 建筑几何。
+- canonical `.blend` SHA256 before/after：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512` / same。
+- 11 families / 40 variants / 365 stable mesh instances unchanged；geometry changed = NO。
+- automated tests 33/33 PASS；independent reopen machine QC 34/34 PASS。
+- 新 diagnostic SHA256：`998739c5c93e5d835c563bfdcaea4552749427d3511dfd9258d22bb67f719d9c`。
+- 四类 priority：UNKNOWN / PLACEHOLDER > RC / approved override > HCI > CONFIRMED。
+- category counts：CONFIRMED 0 / HCI 0 / RC 35 / UNKNOWN-placeholder 330；四类 legend 均保留。
+- Canonical V004 commit：`93aef4803d2c0d3f7e3e3d29e9ab235c2f92d8f3`。
+- ChatGPT 独立工程复核 PASS；Product Owner 直接视觉审核 V002 PASS。
+
+## P2.3 Gate Review｜APPROVED / PASS / CLOSED｜2026-09-12
+
+- PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / corrected EVIDENCE_DIAGNOSTIC_V002：**6/6 PASS**。
+- DoD-01～DoD-09：**9/9 PASS**。
+- Product Owner 明确批准：`P2.3｜PASS`。
+- `CONFIRMED=0 / HCI=0` 仅为 Conservative Risk Map 的实例级最高不确定性聚合结果，不代表参数证据中不存在 CONFIRMED / HCI。
+- Evidence Visualization 双层 carry-forward 已批准并归档。
+
+## P2 Phase Closure｜APPROVED / CLOSED｜2026-09-12
+
+- P2.0 / P2.1 / P2.2 / P2.3：**4 / 4 PASS**。
+- Decision：D-028。
+- Closure archive：`docs/project_control/phase_archive/P2_closure.md`。
+- 下一阶段 Gate 架构尚未定义；不创建 T-009。
+
+## Current Execution State｜2026-09-12 END OF DAY
+
 - P0：CLOSED / APPROVED
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO
-- P2：ACTIVE / 3 of 4 Gates PASS
-- P2.0：PASS / APPROVED
-- P2.1：PASS / APPROVED / CLOSED
-- P2.2：PASS / APPROVED / CLOSED
-- P2.3：**IN PROGRESS / DOD LOCKED / ENGINEERING PASS RECOMMENDED / GATE REVIEW PENDING**
+- P2：**CLOSED / 4/4 PASS / PRODUCT OWNER APPROVED**
+- P2.3：**CLOSED / 9/9 PASS / PRODUCT OWNER APPROVED**
 - Formal Case：平遥镇国寺万佛殿
-- Formal Blender geometry：P2.3 integrated candidate V001 generated locally / local-only canonical blend
-- Current engineering blocker：**none for DoD-07**；Gate 审核与决策仍未完成。
-- Current task：**T-008 V003 engineering evidence archived**。
-- Next action：ChatGPT 独立工程复核与 Product Owner 六图正式审核，再由 Product Owner 明确 P2.3 Gate 决策。
+- Formal Blender geometry：P2.3 integrated candidate V001 / local-only canonical blend
+- Current engineering blocker：NONE
+- Current task：NONE
+- Next action：下一次会话先定义 post-P2 phase / Gate architecture；在明确前不创建 T-009。
