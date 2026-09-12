@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R039",
+  "state_revision": "R040",
   "last_updated": "2026-09-12",
-  "session_status": "ACTIVE_P2_3_PO_VISUAL_REVIEW_REQUIRED",
+  "session_status": "ACTIVE_P2_3_T008_V004_EVIDENCE_DIAGNOSTIC_CORRECTION",
   "next_session_date": null,
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
@@ -13,35 +13,34 @@
   "previous_phase": {"id": "P1", "name": "选题取证", "status": "CLOSED / APPROVED / CONDITIONAL GO", "closed_date": "2026-09-12", "gate_result": "4/4 PASS"},
   "current_gate": {
     "id": "P2",
-    "status": "ACTIVE / P2.3 CURRENT / ENGINEERING PASS / PO VISUAL REVIEW REQUIRED",
+    "status": "ACTIVE / P2.3 CURRENT / ENGINEERING PASS / DoD-08 VISUAL HOLD",
     "passed": 3,
     "total": 4,
-    "architecture_status": "P2.0 PASS / P2.1 PASS / P2.2 PASS / P2.3 8 PASS + 1 PENDING PO REVIEW",
+    "architecture_status": "P2.0 PASS / P2.1 PASS / P2.2 PASS / P2.3 8 PASS + 1 HOLD / T008 V004 READY",
     "items": {
       "P2.0": {"status": "PASS / APPROVED", "name": "Evidence-aware Parameter Schema", "approved_date": "2026-09-12"},
       "P2.1": {"status": "PASS / APPROVED / CLOSED", "name": "正式生产参数集锁定｜Formal Production Parameter Set", "approved_date": "2026-09-12", "gate_review": "docs/production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md", "dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "dod_result": "9/9 PASS"},
       "P2.2": {"status": "PASS / APPROVED / CLOSED", "name": "参数化主体结构候选模型｜Parametric Structural Skeleton", "approved_date": "2026-09-12", "dod": "docs/production/zhenguo_wanfo/P2_2_DEFINITION_OF_DONE_V001.md", "dod_result": "9/9 PASS", "gate_review": "docs/production/zhenguo_wanfo/P2_2_GATE_REVIEW_2026-09-12.md"},
-      "P2.3": {"status": "IN_PROGRESS / ENGINEERING_PASS / PO_VISUAL_REVIEW_REQUIRED", "name": "整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC", "dod": "docs/production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md", "dod_count": 9, "preliminary_gate_review": "docs/production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md", "preliminary_result": "8 PASS + 1 PENDING PRODUCT OWNER REVIEW"}
+      "P2.3": {"status": "IN_PROGRESS / ENGINEERING_PASS / DOD08_VISUAL_HOLD", "name": "整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC", "dod": "docs/production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md", "dod_count": 9, "preliminary_gate_review": "docs/production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md", "preliminary_result": "8 PASS + 1 HOLD — EVIDENCE DIAGNOSTIC FOUR-LEVEL MAPPING REQUIRED"}
     },
-    "note": "T-008 V003 已完成真实 Local3.6→Cloud4.5→Local3.6 roundtrip，并由 ChatGPT 独立核验 run、artifact、machine QC、component architecture 与 evidence boundaries。当前无工程 blocker；P2.3 仅待 Product Owner 对六张正式审核图 / evidence diagnostic 完成人工审核并明确决策。"
+    "note": "T-008 V003 工程主链与 DoD-07 roundtrip 已 PASS。Product Owner 上传六张正式图后，ChatGPT 按 DoD-08 复核：PLAN/ELEVATION/AXON/EXTERIOR_3Q/STRUCTURE_DETAIL PASS；EVIDENCE_DIAGNOSTIC HOLD。当前 renderer 不能明确区分 CONFIRMED / HCI / RC / UNKNOWN-placeholder 四级证据边界。"
   },
-  "decision_required": true,
-  "blocker": null,
+  "decision_required": false,
+  "blocker": {"id": "P2_3_DOD08_EVIDENCE_DIAGNOSTIC", "status": "ACTIVE", "description": "Current evidence diagnostic collapses HCI and RC into a broad non-placeholder class, does not explicitly classify override_ids such as Z-006-RC-01, and lacks a four-level legend required by locked DoD-08."},
   "current_task": {
     "id": "T-008",
-    "formal_name": "【中国古建筑3D复原｜T-008｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003｜GitHub Actions 自认证 Blob 读取与 Roundtrip 阻断清零】",
-    "name": "P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003",
-    "status": "ENGINEERING_PASS / COMPLETE",
-    "think_level": "HIGH",
-    "task_spec": "docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003.md",
-    "canonical_commit": "c18945c52da6666ac9dbe6842fb3d51422fd440a",
-    "scope": "V001 frozen candidate + component architecture + machine QC + deterministic rebuild + independent reopen + authenticated Cloud Blender 4.5 roundtrip + Local 3.6 return QC + archive"
+    "formal_name": "【中国古建筑3D复原｜T-008｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V004｜Evidence Diagnostic 四级证据映射修正与最终视觉复核】",
+    "name": "P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V004",
+    "status": "READY_FOR_LOCAL_EXECUTION / CONTINUATION_AFTER_VISUAL_REVIEW_HOLD",
+    "think_level": "MEDIUM",
+    "task_spec": "docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V004.md",
+    "scope": "Freeze canonical V001 blend and all engineering/QC evidence; create a read-only diagnostic renderer using Integration Manifest stable IDs to distinguish CONFIRMED / HCI / RC / UNKNOWN-placeholder, add an on-image legend, regression-check, and regenerate evidence diagnostic only."
   },
   "current_case": {"name": "平遥镇国寺万佛殿", "location": "山西省平遥县镇国寺", "selection_status": "LOCKED / P1.1 PASS", "selection_date": "2026-09-11", "selection_score": 4.80},
   "p1_closure": {"status": "CLOSED / APPROVED / CONDITIONAL GO", "closed_date": "2026-09-12", "gate_result": "4/4 PASS", "archive": "docs/project_control/phase_archive/P1_closure.md", "product_owner_decision": "APPROVE CONDITIONAL GO", "decision_id": "D-019", "classification_counts": {"confirmed": 46, "high_confidence_inference": 32, "reasonable_completion": 4, "unknown": 3, "total": 85}},
   "conditional_go_rules": ["CG-01 Evidence-aware Parameter Schema must be implemented before first formal geometry production / SATISFIED BY P2.0","CG-02 UNKNOWN / DO_NOT_LOCK must not be silently hard-coded","CG-03 REASONABLE_COMPLETION must remain parameterized, replaceable and traceable","CG-04 observed_as_measured / report_ideal_model / reconstructed_963_candidate must remain separate","CG-05 unresolved corner precision may only enter as topology skeleton / medium LOD","CG-06 historical authenticity claims must remain bounded by component-level uncertainty"],
   "p2_entry": {
-    "status": "ACTIVE / P2.3 ENGINEERING PASS / PO VISUAL REVIEW REQUIRED",
+    "status": "ACTIVE / P2.3 DoD-08 VISUAL HOLD / T008 V004 READY",
     "completed_gate": "P2.2",
     "completed_gate_result": "PASS / PRODUCT_OWNER_APPROVED / CLOSED",
     "gate_architecture_decision": "D-021",
@@ -56,18 +55,20 @@
     "production_path": ["P2.1 Formal Production Parameter Set", "P2.2 Parametric Structural Skeleton", "P2.3 Integrated Reconstruction Candidate & QC"],
     "z006_rc01": {"status": "PRODUCT_OWNER_APPROVED / ENGINEERING_VALIDATED", "candidate_id": "Z-006-RC-01", "target_parameter_id": "Z-006", "classification": "REASONABLE_COMPLETION", "time_layer": "reconstructed_963_candidate", "formula": "11 * MOD-006", "current_resolved_value_mm": 3534.3, "is_replaceable": true, "approval_decision_id": "D-023", "historical_parameter_remains_unknown": true},
     "p2_2_gate_result": {"status": "PASS / APPROVED / CLOSED", "dod": "9/9 PASS", "approval_decision_id": "D-026", "gate_review": "docs/production/zhenguo_wanfo/P2_2_GATE_REVIEW_2026-09-12.md", "object_count_semantics": "217 is a machine object count, not a historical component count"},
-    "p2_3_boundary": "Final P2 Gate. Component Library → Parametric Variant → Placement / Instance → Evidence Metadata; preserve uncertainty boundaries. P2.3 PASS requires Product Owner visual/evidence diagnostic approval.",
+    "p2_3_boundary": "Final P2 Gate. Component Library → Parametric Variant → Placement / Instance → Evidence Metadata; preserve uncertainty boundaries. P2.3 PASS requires compliant evidence diagnostic and explicit Product Owner approval.",
     "p2_3_pass_rule": "DoD 9/9 + component architecture PASS + integrated candidate geometry PASS + machine QC + deterministic rebuild + independent reopen + Local3.6↔Cloud4.5↔Local3.6 core roundtrip PASS + evidence boundaries preserved + Product Owner visual/evidence diagnostic approval",
     "t008_v001_result": {"status":"ENGINEERING_HOLD / LOCAL_ENGINEERING_COMPLETE / CLOUD_ROUNDTRIP_PENDING","canonical_commit":"5bd6ca1f8300a170b74c3a9058352768800b56a6","component_library":"11 families / 40 variants","stable_mesh_instances":365,"machine_qc":"PASS 34/34","automated_tests":"PASS 33/33","local_blend_sha256":"ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512"},
     "t008_v002_result": {"status":"ENGINEERING_HOLD / TRANSPORT_BLOB_PUSHED / CLOUD_NOT_RUN","canonical_commit":"d88fa5e1ebed56bb3ec2d79f903697baf1155091","transport_blob_sha":"23797dbd360ba67b8195d988f2161ff9eaf37d48","independent_fetch":"FAIL x2 / Empty reply from server"},
     "t008_v003_result": {"status":"ENGINEERING_PASS / COMPLETE","canonical_commit":"c18945c52da6666ac9dbe6842fb3d51422fd440a","workflow_run_id":34695870243,"workflow_conclusion":"success","cloud_blender":"4.5.13 LTS","cloud_input_semantic_qc":"PASS","cloud_reopen_semantic_qc":"PASS","artifact":"P2_3_CLOUD_ROUNDTRIP_V001 / PASS","returned_blend_sha256":"d2c80c4e2e0ae278ad4b7055df6871e00bfb85ecf981fbc796ddd2f5e919efc0","local_return_semantic_qc":"PASS","local_return_machine_qc":"PASS 34/34","core_semantic_diff":"NONE","v001_regression":"PASS 33/33 tests + 34/34 machine QC","temporary_refs_cleanup":"PASS"},
-    "preliminary_gate_result": "8 PASS + 1 PENDING PRODUCT OWNER VISUAL REVIEW",
-    "next_action": "Product Owner reviews six P2.3 formal images: PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC. If visual/evidence review passes, Product Owner explicitly approves P2.3 PASS."
+    "visual_review_v001": {"status":"5 PASS + 1 HOLD","plan":"PASS","elevation":"PASS","axon":"PASS","exterior_3q":"PASS","structure_detail":"PASS","evidence_diagnostic":"HOLD — four-level evidence classification not distinguishable"},
+    "t008_task_v004": "docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V004.md",
+    "preliminary_gate_result": "8 PASS + 1 HOLD — EVIDENCE DIAGNOSTIC CORRECTION REQUIRED",
+    "next_action": "Execute T-008 V004 only: preserve canonical model, render a four-level evidence diagnostic from Integration Manifest with explicit legend, run regression QC, then re-review the corrected diagnostic before Product Owner Gate decision."
   },
   "p1_evidence_progress": {"status": "CLOSED / CLASSIFIED / APPROVED FOR CONDITIONAL PRODUCTION", "primary_source": {"id": "SRC-ZG-WF-001", "title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告", "authors": "刘畅、廖慧农、李树盛", "format": "完整扫描PDF", "pdf_pages": 434, "sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472", "status": "DIRECT_REVIEWED"}, "open_but_bounded": ["963原设计柱高（历史UNKNOWN；D-023独立候选已验证）", "小斗统一规格设计规则", "逐构件963原真性", "转角45度精确节点与榫卯落位", "隐衬角栿/隐角梁来源冲突"]},
-  "current_baseline": {"local_blender": "Blender 3.6.23 macOS x64", "cloud_executor": "GitHub Actions Hosted Runner + Blender 4.5.13 LTS Linux x64", "roundtrip": "P2.3 PASS / V003 VERIFIED / core semantic diff NONE", "roundtrip_limitation": "Only previously accepted P0.2 UI-region warning remains; no new core geometry / metadata / instance / camera loss.", "parameter_set": "P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001｜85/85 + Z-006-RC-01 APPROVED / VALIDATED OVERRIDE", "model_3d": "P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001 / 11 families / 40 variants / 365 stable mesh instances / engineering PASS / local-only blend SHA256 ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512"},
+  "current_baseline": {"local_blender": "Blender 3.6.23 macOS x64", "cloud_executor": "GitHub Actions Hosted Runner + Blender 4.5.13 LTS Linux x64", "roundtrip": "P2.3 DoD-07 PASS / V003 VERIFIED / core semantic diff NONE", "roundtrip_limitation": "Only previously accepted P0.2 UI-region warning remains; no new core geometry / metadata / instance / camera loss.", "parameter_set": "P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001｜85/85 + Z-006-RC-01 APPROVED / VALIDATED OVERRIDE", "model_3d": "P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001 / 11 families / 40 variants / 365 stable mesh instances / engineering PASS / local-only blend SHA256 ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512"},
   "project_control_sync": {"status":"TRIAL","canonical_committed_state":"GitHub private repo main branch / docs/project_control","local_working_copy":"/Users/caroline/中国古建筑3D复原/docs/project_control","write_model":"ChatGPT优先直接更新GitHub Project Control；本地Codex负责工程执行。Project Control更新后，本地工作前执行git pull --ff-only origin main；避免同时修改同一 Project Control 文件。","reassessment_rule":"若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"},
   "latest_material_decision": {"id": "D-027", "date": "2026-09-12", "decision": "Product Owner批准并锁定P2.3 Definition of Done V001；T-008作为构件库驱动整合复原候选与最终P2质量验收工程任务获得授权。"},
-  "next_action": "上传 / 展示 P2.3 六张正式审核图，由 ChatGPT + Product Owner 完成 DoD-08 视觉 / evidence diagnostic 审核；明确批准前不得关闭 P2.3 或 P2。",
-  "dashboard": {"path":"docs/project_control/dashboard.html","visualization_version":"v009","role":"DERIVED_VISUALIZATION","authoritative":false,"refresh_status":"R039_REFRESH_COMPLETE","source_files":["project_state.json","decision_log.md","execution_log.md","acceptance_matrix.md","governance.md","rules_change_log.md","phase_archive/P0_closure.md","phase_archive/P1_closure.md","../production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md","../production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md","../../tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003.md","../../production/zhenguo_wanfo/validation/P2_3_VALIDATION_REPORT_V001.md","../../production/zhenguo_wanfo/validation/P2_3_V003_ROUNDTRIP_QC_V001.json"]}
+  "next_action": "执行 T-008 V004：仅修正 Evidence Diagnostic 四级映射与 legend；冻结模型、工程 QC 与其他五张审核图。完成后重新审核新版 diagnostic，再由 Product Owner 决定 P2.3 Gate。",
+  "dashboard": {"path":"docs/project_control/dashboard.html","visualization_version":"v009","role":"DERIVED_VISUALIZATION","authoritative":false,"refresh_status":"R040_PENDING_REFRESH","source_files":["project_state.json","decision_log.md","execution_log.md","acceptance_matrix.md","governance.md","rules_change_log.md","phase_archive/P0_closure.md","phase_archive/P1_closure.md","../production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md","../production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md","../../tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V004.md","../../production/zhenguo_wanfo/validation/P2_3_VALIDATION_REPORT_V001.md","../../production/zhenguo_wanfo/validation/P2_3_V003_ROUNDTRIP_QC_V001.json"]}
 }
