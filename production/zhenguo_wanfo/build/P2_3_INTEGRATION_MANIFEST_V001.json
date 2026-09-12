@@ -15802,8 +15802,13 @@
   ],
   "roundtrip": {
     "artifact_path": null,
-    "status": "HOLD_TEMP_TRANSPORT_NO_CLOUD_RUN",
-    "validation_path": null
+    "status": "HOLD_REMOTE_TAG_FETCH_FAILED_NO_CLOUD_RUN",
+    "transport_tag": "p2-3-transport-v001",
+    "transport_blob_sha": "23797dbd360ba67b8195d988f2161ff9eaf37d48",
+    "transport_push": "PASS",
+    "workflow_v002_path": ".github/workflows/p2_3_integrated_roundtrip.yml",
+    "workflow_v002_sha256": "514e5193e7db908b4b63e5c4e8ce2cae0a5b8073af9c81f63ad856219ce6976f",
+    "validation_path": "production/zhenguo_wanfo/validation/P2_3_V002_TRANSPORT_QC_V001.json"
   },
   "semantic_summary": {
     "candidate_RC_01_mm": 3534.3,

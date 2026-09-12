@@ -18,7 +18,11 @@ The roof uses six continuous envelope strips over approved control intervals, to
 
 ## Cloud roundtrip
 
-**HOLD**. The workflow and version-aware semantic QC script are prepared. The local Blender 3.6 snapshot records per-instance geometry bounds, mesh and variant mapping, transforms, evidence metadata, collection mapping and camera assets. The T-008 archive was pushed to private `origin/main` at `421000e` after an ordinary Git HTTP buffer adjustment. The originally approved draft-release transport remains unavailable because this host has no `gh` executable or browser automation, and automatic approval review rejected extraction of the Git credential for a custom API upload. An alternative temporary, unreferenced Git-blob transport has been proposed to the Product Owner and is pending their choice. The Cloud Blender 4.5 run and returned Blender 3.6 validation have not occurred. DoD-07 remains incomplete.
+**HOLD**. The workflow and version-aware semantic QC script are prepared. The local Blender 3.6 snapshot records per-instance geometry bounds, mesh and variant mapping, transforms, evidence metadata, collection mapping and camera assets. The V001 T-008 engineering archive is on private `origin/main`. The Cloud Blender 4.5 run and returned Blender 3.6 validation have not occurred. DoD-07 remains incomplete.
+
+### V002 continuation — temporary Git blob tag
+
+The V001 canonical `.blend` remains unchanged at SHA256 `ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`. Under the V002 Task Contract, it was written as Git blob `23797dbd360ba67b8195d988f2161ff9eaf37d48` and pushed through temporary lightweight tag `p2-3-transport-v001`. Remote `ls-remote` advertises that exact blob SHA. Two independent attempts to fetch the tag into a disposable repository failed with `Empty reply from server`; therefore the V002 section 4 transport condition is **HOLD**. The Blender 4.5 workflow was not dispatched and no artifact or local-return QC exists. The temporary tag remains in place because V002 section 7 allows cleanup only after a successful workflow, artifact download and local return validation. The exact record is `validation/P2_3_V002_TRANSPORT_QC_V001.json`.
 
 ## Historical statement boundary
 

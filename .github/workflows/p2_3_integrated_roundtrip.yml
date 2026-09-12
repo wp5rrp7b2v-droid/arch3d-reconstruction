@@ -3,8 +3,8 @@ name: P2.3 Integrated Candidate Blender 4.5 Roundtrip
 on:
   workflow_dispatch:
     inputs:
-      release_tag:
-        description: Draft release containing the local-only T-008 transport blend
+      transport_tag:
+        description: Temporary tag pointing directly to the local-only T-008 blend blob
         required: true
         type: string
       expected_sha256:
@@ -20,20 +20,27 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45
     env:
-      GH_TOKEN: ${{ github.token }}
+      TRANSPORT_TAG: ${{ inputs.transport_tag }}
+      EXPECTED_SHA256: ${{ inputs.expected_sha256 }}
       INPUT_BLEND: transport/P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001.blend
       RETURN_BLEND: transport/P2_3_CLOUD_4_5_RETURN_V001.blend
       SNAPSHOT: production/zhenguo_wanfo/validation/P2_3_LOCAL_SEMANTIC_SNAPSHOT_V001.json
       QC_SCRIPT: production/zhenguo_wanfo/scripts/p2_3_roundtrip_semantic_qc_v001.py
     steps:
       - uses: actions/checkout@v4
-      - name: Download local-only transport asset from draft release
+      - name: Fetch verified temporary transport blob
         shell: bash
         run: |
           set -euo pipefail
+          [[ "${TRANSPORT_TAG}" =~ ^[a-zA-Z0-9._-]+$ ]]
+          [[ "${EXPECTED_SHA256}" =~ ^[0-9a-f]{64}$ ]]
           mkdir -p transport
-          gh release download '${{ inputs.release_tag }}' --repo '${{ github.repository }}' --pattern 'P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001.blend' --dir transport
-          echo '${{ inputs.expected_sha256 }}  '${INPUT_BLEND} | sha256sum --check --status
+          git fetch --force --no-tags origin "refs/tags/${TRANSPORT_TAG}:refs/tags/${TRANSPORT_TAG}"
+          BLOB_SHA="$(git rev-parse "refs/tags/${TRANSPORT_TAG}")"
+          test "$(git cat-file -t "${BLOB_SHA}")" = blob
+          git cat-file blob "${BLOB_SHA}" > "${INPUT_BLEND}"
+          echo "${EXPECTED_SHA256}  ${INPUT_BLEND}" | sha256sum --check --status
+          echo "ARCH3D_TRANSPORT_BLOB_SHA=${BLOB_SHA}"
           test -s "${INPUT_BLEND}"
       - name: Download Blender 4.5.13 using the P0.2 verified distribution route
         shell: bash

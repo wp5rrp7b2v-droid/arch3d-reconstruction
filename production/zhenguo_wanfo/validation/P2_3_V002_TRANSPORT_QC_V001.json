@@ -1,0 +1,34 @@
+{
+  "task": "T-008 V002",
+  "status": "HOLD",
+  "local_canonical_blend": {
+    "path": "production/zhenguo_wanfo/output/P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001.blend",
+    "sha256": "ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512",
+    "git_blob_sha": "23797dbd360ba67b8195d988f2161ff9eaf37d48"
+  },
+  "temporary_transport_tag": "p2-3-transport-v001",
+  "tag_push": "PASS: new remote tag pointing directly to blob; no main-tree blend commit",
+  "remote_tag_advertised_sha": "23797dbd360ba67b8195d988f2161ff9eaf37d48",
+  "independent_remote_fetch": {
+    "attempts": 2,
+    "status": "FAIL",
+    "error": "fatal: unable to access 'https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction.git/': Empty reply from server",
+    "conclusion": "Transport tag is advertised but its blob could not be fetched into an independent repository; V002 section 4 requires immediate HOLD."
+  },
+  "cloud_workflow": "NOT_RUN",
+  "artifact": "NOT_AVAILABLE",
+  "local_return_validation": "NOT_RUN",
+  "v001_regression": {
+    "automated_tests": "PASS 33/33",
+    "machine_qc": "PASS 34/34",
+    "local_semantic_snapshot_compare": "PASS",
+    "semantic_sha256": "1e6a1ab2c6f63d0d7772e69b189ab91447aaf8735285df6e9ab1ffb09d232750",
+    "component_families": 11,
+    "variants": 40,
+    "stable_mesh_instances": 365,
+    "historical_Z_006": "UNKNOWN / null / DO_NOT_LOCK",
+    "candidate_Z_006_RC_01": "replaceable / D-023 / 11 x MOD-006"
+  },
+  "tag_cleanup": "NOT_PERFORMED: V002 section 7 permits cleanup only after successful workflow, artifact download and local-return validation",
+  "prohibited_fallbacks_used": false
+}
