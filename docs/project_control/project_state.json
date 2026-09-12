@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R030",
+  "state_revision": "R031",
   "last_updated": "2026-09-12",
-  "session_status": "ACTIVE_P2_1_ENGINEERING_HOLD_Z006_EVIDENCE_REVIEW_REQUIRED",
+  "session_status": "ACTIVE_P2_1_T006_V002_READY_Z006_RC01_APPROVED",
   "next_session_date": null,
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
@@ -13,35 +13,36 @@
   "previous_phase": {"id": "P1", "name": "选题取证", "status": "CLOSED / APPROVED / CONDITIONAL GO", "closed_date": "2026-09-12", "gate_result": "4/4 PASS"},
   "current_gate": {
     "id": "P2",
-    "status": "ACTIVE / P2.1 ENGINEERING HOLD",
+    "status": "ACTIVE / P2.1 RC01 APPROVED / V002 READY",
     "passed": 1,
     "total": 4,
-    "architecture_status": "P2.0-P2.3 LOCKED / P2.1 DOD LOCKED / T006 V001 ENGINEERING HOLD",
+    "architecture_status": "P2.0-P2.3 LOCKED / P2.1 DOD LOCKED / T006 V002 READY",
     "items": {
       "P2.0": {"status": "PASS / APPROVED", "name": "Evidence-aware Parameter Schema", "approved_date": "2026-09-12"},
-      "P2.1": {"status": "IN_PROGRESS / ENGINEERING_HOLD / BLOCKED_BY_Z006", "name": "正式生产参数集锁定｜Formal Production Parameter Set", "dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "dod_count": 9},
+      "P2.1": {"status": "IN_PROGRESS / Z006_RC01_APPROVED / T006_V002_READY", "name": "正式生产参数集锁定｜Formal Production Parameter Set", "dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "dod_count": 9},
       "P2.2": {"status": "LOCKED / WAITING_FOR_P2_1_PASS", "name": "参数化主体结构候选模型｜Parametric Structural Skeleton"},
       "P2.3": {"status": "LOCKED / WAITING_FOR_P2_2_PASS", "name": "整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC"}
     },
-    "note": "T-006 V001 已完成85/85正式参数集与85/85 Geometry Dependency Matrix；机器验证PASS、测试11/11 PASS，但production preflight因Z-006返回HOLD。P2.1 PASS硬条件未满足，P2.2继续锁定。"
+    "note": "D-023 已批准 Z-006-RC-01 作为独立可替换 production override；Z-006 本体继续保持 UNKNOWN/null/DO_NOT_LOCK。T-006 V002 必须验证候选独立性、可重算性和 unresolved blocker 清零；验证前 P2.2 继续锁定。"
   },
-  "decision_required": true,
+  "decision_required": false,
   "blocker": {
     "id": "Z-006",
     "parameter_key": "column_height_963_design_mm",
-    "status": "BLOCKS_P2_2_GEOMETRY",
-    "reason": "P2.2柱、主要梁架与屋顶绝对Z定位需要柱高；P1未锁定合法的963原设计柱高，现状或二手高度不得静默代填。",
-    "resolution_path": "先做Z-006定向证据复核；若证据仍不足，再由Product Owner决定是否批准独立、可替换、可追溯的REASONABLE_COMPLETION。"
+    "status": "HISTORICAL_UNKNOWN / RC01_APPROVED / V002_VALIDATION_PENDING",
+    "reason": "963原设计柱高仍无直接历史锁定值；工程上已批准独立候选 Z-006-RC-01，但尚需T-006 V002机器验证后才能视为生产阻断已解除。",
+    "approved_resolution": "Z-006-RC-01 = 11 * MOD-006; current resolved value 3534.3mm; REASONABLE_COMPLETION; replaceable",
+    "resolution_validation": "T-006 V002 REQUIRED"
   },
   "current_task": {
     "id": "T-006",
-    "formal_name": "【中国古建筑3D复原｜T-006｜P2_1_PRODUCTION_PARAMETER_SET_V001｜正式生产参数集建立与几何依赖预检】",
-    "name": "P2_1_PRODUCTION_PARAMETER_SET_V001",
-    "status": "ENGINEERING_HOLD / COMPLETE_V001_EVIDENCE_ARCHIVED",
+    "formal_name": "【中国古建筑3D复原｜T-006｜P2_1_PRODUCTION_PARAMETER_SET_V002｜Z-006批准候选接入与阻断清零验证】",
+    "name": "P2_1_PRODUCTION_PARAMETER_SET_V002",
+    "status": "READY_FOR_LOCAL_EXECUTION",
     "think_level": "HIGH",
-    "task_spec": "docs/tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V001.md",
-    "engineering_commit": "1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0",
-    "scope": "85/85正式生产参数迁移 + Geometry Dependency Matrix + machine validation + production preflight + P2.1 validation report；不得生成Blender几何"
+    "task_spec": "docs/tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V002.md",
+    "previous_engineering_commit": "1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0",
+    "scope": "保持85/85正式参数集和Z-006历史UNKNOWN不变；新增D-023批准的Z-006-RC-01 production override；扩展machine validation/preflight/tests并验证geometry-critical unresolved blocker清零；不得生成Blender几何"
   },
   "current_case": {
     "name": "平遥镇国寺万佛殿",
@@ -72,15 +73,16 @@
     "CG-06 historical authenticity claims must remain bounded by component-level uncertainty"
   ],
   "p2_entry": {
-    "status": "ACTIVE / P2.1 ENGINEERING HOLD / Z006 BLOCKER",
+    "status": "ACTIVE / P2.1 Z006 RC01 APPROVED / T006 V002 READY",
     "completed_gate": "P2.0",
     "completed_gate_result": "PASS / PRODUCT_OWNER_APPROVED",
     "gate_architecture_decision": "D-021",
     "gate_architecture_version": "P2.1-P2.3 Gate Architecture V001",
     "p2_1_dod_decision": "D-022",
     "p2_1_dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md",
+    "z006_resolution_decision": "D-023",
     "production_path": ["P2.1 Formal Production Parameter Set", "P2.2 Parametric Structural Skeleton", "P2.3 Integrated Reconstruction Candidate & QC"],
-    "p2_1_goal": "建立85/85正式生产参数集并清零P2.2 geometry-critical unresolved blocker，在不掩盖未知项的前提下形成可执行生产输入。",
+    "p2_1_goal": "在保持Z-006历史UNKNOWN不变的前提下，用经批准的独立可替换候选解除P2.2柱高生产阻断，并由机器preflight证明unresolved blocker=0。",
     "p2_1_geometry_rule": "NO FORMAL BLENDER GEOMETRY IN P2.1",
     "p2_1_pass_rule": "DOD 9/9 PASS AND geometry-critical unresolved blocker = 0",
     "p2_1_dod_summary": [
@@ -100,7 +102,7 @@
     "schema_spec": "docs/production/zhenguo_wanfo/P2_0_EVIDENCE_AWARE_PARAMETER_SCHEMA_V001.md",
     "machine_schema": "production/zhenguo_wanfo/schema/evidence_aware_parameter_schema_v001.json",
     "t005_result": {"status": "ENGINEERING_PASS / COMPLETE", "v002_full_suite": "PASS 6/6", "canonical_commit": "a938d9fe96c579c21fb3a16734f9b74efcd7d8bc"},
-    "t006_result": {
+    "t006_v001_result": {
       "status": "ENGINEERING_HOLD",
       "formal_parameter_set": "85/85",
       "classification_counts": {"confirmed": 46, "high_confidence_inference": 32, "reasonable_completion": 4, "unknown": 3},
@@ -116,21 +118,34 @@
       },
       "canonical_commit": "1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0"
     },
-    "next_action": "Perform targeted Z-006 evidence review before considering any temporary REASONABLE_COMPLETION"
+    "z006_rc01": {
+      "status": "PRODUCT_OWNER_APPROVED / VALIDATION_PENDING",
+      "candidate_id": "Z-006-RC-01",
+      "target_parameter_id": "Z-006",
+      "classification": "REASONABLE_COMPLETION",
+      "time_layer": "reconstructed_963_candidate",
+      "formula": "11 * MOD-006",
+      "current_resolved_value_mm": 3534.3,
+      "is_replaceable": true,
+      "approval_decision_id": "D-023",
+      "historical_parameter_remains_unknown": true
+    },
+    "t006_v002_task": "docs/tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V002.md",
+    "next_action": "Sync local main and execute T-006 V002 under D-023; validate Z-006 preservation, RC-01 formula/replacement semantics, and unresolved blocker count=0"
   },
   "p1_evidence_progress": {
     "status": "CLOSED / CLASSIFIED / APPROVED FOR CONDITIONAL PRODUCTION",
     "primary_source": {"id": "SRC-ZG-WF-001", "title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告", "authors": "刘畅、廖慧农、李树盛", "format": "完整扫描PDF", "pdf_pages": 434, "bytes": 84117628, "sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472", "status": "DIRECT_REVIEWED"},
     "parameter_candidate_matrix": "docs/evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V002.md",
     "full_classification": "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
-    "open_but_bounded": ["963原设计柱高", "小斗统一规格设计规则", "逐构件963原真性", "转角45度精确节点与榫卯落位", "隐衬角栿/隐角梁来源冲突"]
+    "open_but_bounded": ["963原设计柱高（历史UNKNOWN；D-023已批准独立生产候选）", "小斗统一规格设计规则", "逐构件963原真性", "转角45度精确节点与榫卯落位", "隐衬角栿/隐角梁来源冲突"]
   },
   "current_baseline": {
     "local_blender": "Blender 3.6.23 macOS x64",
     "cloud_executor": "GitHub Actions Hosted Runner + Blender 4.5.13 LTS Linux x64",
     "roundtrip": "PASS / Class B｜ROUNDTRIP_WITH_LIMITATIONS",
     "roundtrip_limitation": "Blender 3.6会移除Blender 4.5文件中不支持的部分View3D/Image UI region数据；未发现P0验证范围内核心几何、Marker或所需Metadata损失。",
-    "parameter_set": "P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001｜85/85 / ENGINEERING HOLD BY Z-006",
+    "parameter_set": "P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001｜85/85 + Z-006-RC-01 APPROVED OVERRIDE PENDING V002 VALIDATION",
     "model_3d": "正式历史复原几何尚未开始；P2.1 PASS 后才进入 P2.2 第一项正式几何生产"
   },
   "project_control_sync": {
@@ -141,17 +156,17 @@
     "reassessment_rule": "若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"
   },
   "latest_material_decision": {
-    "id": "D-022",
+    "id": "D-023",
     "date": "2026-09-12",
-    "decision": "Product Owner 锁定 P2.1 Definition of Done V001；P2.1 PASS需要9/9且geometry-critical unresolved blocker=0。"
+    "decision": "Product Owner批准Z-006-RC-01=11×MOD-006作为独立、可替换的REASONABLE_COMPLETION生产候选；Z-006历史参数继续保持UNKNOWN/null/DO_NOT_LOCK；继续T-006 V002验证。"
   },
-  "next_action": "定向复核 Z-006｜963原设计柱高 的现有证据；优先尝试从主测绘报告剖面、柱身实测、标高与尺寸链中形成可追溯候选。若仍无法约束，再提交Product Owner决定是否建立可替换REASONABLE_COMPLETION。",
+  "next_action": "本地同步GitHub main后执行T-006 V002：建立Z-006-RC-01 override sidecar，验证11×MOD-006动态解析、Z-006历史UNKNOWN保留与geometry-critical unresolved blocker清零；不得生成Blender几何。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v008",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R030_REFRESH_COMPLETE",
-    "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "../../tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V001.md", "../../production/zhenguo_wanfo/validation/P2_1_VALIDATION_REPORT_V001.md"]
+    "refresh_status": "STALE_AFTER_D023_PENDING_R031_REFRESH",
+    "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "../../tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V001.md", "../../tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V002.md", "../../production/zhenguo_wanfo/validation/P2_1_VALIDATION_REPORT_V001.md"]
   }
 }
