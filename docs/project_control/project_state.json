@@ -140,7 +140,7 @@
     "visualization_version": "v007",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R022_REFRESH_TARGET",
+    "refresh_status": "R022_REFRESH_COMPLETE",
     "source_files": [
       "project_state.json",
       "decision_log.md",
