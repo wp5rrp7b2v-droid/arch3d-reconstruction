@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R026",
+  "state_revision": "R027",
   "last_updated": "2026-09-12",
-  "session_status": "P2_0_APPROVED_NEXT_GATE_ARCHITECTURE_REQUIRED",
+  "session_status": "ACTIVE_P2_1_ENTRY_READY_DOD_REQUIRED",
   "next_session_date": null,
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
@@ -13,14 +13,17 @@
   "previous_phase": {"id": "P1", "name": "选题取证", "status": "CLOSED / APPROVED / CONDITIONAL GO", "closed_date": "2026-09-12", "gate_result": "4/4 PASS"},
   "current_gate": {
     "id": "P2",
-    "status": "ACTIVE / ARCHITECTURE_EXTENSION_REQUIRED",
+    "status": "ACTIVE / ARCHITECTURE_LOCKED",
     "passed": 1,
-    "total": 1,
-    "architecture_status": "P2.0 PASS / P2.1-P2.3 TO BE DEFINED AND LOCKED",
+    "total": 4,
+    "architecture_status": "P2.0-P2.3 LOCKED / P2.1 ENTRY READY",
     "items": {
-      "P2.0": {"status": "PASS / APPROVED", "name": "Evidence-aware Parameter Schema", "approved_date": "2026-09-12"}
+      "P2.0": {"status": "PASS / APPROVED", "name": "Evidence-aware Parameter Schema", "approved_date": "2026-09-12"},
+      "P2.1": {"status": "ENTRY_READY / DOD_TO_BE_LOCKED", "name": "正式生产参数集锁定｜Formal Production Parameter Set"},
+      "P2.2": {"status": "LOCKED / WAITING_FOR_P2_1_PASS", "name": "参数化主体结构候选模型｜Parametric Structural Skeleton"},
+      "P2.3": {"status": "LOCKED / WAITING_FOR_P2_2_PASS", "name": "整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC"}
     },
-    "note": "P2.0 已由 Product Owner 批准 PASS；CG-01 已满足。下一步必须先定义并锁定 P2.1-P2.3 Gate 架构，再创建第一项正式几何生产任务。"
+    "note": "Product Owner 已批准 P2.1-P2.3 Gate Architecture V001。生产路径锁定为参数→结构→整合候选与QC。下一步先明确并锁定 P2.1 Definition of Done；P2.1 DoD 明确前不创建 T-006，P2.1 PASS 前不进入正式 Blender 几何生产。"
   },
   "decision_required": false,
   "blocker": null,
@@ -41,13 +44,7 @@
     "archive": "docs/project_control/phase_archive/P1_closure.md",
     "product_owner_decision": "APPROVE CONDITIONAL GO",
     "decision_id": "D-019",
-    "classification_counts": {
-      "confirmed": 46,
-      "high_confidence_inference": 32,
-      "reasonable_completion": 4,
-      "unknown": 3,
-      "total": 85
-    },
+    "classification_counts": {"confirmed": 46, "high_confidence_inference": 32, "reasonable_completion": 4, "unknown": 3, "total": 85},
     "global_no_go_blocker_found": false,
     "gate_review": "docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md"
   },
@@ -60,48 +57,23 @@
     "CG-06 historical authenticity claims must remain bounded by component-level uncertainty"
   ],
   "p2_entry": {
-    "status": "ACTIVE / P2.0 PASS / NEXT GATE ARCHITECTURE REQUIRED",
+    "status": "ACTIVE / P2.1 ENTRY READY",
     "completed_gate": "P2.0",
-    "completed_gate_name": "Evidence-aware Parameter Schema",
-    "completed_gate_date": "2026-09-12",
     "completed_gate_result": "PASS / PRODUCT_OWNER_APPROVED",
-    "gate_review": "docs/production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md",
+    "gate_architecture_decision": "D-021",
+    "gate_architecture_version": "P2.1-P2.3 Gate Architecture V001",
+    "production_path": ["P2.1 Formal Production Parameter Set", "P2.2 Parametric Structural Skeleton", "P2.3 Integrated Reconstruction Candidate & QC"],
+    "p2_1_goal": "把P1已分类参数转为P2.0 Schema下的正式生产参数集，并明确UNKNOWN对几何生成的真实阻断关系。",
+    "p2_1_geometry_rule": "NO FORMAL BLENDER GEOMETRY IN P2.1",
+    "p2_2_entry_rule": "P2.1 PASS REQUIRED BEFORE FIRST FORMAL BLENDER GEOMETRY",
     "schema_spec": "docs/production/zhenguo_wanfo/P2_0_EVIDENCE_AWARE_PARAMETER_SCHEMA_V001.md",
     "machine_schema": "production/zhenguo_wanfo/schema/evidence_aware_parameter_schema_v001.json",
-    "minimal_parameter_set": "production/zhenguo_wanfo/params/P2_0_MINIMAL_PARAMETER_SET_V001.json",
-    "schema_required_fields": [
-      "parameter_key",
-      "label_zh",
-      "value",
-      "unit",
-      "classification",
-      "time_layer",
-      "source_layer",
-      "production_use",
-      "blocking_level",
-      "source_ids",
-      "is_replaceable",
-      "notes"
-    ],
-    "machine_rules": [
-      "UNKNOWN + DO_NOT_LOCK requires value=null",
-      "REASONABLE_COMPLETION requires is_replaceable=true",
-      "source_ids must contain at least one traceable reference",
-      "observed/report-ideal/reconstructed-963 semantic layers remain separate"
-    ],
     "t005_result": {
       "status": "ENGINEERING_PASS / COMPLETE",
-      "v001_regression": "PASS 4/4",
       "v002_full_suite": "PASS 6/6",
-      "three_layer_coexistence": "PASS",
-      "three_layer_reader_preservation": "PASS",
-      "canonical_archive": "PASS",
       "canonical_commit": "a938d9fe96c579c21fb3a16734f9b74efcd7d8bc"
     },
-    "gate_review_result": "7/7 PASS / PRODUCT_OWNER_APPROVED",
-    "p2_0_decision_id": "D-020",
-    "geometry_status": "P2.0 ENTRY LOCK RELEASED / NO FORMAL GEOMETRY TASK UNTIL P2.1-P2.3 ARCHITECTURE APPROVED",
-    "next_architecture_action": "Define and lock P2.1-P2.3 Gate architecture before assigning next T-### production task"
+    "next_action": "Define and lock P2.1 Definition of Done; only then create T-006"
   },
   "p1_evidence_progress": {
     "status": "CLOSED / CLASSIFIED / APPROVED FOR CONDITIONAL PRODUCTION",
@@ -116,16 +88,8 @@
       "status": "DIRECT_REVIEWED"
     },
     "parameter_candidate_matrix": "docs/evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V002.md",
-    "high_risk_classification": "docs/evidence/zhenguo_wanfo/P1_3_HIGH_RISK_CLASSIFICATION_V001.md",
     "full_classification": "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
-    "gate_review": "docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md",
-    "open_but_bounded": [
-      "963原设计柱高",
-      "小斗统一规格设计规则",
-      "逐构件963原真性",
-      "转角45度精确节点与榫卯落位",
-      "隐衬角栿/隐角梁来源冲突"
-    ]
+    "open_but_bounded": ["963原设计柱高", "小斗统一规格设计规则", "逐构件963原真性", "转角45度精确节点与榫卯落位", "隐衬角栿/隐角梁来源冲突"]
   },
   "current_baseline": {
     "local_blender": "Blender 3.6.23 macOS x64",
@@ -133,9 +97,7 @@
     "roundtrip": "PASS / Class B｜ROUNDTRIP_WITH_LIMITATIONS",
     "roundtrip_limitation": "Blender 3.6会移除Blender 4.5文件中不支持的部分View3D/Image UI region数据；未发现P0验证范围内核心几何、Marker或所需Metadata损失。",
     "parameter_set": "EVIDENCE_AWARE_PARAMETER_SCHEMA_V001｜P2.0 APPROVED PRODUCTION DATA CONTRACT",
-    "model_3d": "正式历史复原几何尚未开始；等待 P2.1-P2.3 Gate 架构锁定后创建下一项生产任务",
-    "p0_archive": "docs/project_control/phase_archive/P0_closure.md",
-    "p1_archive": "docs/project_control/phase_archive/P1_closure.md"
+    "model_3d": "正式历史复原几何尚未开始；P2.1 PASS 后才进入 P2.2 第一项正式几何生产"
   },
   "project_control_sync": {
     "status": "TRIAL",
@@ -145,30 +107,17 @@
     "reassessment_rule": "若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"
   },
   "latest_material_decision": {
-    "id": "D-020",
+    "id": "D-021",
     "date": "2026-09-12",
-    "decision": "Product Owner 批准 P2.0 PASS；Evidence-aware Parameter Schema 成为正式生产数据合同；CG-01 已满足；下一步先定义并锁定 P2.1-P2.3 Gate 架构。"
+    "decision": "Product Owner 批准 P2.1-P2.3 Gate Architecture V001；生产路径锁定为参数→结构→整合候选与QC；P2.1 ENTRY READY。"
   },
-  "next_action": "定义并锁定 P2.1-P2.3 Gate 架构；在该架构获得 Product Owner 批准前，不创建下一项正式 Blender 几何生产 T-###。",
+  "next_action": "明确并锁定 P2.1 Definition of Done；DoD 明确后才创建 T-006。P2.1 PASS 前不得进入 P2.2 正式 Blender 几何生产。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v008",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R026_REFRESH_COMPLETE",
-    "source_files": [
-      "project_state.json",
-      "decision_log.md",
-      "execution_log.md",
-      "acceptance_matrix.md",
-      "governance.md",
-      "rules_change_log.md",
-      "phase_archive/P0_closure.md",
-      "phase_archive/P1_closure.md",
-      "../evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md",
-      "../production/zhenguo_wanfo/P2_0_EVIDENCE_AWARE_PARAMETER_SCHEMA_V001.md",
-      "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md",
-      "../../production/zhenguo_wanfo/validation/P2_0_SCHEMA_VALIDATION_REPORT_V002.md"
-    ]
+    "refresh_status": "STALE_AFTER_D021_PENDING_R027_REFRESH",
+    "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md"]
   }
 }
