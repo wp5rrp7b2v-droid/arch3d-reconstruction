@@ -48,7 +48,7 @@ class IntegratedReconstructionTests(unittest.TestCase):
                 run(BLENDER,"--background",blend,"--python-exit-code","10","--python",QC,"--","--manifest",manifest,"--result",result)
                 evidence=json.loads(result.read_text())
                 self.assertEqual(evidence["status"],"PASS")
-                reopen.append({"label":label,"status":evidence["status"],"checks":len(evidence["checks"]),"blend_sha256":digest(blend)})
+                reopen.append({"label":label,"status":evidence["status"],"checks":len(evidence["checks"])})
             formal=json.loads(formal_path.read_text())
             overrides=json.loads(override_path.read_text())
             # Synthetic replacement: the approved 11 x MOD-006 formula is kept;

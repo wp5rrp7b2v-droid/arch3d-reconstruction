@@ -18,7 +18,7 @@ The roof uses six continuous envelope strips over approved control intervals, to
 
 ## Cloud roundtrip
 
-**PENDING** at this report stage. The workflow and version-aware semantic QC script are prepared. The local Blender 3.6 snapshot records per-instance geometry bounds, mesh and variant mapping, transforms, evidence metadata, collection mapping and camera assets. The result must be updated with the actual GitHub Actions Blender 4.5 run and returned Blender 3.6 validation before DoD-07 can be considered complete.
+**HOLD**. The workflow and version-aware semantic QC script are prepared. The local Blender 3.6 snapshot records per-instance geometry bounds, mesh and variant mapping, transforms, evidence metadata, collection mapping and camera assets. The first T-008 commit exists locally, but automatic approval review rejected `git push origin main`, so the GitHub Actions workflow is unavailable on the remote branch. The Cloud Blender 4.5 run and returned Blender 3.6 validation have not occurred. DoD-07 and canonical GitHub archive are therefore incomplete.
 
 ## Historical statement boundary
 

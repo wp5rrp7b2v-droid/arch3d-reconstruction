@@ -16,13 +16,11 @@
   },
   "independent_reopens": [
     {
-      "blend_sha256": "a9aad351b78b1cfd7f8458f8260ece1123717cfb18ddc42c61f2212b3f6eee30",
       "checks": 34,
       "label": "clean_1",
       "status": "PASS"
     },
     {
-      "blend_sha256": "01b19a95765a2121f15968b422fa8fc21e3b43e20d360f2c170d9fa177d393ed",
       "checks": 34,
       "label": "clean_2",
       "status": "PASS"
