@@ -72,7 +72,7 @@ P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段。P2.0 已完成 CG-01 
 | P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **PASS / APPROVED 2026-09-12** | T-005 V001+V002 工程验证全部 PASS；Gate Review 7/7 PASS；工程证据归档至 GitHub canonical repo，commit `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`。Product Owner 已批准 P2.0。 |
 | P2.1｜正式生产参数集锁定｜Formal Production Parameter Set | 将 P1 已分类参数转为 P2.0 Schema 下的正式 production parameter set；完成 85/85 迁移、Geometry Dependency Matrix、UNKNOWN 几何阻断判定、机器 preflight 与 canonical version lock | **PASS / APPROVED / CLOSED 2026-09-12** | T-006 V002：85/85正式参数、85/85 dependency matrix、21/21 tests、override validation 与 production preflight 全部 PASS；`geometry-critical unresolved blocker=0`。Z-006 保持 UNKNOWN；RC-01 仅为独立可替换 production candidate。 |
 | P2.2｜参数化主体结构候选模型｜Parametric Structural Skeleton | 由 P2.1 正式参数集驱动生成主体结构候选模型，覆盖柱网、柱、主要梁架、斗栱拓扑骨架、屋顶控制几何及主要空间关系，并验证可重复生成与参数响应 | **PASS / APPROVED / CLOSED 2026-09-12** | T-007 V001：6/6 scope、217 machine objects、machine geometry validation PASS、32/32 tests、deterministic rebuild PASS、independent reopen PASS、naked constant scan PASS；PLAN / ELEVATION / AXON 完成 Product Owner 直接结构审核并通过。Gate Review 9/9 PASS。217 是 Blender 机器对象数，不是历史构件数。 |
-| P2.3｜整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC | 整合结构、屋面、斗栱体系与 evidence metadata，完成可追溯性、确定性重建、兼容性、可替换性与视觉 QC，形成正式963候选复原模型 | **UNLOCKED / CURRENT / DOD DEFINITION REQUIRED** | P2.2 已 PASS；在创建下一项正式工程 T-### 前必须先定义并锁定 P2.3 Definition of Done。CG-02～CG-06 持续生效。 |
+| P2.3｜整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC | 整合结构、屋面、斗栱体系与 evidence metadata，完成构件族/variant/instance、可追溯性、确定性重建、Local/Cloud兼容性、可替换性、machine QC 与视觉/evidence diagnostic QC，形成正式963候选复原模型 | **IN PROGRESS / DOD LOCKED / T-008 READY** | D-027 已锁定 P2.3 Definition of Done V001；T-008 已授权。正式架构为 `Component Library → Parametric Variant → Placement / Instance → Evidence Metadata`；CG-02～CG-06 持续生效。Engineering PASS 不等于 P2.3 Gate PASS。 |
 
 ### P2.0 Final Result
 
@@ -219,4 +219,30 @@ P2.2 必须完成 9 项：
 - Product Owner explicit decision：**APPROVED P2.2 PASS**；
 - Gate Review：`docs/production/zhenguo_wanfo/P2_2_GATE_REVIEW_2026-09-12.md`。
 
-Carry-forward：217 是机器结构/控制对象数，不等于217个历史构件；P2.2 PASS 不升级 Z-006、DG-114、HIS-002 或未解决转角/榫卯/隐角梁的历史证据等级。P2.3 已解锁，但下一项工程任务前必须先锁定 P2.3 Definition of Done。
+Carry-forward：217 是机器结构/控制对象数，不等于217个历史构件；P2.2 PASS 不升级 Z-006、DG-114、HIS-002 或未解决转角/榫卯/隐角梁的历史证据等级。
+
+### P2.3 Definition of Done V001｜LOCKED 2026-09-12
+
+正式 DoD：`docs/production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md`
+
+P2.3 必须完成 9 项：
+
+1. **Integration Manifest**：完整记录 P2.1/P2.2 输入、component definitions、RC/override、bounded UNKNOWN、输出 hash 与 QC 环境；
+2. **Component Library / Parametric Variant / Placement-Instance 架构**：重复构件统一由构件族/规则驱动，禁止复制后逐件不可追溯漂移；
+3. **完整整合候选几何**：斗栱、梁架、屋顶、脊檐山面形成连贯建筑系统，且 diagnostic/control geometry 与 final candidate 分层；
+4. **Evidence Metadata / 历史声明边界贯穿**：Z-006、RC-01、DG-114、HIS-002 与转角/榫卯/隐角梁边界不因视觉完整度升级；
+5. **参数驱动 / 可替换 / 无未登记核心手工修模**：RC/variant 改变可通过重建传播；
+6. **Integrated Machine QC**：family/variant/instance、stable IDs、结构链、P2.2 regression、metadata mapping 与 presentation/diagnostic separation 全部检查；
+7. **Deterministic Rebuild + Local/Cloud Roundtrip**：两次干净构建、独立重开，并完成 Local3.6 → Cloud4.5 → Local3.6 核心几何与 metadata 往返 QC；
+8. **视觉 QC + Evidence Diagnostic + Product Owner Review**：至少 PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC 六类审核图；
+9. **最终归档与 P2 Closure Evidence**：component library、scripts、manifest、tests、validation、roundtrip evidence、known limitations、review evidence、local-only `.blend` hash 与 canonical commit 完整归档。
+
+**P2.3 PASS 还要求：完整整合候选成立、component architecture PASS、machine QC PASS、deterministic rebuild / independent reopen PASS、Local3.6↔Cloud4.5↔Local3.6 core roundtrip PASS、无未批准历史输入或 naked constants、evidence boundaries 无静默升级，并由 Product Owner 完成视觉/evidence diagnostic 审核明确批准。**
+
+### T-008｜READY FOR LOCAL EXECUTION
+
+正式任务：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001.md`
+
+T-008 目标：建立构件库 / variant / instance 数据合同，将 P2.2 approved structural baseline 升级为完整整合复原候选，并完成 P2.3 machine QC、replacement、deterministic rebuild、independent reopen、Local/Cloud roundtrip 与六类审核证据。
+
+**T-008 Engineering PASS 不等于 P2.3 Gate PASS。**
