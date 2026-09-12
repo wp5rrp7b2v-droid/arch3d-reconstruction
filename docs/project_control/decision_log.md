@@ -27,7 +27,8 @@
 | D-021 | 2026-09-12 | Product Owner 批准 `P2.1–P2.3 Gate Architecture V001`。P2.1=`正式生产参数集锁定｜Formal Production Parameter Set`；P2.2=`参数化主体结构候选模型｜Parametric Structural Skeleton`；P2.3=`整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC`。生产路径正式锁定为“参数 → 结构 → 整合候选与QC”。P2.1 不生成正式 Blender 几何；P2.1 PASS 后方可进入 P2.2 第一项正式几何生产。CG-02～CG-06 持续强制生效。 | ACTIVE / P2 GATE ARCHITECTURE LOCKED / P2.1 ENTRY READY |
 | D-022 | 2026-09-12 | Product Owner 要求并批准锁定 `P2.1 Definition of Done V001`。P2.1 必须完成85/85参数迁移、证据语义保持、Schema机器验证、UNKNOWN几何阻断判定、Geometry Dependency Matrix、REASONABLE_COMPLETION可替换性、三层语义与构件原真性边界、机器preflight、版本锁定与canonical archive共9项。P2.1 PASS除9/9外还要求 `geometry-critical unresolved blocker = 0`；UNKNOWN若是P2.2必须输入，不得跳过或静默补值，只能由新证据解决或经Product Owner显式批准新的可替换REASONABLE_COMPLETION。 | ACTIVE / P2.1 DOD LOCKED |
 | D-023 | 2026-09-12 | Product Owner 批准 `Z-006-RC-01` 作为解除 P2.2 柱高生产阻断的独立、可替换 REASONABLE_COMPLETION。Z-006 本体继续保持 `UNKNOWN / null / DO_NOT_LOCK`，不得改写为历史事实；RC-01 采用规则 `11 × MOD-006`，当前 MOD-006≈321.3mm 时解析值为 3534.3mm，仅作为 `reconstructed_963_candidate` 的生产候选。RC-01 必须独立于85项正式历史/证据参数保存并可追溯到本决策；若 MOD-006 或后续证据变化，候选必须可重新计算或替换。继续同一工程任务 T-006 V002 验证，不创建 T-007。 | ACTIVE / Z-006 RC-01 APPROVED / T-006 V002 AUTHORIZED |
-| **D-024** | **2026-09-12** | **Product Owner 正式批准 `P2.1｜Formal Production Parameter Set` PASS。Gate Review 9/9 PASS，T-006 V002 machine validation / 21/21 tests / production preflight 全部 PASS，`geometry-critical unresolved blocker = 0`。P2.1 正式 CLOSED；P2.2 `Parametric Structural Skeleton` 解锁为当前 Gate。P2.1 PASS 不改变 Z-006 的历史 UNKNOWN 状态；Z-006-RC-01 继续作为独立、可替换的生产候选。第一项正式 Blender 几何任务创建前，必须先明确并锁定 P2.2 Definition of Done。** | **ACTIVE / P2.1 PASS / P2.2 ENTERED / DOD DEFINITION REQUIRED** |
+| D-024 | 2026-09-12 | Product Owner 正式批准 `P2.1｜Formal Production Parameter Set` PASS。Gate Review 9/9 PASS，T-006 V002 machine validation / 21/21 tests / production preflight 全部 PASS，`geometry-critical unresolved blocker = 0`。P2.1 正式 CLOSED；P2.2 `Parametric Structural Skeleton` 解锁为当前 Gate。P2.1 PASS 不改变 Z-006 的历史 UNKNOWN 状态；Z-006-RC-01 继续作为独立、可替换的生产候选。第一项正式 Blender 几何任务创建前，必须先明确并锁定 P2.2 Definition of Done。 | ACTIVE / P2.1 PASS / P2.2 ENTERED / DOD DEFINITION REQUIRED |
+| **D-025** | **2026-09-12** | **Product Owner 正式批准并锁定 `P2.2 Definition of Done V001`。P2.2 作为第一项正式 Blender 历史候选几何 Gate，必须以 P2.1 正式参数集 + approved override + Geometry Dependency Matrix 为唯一历史/复原输入；DoD 9项覆盖 build manifest、完整主体六大范围、参数驱动与禁止 naked historical constants、机器几何验证、RC可替换、UNKNOWN/转角/原真性边界、geometry metadata traceability、deterministic rebuild + independent reopen + 人工结构审核、以及 canonical archive。P2.2 PASS 需要 9/9、完整主体、machine validation PASS、deterministic rebuild PASS、无未批准 geometry-critical input、无历史尺寸裸常量，并由 Product Owner 完成人工结构审核批准。T-007 可据此启动。** | **ACTIVE / P2.2 DOD LOCKED / T-007 AUTHORIZED** |
 
 ## D-012 直接影响
 
@@ -70,7 +71,7 @@
 
 ## D-017 First Formal Case Boundary
 
-- 正式对象固定为：**山西平遥镇国寺万佛殿**。
+- 正式对象固定为：**山西省平遥县镇国寺万佛殿**。
 - P1.2 的任务不是“证明它一定能够复原”，而是建立证据包并暴露证据缺口。
 - P1.2 中任何尺寸、构造、年代、修缮史或图像判断必须附来源；来源不足时只能标记为待核实或未知。
 - 在 P1.3 形成 Go 结论以前，不因“已经定选”而提前进入正式参数化或 3D 生产。
@@ -143,3 +144,16 @@
 - P2.1 正式 CLOSED；P2.2 正式解锁为当前 Gate。
 - P2.2 是第一项正式 Blender 几何 Gate，但**在创建正式几何 T-### 前必须先明确并锁定 P2.2 Definition of Done**。
 - CG-02～CG-06 全部继续生效；尤其 CG-05 对转角45°精确节点、榫卯和隐角梁冲突继续限制为中等LOD拓扑骨架。
+
+## D-025 P2.2 Definition of Done Boundary
+
+- 正式文件：`docs/production/zhenguo_wanfo/P2_2_DEFINITION_OF_DONE_V001.md`。
+- P2.2 是第一项正式 Blender 历史候选几何 Gate，限定为**完整主体中等 LOD**，不是最终精细成品。
+- 正式几何只能由 P2.1 formal parameter set、approved override、Geometry Dependency Matrix 及可追溯派生规则驱动；禁止未登记历史尺寸裸常量。
+- 必须形成 machine-readable build manifest，并显式记录输入 hash、Blender/script 版本、实际使用参数、RC/override、bounded UNKNOWN 与 output hash。
+- 主体范围必须覆盖 grid、columns、primary frame、medium-LOD bracket topology、roof control geometry、主要出檐/山面与空间关系，不能以局部样板代替整体完成。
+- `Z-006-RC-01` 必须保持独立、可替换且可重算；3534.3mm 不得写回 Z-006 或烘焙成无来源常量。
+- `DG-114`、`HIS-002`、转角45°、榫卯与隐角梁争议继续按 CG-02～CG-06 保留边界，不得因几何生成而自动升级真实性。
+- P2.2 必须完成机器几何验证、deterministic rebuild、独立重开、至少三张结构审核图，以及 Product Owner 人工结构审核。
+- `.blend/.blend1` 继续 local-only；GitHub canonical archive 保存脚本、manifest、tests、validation evidence 与 review PNG。
+- T-007 被授权作为第一项 P2.2 正式工程任务；Engineering PASS 不等于 Gate PASS。
