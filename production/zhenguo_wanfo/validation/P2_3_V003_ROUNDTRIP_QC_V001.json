@@ -10,10 +10,10 @@
     "zip_sha256": "09ebba82b33f6d5c2fcb62d4dd979289a73c8464f285cba823150d0ba9f66abb"
   },
   "cleanup": {
-    "binary_in_main_tree": false,
     "pre_cleanup_evidence_commit": "496ddb62fd095e63c49c719e906ea6244dd76f38",
     "run_trigger_tag": "PASS: remote and local refs deleted; remote ls-remote empty",
-    "transport_tag": "PASS: remote and local refs deleted; remote ls-remote empty"
+    "transport_tag": "PASS: remote and local refs deleted; remote ls-remote empty",
+    "v001_candidate_in_main_tree": false
   },
   "cloud": {
     "blender_version": "4.5.13 LTS",
