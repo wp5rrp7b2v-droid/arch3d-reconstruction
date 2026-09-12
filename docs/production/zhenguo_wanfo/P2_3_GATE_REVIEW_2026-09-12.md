@@ -1,35 +1,34 @@
 # P2.3｜整合复原候选与质量验收｜Gate Review｜2026-09-12
 
-Status: **PRELIMINARY / 8 PASS + 1 HOLD — EVIDENCE DIAGNOSTIC CORRECTION REQUIRED**  
+Status: **PRELIMINARY / 8 PASS + 1 PENDING PRODUCT OWNER REVIEW OF CORRECTED DIAGNOSTIC**  
 Gate: `P2.3｜Integrated Reconstruction Candidate & QC`  
 Locked DoD: `docs/production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md`
 
 ## 1. Review Conclusion
 
-T-008 V003 已关闭 DoD-07 跨版本往返阻断，ChatGPT 对 canonical GitHub 工程证据完成独立复核，工程主链 PASS。
+T-008 V003 已关闭 DoD-07 跨版本往返阻断，工程主链 PASS。Product Owner 首轮六图审核中，PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL 通过，原 `EVIDENCE_DIAGNOSTIC` 因不能区分四级证据边界而 HOLD。
 
-2026-09-12，Product Owner 上传六张正式 review 图供最终审核。ChatGPT 对六图按 DoD-08 逐项视觉复核后：
+T-008 V004 已按锁定修正范围完成：canonical V001 `.blend`、11 families / 40 variants / 365 stable instances、33/33 tests、34/34 machine QC、V003 roundtrip 与其余五张审核图均保持不变；仅新增只读式 evidence diagnostic renderer、四级分类 sidecar QC 与 `EVIDENCE_DIAGNOSTIC_V002`。
 
-- PLAN：PASS
-- ELEVATION：PASS
-- AXON：PASS
-- EXTERIOR_3Q：PASS
-- STRUCTURE_DETAIL：PASS
-- EVIDENCE_DIAGNOSTIC：**HOLD**
+ChatGPT 已对 V004 canonical GitHub 工程证据做独立复核。分类规则与 Task Contract 一致：
+
+`UNKNOWN / PLACEHOLDER > REASONABLE COMPLETION / APPROVED OVERRIDE > HIGH CONFIDENCE INFERENCE > CONFIRMED`
+
+分类以 Integration Manifest 的 stable instance records 为 authoritative mapping，并显式使用 `bounded_placeholder`、`evidence_class`、`override_ids`；四级 legend 全部保留，即使当前类别 count=0。当前实例统计为：CONFIRMED 0 / HCI 0 / RC 35 / UNKNOWN-placeholder 330。
 
 当前结论：
 
 > **P2.3 engineering evidence = PASS**  
-> **P2.3 visual set = 5 PASS + 1 HOLD**  
-> **P2.3 Gate = NOT PASS**
+> **T-008 V004 engineering correction = PASS**  
+> **P2.3 Gate = NOT YET PASS**
 
-HOLD 原因不是建筑几何或 Cloud QC，而是当前 Evidence Diagnostic 不能满足锁定 DoD-08 要求的 `confirmed / inference / reasonable completion / unknown-placeholder` 四级证据边界区分。
+唯一剩余事项：Product Owner 直接查看并批准新版 `EVIDENCE_DIAGNOSTIC_V002`。在该视觉审核完成前，DoD-08 仍不记为 PASS。
 
 ## 2. Independent Engineering Review
 
 ### DoD-01｜Integration Manifest｜PASS
 
-- 正式输入、P2.2 baseline、component definitions、RC/override、bounded UNKNOWN、输出与 QC 环境均已进入 integration / validation evidence。
+- 正式输入、P2.2 baseline、component definitions、RC/override、bounded UNKNOWN、输出与 QC 环境均已归档。
 - V001 frozen candidate SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
 
 ### DoD-02｜Component Library / Variant / Instance Architecture｜PASS
@@ -40,12 +39,8 @@ HOLD 原因不是建筑几何或 Cloud QC，而是当前 Evidence Diagnostic 不
 
 ### DoD-03｜Integrated Candidate Geometry｜PASS
 
-六图中的 PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL 与 machine QC 共同支持：
-
-- 柱网、主要梁架、斗栱拓扑、檩椽与屋面包络形成连续系统；
-- 未发现整族漂浮、明显错向、尺度异常、重复放置或重大断链；
-- P2.2 diagnostic / control-only 几何仍与 presentation layer 有明确区分；
-- open elevations / gable ends 与简化屋面为已记录 evidence boundary，不作为“历史建筑缺少围护”的声明。
+- PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL 已通过首轮视觉审核。
+- machine QC 对 roof continuity、bracket continuity、frame-to-roof trace、P2.2 topology regression 均 PASS。
 
 ### DoD-04｜Evidence Metadata / Historical Claim Boundaries｜PASS
 
@@ -59,67 +54,55 @@ HOLD 原因不是建筑几何或 Cloud QC，而是当前 Evidence Diagnostic 不
 
 - replacement / mutation tests PASS。
 - naked historical constant / manual drift audit PASS。
-- 没有依赖不可追溯手工修模获得正式候选。
+- V004 renderer 只读打开 frozen `.blend`，在内存中改显示色后渲染，不保存、不重建、不修改 geometry / parameter / instance / variant。
 
 ### DoD-06｜Integrated Machine QC｜PASS
 
 - Local Blender 3.6.23 machine QC：**34 / 34 PASS / 0 errors**。
-- stable IDs、family/variant counts、prototype mapping、instance metadata、presentation/diagnostic separation、P2.2 regression 全部 PASS。
+- V004 回归后仍 PASS。
 
 ### DoD-07｜Deterministic Rebuild + Local/Cloud Compatibility QC｜PASS
 
-- deterministic rebuild / independent reopen：PASS。
-- V001 regression：33/33 automated tests PASS；34/34 machine QC PASS。
-- GitHub Actions run `34695870243`：SUCCESS。
-- Cloud Blender 4.5.13 input / reopen semantic QC：PASS。
-- Artifact `P2_3_CLOUD_ROUNDTRIP_V001`：PASS。
-- returned `.blend` SHA256：`d2c80c4e2e0ae278ad4b7055df6871e00bfb85ecf981fbc796ddd2f5e919efc0`。
-- Local Blender 3.6.23 return semantic QC / 34/34 machine QC：PASS。
-- core semantic diff：NONE；仅保留已接受 P0.2 UI-region warning。
-- temporary transport / run-trigger tags 已清理。
+- V003 GitHub Actions run `34695870243` SUCCESS。
+- Cloud Blender 4.5.13 input / reopen semantic QC PASS。
+- Local Blender 3.6.23 return semantic QC / 34/34 machine QC PASS。
+- core semantic diff NONE；V004 未重跑且未修改该证据。
 
-### DoD-08｜Visual QC / Evidence Diagnostic / Product Owner Review｜HOLD
+### DoD-08｜Visual QC / Evidence Diagnostic / Product Owner Review｜PENDING FINAL PRODUCT OWNER REVIEW
 
 #### 五张普通结构审核图｜PASS
 
-1. `PLAN`：整体屋面/平面包络规则、对称关系无明显异常；作为整组六图中的平面审核视图可接受。
-2. `ELEVATION`：柱—主梁—屋架—屋面关系连续，未见明显高程反转或整族错位。
-3. `AXON`：整合建筑系统可读；柱、主要梁架、斗栱拓扑与屋面包络空间关系成立。
-4. `EXTERIOR_3Q`：能够读出完整候选体量；未因视觉完整性擅自补入无证据墙体、门窗或装饰。
-5. `STRUCTURE_DETAIL`：能够检查柱顶—斗栱/支承—梁架—屋顶的局部链条；未发现新的结构性 HOLD。
+1. `PLAN`：PASS
+2. `ELEVATION`：PASS
+3. `AXON`：PASS
+4. `EXTERIOR_3Q`：PASS
+5. `STRUCTURE_DETAIL`：PASS
 
-#### Evidence Diagnostic｜HOLD
+#### Corrected Evidence Diagnostic V002｜ENGINEERING COMPLIANCE PASS / PO REVIEW PENDING
 
-锁定 DoD-08 明确要求 evidence diagnostic 能区分：
+新增：
 
-- CONFIRMED
-- HIGH_CONFIDENCE_INFERENCE
-- REASONABLE_COMPLETION
-- UNKNOWN / PLACEHOLDER
+- `production/zhenguo_wanfo/scripts/render_p2_3_evidence_diagnostic_v002.py`
+- `production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_EVIDENCE_DIAGNOSTIC_V002.png`
+- `production/zhenguo_wanfo/validation/P2_3_EVIDENCE_DIAGNOSTIC_V002_QC.json`
+- `production/zhenguo_wanfo/validation/P2_3_V004_EVIDENCE_DIAGNOSTIC_VISUAL_REVIEW.md`
 
-当前 renderer 实际采用三路逻辑：
+Independent code/QC review findings:
 
-- 仅 exact `evidence_class == CONFIRMED` → confirmed color；
-- 其余所有非 placeholder → 同一颜色；
-- `bounded_placeholder == true` → placeholder color。
+- authoritative classification source = Integration Manifest stable instance records;
+- priority = UNKNOWN > RC/override > HCI > CONFIRMED;
+- RC / override 显式识别；placeholder 优先级高于 RC；
+- 四个 legend 类别均由代码显式支持，0-count 类别保留；
+- counts = `0 / 0 / 35 / 330`，总计365；
+- diagnostic PNG SHA256 = `998739c5c93e5d835c563bfdcaea4552749427d3511dfd9258d22bb67f719d9c`；
+- frozen candidate before/after SHA256 相同；五张已通过图与 roundtrip evidence hash 未变。
 
-因此：
-
-- HIGH_CONFIDENCE_INFERENCE 与 REASONABLE_COMPLETION 被合并；
-- mixed evidence class 不能按不确定性等级显示；
-- `override_ids`（如 `Z-006-RC-01`）未被显式纳入颜色分类；
-- 当前图本身没有四级 legend；
-- 图面实际主要形成 broad evidence / placeholder 分层，而不是锁定 DoD 要求的四级证据边界。
-
-这属于 **DoD-08 合规问题**，不是美术偏好问题，因此不能在本版直接批准 P2.3。
-
-修正任务：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V004.md`。
+但 Product Owner 尚未直接查看 V002 图片，因此 DoD-08 继续保持 PENDING。
 
 ### DoD-09｜Final Archive / Known Limitations / Closure Evidence｜PASS（engineering archive complete）
 
-- component library、generator / validator / tests、integration manifest、machine QC、roundtrip evidence、validation report、known limitations 与 review images 已归档。
-- local-only candidate path / SHA256 / size / Blender version 已记录。
-- V004 只允许新增 corrected evidence diagnostic / QC sidecar，不得改变 canonical model。
+- component library、generator / validator / tests、integration manifest、machine QC、roundtrip evidence、validation report、known limitations 与 review evidence 均归档。
+- T-008 V004 canonical commit：`93aef4803d2c0d3f7e3e3d29e9ab235c2f92d8f3`。
 
 ## 3. Preliminary Gate Score
 
@@ -132,13 +115,13 @@ HOLD 原因不是建筑几何或 Cloud QC，而是当前 Evidence Diagnostic 不
 | DoD-05 | PASS |
 | DoD-06 | PASS |
 | DoD-07 | PASS |
-| DoD-08 | **HOLD — EVIDENCE DIAGNOSTIC FOUR-LEVEL MAPPING REQUIRED** |
+| DoD-08 | **PENDING PRODUCT OWNER REVIEW OF EVIDENCE_DIAGNOSTIC_V002** |
 | DoD-09 | PASS |
 
-**Current: 8 PASS + 1 HOLD.**
+**Current: 8 PASS + 1 PENDING.**
 
 ## 4. Gate Recommendation
 
-> **HOLD P2.3 ONLY FOR EVIDENCE DIAGNOSTIC CORRECTION.**
+> **HOLD P2.3 ONLY FOR DIRECT PRODUCT OWNER REVIEW OF THE CORRECTED DIAGNOSTIC.**
 
-冻结全部已通过的模型与工程结果。执行 T-008 V004，只修正 Evidence Diagnostic 四级分类和 legend；新版 diagnostic 通过 ChatGPT + Product Owner 复核并由 Product Owner 明确批准后，才可形成 9/9 PASS、关闭 P2.3 与 P2。
+当前无工程 blocker，也无需再次修改模型或重跑 Cloud roundtrip。Product Owner 直接审核 `EVIDENCE_DIAGNOSTIC_V002` 并明确批准后，才可形成 9/9 PASS、记录最终 Gate decision、关闭 P2.3 与 P2。
