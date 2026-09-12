@@ -93,6 +93,25 @@
 - 正式几何不再受 P2.0 阻断，但 CG-02～CG-06 持续生效。
 - 在创建下一项正式几何 T-### 前，必须先定义并锁定 P2.1–P2.3 Gate 架构。
 
+## 【中国古建筑3D复原｜T-006｜P2_1_PRODUCTION_PARAMETER_SET_V001｜正式生产参数集建立与几何依赖预检】｜ENGINEERING HOLD
+
+- Think Level: HIGH。
+- Python：3.10.2；`jsonschema`：4.26.0。
+- Formal Production Parameter Set：**85/85**；classification = 46 CONFIRMED / 32 HIGH_CONFIDENCE_INFERENCE / 4 REASONABLE_COMPLETION / 3 UNKNOWN。
+- Geometry Dependency Matrix：**85/85**。
+- Machine validation：**PASS**。
+- Automated tests：**PASS 11/11**。
+- Production preflight：**HOLD / exit 1**。
+- UNKNOWN dependency：
+  - `Z-006 / column_height_963_design_mm` → `BLOCKS_P2_2_GEOMETRY`；
+  - `DG-114 / small_dou_unified_design_rule` → `BOUNDED_NON_BLOCKING`；
+  - `HIS-002 / component_level_963_originality` → `METADATA_ONLY_BLOCK`。
+- Geometry-critical unresolved blocker count：**1**。
+- blocker：`Z-006`。P2.2 的柱、主要梁架与屋顶绝对 Z 定位需要柱高；P1 未锁定合法的 963 原设计柱高，现状或二手高度不得静默代填。
+- 无静默补值、无 UNKNOWN 重分类、无 `bpy`、无 Blender 几何生成。
+- T-006 engineering commit：`1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0`，已进入 GitHub `main` canonical repo。
+- T-006 最终工程建议：**HOLD**。P2.1 不得 PASS；P2.2 不得启动，直到 `Z-006` blocker 通过新证据或 Product Owner 明确批准的独立、可替换、可追溯 REASONABLE_COMPLETION 得到处理。
+
 ## Current Execution State｜2026-09-12
 
 - T-001：PASS
@@ -101,9 +120,12 @@
 - T-004：PASS
 - T-005 V001：ENGINEERING PASS
 - T-005 V002：ENGINEERING PASS / COMPLETE / canonical evidence archived
+- T-006 V001：**ENGINEERING HOLD / canonical evidence archived**
 - P0：CLOSED / APPROVED
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO
 - P2：ACTIVE
-- P2.0：**PASS / APPROVED**
+- P2.0：PASS / APPROVED
+- P2.1：**IN PROGRESS / BLOCKED BY Z-006**
+- P2.2：LOCKED / WAITING FOR P2.1 PASS
 - Formal Case：平遥镇国寺万佛殿
-- Formal Blender geometry：P2.0 entry lock released; next production task waits for P2.1–P2.3 Gate architecture approval
+- Formal Blender geometry：**NOT STARTED**
