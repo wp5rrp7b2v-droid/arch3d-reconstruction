@@ -70,6 +70,9 @@ P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段。P2.0 已完成 CG-01 
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
 | P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **PASS / APPROVED 2026-09-12** | T-005 V001+V002 工程验证全部 PASS；Gate Review 7/7 PASS；工程证据归档至 GitHub canonical repo，commit `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`。Product Owner 已批准 P2.0。 |
+| P2.1｜正式生产参数集锁定｜Formal Production Parameter Set | 将 P1 已分类参数转为 P2.0 Schema 下的正式 production parameter set；明确 UNKNOWN 对几何生成的真实阻断关系；任何临时建模值必须形成显式、可替换、可追溯的 REASONABLE_COMPLETION | **ENTRY READY / DoD TO BE LOCKED** | **本 Gate 不生成正式 Blender 几何。P2.1 PASS 后方可进入 P2.2。** |
+| P2.2｜参数化主体结构候选模型｜Parametric Structural Skeleton | 由 P2.1 正式参数集驱动生成主体结构候选模型，覆盖柱网、柱、主要梁架、斗栱拓扑骨架、屋顶控制几何及主要空间关系，并验证可重复生成与参数响应 | **LOCKED / WAITING FOR P2.1 PASS** | 第一项正式 Blender 几何 Gate；CG-05 未解决转角精确节点/榫卯/隐角梁仅允许中等LOD拓扑骨架。 |
+| P2.3｜整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC | 整合结构、屋面、斗栱体系与 evidence metadata，完成可追溯性、确定性重建、兼容性、可替换性与视觉 QC，形成正式963候选复原模型 | **LOCKED / WAITING FOR P2.2 PASS** | PASS 表示“工程可复现、证据可追溯、不确定性透明的963候选复原模型成立”，不等于完全还原963原貌。 |
 
 ### P2.0 Final Result
 
@@ -99,5 +102,12 @@ Product Owner Approval：**P2.0 PASS / 2026-09-12**。
 - CG-01 视为已满足；
 - CG-02～CG-06 继续强制生效；
 - P2.0 PASS 不表示所有85项参数都已 production-locked；
-- UNKNOWN、合理补全、三层语义和历史原真性边界不得在后续工程中丢失；
-- 下一步先定义并锁定 P2.1–P2.3 Gate 架构，再创建下一项正式几何工程任务。
+- UNKNOWN、合理补全、三层语义和历史原真性边界不得在后续工程中丢失。
+
+### P2.1–P2.3 Architecture V001｜APPROVED 2026-09-12
+
+生产路径正式锁定为：
+
+**P2.1 参数 → P2.2 结构 → P2.3 整合候选与QC**
+
+下一步只展开并锁定 **P2.1 Definition of Done**。在 P2.1 DoD 明确前不创建 T-006；P2.1 PASS 前不得进入 P2.2 正式 Blender 几何生产。
