@@ -1,0 +1,10 @@
+{
+  "blender_version": "4.5.13 LTS",
+  "contract": "P2_3_ROUNDTRIP_SEMANTIC_V001",
+  "instance_count": 365,
+  "mode": "compare",
+  "reference_semantic_sha256": "1e6a1ab2c6f63d0d7772e69b189ab91447aaf8735285df6e9ab1ffb09d232750",
+  "semantic_sha256": "1e6a1ab2c6f63d0d7772e69b189ab91447aaf8735285df6e9ab1ffb09d232750",
+  "status": "PASS",
+  "variant_count": 40
+}

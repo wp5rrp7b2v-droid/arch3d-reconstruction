@@ -1,0 +1,11 @@
+{
+  "api_returned_sha": "23797dbd360ba67b8195d988f2161ff9eaf37d48",
+  "authentication": "GitHub Actions github.token",
+  "computed_blob_sha": "23797dbd360ba67b8195d988f2161ff9eaf37d48",
+  "decoded_sha256": "ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512",
+  "expected_blob_sha": "23797dbd360ba67b8195d988f2161ff9eaf37d48",
+  "expected_sha256": "ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512",
+  "size_bytes": 2723280,
+  "status": "PASS",
+  "task": "T-008 V003"
+}

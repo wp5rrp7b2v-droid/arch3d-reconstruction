@@ -18,11 +18,19 @@ The roof uses six continuous envelope strips over approved control intervals, to
 
 ## Cloud roundtrip
 
-**HOLD**. The workflow and version-aware semantic QC script are prepared. The local Blender 3.6 snapshot records per-instance geometry bounds, mesh and variant mapping, transforms, evidence metadata, collection mapping and camera assets. The V001 T-008 engineering archive is on private `origin/main`. The Cloud Blender 4.5 run and returned Blender 3.6 validation have not occurred. DoD-07 remains incomplete.
+**DoD-07 roundtrip: PASS (T-008 V003).** The V001 local semantic snapshot records per-instance geometry bounds, mesh and variant mapping, transforms, evidence metadata, collection mapping and camera assets. GitHub Actions run [34695870243](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/34695870243) used its own `github.token` to retrieve the already registered Git blob, verified the decoded input SHA256 before starting Blender, and completed Blender 4.5.13 cloud input and independent reopen semantic QC. The returned artifact was downloaded and independently reopened in Local Blender 3.6.23. The local return semantic summary exactly matches the V001 snapshot; its 34/34 structural checks pass. No core geometry, family/variant/instance, metadata, collection or camera difference was found.
 
 ### V002 continuation — temporary Git blob tag
 
 The V001 canonical `.blend` remains unchanged at SHA256 `ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`. Under the V002 Task Contract, it was written as Git blob `23797dbd360ba67b8195d988f2161ff9eaf37d48` and pushed through temporary lightweight tag `p2-3-transport-v001`. Remote `ls-remote` advertises that exact blob SHA. Two independent attempts to fetch the tag into a disposable repository failed with `Empty reply from server`; therefore the V002 section 4 transport condition is **HOLD**. The Blender 4.5 workflow was not dispatched and no artifact or local-return QC exists. The temporary tag remains in place because V002 section 7 allows cleanup only after a successful workflow, artifact download and local return validation. The exact record is `validation/P2_3_V002_TRANSPORT_QC_V001.json`.
+
+### V003 continuation — authenticated Actions blob retrieval
+
+Workflow commit `d595a587c72dc4e76afac249d8a4e667ac772fd0` was pushed to private `main`, then normal commit tag `p2-3-roundtrip-run-v003-001` triggered the successful run. The runner Git Blobs API returned the expected blob SHA `23797dbd360ba67b8195d988f2161ff9eaf37d48`; decoded input SHA256 was the frozen `ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`. The cloud input and reopen semantic SHA256 both equal the V001 reference `1e6a1ab2c6f63d0d7772e69b189ab91447aaf8735285df6e9ab1ffb09d232750` (365 instances, 40 variants, 11 families). Artifact `P2_3_CLOUD_ROUNDTRIP_V001` was downloaded with ZIP SHA256 `09ebba82b33f6d5c2fcb62d4dd979289a73c8464f285cba823150d0ba9f66abb`; the returned `.blend` SHA256 is `d2c80c4e2e0ae278ad4b7055df6871e00bfb85ecf981fbc796ddd2f5e919efc0` and remains local only.
+
+Local Blender 3.6.23 independently reopened the returned file twice: semantic compare **PASS**, and full machine QC **PASS 34/34**. The frozen V001 candidate separately passed **33/33** automated tests and **34/34** machine QC again. The first sandboxed regression attempts crashed during Metal GPU initialization before model validation; both checks passed when Blender had native graphics access. The known P0.2 UI-region-only warnings appeared on the 4.5→3.6 return, without any new core semantic loss. Detailed run, hashes, artifact and QC paths are archived in `validation/P2_3_V003_ROUNDTRIP_QC_V001.json`.
+
+Temporary transport and run-trigger tags await final cleanup after this canonical evidence is pushed, as required by the V003 Task Contract. This engineering result does not decide the P2.3 Gate; independent engineering review and Product Owner review of the six formal images and evidence diagnostic remain required.
 
 ## Historical statement boundary
 

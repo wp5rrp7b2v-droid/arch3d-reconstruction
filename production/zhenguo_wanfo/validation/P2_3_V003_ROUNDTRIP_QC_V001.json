@@ -1,0 +1,64 @@
+{
+  "artifact": {
+    "download": "PASS",
+    "id": 10299030693,
+    "local_only_return_path": "production/zhenguo_wanfo/output/roundtrip/P2_3_CLOUD_4_5_RETURN_V001.blend",
+    "local_only_zip_path": "production/zhenguo_wanfo/output/roundtrip/P2_3_CLOUD_ROUNDTRIP_V001.zip",
+    "name": "P2_3_CLOUD_ROUNDTRIP_V001",
+    "return_sha256": "d2c80c4e2e0ae278ad4b7055df6871e00bfb85ecf981fbc796ddd2f5e919efc0",
+    "return_size_bytes": 2729704,
+    "zip_sha256": "09ebba82b33f6d5c2fcb62d4dd979289a73c8464f285cba823150d0ba9f66abb"
+  },
+  "cleanup": {
+    "run_trigger_tag": "PENDING_CANONICAL_EVIDENCE_PUSH",
+    "transport_tag": "PENDING_CANONICAL_EVIDENCE_PUSH"
+  },
+  "cloud": {
+    "blender_version": "4.5.13 LTS",
+    "input_qc_path": "production/zhenguo_wanfo/validation/P2_3_CLOUD_INPUT_QC_V001.json",
+    "input_semantic_status": "PASS",
+    "reopen_qc_path": "production/zhenguo_wanfo/validation/P2_3_CLOUD_REOPEN_QC_V001.json",
+    "reopen_semantic_status": "PASS",
+    "return_sha256": "d2c80c4e2e0ae278ad4b7055df6871e00bfb85ecf981fbc796ddd2f5e919efc0",
+    "semantic_sha256": "1e6a1ab2c6f63d0d7772e69b189ab91447aaf8735285df6e9ab1ffb09d232750"
+  },
+  "frozen_candidate": {
+    "path": "production/zhenguo_wanfo/output/P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001.blend",
+    "sha256": "ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512",
+    "size_bytes": 2723280
+  },
+  "local_return": {
+    "blender_version": "3.6.23",
+    "core_semantic_diff": "NONE",
+    "known_ui_region_difference": "Only previously accepted P0.2 UI-region warnings; no new core loss",
+    "machine_qc": "PASS 34/34",
+    "machine_qc_path": "production/zhenguo_wanfo/validation/P2_3_V003_LOCAL_RETURN_MACHINE_QC_V001.json",
+    "semantic_qc_path": "production/zhenguo_wanfo/validation/P2_3_V003_LOCAL_RETURN_SEMANTIC_QC_V001.json",
+    "semantic_status": "PASS"
+  },
+  "status": "PASS_PENDING_TAG_CLEANUP",
+  "task": "T-008 V003",
+  "transport": {
+    "blob_sha": "23797dbd360ba67b8195d988f2161ff9eaf37d48",
+    "decoded_sha256": "ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512",
+    "retrieval_qc_path": "production/zhenguo_wanfo/validation/P2_3_BLOB_RETRIEVAL_QC_V003.json",
+    "retrieval_status": "PASS",
+    "temporary_tag": "p2-3-transport-v001"
+  },
+  "v001_regression": {
+    "machine_qc": "PASS 34/34",
+    "machine_qc_path": "production/zhenguo_wanfo/validation/P2_3_V003_V001_MACHINE_REGRESSION_QC.json",
+    "unit_test_log_path": "production/zhenguo_wanfo/validation/P2_3_V003_V001_UNITTEST_LOG_V001.txt",
+    "unit_tests": "PASS 33/33"
+  },
+  "workflow": {
+    "commit": "d595a587c72dc4e76afac249d8a4e667ac772fd0",
+    "conclusion": "success",
+    "path": ".github/workflows/p2_3_integrated_roundtrip.yml",
+    "run_id": 34695870243,
+    "run_tag_push": "PASS",
+    "run_trigger_tag": "p2-3-roundtrip-run-v003-001",
+    "run_url": "https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/34695870243",
+    "sha256": "1728ea66005c8e1fdc9c8a444a5e8d396adce2402e3d290e533cc3fe86529396"
+  }
+}
