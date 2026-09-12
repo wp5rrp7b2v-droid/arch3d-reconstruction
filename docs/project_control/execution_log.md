@@ -84,6 +84,15 @@
 - canonical evidence includes validator、reader、V001/V002 automated tests、两个负例 fixture、三层并存 fixture、V001/V002 validation reports。
 - T-005 V002 最终工程结论：**PASS / COMPLETE**。
 
+## P2.0 Gate Review｜APPROVED / PASS｜2026-09-12
+
+- P2.0 Gate Review：**7/7 PASS**。
+- Product Owner 明确批准 `P2.0｜PASS`。
+- CG-01｜Evidence-aware Parameter Schema 前置条件正式满足。
+- T-005 V001/V002：COMPLETE。
+- 正式几何不再受 P2.0 阻断，但 CG-02～CG-06 持续生效。
+- 在创建下一项正式几何 T-### 前，必须先定义并锁定 P2.1–P2.3 Gate 架构。
+
 ## Current Execution State｜2026-09-12
 
 - T-001：PASS
@@ -95,7 +104,6 @@
 - P0：CLOSED / APPROVED
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO
 - P2：ACTIVE
-- P2.0：**READY FOR PRODUCT OWNER DECISION**
-- P2.0 Gate Review：7/7 PASS；Reviewer Recommendation = **APPROVE PASS**
+- P2.0：**PASS / APPROVED**
 - Formal Case：平遥镇国寺万佛殿
-- Formal Blender geometry：LOCKED until Product Owner approves P2.0
+- Formal Blender geometry：P2.0 entry lock released; next production task waits for P2.1–P2.3 Gate architecture approval
