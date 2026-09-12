@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R027",
+  "state_revision": "R028",
   "last_updated": "2026-09-12",
-  "session_status": "ACTIVE_P2_1_ENTRY_READY_DOD_REQUIRED",
+  "session_status": "ACTIVE_P2_1_DOD_LOCKED_T006_READY_TO_DEFINE",
   "next_session_date": null,
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
@@ -16,14 +16,14 @@
     "status": "ACTIVE / ARCHITECTURE_LOCKED",
     "passed": 1,
     "total": 4,
-    "architecture_status": "P2.0-P2.3 LOCKED / P2.1 ENTRY READY",
+    "architecture_status": "P2.0-P2.3 LOCKED / P2.1 DOD LOCKED / T006 READY TO DEFINE",
     "items": {
       "P2.0": {"status": "PASS / APPROVED", "name": "Evidence-aware Parameter Schema", "approved_date": "2026-09-12"},
-      "P2.1": {"status": "ENTRY_READY / DOD_TO_BE_LOCKED", "name": "正式生产参数集锁定｜Formal Production Parameter Set"},
+      "P2.1": {"status": "IN_PROGRESS / DOD_LOCKED / T006_READY_TO_DEFINE", "name": "正式生产参数集锁定｜Formal Production Parameter Set", "dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "dod_count": 9},
       "P2.2": {"status": "LOCKED / WAITING_FOR_P2_1_PASS", "name": "参数化主体结构候选模型｜Parametric Structural Skeleton"},
       "P2.3": {"status": "LOCKED / WAITING_FOR_P2_2_PASS", "name": "整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC"}
     },
-    "note": "Product Owner 已批准 P2.1-P2.3 Gate Architecture V001。生产路径锁定为参数→结构→整合候选与QC。下一步先明确并锁定 P2.1 Definition of Done；P2.1 DoD 明确前不创建 T-006，P2.1 PASS 前不进入正式 Blender 几何生产。"
+    "note": "Product Owner 已锁定 P2.1 Definition of Done V001。P2.1 PASS 需要 DoD 9/9 且 geometry-critical unresolved blocker=0。下一步创建 T-006 Task Contract；P2.1 PASS 前不进入正式 Blender 几何生产。"
   },
   "decision_required": false,
   "blocker": null,
@@ -57,36 +57,39 @@
     "CG-06 historical authenticity claims must remain bounded by component-level uncertainty"
   ],
   "p2_entry": {
-    "status": "ACTIVE / P2.1 ENTRY READY",
+    "status": "ACTIVE / P2.1 DOD LOCKED / T006 READY TO DEFINE",
     "completed_gate": "P2.0",
     "completed_gate_result": "PASS / PRODUCT_OWNER_APPROVED",
     "gate_architecture_decision": "D-021",
     "gate_architecture_version": "P2.1-P2.3 Gate Architecture V001",
+    "p2_1_dod_decision": "D-022",
+    "p2_1_dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md",
     "production_path": ["P2.1 Formal Production Parameter Set", "P2.2 Parametric Structural Skeleton", "P2.3 Integrated Reconstruction Candidate & QC"],
     "p2_1_goal": "把P1已分类参数转为P2.0 Schema下的正式生产参数集，并明确UNKNOWN对几何生成的真实阻断关系。",
     "p2_1_geometry_rule": "NO FORMAL BLENDER GEOMETRY IN P2.1",
+    "p2_1_pass_rule": "DOD 9/9 PASS AND geometry-critical unresolved blocker = 0",
+    "p2_1_dod_summary": [
+      "85/85 parameter migration",
+      "evidence semantics preserved",
+      "schema + reader machine validation",
+      "UNKNOWN geometry blocker classification",
+      "85/85 Geometry Dependency Matrix",
+      "REASONABLE_COMPLETION replaceability",
+      "three-layer + originality metadata boundary preservation",
+      "machine-executable production preflight",
+      "version lock + canonical archive"
+    ],
+    "unknown_dependency_statuses": ["BLOCKS_P2_2_GEOMETRY", "BOUNDED_NON_BLOCKING", "METADATA_ONLY_BLOCK"],
+    "geometry_dependency_roles": ["DIRECT_GEOMETRY_INPUT", "DERIVED_GEOMETRY_RULE", "VALIDATION_REFERENCE", "METADATA_ONLY", "NOT_USED_IN_P2_2"],
     "p2_2_entry_rule": "P2.1 PASS REQUIRED BEFORE FIRST FORMAL BLENDER GEOMETRY",
     "schema_spec": "docs/production/zhenguo_wanfo/P2_0_EVIDENCE_AWARE_PARAMETER_SCHEMA_V001.md",
     "machine_schema": "production/zhenguo_wanfo/schema/evidence_aware_parameter_schema_v001.json",
-    "t005_result": {
-      "status": "ENGINEERING_PASS / COMPLETE",
-      "v002_full_suite": "PASS 6/6",
-      "canonical_commit": "a938d9fe96c579c21fb3a16734f9b74efcd7d8bc"
-    },
-    "next_action": "Define and lock P2.1 Definition of Done; only then create T-006"
+    "t005_result": {"status": "ENGINEERING_PASS / COMPLETE", "v002_full_suite": "PASS 6/6", "canonical_commit": "a938d9fe96c579c21fb3a16734f9b74efcd7d8bc"},
+    "next_action": "Create T-006 Task Contract for 85/85 production parameter migration + Geometry Dependency Matrix + production preflight + P2.1 validation report"
   },
   "p1_evidence_progress": {
     "status": "CLOSED / CLASSIFIED / APPROVED FOR CONDITIONAL PRODUCTION",
-    "primary_source": {
-      "id": "SRC-ZG-WF-001",
-      "title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告",
-      "authors": "刘畅、廖慧农、李树盛",
-      "format": "完整扫描PDF",
-      "pdf_pages": 434,
-      "bytes": 84117628,
-      "sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
-      "status": "DIRECT_REVIEWED"
-    },
+    "primary_source": {"id": "SRC-ZG-WF-001", "title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告", "authors": "刘畅、廖慧农、李树盛", "format": "完整扫描PDF", "pdf_pages": 434, "bytes": 84117628, "sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472", "status": "DIRECT_REVIEWED"},
     "parameter_candidate_matrix": "docs/evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V002.md",
     "full_classification": "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
     "open_but_bounded": ["963原设计柱高", "小斗统一规格设计规则", "逐构件963原真性", "转角45度精确节点与榫卯落位", "隐衬角栿/隐角梁来源冲突"]
@@ -107,17 +110,17 @@
     "reassessment_rule": "若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"
   },
   "latest_material_decision": {
-    "id": "D-021",
+    "id": "D-022",
     "date": "2026-09-12",
-    "decision": "Product Owner 批准 P2.1-P2.3 Gate Architecture V001；生产路径锁定为参数→结构→整合候选与QC；P2.1 ENTRY READY。"
+    "decision": "Product Owner 锁定 P2.1 Definition of Done V001；P2.1 PASS需要9/9且geometry-critical unresolved blocker=0；下一步创建T-006 Task Contract。"
   },
-  "next_action": "明确并锁定 P2.1 Definition of Done；DoD 明确后才创建 T-006。P2.1 PASS 前不得进入 P2.2 正式 Blender 几何生产。",
+  "next_action": "创建 T-006 Task Contract，执行85/85正式生产参数迁移、Geometry Dependency Matrix、production preflight和P2.1 validation report；P2.1 PASS前不得进入P2.2正式Blender几何生产。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v008",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_D021_PENDING_R027_REFRESH",
-    "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md"]
+    "refresh_status": "R028_REFRESH_COMPLETE",
+    "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md"]
   }
 }

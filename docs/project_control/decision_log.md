@@ -24,7 +24,8 @@
 | D-018 | 2026-09-11 | Product Owner 批准 P1.2｜正式证据包建立通过。完整《精细测绘报告》已纳入主来源并完成关键原页直接核读；参数候选矩阵升级为 V002；P1.2 Gate Review 10/10 PASS。P1.2 正式 PASS，P1 Gate 进度变为 3/4；P1.3 解锁进入证据分级与可复原性 Go / No-Go。 | ACTIVE / P1.2 PASS / P1.3 ENTERED |
 | D-019 | 2026-09-12 | Product Owner 正式批准 `P1.3｜CONDITIONAL GO`。P1.3 PASS，P1 Gate = 4/4 PASS，P1｜选题取证正式关闭。项目允许进入正式参数化与3D候选复原，但 CG-01～CG-06 全部成为跨阶段强制生产规则。P2 第一项强制 Gate 为 `P2.0｜Evidence-aware Parameter Schema`；P2.0 PASS 前不得启动第一项正式 Blender 几何生产。 | ACTIVE / P1 CLOSED / P2 ENTRY / CONDITIONAL GO |
 | D-020 | 2026-09-12 | Product Owner 正式批准 `P2.0｜Evidence-aware Parameter Schema` PASS。T-005 V001/V002 完成并验证 Schema、UNKNOWN/DO_NOT_LOCK 机械约束、REASONABLE_COMPLETION 可替换约束及三层语义并存；P2.0 Gate Review 7/7 PASS。CG-01 前置条件正式满足。P2 后续工作可继续，但在创建第一项正式几何任务前，必须先定义并锁定 P2.1–P2.3 Gate 架构；CG-02～CG-06 继续强制生效。 | ACTIVE / P2.0 PASS / NEXT GATE ARCHITECTURE REQUIRED |
-| **D-021** | **2026-09-12** | **Product Owner 批准 `P2.1–P2.3 Gate Architecture V001`。P2.1=`正式生产参数集锁定｜Formal Production Parameter Set`；P2.2=`参数化主体结构候选模型｜Parametric Structural Skeleton`；P2.3=`整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC`。生产路径正式锁定为“参数 → 结构 → 整合候选与QC”。P2.1 不生成正式 Blender 几何；P2.1 PASS 后方可进入 P2.2 第一项正式几何生产。CG-02～CG-06 持续强制生效。** | **ACTIVE / P2 GATE ARCHITECTURE LOCKED / P2.1 ENTRY READY** |
+| D-021 | 2026-09-12 | Product Owner 批准 `P2.1–P2.3 Gate Architecture V001`。P2.1=`正式生产参数集锁定｜Formal Production Parameter Set`；P2.2=`参数化主体结构候选模型｜Parametric Structural Skeleton`；P2.3=`整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC`。生产路径正式锁定为“参数 → 结构 → 整合候选与QC”。P2.1 不生成正式 Blender 几何；P2.1 PASS 后方可进入 P2.2 第一项正式几何生产。CG-02～CG-06 持续强制生效。 | ACTIVE / P2 GATE ARCHITECTURE LOCKED / P2.1 ENTRY READY |
+| **D-022** | **2026-09-12** | **Product Owner 要求并批准锁定 `P2.1 Definition of Done V001`。P2.1 必须完成85/85参数迁移、证据语义保持、Schema机器验证、UNKNOWN几何阻断判定、Geometry Dependency Matrix、REASONABLE_COMPLETION可替换性、三层语义与构件原真性边界、机器preflight、版本锁定与canonical archive共9项。P2.1 PASS除9/9外还要求 `geometry-critical unresolved blocker = 0`；UNKNOWN若是P2.2必须输入，不得跳过或静默补值，只能由新证据解决或经Product Owner显式批准新的可替换REASONABLE_COMPLETION。** | **ACTIVE / P2.1 DOD LOCKED / T-006 READY TO DEFINE** |
 
 ## D-012 直接影响
 
@@ -107,3 +108,15 @@
 - P2.2 对转角45°精确节点、榫卯与隐角梁争议只允许中等LOD拓扑骨架，继续执行 CG-05。
 - P2.3 PASS 表示“工程可复现、证据可追溯、不确定性透明的963候选复原模型成立”，不等于“完全还原963年原貌”。
 - 下一步先明确并锁定 P2.1 Definition of Done，再创建 T-006；未经 P2.1 PASS，不进入 P2.2 正式几何生产。
+
+## D-022 P2.1 Definition of Done Boundary
+
+- P2.1 DoD 正式文件：`docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md`。
+- PASS 必须满足 DoD-01～DoD-09 全部通过；任何一项未通过即 HOLD。
+- 85项参数必须全部迁移或以明确 metadata/rule representation 保留，不能只保留直接建模参数。
+- Geometry Dependency Matrix 是生产依赖分类，不改变历史证据 classification。
+- UNKNOWN 必须明确判断其是否阻断 P2.2；geometry-critical UNKNOWN 未解除时 P2.1 不得 PASS。
+- 若需要临时值解除 geometry blocker，必须由 Product Owner 显式批准新的 REASONABLE_COMPLETION；禁止静默赋值。
+- HIS-002 的逐构件原真性边界继续进入后续 geometry metadata；无证据时 `originality_status` 默认 `unknown`。
+- P2.1 允许执行纯数据、脚本、preflight 与验证；不生成正式 Blender 几何。
+- DoD 锁定后下一步可定义 T-006；T-006 本身不因 DoD 锁定而自动创建或启动。
