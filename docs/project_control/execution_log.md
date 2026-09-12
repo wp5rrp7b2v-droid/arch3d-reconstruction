@@ -112,6 +112,34 @@
 - T-006 engineering commit：`1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0`，已进入 GitHub `main` canonical repo。
 - T-006 最终工程建议：**HOLD**。P2.1 不得 PASS；P2.2 不得启动，直到 `Z-006` blocker 通过新证据或 Product Owner 明确批准的独立、可替换、可追溯 REASONABLE_COMPLETION 得到处理。
 
+## 【中国古建筑3D复原｜T-006｜P2_1_PRODUCTION_PARAMETER_SET_V002｜Z-006批准候选接入与阻断清零验证】｜ENGINEERING PASS / COMPLETE
+
+- Think Level: HIGH。
+- Python：3.10.2；`jsonschema`：4.26.0。
+- V001 regression：**11/11 PASS**。
+- Automated tests：**21/21 PASS**。
+- Formal Production Parameter Set：**85/85 unchanged**；46 CONFIRMED / 32 HIGH_CONFIDENCE_INFERENCE / 4 REASONABLE_COMPLETION / 3 UNKNOWN。
+- `Z-006`：继续保持 `UNKNOWN / null / DO_NOT_LOCK`；dependency 继续为 `BLOCKS_P2_2_GEOMETRY`。
+- `Z-006-RC-01`：独立 approved override sidecar；`REASONABLE_COMPLETION`；`is_replaceable=true`；traceable to D-023。
+- Formula resolution：`11 × MOD-006 = 11 × 321.3 = 3534.3mm`。
+- Historical geometry-critical unknown count：**1**。
+- Approved candidate resolution count：**1**。
+- Geometry-critical unresolved blocker count：**0**。
+- Production preflight：**PASS / exit 0**。
+- Mutation tests 验证缺失/额外 override、Z-006 改写、dependency 改写、candidate身份/公式/审批/可替换性篡改、stale resolved value、证据边界缺失、RC-01混入历史85项等均触发 HOLD/FAIL。
+- 无 Blender、无 `bpy`、无正式几何生成。
+- canonical engineering commit：`fc124922d5c0c1674548f9b99968f9848ffbb332`。
+- T-006 V002 最终工程结论：**PASS / COMPLETE**。
+
+## P2.1 Gate Review｜APPROVED / PASS / CLOSED｜2026-09-12
+
+- Gate Review：**9/9 PASS**。
+- Hard PASS condition：`geometry-critical unresolved blocker = 0`，**PASS**。
+- Product Owner 明确批准：`P2.1｜PASS`。
+- P2.1 正式 CLOSED；P2.2 解锁。
+- P2.1 PASS 不改变 Z-006 历史 UNKNOWN；Z-006-RC-01 继续作为独立、可替换 production override。
+- Gate Review：`docs/production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md`。
+
 ## Current Execution State｜2026-09-12
 
 - T-001：PASS
@@ -120,12 +148,15 @@
 - T-004：PASS
 - T-005 V001：ENGINEERING PASS
 - T-005 V002：ENGINEERING PASS / COMPLETE / canonical evidence archived
-- T-006 V001：**ENGINEERING HOLD / canonical evidence archived**
+- T-006 V001：ENGINEERING HOLD / canonical evidence archived
+- T-006 V002：**ENGINEERING PASS / COMPLETE / canonical evidence archived**
 - P0：CLOSED / APPROVED
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO
 - P2：ACTIVE
 - P2.0：PASS / APPROVED
-- P2.1：**IN PROGRESS / BLOCKED BY Z-006**
-- P2.2：LOCKED / WAITING FOR P2.1 PASS
+- P2.1：**PASS / APPROVED / CLOSED**
+- P2.2：**UNLOCKED / CURRENT / DOD DEFINITION REQUIRED**
+- P2.3：LOCKED / WAITING FOR P2.2 PASS
 - Formal Case：平遥镇国寺万佛殿
 - Formal Blender geometry：**NOT STARTED**
+- Next engineering T-###：**NOT CREATED**；需先锁定 P2.2 Definition of Done。
