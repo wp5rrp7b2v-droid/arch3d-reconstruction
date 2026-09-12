@@ -28,9 +28,9 @@ P0.3 只证明“结构化建筑参数 → 脚本 → 可重复最小结构模�
 | P1.0｜选题标准锁定 | 明确首个正式复原案例的筛选原则与比较维度，能够稳定排除“过于复杂 / 证据不足 / 不适合首案”的对象 | **PASS** | Product Owner 2026-09-11 批准。采用五项加权指标：证据链完整度30%；测绘/尺寸资料可获得性25%；结构规模与首案可控性20%；历史状态歧义程度15%（歧义越低得分越高）；参数化与展示价值10%。统一按1–5分评分。 |
 | P1.1｜候选案例比较与定选 | 对 3–5 个候选对象按统一标准比较，并由 Product Owner 明确锁定一个正式案例 | **PASS** | 四候选按 P1.0 锁定权重比较：平遥镇国寺万佛殿 4.80；五台南禅寺大殿 4.48；五台佛光寺东大殿 4.13；宁波保国寺大殿 4.05。Product Owner 2026-09-11 批准 **平遥镇国寺万佛殿** 为首案。评分只表示首案适配度，不是历史价值排名。 |
 | P1.2｜正式证据包建立 | 对锁定案例建立可追溯资料包，至少覆盖年代/身份、总体尺寸、平面柱网、立面屋顶、主体木构、关键构件及图像/测绘/考古或修缮资料 | **PASS** | Product Owner 2026-09-11 批准。`SRC-ZG-WF-001`完整精细测绘报告已直接核读；Direct Page Review V001 + Parameter Candidate Matrix V002 + Gate Review 完成；10/10 验收域通过。P1.2 的 PASS 不代表所有参数均已达到历史事实级确定性。 |
-| P1.3｜证据分级与可复原性 Go / No-Go | 将关键信息分为已证实 / 高可信推断 / 合理补全 / 未知，并判断是否足以进入正式参数化与 3D 复原 | **IN PROGRESS** | 已解锁；主输入为 `P1_2_PARAMETER_CANDIDATE_MATRIX_V002.md`。963柱高/Z基准、角柱生起、举折、转角45°节点、逐构件修缮分层等必须在本 Gate 明确分级。P1.3 PASS 前不得进入正式 3D 生产。 |
+| P1.3｜证据分级与可复原性 Go / No-Go | 将关键信息分为已证实 / 高可信推断 / 合理补全 / 未知，并判断是否足以进入正式参数化与 3D 复原 | **READY FOR PO DECISION** | Step 1 + Step 2 + Final Gate Review 已完成。85/85参数已分级；Gate Review = 6 PASS + 2 PASS WITH CONDITION + 0 FAIL；Reviewer Recommendation = **CONDITIONAL GO**。等待 Product Owner 批准，批准前仍不得进入正式3D生产。 |
 
-**P1 Gate Progress：3 / 4 PASS。**
+**P1 Gate Progress：3 / 4 PASS；P1.3 READY FOR DECISION。**
 
 ### P1.0 Locked Selection Policy
 
@@ -53,15 +53,43 @@ P0.3 只证明“结构化建筑参数 → 脚本 → 可重复最小结构模�
 
 直接核读已确认平面柱网、营造尺推定、柱径/角柱生起、斗栱主要构件、六椽栿、架道、山面出际、举折、理想模型、形变和修缮史；同时纠正了此前对主报告印刷 p107 / p147 的错误页码归属。
 
-### P1.3 Entry Boundary
+### P1.3 Classification Evidence
 
-以下问题正式转交 P1.3：
+- `docs/evidence/zhenguo_wanfo/P1_3_HIGH_RISK_CLASSIFICATION_V001.md`
+- `docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md`
+- `docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md`
 
-- 963原设计柱高与统一Z基准；
-- 角柱生起2寸/61.2mm属于报告“猜测”；
-- 举折231分虽高吻合但报告不列为定论；
-- 转角45°精确节点与坐标；
-- 逐构件963原构 vs 后世修缮替换；
-- `report_ideal_model` 与963初建状态的关系。
+Step 2 完整统计：46 CONFIRMED / 32 HIGH_CONFIDENCE_INFERENCE / 4 REASONABLE_COMPLETION / 3 UNKNOWN，共85项。CONFIRMED 必须结合 `time_layer` 解读，不能自动等同963年原设计事实。
 
-P1.0 / P1.1 / P1.2研究与 Gate Review 不创建 Codex T-###；只有出现实际工程执行任务时再创建 T 编号。
+### P1.3 Final Gate Review｜2026-09-12
+
+Gate Review 检查8项：
+
+- 6 PASS；
+- 2 PASS WITH CONDITION；
+- 0 FAIL。
+
+Reviewer Recommendation：**APPROVE CONDITIONAL GO**。
+
+不建议无条件 GO：963原设计柱高、转角45°精确节点、隐衬角栿/隐角梁、逐构件963原真性仍存在不确定性，且正式 Evidence-aware Parameter Schema 尚未实现。
+
+不建议 NO-GO：上述未知项都可隔离到参数或子模块，不会使整个候选复原失去可解释性。
+
+若 Product Owner 批准 CONDITIONAL GO，则以下规则成为进入正式3D的强制条件：
+
+1. 第一项正式几何生产前建立 Evidence-aware Parameter Schema；
+2. UNKNOWN / DO_NOT_LOCK 不得静默硬锁为数字；
+3. REASONABLE_COMPLETION 必须独立参数化、可替换、可追踪；
+4. `observed_as_measured` / `report_ideal_model` / `reconstructed_963_candidate` 三层长期分离；
+5. 未解决转角精确节点只允许中等LOD拓扑骨架，不得声明历史精确复原；
+6. 在逐构件原真性不足时，禁止“完全还原963原貌 / 全部963原构”的过度真实性声明。
+
+### P1.3 Decision Boundary
+
+Product Owner 可选择：
+
+- **APPROVE CONDITIONAL GO** → P1.3 PASS，P1 Gate = 4/4 PASS；正式参数化/3D阶段解锁，但所有 Conditional Go 条件继续强制生效；
+- **HOLD** → P1.3 保持 IN_PROGRESS，补证或修改规则后重审；
+- **NO-GO** → 当前案例不进入正式3D，重新评估对象或证据策略。
+
+P1.0 / P1.1 / P1.2 / P1.3 的研究与 Gate Review 本身不创建 Codex T-###；只有出现实际工程执行任务时再创建 T 编号。
