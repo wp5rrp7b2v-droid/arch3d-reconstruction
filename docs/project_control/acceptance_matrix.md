@@ -7,16 +7,9 @@
 | P0.0 | 项目控制系统可跨 Chat 使用 | **PASS** | Project Control 文件集可作为正式 handoff；Dashboard 是派生可视化。 |
 | P0.1 | 本地 Mac 可稳定完成轻量 Blender 灰模、保存与审核 | **PASS** | Blender 3.6.23；灰模生成、保存、独立重开、Geometry Integrity、PNG 审核全部通过。 |
 | P0.2 | Local → Cloud → 修改 / 渲染 → Local，无关键资产丢失 | **PASS / Class B** | Local 3.6.23 → GitHub → GitHub Actions Blender 4.5.13 → Artifact → Local 3.6.23 全链路通过。3.6 会移除部分不支持的 4.5 UI region 数据，但核心几何、Marker 与所需 Metadata 未损失。 |
-| P0.3 | 建筑参数能够驱动脚本生成一个最小结构模型 | **PASS** | T-004｜PARAMETRIC_ARCHITECTURE_POC_V001：独立 JSON 参数驱动同一 Blender 3.6 Python 脚本；Baseline 3×2 开间→12 柱/21主要对象，Variant 4×3 开间→20柱/31主要对象；尺寸与屋顶同步变化；独立重开及 Determinism PASS。 |
+| P0.3 | 建筑参数能够驱动脚本生成一个最小结构模型 | **PASS** | T-004｜PARAMETRIC_ARCHITECTURE_POC_V001：独立 JSON 参数驱动同一 Blender Python 脚本；Baseline 3×2 开间→12 柱/21主要对象，Variant 4×3 开间→20柱/31主要对象；尺寸与屋顶同步变化；独立重开及 Determinism PASS。 |
 
 **P0 Gate Final：4 / 4 PASS。**
-
-2026-09-11 Product Owner 已明确批准 P0 关闭。
-
-## P0 Carry-forward
-
-- Local Blender 3.6 ↔ Cloud Blender 4.5 的 Class B 兼容性限制继续生效。
-- P0.3 只证明“参数 → 脚本 → 可重复模型”的技术链路成立，不证明历史参数真实性。
 
 ---
 
@@ -27,18 +20,18 @@
 | P1.0｜选题标准锁定 | 明确首个正式复原案例的筛选原则与比较维度 | **PASS** | 五项加权标准已锁定。 |
 | P1.1｜候选案例比较与定选 | 对候选按统一标准比较并正式锁定案例 | **PASS** | 山西平遥镇国寺万佛殿正式定选。 |
 | P1.2｜正式证据包建立 | 建立可追溯证据包并覆盖核心复原域 | **PASS** | `SRC-ZG-WF-001` 完整精细测绘报告已直接核读；Gate Review 10/10 PASS。 |
-| P1.3｜证据分级与可复原性 Go / No-Go | 将关键信息分为已证实 / 高可信推断 / 合理补全 / 未知，并判断是否足以进入正式参数化与3D | **PASS / CONDITIONAL GO** | Product Owner 2026-09-12 批准。85/85参数完成分级；Gate Review 6 PASS + 2 PASS WITH CONDITION + 0 FAIL。CG-01～CG-06 跨阶段强制生效。 |
+| P1.3｜证据分级与可复原性 Go / No-Go | 完成关键参数分级并判断是否可进入正式参数化与3D | **PASS / CONDITIONAL GO** | 85/85参数完成分级；46 CONFIRMED / 32 HCI / 4 RC / 3 UNKNOWN；CG-01～CG-06 生效。 |
 
 **P1 Gate Final：4 / 4 PASS。**
 
 ### P1.3 Conditional Go｜强制边界
 
-1. 第一项正式几何生产前建立 Evidence-aware Parameter Schema；
+1. Evidence-aware Parameter Schema；
 2. UNKNOWN / DO_NOT_LOCK 不得静默硬锁；
-3. REASONABLE_COMPLETION 必须独立参数化、可替换、可追踪；
-4. `observed_as_measured` / `report_ideal_model` / `reconstructed_963_candidate` 三层长期分离；
-5. 未解决转角精确节点只允许中等LOD拓扑骨架，不得声明历史精确复原；
-6. 在逐构件原真性不足时，禁止“完全还原963原貌 / 全部963原构”的过度真实性声明。
+3. RC 必须独立参数化、可替换、可追踪；
+4. observed / report ideal / reconstructed candidate 三层分离；
+5. 未解决转角仅允许 evidence-bounded medium LOD；
+6. 禁止过度真实性声明。
 
 ---
 
@@ -49,13 +42,13 @@
 | P2.0｜Evidence-aware Parameter Schema | Evidence-aware parameter contract | **PASS / APPROVED** | CG-01 satisfied. |
 | P2.1｜Formal Production Parameter Set | 85/85 formal set + dependency + preflight | **PASS / APPROVED / CLOSED** | Z-006 remains UNKNOWN; RC-01 replaceable. |
 | P2.2｜Parametric Structural Skeleton | Complete medium-LOD structural skeleton | **PASS / APPROVED / CLOSED** | 217 = machine objects, not historical component count. |
-| P2.3｜Integrated Reconstruction Candidate & QC | Component-library-driven integrated candidate + final engineering QC | **IN PROGRESS / ENGINEERING PASS RECOMMENDED / GATE REVIEW PENDING** | T-008 V003 DoD-07 cloud and local return QC PASS; independent engineering and Product Owner six-image review remain. |
+| P2.3｜Integrated Reconstruction Candidate & QC | Component-library-driven integrated candidate + final engineering / visual QC | **IN PROGRESS / ENGINEERING PASS / PO REVIEW REQUIRED** | Preliminary Gate Review = **8 PASS + 1 PENDING**；DoD-08 Product Owner visual/evidence diagnostic review 尚未完成。 |
 
 ### P2.1 Gate Final｜APPROVED / PASS / CLOSED
 
 - DoD 9/9 PASS。
 - `geometry-critical unresolved blocker = 0`。
-- Z-006 仍为 UNKNOWN；Z-006-RC-01 仍为独立可替换 production candidate。
+- Z-006 仍 UNKNOWN；Z-006-RC-01 仍独立可替换。
 
 ### P2.2 Gate Final｜APPROVED / PASS / CLOSED
 
@@ -67,53 +60,44 @@
 
 正式 DoD：`docs/production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md`
 
-必须完成：
-
 1. Integration Manifest；
 2. Component Library → Parametric Variant → Placement / Instance → Evidence Metadata；
 3. 完整整合候选几何；
 4. Evidence Metadata / historical claim boundary；
 5. 参数驱动、RC可替换、无不可追溯核心手工漂移；
 6. Integrated Machine QC；
-7. Deterministic rebuild + independent reopen + **Local 3.6 → Cloud 4.5 → Local 3.6 roundtrip QC**；
+7. Deterministic rebuild + independent reopen + Local 3.6 → Cloud 4.5 → Local 3.6 roundtrip QC；
 8. 六类视觉 QC / Evidence Diagnostic + Product Owner review；
 9. 最终归档、Known Limitations 与 P2 Closure Evidence。
 
-### T-008 V001 Engineering Result｜HOLD 2026-09-12
+### T-008 Engineering Result｜PASS / COMPLETE
 
-- Component Library：**11 families / 40 variants**。
-- Integrated candidate：**365 stable mesh instances**。
-- Machine QC：**34/34 PASS / 0 errors**。
-- Automated tests：**33/33 PASS**。
-- Replacement / mutation：PASS。
-- Deterministic rebuild：PASS。
-- Independent reopen：PASS / PASS。
-- Naked historical constant / manual drift audit：PASS。
-- `Z-006` 保持 UNKNOWN；`Z-006-RC-01`、DG-114、HIS-002 与 45°转角等历史边界保持。
-- 六张 review PNG 已生成；Product Owner 正式视觉审核尚未发生。
-- Local-only final candidate SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
-- Canonical engineering commit：`5bd6ca1f8300a170b74c3a9058352768800b56a6`。
-- **DoD-07 = HOLD**：Cloud Blender 4.5.13 workflow 尚无真实 run；无 returned artifact；无 Local Blender 3.6 return validation。
+- V001 candidate：11 families / 40 variants / 365 stable mesh instances。
+- Local Blender 3.6 machine QC：34/34 PASS；automated tests：33/33 PASS。
+- Replacement / mutation、deterministic rebuild、independent reopen、naked constant / manual drift audit：PASS。
+- Historical boundaries：Z-006 UNKNOWN；RC-01 可替换；DG-114 / HIS-002 / 45° corner 等未升级。
+- V001 local-only candidate SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
+- V002 transport path HOLD 后，V003 改为 GitHub Actions runner `github.token` + Git Blobs API。
+- GitHub Actions run `34695870243`：SUCCESS；Cloud Blender 4.5.13 input / reopen semantic QC PASS。
+- Artifact `P2_3_CLOUD_ROUNDTRIP_V001`：PASS；returned blend SHA256 `d2c80c4e2e0ae278ad4b7055df6871e00bfb85ecf981fbc796ddd2f5e919efc0`。
+- Local Blender 3.6 return semantic QC PASS / machine QC 34/34 PASS；core semantic diff NONE。
+- Temporary transport / run-trigger refs 已清理。
+- Canonical T-008 V003 commit：`c18945c52da6666ac9dbe6842fb3d51422fd440a`。
 
-V001 当时的 P2.3 Gate：**NOT PASS / ENGINEERING HOLD**；V003 后续状态见下。
+### P2.3 Preliminary Gate Review｜8 PASS + 1 PENDING
 
-### T-008 V002 Continuation｜READY FOR LOCAL EXECUTION
+Gate Review：`docs/production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md`
 
-- 同一 T-008 目标继续，不创建 T-009。
-- V001 已通过的本地整合候选与工程证据冻结；V002 仅关闭 DoD-07 blocker。
-- 采用普通 Git **temporary tag → `.blend` blob** 传输；不把 `.blend` 提交到 main，不提取 Git credential，不 force-push。
-- 运行 Cloud Blender 4.5.13 reopen / semantic QC / save / independent reopen。
-- 下载 artifact 后以 Local Blender 3.6.23 做返回验证。
-- Roundtrip evidence 入库后删除临时 transport tag。
-- Task Contract：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V002.md`。
+- DoD-01：PASS
+- DoD-02：PASS
+- DoD-03：PASS — engineering
+- DoD-04：PASS
+- DoD-05：PASS
+- DoD-06：PASS
+- DoD-07：PASS
+- DoD-08：**PENDING PRODUCT OWNER VISUAL / EVIDENCE DIAGNOSTIC REVIEW**
+- DoD-09：PASS — engineering archive complete
 
-### T-008 V003 DoD-07 Engineering Result｜PASS 2026-09-12
+**当前无工程 blocker。P2.3 Gate 尚未 PASS。**
 
-- V001 candidate SHA256 仍为 `ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`；11 families / 40 variants / 365 stable instances 不变。
-- GitHub Actions [run 34695870243](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/34695870243) SUCCESS：runner `github.token` blob retrieval SHA 验证 PASS；Blender 4.5.13 input 与 independent reopen semantic QC PASS。
-- Artifact `P2_3_CLOUD_ROUNDTRIP_V001` 已下载；Local Blender 3.6.23 return semantic QC PASS、machine QC 34/34 PASS；无新增核心语义丢失。
-- V001 regression：33/33 automated tests PASS、34/34 machine QC PASS。
-- 正式 QC 见 `production/zhenguo_wanfo/validation/P2_3_V003_ROUNDTRIP_QC_V001.json`；temporary transport 与 run-trigger tags 均已远端及本地清理，`.blend` 未进入 `main` tree。
-- **DoD-07 工程阻断清零；T-008 V003 Engineering PASS 推荐。** P2.3 Gate 仍待独立工程复核、Product Owner 六图审核与明确批准，本记录不宣布 Gate PASS。
-
-P2.3 最终 PASS 仍需：T-008 工程 PASS + ChatGPT 独立复核 + Product Owner 对 PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC 六图完成正式审核并明确批准。
+最终仍需 Product Owner 对 PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC 六图完成审核并明确批准。
