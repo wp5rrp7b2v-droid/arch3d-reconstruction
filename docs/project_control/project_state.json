@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R023",
+  "state_revision": "R024",
   "last_updated": "2026-09-12",
-  "session_status": "ACTIVE_P2_0_T005_READY",
+  "session_status": "ACTIVE_P2_0_T005_V002_READY",
   "next_session_date": null,
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
@@ -18,19 +18,20 @@
     "total": 1,
     "architecture_status": "P2.0 LOCKED AS ENTRY GATE / P2.1-P2.3 TO BE DEFINED AFTER P2.0",
     "items": {
-      "P2.0": {"status": "IN_PROGRESS / SCHEMA_BASELINE_COMPLETE / T005_READY", "name": "Evidence-aware Parameter Schema"}
+      "P2.0": {"status": "HOLD / T005_V002_REQUIRED", "name": "Evidence-aware Parameter Schema"}
     },
-    "note": "P2.0 Schema规则基线、机器可读JSON Schema与四类最小参数集已建立。下一步由T-005执行validator、正反向测试与reader smoke test。P2.0 PASS前不得启动第一项正式Blender几何生产。"
+    "note": "T-005 V001 engineering validation PASS，但P2.0 Gate Review发现两项未闭环：尚未显式验证 observed_as_measured / report_ideal_model / reconstructed_963_candidate 三层并存且不串层；T-005工程证据仍为本地untracked，尚未归档到GitHub canonical repo。继续执行同一任务T-005 V002。P2.0 PASS前不得启动正式Blender几何。"
   },
   "decision_required": false,
   "blocker": null,
   "current_task": {
     "id": "T-005",
-    "name": "P2_0_SCHEMA_VALIDATION_V001",
+    "formal_name": "【中国古建筑3D复原｜T-005｜P2_0_SCHEMA_VALIDATION_V002｜证据感知参数架构验证】",
+    "name": "P2_0_SCHEMA_VALIDATION_V002",
     "status": "READY_FOR_LOCAL_EXECUTION",
     "think_level": "MEDIUM",
-    "task_spec": "docs/tasks/T-005_P2_0_SCHEMA_VALIDATION_V001.md",
-    "scope": "Schema validator + positive/negative tests + read-only parameter reader; no Blender geometry; no Project Control edits"
+    "task_spec": "docs/tasks/T-005_P2_0_SCHEMA_VALIDATION_V002.md",
+    "scope": "补齐三层语义并存验证、回归V001测试并归档T-005工程证据；不生成Blender几何；不修改Project Control"
   },
   "current_case": {
     "name": "平遥镇国寺万佛殿",
@@ -67,7 +68,7 @@
     "CG-06 historical authenticity claims must remain bounded by component-level uncertainty"
   ],
   "p2_entry": {
-    "status": "ACTIVE / P2.0 IN_PROGRESS",
+    "status": "ACTIVE / P2.0 HOLD FOR V002",
     "current_gate": "P2.0",
     "current_gate_name": "Evidence-aware Parameter Schema",
     "goal": "把P1证据分级转化为机器可读、可追踪、可替换的正式生产参数结构。",
@@ -75,6 +76,7 @@
     "schema_spec": "docs/production/zhenguo_wanfo/P2_0_EVIDENCE_AWARE_PARAMETER_SCHEMA_V001.md",
     "machine_schema": "production/zhenguo_wanfo/schema/evidence_aware_parameter_schema_v001.json",
     "minimal_parameter_set": "production/zhenguo_wanfo/params/P2_0_MINIMAL_PARAMETER_SET_V001.json",
+    "gate_review": "docs/production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md",
     "schema_required_fields": [
       "parameter_key",
       "label_zh",
@@ -95,16 +97,24 @@
       "source_ids must contain at least one traceable reference",
       "observed/report-ideal/reconstructed-963 semantic layers remain separate"
     ],
-    "minimum_validation": [
-      "CONFIRMED example",
-      "HIGH_CONFIDENCE_INFERENCE example",
-      "REASONABLE_COMPLETION example",
-      "UNKNOWN example",
-      "UNKNOWN hard-lock negative test must fail",
-      "REASONABLE_COMPLETION non-replaceable negative test must fail",
-      "schema can be read by future Blender/Python without generating formal geometry"
+    "t005_v001_result": {
+      "status": "ENGINEERING_PASS / GATE_NOT_CLOSED",
+      "python": "3.10.2",
+      "jsonschema": "4.26.0",
+      "positive_test": "PASS",
+      "negative_unknown_hard_lock": "PASS / REJECTED_AS_INTENDED",
+      "negative_reasonable_non_replaceable": "PASS / REJECTED_AS_INTENDED",
+      "reader_smoke": "PASS / NO_BPY / NO_GEOMETRY",
+      "remaining_gap": "three-layer coexistence not explicitly validated; engineering evidence not yet committed"
+    },
+    "v002_required_validation": [
+      "all V001 tests remain PASS",
+      "valid fixture contains observed_as_measured + report_ideal_model + reconstructed_963_candidate",
+      "reader preserves exact three time_layer labels without merge/overwrite",
+      "T-005 engineering evidence committed to GitHub canonical repo",
+      "known local-only PDF/P0/.blend assets remain untouched"
     ],
-    "engineering_task": "T-005｜P2_0_SCHEMA_VALIDATION_V001｜READY_FOR_LOCAL_EXECUTION",
+    "engineering_task": "【中国古建筑3D复原｜T-005｜P2_0_SCHEMA_VALIDATION_V002｜证据感知参数架构验证】｜READY_FOR_LOCAL_EXECUTION",
     "future_gate_architecture": "P2.1-P2.3 will be locked after P2.0 validates the production data layer"
   },
   "p1_evidence_progress": {
@@ -153,13 +163,13 @@
     "date": "2026-09-12",
     "decision": "Product Owner 批准 P1.3 CONDITIONAL GO；P1 Gate 4/4 PASS并关闭；P2解锁，P2.0 Evidence-aware Parameter Schema 成为第一项强制前置Gate。"
   },
-  "next_action": "本地先 git pull --ff-only origin main，再按 docs/tasks/T-005_P2_0_SCHEMA_VALIDATION_V001.md 执行 T-005；返回验证报告后进行 P2.0 Gate Review。",
+  "next_action": "本地 git pull --ff-only origin main 后执行 docs/tasks/T-005_P2_0_SCHEMA_VALIDATION_V002.md；补齐三层并存验证并归档T-005工程证据。V002返回后重新进行P2.0 Gate Review。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v007",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_P2_0_STEP1_T005_READY",
+    "refresh_status": "STALE_AFTER_P2_0_GATE_HOLD_V002_READY",
     "source_files": [
       "project_state.json",
       "decision_log.md",
@@ -169,9 +179,9 @@
       "rules_change_log.md",
       "phase_archive/P0_closure.md",
       "phase_archive/P1_closure.md",
-      "../evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
       "../evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md",
-      "../production/zhenguo_wanfo/P2_0_EVIDENCE_AWARE_PARAMETER_SCHEMA_V001.md"
+      "../production/zhenguo_wanfo/P2_0_EVIDENCE_AWARE_PARAMETER_SCHEMA_V001.md",
+      "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md"
     ]
   }
 }
