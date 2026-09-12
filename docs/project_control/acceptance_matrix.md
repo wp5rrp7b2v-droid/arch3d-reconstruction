@@ -42,7 +42,7 @@
 | P2.0｜Evidence-aware Parameter Schema | Evidence-aware parameter contract | **PASS / APPROVED** | CG-01 satisfied. |
 | P2.1｜Formal Production Parameter Set | 85/85 formal set + dependency + preflight | **PASS / APPROVED / CLOSED** | Z-006 remains UNKNOWN; RC-01 replaceable. |
 | P2.2｜Parametric Structural Skeleton | Complete medium-LOD structural skeleton | **PASS / APPROVED / CLOSED** | 217 = machine objects, not historical component count. |
-| P2.3｜Integrated Reconstruction Candidate & QC | Component-library-driven integrated candidate + final engineering / visual QC | **IN PROGRESS / ENGINEERING PASS / DoD-08 VISUAL HOLD** | Preliminary Gate Review = **8 PASS + 1 HOLD**；Evidence Diagnostic 四级证据映射需修正。 |
+| P2.3｜Integrated Reconstruction Candidate & QC | Component-library-driven integrated candidate + final engineering / visual QC | **IN PROGRESS / ENGINEERING PASS / PO REVIEW REQUIRED** | Preliminary Gate Review = **8 PASS + 1 PENDING**；V004 corrected Evidence Diagnostic engineering compliance PASS，待 Product Owner 直接审核 V002 图片。 |
 
 ### P2.1 Gate Final｜APPROVED / PASS / CLOSED
 
@@ -77,29 +77,39 @@
 - Replacement / mutation、deterministic rebuild、independent reopen、naked constant / manual drift audit：PASS。
 - Historical boundaries：Z-006 UNKNOWN；RC-01 可替换；DG-114 / HIS-002 / 45° corner 等未升级。
 - V001 local-only candidate SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
-- V002 transport path HOLD 后，V003 改为 GitHub Actions runner `github.token` + Git Blobs API。
 - GitHub Actions run `34695870243`：SUCCESS；Cloud Blender 4.5.13 input / reopen semantic QC PASS。
 - Artifact `P2_3_CLOUD_ROUNDTRIP_V001`：PASS；returned blend SHA256 `d2c80c4e2e0ae278ad4b7055df6871e00bfb85ecf981fbc796ddd2f5e919efc0`。
 - Local Blender 3.6 return semantic QC PASS / machine QC 34/34 PASS；core semantic diff NONE。
-- Temporary transport / run-trigger refs 已清理。
 - Canonical T-008 V003 commit：`c18945c52da6666ac9dbe6842fb3d51422fd440a`。
 
-### P2.3 Visual Review｜5 PASS + 1 HOLD
+### P2.3 Visual Review｜5 PASS + 1 ORIGINAL HOLD
 
-Product Owner 已上传六张正式审核图；ChatGPT 按 DoD-08 完成视觉复核：
+首轮六图审核：
 
 - PLAN：PASS
 - ELEVATION：PASS
 - AXON：PASS
 - EXTERIOR_3Q：PASS
 - STRUCTURE_DETAIL：PASS
-- EVIDENCE_DIAGNOSTIC：**HOLD**
+- 原 EVIDENCE_DIAGNOSTIC：HOLD
 
-当前 Evidence Diagnostic renderer 仅形成“confirmed / 其他非 placeholder / placeholder”三路映射，无法明确区分 HCI 与 RC，也未显式使用 `override_ids` 识别 `Z-006-RC-01`，且图内无四级 legend。该结果不满足锁定 DoD-08 的 `confirmed / inference / reasonable completion / unknown-placeholder` 四级边界要求。
+原 diagnostic 不能区分 HCI / RC / UNKNOWN-placeholder 四级边界，因此进入 T-008 V004 修正。
 
-修正续版：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V004.md`。
+### T-008 V004｜EVIDENCE DIAGNOSTIC CORRECTION｜ENGINEERING PASS / COMPLETE
 
-### P2.3 Preliminary Gate Review｜8 PASS + 1 HOLD
+- canonical `.blend` SHA256 before/after 相同：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
+- 11 families / 40 variants / 365 stable instances 不变；geometry changed = NO。
+- 33/33 tests PASS；34/34 machine QC PASS。
+- 新 renderer：`production/zhenguo_wanfo/scripts/render_p2_3_evidence_diagnostic_v002.py`。
+- 新 diagnostic：`production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_EVIDENCE_DIAGNOSTIC_V002.png`。
+- diagnostic SHA256：`998739c5c93e5d835c563bfdcaea4552749427d3511dfd9258d22bb67f719d9c`。
+- 四级优先级：`UNKNOWN / PLACEHOLDER > REASONABLE COMPLETION / APPROVED OVERRIDE > HIGH CONFIDENCE INFERENCE > CONFIRMED`。
+- 分类以 Integration Manifest stable instances 为 authoritative mapping；显式使用 `bounded_placeholder` / `evidence_class` / `override_ids`。
+- counts：CONFIRMED 0 / HCI 0 / RC 35 / UNKNOWN-placeholder 330；0-count 类别仍保留 legend。
+- Canonical V004 commit：`93aef4803d2c0d3f7e3e3d29e9ab235c2f92d8f3`。
+- ChatGPT 独立工程复核：PASS。Product Owner 尚未直接审核新版 V002 图片。
+
+### P2.3 Preliminary Gate Review｜8 PASS + 1 PENDING
 
 Gate Review：`docs/production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md`
 
@@ -110,7 +120,7 @@ Gate Review：`docs/production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md`
 - DoD-05：PASS
 - DoD-06：PASS
 - DoD-07：PASS
-- DoD-08：**HOLD — EVIDENCE DIAGNOSTIC FOUR-LEVEL MAPPING REQUIRED**
+- DoD-08：**PENDING PRODUCT OWNER REVIEW OF EVIDENCE_DIAGNOSTIC_V002**
 - DoD-09：PASS
 
-**P2.3 Gate 尚未 PASS。** 冻结全部模型与工程结果；T-008 V004 只修 Evidence Diagnostic。新版 diagnostic 通过 ChatGPT + Product Owner 复核并明确批准后方可关闭 P2.3 / P2。
+**P2.3 Gate 尚未 PASS。当前无工程 blocker。** Product Owner 直接审核新版 diagnostic 并明确批准后方可关闭 P2.3 / P2。
