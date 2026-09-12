@@ -65,46 +65,31 @@
 
 ### P2 Entry Rule
 
-P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段，但**尚未解锁第一项正式 Blender 几何生产**。CG-01 要求先建立 Evidence-aware Parameter Schema。
+P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段，但第一项正式 Blender 几何生产仍受 P2.0 Gate 约束。CG-01 要求先建立并验证 Evidence-aware Parameter Schema。
 
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
-| P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **HOLD / T-005 V002 REQUIRED** | T-005 V001 核心工程验证 PASS，但尚未显式验证三层语义并存；6个工程证据文件尚未归档到 GitHub canonical repo。P2.0 PASS 前仍不得启动正式 Blender 几何。 |
+| P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **READY FOR PRODUCT OWNER DECISION** | T-005 V001+V002 工程验证全部 PASS；Gate Review 7/7 PASS；工程证据已归档至 GitHub canonical repo，commit `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`。等待 Product Owner 最终批准；批准前仍不启动正式 Blender 几何。 |
 
-### P2.0 Definition of Done
+### P2.0 Definition of Done Review
 
-P2.0 至少需要通过以下检查：
+- Schema 字段完整且有明确枚举/约束：**PASS**；
+- 四类 classification 实例验证：**PASS**；
+- UNKNOWN 保持 `null / DO_NOT_LOCK` 且数字硬锁被机械拒绝：**PASS**；
+- REASONABLE_COMPLETION 必须可替换：**PASS**；
+- `observed_as_measured` / `report_ideal_model` / `reconstructed_963_candidate` 三层并存且不串层：**PASS**；
+- 参数可由后续 Python 读取且本 Gate 不生成正式建筑几何：**PASS**；
+- T-005 工程证据进入 canonical GitHub：**PASS**。
 
-- Schema 字段完整且有明确枚举/约束；
-- 至少用一组 CONFIRMED、一组 HIGH_CONFIDENCE_INFERENCE、一组 REASONABLE_COMPLETION、一组 UNKNOWN 参数做实例验证；
-- UNKNOWN 能保持 `null / placeholder / DO_NOT_LOCK`；
-- REASONABLE_COMPLETION 能单独替换而不破坏证据链；
-- `observed_as_measured`、`report_ideal_model`、`reconstructed_963_candidate` 可同时存在且不会被自动覆盖；
-- 参数可被后续 Blender Python 读取，但本 Gate 不生成正式建筑几何。
+### P2.0 Engineering Evidence
 
-### P2.0 T-005 V001 Review｜2026-09-12
+- `production/zhenguo_wanfo/validation/P2_0_SCHEMA_VALIDATION_REPORT_V001.md`
+- `production/zhenguo_wanfo/validation/P2_0_SCHEMA_VALIDATION_REPORT_V002.md`
+- `production/zhenguo_wanfo/tests/test_schema_validation_v001.py`
+- `production/zhenguo_wanfo/tests/fixtures/P2_0_VALID_THREE_LAYER_COEXISTENCE_V001.json`
+- canonical archive commit: `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`
 
-V001 engineering result：**PASS**。
+Gate Review：`docs/production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md`  
+Reviewer Recommendation：**APPROVE PASS**。
 
-已通过：
-
-- Python 3.10.2 / jsonschema 4.26.0；
-- Draft 2020-12 schema check；
-- 四类 classification 正向实例；
-- UNKNOWN + DO_NOT_LOCK 数字硬锁负例按预期失败；
-- REASONABLE_COMPLETION + `is_replaceable=false` 负例按预期失败；
-- read-only reader smoke test；
-- 无 `bpy` / 无 Blender 几何生成。
-
-Gate 尚不能 PASS 的原因：
-
-1. V001 最小集没有 `report_ideal_model` 实例，尚未完成“三层同时并存且不串层”的显式验证；
-2. T-005 V001 的 validator / reader / tests / fixtures / report 仍为本地 untracked，尚未进入 GitHub canonical repo。
-
-Gate Review：`docs/production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md`
-
-继续执行同一任务版本升级：
-
-`【中国古建筑3D复原｜T-005｜P2_0_SCHEMA_VALIDATION_V002｜证据感知参数架构验证】`
-
-V002 完成后重新进行 P2.0 Gate Review；P2.1–P2.3 的完整 Gate 架构仍待 P2.0 最终通过后锁定。
+P2.1–P2.3 的完整 Gate 架构待 P2.0 获得 Product Owner 最终批准后再锁定。
