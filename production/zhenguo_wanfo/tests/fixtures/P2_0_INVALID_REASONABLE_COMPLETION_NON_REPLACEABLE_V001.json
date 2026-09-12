@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "project_id": "ARCH3D-001",
+  "case_id": "ZG-WF-963-CANDIDATE",
+  "case_name": "平遥镇国寺万佛殿",
+  "parameter_set_version": "V001-NEGATIVE-REASONABLE-NON-REPLACEABLE",
+  "status": "P2_0_VALIDATION",
+  "parameters": {
+    "PM-003": {
+      "parameter_key": "front_center_bay_observed_mm",
+      "label_zh": "明间面阔现状实测",
+      "value": 4481.3,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": ["SRC-ZG-WF-001"],
+      "is_replaceable": false,
+      "notes": "现状实测参考；不得直接改称963设计值。"
+    },
+    "PM-008": {
+      "parameter_key": "front_center_bay_design_chi",
+      "label_zh": "明间面阔设计候选",
+      "value": 14.5,
+      "unit": "chi",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": ["SRC-ZG-WF-001"],
+      "is_replaceable": true,
+      "notes": "基于306mm营造尺体系的报告设计归整；不是直接963记录。"
+    },
+    "Z-005": {
+      "parameter_key": "corner_column_rise_design_mm",
+      "label_zh": "角柱生起设计候选",
+      "value": 61.2,
+      "unit": "mm",
+      "classification": "REASONABLE_COMPLETION",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED_GUESS",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "blocking_level": "MEDIUM",
+      "source_ids": ["SRC-ZG-WF-001", "P1_3_GATE_REVIEW_2026-09-12"],
+      "is_replaceable": false,
+      "notes": "负例：REASONABLE_COMPLETION 不得设为不可替换。"
+    },
+    "Z-006": {
+      "parameter_key": "column_height_963_design_mm",
+      "label_zh": "963原设计柱高",
+      "value": null,
+      "unit": "mm",
+      "classification": "UNKNOWN",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "DIRECT_GAP",
+      "production_use": "DO_NOT_LOCK",
+      "blocking_level": "HIGH",
+      "source_ids": ["SRC-ZG-WF-001", "P1_3_GATE_REVIEW_2026-09-12"],
+      "is_replaceable": true,
+      "notes": "不得以3.42m或其他二手/现状高度静默替代。"
+    }
+  }
+}

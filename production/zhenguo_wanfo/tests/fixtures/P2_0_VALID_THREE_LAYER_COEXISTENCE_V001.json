@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "project_id": "ARCH3D-001",
+  "case_id": "ZG-WF-THREE-LAYER-VALIDATION",
+  "case_name": "平遥镇国寺万佛殿三层语义共存验证样例",
+  "parameter_set_version": "V001-THREE-LAYER-COEXISTENCE",
+  "status": "P2_0_VALIDATION",
+  "parameters": {
+    "PM-TL-OBS": {
+      "parameter_key": "front_center_bay_observed_mm",
+      "label_zh": "明间面阔现状实测",
+      "value": 4481.3,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": ["SRC-ZG-WF-001"],
+      "is_replaceable": false,
+      "notes": "现状实测宽度；仅表达观测层，不是报告理想模型或963候选值。"
+    },
+    "MOD-TL-IDEAL": {
+      "parameter_key": "report_ideal_model_grid_rule",
+      "label_zh": "报告理想模型柱网规则",
+      "value": "symmetric_five_bay_ideal_grid",
+      "unit": null,
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "report_ideal_model",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "blocking_level": "MEDIUM",
+      "source_ids": ["SRC-ZG-WF-001", "P1_3_GATE_REVIEW_2026-09-12"],
+      "is_replaceable": true,
+      "notes": "仅表达报告理想模型的对称柱网逻辑；不等同于963初建状态。"
+    },
+    "Z-TL-963": {
+      "parameter_key": "corner_column_rise_963_candidate_mm",
+      "label_zh": "963候选角柱生起",
+      "value": 61.2,
+      "unit": "mm",
+      "classification": "REASONABLE_COMPLETION",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED_GUESS",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "blocking_level": "MEDIUM",
+      "source_ids": ["SRC-ZG-WF-001", "P1_3_GATE_REVIEW_2026-09-12"],
+      "is_replaceable": true,
+      "notes": "仅表达963复原候选的可替换角柱生起；不覆盖现状层或报告理想层。"
+    }
+  }
+}
