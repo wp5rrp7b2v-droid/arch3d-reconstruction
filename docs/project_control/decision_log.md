@@ -28,7 +28,8 @@
 | D-022 | 2026-09-12 | Product Owner 要求并批准锁定 `P2.1 Definition of Done V001`。P2.1 必须完成85/85参数迁移、证据语义保持、Schema机器验证、UNKNOWN几何阻断判定、Geometry Dependency Matrix、REASONABLE_COMPLETION可替换性、三层语义与构件原真性边界、机器preflight、版本锁定与canonical archive共9项。P2.1 PASS除9/9外还要求 `geometry-critical unresolved blocker = 0`；UNKNOWN若是P2.2必须输入，不得跳过或静默补值，只能由新证据解决或经Product Owner显式批准新的可替换REASONABLE_COMPLETION。 | ACTIVE / P2.1 DOD LOCKED |
 | D-023 | 2026-09-12 | Product Owner 批准 `Z-006-RC-01` 作为解除 P2.2 柱高生产阻断的独立、可替换 REASONABLE_COMPLETION。Z-006 本体继续保持 `UNKNOWN / null / DO_NOT_LOCK`，不得改写为历史事实；RC-01 采用规则 `11 × MOD-006`，当前 MOD-006≈321.3mm 时解析值为 3534.3mm，仅作为 `reconstructed_963_candidate` 的生产候选。RC-01 必须独立于85项正式历史/证据参数保存并可追溯到本决策；若 MOD-006 或后续证据变化，候选必须可重新计算或替换。继续同一工程任务 T-006 V002 验证，不创建 T-007。 | ACTIVE / Z-006 RC-01 APPROVED / T-006 V002 AUTHORIZED |
 | D-024 | 2026-09-12 | Product Owner 正式批准 `P2.1｜Formal Production Parameter Set` PASS。Gate Review 9/9 PASS，T-006 V002 machine validation / 21/21 tests / production preflight 全部 PASS，`geometry-critical unresolved blocker = 0`。P2.1 正式 CLOSED；P2.2 `Parametric Structural Skeleton` 解锁为当前 Gate。P2.1 PASS 不改变 Z-006 的历史 UNKNOWN 状态；Z-006-RC-01 继续作为独立、可替换的生产候选。第一项正式 Blender 几何任务创建前，必须先明确并锁定 P2.2 Definition of Done。 | ACTIVE / P2.1 PASS / P2.2 ENTERED / DOD DEFINITION REQUIRED |
-| **D-025** | **2026-09-12** | **Product Owner 正式批准并锁定 `P2.2 Definition of Done V001`。P2.2 作为第一项正式 Blender 历史候选几何 Gate，必须以 P2.1 正式参数集 + approved override + Geometry Dependency Matrix 为唯一历史/复原输入；DoD 9项覆盖 build manifest、完整主体六大范围、参数驱动与禁止 naked historical constants、机器几何验证、RC可替换、UNKNOWN/转角/原真性边界、geometry metadata traceability、deterministic rebuild + independent reopen + 人工结构审核、以及 canonical archive。P2.2 PASS 需要 9/9、完整主体、machine validation PASS、deterministic rebuild PASS、无未批准 geometry-critical input、无历史尺寸裸常量，并由 Product Owner 完成人工结构审核批准。T-007 可据此启动。** | **ACTIVE / P2.2 DOD LOCKED / T-007 AUTHORIZED** |
+| D-025 | 2026-09-12 | Product Owner 正式批准并锁定 `P2.2 Definition of Done V001`。P2.2 作为第一项正式 Blender 历史候选几何 Gate，必须以 P2.1 正式参数集 + approved override + Geometry Dependency Matrix 为唯一历史/复原输入；DoD 9项覆盖 build manifest、完整主体六大范围、参数驱动与禁止 naked historical constants、机器几何验证、RC可替换、UNKNOWN/转角/原真性边界、geometry metadata traceability、deterministic rebuild + independent reopen + 人工结构审核、以及 canonical archive。P2.2 PASS 需要 9/9、完整主体、machine validation PASS、deterministic rebuild PASS、无未批准 geometry-critical input、无历史尺寸裸常量，并由 Product Owner 完成人工结构审核批准。T-007 可据此启动。 | ACTIVE / P2.2 DOD LOCKED / T-007 AUTHORIZED |
+| **D-026** | **2026-09-12** | **Product Owner 正式批准 `P2.2｜Parametric Structural Skeleton` PASS。T-007 V001 完成 6/6 主体结构范围，machine geometry validation PASS、32/32 tests PASS、naked historical constant scan PASS、deterministic rebuild PASS、independent reopen PASS；PLAN / ELEVATION / AXON 三张结构审核图完成直接人工审核并通过。P2.2 DoD 9/9 PASS，P2.2 正式 CLOSED；P2.3 `Integrated Reconstruction Candidate & QC` 解锁为当前 Gate。P2.2 PASS 只确认中等LOD参数化主体骨架工程成立，不把217个Blender对象等同于217个历史构件，也不解除Z-006、DG-114、HIS-002及转角/榫卯/隐角梁等证据边界。P2.3第一项工程任务前必须先明确并锁定P2.3 Definition of Done。** | **ACTIVE / P2.2 PASS / CLOSED / P2.3 ENTERED / DOD REQUIRED** |
 
 ## D-012 直接影响
 
@@ -157,3 +158,13 @@
 - P2.2 必须完成机器几何验证、deterministic rebuild、独立重开、至少三张结构审核图，以及 Product Owner 人工结构审核。
 - `.blend/.blend1` 继续 local-only；GitHub canonical archive 保存脚本、manifest、tests、validation evidence 与 review PNG。
 - T-007 被授权作为第一项 P2.2 正式工程任务；Engineering PASS 不等于 Gate PASS。
+
+## D-026 P2.2 Approval / P2.3 Entry Boundary
+
+- P2.2 Gate Review：**9 / 9 PASS**；Product Owner 已直接审核 PLAN / ELEVATION / AXON 并明确批准 `P2.2｜PASS`。
+- T-007 V001 的 217 个对象是机器可识别的结构/控制对象集合，不得解释为“万佛殿历史上有217个构件”或“一对象=一历史构件”。
+- P2.2 PASS 的正式含义是：P2.1 正式输入能够确定性驱动一个完整、可追溯、可替换、可验证的中等LOD主体结构候选模型。
+- P2.2 PASS 不升级任何证据分类：Z-006 继续 UNKNOWN；Z-006-RC-01 继续为可替换 REASONABLE_COMPLETION；DG-114/HIS-002 与45°转角、榫卯、隐角梁边界继续生效。
+- P2.2 正式 CLOSED；P2.3 正式解锁为当前 Gate。
+- P2.3 在创建下一项工程 T-### 前，必须先定义并锁定 P2.3 Definition of Done；不得因 P2.2 PASS 直接进入无验收标准的精细建模。
+- CG-02～CG-06 全部继续强制生效。
