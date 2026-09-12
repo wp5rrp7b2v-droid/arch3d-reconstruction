@@ -1,20 +1,29 @@
 # P2.3｜整合复原候选与质量验收｜Gate Review｜2026-09-12
 
-Status: **PRELIMINARY / 8 PASS + 1 PENDING PRODUCT OWNER VISUAL REVIEW**  
+Status: **PRELIMINARY / 8 PASS + 1 HOLD — EVIDENCE DIAGNOSTIC CORRECTION REQUIRED**  
 Gate: `P2.3｜Integrated Reconstruction Candidate & QC`  
 Locked DoD: `docs/production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md`
 
 ## 1. Review Conclusion
 
-T-008 V003 已关闭 DoD-07 的跨版本往返阻断。ChatGPT 对 canonical GitHub 工程证据完成独立复核后，当前工程侧未发现新的 blocker。
+T-008 V003 已关闭 DoD-07 跨版本往返阻断，ChatGPT 对 canonical GitHub 工程证据完成独立复核，工程主链 PASS。
+
+2026-09-12，Product Owner 上传六张正式 review 图供最终审核。ChatGPT 对六图按 DoD-08 逐项视觉复核后：
+
+- PLAN：PASS
+- ELEVATION：PASS
+- AXON：PASS
+- EXTERIOR_3Q：PASS
+- STRUCTURE_DETAIL：PASS
+- EVIDENCE_DIAGNOSTIC：**HOLD**
 
 当前结论：
 
-> **P2.3 engineering evidence = PASS recommendation**  
-> **P2.3 Gate = NOT YET PASS**  
-> **Only remaining Gate item = DoD-08 Product Owner visual / evidence diagnostic review**
+> **P2.3 engineering evidence = PASS**  
+> **P2.3 visual set = 5 PASS + 1 HOLD**  
+> **P2.3 Gate = NOT PASS**
 
-P2.3 在 Product Owner 对六张正式审核图完成视觉审核并明确批准前，不得关闭。
+HOLD 原因不是建筑几何或 Cloud QC，而是当前 Evidence Diagnostic 不能满足锁定 DoD-08 要求的 `confirmed / inference / reasonable completion / unknown-placeholder` 四级证据边界区分。
 
 ## 2. Independent Engineering Review
 
@@ -29,73 +38,88 @@ P2.3 在 Product Owner 对六张正式审核图完成视觉审核并明确批准
 - 11 component families / 40 variants / 365 stable mesh instances。
 - 相同 variant 共享 prototype / mesh data；stable instance ID 与 metadata 映射保留。
 
-### DoD-03｜Integrated Candidate Geometry｜PASS（engineering）
+### DoD-03｜Integrated Candidate Geometry｜PASS
 
-- P2.2 structural baseline 保留。
-- 正式候选包含 COLUMN / PRIMARY_FRAME / BRACKET_ARM / BRACKET_CONTACT / PURLIN / RAFTER / ROOF_ENVELOPE 等 presentation families。
-- GRID_CONTROL / FRAME_CONTROL / GABLE_CONTROL 继续作为 diagnostic-only，不进入 presentation historical claim。
-- Machine QC 对 roof continuity、bracket continuity、frame-to-roof trace、P2.2 topology regression 均 PASS。
+六图中的 PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL 与 machine QC 共同支持：
 
-最终视觉成立性仍由 DoD-08 Product Owner review 决定。
+- 柱网、主要梁架、斗栱拓扑、檩椽与屋面包络形成连续系统；
+- 未发现整族漂浮、明显错向、尺度异常、重复放置或重大断链；
+- P2.2 diagnostic / control-only 几何仍与 presentation layer 有明确区分；
+- open elevations / gable ends 与简化屋面为已记录 evidence boundary，不作为“历史建筑缺少围护”的声明。
 
 ### DoD-04｜Evidence Metadata / Historical Claim Boundaries｜PASS
 
 - `Z-006 = UNKNOWN / null / DO_NOT_LOCK` 保持。
 - `Z-006-RC-01` 保持 D-023 可替换候选，不升级为历史事实。
 - `DG-114` 未被解释为统一小斗历史规格。
-- `HIS-002` 继续限制逐构件原真性；365 instances 的 originality status 保持 unknown。
+- `HIS-002` 继续限制逐构件原真性；365 instances originality status 保持 unknown。
 - 45°转角、榫卯、隐角梁等继续 bounded / schematic。
 
 ### DoD-05｜Parameter-driven / Replaceability / No Manual Drift｜PASS
 
 - replacement / mutation tests PASS。
 - naked historical constant / manual drift audit PASS。
-- 没有依赖 edit-mode 或不可追溯手工修模获得正式候选。
+- 没有依赖不可追溯手工修模获得正式候选。
 
 ### DoD-06｜Integrated Machine QC｜PASS
 
 - Local Blender 3.6.23 machine QC：**34 / 34 PASS / 0 errors**。
-- stable IDs、family/variant counts、prototype mapping、instance metadata、presentation/diagnostic separation、P2.2 regression 等全部 PASS。
+- stable IDs、family/variant counts、prototype mapping、instance metadata、presentation/diagnostic separation、P2.2 regression 全部 PASS。
 
 ### DoD-07｜Deterministic Rebuild + Local/Cloud Compatibility QC｜PASS
 
-- V001 deterministic rebuild / independent reopen：PASS。
+- deterministic rebuild / independent reopen：PASS。
 - V001 regression：33/33 automated tests PASS；34/34 machine QC PASS。
-- GitHub Actions run `34695870243`：**SUCCESS**。
-- Workflow commit：`d595a587c72dc4e76afac249d8a4e667ac772fd0`。
-- Cloud Blender：**4.5.13 LTS**。
-- runner Git Blobs API retrieval SHA / decoded SHA256：PASS。
-- Cloud input semantic QC：PASS。
-- Cloud independent reopen semantic QC：PASS。
-- Artifact `P2_3_CLOUD_ROUNDTRIP_V001`：download / digest PASS。
+- GitHub Actions run `34695870243`：SUCCESS。
+- Cloud Blender 4.5.13 input / reopen semantic QC：PASS。
+- Artifact `P2_3_CLOUD_ROUNDTRIP_V001`：PASS。
 - returned `.blend` SHA256：`d2c80c4e2e0ae278ad4b7055df6871e00bfb85ecf981fbc796ddd2f5e919efc0`。
-- Local Blender 3.6.23 return semantic QC：PASS。
-- Local return machine QC：34/34 PASS。
-- core semantic diff：NONE。
-- 仅保留 P0.2 已接受的 UI-region warning，无新 core loss。
-- transport tag 与 run-trigger tag 均已删除。
+- Local Blender 3.6.23 return semantic QC / 34/34 machine QC：PASS。
+- core semantic diff：NONE；仅保留已接受 P0.2 UI-region warning。
+- temporary transport / run-trigger tags 已清理。
 
-### DoD-08｜Visual QC / Evidence Diagnostic / Product Owner Review｜PENDING
+### DoD-08｜Visual QC / Evidence Diagnostic / Product Owner Review｜HOLD
 
-六张正式输出已生成：
+#### 五张普通结构审核图｜PASS
 
-1. `P2_3_INTEGRATED_RECONSTRUCTION_V001_PLAN.png`
-2. `P2_3_INTEGRATED_RECONSTRUCTION_V001_ELEVATION.png`
-3. `P2_3_INTEGRATED_RECONSTRUCTION_V001_AXON.png`
-4. `P2_3_INTEGRATED_RECONSTRUCTION_V001_EXTERIOR_3Q.png`
-5. `P2_3_INTEGRATED_RECONSTRUCTION_V001_STRUCTURE_DETAIL.png`
-6. `P2_3_INTEGRATED_RECONSTRUCTION_V001_EVIDENCE_DIAGNOSTIC.png`
+1. `PLAN`：整体屋面/平面包络规则、对称关系无明显异常；作为整组六图中的平面审核视图可接受。
+2. `ELEVATION`：柱—主梁—屋架—屋面关系连续，未见明显高程反转或整族错位。
+3. `AXON`：整合建筑系统可读；柱、主要梁架、斗栱拓扑与屋面包络空间关系成立。
+4. `EXTERIOR_3Q`：能够读出完整候选体量；未因视觉完整性擅自补入无证据墙体、门窗或装饰。
+5. `STRUCTURE_DETAIL`：能够检查柱顶—斗栱/支承—梁架—屋顶的局部链条；未发现新的结构性 HOLD。
 
-但 Product Owner 尚未在 Gate 层完成直接视觉审核，因此本项仍为 PENDING。
+#### Evidence Diagnostic｜HOLD
 
-审核重点：整体比例 / 空间连续性、重复构件方向尺度与放置、斗栱—梁架—屋顶系统关系、diagnostic placeholder 是否误包装、evidence diagnostic 与 metadata 是否一致、是否存在超证据视觉补全。
+锁定 DoD-08 明确要求 evidence diagnostic 能区分：
+
+- CONFIRMED
+- HIGH_CONFIDENCE_INFERENCE
+- REASONABLE_COMPLETION
+- UNKNOWN / PLACEHOLDER
+
+当前 renderer 实际采用三路逻辑：
+
+- 仅 exact `evidence_class == CONFIRMED` → confirmed color；
+- 其余所有非 placeholder → 同一颜色；
+- `bounded_placeholder == true` → placeholder color。
+
+因此：
+
+- HIGH_CONFIDENCE_INFERENCE 与 REASONABLE_COMPLETION 被合并；
+- mixed evidence class 不能按不确定性等级显示；
+- `override_ids`（如 `Z-006-RC-01`）未被显式纳入颜色分类；
+- 当前图本身没有四级 legend；
+- 图面实际主要形成 broad evidence / placeholder 分层，而不是锁定 DoD 要求的四级证据边界。
+
+这属于 **DoD-08 合规问题**，不是美术偏好问题，因此不能在本版直接批准 P2.3。
+
+修正任务：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V004.md`。
 
 ### DoD-09｜Final Archive / Known Limitations / Closure Evidence｜PASS（engineering archive complete）
 
-- component library、generator / validator / tests、integration manifest、machine QC、roundtrip evidence、validation report、known limitations 与 review images 均已进入 canonical engineering archive。
-- local-only V001 candidate path / SHA256 / size / Blender version 已记录。
-- canonical T-008 V003 evidence commit：`c18945c52da6666ac9dbe6842fb3d51422fd440a`。
-- Known Limitations 明确该成果是“controlled / evidence-traceable 963 reconstruction candidate”，不是“完全还原963原貌”。
+- component library、generator / validator / tests、integration manifest、machine QC、roundtrip evidence、validation report、known limitations 与 review images 已归档。
+- local-only candidate path / SHA256 / size / Blender version 已记录。
+- V004 只允许新增 corrected evidence diagnostic / QC sidecar，不得改变 canonical model。
 
 ## 3. Preliminary Gate Score
 
@@ -103,26 +127,18 @@ P2.3 在 Product Owner 对六张正式审核图完成视觉审核并明确批准
 |---|---|
 | DoD-01 | PASS |
 | DoD-02 | PASS |
-| DoD-03 | PASS — engineering |
+| DoD-03 | PASS |
 | DoD-04 | PASS |
 | DoD-05 | PASS |
 | DoD-06 | PASS |
 | DoD-07 | PASS |
-| DoD-08 | **PENDING PRODUCT OWNER REVIEW** |
+| DoD-08 | **HOLD — EVIDENCE DIAGNOSTIC FOUR-LEVEL MAPPING REQUIRED** |
 | DoD-09 | PASS |
 
-**Current: 8 PASS + 1 PENDING.**
+**Current: 8 PASS + 1 HOLD.**
 
 ## 4. Gate Recommendation
 
-> **HOLD FOR PRODUCT OWNER VISUAL / EVIDENCE DIAGNOSTIC REVIEW ONLY.**
+> **HOLD P2.3 ONLY FOR EVIDENCE DIAGNOSTIC CORRECTION.**
 
-这不是 engineering HOLD。当前无工程 blocker。
-
-Product Owner 完成六图审核并明确批准后，才可：
-
-- 将 DoD-08 更新为 PASS；
-- 形成 9/9 PASS；
-- 记录新的 Product Owner Gate decision；
-- 正式关闭 P2.3 与 P2；
-- 进入下一阶段规划。
+冻结全部已通过的模型与工程结果。执行 T-008 V004，只修正 Evidence Diagnostic 四级分类和 legend；新版 diagnostic 通过 ChatGPT + Product Owner 复核并由 Product Owner 明确批准后，才可形成 9/9 PASS、关闭 P2.3 与 P2。
