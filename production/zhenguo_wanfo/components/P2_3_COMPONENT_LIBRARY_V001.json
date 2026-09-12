@@ -1,0 +1,29 @@
+{
+  "contract_version": "V001",
+  "architecture": "Component Library -> Parametric Variant -> Placement / Instance -> Evidence Metadata",
+  "coordinate_unit": "mm",
+  "historical_state_tag": "reconstructed_963_candidate",
+  "originality_default": "unknown",
+  "component_families": {
+    "COLUMN": {"source": "P2.2 approved perimeter column", "rule": "Z-002 diameter; Z-006-RC-01 height; Z-005 corner rise", "presentation": true},
+    "PRIMARY_FRAME": {"source": "P2.2 principal frame", "rule": "P2.2 approved endpoints and MOD-003/004/005 section envelopes", "presentation": true},
+    "BRACKET_ARM": {"source": "P2.2 approved aggregate jump controls", "rule": "DG-110/111/112/113 and MOD-002; equal subdivisions are graphic topology only", "presentation": true, "bounded_placeholder": true},
+    "BRACKET_CONTACT": {"source": "P2.2 bracket-arm endpoint", "rule": "diagrammatic contact block from MOD-003/004/005 x MOD-002; not a DG-114 small-dou specification", "presentation": true, "bounded_placeholder": true},
+    "PURLIN": {"source": "P2.2 roof control purlin", "rule": "FR-007, ROOF-007/008/009, OUT-003 and module section envelopes", "presentation": true},
+    "RAFTER": {"source": "P2.2 roof slope control", "rule": "FR-007 and ROOF-007/008/009 endpoint segments; diagrammatic spacing", "presentation": true, "bounded_placeholder": true},
+    "ROOF_ENVELOPE": {"source": "P2.2 eave-to-ridge control sequence", "rule": "six continuous planar strips joining approved control coordinates; no thickness claim", "presentation": true, "bounded_placeholder": true},
+    "FRAME_SUPPORT": {"source": "P2.2 frame tier/post control coordinates", "rule": "separate P2.3 diagrammatic connector instances at approved P2.2 endpoints; not exact historical member or joint", "presentation": true, "bounded_placeholder": true},
+    "FRAME_CONTROL": {"source": "P2.2 tier/post controls", "rule": "retain as diagnostic-only bounded topology", "presentation": false, "bounded_placeholder": true},
+    "GRID_CONTROL": {"source": "P2.2 bay grid", "rule": "diagnostic-only", "presentation": false},
+    "GABLE_CONTROL": {"source": "P2.2 gable guide", "rule": "diagnostic-only; roof-envelope end edge is visible", "presentation": false, "bounded_placeholder": true}
+  },
+  "variant_policy": "Stable variant ID is family plus SHA256 of canonical generator parameters; identical variants share one Blender mesh datablock. Distinct source controls or roles remain distinct variants even if dimensions match.",
+  "placement_policy": "P2.2 stable object name or deterministic derived name is the stable instance ID; transforms are generated from approved P2.2 geometry/control endpoints.",
+  "graphic_only_rules": {
+    "contact_block_fraction": 0.5,
+    "contact_block_fraction_note": "fraction of diagrammatic section envelope in each axis; graphic symbol, not measured dou",
+    "roof_surface": "zero-thickness piecewise planar interpolation between P2.2 roof controls",
+    "bracket_jump_division": "two equal graphic segments per approved aggregate; no individual historical jump dimension claim"
+  },
+  "excluded_historical_claims": ["DG-114 unified small-dou specification", "precise 45-degree corner joint", "precise mortise/tenon", "hidden-angle beam resolution", "component-level 963 originality"]
+}

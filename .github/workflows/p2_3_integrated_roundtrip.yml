@@ -1,0 +1,65 @@
+name: P2.3 Integrated Candidate Blender 4.5 Roundtrip
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Draft release containing the local-only T-008 transport blend
+        required: true
+        type: string
+      expected_sha256:
+        description: SHA256 of the approved local input blend
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  blender-roundtrip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+      INPUT_BLEND: transport/P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001.blend
+      RETURN_BLEND: transport/P2_3_CLOUD_4_5_RETURN_V001.blend
+      SNAPSHOT: production/zhenguo_wanfo/validation/P2_3_LOCAL_SEMANTIC_SNAPSHOT_V001.json
+      QC_SCRIPT: production/zhenguo_wanfo/scripts/p2_3_roundtrip_semantic_qc_v001.py
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download local-only transport asset from draft release
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p transport
+          gh release download '${{ inputs.release_tag }}' --repo '${{ github.repository }}' --pattern 'P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001.blend' --dir transport
+          echo '${{ inputs.expected_sha256 }}  '${INPUT_BLEND} | sha256sum --check --status
+          test -s "${INPUT_BLEND}"
+      - name: Download Blender 4.5.13 using the P0.2 verified distribution route
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --show-error --output /tmp/blender-4.5.13-linux-x64.tar.xz https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
+          tar -xf /tmp/blender-4.5.13-linux-x64.tar.xz -C /tmp
+          /tmp/blender-4.5.13-linux-x64/blender --version | head -1 | grep -F 'Blender 4.5.13'
+      - name: Reopen, compare core semantics, and save in Blender 4.5
+        shell: bash
+        run: |
+          set -euo pipefail
+          /tmp/blender-4.5.13-linux-x64/blender --background "${INPUT_BLEND}" --python-exit-code 10 --python "${QC_SCRIPT}" -- --mode cloud-save --reference "${SNAPSHOT}" --output "${RETURN_BLEND}" --result transport/P2_3_CLOUD_INPUT_QC_V001.json
+      - name: Independently reopen returned Blender 4.5 file
+        shell: bash
+        run: |
+          set -euo pipefail
+          /tmp/blender-4.5.13-linux-x64/blender --background "${RETURN_BLEND}" --python-exit-code 10 --python "${QC_SCRIPT}" -- --mode compare --reference "${SNAPSHOT}" --result transport/P2_3_CLOUD_REOPEN_QC_V001.json
+          sha256sum "${RETURN_BLEND}" > transport/P2_3_CLOUD_RETURN_SHA256_V001.txt
+      - name: Upload roundtrip artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: P2_3_CLOUD_ROUNDTRIP_V001
+          if-no-files-found: error
+          path: |
+            transport/P2_3_CLOUD_4_5_RETURN_V001.blend
+            transport/P2_3_CLOUD_INPUT_QC_V001.json
+            transport/P2_3_CLOUD_REOPEN_QC_V001.json
+            transport/P2_3_CLOUD_RETURN_SHA256_V001.txt
