@@ -130,14 +130,29 @@
 - **HOLD blocker：DoD-07 Cloud roundtrip 未执行。** Workflow 与语义快照已准备，但尚无 Blender 4.5.13 cloud run、artifact return 或 Local Blender 3.6 返回验证。
 - 不使用被拒绝的 credential extraction / custom API upload 路线。
 
-## T-008 V002｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V002｜READY FOR LOCAL EXECUTION
+## T-008 V002｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V002｜ENGINEERING HOLD
+
+- V001 frozen baseline 回归：33/33 automated tests PASS；34/34 local machine QC PASS；semantic snapshot compare PASS。
+- Candidate 保持 11 families / 40 variants / 365 stable mesh instances；历史证据边界不变。
+- Local canonical `.blend` SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
+- Git blob SHA：`23797dbd360ba67b8195d988f2161ff9eaf37d48`。
+- 临时 transport tag：`p2-3-transport-v001`；push PASS；remote advertisement 返回精确 blob SHA。
+- 两次独立临时仓库 fetch 均 FAIL：`Empty reply from server`。
+- 按 V002 Task Contract 立即 HOLD；Cloud Blender 4.5.13 workflow 未运行，artifact 未生成，Local 3.6 return QC 未运行。
+- transport tag 按合同暂不清理，等待 roundtrip 真正完成后统一删除。
+- Canonical engineering commit：`d88fa5e1ebed56bb3ec2d79f903697baf1155091`。
+- V002 失败发生在本机 Git HTTP binary fetch 路径，不代表 V001 模型或本地 QC 退化。
+
+## T-008 V003｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003｜READY FOR LOCAL EXECUTION
 
 - 同一 T-008 目标继续，不创建 T-009。
-- V001 本地整合候选与已通过工程证据冻结；V002 仅负责关闭 DoD-07 roundtrip blocker。
-- Transport 采用普通 Git 临时 tag 指向 `.blend` blob；不提交 `.blend` 到 main，不提取 Git 凭据，不 force-push。
-- Cloud Blender 4.5.13 完成 reopen / semantic QC / save / independent reopen 后上传 artifact；取回后由 Local Blender 3.6.23 做返回验证。
-- 真实 roundtrip PASS 后更新 manifest / validation evidence，并删除临时 transport tag。
-- Task Contract：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V002.md`。
+- V001 candidate 与全部本地 PASS 证据继续冻结。
+- 不再依赖本机/runner 通过 Git fetch 读取 transport tag binary。
+- GitHub Actions 使用其自动提供的 `github.token`，通过 GitHub REST Git Blobs API 按已知 blob SHA 读取 binary；runner 解码后必须重新验证 canonical SHA256 才可启动 Blender。
+- 使用普通 Git `p2-3-roundtrip-run-*` tag（指向正常 main commit）触发 workflow，不需要本机 GitHub API credential 或 `gh`。
+- Cloud 4.5 QC PASS 后取回 artifact，并由 Local Blender 3.6.23 做最终返回验证；必要时允许 Product Owner 从 Actions 页面手工下载 artifact，安全规则优先于全自动化。
+- 完成后更新 manifest / validation evidence，并清理 transport tag + workflow trigger tag。
+- Task Contract：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003.md`。
 
 ## Current Execution State｜2026-09-12
 
@@ -149,7 +164,8 @@
 - T-006 V002：ENGINEERING PASS / COMPLETE / canonical evidence archived
 - T-007 V001：ENGINEERING PASS / COMPLETE / canonical evidence archived
 - T-008 V001：**ENGINEERING HOLD / LOCAL ENGINEERING COMPLETE / CLOUD ROUNDTRIP PENDING**
-- T-008 V002：**READY FOR LOCAL EXECUTION**
+- T-008 V002：**ENGINEERING HOLD / TRANSPORT BLOB PUSHED / CLOUD NOT RUN**
+- T-008 V003：**READY FOR LOCAL EXECUTION**
 - P0：CLOSED / APPROVED
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO
 - P2：ACTIVE / 3 of 4 Gates PASS
@@ -158,7 +174,7 @@
 - P2.2：PASS / APPROVED / CLOSED
 - P2.3：**IN PROGRESS / DOD LOCKED / ENGINEERING HOLD**
 - Formal Case：平遥镇国寺万佛殿
-- Formal Blender geometry：P2.3 integrated candidate V001 generated locally / local-only blend
+- Formal Blender geometry：P2.3 integrated candidate V001 generated locally / local-only canonical blend
 - Current blocker：**P2.3 DoD-07 Cloud Blender 4.5.13 roundtrip + Local 3.6 return validation missing**
-- Current task：**T-008 V002**
-- Next action：执行 T-008 V002，仅关闭 DoD-07 roundtrip blocker；完成后再进入 ChatGPT 独立复核与 Product Owner 六图审核。
+- Current task：**T-008 V003**
+- Next action：执行 V003 authenticated blob retrieval roundtrip；完成后再进入 ChatGPT 独立复核与 Product Owner 六图审核。
