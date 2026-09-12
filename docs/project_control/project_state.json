@@ -37,34 +37,9 @@
     "canonical_commit": "c18945c52da6666ac9dbe6842fb3d51422fd440a",
     "scope": "V001 frozen candidate + component architecture + machine QC + deterministic rebuild + independent reopen + authenticated Cloud Blender 4.5 roundtrip + Local 3.6 return QC + archive"
   },
-  "current_case": {
-    "name": "平遥镇国寺万佛殿",
-    "location": "山西省平遥县镇国寺",
-    "selection_status": "LOCKED / P1.1 PASS",
-    "selection_date": "2026-09-11",
-    "selection_basis": "按 P1.0 五项锁定权重比较四个候选后，由 Product Owner 批准定选。",
-    "selection_score": 4.80,
-    "selection_scope_note": "该分数只表示首案适配度，不表示建筑历史价值排名。"
-  },
-  "p1_closure": {
-    "status": "CLOSED / APPROVED / CONDITIONAL GO",
-    "closed_date": "2026-09-12",
-    "gate_result": "4/4 PASS",
-    "archive": "docs/project_control/phase_archive/P1_closure.md",
-    "product_owner_decision": "APPROVE CONDITIONAL GO",
-    "decision_id": "D-019",
-    "classification_counts": {"confirmed": 46, "high_confidence_inference": 32, "reasonable_completion": 4, "unknown": 3, "total": 85},
-    "global_no_go_blocker_found": false,
-    "gate_review": "docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md"
-  },
-  "conditional_go_rules": [
-    "CG-01 Evidence-aware Parameter Schema must be implemented before first formal geometry production / SATISFIED BY P2.0",
-    "CG-02 UNKNOWN / DO_NOT_LOCK must not be silently hard-coded",
-    "CG-03 REASONABLE_COMPLETION must remain parameterized, replaceable and traceable",
-    "CG-04 observed_as_measured / report_ideal_model / reconstructed_963_candidate must remain separate",
-    "CG-05 unresolved corner precision may only enter as topology skeleton / medium LOD",
-    "CG-06 historical authenticity claims must remain bounded by component-level uncertainty"
-  ],
+  "current_case": {"name": "平遥镇国寺万佛殿", "location": "山西省平遥县镇国寺", "selection_status": "LOCKED / P1.1 PASS", "selection_date": "2026-09-11", "selection_score": 4.80},
+  "p1_closure": {"status": "CLOSED / APPROVED / CONDITIONAL GO", "closed_date": "2026-09-12", "gate_result": "4/4 PASS", "archive": "docs/project_control/phase_archive/P1_closure.md", "product_owner_decision": "APPROVE CONDITIONAL GO", "decision_id": "D-019", "classification_counts": {"confirmed": 46, "high_confidence_inference": 32, "reasonable_completion": 4, "unknown": 3, "total": 85}},
+  "conditional_go_rules": ["CG-01 Evidence-aware Parameter Schema must be implemented before first formal geometry production / SATISFIED BY P2.0","CG-02 UNKNOWN / DO_NOT_LOCK must not be silently hard-coded","CG-03 REASONABLE_COMPLETION must remain parameterized, replaceable and traceable","CG-04 observed_as_measured / report_ideal_model / reconstructed_963_candidate must remain separate","CG-05 unresolved corner precision may only enter as topology skeleton / medium LOD","CG-06 historical authenticity claims must remain bounded by component-level uncertainty"],
   "p2_entry": {
     "status": "ACTIVE / P2.3 ENGINEERING PASS / PO VISUAL REVIEW REQUIRED",
     "completed_gate": "P2.2",
@@ -89,21 +64,10 @@
     "preliminary_gate_result": "8 PASS + 1 PENDING PRODUCT OWNER VISUAL REVIEW",
     "next_action": "Product Owner reviews six P2.3 formal images: PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC. If visual/evidence review passes, Product Owner explicitly approves P2.3 PASS."
   },
-  "p1_evidence_progress": {
-    "status": "CLOSED / CLASSIFIED / APPROVED FOR CONDITIONAL PRODUCTION",
-    "primary_source": {"id": "SRC-ZG-WF-001", "title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告", "authors": "刘畅、廖慧农、李树盛", "format": "完整扫描PDF", "pdf_pages": 434, "bytes": 84117628, "sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472", "status": "DIRECT_REVIEWED"},
-    "open_but_bounded": ["963原设计柱高（历史UNKNOWN；D-023独立候选已验证）", "小斗统一规格设计规则", "逐构件963原真性", "转角45度精确节点与榫卯落位", "隐衬角栿/隐角梁来源冲突"]
-  },
-  "current_baseline": {
-    "local_blender": "Blender 3.6.23 macOS x64",
-    "cloud_executor": "GitHub Actions Hosted Runner + Blender 4.5.13 LTS Linux x64",
-    "roundtrip": "P2.3 PASS / V003 VERIFIED / core semantic diff NONE",
-    "roundtrip_limitation": "Only previously accepted P0.2 UI-region warning remains; no new core geometry / metadata / instance / camera loss.",
-    "parameter_set": "P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001｜85/85 + Z-006-RC-01 APPROVED / VALIDATED OVERRIDE",
-    "model_3d": "P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001 / 11 families / 40 variants / 365 stable mesh instances / engineering PASS / local-only blend SHA256 ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512"
-  },
+  "p1_evidence_progress": {"status": "CLOSED / CLASSIFIED / APPROVED FOR CONDITIONAL PRODUCTION", "primary_source": {"id": "SRC-ZG-WF-001", "title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告", "authors": "刘畅、廖慧农、李树盛", "format": "完整扫描PDF", "pdf_pages": 434, "sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472", "status": "DIRECT_REVIEWED"}, "open_but_bounded": ["963原设计柱高（历史UNKNOWN；D-023独立候选已验证）", "小斗统一规格设计规则", "逐构件963原真性", "转角45度精确节点与榫卯落位", "隐衬角栿/隐角梁来源冲突"]},
+  "current_baseline": {"local_blender": "Blender 3.6.23 macOS x64", "cloud_executor": "GitHub Actions Hosted Runner + Blender 4.5.13 LTS Linux x64", "roundtrip": "P2.3 PASS / V003 VERIFIED / core semantic diff NONE", "roundtrip_limitation": "Only previously accepted P0.2 UI-region warning remains; no new core geometry / metadata / instance / camera loss.", "parameter_set": "P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001｜85/85 + Z-006-RC-01 APPROVED / VALIDATED OVERRIDE", "model_3d": "P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001 / 11 families / 40 variants / 365 stable mesh instances / engineering PASS / local-only blend SHA256 ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512"},
   "project_control_sync": {"status":"TRIAL","canonical_committed_state":"GitHub private repo main branch / docs/project_control","local_working_copy":"/Users/caroline/中国古建筑3D复原/docs/project_control","write_model":"ChatGPT优先直接更新GitHub Project Control；本地Codex负责工程执行。Project Control更新后，本地工作前执行git pull --ff-only origin main；避免同时修改同一 Project Control 文件。","reassessment_rule":"若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"},
   "latest_material_decision": {"id": "D-027", "date": "2026-09-12", "decision": "Product Owner批准并锁定P2.3 Definition of Done V001；T-008作为构件库驱动整合复原候选与最终P2质量验收工程任务获得授权。"},
   "next_action": "上传 / 展示 P2.3 六张正式审核图，由 ChatGPT + Product Owner 完成 DoD-08 视觉 / evidence diagnostic 审核；明确批准前不得关闭 P2.3 或 P2。",
-  "dashboard": {"path":"docs/project_control/dashboard.html","visualization_version":"v009","role":"DERIVED_VISUALIZATION","authoritative":false,"refresh_status":"R039_PENDING_REFRESH","source_files":["project_state.json","decision_log.md","execution_log.md","acceptance_matrix.md","governance.md","rules_change_log.md","phase_archive/P0_closure.md","phase_archive/P1_closure.md","../production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md","../production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md","../../tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003.md","../../production/zhenguo_wanfo/validation/P2_3_VALIDATION_REPORT_V001.md","../../production/zhenguo_wanfo/validation/P2_3_V003_ROUNDTRIP_QC_V001.json"]}
+  "dashboard": {"path":"docs/project_control/dashboard.html","visualization_version":"v009","role":"DERIVED_VISUALIZATION","authoritative":false,"refresh_status":"R039_REFRESH_COMPLETE","source_files":["project_state.json","decision_log.md","execution_log.md","acceptance_matrix.md","governance.md","rules_change_log.md","phase_archive/P0_closure.md","phase_archive/P1_closure.md","../production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md","../production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md","../../tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003.md","../../production/zhenguo_wanfo/validation/P2_3_VALIDATION_REPORT_V001.md","../../production/zhenguo_wanfo/validation/P2_3_V003_ROUNDTRIP_QC_V001.json"]}
 }
