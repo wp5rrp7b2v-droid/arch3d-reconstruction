@@ -15802,7 +15802,7 @@
   ],
   "roundtrip": {
     "artifact_path": null,
-    "status": "HOLD_GIT_TRANSPORT_NO_CLOUD_RUN",
+    "status": "HOLD_TEMP_TRANSPORT_NO_CLOUD_RUN",
     "validation_path": null
   },
   "semantic_summary": {
