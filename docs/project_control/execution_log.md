@@ -143,7 +143,7 @@
 - Canonical engineering commit：`d88fa5e1ebed56bb3ec2d79f903697baf1155091`。
 - V002 失败发生在本机 Git HTTP binary fetch 路径，不代表 V001 模型或本地 QC 退化。
 
-## T-008 V003｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003｜READY FOR LOCAL EXECUTION
+## T-008 V003｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003｜ENGINEERING PASS RECOMMENDED
 
 - 同一 T-008 目标继续，不创建 T-009。
 - V001 candidate 与全部本地 PASS 证据继续冻结。
@@ -153,6 +153,12 @@
 - Cloud 4.5 QC PASS 后取回 artifact，并由 Local Blender 3.6.23 做最终返回验证；必要时允许 Product Owner 从 Actions 页面手工下载 artifact，安全规则优先于全自动化。
 - 完成后更新 manifest / validation evidence，并清理 transport tag + workflow trigger tag。
 - Task Contract：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V003.md`。
+- Workflow commit `d595a587c72dc4e76afac249d8a4e667ac772fd0`；run tag `p2-3-roundtrip-run-v003-001` push PASS；[Actions run 34695870243](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/34695870243) SUCCESS。
+- Runner `github.token` Git Blobs API retrieval PASS；blob SHA `23797dbd360ba67b8195d988f2161ff9eaf37d48` 与 decoded input SHA256 `ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512` 均匹配冻结候选。
+- Cloud Blender 4.5.13 input / independent reopen semantic QC PASS；artifact `P2_3_CLOUD_ROUNDTRIP_V001` 下载与 SHA256 核验 PASS；Local Blender 3.6.23 return semantic QC PASS、full machine QC 34/34 PASS，无新增核心语义差异。
+- V001 frozen baseline 回归：33/33 automated tests PASS、34/34 machine QC PASS；11 families / 40 variants / 365 stable instances 与历史边界不变。
+- Canonical validation evidence 首次推送 commit `496ddb62fd095e63c49c719e906ea6244dd76f38`；其后 remote/local transport tag 和 run-trigger tag 均已删除；清理结果见 `production/zhenguo_wanfo/validation/P2_3_V003_ROUNDTRIP_QC_V001.json`。
+- DoD-07 工程阻断已清零。P2.3 Gate 仍待 ChatGPT 独立工程复核与 Product Owner 六图正式审核、明确决策；本条不宣布 Gate PASS 或 P2 Phase CLOSED。
 
 ## Current Execution State｜2026-09-12
 
@@ -165,16 +171,16 @@
 - T-007 V001：ENGINEERING PASS / COMPLETE / canonical evidence archived
 - T-008 V001：**ENGINEERING HOLD / LOCAL ENGINEERING COMPLETE / CLOUD ROUNDTRIP PENDING**
 - T-008 V002：**ENGINEERING HOLD / TRANSPORT BLOB PUSHED / CLOUD NOT RUN**
-- T-008 V003：**READY FOR LOCAL EXECUTION**
+- T-008 V003：**ROUNDTRIP PASS / ENGINEERING PASS RECOMMENDED / GATE REVIEW PENDING**
 - P0：CLOSED / APPROVED
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO
 - P2：ACTIVE / 3 of 4 Gates PASS
 - P2.0：PASS / APPROVED
 - P2.1：PASS / APPROVED / CLOSED
 - P2.2：PASS / APPROVED / CLOSED
-- P2.3：**IN PROGRESS / DOD LOCKED / ENGINEERING HOLD**
+- P2.3：**IN PROGRESS / DOD LOCKED / ENGINEERING PASS RECOMMENDED / GATE REVIEW PENDING**
 - Formal Case：平遥镇国寺万佛殿
 - Formal Blender geometry：P2.3 integrated candidate V001 generated locally / local-only canonical blend
-- Current blocker：**P2.3 DoD-07 Cloud Blender 4.5.13 roundtrip + Local 3.6 return validation missing**
-- Current task：**T-008 V003**
-- Next action：执行 V003 authenticated blob retrieval roundtrip；完成后再进入 ChatGPT 独立复核与 Product Owner 六图审核。
+- Current engineering blocker：**none for DoD-07**；Gate 审核与决策仍未完成。
+- Current task：**T-008 V003 engineering evidence archived**。
+- Next action：ChatGPT 独立工程复核与 Product Owner 六图正式审核，再由 Product Owner 明确 P2.3 Gate 决策。

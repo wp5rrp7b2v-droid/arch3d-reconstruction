@@ -10,8 +10,10 @@
     "zip_sha256": "09ebba82b33f6d5c2fcb62d4dd979289a73c8464f285cba823150d0ba9f66abb"
   },
   "cleanup": {
-    "run_trigger_tag": "PENDING_CANONICAL_EVIDENCE_PUSH",
-    "transport_tag": "PENDING_CANONICAL_EVIDENCE_PUSH"
+    "binary_in_main_tree": false,
+    "pre_cleanup_evidence_commit": "496ddb62fd095e63c49c719e906ea6244dd76f38",
+    "run_trigger_tag": "PASS: remote and local refs deleted; remote ls-remote empty",
+    "transport_tag": "PASS: remote and local refs deleted; remote ls-remote empty"
   },
   "cloud": {
     "blender_version": "4.5.13 LTS",
@@ -36,7 +38,7 @@
     "semantic_qc_path": "production/zhenguo_wanfo/validation/P2_3_V003_LOCAL_RETURN_SEMANTIC_QC_V001.json",
     "semantic_status": "PASS"
   },
-  "status": "PASS_PENDING_TAG_CLEANUP",
+  "status": "PASS",
   "task": "T-008 V003",
   "transport": {
     "blob_sha": "23797dbd360ba67b8195d988f2161ff9eaf37d48",

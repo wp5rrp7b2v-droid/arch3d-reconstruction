@@ -49,7 +49,7 @@
 | P2.0｜Evidence-aware Parameter Schema | Evidence-aware parameter contract | **PASS / APPROVED** | CG-01 satisfied. |
 | P2.1｜Formal Production Parameter Set | 85/85 formal set + dependency + preflight | **PASS / APPROVED / CLOSED** | Z-006 remains UNKNOWN; RC-01 replaceable. |
 | P2.2｜Parametric Structural Skeleton | Complete medium-LOD structural skeleton | **PASS / APPROVED / CLOSED** | 217 = machine objects, not historical component count. |
-| P2.3｜Integrated Reconstruction Candidate & QC | Component-library-driven integrated candidate + final engineering QC | **IN PROGRESS / ENGINEERING HOLD / ROUNDTRIP REQUIRED** | T-008 V001 local engineering complete; DoD-07 real Cloud Blender 4.5.13 roundtrip and Local 3.6 return validation still missing. |
+| P2.3｜Integrated Reconstruction Candidate & QC | Component-library-driven integrated candidate + final engineering QC | **IN PROGRESS / ENGINEERING PASS RECOMMENDED / GATE REVIEW PENDING** | T-008 V003 DoD-07 cloud and local return QC PASS; independent engineering and Product Owner six-image review remain. |
 
 ### P2.1 Gate Final｜APPROVED / PASS / CLOSED
 
@@ -95,7 +95,7 @@
 - Canonical engineering commit：`5bd6ca1f8300a170b74c3a9058352768800b56a6`。
 - **DoD-07 = HOLD**：Cloud Blender 4.5.13 workflow 尚无真实 run；无 returned artifact；无 Local Blender 3.6 return validation。
 
-当前 P2.3 Gate：**NOT PASS / ENGINEERING HOLD**。
+V001 当时的 P2.3 Gate：**NOT PASS / ENGINEERING HOLD**；V003 后续状态见下。
 
 ### T-008 V002 Continuation｜READY FOR LOCAL EXECUTION
 
@@ -106,5 +106,14 @@
 - 下载 artifact 后以 Local Blender 3.6.23 做返回验证。
 - Roundtrip evidence 入库后删除临时 transport tag。
 - Task Contract：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V002.md`。
+
+### T-008 V003 DoD-07 Engineering Result｜PASS 2026-09-12
+
+- V001 candidate SHA256 仍为 `ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`；11 families / 40 variants / 365 stable instances 不变。
+- GitHub Actions [run 34695870243](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/34695870243) SUCCESS：runner `github.token` blob retrieval SHA 验证 PASS；Blender 4.5.13 input 与 independent reopen semantic QC PASS。
+- Artifact `P2_3_CLOUD_ROUNDTRIP_V001` 已下载；Local Blender 3.6.23 return semantic QC PASS、machine QC 34/34 PASS；无新增核心语义丢失。
+- V001 regression：33/33 automated tests PASS、34/34 machine QC PASS。
+- 正式 QC 见 `production/zhenguo_wanfo/validation/P2_3_V003_ROUNDTRIP_QC_V001.json`；temporary transport 与 run-trigger tags 均已远端及本地清理，`.blend` 未进入 `main` tree。
+- **DoD-07 工程阻断清零；T-008 V003 Engineering PASS 推荐。** P2.3 Gate 仍待独立工程复核、Product Owner 六图审核与明确批准，本记录不宣布 Gate PASS。
 
 P2.3 最终 PASS 仍需：T-008 工程 PASS + ChatGPT 独立复核 + Product Owner 对 PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC 六图完成正式审核并明确批准。

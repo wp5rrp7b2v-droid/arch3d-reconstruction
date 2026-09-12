@@ -22,7 +22,7 @@ The roof uses six continuous envelope strips over approved control intervals, to
 
 ### V002 continuation — temporary Git blob tag
 
-The V001 canonical `.blend` remains unchanged at SHA256 `ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`. Under the V002 Task Contract, it was written as Git blob `23797dbd360ba67b8195d988f2161ff9eaf37d48` and pushed through temporary lightweight tag `p2-3-transport-v001`. Remote `ls-remote` advertises that exact blob SHA. Two independent attempts to fetch the tag into a disposable repository failed with `Empty reply from server`; therefore the V002 section 4 transport condition is **HOLD**. The Blender 4.5 workflow was not dispatched and no artifact or local-return QC exists. The temporary tag remains in place because V002 section 7 allows cleanup only after a successful workflow, artifact download and local return validation. The exact record is `validation/P2_3_V002_TRANSPORT_QC_V001.json`.
+The V001 canonical `.blend` remains unchanged at SHA256 `ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`. Under the V002 Task Contract, it was written as Git blob `23797dbd360ba67b8195d988f2161ff9eaf37d48` and pushed through temporary lightweight tag `p2-3-transport-v001`. At the V002 checkpoint, remote `ls-remote` advertised that exact blob SHA. Two independent attempts to fetch the tag into a disposable repository failed with `Empty reply from server`; therefore the V002 section 4 transport condition was **HOLD**. The Blender 4.5 workflow had not been dispatched and no artifact or local-return QC existed. The tag was retained at that checkpoint because V002 section 7 allowed cleanup only after a successful workflow, artifact download and local return validation. The exact historical record is `validation/P2_3_V002_TRANSPORT_QC_V001.json`.
 
 ### V003 continuation — authenticated Actions blob retrieval
 
@@ -30,7 +30,7 @@ Workflow commit `d595a587c72dc4e76afac249d8a4e667ac772fd0` was pushed to private
 
 Local Blender 3.6.23 independently reopened the returned file twice: semantic compare **PASS**, and full machine QC **PASS 34/34**. The frozen V001 candidate separately passed **33/33** automated tests and **34/34** machine QC again. The first sandboxed regression attempts crashed during Metal GPU initialization before model validation; both checks passed when Blender had native graphics access. The known P0.2 UI-region-only warnings appeared on the 4.5→3.6 return, without any new core semantic loss. Detailed run, hashes, artifact and QC paths are archived in `validation/P2_3_V003_ROUNDTRIP_QC_V001.json`.
 
-Temporary transport and run-trigger tags await final cleanup after this canonical evidence is pushed, as required by the V003 Task Contract. This engineering result does not decide the P2.3 Gate; independent engineering review and Product Owner review of the six formal images and evidence diagnostic remain required.
+After canonical evidence commit `496ddb62fd095e63c49c719e906ea6244dd76f38` was pushed, both temporary transport and run-trigger tags were deleted remotely and locally; an independent remote tag listing returned no matching refs. The `.blend` remains local only and did not enter the `main` tree. This result supports a **T-008 V003 engineering PASS recommendation**; it does not decide the P2.3 Gate. Independent engineering review and Product Owner review of the six formal images and evidence diagnostic remain required.
 
 ## Historical statement boundary
 
