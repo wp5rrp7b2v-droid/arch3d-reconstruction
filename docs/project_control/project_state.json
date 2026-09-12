@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R029",
+  "state_revision": "R030",
   "last_updated": "2026-09-12",
-  "session_status": "ACTIVE_P2_1_T006_READY_FOR_LOCAL_EXECUTION",
+  "session_status": "ACTIVE_P2_1_ENGINEERING_HOLD_Z006_EVIDENCE_REVIEW_REQUIRED",
   "next_session_date": null,
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
@@ -13,27 +13,34 @@
   "previous_phase": {"id": "P1", "name": "选题取证", "status": "CLOSED / APPROVED / CONDITIONAL GO", "closed_date": "2026-09-12", "gate_result": "4/4 PASS"},
   "current_gate": {
     "id": "P2",
-    "status": "ACTIVE / ARCHITECTURE_LOCKED",
+    "status": "ACTIVE / P2.1 ENGINEERING HOLD",
     "passed": 1,
     "total": 4,
-    "architecture_status": "P2.0-P2.3 LOCKED / P2.1 DOD LOCKED / T006 READY FOR LOCAL EXECUTION",
+    "architecture_status": "P2.0-P2.3 LOCKED / P2.1 DOD LOCKED / T006 V001 ENGINEERING HOLD",
     "items": {
       "P2.0": {"status": "PASS / APPROVED", "name": "Evidence-aware Parameter Schema", "approved_date": "2026-09-12"},
-      "P2.1": {"status": "IN_PROGRESS / T006_READY_FOR_LOCAL_EXECUTION", "name": "正式生产参数集锁定｜Formal Production Parameter Set", "dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "dod_count": 9},
+      "P2.1": {"status": "IN_PROGRESS / ENGINEERING_HOLD / BLOCKED_BY_Z006", "name": "正式生产参数集锁定｜Formal Production Parameter Set", "dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "dod_count": 9},
       "P2.2": {"status": "LOCKED / WAITING_FOR_P2_1_PASS", "name": "参数化主体结构候选模型｜Parametric Structural Skeleton"},
       "P2.3": {"status": "LOCKED / WAITING_FOR_P2_2_PASS", "name": "整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC"}
     },
-    "note": "P2.1 Definition of Done V001 已锁定。T-006 Task Contract 已定义，负责85/85正式参数迁移、Geometry Dependency Matrix、production preflight与P2.1 validation report；P2.1 PASS前不进入正式Blender几何生产。"
+    "note": "T-006 V001 已完成85/85正式参数集与85/85 Geometry Dependency Matrix；机器验证PASS、测试11/11 PASS，但production preflight因Z-006返回HOLD。P2.1 PASS硬条件未满足，P2.2继续锁定。"
   },
-  "decision_required": false,
-  "blocker": null,
+  "decision_required": true,
+  "blocker": {
+    "id": "Z-006",
+    "parameter_key": "column_height_963_design_mm",
+    "status": "BLOCKS_P2_2_GEOMETRY",
+    "reason": "P2.2柱、主要梁架与屋顶绝对Z定位需要柱高；P1未锁定合法的963原设计柱高，现状或二手高度不得静默代填。",
+    "resolution_path": "先做Z-006定向证据复核；若证据仍不足，再由Product Owner决定是否批准独立、可替换、可追溯的REASONABLE_COMPLETION。"
+  },
   "current_task": {
     "id": "T-006",
     "formal_name": "【中国古建筑3D复原｜T-006｜P2_1_PRODUCTION_PARAMETER_SET_V001｜正式生产参数集建立与几何依赖预检】",
     "name": "P2_1_PRODUCTION_PARAMETER_SET_V001",
-    "status": "READY_FOR_LOCAL_EXECUTION",
+    "status": "ENGINEERING_HOLD / COMPLETE_V001_EVIDENCE_ARCHIVED",
     "think_level": "HIGH",
     "task_spec": "docs/tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V001.md",
+    "engineering_commit": "1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0",
     "scope": "85/85正式生产参数迁移 + Geometry Dependency Matrix + machine validation + production preflight + P2.1 validation report；不得生成Blender几何"
   },
   "current_case": {
@@ -65,7 +72,7 @@
     "CG-06 historical authenticity claims must remain bounded by component-level uncertainty"
   ],
   "p2_entry": {
-    "status": "ACTIVE / P2.1 T006 READY FOR LOCAL EXECUTION",
+    "status": "ACTIVE / P2.1 ENGINEERING HOLD / Z006 BLOCKER",
     "completed_gate": "P2.0",
     "completed_gate_result": "PASS / PRODUCT_OWNER_APPROVED",
     "gate_architecture_decision": "D-021",
@@ -73,7 +80,7 @@
     "p2_1_dod_decision": "D-022",
     "p2_1_dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md",
     "production_path": ["P2.1 Formal Production Parameter Set", "P2.2 Parametric Structural Skeleton", "P2.3 Integrated Reconstruction Candidate & QC"],
-    "p2_1_goal": "把P1已分类参数转为P2.0 Schema下的正式生产参数集，并明确UNKNOWN对几何生成的真实阻断关系。",
+    "p2_1_goal": "建立85/85正式生产参数集并清零P2.2 geometry-critical unresolved blocker，在不掩盖未知项的前提下形成可执行生产输入。",
     "p2_1_geometry_rule": "NO FORMAL BLENDER GEOMETRY IN P2.1",
     "p2_1_pass_rule": "DOD 9/9 PASS AND geometry-critical unresolved blocker = 0",
     "p2_1_dod_summary": [
@@ -93,8 +100,23 @@
     "schema_spec": "docs/production/zhenguo_wanfo/P2_0_EVIDENCE_AWARE_PARAMETER_SCHEMA_V001.md",
     "machine_schema": "production/zhenguo_wanfo/schema/evidence_aware_parameter_schema_v001.json",
     "t005_result": {"status": "ENGINEERING_PASS / COMPLETE", "v002_full_suite": "PASS 6/6", "canonical_commit": "a938d9fe96c579c21fb3a16734f9b74efcd7d8bc"},
-    "t006_task": "docs/tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V001.md",
-    "next_action": "Sync local main and execute T-006 under locked Task Contract"
+    "t006_result": {
+      "status": "ENGINEERING_HOLD",
+      "formal_parameter_set": "85/85",
+      "classification_counts": {"confirmed": 46, "high_confidence_inference": 32, "reasonable_completion": 4, "unknown": 3},
+      "dependency_matrix": "85/85",
+      "machine_validation": "PASS",
+      "automated_tests": "PASS 11/11",
+      "production_preflight": "HOLD / exit 1",
+      "geometry_critical_unresolved_blocker_count": 1,
+      "unknown_dependency": {
+        "Z-006": "BLOCKS_P2_2_GEOMETRY",
+        "DG-114": "BOUNDED_NON_BLOCKING",
+        "HIS-002": "METADATA_ONLY_BLOCK"
+      },
+      "canonical_commit": "1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0"
+    },
+    "next_action": "Perform targeted Z-006 evidence review before considering any temporary REASONABLE_COMPLETION"
   },
   "p1_evidence_progress": {
     "status": "CLOSED / CLASSIFIED / APPROVED FOR CONDITIONAL PRODUCTION",
@@ -108,7 +130,7 @@
     "cloud_executor": "GitHub Actions Hosted Runner + Blender 4.5.13 LTS Linux x64",
     "roundtrip": "PASS / Class B｜ROUNDTRIP_WITH_LIMITATIONS",
     "roundtrip_limitation": "Blender 3.6会移除Blender 4.5文件中不支持的部分View3D/Image UI region数据；未发现P0验证范围内核心几何、Marker或所需Metadata损失。",
-    "parameter_set": "EVIDENCE_AWARE_PARAMETER_SCHEMA_V001｜P2.0 APPROVED PRODUCTION DATA CONTRACT",
+    "parameter_set": "P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001｜85/85 / ENGINEERING HOLD BY Z-006",
     "model_3d": "正式历史复原几何尚未开始；P2.1 PASS 后才进入 P2.2 第一项正式几何生产"
   },
   "project_control_sync": {
@@ -123,13 +145,13 @@
     "date": "2026-09-12",
     "decision": "Product Owner 锁定 P2.1 Definition of Done V001；P2.1 PASS需要9/9且geometry-critical unresolved blocker=0。"
   },
-  "next_action": "本地同步 GitHub main 后执行 T-006：85/85正式生产参数迁移、Geometry Dependency Matrix、production preflight和P2.1 validation report；T-006不得自行创造历史参数或生成Blender几何。",
+  "next_action": "定向复核 Z-006｜963原设计柱高 的现有证据；优先尝试从主测绘报告剖面、柱身实测、标高与尺寸链中形成可追溯候选。若仍无法约束，再提交Product Owner决定是否建立可替换REASONABLE_COMPLETION。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v008",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R029_REFRESH_COMPLETE",
-    "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "../../tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V001.md"]
+    "refresh_status": "STALE_AFTER_T006_HOLD_PENDING_R030_REFRESH",
+    "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "../../tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V001.md", "../../production/zhenguo_wanfo/validation/P2_1_VALIDATION_REPORT_V001.md"]
   }
 }
