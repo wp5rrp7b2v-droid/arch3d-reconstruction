@@ -23,7 +23,8 @@
 | D-017 | 2026-09-11 | Product Owner 批准“山西平遥镇国寺万佛殿”为首个正式复原案例。P1.1 正式 PASS；P1.2 解锁并启动。四候选按 P1.0 锁定权重比较后，镇国寺万佛殿获得最高首案适配度。该选择只代表项目首案适配性，不构成对四座建筑历史价值的排序。正式 3D 生产继续受 P1.3 Gate 约束。 | ACTIVE / CASE LOCKED / P1.1 PASS / P1.2 STARTED |
 | D-018 | 2026-09-11 | Product Owner 批准 P1.2｜正式证据包建立通过。完整《精细测绘报告》已纳入主来源并完成关键原页直接核读；参数候选矩阵升级为 V002；P1.2 Gate Review 10/10 PASS。P1.2 正式 PASS，P1 Gate 进度变为 3/4；P1.3 解锁进入证据分级与可复原性 Go / No-Go。 | ACTIVE / P1.2 PASS / P1.3 ENTERED |
 | D-019 | 2026-09-12 | Product Owner 正式批准 `P1.3｜CONDITIONAL GO`。P1.3 PASS，P1 Gate = 4/4 PASS，P1｜选题取证正式关闭。项目允许进入正式参数化与3D候选复原，但 CG-01～CG-06 全部成为跨阶段强制生产规则。P2 第一项强制 Gate 为 `P2.0｜Evidence-aware Parameter Schema`；P2.0 PASS 前不得启动第一项正式 Blender 几何生产。 | ACTIVE / P1 CLOSED / P2 ENTRY / CONDITIONAL GO |
-| **D-020** | **2026-09-12** | **Product Owner 正式批准 `P2.0｜Evidence-aware Parameter Schema` PASS。T-005 V001/V002 完成并验证 Schema、UNKNOWN/DO_NOT_LOCK 机械约束、REASONABLE_COMPLETION 可替换约束及三层语义并存；P2.0 Gate Review 7/7 PASS。CG-01 前置条件正式满足。P2 后续工作可继续，但在创建第一项正式几何任务前，必须先定义并锁定 P2.1–P2.3 Gate 架构；CG-02～CG-06 继续强制生效。** | **ACTIVE / P2.0 PASS / NEXT GATE ARCHITECTURE REQUIRED** |
+| D-020 | 2026-09-12 | Product Owner 正式批准 `P2.0｜Evidence-aware Parameter Schema` PASS。T-005 V001/V002 完成并验证 Schema、UNKNOWN/DO_NOT_LOCK 机械约束、REASONABLE_COMPLETION 可替换约束及三层语义并存；P2.0 Gate Review 7/7 PASS。CG-01 前置条件正式满足。P2 后续工作可继续，但在创建第一项正式几何任务前，必须先定义并锁定 P2.1–P2.3 Gate 架构；CG-02～CG-06 继续强制生效。 | ACTIVE / P2.0 PASS / NEXT GATE ARCHITECTURE REQUIRED |
+| **D-021** | **2026-09-12** | **Product Owner 批准 `P2.1–P2.3 Gate Architecture V001`。P2.1=`正式生产参数集锁定｜Formal Production Parameter Set`；P2.2=`参数化主体结构候选模型｜Parametric Structural Skeleton`；P2.3=`整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC`。生产路径正式锁定为“参数 → 结构 → 整合候选与QC”。P2.1 不生成正式 Blender 几何；P2.1 PASS 后方可进入 P2.2 第一项正式几何生产。CG-02～CG-06 持续强制生效。** | **ACTIVE / P2 GATE ARCHITECTURE LOCKED / P2.1 ENTRY READY** |
 
 ## D-012 直接影响
 
@@ -97,3 +98,12 @@
 - `observed_as_measured` / `report_ideal_model` / `reconstructed_963_candidate` 三层继续强制隔离。
 - CG-02～CG-06 全部继续生效。
 - 下一步先定义并锁定 P2.1–P2.3 Gate 架构，再创建后续正式几何工程 T-###；不得因为 P2.0 PASS 而跳过 Gate 设计直接进入 Blender 正式建模。
+
+## D-021 P2.1–P2.3 Gate Architecture Boundary
+
+- P2.1｜正式生产参数集锁定：把 P1 已分类信息转成可供生产读取的正式参数集；处理 UNKNOWN 对建模的真实阻断关系；不得生成正式 Blender 几何。
+- P2.2｜参数化主体结构候选模型：第一项正式 Blender 几何 Gate；验证参数驱动的柱网、柱、主要梁架、斗栱拓扑骨架、屋顶控制几何与主要空间关系。
+- P2.3｜整合复原候选与质量验收：整合结构、屋面、斗栱体系与证据 metadata，完成可追溯性、确定性重建、兼容性与视觉 QC，形成正式963候选复原模型。
+- P2.2 对转角45°精确节点、榫卯与隐角梁争议只允许中等LOD拓扑骨架，继续执行 CG-05。
+- P2.3 PASS 表示“工程可复现、证据可追溯、不确定性透明的963候选复原模型成立”，不等于“完全还原963年原貌”。
+- 下一步先明确并锁定 P2.1 Definition of Done，再创建 T-006；未经 P2.1 PASS，不进入 P2.2 正式几何生产。
