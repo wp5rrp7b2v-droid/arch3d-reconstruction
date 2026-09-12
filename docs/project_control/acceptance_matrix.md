@@ -69,7 +69,7 @@ P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段，但**尚未解锁第�
 
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
-| P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **IN PROGRESS / ENTRY READY** | **P2.0 PASS 前不得启动第一项正式 Blender 几何生产。** P0 裸数字 JSON 不得直接升级为正式生产参数。 |
+| P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **HOLD / T-005 V002 REQUIRED** | T-005 V001 核心工程验证 PASS，但尚未显式验证三层语义并存；6个工程证据文件尚未归档到 GitHub canonical repo。P2.0 PASS 前仍不得启动正式 Blender 几何。 |
 
 ### P2.0 Definition of Done
 
@@ -82,4 +82,29 @@ P2.0 至少需要通过以下检查：
 - `observed_as_measured`、`report_ideal_model`、`reconstructed_963_candidate` 可同时存在且不会被自动覆盖；
 - 参数可被后续 Blender Python 读取，但本 Gate 不生成正式建筑几何。
 
-P2.1–P2.3 的完整 Gate 架构在 P2.0 建立并验证生产数据层后再锁定，避免在参数 Schema 尚未成立前过早固化后续工程结构。
+### P2.0 T-005 V001 Review｜2026-09-12
+
+V001 engineering result：**PASS**。
+
+已通过：
+
+- Python 3.10.2 / jsonschema 4.26.0；
+- Draft 2020-12 schema check；
+- 四类 classification 正向实例；
+- UNKNOWN + DO_NOT_LOCK 数字硬锁负例按预期失败；
+- REASONABLE_COMPLETION + `is_replaceable=false` 负例按预期失败；
+- read-only reader smoke test；
+- 无 `bpy` / 无 Blender 几何生成。
+
+Gate 尚不能 PASS 的原因：
+
+1. V001 最小集没有 `report_ideal_model` 实例，尚未完成“三层同时并存且不串层”的显式验证；
+2. T-005 V001 的 validator / reader / tests / fixtures / report 仍为本地 untracked，尚未进入 GitHub canonical repo。
+
+Gate Review：`docs/production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md`
+
+继续执行同一任务版本升级：
+
+`【中国古建筑3D复原｜T-005｜P2_0_SCHEMA_VALIDATION_V002｜证据感知参数架构验证】`
+
+V002 完成后重新进行 P2.0 Gate Review；P2.1–P2.3 的完整 Gate 架构仍待 P2.0 最终通过后锁定。
