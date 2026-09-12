@@ -1,9 +1,10 @@
 # P2.0｜Evidence-aware Parameter Schema｜Gate Review
 
-Status: READY FOR PRODUCT OWNER DECISION  
+Status: **APPROVED / PASS**  
 Date: 2026-09-12  
 Gate: `P2.0｜Evidence-aware Parameter Schema`  
-Reviewer Recommendation: **APPROVE PASS**
+Reviewer Recommendation: **APPROVE PASS**  
+Product Owner Decision: **APPROVED / PASS**
 
 ## 1. Inputs Reviewed
 
@@ -52,30 +53,36 @@ Verified:
 
 Gate Review: **7 / 7 PASS**.
 
-## 4. Reviewer Recommendation
+## 4. Product Owner Approval
 
-**APPROVE P2.0 PASS.**
+2026-09-12，Product Owner 明确批准：
 
-Reason:
+> **P2.0｜PASS**
 
-- CG-01 has been implemented as a machine-readable production data contract;
-- CG-02 and CG-03 are enforced mechanically, not only by documentation;
-- CG-04 three-layer semantic separation is explicitly tested;
-- the reader proves future Python/Blender code can consume the structured parameters without requiring geometry generation at this Gate;
-- the engineering evidence is reproducibly archived in the canonical repository.
+因此：
+
+- P2.0 正式 **PASS / CLOSED**；
+- CG-01 作为正式几何生产前置条件视为已满足；
+- T-005 V001/V002 正式完成；
+- P2 可以继续进入后续正式参数化 / 几何阶段设计；
+- 在后续工程中仍必须持续遵守 CG-02～CG-06。
 
 ## 5. Approval Boundary
 
-If Product Owner approves P2.0:
+P2.0 PASS **只证明正式生产数据层已经成立**，不表示：
 
-- P2.0 becomes PASS;
-- CG-01 is considered satisfied as an entry prerequisite;
-- first formal geometry work may be unlocked only under the still-active CG-02～CG-06 boundaries;
-- P2.1–P2.3 Gate architecture should be defined and locked before assigning the next engineering production task;
-- P2.0 PASS does **not** mean all 85 P1 parameters are production-locked or historically certain.
+- 85个 P1 参数已经全部 production-locked；
+- UNKNOWN 项已经解决；
+- REASONABLE_COMPLETION 已变成历史事实；
+- `report_ideal_model` 可以等同963初建状态；
+- 转角45°精确节点、榫卯、隐角梁等未知项已达到高精度复原条件。
 
-Until Product Owner approval:
+第一项正式 Blender 几何工作在原则上已不再被 P2.0 阻断，但 **P2.1–P2.3 Gate 架构必须先定义并由 Product Owner 锁定**，之后再创建下一项工程生产任务。
 
-- P2.0 remains open;
-- formal Blender geometry remains locked;
-- no P2.1 production task starts.
+## 6. Carry-forward Rules
+
+- CG-02：UNKNOWN / DO_NOT_LOCK 不得静默硬编码；
+- CG-03：REASONABLE_COMPLETION 必须保持独立、可替换、可追踪；
+- CG-04：`observed_as_measured` / `report_ideal_model` / `reconstructed_963_candidate` 三层长期分离；
+- CG-05：未解决转角高精度问题只允许中等LOD拓扑骨架；
+- CG-06：历史真实性声明继续受逐构件原真性证据限制。
