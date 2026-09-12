@@ -1,0 +1,66 @@
+{
+  "deterministic_rebuild": {
+    "binary_files_identical": false,
+    "comparison_scope": "semantic structural geometry and validation; Blender binary serialization is not byte-identical",
+    "comparisons": {
+      "family_counts": true,
+      "geometry_input_snapshot": true,
+      "key_dimensions_mm": true,
+      "object_count": true,
+      "object_names": true,
+      "topology": true
+    },
+    "first_blend_sha256": "e7ea201f0c26650b45d9bb4ed45d06238188fa39af1ac5a49c49b7c51e3f1d9a",
+    "first_semantic_summary_sha256": "520b76e75478a251a6ff2ccc9c5740e536d455520bea8142eb0de938ef72162e",
+    "output_validation_summary_equal": true,
+    "result": "PASS",
+    "second_blend_sha256": "3b61ccbaca17836bd63d9369ebc3a4c6e25fb27f0d274ea67e64f732ad3000e4",
+    "second_semantic_summary_sha256": "520b76e75478a251a6ff2ccc9c5740e536d455520bea8142eb0de938ef72162e"
+  },
+  "deterministic_tolerance_mm": 0.0001,
+  "independent_reopen": {
+    "first": "PASS",
+    "mesh_objects": 217,
+    "second": "PASS"
+  },
+  "machine_geometry_validation": {
+    "checked_mesh_objects": 217,
+    "column_height_mm": 3534.3,
+    "errors": [],
+    "family_counts": {
+      "BRACKET": 88,
+      "COLUMN": 12,
+      "FRAME": 62,
+      "GABLE": 4,
+      "GRID": 8,
+      "ROOF": 43
+    },
+    "machine_tolerance_mm": 0.01,
+    "result": "PASS",
+    "roof_ridge_z_mm": 7389.900000000001
+  },
+  "machine_tolerance_mm": 0.01,
+  "synthetic_mutations_not_formal_inputs": {
+    "Z-006-RC-01_modular_rebuild": {
+      "formal_mod_006_mm": 321.3,
+      "formal_resolved_column_height_mm": 3534.3,
+      "historical_Z_006_remains_null": true,
+      "independent_reopen": "PASS",
+      "synthetic_mod_006_mm": 336.6,
+      "synthetic_resolved_column_height_mm": 3702.6
+    },
+    "other_reasonable_completions": {
+      "baseline_ridge_z_mm": 7389.900000000001,
+      "changed_ids": [
+        "Z-005",
+        "Z-007",
+        "ROOF-010",
+        "ROOF-011"
+      ],
+      "independent_reopen": "PASS",
+      "synthetic_ridge_z_mm": 7420.500000000002
+    }
+  },
+  "task": "T-007",
+  "version": "V001"
+}

@@ -1,0 +1,5913 @@
+{
+  "approval_boundary": {
+    "decision_ids": [
+      "D-023",
+      "D-024",
+      "D-025"
+    ],
+    "path": "/Users/caroline/中国古建筑3D复原/docs/project_control/decision_log.md",
+    "sha256": "99050e585dcf5c6e8dd04d5eb7d5bf7fd3e00d500c04f0d34a43faa600e090a5"
+  },
+  "approved_override": {
+    "approval_decision_id": "D-023",
+    "classification": "REASONABLE_COMPLETION",
+    "formula": "11 * MOD-006",
+    "historical_Z_006": {
+      "classification": "UNKNOWN",
+      "dependency": "BLOCKS_P2_2_GEOMETRY",
+      "production_use": "DO_NOT_LOCK",
+      "value": null
+    },
+    "id": "Z-006-RC-01",
+    "is_replaceable": true,
+    "resolved_value_mm": 3534.3,
+    "target_parameter_id": "Z-006"
+  },
+  "blender_python_version": "3.10.13",
+  "blender_version": "3.6.23",
+  "bounded_unknowns": [
+    {
+      "id": "DG-114",
+      "status": "BOUNDED_NON_BLOCKING",
+      "use": "none"
+    },
+    {
+      "id": "HIS-002",
+      "originality_status": "unknown",
+      "status": "METADATA_ONLY_BLOCK"
+    },
+    {
+      "item": "45-degree corner joints / mortises / hidden-angle beam",
+      "status": "bounded medium-LOD topology only"
+    }
+  ],
+  "derived_geometry_rules": {
+    "Z-006-RC-01": {
+      "formula": "approved Z-006-RC-01.multiplier * MOD-006",
+      "resolved_value_mm": 3534.3,
+      "source_parameter_ids": [
+        "MOD-006",
+        "Z-006-RC-01"
+      ]
+    },
+    "depth_center_bay_mm": {
+      "formula": "PM-009 * MOD-001",
+      "resolved_value_mm": 3672.0,
+      "source_parameter_ids": [
+        "PM-009",
+        "MOD-001"
+      ]
+    },
+    "diagrammatic_section_depth_mm": {
+      "formula": "MOD-004 * MOD-002",
+      "resolved_value_mm": 153.0,
+      "source_parameter_ids": [
+        "MOD-004",
+        "MOD-002"
+      ]
+    },
+    "diagrammatic_section_height_mm": {
+      "formula": "MOD-005 * MOD-002",
+      "resolved_value_mm": 321.3,
+      "source_parameter_ids": [
+        "MOD-005",
+        "MOD-002"
+      ]
+    },
+    "diagrammatic_section_width_mm": {
+      "formula": "MOD-003 * MOD-002",
+      "resolved_value_mm": 214.20000000000002,
+      "source_parameter_ids": [
+        "MOD-003",
+        "MOD-002"
+      ]
+    },
+    "first_second_jump_total_mm": {
+      "formula": "DG-110 * MOD-002",
+      "resolved_value_mm": 734.4000000000001,
+      "source_parameter_ids": [
+        "DG-110",
+        "MOD-002"
+      ]
+    },
+    "frame_rise_interval_1_mm": {
+      "formula": "ROOF-004 * MOD-002",
+      "resolved_value_mm": 382.5,
+      "source_parameter_ids": [
+        "ROOF-004",
+        "MOD-002"
+      ]
+    },
+    "frame_rise_interval_2_mm": {
+      "formula": "ROOF-005 * MOD-002",
+      "resolved_value_mm": 612.0,
+      "source_parameter_ids": [
+        "ROOF-005",
+        "MOD-002"
+      ]
+    },
+    "frame_rise_interval_3_mm": {
+      "formula": "ROOF-006 * MOD-002",
+      "resolved_value_mm": 1254.6000000000001,
+      "source_parameter_ids": [
+        "ROOF-006",
+        "MOD-002"
+      ]
+    },
+    "front_center_bay_mm": {
+      "formula": "PM-008 * MOD-001",
+      "resolved_value_mm": 4437.0,
+      "source_parameter_ids": [
+        "PM-008",
+        "MOD-001"
+      ]
+    },
+    "gable_projection_mm": {
+      "formula": "OUT-003 * MOD-002",
+      "resolved_value_mm": 1407.6000000000001,
+      "source_parameter_ids": [
+        "OUT-003",
+        "MOD-002"
+      ]
+    },
+    "lower_ang_rise_mm": {
+      "formula": "DG-113 * MOD-002",
+      "resolved_value_mm": 321.3,
+      "source_parameter_ids": [
+        "DG-113",
+        "MOD-002"
+      ]
+    },
+    "lower_ang_run_mm": {
+      "formula": "DG-112 * MOD-002",
+      "resolved_value_mm": 719.1,
+      "source_parameter_ids": [
+        "DG-112",
+        "MOD-002"
+      ]
+    },
+    "roof_half_run_mm": {
+      "formula": "sum(FR-007) * MOD-002",
+      "resolved_value_mm": 6808.5,
+      "source_parameter_ids": [
+        "FR-007",
+        "MOD-002"
+      ]
+    },
+    "roof_rise_interval_1_mm": {
+      "formula": "ROOF-007 * MOD-002",
+      "resolved_value_mm": 1346.4,
+      "source_parameter_ids": [
+        "ROOF-007",
+        "MOD-002"
+      ]
+    },
+    "roof_rise_interval_2_mm": {
+      "formula": "ROOF-008 * MOD-002",
+      "resolved_value_mm": 933.3000000000001,
+      "source_parameter_ids": [
+        "ROOF-008",
+        "MOD-002"
+      ]
+    },
+    "roof_rise_interval_3_mm": {
+      "formula": "ROOF-009 * MOD-002",
+      "resolved_value_mm": 1254.6000000000001,
+      "source_parameter_ids": [
+        "ROOF-009",
+        "MOD-002"
+      ]
+    },
+    "side_bay_mm": {
+      "formula": "PM-010 * MOD-001",
+      "resolved_value_mm": 3519.0,
+      "source_parameter_ids": [
+        "PM-010",
+        "MOD-001"
+      ]
+    },
+    "third_fourth_jump_total_mm": {
+      "formula": "DG-111 * MOD-002",
+      "resolved_value_mm": 719.1,
+      "source_parameter_ids": [
+        "DG-111",
+        "MOD-002"
+      ]
+    }
+  },
+  "deterministic_tolerance_mm": 0.0001,
+  "enabled_reasonable_completion": [
+    {
+      "id": "ROOF-010",
+      "is_replaceable": true,
+      "value": 231
+    },
+    {
+      "id": "ROOF-011",
+      "is_replaceable": true,
+      "value": 3534.3
+    },
+    {
+      "id": "Z-005",
+      "is_replaceable": true,
+      "value": 61.2
+    },
+    {
+      "id": "Z-007",
+      "is_replaceable": true,
+      "value": "Z = 0; abstract column-foot design plane"
+    }
+  ],
+  "formal_derived_rule_inputs": {
+    "DG-110": {
+      "formula": "identity(formal DG-110 value)",
+      "source_parameter_ids": [
+        "DG-110"
+      ],
+      "unit": "fen",
+      "value": 48
+    },
+    "DG-111": {
+      "formula": "identity(formal DG-111 value)",
+      "source_parameter_ids": [
+        "DG-111"
+      ],
+      "unit": "fen",
+      "value": 47
+    },
+    "DG-112": {
+      "formula": "identity(formal DG-112 value)",
+      "source_parameter_ids": [
+        "DG-112"
+      ],
+      "unit": "fen",
+      "value": 47
+    },
+    "DG-113": {
+      "formula": "identity(formal DG-113 value)",
+      "source_parameter_ids": [
+        "DG-113"
+      ],
+      "unit": "fen",
+      "value": 21
+    },
+    "MOD-001": {
+      "formula": "identity(formal MOD-001 value)",
+      "source_parameter_ids": [
+        "MOD-001"
+      ],
+      "unit": "mm",
+      "value": 306
+    },
+    "MOD-002": {
+      "formula": "identity(formal MOD-002 value)",
+      "source_parameter_ids": [
+        "MOD-002"
+      ],
+      "unit": "mm",
+      "value": 15.3
+    },
+    "MOD-003": {
+      "formula": "identity(formal MOD-003 value)",
+      "source_parameter_ids": [
+        "MOD-003"
+      ],
+      "unit": "fen",
+      "value": 14
+    },
+    "MOD-004": {
+      "formula": "identity(formal MOD-004 value)",
+      "source_parameter_ids": [
+        "MOD-004"
+      ],
+      "unit": "fen",
+      "value": 10
+    },
+    "MOD-005": {
+      "formula": "identity(formal MOD-005 value)",
+      "source_parameter_ids": [
+        "MOD-005"
+      ],
+      "unit": "fen",
+      "value": 21
+    },
+    "MOD-006": {
+      "formula": "identity(formal MOD-006 value)",
+      "source_parameter_ids": [
+        "MOD-006"
+      ],
+      "unit": "mm",
+      "value": 321.3
+    },
+    "ROOF-004": {
+      "formula": "identity(formal ROOF-004 value)",
+      "source_parameter_ids": [
+        "ROOF-004"
+      ],
+      "unit": "fen",
+      "value": 25
+    },
+    "ROOF-005": {
+      "formula": "identity(formal ROOF-005 value)",
+      "source_parameter_ids": [
+        "ROOF-005"
+      ],
+      "unit": "fen",
+      "value": 40
+    },
+    "ROOF-006": {
+      "formula": "identity(formal ROOF-006 value)",
+      "source_parameter_ids": [
+        "ROOF-006"
+      ],
+      "unit": "fen",
+      "value": 82
+    },
+    "ROOF-007": {
+      "formula": "identity(formal ROOF-007 value)",
+      "source_parameter_ids": [
+        "ROOF-007"
+      ],
+      "unit": "fen",
+      "value": 88
+    },
+    "ROOF-008": {
+      "formula": "identity(formal ROOF-008 value)",
+      "source_parameter_ids": [
+        "ROOF-008"
+      ],
+      "unit": "fen",
+      "value": 61
+    },
+    "ROOF-009": {
+      "formula": "identity(formal ROOF-009 value)",
+      "source_parameter_ids": [
+        "ROOF-009"
+      ],
+      "unit": "fen",
+      "value": 82
+    },
+    "Z-007": {
+      "formula": "identity(formal Z-007 value)",
+      "source_parameter_ids": [
+        "Z-007"
+      ],
+      "unit": null,
+      "value": "Z = 0; abstract column-foot design plane"
+    }
+  },
+  "generation_script": {
+    "path": "production/zhenguo_wanfo/scripts/generate_p2_2_structural_skeleton_v001.py",
+    "sha256": "d9c5b217271e01290d6fb65b701701cc1bed0ba1e18f50e53246074b5505534a",
+    "source_commit": "45dc1dcf9a5e28d924791aa885ff6a25eefe1af2"
+  },
+  "geometry_input_snapshot": {
+    "DG-001": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": null,
+      "value": "七铺作、双杪双下昂"
+    },
+    "DG-002": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": null,
+      "value": "五铺作、双杪偷心"
+    },
+    "DG-110": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 48
+    },
+    "DG-111": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 47
+    },
+    "DG-112": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 47
+    },
+    "DG-113": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 21
+    },
+    "FR-004": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "mm",
+      "value": 1759.5
+    },
+    "FR-005": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "mm",
+      "value": 1759.5
+    },
+    "FR-006": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "mm",
+      "value": 1836
+    },
+    "FR-007": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "fen",
+      "value": [
+        120,
+        115,
+        210
+      ]
+    },
+    "MOD-001": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "mm",
+      "value": 306
+    },
+    "MOD-002": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "mm",
+      "value": 15.3
+    },
+    "MOD-003": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 14
+    },
+    "MOD-004": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 10
+    },
+    "MOD-005": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 21
+    },
+    "MOD-006": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "mm",
+      "value": 321.3
+    },
+    "OUT-003": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "fen",
+      "value": 92
+    },
+    "PM-001": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": null,
+      "value": 3
+    },
+    "PM-002": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": null,
+      "value": 3
+    },
+    "PM-008": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "chi",
+      "value": 14.5
+    },
+    "PM-009": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "chi",
+      "value": 12
+    },
+    "PM-010": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "chi",
+      "value": 11.5
+    },
+    "PM-011": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "mm",
+      "value": 11475
+    },
+    "PM-012": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "mm",
+      "value": 10710
+    },
+    "PM-013": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": null,
+      "value": 12
+    },
+    "PM-014": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": null,
+      "value": 0
+    },
+    "RF-001": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": null,
+      "value": "复合式六椽栿通檐用两柱、彻上露明"
+    },
+    "ROOF-004": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 25
+    },
+    "ROOF-005": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 40
+    },
+    "ROOF-006": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 82
+    },
+    "ROOF-007": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 88
+    },
+    "ROOF-008": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 61
+    },
+    "ROOF-009": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": "fen",
+      "value": 82
+    },
+    "ROOF-010": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "fen",
+      "value": 231
+    },
+    "ROOF-011": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "mm",
+      "value": 3534.3
+    },
+    "Z-002": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "mm",
+      "value": 459
+    },
+    "Z-005": {
+      "role": "DIRECT_GEOMETRY_INPUT",
+      "unit": "mm",
+      "value": 61.2
+    },
+    "Z-007": {
+      "role": "DERIVED_GEOMETRY_RULE",
+      "unit": null,
+      "value": "Z = 0; abstract column-foot design plane"
+    }
+  },
+  "inputs": {
+    "approved_overrides": {
+      "path": "/Users/caroline/中国古建筑3D复原/production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+      "sha256": "3436050b33508d55633d1699c9f263f976f6e4b30b534c5607f89752735116c3",
+      "version": "V001"
+    },
+    "evidence_schema": {
+      "path": "/Users/caroline/中国古建筑3D复原/production/zhenguo_wanfo/schema/evidence_aware_parameter_schema_v001.json",
+      "sha256": "3348bddc0509e004ff6b99c48fc047c8b080bdc98bf6fd069acc6454589328ed",
+      "version": "1.0"
+    },
+    "formal_parameter_set": {
+      "path": "/Users/caroline/中国古建筑3D复原/production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json",
+      "sha256": "37bc365a50bd6a43e178c3102c19ad76cbf0cb533f4d76710a793afa318c0889",
+      "version": "V001"
+    },
+    "geometry_dependency_matrix": {
+      "path": "/Users/caroline/中国古建筑3D复原/production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+      "sha256": "3e77d4c03acbd3595c28e93b1d04166730ede1bd08741c9aa94b28164f3764e4",
+      "version": "V001"
+    }
+  },
+  "machine_tolerance_mm": 0.01,
+  "object_families": {
+    "BRACKET": {
+      "count": 88,
+      "name_prefix": "BRACKET_"
+    },
+    "COLUMN": {
+      "count": 12,
+      "name_prefix": "COLUMN_"
+    },
+    "FRAME": {
+      "count": 62,
+      "name_prefix": "FRAME_"
+    },
+    "GABLE": {
+      "count": 4,
+      "name_prefix": "GABLE_"
+    },
+    "GRID": {
+      "count": 8,
+      "name_prefix": "GRID_"
+    },
+    "ROOF": {
+      "count": 43,
+      "name_prefix": "ROOF_"
+    }
+  },
+  "objects": [
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GRID",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GRID_Y00",
+      "originality_status": "unknown",
+      "override_ids": "",
+      "parameter_ids": [
+        "PM-001",
+        "PM-008",
+        "PM-010",
+        "MOD-001",
+        "Z-007"
+      ],
+      "reasonable_completion_ids": "Z-007",
+      "source_layer": "DIRECT_PRIMARY+PROJECT_RULE+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GRID",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GRID_Y01",
+      "originality_status": "unknown",
+      "override_ids": "",
+      "parameter_ids": [
+        "PM-001",
+        "PM-008",
+        "PM-010",
+        "MOD-001",
+        "Z-007"
+      ],
+      "reasonable_completion_ids": "Z-007",
+      "source_layer": "DIRECT_PRIMARY+PROJECT_RULE+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GRID",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GRID_Y02",
+      "originality_status": "unknown",
+      "override_ids": "",
+      "parameter_ids": [
+        "PM-001",
+        "PM-008",
+        "PM-010",
+        "MOD-001",
+        "Z-007"
+      ],
+      "reasonable_completion_ids": "Z-007",
+      "source_layer": "DIRECT_PRIMARY+PROJECT_RULE+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GRID",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GRID_Y03",
+      "originality_status": "unknown",
+      "override_ids": "",
+      "parameter_ids": [
+        "PM-001",
+        "PM-008",
+        "PM-010",
+        "MOD-001",
+        "Z-007"
+      ],
+      "reasonable_completion_ids": "Z-007",
+      "source_layer": "DIRECT_PRIMARY+PROJECT_RULE+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GRID",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GRID_X00",
+      "originality_status": "unknown",
+      "override_ids": "",
+      "parameter_ids": [
+        "PM-002",
+        "PM-009",
+        "PM-010",
+        "MOD-001",
+        "Z-007"
+      ],
+      "reasonable_completion_ids": "Z-007",
+      "source_layer": "DIRECT_PRIMARY+PROJECT_RULE+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GRID",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GRID_X01",
+      "originality_status": "unknown",
+      "override_ids": "",
+      "parameter_ids": [
+        "PM-002",
+        "PM-009",
+        "PM-010",
+        "MOD-001",
+        "Z-007"
+      ],
+      "reasonable_completion_ids": "Z-007",
+      "source_layer": "DIRECT_PRIMARY+PROJECT_RULE+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GRID",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GRID_X02",
+      "originality_status": "unknown",
+      "override_ids": "",
+      "parameter_ids": [
+        "PM-002",
+        "PM-009",
+        "PM-010",
+        "MOD-001",
+        "Z-007"
+      ],
+      "reasonable_completion_ids": "Z-007",
+      "source_layer": "DIRECT_PRIMARY+PROJECT_RULE+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GRID",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GRID_X03",
+      "originality_status": "unknown",
+      "override_ids": "",
+      "parameter_ids": [
+        "PM-002",
+        "PM-009",
+        "PM-010",
+        "MOD-001",
+        "Z-007"
+      ],
+      "reasonable_completion_ids": "Z-007",
+      "source_layer": "DIRECT_PRIMARY+PROJECT_RULE+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X00_Y00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-005",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-005,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED+REPORT_INFERRED_GUESS",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X00_Y01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-006-RC-01",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X00_Y02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-006-RC-01",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X00_Y03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-005",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-005,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED+REPORT_INFERRED_GUESS",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X01_Y00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-006-RC-01",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X01_Y03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-006-RC-01",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X02_Y00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-006-RC-01",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X02_Y03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-006-RC-01",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X03_Y00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-005",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-005,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED+REPORT_INFERRED_GUESS",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X03_Y01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-006-RC-01",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X03_Y02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-006-RC-01",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "COLUMN",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "COLUMN_X03_Y03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-013",
+        "PM-014",
+        "Z-002",
+        "Z-005",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-005,Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED+REPORT_INFERRED_GUESS",
+      "topology_type": ""
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_DEPTH_X00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "RF-001",
+        "PM-012",
+        "Z-006-RC-01",
+        "DG-113",
+        "MOD-002",
+        "MOD-003",
+        "MOD-005"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": "six_chuanfu_depth"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_DEPTH_X01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "RF-001",
+        "PM-012",
+        "Z-006-RC-01",
+        "DG-113",
+        "MOD-002",
+        "MOD-003",
+        "MOD-005"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": "six_chuanfu_depth"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_DEPTH_X02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "RF-001",
+        "PM-012",
+        "Z-006-RC-01",
+        "DG-113",
+        "MOD-002",
+        "MOD-003",
+        "MOD-005"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": "six_chuanfu_depth"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_DEPTH_X03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "RF-001",
+        "PM-012",
+        "Z-006-RC-01",
+        "DG-113",
+        "MOD-002",
+        "MOD-003",
+        "MOD-005"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": "six_chuanfu_depth"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_WIDTH_Y00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-011",
+        "RF-001",
+        "Z-006-RC-01",
+        "MOD-003",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": "tie_beam"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_WIDTH_Y01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-011",
+        "RF-001",
+        "Z-006-RC-01",
+        "MOD-003",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": "tie_beam"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_WIDTH_Y02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-011",
+        "RF-001",
+        "Z-006-RC-01",
+        "MOD-003",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": "tie_beam"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_WIDTH_Y03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "PM-011",
+        "RF-001",
+        "Z-006-RC-01",
+        "MOD-003",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PRIMARY+REPORT_INFERRED",
+      "topology_type": "tie_beam"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_TIER_N_01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "PM-012",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_depth_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_01_X00_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_01_X00_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_01_X01_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_01_X01_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_01_X02_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_01_X02_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_01_X03_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_01_X03_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_TIER_N_02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "PM-012",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_depth_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_02_X00_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_02_X00_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_02_X01_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_02_X01_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_02_X02_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_02_X02_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_02_X03_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_02_X03_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_TIER_N_03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "PM-012",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_depth_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_03_X00_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_03_X00_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_03_X01_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_03_X01_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_03_X02_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_03_X02_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_03_X03_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_N_03_X03_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_TIER_S_01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "PM-012",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_depth_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_01_X00_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_01_X00_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_01_X01_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_01_X01_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_01_X02_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_01_X02_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_01_X03_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_01_X03_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_TIER_S_02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "PM-012",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_depth_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_02_X00_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_02_X00_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_02_X01_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_02_X01_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_02_X02_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_02_X02_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_02_X03_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_02_X03_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_TIER_S_03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "PM-012",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_depth_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_03_X00_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_03_X00_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_03_X01_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_03_X01_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_03_X02_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_03_X02_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_03_X03_LOW",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "frame_tier_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "FRAME",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "FRAME_POST_S_03_X03_UP",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-006-RC-01",
+        "MOD-002",
+        "MOD-004"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_control_support"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y00_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y00_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y00_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y00_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y00_A1_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y00_A1_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y00_A1_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y00_A1_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y01_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y01_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y01_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y01_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y02_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y02_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y02_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y02_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y03_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y03_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y03_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y03_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y03_A1_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y03_A1_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y03_A1_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X00_Y03_A1_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X01_Y00_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X01_Y00_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X01_Y00_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X01_Y00_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X01_Y03_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X01_Y03_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X01_Y03_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X01_Y03_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X02_Y00_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X02_Y00_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X02_Y00_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X02_Y00_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X02_Y03_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X02_Y03_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X02_Y03_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X02_Y03_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y00_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y00_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y00_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y00_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y00_A1_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y00_A1_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y00_A1_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y00_A1_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y01_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y01_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y01_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y01_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y02_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y02_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y02_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y02_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y03_A0_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y03_A0_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y03_A0_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y03_A0_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y03_A1_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y03_A1_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y03_A1_J03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_HEAD_X03_Y03_A1_J04",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-001",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01",
+        "DG-111",
+        "DG-112",
+        "DG-113"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "head_4_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y00_B00_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y00_B00_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y00_B01_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y00_B01_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y00_B02_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y00_B02_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y03_B00_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y03_B00_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y03_B01_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y03_B01_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y03_B02_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_Y03_B02_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X00_B00_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X00_B00_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X00_B01_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X00_B01_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X00_B02_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X00_B02_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X03_B00_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X03_B00_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X03_B01_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X03_B01_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X03_B02_J01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "CONFIRMED+HIGH_CONFIDENCE_INFERENCE",
+      "family": "BRACKET",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "BRACKET_INTER_X03_B02_J02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "DG-002",
+        "DG-110",
+        "MOD-002",
+        "MOD-003",
+        "MOD-004",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "DIRECT_PLUS_SUPPORT+REPORT_INFERRED",
+      "topology_type": "intercolumn_2_jumps"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_PURLIN_N_00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "ROOF-010",
+        "ROOF-011",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "ROOF-010,ROOF-011,Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED+REPORT_INFERRED_HIGH_CAUTION",
+      "topology_type": "roof_control_purlin"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_PURLIN_N_01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "ROOF-010",
+        "ROOF-011",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "ROOF-010,ROOF-011,Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED+REPORT_INFERRED_HIGH_CAUTION",
+      "topology_type": "roof_control_purlin"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_PURLIN_N_02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "ROOF-010",
+        "ROOF-011",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "ROOF-010,ROOF-011,Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED+REPORT_INFERRED_HIGH_CAUTION",
+      "topology_type": "roof_control_purlin"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_PURLIN_N_03",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "ROOF-010",
+        "ROOF-011",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "ROOF-010,ROOF-011,Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED+REPORT_INFERRED_HIGH_CAUTION",
+      "topology_type": "roof_control_purlin"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X00_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X00_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X00_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X01_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X01_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X01_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X02_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X02_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X02_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X03_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X03_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X03_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X04_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X04_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X04_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X05_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X05_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_N_X05_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_PURLIN_S_00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "ROOF-010",
+        "ROOF-011",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "ROOF-010,ROOF-011,Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED+REPORT_INFERRED_HIGH_CAUTION",
+      "topology_type": "roof_control_purlin"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_PURLIN_S_01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "ROOF-010",
+        "ROOF-011",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "ROOF-010,ROOF-011,Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED+REPORT_INFERRED_HIGH_CAUTION",
+      "topology_type": "roof_control_purlin"
+    },
+    {
+      "bounded_placeholder": false,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_PURLIN_S_02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "ROOF-010",
+        "ROOF-011",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "ROOF-010,ROOF-011,Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED+REPORT_INFERRED_HIGH_CAUTION",
+      "topology_type": "roof_control_purlin"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X00_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X00_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X00_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X01_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X01_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X01_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X02_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X02_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X02_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X03_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X03_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X03_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X04_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X04_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X04_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X05_S00",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X05_S01",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE",
+      "family": "ROOF",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "ROOF_RAFTER_S_X05_S02",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "FR-007",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "OUT-003",
+        "Z-006-RC-01",
+        "MOD-002"
+      ],
+      "reasonable_completion_ids": "Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED",
+      "topology_type": "roof_slope_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GABLE",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GABLE_W_N",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "OUT-003",
+        "FR-007",
+        "ROOF-010",
+        "ROOF-011",
+        "MOD-002",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "ROOF-010,ROOF-011,Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED+REPORT_INFERRED_HIGH_CAUTION",
+      "topology_type": "gable_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GABLE",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GABLE_W_S",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "OUT-003",
+        "FR-007",
+        "ROOF-010",
+        "ROOF-011",
+        "MOD-002",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "ROOF-010,ROOF-011,Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED+REPORT_INFERRED_HIGH_CAUTION",
+      "topology_type": "gable_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GABLE",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GABLE_E_N",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "OUT-003",
+        "FR-007",
+        "ROOF-010",
+        "ROOF-011",
+        "MOD-002",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "ROOF-010,ROOF-011,Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED+REPORT_INFERRED_HIGH_CAUTION",
+      "topology_type": "gable_control"
+    },
+    {
+      "bounded_placeholder": true,
+      "evidence_class": "HIGH_CONFIDENCE_INFERENCE+REASONABLE_COMPLETION",
+      "family": "GABLE",
+      "historical_state_tag": "reconstructed_963_candidate",
+      "name": "GABLE_E_S",
+      "originality_status": "unknown",
+      "override_ids": "Z-006-RC-01",
+      "parameter_ids": [
+        "OUT-003",
+        "FR-007",
+        "ROOF-010",
+        "ROOF-011",
+        "MOD-002",
+        "Z-006-RC-01"
+      ],
+      "reasonable_completion_ids": "ROOF-010,ROOF-011,Z-006-RC-01",
+      "source_layer": "REPORT_INFERRED+REPORT_INFERRED_HIGH_CAUTION",
+      "topology_type": "gable_control"
+    }
+  ],
+  "output_blend": {
+    "path": "/Users/caroline/中国古建筑3D复原/production/zhenguo_wanfo/output/P2_2_STRUCTURAL_SKELETON_V001.blend",
+    "sha256": "3b61ccbaca17836bd63d9369ebc3a4c6e25fb27f0d274ea67e64f732ad3000e4",
+    "size_bytes": 2466272
+  },
+  "review_images": [
+    {
+      "path": "/Users/caroline/中国古建筑3D复原/production/zhenguo_wanfo/review/P2_2_STRUCTURAL_SKELETON_V001_PLAN.png",
+      "sha256": "f4184c6a73930fa5396828ea3febcd3ed296535c265daf616fc16b4f3d084ccc"
+    },
+    {
+      "path": "/Users/caroline/中国古建筑3D复原/production/zhenguo_wanfo/review/P2_2_STRUCTURAL_SKELETON_V001_ELEVATION.png",
+      "sha256": "c8d329fee203fc521524e1c0a21414ad6dfa6a04c12569ea445e63fda42c3119"
+    },
+    {
+      "path": "/Users/caroline/中国古建筑3D复原/production/zhenguo_wanfo/review/P2_2_STRUCTURAL_SKELETON_V001_AXON.png",
+      "sha256": "2931b8159112616131f1eefdfe8f4714760d5a96e35308e11ccfb8d7a36166fc"
+    }
+  ],
+  "semantic_summary": {
+    "family_counts": {
+      "BRACKET": 88,
+      "COLUMN": 12,
+      "FRAME": 62,
+      "GABLE": 4,
+      "GRID": 8,
+      "ROOF": 43
+    },
+    "geometry_input_snapshot": {
+      "DG-001": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": null,
+        "value": "七铺作、双杪双下昂"
+      },
+      "DG-002": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": null,
+        "value": "五铺作、双杪偷心"
+      },
+      "DG-110": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 48
+      },
+      "DG-111": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 47
+      },
+      "DG-112": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 47
+      },
+      "DG-113": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 21
+      },
+      "FR-004": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "mm",
+        "value": 1759.5
+      },
+      "FR-005": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "mm",
+        "value": 1759.5
+      },
+      "FR-006": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "mm",
+        "value": 1836
+      },
+      "FR-007": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "fen",
+        "value": [
+          120,
+          115,
+          210
+        ]
+      },
+      "MOD-001": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "mm",
+        "value": 306
+      },
+      "MOD-002": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "mm",
+        "value": 15.3
+      },
+      "MOD-003": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 14
+      },
+      "MOD-004": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 10
+      },
+      "MOD-005": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 21
+      },
+      "MOD-006": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "mm",
+        "value": 321.3
+      },
+      "OUT-003": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "fen",
+        "value": 92
+      },
+      "PM-001": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": null,
+        "value": 3
+      },
+      "PM-002": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": null,
+        "value": 3
+      },
+      "PM-008": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "chi",
+        "value": 14.5
+      },
+      "PM-009": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "chi",
+        "value": 12
+      },
+      "PM-010": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "chi",
+        "value": 11.5
+      },
+      "PM-011": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "mm",
+        "value": 11475
+      },
+      "PM-012": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "mm",
+        "value": 10710
+      },
+      "PM-013": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": null,
+        "value": 12
+      },
+      "PM-014": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": null,
+        "value": 0
+      },
+      "RF-001": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": null,
+        "value": "复合式六椽栿通檐用两柱、彻上露明"
+      },
+      "ROOF-004": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 25
+      },
+      "ROOF-005": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 40
+      },
+      "ROOF-006": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 82
+      },
+      "ROOF-007": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 88
+      },
+      "ROOF-008": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 61
+      },
+      "ROOF-009": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": "fen",
+        "value": 82
+      },
+      "ROOF-010": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "fen",
+        "value": 231
+      },
+      "ROOF-011": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "mm",
+        "value": 3534.3
+      },
+      "Z-002": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "mm",
+        "value": 459
+      },
+      "Z-005": {
+        "role": "DIRECT_GEOMETRY_INPUT",
+        "unit": "mm",
+        "value": 61.2
+      },
+      "Z-007": {
+        "role": "DERIVED_GEOMETRY_RULE",
+        "unit": null,
+        "value": "Z = 0; abstract column-foot design plane"
+      }
+    },
+    "key_dimensions_mm": {
+      "bracket_outer_two_jump_aggregate": 719.1,
+      "bracket_two_jump_aggregate": 734.4000000000001,
+      "column_height": 3534.3,
+      "corner_rise": 61.2,
+      "datum_z": 0.0,
+      "depth": 10710.0,
+      "depth_bays": [
+        3519.0,
+        3672.0,
+        3519.0
+      ],
+      "frame_half_depth_spans": [
+        1759.5,
+        1759.5,
+        1836.0
+      ],
+      "frame_tier_z": [
+        6104.700000000001,
+        4850.1,
+        4238.1
+      ],
+      "front_bays": [
+        3519.0,
+        4437.0,
+        3519.0
+      ],
+      "gable_projection": 1407.6000000000001,
+      "roof_control_z": [
+        3855.6000000000004,
+        5202.0,
+        6135.3,
+        7389.900000000001
+      ],
+      "roof_half_run": 6808.5,
+      "width": 11475.0
+    },
+    "object_count": 217,
+    "object_names": [
+      "BRACKET_HEAD_X00_Y00_A0_J01",
+      "BRACKET_HEAD_X00_Y00_A0_J02",
+      "BRACKET_HEAD_X00_Y00_A0_J03",
+      "BRACKET_HEAD_X00_Y00_A0_J04",
+      "BRACKET_HEAD_X00_Y00_A1_J01",
+      "BRACKET_HEAD_X00_Y00_A1_J02",
+      "BRACKET_HEAD_X00_Y00_A1_J03",
+      "BRACKET_HEAD_X00_Y00_A1_J04",
+      "BRACKET_HEAD_X00_Y01_A0_J01",
+      "BRACKET_HEAD_X00_Y01_A0_J02",
+      "BRACKET_HEAD_X00_Y01_A0_J03",
+      "BRACKET_HEAD_X00_Y01_A0_J04",
+      "BRACKET_HEAD_X00_Y02_A0_J01",
+      "BRACKET_HEAD_X00_Y02_A0_J02",
+      "BRACKET_HEAD_X00_Y02_A0_J03",
+      "BRACKET_HEAD_X00_Y02_A0_J04",
+      "BRACKET_HEAD_X00_Y03_A0_J01",
+      "BRACKET_HEAD_X00_Y03_A0_J02",
+      "BRACKET_HEAD_X00_Y03_A0_J03",
+      "BRACKET_HEAD_X00_Y03_A0_J04",
+      "BRACKET_HEAD_X00_Y03_A1_J01",
+      "BRACKET_HEAD_X00_Y03_A1_J02",
+      "BRACKET_HEAD_X00_Y03_A1_J03",
+      "BRACKET_HEAD_X00_Y03_A1_J04",
+      "BRACKET_HEAD_X01_Y00_A0_J01",
+      "BRACKET_HEAD_X01_Y00_A0_J02",
+      "BRACKET_HEAD_X01_Y00_A0_J03",
+      "BRACKET_HEAD_X01_Y00_A0_J04",
+      "BRACKET_HEAD_X01_Y03_A0_J01",
+      "BRACKET_HEAD_X01_Y03_A0_J02",
+      "BRACKET_HEAD_X01_Y03_A0_J03",
+      "BRACKET_HEAD_X01_Y03_A0_J04",
+      "BRACKET_HEAD_X02_Y00_A0_J01",
+      "BRACKET_HEAD_X02_Y00_A0_J02",
+      "BRACKET_HEAD_X02_Y00_A0_J03",
+      "BRACKET_HEAD_X02_Y00_A0_J04",
+      "BRACKET_HEAD_X02_Y03_A0_J01",
+      "BRACKET_HEAD_X02_Y03_A0_J02",
+      "BRACKET_HEAD_X02_Y03_A0_J03",
+      "BRACKET_HEAD_X02_Y03_A0_J04",
+      "BRACKET_HEAD_X03_Y00_A0_J01",
+      "BRACKET_HEAD_X03_Y00_A0_J02",
+      "BRACKET_HEAD_X03_Y00_A0_J03",
+      "BRACKET_HEAD_X03_Y00_A0_J04",
+      "BRACKET_HEAD_X03_Y00_A1_J01",
+      "BRACKET_HEAD_X03_Y00_A1_J02",
+      "BRACKET_HEAD_X03_Y00_A1_J03",
+      "BRACKET_HEAD_X03_Y00_A1_J04",
+      "BRACKET_HEAD_X03_Y01_A0_J01",
+      "BRACKET_HEAD_X03_Y01_A0_J02",
+      "BRACKET_HEAD_X03_Y01_A0_J03",
+      "BRACKET_HEAD_X03_Y01_A0_J04",
+      "BRACKET_HEAD_X03_Y02_A0_J01",
+      "BRACKET_HEAD_X03_Y02_A0_J02",
+      "BRACKET_HEAD_X03_Y02_A0_J03",
+      "BRACKET_HEAD_X03_Y02_A0_J04",
+      "BRACKET_HEAD_X03_Y03_A0_J01",
+      "BRACKET_HEAD_X03_Y03_A0_J02",
+      "BRACKET_HEAD_X03_Y03_A0_J03",
+      "BRACKET_HEAD_X03_Y03_A0_J04",
+      "BRACKET_HEAD_X03_Y03_A1_J01",
+      "BRACKET_HEAD_X03_Y03_A1_J02",
+      "BRACKET_HEAD_X03_Y03_A1_J03",
+      "BRACKET_HEAD_X03_Y03_A1_J04",
+      "BRACKET_INTER_X00_B00_J01",
+      "BRACKET_INTER_X00_B00_J02",
+      "BRACKET_INTER_X00_B01_J01",
+      "BRACKET_INTER_X00_B01_J02",
+      "BRACKET_INTER_X00_B02_J01",
+      "BRACKET_INTER_X00_B02_J02",
+      "BRACKET_INTER_X03_B00_J01",
+      "BRACKET_INTER_X03_B00_J02",
+      "BRACKET_INTER_X03_B01_J01",
+      "BRACKET_INTER_X03_B01_J02",
+      "BRACKET_INTER_X03_B02_J01",
+      "BRACKET_INTER_X03_B02_J02",
+      "BRACKET_INTER_Y00_B00_J01",
+      "BRACKET_INTER_Y00_B00_J02",
+      "BRACKET_INTER_Y00_B01_J01",
+      "BRACKET_INTER_Y00_B01_J02",
+      "BRACKET_INTER_Y00_B02_J01",
+      "BRACKET_INTER_Y00_B02_J02",
+      "BRACKET_INTER_Y03_B00_J01",
+      "BRACKET_INTER_Y03_B00_J02",
+      "BRACKET_INTER_Y03_B01_J01",
+      "BRACKET_INTER_Y03_B01_J02",
+      "BRACKET_INTER_Y03_B02_J01",
+      "BRACKET_INTER_Y03_B02_J02",
+      "COLUMN_X00_Y00",
+      "COLUMN_X00_Y01",
+      "COLUMN_X00_Y02",
+      "COLUMN_X00_Y03",
+      "COLUMN_X01_Y00",
+      "COLUMN_X01_Y03",
+      "COLUMN_X02_Y00",
+      "COLUMN_X02_Y03",
+      "COLUMN_X03_Y00",
+      "COLUMN_X03_Y01",
+      "COLUMN_X03_Y02",
+      "COLUMN_X03_Y03",
+      "FRAME_DEPTH_X00",
+      "FRAME_DEPTH_X01",
+      "FRAME_DEPTH_X02",
+      "FRAME_DEPTH_X03",
+      "FRAME_POST_N_01_X00_LOW",
+      "FRAME_POST_N_01_X00_UP",
+      "FRAME_POST_N_01_X01_LOW",
+      "FRAME_POST_N_01_X01_UP",
+      "FRAME_POST_N_01_X02_LOW",
+      "FRAME_POST_N_01_X02_UP",
+      "FRAME_POST_N_01_X03_LOW",
+      "FRAME_POST_N_01_X03_UP",
+      "FRAME_POST_N_02_X00_LOW",
+      "FRAME_POST_N_02_X00_UP",
+      "FRAME_POST_N_02_X01_LOW",
+      "FRAME_POST_N_02_X01_UP",
+      "FRAME_POST_N_02_X02_LOW",
+      "FRAME_POST_N_02_X02_UP",
+      "FRAME_POST_N_02_X03_LOW",
+      "FRAME_POST_N_02_X03_UP",
+      "FRAME_POST_N_03_X00_LOW",
+      "FRAME_POST_N_03_X00_UP",
+      "FRAME_POST_N_03_X01_LOW",
+      "FRAME_POST_N_03_X01_UP",
+      "FRAME_POST_N_03_X02_LOW",
+      "FRAME_POST_N_03_X02_UP",
+      "FRAME_POST_N_03_X03_LOW",
+      "FRAME_POST_N_03_X03_UP",
+      "FRAME_POST_S_01_X00_LOW",
+      "FRAME_POST_S_01_X00_UP",
+      "FRAME_POST_S_01_X01_LOW",
+      "FRAME_POST_S_01_X01_UP",
+      "FRAME_POST_S_01_X02_LOW",
+      "FRAME_POST_S_01_X02_UP",
+      "FRAME_POST_S_01_X03_LOW",
+      "FRAME_POST_S_01_X03_UP",
+      "FRAME_POST_S_02_X00_LOW",
+      "FRAME_POST_S_02_X00_UP",
+      "FRAME_POST_S_02_X01_LOW",
+      "FRAME_POST_S_02_X01_UP",
+      "FRAME_POST_S_02_X02_LOW",
+      "FRAME_POST_S_02_X02_UP",
+      "FRAME_POST_S_02_X03_LOW",
+      "FRAME_POST_S_02_X03_UP",
+      "FRAME_POST_S_03_X00_LOW",
+      "FRAME_POST_S_03_X00_UP",
+      "FRAME_POST_S_03_X01_LOW",
+      "FRAME_POST_S_03_X01_UP",
+      "FRAME_POST_S_03_X02_LOW",
+      "FRAME_POST_S_03_X02_UP",
+      "FRAME_POST_S_03_X03_LOW",
+      "FRAME_POST_S_03_X03_UP",
+      "FRAME_TIER_N_01",
+      "FRAME_TIER_N_02",
+      "FRAME_TIER_N_03",
+      "FRAME_TIER_S_01",
+      "FRAME_TIER_S_02",
+      "FRAME_TIER_S_03",
+      "FRAME_WIDTH_Y00",
+      "FRAME_WIDTH_Y01",
+      "FRAME_WIDTH_Y02",
+      "FRAME_WIDTH_Y03",
+      "GABLE_E_N",
+      "GABLE_E_S",
+      "GABLE_W_N",
+      "GABLE_W_S",
+      "GRID_X00",
+      "GRID_X01",
+      "GRID_X02",
+      "GRID_X03",
+      "GRID_Y00",
+      "GRID_Y01",
+      "GRID_Y02",
+      "GRID_Y03",
+      "ROOF_PURLIN_N_00",
+      "ROOF_PURLIN_N_01",
+      "ROOF_PURLIN_N_02",
+      "ROOF_PURLIN_N_03",
+      "ROOF_PURLIN_S_00",
+      "ROOF_PURLIN_S_01",
+      "ROOF_PURLIN_S_02",
+      "ROOF_RAFTER_N_X00_S00",
+      "ROOF_RAFTER_N_X00_S01",
+      "ROOF_RAFTER_N_X00_S02",
+      "ROOF_RAFTER_N_X01_S00",
+      "ROOF_RAFTER_N_X01_S01",
+      "ROOF_RAFTER_N_X01_S02",
+      "ROOF_RAFTER_N_X02_S00",
+      "ROOF_RAFTER_N_X02_S01",
+      "ROOF_RAFTER_N_X02_S02",
+      "ROOF_RAFTER_N_X03_S00",
+      "ROOF_RAFTER_N_X03_S01",
+      "ROOF_RAFTER_N_X03_S02",
+      "ROOF_RAFTER_N_X04_S00",
+      "ROOF_RAFTER_N_X04_S01",
+      "ROOF_RAFTER_N_X04_S02",
+      "ROOF_RAFTER_N_X05_S00",
+      "ROOF_RAFTER_N_X05_S01",
+      "ROOF_RAFTER_N_X05_S02",
+      "ROOF_RAFTER_S_X00_S00",
+      "ROOF_RAFTER_S_X00_S01",
+      "ROOF_RAFTER_S_X00_S02",
+      "ROOF_RAFTER_S_X01_S00",
+      "ROOF_RAFTER_S_X01_S01",
+      "ROOF_RAFTER_S_X01_S02",
+      "ROOF_RAFTER_S_X02_S00",
+      "ROOF_RAFTER_S_X02_S01",
+      "ROOF_RAFTER_S_X02_S02",
+      "ROOF_RAFTER_S_X03_S00",
+      "ROOF_RAFTER_S_X03_S01",
+      "ROOF_RAFTER_S_X03_S02",
+      "ROOF_RAFTER_S_X04_S00",
+      "ROOF_RAFTER_S_X04_S01",
+      "ROOF_RAFTER_S_X04_S02",
+      "ROOF_RAFTER_S_X05_S00",
+      "ROOF_RAFTER_S_X05_S01",
+      "ROOF_RAFTER_S_X05_S02"
+    ],
+    "topology": {
+      "depth_bay_count": 3,
+      "front_bay_count": 3,
+      "head_bracket_directions": 16,
+      "head_jumps": 4,
+      "intercolumn_bracket_sets": 12,
+      "intercolumn_jumps": 2,
+      "interior_columns": 0,
+      "perimeter_columns": 12,
+      "roof_half_control_intervals": 3
+    }
+  },
+  "task": "T-007",
+  "used_parameter_ids": [
+    "DG-001",
+    "DG-002",
+    "DG-110",
+    "DG-111",
+    "DG-112",
+    "DG-113",
+    "FR-004",
+    "FR-005",
+    "FR-006",
+    "FR-007",
+    "MOD-001",
+    "MOD-002",
+    "MOD-003",
+    "MOD-004",
+    "MOD-005",
+    "MOD-006",
+    "OUT-003",
+    "PM-001",
+    "PM-002",
+    "PM-008",
+    "PM-009",
+    "PM-010",
+    "PM-011",
+    "PM-012",
+    "PM-013",
+    "PM-014",
+    "RF-001",
+    "ROOF-004",
+    "ROOF-005",
+    "ROOF-006",
+    "ROOF-007",
+    "ROOF-008",
+    "ROOF-009",
+    "ROOF-010",
+    "ROOF-011",
+    "Z-002",
+    "Z-005",
+    "Z-007"
+  ],
+  "version": "V001"
+}

@@ -38,7 +38,8 @@ def check_approval_sources() -> list[str]:
     """Make sure the sidecar's three cited anchors still exist and say what it claims."""
     errors = []
     decision_lines = DECISIONS.read_text(encoding="utf-8").splitlines()
-    decision = next((line for line in decision_lines if line.startswith("| **D-023** |")), "")
+    decision = next((line for line in decision_lines
+                     if line.startswith("| **D-023** |") or line.startswith("| D-023 |")), "")
     if not all(token in decision for token in ("Product Owner 批准", "11 × MOD-006", "3534.3mm",
                                                 "REASONABLE_COMPLETION", "ACTIVE")):
         errors.append("D-023 approval text missing or inconsistent with the candidate")
