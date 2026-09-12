@@ -117,18 +117,36 @@
 - 仍未启动正式 Blender 参数化或 3D 生产。
 - 本次研究与 Gate Review 不创建新的 T-###。
 
-## Current Execution State｜2026-09-11 EOD
+## 【中国古建筑3D复原｜T-005｜P2_0_SCHEMA_VALIDATION_V001｜证据感知参数架构验证】｜ENGINEERING PASS / GATE HOLD
+
+- Think Level: MEDIUM
+- Python：3.10.2。
+- `jsonschema`：4.26.0 / `Draft202012Validator`。
+- Positive four-class validation：PASS。
+- Negative 01：`UNKNOWN + DO_NOT_LOCK` with numeric `Z-006.value=3420` → validation FAIL as intended / test PASS。
+- Negative 02：`REASONABLE_COMPLETION + is_replaceable=false` → validation FAIL as intended / test PASS。
+- Reader smoke test：PASS；read-only JSON；AST confirms no `bpy` import；无几何生成。
+- V001 automated suite：4 tests PASS。
+- Scope audit：未修改 P0 POC、P1 evidence/classification、`docs/project_control/*` 或 `.blend`。
+- Codex 环境内 `git pull --ff-only origin main` 被受控环境拒绝；用户在任务启动前已人工同步至 T-005 输入版本，因此不影响 V001 工程验证结论。
+- V001 结论：**ENGINEERING PASS**。
+- P2.0 Gate Review 发现两项未闭环：
+  1. V001 未显式验证 `observed_as_measured / report_ideal_model / reconstructed_963_candidate` 三层同时并存且不串层；
+  2. validator / reader / tests / fixtures / report 仍为本地 untracked，尚未归档到 GitHub canonical repo。
+- 因任务目标未改变，不创建 T-006；继续同一任务版本：`【中国古建筑3D复原｜T-005｜P2_0_SCHEMA_VALIDATION_V002｜证据感知参数架构验证】`。
+- P2.0 Gate：**HOLD / T-005 V002 REQUIRED**。
+
+## Current Execution State｜2026-09-12
 
 - T-001：PASS
 - T-002：PASS
 - T-003：PASS / Class B
 - T-004：PASS
+- T-005 V001：ENGINEERING PASS / P2.0 GATE HOLD
+- T-005 V002：READY_FOR_LOCAL_EXECUTION
 - P0：CLOSED / APPROVED
-- P1.0：PASS
-- P1.1：PASS
-- P1.2：PASS
-- P1.3：IN PROGRESS / NOT STARTED TODAY
-- P1 Gate：3 / 4 PASS
+- P1：CLOSED / 4/4 PASS / CONDITIONAL GO
+- P2：ACTIVE
+- P2.0：HOLD / T-005 V002 REQUIRED
 - Formal Case：平遥镇国寺万佛殿
-- Current Phase：P1｜选题取证
-- 当前尚未创建新的 Codex 工程任务。
+- Formal Blender geometry：LOCKED until P2.0 PASS
