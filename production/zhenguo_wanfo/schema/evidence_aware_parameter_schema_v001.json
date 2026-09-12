@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/arch3d/evidence_aware_parameter_schema_v001.json",
+  "title": "ARCH3D Evidence-aware Parameter Set V001",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project_id",
+    "case_id",
+    "case_name",
+    "parameter_set_version",
+    "status",
+    "parameters"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "project_id": {"type": "string", "minLength": 1},
+    "case_id": {"type": "string", "minLength": 1},
+    "case_name": {"type": "string", "minLength": 1},
+    "parameter_set_version": {"type": "string", "minLength": 1},
+    "status": {
+      "type": "string",
+      "enum": ["P2_0_VALIDATION", "PRODUCTION_CANDIDATE", "PRODUCTION_LOCKED"]
+    },
+    "parameters": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"$ref": "#/$defs/parameter"}
+    }
+  },
+  "$defs": {
+    "parameter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "parameter_key",
+        "label_zh",
+        "value",
+        "unit",
+        "classification",
+        "time_layer",
+        "source_layer",
+        "production_use",
+        "blocking_level",
+        "source_ids",
+        "is_replaceable",
+        "notes"
+      ],
+      "properties": {
+        "parameter_key": {"type": "string", "minLength": 1},
+        "label_zh": {"type": "string", "minLength": 1},
+        "value": {
+          "type": ["number", "string", "array", "object", "null"]
+        },
+        "unit": {
+          "type": ["string", "null"]
+        },
+        "classification": {
+          "type": "string",
+          "enum": [
+            "CONFIRMED",
+            "HIGH_CONFIDENCE_INFERENCE",
+            "REASONABLE_COMPLETION",
+            "UNKNOWN"
+          ]
+        },
+        "time_layer": {
+          "type": "string",
+          "enum": [
+            "observed_as_measured",
+            "observed_as_measured_filtered",
+            "observed_deformation",
+            "observed_current_topology",
+            "report_ideal_model",
+            "reconstructed_design_candidate",
+            "reconstructed_963_candidate",
+            "project_model_datum",
+            "historical_events",
+            "component_history",
+            "evidence_rule",
+            "topology_or_rule"
+          ]
+        },
+        "source_layer": {
+          "type": "string",
+          "enum": [
+            "DIRECT_PRIMARY",
+            "DIRECT_PRIMARY_DERIVED",
+            "DIRECT_PLUS_SUPPORT",
+            "REPORT_INFERRED",
+            "REPORT_INFERRED_GUESS",
+            "REPORT_INFERRED_HIGH_CAUTION",
+            "A_BRIDGE_VERIFIED",
+            "A_BRIDGE_UNRESOLVED",
+            "DIRECT_GAP",
+            "PROJECT_RULE",
+            "UNKNOWN"
+          ]
+        },
+        "production_use": {
+          "type": "string",
+          "enum": [
+            "OBSERVED_REFERENCE",
+            "OBSERVED_DEFORMATION_REFERENCE",
+            "BASE_TOPOLOGY",
+            "DEFAULT_963_CANDIDATE",
+            "DEFAULT_DESIGN_SYSTEM",
+            "DEFAULT_DESIGN_LOGIC",
+            "DEFAULT_REPLACEABLE_CANDIDATE",
+            "PROVISIONAL_REFERENCE",
+            "DO_NOT_LOCK",
+            "PROJECT_COORDINATE_RULE",
+            "PER_COMPONENT_METADATA_REQUIRED",
+            "HISTORICAL_TIMELINE"
+          ]
+        },
+        "blocking_level": {
+          "type": "string",
+          "enum": ["NONE", "LOW", "MEDIUM", "HIGH"]
+        },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "minLength": 1}
+        },
+        "is_replaceable": {"type": "boolean"},
+        "notes": {"type": "string"}
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "classification": {"const": "UNKNOWN"},
+              "production_use": {"const": "DO_NOT_LOCK"}
+            },
+            "required": ["classification", "production_use"]
+          },
+          "then": {
+            "properties": {
+              "value": {"type": "null"}
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "classification": {"const": "REASONABLE_COMPLETION"}
+            },
+            "required": ["classification"]
+          },
+          "then": {
+            "properties": {
+              "is_replaceable": {"const": true}
+            }
+          }
+        }
+      ]
+    }
+  }
+}
