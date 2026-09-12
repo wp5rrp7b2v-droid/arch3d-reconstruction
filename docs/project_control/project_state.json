@@ -151,7 +151,7 @@
     "visualization_version": "v008",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_T006_HOLD_PENDING_R030_REFRESH",
+    "refresh_status": "R030_REFRESH_COMPLETE",
     "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "../../tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V001.md", "../../production/zhenguo_wanfo/validation/P2_1_VALIDATION_REPORT_V001.md"]
   }
 }
