@@ -155,7 +155,7 @@
     "visualization_version": "v008",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_P2_0_APPROVAL_PENDING_V008_REFRESH",
+    "refresh_status": "R026_REFRESH_COMPLETE",
     "source_files": [
       "project_state.json",
       "decision_log.md",
