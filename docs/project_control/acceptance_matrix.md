@@ -7,7 +7,7 @@
 | P0.0 | 项目控制系统可跨 Chat 使用 | **PASS** | Project Control 文件集可作为正式 handoff；Dashboard 是派生可视化。 |
 | P0.1 | 本地 Mac 可稳定完成轻量 Blender 灰模、保存与审核 | **PASS** | Blender 3.6.23；灰模生成、保存、独立重开、Geometry Integrity、PNG 审核全部通过。 |
 | P0.2 | Local → Cloud → 修改 / 渲染 → Local，无关键资产丢失 | **PASS / Class B** | Local 3.6.23 → GitHub → GitHub Actions Blender 4.5.13 → Artifact → Local 3.6.23 全链路通过。3.6 会移除部分不支持的 4.5 UI region 数据，但核心几何、Marker 与所需 Metadata 未损失。 |
-| P0.3 | 建筑参数能够驱动脚本生成一个最小结构模型 | **PASS** | T-004｜PARAMETRIC_ARCHITECTURE_POC_V001：独立 JSON 参数驱动同一 Blender 3.6 Python 脚本；Baseline 3×2 开间→12 柱/21 主要对象，Variant 仅改 JSON 为 4×3 开间→20柱/31主要对象；尺寸与屋顶同步变化；独立重开及 Determinism PASS。 |
+| P0.3 | 建筑参数能够驱动脚本生成一个最小结构模型 | **PASS** | T-004｜PARAMETRIC_ARCHITECTURE_POC_V001：独立 JSON 参数驱动同一 Blender 3.6 Python 脚本；Baseline 3×2 开间→12 柱/21主要对象，Variant 4×3 开间→20柱/31主要对象；尺寸与屋顶同步变化；独立重开及 Determinism PASS。 |
 
 **P0 Gate Final：4 / 4 PASS。**
 
@@ -71,8 +71,8 @@ P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段。P2.0 已完成 CG-01 
 |---|---|---|---|
 | P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **PASS / APPROVED 2026-09-12** | T-005 V001+V002 工程验证全部 PASS；Gate Review 7/7 PASS；工程证据归档至 GitHub canonical repo，commit `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`。Product Owner 已批准 P2.0。 |
 | P2.1｜正式生产参数集锁定｜Formal Production Parameter Set | 将 P1 已分类参数转为 P2.0 Schema 下的正式 production parameter set；完成 85/85 迁移、Geometry Dependency Matrix、UNKNOWN 几何阻断判定、机器 preflight 与 canonical version lock | **PASS / APPROVED / CLOSED 2026-09-12** | T-006 V002：85/85正式参数、85/85 dependency matrix、21/21 tests、override validation 与 production preflight 全部 PASS；`geometry-critical unresolved blocker=0`。Z-006 保持 UNKNOWN；RC-01 仅为独立可替换 production candidate。 |
-| P2.2｜参数化主体结构候选模型｜Parametric Structural Skeleton | 由 P2.1 正式参数集驱动生成主体结构候选模型，覆盖柱网、柱、主要梁架、斗栱拓扑骨架、屋顶控制几何及主要空间关系，并验证可重复生成与参数响应 | **IN PROGRESS / ENGINEERING PASS / PO STRUCTURAL REVIEW REQUIRED** | T-007 V001 已完成：6/6 scope、217 objects、machine geometry validation PASS、32/32 tests、deterministic rebuild PASS、independent reopen PASS、naked constant scan PASS、canonical commit `a5a4181499c0494d16fbaf59d29337fa7d688e9d`。P2.2 仍需 Product Owner 对 PLAN / ELEVATION / AXON 三张审核图完成人工结构审核后才能 Gate PASS。 |
-| P2.3｜整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC | 整合结构、屋面、斗栱体系与 evidence metadata，完成可追溯性、确定性重建、兼容性、可替换性与视觉 QC，形成正式963候选复原模型 | **LOCKED / WAITING FOR P2.2 PASS** | PASS 表示“工程可复现、证据可追溯、不确定性透明的963候选复原模型成立”，不等于完全还原963原貌。 |
+| P2.2｜参数化主体结构候选模型｜Parametric Structural Skeleton | 由 P2.1 正式参数集驱动生成主体结构候选模型，覆盖柱网、柱、主要梁架、斗栱拓扑骨架、屋顶控制几何及主要空间关系，并验证可重复生成与参数响应 | **PASS / APPROVED / CLOSED 2026-09-12** | T-007 V001：6/6 scope、217 machine objects、machine geometry validation PASS、32/32 tests、deterministic rebuild PASS、independent reopen PASS、naked constant scan PASS；PLAN / ELEVATION / AXON 完成 Product Owner 直接结构审核并通过。Gate Review 9/9 PASS。217 是 Blender 机器对象数，不是历史构件数。 |
+| P2.3｜整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC | 整合结构、屋面、斗栱体系与 evidence metadata，完成可追溯性、确定性重建、兼容性、可替换性与视觉 QC，形成正式963候选复原模型 | **UNLOCKED / CURRENT / DOD DEFINITION REQUIRED** | P2.2 已 PASS；在创建下一项正式工程 T-### 前必须先定义并锁定 P2.3 Definition of Done。CG-02～CG-06 持续生效。 |
 
 ### P2.0 Final Result
 
@@ -208,12 +208,15 @@ P2.2 必须完成 9 项：
 - local-only `.blend` SHA256=`3b61ccbaca17836bd63d9369ebc3a4c6e25fb27f0d274ea67e64f732ad3000e4`；
 - canonical engineering commit：`a5a4181499c0494d16fbaf59d29337fa7d688e9d`。
 
-### P2.2 Preliminary Gate Review｜HOLD FOR PO STRUCTURAL REVIEW
+### P2.2 Gate Final｜APPROVED / PASS / CLOSED 2026-09-12
 
-- DoD-01～DoD-07：**PASS**；
-- DoD-08 engineering portion：**PASS**；Product Owner visual structural review：**PENDING**；
-- DoD-09：**PASS**；
-- New engineering blocker：**NONE**；
+- DoD-01～DoD-09：**9 / 9 PASS**；
+- Complete six-system scope：**PASS**；
+- Machine geometry validation：**PASS**；
+- Deterministic rebuild：**PASS**；
+- Independent reopen：**PASS**；
+- Product Owner PLAN / ELEVATION / AXON structural review：**PASS**；
+- Product Owner explicit decision：**APPROVED P2.2 PASS**；
 - Gate Review：`docs/production/zhenguo_wanfo/P2_2_GATE_REVIEW_2026-09-12.md`。
 
-当前结论：**T-007 工程 PASS，但 P2.2 Gate 尚未 PASS。唯一剩余 Gate 条件是 Product Owner 对 PLAN / ELEVATION / AXON 三张结构审核图完成人工审核并作出明确决定。**
+Carry-forward：217 是机器结构/控制对象数，不等于217个历史构件；P2.2 PASS 不升级 Z-006、DG-114、HIS-002 或未解决转角/榫卯/隐角梁的历史证据等级。P2.3 已解锁，但下一项工程任务前必须先锁定 P2.3 Definition of Done。
