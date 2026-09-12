@@ -113,6 +113,32 @@
 - Carry-forward：Z-006、DG-114、HIS-002 与45°转角/榫卯/隐角梁等证据边界继续生效；217对象数不作为历史构件数量声明。
 - Gate Review：`docs/production/zhenguo_wanfo/P2_2_GATE_REVIEW_2026-09-12.md`。
 
+## T-008 V001｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001｜ENGINEERING HOLD
+
+- Think Level: HIGH。
+- 本地 Blender 3.6.23；Blender Python 3.10.13；host Python 3.10.2。
+- Component Library：**11 families / 40 variants**。
+- Integrated candidate：**365 stable mesh instances**；柱12、主要梁架8、示意框架连接件54、斗栱臂88、示意接触块88、檩7、椽36、屋面6，其余66为分层诊断控制对象。
+- Machine QC：**34/34 PASS / 0 errors**。
+- Automated tests：**33/33 PASS**。
+- Replacement / mutation：PASS；deterministic rebuild：PASS；independent reopen：PASS / PASS。
+- Naked historical constant / manual drift audit：PASS。
+- `Z-006` 继续 UNKNOWN / null / DO_NOT_LOCK；`Z-006-RC-01` 继续独立可替换；DG-114 / HIS-002 / 45°转角等边界未升级。
+- 六张正式审核图已生成：PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC；Product Owner 尚未完成正式 P2.3 视觉审核。
+- Local-only final candidate SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
+- Canonical engineering commit：`5bd6ca1f8300a170b74c3a9058352768800b56a6`。
+- **HOLD blocker：DoD-07 Cloud roundtrip 未执行。** Workflow 与语义快照已准备，但尚无 Blender 4.5.13 cloud run、artifact return 或 Local Blender 3.6 返回验证。
+- 不使用被拒绝的 credential extraction / custom API upload 路线。
+
+## T-008 V002｜P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V002｜READY FOR LOCAL EXECUTION
+
+- 同一 T-008 目标继续，不创建 T-009。
+- V001 本地整合候选与已通过工程证据冻结；V002 仅负责关闭 DoD-07 roundtrip blocker。
+- Transport 采用普通 Git 临时 tag 指向 `.blend` blob；不提交 `.blend` 到 main，不提取 Git 凭据，不 force-push。
+- Cloud Blender 4.5.13 完成 reopen / semantic QC / save / independent reopen 后上传 artifact；取回后由 Local Blender 3.6.23 做返回验证。
+- 真实 roundtrip PASS 后更新 manifest / validation evidence，并删除临时 transport tag。
+- Task Contract：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V002.md`。
+
 ## Current Execution State｜2026-09-12
 
 - T-001：PASS
@@ -122,15 +148,17 @@
 - T-005 V002：ENGINEERING PASS / COMPLETE / canonical evidence archived
 - T-006 V002：ENGINEERING PASS / COMPLETE / canonical evidence archived
 - T-007 V001：ENGINEERING PASS / COMPLETE / canonical evidence archived
+- T-008 V001：**ENGINEERING HOLD / LOCAL ENGINEERING COMPLETE / CLOUD ROUNDTRIP PENDING**
+- T-008 V002：**READY FOR LOCAL EXECUTION**
 - P0：CLOSED / APPROVED
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO
 - P2：ACTIVE / 3 of 4 Gates PASS
 - P2.0：PASS / APPROVED
 - P2.1：PASS / APPROVED / CLOSED
-- P2.2：**PASS / APPROVED / CLOSED**
-- P2.3：**UNLOCKED / CURRENT / DOD DEFINITION REQUIRED**
+- P2.2：PASS / APPROVED / CLOSED
+- P2.3：**IN PROGRESS / DOD LOCKED / ENGINEERING HOLD**
 - Formal Case：平遥镇国寺万佛殿
-- Formal Blender geometry：P2.2 medium-LOD structural baseline APPROVED / local-only blend
-- Current blocker：NONE
-- Current task：NONE
-- Next action：明确并锁定 P2.3 Definition of Done；在此之前不创建下一项正式工程 T-###。
+- Formal Blender geometry：P2.3 integrated candidate V001 generated locally / local-only blend
+- Current blocker：**P2.3 DoD-07 Cloud Blender 4.5.13 roundtrip + Local 3.6 return validation missing**
+- Current task：**T-008 V002**
+- Next action：执行 T-008 V002，仅关闭 DoD-07 roundtrip blocker；完成后再进入 ChatGPT 独立复核与 Product Owner 六图审核。
