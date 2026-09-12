@@ -1,0 +1,38 @@
+test_approval_and_candidate_identity_mutations_hold (test_p2_1_approved_override_v002.ApprovedOverrideV002Tests) ... ok
+test_approved_candidate_resolves_only_the_unresolved_count (test_p2_1_approved_override_v002.ApprovedOverrideV002Tests) ... ok
+test_cached_value_and_approval_evidence_mutations_hold (test_p2_1_approved_override_v002.ApprovedOverrideV002Tests) ... ok
+test_changed_mod_requires_recomputed_cache_and_formal_review (test_p2_1_approved_override_v002.ApprovedOverrideV002Tests) ... ok
+test_dependency_mutation_cannot_clear_historical_blocker (test_p2_1_approved_override_v002.ApprovedOverrideV002Tests) ... ok
+test_formula_dependency_and_multiplier_mutations_hold (test_p2_1_approved_override_v002.ApprovedOverrideV002Tests) ... ok
+test_historical_z006_mutations_hold (test_p2_1_approved_override_v002.ApprovedOverrideV002Tests) ... ok
+test_missing_or_extra_override_holds (test_p2_1_approved_override_v002.ApprovedOverrideV002Tests) ... ok
+test_override_does_not_enter_historical_parameter_set (test_p2_1_approved_override_v002.ApprovedOverrideV002Tests) ... ok
+test_read_only_scripts_have_no_blender_dependency (test_p2_1_approved_override_v002.ApprovedOverrideV002Tests) ... ok
+test_classification_and_semantic_layer_drift_are_detected (test_p2_1_production_parameter_set_v001.P21ProductionParameterSetTests) ... ok
+test_duplicate_parameter_key_is_detected (test_p2_1_production_parameter_set_v001.P21ProductionParameterSetTests) ... ok
+test_full_source_backed_validation_and_reader (test_p2_1_production_parameter_set_v001.P21ProductionParameterSetTests) ... ok
+test_missing_parameter_and_matrix_entry_are_detected (test_p2_1_production_parameter_set_v001.P21ProductionParameterSetTests) ... ok
+test_preflight_hold_is_data_driven (test_p2_1_production_parameter_set_v001.P21ProductionParameterSetTests) ... ok
+test_reasonable_completion_must_remain_replaceable (test_p2_1_production_parameter_set_v001.P21ProductionParameterSetTests) ... ok
+test_schema_rejects_missing_required_field (test_p2_1_production_parameter_set_v001.P21ProductionParameterSetTests) ... ok
+test_scripts_are_read_only_and_blender_free (test_p2_1_production_parameter_set_v001.P21ProductionParameterSetTests) ... ok
+test_source_value_and_unit_drift (test_p2_1_production_parameter_set_v001.P21ProductionParameterSetTests) ... ok
+test_three_layer_and_originality_policies (test_p2_1_production_parameter_set_v001.P21ProductionParameterSetTests) ... ok
+test_unknown_value_and_dependency_boundaries (test_p2_1_production_parameter_set_v001.P21ProductionParameterSetTests) ... ok
+test_formal_geometry_and_historical_boundary (test_p2_2_structural_skeleton_v001.StructuralSkeletonTests) ... ok
+test_modular_mutation_recomputes_replaceable_candidate (test_p2_2_structural_skeleton_v001.StructuralSkeletonTests) ... ok
+test_no_formal_historical_dimension_literal (test_p2_2_structural_skeleton_v001.StructuralSkeletonTests) ... ok
+test_other_reasonable_completions_remain_parameter_driven (test_p2_2_structural_skeleton_v001.StructuralSkeletonTests) ... ok
+test_reference_and_unknown_cannot_enter_geometry (test_p2_2_structural_skeleton_v001.StructuralSkeletonTests) ... ok
+test_clean_rebuild_reopen_and_mutation (test_p2_3_integrated_reconstruction_v001.IntegratedReconstructionTests) ... ok
+test_negative_01_unknown_do_not_lock_rejects_number (test_schema_validation_v001.EvidenceAwareSchemaValidationTests) ... ok
+test_negative_02_reasonable_completion_must_be_replaceable (test_schema_validation_v001.EvidenceAwareSchemaValidationTests) ... ok
+test_positive_minimal_set_covers_four_classes (test_schema_validation_v001.EvidenceAwareSchemaValidationTests) ... ok
+test_reader_smoke_is_read_only_and_blender_free (test_schema_validation_v001.EvidenceAwareSchemaValidationTests) ... ok
+test_three_layer_coexistence_fixture_validates (test_schema_validation_v001.EvidenceAwareSchemaValidationTests) ... ok
+test_three_layer_reader_preserves_exact_time_layers (test_schema_validation_v001.EvidenceAwareSchemaValidationTests) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 51.821s
+
+OK

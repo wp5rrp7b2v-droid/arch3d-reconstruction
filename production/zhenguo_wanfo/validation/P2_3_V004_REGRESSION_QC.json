@@ -1,0 +1,36 @@
+{
+  "automated_tests": {
+    "log_path": "production/zhenguo_wanfo/validation/P2_3_V004_V001_UNITTEST_LOG_V001.txt",
+    "log_sha256": "aa55d3551a6dabdf512928b1d6d778e0739d7f52ae16dd33f9a69b8059bde7bb",
+    "passed": 33,
+    "status": "PASS",
+    "total": 33
+  },
+  "baseline_git_commit": "f4a794759ab3dcacf7568265888df409a158ab33",
+  "component_library_changed": false,
+  "dod_07_roundtrip_evidence": {
+    "path": "production/zhenguo_wanfo/validation/P2_3_V003_ROUNDTRIP_QC_V001.json",
+    "sha256": "2facab4e3f722bdd21a356db75c901be3fde60b95168fd9b2f3c9c85f9972473",
+    "status": "UNCHANGED"
+  },
+  "family_count": 11,
+  "frozen_candidate_sha256": "ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512",
+  "geometry_changed": false,
+  "independent_chatgpt_and_product_owner_review": "PENDING",
+  "machine_qc": {
+    "passed": 34,
+    "result_path": "production/zhenguo_wanfo/validation/P2_3_V004_V001_MACHINE_REGRESSION_QC.json",
+    "result_sha256": "81150dbe55a72a1dfdef38b282239632a49c62dec1d1eb89c8278cd4359433a3",
+    "status": "PASS",
+    "total": 34
+  },
+  "manifest_changed": false,
+  "new_diagnostic_png_sha256": "998739c5c93e5d835c563bfdcaea4552749427d3511dfd9258d22bb67f719d9c",
+  "new_diagnostic_sidecar_sha256": "11326e9db60c09f4fa4e695ce7479e2bb1c0e739f11cca213b382e00832f85fc",
+  "other_five_review_images": "UNCHANGED: verified by frozen SHA256 before and after diagnostic rendering",
+  "stable_instance_count": 365,
+  "status": "PASS",
+  "task": "T-008 V004",
+  "variant_count": 40,
+  "visual_self_review": "PASS: four labeled legend categories and zero counts visible; no legend/model overlap; old diagnostic viewpoint retained"
+}
