@@ -65,13 +65,13 @@
 
 ### P2 Entry Rule
 
-P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段，但第一项正式 Blender 几何生产仍受 P2.0 Gate 约束。CG-01 要求先建立并验证 Evidence-aware Parameter Schema。
+P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段。P2.0 已完成 CG-01 所要求的 Evidence-aware Parameter Schema 前置条件；后续正式几何工作必须继续遵守 CG-02～CG-06。
 
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
-| P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **READY FOR PRODUCT OWNER DECISION** | T-005 V001+V002 工程验证全部 PASS；Gate Review 7/7 PASS；工程证据已归档至 GitHub canonical repo，commit `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`。等待 Product Owner 最终批准；批准前仍不启动正式 Blender 几何。 |
+| P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **PASS / APPROVED 2026-09-12** | T-005 V001+V002 工程验证全部 PASS；Gate Review 7/7 PASS；工程证据归档至 GitHub canonical repo，commit `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`。Product Owner 已批准 P2.0。 |
 
-### P2.0 Definition of Done Review
+### P2.0 Final Result
 
 - Schema 字段完整且有明确枚举/约束：**PASS**；
 - 四类 classification 实例验证：**PASS**；
@@ -80,6 +80,8 @@ P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段，但第一项正式 Bl
 - `observed_as_measured` / `report_ideal_model` / `reconstructed_963_candidate` 三层并存且不串层：**PASS**；
 - 参数可由后续 Python 读取且本 Gate 不生成正式建筑几何：**PASS**；
 - T-005 工程证据进入 canonical GitHub：**PASS**。
+
+**P2.0 Gate Final：7 / 7 PASS / Product Owner APPROVED。**
 
 ### P2.0 Engineering Evidence
 
@@ -90,6 +92,12 @@ P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段，但第一项正式 Bl
 - canonical archive commit: `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`
 
 Gate Review：`docs/production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md`  
-Reviewer Recommendation：**APPROVE PASS**。
+Product Owner Approval：**P2.0 PASS / 2026-09-12**。
 
-P2.1–P2.3 的完整 Gate 架构待 P2.0 获得 Product Owner 最终批准后再锁定。
+### P2.0 Carry-forward
+
+- CG-01 视为已满足；
+- CG-02～CG-06 继续强制生效；
+- P2.0 PASS 不表示所有85项参数都已 production-locked；
+- UNKNOWN、合理补全、三层语义和历史原真性边界不得在后续工程中丢失；
+- 下一步先定义并锁定 P2.1–P2.3 Gate 架构，再创建下一项正式几何工程任务。
