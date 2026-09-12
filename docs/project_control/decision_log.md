@@ -29,7 +29,8 @@
 | D-023 | 2026-09-12 | Product Owner 批准 `Z-006-RC-01` 作为解除 P2.2 柱高生产阻断的独立、可替换 REASONABLE_COMPLETION。Z-006 本体继续保持 `UNKNOWN / null / DO_NOT_LOCK`，不得改写为历史事实；RC-01 采用规则 `11 × MOD-006`，当前 MOD-006≈321.3mm 时解析值为 3534.3mm，仅作为 `reconstructed_963_candidate` 的生产候选。RC-01 必须独立于85项正式历史/证据参数保存并可追溯到本决策；若 MOD-006 或后续证据变化，候选必须可重新计算或替换。继续同一工程任务 T-006 V002 验证，不创建 T-007。 | ACTIVE / Z-006 RC-01 APPROVED / T-006 V002 AUTHORIZED |
 | D-024 | 2026-09-12 | Product Owner 正式批准 `P2.1｜Formal Production Parameter Set` PASS。Gate Review 9/9 PASS，T-006 V002 machine validation / 21/21 tests / production preflight 全部 PASS，`geometry-critical unresolved blocker = 0`。P2.1 正式 CLOSED；P2.2 `Parametric Structural Skeleton` 解锁为当前 Gate。P2.1 PASS 不改变 Z-006 的历史 UNKNOWN 状态；Z-006-RC-01 继续作为独立、可替换的生产候选。第一项正式 Blender 几何任务创建前，必须先明确并锁定 P2.2 Definition of Done。 | ACTIVE / P2.1 PASS / P2.2 ENTERED / DOD DEFINITION REQUIRED |
 | D-025 | 2026-09-12 | Product Owner 正式批准并锁定 `P2.2 Definition of Done V001`。P2.2 作为第一项正式 Blender 历史候选几何 Gate，必须以 P2.1 正式参数集 + approved override + Geometry Dependency Matrix 为唯一历史/复原输入；DoD 9项覆盖 build manifest、完整主体六大范围、参数驱动与禁止 naked historical constants、机器几何验证、RC可替换、UNKNOWN/转角/原真性边界、geometry metadata traceability、deterministic rebuild + independent reopen + 人工结构审核、以及 canonical archive。P2.2 PASS 需要 9/9、完整主体、machine validation PASS、deterministic rebuild PASS、无未批准 geometry-critical input、无历史尺寸裸常量，并由 Product Owner 完成人工结构审核批准。T-007 可据此启动。 | ACTIVE / P2.2 DOD LOCKED / T-007 AUTHORIZED |
-| **D-026** | **2026-09-12** | **Product Owner 正式批准 `P2.2｜Parametric Structural Skeleton` PASS。T-007 V001 完成 6/6 主体结构范围，machine geometry validation PASS、32/32 tests PASS、naked historical constant scan PASS、deterministic rebuild PASS、independent reopen PASS；PLAN / ELEVATION / AXON 三张结构审核图完成直接人工审核并通过。P2.2 DoD 9/9 PASS，P2.2 正式 CLOSED；P2.3 `Integrated Reconstruction Candidate & QC` 解锁为当前 Gate。P2.2 PASS 只确认中等LOD参数化主体骨架工程成立，不把217个Blender对象等同于217个历史构件，也不解除Z-006、DG-114、HIS-002及转角/榫卯/隐角梁等证据边界。P2.3第一项工程任务前必须先明确并锁定P2.3 Definition of Done。** | **ACTIVE / P2.2 PASS / CLOSED / P2.3 ENTERED / DOD REQUIRED** |
+| D-026 | 2026-09-12 | Product Owner 正式批准 `P2.2｜Parametric Structural Skeleton` PASS。T-007 V001 完成 6/6 主体结构范围，machine geometry validation PASS、32/32 tests PASS、naked historical constant scan PASS、deterministic rebuild PASS、independent reopen PASS；PLAN / ELEVATION / AXON 三张结构审核图完成直接人工审核并通过。P2.2 DoD 9/9 PASS，P2.2 正式 CLOSED；P2.3 `Integrated Reconstruction Candidate & QC` 解锁为当前 Gate。P2.2 PASS 只确认中等LOD参数化主体骨架工程成立，不把217个Blender对象等同于217个历史构件，也不解除Z-006、DG-114、HIS-002及转角/榫卯/隐角梁等证据边界。P2.3第一项工程任务前必须先明确并锁定P2.3 Definition of Done。 | ACTIVE / P2.2 PASS / CLOSED / P2.3 ENTERED / DOD REQUIRED |
+| **D-027** | **2026-09-12** | **Product Owner 正式批准并锁定 `P2.3 Definition of Done V001`。P2.3 作为 P2 最终 Gate，必须把 P2.2 approved structural baseline 升级为构件库驱动的整合复原候选，采用 `Component Library → Parametric Variant → Placement / Instance → Evidence Metadata` 架构；DoD 9项覆盖 Integration Manifest、构件族/variant/instance、完整整合几何、evidence metadata、参数驱动与可替换性、machine QC、deterministic rebuild + Local3.6↔Cloud4.5 roundtrip、六类视觉/evidence diagnostic 审核以及最终 P2 closure archive。CG-02～CG-06 持续强制生效；P2.3 PASS 不等于完全还原963原貌。T-008 获授权启动。** | **ACTIVE / P2.3 DOD LOCKED / T-008 AUTHORIZED** |
 
 ## D-012 直接影响
 
@@ -168,3 +169,16 @@
 - P2.2 正式 CLOSED；P2.3 正式解锁为当前 Gate。
 - P2.3 在创建下一项工程 T-### 前，必须先定义并锁定 P2.3 Definition of Done；不得因 P2.2 PASS 直接进入无验收标准的精细建模。
 - CG-02～CG-06 全部继续强制生效。
+
+## D-027 P2.3 Definition of Done Boundary
+
+- 正式文件：`docs/production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md`。
+- P2.3 是 P2 的最终 Gate，目标是从 P2.2 approved structural baseline 形成完整、可维护、可重复重建、证据边界透明的整合复原候选。
+- 正式生产架构锁定为 `Component Library → Parametric Variant → Placement / Instance → Evidence Metadata`；同类构件不得通过大量复制后逐件手改形成不可追溯漂移。
+- 必须形成 Integration Manifest，记录 P2.1/P2.2 输入链、component families / variants / instances、RC/override、bounded UNKNOWN、最终 output hash 与 QC 环境。
+- 斗栱须从纯拓扑控制段升级为 evidence-bounded 的可读构件族几何；屋顶须从控制线升级为连贯屋面/屋顶包络及主要空间关系，但不得超出证据精度。
+- P2.1/P2.2 evidence metadata、Z-006 UNKNOWN、Z-006-RC-01 replaceable、DG-114、HIS-002、45°转角/榫卯/隐角梁等边界必须贯穿最终候选。
+- P2.3 必须完成 machine QC、replacement/mutation、deterministic rebuild、independent reopen，以及一次正式 Local Blender 3.6 → Cloud Blender 4.5 → Local Blender 3.6 roundtrip QC；新出现的核心几何或 metadata 损失即 HOLD。
+- 至少输出 PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC 六类审核图，并由 Product Owner 完成人工审核。
+- P2.3 PASS 表示“受控的963候选复原模型工程成立”，不是“完全还原963年原貌”，也不自动解决逐构件原真性或全部历史节点争议。
+- T-008 被授权为 P2.3 第一项正式工程任务；Engineering PASS 不等于 P2.3 Gate PASS。
