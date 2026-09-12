@@ -7,7 +7,7 @@
 | P0.0 | 项目控制系统可跨 Chat 使用 | **PASS** | Project Control 文件集可作为正式 handoff；Dashboard 是派生可视化。 |
 | P0.1 | 本地 Mac 可稳定完成轻量 Blender 灰模、保存与审核 | **PASS** | Blender 3.6.23；灰模生成、保存、独立重开、Geometry Integrity、PNG 审核全部通过。 |
 | P0.2 | Local → Cloud → 修改 / 渲染 → Local，无关键资产丢失 | **PASS / Class B** | Local 3.6.23 → GitHub → GitHub Actions Blender 4.5.13 → Artifact → Local 3.6.23 全链路通过。3.6 会移除部分不支持的 4.5 UI region 数据，但核心几何、Marker 与所需 Metadata 未损失。 |
-| P0.3 | 建筑参数能够驱动脚本生成一个最小结构模型 | **PASS** | T-004｜PARAMETRIC_ARCHITECTURE_POC_V001：独立 JSON 参数驱动同一 Blender Python 脚本；Baseline 3×2 开间→12 柱/21主要对象，Variant 4×3 开间→20柱/31主要对象；尺寸与屋顶同步变化；独立重开及 Determinism PASS。 |
+| P0.3 | 建筑参数能够驱动脚本生成一个最小结构模型 | **PASS** | T-004｜PARAMETRIC_ARCHITECTURE_POC_V001：独立 JSON 参数驱动同一 Blender 3.6 Python 脚本；Baseline 3×2 开间→12 柱/21主要对象，Variant 4×3 开间→20柱/31主要对象；尺寸与屋顶同步变化；独立重开及 Determinism PASS。 |
 
 **P0 Gate Final：4 / 4 PASS。**
 
@@ -42,7 +42,7 @@
 | P2.0｜Evidence-aware Parameter Schema | Evidence-aware parameter contract | **PASS / APPROVED** | CG-01 satisfied. |
 | P2.1｜Formal Production Parameter Set | 85/85 formal set + dependency + preflight | **PASS / APPROVED / CLOSED** | Z-006 remains UNKNOWN; RC-01 replaceable. |
 | P2.2｜Parametric Structural Skeleton | Complete medium-LOD structural skeleton | **PASS / APPROVED / CLOSED** | 217 = machine objects, not historical component count. |
-| P2.3｜Integrated Reconstruction Candidate & QC | Component-library-driven integrated candidate + final engineering / visual QC | **IN PROGRESS / ENGINEERING PASS / PO REVIEW REQUIRED** | Preliminary Gate Review = **8 PASS + 1 PENDING**；DoD-08 Product Owner visual/evidence diagnostic review 尚未完成。 |
+| P2.3｜Integrated Reconstruction Candidate & QC | Component-library-driven integrated candidate + final engineering / visual QC | **IN PROGRESS / ENGINEERING PASS / DoD-08 VISUAL HOLD** | Preliminary Gate Review = **8 PASS + 1 HOLD**；Evidence Diagnostic 四级证据映射需修正。 |
 
 ### P2.1 Gate Final｜APPROVED / PASS / CLOSED
 
@@ -84,20 +84,33 @@
 - Temporary transport / run-trigger refs 已清理。
 - Canonical T-008 V003 commit：`c18945c52da6666ac9dbe6842fb3d51422fd440a`。
 
-### P2.3 Preliminary Gate Review｜8 PASS + 1 PENDING
+### P2.3 Visual Review｜5 PASS + 1 HOLD
+
+Product Owner 已上传六张正式审核图；ChatGPT 按 DoD-08 完成视觉复核：
+
+- PLAN：PASS
+- ELEVATION：PASS
+- AXON：PASS
+- EXTERIOR_3Q：PASS
+- STRUCTURE_DETAIL：PASS
+- EVIDENCE_DIAGNOSTIC：**HOLD**
+
+当前 Evidence Diagnostic renderer 仅形成“confirmed / 其他非 placeholder / placeholder”三路映射，无法明确区分 HCI 与 RC，也未显式使用 `override_ids` 识别 `Z-006-RC-01`，且图内无四级 legend。该结果不满足锁定 DoD-08 的 `confirmed / inference / reasonable completion / unknown-placeholder` 四级边界要求。
+
+修正续版：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V004.md`。
+
+### P2.3 Preliminary Gate Review｜8 PASS + 1 HOLD
 
 Gate Review：`docs/production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md`
 
 - DoD-01：PASS
 - DoD-02：PASS
-- DoD-03：PASS — engineering
+- DoD-03：PASS
 - DoD-04：PASS
 - DoD-05：PASS
 - DoD-06：PASS
 - DoD-07：PASS
-- DoD-08：**PENDING PRODUCT OWNER VISUAL / EVIDENCE DIAGNOSTIC REVIEW**
-- DoD-09：PASS — engineering archive complete
+- DoD-08：**HOLD — EVIDENCE DIAGNOSTIC FOUR-LEVEL MAPPING REQUIRED**
+- DoD-09：PASS
 
-**当前无工程 blocker。P2.3 Gate 尚未 PASS。**
-
-最终仍需 Product Owner 对 PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC 六图完成审核并明确批准。
+**P2.3 Gate 尚未 PASS。** 冻结全部模型与工程结果；T-008 V004 只修 Evidence Diagnostic。新版 diagnostic 通过 ChatGPT + Product Owner 复核并明确批准后方可关闭 P2.3 / P2。
