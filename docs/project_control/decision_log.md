@@ -31,6 +31,7 @@
 | D-025 | 2026-09-12 | Product Owner 正式批准并锁定 `P2.2 Definition of Done V001`。P2.2 作为第一项正式 Blender 历史候选几何 Gate，必须以 P2.1 正式参数集 + approved override + Geometry Dependency Matrix 为唯一历史/复原输入；DoD 9项覆盖 build manifest、完整主体六大范围、参数驱动与禁止 naked historical constants、机器几何验证、RC可替换、UNKNOWN/转角/原真性边界、geometry metadata traceability、deterministic rebuild + independent reopen + 人工结构审核、以及 canonical archive。P2.2 PASS 需要 9/9、完整主体、machine validation PASS、deterministic rebuild PASS、无未批准 geometry-critical input、无历史尺寸裸常量，并由 Product Owner 完成人工结构审核批准。T-007 可据此启动。 | ACTIVE / P2.2 DOD LOCKED / T-007 AUTHORIZED |
 | D-026 | 2026-09-12 | Product Owner 正式批准 `P2.2｜Parametric Structural Skeleton` PASS。T-007 V001 完成 6/6 主体结构范围，machine geometry validation PASS、32/32 tests PASS、naked historical constant scan PASS、deterministic rebuild PASS、independent reopen PASS；PLAN / ELEVATION / AXON 三张结构审核图完成直接人工审核并通过。P2.2 DoD 9/9 PASS，P2.2 正式 CLOSED；P2.3 `Integrated Reconstruction Candidate & QC` 解锁为当前 Gate。P2.2 PASS 只确认中等LOD参数化主体骨架工程成立，不把217个Blender对象等同于217个历史构件，也不解除Z-006、DG-114、HIS-002及转角/榫卯/隐角梁等证据边界。P2.3第一项工程任务前必须先明确并锁定P2.3 Definition of Done。 | ACTIVE / P2.2 PASS / CLOSED / P2.3 ENTERED / DOD REQUIRED |
 | **D-027** | **2026-09-12** | **Product Owner 正式批准并锁定 `P2.3 Definition of Done V001`。P2.3 作为 P2 最终 Gate，必须把 P2.2 approved structural baseline 升级为构件库驱动的整合复原候选，采用 `Component Library → Parametric Variant → Placement / Instance → Evidence Metadata` 架构；DoD 9项覆盖 Integration Manifest、构件族/variant/instance、完整整合几何、evidence metadata、参数驱动与可替换性、machine QC、deterministic rebuild + Local3.6↔Cloud4.5 roundtrip、六类视觉/evidence diagnostic 审核以及最终 P2 closure archive。CG-02～CG-06 持续强制生效；P2.3 PASS 不等于完全还原963原貌。T-008 获授权启动。** | **ACTIVE / P2.3 DOD LOCKED / T-008 AUTHORIZED** |
+| **D-028** | **2026-09-12** | **Product Owner 正式批准 `P2.3｜PASS`。T-008 V001–V004 完成构件库驱动整合候选、33/33 tests、34/34 machine QC、Local3.6→Cloud4.5→Local3.6 roundtrip、六类视觉审核与修正版 Evidence Diagnostic；P2.3 DoD 9/9 PASS，P2 四个 Gate 4/4 PASS，P2 正式 CLOSED。同时批准 Evidence Visualization 双层 carry-forward：Risk Map 保留最高不确定性优先的 Conservative Risk Map；后续整寺级最终证据展示新增 Evidence Composition Map，按属性/子构件表达 CONFIRMED/HCI/RC/UNKNOWN 组成，正常建筑展示与证据着色分离。** | **ACTIVE / P2.3 PASS / P2 CLOSED / EVIDENCE VISUALIZATION CARRY-FORWARD LOCKED** |
 
 ## D-012 直接影响
 
@@ -182,3 +183,14 @@
 - 至少输出 PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC 六类审核图，并由 Product Owner 完成人工审核。
 - P2.3 PASS 表示“受控的963候选复原模型工程成立”，不是“完全还原963年原貌”，也不自动解决逐构件原真性或全部历史节点争议。
 - T-008 被授权为 P2.3 第一项正式工程任务；Engineering PASS 不等于 P2.3 Gate PASS。
+
+## D-028 P2.3 Approval / P2 Closure / Evidence Visualization Carry-forward
+
+- Product Owner 已直接审核最终六类 review set，修正版 `EVIDENCE_DIAGNOSTIC_V002` PASS，并明确批准 `P2.3｜PASS`。
+- P2.3 DoD-01～DoD-09：**9 / 9 PASS**；P2.3 正式 CLOSED。
+- P2.0 / P2.1 / P2.2 / P2.3：**4 / 4 Gates PASS**；`P2｜正式参数化与3D复原` 正式 CLOSED。
+- P2.3 Risk Map 中 `CONFIRMED=0 / HCI=0 / RC=35 / UNKNOWN-PLACEHOLDER=330` 是“实例整体按最高不确定性聚合”的保守风险显示，不得解释成“参数证据没有 CONFIRMED/HCI”。
+- Evidence Visualization 后续采用双层体系：`Risk Map` 用于内部风险边界审计；`Evidence Composition Map` 用于按属性/子构件表达多等级证据组成。正式正常展示与证据颜色分离。
+- 正式 carry-forward 文件：`docs/production/zhenguo_wanfo/EVIDENCE_VISUALIZATION_CARRY_FORWARD_V001.md`。
+- Z-006、DG-114、HIS-002、45°转角/榫卯/隐角梁等历史边界继续有效；P2 Closure 不升级这些证据状态。
+- 下一阶段尚未定义 Gate 架构；在 post-P2 phase / Gate architecture 明确前，不创建 T-009，不自动扩大建模精度或范围。
