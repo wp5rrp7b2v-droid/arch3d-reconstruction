@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R020",
+  "state_revision": "R021",
   "last_updated": "2026-09-12",
-  "session_status": "ACTIVE_P1_3_GATE_REVIEW_READY",
+  "session_status": "AWAITING_PRODUCT_OWNER_P1_3_DECISION",
   "next_session_date": null,
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
@@ -20,11 +20,11 @@
       "P1.0": {"status": "PASS", "name": "选题标准锁定"},
       "P1.1": {"status": "PASS", "name": "候选案例比较与定选"},
       "P1.2": {"status": "PASS", "name": "正式证据包建立"},
-      "P1.3": {"status": "IN_PROGRESS", "name": "证据分级与可复原性 Go / No-Go"}
+      "P1.3": {"status": "READY_FOR_PRODUCT_OWNER_DECISION", "name": "证据分级与可复原性 Go / No-Go"}
     },
-    "note": "P1.3 Step 1高风险分类与Step 2全量关键参数分类均已完成；85/85参数已映射四级证据。当前进入最终Gate Review准备，正式3D生产仍受P1.3 PASS约束。"
+    "note": "P1.3 Step 1/2/3 均已完成。Final Gate Review = 6 PASS + 2 PASS WITH CONDITION + 0 FAIL；Reviewer Recommendation = APPROVE CONDITIONAL GO。等待 Product Owner 决策，批准前正式3D生产仍禁止启动。"
   },
-  "decision_required": false,
+  "decision_required": true,
   "blocker": null,
   "current_task": null,
   "current_case": {
@@ -37,7 +37,7 @@
     "selection_scope_note": "该分数只表示首案适配度，不表示建筑历史价值排名。"
   },
   "p1_evidence_progress": {
-    "status": "P1.2 CLOSED / P1.3 STEP 2 COMPLETE / GATE REVIEW READY",
+    "status": "P1.3 GATE REVIEW COMPLETE / AWAITING PRODUCT OWNER DECISION",
     "primary_sources": [
       {
         "id": "SRC-ZG-WF-001",
@@ -61,7 +61,8 @@
       "docs/evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V002.md",
       "docs/evidence/zhenguo_wanfo/P1_2_GATE_REVIEW_2026-09-11.md",
       "docs/evidence/zhenguo_wanfo/P1_3_HIGH_RISK_CLASSIFICATION_V001.md",
-      "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md"
+      "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+      "docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md"
     ],
     "parameter_candidate_matrix": {
       "path": "docs/evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V002.md",
@@ -69,7 +70,7 @@
       "supersedes": "docs/evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V001.md",
       "rule": "参数按 observed_as_measured / report_ideal_model / reconstructed_963_candidate / topology_or_rule 分层；DIRECT_VERIFIED仅表示原页已核，不自动等于963历史事实。"
     },
-    "gate_review": {
+    "p1_2_gate_review": {
       "path": "docs/evidence/zhenguo_wanfo/P1_2_GATE_REVIEW_2026-09-11.md",
       "result": "APPROVED / PASS",
       "checks_passed": 10,
@@ -78,7 +79,7 @@
       "approved_date": "2026-09-11"
     },
     "p1_3_classification": {
-      "status": "STEP_1_STEP_2_COMPLETE / FINAL_GATE_REVIEW_READY",
+      "status": "STEP_1_STEP_2_STEP_3_COMPLETE / AWAITING_PO_DECISION",
       "high_risk_path": "docs/evidence/zhenguo_wanfo/P1_3_HIGH_RISK_CLASSIFICATION_V001.md",
       "full_classification_path": "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
       "parameter_total": 85,
@@ -88,10 +89,23 @@
         "reasonable_completion": 4,
         "unknown": 3
       },
-      "provisional_direction": "CONDITIONAL_GO_CANDIDATE",
-      "gate_status": "NOT_APPROVED",
       "global_no_go_blocker_found": false,
       "production_rule": "进入正式3D前，关键参数必须保存value + classification + time_layer + source_layer + production_use + blocking_level；禁止裸数字跨层进入生产。"
+    },
+    "p1_3_gate_review": {
+      "path": "docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md",
+      "status": "COMPLETE / AWAITING_PRODUCT_OWNER_DECISION",
+      "review_result": "6 PASS + 2 PASS_WITH_CONDITION + 0 FAIL",
+      "reviewer_recommendation": "APPROVE_CONDITIONAL_GO",
+      "gate_result": "NOT_YET_APPROVED",
+      "conditional_go_rules": [
+        "CG-01 Evidence-aware Parameter Schema must be implemented before first formal geometry production",
+        "CG-02 UNKNOWN / DO_NOT_LOCK must not be silently hard-coded",
+        "CG-03 REASONABLE_COMPLETION must remain parameterized, replaceable and traceable",
+        "CG-04 observed_as_measured / report_ideal_model / reconstructed_963_candidate must remain separate",
+        "CG-05 unresolved corner precision may only enter as topology skeleton / medium LOD",
+        "CG-06 historical authenticity claims must remain bounded by component-level uncertainty"
+      ]
     },
     "open_gaps_for_p1_3": [
       "963原设计柱高仍未知；项目Z基准仅作为工程坐标规则，不等于历史地坪",
@@ -149,13 +163,13 @@
     "date": "2026-09-11",
     "decision": "Product Owner 批准 P1.2 正式通过；P1 Gate 3/4 PASS；P1.3 解锁进入证据分级与可复原性 Go / No-Go。"
   },
-  "next_action": "P1.3 Step 3｜执行最终 Gate Review：检查85/85分类完整性、HIGH blocker隔离策略和参数证据schema要求，形成 Go / Conditional Go / No-Go 推荐并提交 Product Owner 批准。",
+  "next_action": "Product Owner 决定 P1.3 Gate：APPROVE CONDITIONAL GO / HOLD / NO-GO。Reviewer Recommendation = APPROVE CONDITIONAL GO。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v006",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_P1_3_STEP_2",
+    "refresh_status": "STALE_AFTER_P1_3_STEP_3",
     "source_files": [
       "project_state.json",
       "decision_log.md",
@@ -169,7 +183,8 @@
       "../evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V002.md",
       "../evidence/zhenguo_wanfo/P1_2_GATE_REVIEW_2026-09-11.md",
       "../evidence/zhenguo_wanfo/P1_3_HIGH_RISK_CLASSIFICATION_V001.md",
-      "../evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md"
+      "../evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+      "../evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md"
     ]
   }
 }
