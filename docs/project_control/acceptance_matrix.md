@@ -70,7 +70,7 @@ P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段。P2.0 已完成 CG-01 
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
 | P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **PASS / APPROVED 2026-09-12** | T-005 V001+V002 工程验证全部 PASS；Gate Review 7/7 PASS；工程证据归档至 GitHub canonical repo，commit `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`。Product Owner 已批准 P2.0。 |
-| P2.1｜正式生产参数集锁定｜Formal Production Parameter Set | 将 P1 已分类参数转为 P2.0 Schema 下的正式 production parameter set；完成 85/85 迁移、Geometry Dependency Matrix、UNKNOWN 几何阻断判定、机器 preflight 与 canonical version lock | **IN PROGRESS / DoD LOCKED / T-006 READY TO DEFINE** | **DoD V001 已锁定为9项。P2.1 不生成正式 Blender 几何；9/9 PASS 且 geometry-critical unresolved blocker=0 后方可进入 P2.2。** |
+| P2.1｜正式生产参数集锁定｜Formal Production Parameter Set | 将 P1 已分类参数转为 P2.0 Schema 下的正式 production parameter set；完成 85/85 迁移、Geometry Dependency Matrix、UNKNOWN 几何阻断判定、机器 preflight 与 canonical version lock | **IN PROGRESS / ENGINEERING HOLD / BLOCKED BY Z-006** | T-006 V001 已完成 85/85 参数迁移与 85/85 dependency matrix；机器验证 PASS、测试 11/11 PASS，但 `Z-006 / column_height_963_design_mm` = `BLOCKS_P2_2_GEOMETRY`，geometry-critical unresolved blocker count = 1。P2.1 不得 PASS。 |
 | P2.2｜参数化主体结构候选模型｜Parametric Structural Skeleton | 由 P2.1 正式参数集驱动生成主体结构候选模型，覆盖柱网、柱、主要梁架、斗栱拓扑骨架、屋顶控制几何及主要空间关系，并验证可重复生成与参数响应 | **LOCKED / WAITING FOR P2.1 PASS** | 第一项正式 Blender 几何 Gate；CG-05 未解决转角精确节点/榫卯/隐角梁仅允许中等LOD拓扑骨架。 |
 | P2.3｜整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC | 整合结构、屋面、斗栱体系与 evidence metadata，完成可追溯性、确定性重建、兼容性、可替换性与视觉 QC，形成正式963候选复原模型 | **LOCKED / WAITING FOR P2.2 PASS** | PASS 表示“工程可复现、证据可追溯、不确定性透明的963候选复原模型成立”，不等于完全还原963原貌。 |
 
@@ -130,4 +130,15 @@ P2.1 必须 9 / 9 全部通过：
 
 如果 UNKNOWN 对 P2.2 主体结构属于必须输入，则 P2.1 不能靠跳过它获得 PASS；必须新增证据，或由 Product Owner 明确批准一个新的、独立、可替换、可追溯的 REASONABLE_COMPLETION。
 
-DoD 锁定后允许创建 T-006；T-006 仅执行数据迁移、dependency/preflight 与验证，不生成正式 Blender 几何。P2.1 PASS 前不得进入 P2.2。
+### T-006 V001 Engineering Result｜HOLD 2026-09-12
+
+- Formal Production Parameter Set：85 / 85；
+- Geometry Dependency Matrix：85 / 85；
+- Machine validation：PASS；
+- Automated tests：11 / 11 PASS；
+- Production preflight：HOLD；
+- UNKNOWN：`Z-006` = `BLOCKS_P2_2_GEOMETRY`；`DG-114` = `BOUNDED_NON_BLOCKING`；`HIS-002` = `METADATA_ONLY_BLOCK`；
+- geometry-critical unresolved blocker count：**1**；
+- canonical engineering commit：`1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0`。
+
+当前唯一 P2.1 生产 blocker：**Z-006｜963原设计柱高**。下一步先做 Z-006 定向证据复核；若现有证据仍不足，再由 Product Owner 决定是否批准一个独立、可替换、可追溯的 REASONABLE_COMPLETION。P2.1 PASS 前不得进入 P2.2。
