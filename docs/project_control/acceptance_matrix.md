@@ -31,25 +31,6 @@
 
 **P1 Gate Final：4 / 4 PASS。**
 
-### P1 Final Evidence
-
-- `docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md`
-- `docs/evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V002.md`
-- `docs/evidence/zhenguo_wanfo/P1_3_HIGH_RISK_CLASSIFICATION_V001.md`
-- `docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md`
-- `docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md`
-- `docs/project_control/phase_archive/P1_closure.md`
-
-### P1.3 Final Classification
-
-- CONFIRMED：46
-- HIGH_CONFIDENCE_INFERENCE：32
-- REASONABLE_COMPLETION：4
-- UNKNOWN：3
-- TOTAL：85
-
-`CONFIRMED` 必须结合 `time_layer` 解读，不能自动等同963年原设计事实。
-
 ### P1.3 Conditional Go｜强制边界
 
 1. 第一项正式几何生产前建立 Evidence-aware Parameter Schema；
@@ -63,186 +44,67 @@
 
 ## P2｜正式参数化与3D复原｜ACTIVE
 
-### P2 Entry Rule
-
-P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段。P2.0 已完成 CG-01 所要求的 Evidence-aware Parameter Schema 前置条件；后续正式几何工作必须继续遵守 CG-02～CG-06。
-
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
-| P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **PASS / APPROVED 2026-09-12** | T-005 V001+V002 工程验证全部 PASS；Gate Review 7/7 PASS；工程证据归档至 GitHub canonical repo，commit `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`。Product Owner 已批准 P2.0。 |
-| P2.1｜正式生产参数集锁定｜Formal Production Parameter Set | 将 P1 已分类参数转为 P2.0 Schema 下的正式 production parameter set；完成 85/85 迁移、Geometry Dependency Matrix、UNKNOWN 几何阻断判定、机器 preflight 与 canonical version lock | **PASS / APPROVED / CLOSED 2026-09-12** | T-006 V002：85/85正式参数、85/85 dependency matrix、21/21 tests、override validation 与 production preflight 全部 PASS；`geometry-critical unresolved blocker=0`。Z-006 保持 UNKNOWN；RC-01 仅为独立可替换 production candidate。 |
-| P2.2｜参数化主体结构候选模型｜Parametric Structural Skeleton | 由 P2.1 正式参数集驱动生成主体结构候选模型，覆盖柱网、柱、主要梁架、斗栱拓扑骨架、屋顶控制几何及主要空间关系，并验证可重复生成与参数响应 | **PASS / APPROVED / CLOSED 2026-09-12** | T-007 V001：6/6 scope、217 machine objects、machine geometry validation PASS、32/32 tests、deterministic rebuild PASS、independent reopen PASS、naked constant scan PASS；PLAN / ELEVATION / AXON 完成 Product Owner 直接结构审核并通过。Gate Review 9/9 PASS。217 是 Blender 机器对象数，不是历史构件数。 |
-| P2.3｜整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC | 整合结构、屋面、斗栱体系与 evidence metadata，完成构件族/variant/instance、可追溯性、确定性重建、Local/Cloud兼容性、可替换性、machine QC 与视觉/evidence diagnostic QC，形成正式963候选复原模型 | **IN PROGRESS / DOD LOCKED / T-008 READY** | D-027 已锁定 P2.3 Definition of Done V001；T-008 已授权。正式架构为 `Component Library → Parametric Variant → Placement / Instance → Evidence Metadata`；CG-02～CG-06 持续生效。Engineering PASS 不等于 P2.3 Gate PASS。 |
+| P2.0｜Evidence-aware Parameter Schema | Evidence-aware parameter contract | **PASS / APPROVED** | CG-01 satisfied. |
+| P2.1｜Formal Production Parameter Set | 85/85 formal set + dependency + preflight | **PASS / APPROVED / CLOSED** | Z-006 remains UNKNOWN; RC-01 replaceable. |
+| P2.2｜Parametric Structural Skeleton | Complete medium-LOD structural skeleton | **PASS / APPROVED / CLOSED** | 217 = machine objects, not historical component count. |
+| P2.3｜Integrated Reconstruction Candidate & QC | Component-library-driven integrated candidate + final engineering QC | **IN PROGRESS / ENGINEERING HOLD / ROUNDTRIP REQUIRED** | T-008 V001 local engineering complete; DoD-07 real Cloud Blender 4.5.13 roundtrip and Local 3.6 return validation still missing. |
 
-### P2.0 Final Result
+### P2.1 Gate Final｜APPROVED / PASS / CLOSED
 
-- Schema 字段完整且有明确枚举/约束：**PASS**；
-- 四类 classification 实例验证：**PASS**；
-- UNKNOWN 保持 `null / DO_NOT_LOCK` 且数字硬锁被机械拒绝：**PASS**；
-- REASONABLE_COMPLETION 必须可替换：**PASS**；
-- `observed_as_measured` / `report_ideal_model` / `reconstructed_963_candidate` 三层并存且不串层：**PASS**；
-- 参数可由后续 Python 读取且本 Gate 不生成正式建筑几何：**PASS**；
-- T-005 工程证据进入 canonical GitHub：**PASS**。
+- DoD 9/9 PASS。
+- `geometry-critical unresolved blocker = 0`。
+- Z-006 仍为 UNKNOWN；Z-006-RC-01 仍为独立可替换 production candidate。
 
-**P2.0 Gate Final：7 / 7 PASS / Product Owner APPROVED。**
+### P2.2 Gate Final｜APPROVED / PASS / CLOSED
 
-### P2.0 Engineering Evidence
+- DoD 9/9 PASS。
+- 6/6 structural scope；machine validation / deterministic rebuild / reopen / Product Owner structural review 全部 PASS。
+- 217 仅为 Blender 机器结构/控制对象数。
 
-- `production/zhenguo_wanfo/validation/P2_0_SCHEMA_VALIDATION_REPORT_V001.md`
-- `production/zhenguo_wanfo/validation/P2_0_SCHEMA_VALIDATION_REPORT_V002.md`
-- `production/zhenguo_wanfo/tests/test_schema_validation_v001.py`
-- `production/zhenguo_wanfo/tests/fixtures/P2_0_VALID_THREE_LAYER_COEXISTENCE_V001.json`
-- canonical archive commit: `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`
-
-Gate Review：`docs/production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md`  
-Product Owner Approval：**P2.0 PASS / 2026-09-12**。
-
-### P2.0 Carry-forward
-
-- CG-01 视为已满足；
-- CG-02～CG-06 继续强制生效；
-- P2.0 PASS 不表示所有85项参数都已 production-locked；
-- UNKNOWN、合理补全、三层语义和历史原真性边界不得在后续工程中丢失。
-
-### P2.1–P2.3 Architecture V001｜APPROVED 2026-09-12
-
-生产路径正式锁定为：
-
-**P2.1 参数 → P2.2 结构 → P2.3 整合候选与QC**
-
-### P2.1 Definition of Done V001｜LOCKED 2026-09-12
-
-正式 DoD：`docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md`
-
-P2.1 必须 9 / 9 全部通过：
-
-1. **85 / 85 参数完整迁移**：无遗漏、无重复、非几何 evidence / history / metadata requirement 不得因“不直接建模”而被丢弃；
-2. **证据语义保持一致**：classification / time_layer / source_layer / production_use 等不得静默漂移；
-3. **Schema + Reader 机器验证 PASS**：正式 production set 通过 P2.0 Schema，不存在脱离 Schema 的裸数字生产输入；
-4. **UNKNOWN 几何依赖明确**：每个 UNKNOWN 必须判定为 `BLOCKS_P2_2_GEOMETRY / BOUNDED_NON_BLOCKING / METADATA_ONLY_BLOCK`；
-5. **Geometry Dependency Matrix 完整**：全部85项明确其 P2.2 角色；几何依赖等级不得改变历史证据等级；
-6. **REASONABLE_COMPLETION 可独立替换**：现有4项以及任何新增临时候选均保持 `is_replaceable=true`、来源与理由可追溯；
-7. **三层语义与构件原真性边界保留**：observed / report ideal / reconstructed963 不覆盖；后续构件 metadata 默认未知时不得自动升级真实性；
-8. **Production preflight 可机器执行**：可重复输出参数计数、UNKNOWN/RC清单、dependency覆盖率、几何 blocker 数、Schema与time-layer检查；
-9. **版本锁定与 canonical archive**：正式参数集、dependency matrix、preflight、validation report 进入 GitHub canonical repo，并记录版本/commit/hash。
-
-**P2.1 PASS 的附加硬条件：`geometry-critical unresolved blocker = 0`。**
-
-如果 UNKNOWN 对 P2.2 主体结构属于必须输入，则 P2.1 不能靠跳过它获得 PASS；必须新增证据，或由 Product Owner 明确批准一个新的、独立、可替换、可追溯的 REASONABLE_COMPLETION。
-
-### T-006 V001 Engineering Result｜HOLD 2026-09-12
-
-- Formal Production Parameter Set：85 / 85；
-- Geometry Dependency Matrix：85 / 85；
-- Machine validation：PASS；
-- Automated tests：11 / 11 PASS；
-- Production preflight：HOLD；
-- UNKNOWN：`Z-006` = `BLOCKS_P2_2_GEOMETRY`；`DG-114` = `BOUNDED_NON_BLOCKING`；`HIS-002` = `METADATA_ONLY_BLOCK`；
-- geometry-critical unresolved blocker count：**1**；
-- canonical engineering commit：`1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0`。
-
-### D-023｜Z-006-RC-01 Approved Production Candidate
-
-Product Owner 已批准：
-
-- `Z-006` 本体继续保持 `UNKNOWN / null / DO_NOT_LOCK`；
-- 独立候选 `Z-006-RC-01` = `11 × MOD-006`；
-- 当前 `MOD-006 ≈ 321.3mm`，因此当前生产解析值 = **3534.3mm**；
-- classification = `REASONABLE_COMPLETION`；
-- time layer = `reconstructed_963_candidate`；
-- `is_replaceable = true`；
-- RC-01 不计入原85项 classification counts，不得被描述为已证实963历史柱高。
-
-### T-006 V002 Engineering Result｜PASS 2026-09-12
-
-- V001 regression：**11 / 11 PASS**；
-- Full automated tests：**21 / 21 PASS**；
-- Formal Parameter Set：**85 / 85 unchanged**；
-- Z-006：`UNKNOWN / null / DO_NOT_LOCK`，dependency 仍为 `BLOCKS_P2_2_GEOMETRY`；
-- Z-006-RC-01：独立 sidecar、`is_replaceable=true`、D-023 traceable、`11 × MOD-006 = 3534.3mm`；
-- historical geometry-critical unknown count：**1**；
-- approved candidate resolution count：**1**；
-- geometry-critical unresolved blocker count：**0**；
-- production preflight：**PASS / exit 0**；
-- canonical engineering commit：`fc124922d5c0c1674548f9b99968f9848ffbb332`。
-
-### P2.1 Gate Final｜APPROVED / PASS / CLOSED 2026-09-12
-
-- Gate Review：**9 / 9 PASS**；
-- Hard PASS condition：**PASS**；
-- Product Owner：**APPROVED P2.1 PASS**；
-- Gate Review file：`docs/production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md`。
-
-Carry-forward：P2.1 PASS 只表示正式生产输入基线已满足进入主体结构候选模型的条件，不表示 Z-006 已成为历史事实。P2.2 使用正式 P2.1 参数集 + approved override sidecar，且所有合理补全继续可替换、可追溯。
-
-### P2.2 Definition of Done V001｜LOCKED 2026-09-12
-
-正式 DoD：`docs/production/zhenguo_wanfo/P2_2_DEFINITION_OF_DONE_V001.md`
-
-P2.2 必须完成 9 项：
-
-1. **正式输入合同 + Build Manifest**：输入版本/hash、Blender/script版本、实际几何参数、RC/override、bounded UNKNOWN 与输出 hash 全部可追溯；
-2. **主体六大范围完整**：grid、columns、primary frame、medium-LOD bracket topology、roof control geometry、主要出檐/山面与空间关系；
-3. **参数驱动 / 禁止 Naked Historical Constants**：历史/复原尺寸只能来自 P2.1 正式输入、批准 override 或明确派生规则；
-4. **关键几何机器验证**：柱网、柱位、柱高解析、梁架跨度/层级、斗栱拓扑、屋顶控制与主要出檐/山面关系均需机器验证；
-5. **RC 可替换**：Z-006-RC-01 与其他合理补全不得烘焙，替换后必须可重建；
-6. **UNKNOWN / 转角 / 原真性边界保留**：DG-114、HIS-002、45°转角、榫卯、隐角梁争议不得伪装成历史精确结论；
-7. **Geometry Metadata / Evidence Traceability**：主要对象/对象族可映射至 evidence class、source layer、originality status 与 parameter IDs；
-8. **Deterministic Rebuild + 技术完整性 + 人工结构审核**：同输入两次构建一致、独立重开稳定、Local Blender 3.6 可维护，并输出至少三张结构审核图；
-9. **正式归档**：generation script、manifest、tests、validation、determinism evidence、review PNG 与 local-only `.blend` hash/版本记录进入正式证据链。
-
-**P2.2 PASS 还要求：完整主体、machine geometry validation PASS、deterministic rebuild PASS、无未批准 geometry-critical input、无 naked historical constants，并由 Product Owner 完成人工结构审核批准。**
-
-### T-007 V001 Engineering Result｜PASS 2026-09-12
-
-- Structural scope：**6 / 6**；217 objects = GRID 8 / COLUMN 12 / FRAME 62 / BRACKET 88 / ROOF 43 / GABLE 4；
-- Build Manifest：PASS；正式输入/override/dependency/schema hash 与 decision boundary 可追溯；
-- Machine geometry validation：**PASS / 217 objects / 0 errors**；
-- Automated tests：**32 / 32 PASS**；
-- Naked historical constant scan：**PASS**；
-- Deterministic rebuild：**PASS**（结构/语义比较一致；Blender binary serialization 不要求 byte-identical）；
-- Independent reopen：**PASS / PASS**；
-- Replaceability：RC-01 与其他 RC synthetic rebuild tests PASS；
-- Z-006 仍为 `UNKNOWN / null / DO_NOT_LOCK`；RC-01 仍为独立可替换生产候选；
-- Review images：PLAN / ELEVATION / AXON 已生成并进入 canonical archive；
-- local-only `.blend` SHA256=`3b61ccbaca17836bd63d9369ebc3a4c6e25fb27f0d274ea67e64f732ad3000e4`；
-- canonical engineering commit：`a5a4181499c0494d16fbaf59d29337fa7d688e9d`。
-
-### P2.2 Gate Final｜APPROVED / PASS / CLOSED 2026-09-12
-
-- DoD-01～DoD-09：**9 / 9 PASS**；
-- Complete six-system scope：**PASS**；
-- Machine geometry validation：**PASS**；
-- Deterministic rebuild：**PASS**；
-- Independent reopen：**PASS**；
-- Product Owner PLAN / ELEVATION / AXON structural review：**PASS**；
-- Product Owner explicit decision：**APPROVED P2.2 PASS**；
-- Gate Review：`docs/production/zhenguo_wanfo/P2_2_GATE_REVIEW_2026-09-12.md`。
-
-Carry-forward：217 是机器结构/控制对象数，不等于217个历史构件；P2.2 PASS 不升级 Z-006、DG-114、HIS-002 或未解决转角/榫卯/隐角梁的历史证据等级。
-
-### P2.3 Definition of Done V001｜LOCKED 2026-09-12
+### P2.3 Definition of Done V001｜LOCKED
 
 正式 DoD：`docs/production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md`
 
-P2.3 必须完成 9 项：
+必须完成：
 
-1. **Integration Manifest**：完整记录 P2.1/P2.2 输入、component definitions、RC/override、bounded UNKNOWN、输出 hash 与 QC 环境；
-2. **Component Library / Parametric Variant / Placement-Instance 架构**：重复构件统一由构件族/规则驱动，禁止复制后逐件不可追溯漂移；
-3. **完整整合候选几何**：斗栱、梁架、屋顶、脊檐山面形成连贯建筑系统，且 diagnostic/control geometry 与 final candidate 分层；
-4. **Evidence Metadata / 历史声明边界贯穿**：Z-006、RC-01、DG-114、HIS-002 与转角/榫卯/隐角梁边界不因视觉完整度升级；
-5. **参数驱动 / 可替换 / 无未登记核心手工修模**：RC/variant 改变可通过重建传播；
-6. **Integrated Machine QC**：family/variant/instance、stable IDs、结构链、P2.2 regression、metadata mapping 与 presentation/diagnostic separation 全部检查；
-7. **Deterministic Rebuild + Local/Cloud Roundtrip**：两次干净构建、独立重开，并完成 Local3.6 → Cloud4.5 → Local3.6 核心几何与 metadata 往返 QC；
-8. **视觉 QC + Evidence Diagnostic + Product Owner Review**：至少 PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC 六类审核图；
-9. **最终归档与 P2 Closure Evidence**：component library、scripts、manifest、tests、validation、roundtrip evidence、known limitations、review evidence、local-only `.blend` hash 与 canonical commit 完整归档。
+1. Integration Manifest；
+2. Component Library → Parametric Variant → Placement / Instance → Evidence Metadata；
+3. 完整整合候选几何；
+4. Evidence Metadata / historical claim boundary；
+5. 参数驱动、RC可替换、无不可追溯核心手工漂移；
+6. Integrated Machine QC；
+7. Deterministic rebuild + independent reopen + **Local 3.6 → Cloud 4.5 → Local 3.6 roundtrip QC**；
+8. 六类视觉 QC / Evidence Diagnostic + Product Owner review；
+9. 最终归档、Known Limitations 与 P2 Closure Evidence。
 
-**P2.3 PASS 还要求：完整整合候选成立、component architecture PASS、machine QC PASS、deterministic rebuild / independent reopen PASS、Local3.6↔Cloud4.5↔Local3.6 core roundtrip PASS、无未批准历史输入或 naked constants、evidence boundaries 无静默升级，并由 Product Owner 完成视觉/evidence diagnostic 审核明确批准。**
+### T-008 V001 Engineering Result｜HOLD 2026-09-12
 
-### T-008｜READY FOR LOCAL EXECUTION
+- Component Library：**11 families / 40 variants**。
+- Integrated candidate：**365 stable mesh instances**。
+- Machine QC：**34/34 PASS / 0 errors**。
+- Automated tests：**33/33 PASS**。
+- Replacement / mutation：PASS。
+- Deterministic rebuild：PASS。
+- Independent reopen：PASS / PASS。
+- Naked historical constant / manual drift audit：PASS。
+- `Z-006` 保持 UNKNOWN；`Z-006-RC-01`、DG-114、HIS-002 与 45°转角等历史边界保持。
+- 六张 review PNG 已生成；Product Owner 正式视觉审核尚未发生。
+- Local-only final candidate SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
+- Canonical engineering commit：`5bd6ca1f8300a170b74c3a9058352768800b56a6`。
+- **DoD-07 = HOLD**：Cloud Blender 4.5.13 workflow 尚无真实 run；无 returned artifact；无 Local Blender 3.6 return validation。
 
-正式任务：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001.md`
+当前 P2.3 Gate：**NOT PASS / ENGINEERING HOLD**。
 
-T-008 目标：建立构件库 / variant / instance 数据合同，将 P2.2 approved structural baseline 升级为完整整合复原候选，并完成 P2.3 machine QC、replacement、deterministic rebuild、independent reopen、Local/Cloud roundtrip 与六类审核证据。
+### T-008 V002 Continuation｜READY FOR LOCAL EXECUTION
 
-**T-008 Engineering PASS 不等于 P2.3 Gate PASS。**
+- 同一 T-008 目标继续，不创建 T-009。
+- V001 已通过的本地整合候选与工程证据冻结；V002 仅关闭 DoD-07 blocker。
+- 采用普通 Git **temporary tag → `.blend` blob** 传输；不把 `.blend` 提交到 main，不提取 Git credential，不 force-push。
+- 运行 Cloud Blender 4.5.13 reopen / semantic QC / save / independent reopen。
+- 下载 artifact 后以 Local Blender 3.6.23 做返回验证。
+- Roundtrip evidence 入库后删除临时 transport tag。
+- Task Contract：`docs/tasks/T-008_P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V002.md`。
+
+P2.3 最终 PASS 仍需：T-008 工程 PASS + ChatGPT 独立复核 + Product Owner 对 PLAN / ELEVATION / AXON / EXTERIOR_3Q / STRUCTURE_DETAIL / EVIDENCE_DIAGNOSTIC 六图完成正式审核并明确批准。
