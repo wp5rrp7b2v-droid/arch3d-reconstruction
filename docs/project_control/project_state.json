@@ -78,67 +78,12 @@
     "p2_2_dod_decision": "D-025",
     "p2_2_dod": "docs/production/zhenguo_wanfo/P2_2_DEFINITION_OF_DONE_V001.md",
     "production_path": ["P2.1 Formal Production Parameter Set", "P2.2 Parametric Structural Skeleton", "P2.3 Integrated Reconstruction Candidate & QC"],
-    "p2_1_result": {
-      "status": "PASS / APPROVED / CLOSED",
-      "dod": "9/9 PASS",
-      "geometry_critical_unresolved_blocker_count": 0,
-      "formal_parameter_set": "85/85",
-      "dependency_matrix": "85/85",
-      "gate_review": "docs/production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md"
-    },
-    "t006_v001_result": {
-      "status": "ENGINEERING_HOLD",
-      "formal_parameter_set": "85/85",
-      "classification_counts": {"confirmed": 46, "high_confidence_inference": 32, "reasonable_completion": 4, "unknown": 3},
-      "dependency_matrix": "85/85",
-      "machine_validation": "PASS",
-      "automated_tests": "PASS 11/11",
-      "production_preflight": "HOLD / exit 1",
-      "geometry_critical_unresolved_blocker_count": 1,
-      "canonical_commit": "1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0"
-    },
-    "z006_rc01": {
-      "status": "PRODUCT_OWNER_APPROVED / ENGINEERING_VALIDATED",
-      "candidate_id": "Z-006-RC-01",
-      "target_parameter_id": "Z-006",
-      "classification": "REASONABLE_COMPLETION",
-      "time_layer": "reconstructed_963_candidate",
-      "formula": "11 * MOD-006",
-      "current_resolved_value_mm": 3534.3,
-      "is_replaceable": true,
-      "approval_decision_id": "D-023",
-      "historical_parameter_remains_unknown": true
-    },
-    "t006_v002_result": {
-      "status": "ENGINEERING_PASS / COMPLETE",
-      "v001_regression": "PASS 11/11",
-      "automated_tests": "PASS 21/21",
-      "approved_override_validation": "PASS",
-      "production_preflight": "PASS / exit 0",
-      "historical_geometry_critical_unknown_count": 1,
-      "approved_candidate_resolution_count": 1,
-      "geometry_critical_unresolved_blocker_count": 0,
-      "canonical_commit": "fc124922d5c0c1674548f9b99968f9848ffbb332"
-    },
-    "p2_2_scope": [
-      "column grid",
-      "columns",
-      "primary frame",
-      "bracket topology / medium LOD",
-      "roof control geometry/profile",
-      "main eave/gable relations"
-    ],
-    "p2_2_dod_summary": [
-      "formal input contract + build manifest",
-      "complete six-system structural scope",
-      "parameter-driven geometry / no naked historical constants",
-      "machine geometry validation",
-      "replaceable RC/override behavior",
-      "UNKNOWN/corner/authenticity boundaries preserved",
-      "geometry metadata + evidence traceability",
-      "deterministic rebuild + independent reopen + human structural review",
-      "canonical engineering archive"
-    ],
+    "p2_1_result": {"status": "PASS / APPROVED / CLOSED", "dod": "9/9 PASS", "geometry_critical_unresolved_blocker_count": 0, "formal_parameter_set": "85/85", "dependency_matrix": "85/85", "gate_review": "docs/production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md"},
+    "t006_v001_result": {"status": "ENGINEERING_HOLD", "formal_parameter_set": "85/85", "classification_counts": {"confirmed": 46, "high_confidence_inference": 32, "reasonable_completion": 4, "unknown": 3}, "dependency_matrix": "85/85", "machine_validation": "PASS", "automated_tests": "PASS 11/11", "production_preflight": "HOLD / exit 1", "geometry_critical_unresolved_blocker_count": 1, "canonical_commit": "1ccf08aeed6f5bb6ae3ed0e0ccd25cd8346055f0"},
+    "z006_rc01": {"status": "PRODUCT_OWNER_APPROVED / ENGINEERING_VALIDATED", "candidate_id": "Z-006-RC-01", "target_parameter_id": "Z-006", "classification": "REASONABLE_COMPLETION", "time_layer": "reconstructed_963_candidate", "formula": "11 * MOD-006", "current_resolved_value_mm": 3534.3, "is_replaceable": true, "approval_decision_id": "D-023", "historical_parameter_remains_unknown": true},
+    "t006_v002_result": {"status": "ENGINEERING_PASS / COMPLETE", "v001_regression": "PASS 11/11", "automated_tests": "PASS 21/21", "approved_override_validation": "PASS", "production_preflight": "PASS / exit 0", "historical_geometry_critical_unknown_count": 1, "approved_candidate_resolution_count": 1, "geometry_critical_unresolved_blocker_count": 0, "canonical_commit": "fc124922d5c0c1674548f9b99968f9848ffbb332"},
+    "p2_2_scope": ["column grid", "columns", "primary frame", "bracket topology / medium LOD", "roof control geometry/profile", "main eave/gable relations"],
+    "p2_2_dod_summary": ["formal input contract + build manifest", "complete six-system structural scope", "parameter-driven geometry / no naked historical constants", "machine geometry validation", "replaceable RC/override behavior", "UNKNOWN/corner/authenticity boundaries preserved", "geometry metadata + evidence traceability", "deterministic rebuild + independent reopen + human structural review", "canonical engineering archive"],
     "p2_2_pass_rule": "DoD 9/9 + complete structural scope + machine validation PASS + deterministic rebuild PASS + no unapproved geometry-critical input + no naked historical constants + Product Owner structural review approval",
     "p2_2_boundary": "First formal Blender geometry Gate. Medium-LOD structural skeleton only. Must consume P2.1 formal parameters plus approved override sidecar; unresolved 45-degree corner geometry, mortise and hidden-angle conflicts remain topology-only under CG-05.",
     "t007_task": "docs/tasks/T-007_P2_2_STRUCTURAL_SKELETON_V001.md",
@@ -157,12 +102,7 @@
       "local_blend_sha256": "3b61ccbaca17836bd63d9369ebc3a4c6e25fb27f0d274ea67e64f732ad3000e4",
       "canonical_commit": "a5a4181499c0494d16fbaf59d29337fa7d688e9d"
     },
-    "p2_2_preliminary_gate_review": {
-      "status": "8 PASS + 1 PENDING PRODUCT_OWNER_STRUCTURAL_REVIEW",
-      "gate_review": "docs/production/zhenguo_wanfo/P2_2_GATE_REVIEW_2026-09-12.md",
-      "engineering_blocker": null,
-      "remaining_condition": "Product Owner visual structural review and explicit P2.2 Gate decision"
-    },
+    "p2_2_preliminary_gate_review": {"status": "8 PASS + 1 PENDING PRODUCT_OWNER_STRUCTURAL_REVIEW", "gate_review": "docs/production/zhenguo_wanfo/P2_2_GATE_REVIEW_2026-09-12.md", "engineering_blocker": null, "remaining_condition": "Product Owner visual structural review and explicit P2.2 Gate decision"},
     "next_action": "Product Owner reviews PLAN / ELEVATION / AXON structural images; do not enter P2.3 before explicit P2.2 Gate approval"
   },
   "p1_evidence_progress": {
@@ -187,18 +127,14 @@
     "write_model": "ChatGPT优先直接更新GitHub Project Control；本地Codex负责工程执行。Project Control更新后，本地工作前执行git pull --ff-only origin main；避免同时修改同一 Project Control 文件。",
     "reassessment_rule": "若同步成本、版本噪音、隐私风险或维护复杂度明显大于价值，由Product Owner批准后调整策略。"
   },
-  "latest_material_decision": {
-    "id": "D-025",
-    "date": "2026-09-12",
-    "decision": "Product Owner批准并锁定P2.2 Definition of Done V001；T-007作为第一项正式Blender主体结构工程任务获得授权。"
-  },
+  "latest_material_decision": {"id": "D-025", "date": "2026-09-12", "decision": "Product Owner批准并锁定P2.2 Definition of Done V001；T-007作为第一项正式Blender主体结构工程任务获得授权。"},
   "next_action": "上传或展示 T-007 的 PLAN / ELEVATION / AXON 三张结构审核图，完成 Product Owner 人工结构审核；审核前 P2.2 不宣布 PASS，P2.3 继续锁定。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v008",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_T007_PENDING_R034_REFRESH",
+    "refresh_status": "R034_REFRESH_COMPLETE",
     "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "../production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_2_DEFINITION_OF_DONE_V001.md", "../production/zhenguo_wanfo/P2_2_GATE_REVIEW_2026-09-12.md", "../../tasks/T-007_P2_2_STRUCTURAL_SKELETON_V001.md", "../../production/zhenguo_wanfo/validation/P2_2_VALIDATION_REPORT_V001.md", "../../production/zhenguo_wanfo/validation/P2_2_MACHINE_VALIDATION_V001.json"]
   }
 }
