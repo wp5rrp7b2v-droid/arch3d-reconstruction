@@ -1,0 +1,1402 @@
+{
+  "schema_version": "1.0",
+  "project_id": "ARCH3D-001",
+  "case_id": "ZG-WF-963-CANDIDATE",
+  "case_name": "平遥镇国寺万佛殿",
+  "parameter_set_version": "V001",
+  "status": "PRODUCTION_CANDIDATE",
+  "parameters": {
+    "PM-001": {
+      "parameter_key": "bay_count_front",
+      "label_zh": "面阔间数",
+      "value": 3,
+      "unit": null,
+      "classification": "CONFIRMED",
+      "time_layer": "observed_current_topology",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "BASE_TOPOLOGY",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "面阔三间；现状/结构拓扑已证实；用于963候选时保留历史层标签；现状拓扑用于候选复原时仍须保留历史状态标签。"
+    },
+    "PM-002": {
+      "parameter_key": "bay_count_depth",
+      "label_zh": "进深间数",
+      "value": 3,
+      "unit": null,
+      "classification": "CONFIRMED",
+      "time_layer": "observed_current_topology",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "BASE_TOPOLOGY",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "进深三间六椽；现状/结构拓扑已证实；用于963候选时保留历史层标签；现状拓扑用于候选复原时仍须保留历史状态标签。"
+    },
+    "PM-003": {
+      "parameter_key": "front_center_bay_observed_mm",
+      "label_zh": "明间面阔现状实测",
+      "value": 4481.3,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-4；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "PM-004": {
+      "parameter_key": "depth_center_bay_observed_mm",
+      "label_zh": "明间进深现状实测",
+      "value": 3676.8,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-4；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "PM-005": {
+      "parameter_key": "side_bay_observed_mm",
+      "label_zh": "次间尺寸现状实测",
+      "value": 3505.7,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "面阔/进深次间均值；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "PM-006": {
+      "parameter_key": "overall_width_observed_mm",
+      "label_zh": "总面阔现状实测",
+      "value": 11492.7,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "4481.3+2×3505.7；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "PM-007": {
+      "parameter_key": "overall_depth_observed_mm",
+      "label_zh": "总进深现状实测",
+      "value": 10688.2,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "3676.8+2×3505.7；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "PM-008": {
+      "parameter_key": "front_center_bay_design_chi",
+      "label_zh": "明间面阔设计候选",
+      "value": 14.5,
+      "unit": "chi",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "306mm营造尺；306mm营造尺体系下的高吻合设计归整；报告/桥接推断，不是963直接历史记录。"
+    },
+    "PM-009": {
+      "parameter_key": "depth_center_bay_design_chi",
+      "label_zh": "明间进深设计候选",
+      "value": 12,
+      "unit": "chi",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "306mm营造尺体系下的高吻合设计归整；报告/桥接推断，不是963直接历史记录。"
+    },
+    "PM-010": {
+      "parameter_key": "side_bay_design_chi",
+      "label_zh": "次间尺寸设计候选",
+      "value": 11.5,
+      "unit": "chi",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "306mm营造尺体系下的高吻合设计归整；报告/桥接推断，不是963直接历史记录。"
+    },
+    "PM-011": {
+      "parameter_key": "overall_width_design_mm",
+      "label_zh": "总面阔设计候选",
+      "value": 11475,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "37.5尺×306；306mm营造尺体系下的高吻合设计归整；报告/桥接推断，不是963直接历史记录。"
+    },
+    "PM-012": {
+      "parameter_key": "overall_depth_design_mm",
+      "label_zh": "总进深设计候选",
+      "value": 10710,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "35尺×306；306mm营造尺体系下的高吻合设计归整；报告/桥接推断，不是963直接历史记录。"
+    },
+    "PM-013": {
+      "parameter_key": "perimeter_column_count",
+      "label_zh": "周边柱数量",
+      "value": 12,
+      "unit": null,
+      "classification": "CONFIRMED",
+      "time_layer": "observed_current_topology",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "BASE_TOPOLOGY",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "无内柱；现状/结构拓扑已证实；用于963候选时保留历史层标签；现状拓扑用于候选复原时仍须保留历史状态标签。"
+    },
+    "PM-014": {
+      "parameter_key": "interior_column_count",
+      "label_zh": "内柱数量",
+      "value": 0,
+      "unit": null,
+      "classification": "CONFIRMED",
+      "time_layer": "observed_current_topology",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "BASE_TOPOLOGY",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "与六椽栿通檐用两柱一致；现状/结构拓扑已证实；用于963候选时保留历史层标签；现状拓扑用于候选复原时仍须保留历史状态标签。"
+    },
+    "MOD-001": {
+      "parameter_key": "yingzao_chi_mm",
+      "label_zh": "营造尺设计候选",
+      "value": 306,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "报告推荐结论；不是实测物理尺；系统性模数解释；不是物理实测尺；报告/桥接推断，不是963直接历史记录。"
+    },
+    "MOD-002": {
+      "parameter_key": "fen_mm",
+      "label_zh": "每分毫米数设计候选",
+      "value": 15.3,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "1尺=20分体系；系统性模数解释；不是物理实测尺；报告/桥接推断，不是963直接历史记录。"
+    },
+    "MOD-003": {
+      "parameter_key": "single_cai_width_fen",
+      "label_zh": "单材广设计候选",
+      "value": 14,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "报告结论倾向14分，不按《营造法式》15分；系统性模数解释；不是物理实测尺；报告/桥接推断，不是963直接历史记录。"
+    },
+    "MOD-004": {
+      "parameter_key": "single_cai_thickness_fen",
+      "label_zh": "单材厚设计候选",
+      "value": 10,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "每分0.5寸；系统性模数解释；不是物理实测尺；报告/桥接推断，不是963直接历史记录。"
+    },
+    "MOD-005": {
+      "parameter_key": "full_cai_height_fen",
+      "label_zh": "足材高设计候选",
+      "value": 21,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "足材；系统性模数解释；不是物理实测尺；报告/桥接推断，不是963直接历史记录。"
+    },
+    "MOD-006": {
+      "parameter_key": "full_cai_height_mm",
+      "label_zh": "足材高毫米数设计候选",
+      "value": 321.3,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "21×15.3；系统性模数解释；不是物理实测尺；报告/桥接推断，不是963直接历史记录；原候选使用约数表达，保留近似语义。"
+    },
+    "Z-001": {
+      "parameter_key": "column_diameter_observed_mm",
+      "label_zh": "柱径现状估算",
+      "value": 460,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "报告现场估算调整值；仅用于相应现状/桥接参考层，不自动转为963设计值；约460mm为报告估算调整值，非精确实测。"
+    },
+    "Z-002": {
+      "parameter_key": "column_diameter_design_mm",
+      "label_zh": "柱径设计候选",
+      "value": 459,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "1尺5寸；报告/桥接推断，不是963直接历史记录。"
+    },
+    "Z-003": {
+      "parameter_key": "corner_column_rise_valid_range_mm",
+      "label_zh": "角柱生起有效实测范围",
+      "value": [
+        51,
+        68
+      ],
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "报告筛选有效值；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "Z-004": {
+      "parameter_key": "corner_column_rise_mean_mm",
+      "label_zh": "角柱生起有效实测均值",
+      "value": 59.5,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "有效值平均；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "Z-005": {
+      "parameter_key": "corner_column_rise_design_mm",
+      "label_zh": "角柱生起设计候选",
+      "value": 61.2,
+      "unit": "mm",
+      "classification": "REASONABLE_COMPLETION",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED_GUESS",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "2寸；报告仅称猜测；61.2mm仅为报告猜测；独立可替换，不得表述为已证实963事实。"
+    },
+    "Z-006": {
+      "parameter_key": "column_height_963_design_mm",
+      "label_zh": "963原设计柱高",
+      "value": null,
+      "unit": "mm",
+      "classification": "UNKNOWN",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "UNKNOWN",
+      "production_use": "DO_NOT_LOCK",
+      "blocking_level": "HIGH",
+      "source_ids": [
+        "SRC-ZG-WF-001",
+        "P1_3_HIGH_RISK_CLASSIFICATION_V001"
+      ],
+      "is_replaceable": true,
+      "notes": "原始地坪/柱础关系仍不足；963柱高未知；无合法963设计柱高；不得以3.42m或现状高度替代。"
+    },
+    "Z-007": {
+      "parameter_key": "global_z_datum",
+      "label_zh": "工程全局Z基准",
+      "value": "Z = 0; abstract column-foot design plane",
+      "unit": null,
+      "classification": "REASONABLE_COMPLETION",
+      "time_layer": "project_model_datum",
+      "source_layer": "PROJECT_RULE",
+      "production_use": "PROJECT_COORDINATE_RULE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001",
+        "P1_3_HIGH_RISK_CLASSIFICATION_V001"
+      ],
+      "is_replaceable": true,
+      "notes": "P1.3必须明确选取基准并标注假设；Z=0定义为抽象柱脚设计控制平面，不是历史地坪；独立可替换，不得表述为已证实963事实；工程坐标约定，不等于963地坪或现状测绘零点。"
+    },
+    "DG-001": {
+      "parameter_key": "column_head_puzuo_type",
+      "label_zh": "柱头铺作形制",
+      "value": "七铺作、双杪双下昂",
+      "unit": null,
+      "classification": "CONFIRMED",
+      "time_layer": "observed_current_topology",
+      "source_layer": "DIRECT_PLUS_SUPPORT",
+      "production_use": "BASE_TOPOLOGY",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "形制稳定；现状拓扑用于候选复原时仍须保留历史状态标签。"
+    },
+    "DG-002": {
+      "parameter_key": "intercolumn_puzuo_type",
+      "label_zh": "补间铺作形制",
+      "value": "五铺作、双杪偷心",
+      "unit": null,
+      "classification": "CONFIRMED",
+      "time_layer": "observed_current_topology",
+      "source_layer": "DIRECT_PLUS_SUPPORT",
+      "production_use": "BASE_TOPOLOGY",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "形制稳定；现状拓扑用于候选复原时仍须保留历史状态标签。"
+    },
+    "DG-101": {
+      "parameter_key": "column_ludou_top_width_mm",
+      "label_zh": "柱头栌斗顶宽现状实测",
+      "value": 475.1,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-26；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DG-102": {
+      "parameter_key": "column_ludou_bottom_width_mm",
+      "label_zh": "柱头栌斗底宽现状实测",
+      "value": 327.1,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-26；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DG-103": {
+      "parameter_key": "column_ludou_top_depth_mm",
+      "label_zh": "柱头栌斗顶深现状实测",
+      "value": 446.3,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-26；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DG-104": {
+      "parameter_key": "column_ludou_bottom_depth_mm",
+      "label_zh": "柱头栌斗底深现状实测",
+      "value": 305.5,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-26；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DG-105": {
+      "parameter_key": "bottom_long_kai_dou_top_width_mm",
+      "label_zh": "底部长开斗顶宽现状实测",
+      "value": 255.56,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-28；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DG-106": {
+      "parameter_key": "bottom_long_kai_dou_bottom_width_mm",
+      "label_zh": "底部长开斗底宽现状实测",
+      "value": 178.56,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-28；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DG-107": {
+      "parameter_key": "single_long_kai_dou_top_width_mm",
+      "label_zh": "单个长开斗顶宽现状实测",
+      "value": 236.2,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-28；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DG-108": {
+      "parameter_key": "cross_dou_top_width_mm",
+      "label_zh": "交互斗顶宽现状实测",
+      "value": 255.2,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-28；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DG-109": {
+      "parameter_key": "cross_dou_top_depth_mm",
+      "label_zh": "交互斗顶深现状实测",
+      "value": 240.0,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-28；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DG-110": {
+      "parameter_key": "first_second_jump_total_fen",
+      "label_zh": "第一二跳总长设计候选",
+      "value": 48,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "报告推荐结论；报告/桥接推断，不是963直接历史记录。"
+    },
+    "DG-111": {
+      "parameter_key": "third_fourth_jump_total_fen",
+      "label_zh": "第三四跳总长设计候选",
+      "value": 47,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "报告推荐结论；报告/桥接推断，不是963直接历史记录。"
+    },
+    "DG-112": {
+      "parameter_key": "lower_ang_run_fen",
+      "label_zh": "下昂水平长设计候选",
+      "value": 47,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "下昂基准三角形；报告/桥接推断，不是963直接历史记录。"
+    },
+    "DG-113": {
+      "parameter_key": "lower_ang_rise_fen",
+      "label_zh": "下昂上升高设计候选",
+      "value": 21,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "报告/桥接推断，不是963直接历史记录。"
+    },
+    "DG-114": {
+      "parameter_key": "small_dou_unified_design_rule",
+      "label_zh": "小斗统一规格设计规则",
+      "value": null,
+      "unit": null,
+      "classification": "UNKNOWN",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "A_BRIDGE_UNRESOLVED",
+      "production_use": "DO_NOT_LOCK",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "P1_2_DIRECT_PAGE_REVIEW_V001",
+        "P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001"
+      ],
+      "is_replaceable": true,
+      "notes": "“主报告p107”页码归属已撤销；待重新定位原论证或保持外部论文桥接；候选本身为HOLD；错误主报告页码已撤销；主报告p107归属已撤销；候选保持HOLD。"
+    },
+    "RF-001": {
+      "parameter_key": "frame_system",
+      "label_zh": "主体梁架体系",
+      "value": "复合式六椽栿通檐用两柱、彻上露明",
+      "unit": null,
+      "classification": "CONFIRMED",
+      "time_layer": "observed_current_topology",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "BASE_TOPOLOGY",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "主报告2.3；现状拓扑用于候选复原时仍须保留历史状态标签。"
+    },
+    "RF-002": {
+      "parameter_key": "lower_six_chuanfu_width_mm",
+      "label_zh": "下层六椽栿宽现状实测",
+      "value": 493.5,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-38均值；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "RF-003": {
+      "parameter_key": "lower_six_chuanfu_tenon_thickness_mm",
+      "label_zh": "下层六椽栿榫部厚现状实测",
+      "value": 375,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-38；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "RF-004": {
+      "parameter_key": "lower_six_chuanfu_max_thickness_mm",
+      "label_zh": "下层六椽栿最大厚现状实测",
+      "value": 444,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-38；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "RF-005": {
+      "parameter_key": "upper_six_chuanfu_width_mm",
+      "label_zh": "上层六椽栿宽现状实测",
+      "value": 334,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-38；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "RF-006": {
+      "parameter_key": "upper_six_chuanfu_tenon_thickness_mm",
+      "label_zh": "上层六椽栿榫部厚现状实测",
+      "value": 209,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-38；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "RF-007": {
+      "parameter_key": "upper_six_chuanfu_max_thickness_mm",
+      "label_zh": "上层六椽栿最大厚现状实测",
+      "value": 240.5,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-38；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "FR-001": {
+      "parameter_key": "frame_depth_1_observed_mm",
+      "label_zh": "第一架道进深现状实测",
+      "value": 1747.6,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-51；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "FR-002": {
+      "parameter_key": "frame_depth_2_observed_mm",
+      "label_zh": "第二架道进深现状实测",
+      "value": 1757.2,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-51；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "FR-003": {
+      "parameter_key": "frame_depth_3_observed_mm",
+      "label_zh": "第三架道进深现状实测",
+      "value": 1841,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-51；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "FR-004": {
+      "parameter_key": "frame_depth_1_design_mm",
+      "label_zh": "第一架道进深设计候选",
+      "value": 1759.5,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "5.75尺；报告/桥接推断，不是963直接历史记录。"
+    },
+    "FR-005": {
+      "parameter_key": "frame_depth_2_design_mm",
+      "label_zh": "第二架道进深设计候选",
+      "value": 1759.5,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "5.75尺；报告/桥接推断，不是963直接历史记录。"
+    },
+    "FR-006": {
+      "parameter_key": "frame_depth_3_design_mm",
+      "label_zh": "第三架道进深设计候选",
+      "value": 1836,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "6尺；报告/桥接推断，不是963直接历史记录。"
+    },
+    "FR-007": {
+      "parameter_key": "roof_horizontal_sequence_fen",
+      "label_zh": "屋架水平序列设计候选",
+      "value": [
+        120,
+        115,
+        210
+      ],
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "举折示意图；报告/桥接推断，不是963直接历史记录。"
+    },
+    "OUT-001": {
+      "parameter_key": "gable_projection_east_mm",
+      "label_zh": "东山面出际现状实测",
+      "value": 1385,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "槫中心线→博风板内皮；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "OUT-002": {
+      "parameter_key": "gable_projection_west_mm",
+      "label_zh": "西山面出际现状实测",
+      "value": 1411,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "同定义；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "OUT-003": {
+      "parameter_key": "gable_projection_design_fen",
+      "label_zh": "山面出际设计候选",
+      "value": 92,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "blocking_level": "LOW",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "约4尺6寸；报告/桥接推断，不是963直接历史记录。"
+    },
+    "OUT-004": {
+      "parameter_key": "rafter_head_to_column_center_mm",
+      "label_zh": "椽头至檐柱心距离论文桥接参考",
+      "value": 2677.5,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "observed_as_measured",
+      "source_layer": "A_BRIDGE_VERIFIED",
+      "production_use": "PROVISIONAL_REFERENCE",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "P1_2_CORE_EVIDENCE_BATCH_04",
+        "P1_2_PARAMETER_CANDIDATE_MATRIX_V002"
+      ],
+      "is_replaceable": true,
+      "notes": "不是主报告印刷p147；继续保留桥接状态；正式论文桥接；未升级为主报告DIRECT；仅用于相应现状/桥接参考层，不自动转为963设计值；报告/桥接推断，不是963直接历史记录。"
+    },
+    "OUT-005": {
+      "parameter_key": "rafter_head_to_liaoyanfang_mm",
+      "label_zh": "椽头至橑檐枋距离论文桥接参考",
+      "value": 1224,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "observed_as_measured",
+      "source_layer": "A_BRIDGE_VERIFIED",
+      "production_use": "PROVISIONAL_REFERENCE",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "P1_2_CORE_EVIDENCE_BATCH_04",
+        "P1_2_PARAMETER_CANDIDATE_MATRIX_V002"
+      ],
+      "is_replaceable": true,
+      "notes": "正式论文桥接；未升级为主报告DIRECT；仅用于相应现状/桥接参考层，不自动转为963设计值；报告/桥接推断，不是963直接历史记录。"
+    },
+    "OUT-006": {
+      "parameter_key": "bracket_outjump_mm",
+      "label_zh": "铺作外跳长论文桥接参考",
+      "value": 1453.5,
+      "unit": "mm",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "observed_as_measured",
+      "source_layer": "A_BRIDGE_VERIFIED",
+      "production_use": "PROVISIONAL_REFERENCE",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "P1_2_CORE_EVIDENCE_BATCH_04",
+        "P1_2_PARAMETER_CANDIDATE_MATRIX_V002"
+      ],
+      "is_replaceable": true,
+      "notes": "正式论文桥接；未升级为主报告DIRECT；仅用于相应现状/桥接参考层，不自动转为963设计值；报告/桥接推断，不是963直接历史记录。"
+    },
+    "ROOF-001": {
+      "parameter_key": "rise_interval_A_observed_mm",
+      "label_zh": "第一槫间高差现状实测",
+      "value": 383.5,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-52；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "ROOF-002": {
+      "parameter_key": "rise_interval_B_observed_mm",
+      "label_zh": "第二槫间高差现状实测",
+      "value": 602.3,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-52；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "ROOF-003": {
+      "parameter_key": "rise_interval_C_observed_mm",
+      "label_zh": "第三槫间高差现状实测",
+      "value": 1249.5,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "表2-52；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "ROOF-004": {
+      "parameter_key": "rise_interval_A_design_fen",
+      "label_zh": "第一槫间高差设计候选",
+      "value": 25,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "99.74%吻合；高吻合设计规律，但非直接963记录；报告/桥接推断，不是963直接历史记录。"
+    },
+    "ROOF-005": {
+      "parameter_key": "rise_interval_B_design_fen",
+      "label_zh": "第二槫间高差设计候选",
+      "value": 40,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "98.41%吻合；高吻合设计规律，但非直接963记录；报告/桥接推断，不是963直接历史记录。"
+    },
+    "ROOF-006": {
+      "parameter_key": "rise_interval_C_design_fen",
+      "label_zh": "第三槫间高差设计候选",
+      "value": 82,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "99.59%吻合；高吻合设计规律，但非直接963记录；报告/桥接推断，不是963直接历史记录。"
+    },
+    "ROOF-007": {
+      "parameter_key": "eave_to_lower_purlin_rise_fen",
+      "label_zh": "檐至下平槫举高设计候选",
+      "value": 88,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "考虑替木；高吻合设计规律，但非直接963记录；报告/桥接推断，不是963直接历史记录。"
+    },
+    "ROOF-008": {
+      "parameter_key": "lower_to_upper_purlin_rise_fen",
+      "label_zh": "下平槫至上平槫举高设计候选",
+      "value": 61,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "高吻合设计规律，但非直接963记录；报告/桥接推断，不是963直接历史记录。"
+    },
+    "ROOF-009": {
+      "parameter_key": "upper_to_ridge_purlin_rise_fen",
+      "label_zh": "上平槫至脊槫举高设计候选",
+      "value": 82,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "高吻合设计规律，但非直接963记录；报告/桥接推断，不是963直接历史记录。"
+    },
+    "ROOF-010": {
+      "parameter_key": "total_roof_rise_fen",
+      "label_zh": "总举高分数可替换候选",
+      "value": 231,
+      "unit": "fen",
+      "classification": "REASONABLE_COMPLETION",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "报告明确不把举折推算提升为定论；主报告明确不提升为定论；独立可替换，不得表述为已证实963事实。"
+    },
+    "ROOF-011": {
+      "parameter_key": "total_roof_rise_candidate_mm",
+      "label_zh": "总举高毫米数可替换候选",
+      "value": 3534.3,
+      "unit": "mm",
+      "classification": "REASONABLE_COMPLETION",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "231×15.3；主报告明确不提升为定论；独立可替换，不得表述为已证实963事实；原候选使用约数表达，保留近似语义。"
+    },
+    "ROOF-012": {
+      "parameter_key": "upper_purlin_drop_fen",
+      "label_zh": "上平槫折屋下降设计候选",
+      "value": 20,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "折屋解释；高吻合设计规律，但非直接963记录；报告/桥接推断，不是963直接历史记录。"
+    },
+    "ROOF-013": {
+      "parameter_key": "lower_purlin_additional_drop_fen",
+      "label_zh": "下平槫额外下降设计候选",
+      "value": 8,
+      "unit": "fen",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "time_layer": "reconstructed_design_candidate",
+      "source_layer": "REPORT_INFERRED",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "blocking_level": "MEDIUM",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": true,
+      "notes": "折屋解释；高吻合设计规律，但非直接963记录；报告/桥接推断，不是963直接历史记录。"
+    },
+    "DEF-001": {
+      "parameter_key": "bracket_inward_outward_vertical_mm",
+      "label_zh": "铺作出入跳竖向形变范围",
+      "value": [
+        0,
+        66
+      ],
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_deformation",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "外檐柱头铺作；仅用于现状/形变校核，不作为963设计尺寸；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DEF-002": {
+      "parameter_key": "bracket_inward_outward_parallel_mm",
+      "label_zh": "铺作出入跳平行形变范围",
+      "value": [
+        0,
+        39
+      ],
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_deformation",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "仅用于现状/形变校核，不作为963设计尺寸；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DEF-003": {
+      "parameter_key": "bracket_settlement_mm",
+      "label_zh": "斗栱下沉范围",
+      "value": [
+        49,
+        126
+      ],
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_deformation",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "令栱上替木下沉；仅用于现状/形变校核，不作为963设计尺寸；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DEF-004": {
+      "parameter_key": "roof_purlin_relative_settlement_mm",
+      "label_zh": "槫相对下沉范围",
+      "value": [
+        0,
+        79
+      ],
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_deformation",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "扣除斗栱下沉后；仅用于现状/形变校核，不作为963设计尺寸；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DEF-005": {
+      "parameter_key": "purlin_inward_outward_mm",
+      "label_zh": "槫出入跳形变范围",
+      "value": [
+        0,
+        34
+      ],
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_deformation",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "进深方向；仅用于现状/形变校核，不作为963设计尺寸；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DEF-006": {
+      "parameter_key": "purlin_roll_mm",
+      "label_zh": "槫滚动范围",
+      "value": [
+        10,
+        60
+      ],
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_deformation",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "槫滚动；仅用于现状/形变校核，不作为963设计尺寸；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "DEF-007": {
+      "parameter_key": "max_six_chuanfu_deflection_mm",
+      "label_zh": "六椽栿最大挠度",
+      "value": 56,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_deformation",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "西缝最大；挠跨比约1/191；仅用于现状/形变校核，不作为963设计尺寸；仅用于相应现状/桥接参考层，不自动转为963设计值。"
+    },
+    "HIS-001": {
+      "parameter_key": "repair_events_confirmed",
+      "label_zh": "已证实修缮时间线",
+      "value": "1151 / 1540 / 1752前后 / 1811–1816 / 1895–1904 / 1949后局部维修",
+      "unit": null,
+      "classification": "CONFIRMED",
+      "time_layer": "historical_events",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "HISTORICAL_TIMELINE",
+      "blocking_level": "NONE",
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "is_replaceable": false,
+      "notes": "主报告印刷p31。"
+    },
+    "HIS-002": {
+      "parameter_key": "component_level_963_originality",
+      "label_zh": "逐构件963原真性状态",
+      "value": null,
+      "unit": null,
+      "classification": "UNKNOWN",
+      "time_layer": "component_history",
+      "source_layer": "DIRECT_GAP",
+      "production_use": "PER_COMPONENT_METADATA_REQUIRED",
+      "blocking_level": "HIGH",
+      "source_ids": [
+        "SRC-ZG-WF-001",
+        "P1_3_HIGH_RISK_CLASSIFICATION_V001"
+      ],
+      "is_replaceable": true,
+      "notes": "P1.3按构件分级；必须逐构件判定；默认unknown；逐构件未证实则originality_status默认为unknown。"
+    }
+  }
+}

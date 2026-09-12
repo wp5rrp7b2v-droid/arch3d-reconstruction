@@ -1,0 +1,883 @@
+{
+  "matrix_version": "V001",
+  "parameter_set_version": "V001",
+  "p2_2_scope": [
+    "柱网",
+    "柱",
+    "主要梁架",
+    "斗栱拓扑骨架",
+    "屋顶控制几何",
+    "主要空间关系"
+  ],
+  "semantic_layer_policy": {
+    "distinct_layers": [
+      "observed_as_measured",
+      "report_ideal_model",
+      "reconstructed_963_candidate"
+    ],
+    "report_ideal_model_parameter_ids": [],
+    "rule": "三层保持分离；85项中无report_ideal_model参数，不得由现状实测或报告理想层静默覆盖963候选层。"
+  },
+  "component_metadata_policy": {
+    "required_fields": [
+      "historical_state_tag",
+      "evidence_class",
+      "source_layer",
+      "originality_status"
+    ],
+    "default_originality_status": "unknown",
+    "prohibited_automatic_status": "963_confirmed"
+  },
+  "entries": {
+    "PM-001": {
+      "parameter_key": "bay_count_front",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。 现状拓扑进入候选模型时仍保留其来源层。"
+    },
+    "PM-002": {
+      "parameter_key": "bay_count_depth",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。 现状拓扑进入候选模型时仍保留其来源层。"
+    },
+    "PM-003": {
+      "parameter_key": "front_center_bay_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "PM-004": {
+      "parameter_key": "depth_center_bay_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "PM-005": {
+      "parameter_key": "side_bay_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "PM-006": {
+      "parameter_key": "overall_width_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "PM-007": {
+      "parameter_key": "overall_depth_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "PM-008": {
+      "parameter_key": "front_center_bay_design_chi",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。"
+    },
+    "PM-009": {
+      "parameter_key": "depth_center_bay_design_chi",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。"
+    },
+    "PM-010": {
+      "parameter_key": "side_bay_design_chi",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。"
+    },
+    "PM-011": {
+      "parameter_key": "overall_width_design_mm",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。"
+    },
+    "PM-012": {
+      "parameter_key": "overall_depth_design_mm",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。"
+    },
+    "PM-013": {
+      "parameter_key": "perimeter_column_count",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。 现状拓扑进入候选模型时仍保留其来源层。"
+    },
+    "PM-014": {
+      "parameter_key": "interior_column_count",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱网与主要空间关系",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。 现状拓扑进入候选模型时仍保留其来源层。"
+    },
+    "MOD-001": {
+      "parameter_key": "yingzao_chi_mm",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "设计模数与主要构件比例",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "MOD-002": {
+      "parameter_key": "fen_mm",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "设计模数与主要构件比例",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "MOD-003": {
+      "parameter_key": "single_cai_width_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "设计模数与主要构件比例",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "MOD-004": {
+      "parameter_key": "single_cai_thickness_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "设计模数与主要构件比例",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "MOD-005": {
+      "parameter_key": "full_cai_height_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "设计模数与主要构件比例",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "MOD-006": {
+      "parameter_key": "full_cai_height_mm",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "设计模数与主要构件比例",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "Z-001": {
+      "parameter_key": "column_diameter_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "柱与屋架绝对Z控制",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "Z-002": {
+      "parameter_key": "column_diameter_design_mm",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱与屋架绝对Z控制",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。"
+    },
+    "Z-003": {
+      "parameter_key": "corner_column_rise_valid_range_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "柱与屋架绝对Z控制",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "Z-004": {
+      "parameter_key": "corner_column_rise_mean_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "柱与屋架绝对Z控制",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "Z-005": {
+      "parameter_key": "corner_column_rise_design_mm",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱与屋架绝对Z控制",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。 合理补全值须独立可替换。"
+    },
+    "Z-006": {
+      "parameter_key": "column_height_963_design_mm",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "柱与屋架绝对Z控制",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": "BLOCKS_P2_2_GEOMETRY",
+      "blocking_reason": "P2.2柱与主要梁架、屋顶绝对Z定位需要柱高；P1未锁定963原设计柱高，现状/二手高度不得转作该值。",
+      "resolution_required_before_p2_2": true,
+      "notes": "相对Z和拓扑可先定义，但不能据此生成完整的主体结构绝对几何；需要新证据或Product Owner显式可替换临时候选决策。"
+    },
+    "Z-007": {
+      "parameter_key": "global_z_datum",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "柱与屋架绝对Z控制",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "DG-001": {
+      "parameter_key": "column_head_puzuo_type",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。 现状拓扑进入候选模型时仍保留其来源层。"
+    },
+    "DG-002": {
+      "parameter_key": "intercolumn_puzuo_type",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。 现状拓扑进入候选模型时仍保留其来源层。"
+    },
+    "DG-101": {
+      "parameter_key": "column_ludou_top_width_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DG-102": {
+      "parameter_key": "column_ludou_bottom_width_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DG-103": {
+      "parameter_key": "column_ludou_top_depth_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DG-104": {
+      "parameter_key": "column_ludou_bottom_depth_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DG-105": {
+      "parameter_key": "bottom_long_kai_dou_top_width_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DG-106": {
+      "parameter_key": "bottom_long_kai_dou_bottom_width_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DG-107": {
+      "parameter_key": "single_long_kai_dou_top_width_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DG-108": {
+      "parameter_key": "cross_dou_top_width_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DG-109": {
+      "parameter_key": "cross_dou_top_depth_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DG-110": {
+      "parameter_key": "first_second_jump_total_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "DG-111": {
+      "parameter_key": "third_fourth_jump_total_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "DG-112": {
+      "parameter_key": "lower_ang_run_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "DG-113": {
+      "parameter_key": "lower_ang_rise_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "DG-114": {
+      "parameter_key": "small_dou_unified_design_rule",
+      "geometry_dependency_role": "NOT_USED_IN_P2_2",
+      "p2_2_target": "斗栱拓扑骨架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": "BOUNDED_NON_BLOCKING",
+      "blocking_reason": "小斗统一设计规格未获合法锁定；P2.2仅做斗栱拓扑骨架，不要求小斗统一规格的精确构件实体。",
+      "resolution_required_before_p2_2": false,
+      "notes": "禁止用已撤销的主报告p107页码定论；精细斗栱构件生产前另行解决。"
+    },
+    "RF-001": {
+      "parameter_key": "frame_system",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "主体梁架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。 现状拓扑进入候选模型时仍保留其来源层。"
+    },
+    "RF-002": {
+      "parameter_key": "lower_six_chuanfu_width_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "主体梁架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "RF-003": {
+      "parameter_key": "lower_six_chuanfu_tenon_thickness_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "主体梁架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "RF-004": {
+      "parameter_key": "lower_six_chuanfu_max_thickness_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "主体梁架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "RF-005": {
+      "parameter_key": "upper_six_chuanfu_width_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "主体梁架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "RF-006": {
+      "parameter_key": "upper_six_chuanfu_tenon_thickness_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "主体梁架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "RF-007": {
+      "parameter_key": "upper_six_chuanfu_max_thickness_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "主体梁架",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "FR-001": {
+      "parameter_key": "frame_depth_1_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "屋架水平控制",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "FR-002": {
+      "parameter_key": "frame_depth_2_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "屋架水平控制",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "FR-003": {
+      "parameter_key": "frame_depth_3_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "屋架水平控制",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "FR-004": {
+      "parameter_key": "frame_depth_1_design_mm",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "屋架水平控制",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。"
+    },
+    "FR-005": {
+      "parameter_key": "frame_depth_2_design_mm",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "屋架水平控制",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。"
+    },
+    "FR-006": {
+      "parameter_key": "frame_depth_3_design_mm",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "屋架水平控制",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。"
+    },
+    "FR-007": {
+      "parameter_key": "roof_horizontal_sequence_fen",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "屋架水平控制",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。"
+    },
+    "OUT-001": {
+      "parameter_key": "gable_projection_east_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "屋顶山面控制几何",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "OUT-002": {
+      "parameter_key": "gable_projection_west_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "屋顶山面控制几何",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "OUT-003": {
+      "parameter_key": "gable_projection_design_fen",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "屋顶山面控制几何",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。"
+    },
+    "OUT-004": {
+      "parameter_key": "rafter_head_to_column_center_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "屋顶山面控制几何",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "OUT-005": {
+      "parameter_key": "rafter_head_to_liaoyanfang_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "屋顶山面控制几何",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "OUT-006": {
+      "parameter_key": "bracket_outjump_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "屋顶山面控制几何",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "ROOF-001": {
+      "parameter_key": "rise_interval_A_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "ROOF-002": {
+      "parameter_key": "rise_interval_B_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "ROOF-003": {
+      "parameter_key": "rise_interval_C_observed_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "ROOF-004": {
+      "parameter_key": "rise_interval_A_design_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "ROOF-005": {
+      "parameter_key": "rise_interval_B_design_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "ROOF-006": {
+      "parameter_key": "rise_interval_C_design_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "ROOF-007": {
+      "parameter_key": "eave_to_lower_purlin_rise_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "ROOF-008": {
+      "parameter_key": "lower_to_upper_purlin_rise_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "ROOF-009": {
+      "parameter_key": "upper_to_ridge_purlin_rise_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "ROOF-010": {
+      "parameter_key": "total_roof_rise_fen",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。 合理补全值须独立可替换。"
+    },
+    "ROOF-011": {
+      "parameter_key": "total_roof_rise_candidate_mm",
+      "geometry_dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "按原有time_layer与classification读取；候选值不能表述为963已证实事实。 合理补全值须独立可替换。"
+    },
+    "ROOF-012": {
+      "parameter_key": "upper_purlin_drop_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "ROOF-013": {
+      "parameter_key": "lower_purlin_additional_drop_fen",
+      "geometry_dependency_role": "DERIVED_GEOMETRY_RULE",
+      "p2_2_target": "屋顶Z向控制几何",
+      "requires_numeric_value": true,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "作为已有设计规律或工程坐标规则；不得与实测层混写。"
+    },
+    "DEF-001": {
+      "parameter_key": "bracket_inward_outward_vertical_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "现状形变校核",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DEF-002": {
+      "parameter_key": "bracket_inward_outward_parallel_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "现状形变校核",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DEF-003": {
+      "parameter_key": "bracket_settlement_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "现状形变校核",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DEF-004": {
+      "parameter_key": "roof_purlin_relative_settlement_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "现状形变校核",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DEF-005": {
+      "parameter_key": "purlin_inward_outward_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "现状形变校核",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DEF-006": {
+      "parameter_key": "purlin_roll_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "现状形变校核",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "DEF-007": {
+      "parameter_key": "max_six_chuanfu_deflection_mm",
+      "geometry_dependency_role": "VALIDATION_REFERENCE",
+      "p2_2_target": "现状形变校核",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "只作现状、变形或论文桥接校核；不得未经决策转换为963候选几何输入。"
+    },
+    "HIS-001": {
+      "parameter_key": "repair_events_confirmed",
+      "geometry_dependency_role": "METADATA_ONLY",
+      "p2_2_target": "构件历史元数据",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": null,
+      "blocking_reason": null,
+      "resolution_required_before_p2_2": false,
+      "notes": "仅传递历史状态信息。"
+    },
+    "HIS-002": {
+      "parameter_key": "component_level_963_originality",
+      "geometry_dependency_role": "METADATA_ONLY",
+      "p2_2_target": "构件历史元数据",
+      "requires_numeric_value": false,
+      "unknown_dependency_status": "METADATA_ONLY_BLOCK",
+      "blocking_reason": "逐构件963原真性未知限制历史真实性声明，不决定P2.2主体几何坐标。",
+      "resolution_required_before_p2_2": false,
+      "notes": "构件metadata的originality_status必须默认unknown，不得自动升为963_confirmed。"
+    }
+  }
+}
