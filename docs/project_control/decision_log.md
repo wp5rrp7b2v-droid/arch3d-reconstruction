@@ -25,7 +25,8 @@
 | D-019 | 2026-09-12 | Product Owner 正式批准 `P1.3｜CONDITIONAL GO`。P1.3 PASS，P1 Gate = 4/4 PASS，P1｜选题取证正式关闭。项目允许进入正式参数化与3D候选复原，但 CG-01～CG-06 全部成为跨阶段强制生产规则。P2 第一项强制 Gate 为 `P2.0｜Evidence-aware Parameter Schema`；P2.0 PASS 前不得启动第一项正式 Blender 几何生产。 | ACTIVE / P1 CLOSED / P2 ENTRY / CONDITIONAL GO |
 | D-020 | 2026-09-12 | Product Owner 正式批准 `P2.0｜Evidence-aware Parameter Schema` PASS。T-005 V001/V002 完成并验证 Schema、UNKNOWN/DO_NOT_LOCK 机械约束、REASONABLE_COMPLETION 可替换约束及三层语义并存；P2.0 Gate Review 7/7 PASS。CG-01 前置条件正式满足。P2 后续工作可继续，但在创建第一项正式几何任务前，必须先定义并锁定 P2.1–P2.3 Gate 架构；CG-02～CG-06 继续强制生效。 | ACTIVE / P2.0 PASS / NEXT GATE ARCHITECTURE REQUIRED |
 | D-021 | 2026-09-12 | Product Owner 批准 `P2.1–P2.3 Gate Architecture V001`。P2.1=`正式生产参数集锁定｜Formal Production Parameter Set`；P2.2=`参数化主体结构候选模型｜Parametric Structural Skeleton`；P2.3=`整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC`。生产路径正式锁定为“参数 → 结构 → 整合候选与QC”。P2.1 不生成正式 Blender 几何；P2.1 PASS 后方可进入 P2.2 第一项正式几何生产。CG-02～CG-06 持续强制生效。 | ACTIVE / P2 GATE ARCHITECTURE LOCKED / P2.1 ENTRY READY |
-| **D-022** | **2026-09-12** | **Product Owner 要求并批准锁定 `P2.1 Definition of Done V001`。P2.1 必须完成85/85参数迁移、证据语义保持、Schema机器验证、UNKNOWN几何阻断判定、Geometry Dependency Matrix、REASONABLE_COMPLETION可替换性、三层语义与构件原真性边界、机器preflight、版本锁定与canonical archive共9项。P2.1 PASS除9/9外还要求 `geometry-critical unresolved blocker = 0`；UNKNOWN若是P2.2必须输入，不得跳过或静默补值，只能由新证据解决或经Product Owner显式批准新的可替换REASONABLE_COMPLETION。** | **ACTIVE / P2.1 DOD LOCKED / T-006 READY TO DEFINE** |
+| D-022 | 2026-09-12 | Product Owner 要求并批准锁定 `P2.1 Definition of Done V001`。P2.1 必须完成85/85参数迁移、证据语义保持、Schema机器验证、UNKNOWN几何阻断判定、Geometry Dependency Matrix、REASONABLE_COMPLETION可替换性、三层语义与构件原真性边界、机器preflight、版本锁定与canonical archive共9项。P2.1 PASS除9/9外还要求 `geometry-critical unresolved blocker = 0`；UNKNOWN若是P2.2必须输入，不得跳过或静默补值，只能由新证据解决或经Product Owner显式批准新的可替换REASONABLE_COMPLETION。 | ACTIVE / P2.1 DOD LOCKED |
+| **D-023** | **2026-09-12** | **Product Owner 批准 `Z-006-RC-01` 作为解除 P2.2 柱高生产阻断的独立、可替换 REASONABLE_COMPLETION。Z-006 本体继续保持 `UNKNOWN / null / DO_NOT_LOCK`，不得改写为历史事实；RC-01 采用规则 `11 × MOD-006`，当前 MOD-006≈321.3mm 时解析值为 3534.3mm，仅作为 `reconstructed_963_candidate` 的生产候选。RC-01 必须独立于85项正式历史/证据参数保存并可追溯到本决策；若 MOD-006 或后续证据变化，候选必须可重新计算或替换。继续同一工程任务 T-006 V002 验证，不创建 T-007。** | **ACTIVE / Z-006 RC-01 APPROVED / T-006 V002 AUTHORIZED** |
 
 ## D-012 直接影响
 
@@ -120,3 +121,14 @@
 - HIS-002 的逐构件原真性边界继续进入后续 geometry metadata；无证据时 `originality_status` 默认 `unknown`。
 - P2.1 允许执行纯数据、脚本、preflight 与验证；不生成正式 Blender 几何。
 - DoD 锁定后下一步可定义 T-006；T-006 本身不因 DoD 锁定而自动创建或启动。
+
+## D-023 Z-006 Replaceable Candidate Boundary
+
+- `Z-006 / column_height_963_design_mm` **继续保持 UNKNOWN / null / DO_NOT_LOCK**；D-023 不改变其历史证据分类。
+- `Z-006-RC-01` 是独立生产候选，不得覆盖或替换 Z-006 本体记录。
+- 候选规则固定为 `11 × MOD-006`；当前 `MOD-006 ≈ 321.3mm` 时解析值为 **3534.3mm**。
+- `Z-006-RC-01` 的 classification = `REASONABLE_COMPLETION`，time layer = `reconstructed_963_candidate`，必须 `is_replaceable=true`。
+- 3534.3mm 仅表示当前参数基线下的生产解析值，不得描述成“963年柱高已证实为3534.3mm”。
+- 若 MOD-006 更新，RC-01 应按公式重新计算；若获得更强柱高证据，可直接替换/撤销 RC-01，而不改写历史记录。
+- T-006 V002 必须机械验证：Z-006仍未知、RC-01独立存在且获D-023批准、公式可重算、preflight的 `geometry-critical unresolved blocker count` 才可降为0。
+- 在 T-006 V002 validation / preflight PASS 前，P2.1 仍不得宣布 PASS，P2.2 继续 LOCKED。
