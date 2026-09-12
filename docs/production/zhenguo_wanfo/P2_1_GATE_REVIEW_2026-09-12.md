@@ -2,7 +2,7 @@
 
 Date: 2026-09-12  
 Gate: `P2.1｜Formal Production Parameter Set`  
-Review status: **9 / 9 PASS / RECOMMEND PASS / PRODUCT OWNER APPROVAL REQUIRED**  
+Review status: **9 / 9 PASS / PRODUCT OWNER APPROVED / CLOSED**  
 Engineering basis: T-006 V001 + V002
 
 ## 1. Review Basis
@@ -47,7 +47,7 @@ Observed result:
 
 ## 4. Z-006 / RC-01 Semantic Boundary
 
-P2.1 PASS must not be interpreted as historical confirmation of the column height.
+P2.1 PASS does not constitute historical confirmation of the column height.
 
 The following remain simultaneously true:
 
@@ -64,9 +64,10 @@ The following remain simultaneously true:
 
 ## 5. Carry-forward to P2.2
 
-If Product Owner approves P2.1 PASS:
+With Product Owner approval of P2.1 PASS:
 
-- P2.2 may be unlocked as the first formal Blender geometry Gate.
+- P2.2 is unlocked as the first formal Blender geometry Gate.
+- Before creating the first formal Blender geometry task, P2.2 Definition of Done must be explicitly defined and locked.
 - P2.2 geometry must read the formal P2.1 baseline plus approved override sidecar; no hidden/naked historical constants.
 - `Z-006-RC-01 = 3534.3mm` must remain visibly tagged as REASONABLE_COMPLETION / replaceable.
 - DG-114 remains bounded non-blocking for medium-LOD bracket topology only.
@@ -74,10 +75,10 @@ If Product Owner approves P2.1 PASS:
 - CG-02～CG-06 remain active.
 - CG-05 continues to prohibit false precision for unresolved 45° corner geometry, mortises and hidden-angle beam conflicts.
 
-## 6. Gate Review Recommendation
+## 6. Final Gate Decision
 
-**RECOMMEND: P2.1 PASS.**
+**P2.1 PASS / PRODUCT OWNER APPROVED / CLOSED.**
 
-Reason: the formal production input baseline is complete, machine-validated, evidence-aware and production-executable; the sole geometry-critical production blocker has an explicitly approved, independent and replaceable candidate resolution while the underlying historical UNKNOWN remains preserved.
+Product Owner approval date: **2026-09-12**.
 
-This review does **not** itself approve or close P2.1. Final Gate approval remains with the Product Owner.
+P2.1 is complete. The project advances to `P2.2｜Parametric Structural Skeleton`, with P2.2 DoD definition/lock as the next control action before formal Blender geometry execution.
