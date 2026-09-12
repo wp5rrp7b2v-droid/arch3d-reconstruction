@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R028",
+  "state_revision": "R029",
   "last_updated": "2026-09-12",
-  "session_status": "ACTIVE_P2_1_DOD_LOCKED_T006_READY_TO_DEFINE",
+  "session_status": "ACTIVE_P2_1_T006_READY_FOR_LOCAL_EXECUTION",
   "next_session_date": null,
   "north_star": "基于历史文献、考古材料、图像资料与同期实物证据，建立一套可追溯、可验证、可复用的中国古建筑3D复原工作流，并完成首个正式复原案例。",
   "definition_of_done": "完成至少一个正式古建筑复原案例，并形成史料证据链、复原参数、可维护3D模型、正式视觉成果，同时明确标注事实、推断与未知项。",
@@ -16,18 +16,26 @@
     "status": "ACTIVE / ARCHITECTURE_LOCKED",
     "passed": 1,
     "total": 4,
-    "architecture_status": "P2.0-P2.3 LOCKED / P2.1 DOD LOCKED / T006 READY TO DEFINE",
+    "architecture_status": "P2.0-P2.3 LOCKED / P2.1 DOD LOCKED / T006 READY FOR LOCAL EXECUTION",
     "items": {
       "P2.0": {"status": "PASS / APPROVED", "name": "Evidence-aware Parameter Schema", "approved_date": "2026-09-12"},
-      "P2.1": {"status": "IN_PROGRESS / DOD_LOCKED / T006_READY_TO_DEFINE", "name": "正式生产参数集锁定｜Formal Production Parameter Set", "dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "dod_count": 9},
+      "P2.1": {"status": "IN_PROGRESS / T006_READY_FOR_LOCAL_EXECUTION", "name": "正式生产参数集锁定｜Formal Production Parameter Set", "dod": "docs/production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "dod_count": 9},
       "P2.2": {"status": "LOCKED / WAITING_FOR_P2_1_PASS", "name": "参数化主体结构候选模型｜Parametric Structural Skeleton"},
       "P2.3": {"status": "LOCKED / WAITING_FOR_P2_2_PASS", "name": "整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC"}
     },
-    "note": "Product Owner 已锁定 P2.1 Definition of Done V001。P2.1 PASS 需要 DoD 9/9 且 geometry-critical unresolved blocker=0。下一步创建 T-006 Task Contract；P2.1 PASS 前不进入正式 Blender 几何生产。"
+    "note": "P2.1 Definition of Done V001 已锁定。T-006 Task Contract 已定义，负责85/85正式参数迁移、Geometry Dependency Matrix、production preflight与P2.1 validation report；P2.1 PASS前不进入正式Blender几何生产。"
   },
   "decision_required": false,
   "blocker": null,
-  "current_task": null,
+  "current_task": {
+    "id": "T-006",
+    "formal_name": "【中国古建筑3D复原｜T-006｜P2_1_PRODUCTION_PARAMETER_SET_V001｜正式生产参数集建立与几何依赖预检】",
+    "name": "P2_1_PRODUCTION_PARAMETER_SET_V001",
+    "status": "READY_FOR_LOCAL_EXECUTION",
+    "think_level": "HIGH",
+    "task_spec": "docs/tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V001.md",
+    "scope": "85/85正式生产参数迁移 + Geometry Dependency Matrix + machine validation + production preflight + P2.1 validation report；不得生成Blender几何"
+  },
   "current_case": {
     "name": "平遥镇国寺万佛殿",
     "location": "山西省平遥县镇国寺",
@@ -57,7 +65,7 @@
     "CG-06 historical authenticity claims must remain bounded by component-level uncertainty"
   ],
   "p2_entry": {
-    "status": "ACTIVE / P2.1 DOD LOCKED / T006 READY TO DEFINE",
+    "status": "ACTIVE / P2.1 T006 READY FOR LOCAL EXECUTION",
     "completed_gate": "P2.0",
     "completed_gate_result": "PASS / PRODUCT_OWNER_APPROVED",
     "gate_architecture_decision": "D-021",
@@ -85,7 +93,8 @@
     "schema_spec": "docs/production/zhenguo_wanfo/P2_0_EVIDENCE_AWARE_PARAMETER_SCHEMA_V001.md",
     "machine_schema": "production/zhenguo_wanfo/schema/evidence_aware_parameter_schema_v001.json",
     "t005_result": {"status": "ENGINEERING_PASS / COMPLETE", "v002_full_suite": "PASS 6/6", "canonical_commit": "a938d9fe96c579c21fb3a16734f9b74efcd7d8bc"},
-    "next_action": "Create T-006 Task Contract for 85/85 production parameter migration + Geometry Dependency Matrix + production preflight + P2.1 validation report"
+    "t006_task": "docs/tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V001.md",
+    "next_action": "Sync local main and execute T-006 under locked Task Contract"
   },
   "p1_evidence_progress": {
     "status": "CLOSED / CLASSIFIED / APPROVED FOR CONDITIONAL PRODUCTION",
@@ -112,15 +121,15 @@
   "latest_material_decision": {
     "id": "D-022",
     "date": "2026-09-12",
-    "decision": "Product Owner 锁定 P2.1 Definition of Done V001；P2.1 PASS需要9/9且geometry-critical unresolved blocker=0；下一步创建T-006 Task Contract。"
+    "decision": "Product Owner 锁定 P2.1 Definition of Done V001；P2.1 PASS需要9/9且geometry-critical unresolved blocker=0。"
   },
-  "next_action": "创建 T-006 Task Contract，执行85/85正式生产参数迁移、Geometry Dependency Matrix、production preflight和P2.1 validation report；P2.1 PASS前不得进入P2.2正式Blender几何生产。",
+  "next_action": "本地同步 GitHub main 后执行 T-006：85/85正式生产参数迁移、Geometry Dependency Matrix、production preflight和P2.1 validation report；T-006不得自行创造历史参数或生成Blender几何。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v008",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R028_REFRESH_COMPLETE",
-    "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md"]
+    "refresh_status": "R029_REFRESH_PENDING",
+    "source_files": ["project_state.json", "decision_log.md", "execution_log.md", "acceptance_matrix.md", "governance.md", "rules_change_log.md", "phase_archive/P0_closure.md", "phase_archive/P1_closure.md", "../production/zhenguo_wanfo/P2_0_GATE_REVIEW_2026-09-12.md", "../production/zhenguo_wanfo/P2_1_DEFINITION_OF_DONE_V001.md", "../../tasks/T-006_P2_1_PRODUCTION_PARAMETER_SET_V001.md"]
   }
 }
