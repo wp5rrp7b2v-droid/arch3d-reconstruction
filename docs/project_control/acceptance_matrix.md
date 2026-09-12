@@ -71,7 +71,7 @@ P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段。P2.0 已完成 CG-01 
 |---|---|---|---|
 | P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **PASS / APPROVED 2026-09-12** | T-005 V001+V002 工程验证全部 PASS；Gate Review 7/7 PASS；工程证据归档至 GitHub canonical repo，commit `a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`。Product Owner 已批准 P2.0。 |
 | P2.1｜正式生产参数集锁定｜Formal Production Parameter Set | 将 P1 已分类参数转为 P2.0 Schema 下的正式 production parameter set；完成 85/85 迁移、Geometry Dependency Matrix、UNKNOWN 几何阻断判定、机器 preflight 与 canonical version lock | **PASS / APPROVED / CLOSED 2026-09-12** | T-006 V002：85/85正式参数、85/85 dependency matrix、21/21 tests、override validation 与 production preflight 全部 PASS；`geometry-critical unresolved blocker=0`。Z-006 保持 UNKNOWN；RC-01 仅为独立可替换 production candidate。 |
-| P2.2｜参数化主体结构候选模型｜Parametric Structural Skeleton | 由 P2.1 正式参数集驱动生成主体结构候选模型，覆盖柱网、柱、主要梁架、斗栱拓扑骨架、屋顶控制几何及主要空间关系，并验证可重复生成与参数响应 | **UNLOCKED / CURRENT / DOD DEFINITION REQUIRED** | 第一项正式 Blender 几何 Gate。正式几何 T-### 创建前必须先锁定 P2.2 DoD；CG-05 未解决转角精确节点/榫卯/隐角梁仅允许中等LOD拓扑骨架。 |
+| P2.2｜参数化主体结构候选模型｜Parametric Structural Skeleton | 由 P2.1 正式参数集驱动生成主体结构候选模型，覆盖柱网、柱、主要梁架、斗栱拓扑骨架、屋顶控制几何及主要空间关系，并验证可重复生成与参数响应 | **IN PROGRESS / DOD LOCKED / T-007 READY** | P2.2 DoD V001 已由 Product Owner 锁定；第一项正式 Blender 几何任务 T-007 已授权。必须完成完整主体中等LOD、build manifest、machine validation、deterministic rebuild、independent reopen 与人工结构审核；CG-05 继续限制转角/榫卯/隐角梁精度。 |
 | P2.3｜整合复原候选与质量验收｜Integrated Reconstruction Candidate & QC | 整合结构、屋面、斗栱体系与 evidence metadata，完成可追溯性、确定性重建、兼容性、可替换性与视觉 QC，形成正式963候选复原模型 | **LOCKED / WAITING FOR P2.2 PASS** | PASS 表示“工程可复现、证据可追溯、不确定性透明的963候选复原模型成立”，不等于完全还原963原貌。 |
 
 ### P2.0 Final Result
@@ -174,3 +174,23 @@ Product Owner 已批准：
 - Gate Review file：`docs/production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md`。
 
 Carry-forward：P2.1 PASS 只表示正式生产输入基线已满足进入主体结构候选模型的条件，不表示 Z-006 已成为历史事实。P2.2 使用正式 P2.1 参数集 + approved override sidecar，且所有合理补全继续可替换、可追溯。
+
+### P2.2 Definition of Done V001｜LOCKED 2026-09-12
+
+正式 DoD：`docs/production/zhenguo_wanfo/P2_2_DEFINITION_OF_DONE_V001.md`
+
+P2.2 必须完成 9 项：
+
+1. **正式输入合同 + Build Manifest**：输入版本/hash、Blender/script版本、实际几何参数、RC/override、bounded UNKNOWN 与输出 hash 全部可追溯；
+2. **主体六大范围完整**：grid、columns、primary frame、medium-LOD bracket topology、roof control geometry、主要出檐/山面与空间关系；
+3. **参数驱动 / 禁止 Naked Historical Constants**：历史/复原尺寸只能来自 P2.1 正式输入、批准 override 或明确派生规则；
+4. **关键几何机器验证**：柱网、柱位、柱高解析、梁架跨度/层级、斗栱拓扑、屋顶控制与主要出檐/山面关系均需机器验证；
+5. **RC 可替换**：Z-006-RC-01 与其他合理补全不得烘焙，替换后必须可重建；
+6. **UNKNOWN / 转角 / 原真性边界保留**：DG-114、HIS-002、45°转角、榫卯、隐角梁争议不得伪装成历史精确结论；
+7. **Geometry Metadata / Evidence Traceability**：主要对象/对象族可映射至 evidence class、source layer、originality status 与 parameter IDs；
+8. **Deterministic Rebuild + 技术完整性 + 人工结构审核**：同输入两次构建一致、独立重开稳定、Local Blender 3.6 可维护，并输出至少三张结构审核图；
+9. **正式归档**：generation script、manifest、tests、validation、determinism evidence、review PNG 与 local-only `.blend` hash/版本记录进入正式证据链。
+
+**P2.2 PASS 还要求：完整主体、machine geometry validation PASS、deterministic rebuild PASS、无未批准 geometry-critical input、无 naked historical constants，并由 Product Owner 完成人工结构审核批准。**
+
+T-007 已获授权作为 P2.2 第一项正式工程任务；Engineering PASS 不等于 P2.2 Gate PASS。
