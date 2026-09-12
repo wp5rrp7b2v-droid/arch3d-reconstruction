@@ -140,6 +140,25 @@
 - P2.1 PASS 不改变 Z-006 历史 UNKNOWN；Z-006-RC-01 继续作为独立、可替换 production override。
 - Gate Review：`docs/production/zhenguo_wanfo/P2_1_GATE_REVIEW_2026-09-12.md`。
 
+## 【中国古建筑3D复原｜T-007｜P2_2_STRUCTURAL_SKELETON_V001｜第一版正式主体结构候选模型】｜ENGINEERING PASS / COMPLETE
+
+- Think Level: HIGH。
+- Blender：3.6.23；Blender Python：3.10.13；host test Python：3.10.2。
+- 正式输入 hash 已锁定并写入 build manifest；P2.1 production preflight 继续 PASS。
+- Structural scope：**6/6**；共 **217** 个稳定命名 mesh 对象：GRID 8 / COLUMN 12 / FRAME 62 / BRACKET 88 / ROOF 43 / GABLE 4。
+- `Z-006` 继续 `UNKNOWN / null / DO_NOT_LOCK`；`Z-006-RC-01 = 11 × MOD-006 = 3534.3mm` 以独立、可替换 REASONABLE_COMPLETION 进入几何。
+- Machine geometry validation：**PASS / 0 errors**；声明 tolerance = 0.01mm。
+- Naked historical constant scan：**PASS**。
+- Deterministic rebuild：**PASS**；两次 clean build 的对象集合、数量、family counts、关键尺寸、topology、geometry-input snapshot 与 validation summary 一致；`.blend` 二进制序列化不要求 byte-identical。
+- Independent reopen：**PASS / PASS**。
+- Replaceability：synthetic test-only MOD-006 change 使实际柱高由 3534.3mm 重建为 3702.6mm，reopen PASS；Z-006 保持 null。其他合理补全替换测试亦 PASS。
+- Automated tests：**32/32 PASS**。
+- Review PNG：PLAN / ELEVATION / AXON 三张已生成并归档。
+- 本地正式 `.blend`：`production/zhenguo_wanfo/output/P2_2_STRUCTURAL_SKELETON_V001.blend`；SHA256 `3b61ccbaca17836bd63d9369ebc3a4c6e25fb27f0d274ea67e64f732ad3000e4`；2,466,272 bytes；local-only。
+- Canonical engineering commit：`a5a4181499c0494d16fbaf59d29337fa7d688e9d`，已进入 `origin/main`。
+- 独立复核：generator / validator / tests / manifest / machine validation / engineering report 一致，未发现新的工程 blocker。
+- T-007 最终工程结论：**PASS / COMPLETE**；**不等于 P2.2 Gate PASS**，仍需 Product Owner 人工结构审核。
+
 ## Current Execution State｜2026-09-12
 
 - T-001：PASS
@@ -149,14 +168,16 @@
 - T-005 V001：ENGINEERING PASS
 - T-005 V002：ENGINEERING PASS / COMPLETE / canonical evidence archived
 - T-006 V001：ENGINEERING HOLD / canonical evidence archived
-- T-006 V002：**ENGINEERING PASS / COMPLETE / canonical evidence archived**
+- T-006 V002：ENGINEERING PASS / COMPLETE / canonical evidence archived
+- T-007 V001：**ENGINEERING PASS / COMPLETE / canonical evidence archived**
 - P0：CLOSED / APPROVED
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO
 - P2：ACTIVE
 - P2.0：PASS / APPROVED
-- P2.1：**PASS / APPROVED / CLOSED**
-- P2.2：**UNLOCKED / CURRENT / DOD DEFINITION REQUIRED**
+- P2.1：PASS / APPROVED / CLOSED
+- P2.2：**IN PROGRESS / ENGINEERING PASS / PRODUCT OWNER STRUCTURAL REVIEW REQUIRED**
 - P2.3：LOCKED / WAITING FOR P2.2 PASS
 - Formal Case：平遥镇国寺万佛殿
-- Formal Blender geometry：**NOT STARTED**
-- Next engineering T-###：**NOT CREATED**；需先锁定 P2.2 Definition of Done。
+- Formal Blender geometry：**FIRST FORMAL CANDIDATE GENERATED / LOCAL-ONLY BLEND**
+- Current blocker：**NONE**
+- Next action：Product Owner 视觉审核 PLAN / ELEVATION / AXON 三张结构审核图；审核前不得宣布 P2.2 Gate PASS。
