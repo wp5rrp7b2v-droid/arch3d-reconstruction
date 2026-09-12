@@ -11,85 +11,75 @@
 
 **P0 Gate Final：4 / 4 PASS。**
 
-2026-09-11 Product Owner 已明确批准 P0 关闭。P0 状态：**CLOSED / APPROVED**。项目进入 **P1｜选题取证**。
+2026-09-11 Product Owner 已明确批准 P0 关闭。
 
-## P0.2 Production Rule｜Carry-forward
+## P0 Carry-forward
 
-凡需要返回 Local Blender 3.6 继续维护的核心资产，不得默认依赖未经单独验证的 Blender 4.5-only 数据结构、节点、模拟或其他新功能。新功能进入正式生产前必须先做兼容性验证。
+- Local Blender 3.6 ↔ Cloud Blender 4.5 的 Class B 兼容性限制继续生效。
+- P0.3 只证明“参数 → 脚本 → 可重复模型”的技术链路成立，不证明历史参数真实性。
 
-## P0.3 Validation Boundary｜Carry-forward
+---
 
-P0.3 只证明“结构化建筑参数 → 脚本 → 可重复最小结构模型”的技术链路成立；不代表历史证据已经完成参数化，也不代表正式古建筑结构、构造法式或复原精度已经被验证。这些属于 P1 及后续 Phase。
+## P1｜选题取证｜CLOSED / APPROVED 2026-09-12
 
-## P1｜选题取证｜ACTIVE
-
-| Gate | 验收标准 | 当前状态 | 关键边界 |
+| Gate | 验收标准 | 最终状态 | 关键证据 / 限制 |
 |---|---|---|---|
-| P1.0｜选题标准锁定 | 明确首个正式复原案例的筛选原则与比较维度，能够稳定排除“过于复杂 / 证据不足 / 不适合首案”的对象 | **PASS** | Product Owner 2026-09-11 批准。采用五项加权指标：证据链完整度30%；测绘/尺寸资料可获得性25%；结构规模与首案可控性20%；历史状态歧义程度15%（歧义越低得分越高）；参数化与展示价值10%。统一按1–5分评分。 |
-| P1.1｜候选案例比较与定选 | 对 3–5 个候选对象按统一标准比较，并由 Product Owner 明确锁定一个正式案例 | **PASS** | 四候选按 P1.0 锁定权重比较：平遥镇国寺万佛殿 4.80；五台南禅寺大殿 4.48；五台佛光寺东大殿 4.13；宁波保国寺大殿 4.05。Product Owner 2026-09-11 批准 **平遥镇国寺万佛殿** 为首案。评分只表示首案适配度，不是历史价值排名。 |
-| P1.2｜正式证据包建立 | 对锁定案例建立可追溯资料包，至少覆盖年代/身份、总体尺寸、平面柱网、立面屋顶、主体木构、关键构件及图像/测绘/考古或修缮资料 | **PASS** | Product Owner 2026-09-11 批准。`SRC-ZG-WF-001`完整精细测绘报告已直接核读；Direct Page Review V001 + Parameter Candidate Matrix V002 + Gate Review 完成；10/10 验收域通过。P1.2 的 PASS 不代表所有参数均已达到历史事实级确定性。 |
-| P1.3｜证据分级与可复原性 Go / No-Go | 将关键信息分为已证实 / 高可信推断 / 合理补全 / 未知，并判断是否足以进入正式参数化与 3D 复原 | **READY FOR PO DECISION** | Step 1 + Step 2 + Final Gate Review 已完成。85/85参数已分级；Gate Review = 6 PASS + 2 PASS WITH CONDITION + 0 FAIL；Reviewer Recommendation = **CONDITIONAL GO**。等待 Product Owner 批准，批准前仍不得进入正式3D生产。 |
+| P1.0｜选题标准锁定 | 明确首个正式复原案例的筛选原则与比较维度 | **PASS** | 五项加权标准已锁定。 |
+| P1.1｜候选案例比较与定选 | 对候选按统一标准比较并正式锁定案例 | **PASS** | 山西平遥镇国寺万佛殿正式定选。 |
+| P1.2｜正式证据包建立 | 建立可追溯证据包并覆盖核心复原域 | **PASS** | `SRC-ZG-WF-001` 完整精细测绘报告已直接核读；Gate Review 10/10 PASS。 |
+| P1.3｜证据分级与可复原性 Go / No-Go | 将关键信息分为已证实 / 高可信推断 / 合理补全 / 未知，并判断是否足以进入正式参数化与3D | **PASS / CONDITIONAL GO** | Product Owner 2026-09-12 批准。85/85参数完成分级；Gate Review 6 PASS + 2 PASS WITH CONDITION + 0 FAIL。CG-01～CG-06 跨阶段强制生效。 |
 
-**P1 Gate Progress：3 / 4 PASS；P1.3 READY FOR DECISION。**
+**P1 Gate Final：4 / 4 PASS。**
 
-### P1.0 Locked Selection Policy
+### P1 Final Evidence
 
-首案优先选择：**证据充分、结构规模可控、可参数化、公开资料可获得，并能够验证完整复原方法的现存或有高质量测绘资料的古代木构单体。**
-
-不以知名度或年代最早作为首要标准；“历史状态是否清晰”是独立评价维度，不能被“资料多”替代。
-
-### P1.1 Locked Case
-
-**首个正式复原案例：山西平遥镇国寺万佛殿。**
-
-锁定理由：在统一权重下获得最高首案适配度；兼具明确纪年基础、中小型单体规模、高质量精细测绘可获得性、较高参数化价值与相对可控的历史状态歧义。
-
-### P1.2 Final Evidence
-
-- `docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md`
 - `docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md`
 - `docs/evidence/zhenguo_wanfo/P1_2_PARAMETER_CANDIDATE_MATRIX_V002.md`
-- `docs/evidence/zhenguo_wanfo/P1_2_GATE_REVIEW_2026-09-11.md`
-
-直接核读已确认平面柱网、营造尺推定、柱径/角柱生起、斗栱主要构件、六椽栿、架道、山面出际、举折、理想模型、形变和修缮史；同时纠正了此前对主报告印刷 p107 / p147 的错误页码归属。
-
-### P1.3 Classification Evidence
-
 - `docs/evidence/zhenguo_wanfo/P1_3_HIGH_RISK_CLASSIFICATION_V001.md`
 - `docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md`
 - `docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md`
+- `docs/project_control/phase_archive/P1_closure.md`
 
-Step 2 完整统计：46 CONFIRMED / 32 HIGH_CONFIDENCE_INFERENCE / 4 REASONABLE_COMPLETION / 3 UNKNOWN，共85项。CONFIRMED 必须结合 `time_layer` 解读，不能自动等同963年原设计事实。
+### P1.3 Final Classification
 
-### P1.3 Final Gate Review｜2026-09-12
+- CONFIRMED：46
+- HIGH_CONFIDENCE_INFERENCE：32
+- REASONABLE_COMPLETION：4
+- UNKNOWN：3
+- TOTAL：85
 
-Gate Review 检查8项：
+`CONFIRMED` 必须结合 `time_layer` 解读，不能自动等同963年原设计事实。
 
-- 6 PASS；
-- 2 PASS WITH CONDITION；
-- 0 FAIL。
-
-Reviewer Recommendation：**APPROVE CONDITIONAL GO**。
-
-不建议无条件 GO：963原设计柱高、转角45°精确节点、隐衬角栿/隐角梁、逐构件963原真性仍存在不确定性，且正式 Evidence-aware Parameter Schema 尚未实现。
-
-不建议 NO-GO：上述未知项都可隔离到参数或子模块，不会使整个候选复原失去可解释性。
-
-若 Product Owner 批准 CONDITIONAL GO，则以下规则成为进入正式3D的强制条件：
+### P1.3 Conditional Go｜强制边界
 
 1. 第一项正式几何生产前建立 Evidence-aware Parameter Schema；
-2. UNKNOWN / DO_NOT_LOCK 不得静默硬锁为数字；
+2. UNKNOWN / DO_NOT_LOCK 不得静默硬锁；
 3. REASONABLE_COMPLETION 必须独立参数化、可替换、可追踪；
 4. `observed_as_measured` / `report_ideal_model` / `reconstructed_963_candidate` 三层长期分离；
 5. 未解决转角精确节点只允许中等LOD拓扑骨架，不得声明历史精确复原；
 6. 在逐构件原真性不足时，禁止“完全还原963原貌 / 全部963原构”的过度真实性声明。
 
-### P1.3 Decision Boundary
+---
 
-Product Owner 可选择：
+## P2｜正式参数化与3D复原｜ACTIVE
 
-- **APPROVE CONDITIONAL GO** → P1.3 PASS，P1 Gate = 4/4 PASS；正式参数化/3D阶段解锁，但所有 Conditional Go 条件继续强制生效；
-- **HOLD** → P1.3 保持 IN_PROGRESS，补证或修改规则后重审；
-- **NO-GO** → 当前案例不进入正式3D，重新评估对象或证据策略。
+### P2 Entry Rule
 
-P1.0 / P1.1 / P1.2 / P1.3 的研究与 Gate Review 本身不创建 Codex T-###；只有出现实际工程执行任务时再创建 T 编号。
+P1.3 的 `CONDITIONAL GO` 已解锁正式参数化阶段，但**尚未解锁第一项正式 Blender 几何生产**。CG-01 要求先建立 Evidence-aware Parameter Schema。
+
+| Gate | 验收标准 | 当前状态 | 关键边界 |
+|---|---|---|---|
+| P2.0｜Evidence-aware Parameter Schema | 建立机器可读的正式参数 Schema，使关键参数同时保存 `value / unit / classification / time_layer / source_layer / production_use / blocking_level / source_ids / notes`；验证 UNKNOWN 不会被硬锁、REASONABLE_COMPLETION 可替换、三层语义不会串层 | **IN PROGRESS / ENTRY READY** | **P2.0 PASS 前不得启动第一项正式 Blender 几何生产。** P0 裸数字 JSON 不得直接升级为正式生产参数。 |
+
+### P2.0 Definition of Done
+
+P2.0 至少需要通过以下检查：
+
+- Schema 字段完整且有明确枚举/约束；
+- 至少用一组 CONFIRMED、一组 HIGH_CONFIDENCE_INFERENCE、一组 REASONABLE_COMPLETION、一组 UNKNOWN 参数做实例验证；
+- UNKNOWN 能保持 `null / placeholder / DO_NOT_LOCK`；
+- REASONABLE_COMPLETION 能单独替换而不破坏证据链；
+- `observed_as_measured`、`report_ideal_model`、`reconstructed_963_candidate` 可同时存在且不会被自动覆盖；
+- 参数可被后续 Blender Python 读取，但本 Gate 不生成正式建筑几何。
+
+P2.1–P2.3 的完整 Gate 架构在 P2.0 建立并验证生产数据层后再锁定，避免在参数 Schema 尚未成立前过早固化后续工程结构。
