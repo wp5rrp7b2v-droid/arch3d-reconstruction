@@ -1,0 +1,136 @@
+{
+  "component_id": "CMP-COLUMN-001",
+  "master_id": "CMP-COLUMN-001_MASTER",
+  "master_version": "V001",
+  "canonical_reference_status": "CURRENT_PARAMETER_REALIZATION_FOR_REVIEW",
+  "unit": "mm",
+  "coordinate_convention": {
+    "handedness": "right_handed",
+    "+X": "horizontal_section_axis",
+    "+Y": "horizontal_section_axis_orthogonal_to_X",
+    "+Z": "column_longitudinal_axis_gravity_up"
+  },
+  "origin_convention": "column_body_bottom_face_center",
+  "canonical_transform": {
+    "location": [0, 0, 0],
+    "rotation": [0, 0, 0],
+    "scale": [1, 1, 1]
+  },
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "geometry_mode": "PARAMETRIC_CIRCULAR_COLUMN_BODY",
+  "parameters": [
+    {
+      "key": "diameter_mm",
+      "value": 460.0,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "OBSERVED_REFERENCE",
+      "source_ids": ["Z-001", "SRC-ZG-WF-001"],
+      "replaceable": false,
+      "precision_note": "Approximately 460 mm, report-adjusted observed reference; not an exact original 963 design diameter."
+    },
+    {
+      "key": "height_mm",
+      "value": 3534.3,
+      "unit": "mm",
+      "classification": "REASONABLE_COMPLETION",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "APPROVED_OVERRIDE",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "source_ids": ["Z-006-RC-01", "MOD-006", "D-023"],
+      "replaceable": true,
+      "historical_claim": "NOT_CONFIRMED_963_COLUMN_HEIGHT"
+    },
+    {
+      "key": "diameter_source_mode",
+      "value": "OBSERVED_Z001",
+      "unit": null,
+      "classification": "CONFIRMED",
+      "time_layer": "observed_as_measured",
+      "source_layer": "DIRECT_PRIMARY",
+      "production_use": "SOURCE_SELECTION",
+      "source_ids": ["Z-001"],
+      "replaceable": false
+    },
+    {
+      "key": "height_source_mode",
+      "value": "RC_Z006_RC_01",
+      "unit": null,
+      "classification": "REASONABLE_COMPLETION",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "APPROVED_OVERRIDE",
+      "production_use": "SOURCE_SELECTION",
+      "source_ids": ["Z-006-RC-01", "D-023"],
+      "replaceable": true
+    },
+    {
+      "key": "historical_height_Z006_mm",
+      "value": null,
+      "unit": "mm",
+      "classification": "UNKNOWN",
+      "time_layer": "reconstructed_963_candidate",
+      "source_layer": "UNKNOWN",
+      "production_use": "DO_NOT_LOCK",
+      "source_ids": ["Z-006", "SRC-ZG-WF-001"],
+      "replaceable": true
+    }
+  ],
+  "height_candidate": {
+    "candidate_id": "Z-006-RC-01",
+    "target_parameter_id": "Z-006",
+    "approval_decision_id": "D-023",
+    "classification": "REASONABLE_COMPLETION",
+    "time_layer": "reconstructed_963_candidate",
+    "source_layer": "APPROVED_OVERRIDE",
+    "formula": "11 * MOD-006",
+    "multiplier": 11,
+    "depends_on": ["MOD-006"],
+    "resolved_mod_006_mm": 321.3,
+    "current_resolved_value_mm": 3534.3,
+    "replaceable": true,
+    "historical_claim": "Production candidate only; historical Z-006 remains unknown."
+  },
+  "historical_state": {
+    "historical_claim": "candidate_only",
+    "model_layer": "reconstructed_963_candidate",
+    "observed_as_measured": "diameter reference only",
+    "report_ideal_model": "separate; no automatic equivalence"
+  },
+  "originality_status": "unknown",
+  "originality_parameter_id": "HIS-002",
+  "reuse_scope": "Reusable circular column body; diameter and body height are explicit geometry inputs per realization, subject to building-specific evidence review.",
+  "variant_axes": ["diameter_mm", "height_mm"],
+  "placement_only_attributes": ["grid_position", "bay_index", "world_position", "world_rotation", "instance_number", "corner_column_role"],
+  "known_unknowns": [
+    "Z-006: original 963 column height UNKNOWN / null / DO_NOT_LOCK",
+    "HIS-002: component-level 963 originality unknown",
+    "Corner-column rise, taper, entasis, side-foot, base, capital and joinery geometry are not evidenced for this Master"
+  ],
+  "interpretation_boundary": [
+    "Observed Z-001 diameter is a current report-adjusted approximate reference, not an exact 963 design diameter.",
+    "3534.3 mm is the D-023 approved replaceable Z-006-RC-01 production candidate, not a confirmed 963 column height.",
+    "This circular body is an evidence-bounded canonical reference realization, not a scan or proven exact original component.",
+    "No world placement or corner-column rise belongs in the Master body."
+  ],
+  "unsupported_geometry": [],
+  "evidence_references": [
+    "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+    "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+    "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json",
+    "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+    "production/zhenguo_wanfo/registry/P3_1_COMPONENT_IDENTITY_RESOLUTION_V001.json"
+  ],
+  "generator_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/build_column_master_v001.py",
+  "canonical_asset_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/asset/CMP-COLUMN-001_MASTER_V001.blend",
+  "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json",
+  "review_asset_paths": [
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/FRONT.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/SIDE.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/TOP.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/AXON.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/DIMENSION_PARAMETER_SUMMARY.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/EVIDENCE_UNCERTAINTY_SUMMARY.png"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "blender_version": "3.6.23",
+  "body": {
+    "face_count": 130,
+    "local_bbox_mm": {
+      "dimensions": [
+        460.0,
+        460.0,
+        3534.30005
+      ],
+      "max": [
+        230.0,
+        230.0,
+        3534.30005
+      ],
+      "min": [
+        -230.0,
+        -230.0,
+        0.0
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "name": "MASTER__CMP_COLUMN_001__BODY",
+    "primitive": "closed_constant_radius_circular_column_body",
+    "unsupported_column_geometry_count": 0,
+    "vertex_count": 256
+  },
+  "canonical_asset_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/asset/CMP-COLUMN-001_MASTER_V001.blend",
+  "canonical_blend_sha256": "98211701fcc358f6174829257ef13310baa4d1a2d5e762637c25c812a4362487",
+  "collection_names": [
+    "MASTER__CMP_COLUMN_001"
+  ],
+  "component_id": "CMP-COLUMN-001",
+  "evidence_classes": {
+    "diameter_mm": "CONFIRMED",
+    "diameter_source_mode": "CONFIRMED",
+    "height_mm": "REASONABLE_COMPLETION",
+    "height_source_mode": "REASONABLE_COMPLETION",
+    "historical_height_Z006_mm": "UNKNOWN"
+  },
+  "generator_version": "V001",
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "geometry_mode": "PARAMETRIC_CIRCULAR_COLUMN_BODY",
+  "historical_state": {
+    "historical_claim": "candidate_only",
+    "model_layer": "reconstructed_963_candidate",
+    "observed_as_measured": "diameter reference only",
+    "report_ideal_model": "separate; no automatic equivalence"
+  },
+  "input_hashes": {
+    "generator": "d04f6fa6232b9c53e9037d96eaa163ed86fec5ab24e70120293c540b0e396521",
+    "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json": "07676d390a709c6baaed39986033725550b543b88239d167e6dd4bbabed25739"
+  },
+  "known_unknowns": [
+    "Z-006: original 963 column height UNKNOWN / null / DO_NOT_LOCK",
+    "HIS-002: component-level 963 originality unknown",
+    "Corner-column rise, taper, entasis, side-foot, base, capital and joinery geometry are not evidenced for this Master"
+  ],
+  "master_id": "CMP-COLUMN-001_MASTER",
+  "master_version": "V001",
+  "mesh_count": 1,
+  "non_mesh_auxiliary_objects": [],
+  "object_count": 1,
+  "object_names": [
+    "MASTER__CMP_COLUMN_001__BODY"
+  ],
+  "originality_status": "unknown",
+  "resolved_parameters": {
+    "diameter_mm": 460.0,
+    "diameter_source_mode": "OBSERVED_Z001",
+    "height_mm": 3534.3,
+    "height_source_mode": "RC_Z006_RC_01",
+    "historical_height_Z006_mm": null
+  },
+  "semantic_geometry_signature": "ad50176d3fb9a1125e5bcefce6ff29350997ddd0221fdc3e52e134d75151b08c",
+  "unit": "mm"
+}

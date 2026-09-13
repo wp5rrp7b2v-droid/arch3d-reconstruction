@@ -1,0 +1,51 @@
+{
+  "component_id": "CMP-COLUMN-001",
+  "geometry_color": "neutral_grey",
+  "images": [
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/FRONT.png",
+      "sha256": "9132b81ae430a97cfcc2b5b17c24ef2094644ebefea662cd4cc0800940f4c8d7",
+      "view": "FRONT"
+    },
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/SIDE.png",
+      "sha256": "ade55fc6fa1ad0fcd816bfa1a278142753b61da5220791d956c47344976a4714",
+      "view": "SIDE"
+    },
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/TOP.png",
+      "sha256": "efcdbb491b12ed47e83938fdd4d5cd26b8d0299beba2850afbbae787efa70040",
+      "view": "TOP"
+    },
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/AXON.png",
+      "sha256": "9466c862f347958f15b5ced25175e46ed8c9aa158a388bbe1a35ded0ea8c20f1",
+      "view": "AXON"
+    },
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/DIMENSION_PARAMETER_SUMMARY.png",
+      "sha256": "f6dd4a9691c6a51bb795c74ab5515f89747bc6fef8fa148ba319b220da781f87",
+      "view": "DIMENSION_PARAMETER_SUMMARY"
+    },
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/EVIDENCE_UNCERTAINTY_SUMMARY.png",
+      "sha256": "8deb3ad0992d8a61e0d5a5ae8ffde74d02d0b415aaa6b83f0dbf41db2cea241f",
+      "view": "EVIDENCE_UNCERTAINTY_SUMMARY"
+    }
+  ],
+  "interpretation_boundary": [
+    "Observed Z-001 diameter is a current report-adjusted approximate reference, not an exact 963 design diameter.",
+    "3534.3 mm is the D-023 approved replaceable Z-006-RC-01 production candidate, not a confirmed 963 column height.",
+    "This circular body is an evidence-bounded canonical reference realization, not a scan or proven exact original component.",
+    "No world placement or corner-column rise belongs in the Master body."
+  ],
+  "master_version": "V001",
+  "orthographic_views": [
+    "FRONT",
+    "SIDE",
+    "TOP",
+    "AXON"
+  ],
+  "render_source": "Blender 3.6.23 canonical parameter realization; temporary review-only camera/materials are not saved in the Master",
+  "status": "ENGINEERING_REVIEW_READY"
+}

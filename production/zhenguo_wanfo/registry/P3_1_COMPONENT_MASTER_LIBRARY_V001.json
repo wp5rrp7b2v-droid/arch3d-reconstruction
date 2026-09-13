@@ -1,0 +1,40 @@
+{
+  "base_registry_path": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_V001.json",
+  "masters": [
+    {
+      "approval_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+      "canonical_asset_sha256": "98211701fcc358f6174829257ef13310baa4d1a2d5e762637c25c812a4362487",
+      "canonical_asset_status": "LOCAL_ONLY_GENERATED",
+      "component_id": "CMP-COLUMN-001",
+      "evidence_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/registry/P3_1_COMPONENT_IDENTITY_RESOLUTION_V001.json"
+      ],
+      "generator_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/build_column_master_v001.py",
+      "geometry_mode": "PARAMETRIC_CIRCULAR_COLUMN_BODY",
+      "known_unknowns": [
+        "Z-006: original 963 column height UNKNOWN / null / DO_NOT_LOCK",
+        "HIS-002: component-level 963 originality unknown",
+        "Corner-column rise, taper, entasis, side-foot, base, capital and joinery geometry are not evidenced for this Master"
+      ],
+      "local_binary_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/asset/CMP-COLUMN-001_MASTER_V001.blend",
+      "master_id": "CMP-COLUMN-001_MASTER",
+      "master_version": "V001",
+      "originality_status": "unknown",
+      "parameter_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json",
+      "reuse_scope": "Reusable circular column body; diameter and body height are explicit geometry inputs per realization, subject to building-specific evidence review.",
+      "review_metadata_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/REVIEW_PACKAGE_V001.json",
+      "review_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001",
+      "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json",
+      "validation_status": "T011_ENGINEERING_PASS",
+      "variant_ids": []
+    }
+  ],
+  "phase": "P3.1",
+  "status": "PILOT_ENGINEERING_COMPLETE_PENDING_PRODUCT_OWNER_REVIEW",
+  "task": "T-011",
+  "version": "V001"
+}

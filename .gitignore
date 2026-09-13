@@ -1,5 +1,6 @@
 .DS_Store
 *.blend1
 *.blend2
+*.blend
 production/zhenguo_wanfo/output/*.blend
 **pycache__/

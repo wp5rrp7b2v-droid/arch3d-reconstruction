@@ -1,0 +1,139 @@
+{
+  "approval_boundary": "T-011 engineering PASS only; Product Owner visual/Pilot approval and P3.1 gate remain pending.",
+  "blender_version": "3.6.23",
+  "canonical_blend_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/asset/CMP-COLUMN-001_MASTER_V001.blend",
+  "canonical_blend_sha256": "98211701fcc358f6174829257ef13310baa4d1a2d5e762637c25c812a4362487",
+  "check_count": 22,
+  "checks": {
+    "bounding_box_matches_parameters": "PASS",
+    "canonical_binary_hash": "PASS",
+    "canonical_rebuild_after_mutation": "PASS",
+    "canonical_source_modes": "PASS",
+    "deterministic_semantic_regeneration": "PASS",
+    "geometry_mode_lod_contract": "PASS",
+    "his002_originality_unknown": "PASS",
+    "independent_reopen": "PASS",
+    "naked_historical_constant_scan": "PASS",
+    "no_world_placement_leakage": "PASS",
+    "observed_diameter_reference": "PASS",
+    "p2_frozen_baseline_unchanged": "PASS",
+    "rc01_separate_replaceable_candidate": "PASS",
+    "registry_single_master_no_orphan": "PASS",
+    "required_asset_contract_fields": "PASS",
+    "six_review_images": "PASS",
+    "synthetic_mutation_isolated": "PASS",
+    "transform_object_count": "PASS",
+    "unique_component_master_identity": "PASS",
+    "unit_axes_origin_contract": "PASS",
+    "unsupported_column_geometry_zero": "PASS",
+    "z006_unknown_null_do_not_lock": "PASS"
+  },
+  "component_id": "CMP-COLUMN-001",
+  "independent_reopen_evidence": {
+    "bbox_dimensions_mm": [
+      460.0,
+      460.0,
+      3534.30005
+    ],
+    "blender_version": "3.6.23",
+    "collection_names": [
+      "MASTER__CMP_COLUMN_001"
+    ],
+    "constant_radius": true,
+    "loaded_blend": "/Users/caroline/中国古建筑3D复原/production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/asset/CMP-COLUMN-001_MASTER_V001.blend",
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "mesh_count": 1,
+    "object_count": 1,
+    "semantic_geometry_signature": "ad50176d3fb9a1125e5bcefce6ff29350997ddd0221fdc3e52e134d75151b08c",
+    "status": "PASS",
+    "unsupported_column_geometry_count": 0
+  },
+  "master_version": "V001",
+  "mutation_evidence": {
+    "baseline_bbox_mm": [
+      460.0,
+      460.0,
+      3534.30005
+    ],
+    "baseline_height_mm": 3534.3,
+    "baseline_signature": "ad50176d3fb9a1125e5bcefce6ff29350997ddd0221fdc3e52e134d75151b08c",
+    "canonical_file_unchanged_during_mutation": true,
+    "canonical_rebuild_restored": true,
+    "changed_parameter": "height_mm",
+    "classification": "ENGINEERING_TEST_ONLY",
+    "not_a_historical_variant": true,
+    "status": "PASS",
+    "synthetic_bbox_mm": [
+      460.0,
+      460.0,
+      3634.30005
+    ],
+    "synthetic_height_mm": 3634.3,
+    "synthetic_signature": "35e4c34abc1d100b39904eaef2d5c0e7af2528520a6d8d27c3f755036e818e57"
+  },
+  "p2_frozen_baseline_sha256_after": {
+    "production/zhenguo_wanfo/build/P2_2_BUILD_MANIFEST_V001.json": "382af675cbfef78f4764c061693ee096f0f0c22d2838fed0257175dbf18a0cfd",
+    "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json": "5b10f3d83c4d72cc312c5f896e7cff5838365986612a885a310e2799e2a844a7",
+    "production/zhenguo_wanfo/components/P2_3_COMPONENT_LIBRARY_V001.json": "78dc21608b52b35d8e163d505078848943b22f7cf796eacff3060f94458faddf",
+    "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json": "3e77d4c03acbd3595c28e93b1d04166730ede1bd08741c9aa94b28164f3764e4",
+    "production/zhenguo_wanfo/output/P2_2_STRUCTURAL_SKELETON_V001.blend": "3b61ccbaca17836bd63d9369ebc3a4c6e25fb27f0d274ea67e64f732ad3000e4",
+    "production/zhenguo_wanfo/output/P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001.blend": "ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512",
+    "production/zhenguo_wanfo/params/P2_0_MINIMAL_PARAMETER_SET_V001.json": "189a95a6718145e0b85fe083a453edd7e7b7f9d5bb06cb33aac2abee0b8b4061",
+    "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json": "3436050b33508d55633d1699c9f263f976f6e4b30b534c5607f89752735116c3",
+    "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json": "37bc365a50bd6a43e178c3102c19ad76cbf0cb533f4d76710a793afa318c0889",
+    "production/zhenguo_wanfo/review/P2_2_STRUCTURAL_SKELETON_V001_AXON.png": "2931b8159112616131f1eefdfe8f4714760d5a96e35308e11ccfb8d7a36166fc",
+    "production/zhenguo_wanfo/review/P2_2_STRUCTURAL_SKELETON_V001_ELEVATION.png": "c8d329fee203fc521524e1c0a21414ad6dfa6a04c12569ea445e63fda42c3119",
+    "production/zhenguo_wanfo/review/P2_2_STRUCTURAL_SKELETON_V001_PLAN.png": "f4184c6a73930fa5396828ea3febcd3ed296535c265daf616fc16b4f3d084ccc",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_AXON.png": "98bd0a793c43d3284a8da1cfb88fd9f3e5f3eb6e2492b92c62893bfc38121535",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_ELEVATION.png": "522d154cf1827871e1a9dfd4fa5e9c0fb9914f6ffc4dff8c10d45d56ffd260e7",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_EVIDENCE_DIAGNOSTIC.png": "742de9b2cbe53d5665fe81208b404ce46223497850e30ded52738a96b34a1b87",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_EVIDENCE_DIAGNOSTIC_V002.png": "998739c5c93e5d835c563bfdcaea4552749427d3511dfd9258d22bb67f719d9c",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_EXTERIOR_3Q.png": "6384de1009b7aff8051ca915c3960322c150a8a0dcb384d0638e9c1b3601e140",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_PLAN.png": "696978ce6590b869e141e3fa2e22aecb4fbfffe6e724684c38b760f54fea8dfc",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_STRUCTURE_DETAIL.png": "1448ece61305cde0166c4440747dfec16d21afad19763002b189a0eacb9f49ac"
+  },
+  "p2_frozen_baseline_sha256_before": {
+    "production/zhenguo_wanfo/build/P2_2_BUILD_MANIFEST_V001.json": "382af675cbfef78f4764c061693ee096f0f0c22d2838fed0257175dbf18a0cfd",
+    "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json": "5b10f3d83c4d72cc312c5f896e7cff5838365986612a885a310e2799e2a844a7",
+    "production/zhenguo_wanfo/components/P2_3_COMPONENT_LIBRARY_V001.json": "78dc21608b52b35d8e163d505078848943b22f7cf796eacff3060f94458faddf",
+    "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json": "3e77d4c03acbd3595c28e93b1d04166730ede1bd08741c9aa94b28164f3764e4",
+    "production/zhenguo_wanfo/output/P2_2_STRUCTURAL_SKELETON_V001.blend": "3b61ccbaca17836bd63d9369ebc3a4c6e25fb27f0d274ea67e64f732ad3000e4",
+    "production/zhenguo_wanfo/output/P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001.blend": "ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512",
+    "production/zhenguo_wanfo/params/P2_0_MINIMAL_PARAMETER_SET_V001.json": "189a95a6718145e0b85fe083a453edd7e7b7f9d5bb06cb33aac2abee0b8b4061",
+    "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json": "3436050b33508d55633d1699c9f263f976f6e4b30b534c5607f89752735116c3",
+    "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json": "37bc365a50bd6a43e178c3102c19ad76cbf0cb533f4d76710a793afa318c0889",
+    "production/zhenguo_wanfo/review/P2_2_STRUCTURAL_SKELETON_V001_AXON.png": "2931b8159112616131f1eefdfe8f4714760d5a96e35308e11ccfb8d7a36166fc",
+    "production/zhenguo_wanfo/review/P2_2_STRUCTURAL_SKELETON_V001_ELEVATION.png": "c8d329fee203fc521524e1c0a21414ad6dfa6a04c12569ea445e63fda42c3119",
+    "production/zhenguo_wanfo/review/P2_2_STRUCTURAL_SKELETON_V001_PLAN.png": "f4184c6a73930fa5396828ea3febcd3ed296535c265daf616fc16b4f3d084ccc",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_AXON.png": "98bd0a793c43d3284a8da1cfb88fd9f3e5f3eb6e2492b92c62893bfc38121535",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_ELEVATION.png": "522d154cf1827871e1a9dfd4fa5e9c0fb9914f6ffc4dff8c10d45d56ffd260e7",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_EVIDENCE_DIAGNOSTIC.png": "742de9b2cbe53d5665fe81208b404ce46223497850e30ded52738a96b34a1b87",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_EVIDENCE_DIAGNOSTIC_V002.png": "998739c5c93e5d835c563bfdcaea4552749427d3511dfd9258d22bb67f719d9c",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_EXTERIOR_3Q.png": "6384de1009b7aff8051ca915c3960322c150a8a0dcb384d0638e9c1b3601e140",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_PLAN.png": "696978ce6590b869e141e3fa2e22aecb4fbfffe6e724684c38b760f54fea8dfc",
+    "production/zhenguo_wanfo/review/P2_3_INTEGRATED_RECONSTRUCTION_V001_STRUCTURE_DETAIL.png": "1448ece61305cde0166c4440747dfec16d21afad19763002b189a0eacb9f49ac"
+  },
+  "requires_project_control_review": [],
+  "review_count": 6,
+  "semantic_geometry_signature": "ad50176d3fb9a1125e5bcefce6ff29350997ddd0221fdc3e52e134d75151b08c",
+  "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json",
+  "status": "PASS",
+  "task": "T-011",
+  "unexplained_validation_errors": []
+}
