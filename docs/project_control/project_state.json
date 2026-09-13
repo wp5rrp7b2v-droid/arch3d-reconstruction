@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R047",
+  "state_revision": "R048",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.0_CLOSED / P3.1_DOD_DEFINITION_REQUIRED",
+  "session_status": "ACTIVE / P3.1_DOD_DRAFT / PRODUCT_OWNER_REVIEW_REQUIRED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,12 +17,12 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "ENTERED / DOD DEFINITION REQUIRED",
+    "status": "DOD DRAFT / CHATGPT REVIEWED / PRODUCT OWNER REVIEW REQUIRED",
     "passed": 1,
     "total": 4,
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ENTERED / DOD REQUIRED",
+      "P3.1": "ACTIVE / DOD DRAFT / REVIEW REQUIRED",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
@@ -67,9 +67,24 @@
     "technical_result": "9/9 PASS"
   },
   "p3_1": {
-    "status": "ENTERED / DOD DEFINITION REQUIRED",
-    "purpose": "Create canonical 3D Component Masters, parameterized variants and standardized review assets from the P3.0 Registry without collapsing unresolved proxy semantics into historical certainty.",
-    "task_rule": "Do not create T-010 or start new component geometry before P3.1 Definition of Done is approved and locked."
+    "status": "ACTIVE / DOD DRAFT / PRODUCT OWNER REVIEW REQUIRED",
+    "purpose": "Create canonical 3D Component Masters, parameterized variants and standardized review assets from evidence-qualified historical component identities without collapsing unresolved proxy semantics into historical certainty.",
+    "dod": "docs/production/zhenguo_wanfo/P3_1_DEFINITION_OF_DONE_V001.md",
+    "dod_status": "DRAFT / CHATGPT REVIEWED / FOR PRODUCT OWNER APPROVAL",
+    "dod_items": 9,
+    "scope_rule": "Master production count is evidence-qualified, not inherited from the 11 P2 engineering families. All MASTER_REQUIRED records must reach 100% coverage; proxy/control/envelope objects must not be silently historicized.",
+    "minimum_scope_review": [
+      "柱",
+      "柱头栌斗",
+      "底斗",
+      "单向长开斗",
+      "交互斗",
+      "下六椽栿",
+      "上六椽栿",
+      "槫类",
+      "椽类"
+    ],
+    "task_rule": "Do not create T-010 or start new P3.1 component geometry before P3.1 Definition of Done is approved and locked. P3.1 may later use multiple T-tasks rather than one monolithic task."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -93,14 +108,14 @@
   "latest_material_decision": {
     "id": "D-031",
     "date": "2026-09-13",
-    "decision": "Product Owner approved P3.0 PASS / CLOSED after 9/9 DoD, 11/40/365 migration coverage and zero orphan; P3.1 entered with DoD definition required."
+    "decision": "Product Owner approved P3.0 PASS / CLOSED after 9/9 DoD, 11/40/365 migration coverage and zero orphan; P3.1 entered."
   },
-  "next_action": "Define and approve P3.1 Definition of Done before creating T-010 or starting new component geometry.",
+  "next_action": "Product Owner review P3.1 Definition of Done V001. If approved, lock the DoD and then plan/authorize the first P3.1 engineering task; no new component geometry before approval.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v013",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R047_REFRESH_COMPLETE"
+    "refresh_status": "R047_STALE_AFTER_R048_DOD_DRAFT"
   }
 }
