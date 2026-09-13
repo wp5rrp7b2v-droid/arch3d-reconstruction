@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R049",
+  "state_revision": "R050",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1_DOD_LOCKED / T010_PLANNING_READY",
+  "session_status": "ACTIVE / P3.1_DOD_LOCKED / T010_AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,19 +17,27 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "ACTIVE / DOD LOCKED / T-010 PLANNING READY",
+    "status": "ACTIVE / DOD LOCKED / T-010 AUTHORIZED",
     "passed": 1,
     "total": 4,
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / DOD LOCKED / T-010 PLANNING READY",
+      "P3.1": "ACTIVE / DOD LOCKED / T-010 AUTHORIZED",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
   "decision_required": false,
   "blocker": null,
-  "current_task": null,
+  "current_task": {
+    "id": "T-010",
+    "key": "P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001",
+    "name": "构件Master资格矩阵与证据身份解析",
+    "status": "AUTHORIZED / READY_FOR_LOCAL_EXECUTION",
+    "think_level": "HIGH",
+    "contract": "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+    "scope": "Master eligibility / scope matrix + evidence-backed historical component identity resolution + validation only; no Blender Master geometry or Variant production"
+  },
   "current_case": {
     "name": "平遥镇国寺万佛殿",
     "location": "山西省平遥县镇国寺",
@@ -67,7 +75,7 @@
     "technical_result": "9/9 PASS"
   },
   "p3_1": {
-    "status": "ACTIVE / DOD LOCKED / PRODUCT OWNER APPROVED",
+    "status": "ACTIVE / DOD LOCKED / T-010 AUTHORIZED",
     "decision_id": "D-032",
     "purpose": "Create canonical 3D Component Masters, parameterized variants and standardized review assets from evidence-qualified historical component identities without collapsing unresolved proxy semantics into historical certainty.",
     "dod": "docs/production/zhenguo_wanfo/P3_1_DEFINITION_OF_DONE_V001.md",
@@ -85,8 +93,8 @@
       "槫类",
       "椽类"
     ],
-    "task_strategy": "P3.1 may use multiple T-tasks. T-010 should first establish the Master Scope Matrix and evidence-backed identity resolution before any batch Master geometry production.",
-    "task_rule": "Do not start batch component geometry until Master eligibility and identity resolution are completed under an authorized task contract."
+    "task_strategy": "P3.1 may use multiple T-tasks. T-010 first establishes the Master Scope Matrix and evidence-backed identity resolution before any batch Master geometry production.",
+    "task_rule": "T-010 is authorized for qualification / identity work only; no batch component geometry until T-010 review is complete and the next geometry task is separately authorized."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -110,14 +118,14 @@
   "latest_material_decision": {
     "id": "D-032",
     "date": "2026-09-13",
-    "decision": "Product Owner approved and locked P3.1 Definition of Done V001. Master production is evidence-qualified; T-010 planning may begin with Scope Matrix and identity resolution before batch geometry."
+    "decision": "Product Owner approved and locked P3.1 Definition of Done V001. T-010 is now authorized as the first qualification task for Scope Matrix and evidence-backed identity resolution; no batch Master geometry is authorized."
   },
-  "next_action": "Define and authorize T-010 as the first P3.1 task for Component Master Scope Matrix and evidence-backed identity resolution. Do not begin batch component geometry before that qualification work is complete.",
+  "next_action": "Sync local repo with GitHub main, then execute T-010 P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001. Do not create Blender Master geometry or Variant geometry in T-010.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v015",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R049_REFRESH_COMPLETE"
+    "refresh_status": "R049_STALE_AFTER_R050_T010_AUTHORIZATION"
   }
 }
