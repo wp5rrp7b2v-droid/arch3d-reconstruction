@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R045",
+  "state_revision": "R046",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.0_DOD_LOCKED / T009_AUTHORIZED",
+  "session_status": "ACTIVE / P3.0_TECHNICAL_REVIEW_PASS / PRODUCT_OWNER_DECISION_REQUIRED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,24 +17,31 @@
   "current_gate": {
     "id": "P3.0",
     "name": "Component Ontology & Registry",
-    "status": "ACTIVE / DOD LOCKED / IMPLEMENTATION READY",
+    "status": "TECHNICAL REVIEW PASS / 9 OF 9 / PRODUCT OWNER APPROVAL REQUIRED",
     "passed": 0,
     "total": 4,
     "items": {
-      "P3.0": "ACTIVE / DOD LOCKED / T-009 AUTHORIZED",
+      "P3.0": "REVIEW READY / 9 OF 9 TECHNICAL PASS / PO DECISION REQUIRED",
       "P3.1": "LOCKED / WAITING_FOR_P3.0_PASS",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
-  "decision_required": false,
+  "decision_required": true,
   "blocker": null,
   "current_task": {
     "id": "T-009",
     "key": "P3_0_COMPONENT_ONTOLOGY_REGISTRY_MIGRATION_V001",
-    "status": "AUTHORIZED / READY_FOR_LOCAL_EXECUTION",
+    "status": "COMPLETE / ENGINEERING PASS",
     "think_level": "HIGH",
-    "scope": "ontology / registry schema / P2 11-40-365 semantic migration / validation only; no new Blender geometry"
+    "scope": "ontology / registry schema / P2 11-40-365 semantic migration / validation only; no new Blender geometry",
+    "commit_sha": "3db50b94cd72e79cef419054aeaa7d2b75523ba5",
+    "family_coverage": "11/11",
+    "variant_coverage": "40/40",
+    "instance_coverage": "365/365",
+    "orphans": "0/0/0",
+    "validation": "PASS",
+    "determinism": "PASS"
   },
   "current_case": {
     "name": "平遥镇国寺万佛殿",
@@ -65,15 +72,23 @@
     },
     "core_model": "Evidence -> Component Knowledge -> Parametric Component -> Assembly Rules -> Building Reconstruction",
     "p2_migration_rule": "P3.0 must audit and map existing P2 11 families / 40 variants / 365 instances before creating new geometry.",
-    "task_rule": "T-009 is authorized after D-030, but must not create new Blender geometry."
+    "task_rule": "P3.1 remains locked until Product Owner explicitly approves P3.0 PASS."
   },
   "p3_0": {
     "dod": "docs/production/zhenguo_wanfo/P3_0_DEFINITION_OF_DONE_V001.md",
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-030",
     "migration_audit": "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
-    "migration_audit_status": "WORKING DRAFT / SEMANTIC AUDIT STARTED",
-    "initial_family_finding": "P2 11 families mix historical component concepts, geometric proxies, control objects and roof envelope; they must not be treated as 11 historical component types.",
-    "pass_coverage": "11/11 families + 40/40 variants + 365/365 instances + zero orphan",
+    "migration_audit_status": "11/11 COMPLETE / T-009 VALIDATED",
+    "component_ontology": "docs/production/zhenguo_wanfo/P3_0_COMPONENT_ONTOLOGY_V001.md",
+    "registry_schema": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_SCHEMA_V001.json",
+    "component_registry": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_V001.json",
+    "validation_report": "docs/production/zhenguo_wanfo/P3_0_REGISTRY_VALIDATION_REPORT_V001.md",
+    "gate_review": "docs/production/zhenguo_wanfo/P3_0_GATE_REVIEW_2026-09-13.md",
+    "technical_gate_result": "9/9 PASS / RECOMMEND APPROVE",
+    "family_coverage": "11/11",
+    "variant_coverage": "40/40",
+    "instance_coverage": "365/365",
+    "orphans": "0/0/0",
     "decision_id": "D-030"
   },
   "historical_boundaries": {
@@ -101,12 +116,12 @@
     "date": "2026-09-13",
     "decision": "Product Owner approved and locked P3.0 Definition of Done V001; T-009 authorized for ontology/registry/migration engineering without new geometry."
   },
-  "next_action": "Sync local repo with GitHub main, then execute T-009 P3_0_COMPONENT_ONTOLOGY_REGISTRY_MIGRATION_V001 locally. Do not add Blender geometry.",
+  "next_action": "Product Owner review the P3.0 Gate Review and explicitly approve or reject P3.0 PASS. Do not create P3.1 engineering task before approval.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v012",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R045_REFRESH_COMPLETE"
+    "refresh_status": "R045_STALE_AFTER_R046_GATE_REVIEW"
   }
 }
