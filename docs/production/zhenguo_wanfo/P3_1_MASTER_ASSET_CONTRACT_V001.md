@@ -1,9 +1,10 @@
 # P3.1 Canonical Master Asset Contract V001
 
-Status: **DRAFT / PRODUCT OWNER REVIEW REQUIRED**  
+Status: **LOCKED / PRODUCT OWNER APPROVED / D-034**  
 Date: 2026-09-13  
 Phase/Gate: `P3 / P3.1｜Component Master & Variant Library`  
 Qualification baseline: `T-010 APPROVED / D-033`  
+Contract approval: `D-034`  
 Scope: **6 MASTER_REQUIRED components only**
 
 ## 1. Purpose
@@ -39,7 +40,7 @@ Master 生产必须继承且不得覆盖：
 - P3.0 Ontology / Registry / Migration Audit；
 - P1 approved direct evidence package；
 - P2 frozen engineering baseline；
-- D-023、D-028～D-033；
+- D-023、D-028～D-034；
 - CG-02～CG-06；
 - Evidence Visualization carry-forward rules。
 
@@ -504,7 +505,7 @@ Deferred / Proxy / Control / Envelope 不得出现 `approved master_3d_asset`。
 
 ## 14. Contract Acceptance / Next-step Rule
 
-本合同只有在 Product Owner 明确批准并锁定后才成为 P3.1 正式工程输入。
+本合同已由 Product Owner 于 2026-09-13 明确批准并锁定（D-034），现为 P3.1 正式工程输入。
 
 批准本合同：
 
