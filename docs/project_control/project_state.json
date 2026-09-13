@@ -3,46 +3,33 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R046",
+  "state_revision": "R047",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.0_TECHNICAL_REVIEW_PASS / PRODUCT_OWNER_DECISION_REQUIRED",
+  "session_status": "ACTIVE / P3.0_CLOSED / P3.1_DOD_DEFINITION_REQUIRED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
     "english_name": "Component System & Assembly Architecture",
-    "status": "ACTIVE / PRODUCT OWNER APPROVED ENTRY",
+    "status": "ACTIVE",
     "entered_date": "2026-09-13",
-    "gate_progress": "0/4"
+    "gate_progress": "1/4"
   },
   "current_gate": {
-    "id": "P3.0",
-    "name": "Component Ontology & Registry",
-    "status": "TECHNICAL REVIEW PASS / 9 OF 9 / PRODUCT OWNER APPROVAL REQUIRED",
-    "passed": 0,
+    "id": "P3.1",
+    "name": "Component Master & Variant Library",
+    "status": "ENTERED / DOD DEFINITION REQUIRED",
+    "passed": 1,
     "total": 4,
     "items": {
-      "P3.0": "REVIEW READY / 9 OF 9 TECHNICAL PASS / PO DECISION REQUIRED",
-      "P3.1": "LOCKED / WAITING_FOR_P3.0_PASS",
+      "P3.0": "PASS / APPROVED / CLOSED",
+      "P3.1": "ENTERED / DOD REQUIRED",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
   "decision_required": true,
   "blocker": null,
-  "current_task": {
-    "id": "T-009",
-    "key": "P3_0_COMPONENT_ONTOLOGY_REGISTRY_MIGRATION_V001",
-    "status": "COMPLETE / ENGINEERING PASS",
-    "think_level": "HIGH",
-    "scope": "ontology / registry schema / P2 11-40-365 semantic migration / validation only; no new Blender geometry",
-    "commit_sha": "3db50b94cd72e79cef419054aeaa7d2b75523ba5",
-    "family_coverage": "11/11",
-    "variant_coverage": "40/40",
-    "instance_coverage": "365/365",
-    "orphans": "0/0/0",
-    "validation": "PASS",
-    "determinism": "PASS"
-  },
+  "current_task": null,
   "current_case": {
     "name": "平遥镇国寺万佛殿",
     "location": "山西省平遥县镇国寺",
@@ -52,14 +39,8 @@
   "p2_closure": {
     "status": "CLOSED / APPROVED / FROZEN ENGINEERING BASELINE",
     "decision_id": "D-028",
-    "archive": "docs/project_control/phase_archive/P2_closure.md",
-    "gate_review": "docs/production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md",
     "formal_model": "P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001",
-    "component_architecture": "11 families / 40 variants / 365 stable mesh instances",
-    "automated_tests": "33/33 PASS",
-    "machine_qc": "34/34 PASS",
-    "roundtrip": "Local Blender 3.6.23 -> Cloud Blender 4.5.13 -> Local Blender 3.6.23 PASS / core semantic diff NONE",
-    "visual_review": "6/6 PASS"
+    "component_architecture": "11 families / 40 variants / 365 stable mesh instances"
   },
   "p3_architecture": {
     "status": "LOCKED / PRODUCT OWNER APPROVED",
@@ -70,26 +51,25 @@
       "P3.2": "Assembly Relationship Model",
       "P3.3": "Component-driven Building Reconstruction"
     },
-    "core_model": "Evidence -> Component Knowledge -> Parametric Component -> Assembly Rules -> Building Reconstruction",
-    "p2_migration_rule": "P3.0 must audit and map existing P2 11 families / 40 variants / 365 instances before creating new geometry.",
-    "task_rule": "P3.1 remains locked until Product Owner explicitly approves P3.0 PASS."
+    "core_model": "Evidence -> Component Knowledge -> Parametric Component -> Assembly Rules -> Building Reconstruction"
   },
   "p3_0": {
+    "status": "PASS / APPROVED / CLOSED",
+    "decision_id": "D-031",
     "dod": "docs/production/zhenguo_wanfo/P3_0_DEFINITION_OF_DONE_V001.md",
-    "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-030",
-    "migration_audit": "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
-    "migration_audit_status": "11/11 COMPLETE / T-009 VALIDATED",
-    "component_ontology": "docs/production/zhenguo_wanfo/P3_0_COMPONENT_ONTOLOGY_V001.md",
-    "registry_schema": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_SCHEMA_V001.json",
-    "component_registry": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_V001.json",
-    "validation_report": "docs/production/zhenguo_wanfo/P3_0_REGISTRY_VALIDATION_REPORT_V001.md",
     "gate_review": "docs/production/zhenguo_wanfo/P3_0_GATE_REVIEW_2026-09-13.md",
-    "technical_gate_result": "9/9 PASS / RECOMMEND APPROVE",
+    "engineering_task": "T-009",
+    "engineering_commit": "3db50b94cd72e79cef419054aeaa7d2b75523ba5",
     "family_coverage": "11/11",
     "variant_coverage": "40/40",
     "instance_coverage": "365/365",
     "orphans": "0/0/0",
-    "decision_id": "D-030"
+    "technical_result": "9/9 PASS"
+  },
+  "p3_1": {
+    "status": "ENTERED / DOD DEFINITION REQUIRED",
+    "purpose": "Create canonical 3D Component Masters, parameterized variants and standardized review assets from the P3.0 Registry without collapsing unresolved proxy semantics into historical certainty.",
+    "task_rule": "Do not create T-010 or start new component geometry before P3.1 Definition of Done is approved and locked."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -103,8 +83,7 @@
     "file": "docs/production/zhenguo_wanfo/EVIDENCE_VISUALIZATION_CARRY_FORWARD_V001.md",
     "risk_map": "Conservative Risk Map; highest uncertainty wins at instance level",
     "composition_map": "Future whole-temple/final evidence view shows evidence composition by attribute or subcomponent",
-    "normal_presentation": "Normal reconstruction materials remain separate from evidence colors",
-    "p2_3_risk_counts": {"confirmed": 0, "high_confidence_inference": 0, "reasonable_completion": 35, "unknown_placeholder": 330}
+    "normal_presentation": "Normal reconstruction materials remain separate from evidence colors"
   },
   "dashboard_rules": {
     "overall_gate_status": "fixed 6 visible rows; additional gates scroll inside the card",
@@ -112,16 +91,16 @@
     "final_review_set": "responsive labels; no overlap"
   },
   "latest_material_decision": {
-    "id": "D-030",
+    "id": "D-031",
     "date": "2026-09-13",
-    "decision": "Product Owner approved and locked P3.0 Definition of Done V001; T-009 authorized for ontology/registry/migration engineering without new geometry."
+    "decision": "Product Owner approved P3.0 PASS / CLOSED after 9/9 DoD, 11/40/365 migration coverage and zero orphan; P3.1 entered with DoD definition required."
   },
-  "next_action": "Product Owner review the P3.0 Gate Review and explicitly approve or reject P3.0 PASS. Do not create P3.1 engineering task before approval.",
+  "next_action": "Define and approve P3.1 Definition of Done before creating T-010 or starting new component geometry.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v012",
+    "visualization_version": "v013",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R045_STALE_AFTER_R046_GATE_REVIEW"
+    "refresh_status": "R046_STALE_AFTER_R047_P3_0_CLOSURE"
   }
 }
