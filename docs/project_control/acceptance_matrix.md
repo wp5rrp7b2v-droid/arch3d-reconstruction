@@ -46,7 +46,7 @@ P2 frozen baseline：11 families / 40 variants / 365 stable mesh instances；Loc
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
 | P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11/40/365 语义审计与迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；orphan 0/0/0；D-031。 |
-| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **ACTIVE / DOD LOCKED / T-010 APPROVED / MASTER ASSET CONTRACT LOCKED** | 六类 Master-production scope 已由 D-033 锁定；Contract V001 已由 D-034 锁定；Column Pilot planning ready；未授权剩余五类批量 Blender Master。 |
+| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **ACTIVE / DOD LOCKED / CONTRACT V002 LOCKED / 1 OF 6 MASTERS APPROVED** | 六类 scope 由 D-033 锁定；T-011 柱 Master 已 D-035 批准；V002 字段纠错由 D-036 锁定；剩余五类 planning-ready、尚未授权。 |
 | P3.2｜Assembly Relationship Model | 建立构件之间组合、支承、连接、定位、重复和 Assembly Unit 关系 | **LOCKED** | 等待 P3.1 PASS。 |
 | P3.3｜Component-driven Building Reconstruction | 验证可由构件库 + Variant + Assembly Rules 重新装配万佛殿并形成可解释成果 | **LOCKED** | 等待 P3.2 PASS。 |
 
@@ -73,14 +73,23 @@ PASS 仍要求 DoD 9/9、全部 MASTER_REQUIRED 100% Master coverage、Variant/e
 - 六类正式 Master-production scope：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿。
 - T-010 approval 不等于几何授权。
 
-### P3.1 Canonical Master Asset Contract V001｜LOCKED / PRODUCT OWNER APPROVED / D-034
+### P3.1 Canonical Master Asset Contract V002｜LOCKED / PRODUCT OWNER APPROVED / D-036
 
-正式合同：
+当前 authoritative Contract：
 
-- `docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V001.md`
-- `production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V001.json`
+- `docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md`
+- `production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json`
 
-Locked rules：
+V001（D-034）保留为历史版本，但 **V002 supersedes V001 for all future Master production**。
+
+V002 继承原全部 Locked rules，并仅修正柱头栌斗字段映射：
+
+- top width / 面阔总宽 = `475.1 mm`
+- bottom width / 面阔下宽 = `327.1 mm`
+- top depth / 进深总深 = `446.3 mm`
+- bottom depth / 进深下深 = `305.5 mm`
+
+其余核心规则继续不变：
 
 - unit = mm；+Z = up；+X = 主水平长度/跨度；+Y = 横向深度；
 - Master transform = location 0 / rotation 0 / scale 1；
@@ -92,9 +101,21 @@ Locked rules：
 - 上下六椽栿完整长度仍未被证实，只允许显式、可追溯的 length parameter；max thickness 仅作为 bounded outer envelope；
 - standard review set + semantic snapshot + deterministic semantic regeneration + independent reopen + mutation validation + Registry registration 为正式资产链要求。
 
+### T-011｜CMP-COLUMN-001 Column Master Pilot｜APPROVED / CLOSED / D-035
+
+- Engineering：22/22 machine checks PASS。
+- Blender execution：3.6.23 CLI/background / RC-008 COMPLIANT。
+- deterministic regeneration / independent reopen / synthetic mutation / canonical rebuild / Registry registration：PASS。
+- P2 frozen baseline：19 hashes unchanged。
+- Review package：6/6，ChatGPT visual PASS，Product Owner APPROVED。
+- `CMP-COLUMN-001` 为当前第 1 个 approved canonical Master；V002 字段纠错不影响该资产。
+
 ### P3.1 Current Boundary / Next Step
 
 - 当前无 active Codex task。
-- Contract LOCK **不等于 P3.1 PASS**，也不等于 6 个 Master 已完成。
-- 下一步只规划 `CMP-COLUMN-001` Contract Implementation Pilot，验证 generator → local `.blend` → semantic QC → standard review package → Registry registration 全链。
-- 柱 Pilot 未通过前，不授权剩余五类 Master 的批量 Blender 生产。
+- Master coverage：**1 / 6 approved**。
+- 剩余五类已解除 Contract HOLD，但**尚未授权 Blender 生产**。
+- 推荐拆分：
+  1. 斗类：柱头栌斗 + 单向长开斗 + 交互斗；
+  2. 梁架类：下六椽栿 + 上六椽栿。
+- 下一步先定义并审核斗类 batch 的正式 Task Contract；只有明确授权后 Codex 才可执行。
