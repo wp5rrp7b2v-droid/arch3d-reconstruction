@@ -92,6 +92,23 @@ git config --local https.proxy http://127.0.0.1:15236
 
 该规则适用于后续所有本地 Blender T-###，除非某个 Task Contract 经明确批准要求交互式 GUI 操作。
 
+### 4.3 Lean Production Mode｜Pilot 后的精益批量生产
+
+当某类生产已经通过代表性 Pilot 或 First Article 验证，且后续批次共享明确的生成方法、资产合同与验证逻辑时，默认优先采用 `LEAN_PRODUCTION_MODE`。
+
+规则：
+
+1. **共享工具链**：可共享 generator utility、batch runner、validator、renderer、semantic helper，避免为同类资产重复编写相同逻辑；
+2. **首件闸门**：先选择风险最高或参数最复杂的代表资产完成完整验证，首件未 PASS 前不得批量扩展；
+3. **逐资产独立验收**：每个正式资产仍必须独立 parameter set、canonical binary、SHA256、semantic snapshot、Registry record，并逐资产完成 deterministic regeneration、independent reopen、synthetic mutation、canonical rebuild、transform/evidence validation 与 review package；
+4. **保护性输入用 hash check**：对已锁定且无需重新解释的 P2 baseline、approved assets、Contract 等，优先做前后 hash/manifest 比较；hash 不变则不重复通读分析，hash mismatch 才展开调查；
+5. **视觉职责分离**：Codex 负责生成正式 review assets 和机器可读检查，不重复消耗额度做逐图视觉判断；视觉审核由 ChatGPT / Product Owner 完成；
+6. **重试上限**：同一根因最多 2 次有证据的修正重试；仍失败则 STOP 回报，禁止无上限猜测式调试；
+7. **不降低标准**：Lean 只能减少重复读取、重复代码、重复启动、重复解释和非必要中间产物，不得删除 DoD、Hard Fail、Evidence Boundary、逐资产 validation 或正式视觉审核；
+8. **适用边界**：若批次之间几何方法、证据语义、资产合同或执行环境发生实质变化，必须回到 standalone / pilot mode，不得机械复用 Lean。
+
+该模式的目标是：**共享生产工具，保留逐资产验收；降低 Codex 额度与工程冗余，而非降低工程质量。**
+
 ## 5. Checkpoint 的职责
 
 Checkpoint **不负责首次落档**。它只负责：
