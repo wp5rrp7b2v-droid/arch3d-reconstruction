@@ -33,10 +33,11 @@ T-011 PASS 后，ChatGPT / Product Owner 再决定是否按同一模式扩展其
 6. P3.0 Ontology / Registry / Schema / Migration Audit；
 7. P1 approved evidence package；
 8. P2 frozen parameter / dependency / integration baseline；
-9. `docs/project_control/project_state.json`、`decision_log.md`、`acceptance_matrix.md`、`governance.md`；
-10. D-023、D-028～D-034 与 CG-02～CG-06。
+9. `docs/project_control/project_state.json`、`decision_log.md`、`acceptance_matrix.md`、`governance.md`、`rules_change_log.md`；
+10. D-023、D-028～D-034 与 CG-02～CG-06；
+11. `RC-008｜LOCAL BLENDER EXECUTION RULE`。
 
-如果任何执行细节与已锁定 Asset Contract 冲突，以 Asset Contract + Project Control 为准，不自行放宽。
+如果任何执行细节与已锁定 Asset Contract 或 Governance 冲突，以 Asset Contract + Project Control 为准，不自行放宽。
 
 ---
 
@@ -370,6 +371,35 @@ git pull --ff-only origin main
 
 本仓库已配置 repository-local Git proxy；正常 `git pull / push` 即可。网络 443 失败先按网络/代理问题处理，不得误判为分支冲突，也不得 force/reset/overwrite。
 
+### 12.1 Local Blender Execution｜RC-008
+
+本任务的自动 Blender 工程**不得通过 GUI 启动链路执行**。
+
+固定 executable：
+
+```bash
+/Applications/Blender.app/Contents/MacOS/Blender
+```
+
+正式自动执行必须优先采用：
+
+```bash
+/Applications/Blender.app/Contents/MacOS/Blender \
+  --background \
+  --python <script.py>
+```
+
+强制规则：
+
+- 禁止使用 `open -a Blender` 作为本任务的自动执行方式；
+- 禁止依赖 Finder、AppleScript 或人工点击打开 Blender 后再继续自动化；
+- 不自动下载安装或切换其他 Blender 版本；
+- 执行前先记录 executable 实际版本，预期为 Blender 3.6.23 / Intel x64；
+- 若路径不存在、版本不符或 CLI/background 失败，STOP 并报告，不静默换版本；
+- GUI / LaunchServices 报错本身不构成 Blender runtime blocker；只有指定 executable 的 CLI/background 也失败时，才报告 Blender runtime blocker；
+- review PNG、保存 `.blend`、independent reopen 与可自动化 QC 均应通过 background/CLI 完成；
+- Product Owner 需要人工视觉检查时，再单独手动查看正式 review PNG 或打开 `.blend`，不作为 Codex 自动执行前置步骤。
+
 若出现：
 
 - unknown tracked changes；
@@ -399,6 +429,8 @@ T-011 执行期间不得修改 `docs/project_control/`；Project Control 由 Cha
 - COMPONENT_ID: `CMP-COLUMN-001`
 - MASTER_VERSION: `V001`
 - BLENDER_VERSION:
+- BLENDER_EXECUTION_MODE: CLI_BACKGROUND / OTHER
+- BLENDER_EXECUTABLE_PATH:
 - CANONICAL_PARAMS: diameter / height + source modes
 - CANONICAL_BLEND_PATH:
 - CANONICAL_BLEND_SHA256:
