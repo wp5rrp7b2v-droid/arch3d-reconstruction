@@ -148,7 +148,7 @@
   "next_action": "Define and lock P3.2 Definition of Done for Assembly Relationship Model. Do not create a P3.2 engineering task until Product Owner explicitly approves that DoD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v027",
+    "visualization_version": "v028",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
     "refresh_status": "CURRENT_R071"
