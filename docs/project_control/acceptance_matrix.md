@@ -46,7 +46,7 @@ P2 frozen baseline：11 families / 40 variants / 365 stable mesh instances；Loc
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
 | P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11/40/365 语义审计与迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；orphan 0/0/0；D-031。 |
-| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **ACTIVE / DOD LOCKED / T-010 APPROVED / MASTER ASSET CONTRACT REVIEW** | 六类 Master-production scope 已由 D-033 锁定；Contract V001 draft 等待 Product Owner 审核；未授权 Blender Master 几何。 |
+| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **ACTIVE / DOD LOCKED / T-010 APPROVED / MASTER ASSET CONTRACT LOCKED** | 六类 Master-production scope 已由 D-033 锁定；Contract V001 已由 D-034 锁定；Column Pilot planning ready；未授权剩余五类批量 Blender Master。 |
 | P3.2｜Assembly Relationship Model | 建立构件之间组合、支承、连接、定位、重复和 Assembly Unit 关系 | **LOCKED** | 等待 P3.1 PASS。 |
 | P3.3｜Component-driven Building Reconstruction | 验证可由构件库 + Variant + Assembly Rules 重新装配万佛殿并形成可解释成果 | **LOCKED** | 等待 P3.2 PASS。 |
 
@@ -73,25 +73,28 @@ PASS 仍要求 DoD 9/9、全部 MASTER_REQUIRED 100% Master coverage、Variant/e
 - 六类正式 Master-production scope：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿。
 - T-010 approval 不等于几何授权。
 
-### P3.1 Canonical Master Asset Contract V001｜DRAFT / PO REVIEW REQUIRED
+### P3.1 Canonical Master Asset Contract V001｜LOCKED / PRODUCT OWNER APPROVED / D-034
 
-正式草案：
+正式合同：
 
 - `docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V001.md`
 - `production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V001.json`
 
-草案统一：
+Locked rules：
 
-- unit = mm；
-- +Z = up；+X = 主水平长度/跨度；+Y = 横向深度；
+- unit = mm；+Z = up；+X = 主水平长度/跨度；+Y = 横向深度；
 - Master transform = location 0 / rotation 0 / scale 1；
-- LOD = `EVIDENCE_BOUNDED_MEDIUM_LOD`；
-- world placement 不得写入 Master；
+- LOD = `EVIDENCE_BOUNDED_MEDIUM_LOD`；world placement 不得写入 Master；
 - UNKNOWN 不得静默填值；RC/HCI 不得升级为 CONFIRMED；
-- 不建无证据榫卯、暗槽、内部空腔、端部细节；
-- Variant 必须参数驱动，placement-only 不创建 Variant；
-- standard review set + semantic snapshot + independent reopen + mutation validation 必须保留。
+- `Z-006` 保持 UNKNOWN；`Z-006-RC-01` 独立可替换；`DG-114` 不形成统一小斗规格；`HIS-002` originality unknown；
+- 不建无证据榫卯、暗槽、内部空腔、耳瓣或端部细节；
+- Variant 必须参数驱动，placement-only 不创建 Variant，Object Scale 不得形成正式 Variant；
+- 上下六椽栿完整长度仍未被证实，只允许显式、可追溯的 length parameter；max thickness 仅作为 bounded outer envelope；
+- standard review set + semantic snapshot + deterministic semantic regeneration + independent reopen + mutation validation + Registry registration 为正式资产链要求。
 
-关键限制：上下六椽栿完整长度仍未被证实，Master 只允许使用显式、可追溯的 length parameter；max thickness 只能作为 bounded outer envelope，不得声称整根构件全长恒定为该厚度。
+### P3.1 Current Boundary / Next Step
 
-当前建议：Contract LOCK 后先以 `CMP-COLUMN-001` 做 Contract Implementation Pilot，验证完整资产链，再扩展其余五个 Master。
+- 当前无 active Codex task。
+- Contract LOCK **不等于 P3.1 PASS**，也不等于 6 个 Master 已完成。
+- 下一步只规划 `CMP-COLUMN-001` Contract Implementation Pilot，验证 generator → local `.blend` → semantic QC → standard review package → Registry registration 全链。
+- 柱 Pilot 未通过前，不授权剩余五类 Master 的批量 Blender 生产。
