@@ -1,0 +1,193 @@
+{
+  "version": "V002",
+  "status": "LOCKED_PRODUCT_OWNER_APPROVED",
+  "date": "2026-09-13",
+  "phase": "P3.1",
+  "qualification_decision": "D-033",
+  "previous_contract_approval_decision": "D-034",
+  "contract_approval_decision": "D-036",
+  "supersedes": "P3_1_MASTER_ASSET_CONTRACT_V001",
+  "change_type": "FIELD_MAPPING_CORRECTION_ONLY",
+  "scope_count": 6,
+  "global_convention": {
+    "unit": "mm",
+    "handedness": "right_handed",
+    "axes": {
+      "+Z": "building_gravity_up",
+      "+X": "primary_horizontal_length_span_or_canonical_width",
+      "+Y": "secondary_horizontal_depth_transverse"
+    },
+    "canonical_transform": {
+      "location": [0, 0, 0],
+      "rotation": [0, 0, 0],
+      "scale": [1, 1, 1]
+    },
+    "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+    "world_placement_in_master": false,
+    "object_scale_for_formal_dimensions": false
+  },
+  "historical_boundaries": {
+    "Z-006": "UNKNOWN_NULL_DO_NOT_LOCK",
+    "Z-006-RC-01": "REASONABLE_COMPLETION_REPLACEABLE_D-023",
+    "DG-114": "UNKNOWN_NO_UNIFIED_SMALL_DOU_RULE",
+    "HIS-002": "ORIGINALITY_UNKNOWN",
+    "corner_joinery_hidden_angle_beam": "UNRESOLVED_NO_PRECISION_CLAIM",
+    "semantic_layers_must_remain_separate": [
+      "observed_as_measured",
+      "report_ideal_model",
+      "reconstructed_963_candidate"
+    ]
+  },
+  "master_components": [
+    {
+      "component_id": "CMP-COLUMN-001",
+      "canonical_name_zh": "柱",
+      "machine_key": "column",
+      "origin": "bottom_face_center",
+      "primary_axis": "+Z",
+      "geometry_mode": "PARAMETRIC_CIRCULAR_COLUMN_BODY",
+      "authorized_inputs": {
+        "observed_diameter_mm": 460,
+        "report_candidate_diameter_mm": 459,
+        "historical_height_mm": null,
+        "replaceable_height_candidate_mm": 3534.3
+      },
+      "required_parameters": ["diameter_mm", "height_mm", "diameter_source_mode", "height_source_mode"],
+      "prohibited_geometry": ["unsupported_taper", "unsupported_entasis", "unsupported_column_base", "unsupported_capital_detail"],
+      "variant_axes": ["diameter_mm", "height_mm"],
+      "placement_only": ["grid_position", "world_rotation", "instance_number"]
+    },
+    {
+      "component_id": "CMP-LUDOU-COLUMN-001",
+      "canonical_name_zh": "柱头栌斗",
+      "machine_key": "column_head_ludou",
+      "origin": "bottom_footprint_center",
+      "geometry_mode": "MEASURED_OUTER_ENVELOPE_WITH_BOUNDED_PROFILE",
+      "authorized_inputs_mm": {
+        "top_width": 475.1,
+        "bottom_width": 327.1,
+        "top_depth": 446.3,
+        "bottom_depth": 305.5,
+        "total_height": 293.8,
+        "flat_height": 58.75,
+        "sloped_height": 116.2
+      },
+      "evidence_mapping_note": "Corrected in V002: 327.1 is 面阔下宽/bottom_width; 446.3 is 进深总深/top_depth. Source: P1_2_DIRECT_PAGE_REVIEW_V001 D-007.",
+      "engineering_interpolation": "REPLACEABLE_LINEAR_OUTER_PROFILE_WHERE_REQUIRED",
+      "prohibited_geometry": ["unsupported_ears", "unsupported_cavities", "unsupported_notches", "unsupported_mortise_tenon"],
+      "variant_axes": ["evidence_supported_dimension_set"],
+      "placement_only": ["rotation_about_Z", "instance_number"]
+    },
+    {
+      "component_id": "CMP-DOU-SINGLE-LONGKAI-001",
+      "canonical_name_zh": "单向长开斗",
+      "machine_key": "single_direction_long_kai_dou",
+      "origin": "bottom_footprint_center",
+      "geometry_mode": "MEASURED_OUTER_ENVELOPE_WITH_BOUNDED_PROFILE",
+      "authorized_inputs_mm": {
+        "top_width": 236.2,
+        "bottom_width": 162.7,
+        "top_depth": 256.2,
+        "bottom_depth": 177.2,
+        "total_height": 158.6
+      },
+      "engineering_interpolation": "REPLACEABLE_LINEAR_LOFT",
+      "prohibited_geometry": ["unsupported_longkai_notch_detail", "unsupported_ears", "unsupported_cavities", "unsupported_mortise_tenon"],
+      "variant_axes": ["evidence_supported_dimension_set"],
+      "placement_only": ["rotation_about_Z", "instance_number"]
+    },
+    {
+      "component_id": "CMP-DOU-INTERACTIVE-001",
+      "canonical_name_zh": "交互斗",
+      "machine_key": "interactive_dou",
+      "origin": "bottom_footprint_center",
+      "geometry_mode": "MEASURED_OUTER_ENVELOPE_WITH_BOUNDED_PROFILE",
+      "authorized_inputs_mm": {
+        "top_width": 255.2,
+        "top_depth": 240.0,
+        "bottom_width": 176.2,
+        "bottom_depth": 165.1,
+        "total_height": 148.5
+      },
+      "engineering_interpolation": "REPLACEABLE_LINEAR_LOFT",
+      "prohibited_geometry": ["DG-114_UNIFIED_RULE", "unsupported_ears", "unsupported_cavities", "unsupported_mortise_tenon"],
+      "variant_axes": ["evidence_supported_dimension_set"],
+      "placement_only": ["rotation_about_Z", "instance_number"]
+    },
+    {
+      "component_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "canonical_name_zh": "下六椽栿",
+      "machine_key": "lower_six_chuanfu",
+      "origin": "longitudinal_midpoint_transverse_center_lower_reference_plane",
+      "primary_axis": "+X",
+      "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+      "authorized_inputs_mm": {
+        "width": 493.5,
+        "tenon_area_thickness": 375.0,
+        "maximum_thickness": 444.0,
+        "length": null
+      },
+      "required_parameters": ["length_mm", "width_mm", "max_thickness_mm", "tenon_area_thickness_mm"],
+      "tenon_area_parameter_use": "METADATA_ONLY_UNTIL_ZONE_EXTENT_IS_EVIDENCED",
+      "prohibited_geometry": ["unsupported_camber", "unsupported_end_profile", "unsupported_local_thickness_zone", "unsupported_mortise_tenon"],
+      "variant_axes": ["length_mm", "evidence_supported_section_difference"],
+      "placement_only": ["support_points", "world_position", "world_rotation", "instance_number"]
+    },
+    {
+      "component_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "canonical_name_zh": "上六椽栿",
+      "machine_key": "upper_six_chuanfu",
+      "origin": "longitudinal_midpoint_transverse_center_lower_reference_plane",
+      "primary_axis": "+X",
+      "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+      "authorized_inputs_mm": {
+        "width": 334.0,
+        "tenon_area_thickness": 209.0,
+        "maximum_thickness": 240.5,
+        "length": null
+      },
+      "required_parameters": ["length_mm", "width_mm", "max_thickness_mm", "tenon_area_thickness_mm"],
+      "tenon_area_parameter_use": "METADATA_ONLY_UNTIL_ZONE_EXTENT_IS_EVIDENCED",
+      "prohibited_geometry": ["unsupported_camber", "unsupported_end_profile", "unsupported_local_thickness_zone", "unsupported_mortise_tenon"],
+      "variant_axes": ["length_mm", "evidence_supported_section_difference"],
+      "placement_only": ["support_points", "world_position", "world_rotation", "instance_number"]
+    }
+  ],
+  "variant_contract": {
+    "stable_variant_id_required": true,
+    "parent_component_id_required": true,
+    "parameter_evidence_required": true,
+    "manual_object_scale_for_variant": false,
+    "placement_only_does_not_create_variant": true,
+    "mutation_test_required": true
+  },
+  "asset_paths": {
+    "committed_master_root": "production/zhenguo_wanfo/component_library/masters/<COMPONENT_ID>/",
+    "local_binary": "production/zhenguo_wanfo/component_library/masters/<COMPONENT_ID>/asset/<COMPONENT_ID>_MASTER_V001.blend",
+    "review_root": "production/zhenguo_wanfo/review/P3_1/masters/<COMPONENT_ID>/"
+  },
+  "review_package_required": ["FRONT", "SIDE", "TOP", "AXON", "DIMENSION_PARAMETER_SUMMARY", "EVIDENCE_UNCERTAINTY_SUMMARY"],
+  "reproducibility": {
+    "semantic_regeneration": "PASS_REQUIRED",
+    "blend_byte_identity": "NOT_REQUIRED",
+    "independent_reopen": "PASS_REQUIRED",
+    "naked_historical_constant_scan": "PASS_REQUIRED",
+    "world_placement_leakage": "ZERO_REQUIRED",
+    "non_unit_object_scale": "ZERO_REQUIRED",
+    "p2_frozen_baseline_change": "ZERO_REQUIRED"
+  },
+  "hard_fail_conditions": [
+    "P2_PROXY_USED_AS_HISTORICAL_MASTER",
+    "UNKNOWN_SILENTLY_FILLED",
+    "RC_OR_HCI_PROMOTED_TO_CONFIRMED",
+    "DG-114_USED_AS_UNIFIED_SMALL_DOU_RULE",
+    "UNSUPPORTED_JOINERY_OR_CAVITY_MODELED_AS_FACT",
+    "SIX_CHUANFU_MAX_THICKNESS_CLAIMED_AS_CONFIRMED_FULL_LENGTH_SECTION",
+    "Z-006-RC-01_CLAIMED_AS_HISTORICAL_COLUMN_HEIGHT",
+    "FORMAL_VARIANT_CREATED_BY_OBJECT_SCALE",
+    "WORLD_PLACEMENT_WRITTEN_INTO_MASTER",
+    "DUPLICATE_COMPONENT_OR_ORPHAN_VARIANT",
+    "P2_FROZEN_BASELINE_OVERWRITTEN"
+  ],
+  "next_step_after_lock": "PLAN_REMAINING_FIVE_AS_TWO_RISK_AWARE_BATCHES_DOU_AND_SIX_CHUANFU"
+}
