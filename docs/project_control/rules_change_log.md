@@ -16,6 +16,7 @@
 | **RC-010** | **2026-09-13** | **GitHub 网络连接统一采用动态 `git-proxy-auto` helper：每次 Git 网络操作读取 macOS 当前系统代理，临时注入 `http.proxy`，不在 global 或 repo-local config 持久化动态端口；通过代理时固定 HTTP/1.1；push 使用受控 POST buffer，并在异常断连后核对远端 SHA 区分真实失败与 ACK 丢失。禁止因网络问题 force/reset/rebase/overwrite，non-fast-forward、unknown tracked changes、同文件并发修改或真实冲突仍须 STOP。该 helper 可供《中国古建筑3D复原》与《诡舍·黑衣夫人》统一复用。** | **固定代理端口存在 stale configuration 风险；T-012 发布中曾出现 sideband unexpected disconnect。动态 helper 在不保存端口的前提下成功发布 `d1ae53ee...`，更适合作为跨项目长期 Git 网络层。** | **ACTIVE / DYNAMIC GIT CONNECTIVITY RULE** |
 | **RC-011** | **2026-09-13** | **试运行 `CHAT_FIRST_CODEX_EXECUTOR_MODE`：ChatGPT 负责证据解释、Task Contract、几何/参数语义、Hard Fail、异常诊断、视觉审核和 Project Control；Codex 默认只读取最小锁定输入并执行确定性工程、机器验证、资产生成与提交。Codex 遇到合同外证据冲突、几何方法变化、参数语义不明或非显然实现型 validation failure 时必须 STOP，把最小失败证据交回 ChatGPT；不得自行扩展历史解释或修改 Contract。Codex Think Level 默认 MEDIUM，只有 ChatGPT 明确判断结构性工程问题后才针对性升级 HIGH。所有 DoD、逐资产 validation、mutation、reopen、review package 与 Product Owner approval 标准保持不变。** | **进一步减少 Codex 重复研究、长推理和猜测式调试，把额度集中在实际工程执行；通过“分析/决策与执行分离”降本，但不减少任何正式验收证据。先在 T-013 试运行，再依据额度、返工率与质量结果决定是否转为长期默认。** | **T013 TRIAL COMPLETE / EVALUATION PENDING** |
 | **RC-012** | **2026-09-13** | **正式面向人工审核/展示的构件、装配与证据视觉资产，只要标识具体构件身份，就必须显示项目正式中文构件名；component ID 可并列，英文可作为辅助但不得替代中文。中文名称优先继承直接证据来源使用的专业术语；如项目已形成 canonical naming，则按项目正式名称显示并保留来源追溯。不得未经核证自行现代化翻译、简称、改名，也不得把现代测绘/项目术语标注为“宋代原称”“古籍原称”或《营造法式》原称。只有存在直接历史文献证据时，才可单独标注古籍原称及出处。** | **保证古建专业视觉资产对中文专业术语可读、可追溯，同时严格区分现代测绘名称、项目 canonical naming 与历史文献原称，避免视觉展示造成历史术语误读。** | **ACTIVE / CHINESE COMPONENT VISUAL NAMING RULE** |
+| **RC-013** | **2026-09-13** | **每天正式收尾前必须执行 `DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT`：逐项核对 `project_state.json`、`acceptance_matrix.md`、`decision_log.md`、`execution_log.md`、`governance.md`、`rules_change_log.md`、`dashboard.html`，以及当日相关的 `phase_archive/` 索引/Closure 文件，确认 Phase、Gate、Current Task、Blocker、Next Action、Decision/Task/Rule 状态、Dashboard snapshot 与历史归档边界彼此一致。发现明确不一致应在当日修正；不能立即判断的差异必须明确登记为 known exception / HOLD，不得静默留到次日。审计本身不占 T 编号；若只做一致性维护且项目状态事实未变化，不强制递增 State Revision。** | **防止一天内多次 Project Control 更新后产生跨文件状态漂移、旧状态残留或规则只落在单一文件中；把“每天结束的一致性核对”从临时人工习惯固化为强制收尾 Gate。** | **ACTIVE / DAILY CLOSING CONSISTENCY AUDIT** |
 
 ## 当前有效原则摘要
 
@@ -48,5 +49,7 @@
 `Chat-first Codex-executor = T013 trial complete / evaluation pending; ChatGPT decides/diagnoses/reviews; Codex executes/validates; contract-external ambiguity returns to ChatGPT; Codex MEDIUM by default when explicitly adopted`
 
 `Formal human-facing component/assembly/evidence visuals = Chinese canonical component name required; English/ID may assist but not replace Chinese; historical original-name claims require direct historical-source verification`
+
+`Daily closing = mandatory cross-file Project Control consistency audit; fix same-day inconsistencies or explicitly record known exception / HOLD`
 
 `同步模式 = TRIAL；价值不足时可调整`
