@@ -113,9 +113,9 @@
   "next_action": "Product Owner review P3.1 Definition of Done V001. If approved, lock the DoD and then plan/authorize the first P3.1 engineering task; no new component geometry before approval.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v013",
+    "visualization_version": "v014",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R047_STALE_AFTER_R048_DOD_DRAFT"
+    "refresh_status": "R048_REFRESH_COMPLETE"
   }
 }
