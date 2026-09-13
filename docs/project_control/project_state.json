@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R061",
+  "state_revision": "R062",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1_DOD_LOCKED / T011_APPROVED_CLOSED / MASTER_ASSET_CONTRACT_V002_LOCKED / T012_AUTHORIZED",
+  "session_status": "ACTIVE / P3.1_DOD_LOCKED / CONTRACT_V002_LOCKED / T011_APPROVED_CLOSED / T012_LEAN_V002_AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,12 +17,12 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "ACTIVE / 1 OF 6 MASTERS APPROVED / CONTRACT V002 LOCKED / T-012 DOU BATCH AUTHORIZED",
+    "status": "ACTIVE / 1 OF 6 MASTERS APPROVED / T-012 LEAN DOU BATCH AUTHORIZED",
     "passed": 1,
     "total": 4,
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / 1 OF 6 MASTERS APPROVED / T-012 AUTHORIZED",
+      "P3.1": "ACTIVE / 1 OF 6 MASTERS APPROVED / T-012 LEAN V002 AUTHORIZED",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
@@ -31,17 +31,24 @@
   "blocker": null,
   "current_task": {
     "id": "T-012",
-    "key": "P3_1_DOU_MASTER_BATCH_V001",
-    "name": "斗类三构件Master批次生产",
+    "key": "P3_1_DOU_MASTER_BATCH_V002",
+    "name": "斗类三构件Master精益批次生产",
     "status": "AUTHORIZED / READY_FOR_LOCAL_EXECUTION",
-    "think_level": "HIGH",
-    "contract": "docs/tasks/T-012_P3_1_DOU_MASTER_BATCH_V001.md",
+    "execution_mode": "LEAN_PRODUCTION_MODE_V001",
+    "think_level": "HIGH_FIRST_ARTICLE / MEDIUM_PROVEN_BATCH_REPETITION",
+    "contract": "docs/tasks/T-012_P3_1_DOU_MASTER_BATCH_V002.md",
+    "superseded_execution_contract": "docs/tasks/T-012_P3_1_DOU_MASTER_BATCH_V001.md",
     "scope": [
       "CMP-LUDOU-COLUMN-001",
       "CMP-DOU-SINGLE-LONGKAI-001",
       "CMP-DOU-INTERACTIVE-001"
     ],
+    "first_article": "CMP-LUDOU-COLUMN-001",
+    "shared_pipeline": "generator utility + batch runner + validator + review renderer + semantic helper",
+    "first_article_gate": "FULL PASS REQUIRED BEFORE BATCH EXPANSION",
+    "retry_rule": "MAX 2 EVIDENCE-BASED RETRIES PER ROOT CAUSE, THEN STOP",
     "review_package_target": "18 individual review PNGs + 1 DOU_BATCH_OVERVIEW",
+    "quality_rule": "REDUCE DUPLICATION, NOT ACCEPTANCE EVIDENCE",
     "frame_masters_authorized": false
   },
   "current_case": {
@@ -54,7 +61,8 @@
     "status": "CLOSED / APPROVED / FROZEN ENGINEERING BASELINE",
     "decision_id": "D-028",
     "formal_model": "P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001",
-    "component_architecture": "11 families / 40 variants / 365 stable mesh instances"
+    "component_architecture": "11 families / 40 variants / 365 stable mesh instances",
+    "protection_mode_for_t012": "HASH_ONLY_RECHECK_UNLESS_MISMATCH"
   },
   "p3_architecture": {
     "status": "LOCKED / PRODUCT OWNER APPROVED",
@@ -70,33 +78,26 @@
   "p3_0": {
     "status": "PASS / APPROVED / CLOSED",
     "decision_id": "D-031",
-    "dod": "docs/production/zhenguo_wanfo/P3_0_DEFINITION_OF_DONE_V001.md",
-    "gate_review": "docs/production/zhenguo_wanfo/P3_0_GATE_REVIEW_2026-09-13.md",
     "engineering_task": "T-009",
-    "engineering_commit": "3db50b94cd72e79cef419054aeaa7d2b75523ba5",
     "family_coverage": "11/11",
     "variant_coverage": "40/40",
     "instance_coverage": "365/365",
-    "orphans": "0/0/0",
-    "technical_result": "9/9 PASS"
+    "orphans": "0/0/0"
   },
   "p3_1": {
-    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / SIX-MASTER SCOPE LOCKED / T-011 APPROVED / COLUMN MASTER APPROVED / MASTER ASSET CONTRACT V002 LOCKED / T-012 AUTHORIZED",
-    "decision_id": "D-032",
+    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / T-011 APPROVED / CONTRACT V002 LOCKED / T-012 LEAN V002 AUTHORIZED",
+    "dod_decision_id": "D-032",
     "qualification_decision_id": "D-033",
     "asset_contract_v001_decision_id": "D-034",
     "column_pilot_approval_decision_id": "D-035",
     "asset_contract_v002_decision_id": "D-036",
-    "purpose": "Create canonical 3D Component Masters, parameterized variants and standardized review assets from evidence-qualified historical component identities without collapsing unresolved proxy semantics into historical certainty.",
     "dod": "docs/production/zhenguo_wanfo/P3_1_DEFINITION_OF_DONE_V001.md",
-    "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-032",
-    "dod_items": 9,
-    "scope_rule": "Master production count is evidence-qualified, not inherited from the 11 P2 engineering families. All MASTER_REQUIRED records must reach 100% coverage; proxy/control/envelope objects must not be silently historicized.",
     "master_production_scope": {
       "status": "LOCKED / PRODUCT OWNER APPROVED / D-033",
       "count": 6,
       "approved_count": 1,
-      "remaining_count": 5,
+      "engineering_batch_authorized_count": 3,
+      "remaining_unstarted_count": 2,
       "components": [
         "柱",
         "柱头栌斗",
@@ -112,10 +113,7 @@
       "human_readable": "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md",
       "machine_readable": "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json",
       "previous_version": "V001 / D-034 / SUPERSEDED FOR FUTURE PRODUCTION",
-      "field_mapping_correction": "CMP-LUDOU-COLUMN-001: top_width=475.1, bottom_width=327.1, top_depth=446.3, bottom_depth=305.5",
-      "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
-      "global_unit": "mm",
-      "canonical_transform": "Location 0 / Rotation 0 / Scale 1"
+      "field_mapping_correction": "CMP-LUDOU-COLUMN-001: top_width=475.1, bottom_width=327.1, top_depth=446.3, bottom_depth=305.5"
     },
     "column_pilot": {
       "status": "APPROVED / CLOSED / D-035",
@@ -124,31 +122,44 @@
       "master_version": "V001",
       "engineering_commit": "4eb79f37d31202ab2088724008b5412cba4d38b0",
       "canonical_blend_sha256": "98211701fcc358f6174829257ef13310baa4d1a2d5e762637c25c812a4362487",
-      "review_package": "6/6 GENERATED / CHATGPT VISUAL PASS / PRODUCT OWNER APPROVED",
-      "blender_execution": "RC-008 COMPLIANT / CLI_BACKGROUND"
+      "machine_checks": "22/22 PASS",
+      "review_package": "6/6 / CHATGPT VISUAL PASS / PRODUCT OWNER APPROVED",
+      "blender_execution": "RC-008 COMPLIANT"
     },
     "dou_batch": {
       "status": "AUTHORIZED / READY_FOR_LOCAL_EXECUTION",
       "task_id": "T-012",
-      "contract": "docs/tasks/T-012_P3_1_DOU_MASTER_BATCH_V001.md",
-      "components": [
-        "CMP-LUDOU-COLUMN-001",
+      "task_contract": "docs/tasks/T-012_P3_1_DOU_MASTER_BATCH_V002.md",
+      "execution_mode": "LEAN_PRODUCTION_MODE_V001",
+      "first_article": "CMP-LUDOU-COLUMN-001",
+      "batch_after_first_article": [
         "CMP-DOU-SINGLE-LONGKAI-001",
         "CMP-DOU-INTERACTIVE-001"
       ],
-      "geometry_rule": "evidence-bounded rectangular bottom/top footprint with replaceable linear outer-envelope loft",
-      "review_target": "18 individual + 1 batch overview",
-      "approval_status": "PRODUCT OWNER AUTHORIZED FOR ENGINEERING EXECUTION / FINAL MASTER APPROVAL STILL PENDING"
+      "quality_preservation": "ALL PER-ASSET VALIDATION AND 19 REVIEW ASSETS RETAINED",
+      "codex_optimization": [
+        "minimal authoritative read set",
+        "shared generator/validator/renderer",
+        "hash-only recheck for protected unchanged baselines",
+        "first-article gate",
+        "max two evidence-based retries per root cause",
+        "no Codex visual interpretation of review PNGs"
+      ]
     },
     "frame_batch": {
-      "status": "PLANNING_READY / NOT_AUTHORIZED",
+      "status": "NOT YET AUTHORIZED",
       "components": [
         "CMP-FRAME-LOWER-SIX-CHUANFU-001",
         "CMP-FRAME-UPPER-SIX-CHUANFU-001"
       ]
-    },
-    "task_strategy": "Execute and review T-012 dou batch under Contract V002 before authorizing the six-chuanfu batch.",
-    "task_rule": "T-012 authorization covers only the three dou Masters. Upper/lower six-chuanfu remain unauthorized until a separate Task Contract and approval."
+    }
+  },
+  "lean_production": {
+    "rule_id": "RC-009",
+    "status": "ACTIVE / FIRST FORMAL USE IN T-012",
+    "principle": "shared production tools + first-article gate + independent per-asset acceptance",
+    "future_default": "ELIGIBLE AFTER T-012 ENGINEERING + VISUAL PASS FOR HOMOGENEOUS BATCHES",
+    "fallback": "RETURN TO STANDALONE/PILOT WHEN GEOMETRY METHOD, EVIDENCE SEMANTICS, CONTRACT OR EXECUTION ENVIRONMENT MATERIALLY CHANGES"
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -165,16 +176,16 @@
     "normal_presentation": "Normal reconstruction materials remain separate from evidence colors"
   },
   "latest_material_decision": {
-    "id": "D-036",
+    "id": "RC-009 / T-012 V002",
     "date": "2026-09-13",
-    "decision": "P3.1 Canonical Master Asset Contract V002 remains locked and authoritative. Product Owner has operationally authorized T-012 dou Master batch under that contract; this task authorization does not constitute final approval of the three Masters or authorization of the six-chuanfu batch."
+    "decision": "Product Owner approved Lean Production Mode for T-012 and future eligible homogeneous production: reduce duplicated reasoning/code/reads, while preserving independent assets, all per-asset validation, Hard Fails and visual review."
   },
-  "next_action": "Sync local main, execute T-012 for the three authorized dou Masters only, then return the strict Completion Report and 19 review images for ChatGPT/Product Owner review.",
+  "next_action": "Sync local main, then execute T-012 using P3_1_DOU_MASTER_BATCH_V002 Lean Production Mode. First Article CMP-LUDOU-COLUMN-001 must fully PASS before generating the other two dou Masters.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v023",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R061_REFRESH_COMPLETE"
+    "refresh_status": "R061_DASHBOARD_STALE_AFTER_R062_LEAN_MODE"
   }
 }
