@@ -96,15 +96,44 @@
 - 两个 frame Master Registry 状态提升为 `PRODUCT_OWNER_APPROVED_D039`。
 - P3.1 Master coverage：**6/6 approved**。
 
-## Current Execution State｜R069｜2026-09-13
+## T-014｜P3.1 Master Library Overview V001｜PASS / CLOSED
+
+- Think Level: LOW / Light。
+- Purpose：补齐 P3.1 DoD-07 whole-library Overview，不修改 Blender Master / params / Registry 语义 / P2 baseline。
+- Source components：6/6 approved Masters。
+- Formal registered variants：0。
+- Final overview：`production/zhenguo_wanfo/review/P3_1/P3_1_MASTER_LIBRARY_OVERVIEW_V001.png`。
+- Final SHA256：`4719a31c18de13b0453a64d29847381d8e45af0f145bcb37bf7fee0abf9671a7`。
+- 中文名称：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿；依据 `SRC-ZG-WF-001` / project canonical naming，不标为宋代原称或古籍原称。
+- 三类斗说明统一为 `Evidence-bounded medium-LOD`。
+- Validation：canonical Masters unchanged / individual review assets unchanged / batch overviews unchanged / P2 frozen unchanged / Contract V002 unchanged / P3.2 files created NO / new Variant records 0。
+- Final local commit：`ecdec887ba4c67018e3dfea63920263ed47cce30`。
+- Publication merge commit：`c15064bcd7d5cf2f3e58cdbffccc256043836413`。
+- ChatGPT final visual review：PASS。
+- Result：DoD-07 closure completed。
+
+## P3.1 Gate Review｜9/9 PASS / APPROVED / CLOSED / D-040
+
+- DoD-01～09：全部 PASS。
+- MASTER_REQUIRED coverage：6/6 / 100%。
+- `EVIDENCE_REVIEW_BEFORE_MASTER=0`。
+- Formal registered variants：0；parameterized variant capability verified by mutation / rebuild tests。
+- Proxy 4 / Control 3 / Envelope 1 / Deferred 13 保持非历史化。
+- Registry / evidence traceability / replaceability / deterministic regeneration / independent reopen / P2 frozen baseline：PASS。
+- Product Owner explicit approval：`P3.1｜Component Master & Variant Library｜PASS / APPROVED / CLOSED`。
+- Decision：D-040。
+- P3.2 `Assembly Relationship Model` 解锁并进入。
+
+## Current Execution State｜R071｜2026-09-13
 
 - P0：CLOSED / APPROVED。
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO。
 - P2：CLOSED / 4/4 PASS / PRODUCT OWNER APPROVED。
-- P3：ACTIVE / 1/4 PASS。
+- P3：ACTIVE / **2/4 PASS**。
 - P3.0：CLOSED / APPROVED。
-- P3.1：ACTIVE / DoD LOCKED / Contract V002 LOCKED / **6 OF 6 MASTERS APPROVED**。
+- P3.1：**PASS / APPROVED / CLOSED / D-040**。
+- P3.2：**ACTIVE / ENTERED / DOD REQUIRED**。
+- P3.3：LOCKED / WAITING_FOR_P3.2_PASS。
 - Current engineering blocker：NONE。
 - Current task：NONE。
-- T-013：APPROVED / CLOSED / D-039。
-- Next action：执行独立 `P3.1 Gate Review`，逐项核对 DoD 9/9；Product Owner 明确批准 P3.1 PASS / CLOSED 前，P3.2 继续 LOCKED。
+- Next action：定义并锁定 `P3.2 Definition of Done`；在 Product Owner 批准 P3.2 DoD 前，不创建新的 P3.2 工程任务。
