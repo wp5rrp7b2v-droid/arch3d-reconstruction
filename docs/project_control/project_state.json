@@ -147,9 +147,9 @@
   "next_action": "Define the CMP-COLUMN-001 Contract Implementation Pilot task. Do not start remaining-five batch Master production before the pilot is separately approved and passes review.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v019",
+    "visualization_version": "v020",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R053_STALE_AFTER_R054_D034"
+    "refresh_status": "R054_REFRESH_COMPLETE"
   }
 }
