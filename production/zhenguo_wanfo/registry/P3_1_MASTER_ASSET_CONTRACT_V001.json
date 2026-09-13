@@ -1,10 +1,14 @@
 {
   "version": "V001",
-  "status": "LOCKED_PRODUCT_OWNER_APPROVED",
+  "status": "SUPERSEDED_BY_V002_FIELD_MAPPING_CORRECTION",
   "date": "2026-09-13",
   "phase": "P3.1",
   "qualification_decision": "D-033",
   "contract_approval_decision": "D-034",
+  "superseded_by": "P3_1_MASTER_ASSET_CONTRACT_V002",
+  "supersession_decision": "D-036",
+  "production_use": "HISTORICAL_RECORD_ONLY_DO_NOT_USE_FOR_FUTURE_MASTER_PRODUCTION",
+  "supersession_reason": "CMP-LUDOU-COLUMN-001 field mapping defect: V001 incorrectly maps 327.1mm as top_depth and 446.3mm as bottom_width. V002 corrects bottom_width=327.1mm and top_depth=446.3mm per P1 direct evidence D-007.",
   "scope_count": 6,
   "global_convention": {
     "unit": "mm",
@@ -69,6 +73,7 @@
         "flat_height": 58.75,
         "sloped_height": 116.2
       },
+      "historical_record_warning": "The above ludou top_depth/bottom_width mapping is the V001 transcription defect. Do not use this record for production; use V002.",
       "engineering_interpolation": "REPLACEABLE_LINEAR_OUTER_PROFILE_WHERE_REQUIRED",
       "prohibited_geometry": ["unsupported_ears", "unsupported_cavities", "unsupported_notches", "unsupported_mortise_tenon"],
       "variant_axes": ["evidence_supported_dimension_set"],
@@ -185,5 +190,5 @@
     "DUPLICATE_COMPONENT_OR_ORPHAN_VARIANT",
     "P2_FROZEN_BASELINE_OVERWRITTEN"
   ],
-  "next_step_after_lock": "CONTRACT_IMPLEMENTATION_PILOT_ON_CMP-COLUMN-001_BEFORE_BATCH_PRODUCTION"
+  "next_step_after_lock": "SUPERSEDED_USE_V002"
 }
