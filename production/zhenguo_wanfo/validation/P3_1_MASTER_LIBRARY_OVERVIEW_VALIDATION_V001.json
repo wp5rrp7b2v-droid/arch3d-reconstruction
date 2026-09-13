@@ -9,8 +9,17 @@
     "CMP-FRAME-LOWER-SIX-CHUANFU-001",
     "CMP-FRAME-UPPER-SIX-CHUANFU-001"
   ],
+  "canonical_chinese_names": {
+    "CMP-COLUMN-001": "柱",
+    "CMP-LUDOU-COLUMN-001": "柱头栌斗",
+    "CMP-DOU-SINGLE-LONGKAI-001": "单向长开斗",
+    "CMP-DOU-INTERACTIVE-001": "交互斗",
+    "CMP-FRAME-LOWER-SIX-CHUANFU-001": "下六椽栿",
+    "CMP-FRAME-UPPER-SIX-CHUANFU-001": "上六椽栿"
+  },
+  "naming_basis": "SRC-ZG-WF-001 精细测绘报告 / 项目 canonical naming",
   "overview_path": "production/zhenguo_wanfo/review/P3_1/P3_1_MASTER_LIBRARY_OVERVIEW_V001.png",
-  "overview_sha256": "a060a7e98ca14c4ce061d18428d84ee4f2d818025546b7ec0520bbeea89ee6b5",
+  "overview_sha256": "580dd715a7c7316aabc1af7858f672ccf874e5c8bd53f6fad63e40b5bd84798c",
   "source_review_views": [
     "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/AXON.png",
     "production/zhenguo_wanfo/review/P3_1/masters/CMP-LUDOU-COLUMN-001/AXON.png",
