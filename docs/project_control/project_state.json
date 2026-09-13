@@ -104,9 +104,9 @@
   "next_action": "Sync local repo with GitHub main, then execute T-009 P3_0_COMPONENT_ONTOLOGY_REGISTRY_MIGRATION_V001 locally. Do not add Blender geometry.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v011",
+    "visualization_version": "v012",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R044_STALE_AFTER_R045_DOD_LOCK"
+    "refresh_status": "R045_REFRESH_COMPLETE"
   }
 }
