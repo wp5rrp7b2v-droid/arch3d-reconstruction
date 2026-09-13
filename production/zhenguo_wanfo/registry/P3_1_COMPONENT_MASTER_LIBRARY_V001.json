@@ -89,7 +89,7 @@
       "variant_ids": []
     },
     {
-      "approval_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+      "approval_status": "PRODUCT_OWNER_APPROVED_D039",
       "canonical_asset_sha256": "71b6c0aecc179ff79b95c48fad38645108854e2b14d572d4f11f454e0856a1fd",
       "canonical_asset_status": "LOCAL_ONLY_GENERATED",
       "component_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
@@ -117,11 +117,11 @@
       "review_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001",
       "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
       "shared_generator_path": "production/zhenguo_wanfo/scripts/six_chuanfu_master_common_v001.py",
-      "validation_status": "T013_ENGINEERING_PASS",
+      "validation_status": "T013_ENGINEERING_PASS_VISUAL_PASS_APPROVED_D039",
       "variant_ids": []
     },
     {
-      "approval_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+      "approval_status": "PRODUCT_OWNER_APPROVED_D039",
       "canonical_asset_sha256": "c4b83d0c0dc179c3946b2744b9c3887301fb81c3d835bd0f24a96336616a07e7",
       "canonical_asset_status": "LOCAL_ONLY_GENERATED",
       "component_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
@@ -149,12 +149,12 @@
       "review_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001",
       "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
       "shared_generator_path": "production/zhenguo_wanfo/scripts/six_chuanfu_master_common_v001.py",
-      "validation_status": "T013_ENGINEERING_PASS",
+      "validation_status": "T013_ENGINEERING_PASS_VISUAL_PASS_APPROVED_D039",
       "variant_ids": []
     }
   ],
   "phase": "P3.1",
-  "status": "FOUR_APPROVED_TWO_FRAME_ENGINEERING_COMPLETE_PENDING_REVIEW",
+  "status": "SIX_OF_SIX_APPROVED / P3_1_GATE_REVIEW_REQUIRED",
   "task": "T-013",
   "version": "V001"
 }
