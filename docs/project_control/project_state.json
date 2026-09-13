@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R069",
+  "state_revision": "R070",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1 / MASTER_COVERAGE_6_OF_6_APPROVED / T013_APPROVED_CLOSED / P3_1_GATE_REVIEW_NEXT",
+  "session_status": "ACTIVE / P3.1_GATE_REVIEW / 7_OF_9_PASS / DOD07_LIBRARY_OVERVIEW_HOLD / DOD09_FINAL_APPROVAL_PENDING",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -16,16 +16,16 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "ACTIVE / MASTER COVERAGE 6 OF 6 APPROVED / GATE REVIEW REQUIRED",
+    "status": "GATE REVIEW HOLD / 7 OF 9 PASS / DOD-07 PARTIAL / DOD-09 PENDING",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / 6 OF 6 MASTERS APPROVED / GATE REVIEW NEXT",
+      "P3.1": "ACTIVE / GATE REVIEW HOLD",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
-  "decision_required": false,
-  "blocker": null,
+  "decision_required": true,
+  "blocker": "P3.1 DoD-07 requires at least one whole-library overview covering all approved Masters / current formal Variant status; current repo has only batch overviews.",
   "current_task": null,
   "current_case": {
     "name": "平遥镇国寺万佛殿",
@@ -38,7 +38,7 @@
     "component_architecture": "11 families / 40 variants / 365 stable mesh instances"
   },
   "p3_1": {
-    "status": "ACTIVE / DOD LOCKED / CONTRACT V002 LOCKED / MASTER COVERAGE 6 OF 6 APPROVED / GATE REVIEW REQUIRED",
+    "status": "ACTIVE / GATE REVIEW HOLD / MASTER COVERAGE 6 OF 6 APPROVED",
     "dod_decision_id": "D-032",
     "qualification_decision_id": "D-033",
     "asset_contract_v002_decision_id": "D-036",
@@ -55,6 +55,23 @@
       "CMP-FRAME-LOWER-SIX-CHUANFU-001",
       "CMP-FRAME-UPPER-SIX-CHUANFU-001"
     ],
+    "formal_variant_count": 0,
+    "variant_gate_interpretation": "PASS: no evidence-qualified within-Master historical variants are currently registered; parameterized variant capability and mutation behavior are proven, and distinct dou / lower-upper six-chuanfu identities are separate components rather than variants.",
+    "gate_review": {
+      "file": "docs/production/zhenguo_wanfo/P3_1_GATE_REVIEW_2026-09-13.md",
+      "status": "HOLD",
+      "score": "7 PASS / 1 PARTIAL / 1 PENDING",
+      "dod_01": "PASS",
+      "dod_02": "PASS",
+      "dod_03": "PASS",
+      "dod_04": "PASS",
+      "dod_05": "PASS / ZERO FORMAL VARIANTS IN CURRENT EVIDENCE VERSION",
+      "dod_06": "PASS",
+      "dod_07": "PARTIAL / WHOLE-LIBRARY OVERVIEW MISSING",
+      "dod_08": "PASS",
+      "dod_09": "PENDING / CLOSURE ARTIFACT + PRODUCT OWNER FINAL GATE APPROVAL",
+      "closure_artifact_required": "production/zhenguo_wanfo/review/P3_1/P3_1_MASTER_LIBRARY_OVERVIEW_V001.png"
+    },
     "frame_batch": {
       "status": "APPROVED / CLOSED / D-039",
       "task_id": "T-013",
@@ -81,10 +98,10 @@
   },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
-    "status": "T013 TRIAL ENGINEERING + REVIEW COMPLETE / EVALUATION PENDING",
+    "status": "T013 TRIAL COMPLETE / EVALUATION PENDING AFTER P3.1 CLOSURE",
     "principle": "ChatGPT handles analysis/decision/diagnosis/review; Codex handles deterministic execution/machine validation",
     "quality_preservation": "NO REDUCTION TO DOD / HARD FAIL / PER-ASSET VALIDATION / REVIEW / PRODUCT OWNER APPROVAL",
-    "trial_evaluation_status": "T013 completed successfully with one presentation-only review correction; evaluate before making long-term default"
+    "trial_evaluation_status": "T013 completed successfully with one presentation-only correction; P3.1 closure package remains before final policy evaluation"
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -97,14 +114,14 @@
   "latest_material_decision": {
     "id": "D-039",
     "date": "2026-09-13",
-    "decision": "T-013 V002 approved/closed; both six-chuanfu Masters approved; P3.1 Master coverage is 6/6; P3.1 Gate Review is next."
+    "decision": "T-013 V002 approved/closed; both six-chuanfu Masters approved; P3.1 Master coverage is 6/6. Gate Review subsequently found one remaining DoD-07 closure artifact before final P3.1 approval."
   },
-  "next_action": "Perform the independent P3.1 Gate Review against P3_1_DEFINITION_OF_DONE_V001. Do not enter P3.2 until Product Owner explicitly approves P3.1 PASS / CLOSED.",
+  "next_action": "Create and review the whole-library P3_1_MASTER_LIBRARY_OVERVIEW_V001.png using existing approved review assets only; no Master regeneration. After visual PASS, complete DoD-09 Product Owner final P3.1 PASS/CLOSED decision.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v026",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_R069 / refresh after P3.1 gate review conclusion"
+    "refresh_status": "STALE_AFTER_R070 / refresh after P3.1 gate conclusion"
   }
 }
