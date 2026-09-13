@@ -14,6 +14,7 @@
 | **RC-008** | **2026-09-13** | **本地 Blender 自动执行统一改为 CLI/background：Codex 默认固定调用 `/Applications/Blender.app/Contents/MacOS/Blender --background --python ...`，禁止将 `open -a Blender`、Finder/AppleScript GUI 启动作为正式自动工程链。GUI/LaunchServices 报错不视为 Blender engine failure；先验证 executable + background。只有任务明确需要交互式 GUI 时才例外。** | **本机 Blender 3.6.23 Intel 已验证可运行，但 Codex 经 GUI/LaunchServices 启动时反复报错；把自动化与桌面 GUI 解耦可减少重复故障，并使生成、验证、保存、重开和渲染更确定。** | **ACTIVE / LOCAL BLENDER EXECUTION RULE** |
 | **RC-009** | **2026-09-13** | **引入 `LEAN_PRODUCTION_MODE`：在代表性 Pilot / First Article 已验证共享 pipeline 后，同类批量生产默认优先采用共享 generator utility、batch runner、validator、renderer 与首件闸门；减少重复读取、重复代码、重复启动和重复解释，但每个正式资产仍必须独立参数、独立 binary/hash/semantic/Registry，并逐资产完成 deterministic regeneration、reopen、mutation、canonical rebuild、evidence/transform validation 与正式 review package。首件失败立即停止批量扩展；同一根因最多 2 次有证据的修正重试。若几何方法、证据语义或执行环境发生实质变化，必须回到 standalone/pilot mode。** | **在不降低 DoD、Hard Fail、Evidence Boundary 或 Visual Review 的前提下，降低 Codex 额度、重复工程与调试成本，并将 Pilot→批量生产转化为可复用生产范式。** | **ACTIVE / LEAN PRODUCTION RULE** |
 | **RC-010** | **2026-09-13** | **GitHub 网络连接统一采用动态 `git-proxy-auto` helper：每次 Git 网络操作读取 macOS 当前系统代理，临时注入 `http.proxy`，不在 global 或 repo-local config 持久化动态端口；通过代理时固定 HTTP/1.1；push 使用受控 POST buffer，并在异常断连后核对远端 SHA 区分真实失败与 ACK 丢失。禁止因网络问题 force/reset/rebase/overwrite，non-fast-forward、unknown tracked changes、同文件并发修改或真实冲突仍须 STOP。该 helper 可供《中国古建筑3D复原》与《诡舍·黑衣夫人》统一复用。** | **固定代理端口存在 stale configuration 风险；T-012 发布中曾出现 sideband unexpected disconnect。动态 helper 在不保存端口的前提下成功发布 `d1ae53ee...`，更适合作为跨项目长期 Git 网络层。** | **ACTIVE / DYNAMIC GIT CONNECTIVITY RULE** |
+| **RC-011** | **2026-09-13** | **试运行 `CHAT_FIRST_CODEX_EXECUTOR_MODE`：ChatGPT 负责证据解释、Task Contract、几何/参数语义、Hard Fail、异常诊断、视觉审核和 Project Control；Codex 默认只读取最小锁定输入并执行确定性工程、机器验证、资产生成与提交。Codex 遇到合同外证据冲突、几何方法变化、参数语义不明或非显然实现型 validation failure 时必须 STOP，把最小失败证据交回 ChatGPT；不得自行扩展历史解释或修改 Contract。Codex Think Level 默认 MEDIUM，只有 ChatGPT 明确判断结构性工程问题后才针对性升级 HIGH。所有 DoD、逐资产 validation、mutation、reopen、review package 与 Product Owner approval 标准保持不变。** | **进一步减少 Codex 重复研究、长推理和猜测式调试，把额度集中在实际工程执行；通过“分析/决策与执行分离”降本，但不减少任何正式验收证据。先在 T-013 试运行，再依据额度、返工率与质量结果决定是否转为长期默认。** | **ACTIVE / TRIAL IN T-013** |
 
 ## 当前有效原则摘要
 
@@ -42,5 +43,7 @@
 `Local Blender automation = fixed executable + CLI/background; GUI launch is not the default execution path`
 
 `Lean Production = shared pipeline + first-article gate + independent per-asset acceptance; reduce duplication, not quality`
+
+`Chat-first Codex-executor = ChatGPT decides/diagnoses/reviews; Codex executes/validates; contract-external ambiguity returns to ChatGPT; Codex MEDIUM by default`
 
 `同步模式 = TRIAL；价值不足时可调整`
