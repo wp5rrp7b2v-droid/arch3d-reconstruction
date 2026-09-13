@@ -183,9 +183,9 @@
   "next_action": "Sync local main, then execute T-012 using P3_1_DOU_MASTER_BATCH_V002 Lean Production Mode. First Article CMP-LUDOU-COLUMN-001 must fully PASS before generating the other two dou Masters.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v023",
+    "visualization_version": "v024",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R061_DASHBOARD_STALE_AFTER_R062_LEAN_MODE"
+    "refresh_status": "R062_REFRESH_COMPLETE"
   }
 }
