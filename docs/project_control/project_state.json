@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R044",
+  "state_revision": "R045",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.0_DOD_DRAFT / COMPONENT_AUDIT_STARTED",
+  "session_status": "ACTIVE / P3.0_DOD_LOCKED / T009_AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,19 +17,25 @@
   "current_gate": {
     "id": "P3.0",
     "name": "Component Ontology & Registry",
-    "status": "DOD DRAFT / PRODUCT OWNER REVIEW",
+    "status": "ACTIVE / DOD LOCKED / IMPLEMENTATION READY",
     "passed": 0,
     "total": 4,
     "items": {
-      "P3.0": "ACTIVE / DOD DRAFT / REVIEW REQUIRED",
+      "P3.0": "ACTIVE / DOD LOCKED / T-009 AUTHORIZED",
       "P3.1": "LOCKED / WAITING_FOR_P3.0_PASS",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
-  "decision_required": true,
+  "decision_required": false,
   "blocker": null,
-  "current_task": null,
+  "current_task": {
+    "id": "T-009",
+    "key": "P3_0_COMPONENT_ONTOLOGY_REGISTRY_MIGRATION_V001",
+    "status": "AUTHORIZED / READY_FOR_LOCAL_EXECUTION",
+    "think_level": "HIGH",
+    "scope": "ontology / registry schema / P2 11-40-365 semantic migration / validation only; no new Blender geometry"
+  },
   "current_case": {
     "name": "平遥镇国寺万佛殿",
     "location": "山西省平遥县镇国寺",
@@ -59,15 +65,16 @@
     },
     "core_model": "Evidence -> Component Knowledge -> Parametric Component -> Assembly Rules -> Building Reconstruction",
     "p2_migration_rule": "P3.0 must audit and map existing P2 11 families / 40 variants / 365 instances before creating new geometry.",
-    "task_rule": "Do not create T-009 until P3.0 Definition of Done is approved and locked."
+    "task_rule": "T-009 is authorized after D-030, but must not create new Blender geometry."
   },
   "p3_0": {
     "dod": "docs/production/zhenguo_wanfo/P3_0_DEFINITION_OF_DONE_V001.md",
-    "dod_status": "DRAFT / FOR PRODUCT OWNER REVIEW",
+    "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-030",
     "migration_audit": "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
     "migration_audit_status": "WORKING DRAFT / SEMANTIC AUDIT STARTED",
     "initial_family_finding": "P2 11 families mix historical component concepts, geometric proxies, control objects and roof envelope; they must not be treated as 11 historical component types.",
-    "proposed_pass_coverage": "11/11 families + 40/40 variants + 365/365 instances + zero orphan"
+    "pass_coverage": "11/11 families + 40/40 variants + 365/365 instances + zero orphan",
+    "decision_id": "D-030"
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -90,16 +97,16 @@
     "final_review_set": "responsive labels; no overlap"
   },
   "latest_material_decision": {
-    "id": "D-029",
+    "id": "D-030",
     "date": "2026-09-13",
-    "decision": "Product Owner approved P3 Component System & Assembly Architecture and entered P3.0 Component Ontology & Registry."
+    "decision": "Product Owner approved and locked P3.0 Definition of Done V001; T-009 authorized for ontology/registry/migration engineering without new geometry."
   },
-  "next_action": "Product Owner review P3.0 Definition of Done V001. If approved, lock DoD and authorize P3.0 implementation task T-009 for ontology/registry/migration engineering; no new geometry.",
+  "next_action": "Sync local repo with GitHub main, then execute T-009 P3_0_COMPONENT_ONTOLOGY_REGISTRY_MIGRATION_V001 locally. Do not add Blender geometry.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v011",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R044_REFRESH_COMPLETE"
+    "refresh_status": "R044_STALE_AFTER_R045_DOD_LOCK"
   }
 }
