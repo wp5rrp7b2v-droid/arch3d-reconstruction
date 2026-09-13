@@ -1,0 +1,3087 @@
+{
+  "historical_boundaries": {
+    "DG-114": {
+      "blocking_level": "MEDIUM",
+      "classification": "UNKNOWN",
+      "is_replaceable": true,
+      "label_zh": "小斗统一规格设计规则",
+      "notes": "“主报告p107”页码归属已撤销；待重新定位原论证或保持外部论文桥接；候选本身为HOLD；错误主报告页码已撤销；主报告p107归属已撤销；候选保持HOLD。",
+      "parameter_key": "small_dou_unified_design_rule",
+      "production_use": "DO_NOT_LOCK",
+      "source_ids": [
+        "P1_2_DIRECT_PAGE_REVIEW_V001",
+        "P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001"
+      ],
+      "source_layer": "A_BRIDGE_UNRESOLVED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": null,
+      "value": null
+    },
+    "HIS-002": {
+      "blocking_level": "HIGH",
+      "classification": "UNKNOWN",
+      "is_replaceable": true,
+      "label_zh": "逐构件963原真性状态",
+      "notes": "P1.3按构件分级；必须逐构件判定；默认unknown；逐构件未证实则originality_status默认为unknown。",
+      "parameter_key": "component_level_963_originality",
+      "production_use": "PER_COMPONENT_METADATA_REQUIRED",
+      "source_ids": [
+        "SRC-ZG-WF-001",
+        "P1_3_HIGH_RISK_CLASSIFICATION_V001"
+      ],
+      "source_layer": "DIRECT_GAP",
+      "time_layer": "component_history",
+      "unit": null,
+      "value": null
+    },
+    "Z-006": {
+      "blocking_level": "HIGH",
+      "classification": "UNKNOWN",
+      "is_replaceable": true,
+      "label_zh": "963原设计柱高",
+      "notes": "原始地坪/柱础关系仍不足；963柱高未知；无合法963设计柱高；不得以3.42m或现状高度替代。",
+      "parameter_key": "column_height_963_design_mm",
+      "production_use": "DO_NOT_LOCK",
+      "source_ids": [
+        "SRC-ZG-WF-001",
+        "P1_3_HIGH_RISK_CLASSIFICATION_V001"
+      ],
+      "source_layer": "UNKNOWN",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "mm",
+      "value": null
+    },
+    "Z-006-RC-01": {
+      "approval_decision_id": "D-023",
+      "candidate_id": "Z-006-RC-01",
+      "classification": "REASONABLE_COMPLETION",
+      "current_resolved_value": 3534.3,
+      "depends_on": [
+        "MOD-006"
+      ],
+      "evidence_basis": [
+        "E-018",
+        "HR-01A",
+        "D-023"
+      ],
+      "formula": "11 * MOD-006",
+      "historical_claim_boundary": "仅为reconstructed_963_candidate的可替换生产解析值，不是已证实的963年原设计柱高。",
+      "is_replaceable": true,
+      "multiplier": 11,
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "status": "APPROVED_FOR_P2_2_CANDIDATE_USE",
+      "target_parameter_id": "Z-006",
+      "target_parameter_key": "column_height_963_design_mm",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "mm"
+    },
+    "corner_joinery_hidden_angle_beam": "45-degree corner, mortise and hidden-angle beam unresolved; no precision claim",
+    "semantic_layers": [
+      "observed_as_measured",
+      "report_ideal_model",
+      "reconstructed_963_candidate"
+    ],
+    "source_references": [
+      "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+      "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+      "docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md",
+      "D-023",
+      "D-028",
+      "D-029",
+      "D-030"
+    ]
+  },
+  "primary_direct_review": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+  "records": [
+    {
+      "aliases": [
+        "BRACKET_ARM"
+      ],
+      "candidate_id": "PRX-BRACKET-JUMP-001",
+      "canonical_name_en": "unresolved_bracket_jump_proxy",
+      "canonical_name_zh": "未定铺作出跳代理",
+      "corresponds_to_real_historical_component": null,
+      "eligibility_reason": "P2 equal jump subdivisions are aggregate graphic topology; DG-110–113 do not identify individual 栱 or 昂.",
+      "eligibility_status": "PROXY_ONLY",
+      "evidence_by_attribute": {
+        "DG-001": {
+          "classification": "CONFIRMED",
+          "production_use": "BASE_TOPOLOGY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PLUS_SUPPORT",
+          "time_layer": "observed_current_topology",
+          "unit": null,
+          "value": "七铺作、双杪双下昂"
+        },
+        "DG-002": {
+          "classification": "CONFIRMED",
+          "production_use": "BASE_TOPOLOGY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PLUS_SUPPORT",
+          "time_layer": "observed_current_topology",
+          "unit": null,
+          "value": "五铺作、双杪偷心"
+        },
+        "DG-110": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 48
+        },
+        "DG-111": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 47
+        },
+        "DG-112": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 47
+        },
+        "DG-113": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 21
+        },
+        "MOD-002": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 15.3
+        },
+        "MOD-003": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 14
+        },
+        "MOD-004": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 10
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": null,
+      "historical_state": {
+        "historical_claim": "candidate_only",
+        "model_layer": "reconstructed_963_candidate",
+        "observed_as_measured": "separate in P1/P2 parameter record",
+        "report_ideal_model": "separate; no automatic equivalence"
+      },
+      "historical_terms": [],
+      "known_geometry_inputs": [
+        "P2 engineering parameter IDs: DG-001, DG-002, DG-110, DG-111, DG-112, DG-113, MOD-002, MOD-003, MOD-004, Z-006-RC-01; not direct member geometry"
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "GEOMETRIC_PROXY",
+      "p2_proxy_control_envelope_relationship": "保留代理；后续按实证拆分栱、昂及铺作组合，不把四跳均分网格当成构件。",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P3_0_REGISTRY",
+      "required_followup_evidence": null,
+      "source_context": "外檐铺作出跳",
+      "source_p2_family": "BRACKET_ARM",
+      "source_pages": [
+        {
+          "pdf_page": "119–120",
+          "printed_page": "104–105",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "recommended conclusions"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+        "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+        "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+      ],
+      "source_registry_id": "PRX-BRACKET-JUMP-001",
+      "split_merge_replacement_relationship": "P3.0 record retained unchanged; no automatic historical upgrade.",
+      "unknown_unresolved_attributes": [
+        "DG-110～113 只控制总体出跳；45°构件、栱昂分件、榫卯未定。",
+        "HIS-002: component originality unknown",
+        "Individual member drawings, section, endpoints and 45° node evidence."
+      ]
+    },
+    {
+      "aliases": [
+        "BRACKET_CONTACT"
+      ],
+      "candidate_id": "PRX-BRACKET-CONTACT-001",
+      "canonical_name_en": "bracket_endpoint_contact_proxy",
+      "canonical_name_zh": "铺作端点接触代理",
+      "corresponds_to_real_historical_component": false,
+      "eligibility_reason": "Diagrammatic contact block is not 小斗; DG-114 unified-small-dou rule remains UNKNOWN.",
+      "eligibility_status": "PROXY_ONLY",
+      "evidence_by_attribute": {
+        "DG-001": {
+          "classification": "CONFIRMED",
+          "production_use": "BASE_TOPOLOGY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PLUS_SUPPORT",
+          "time_layer": "observed_current_topology",
+          "unit": null,
+          "value": "七铺作、双杪双下昂"
+        },
+        "DG-002": {
+          "classification": "CONFIRMED",
+          "production_use": "BASE_TOPOLOGY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PLUS_SUPPORT",
+          "time_layer": "observed_current_topology",
+          "unit": null,
+          "value": "五铺作、双杪偷心"
+        },
+        "DG-110": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 48
+        },
+        "DG-111": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 47
+        },
+        "MOD-002": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 15.3
+        },
+        "MOD-003": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 14
+        },
+        "MOD-004": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 10
+        },
+        "MOD-005": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 21
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": null,
+      "historical_state": {
+        "historical_claim": "candidate_only",
+        "model_layer": "reconstructed_963_candidate",
+        "observed_as_measured": "separate in P1/P2 parameter record",
+        "report_ideal_model": "separate; no automatic equivalence"
+      },
+      "historical_terms": [],
+      "known_geometry_inputs": [
+        "P2 engineering parameter IDs: DG-001, DG-002, DG-110, DG-111, MOD-002, MOD-003, MOD-004, MOD-005, Z-006-RC-01; not direct member geometry"
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "GEOMETRIC_PROXY",
+      "p2_proxy_control_envelope_relationship": "保留端点代理；不得重命名为小斗。",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P3_0_REGISTRY",
+      "required_followup_evidence": null,
+      "source_context": "铺作出跳端点",
+      "source_p2_family": "BRACKET_CONTACT",
+      "source_pages": [
+        {
+          "pdf_page": "65–66",
+          "printed_page": "50–51",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "tables 2-28 / 2-29"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+        "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+        "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+      ],
+      "source_registry_id": "PRX-BRACKET-CONTACT-001",
+      "split_merge_replacement_relationship": "P3.0 record retained unchanged; no automatic historical upgrade.",
+      "unknown_unresolved_attributes": [
+        "DG-114 为 UNKNOWN / DO_NOT_LOCK；不能据此给散斗、齐心斗或交互斗统一规格。",
+        "HIS-002: component originality unknown",
+        "A component-specific斗 identity and shape source, without using P2 contact-block dimensions."
+      ]
+    },
+    {
+      "aliases": [
+        "COLUMN"
+      ],
+      "candidate_id": "CMP-COLUMN-001",
+      "canonical_name_en": "column",
+      "canonical_name_zh": "柱",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Column type and observed diameter are verified; a reusable parametric column body is feasible while Z-006 remains unknown.",
+      "eligibility_status": "MASTER_REQUIRED",
+      "evidence_by_attribute": {
+        "PM-013": {
+          "classification": "CONFIRMED",
+          "production_use": "BASE_TOPOLOGY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_current_topology",
+          "unit": null,
+          "value": 12
+        },
+        "PM-014": {
+          "classification": "CONFIRMED",
+          "production_use": "BASE_TOPOLOGY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_current_topology",
+          "unit": null,
+          "value": 0
+        },
+        "Z-001": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 460
+        },
+        "Z-002": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "mm",
+          "value": 459
+        },
+        "Z-005": {
+          "classification": "REASONABLE_COMPLETION",
+          "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED_GUESS",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "mm",
+          "value": 61.2
+        },
+        "Z-006": {
+          "classification": "UNKNOWN",
+          "production_use": "DO_NOT_LOCK",
+          "source_ids": [
+            "SRC-ZG-WF-001",
+            "P1_3_HIGH_RISK_CLASSIFICATION_V001"
+          ],
+          "source_layer": "UNKNOWN",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "mm",
+          "value": null
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": "柱",
+      "historical_state": {
+        "historical_claim": "candidate_only",
+        "model_layer": "reconstructed_963_candidate",
+        "observed_as_measured": "separate in P1/P2 parameter record",
+        "report_ideal_model": "separate; no automatic equivalence"
+      },
+      "historical_terms": [
+        "柱",
+        "檐柱",
+        "角柱"
+      ],
+      "known_geometry_inputs": [
+        "Observed diameter approximately 460 mm (Z-001); report design candidate 459 mm (Z-002); height is an explicit free parameter, not a historical constant."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "RECONSTRUCTED_COMPONENT_CANDIDATE",
+      "p2_proxy_control_envelope_relationship": "归入柱构件概念；位置和候选尺寸只作为建筑专属变体。",
+      "proposed_future_component_id": "CMP-COLUMN-001",
+      "readiness_for_later_master_asset_contract": "READY_WITH_BOUNDED_LOD",
+      "record_origin": "P3_0_REGISTRY",
+      "required_followup_evidence": null,
+      "source_context": "外围檐柱柱网",
+      "source_p2_family": "COLUMN",
+      "source_pages": [
+        {
+          "pdf_page": "49–50",
+          "printed_page": "34–35",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "2.1.2 / table 2-6"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+        "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+        "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+      ],
+      "source_registry_id": "CMP-COLUMN-001",
+      "split_merge_replacement_relationship": "P3.0 record retained unchanged; no automatic historical upgrade.",
+      "unknown_unresolved_attributes": [
+        "Z-006 963柱高 UNKNOWN；Z-006-RC-01 仅是 D-023 可替换生产候选；角柱生起为报告猜测。",
+        "HIS-002: component originality unknown",
+        "963 column height and individual originality remain unknown; no fixed historical height is licensed.",
+        "Z-006-RC-01 is a separate replaceable candidate under D-023, not Z-006 history."
+      ]
+    },
+    {
+      "aliases": [
+        "FRAME_CONTROL"
+      ],
+      "candidate_id": "CTL-FRAME-001",
+      "canonical_name_en": "frame_tier_control",
+      "canonical_name_zh": "梁架层位控制对象",
+      "corresponds_to_real_historical_component": false,
+      "eligibility_reason": "Frame-tier locator has no physical historical member identity.",
+      "eligibility_status": "CONTROL_ONLY",
+      "evidence_by_attribute": {
+        "FR-004": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 1759.5
+        },
+        "FR-005": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 1759.5
+        },
+        "FR-006": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 1836
+        },
+        "FR-007": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": [
+            120,
+            115,
+            210
+          ]
+        },
+        "MOD-002": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 15.3
+        },
+        "MOD-003": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 14
+        },
+        "MOD-004": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 10
+        },
+        "PM-012": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "mm",
+          "value": 10710
+        },
+        "ROOF-004": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 25
+        },
+        "ROOF-005": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 40
+        },
+        "ROOF-006": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 82
+        },
+        "ROOF-007": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 88
+        },
+        "ROOF-008": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 61
+        },
+        "ROOF-009": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 82
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": null,
+      "historical_state": {
+        "historical_claim": "candidate_only",
+        "model_layer": "reconstructed_963_candidate",
+        "observed_as_measured": "separate in P1/P2 parameter record",
+        "report_ideal_model": "separate; no automatic equivalence"
+      },
+      "historical_terms": [],
+      "known_geometry_inputs": [
+        "P2 engineering parameter IDs: FR-004, FR-005, FR-006, FR-007, MOD-002, MOD-003, MOD-004, PM-012, ROOF-004, ROOF-005, ROOF-006, ROOF-007, ROOF-008, ROOF-009, Z-006-RC-01; not direct member geometry"
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "CONTROL_OBJECT",
+      "p2_proxy_control_envelope_relationship": "保留工程控制命名空间，不迁入历史构件目录。",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P3_0_REGISTRY",
+      "required_followup_evidence": null,
+      "source_context": "梁架控制坐标",
+      "source_p2_family": "FRAME_CONTROL",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md",
+        "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+        "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+        "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+      ],
+      "source_registry_id": "CTL-FRAME-001",
+      "split_merge_replacement_relationship": "P3.0 record retained unchanged; no automatic historical upgrade.",
+      "unknown_unresolved_attributes": [
+        "控制长度和位置不能解释为实体梁、枋或节点。",
+        "HIS-002: component originality unknown",
+        "Not applicable to a control object."
+      ]
+    },
+    {
+      "aliases": [
+        "FRAME_SUPPORT"
+      ],
+      "candidate_id": "PRX-FRAME-CONNECTOR-001",
+      "canonical_name_en": "frame_tier_connector_proxy",
+      "canonical_name_zh": "梁架层位连接代理",
+      "corresponds_to_real_historical_component": false,
+      "eligibility_reason": "P2 connector endpoints do not identify 托脚, 蜀柱 or joints.",
+      "eligibility_status": "PROXY_ONLY",
+      "evidence_by_attribute": {
+        "FR-004": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 1759.5
+        },
+        "FR-005": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 1759.5
+        },
+        "FR-006": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 1836
+        },
+        "FR-007": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": [
+            120,
+            115,
+            210
+          ]
+        },
+        "MOD-002": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 15.3
+        },
+        "MOD-003": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 14
+        },
+        "MOD-004": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 10
+        },
+        "PM-012": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "mm",
+          "value": 10710
+        },
+        "ROOF-004": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 25
+        },
+        "ROOF-005": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 40
+        },
+        "ROOF-006": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 82
+        },
+        "ROOF-007": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 88
+        },
+        "ROOF-008": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 61
+        },
+        "ROOF-009": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 82
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": null,
+      "historical_state": {
+        "historical_claim": "candidate_only",
+        "model_layer": "reconstructed_963_candidate",
+        "observed_as_measured": "separate in P1/P2 parameter record",
+        "report_ideal_model": "separate; no automatic equivalence"
+      },
+      "historical_terms": [],
+      "known_geometry_inputs": [
+        "P2 engineering parameter IDs: FR-004, FR-005, FR-006, FR-007, MOD-002, MOD-003, MOD-004, PM-012, ROOF-004, ROOF-005, ROOF-006, ROOF-007, ROOF-008, ROOF-009, Z-006-RC-01; not direct member geometry"
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "GEOMETRIC_PROXY",
+      "p2_proxy_control_envelope_relationship": "保留代理；未来按确证梁架成员替换。",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P3_0_REGISTRY",
+      "required_followup_evidence": null,
+      "source_context": "梁架层位连接处",
+      "source_p2_family": "FRAME_SUPPORT",
+      "source_pages": [
+        {
+          "pdf_page": "81",
+          "printed_page": "66",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "table 2-38"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md",
+        "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+        "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+        "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+      ],
+      "source_registry_id": "PRX-FRAME-CONNECTOR-001",
+      "split_merge_replacement_relationship": "P3.0 record retained unchanged; no automatic historical upgrade.",
+      "unknown_unresolved_attributes": [
+        "端点与截面为中等 LOD；不能命名为托脚、蜀柱等具体历史构件。",
+        "HIS-002: component originality unknown",
+        "Member-specific section, length, topology and contact/joint evidence."
+      ]
+    },
+    {
+      "aliases": [
+        "GABLE_CONTROL"
+      ],
+      "candidate_id": "CTL-GABLE-001",
+      "canonical_name_en": "gable_guide_control",
+      "canonical_name_zh": "山面轮廓控制对象",
+      "corresponds_to_real_historical_component": false,
+      "eligibility_reason": "Gable diagnostic line is not 博风板, 角梁 or another physical member.",
+      "eligibility_status": "CONTROL_ONLY",
+      "evidence_by_attribute": {
+        "FR-007": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": [
+            120,
+            115,
+            210
+          ]
+        },
+        "MOD-002": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 15.3
+        },
+        "OUT-003": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 92
+        },
+        "ROOF-010": {
+          "classification": "REASONABLE_COMPLETION",
+          "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "fen",
+          "value": 231
+        },
+        "ROOF-011": {
+          "classification": "REASONABLE_COMPLETION",
+          "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "mm",
+          "value": 3534.3
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": null,
+      "historical_state": {
+        "historical_claim": "candidate_only",
+        "model_layer": "reconstructed_963_candidate",
+        "observed_as_measured": "separate in P1/P2 parameter record",
+        "report_ideal_model": "separate; no automatic equivalence"
+      },
+      "historical_terms": [],
+      "known_geometry_inputs": [
+        "P2 engineering parameter IDs: FR-007, MOD-002, OUT-003, ROOF-010, ROOF-011, Z-006-RC-01; not direct member geometry"
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "CONTROL_OBJECT",
+      "p2_proxy_control_envelope_relationship": "保留诊断控制命名空间。",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P3_0_REGISTRY",
+      "required_followup_evidence": null,
+      "source_context": "山面轮廓",
+      "source_p2_family": "GABLE_CONTROL",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md",
+        "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+        "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+        "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+      ],
+      "source_registry_id": "CTL-GABLE-001",
+      "split_merge_replacement_relationship": "P3.0 record retained unchanged; no automatic historical upgrade.",
+      "unknown_unresolved_attributes": [
+        "山面控制线不能解释为博风板、角梁或其他实体构件。",
+        "HIS-002: component originality unknown",
+        "Not applicable to a control object."
+      ]
+    },
+    {
+      "aliases": [
+        "GRID_CONTROL"
+      ],
+      "candidate_id": "CTL-GRID-001",
+      "canonical_name_en": "bay_grid_control",
+      "canonical_name_zh": "柱网定位控制对象",
+      "corresponds_to_real_historical_component": false,
+      "eligibility_reason": "Grid locator is not a column or historical member.",
+      "eligibility_status": "CONTROL_ONLY",
+      "evidence_by_attribute": {
+        "MOD-001": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 306
+        },
+        "PM-001": {
+          "classification": "CONFIRMED",
+          "production_use": "BASE_TOPOLOGY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_current_topology",
+          "unit": null,
+          "value": 3
+        },
+        "PM-002": {
+          "classification": "CONFIRMED",
+          "production_use": "BASE_TOPOLOGY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_current_topology",
+          "unit": null,
+          "value": 3
+        },
+        "PM-008": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "chi",
+          "value": 14.5
+        },
+        "PM-009": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "chi",
+          "value": 12
+        },
+        "PM-010": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "chi",
+          "value": 11.5
+        },
+        "Z-007": {
+          "classification": "REASONABLE_COMPLETION",
+          "production_use": "PROJECT_COORDINATE_RULE",
+          "source_ids": [
+            "SRC-ZG-WF-001",
+            "P1_3_HIGH_RISK_CLASSIFICATION_V001"
+          ],
+          "source_layer": "PROJECT_RULE",
+          "time_layer": "project_model_datum",
+          "unit": null,
+          "value": "Z = 0; abstract column-foot design plane"
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": null,
+      "historical_state": {
+        "historical_claim": "candidate_only",
+        "model_layer": "reconstructed_963_candidate",
+        "observed_as_measured": "separate in P1/P2 parameter record",
+        "report_ideal_model": "separate; no automatic equivalence"
+      },
+      "historical_terms": [],
+      "known_geometry_inputs": [
+        "P2 engineering parameter IDs: MOD-001, PM-001, PM-002, PM-008, PM-009, PM-010, Z-007; not direct member geometry"
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "CONTROL_OBJECT",
+      "p2_proxy_control_envelope_relationship": "保留定位控制命名空间。",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P3_0_REGISTRY",
+      "required_followup_evidence": null,
+      "source_context": "平面柱网",
+      "source_p2_family": "GRID_CONTROL",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+        "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+        "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+      ],
+      "source_registry_id": "CTL-GRID-001",
+      "split_merge_replacement_relationship": "P3.0 record retained unchanged; no automatic historical upgrade.",
+      "unknown_unresolved_attributes": [
+        "线段数不是柱数或历史构件数。",
+        "HIS-002: component originality unknown",
+        "Not applicable to a control object."
+      ]
+    },
+    {
+      "aliases": [
+        "PRIMARY_FRAME"
+      ],
+      "candidate_id": "UNR-PRIMARY-FRAME-001",
+      "canonical_name_en": "unresolved_primary_frame_proxy",
+      "canonical_name_zh": "未分解主体梁架代理",
+      "corresponds_to_real_historical_component": null,
+      "eligibility_reason": "Aggregate P2 frame meshes cannot be assigned to individual 六椽栿, 梁 or 枋.",
+      "eligibility_status": "PROXY_ONLY",
+      "evidence_by_attribute": {
+        "DG-113": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 21
+        },
+        "MOD-002": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 15.3
+        },
+        "MOD-003": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 14
+        },
+        "MOD-004": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 10
+        },
+        "MOD-005": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 21
+        },
+        "PM-011": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "mm",
+          "value": 11475
+        },
+        "PM-012": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "mm",
+          "value": 10710
+        },
+        "RF-001": {
+          "classification": "CONFIRMED",
+          "production_use": "BASE_TOPOLOGY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_current_topology",
+          "unit": null,
+          "value": "复合式六椽栿通檐用两柱、彻上露明"
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": null,
+      "historical_state": {
+        "historical_claim": "candidate_only",
+        "model_layer": "reconstructed_963_candidate",
+        "observed_as_measured": "separate in P1/P2 parameter record",
+        "report_ideal_model": "separate; no automatic equivalence"
+      },
+      "historical_terms": [],
+      "known_geometry_inputs": [
+        "P2 engineering parameter IDs: DG-113, MOD-002, MOD-003, MOD-004, MOD-005, PM-011, PM-012, RF-001, Z-006-RC-01; not direct member geometry"
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "GEOMETRIC_PROXY",
+      "p2_proxy_control_envelope_relationship": "保留集合代理；后续按证据拆分六椽栿、梁、枋等，不能把整个 family 命名为单件。",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P3_0_REGISTRY",
+      "required_followup_evidence": null,
+      "source_context": "主体梁架",
+      "source_p2_family": "PRIMARY_FRAME",
+      "source_pages": [
+        {
+          "pdf_page": "81",
+          "printed_page": "66",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "table 2-38"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+        "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+        "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+      ],
+      "source_registry_id": "UNR-PRIMARY-FRAME-001",
+      "split_merge_replacement_relationship": "P3.0 record retained unchanged; no automatic historical upgrade.",
+      "unknown_unresolved_attributes": [
+        "六椽栿、阑额等术语有证据，但 P2 两种网格不能逐一等同具体历史成员。",
+        "HIS-002: component originality unknown",
+        "Member-by-member mapping; independently verified identities are separate derived candidates."
+      ]
+    },
+    {
+      "aliases": [
+        "PURLIN",
+        "檩类"
+      ],
+      "candidate_id": "CMP-PURLIN-001",
+      "canonical_name_en": "purlin_type",
+      "canonical_name_zh": "槫类构件",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "槫 is a verified type term, but P2 one section/variant is an engineering envelope, not a measured component profile.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "FR-007": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": [
+            120,
+            115,
+            210
+          ]
+        },
+        "MOD-002": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 15.3
+        },
+        "OUT-003": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 92
+        },
+        "ROOF-007": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 88
+        },
+        "ROOF-008": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 61
+        },
+        "ROOF-009": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 82
+        },
+        "ROOF-010": {
+          "classification": "REASONABLE_COMPLETION",
+          "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "fen",
+          "value": 231
+        },
+        "ROOF-011": {
+          "classification": "REASONABLE_COMPLETION",
+          "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "mm",
+          "value": 3534.3
+        }
+      },
+      "evidence_gap": "Position-specific sections, member lengths, end conditions and evidence for whether positions are variants or separate types.",
+      "historical_component_identity": "槫类构件",
+      "historical_state": {
+        "historical_claim": "candidate_only",
+        "model_layer": "reconstructed_963_candidate",
+        "observed_as_measured": "separate in P1/P2 parameter record",
+        "report_ideal_model": "separate; no automatic equivalence"
+      },
+      "historical_terms": [
+        "槫",
+        "撩风槫",
+        "下平槫",
+        "上平槫",
+        "脊槫"
+      ],
+      "known_geometry_inputs": [
+        "Measured purlin-to-purlin rises A/B/C and inferred position rises constrain placement, not an individual 槫 cross-section."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "RECONSTRUCTED_COMPONENT_CANDIDATE",
+      "p2_proxy_control_envelope_relationship": "以报告使用的槫为类名；具体撩风/下平/上平/脊槫分型暂不由 P2 单一 variant 锁定。",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P3_0_REGISTRY",
+      "required_followup_evidence": "Obtain attributable report drawings/tables or an approved formal bridge resolving: Position-specific sections, member lengths, end conditions and evidence for whether positions are variants or separate types.",
+      "source_context": "屋架各槫位",
+      "source_p2_family": "PURLIN",
+      "source_pages": [
+        {
+          "pdf_page": "103–107",
+          "printed_page": "88–92",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "tables 2-51 / 2-52"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+        "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+        "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+      ],
+      "source_registry_id": "CMP-PURLIN-001",
+      "split_merge_replacement_relationship": "P3.0 record retained unchanged; no automatic historical upgrade.",
+      "unknown_unresolved_attributes": [
+        "当前 P2 截面、数量和排布为 roof-control 候选，不是逐根原构清单。",
+        "HIS-002: component originality unknown",
+        "Position-specific sections, member lengths, end conditions and evidence for whether positions are variants or separate types."
+      ]
+    },
+    {
+      "aliases": [
+        "RAFTER"
+      ],
+      "candidate_id": "CMP-RAFTER-001",
+      "canonical_name_en": "rafter_type",
+      "canonical_name_zh": "椽类构件",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "椽 type is real, but P2 slope segments and spacing are diagrammatic.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "FR-007": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": [
+            120,
+            115,
+            210
+          ]
+        },
+        "MOD-002": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 15.3
+        },
+        "OUT-003": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 92
+        },
+        "ROOF-007": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 88
+        },
+        "ROOF-008": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 61
+        },
+        "ROOF-009": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 82
+        }
+      },
+      "evidence_gap": "Measured sections, lengths, eave/flying-rafter distinctions, spacing and wing-corner form.",
+      "historical_component_identity": "椽类构件",
+      "historical_state": {
+        "historical_claim": "candidate_only",
+        "model_layer": "reconstructed_963_candidate",
+        "observed_as_measured": "separate in P1/P2 parameter record",
+        "report_ideal_model": "separate; no automatic equivalence"
+      },
+      "historical_terms": [
+        "椽",
+        "檐椽",
+        "飞椽"
+      ],
+      "known_geometry_inputs": [
+        "Roof slope and eave references constrain envelope/placement, not individual 椽 shape or count."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "GEOMETRIC_PROXY",
+      "p2_proxy_control_envelope_relationship": "保留椽构件概念，P2 三种坡段仅作图示代理。",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P3_0_REGISTRY",
+      "required_followup_evidence": "Obtain attributable report drawings/tables or an approved formal bridge resolving: Measured sections, lengths, eave/flying-rafter distinctions, spacing and wing-corner form.",
+      "source_context": "屋面各坡段",
+      "source_p2_family": "RAFTER",
+      "source_pages": [
+        {
+          "pdf_page": "104–109",
+          "printed_page": "89–94",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "2.3.3 / 2.4"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+        "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+        "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+      ],
+      "source_registry_id": "CMP-RAFTER-001",
+      "split_merge_replacement_relationship": "P3.0 record retained unchanged; no automatic historical upgrade.",
+      "unknown_unresolved_attributes": [
+        "P2 36 个图示段的间距、数量、翼角做法不能作为历史精确椽布置。",
+        "HIS-002: component originality unknown",
+        "Measured sections, lengths, eave/flying-rafter distinctions, spacing and wing-corner form."
+      ]
+    },
+    {
+      "aliases": [
+        "ROOF_ENVELOPE"
+      ],
+      "candidate_id": "ENV-ROOF-001",
+      "canonical_name_en": "roof_surface_envelope",
+      "canonical_name_zh": "屋面连续形态包络",
+      "corresponds_to_real_historical_component": false,
+      "eligibility_reason": "Zero-thickness surface strips are not tiles, boarding or solid roof members.",
+      "eligibility_status": "ENVELOPE_ONLY",
+      "evidence_by_attribute": {
+        "FR-007": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": [
+            120,
+            115,
+            210
+          ]
+        },
+        "MOD-002": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_SYSTEM",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "mm",
+          "value": 15.3
+        },
+        "OUT-003": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 92
+        },
+        "ROOF-007": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 88
+        },
+        "ROOF-008": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 61
+        },
+        "ROOF-009": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_DESIGN_LOGIC",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 82
+        },
+        "ROOF-010": {
+          "classification": "REASONABLE_COMPLETION",
+          "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "fen",
+          "value": 231
+        },
+        "ROOF-011": {
+          "classification": "REASONABLE_COMPLETION",
+          "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+          "time_layer": "reconstructed_963_candidate",
+          "unit": "mm",
+          "value": 3534.3
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": null,
+      "historical_state": {
+        "historical_claim": "candidate_only",
+        "model_layer": "reconstructed_963_candidate",
+        "observed_as_measured": "separate in P1/P2 parameter record",
+        "report_ideal_model": "separate; no automatic equivalence"
+      },
+      "historical_terms": [],
+      "known_geometry_inputs": [
+        "P2 engineering parameter IDs: FR-007, MOD-002, OUT-003, ROOF-007, ROOF-008, ROOF-009, ROOF-010, ROOF-011, Z-006-RC-01; not direct member geometry"
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "ENVELOPE_SURFACE",
+      "p2_proxy_control_envelope_relationship": "保留零厚度包络层，不登记为瓦、望板或实体屋面构件。",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P3_0_REGISTRY",
+      "required_followup_evidence": null,
+      "source_context": "屋面外表",
+      "source_p2_family": "ROOF_ENVELOPE",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md",
+        "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md",
+        "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
+        "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+        "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+        "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+      ],
+      "source_registry_id": "ENV-ROOF-001",
+      "split_merge_replacement_relationship": "P3.0 record retained unchanged; no automatic historical upgrade.",
+      "unknown_unresolved_attributes": [
+        "六片平面条带无厚度、铺瓦及真实曲面构造主张。",
+        "HIS-002: component originality unknown",
+        "Not applicable to an envelope surface."
+      ]
+    },
+    {
+      "aliases": [
+        "栌斗"
+      ],
+      "candidate_id": "CMP-LUDOU-COLUMN-001",
+      "canonical_name_en": "column_head_ludou",
+      "canonical_name_zh": "柱头栌斗",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Distinct named column-head斗 with measured width/depth/height supports a bounded reusable type; P2 contact block supplies no geometry.",
+      "eligibility_status": "MASTER_REQUIRED",
+      "evidence_by_attribute": {
+        "DG-101": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 475.1
+        },
+        "DG-102": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 327.1
+        },
+        "DG-103": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 446.3
+        },
+        "DG-104": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 305.5
+        },
+        "measured_flat_height": {
+          "classification": "CONFIRMED",
+          "note": "P1 direct review D-007",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 58.75
+        },
+        "measured_sloped_height": {
+          "classification": "CONFIRMED",
+          "note": "P1 direct review D-007",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 116.2
+        },
+        "measured_total_height": {
+          "classification": "CONFIRMED",
+          "note": "P1 direct review D-007",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 293.8
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": "柱头栌斗",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "柱头栌斗"
+      ],
+      "known_geometry_inputs": [
+        "Top/bottom width and depth plus total, flat and sloped heights from tables 2-26/2-27."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 BRACKET_CONTACT remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": "CMP-LUDOU-COLUMN-001",
+      "readiness_for_later_master_asset_contract": "READY_WITH_BOUNDED_LOD",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "PRX-BRACKET-CONTACT-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": null,
+      "source_context": "外檐柱头铺作下层",
+      "source_p2_family": "BRACKET_CONTACT",
+      "source_pages": [
+        {
+          "pdf_page": "62–63",
+          "printed_page": "47–48",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "tables 2-26 / 2-27"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 PRX-BRACKET-CONTACT-001 (BRACKET_CONTACT) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Exact 3D ear/cavity/profile and mortise geometry are not directly quantified; limit later Master to evidence-bounded medium LOD.",
+        "Observed means include compression/wear and are not 963 design dimensions; DG-114 remains UNKNOWN.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [
+        "底部长开斗"
+      ],
+      "candidate_id": "CMP-DOU-BOTTOM-LONGKAI-001",
+      "canonical_name_en": "bottom_long_kai_dou",
+      "canonical_name_zh": "底斗",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Named and measured distinct斗 type, but missing depth prevents a qualified canonical 3D Master; DG-114 cannot fill it.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "DG-105": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 255.56
+        },
+        "DG-106": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 178.56
+        },
+        "measured_total_height": {
+          "classification": "CONFIRMED",
+          "note": "P1 direct review D-008",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 161.78
+        }
+      },
+      "evidence_gap": "Exact 3D ear/cavity/profile and mortise geometry are not directly quantified; limit later Master to evidence-bounded medium LOD.; Observed means include compression/wear and are not 963 design dimensions; DG-114 remains UNKNOWN.; Depth is not recorded in the approved direct-review summary.",
+      "historical_component_identity": "底斗",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "底斗"
+      ],
+      "known_geometry_inputs": [
+        "Top/bottom widths and total height, table 2-28/2-29."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 BRACKET_CONTACT remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "PRX-BRACKET-CONTACT-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": "Obtain direct original-page member-specific geometry and identity comparison resolving: Exact 3D ear/cavity/profile and mortise geometry are not directly quantified; limit later Master to evidence-bounded medium LOD.; Observed means include compression/wear and are not 963 design dimensions; DG-114 remains UNKNOWN.; Depth is not recorded in the approved direct-review summary.",
+      "source_context": "外檐铺作长开斗组",
+      "source_p2_family": "BRACKET_CONTACT",
+      "source_pages": [
+        {
+          "pdf_page": "65–66",
+          "printed_page": "50–51",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "tables 2-28 / 2-29"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 PRX-BRACKET-CONTACT-001 (BRACKET_CONTACT) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Exact 3D ear/cavity/profile and mortise geometry are not directly quantified; limit later Master to evidence-bounded medium LOD.",
+        "Observed means include compression/wear and are not 963 design dimensions; DG-114 remains UNKNOWN.",
+        "Depth is not recorded in the approved direct-review summary.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [
+        "单向长开斗"
+      ],
+      "candidate_id": "CMP-DOU-SINGLE-LONGKAI-001",
+      "canonical_name_en": "single_direction_long_kai_dou",
+      "canonical_name_zh": "单向长开斗",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Named orientation-specific斗 with distinct measured profile; future placement rotation alone does not create another type.",
+      "eligibility_status": "MASTER_REQUIRED",
+      "evidence_by_attribute": {
+        "DG-107": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 236.2
+        },
+        "measured_bottom_depth": {
+          "classification": "CONFIRMED",
+          "note": "P1 direct review D-008",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 177.2
+        },
+        "measured_bottom_width": {
+          "classification": "CONFIRMED",
+          "note": "P1 direct review D-008",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 162.7
+        },
+        "measured_top_depth": {
+          "classification": "CONFIRMED",
+          "note": "P1 direct review D-008",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 256.2
+        },
+        "measured_total_height": {
+          "classification": "CONFIRMED",
+          "note": "P1 direct review D-008",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 158.6
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": "单向长开斗",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "单向长开斗"
+      ],
+      "known_geometry_inputs": [
+        "Top/bottom width and depth plus height, table 2-28/2-29."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 BRACKET_CONTACT remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": "CMP-DOU-SINGLE-LONGKAI-001",
+      "readiness_for_later_master_asset_contract": "READY_WITH_BOUNDED_LOD",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "PRX-BRACKET-CONTACT-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": null,
+      "source_context": "外檐铺作单向长开位置",
+      "source_p2_family": "BRACKET_CONTACT",
+      "source_pages": [
+        {
+          "pdf_page": "65–66",
+          "printed_page": "50–51",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "tables 2-28 / 2-29"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 PRX-BRACKET-CONTACT-001 (BRACKET_CONTACT) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Exact 3D ear/cavity/profile and mortise geometry are not directly quantified; limit later Master to evidence-bounded medium LOD.",
+        "Observed means include compression/wear and are not 963 design dimensions; DG-114 remains UNKNOWN.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [
+        "交互斗"
+      ],
+      "candidate_id": "CMP-DOU-INTERACTIVE-001",
+      "canonical_name_en": "interactive_dou",
+      "canonical_name_zh": "交互斗",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Explicit measured斗 identity and profile distinguish it from a generic contact block; no unified small-dou design claim.",
+      "eligibility_status": "MASTER_REQUIRED",
+      "evidence_by_attribute": {
+        "DG-108": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 255.2
+        },
+        "DG-109": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 240.0
+        },
+        "measured_bottom_depth": {
+          "classification": "CONFIRMED",
+          "note": "P1 direct review D-008",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 165.1
+        },
+        "measured_bottom_width": {
+          "classification": "CONFIRMED",
+          "note": "P1 direct review D-008",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 176.2
+        },
+        "measured_total_height": {
+          "classification": "CONFIRMED",
+          "note": "P1 direct review D-008",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 148.5
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": "交互斗",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "交互斗"
+      ],
+      "known_geometry_inputs": [
+        "Top/bottom width and depth plus height, table 2-28/2-29."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 BRACKET_CONTACT remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": "CMP-DOU-INTERACTIVE-001",
+      "readiness_for_later_master_asset_contract": "READY_WITH_BOUNDED_LOD",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "PRX-BRACKET-CONTACT-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": null,
+      "source_context": "外檐铺作交互承托位置",
+      "source_p2_family": "BRACKET_CONTACT",
+      "source_pages": [
+        {
+          "pdf_page": "65–66",
+          "printed_page": "50–51",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "tables 2-28 / 2-29"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 PRX-BRACKET-CONTACT-001 (BRACKET_CONTACT) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Exact 3D ear/cavity/profile and mortise geometry are not directly quantified; limit later Master to evidence-bounded medium LOD.",
+        "Observed means include compression/wear and are not 963 design dimensions; DG-114 remains UNKNOWN.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [
+        "下层六椽栿"
+      ],
+      "candidate_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "canonical_name_en": "lower_six_chuanfu",
+      "canonical_name_zh": "下六椽栿",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Independent lower six-rafter beam identity and observed section support a bounded parametric member type; P2 frame mesh is not inherited.",
+      "eligibility_status": "MASTER_REQUIRED",
+      "evidence_by_attribute": {
+        "RF-001": {
+          "classification": "CONFIRMED",
+          "production_use": "BASE_TOPOLOGY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_current_topology",
+          "unit": null,
+          "value": "复合式六椽栿通檐用两柱、彻上露明"
+        },
+        "RF-002": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 493.5
+        },
+        "RF-003": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 375
+        },
+        "RF-004": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 444
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": "下六椽栿",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "下六椽栿"
+      ],
+      "known_geometry_inputs": [
+        "Measured width 493.5 mm, tenon-area thickness 375 mm and maximum thickness 444 mm; verified frame-system topology."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 PRIMARY_FRAME remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "readiness_for_later_master_asset_contract": "READY_WITH_BOUNDED_LOD",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "UNR-PRIMARY-FRAME-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": null,
+      "source_context": "主体梁架下层通檐构架",
+      "source_p2_family": "PRIMARY_FRAME",
+      "source_pages": [
+        {
+          "pdf_page": "81",
+          "printed_page": "66",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "table 2-38"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 UNR-PRIMARY-FRAME-001 (PRIMARY_FRAME) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Member full length, camber, end profile and exact joinery are not verified as individual geometry.",
+        "Observed sections must not become fixed 963 design dimensions; length needs an explicit parameter.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [
+        "上层六椽栿"
+      ],
+      "candidate_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "canonical_name_en": "upper_six_chuanfu",
+      "canonical_name_zh": "上六椽栿",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Independent upper six-rafter beam identity and distinct observed section support a bounded parametric member type; P2 frame mesh is not inherited.",
+      "eligibility_status": "MASTER_REQUIRED",
+      "evidence_by_attribute": {
+        "RF-001": {
+          "classification": "CONFIRMED",
+          "production_use": "BASE_TOPOLOGY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_current_topology",
+          "unit": null,
+          "value": "复合式六椽栿通檐用两柱、彻上露明"
+        },
+        "RF-005": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 334
+        },
+        "RF-006": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 209
+        },
+        "RF-007": {
+          "classification": "CONFIRMED",
+          "production_use": "OBSERVED_REFERENCE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": "mm",
+          "value": 240.5
+        }
+      },
+      "evidence_gap": null,
+      "historical_component_identity": "上六椽栿",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "上六椽栿"
+      ],
+      "known_geometry_inputs": [
+        "Measured width 334 mm, tenon-area thickness 209 mm and maximum thickness 240.5 mm; verified frame-system topology."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 PRIMARY_FRAME remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "readiness_for_later_master_asset_contract": "READY_WITH_BOUNDED_LOD",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "UNR-PRIMARY-FRAME-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": null,
+      "source_context": "主体梁架上层通檐构架",
+      "source_p2_family": "PRIMARY_FRAME",
+      "source_pages": [
+        {
+          "pdf_page": "81",
+          "printed_page": "66",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "table 2-38"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 UNR-PRIMARY-FRAME-001 (PRIMARY_FRAME) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Member full length, camber, end profile and exact joinery are not verified as individual geometry.",
+        "Observed sections must not become fixed 963 design dimensions; length needs an explicit parameter.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [],
+      "candidate_id": "P1-REVIEW-COLUMN-HEAD-NIDAO-GONG",
+      "canonical_name_en": "column_head_nidao_gong",
+      "canonical_name_zh": "柱头泥道栱",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Historical component term merits review, but source grade or member geometry does not meet Master threshold.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "identity_mention": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "note": "No member-specific 3D geometry established.",
+          "production_use": "IDENTITY_REVIEW_ONLY",
+          "source_ids": [
+            "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md"
+          ],
+          "source_layer": "A_BRIDGE_OR_SECONDARY",
+          "time_layer": "source_mention_only",
+          "unit": null,
+          "value": "柱头泥道栱"
+        }
+      },
+      "evidence_gap": "Bridge paper cites measured length; original component profile, section and exact member mapping not directly verified.",
+      "historical_component_identity": "柱头泥道栱",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "柱头泥道栱"
+      ],
+      "known_geometry_inputs": [
+        "A type/position mention only; no P2 mesh is adopted as member geometry."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 BRACKET_ARM remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "PRX-BRACKET-JUMP-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": "Obtain direct original-page member-specific geometry and identity comparison resolving: Bridge paper cites measured length; original component profile, section and exact member mapping not directly verified.",
+      "source_context": "P1 package named member; precise position requires source drawing",
+      "source_p2_family": "BRACKET_ARM",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 PRX-BRACKET-JUMP-001 (BRACKET_ARM) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Bridge paper cites measured length; original component profile, section and exact member mapping not directly verified.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [],
+      "candidate_id": "P1-REVIEW-LARGE-MAN-GONG",
+      "canonical_name_en": "large_man_gong",
+      "canonical_name_zh": "大型慢栱",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Historical component term merits review, but source grade or member geometry does not meet Master threshold.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "identity_mention": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "note": "No member-specific 3D geometry established.",
+          "production_use": "IDENTITY_REVIEW_ONLY",
+          "source_ids": [
+            "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md"
+          ],
+          "source_layer": "A_BRIDGE_OR_SECONDARY",
+          "time_layer": "source_mention_only",
+          "unit": null,
+          "value": "大型慢栱"
+        }
+      },
+      "evidence_gap": "Bridge length and derived centre length are mixed; section and 3D profile not directly verified.",
+      "historical_component_identity": "大型慢栱",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "大型慢栱"
+      ],
+      "known_geometry_inputs": [
+        "A type/position mention only; no P2 mesh is adopted as member geometry."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 BRACKET_ARM remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "PRX-BRACKET-JUMP-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": "Obtain direct original-page member-specific geometry and identity comparison resolving: Bridge length and derived centre length are mixed; section and 3D profile not directly verified.",
+      "source_context": "P1 package named member; precise position requires source drawing",
+      "source_p2_family": "BRACKET_ARM",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 PRX-BRACKET-JUMP-001 (BRACKET_ARM) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Bridge length and derived centre length are mixed; section and 3D profile not directly verified.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [],
+      "candidate_id": "P1-REVIEW-HUA-GONG",
+      "canonical_name_en": "hua_gong",
+      "canonical_name_zh": "华栱",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Historical component term merits review, but source grade or member geometry does not meet Master threshold.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "identity_mention": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "note": "No member-specific 3D geometry established.",
+          "production_use": "IDENTITY_REVIEW_ONLY",
+          "source_ids": [
+            "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md"
+          ],
+          "source_layer": "A_BRIDGE_OR_SECONDARY",
+          "time_layer": "source_mention_only",
+          "unit": null,
+          "value": "华栱"
+        }
+      },
+      "evidence_gap": "P1 bridge separates column-head/intercolumn jumps, but individual length, section and placement mapping remain mixed or inferred.",
+      "historical_component_identity": "华栱",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "华栱"
+      ],
+      "known_geometry_inputs": [
+        "A type/position mention only; no P2 mesh is adopted as member geometry."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 BRACKET_ARM remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "PRX-BRACKET-JUMP-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": "Obtain direct original-page member-specific geometry and identity comparison resolving: P1 bridge separates column-head/intercolumn jumps, but individual length, section and placement mapping remain mixed or inferred.",
+      "source_context": "P1 package named member; precise position requires source drawing",
+      "source_p2_family": "BRACKET_ARM",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 PRX-BRACKET-JUMP-001 (BRACKET_ARM) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "P1 bridge separates column-head/intercolumn jumps, but individual length, section and placement mapping remain mixed or inferred.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [],
+      "candidate_id": "P1-REVIEW-INTERCOLUMN-NIDAO-GUAZI-GONG",
+      "canonical_name_en": "intercolumn_nidao_guazi_gong",
+      "canonical_name_zh": "补间泥道瓜子栱",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Historical component term merits review, but source grade or member geometry does not meet Master threshold.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "identity_mention": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "note": "No member-specific 3D geometry established.",
+          "production_use": "IDENTITY_REVIEW_ONLY",
+          "source_ids": [
+            "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md"
+          ],
+          "source_layer": "A_BRIDGE_OR_SECONDARY",
+          "time_layer": "source_mention_only",
+          "unit": null,
+          "value": "补间泥道瓜子栱"
+        }
+      },
+      "evidence_gap": "Bridge paper gives one length, but direct original-page profile, section and joint evidence are not established.",
+      "historical_component_identity": "补间泥道瓜子栱",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "补间泥道瓜子栱"
+      ],
+      "known_geometry_inputs": [
+        "A type/position mention only; no P2 mesh is adopted as member geometry."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 BRACKET_ARM remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "PRX-BRACKET-JUMP-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": "Obtain direct original-page member-specific geometry and identity comparison resolving: Bridge paper gives one length, but direct original-page profile, section and joint evidence are not established.",
+      "source_context": "P1 package named member; precise position requires source drawing",
+      "source_p2_family": "BRACKET_ARM",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 PRX-BRACKET-JUMP-001 (BRACKET_ARM) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Bridge paper gives one length, but direct original-page profile, section and joint evidence are not established.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [],
+      "candidate_id": "P1-REVIEW-LOWER-ANG",
+      "canonical_name_en": "lower_ang",
+      "canonical_name_zh": "下昂",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Historical component term merits review, but source grade or member geometry does not meet Master threshold.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "DG-112": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 47
+        },
+        "DG-113": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "production_use": "DEFAULT_963_CANDIDATE",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "REPORT_INFERRED",
+          "time_layer": "reconstructed_design_candidate",
+          "unit": "fen",
+          "value": 21
+        }
+      },
+      "evidence_gap": "DG-112/113 describe a report-inferred triangle, not a full individual昂 geometry or 45° node.",
+      "historical_component_identity": "下昂",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "下昂"
+      ],
+      "known_geometry_inputs": [
+        "A type/position mention only; no P2 mesh is adopted as member geometry."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 BRACKET_ARM remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "PRX-BRACKET-JUMP-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": "Obtain direct original-page member-specific geometry and identity comparison resolving: DG-112/113 describe a report-inferred triangle, not a full individual昂 geometry or 45° node.",
+      "source_context": "P1 package named member; precise position requires source drawing",
+      "source_p2_family": "BRACKET_ARM",
+      "source_pages": [
+        {
+          "pdf_page": "119–120",
+          "printed_page": "104–105",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "recommended conclusions"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 PRX-BRACKET-JUMP-001 (BRACKET_ARM) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "DG-112/113 describe a report-inferred triangle, not a full individual昂 geometry or 45° node.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [],
+      "candidate_id": "P1-REVIEW-FOUR-CHUANFU",
+      "canonical_name_en": "four_chuanfu",
+      "canonical_name_zh": "四椽栿",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Historical component term merits review, but source grade or member geometry does not meet Master threshold.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "identity_mention": {
+          "classification": "CONFIRMED",
+          "note": "No member-specific 3D geometry established.",
+          "production_use": "IDENTITY_REVIEW_ONLY",
+          "source_ids": [
+            "SRC-ZG-WF-001"
+          ],
+          "source_layer": "DIRECT_PRIMARY",
+          "time_layer": "observed_as_measured",
+          "unit": null,
+          "value": "四椽栿"
+        }
+      },
+      "evidence_gap": "D-015 mentions deformation but approved direct review lacks a member-specific section and length.",
+      "historical_component_identity": "四椽栿",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "四椽栿"
+      ],
+      "known_geometry_inputs": [
+        "A type/position mention only; no P2 mesh is adopted as member geometry."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 PRIMARY_FRAME remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "UNR-PRIMARY-FRAME-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": "Obtain direct original-page member-specific geometry and identity comparison resolving: D-015 mentions deformation but approved direct review lacks a member-specific section and length.",
+      "source_context": "P1 package named member; precise position requires source drawing",
+      "source_p2_family": "PRIMARY_FRAME",
+      "source_pages": [
+        {
+          "pdf_page": "131",
+          "printed_page": "116",
+          "review_path": "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+          "source_id": "SRC-ZG-WF-001",
+          "table_or_section": "deformation analysis; 四椽栿 mention only"
+        }
+      ],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 UNR-PRIMARY-FRAME-001 (PRIMARY_FRAME) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "D-015 mentions deformation but approved direct review lacks a member-specific section and length.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [],
+      "candidate_id": "P1-REVIEW-PING-LIANG",
+      "canonical_name_en": "ping_liang",
+      "canonical_name_zh": "平梁",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Historical component term merits review, but source grade or member geometry does not meet Master threshold.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "identity_mention": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "note": "No member-specific 3D geometry established.",
+          "production_use": "IDENTITY_REVIEW_ONLY",
+          "source_ids": [
+            "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_03.md"
+          ],
+          "source_layer": "A_BRIDGE_OR_SECONDARY",
+          "time_layer": "source_mention_only",
+          "unit": null,
+          "value": "平梁"
+        }
+      },
+      "evidence_gap": "Structural position is described in secondary topology; member-specific section, length and joinery not directly verified.",
+      "historical_component_identity": "平梁",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "平梁"
+      ],
+      "known_geometry_inputs": [
+        "A type/position mention only; no P2 mesh is adopted as member geometry."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 PRIMARY_FRAME remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "UNR-PRIMARY-FRAME-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": "Obtain direct original-page member-specific geometry and identity comparison resolving: Structural position is described in secondary topology; member-specific section, length and joinery not directly verified.",
+      "source_context": "P1 package named member; precise position requires source drawing",
+      "source_p2_family": "PRIMARY_FRAME",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_03.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 UNR-PRIMARY-FRAME-001 (PRIMARY_FRAME) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Structural position is described in secondary topology; member-specific section, length and joinery not directly verified.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [],
+      "candidate_id": "P1-REVIEW-TUO-JIAO",
+      "canonical_name_en": "tuo_jiao",
+      "canonical_name_zh": "托脚",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Historical component term merits review, but source grade or member geometry does not meet Master threshold.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "identity_mention": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "note": "No member-specific 3D geometry established.",
+          "production_use": "IDENTITY_REVIEW_ONLY",
+          "source_ids": [
+            "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_04.md"
+          ],
+          "source_layer": "A_BRIDGE_OR_SECONDARY",
+          "time_layer": "source_mention_only",
+          "unit": null,
+          "value": "托脚"
+        }
+      },
+      "evidence_gap": "Secondary/bridge discussion distinguishes bearing relationship, but the specific section, endpoints and angle are not verified.",
+      "historical_component_identity": "托脚",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "托脚"
+      ],
+      "known_geometry_inputs": [
+        "A type/position mention only; no P2 mesh is adopted as member geometry."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 FRAME_SUPPORT remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "PRX-FRAME-CONNECTOR-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": "Obtain direct original-page member-specific geometry and identity comparison resolving: Secondary/bridge discussion distinguishes bearing relationship, but the specific section, endpoints and angle are not verified.",
+      "source_context": "P1 package named member; precise position requires source drawing",
+      "source_p2_family": "FRAME_SUPPORT",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_04.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 PRX-FRAME-CONNECTOR-001 (FRAME_SUPPORT) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Secondary/bridge discussion distinguishes bearing relationship, but the specific section, endpoints and angle are not verified.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [],
+      "candidate_id": "P1-REVIEW-LAN-E",
+      "canonical_name_en": "lan_e",
+      "canonical_name_zh": "阑额",
+      "corresponds_to_real_historical_component": true,
+      "eligibility_reason": "Historical component term merits review, but source grade or member geometry does not meet Master threshold.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "identity_mention": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "note": "No member-specific 3D geometry established.",
+          "production_use": "IDENTITY_REVIEW_ONLY",
+          "source_ids": [
+            "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_03.md"
+          ],
+          "source_layer": "A_BRIDGE_OR_SECONDARY",
+          "time_layer": "source_mention_only",
+          "unit": null,
+          "value": "阑额"
+        }
+      },
+      "evidence_gap": "Term and column-between role are present in secondary evidence, but independent geometry and mapping are absent.",
+      "historical_component_identity": "阑额",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "阑额"
+      ],
+      "known_geometry_inputs": [
+        "A type/position mention only; no P2 mesh is adopted as member geometry."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 PRIMARY_FRAME remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "UNR-PRIMARY-FRAME-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": "Obtain direct original-page member-specific geometry and identity comparison resolving: Term and column-between role are present in secondary evidence, but independent geometry and mapping are absent.",
+      "source_context": "P1 package named member; precise position requires source drawing",
+      "source_p2_family": "PRIMARY_FRAME",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_03.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 UNR-PRIMARY-FRAME-001 (PRIMARY_FRAME) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Term and column-between role are present in secondary evidence, but independent geometry and mapping are absent.",
+        "HIS-002: individual 963 originality unknown."
+      ]
+    },
+    {
+      "aliases": [],
+      "candidate_id": "P1-REVIEW-INTERCOLUMN-SEATED-DOU",
+      "canonical_name_en": "intercolumn_seated_dou",
+      "canonical_name_zh": "补间坐斗",
+      "corresponds_to_real_historical_component": null,
+      "eligibility_reason": "Historical component term merits review, but source grade or member geometry does not meet Master threshold.",
+      "eligibility_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "evidence_by_attribute": {
+        "identity_mention": {
+          "classification": "HIGH_CONFIDENCE_INFERENCE",
+          "note": "No member-specific 3D geometry established.",
+          "production_use": "IDENTITY_REVIEW_ONLY",
+          "source_ids": [
+            "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md"
+          ],
+          "source_layer": "A_BRIDGE_OR_SECONDARY",
+          "time_layer": "source_mention_only",
+          "unit": null,
+          "value": "补间坐斗"
+        }
+      },
+      "evidence_gap": "Bridge measurement is mentioned, but equivalence to directly verified 底斗 or another named斗 is unproved; independent profile and location need direct verification.",
+      "historical_component_identity": "补间坐斗",
+      "historical_state": {
+        "observed_as_measured": "directly measured where stated",
+        "reconstructed_963_candidate": "not historically locked",
+        "report_ideal_model": "separate, no equivalence"
+      },
+      "historical_terms": [
+        "补间坐斗"
+      ],
+      "known_geometry_inputs": [
+        "A type/position mention only; no P2 mesh is adopted as member geometry."
+      ],
+      "originality_status": "unknown",
+      "p2_asset_role": "NONE_INDEPENDENT",
+      "p2_proxy_control_envelope_relationship": "P1-derived identity; P2 BRACKET_CONTACT remains an unchanged aggregate/proxy.",
+      "proposed_future_component_id": null,
+      "readiness_for_later_master_asset_contract": "NOT_READY",
+      "record_origin": "P1_EVIDENCE_DERIVED",
+      "related_p3_0_registry_id": "PRX-BRACKET-CONTACT-001",
+      "relationship_kind": "EVIDENCE_DERIVED_CANDIDATE_RETAINS_P3_0_PROXY",
+      "required_followup_evidence": "Obtain direct original-page member-specific geometry and identity comparison resolving: Bridge measurement is mentioned, but equivalence to directly verified 底斗 or another named斗 is unproved; independent profile and location need direct verification. Compare E-022 and D-008 original labels/positions before a separate type ID.",
+      "source_context": "P1 package named member; precise position requires source drawing",
+      "source_p2_family": "BRACKET_CONTACT",
+      "source_pages": [],
+      "source_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md",
+        "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+        "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md"
+      ],
+      "source_registry_id": null,
+      "split_merge_replacement_relationship": "DERIVED_FROM_P1_EVIDENCE; related P3.0 PRX-BRACKET-CONTACT-001 (BRACKET_CONTACT) record is retained, not renamed or superseded.",
+      "unknown_unresolved_attributes": [
+        "Bridge measurement is mentioned, but equivalence to directly verified 底斗 or another named斗 is unproved; independent profile and location need direct verification.",
+        "HIS-002: individual 963 originality unknown.",
+        "E-022 shares the reported top/bottom widths of 底斗; identity equivalence or distinction is unproved."
+      ]
+    }
+  ],
+  "source_registry": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_V001.json",
+  "status": "PRODUCT_OWNER_REVIEW_REQUIRED",
+  "task": "T-010",
+  "version": "V001"
+}

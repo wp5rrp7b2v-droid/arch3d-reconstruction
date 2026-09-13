@@ -1,0 +1,57 @@
+{
+  "determinism": "PASS",
+  "eligibility_counts": {
+    "CONTROL_ONLY": 3,
+    "DEFERRED_INSUFFICIENT_EVIDENCE": 13,
+    "ENVELOPE_ONLY": 1,
+    "EVIDENCE_REVIEW_BEFORE_MASTER": 0,
+    "MASTER_REQUIRED": 6,
+    "PROXY_ONLY": 4
+  },
+  "errors": [],
+  "historical_boundary": "PASS",
+  "negative_mutation_probes": {
+    "duplicate_candidate_id": "REJECTED",
+    "lost_p3_record": "REJECTED",
+    "missing_deferred_gap": "REJECTED",
+    "missing_provenance": "REJECTED",
+    "proxy_historicized": "REJECTED"
+  },
+  "note": "No Blender Master, Variant, P2 baseline or P3.1 Gate file is written.",
+  "p1_minimum_scope_coverage": "9/9",
+  "p2_frozen_baseline_hashes": {
+    "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json": {
+      "actual": "5b10f3d83c4d72cc312c5f896e7cff5838365986612a885a310e2799e2a844a7",
+      "expected": "5b10f3d83c4d72cc312c5f896e7cff5838365986612a885a310e2799e2a844a7",
+      "match": true
+    },
+    "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json": {
+      "actual": "3e77d4c03acbd3595c28e93b1d04166730ede1bd08741c9aa94b28164f3764e4",
+      "expected": "3e77d4c03acbd3595c28e93b1d04166730ede1bd08741c9aa94b28164f3764e4",
+      "match": true
+    },
+    "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json": {
+      "actual": "3436050b33508d55633d1699c9f263f976f6e4b30b534c5607f89752735116c3",
+      "expected": "3436050b33508d55633d1699c9f263f976f6e4b30b534c5607f89752735116c3",
+      "match": true
+    },
+    "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json": {
+      "actual": "37bc365a50bd6a43e178c3102c19ad76cbf0cb533f4d76710a793afa318c0889",
+      "expected": "37bc365a50bd6a43e178c3102c19ad76cbf0cb533f4d76710a793afa318c0889",
+      "match": true
+    },
+    "production/zhenguo_wanfo/schema/evidence_aware_parameter_schema_v001.json": {
+      "actual": "3348bddc0509e004ff6b99c48fc047c8b080bdc98bf6fd069acc6454589328ed",
+      "expected": "3348bddc0509e004ff6b99c48fc047c8b080bdc98bf6fd069acc6454589328ed",
+      "match": true
+    }
+  },
+  "p3_0_registry_coverage": "11/11",
+  "provenance": "PASS",
+  "requires_project_control_review": [],
+  "result": "PASS",
+  "task": "T-010",
+  "total_review_records": 27,
+  "unexplained_pending": 0,
+  "version": "V001"
+}
