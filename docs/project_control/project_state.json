@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R059",
+  "state_revision": "R060",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1_DOD_LOCKED / T011_APPROVED_CLOSED / CONTRACT_V002_CORRECTION_REVIEW_REQUIRED",
+  "session_status": "ACTIVE / P3.1_DOD_LOCKED / T011_APPROVED_CLOSED / MASTER_ASSET_CONTRACT_V002_LOCKED / REMAINING_FIVE_PLANNING_READY",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,18 +17,18 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "ACTIVE / COLUMN MASTER APPROVED / CONTRACT V002 CORRECTION REVIEW REQUIRED / REMAINING-FIVE HOLD",
+    "status": "ACTIVE / COLUMN MASTER APPROVED / CONTRACT V002 LOCKED / REMAINING-FIVE PLANNING READY",
     "passed": 1,
     "total": 4,
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / COLUMN MASTER APPROVED / CONTRACT CORRECTION REQUIRED BEFORE REMAINING-FIVE",
+      "P3.1": "ACTIVE / 1 OF 6 MASTERS APPROVED / CONTRACT V002 LOCKED / REMAINING-FIVE PLANNING READY",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
-  "decision_required": true,
-  "blocker": "P3.1 Master Asset Contract V001 field-mapping defect for CMP-LUDOU-COLUMN-001: bottom_width and top_depth values are swapped relative to P1 direct evidence. Remaining-five production is HOLD until V002 correction is approved/locked.",
+  "decision_required": false,
+  "blocker": null,
   "current_task": null,
   "current_case": {
     "name": "平遥镇国寺万佛殿",
@@ -67,11 +67,12 @@
     "technical_result": "9/9 PASS"
   },
   "p3_1": {
-    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / SIX-MASTER SCOPE LOCKED / T-011 APPROVED / COLUMN MASTER APPROVED / CONTRACT V002 CORRECTION REVIEW REQUIRED",
+    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / SIX-MASTER SCOPE LOCKED / T-011 APPROVED / COLUMN MASTER APPROVED / MASTER ASSET CONTRACT V002 LOCKED",
     "decision_id": "D-032",
     "qualification_decision_id": "D-033",
-    "asset_contract_decision_id": "D-034",
+    "asset_contract_v001_decision_id": "D-034",
     "column_pilot_approval_decision_id": "D-035",
+    "asset_contract_v002_decision_id": "D-036",
     "purpose": "Create canonical 3D Component Masters, parameterized variants and standardized review assets from evidence-qualified historical component identities without collapsing unresolved proxy semantics into historical certainty.",
     "dod": "docs/production/zhenguo_wanfo/P3_1_DEFINITION_OF_DONE_V001.md",
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-032",
@@ -109,21 +110,21 @@
       ]
     },
     "master_asset_contract": {
-      "status": "V001 LOCKED / FIELD-MAPPING DEFECT IDENTIFIED / V002 CHANGE PROPOSAL PENDING",
-      "version": "V001",
-      "human_readable": "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V001.md",
-      "machine_readable": "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V001.json",
+      "status": "V002 LOCKED / PRODUCT OWNER APPROVED / D-036",
+      "version": "V002",
+      "human_readable": "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md",
+      "machine_readable": "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json",
+      "previous_version": "V001 / D-034 / SUPERSEDED FOR FUTURE PRODUCTION",
       "change_proposal": "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002_CHANGE_PROPOSAL.md",
-      "affected_component": "CMP-LUDOU-COLUMN-001",
-      "defect": "V001 maps 327.1mm to top_depth and 446.3mm to bottom_width; P1 direct evidence requires bottom_width=327.1mm and top_depth=446.3mm.",
+      "field_mapping_correction": "CMP-LUDOU-COLUMN-001: top_width=475.1, bottom_width=327.1, top_depth=446.3, bottom_depth=305.5",
       "scope_count": 6,
       "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
       "global_unit": "mm",
       "canonical_transform": "Location 0 / Rotation 0 / Scale 1",
-      "approval_required": true
+      "approval_required": false
     },
     "column_pilot": {
-      "status": "APPROVED / CLOSED / D-035 / UNAFFECTED_BY_CONTRACT_CORRECTION",
+      "status": "APPROVED / CLOSED / D-035 / UNAFFECTED_BY_V002_CORRECTION",
       "task_id": "T-011",
       "component_id": "CMP-COLUMN-001",
       "master_version": "V001",
@@ -139,7 +140,7 @@
       "p2_frozen_baseline": "UNCHANGED / 19 hashes matched"
     },
     "remaining_five": {
-      "status": "HOLD / CONTRACT_V002_APPROVAL_REQUIRED",
+      "status": "PLANNING_READY / NOT_YET_AUTHORIZED",
       "components": [
         "CMP-LUDOU-COLUMN-001",
         "CMP-DOU-SINGLE-LONGKAI-001",
@@ -147,13 +148,13 @@
         "CMP-FRAME-LOWER-SIX-CHUANFU-001",
         "CMP-FRAME-UPPER-SIX-CHUANFU-001"
       ],
-      "proposed_split_after_contract_fix": {
+      "recommended_split": {
         "batch_1": "dou components: CMP-LUDOU-COLUMN-001 + CMP-DOU-SINGLE-LONGKAI-001 + CMP-DOU-INTERACTIVE-001",
         "batch_2": "frame components: CMP-FRAME-LOWER-SIX-CHUANFU-001 + CMP-FRAME-UPPER-SIX-CHUANFU-001"
       }
     },
-    "task_strategy": "First approve/lock Contract V002 field-mapping correction. Then define separate dou and six-chuanfu production tasks; do not authorize geometry before V002 lock.",
-    "task_rule": "Remaining-five production is blocked until the locked Contract is corrected through an explicit Product Owner-approved V002. T-011 remains approved and does not require rework."
+    "task_strategy": "Use Contract V002 as the only authoritative contract for future Master production. Define two independent remaining-five tasks: dou batch first, then six-chuanfu batch, unless pre-task review identifies a safer split.",
+    "task_rule": "No remaining-five Blender production is authorized yet. Each batch requires an explicit Task Contract and authorization. T-011 remains approved and requires no rework."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -175,16 +176,16 @@
     "final_review_set": "responsive labels; no overlap"
   },
   "latest_material_decision": {
-    "id": "D-035",
+    "id": "D-036",
     "date": "2026-09-13",
-    "decision": "Product Owner approved T-011 CMP-COLUMN-001 Column Master Pilot. Column Master V001 remains approved. A separate V002 Contract correction is now required before remaining-five production because a ludou field-mapping transcription defect was found during pre-production review."
+    "decision": "Product Owner approved and locked P3.1 Canonical Master Asset Contract V002 field-mapping correction. V002 supersedes V001 for future Master production; T-011 remains approved and remaining-five production returns to planning-ready status."
   },
-  "next_action": "Product Owner review and approve/reject P3.1 Canonical Master Asset Contract V002 field-mapping correction. No remaining-five Blender production before V002 is locked.",
+  "next_action": "Define the next Task Contract for the three dou Masters under Contract V002, then authorize separately. Do not begin Blender production until that task is explicitly authorized.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v021",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R057_DASHBOARD_STALE_AFTER_R059_CONTRACT_CORRECTION_HOLD"
+    "refresh_status": "R057_DASHBOARD_STALE_AFTER_R060_CONTRACT_V002_LOCK"
   }
 }
