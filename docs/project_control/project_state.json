@@ -115,9 +115,9 @@
   "next_action": "Define and authorize T-010 as the first P3.1 task for Component Master Scope Matrix and evidence-backed identity resolution. Do not begin batch component geometry before that qualification work is complete.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v014",
+    "visualization_version": "v015",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R048_STALE_AFTER_R049_DOD_LOCK"
+    "refresh_status": "R049_REFRESH_COMPLETE"
   }
 }
