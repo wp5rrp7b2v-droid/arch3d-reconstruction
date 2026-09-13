@@ -7,7 +7,7 @@
 | P0.0 | 项目控制系统可跨 Chat 使用 | **PASS** | Project Control 文件集可作为正式 handoff；Dashboard 是派生可视化。 |
 | P0.1 | 本地 Mac 可稳定完成轻量 Blender 灰模、保存与审核 | **PASS** | Blender 3.6.23；灰模生成、保存、独立重开、Geometry Integrity、PNG 审核全部通过。 |
 | P0.2 | Local → Cloud → 修改 / 渲染 → Local，无关键资产丢失 | **PASS / Class B** | Local 3.6.23 → GitHub → GitHub Actions Blender 4.5.13 → Artifact → Local 3.6.23 全链路通过。3.6 会移除部分不支持的 4.5 UI region 数据，但核心几何、Marker 与所需 Metadata 未损失。 |
-| P0.3 | 建筑参数能够驱动脚本生成一个最小结构模型 | **PASS** | T-004｜PARAMETRIC_ARCHITECTURE_POC_V001：独立 JSON 参数驱动同一 Blender 3.6 Python 脚本；Baseline 3×2 开间→12 柱/21主要对象，Variant 4×3 开间→20柱/31主要对象；尺寸与屋顶同步变化；独立重开及 Determinism PASS。 |
+| P0.3 | 建筑参数能够驱动脚本生成一个最小结构模型 | **PASS** | T-004：参数驱动、独立重开与 Determinism PASS。 |
 
 **P0 Gate Final：4 / 4 PASS。**
 
@@ -20,18 +20,9 @@
 | P1.0｜选题标准锁定 | 明确首个正式复原案例的筛选原则与比较维度 | **PASS** | 五项加权标准已锁定。 |
 | P1.1｜候选案例比较与定选 | 对候选按统一标准比较并正式锁定案例 | **PASS** | 山西平遥镇国寺万佛殿正式定选。 |
 | P1.2｜正式证据包建立 | 建立可追溯证据包并覆盖核心复原域 | **PASS** | `SRC-ZG-WF-001` 完整精细测绘报告已直接核读；Gate Review 10/10 PASS。 |
-| P1.3｜证据分级与可复原性 Go / No-Go | 完成关键参数分级并判断是否可进入正式参数化与3D | **PASS / CONDITIONAL GO** | 85/85参数完成分级；46 CONFIRMED / 32 HCI / 4 RC / 3 UNKNOWN；CG-01～CG-06 生效。 |
+| P1.3｜证据分级与可复原性 Go / No-Go | 完成关键参数分级并判断是否可进入正式参数化与3D | **PASS / CONDITIONAL GO** | 85/85参数完成分级；CG-01～CG-06 生效。 |
 
 **P1 Gate Final：4 / 4 PASS。**
-
-### P1.3 Conditional Go｜强制边界
-
-1. Evidence-aware Parameter Schema；
-2. UNKNOWN / DO_NOT_LOCK 不得静默硬锁；
-3. RC 必须独立参数化、可替换、可追踪；
-4. observed / report ideal / reconstructed candidate 三层分离；
-5. 未解决转角仅允许 evidence-bounded medium LOD；
-6. 禁止过度真实性声明。
 
 ---
 
@@ -46,72 +37,7 @@
 
 **P2 Gate Final：4 / 4 PASS / CLOSED。**
 
-### P2.1 Gate Final｜APPROVED / PASS / CLOSED
-
-- DoD 9/9 PASS。
-- `geometry-critical unresolved blocker = 0`。
-- Z-006 仍 UNKNOWN；Z-006-RC-01 仍独立可替换。
-
-### P2.2 Gate Final｜APPROVED / PASS / CLOSED
-
-- DoD 9/9 PASS。
-- 6/6 structural scope；machine validation / deterministic rebuild / reopen / Product Owner structural review 全部 PASS。
-- 217 仅为 Blender 机器结构/控制对象数。
-
-### P2.3 Definition of Done V001｜LOCKED / FINAL 9 OF 9 PASS
-
-正式 DoD：`docs/production/zhenguo_wanfo/P2_3_DEFINITION_OF_DONE_V001.md`
-
-1. Integration Manifest：PASS；
-2. Component Library → Parametric Variant → Placement / Instance → Evidence Metadata：PASS；
-3. 完整整合候选几何：PASS；
-4. Evidence Metadata / historical claim boundary：PASS；
-5. 参数驱动、RC可替换、无不可追溯核心手工漂移：PASS；
-6. Integrated Machine QC：PASS；
-7. Deterministic rebuild + independent reopen + Local 3.6 → Cloud 4.5 → Local 3.6 roundtrip QC：PASS；
-8. 六类视觉 QC / Evidence Diagnostic + Product Owner review：PASS；
-9. 最终归档、Known Limitations 与 P2 Closure Evidence：PASS。
-
-### T-008 Engineering Result｜PASS / COMPLETE
-
-- V001 candidate：11 families / 40 variants / 365 stable mesh instances。
-- Local Blender 3.6 machine QC：34/34 PASS；automated tests：33/33 PASS。
-- Replacement / mutation、deterministic rebuild、independent reopen、naked constant / manual drift audit：PASS。
-- Historical boundaries：Z-006 UNKNOWN；RC-01 可替换；DG-114 / HIS-002 / 45° corner 等未升级。
-- V001 local-only candidate SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
-- GitHub Actions run `34695870243`：SUCCESS；Cloud Blender 4.5.13 input / reopen semantic QC PASS。
-- Artifact `P2_3_CLOUD_ROUNDTRIP_V001`：PASS；returned blend SHA256 `d2c80c4e2e0ae278ad4b7055df6871e00bfb85ecf981fbc796ddd2f5e919efc0`。
-- Local Blender 3.6 return semantic QC PASS / machine QC 34/34 PASS；core semantic diff NONE。
-
-### P2.3 Final Visual Review｜6 / 6 PASS
-
-- PLAN：PASS
-- ELEVATION：PASS
-- AXON：PASS
-- EXTERIOR_3Q：PASS
-- STRUCTURE_DETAIL：PASS
-- EVIDENCE_DIAGNOSTIC_V002：PASS
-
-原 Evidence Diagnostic 首轮 HOLD 后，T-008 V004 只读修正四级证据映射；canonical `.blend` SHA、11/40/365、33/33 tests、34/34 machine QC、V003 roundtrip 与其余五张审核图全部保持不变。
-
-最终 V002 diagnostic：
-
-- priority = `UNKNOWN / PLACEHOLDER > REASONABLE_COMPLETION / APPROVED OVERRIDE > HIGH_CONFIDENCE_INFERENCE > CONFIRMED`；
-- counts = CONFIRMED 0 / HCI 0 / RC 35 / UNKNOWN-placeholder 330；
-- 0-count 类别保留 legend；
-- Product Owner 直接审核 PASS。
-
-该图正式解释为 **Conservative Risk Map**；`0 / 0 / 35 / 330` 不表示参数证据中没有 CONFIRMED / HCI。
-
-后续 Evidence Visualization 双层规则：`docs/production/zhenguo_wanfo/EVIDENCE_VISUALIZATION_CARRY_FORWARD_V001.md`。
-
-### P2.3 Final Gate Review｜9 / 9 PASS
-
-Gate Review：`docs/production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md`
-
-Product Owner 明确批准：`P2.3｜PASS`。Decision：D-028。
-
-P2 Closure Archive：`docs/project_control/phase_archive/P2_closure.md`。
+P2 frozen baseline：11 families / 40 variants / 365 stable mesh instances；Local3.6→Cloud4.5→Local3.6 roundtrip PASS；历史边界继续有效。
 
 ---
 
@@ -119,52 +45,53 @@ P2 Closure Archive：`docs/project_control/phase_archive/P2_closure.md`。
 
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
-| P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11 families / 40 variants / 365 instances 的语义审计与迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；orphan 0/0/0；D-031。 |
-| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **ACTIVE / DOD LOCKED / T-010 PLANNING READY** | Master 数量由证据资格决定；`MASTER_REQUIRED` 必须100%覆盖；D-032。 |
+| P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11/40/365 语义审计与迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；orphan 0/0/0；D-031。 |
+| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **ACTIVE / DOD LOCKED / T-010 APPROVED / MASTER ASSET CONTRACT REVIEW** | 六类 Master-production scope 已由 D-033 锁定；Contract V001 draft 等待 Product Owner 审核；未授权 Blender Master 几何。 |
 | P3.2｜Assembly Relationship Model | 建立构件之间组合、支承、连接、定位、重复和 Assembly Unit 关系 | **LOCKED** | 等待 P3.1 PASS。 |
-| P3.3｜Component-driven Building Reconstruction | 验证可由构件库 + Variant + Assembly Rules 重新装配万佛殿并形成可解释成果 | **LOCKED** | 等待 P3.2 PASS；Evidence Visualization 双层规则继续生效。 |
+| P3.3｜Component-driven Building Reconstruction | 验证可由构件库 + Variant + Assembly Rules 重新装配万佛殿并形成可解释成果 | **LOCKED** | 等待 P3.2 PASS。 |
 
 **P3 Gate Progress：1 / 4。**
 
 ### P3.0 Gate Final｜APPROVED / PASS / CLOSED
 
-- Definition of Done：**9 / 9 PASS**。
-- Family migration：**11 / 11**。
-- Variant migration：**40 / 40**。
-- Instance migration：**365 / 365**。
-- Orphan family / variant / instance：**0 / 0 / 0**。
-- Ontology / Registry Schema / Evidence Boundary / Determinism：PASS。
+- Definition of Done：9 / 9 PASS。
+- Family / Variant / Instance migration：11 / 40 / 365；orphan 0/0/0。
 - Historical component、GEOMETRIC_PROXY、CONTROL_OBJECT、ENVELOPE_SURFACE 已正式分离。
 - T-009 engineering commit：`3db50b94cd72e79cef419054aeaa7d2b75523ba5`。
-- Gate Review：`docs/production/zhenguo_wanfo/P3_0_GATE_REVIEW_2026-09-13.md`。
-- Product Owner 明确批准：`P3.0｜PASS / CLOSED`。Decision：D-031。
+- Product Owner approval：D-031。
 
-### P3.0 Carry-forward Boundary
+### P3.1 Definition of Done V001｜LOCKED / D-032
 
-- P2 11 engineering families 不等于 11 种历史构件。
-- `COLUMN / PURLIN / RAFTER` 仅确认历史构件类型概念；P2 placement 不作为原构数量。
-- `BRACKET_ARM / PRIMARY_FRAME` 等 unresolved/proxy 必须在后续回到证据后再拆分，不得因 P3.1 建模需求静默升级。
-- `Z-006`、`Z-006-RC-01`、`DG-114`、`HIS-002`、45°转角、榫卯、隐角梁等边界继续生效。
+PASS 仍要求 DoD 9/9、全部 MASTER_REQUIRED 100% Master coverage、Variant/evidence/replaceability/reproducibility PASS、P2 frozen baseline unchanged、Product Owner 最终批准。
 
-### P3.1 Definition of Done V001｜LOCKED / PRODUCT OWNER APPROVED
+### T-010 Qualification Baseline｜APPROVED / D-033
 
-正式 DoD：`docs/production/zhenguo_wanfo/P3_1_DEFINITION_OF_DONE_V001.md`。Decision：D-032。
+- P3.0 Registry coverage：11/11。
+- P1 minimum scope：9/9。
+- Total review records：27；pending = 0。
+- MASTER_REQUIRED：6；Deferred：13；Proxy：4；Control：3；Envelope：1。
+- 六类正式 Master-production scope：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿。
+- T-010 approval 不等于几何授权。
 
-PASS 必须同时满足：
+### P3.1 Canonical Master Asset Contract V001｜DRAFT / PO REVIEW REQUIRED
 
-- DoD 9/9；
-- Scope Matrix coverage = 100%；
-- 所有 `MASTER_REQUIRED` Master coverage = 100%；
-- 所有 `EVIDENCE_REVIEW_BEFORE_MASTER` 得到明确升级 / Proxy / Deferred 结论；
-- CONTROL / ENVELOPE 被错误历史化建模数量 = 0；
-- orphan Master / Variant = 0；
-- evidence traceability / parameter mutation / replaceability / reproducibility / independent reopen 全部 PASS；
-- P2 frozen baseline 未修改；
-- Product Owner 最终明确批准。
+正式草案：
 
-### P3.1 Current Boundary
+- `docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V001.md`
+- `production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V001.json`
 
-- P3.1 不设固定 Master 数量，资产范围由证据资格决定。
-- P1 已直接核实但未被 P2 独立 family 表达的柱头栌斗、三类长开斗、上下六椽栿等必须进入资格审查。
-- 首个工程任务应先处理 Scope Matrix + Evidence-backed Identity Resolution；未完成资格判定前，不进行批量 Master 几何生产。
-- P3.1 可以拆分为多个 T 任务，不强制由 T-010 一次完成整个 Gate。
+草案统一：
+
+- unit = mm；
+- +Z = up；+X = 主水平长度/跨度；+Y = 横向深度；
+- Master transform = location 0 / rotation 0 / scale 1；
+- LOD = `EVIDENCE_BOUNDED_MEDIUM_LOD`；
+- world placement 不得写入 Master；
+- UNKNOWN 不得静默填值；RC/HCI 不得升级为 CONFIRMED；
+- 不建无证据榫卯、暗槽、内部空腔、端部细节；
+- Variant 必须参数驱动，placement-only 不创建 Variant；
+- standard review set + semantic snapshot + independent reopen + mutation validation 必须保留。
+
+关键限制：上下六椽栿完整长度仍未被证实，Master 只允许使用显式、可追溯的 length parameter；max thickness 只能作为 bounded outer envelope，不得声称整根构件全长恒定为该厚度。
+
+当前建议：Contract LOCK 后先以 `CMP-COLUMN-001` 做 Contract Implementation Pilot，验证完整资产链，再扩展其余五个 Master。
