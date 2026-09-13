@@ -97,9 +97,9 @@
   "next_action": "Product Owner review P3.0 Definition of Done V001. If approved, lock DoD and authorize P3.0 implementation task T-009 for ontology/registry/migration engineering; no new geometry.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v010",
+    "visualization_version": "v011",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE / R044_REFRESH_REQUIRED"
+    "refresh_status": "R044_REFRESH_COMPLETE"
   }
 }
