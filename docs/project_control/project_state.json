@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R048",
+  "state_revision": "R049",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1_DOD_DRAFT / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "session_status": "ACTIVE / P3.1_DOD_LOCKED / T010_PLANNING_READY",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "DOD DRAFT / CHATGPT REVIEWED / PRODUCT OWNER REVIEW REQUIRED",
+    "status": "ACTIVE / DOD LOCKED / T-010 PLANNING READY",
     "passed": 1,
     "total": 4,
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / DOD DRAFT / REVIEW REQUIRED",
+      "P3.1": "ACTIVE / DOD LOCKED / T-010 PLANNING READY",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
-  "decision_required": true,
+  "decision_required": false,
   "blocker": null,
   "current_task": null,
   "current_case": {
@@ -67,10 +67,11 @@
     "technical_result": "9/9 PASS"
   },
   "p3_1": {
-    "status": "ACTIVE / DOD DRAFT / PRODUCT OWNER REVIEW REQUIRED",
+    "status": "ACTIVE / DOD LOCKED / PRODUCT OWNER APPROVED",
+    "decision_id": "D-032",
     "purpose": "Create canonical 3D Component Masters, parameterized variants and standardized review assets from evidence-qualified historical component identities without collapsing unresolved proxy semantics into historical certainty.",
     "dod": "docs/production/zhenguo_wanfo/P3_1_DEFINITION_OF_DONE_V001.md",
-    "dod_status": "DRAFT / CHATGPT REVIEWED / FOR PRODUCT OWNER APPROVAL",
+    "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-032",
     "dod_items": 9,
     "scope_rule": "Master production count is evidence-qualified, not inherited from the 11 P2 engineering families. All MASTER_REQUIRED records must reach 100% coverage; proxy/control/envelope objects must not be silently historicized.",
     "minimum_scope_review": [
@@ -84,7 +85,8 @@
       "槫类",
       "椽类"
     ],
-    "task_rule": "Do not create T-010 or start new P3.1 component geometry before P3.1 Definition of Done is approved and locked. P3.1 may later use multiple T-tasks rather than one monolithic task."
+    "task_strategy": "P3.1 may use multiple T-tasks. T-010 should first establish the Master Scope Matrix and evidence-backed identity resolution before any batch Master geometry production.",
+    "task_rule": "Do not start batch component geometry until Master eligibility and identity resolution are completed under an authorized task contract."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -106,16 +108,16 @@
     "final_review_set": "responsive labels; no overlap"
   },
   "latest_material_decision": {
-    "id": "D-031",
+    "id": "D-032",
     "date": "2026-09-13",
-    "decision": "Product Owner approved P3.0 PASS / CLOSED after 9/9 DoD, 11/40/365 migration coverage and zero orphan; P3.1 entered."
+    "decision": "Product Owner approved and locked P3.1 Definition of Done V001. Master production is evidence-qualified; T-010 planning may begin with Scope Matrix and identity resolution before batch geometry."
   },
-  "next_action": "Product Owner review P3.1 Definition of Done V001. If approved, lock the DoD and then plan/authorize the first P3.1 engineering task; no new component geometry before approval.",
+  "next_action": "Define and authorize T-010 as the first P3.1 task for Component Master Scope Matrix and evidence-backed identity resolution. Do not begin batch component geometry before that qualification work is complete.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v014",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R048_REFRESH_COMPLETE"
+    "refresh_status": "R048_STALE_AFTER_R049_DOD_LOCK"
   }
 }
