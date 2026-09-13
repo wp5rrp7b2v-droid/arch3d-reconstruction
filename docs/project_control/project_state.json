@@ -154,9 +154,9 @@
   "next_action": "Product Owner review and approve/reject T-010 Scope Matrix & Identity Resolution. If approved, lock the six MASTER_REQUIRED records as the current P3.1 Master-production scope, then define the Canonical Master Asset Contract task before any batch Blender geometry.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v016",
+    "visualization_version": "v017",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R050_STALE_AFTER_R051_T010_REVIEW"
+    "refresh_status": "R051_REFRESH_COMPLETE"
   }
 }
