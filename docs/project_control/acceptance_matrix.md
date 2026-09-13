@@ -46,7 +46,7 @@ P2 frozen baseline：11 families / 40 variants / 365 stable mesh instances；Loc
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
 | P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11/40/365 语义审计与迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；orphan 0/0/0；D-031。 |
-| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **ACTIVE / DOD LOCKED / CONTRACT V002 LOCKED / 1 OF 6 MASTERS APPROVED** | 六类 scope 由 D-033 锁定；T-011 柱 Master 已 D-035 批准；V002 字段纠错由 D-036 锁定；剩余五类 planning-ready、尚未授权。 |
+| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **ACTIVE / DOD LOCKED / CONTRACT V002 LOCKED / 4 OF 6 MASTERS APPROVED** | 柱 Master D-035；斗类三 Master T-012 / D-037 APPROVED；剩余上下六椽栿尚未授权。 |
 | P3.2｜Assembly Relationship Model | 建立构件之间组合、支承、连接、定位、重复和 Assembly Unit 关系 | **LOCKED** | 等待 P3.1 PASS。 |
 | P3.3｜Component-driven Building Reconstruction | 验证可由构件库 + Variant + Assembly Rules 重新装配万佛殿并形成可解释成果 | **LOCKED** | 等待 P3.2 PASS。 |
 
@@ -108,14 +108,26 @@ V002 继承原全部 Locked rules，并仅修正柱头栌斗字段映射：
 - deterministic regeneration / independent reopen / synthetic mutation / canonical rebuild / Registry registration：PASS。
 - P2 frozen baseline：19 hashes unchanged。
 - Review package：6/6，ChatGPT visual PASS，Product Owner APPROVED。
-- `CMP-COLUMN-001` 为当前第 1 个 approved canonical Master；V002 字段纠错不影响该资产。
+- `CMP-COLUMN-001` 为第 1 个 approved canonical Master；V002 字段纠错不影响该资产。
+
+### T-012｜Dou Master Lean Batch V002｜APPROVED / CLOSED / D-037
+
+- Execution Mode：`LEAN_PRODUCTION_MODE_V001`。
+- First Article `CMP-LUDOU-COLUMN-001`：PASS。
+- Shared pipeline：PASS。
+- Scope：3/3 engineering PASS。
+- semantic snapshot / deterministic regeneration / independent reopen / synthetic mutation / canonical rebuild：3/3 PASS。
+- Review：18/18 individual + 1/1 batch overview = **19/19 visual PASS**。
+- Product Owner：`T-012｜P3_1_DOU_MASTER_BATCH_V002｜APPROVED`。
+- Approved Masters：柱头栌斗、单向长开斗、交互斗。
+- P3.1 Master coverage：**4 / 6 approved**。
+- Lean Production Mode 首次正式闭环验证成功；后续同质批次可按 RC-009 复用，实质变化仍须新首件/试点。
+- Visual Review：`docs/production/zhenguo_wanfo/P3_1_T012_DOU_MASTER_VISUAL_REVIEW_2026-09-13.md`。
 
 ### P3.1 Current Boundary / Next Step
 
 - 当前无 active Codex task。
-- Master coverage：**1 / 6 approved**。
-- 剩余五类已解除 Contract HOLD，但**尚未授权 Blender 生产**。
-- 推荐拆分：
-  1. 斗类：柱头栌斗 + 单向长开斗 + 交互斗；
-  2. 梁架类：下六椽栿 + 上六椽栿。
-- 下一步先定义并审核斗类 batch 的正式 Task Contract；只有明确授权后 Codex 才可执行。
+- Master coverage：**4 / 6 approved**。
+- 剩余：`CMP-FRAME-LOWER-SIX-CHUANFU-001`、`CMP-FRAME-UPPER-SIX-CHUANFU-001`。
+- 两个梁架 Master **尚未授权 Blender 生产**。
+- 下一步：设计并审核梁架类正式 Task Contract；由于几何方法与斗类不同，必须保留新的 First Article Gate，批准前不执行 Codex。
