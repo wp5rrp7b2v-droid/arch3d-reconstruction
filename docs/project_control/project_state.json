@@ -163,9 +163,9 @@
   "next_action": "Execute T-011 locally for CMP-COLUMN-001 only, then return the strict completion report and six-item review package for ChatGPT/Product Owner review.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v020",
+    "visualization_version": "v021",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R054_STALE_AFTER_R055_T011_AUTHORIZATION"
+    "refresh_status": "R055_REFRESH_COMPLETE"
   }
 }
