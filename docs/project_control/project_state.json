@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R054",
+  "state_revision": "R055",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1_DOD_LOCKED / MASTER_ASSET_CONTRACT_LOCKED / COLUMN_PILOT_PLANNING_READY",
+  "session_status": "ACTIVE / P3.1_DOD_LOCKED / MASTER_ASSET_CONTRACT_LOCKED / T011_AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,19 +17,27 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "ACTIVE / DOD LOCKED / SIX-MASTER SCOPE LOCKED / MASTER ASSET CONTRACT LOCKED",
+    "status": "ACTIVE / DOD LOCKED / SIX-MASTER SCOPE LOCKED / MASTER ASSET CONTRACT LOCKED / T-011 AUTHORIZED",
     "passed": 1,
     "total": 4,
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / MASTER ASSET CONTRACT LOCKED / COLUMN PILOT PLANNING READY",
+      "P3.1": "ACTIVE / MASTER ASSET CONTRACT LOCKED / T-011 COLUMN PILOT AUTHORIZED",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
   "decision_required": false,
   "blocker": null,
-  "current_task": null,
+  "current_task": {
+    "id": "T-011",
+    "key": "P3_1_COLUMN_MASTER_CONTRACT_PILOT_V001",
+    "name": "柱Master合同实现试点",
+    "status": "AUTHORIZED / READY_FOR_LOCAL_EXECUTION",
+    "think_level": "HIGH",
+    "contract": "docs/tasks/T-011_P3_1_COLUMN_MASTER_CONTRACT_PILOT_V001.md",
+    "scope": "CMP-COLUMN-001 only: evidence-aware params -> deterministic generator -> local-only canonical blend -> semantic QC -> six-item review package -> registry pilot registration -> reopen/mutation validation"
+  },
   "current_case": {
     "name": "平遥镇国寺万佛殿",
     "location": "山西省平遥县镇国寺",
@@ -67,7 +75,7 @@
     "technical_result": "9/9 PASS"
   },
   "p3_1": {
-    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / SIX-MASTER SCOPE LOCKED / MASTER ASSET CONTRACT LOCKED",
+    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / SIX-MASTER SCOPE LOCKED / MASTER ASSET CONTRACT LOCKED / T-011 AUTHORIZED",
     "decision_id": "D-032",
     "qualification_decision_id": "D-033",
     "asset_contract_decision_id": "D-034",
@@ -114,18 +122,26 @@
       "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
       "global_unit": "mm",
       "canonical_transform": "Location 0 / Rotation 0 / Scale 1",
-      "pilot_recommendation": "CMP-COLUMN-001 first; validate generator -> blend -> semantic QC -> review package -> Registry registration before expanding to remaining five",
       "approval_required": false
     },
-    "task_strategy": "Next define a representative Contract Implementation Pilot on CMP-COLUMN-001 before batch production of all six Masters.",
-    "task_rule": "No batch production of the remaining five Masters is authorized until the CMP-COLUMN-001 Contract Implementation Pilot is separately defined, executed and reviewed."
+    "column_pilot": {
+      "status": "AUTHORIZED / READY_FOR_LOCAL_EXECUTION",
+      "task_id": "T-011",
+      "component_id": "CMP-COLUMN-001",
+      "contract": "docs/tasks/T-011_P3_1_COLUMN_MASTER_CONTRACT_PILOT_V001.md",
+      "canonical_reference": "diameter 460.0mm observed Z-001 + height 3534.3mm replaceable RC Z-006-RC-01",
+      "purpose": "Validate full Master asset chain before remaining-five production",
+      "remaining_five_authorized": false
+    },
+    "task_strategy": "Execute and review T-011 CMP-COLUMN-001 Contract Implementation Pilot before authorizing remaining-five Master production.",
+    "task_rule": "No remaining-five batch Master production is authorized until T-011 is complete and separately reviewed."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
     "Z-006-RC-01": "REASONABLE_COMPLETION / replaceable / D-023",
     "DG-114": "UNKNOWN / no unified small-dou historical specification claim",
     "HIS-002": "component originality unknown",
-    "corner_and_joinery": "45-degree corner, mortise and hidden-angle beam precision unresolved / bounded"
+    "corner_and_joinery": "45-degree corner, mortise and hidden-angle beam unresolved / bounded"
   },
   "evidence_visualization_carry_forward": {
     "status": "LOCKED / PRODUCT OWNER APPROVED",
@@ -142,14 +158,14 @@
   "latest_material_decision": {
     "id": "D-034",
     "date": "2026-09-13",
-    "decision": "Product Owner approved and locked P3.1 Canonical Master Asset Contract V001. The six-master asset standard is now authoritative; next step is planning a CMP-COLUMN-001 Contract Implementation Pilot before any remaining-five batch Master production."
+    "decision": "Product Owner approved and locked P3.1 Canonical Master Asset Contract V001. T-011 CMP-COLUMN-001 Contract Implementation Pilot is now authorized under that locked contract; remaining-five production is not authorized."
   },
-  "next_action": "Define the CMP-COLUMN-001 Contract Implementation Pilot task. Do not start remaining-five batch Master production before the pilot is separately approved and passes review.",
+  "next_action": "Execute T-011 locally for CMP-COLUMN-001 only, then return the strict completion report and six-item review package for ChatGPT/Product Owner review.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v020",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R054_REFRESH_COMPLETE"
+    "refresh_status": "R054_STALE_AFTER_R055_T011_AUTHORIZATION"
   }
 }
