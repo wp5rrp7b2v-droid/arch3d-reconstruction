@@ -1,0 +1,33 @@
+{
+  "task_id": "T-014",
+  "source_components": "6/6",
+  "approved_components": [
+    "CMP-COLUMN-001",
+    "CMP-LUDOU-COLUMN-001",
+    "CMP-DOU-SINGLE-LONGKAI-001",
+    "CMP-DOU-INTERACTIVE-001",
+    "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+    "CMP-FRAME-UPPER-SIX-CHUANFU-001"
+  ],
+  "overview_path": "production/zhenguo_wanfo/review/P3_1/P3_1_MASTER_LIBRARY_OVERVIEW_V001.png",
+  "overview_sha256": "a060a7e98ca14c4ce061d18428d84ee4f2d818025546b7ec0520bbeea89ee6b5",
+  "source_review_views": [
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/AXON.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-LUDOU-COLUMN-001/AXON.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/AXON.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-INTERACTIVE-001/AXON.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/AXON.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/AXON.png"
+  ],
+  "status": "PASS",
+  "canonical_masters_unchanged": true,
+  "existing_individual_review_assets_unchanged": true,
+  "existing_batch_overviews_unchanged": true,
+  "p2_frozen_baseline_unchanged": true,
+  "p3_1_contract_v002_unchanged": true,
+  "p3_2_files_created": false,
+  "new_variant_records": 0,
+  "formal_variants": 0,
+  "protection_check": "SHA256 before/after for six local canonical blends, all individual review PNGs, batch overviews, P2-prefixed production files, and Contract V002; review PNGs also matched package hashes.",
+  "unexplained_validation_errors": []
+}
