@@ -1,0 +1,484 @@
+{
+  "$defs": {
+    "component": {
+      "properties": {
+        "aliases": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "applicability": {
+          "type": "object"
+        },
+        "assembly_relations": {
+          "items": {
+            "$ref": "#/$defs/relation"
+          },
+          "type": "array"
+        },
+        "canonical_name_en": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "canonical_name_zh": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "category": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "component_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "corresponds_to_real_historical_component": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "current_asset_role": {
+          "enum": [
+            "RECONSTRUCTED_COMPONENT_CANDIDATE",
+            "GEOMETRIC_PROXY",
+            "CONTROL_OBJECT",
+            "ENVELOPE_SURFACE"
+          ]
+        },
+        "evidence_by_attribute": {
+          "type": "object"
+        },
+        "function": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "historical_component_concept": {
+          "type": "boolean"
+        },
+        "historical_component_statistics_policy": {
+          "enum": [
+            "CANDIDATE_PLACEMENT_ONLY",
+            "EXCLUDED"
+          ]
+        },
+        "historical_state": {
+          "type": "object"
+        },
+        "historical_terms": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "instance_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "interpretation_boundary": {
+          "type": "object"
+        },
+        "known_unknowns": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "master_3d_asset": {
+          "type": "object"
+        },
+        "ontology_type": {
+          "enum": [
+            "HISTORICAL_COMPONENT",
+            "ASSEMBLY_UNIT",
+            "GEOMETRIC_PROXY",
+            "CONTROL_OBJECT",
+            "ENVELOPE_SURFACE",
+            "UNKNOWN_UNRESOLVED_COMPONENT"
+          ]
+        },
+        "originality_status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "p2_family_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "parameter_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "period": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "reuse_scope": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_building": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_references": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "structural_role": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "typical_position": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "variant_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "version": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "component_id",
+        "canonical_name_zh",
+        "canonical_name_en",
+        "aliases",
+        "historical_terms",
+        "category",
+        "ontology_type",
+        "function",
+        "structural_role",
+        "typical_position",
+        "source_building",
+        "period",
+        "parameter_ids",
+        "evidence_by_attribute",
+        "source_references",
+        "historical_state",
+        "originality_status",
+        "master_3d_asset",
+        "variant_ids",
+        "instance_ids",
+        "assembly_relations",
+        "applicability",
+        "reuse_scope",
+        "known_unknowns",
+        "interpretation_boundary",
+        "version",
+        "status",
+        "p2_family_id",
+        "current_asset_role",
+        "historical_component_concept",
+        "historical_component_statistics_policy",
+        "corresponds_to_real_historical_component"
+      ],
+      "type": "object"
+    },
+    "instance": {
+      "properties": {
+        "component_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "evidence_metadata": {
+          "required": [
+            "evidence_class",
+            "source_layer",
+            "time_layer",
+            "historical_state_tag",
+            "originality_status",
+            "bounded_placeholder",
+            "override_ids"
+          ],
+          "type": "object"
+        },
+        "historical_component_count_eligible": {
+          "type": "boolean"
+        },
+        "instance_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "p2_family_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "p2_instance_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "parameter_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "placement": {
+          "required": [
+            "location_mm",
+            "rotation_euler_rad",
+            "scale"
+          ],
+          "type": "object"
+        },
+        "source_references": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "variant_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "instance_id",
+        "p2_instance_id",
+        "component_id",
+        "variant_id",
+        "p2_family_id",
+        "placement",
+        "evidence_metadata",
+        "parameter_ids",
+        "historical_component_count_eligible",
+        "source_references",
+        "version",
+        "status"
+      ],
+      "type": "object"
+    },
+    "relation": {
+      "additionalProperties": false,
+      "properties": {
+        "evidence_status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "relation": {
+          "enum": [
+            "supports",
+            "supported_by",
+            "connects_to",
+            "inserted_into",
+            "receives",
+            "rests_on",
+            "spans_between",
+            "aligned_with",
+            "repeated_in",
+            "belongs_to_assembly",
+            "located_at",
+            "orientation"
+          ]
+        },
+        "target_id": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "relation",
+        "target_id",
+        "evidence_status"
+      ],
+      "type": "object"
+    },
+    "variant": {
+      "properties": {
+        "component_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "current_asset_role": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "evidence_by_attribute": {
+          "type": "object"
+        },
+        "p2_family_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "p2_generator_parameters": {
+          "type": "object"
+        },
+        "p2_mesh_data_name": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "p2_variant_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "parameter_ids": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "replaceability": {
+          "type": "object"
+        },
+        "source_references": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "status": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "variant_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "version": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "variant_id",
+        "p2_variant_id",
+        "component_id",
+        "p2_family_id",
+        "parameter_ids",
+        "evidence_by_attribute",
+        "p2_generator_parameters",
+        "p2_mesh_data_name",
+        "current_asset_role",
+        "replaceability",
+        "source_references",
+        "version",
+        "status"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://example.local/arch3d/p3_0_component_registry_schema_v001.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assembly_relationship_vocabulary": {
+      "items": {
+        "enum": [
+          "supports",
+          "supported_by",
+          "connects_to",
+          "inserted_into",
+          "receives",
+          "rests_on",
+          "spans_between",
+          "aligned_with",
+          "repeated_in",
+          "belongs_to_assembly",
+          "located_at",
+          "orientation"
+        ]
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "case_id": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "components": {
+      "items": {
+        "$ref": "#/$defs/component"
+      },
+      "maxItems": 11,
+      "minItems": 11,
+      "type": "array"
+    },
+    "historical_boundaries": {
+      "type": "object"
+    },
+    "input_sha256": {
+      "additionalProperties": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "minProperties": 5,
+      "type": "object"
+    },
+    "instances": {
+      "items": {
+        "$ref": "#/$defs/instance"
+      },
+      "maxItems": 365,
+      "minItems": 365,
+      "type": "array"
+    },
+    "parameter_evidence_catalog": {
+      "type": "object"
+    },
+    "status": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "variants": {
+      "items": {
+        "$ref": "#/$defs/variant"
+      },
+      "maxItems": 40,
+      "minItems": 40,
+      "type": "array"
+    },
+    "version": {
+      "const": "V001"
+    }
+  },
+  "required": [
+    "version",
+    "status",
+    "case_id",
+    "input_sha256",
+    "historical_boundaries",
+    "parameter_evidence_catalog",
+    "components",
+    "variants",
+    "instances",
+    "assembly_relationship_vocabulary"
+  ],
+  "title": "ARCH3D P3.0 Component Registry V001",
+  "type": "object"
+}

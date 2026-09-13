@@ -1,0 +1,52 @@
+{
+  "assembly_relationship_vocabulary": [
+    "supports",
+    "supported_by",
+    "connects_to",
+    "inserted_into",
+    "receives",
+    "rests_on",
+    "spans_between",
+    "aligned_with",
+    "repeated_in",
+    "belongs_to_assembly",
+    "located_at",
+    "orientation"
+  ],
+  "asset_roles": [
+    "RECONSTRUCTED_COMPONENT_CANDIDATE",
+    "GEOMETRIC_PROXY",
+    "CONTROL_OBJECT",
+    "ENVELOPE_SURFACE"
+  ],
+  "evidence_classes": [
+    "CONFIRMED",
+    "HIGH_CONFIDENCE_INFERENCE",
+    "REASONABLE_COMPLETION",
+    "UNKNOWN"
+  ],
+  "historical_count_rule": "P2 instances are machine placements; no historical component inventory count is derived in P3.0.",
+  "identity_rule": "P2 engineering family and Blender mesh instance do not imply historical component type or count.",
+  "semantic_layers": [
+    "observed_as_measured",
+    "report_ideal_model",
+    "reconstructed_963_candidate"
+  ],
+  "source_references": [
+    "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+    "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+    "docs/evidence/zhenguo_wanfo/P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001.md",
+    "docs/evidence/zhenguo_wanfo/P1_3_GATE_REVIEW_2026-09-12.md",
+    "docs/production/zhenguo_wanfo/P3_0_DEFINITION_OF_DONE_V001.md"
+  ],
+  "status": "T-009_IMPLEMENTED_PENDING_GATE_REVIEW",
+  "types": {
+    "ASSEMBLY_UNIT": "多个构件的组合单元；P3.0 预留，不由 P2 family 自动生成。",
+    "CONTROL_OBJECT": "参数化定位或诊断对象，不是历史构件。",
+    "ENVELOPE_SURFACE": "连续外形包络或曲面，不是实体古建构件。",
+    "GEOMETRIC_PROXY": "证据或 LOD 受限时的替代几何，无精确历史构件身份。",
+    "HISTORICAL_COMPONENT": "有证据支持的构件类型概念；当前 P2 网格精度与历史原构数量另行判断。",
+    "UNKNOWN_UNRESOLVED_COMPONENT": "构件身份或集合拆分未获证据支持，保持未决。"
+  },
+  "version": "V001"
+}
