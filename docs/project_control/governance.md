@@ -44,30 +44,37 @@
 3. **ChatGPT direct write**：凡属于 Project Control 的状态、决策、验收、治理和 Dashboard 更新，优先由 ChatGPT 直接更新 GitHub，避免重复生成长 Codex 管理指令。
 4. **Local sync**：进入本地工作前执行 `git pull --ff-only origin main`，使 working copy 与 canonical committed state 对齐。
 5. **Local engineering write-back**：若 Codex 的工程结果需要进入 Project Control，应在工程完成后根据明确授权更新、commit、push；若 Project Control 可由 ChatGPT 根据结果直接更新，则优先由 ChatGPT处理。
-6. **冲突规则**：ChatGPT 与本地 Codex 不得并行修改同一 Project Control 文件。发生非 fast-forward 或不明 tracked changes 时停止，不 force、不覆盖。
+6. **冲突规则**：ChatGPT 与本地 Codex 不得并行修改同一 Project Control 文件。发生 non-fast-forward 或不明 tracked changes 时停止，不 force、不覆盖。
 7. **敏感信息规则**：Project Control 不记录密码、Token、个人敏感资料或其他不应上云的信息。
 8. **试运行退出条件**：如果同步成本、版本噪音、隐私风险、冲突频率或维护复杂度明显大于版本历史、备份和跨环境访问的收益，由 Product Owner 批准后调整策略。
 
-### 4.1 GitHub 网络连接与代理自动恢复
+### 4.1 GitHub 网络连接与动态代理恢复
 
-本项目已确认本机可能出现“无法直连 `github.com:443`，但本地系统代理可正常访问 GitHub”的网络情况。该情况属于**网络连接问题**，不得默认解释为 Git 分支冲突或仓库状态异常。
+本机可能出现“Terminal/Git 无法稳定直连 GitHub，但当前 macOS 系统代理可正常访问”的情况。该类错误属于**网络连接层问题**，不得默认解释为 Git 分支冲突或仓库状态异常。
+
+当前统一采用 `git-proxy-auto` 动态 helper，适用于《中国古建筑3D复原》及其他采用同一 GitHub 网络环境的本地项目。
 
 本地/Codex 执行规则：
 
-1. 项目仓库优先使用 **repository-local Git proxy configuration**，不修改全局 Git 配置；
-2. 当前已验证可用的 HTTPS/HTTP 代理端点为 `http://127.0.0.1:15236`；若未来系统代理端口变化，以当前 `scutil --proxy` / 实际可用代理为准更新仓库 local config；
-3. 若普通 `git pull / fetch / push` 报 `Failed to connect to github.com port 443`、timeout 或等价网络错误，Codex 应自动检查/应用当前本地代理并重试，不把该错误上报为 merge/non-fast-forward 冲突；
-4. 只有出现 **non-fast-forward、unknown tracked changes、同文件并行修改或真实 merge conflict** 时才按冲突规则 STOP；
-5. 不得为解决网络错误使用 `force`、`reset --hard`、覆盖本地文件或改写历史。
+1. **禁止持久化动态代理端口**：不得在 global 或 repository-local Git config 中长期保存类似 `127.0.0.1:15236` 的 VPN/proxy 动态端口；固定端口方案 RC-007 已由 RC-010 取代。
+2. **动态检测**：每次 Git 网络操作由 helper 读取当前 `scutil --proxy`，优先使用当前有效 HTTP/HTTPS/SOCKS 系统代理；代理值仅通过本次 Git command 的 `-c http.proxy=...` 注入。
+3. **协议稳定性**：经过本地 HTTP/HTTPS proxy 时默认使用 `http.version=HTTP/1.1`；push 可使用受控 `http.postBuffer` 以降低部分本地代理对 chunked POST 的兼容问题。
+4. **push 结果必须验证**：若 push 正常返回成功，则结束；若发生 `unexpected disconnect`、`remote end hung up`、timeout 或等价异常，helper 应只读查询远端 branch SHA：
+   - remote SHA == local intended HEAD → `SUCCESS_WITH_ACK_LOSS`；
+   - remote SHA != local intended HEAD → `NETWORK_PUSH_FAILED`。
+5. **不无限重试**：同一网络失败不得无上限重复 push；确认真实失败后停止并报告网络 blocker，避免无效消耗工程额度。
+6. **冲突与网络严格分流**：只有 non-fast-forward、unknown tracked changes、同文件并行修改或真实 merge conflict 才进入 Git conflict STOP；普通 443 timeout / proxy disconnect 不得触发 force、reset、rebase、overwrite 或改写历史。
+7. **helper 路径**：当前本机复用 helper 为 `$HOME/.local/bin/git-proxy-auto`；其职责仅是网络层适配，不改变 Git 历史或项目内容。
+8. **验证记录**：T-012 发布过程中，固定代理链路出现 sideband disconnect；升级为动态 helper + HTTP/1.1 + push 保护后，提交 `d1ae53ee368729a395623a8d9a4342f7455e2e9b` 已成功发布到 `origin/main`。
 
-推荐的一次性仓库本地配置：
+推荐日常用法：
 
 ```bash
-git config --local http.proxy http://127.0.0.1:15236
-git config --local https.proxy http://127.0.0.1:15236
+git-proxy-auto pull --ff-only origin main
+git-proxy-auto fetch origin
+git-proxy-auto push origin main
+git-proxy-auto ls-remote origin refs/heads/main
 ```
-
-设置后，本仓库后续普通 `git pull / fetch / push` 应自动使用代理，无需每个 T-### 重复显式添加 `-c http.proxy=...`。
 
 ### 4.2 本地 Blender 自动执行规则
 
