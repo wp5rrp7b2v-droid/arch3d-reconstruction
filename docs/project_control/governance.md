@@ -153,6 +153,34 @@ Checkpoint **不负责首次落档**。它只负责：
 
 典型 Checkpoint：阶段 / Gate Review 完成、重大方向变更、切换 Chat、当天结束、Product Owner 明确要求刷新 Dashboard。
 
+### 5.1 Daily Closing Project Control Consistency Audit｜每日收尾一致性审计
+
+**每天正式结束项目工作前必须执行一次。**该审计属于 Project Control Maintenance / Checkpoint，不占 T-### 编号。
+
+最低核对范围：
+
+1. `project_state.json`：Phase、Gate、Current Task、Blocker、Next Action、State Revision；
+2. `acceptance_matrix.md`：Gate 状态、DoD、限制与通过依据；
+3. `decision_log.md`：当日形成且已批准的重大决策是否完整登记，Decision ID 与当前状态是否一致；
+4. `execution_log.md`：当日 T-### 执行事实、PASS/HOLD/CLOSED 状态和关键提交/证据是否与其他文件一致；
+5. `governance.md` + `rules_change_log.md`：新增、修改、替代或结束试运行的规则是否双向同步；
+6. `dashboard.html`：作为派生可视化，其 Phase / Gate / Current Task / Blocker / Next Action / Snapshot version 是否与 `project_state.json` 一致，并继续遵守 Dashboard UI 规则；
+7. `phase_archive/`：仅在相关时核对索引与已关闭 Phase 的 Closure 是否存在、状态正确；Closure 作为关闭时点历史快照，除事实性纠错外不得因后续阶段推进而改写旧状态。
+
+审计判定：
+
+- **PASS**：未发现跨文件矛盾、过期当前状态或应登记而漏登记的正式事实；
+- **PASS WITH KNOWN EXCEPTION**：存在已明确识别、不会导致当前状态误读且已登记的例外；
+- **HOLD**：存在尚未澄清的实质冲突、状态漂移或关键漏档。HOLD 时不得声称当天 Project Control 收尾完成。
+
+处理规则：
+
+- 明确可纠正的不一致应在当天直接修正；
+- 无法当场判断的差异必须显式记录为 known exception / HOLD，不得静默带入下一工作日；
+- 纯一致性维护若不改变 Phase / Gate / Current Task / Blocker / Next Action 等项目状态事实，不要求递增 `state_revision`；Dashboard 只有实际重生成或内容发生变化时才递增 Visualization Snapshot 版本。
+
+每天收尾汇报应明确给出：**`DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT = PASS / PASS WITH KNOWN EXCEPTION / HOLD`**。
+
 ## 6. Dashboard 规则
 
 - Dashboard 只展示 Product Owner 当前管理与决策所需信息。
