@@ -1,10 +1,11 @@
 # P3.1 Canonical Master Asset Contract V002｜Change Proposal
 
-Status: **PROPOSED / PRODUCT OWNER APPROVAL REQUIRED**  
+Status: **APPROVED / IMPLEMENTED / D-036**  
 Date: 2026-09-13  
 Phase/Gate: `P3 / P3.1｜Component Master & Variant Library`  
 Affected component: `CMP-LUDOU-COLUMN-001｜柱头栌斗`  
-Current locked contract: `P3_1_MASTER_ASSET_CONTRACT_V001` / D-034
+Previous locked contract: `P3_1_MASTER_ASSET_CONTRACT_V001` / D-034  
+Implemented contract: `P3_1_MASTER_ASSET_CONTRACT_V002` / D-036
 
 ## 1. Reason for Change
 
@@ -36,11 +37,11 @@ Evidence state remains:
 
 ## 3. V001 Defect
 
-当前 V001 human-readable / machine-readable Contract 均写成：
+V001 human-readable / machine-readable Contract 曾写成：
 
 ```text
 top_width    = 475.1
- top_depth    = 327.1   ← WRONG FIELD
+top_depth    = 327.1   ← WRONG FIELD
 bottom_width = 446.3   ← WRONG FIELD
 bottom_depth = 305.5
 ```
@@ -52,17 +53,17 @@ bottom_depth = 305.5
 
 如果按 V001 直接生成几何，会把 X/Y 方向上下轮廓错误配对。
 
-## 4. Proposed V002 Correction
+## 4. Approved V002 Correction
 
-V002 仅将 `CMP-LUDOU-COLUMN-001.authorized_inputs_mm` 修正为：
+V002 将 `CMP-LUDOU-COLUMN-001.authorized_inputs_mm` 修正为：
 
 ```text
-top_width    = 475.1
-bottom_width = 327.1
-top_depth    = 446.3
-bottom_depth = 305.5
-total_height = 293.8
-flat_height  = 58.75
+top_width     = 475.1
+bottom_width  = 327.1
+top_depth     = 446.3
+bottom_depth  = 305.5
+total_height  = 293.8
+flat_height   = 58.75
 sloped_height = 116.2
 ```
 
@@ -90,17 +91,15 @@ V002 不改变：
 
 ## 6. Versioning / Governance
 
-由于 V001 已由 D-034 正式 LOCK，不允许静默覆盖。
+Product Owner 已于 2026-09-13 批准本 Change Proposal（D-036）：
 
-若 Product Owner 批准本 Change Proposal：
-
-1. 创建 `P3_1_MASTER_ASSET_CONTRACT_V002.md`；
-2. 创建 `P3_1_MASTER_ASSET_CONTRACT_V002.json`；
+1. `P3_1_MASTER_ASSET_CONTRACT_V002.md` 已创建并锁定；
+2. `P3_1_MASTER_ASSET_CONTRACT_V002.json` 已创建并锁定；
 3. V002 继承 V001 全部规则，仅包含本 Proposal 的字段映射修正；
-4. Decision Log 形成新的正式决策（建议 D-036）；
-5. V001 保留历史记录并标记为 `SUPERSEDED BY V002 / FIELD-MAPPING CORRECTION`；
-6. 后续剩余五类 Master 一律以 V002 为 authoritative Contract；
-7. 在 V002 LOCK 前，不授权 `CMP-LUDOU-COLUMN-001` 或剩余五类的 Blender 生产任务。
+4. Decision Log 正式记录 D-036；
+5. V001 保留历史记录，并由 Project Control 标记为被 V002 取代用于未来生产；
+6. 后续 Master 生产一律以 V002 为 authoritative Contract；
+7. 剩余五类恢复为 planning-ready，但仍需独立 Task Contract 授权。
 
 ## 7. Impact Assessment
 
@@ -110,12 +109,10 @@ V002 不改变：
 - Asset migration required: **NONE**
 - Historical claim change: **NONE**
 - Evidence classification change: **NONE**
-- Remaining-five production: **HOLD UNTIL V002 APPROVAL / LOCK**
+- Remaining-five production: **PLANNING READY / TASK AUTHORIZATION STILL REQUIRED**
 
-## 8. Requested Product Owner Decision
+## 8. Final Decision
 
-Recommended decision:
-
-**`P3.1 Canonical Master Asset Contract V002｜FIELD-MAPPING CORRECTION｜APPROVED / LOCK`**
+**`P3.1 Canonical Master Asset Contract V002｜FIELD-MAPPING CORRECTION｜APPROVED / LOCKED / D-036`**
 
 This is a controlled correction of an implementation contract transcription error, not a revision of the underlying historical evidence interpretation.
