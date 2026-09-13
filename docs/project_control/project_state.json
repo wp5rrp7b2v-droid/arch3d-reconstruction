@@ -144,9 +144,9 @@
   "next_action": "Product Owner review and approve/revise P3_1_MASTER_ASSET_CONTRACT_V001. If approved, lock the contract and create a CMP-COLUMN-001 Contract Implementation Pilot before batch Master production.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v018",
+    "visualization_version": "v019",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R052_STALE_AFTER_R053_CONTRACT_DRAFT"
+    "refresh_status": "R053_REFRESH_COMPLETE"
   }
 }
