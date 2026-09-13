@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R062",
+  "state_revision": "R063",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1_DOD_LOCKED / CONTRACT_V002_LOCKED / T011_APPROVED_CLOSED / T012_LEAN_V002_AUTHORIZED",
+  "session_status": "ACTIVE / P3.1_DOD_LOCKED / CONTRACT_V002_LOCKED / T011_APPROVED_CLOSED / T012_ENGINEERING_PASS_VISUAL_REVIEW_PENDING",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,12 +17,12 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "ACTIVE / 1 OF 6 MASTERS APPROVED / T-012 LEAN DOU BATCH AUTHORIZED",
+    "status": "ACTIVE / 1 OF 6 MASTERS APPROVED / T-012 ENGINEERING PASS / VISUAL REVIEW PENDING",
     "passed": 1,
     "total": 4,
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / 1 OF 6 MASTERS APPROVED / T-012 LEAN V002 AUTHORIZED",
+      "P3.1": "ACTIVE / 1 OF 6 MASTERS APPROVED / T-012 ENGINEERING PASS / VISUAL REVIEW PENDING",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
@@ -33,21 +33,21 @@
     "id": "T-012",
     "key": "P3_1_DOU_MASTER_BATCH_V002",
     "name": "斗类三构件Master精益批次生产",
-    "status": "AUTHORIZED / READY_FOR_LOCAL_EXECUTION",
+    "status": "ENGINEERING_PASS / REMOTE_PUBLISHED / VISUAL_REVIEW_PENDING",
     "execution_mode": "LEAN_PRODUCTION_MODE_V001",
     "think_level": "HIGH_FIRST_ARTICLE / MEDIUM_PROVEN_BATCH_REPETITION",
     "contract": "docs/tasks/T-012_P3_1_DOU_MASTER_BATCH_V002.md",
     "superseded_execution_contract": "docs/tasks/T-012_P3_1_DOU_MASTER_BATCH_V001.md",
+    "engineering_commit": "d1ae53ee368729a395623a8d9a4342f7455e2e9b",
     "scope": [
       "CMP-LUDOU-COLUMN-001",
       "CMP-DOU-SINGLE-LONGKAI-001",
       "CMP-DOU-INTERACTIVE-001"
     ],
-    "first_article": "CMP-LUDOU-COLUMN-001",
-    "shared_pipeline": "generator utility + batch runner + validator + review renderer + semantic helper",
-    "first_article_gate": "FULL PASS REQUIRED BEFORE BATCH EXPANSION",
-    "retry_rule": "MAX 2 EVIDENCE-BASED RETRIES PER ROOT CAUSE, THEN STOP",
+    "first_article": "CMP-LUDOU-COLUMN-001 / PASS",
+    "shared_pipeline": "PASS",
     "review_package_target": "18 individual review PNGs + 1 DOU_BATCH_OVERVIEW",
+    "review_package_status": "19/19 GENERATED / MACHINE CHECKED / CHATGPT_PRODUCT_OWNER_VISUAL_REVIEW_PENDING",
     "quality_rule": "REDUCE DUPLICATION, NOT ACCEPTANCE EVIDENCE",
     "frame_masters_authorized": false
   },
@@ -85,7 +85,7 @@
     "orphans": "0/0/0"
   },
   "p3_1": {
-    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / T-011 APPROVED / CONTRACT V002 LOCKED / T-012 LEAN V002 AUTHORIZED",
+    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / T-011 APPROVED / CONTRACT V002 LOCKED / T-012 ENGINEERING PASS / VISUAL REVIEW PENDING",
     "dod_decision_id": "D-032",
     "qualification_decision_id": "D-033",
     "asset_contract_v001_decision_id": "D-034",
@@ -96,7 +96,7 @@
       "status": "LOCKED / PRODUCT OWNER APPROVED / D-033",
       "count": 6,
       "approved_count": 1,
-      "engineering_batch_authorized_count": 3,
+      "engineering_complete_pending_review_count": 3,
       "remaining_unstarted_count": 2,
       "components": [
         "柱",
@@ -127,24 +127,26 @@
       "blender_execution": "RC-008 COMPLIANT"
     },
     "dou_batch": {
-      "status": "AUTHORIZED / READY_FOR_LOCAL_EXECUTION",
+      "status": "ENGINEERING PASS / REMOTE PUBLISHED / VISUAL REVIEW PENDING",
       "task_id": "T-012",
       "task_contract": "docs/tasks/T-012_P3_1_DOU_MASTER_BATCH_V002.md",
       "execution_mode": "LEAN_PRODUCTION_MODE_V001",
-      "first_article": "CMP-LUDOU-COLUMN-001",
-      "batch_after_first_article": [
-        "CMP-DOU-SINGLE-LONGKAI-001",
-        "CMP-DOU-INTERACTIVE-001"
-      ],
-      "quality_preservation": "ALL PER-ASSET VALIDATION AND 19 REVIEW ASSETS RETAINED",
-      "codex_optimization": [
-        "minimal authoritative read set",
-        "shared generator/validator/renderer",
-        "hash-only recheck for protected unchanged baselines",
-        "first-article gate",
-        "max two evidence-based retries per root cause",
-        "no Codex visual interpretation of review PNGs"
-      ]
+      "engineering_commit": "d1ae53ee368729a395623a8d9a4342f7455e2e9b",
+      "first_article": "CMP-LUDOU-COLUMN-001 / PASS",
+      "components_complete": "3/3",
+      "semantic_snapshot": "3/3 PASS",
+      "deterministic_regeneration": "3/3 PASS",
+      "independent_reopen": "3/3 PASS",
+      "synthetic_mutation": "3/3 PASS",
+      "canonical_rebuild": "3/3 PASS",
+      "registry_registration": "PASS / 3 PENDING VISUAL REVIEW",
+      "review_package": "18/18 + 1/1 GENERATED / VISUAL REVIEW PENDING",
+      "canonical_blend_sha256": {
+        "CMP-LUDOU-COLUMN-001": "bc46dbcdcbff738ddd0d88051e8ae362880a3edd8bc06a4144b5ff01788ebf57",
+        "CMP-DOU-SINGLE-LONGKAI-001": "dc1cc93016a19cd08ece0d84ce9bf584bf7780726ac8b6b3c975eae063cfbe32",
+        "CMP-DOU-INTERACTIVE-001": "d7a78d63a96cbaf215ed0b54692f1c48d0c1acf7410490580c993bbfb0b73d0c"
+      },
+      "protected_assets": "P2 UNCHANGED / CONTRACT V002 UNCHANGED / APPROVED COLUMN PRESERVED"
     },
     "frame_batch": {
       "status": "NOT YET AUTHORIZED",
@@ -156,9 +158,9 @@
   },
   "lean_production": {
     "rule_id": "RC-009",
-    "status": "ACTIVE / FIRST FORMAL USE IN T-012",
+    "status": "T-012 ENGINEERING PASS / VISUAL VALIDATION PENDING",
     "principle": "shared production tools + first-article gate + independent per-asset acceptance",
-    "future_default": "ELIGIBLE AFTER T-012 ENGINEERING + VISUAL PASS FOR HOMOGENEOUS BATCHES",
+    "future_default": "ELIGIBLE AFTER T-012 VISUAL PASS FOR HOMOGENEOUS BATCHES",
     "fallback": "RETURN TO STANDALONE/PILOT WHEN GEOMETRY METHOD, EVIDENCE SEMANTICS, CONTRACT OR EXECUTION ENVIRONMENT MATERIALLY CHANGES"
   },
   "historical_boundaries": {
@@ -175,17 +177,24 @@
     "composition_map": "Future whole-temple/final evidence view shows evidence composition by attribute or subcomponent",
     "normal_presentation": "Normal reconstruction materials remain separate from evidence colors"
   },
-  "latest_material_decision": {
-    "id": "RC-009 / T-012 V002",
-    "date": "2026-09-13",
-    "decision": "Product Owner approved Lean Production Mode for T-012 and future eligible homogeneous production: reduce duplicated reasoning/code/reads, while preserving independent assets, all per-asset validation, Hard Fails and visual review."
+  "git_connectivity": {
+    "status": "DYNAMIC_HELPER_VALIDATED",
+    "helper": "$HOME/.local/bin/git-proxy-auto",
+    "persistent_proxy_config": "NONE",
+    "validated_behavior": "detect current macOS proxy dynamically; HTTP/1.1; push verification; no force/reset",
+    "latest_publish": "d1ae53ee368729a395623a8d9a4342f7455e2e9b -> origin/main SUCCESS"
   },
-  "next_action": "Sync local main, then execute T-012 using P3_1_DOU_MASTER_BATCH_V002 Lean Production Mode. First Article CMP-LUDOU-COLUMN-001 must fully PASS before generating the other two dou Masters.",
+  "latest_material_decision": {
+    "id": "T-012 V002 / DYNAMIC_GIT_HELPER_VALIDATED",
+    "date": "2026-09-13",
+    "decision": "T-012 Lean engineering chain passed 3/3 and was published to origin/main. Product approval remains pending formal visual review of 19 review assets."
+  },
+  "next_action": "Perform ChatGPT/Product Owner visual review of T-012 18 individual review PNGs + 1 batch overview. Do not authorize frame Masters before T-012 review conclusion.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v024",
+    "visualization_version": "v025",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R062_REFRESH_COMPLETE"
+    "refresh_status": "R063_PENDING_DASHBOARD_REFRESH"
   }
 }
