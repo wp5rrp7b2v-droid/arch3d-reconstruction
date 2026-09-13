@@ -6,125 +6,105 @@
 
 - T-001：项目工作区建立完成；LOW。
 - T-002：Local Blender 3.6.23 灰模生成、保存、独立重开、Geometry Integrity、PNG review PASS；MEDIUM。
-- T-003：Local 3.6 → GitHub Actions Blender 4.5.13 → Local 3.6 roundtrip PASS / Class B；核心几何、Marker 与所需 Metadata 保留；commit `e26d5d600ed693a8e86a914e24dfbe652d718ed3`。
-- T-004：JSON 参数驱动同一 Blender Python 脚本；Baseline 3×2 与 Variant 4×3 参数响应、独立重开、Determinism PASS；commit `63a0c506f98d843376361421cf88e1e74c807dc7`。
+- T-003：Local 3.6 → GitHub Actions Blender 4.5.13 → Local 3.6 roundtrip PASS / Class B；commit `e26d5d600ed693a8e86a914e24dfbe652d718ed3`。
+- T-004：JSON 参数驱动同一 Blender Python 脚本；Baseline / Variant 参数响应、独立重开、Determinism PASS；commit `63a0c506f98d843376361421cf88e1e74c807dc7`。
 - P0：4/4 PASS / APPROVED / CLOSED。
 
 ## P1｜选题取证｜PASS / CLOSED
 
 - 正式案例：山西平遥镇国寺万佛殿。
 - `SRC-ZG-WF-001` 完整精细测绘报告直接核读完成。
-- 85/85关键参数完成分级；46 CONFIRMED / 32 HCI / 4 RC / 3 UNKNOWN。
-- Product Owner 批准 `CONDITIONAL GO`；P1 4/4 PASS / CLOSED。
+- 85/85 关键参数完成分级；Product Owner 批准 `CONDITIONAL GO`；P1 4/4 PASS / CLOSED。
 
 ## T-005｜P2.0 Schema Validation｜PASS
 
-- V001 基础 UNKNOWN/DO_NOT_LOCK、RC 可替换约束 PASS。
-- V002 增加 observed / report-ideal / reconstructed 三层语义并存验证；6 tests PASS。
+- UNKNOWN/DO_NOT_LOCK、RC 可替换、observed / report-ideal / reconstructed 三层语义验证 PASS。
 - Canonical evidence commit：`a938d9fe96c579c21fb3a16734f9b74efcd7d8bc`。
-- P2.0 APPROVED / PASS。
 
 ## T-006｜P2.1 Production Parameter Set｜PASS
 
-- V001：85/85 parameter + dependency matrix 完成；因 Z-006 geometry-critical UNKNOWN HOLD。
+- 85/85 formal parameter + dependency matrix 完成。
 - D-023 批准独立可替换 `Z-006-RC-01 = 11 × MOD-006 = 3534.3mm`；Z-006 本体保持 UNKNOWN / null / DO_NOT_LOCK。
-- V002：21/21 tests PASS；production preflight PASS；geometry-critical unresolved blocker = 0。
-- Canonical commit：`fc124922d5c0c1674548f9b99968f9848ffbb332`。
-- P2.1 APPROVED / PASS / CLOSED。
+- 21/21 tests PASS；production preflight PASS；canonical commit `fc124922d5c0c1674548f9b99968f9848ffbb332`。
 
-## T-007｜P2.2 Structural Skeleton｜PASS
+## T-007｜P2.2 Structural Skeleton｜PASS / APPROVED
 
 - Think Level: HIGH；Blender 3.6.23。
 - Structural scope 6/6；217 stable machine objects（不等于历史构件数）。
-- Machine geometry validation PASS；32/32 tests PASS；naked historical constant scan PASS；deterministic rebuild / independent reopen / replaceability tests PASS。
+- Machine geometry validation / 32 tests / naked historical constant scan / deterministic rebuild / independent reopen PASS。
 - Local-only `.blend` SHA256：`3b61ccbaca17836bd63d9369ebc3a4c6e25fb27f0d274ea67e64f732ad3000e4`。
 - Engineering commit：`a5a4181499c0494d16fbaf59d29337fa7d688e9d`。
-- PLAN / ELEVATION / AXON visual review PASS；P2.2 APPROVED / CLOSED。
 
-## T-008｜P2.3 Integrated Reconstruction Candidate｜PASS
+## T-008｜P2.3 Integrated Reconstruction Candidate｜PASS / APPROVED
 
-- V001：11 families / 40 variants / 365 stable mesh instances；33/33 tests、34/34 machine QC PASS；Cloud roundtrip initially HOLD。
-- V003：GitHub Actions Blender 4.5.13 roundtrip successful；Local3.6 return semantic QC PASS；core semantic diff NONE；commit `c18945c52da6666ac9dbe6842fb3d51422fd440a`。
-- V004：Evidence Diagnostic 修正；canonical geometry unchanged；33/33 tests、34/34 QC PASS；commit `93aef4803d2c0d3f7e3e3d29e9ab235c2f92d8f3`。
+- 11 families / 40 variants / 365 stable mesh instances。
+- 33/33 tests、34/34 machine QC、Local3.6→Cloud4.5→Local3.6 roundtrip PASS；core semantic diff NONE。
 - Final local-only candidate SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
-- 六类视觉审核 PASS；P2.3 APPROVED / CLOSED；P2 4/4 PASS / CLOSED / D-028。
+- Final engineering commit：`93aef4803d2c0d3f7e3e3d29e9ab235c2f92d8f3`；P2 CLOSED / D-028。
 
-## T-009｜P3.0 Component Ontology & Registry Migration｜PASS / APPROVED
+## T-009｜P3.0 Component Ontology & Registry Migration｜PASS / APPROVED / CLOSED
 
-- Think Level: HIGH。
-- Component Ontology、Naming/ID、Registry Schema、P2 semantic audit、migration、validation 完成。
+- Component Ontology、Naming/ID、Registry Schema、P2 semantic audit / migration 完成。
 - Coverage：11/11 families / 40/40 variants / 365/365 instances；orphan 0/0/0。
-- Historical component / proxy / control / envelope 正式分离；Z-006、DG-114、HIS-002、45°转角/榫卯/隐角梁边界保持。
-- Engineering commit：`3db50b94cd72e79cef419054aeaa7d2b75523ba5`。
-- P3.0 DoD 9/9 PASS / Product Owner APPROVED / D-031。
+- Engineering commit：`3db50b94cd72e79cef419054aeaa7d2b75523ba5`；D-031。
 
 ## T-010｜P3.1 Component Master Scope & Identity｜PASS / APPROVED
 
-- Think Level: HIGH。
 - Engineering commit：`774a1469416d49268997d20970c71bb9357849aa`。
-- P3.0 Registry 11/11；P1 minimum scope 9/9；27 records；pending 0。
-- MASTER_REQUIRED 6 / Deferred 13 / Proxy 4 / Control 3 / Envelope 1。
-- Evidence provenance / historical boundary / determinism PASS；5/5 negative mutation probes REJECTED；P2 frozen hashes unchanged。
-- 六类 Master scope 锁定：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿。
-- Product Owner APPROVED / D-033。
+- 27 records；MASTER_REQUIRED 6 / Deferred 13 / Proxy 4 / Control 3 / Envelope 1；pending 0。
+- 六类 Master scope：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿；D-033。
 
 ## T-011｜P3.1 Column Master Pilot｜PASS / APPROVED / CLOSED
 
-- Think Level: HIGH；Blender 3.6.23 CLI/background / RC-008 compliant。
-- `CMP-COLUMN-001`：diameter 460.0 mm；height 3534.3 mm via replaceable Z-006-RC-01；Z-006 remains UNKNOWN。
-- 22/22 machine checks PASS；deterministic regeneration / independent reopen / synthetic mutation / canonical rebuild / Registry registration PASS。
-- Review package 6/6 ChatGPT visual PASS；Product Owner APPROVED / D-035。
+- Blender 3.6.23 CLI/background；22/22 machine checks PASS。
+- deterministic regeneration / independent reopen / synthetic mutation / canonical rebuild / Registry registration PASS。
+- Review 6/6 visual PASS；Product Owner APPROVED / D-035。
 - Canonical `.blend` SHA256：`98211701fcc358f6174829257ef13310baa4d1a2d5e762637c25c812a4362487`。
 - Engineering commit：`4eb79f37d31202ab2088724008b5412cba4d38b0`。
 
 ## T-012｜P3.1 Dou Master Lean Batch V002｜PASS / APPROVED / CLOSED
 
 - Execution Mode：`LEAN_PRODUCTION_MODE_V001`。
-- Think Level：HIGH first article / MEDIUM proven batch repetition。
-- First Article `CMP-LUDOU-COLUMN-001` PASS；shared pipeline PASS；3 components 3/3 engineering PASS。
-- Contract：`P3_1_MASTER_ASSET_CONTRACT_V002 / D-036`；corrected ludou field mapping PASS。
-- semantic snapshot / transform / evidence boundary / DG-114 non-use / unsupported detail / naked historical constant scan PASS。
+- First Article `CMP-LUDOU-COLUMN-001` PASS；shared pipeline PASS；3/3 engineering PASS。
 - deterministic regeneration / independent reopen / synthetic mutation / canonical rebuild：3/3 PASS。
-- Registry registration PASS；P2 frozen baseline unchanged；Contract V002 unchanged；approved column preserved。
-- Review package：18/18 individual + 1/1 batch overview；ChatGPT visual review **19/19 PASS**；Product Owner APPROVED / D-037。
+- Review：18/18 individual + 1/1 overview = 19/19 visual PASS；Product Owner APPROVED / D-037。
 - Engineering commit：`d1ae53ee368729a395623a8d9a4342f7455e2e9b`。
-- Canonical `.blend` SHA256：
-  - Ludou `bc46dbcdcbff738ddd0d88051e8ae362880a3edd8bc06a4144b5ff01788ebf57`
-  - Single-longkai `dc1cc93016a19cd08ece0d84ce9bf584bf7780726ac8b6b3c975eae063cfbe32`
-  - Interactive dou `d7a78d63a96cbaf215ed0b54692f1c48d0c1acf7410490580c993bbfb0b73d0c`
-- Visual review record：`docs/production/zhenguo_wanfo/P3_1_T012_DOU_MASTER_VISUAL_REVIEW_2026-09-13.md`。
-- RC-009 Lean Production Mode 首次正式闭环验证成功；未来仅对同质批次默认复用，实质变化仍须新 First Article / Pilot。
+- Canonical SHA256：Ludou `bc46dbcd...bf57`；Single-longkai `dc1cc930...be32`；Interactive `d7a78d63...73d0c`。
+- RC-009 Lean Production Mode 首次闭环验证成功。
 
-## T-013｜P3.1 Six-Chuanfu Master Batch V002｜ENGINEERING PASS / REMOTE PUBLISHED / VISUAL REVIEW PENDING
+## T-013｜P3.1 Six-Chuanfu Master Batch V002｜PASS / APPROVED / CLOSED
 
 - Execution Mode：`CHAT_FIRST_CODEX_EXECUTOR_MODE_TRIAL + LEAN_PRODUCTION_MODE_V001`；Codex default Think = MEDIUM。
-- Authorization：D-038。
-- First Article `CMP-FRAME-LOWER-SIX-CHUANFU-001` 先完成并 PASS；之后 `CMP-FRAME-UPPER-SIX-CHUANFU-001` PASS。
+- Authorization：D-038；final approval/closure：D-039。
+- First Article `CMP-FRAME-LOWER-SIX-CHUANFU-001` 先 PASS；`CMP-FRAME-UPPER-SIX-CHUANFU-001` 后续 PASS。
 - Shared long-member pipeline：PASS。
-- 两件各 **26/26 machine checks PASS**；总计 52 项逐资产检查 PASS；无 unexplained validation errors。
-- 历史完整长度持续 `UNKNOWN / null`；`canonical_reference_length_mm=1000` 仅为 non-historical PROJECT_RULE / replaceable reference specimen；三层长度隔离与 `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` hard-fail carry-forward PASS。
-- `max_thickness` 保持 observed bound 语义；未提升为全长统一厚度历史事实。
-- `tenon_area_thickness` 保持 metadata-only / geometry use = 0；metadata mutation 时几何不变。
+- 两件各 26/26 machine checks PASS；52 项逐资产检查 PASS；无 unexplained validation errors。
 - deterministic semantic regeneration / independent reopen / length mutation / tenon metadata mutation / canonical rebuild：2/2 PASS。
-- Unsupported geometry = 0；P2 PRIMARY_FRAME proxy geometry non-use PASS。
-- Review package：12/12 individual + 1/1 batch overview 已生成并 machine checked，待 ChatGPT / Product Owner 视觉审核。
-- Registry：2 条独立 `PENDING_CHATGPT_PRODUCT_OWNER_REVIEW` records；已批准四件 Master 保持不变。
-- P2 frozen baseline、Contract V002、四件已批准 Master 保护性检查 PASS；`.blend/.blend1` 未进入 Git。
+- historical full length = `UNKNOWN / null`；`canonical_reference_length_mm=1000` 仅为 NON-HISTORICAL / REPLACEABLE PROJECT_RULE reference specimen。
+- `max_thickness` 保持 observed upper bound；`tenon_area_thickness` 保持 metadata-only / geometry use = 0。
+- Unsupported geometry = 0；P2 PRIMARY_FRAME proxy non-use PASS；`REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` carry-forward active。
+- P2 frozen baseline、Contract V002、四件既有 approved Master 保护性检查 PASS；`.blend/.blend1` 未进入 Git。
 - Canonical `.blend` SHA256：
   - Lower `71b6c0aecc179ff79b95c48fad38645108854e2b14d572d4f11f454e0856a1fd`
   - Upper `c4b83d0c0dc179c3946b2744b9c3887301fb81c3d835bd0f24a96336616a07e7`
-- Engineering commit：`f607245444927b9853e0976b891673e387a14750`；push `SUCCESS`；remote `main` verified at same engineering commit before subsequent ChatGPT Project Control commits。
-- Engineering review：`docs/production/zhenguo_wanfo/P3_1_T013_ENGINEERING_REVIEW_2026-09-13.md`。
-- Boundary：engineering PASS **不等于** 两件 Master approved，也不等于 P3.1 PASS。
+- Engineering commit：`f607245444927b9853e0976b891673e387a14750`，发布 SUCCESS。
+- 初次视觉审核：12/13 PASS；Batch Overview 因两构件视觉叠合造成潜在局部削形误读，判定为 presentation-only defect。
+- 仅重渲染 Overview；其余 12 review assets 与 canonical Masters unchanged。
+- Overview correction commit：`cbc0a5417e56b6851778c254a8c4b5a87fc413d3`，发布 SUCCESS。
+- Corrected overview SHA256：`fd03116ba035dd98a66363d7bb4699634ebb62484c58c04c3befae32c33d9f32`。
+- 最终 Review：**13/13 visual PASS**；Product Owner `APPROVED / CLOSED / D-039`。
+- 两个 frame Master Registry 状态提升为 `PRODUCT_OWNER_APPROVED_D039`。
+- P3.1 Master coverage：**6/6 approved**。
 
-## Current Execution State｜R068｜2026-09-13
+## Current Execution State｜R069｜2026-09-13
 
 - P0：CLOSED / APPROVED。
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO。
 - P2：CLOSED / 4/4 PASS / PRODUCT OWNER APPROVED。
 - P3：ACTIVE / 1/4 PASS。
 - P3.0：CLOSED / APPROVED。
-- P3.1：ACTIVE / DoD LOCKED / Contract V002 LOCKED / **4 OF 6 MASTERS APPROVED + 2 ENGINEERING PASS PENDING VISUAL APPROVAL**。
+- P3.1：ACTIVE / DoD LOCKED / Contract V002 LOCKED / **6 OF 6 MASTERS APPROVED**。
 - Current engineering blocker：NONE。
-- Current task：T-013 V002 / ENGINEERING PASS / VISUAL REVIEW PENDING。
-- Next action：ChatGPT / Product Owner 审核 T-013 的 13 张 review assets；视觉 PASS + Product Owner 明确批准前，不提升两件 frame Master Registry 状态，不关闭 P3.1。
+- Current task：NONE。
+- T-013：APPROVED / CLOSED / D-039。
+- Next action：执行独立 `P3.1 Gate Review`，逐项核对 DoD 9/9；Product Owner 明确批准 P3.1 PASS / CLOSED 前，P3.2 继续 LOCKED。
