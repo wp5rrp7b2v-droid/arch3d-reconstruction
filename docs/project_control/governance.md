@@ -42,7 +42,7 @@
 1. **GitHub main**：保存最新正式提交状态、Git 历史、备份和跨环境访问副本。
 2. **Local working copy**：`/Users/caroline/中国古建筑3D复原/docs/project_control/`，用于本地直接查看和工程配合。
 3. **ChatGPT direct write**：凡属于 Project Control 的状态、决策、验收、治理和 Dashboard 更新，优先由 ChatGPT 直接更新 GitHub，避免重复生成长 Codex 管理指令。
-4. **Local sync**：进入本地工作前执行 `git pull --ff-only origin main`，使 working copy 与 canonical committed state 对齐。
+4. **Local sync**：进入本地工作前执行 `git-proxy-auto pull --ff-only origin main`，使 working copy 与 canonical committed state 对齐。
 5. **Local engineering write-back**：若 Codex 的工程结果需要进入 Project Control，应在工程完成后根据明确授权更新、commit、push；若 Project Control 可由 ChatGPT 根据结果直接更新，则优先由 ChatGPT处理。
 6. **冲突规则**：ChatGPT 与本地 Codex 不得并行修改同一 Project Control 文件。发生 non-fast-forward 或不明 tracked changes 时停止，不 force、不覆盖。
 7. **敏感信息规则**：Project Control 不记录密码、Token、个人敏感资料或其他不应上云的信息。
@@ -116,7 +116,20 @@ git-proxy-auto ls-remote origin refs/heads/main
 
 该模式的目标是：**共享生产工具，保留逐资产验收；降低 Codex 额度与工程冗余，而非降低工程质量。**
 
-### 4.4 Chinese Component Naming in Visual Assets｜中文构件命名规则
+### 4.4 Chat-first Codex-executor Mode｜T-013 试运行完成 / 评估待定
+
+`CHAT_FIRST_CODEX_EXECUTOR_MODE` 已在 T-013 完成一次正式试运行，结果为工程链完成、逐资产验证完整，并出现一次仅影响呈现的 Overview 修正。当前状态为 **TRIAL COMPLETE / EVALUATION PENDING**，尚未自动升级为全项目长期默认模式。
+
+在正式评估完成前：
+
+1. **职责分离保持明确**：ChatGPT 负责证据解释、Task Contract、参数/几何语义、Hard Fail、非显然异常诊断、视觉审核与 Project Control；Codex 负责确定性工程执行、机器验证、资产生成和经授权的提交；
+2. **合同外问题必须返回**：证据冲突、几何方法变化、参数语义不明、非显然 validation failure 或历史解释扩张，Codex 必须 STOP 并把最小失败证据交回 ChatGPT；
+3. **Think Level**：显式采用该模式的任务中 Codex 默认 MEDIUM；只有 ChatGPT 判断存在结构性工程问题后才针对性升级 HIGH；
+4. **不降低验收标准**：DoD、Hard Fail、逐资产 validation、mutation、independent reopen、review package 和 Product Owner approval 均保持；
+5. **不自动继承**：在是否转为长期默认规则的评价完成前，后续任务只有在 Task Contract 明确采用时才使用该执行模式；
+6. **不阻塞当前 Gate 设计**：RC-011 的长期评估不阻塞 P3.2 Definition of Done 的定义与审批。
+
+### 4.5 Chinese Component Naming in Visual Assets｜中文构件命名规则
 
 该规则适用于所有正式面向人工审核、项目展示或证据表达的**构件图、装配图、Library Overview、Evidence Visualization 及同类视觉资产**。只要图中标识具体构件身份，就必须遵守：
 
@@ -146,7 +159,7 @@ Checkpoint **不负责首次落档**。它只负责：
 - 不保存完整 Decision Log、Execution Log、Acceptance Matrix 或 Rules Change Log 历史。
 - canonical Dashboard 路径固定为 `docs/project_control/dashboard.html`；其历史由 Git 负责，不靠文件名堆叠版本。
 - Dashboard 内可包含从 `project_state.json` 派生的 compact snapshot，便于跨 Chat handoff，但该 snapshot 不是 Project Control 事实本体。
-- Dashboard 可视化架构当前版本：**v006**。
+- Dashboard Architecture Baseline：**v006**；当前 Visualization Snapshot 版本单独记录在 `project_state.json` 与 `dashboard.html`，两者不得混为同一版本号。
 
 ## 7. Codex Task Contract 与权限边界
 
@@ -174,8 +187,16 @@ Checkpoint **不负责首次落档**。它只负责：
 - **GitHub Actions / Cloud**：自动化、Cloud Blender 与工程执行节点。
 - **GitHub private repo**：当前试运行中的正式提交状态、版本历史、备份和跨环境访问层。
 
-## 10. Scope / Non-goals｜当前 P0
+## 10. Scope / Non-goals｜当前 P3
 
-- P0 只验证管理与技术闭环，不追求正式古建筑成果。
-- 不启动大型建筑群、城市级模型或高成本渲染。
-- 未经验证的 AI / Cloud 能力不得直接视为正式生产能力。
+当前正式案例仍为**平遥镇国寺万佛殿**。P3 的目标是建立可登记、可解释、可复用、可组合的古建筑构件系统，并验证构件之间的装配关系与构件驱动重建能力，不把阶段目标扩大为寺院群、城市级或无限精细化建模。
+
+当前边界：
+
+- P3.0、P3.1 已关闭；P3.2 `Assembly Relationship Model` 已进入，但其 Definition of Done 尚未批准；
+- P3.2 DoD 获 Product Owner 明确批准前，不创建 P3.2 工程任务，不提前进行装配工程实现；
+- P3.3 在 P3.2 PASS 前保持 LOCKED；
+- P1/P2/P3.1 的 evidence boundary 持续有效，不因进入装配阶段而把 UNKNOWN、Proxy、Control、Envelope、Deferred 对象静默历史化；
+- 六椽栿 `canonical_reference_length_mm=1000` 仅为非历史 reference specimen，严禁作为建筑实际装配长度自动继承；`REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` 继续作为 Hard Fail；
+- 未经验证或未经 Task Contract 授权的 AI / Cloud / Blender 能力不得直接视为正式生产能力；
+- 不以视觉完整性替代历史证据，不因构件系统可组合而宣称“完全还原963原貌”。
