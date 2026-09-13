@@ -183,9 +183,9 @@
   "next_action": "Define the next Task Contract for the three dou Masters under Contract V002, then authorize separately. Do not begin Blender production until that task is explicitly authorized.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v021",
+    "visualization_version": "v022",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R057_DASHBOARD_STALE_AFTER_R060_CONTRACT_V002_LOCK"
+    "refresh_status": "R060_REFRESH_COMPLETE"
   }
 }
