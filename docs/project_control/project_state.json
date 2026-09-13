@@ -3,29 +3,29 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R070",
+  "state_revision": "R071",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1_GATE_REVIEW / 7_OF_9_PASS / DOD07_LIBRARY_OVERVIEW_HOLD / DOD09_FINAL_APPROVAL_PENDING",
+  "session_status": "ACTIVE / P3.2_ENTERED / P3.1_PASS_APPROVED_CLOSED / P3.2_DOD_REQUIRED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
     "english_name": "Component System & Assembly Architecture",
     "status": "ACTIVE",
-    "gate_progress": "1/4"
+    "gate_progress": "2/4"
   },
   "current_gate": {
-    "id": "P3.1",
-    "name": "Component Master & Variant Library",
-    "status": "GATE REVIEW HOLD / 7 OF 9 PASS / DOD-07 PARTIAL / DOD-09 PENDING",
+    "id": "P3.2",
+    "name": "Assembly Relationship Model",
+    "status": "ACTIVE / ENTERED / DOD REQUIRED",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / GATE REVIEW HOLD",
-      "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
+      "P3.1": "PASS / APPROVED / CLOSED / D-040",
+      "P3.2": "ACTIVE / ENTERED / DOD REQUIRED",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
   "decision_required": true,
-  "blocker": "P3.1 DoD-07 requires at least one whole-library overview covering all approved Masters / current formal Variant status; current repo has only batch overviews.",
+  "blocker": null,
   "current_task": null,
   "current_case": {
     "name": "平遥镇国寺万佛殿",
@@ -38,15 +38,20 @@
     "component_architecture": "11 families / 40 variants / 365 stable mesh instances"
   },
   "p3_1": {
-    "status": "ACTIVE / GATE REVIEW HOLD / MASTER COVERAGE 6 OF 6 APPROVED",
+    "status": "PASS / APPROVED / CLOSED / D-040",
     "dod_decision_id": "D-032",
     "qualification_decision_id": "D-033",
     "asset_contract_v002_decision_id": "D-036",
     "frame_batch_authorization_decision_id": "D-038",
     "frame_batch_approval_decision_id": "D-039",
+    "gate_closure_decision_id": "D-040",
+    "gate_review_file": "docs/production/zhenguo_wanfo/P3_1_GATE_REVIEW_2026-09-13.md",
+    "gate_score": "9/9 PASS",
     "master_scope_count": 6,
     "approved_master_count": 6,
     "engineering_complete_pending_visual_count": 0,
+    "formal_variant_count": 0,
+    "variant_gate_interpretation": "PASS: no evidence-qualified within-Master historical variants are currently registered; parameterized variant capability and mutation behavior are proven, and distinct dou / lower-upper six-chuanfu identities are separate components rather than variants.",
     "approved_components": [
       "CMP-COLUMN-001",
       "CMP-LUDOU-COLUMN-001",
@@ -55,22 +60,26 @@
       "CMP-FRAME-LOWER-SIX-CHUANFU-001",
       "CMP-FRAME-UPPER-SIX-CHUANFU-001"
     ],
-    "formal_variant_count": 0,
-    "variant_gate_interpretation": "PASS: no evidence-qualified within-Master historical variants are currently registered; parameterized variant capability and mutation behavior are proven, and distinct dou / lower-upper six-chuanfu identities are separate components rather than variants.",
-    "gate_review": {
-      "file": "docs/production/zhenguo_wanfo/P3_1_GATE_REVIEW_2026-09-13.md",
-      "status": "HOLD",
-      "score": "7 PASS / 1 PARTIAL / 1 PENDING",
-      "dod_01": "PASS",
-      "dod_02": "PASS",
-      "dod_03": "PASS",
-      "dod_04": "PASS",
-      "dod_05": "PASS / ZERO FORMAL VARIANTS IN CURRENT EVIDENCE VERSION",
-      "dod_06": "PASS",
-      "dod_07": "PARTIAL / WHOLE-LIBRARY OVERVIEW MISSING",
-      "dod_08": "PASS",
-      "dod_09": "PENDING / CLOSURE ARTIFACT + PRODUCT OWNER FINAL GATE APPROVAL",
-      "closure_artifact_required": "production/zhenguo_wanfo/review/P3_1/P3_1_MASTER_LIBRARY_OVERVIEW_V001.png"
+    "non_historicized_counts": {
+      "proxy": 4,
+      "control": 3,
+      "envelope": 1,
+      "deferred_insufficient_evidence": 13
+    },
+    "t014_library_overview": {
+      "status": "PASS / VISUAL PASS / PUBLISHED",
+      "task_id": "T-014",
+      "overview_path": "production/zhenguo_wanfo/review/P3_1/P3_1_MASTER_LIBRARY_OVERVIEW_V001.png",
+      "overview_sha256": "4719a31c18de13b0453a64d29847381d8e45af0f145bcb37bf7fee0abf9671a7",
+      "validation_path": "production/zhenguo_wanfo/validation/P3_1_MASTER_LIBRARY_OVERVIEW_VALIDATION_V001.json",
+      "source_components": "6/6",
+      "formal_variants": 0,
+      "canonical_masters_unchanged": true,
+      "individual_review_assets_unchanged": true,
+      "p2_frozen_baseline_unchanged": true,
+      "p3_2_files_created": false,
+      "local_final_commit": "ecdec887ba4c67018e3dfea63920263ed47cce30",
+      "publication_merge_commit": "c15064bcd7d5cf2f3e58cdbffccc256043836413"
     },
     "frame_batch": {
       "status": "APPROVED / CLOSED / D-039",
@@ -96,12 +105,31 @@
       "git_binary_rule": ".blend/.blend1 local-only / not committed"
     }
   },
+  "p3_2": {
+    "status": "ACTIVE / ENTERED / DOD REQUIRED",
+    "gate_name": "Assembly Relationship Model",
+    "engineering_authorized": false,
+    "approved_component_nodes_from_p3_1": [
+      "CMP-COLUMN-001",
+      "CMP-LUDOU-COLUMN-001",
+      "CMP-DOU-SINGLE-LONGKAI-001",
+      "CMP-DOU-INTERACTIVE-001",
+      "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "CMP-FRAME-UPPER-SIX-CHUANFU-001"
+    ],
+    "entry_constraints": [
+      "Define and Product-Owner-approve P3.2 Definition of Done before creating any engineering task.",
+      "Preserve P3.1 evidence and component identity boundaries.",
+      "Do not allow six-chuanfu canonical 1000 mm reference length to leak into building assembly.",
+      "Do not silently historicize Proxy / Control / Envelope / Deferred objects."
+    ]
+  },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
-    "status": "T013 TRIAL COMPLETE / EVALUATION PENDING AFTER P3.1 CLOSURE",
+    "status": "T013 TRIAL COMPLETE / EVALUATION PENDING",
     "principle": "ChatGPT handles analysis/decision/diagnosis/review; Codex handles deterministic execution/machine validation",
     "quality_preservation": "NO REDUCTION TO DOD / HARD FAIL / PER-ASSET VALIDATION / REVIEW / PRODUCT OWNER APPROVAL",
-    "trial_evaluation_status": "T013 completed successfully with one presentation-only correction; P3.1 closure package remains before final policy evaluation"
+    "trial_evaluation_status": "T013 completed successfully with one presentation-only correction; evaluate before deciding whether RC-011 becomes a long-term default. This evaluation does not block P3.2 DoD definition."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -109,19 +137,20 @@
     "DG-114": "UNKNOWN / no unified small-dou historical specification claim",
     "HIS-002": "component originality unknown",
     "six_chuanfu_length": "UNKNOWN / null; 1000 mm is non-historical canonical reference only",
-    "corner_and_joinery": "45-degree corner, mortise and hidden-angle beam unresolved / bounded"
+    "corner_and_joinery": "45-degree corner, mortise and hidden-angle beam unresolved / bounded",
+    "assembly_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY"
   },
   "latest_material_decision": {
-    "id": "D-039",
+    "id": "D-040",
     "date": "2026-09-13",
-    "decision": "T-013 V002 approved/closed; both six-chuanfu Masters approved; P3.1 Master coverage is 6/6. Gate Review subsequently found one remaining DoD-07 closure artifact before final P3.1 approval."
+    "decision": "P3.1 Component Master & Variant Library passed 9/9, approved and closed. P3.2 Assembly Relationship Model is unlocked and entered; P3.2 Definition of Done is required before engineering."
   },
-  "next_action": "Create and review the whole-library P3_1_MASTER_LIBRARY_OVERVIEW_V001.png using existing approved review assets only; no Master regeneration. After visual PASS, complete DoD-09 Product Owner final P3.1 PASS/CLOSED decision.",
+  "next_action": "Define and lock P3.2 Definition of Done for Assembly Relationship Model. Do not create a P3.2 engineering task until Product Owner explicitly approves that DoD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v026",
+    "visualization_version": "v027",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_R070 / refresh after P3.1 gate conclusion"
+    "refresh_status": "REFRESH_REQUIRED_FOR_R071"
   }
 }
