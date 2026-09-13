@@ -175,6 +175,6 @@
     "visualization_version": "v023",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R061_DASHBOARD_PENDING_REFRESH"
+    "refresh_status": "R061_REFRESH_COMPLETE"
   }
 }
