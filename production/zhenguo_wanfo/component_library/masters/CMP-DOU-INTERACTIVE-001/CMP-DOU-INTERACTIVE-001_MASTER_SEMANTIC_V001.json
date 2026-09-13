@@ -1,0 +1,191 @@
+{
+  "blender_version": "3.6.23",
+  "body": {
+    "face_count": 6,
+    "geometry_faces": [
+      [
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        4
+      ],
+      [
+        1,
+        2,
+        6,
+        5
+      ],
+      [
+        2,
+        3,
+        7,
+        6
+      ],
+      [
+        3,
+        0,
+        4,
+        7
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "geometry_vertices_mm": [
+      [
+        -88.1,
+        -82.55,
+        0.0
+      ],
+      [
+        88.1,
+        -82.55,
+        0.0
+      ],
+      [
+        88.1,
+        82.55,
+        0.0
+      ],
+      [
+        -88.1,
+        82.55,
+        0.0
+      ],
+      [
+        -127.6,
+        -120.0,
+        148.5
+      ],
+      [
+        127.6,
+        -120.0,
+        148.5
+      ],
+      [
+        127.6,
+        120.0,
+        148.5
+      ],
+      [
+        -127.6,
+        120.0,
+        148.5
+      ]
+    ],
+    "local_bbox_mm": {
+      "dimensions": [
+        255.2,
+        240.0,
+        148.5
+      ],
+      "max": [
+        127.6,
+        120.0,
+        148.5
+      ],
+      "min": [
+        -127.6,
+        -120.0,
+        0.0
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "name": "MASTER__CMP_DOU_INTERACTIVE_001__BODY",
+    "primitive": "closed_centered_rectangular_linear_outer_envelope",
+    "unsupported_detail_count": 0,
+    "vertex_count": 8
+  },
+  "canonical_asset_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/asset/CMP-DOU-INTERACTIVE-001_MASTER_V001.blend",
+  "canonical_blend_sha256": "d7a78d63a96cbaf215ed0b54692f1c48d0c1acf7410490580c993bbfb0b73d0c",
+  "collection_names": [
+    "MASTER__CMP_DOU_INTERACTIVE_001"
+  ],
+  "component_id": "CMP-DOU-INTERACTIVE-001",
+  "dg114_geometry_use_count": 0,
+  "evidence_classes": {
+    "bottom_depth_mm": "CONFIRMED",
+    "bottom_width_mm": "CONFIRMED",
+    "top_depth_mm": "CONFIRMED",
+    "top_width_mm": "CONFIRMED",
+    "total_height_mm": "CONFIRMED"
+  },
+  "generator_version": "V001",
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "geometry_mode": "MEASURED_OUTER_ENVELOPE_WITH_BOUNDED_PROFILE",
+  "historical_state": {
+    "historical_claim": "not_proven_963_design",
+    "model_layer": "observed_as_measured",
+    "reconstructed_963_candidate": "not_inferred",
+    "report_ideal_model": "separate_not_inferred"
+  },
+  "input_hashes": {
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_PARAMS_V001.json": "6266d4b3666c3f68052e05d9d4bd6c875a5aab948a34b86c4102decdb433f421",
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/build_dou_master_v001.py": "c476be15c435589598cc95bac0ee26d705ac451bc97e0ee309d81c205b7e1910",
+    "production/zhenguo_wanfo/scripts/dou_master_common_v001.py": "cc6b1dbabc8a72375c3de75424fce1ebd3951bbe657907e554aaa17ea700d42a"
+  },
+  "interpolation": "PROJECT_RULE / REPLACEABLE_ENGINEERING_INTERPOLATION",
+  "known_unknowns": [
+    "HIS-002: 963 component originality unknown",
+    "DG-114: unified small-dou rule UNKNOWN and unused",
+    "Current measurements can include replacement, compression, wear and deformation",
+    "Ears, notches, cavities, mortise-tenon and hidden connections lack quantified evidence"
+  ],
+  "master_id": "CMP-DOU-INTERACTIVE-001_MASTER",
+  "master_version": "V001",
+  "mesh_count": 1,
+  "non_mesh_auxiliary_objects": [],
+  "object_count": 1,
+  "object_names": [
+    "MASTER__CMP_DOU_INTERACTIVE_001__BODY"
+  ],
+  "originality_status": "unknown",
+  "resolved_parameters": {
+    "bottom_depth_mm": 165.1,
+    "bottom_width_mm": 176.2,
+    "top_depth_mm": 240.0,
+    "top_width_mm": 255.2,
+    "total_height_mm": 148.5
+  },
+  "sections_mm": {
+    "bottom": {
+      "depth": 165.1,
+      "width": 176.2
+    },
+    "mid": {
+      "depth": 202.55,
+      "width": 215.7
+    },
+    "top": {
+      "depth": 240.0,
+      "width": 255.2
+    }
+  },
+  "semantic_geometry_signature": "2cdec80c4753384470cbe52f1d375ea1b251cf1925d32840343f0987a4e73124",
+  "unit": "mm"
+}

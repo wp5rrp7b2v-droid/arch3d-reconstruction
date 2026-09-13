@@ -31,10 +31,103 @@
       "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json",
       "validation_status": "T011_ENGINEERING_PASS_VISUAL_PASS_APPROVED",
       "variant_ids": []
+    },
+    {
+      "approval_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+      "canonical_asset_sha256": "bc46dbcdcbff738ddd0d88051e8ae362880a3edd8bc06a4144b5ff01788ebf57",
+      "canonical_asset_status": "LOCAL_ONLY_GENERATED",
+      "component_id": "CMP-LUDOU-COLUMN-001",
+      "evidence_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md",
+        "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json"
+      ],
+      "generator_path": "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/build_dou_master_v001.py",
+      "geometry_mode": "MEASURED_OUTER_ENVELOPE_WITH_BOUNDED_PROFILE",
+      "known_unknowns": [
+        "HIS-002: 963 component originality unknown",
+        "DG-114: unified small-dou rule UNKNOWN and unused",
+        "Current measurements can include replacement, compression, wear and deformation",
+        "Ears, notches, cavities, mortise-tenon and hidden connections lack quantified evidence"
+      ],
+      "local_binary_path": "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/asset/CMP-LUDOU-COLUMN-001_MASTER_V001.blend",
+      "master_id": "CMP-LUDOU-COLUMN-001_MASTER",
+      "master_version": "V001",
+      "originality_status": "unknown",
+      "parameter_path": "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_PARAMS_V001.json",
+      "reuse_scope": "Evidence-bounded measured dou outer-envelope reference; replace upon stronger evidence.",
+      "review_metadata_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-LUDOU-COLUMN-001/REVIEW_PACKAGE_V001.json",
+      "review_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-LUDOU-COLUMN-001",
+      "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_SEMANTIC_V001.json",
+      "shared_generator_path": "production/zhenguo_wanfo/scripts/dou_master_common_v001.py",
+      "validation_status": "T012_ENGINEERING_PASS",
+      "variant_ids": []
+    },
+    {
+      "approval_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+      "canonical_asset_sha256": "dc1cc93016a19cd08ece0d84ce9bf584bf7780726ac8b6b3c975eae063cfbe32",
+      "canonical_asset_status": "LOCAL_ONLY_GENERATED",
+      "component_id": "CMP-DOU-SINGLE-LONGKAI-001",
+      "evidence_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md",
+        "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json"
+      ],
+      "generator_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/build_dou_master_v001.py",
+      "geometry_mode": "MEASURED_OUTER_ENVELOPE_WITH_BOUNDED_PROFILE",
+      "known_unknowns": [
+        "HIS-002: 963 component originality unknown",
+        "DG-114: unified small-dou rule UNKNOWN and unused",
+        "Current measurements can include replacement, compression, wear and deformation",
+        "Ears, notches, cavities, mortise-tenon and hidden connections lack quantified evidence"
+      ],
+      "local_binary_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/asset/CMP-DOU-SINGLE-LONGKAI-001_MASTER_V001.blend",
+      "master_id": "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+      "master_version": "V001",
+      "originality_status": "unknown",
+      "parameter_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_PARAMS_V001.json",
+      "reuse_scope": "Evidence-bounded measured dou outer-envelope reference; replace upon stronger evidence.",
+      "review_metadata_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/REVIEW_PACKAGE_V001.json",
+      "review_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001",
+      "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_SEMANTIC_V001.json",
+      "shared_generator_path": "production/zhenguo_wanfo/scripts/dou_master_common_v001.py",
+      "validation_status": "T012_ENGINEERING_PASS",
+      "variant_ids": []
+    },
+    {
+      "approval_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+      "canonical_asset_sha256": "d7a78d63a96cbaf215ed0b54692f1c48d0c1acf7410490580c993bbfb0b73d0c",
+      "canonical_asset_status": "LOCAL_ONLY_GENERATED",
+      "component_id": "CMP-DOU-INTERACTIVE-001",
+      "evidence_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md",
+        "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json"
+      ],
+      "generator_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/build_dou_master_v001.py",
+      "geometry_mode": "MEASURED_OUTER_ENVELOPE_WITH_BOUNDED_PROFILE",
+      "known_unknowns": [
+        "HIS-002: 963 component originality unknown",
+        "DG-114: unified small-dou rule UNKNOWN and unused",
+        "Current measurements can include replacement, compression, wear and deformation",
+        "Ears, notches, cavities, mortise-tenon and hidden connections lack quantified evidence"
+      ],
+      "local_binary_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/asset/CMP-DOU-INTERACTIVE-001_MASTER_V001.blend",
+      "master_id": "CMP-DOU-INTERACTIVE-001_MASTER",
+      "master_version": "V001",
+      "originality_status": "unknown",
+      "parameter_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_PARAMS_V001.json",
+      "reuse_scope": "Evidence-bounded measured dou outer-envelope reference; replace upon stronger evidence.",
+      "review_metadata_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-INTERACTIVE-001/REVIEW_PACKAGE_V001.json",
+      "review_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-INTERACTIVE-001",
+      "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_SEMANTIC_V001.json",
+      "shared_generator_path": "production/zhenguo_wanfo/scripts/dou_master_common_v001.py",
+      "validation_status": "T012_ENGINEERING_PASS",
+      "variant_ids": []
     }
   ],
   "phase": "P3.1",
-  "status": "COLUMN_PILOT_APPROVED_D035_REMAINING_FIVE_PLANNING_READY",
-  "task": "T-011",
+  "status": "COLUMN_APPROVED_D035_DOU_BATCH_ENGINEERING_COMPLETE_PENDING_REVIEW",
+  "task": "T-012",
   "version": "V001"
 }

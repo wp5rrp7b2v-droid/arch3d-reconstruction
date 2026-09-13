@@ -1,0 +1,62 @@
+{
+  "component_id": "CMP-DOU-SINGLE-LONGKAI-001",
+  "geometry_color": "neutral_grey",
+  "images": [
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/FRONT.png",
+      "sha256": "4b27020479bd3326690fb5e695a1c6baf0a6c5bca117db0478a373faf4196a53",
+      "view": "FRONT",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/SIDE.png",
+      "sha256": "8ab11c1eabb9c638c4625d076c97ffd0f966e297b9fad8cb5b4292d247553e9a",
+      "view": "SIDE",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/TOP.png",
+      "sha256": "9acea5beb36a524f709d7532a5c0258051e58f7c3af1d4dd4a1be25978d4e8a3",
+      "view": "TOP",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/AXON.png",
+      "sha256": "633cd6b2d90e2c2cb3cbf4a2522eab522461ad3b88fa6ccb94b75c1fab1a5913",
+      "view": "AXON",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/DIMENSION_PARAMETER_SUMMARY.png",
+      "sha256": "eb6a3700f889fd997480c82a7642918a88d394fe3d55a4b39e25da9435724b5b",
+      "view": "DIMENSION_PARAMETER_SUMMARY",
+      "width": 1400
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/EVIDENCE_UNCERTAINTY_SUMMARY.png",
+      "sha256": "8649b10dfbb7689c745da08defbdd62197126821c66527697ca7f0aab931c6ac",
+      "view": "EVIDENCE_UNCERTAINTY_SUMMARY",
+      "width": 1400
+    }
+  ],
+  "interpretation_boundary": [
+    "Current measured dimensions are not proven 963 original design.",
+    "Linear outer envelope loft is replaceable engineering interpolation, not a historical profile claim.",
+    "No name-driven slots, ears, cavities or joinery are modeled."
+  ],
+  "master_version": "V001",
+  "orthographic_views": [
+    "FRONT",
+    "SIDE",
+    "TOP",
+    "AXON"
+  ],
+  "status": "ENGINEERING_REVIEW_READY",
+  "visual_review_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW"
+}

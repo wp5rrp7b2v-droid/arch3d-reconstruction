@@ -1,0 +1,9 @@
+{
+  "canonical_blend_sha256": "bc46dbcdcbff738ddd0d88051e8ae362880a3edd8bc06a4144b5ff01788ebf57",
+  "check_count": 28,
+  "component_id": "CMP-LUDOU-COLUMN-001",
+  "per_asset_report": "production/zhenguo_wanfo/validation/CMP-LUDOU-COLUMN-001_MASTER_VALIDATION_V001.json",
+  "review_count": 6,
+  "stage_c_authorized": true,
+  "status": "PASS"
+}

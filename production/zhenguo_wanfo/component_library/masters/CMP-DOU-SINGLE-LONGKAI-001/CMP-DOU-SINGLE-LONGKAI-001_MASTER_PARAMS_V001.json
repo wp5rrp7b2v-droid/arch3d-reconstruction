@@ -1,0 +1,156 @@
+{
+  "canonical_asset_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/asset/CMP-DOU-SINGLE-LONGKAI-001_MASTER_V001.blend",
+  "canonical_name_zh": "单向长开斗",
+  "canonical_reference_status": "CURRENT_MEASURED_REFERENCE_REALIZATION_FOR_REVIEW",
+  "canonical_transform": {
+    "location": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "component_id": "CMP-DOU-SINGLE-LONGKAI-001",
+  "contract_decision_id": "D-036",
+  "contract_version": "P3_1_MASTER_ASSET_CONTRACT_V002",
+  "coordinate_convention": {
+    "+X": "canonical_width",
+    "+Y": "canonical_depth",
+    "+Z": "gravity_up_height",
+    "handedness": "right_handed"
+  },
+  "dg114_geometry_use_count": 0,
+  "dg114_status": "UNKNOWN_NO_UNIFIED_SMALL_DOU_RULE",
+  "evidence_references": [
+    "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+    "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md",
+    "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json"
+  ],
+  "generator_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/build_dou_master_v001.py",
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "geometry_mode": "MEASURED_OUTER_ENVELOPE_WITH_BOUNDED_PROFILE",
+  "historical_state": {
+    "historical_claim": "not_proven_963_design",
+    "model_layer": "observed_as_measured",
+    "reconstructed_963_candidate": "not_inferred",
+    "report_ideal_model": "separate_not_inferred"
+  },
+  "interpolation": "PROJECT_RULE / REPLACEABLE_ENGINEERING_INTERPOLATION",
+  "interpretation_boundary": [
+    "Current measured dimensions are not proven 963 original design.",
+    "Linear outer envelope loft is replaceable engineering interpolation, not a historical profile claim.",
+    "No name-driven slots, ears, cavities or joinery are modeled."
+  ],
+  "known_unknowns": [
+    "HIS-002: 963 component originality unknown",
+    "DG-114: unified small-dou rule UNKNOWN and unused",
+    "Current measurements can include replacement, compression, wear and deformation",
+    "Ears, notches, cavities, mortise-tenon and hidden connections lack quantified evidence"
+  ],
+  "master_id": "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+  "master_version": "V001",
+  "origin_convention": "bottom_footprint_center",
+  "originality_parameter_id": "HIS-002",
+  "originality_status": "unknown",
+  "parameters": [
+    {
+      "classification": "CONFIRMED",
+      "key": "top_width_mm",
+      "production_use": "OBSERVED_REFERENCE_OUTER_ENVELOPE",
+      "replaceable": false,
+      "source_ids": [
+        "D-008",
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 236.2
+    },
+    {
+      "classification": "CONFIRMED",
+      "key": "bottom_width_mm",
+      "production_use": "OBSERVED_REFERENCE_OUTER_ENVELOPE",
+      "replaceable": false,
+      "source_ids": [
+        "D-008",
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 162.7
+    },
+    {
+      "classification": "CONFIRMED",
+      "key": "top_depth_mm",
+      "production_use": "OBSERVED_REFERENCE_OUTER_ENVELOPE",
+      "replaceable": false,
+      "source_ids": [
+        "D-008",
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 256.2
+    },
+    {
+      "classification": "CONFIRMED",
+      "key": "bottom_depth_mm",
+      "production_use": "OBSERVED_REFERENCE_OUTER_ENVELOPE",
+      "replaceable": false,
+      "source_ids": [
+        "D-008",
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 177.2
+    },
+    {
+      "classification": "CONFIRMED",
+      "key": "total_height_mm",
+      "production_use": "OBSERVED_REFERENCE_OUTER_ENVELOPE",
+      "replaceable": false,
+      "source_ids": [
+        "D-008",
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 158.6
+    }
+  ],
+  "placement_only_attributes": [
+    "rotation_about_Z",
+    "instance_number"
+  ],
+  "reuse_scope": "Evidence-bounded measured dou outer-envelope reference; replace upon stronger evidence.",
+  "review_asset_paths": [
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/FRONT.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/SIDE.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/TOP.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/AXON.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/DIMENSION_PARAMETER_SUMMARY.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-SINGLE-LONGKAI-001/EVIDENCE_UNCERTAINTY_SUMMARY.png"
+  ],
+  "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_SEMANTIC_V001.json",
+  "shared_generator_path": "production/zhenguo_wanfo/scripts/dou_master_common_v001.py",
+  "unit": "mm",
+  "unsupported_geometry": [],
+  "variant_axes": [
+    "evidence_supported_dimension_set"
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "component_id": "CMP-DOU-INTERACTIVE-001",
+  "geometry_color": "neutral_grey",
+  "images": [
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-INTERACTIVE-001/FRONT.png",
+      "sha256": "657e95a8a7193a0890ec51a2d355c5231f8caf28ee9aa41fd939f0db9d1d9337",
+      "view": "FRONT",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-INTERACTIVE-001/SIDE.png",
+      "sha256": "73e858a148c5214566a551b5a952f368e4c38a9d746b40116eeab1090939b7b0",
+      "view": "SIDE",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-INTERACTIVE-001/TOP.png",
+      "sha256": "72ccab233aae67b8b9c1b8a437b7175120d9c60578bcce397d6bebfb48fd2c32",
+      "view": "TOP",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-INTERACTIVE-001/AXON.png",
+      "sha256": "92141223dd51cacc3740f7968fe9a5681d71f61f087b1105c4049611e9791ede",
+      "view": "AXON",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-INTERACTIVE-001/DIMENSION_PARAMETER_SUMMARY.png",
+      "sha256": "2dbd10381246b377f34712d78d999dea126a967d84b51042a9bf5396720d217d",
+      "view": "DIMENSION_PARAMETER_SUMMARY",
+      "width": 1400
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-DOU-INTERACTIVE-001/EVIDENCE_UNCERTAINTY_SUMMARY.png",
+      "sha256": "a9cea425630d860fdd13a1978c3812612a2fa3eb640371b956a4a8ed495b70c2",
+      "view": "EVIDENCE_UNCERTAINTY_SUMMARY",
+      "width": 1400
+    }
+  ],
+  "interpretation_boundary": [
+    "Current measured dimensions are not proven 963 original design.",
+    "Linear outer envelope loft is replaceable engineering interpolation, not a historical profile claim.",
+    "No name-driven slots, ears, cavities or joinery are modeled."
+  ],
+  "master_version": "V001",
+  "orthographic_views": [
+    "FRONT",
+    "SIDE",
+    "TOP",
+    "AXON"
+  ],
+  "status": "ENGINEERING_REVIEW_READY",
+  "visual_review_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW"
+}

@@ -1,0 +1,62 @@
+{
+  "component_id": "CMP-LUDOU-COLUMN-001",
+  "geometry_color": "neutral_grey",
+  "images": [
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-LUDOU-COLUMN-001/FRONT.png",
+      "sha256": "ee6b31420be1f190e3cfebe1c6ac13705904d932a1918faf786bdc2b2f7945ff",
+      "view": "FRONT",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-LUDOU-COLUMN-001/SIDE.png",
+      "sha256": "4442c8675a61ac505c513be0e9f98389c2e4b529e74506dcbd1cc3fcad7e8c2c",
+      "view": "SIDE",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-LUDOU-COLUMN-001/TOP.png",
+      "sha256": "71b89f776826eb61239e517238d6e49ce9592e5627274d7cf71f48dffe105fc6",
+      "view": "TOP",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-LUDOU-COLUMN-001/AXON.png",
+      "sha256": "f3b32ffa35b09a9928f5efd88f4410249d5ed5cb2fbe017ecb4000da9c4746de",
+      "view": "AXON",
+      "width": 1200
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-LUDOU-COLUMN-001/DIMENSION_PARAMETER_SUMMARY.png",
+      "sha256": "c7e0522baeb144d88b23c7b4c2a668606b026791aacfe3ab4a396a1db914382d",
+      "view": "DIMENSION_PARAMETER_SUMMARY",
+      "width": 1400
+    },
+    {
+      "height": 1000,
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-LUDOU-COLUMN-001/EVIDENCE_UNCERTAINTY_SUMMARY.png",
+      "sha256": "da6dde9e69f57c0b05c2faa7985c5f13f1b23252986568371d5f41698a4733a9",
+      "view": "EVIDENCE_UNCERTAINTY_SUMMARY",
+      "width": 1400
+    }
+  ],
+  "interpretation_boundary": [
+    "Current measured dimensions are not proven 963 original design.",
+    "Linear outer envelope loft is replaceable engineering interpolation, not a historical profile claim.",
+    "No name-driven slots, ears, cavities or joinery are modeled."
+  ],
+  "master_version": "V001",
+  "orthographic_views": [
+    "FRONT",
+    "SIDE",
+    "TOP",
+    "AXON"
+  ],
+  "status": "ENGINEERING_REVIEW_READY",
+  "visual_review_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW"
+}
