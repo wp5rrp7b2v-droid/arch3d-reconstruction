@@ -1,11 +1,11 @@
 # 【中国古建筑3D复原｜T-013｜P3_1_SIX_CHUANFU_MASTER_BATCH_V002｜上下六椽栿Master批次生产】
 
-Status: **DRAFT / NOT AUTHORIZED**  
+Status: **AUTHORIZED / READY_FOR_LOCAL_EXECUTION**  
 Execution Mode: **CHAT_FIRST_CODEX_EXECUTOR_MODE_TRIAL + LEAN_PRODUCTION_MODE_V001 / NEW_GEOMETRY_FIRST_ARTICLE**  
-Codex Think Level: **MEDIUM DEFAULT / HIGH ONLY BY EXPLICIT ESCALATION**  
+Codex Think Level: **MEDIUM DEFAULT / HIGH ONLY BY EXPLICIT CHATGPT ESCALATION**  
 Phase/Gate: P3 / P3.1  
 Date: 2026-09-13  
-Authorization: **PENDING PRODUCT OWNER APPROVAL**  
+Authorization: **PRODUCT OWNER APPROVED / D-038**  
 Supersedes for execution planning: `T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V001.md`
 
 ## 1. Objective
@@ -17,7 +17,7 @@ Supersedes for execution planning: `T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V001.md`
 
 目标：将 P3.1 Master coverage 从 **4/6** 推进到 **6/6 engineering + visual review ready**。
 
-T-013 完成及 Product Owner 批准后，仍需单独执行 P3.1 Gate Review；不得由 T-013 自动宣告 P3.1 PASS / CLOSED。
+T-013 工程完成及 Product Owner 对两件 Master 最终批准后，仍需单独执行 P3.1 Gate Review；不得由 T-013 自动宣告 P3.1 PASS / CLOSED。
 
 核心模式：
 
@@ -81,8 +81,6 @@ ChatGPT 完成诊断后，才可给出 targeted retry / Contract amendment / Thi
 
 T-013 Codex 默认：**MEDIUM**。
 
-原因：证据解释、几何语义和关键决策已经由 ChatGPT 在执行前锁定；Codex 不需要重新进行完整研究推理。
-
 - First Article 下六椽栿：MEDIUM default；
 - Batch repetition 上六椽栿：MEDIUM；
 - 只有 ChatGPT 判断出现真正结构性工程问题时，才显式升级某一轮为 HIGH；
@@ -92,7 +90,7 @@ Think Level 降低 **不允许** 减少 validation、mutation、reopen、review 
 
 ---
 
-## 4. Why a New First-Article Gate Is Still Required
+## 4. Why a New First-Article Gate Is Required
 
 T-012 验证的是 Lean 执行机制，斗类 geometry mode 为 `MEASURED_OUTER_ENVELOPE_WITH_BOUNDED_PROFILE`。
 
@@ -100,7 +98,7 @@ T-013 使用新的：
 
 `BOUNDED_LONG_MEMBER_OUTER_ENVELOPE`
 
-因此仍需新 First Article：
+因此必须重新建立 First Article：
 
 `CMP-FRAME-LOWER-SIX-CHUANFU-001｜下六椽栿`
 
@@ -161,13 +159,13 @@ P2 `PRIMARY_FRAME` aggregate/proxy 不作为本 Master 几何来源。
 
 ---
 
-## 7. Proposed Canonical Reference-Length Policy｜REQUIRES PO APPROVAL
+## 7. Approved Canonical Reference-Length Policy｜D-038
 
-由于历史完整长度 UNKNOWN，而 canonical `.blend` 需要一个可执行 realization，提议：
+由于历史完整长度 UNKNOWN，而 canonical `.blend` 需要一个可执行 realization，Product Owner 批准统一中性参考长度：
 
 `canonical_reference_length_mm = 1000.0`
 
-必须标记：
+该值必须标记：
 
 - classification: `PROJECT_RULE`
 - source_layer: `ENGINEERING_REFERENCE`
@@ -182,10 +180,33 @@ P2 `PRIMARY_FRAME` aggregate/proxy 不作为本 Master 几何来源。
 - 不是963设计候选；
 - 不进入 historical evidence layer；
 - 仅用于 canonical reference binary、mutation、reopen 和参数化验证；
-- P3.2/P3.3 装配时必须由 building-specific evidence 或正式批准 candidate 提供实际 `length_mm`，不得默认沿用；
+- P3.2/P3.3 装配时必须由 building-specific evidence 或正式批准 candidate 提供实际长度，不得默认沿用；
 - 必须来自 params JSON，不得作为共享 generator 裸常量。
 
-本条与 T-013 授权一并由 Product Owner 审批。
+### 7.1 Mandatory three-layer length isolation
+
+必须明确保存并机械区分：
+
+```text
+historical_full_length_mm = null
+  classification = UNKNOWN
+  production_use = DO_NOT_LOCK
+
+canonical_reference_length_mm = 1000.0
+  classification = PROJECT_RULE
+  source_layer = ENGINEERING_REFERENCE
+  historical_claim = false
+
+realization_length_mm = 1000.0
+  role = GEOMETRY_EXECUTION_VALUE
+  derives_from = canonical_reference_length_mm
+```
+
+约束：
+
+- `historical_full_length_mm` 在 canonical build、mutation、rebuild 全流程始终保持 `null`；
+- `realization_length_mm` 只能是工程执行字段，不得反写 historical layer；
+- 若未来存在 building-specific approved length，必须通过显式 assembly/build input 覆盖 realization，而不是修改历史字段。
 
 ---
 
@@ -196,12 +217,12 @@ P2 `PRIMARY_FRAME` aggregate/proxy 不作为本 Master 几何来源。
 - +Y = 截面宽度
 - +Z = 垂直厚度
 - origin = longitudinal midpoint / transverse center / lower reference plane
-- theoretical ends = `X = ±length_mm / 2`
+- theoretical ends = `X = ±realization_length_mm / 2`
 - Location `(0,0,0)` / Rotation `(0,0,0)` / Scale `(1,1,1)`
 
 Canonical body：
 
-> `length_mm × width_mm × max_thickness_mm` centered rectangular bounded outer envelope
+> `realization_length_mm × width_mm × max_thickness_mm` centered rectangular bounded outer envelope
 
 X = `[-L/2,+L/2]`；Y = `[-width/2,+width/2]`；Z = `[0,max_thickness]`。
 
@@ -209,7 +230,7 @@ Geometry semantics：
 
 `PROJECT_RULE / BOUNDED_OUTER_ENVELOPE_REFERENCE / REPLACEABLE`
 
-该 prism 不是“历史整根梁通长均匀矩形截面”的声明。
+该 prism 只代表当前已知外包络上限下的 reference specimen，不是“历史整根梁通长均匀矩形截面”的声明。
 
 `tenon_area_thickness_mm` 当前必须进入 params / semantic / review summary，但 geometry use = 0；不得生成局部薄化、榫头、榫区长度或起止位置。
 
@@ -247,11 +268,11 @@ Geometry semantics：
 
 建立一次 long-member generator / validator / renderer / semantic helper / batch orchestration。
 
-共享代码不得出现 493.5 / 444 / 375 / 334 / 240.5 / 209 等 component-specific 裸常量。
+共享代码不得出现 493.5 / 444 / 375 / 334 / 240.5 / 209 / 1000 等 component-specific 或 project-reference 裸常量；全部来自 params JSON。
 
 ### Stage B｜First Article = 下六椽栿
 
-完整执行：params semantics、reference-length classification、bbox/extents、origin/transform、max-thickness semantics、tenon metadata-only、unsupported geometry=0、P2 proxy non-use、deterministic regeneration、independent reopen、mutation、canonical rebuild、6/6 review assets、binary local-only。
+完整执行：params semantics、三层长度隔离、bbox/extents、origin/transform、max-thickness semantics、tenon metadata-only、unsupported geometry=0、P2 proxy non-use、deterministic regeneration、independent reopen、mutation、canonical rebuild、6/6 review assets、binary local-only。
 
 任何合同外问题立即 STOP，交回 ChatGPT。
 
@@ -269,13 +290,27 @@ Stage B PASS 后，用相同 pipeline 参数驱动；不重新设计 generator/v
 
 每个 Master 至少两类：
 
-### Probe A｜length mutation
+### Probe A｜reference realization length mutation
 
-临时改变 `length_mm`：只改变 X extent；Y/Z 不变；origin 仍 X=0；semantic 正确反映。随后 canonical rebuild 恢复 1000 mm reference realization。
+临时改变 `canonical_reference_length_mm` 并令 `realization_length_mm` 显式跟随：
+
+- 只改变 X extent；
+- Y/Z 不变；
+- origin 仍 X=0；
+- semantic snapshot 正确反映 reference/realization mutation；
+- `historical_full_length_mm` 始终保持 `null`。
+
+随后 canonical rebuild 必须恢复 `canonical_reference_length_mm=1000.0` / `realization_length_mm=1000.0`。
 
 ### Probe B｜metadata-only tenon thickness mutation
 
-临时改变 `tenon_area_thickness_mm`：params / semantic metadata 变化；canonical body geometry / bbox 完全不变；不得出现局部削减/榫头/端部变化。随后 rebuild 恢复正式参数。
+临时改变 `tenon_area_thickness_mm`：
+
+- params / semantic metadata 变化；
+- canonical body geometry / bbox 完全不变；
+- 不得出现局部削减、榫头、端部变化。
+
+随后 rebuild 恢复正式参数。
 
 ---
 
@@ -286,39 +321,41 @@ Stage B PASS 后，用相同 pipeline 参数驱动；不重新设计 generator/v
 1. unique component/master ID
 2. authoritative Contract V002 / D-036
 3. measured section trace to D-009
-4. historical full length remains UNKNOWN/null
-5. 1000 mm only PROJECT_RULE / ENGINEERING_REFERENCE
-6. no historical/963 claim from reference length
-7. width matches params
-8. Z outer bound matches max_thickness
-9. max_thickness not promoted to confirmed uniform full-length section
-10. tenon_area_thickness present as metadata
-11. tenon_area_thickness geometry use = 0
-12. origin/axes/transform correct
-13. Scale=1
-14. no world placement
-15. no naked historical constants
-16. no camber
-17. no unsupported end profile
-18. no local thickness zone
-19. no mortise-tenon/cavity/hidden joint
-20. no P2 PRIMARY_FRAME proxy geometry source
-21. deterministic regeneration
-22. independent reopen
-23. length mutation isolates X
-24. tenon metadata mutation leaves geometry unchanged
-25. canonical rebuild after mutation
-26. `.blend/.blend1` absent from Git
+4. `historical_full_length_mm` remains UNKNOWN/null
+5. `canonical_reference_length_mm=1000` only PROJECT_RULE / ENGINEERING_REFERENCE
+6. `realization_length_mm` explicitly derives from canonical reference in canonical build
+7. no historical/current/963 claim from reference or realization length
+8. no reference/realization value written back into historical field
+9. width matches params
+10. Z outer bound matches max_thickness
+11. max_thickness not promoted to confirmed uniform full-length section
+12. tenon_area_thickness present as metadata
+13. tenon_area_thickness geometry use = 0
+14. origin/axes/transform correct
+15. Scale=1
+16. no world placement leakage
+17. no naked historical/project-reference constants in shared code
+18. no camber
+19. no unsupported end profile
+20. no local thickness zone
+21. no mortise-tenon/cavity/hidden joint
+22. no P2 PRIMARY_FRAME proxy geometry source
+23. deterministic regeneration PASS
+24. independent reopen PASS
+25. reference-length mutation isolates X and preserves historical null
+26. tenon metadata mutation leaves geometry unchanged
+27. canonical rebuild after mutations PASS
+28. `.blend/.blend1` absent from Git
 
 Batch must PASS：
 
-27. 2/2 params / blends / semantic snapshots / hashes
-28. review 12/12 + overview 1/1
-29. Registry 2 independent pending-review records
-30. four approved Masters unchanged
-31. P2 frozen baseline unchanged
-32. Contract V002 unchanged
-33. no unsupported extra Master production
+29. 2/2 params / blends / semantic snapshots / hashes
+30. review 12/12 + overview 1/1
+31. Registry 2 independent pending-review records
+32. four approved Masters unchanged
+33. P2 frozen baseline unchanged
+34. Contract V002 unchanged
+35. no unsupported extra Master production
 
 ---
 
@@ -337,7 +374,13 @@ Batch must PASS：
 
 共 13 张。
 
-Overview 要求：两件同画面、同轴向、真实相对截面尺度；纵向统一使用相同 1000 mm engineering reference，必须明显标注 `REFERENCE LENGTH / NON-HISTORICAL`，避免被误读为历史长度比较。
+Overview 要求：两件同画面、同轴向、真实相对截面尺度；纵向统一使用相同 1000 mm engineering reference，并必须显著标注：
+
+> `LENGTH NORMALIZED TO 1000 mm — NON-HISTORICAL`
+
+> `RELATIVE SECTION SCALE IS MEANINGFUL; MEMBER LENGTH IS NOT`
+
+避免被误读为真实或历史长度比较。
 
 Codex 只做文件与机器检查；ChatGPT / Product Owner 做视觉与历史表达审核。
 
@@ -345,7 +388,7 @@ Codex 只做文件与机器检查；ChatGPT / Product Owner 做视觉与历史�
 
 ## 14. Registry Rule
 
-更新 `P3_1_COMPONENT_MASTER_LIBRARY_V001.json`：
+更新 `production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json`：
 
 - 已批准四个 Master 保持不变；
 - 新增两条独立 frame Master record；
@@ -375,7 +418,9 @@ Codex 不修改 `docs/project_control/`。
 任一不得 COMPLETE：
 
 - historical length 被填成已知值
-- 1000 mm reference 被描述为 historical/current/963 length
+- 1000 mm reference / realization 被描述为 historical/current/963 length
+- reference/realization length 写入 historical evidence field
+- **REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY**：任何后续 assembly/building instance 在没有显式 building-specific approved length 输入时，默认继承 1000 mm canonical reference
 - max_thickness 被宣称全长历史统一厚度
 - tenon-area thickness 驱动无证据局部几何
 - unsupported camber/end profile/local thickness/joinery/cavity
@@ -388,12 +433,14 @@ Codex 不修改 `docs/project_control/`。
 - First Article 未 PASS 就生产第二件
 - Codex 遇到合同外问题后自行改变 evidence/geometry rule 而未 STOP 回 ChatGPT
 
+其中 `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` 本轮至少必须写入 semantic/validation contract，供 P3.2/P3.3 强制继承；T-013 本身不生成 assembly instance。
+
 ---
 
 ## 17. Retry / Cost Discipline
 
 - 同一纯实现根因最多 2 次有证据的修正；
-- 合同/证据/几何语义问题不允许 Codex自行重试推理，第一次即 STOP；
+- 合同/证据/几何语义问题不允许 Codex 自行重试推理，第一次即 STOP；
 - 不重复全文分析历史资料；
 - 不重复构建两套工具链；
 - 不做 Codex 视觉判断；
@@ -411,13 +458,16 @@ T-013 engineering COMPLETE 需：
 - 2/2 deterministic regeneration / reopen / mutation / rebuild
 - historical length UNKNOWN preserved
 - 1000 mm reference correctly classified as non-historical project rule
+- realization length explicitly isolated from historical length
+- reference-length mutation preserves historical null
 - tenon metadata-only behavior mechanically proven
+- `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` carry-forward rule encoded
 - unsupported geometry = 0
 - review package 12+1 complete
 - Registry 2 pending-review records
 - P2 / Contract V002 / approved four Masters unchanged
 - no `.blend` in Git
-- engineering commit created
+- engineering commit created and published per RC-010
 
 之后由 ChatGPT / Product Owner 审核 13 张图并决定是否批准两件 Master。
 
@@ -427,13 +477,15 @@ T-013 approval 也不自动等于 P3.1 PASS；仍需独立 P3.1 Gate Review。
 
 ## 19. Authorization Boundary
 
-当前：**DRAFT / NOT AUTHORIZED**。
+**AUTHORIZED / READY_FOR_LOCAL_EXECUTION / D-038**。
 
-Product Owner 批准时必须同时确认：
+Product Owner 已明确批准：
 
 1. T-013 V002 scope / geometry / validation；
 2. `canonical_reference_length_mm = 1000` 的非历史工程参考规则；
-3. `CHAT_FIRST_CODEX_EXECUTOR_MODE_TRIAL`；
-4. Codex `MEDIUM DEFAULT / HIGH ONLY BY EXPLICIT ESCALATION`。
+3. 三层长度隔离：historical null / canonical reference / realization execution value；
+4. `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` Hard Fail carry-forward；
+5. `CHAT_FIRST_CODEX_EXECUTOR_MODE_TRIAL`；
+6. Codex `MEDIUM DEFAULT / HIGH ONLY BY EXPLICIT CHATGPT ESCALATION`。
 
-在明确批准前不得执行 Blender 生产。
+Codex 可在完成最新 `main` 同步后开始 Stage A / Stage B。
