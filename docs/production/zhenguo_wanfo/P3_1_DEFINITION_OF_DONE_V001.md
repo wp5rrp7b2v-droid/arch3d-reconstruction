@@ -1,6 +1,6 @@
 # P3.1 Definition of Done V001｜Component Master & Variant Library
 
-Status: **DRAFT / CHATGPT REVIEWED / FOR PRODUCT OWNER APPROVAL**  
+Status: **LOCKED / PRODUCT OWNER APPROVED / D-032**  
 Date: 2026-09-13  
 Phase: `P3｜古建筑构件系统化与组合建模`  
 Gate: `P3.1｜Component Master & Variant Library`
