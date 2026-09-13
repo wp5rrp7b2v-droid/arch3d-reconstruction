@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R056",
+  "state_revision": "R057",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1_DOD_LOCKED / MASTER_ASSET_CONTRACT_LOCKED / T011_ENGINEERING_PASS / PO_VISUAL_REVIEW_REQUIRED",
+  "session_status": "ACTIVE / P3.1_DOD_LOCKED / MASTER_ASSET_CONTRACT_LOCKED / T011_ENGINEERING_PASS / CHATGPT_VISUAL_PASS / PRODUCT_OWNER_APPROVAL_REQUIRED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,12 +17,12 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "ACTIVE / MASTER ASSET CONTRACT LOCKED / T-011 ENGINEERING PASS / PO VISUAL REVIEW REQUIRED",
+    "status": "ACTIVE / MASTER ASSET CONTRACT LOCKED / T-011 ENGINEERING PASS / CHATGPT VISUAL PASS / PRODUCT OWNER APPROVAL REQUIRED",
     "passed": 1,
     "total": 4,
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / T-011 ENGINEERING PASS / PO VISUAL REVIEW REQUIRED",
+      "P3.1": "ACTIVE / T-011 ENGINEERING + VISUAL REVIEW PASS / PRODUCT OWNER APPROVAL REQUIRED",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
@@ -33,11 +33,12 @@
     "id": "T-011",
     "key": "P3_1_COLUMN_MASTER_CONTRACT_PILOT_V001",
     "name": "柱Master合同实现试点",
-    "status": "ENGINEERING PASS / COMPLETE / PRODUCT OWNER VISUAL REVIEW REQUIRED",
+    "status": "ENGINEERING PASS / CHATGPT VISUAL PASS / PRODUCT OWNER APPROVAL REQUIRED",
     "think_level": "HIGH",
     "contract": "docs/tasks/T-011_P3_1_COLUMN_MASTER_CONTRACT_PILOT_V001.md",
     "engineering_commit": "4eb79f37d31202ab2088724008b5412cba4d38b0",
     "technical_review": "docs/production/zhenguo_wanfo/P3_1_T011_COLUMN_MASTER_TECHNICAL_REVIEW_2026-09-13.md",
+    "visual_review": "docs/production/zhenguo_wanfo/P3_1_T011_COLUMN_MASTER_VISUAL_REVIEW_2026-09-13.md",
     "scope": "CMP-COLUMN-001 only: evidence-aware params -> deterministic generator -> local-only canonical blend -> semantic QC -> six-item review package -> registry pilot registration -> reopen/mutation validation"
   },
   "current_case": {
@@ -77,7 +78,7 @@
     "technical_result": "9/9 PASS"
   },
   "p3_1": {
-    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / SIX-MASTER SCOPE LOCKED / MASTER ASSET CONTRACT LOCKED / T-011 ENGINEERING PASS / VISUAL REVIEW PENDING",
+    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / SIX-MASTER SCOPE LOCKED / MASTER ASSET CONTRACT LOCKED / T-011 ENGINEERING PASS / CHATGPT VISUAL PASS / PRODUCT OWNER APPROVAL REQUIRED",
     "decision_id": "D-032",
     "qualification_decision_id": "D-033",
     "asset_contract_decision_id": "D-034",
@@ -127,23 +128,24 @@
       "approval_required": false
     },
     "column_pilot": {
-      "status": "ENGINEERING PASS / COMPLETE / PRODUCT OWNER VISUAL REVIEW REQUIRED",
+      "status": "ENGINEERING PASS / CHATGPT VISUAL PASS / PRODUCT OWNER APPROVAL REQUIRED",
       "task_id": "T-011",
       "component_id": "CMP-COLUMN-001",
       "contract": "docs/tasks/T-011_P3_1_COLUMN_MASTER_CONTRACT_PILOT_V001.md",
       "engineering_commit": "4eb79f37d31202ab2088724008b5412cba4d38b0",
       "technical_review": "docs/production/zhenguo_wanfo/P3_1_T011_COLUMN_MASTER_TECHNICAL_REVIEW_2026-09-13.md",
+      "visual_review": "docs/production/zhenguo_wanfo/P3_1_T011_COLUMN_MASTER_VISUAL_REVIEW_2026-09-13.md",
       "canonical_reference": "diameter 460.0mm observed Z-001 + height 3534.3mm replaceable RC Z-006-RC-01",
       "canonical_blend_sha256": "98211701fcc358f6174829257ef13310baa4d1a2d5e762637c25c812a4362487",
       "machine_checks": "22/22 PASS",
-      "review_package": "6/6 GENERATED / VISUAL CONTENT REVIEW PENDING",
+      "review_package": "6/6 GENERATED / CHATGPT VISUAL PASS",
       "blender_execution": "RC-008 COMPLIANT / /Applications/Blender.app/Contents/MacOS/Blender / --background",
       "p2_frozen_baseline": "UNCHANGED / 19 hashes matched",
       "purpose": "Validate full Master asset chain before remaining-five production",
       "remaining_five_authorized": false
     },
-    "task_strategy": "Complete Product Owner visual review of the six T-011 review assets before deciding whether to approve the column Pilot and authorize remaining-five Master production.",
-    "task_rule": "No remaining-five Master production is authorized until T-011 receives explicit Product Owner visual/Pilot approval."
+    "task_strategy": "Obtain explicit Product Owner approval of T-011. If approved, close the column Pilot and then define the production strategy/tasking for the remaining five Masters.",
+    "task_rule": "No remaining-five Master production is authorized until T-011 receives explicit Product Owner approval."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -167,14 +169,14 @@
   "latest_material_decision": {
     "id": "D-034",
     "date": "2026-09-13",
-    "decision": "P3.1 Canonical Master Asset Contract V001 remains locked. T-011 CMP-COLUMN-001 has independently passed engineering review; Product Owner visual review of the six review assets is required before Pilot approval or remaining-five authorization."
+    "decision": "P3.1 Canonical Master Asset Contract V001 remains locked. T-011 CMP-COLUMN-001 has independently passed engineering review and ChatGPT visual review; explicit Product Owner approval is now the only remaining Pilot decision."
   },
-  "next_action": "Product Owner provide/view the six T-011 review PNGs for visual review. If the visual package is approved, formally approve the CMP-COLUMN-001 Pilot and then decide the remaining-five Master production strategy.",
+  "next_action": "Product Owner approve/reject T-011 CMP-COLUMN-001 Pilot. If approved, close T-011 and then define the remaining-five Master production strategy; do not start them before that approval.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v021",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R055_DASHBOARD_STALE_AFTER_R056_T011_ENGINEERING_REVIEW"
+    "refresh_status": "R055_DASHBOARD_STALE_AFTER_R057_T011_VISUAL_REVIEW"
   }
 }
