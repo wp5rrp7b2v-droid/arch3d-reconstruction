@@ -48,6 +48,27 @@
 7. **敏感信息规则**：Project Control 不记录密码、Token、个人敏感资料或其他不应上云的信息。
 8. **试运行退出条件**：如果同步成本、版本噪音、隐私风险、冲突频率或维护复杂度明显大于版本历史、备份和跨环境访问的收益，由 Product Owner 批准后调整策略。
 
+### 4.1 GitHub 网络连接与代理自动恢复
+
+本项目已确认本机可能出现“无法直连 `github.com:443`，但本地系统代理可正常访问 GitHub”的网络情况。该情况属于**网络连接问题**，不得默认解释为 Git 分支冲突或仓库状态异常。
+
+本地/Codex 执行规则：
+
+1. 项目仓库优先使用 **repository-local Git proxy configuration**，不修改全局 Git 配置；
+2. 当前已验证可用的 HTTPS/HTTP 代理端点为 `http://127.0.0.1:15236`；若未来系统代理端口变化，以当前 `scutil --proxy` / 实际可用代理为准更新仓库 local config；
+3. 若普通 `git pull / fetch / push` 报 `Failed to connect to github.com port 443`、timeout 或等价网络错误，Codex 应自动检查/应用当前本地代理并重试，不把该错误上报为 merge/non-fast-forward 冲突；
+4. 只有出现 **non-fast-forward、unknown tracked changes、同文件并行修改或真实 merge conflict** 时才按冲突规则 STOP；
+5. 不得为解决网络错误使用 `force`、`reset --hard`、覆盖本地文件或改写历史。
+
+推荐的一次性仓库本地配置：
+
+```bash
+git config --local http.proxy http://127.0.0.1:15236
+git config --local https.proxy http://127.0.0.1:15236
+```
+
+设置后，本仓库后续普通 `git pull / fetch / push` 应自动使用代理，无需每个 T-### 重复显式添加 `-c http.proxy=...`。
+
 ## 5. Checkpoint 的职责
 
 Checkpoint **不负责首次落档**。它只负责：
