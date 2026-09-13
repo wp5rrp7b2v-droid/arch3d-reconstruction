@@ -178,16 +178,38 @@
 - P2.0 / P2.1 / P2.2 / P2.3：**4 / 4 PASS**。
 - Decision：D-028。
 - Closure archive：`docs/project_control/phase_archive/P2_closure.md`。
-- 下一阶段 Gate 架构尚未定义；不创建 T-009。
 
-## Current Execution State｜2026-09-12 END OF DAY
+## T-009｜P3_0_COMPONENT_ONTOLOGY_REGISTRY_MIGRATION_V001｜ENGINEERING PASS / COMPLETE
 
-- P0：CLOSED / APPROVED
-- P1：CLOSED / 4/4 PASS / CONDITIONAL GO
-- P2：**CLOSED / 4/4 PASS / PRODUCT OWNER APPROVED**
-- P2.3：**CLOSED / 9/9 PASS / PRODUCT OWNER APPROVED**
-- Formal Case：平遥镇国寺万佛殿
-- Formal Blender geometry：P2.3 integrated candidate V001 / local-only canonical blend
-- Current engineering blocker：NONE
-- Current task：NONE
-- Next action：下一次会话先定义 post-P2 phase / Gate architecture；在明确前不创建 T-009。
+- Think Level: HIGH。
+- Component Ontology、Naming/ID、Registry Schema、P2 semantic audit、migration、validation 完成。
+- Family coverage：**11/11**；Variant coverage：**40/40**；Instance coverage：**365/365**。
+- Orphan family / variant / instance：**0 / 0 / 0**。
+- Ontology / Registry Schema / Evidence Boundary / Determinism：PASS。
+- P2 11 engineering families 已明确区分 historical component concepts、geometric proxies、control objects 与 roof envelope。
+- `COLUMN / PURLIN / RAFTER` 仅建立历史构件类型概念；P2 placement 不作为原构数量。
+- `BRACKET_ARM / PRIMARY_FRAME` 保持 unresolved/proxy；`BRACKET_CONTACT` 未被解释为小斗。
+- `Z-006`、`Z-006-RC-01`、`DG-114`、`HIS-002`、45°转角、榫卯、隐角梁等边界全部保持。
+- 未修改 Blender 几何或 P2 canonical `.blend`。
+- Canonical engineering commit：`3db50b94cd72e79cef419054aeaa7d2b75523ba5`。
+
+## P3.0 Gate Review｜APPROVED / PASS / CLOSED｜2026-09-13
+
+- DoD-01～DoD-09：**9/9 PASS**。
+- 11/11 families、40/40 variants、365/365 instances；orphan 0/0/0。
+- Product Owner 明确批准：`P3.0｜PASS / CLOSED`。
+- Decision：D-031。
+- Gate Review：`docs/production/zhenguo_wanfo/P3_0_GATE_REVIEW_2026-09-13.md`。
+- P3.1 `Component Master & Variant Library` 解锁并进入；其 DoD 批准前不得创建 T-010 或启动新增构件几何。
+
+## Current Execution State｜2026-09-13
+
+- P0：CLOSED / APPROVED。
+- P1：CLOSED / 4/4 PASS / CONDITIONAL GO。
+- P2：CLOSED / 4/4 PASS / PRODUCT OWNER APPROVED。
+- P3：ACTIVE / **1/4 PASS**。
+- P3.0：**CLOSED / 9/9 PASS / PRODUCT OWNER APPROVED**。
+- Current Gate：P3.1｜Component Master & Variant Library｜DOD DEFINITION REQUIRED。
+- Current engineering blocker：NONE。
+- Current task：NONE。
+- Next action：先定义并批准 P3.1 Definition of Done；批准前不创建 T-010。
