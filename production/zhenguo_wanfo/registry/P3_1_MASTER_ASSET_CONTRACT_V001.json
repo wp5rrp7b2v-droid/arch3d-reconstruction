@@ -1,9 +1,10 @@
 {
   "version": "V001",
-  "status": "DRAFT_PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "LOCKED_PRODUCT_OWNER_APPROVED",
   "date": "2026-09-13",
   "phase": "P3.1",
   "qualification_decision": "D-033",
+  "contract_approval_decision": "D-034",
   "scope_count": 6,
   "global_convention": {
     "unit": "mm",
