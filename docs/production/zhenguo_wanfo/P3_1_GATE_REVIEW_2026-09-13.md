@@ -1,38 +1,34 @@
 # P3.1 Gate Review｜Component Master & Variant Library｜2026-09-13
 
-Status: **HOLD / 7 OF 9 PASS / DOD-07 PARTIAL / DOD-09 PENDING**  
+Status: **PASS / APPROVED / CLOSED / D-040**  
 Phase: `P3｜古建筑构件系统化与组合建模`  
 Gate: `P3.1｜Component Master & Variant Library`  
 Authoritative DoD: `docs/production/zhenguo_wanfo/P3_1_DEFINITION_OF_DONE_V001.md` / D-032  
-Review basis: T-010 / T-011 / T-012 / T-013 approved outputs through D-039
+Review basis: T-010 / T-011 / T-012 / T-013 / T-014 approved outputs through D-040
 
 ## 1. Executive Conclusion
 
-P3.1 已完成核心工程与证据工作，6/6 `MASTER_REQUIRED` canonical Masters 均已通过工程、视觉与 Product Owner 审批；Scope / Identity / Contract / evidence boundary / reproducibility / Registry 均具备闭环证据。
+P3.1 已完成最终 Gate Review，并由 Product Owner 明确批准：
 
-当前 **不能直接宣告 P3.1 PASS / CLOSED**，原因不是 Master 几何或历史证据失败，而是锁定 DoD-07 明确要求：
+> `P3.1｜Component Master & Variant Library｜PASS / APPROVED / CLOSED`
 
-> 同时生成至少一张 Library Overview，展示当前 P3.1 已完成的 Master / Variant 集合及其状态。
+最终 Gate Score：**9 / 9 PASS**。
 
-当前仓库只有：
+当前证据版本下：
 
-- `DOU_MASTER_BATCH_V001_OVERVIEW.png`
-- `SIX_CHUANFU_MASTER_BATCH_V001_OVERVIEW.png`
+- `MASTER_REQUIRED = 6`，6/6 canonical Masters 已批准；
+- formal registered variants = **0**，且这不是缺失生产，而是当前没有 evidence-qualified 的 within-Master historical variant；
+- Proxy / Control / Envelope / Deferred 对象继续保持非历史化边界；
+- P2 frozen baseline 未被覆盖；
+- T-014 已补齐 whole-library Overview，DoD-07 关闭；
+- Product Owner 最终批准使 DoD-09 关闭；
+- P3.2 `Assembly Relationship Model` 正式解锁，但在其 Definition of Done 被批准前不得创建工程任务。
 
-尚无一张覆盖当前 **全部 6 个 approved Masters** 的 P3.1 Library Overview。
-
-因此：
-
-- DoD-01～06：PASS
-- DoD-07：PARTIAL / HOLD
-- DoD-08：PASS
-- DoD-09：PENDING（本 Gate Review 已建立，但仍需 DoD-07 closure + Product Owner final Gate approval）
-
-当前 Gate Score：**7 PASS / 1 PARTIAL / 1 PENDING**。
+P3.1 PASS 不代表万佛殿全部历史构件已经复原，只代表在当前正式证据边界内，所有有资格进入本版本构件库的对象已经得到一致、可复用、可验证的 Master / Variant 处理。
 
 ---
 
-## 2. DoD Review
+## 2. DoD Review｜9 / 9 PASS
 
 ### DoD-01｜Component Master Eligibility & Scope Matrix — PASS
 
@@ -54,16 +50,9 @@ Results:
 - `DEFERRED_INSUFFICIENT_EVIDENCE = 13`
 - unexplained pending = `0`
 
-Conclusion: coverage and unique eligibility classification satisfy DoD-01.
+Conclusion: **PASS**.
 
 ### DoD-02｜Evidence-backed Component Identity Resolution — PASS
-
-Evidence:
-
-- `P3_1_COMPONENT_IDENTITY_RESOLUTION_V001.json`
-- T-010 / D-033
-
-Key conclusions retained:
 
 - `BRACKET_ARM` aggregate remains proxy where individual 栱/昂 cannot be evidenced.
 - `BRACKET_CONTACT` is not silently reinterpreted as 小斗; DG-114 remains UNKNOWN.
@@ -71,20 +60,19 @@ Key conclusions retained:
 - Purlin / rafter / bottom dou and other named members remain Deferred where geometry evidence is insufficient.
 - No `EVIDENCE_REVIEW_BEFORE_MASTER` record remains unresolved.
 
-Conclusion: PASS.
+Conclusion: **PASS**.
 
 ### DoD-03｜Canonical Component Master Asset Contract — PASS
 
-Evidence:
+Authoritative contract:
 
-- `P3_1_MASTER_ASSET_CONTRACT_V002.json`
-- D-036
+- `docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md`
+- `production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json`
+- approval: D-036
 
-Contract scope = 6 and defines unit, axes, origin, transform, geometry LOD/mode, parameter contract, variant axes, placement-only distinctions, evidence boundaries, prohibited geometry, review and reproducibility requirements.
+V002 covers all 6 Masters and locks unit / local axes / origin / transform / geometry LOD / parameter contract / evidence boundary / variant axes / placement-only distinction / prohibited geometry / review / reproducibility requirements.
 
-V002 field-mapping correction is authoritative for all later production.
-
-Conclusion: PASS.
+Conclusion: **PASS**.
 
 ### DoD-04｜Canonical 3D Master Production — PASS
 
@@ -99,36 +87,26 @@ Approved Master coverage = **6/6 / 100%**:
 
 `CONTROL_ONLY / ENVELOPE_ONLY` historical Master count = 0; unresolved proxies are not promoted.
 
-Conclusion: PASS.
+Conclusion: **PASS**.
 
-### DoD-05｜Parameterized Variant Model — PASS WITH ZERO FORMAL VARIANTS IN CURRENT EVIDENCE VERSION
+### DoD-05｜Parameterized Variant Model — PASS
 
-Current `variant_ids` for the six approved Masters are empty. This is **not treated as missing production**, because current evidence does not establish a qualified within-Master historical variant requiring registration:
+Current formal registered variants = **0**.
+
+This is accepted because current evidence does not establish a qualified within-Master historical variant requiring registration:
 
 - column observed/report/reconstructed values remain evidence-layer alternatives, not automatically distinct historical variants;
 - three dou identities are distinct component types, not variants of one generic dou;
 - lower / upper six-chuanfu are distinct component identities / structural roles, not variants of one generic beam;
 - placement rotation / instance number does not create variants.
 
-The locked V002 contract defines variant axes and the formal variant contract (`stable_variant_id`, parent reference, parameter evidence, no Object Scale, placement-only exclusion).
+Parameterized behavior is proven by mutation / rebuild testing for column, dou and six-chuanfu families. Future evidence-qualified variants must obtain stable variant IDs under Contract V002 before production use.
 
-Parameter-driven behavior is mechanically proven:
-
-- Column: synthetic height mutation PASS / canonical rebuild PASS.
-- Dou batch: synthetic mutation / deterministic regeneration / rebuild PASS for 3/3.
-- Six-chuanfu: length mutation and metadata-only tenon mutation / rebuild PASS for 2/2.
-
-Gate interpretation for current evidence version:
-
-> **Formal registered variants = 0; parametric variant capability = PASS; no evidence-qualified variant is being silently omitted.**
-
-If future evidence supports a real dimension/form/role variant, it must obtain a stable variant ID under the V002 contract before production use.
-
-Conclusion: PASS.
+Conclusion: **PASS / ZERO FORMAL VARIANTS IN CURRENT EVIDENCE VERSION**.
 
 ### DoD-06｜Evidence-aware Geometry & Replaceability — PASS
 
-Verified boundaries remain active:
+Boundaries retained:
 
 - `Z-006 = UNKNOWN / null / DO_NOT_LOCK`
 - `Z-006-RC-01` remains separate / replaceable
@@ -136,55 +114,43 @@ Verified boundaries remain active:
 - `HIS-002` originality remains unknown
 - unsupported 45° corner / joinery / hidden-angle geometry is not promoted
 - observed / report-ideal / reconstructed candidate layers remain separate
-- six-chuanfu 1000 mm reference length is explicitly non-historical / replaceable and cannot leak into assembly
+- six-chuanfu 1000 mm reference length remains explicitly non-historical / replaceable and must not leak into assembly
 
-Mutation / replaceability evidence exists for column, dou and six-chuanfu families.
+Conclusion: **PASS**.
 
-Conclusion: PASS.
+### DoD-07｜Standard Component Review Package — PASS
 
-### DoD-07｜Standard Component Review Package — PARTIAL / HOLD
-
-Individual approved review coverage is complete:
+Individual approved review coverage:
 
 - Column: 6/6 PASS
 - Dou Masters: 18/18 individual PASS
 - Six-chuanfu Masters: 12/12 individual PASS
+- Total individual Master review set = **36/36 PASS**
 
-Total individual Master review set = **36/36 PASS**.
-
-Batch overviews also exist and passed after correction:
+Batch overviews:
 
 - Dou batch overview: PASS
 - Six-chuanfu batch overview: PASS
 
-However the locked DoD additionally requires **at least one Library Overview showing the current P3.1 completed Master / Variant collection and status**.
+T-014 closure artifact:
 
-No whole-library overview covering all six approved Masters exists in the current review tree.
+- `production/zhenguo_wanfo/review/P3_1/P3_1_MASTER_LIBRARY_OVERVIEW_V001.png`
+- final SHA256: `4719a31c18de13b0453a64d29847381d8e45af0f145bcb37bf7fee0abf9671a7`
+- validation: `production/zhenguo_wanfo/validation/P3_1_MASTER_LIBRARY_OVERVIEW_VALIDATION_V001.json`
+- source components: 6/6
+- formal variants shown: 0
+- canonical Masters unchanged: YES
+- existing individual review assets unchanged: YES
+- P2 frozen baseline unchanged: YES
+- P3.2 files created: NO
 
-Required closure artifact:
+The six panels also show the project formal Chinese component names: 柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿. Naming basis is `SRC-ZG-WF-001` precision survey report / project canonical naming; the overview does not claim these labels are “宋代原称” or “古籍原称”.
 
-`production/zhenguo_wanfo/review/P3_1/P3_1_MASTER_LIBRARY_OVERVIEW_V001.png`
+Visual review final result: **PASS**.
 
-Minimum content:
-
-- all 6 approved Masters visible / identifiable;
-- canonical name + component ID;
-- status `APPROVED`;
-- formal variant count = 0 for current evidence version;
-- explicit statement that zero formal variants means no evidence-qualified registered variants, not absence of parametric capability;
-- no new historical geometry claims;
-- existing individual review renders may be composited; no Master regeneration is required.
-
-Conclusion: **PARTIAL / HOLD**.
+Conclusion: **PASS**.
 
 ### DoD-08｜Library Registration, Machine Validation & Reproducibility — PASS
-
-Evidence chain:
-
-- `P3_1_COMPONENT_MASTER_LIBRARY_V001.json`
-- T-011 validation: 22/22 PASS
-- T-012 batch validation: PASS; 3 Masters registered; protected P2 hashes PASS
-- T-013 batch validation: 26/26 each / 52 total PASS
 
 Verified:
 
@@ -199,19 +165,17 @@ Verified:
 - mutation / canonical rebuild PASS
 - P2 frozen baseline unchanged
 
-Conclusion: PASS.
+Conclusion: **PASS**.
 
-### DoD-09｜Product Owner Review + Canonical Archive + P3.2 Readiness — PENDING
+### DoD-09｜Product Owner Review + Canonical Archive + P3.2 Readiness — PASS
 
-Completed before final Gate approval:
+Product Owner explicitly approved on 2026-09-13:
 
-- Scope Matrix reviewed and approved through D-033.
-- All six Master assets individually Product Owner approved through D-035 / D-037 / D-039.
-- Registry approval coverage = 6/6.
-- Current unresolved / non-historicized objects remain explicitly classified.
-- Canonical local-only binaries have hash / semantic / generator / review / registry traceability.
+> `P3.1｜Component Master & Variant Library｜PASS / APPROVED / CLOSED`
 
-P3.2 readiness answer is already structurally available:
+Decision: **D-040**.
+
+P3.2 readiness answer:
 
 **Approved P3.2 component nodes**
 
@@ -225,9 +189,9 @@ P3.2 readiness answer is already structurally available:
 **Current formal variants**
 
 - 0 registered evidence-qualified variants in this P3.1 version.
-- Parametric axes remain available under V002 and future evidence can create registered variants.
+- Parametric axes remain available under V002; future evidence can create registered variants.
 
-**Objects that remain non-historicized**
+**Objects remaining non-historicized**
 
 - Proxy: 4
 - Control: 3
@@ -238,22 +202,18 @@ P3.2 readiness answer is already structurally available:
 
 - six-chuanfu canonical 1000 mm reference length must not enter building assembly implicitly;
 - column RC height remains replaceable / not historical fact;
-- DG-114 / HIS-002 / corner / joinery boundaries remain active.
+- DG-114 / HIS-002 / corner / joinery boundaries remain active;
+- `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` remains a Hard Fail for later assembly work.
 
-Remaining conditions for DoD-09 PASS:
-
-1. close DoD-07 with whole-library overview;
-2. Product Owner explicitly approve `P3.1｜PASS / CLOSED` after this Gate Review is complete.
-
-Conclusion: **PENDING**.
+Conclusion: **PASS**.
 
 ---
 
-## 3. Gate PASS Condition Matrix
+## 3. Final Gate PASS Condition Matrix
 
-| Condition | Status |
+| Condition | Final Status |
 |---|---|
-| DoD 9/9 | HOLD — currently 7 PASS / 1 PARTIAL / 1 PENDING |
+| DoD 9/9 | **PASS** |
 | Scope Matrix coverage | PASS / 100% |
 | MASTER_REQUIRED coverage | PASS / 6 of 6 / 100% |
 | EVIDENCE_REVIEW_BEFORE_MASTER unresolved | PASS / 0 |
@@ -263,14 +223,12 @@ Conclusion: **PENDING**.
 | mutation / replaceability | PASS |
 | reproducibility / independent reopen | PASS |
 | P2 frozen baseline unchanged | PASS |
-| Product Owner final Gate approval | PENDING |
+| Product Owner final Gate approval | **PASS / D-040** |
 
-## 4. Current Gate Decision
+## 4. Final Gate Decision
 
-**P3.1 = HOLD FOR ONE CLOSURE ARTIFACT + FINAL PRODUCT OWNER GATE APPROVAL.**
+**P3.1｜Component Master & Variant Library = PASS / APPROVED / CLOSED / D-040.**
 
-There is no geometry/evidence failure requiring Master rework.
+P3 Gate progress becomes **2 / 4**.
 
-The only production closure artifact still required is the whole-library overview. After it passes visual review, this Gate can be re-evaluated as 8/9 technical PASS + DoD-09 ready for Product Owner final approval.
-
-P3.2 remains LOCKED until explicit P3.1 PASS / CLOSED approval.
+P3.2 `Assembly Relationship Model` is now **UNLOCKED / ENTERED**. Before any P3.2 engineering task is created, its Definition of Done must be defined and explicitly approved by the Product Owner.
