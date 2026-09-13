@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R043",
+  "state_revision": "R044",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3_ENTERED / P3.0_DOD_DEFINITION_REQUIRED",
+  "session_status": "ACTIVE / P3.0_DOD_DRAFT / COMPONENT_AUDIT_STARTED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,11 +17,11 @@
   "current_gate": {
     "id": "P3.0",
     "name": "Component Ontology & Registry",
-    "status": "ENTERED / DOD DEFINITION REQUIRED",
+    "status": "DOD DRAFT / PRODUCT OWNER REVIEW",
     "passed": 0,
     "total": 4,
     "items": {
-      "P3.0": "ENTERED / DOD REQUIRED",
+      "P3.0": "ACTIVE / DOD DRAFT / REVIEW REQUIRED",
       "P3.1": "LOCKED / WAITING_FOR_P3.0_PASS",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
@@ -61,6 +61,14 @@
     "p2_migration_rule": "P3.0 must audit and map existing P2 11 families / 40 variants / 365 instances before creating new geometry.",
     "task_rule": "Do not create T-009 until P3.0 Definition of Done is approved and locked."
   },
+  "p3_0": {
+    "dod": "docs/production/zhenguo_wanfo/P3_0_DEFINITION_OF_DONE_V001.md",
+    "dod_status": "DRAFT / FOR PRODUCT OWNER REVIEW",
+    "migration_audit": "docs/production/zhenguo_wanfo/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.md",
+    "migration_audit_status": "WORKING DRAFT / SEMANTIC AUDIT STARTED",
+    "initial_family_finding": "P2 11 families mix historical component concepts, geometric proxies, control objects and roof envelope; they must not be treated as 11 historical component types.",
+    "proposed_pass_coverage": "11/11 families + 40/40 variants + 365/365 instances + zero orphan"
+  },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
     "Z-006-RC-01": "REASONABLE_COMPLETION / replaceable / D-023",
@@ -86,12 +94,12 @@
     "date": "2026-09-13",
     "decision": "Product Owner approved P3 Component System & Assembly Architecture and entered P3.0 Component Ontology & Registry."
   },
-  "next_action": "Define and approve P3.0 Definition of Done. P3.0 is ontology/registry/migration design only; do not create T-009 or new geometry before DoD approval.",
+  "next_action": "Product Owner review P3.0 Definition of Done V001. If approved, lock DoD and authorize P3.0 implementation task T-009 for ontology/registry/migration engineering; no new geometry.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v010",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R042_STALE_AFTER_R043_PHASE_ENTRY"
+    "refresh_status": "STALE / R044_REFRESH_REQUIRED"
   }
 }
