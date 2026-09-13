@@ -1,11 +1,12 @@
 # P3.0 Gate Review｜Component Ontology & Registry
 
-Status: **TECHNICAL REVIEW PASS / 9 OF 9 / PRODUCT OWNER APPROVAL REQUIRED**  
+Status: **APPROVED / PASS / CLOSED / 9 OF 9**  
 Date: 2026-09-13  
 Phase: `P3｜古建筑构件系统化与组合建模`  
 Gate: `P3.0｜Component Ontology & Registry`  
 Task: `T-009｜P3_0_COMPONENT_ONTOLOGY_REGISTRY_MIGRATION_V001`  
-Engineering commit: `3db50b94cd72e79cef419054aeaa7d2b75523ba5`
+Engineering commit: `3db50b94cd72e79cef419054aeaa7d2b75523ba5`  
+Product Owner decision: `D-031`
 
 ## 1. Review Basis
 
@@ -48,7 +49,7 @@ Engineering commit: `3db50b94cd72e79cef419054aeaa7d2b75523ba5`
 | 06 | P2 Instance Migration 365/365 | **PASS** | All 365 stable instances migrated with placement/evidence metadata and zero orphan; machine placements are not historical counts. |
 | 07 | Evidence & Historical Boundary Preservation | **PASS** | Z-006 remains UNKNOWN; Z-006-RC-01 remains independent/replaceable; DG-114 and HIS-002 remain unresolved; semantic layers preserved. |
 | 08 | Assembly-ready Relationship Vocabulary | **PASS** | Required vocabulary is present; no unsupported assembly edges are invented. |
-| 09 | Machine-readable Registry + Validation + PO Review readiness | **PASS / PO DECISION PENDING** | Schema/ID/coverage/orphan/evidence/determinism validations all PASS; Product Owner approval is the only remaining closure action. |
+| 09 | Machine-readable Registry + Validation + Product Owner Review | **PASS** | Schema/ID/coverage/orphan/evidence/determinism validations PASS; Product Owner approved P3.0 PASS / CLOSED on 2026-09-13. |
 
 ## 4. Semantic Audit Result
 
@@ -76,10 +77,10 @@ P3.0 did **not**:
 
 All P1/P2 evidence restrictions continue to carry forward.
 
-## 6. Technical Recommendation
+## 6. Final Gate Decision
 
-**P3.0 technical Gate result = 9 / 9 PASS.**
+**P3.0 = APPROVED / PASS / CLOSED / 9 OF 9.**
 
-Recommendation: **APPROVE P3.0 PASS / CLOSE P3.0 / UNLOCK P3.1**, subject to explicit Product Owner approval.
+Product Owner explicitly approved P3.0 PASS / CLOSED on 2026-09-13. Decision: `D-031`.
 
-Until Product Owner explicitly approves, formal project state remains `P3.0 REVIEW READY / DECISION REQUIRED`; P3.1 remains locked and no P3.1 engineering task should be created.
+P3.1 `Component Master & Variant Library` is unlocked and entered. P3.1 engineering work remains blocked until its Definition of Done is separately defined, approved and locked; no T-010 should be created before that approval.
