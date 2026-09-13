@@ -2,7 +2,7 @@
   "base_registry_path": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_V001.json",
   "masters": [
     {
-      "approval_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+      "approval_status": "PRODUCT_OWNER_APPROVED_D035",
       "canonical_asset_sha256": "98211701fcc358f6174829257ef13310baa4d1a2d5e762637c25c812a4362487",
       "canonical_asset_status": "LOCAL_ONLY_GENERATED",
       "component_id": "CMP-COLUMN-001",
@@ -29,12 +29,12 @@
       "review_metadata_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001/REVIEW_PACKAGE_V001.json",
       "review_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-COLUMN-001",
       "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json",
-      "validation_status": "T011_ENGINEERING_PASS",
+      "validation_status": "T011_ENGINEERING_PASS_VISUAL_PASS_APPROVED",
       "variant_ids": []
     }
   ],
   "phase": "P3.1",
-  "status": "PILOT_ENGINEERING_COMPLETE_PENDING_PRODUCT_OWNER_REVIEW",
+  "status": "COLUMN_PILOT_APPROVED_D035_REMAINING_FIVE_PLANNING_READY",
   "task": "T-011",
   "version": "V001"
 }
