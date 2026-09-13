@@ -3,38 +3,41 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R042",
-  "last_updated": "2026-09-12",
-  "session_status": "CLOSED_FOR_DAY / P2_CLOSED / POST_P2_PHASE_DEFINITION_REQUIRED",
+  "state_revision": "R043",
+  "last_updated": "2026-09-13",
+  "session_status": "ACTIVE / P3_ENTERED / P3.0_DOD_DEFINITION_REQUIRED",
   "phase": {
-    "id": "P2",
-    "name": "正式参数化与3D复原",
-    "status": "CLOSED / APPROVED",
-    "closed_date": "2026-09-12",
-    "gate_result": "4/4 PASS"
+    "id": "P3",
+    "name": "古建筑构件系统化与组合建模",
+    "english_name": "Component System & Assembly Architecture",
+    "status": "ACTIVE / PRODUCT OWNER APPROVED ENTRY",
+    "entered_date": "2026-09-13",
+    "gate_progress": "0/4"
   },
   "current_gate": {
-    "id": "P2",
-    "status": "CLOSED / PRODUCT OWNER APPROVED",
-    "passed": 4,
+    "id": "P3.0",
+    "name": "Component Ontology & Registry",
+    "status": "ENTERED / DOD DEFINITION REQUIRED",
+    "passed": 0,
     "total": 4,
     "items": {
-      "P2.0": "PASS / APPROVED",
-      "P2.1": "PASS / APPROVED / CLOSED",
-      "P2.2": "PASS / APPROVED / CLOSED",
-      "P2.3": "PASS / APPROVED / CLOSED / 9/9 DoD"
+      "P3.0": "ENTERED / DOD REQUIRED",
+      "P3.1": "LOCKED / WAITING_FOR_P3.0_PASS",
+      "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
+      "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
-  "decision_required": false,
+  "decision_required": true,
   "blocker": null,
   "current_task": null,
   "current_case": {
     "name": "平遥镇国寺万佛殿",
     "location": "山西省平遥县镇国寺",
-    "selection_status": "LOCKED"
+    "selection_status": "LOCKED",
+    "scope_rule": "P3 remains single-building scope until P3 architecture proves reusable."
   },
   "p2_closure": {
-    "status": "CLOSED / APPROVED",
+    "status": "CLOSED / APPROVED / FROZEN ENGINEERING BASELINE",
     "decision_id": "D-028",
     "archive": "docs/project_control/phase_archive/P2_closure.md",
     "gate_review": "docs/production/zhenguo_wanfo/P2_3_GATE_REVIEW_2026-09-12.md",
@@ -44,6 +47,19 @@
     "machine_qc": "34/34 PASS",
     "roundtrip": "Local Blender 3.6.23 -> Cloud Blender 4.5.13 -> Local Blender 3.6.23 PASS / core semantic diff NONE",
     "visual_review": "6/6 PASS"
+  },
+  "p3_architecture": {
+    "status": "LOCKED / PRODUCT OWNER APPROVED",
+    "decision_id": "D-029",
+    "gates": {
+      "P3.0": "Component Ontology & Registry",
+      "P3.1": "Component Master & Variant Library",
+      "P3.2": "Assembly Relationship Model",
+      "P3.3": "Component-driven Building Reconstruction"
+    },
+    "core_model": "Evidence -> Component Knowledge -> Parametric Component -> Assembly Rules -> Building Reconstruction",
+    "p2_migration_rule": "P3.0 must audit and map existing P2 11 families / 40 variants / 365 instances before creating new geometry.",
+    "task_rule": "Do not create T-009 until P3.0 Definition of Done is approved and locked."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -66,20 +82,16 @@
     "final_review_set": "responsive labels; no overlap"
   },
   "latest_material_decision": {
-    "id": "D-028",
-    "date": "2026-09-12",
-    "decision": "Product Owner approved P2.3 PASS, closed P2, and locked dual-layer Evidence Visualization carry-forward."
+    "id": "D-029",
+    "date": "2026-09-13",
+    "decision": "Product Owner approved P3 Component System & Assembly Architecture and entered P3.0 Component Ontology & Registry."
   },
-  "next_phase": {
-    "status": "NOT_DEFINED",
-    "rule": "Define post-P2 phase / Gate architecture before creating T-009 or expanding model scope/LOD."
-  },
-  "next_action": "NEXT SESSION: review P2 closure and define post-P2 phase / Gate architecture. Do not create T-009 before approval.",
+  "next_action": "Define and approve P3.0 Definition of Done. P3.0 is ontology/registry/migration design only; do not create T-009 or new geometry before DoD approval.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v010",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R042_REFRESH_COMPLETE"
+    "refresh_status": "R042_STALE_AFTER_R043_PHASE_ENTRY"
   }
 }
