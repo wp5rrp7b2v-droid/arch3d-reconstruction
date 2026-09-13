@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R053",
+  "state_revision": "R054",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1_DOD_LOCKED / MASTER_ASSET_CONTRACT_DRAFT / PO_REVIEW_REQUIRED",
+  "session_status": "ACTIVE / P3.1_DOD_LOCKED / MASTER_ASSET_CONTRACT_LOCKED / COLUMN_PILOT_PLANNING_READY",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "ACTIVE / DOD LOCKED / SIX-MASTER SCOPE LOCKED / MASTER ASSET CONTRACT REVIEW",
+    "status": "ACTIVE / DOD LOCKED / SIX-MASTER SCOPE LOCKED / MASTER ASSET CONTRACT LOCKED",
     "passed": 1,
     "total": 4,
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / MASTER ASSET CONTRACT REVIEW REQUIRED",
+      "P3.1": "ACTIVE / MASTER ASSET CONTRACT LOCKED / COLUMN PILOT PLANNING READY",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
-  "decision_required": true,
+  "decision_required": false,
   "blocker": null,
   "current_task": null,
   "current_case": {
@@ -67,9 +67,10 @@
     "technical_result": "9/9 PASS"
   },
   "p3_1": {
-    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / SIX-MASTER SCOPE LOCKED / CONTRACT REVIEW",
+    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / SIX-MASTER SCOPE LOCKED / MASTER ASSET CONTRACT LOCKED",
     "decision_id": "D-032",
     "qualification_decision_id": "D-033",
+    "asset_contract_decision_id": "D-034",
     "purpose": "Create canonical 3D Component Masters, parameterized variants and standardized review assets from evidence-qualified historical component identities without collapsing unresolved proxy semantics into historical certainty.",
     "dod": "docs/production/zhenguo_wanfo/P3_1_DEFINITION_OF_DONE_V001.md",
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-032",
@@ -93,7 +94,7 @@
       "envelope_only": 1
     },
     "master_production_scope": {
-      "status": "LOCKED / PRODUCT OWNER APPROVED",
+      "status": "LOCKED / PRODUCT OWNER APPROVED / D-033",
       "count": 6,
       "components": [
         "柱",
@@ -105,17 +106,19 @@
       ]
     },
     "master_asset_contract": {
-      "status": "DRAFT / PRODUCT OWNER REVIEW REQUIRED",
+      "status": "LOCKED / PRODUCT OWNER APPROVED / D-034",
       "version": "V001",
       "human_readable": "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V001.md",
       "machine_readable": "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V001.json",
       "scope_count": 6,
       "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
-      "pilot_recommendation": "CMP-COLUMN-001 first; validate full asset chain before expanding to remaining five",
-      "approval_required": true
+      "global_unit": "mm",
+      "canonical_transform": "Location 0 / Rotation 0 / Scale 1",
+      "pilot_recommendation": "CMP-COLUMN-001 first; validate generator -> blend -> semantic QC -> review package -> Registry registration before expanding to remaining five",
+      "approval_required": false
     },
-    "task_strategy": "After Product Owner locks the Canonical Master Asset Contract, create a representative Contract Implementation Pilot on CMP-COLUMN-001 before batch production of all six Masters.",
-    "task_rule": "No Blender Master geometry task is authorized until the Canonical Master Asset Contract is Product Owner approved and locked."
+    "task_strategy": "Next define a representative Contract Implementation Pilot on CMP-COLUMN-001 before batch production of all six Masters.",
+    "task_rule": "No batch production of the remaining five Masters is authorized until the CMP-COLUMN-001 Contract Implementation Pilot is separately defined, executed and reviewed."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -137,16 +140,16 @@
     "final_review_set": "responsive labels; no overlap"
   },
   "latest_material_decision": {
-    "id": "D-033",
+    "id": "D-034",
     "date": "2026-09-13",
-    "decision": "Product Owner approved T-010 Scope Matrix & Identity Resolution. Six MASTER_REQUIRED records are locked as the current P3.1 Master-production scope. Canonical Master Asset Contract V001 is now drafted for Product Owner review; no geometry task is authorized yet."
+    "decision": "Product Owner approved and locked P3.1 Canonical Master Asset Contract V001. The six-master asset standard is now authoritative; next step is planning a CMP-COLUMN-001 Contract Implementation Pilot before any remaining-five batch Master production."
   },
-  "next_action": "Product Owner review and approve/revise P3_1_MASTER_ASSET_CONTRACT_V001. If approved, lock the contract and create a CMP-COLUMN-001 Contract Implementation Pilot before batch Master production.",
+  "next_action": "Define the CMP-COLUMN-001 Contract Implementation Pilot task. Do not start remaining-five batch Master production before the pilot is separately approved and passes review.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v019",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R053_REFRESH_COMPLETE"
+    "refresh_status": "R053_STALE_AFTER_R054_D034"
   }
 }
