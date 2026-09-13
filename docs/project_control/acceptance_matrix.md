@@ -46,11 +46,11 @@ P2 frozen baseline：11 families / 40 variants / 365 stable mesh instances；Loc
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
 | P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11/40/365 语义审计与迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；orphan 0/0/0；D-031。 |
-| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **GATE REVIEW HOLD / 7 OF 9 PASS / DOD-07 PARTIAL / DOD-09 PENDING** | 6/6 Masters Approved；缺少覆盖全部 6 Masters / 当前 Variant 状态的 whole-library Overview；Product Owner final Gate approval 尚未进行。 |
-| P3.2｜Assembly Relationship Model | 建立构件之间组合、支承、连接、定位、重复和 Assembly Unit 关系 | **LOCKED** | 等待 P3.1 PASS。 |
+| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **PASS / APPROVED / CLOSED** | DoD 9/9；6/6 Master Approved；formal variants=0；T-014 Library Overview PASS；D-040。 |
+| P3.2｜Assembly Relationship Model | 建立构件之间组合、支承、连接、定位、重复和 Assembly Unit 关系 | **ACTIVE / ENTERED / DOD REQUIRED** | 已由 D-040 解锁；P3.2 DoD 未批准前不得创建工程任务。 |
 | P3.3｜Component-driven Building Reconstruction | 验证可由构件库 + Variant + Assembly Rules 重新装配万佛殿并形成可解释成果 | **LOCKED** | 等待 P3.2 PASS。 |
 
-**P3 Gate Progress：1 / 4。**
+**P3 Gate Progress：2 / 4。**
 
 ### P3.0 Gate Final｜APPROVED / PASS / CLOSED
 
@@ -62,7 +62,7 @@ P2 frozen baseline：11 families / 40 variants / 365 stable mesh instances；Loc
 
 ### P3.1 Definition of Done V001｜LOCKED / D-032
 
-PASS 仍要求 DoD 9/9、全部 MASTER_REQUIRED 100% Master coverage、Variant/evidence/replaceability/reproducibility PASS、P2 frozen baseline unchanged、Product Owner 最终批准。
+PASS 要求 DoD 9/9、全部 MASTER_REQUIRED 100% Master coverage、Variant/evidence/replaceability/reproducibility PASS、P2 frozen baseline unchanged、Product Owner 最终批准。
 
 ### T-010 Qualification Baseline｜APPROVED / D-033
 
@@ -93,7 +93,6 @@ PASS 仍要求 DoD 9/9、全部 MASTER_REQUIRED 100% Master coverage、Variant/e
 - 3/3 engineering PASS；3/3 deterministic regeneration / reopen / mutation / rebuild PASS。
 - Review：18/18 individual + 1/1 batch overview = **19/19 visual PASS**。
 - Approved Masters：柱头栌斗、单向长开斗、交互斗。
-- P3.1 Master coverage：4 / 6 approved。
 
 ### T-013｜Six-Chuanfu Master Batch V002｜APPROVED / CLOSED / D-039
 
@@ -104,41 +103,44 @@ PASS 仍要求 DoD 9/9、全部 MASTER_REQUIRED 100% Master coverage、Variant/e
 - `canonical_reference_length_mm=1000`：仅 `PROJECT_RULE / NON_HISTORICAL / REPLACEABLE` reference specimen。
 - `tenon_area_thickness`：metadata-only / geometry use = 0。
 - `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY`：继续作为后续 Hard Fail。
-- 初次 review 12/13 PASS；Batch Overview 因视觉叠合 HOLD，仅重渲染 overview，canonical Masters 与其他 12 张图未修改。
-- 修正版 overview SHA256：`fd03116ba035dd98a66363d7bb4699634ebb62484c58c04c3befae32c33d9f32`。
 - 最终视觉审核：**13/13 PASS**。
 - Product Owner：`APPROVED / CLOSED / D-039`。
-- Approved Masters：下六椽栿、上六椽栿。
 - P3.1 Master coverage：**6 / 6 approved**。
 
-### P3.1 Gate Review｜HOLD / 7 OF 9 PASS
+### T-014｜P3.1 Master Library Overview｜PASS / CLOSED
+
+- whole-library Overview 覆盖 6/6 approved Masters。
+- 正式中文构件名：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿。
+- 名称依据：`SRC-ZG-WF-001` 精细测绘报告 / project canonical naming；不宣称为宋代原称或古籍原称。
+- formal variants = 0。
+- canonical Masters / existing review assets / batch overviews / P2 frozen baseline / Contract V002：UNCHANGED。
+- P3.2 files created = NO；new Variant records = 0。
+- Final Overview SHA256：`4719a31c18de13b0453a64d29847381d8e45af0f145bcb37bf7fee0abf9671a7`。
+- ChatGPT final visual review：PASS。
+
+### P3.1 Gate Final｜PASS / APPROVED / CLOSED / D-040
 
 Gate Review：`docs/production/zhenguo_wanfo/P3_1_GATE_REVIEW_2026-09-13.md`
 
-| DoD | 当前结论 | Gate Review 摘要 |
-|---|---|---|
-| DoD-01 Scope Matrix | **PASS** | 11/11 P3.0 Registry + 9/9 P1 minimum scope；27 records；eligibility 全部明确。 |
-| DoD-02 Identity Resolution | **PASS** | `EVIDENCE_REVIEW_BEFORE_MASTER=0`；Proxy / Deferred 边界明确，无强行历史化。 |
-| DoD-03 Master Asset Contract | **PASS** | V002 / D-036 覆盖 6 Masters；坐标、参数、evidence、Variant、review、reproducibility 合同完整。 |
-| DoD-04 Canonical Masters | **PASS** | MASTER_REQUIRED 6/6 = 100% Approved；Control / Envelope Master = 0。 |
-| DoD-05 Parameterized Variant Model | **PASS** | 当前 evidence-qualified formal variants = 0；V002 Variant contract/axes 已锁定；column/dou/frame mutation 已证明参数驱动；distinct component identities 不错误合并为 Variant。 |
-| DoD-06 Evidence / Replaceability | **PASS** | Z-006 / RC-01 / DG-114 / HIS-002 / joinery boundaries preserved；mutation/replaceability PASS。 |
-| DoD-07 Standard Review Package | **PARTIAL / HOLD** | 36/36 individual views PASS；2 batch overviews PASS；但缺一张覆盖全部 6 approved Masters + current Variant status 的 Library Overview。 |
-| DoD-08 Registry / Validation / Reproducibility | **PASS** | Registry 6 approved Masters；orphan variant = 0；reopen/regeneration/mutation PASS；P2 frozen unchanged。 |
-| DoD-09 PO Review / Archive / P3.2 Readiness | **PENDING** | Gate Review 已建立；等待 DoD-07 closure + Product Owner final P3.1 PASS/CLOSED。 |
+| DoD | 最终结论 |
+|---|---|
+| DoD-01 Scope Matrix | **PASS** |
+| DoD-02 Identity Resolution | **PASS** |
+| DoD-03 Master Asset Contract | **PASS** |
+| DoD-04 Canonical Masters | **PASS** |
+| DoD-05 Parameterized Variant Model | **PASS / formal registered variants = 0** |
+| DoD-06 Evidence / Replaceability | **PASS** |
+| DoD-07 Standard Review Package | **PASS / T-014 whole-library Overview** |
+| DoD-08 Registry / Validation / Reproducibility | **PASS** |
+| DoD-09 PO Review / Archive / P3.2 Readiness | **PASS / D-040** |
 
-当前唯一生产性 closure artifact：
+**P3.1 Gate Final：9 / 9 PASS / APPROVED / CLOSED。**
 
-`production/zhenguo_wanfo/review/P3_1/P3_1_MASTER_LIBRARY_OVERVIEW_V001.png`
+Carry-forward boundaries remain active：Z-006 UNKNOWN/null；Z-006-RC-01 replaceable；DG-114 UNKNOWN；HIS-002 originality unknown；45°转角/榫卯/隐角梁 unresolved；六椽栿 historical full length UNKNOWN/null；1000 mm 仅 non-historical reference；`REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` 为 P3.2/P3.3 Hard Fail。
 
-要求使用既有 approved review assets 组合，不重新生成或修改任何 canonical Master；展示全部 6 Masters、ID、Approved 状态及 `formal variants = 0` 当前结论。
+### P3.2 Current Boundary / Next Step
 
-### P3.1 Current Boundary / Next Step
-
+- P3.2 已解锁并进入。
 - 当前无 active Codex task。
-- Master coverage：**6 / 6 approved / 100%**。
-- Gate Review：**7 PASS / 1 PARTIAL / 1 PENDING**。
-- 无几何或历史证据返工 blocker。
-- 唯一 closure gap：whole-library overview。
-- P3.2 继续 LOCKED。
-- 下一步：生成并审核 `P3_1_MASTER_LIBRARY_OVERVIEW_V001.png`；通过后由 Product Owner 明确批准 `P3.1｜PASS / CLOSED`。
+- 第一项工作不是建模，而是定义并锁定 `P3.2 Definition of Done`。
+- P3.2 DoD 获 Product Owner 明确批准前，不创建新的 P3.2 工程任务。
