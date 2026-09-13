@@ -96,7 +96,7 @@
 
 最终 V002 diagnostic：
 
-- priority = `UNKNOWN / PLACEHOLDER > REASONABLE COMPLETION / APPROVED OVERRIDE > HIGH CONFIDENCE INFERENCE > CONFIRMED`；
+- priority = `UNKNOWN / PLACEHOLDER > REASONABLE COMPLETION / APPROVED OVERRIDE > HIGH_CONFIDENCE_INFERENCE > CONFIRMED`；
 - counts = CONFIRMED 0 / HCI 0 / RC 35 / UNKNOWN-placeholder 330；
 - 0-count 类别保留 legend；
 - Product Owner 直接审核 PASS。
@@ -119,32 +119,38 @@ P2 Closure Archive：`docs/project_control/phase_archive/P2_closure.md`。
 
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
-| P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11 families / 40 variants / 365 instances 的语义审计与迁移 | **ACTIVE / DOD LOCKED / T-009 AUTHORIZED** | 不新增几何；historical component 与 control/proxy/envelope 必须分离；D-030。 |
-| P3.1｜Component Master & Variant Library | 为正式历史构件建立独立 3D Master、参数化 Variant、标准审核图与资产登记 | **LOCKED** | 等待 P3.0 PASS。 |
+| P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11 families / 40 variants / 365 instances 的语义审计与迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；orphan 0/0/0；D-031。 |
+| P3.1｜Component Master & Variant Library | 为正式历史构件建立独立 3D Master、参数化 Variant、标准审核图与资产登记 | **ENTERED / DOD REQUIRED** | P3.0 Registry 为正式输入；DoD 批准前不得创建 T-010 或新增构件几何。 |
 | P3.2｜Assembly Relationship Model | 建立构件之间组合、支承、连接、定位、重复和 Assembly Unit 关系 | **LOCKED** | 等待 P3.1 PASS。 |
 | P3.3｜Component-driven Building Reconstruction | 验证可由构件库 + Variant + Assembly Rules 重新装配万佛殿并形成可解释成果 | **LOCKED** | 等待 P3.2 PASS；Evidence Visualization 双层规则继续生效。 |
 
-**P3 Gate Progress：0 / 4。**
+**P3 Gate Progress：1 / 4。**
 
-### P3.0 Definition of Done V001｜LOCKED / PRODUCT OWNER APPROVED
+### P3.0 Gate Final｜APPROVED / PASS / CLOSED
 
-正式 DoD：`docs/production/zhenguo_wanfo/P3_0_DEFINITION_OF_DONE_V001.md`。Decision：D-030。
+- Definition of Done：**9 / 9 PASS**。
+- Family migration：**11 / 11**。
+- Variant migration：**40 / 40**。
+- Instance migration：**365 / 365**。
+- Orphan family / variant / instance：**0 / 0 / 0**。
+- Ontology / Registry Schema / Evidence Boundary / Determinism：PASS。
+- Historical component、GEOMETRIC_PROXY、CONTROL_OBJECT、ENVELOPE_SURFACE 已正式分离。
+- T-009 engineering commit：`3db50b94cd72e79cef419054aeaa7d2b75523ba5`。
+- Gate Review：`docs/production/zhenguo_wanfo/P3_0_GATE_REVIEW_2026-09-13.md`。
+- Product Owner 明确批准：`P3.0｜PASS / CLOSED`。Decision：D-031。
 
-PASS 必须同时满足：
+### P3.0 Carry-forward Boundary
 
-- DoD 9/9；
-- P2 family migration = 11/11；
-- P2 variant migration = 40/40；
-- P2 instance migration = 365/365；
-- orphan family / variant / instance = 0；
-- historical component 与 engineering/control object 明确分离；
-- evidence / uncertainty 无静默升级；
-- Registry Schema 可扩展至下一座建筑；
-- Product Owner 最终明确批准。
+- P2 11 engineering families 不等于 11 种历史构件。
+- `COLUMN / PURLIN / RAFTER` 仅确认历史构件类型概念；P2 placement 不作为原构数量。
+- `BRACKET_ARM / PRIMARY_FRAME` 等 unresolved/proxy 必须在后续回到证据后再拆分，不得因 P3.1 建模需求静默升级。
+- `Z-006`、`Z-006-RC-01`、`DG-114`、`HIS-002`、45°转角、榫卯、隐角梁等边界继续生效。
 
-### P3.0 Current Boundary
+### P3.1 Entry Boundary
 
-- P2 冻结为 Reconstruction Engineering Baseline，不重做。
-- P3.0 首先审计 P2 工程 family 是否真对应历史构件。
-- 现有 P2 family 中已明确混有 CONTROL / DIAGNOSTIC / ENVELOPE 类对象，因此不得直接将 11 families 解释为 11 种古建筑构件。
-- T-009 已获授权，仅执行 ontology / registry / migration / validation；不得新增 Blender 几何。
+P3.1 已解锁并进入，但在其 Definition of Done 正式批准并锁定前：
+
+- 不创建 T-010；
+- 不启动新的独立构件几何生产；
+- 不把 unresolved proxy 直接提升为正式 Component Master；
+- 下一步先定义 P3.1 的构件选择范围、Master/Variant资产标准、证据门槛和审核要求。
