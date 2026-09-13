@@ -123,9 +123,9 @@
   "next_action": "Sync local repo with GitHub main, then execute T-010 P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001. Do not create Blender Master geometry or Variant geometry in T-010.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v015",
+    "visualization_version": "v016",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R049_STALE_AFTER_R050_T010_AUTHORIZATION"
+    "refresh_status": "R050_REFRESH_COMPLETE"
   }
 }
