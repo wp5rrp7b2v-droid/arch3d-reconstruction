@@ -148,6 +148,6 @@
     "visualization_version": "v018",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R052_REFRESH_PENDING"
+    "refresh_status": "R052_REFRESH_COMPLETE"
   }
 }
