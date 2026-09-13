@@ -202,6 +202,19 @@
 - Gate Review：`docs/production/zhenguo_wanfo/P3_0_GATE_REVIEW_2026-09-13.md`。
 - P3.1 `Component Master & Variant Library` 解锁并进入；其 DoD 批准前不得创建 T-010 或启动新增构件几何。
 
+## T-010｜P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001｜ENGINEERING PASS / COMPLETE / APPROVED
+
+- Think Level: HIGH。
+- Engineering commit：`774a1469416d49268997d20970c71bb9357849aa`。
+- P3.0 Registry coverage：**11/11**；P1 minimum scope：**9/9**；total review records：**27**。
+- Eligibility：MASTER_REQUIRED 6 / PROXY_ONLY 4 / CONTROL_ONLY 3 / ENVELOPE_ONLY 1 / DEFERRED_INSUFFICIENT_EVIDENCE 13 / unexplained pending 0。
+- Evidence provenance / historical boundary / determinism：PASS；5/5 negative mutation probes REJECTED；P2 frozen baseline hashes unchanged。
+- Product Owner 批准 T-010 Scope Matrix & Identity Resolution；Decision：D-033。
+- 当前锁定 6 个 MASTER_REQUIRED：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿。
+- 13 个证据不足对象继续 Deferred；P3.0 proxy/control/envelope 边界保持，不发生静默历史化。
+- T-010 未创建 Blender Master / Variant geometry；批准不等于 P3.1 PASS。
+- Technical Review：`docs/production/zhenguo_wanfo/P3_1_T010_SCOPE_IDENTITY_REVIEW_2026-09-13.md`。
+
 ## Current Execution State｜2026-09-13
 
 - P0：CLOSED / APPROVED。
@@ -209,7 +222,7 @@
 - P2：CLOSED / 4/4 PASS / PRODUCT OWNER APPROVED。
 - P3：ACTIVE / **1/4 PASS**。
 - P3.0：**CLOSED / 9/9 PASS / PRODUCT OWNER APPROVED**。
-- Current Gate：P3.1｜Component Master & Variant Library｜DOD DEFINITION REQUIRED。
+- P3.1：**ACTIVE / DOD LOCKED / T-010 APPROVED / SIX-MASTER SCOPE LOCKED**。
 - Current engineering blocker：NONE。
 - Current task：NONE。
-- Next action：先定义并批准 P3.1 Definition of Done；批准前不创建 T-010。
+- Next action：先为 6 个 approved MASTER_REQUIRED 建立 Canonical Master Asset Contract；在 Contract 锁定前不启动批量 Blender Master 几何。
