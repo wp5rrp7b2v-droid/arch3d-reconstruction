@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R065",
+  "state_revision": "R066",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1_DOD_LOCKED / CONTRACT_V002_LOCKED / T011_APPROVED_CLOSED / T012_APPROVED_CLOSED / MASTER_COVERAGE_4_OF_6 / T013_CONTRACT_DRAFT_REVIEW",
+  "session_status": "ACTIVE / P3.1_DOD_LOCKED / CONTRACT_V002_LOCKED / T011_APPROVED_CLOSED / T012_APPROVED_CLOSED / MASTER_COVERAGE_4_OF_6 / T013_V002_CHAT_FIRST_TRIAL_DRAFT_REVIEW",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,12 +17,12 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "ACTIVE / 4 OF 6 MASTERS APPROVED / T-013 CONTRACT DRAFT REVIEW",
+    "status": "ACTIVE / 4 OF 6 MASTERS APPROVED / T-013 V002 CONTRACT DRAFT REVIEW",
     "passed": 1,
     "total": 4,
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / 4 OF 6 MASTERS APPROVED / T-013 DRAFT NOT AUTHORIZED",
+      "P3.1": "ACTIVE / 4 OF 6 MASTERS APPROVED / T-013 V002 DRAFT NOT AUTHORIZED",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
@@ -31,12 +31,13 @@
   "blocker": null,
   "current_task": {
     "id": "T-013",
-    "key": "P3_1_SIX_CHUANFU_MASTER_BATCH_V001",
+    "key": "P3_1_SIX_CHUANFU_MASTER_BATCH_V002",
     "name": "上下六椽栿Master批次生产",
     "status": "DRAFT / NOT AUTHORIZED / PRODUCT OWNER REVIEW REQUIRED",
-    "execution_mode": "LEAN_PRODUCTION_MODE_V001 / NEW_GEOMETRY_FIRST_ARTICLE",
-    "think_level": "HIGH_FIRST_ARTICLE / MEDIUM_PROVEN_BATCH_REPETITION",
-    "contract": "docs/tasks/T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V001.md",
+    "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE_TRIAL + LEAN_PRODUCTION_MODE_V001 / NEW_GEOMETRY_FIRST_ARTICLE",
+    "think_level": "CODEX_MEDIUM_DEFAULT / HIGH_ONLY_BY_EXPLICIT_CHATGPT_ESCALATION",
+    "contract": "docs/tasks/T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V002.md",
+    "superseded_draft": "docs/tasks/T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V001.md",
     "scope": [
       "CMP-FRAME-LOWER-SIX-CHUANFU-001",
       "CMP-FRAME-UPPER-SIX-CHUANFU-001"
@@ -45,6 +46,7 @@
     "new_geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
     "reference_length_policy": "PROPOSED: 1000 mm PROJECT_RULE / ENGINEERING_REFERENCE / NON_HISTORICAL / REPLACEABLE",
     "review_package_target": "12 individual review PNGs + 1 SIX_CHUANFU_BATCH_OVERVIEW",
+    "exception_policy": "CONTRACT-EXTERNAL OR NON-OBVIOUS FAILURE => CODEX STOP => CHATGPT DIAGNOSIS => TARGETED RETRY OR EXPLICIT HIGH ESCALATION",
     "authorization": "PENDING PRODUCT OWNER"
   },
   "current_case": {
@@ -80,7 +82,7 @@
     "orphans": "0/0/0"
   },
   "p3_1": {
-    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / T-011 APPROVED / CONTRACT V002 LOCKED / T-012 APPROVED / 4 OF 6 MASTERS APPROVED / T-013 DRAFT REVIEW",
+    "status": "ACTIVE / DOD LOCKED / T-010 APPROVED / T-011 APPROVED / CONTRACT V002 LOCKED / T-012 APPROVED / 4 OF 6 MASTERS APPROVED / T-013 V002 DRAFT REVIEW",
     "dod_decision_id": "D-032",
     "qualification_decision_id": "D-033",
     "asset_contract_v001_decision_id": "D-034",
@@ -125,7 +127,7 @@
       "task_id": "T-011",
       "component_id": "CMP-COLUMN-001",
       "master_version": "V001",
-      "engineering_commit": "4eb79f37d31202ab2088724008b5412cba4d1a2d5e762637c25c812a4362487",
+      "engineering_commit": "4eb79f37d31202ab2088724008b5412cba4d38b0",
       "canonical_blend_sha256": "98211701fcc358f6174829257ef13310baa4d1a2d5e762637c25c812a4362487",
       "machine_checks": "22/22 PASS",
       "review_package": "6/6 / CHATGPT VISUAL PASS / PRODUCT OWNER APPROVED",
@@ -156,15 +158,17 @@
       "protected_assets": "P2 UNCHANGED / CONTRACT V002 UNCHANGED / APPROVED COLUMN PRESERVED"
     },
     "frame_batch": {
-      "status": "TASK_CONTRACT_DRAFT / NOT AUTHORIZED",
+      "status": "TASK_CONTRACT_V002_DRAFT / NOT AUTHORIZED",
       "task_id": "T-013",
-      "task_contract": "docs/tasks/T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V001.md",
+      "task_contract": "docs/tasks/T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V002.md",
+      "superseded_draft": "docs/tasks/T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V001.md",
       "components": [
         "CMP-FRAME-LOWER-SIX-CHUANFU-001",
         "CMP-FRAME-UPPER-SIX-CHUANFU-001"
       ],
       "first_article": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
-      "execution_rule": "NEW LONG-MEMBER GEOMETRY METHOD REQUIRES FIRST-ARTICLE GATE",
+      "execution_rule": "CHATGPT DEFINES/DIAGNOSES/REVIEWS; CODEX EXECUTES/VALIDATES; NEW LONG-MEMBER GEOMETRY METHOD REQUIRES FIRST-ARTICLE GATE",
+      "codex_think_level": "MEDIUM_DEFAULT / HIGH_BY_EXPLICIT_ESCALATION_ONLY",
       "reference_length_policy": "PENDING PRODUCT OWNER APPROVAL: 1000 mm non-historical engineering reference"
     }
   },
@@ -174,6 +178,16 @@
     "principle": "shared production tools + first-article gate + independent per-asset acceptance",
     "future_default": "USE FOR HOMOGENEOUS BATCHES ONLY AFTER REPRESENTATIVE FIRST ARTICLE PASS",
     "fallback": "RETURN TO STANDALONE/PILOT WHEN GEOMETRY METHOD, EVIDENCE SEMANTICS, CONTRACT OR EXECUTION ENVIRONMENT MATERIALLY CHANGES"
+  },
+  "chat_first_codex_executor": {
+    "rule_id": "RC-011",
+    "status": "ACTIVE_TRIAL_IN_T013",
+    "principle": "ChatGPT handles analysis/decision/diagnosis/review; Codex handles deterministic execution/machine validation",
+    "codex_default_think": "MEDIUM",
+    "high_escalation": "EXPLICIT_CHATGPT_APPROVAL_REQUIRED",
+    "stop_boundary": "CONTRACT_EXTERNAL_AMBIGUITY_OR_NON_OBVIOUS_FAILURE_RETURNS_TO_CHATGPT",
+    "quality_preservation": "NO REDUCTION TO DOD / HARD FAIL / PER-ASSET VALIDATION / REVIEW / PRODUCT OWNER APPROVAL",
+    "trial_evaluation": "AFTER T-013 compare quota use, rework rate, engineering quality and review outcome before making long-term default"
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -197,16 +211,16 @@
     "latest_publish": "d1ae53ee368729a395623a8d9a4342f7455e2e9b -> origin/main SUCCESS"
   },
   "latest_material_decision": {
-    "id": "D-037",
+    "id": "RC-011 / T-013 V002 DRAFT",
     "date": "2026-09-13",
-    "decision": "T-012 dou Master Lean batch approved. Three dou Masters become approved canonical assets; P3.1 Master coverage becomes 4/6; Lean Production Mode validated for future eligible homogeneous batches."
+    "decision": "Product Owner agreed to trial Chat-first/Codex-executor division for T-013: move analysis and diagnosis to ChatGPT, keep Codex focused on deterministic execution, without reducing any acceptance evidence. T-013 itself remains NOT AUTHORIZED pending approval of V002 and the 1000 mm non-historical reference-length rule."
   },
-  "next_action": "Review T-013 V001 Task Contract draft. Product Owner must explicitly approve or revise the proposed 1000 mm non-historical canonical reference-length rule and authorize T-013 before any Blender production.",
+  "next_action": "Review T-013 V002 Task Contract draft and explicitly approve/revise the proposed 1000 mm non-historical canonical reference-length rule. Blender production remains blocked until Product Owner authorizes T-013 V002.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v026",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R065_NOT_REFRESHED_AFTER_T013_DRAFT"
+    "refresh_status": "R066_NOT_REFRESHED_AFTER_CHAT_FIRST_TRIAL"
   }
 }
