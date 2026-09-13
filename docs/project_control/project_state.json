@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R050",
+  "state_revision": "R051",
   "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.1_DOD_LOCKED / T010_AUTHORIZED",
+  "session_status": "ACTIVE / P3.1_DOD_LOCKED / T010_TECHNICAL_PASS / PO_REVIEW_REQUIRED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,26 +17,43 @@
   "current_gate": {
     "id": "P3.1",
     "name": "Component Master & Variant Library",
-    "status": "ACTIVE / DOD LOCKED / T-010 AUTHORIZED",
+    "status": "ACTIVE / DOD LOCKED / T-010 TECHNICAL PASS / PO REVIEW REQUIRED",
     "passed": 1,
     "total": 4,
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
-      "P3.1": "ACTIVE / DOD LOCKED / T-010 AUTHORIZED",
+      "P3.1": "ACTIVE / DOD LOCKED / T-010 TECHNICAL PASS / PO REVIEW REQUIRED",
       "P3.2": "LOCKED / WAITING_FOR_P3.1_PASS",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
-  "decision_required": false,
+  "decision_required": true,
   "blocker": null,
   "current_task": {
     "id": "T-010",
     "key": "P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001",
     "name": "构件Master资格矩阵与证据身份解析",
-    "status": "AUTHORIZED / READY_FOR_LOCAL_EXECUTION",
+    "status": "ENGINEERING PASS / COMPLETE / PRODUCT OWNER REVIEW REQUIRED",
     "think_level": "HIGH",
     "contract": "docs/tasks/T-010_P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001.md",
-    "scope": "Master eligibility / scope matrix + evidence-backed historical component identity resolution + validation only; no Blender Master geometry or Variant production"
+    "engineering_commit": "774a1469416d49268997d20970c71bb9357849aa",
+    "technical_review": "docs/production/zhenguo_wanfo/P3_1_T010_SCOPE_IDENTITY_REVIEW_2026-09-13.md",
+    "scope": "Master eligibility / scope matrix + evidence-backed historical component identity resolution + validation only; no Blender Master geometry or Variant production",
+    "result": {
+      "p3_0_registry_coverage": "11/11",
+      "p1_minimum_scope_coverage": "9/9",
+      "total_review_records": 27,
+      "master_required": 6,
+      "evidence_review_before_master": 0,
+      "proxy_only": 4,
+      "control_only": 3,
+      "envelope_only": 1,
+      "deferred_insufficient_evidence": 13,
+      "unexplained_pending": 0,
+      "evidence_provenance": "PASS",
+      "historical_boundary": "PASS",
+      "determinism": "PASS"
+    }
   },
   "current_case": {
     "name": "平遥镇国寺万佛殿",
@@ -75,7 +92,7 @@
     "technical_result": "9/9 PASS"
   },
   "p3_1": {
-    "status": "ACTIVE / DOD LOCKED / T-010 AUTHORIZED",
+    "status": "ACTIVE / DOD LOCKED / T-010 TECHNICAL PASS / PRODUCT OWNER REVIEW REQUIRED",
     "decision_id": "D-032",
     "purpose": "Create canonical 3D Component Masters, parameterized variants and standardized review assets from evidence-qualified historical component identities without collapsing unresolved proxy semantics into historical certainty.",
     "dod": "docs/production/zhenguo_wanfo/P3_1_DEFINITION_OF_DONE_V001.md",
@@ -93,8 +110,22 @@
       "槫类",
       "椽类"
     ],
-    "task_strategy": "P3.1 may use multiple T-tasks. T-010 first establishes the Master Scope Matrix and evidence-backed identity resolution before any batch Master geometry production.",
-    "task_rule": "T-010 is authorized for qualification / identity work only; no batch component geometry until T-010 review is complete and the next geometry task is separately authorized."
+    "t010_result": {
+      "technical_status": "PASS / COMPLETE",
+      "engineering_commit": "774a1469416d49268997d20970c71bb9357849aa",
+      "master_required": [
+        "CMP-COLUMN-001",
+        "CMP-LUDOU-COLUMN-001",
+        "CMP-DOU-SINGLE-LONGKAI-001",
+        "CMP-DOU-INTERACTIVE-001",
+        "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+        "CMP-FRAME-UPPER-SIX-CHUANFU-001"
+      ],
+      "deferred_count": 13,
+      "po_approval": "REQUIRED"
+    },
+    "task_strategy": "P3.1 may use multiple T-tasks. After Product Owner approval of the T-010 qualification baseline, the next task should establish the Canonical Master Asset Contract for the six approved MASTER_REQUIRED records before batch Blender geometry production.",
+    "task_rule": "No next geometry task is authorized until Product Owner approves the T-010 Scope Matrix and Identity Resolution baseline."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -118,14 +149,14 @@
   "latest_material_decision": {
     "id": "D-032",
     "date": "2026-09-13",
-    "decision": "Product Owner approved and locked P3.1 Definition of Done V001. T-010 is now authorized as the first qualification task for Scope Matrix and evidence-backed identity resolution; no batch Master geometry is authorized."
+    "decision": "Product Owner approved and locked P3.1 Definition of Done V001. T-010 has now completed with technical PASS; Product Owner approval of the six-record MASTER_REQUIRED qualification baseline is still required before the next task."
   },
-  "next_action": "Sync local repo with GitHub main, then execute T-010 P3_1_COMPONENT_MASTER_SCOPE_IDENTITY_V001. Do not create Blender Master geometry or Variant geometry in T-010.",
+  "next_action": "Product Owner review and approve/reject T-010 Scope Matrix & Identity Resolution. If approved, lock the six MASTER_REQUIRED records as the current P3.1 Master-production scope, then define the Canonical Master Asset Contract task before any batch Blender geometry.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v016",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R050_REFRESH_COMPLETE"
+    "refresh_status": "R050_STALE_AFTER_R051_T010_REVIEW"
   }
 }
