@@ -1,7 +1,9 @@
 # P3.0 Definition of Done V001｜Component Ontology & Registry
 
-Status: **DRAFT / FOR PRODUCT OWNER REVIEW**  
+Status: **LOCKED / PRODUCT OWNER APPROVED**  
 Date: 2026-09-13  
+Approved: 2026-09-13  
+Decision: `D-030`  
 Phase: `P3｜古建筑构件系统化与组合建模`  
 Gate: `P3.0｜Component Ontology & Registry`
 
@@ -208,12 +210,13 @@ P3.0 不做：
 - 材质 / 彩画 / 风化表现；
 - 整寺扩建；
 - 第二座建筑生产；
-- 为视觉完整性新增无证据几何；
-- 新建 T-009，除非本 DoD 经 Product Owner 批准并锁定。
+- 为视觉完整性新增无证据几何。
+
+在本 DoD 已批准并锁定后，允许创建 T-009，但 T-009 仅限 ontology / registry / migration engineering，不得新增 Blender 几何。
 
 ## 6. Expected Deliverables
 
-建议 P3.0 最终至少形成：
+P3.0 最终至少形成：
 
 1. `P3_0_COMPONENT_ONTOLOGY_V001.json/md`；
 2. `P3_0_COMPONENT_REGISTRY_SCHEMA_V001.json`；
