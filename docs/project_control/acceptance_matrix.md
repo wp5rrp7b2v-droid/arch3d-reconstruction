@@ -46,7 +46,7 @@ P2 frozen baseline：11 families / 40 variants / 365 stable mesh instances；Loc
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
 | P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11/40/365 语义审计与迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；orphan 0/0/0；D-031。 |
-| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **ACTIVE / DOD LOCKED / CONTRACT V002 LOCKED / 4 OF 6 MASTERS APPROVED** | 柱 Master D-035；斗类三 Master T-012 / D-037 APPROVED；剩余上下六椽栿尚未授权。 |
+| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **ACTIVE / 6 OF 6 MASTERS APPROVED / GATE REVIEW REQUIRED** | 柱 D-035；三斗 D-037；上下六椽栿 D-039。Master coverage 已 100%，但尚未执行独立 P3.1 Gate Review。 |
 | P3.2｜Assembly Relationship Model | 建立构件之间组合、支承、连接、定位、重复和 Assembly Unit 关系 | **LOCKED** | 等待 P3.1 PASS。 |
 | P3.3｜Component-driven Building Reconstruction | 验证可由构件库 + Variant + Assembly Rules 重新装配万佛殿并形成可解释成果 | **LOCKED** | 等待 P3.2 PASS。 |
 
@@ -71,7 +71,6 @@ PASS 仍要求 DoD 9/9、全部 MASTER_REQUIRED 100% Master coverage、Variant/e
 - Total review records：27；pending = 0。
 - MASTER_REQUIRED：6；Deferred：13；Proxy：4；Control：3；Envelope：1。
 - 六类正式 Master-production scope：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿。
-- T-010 approval 不等于几何授权。
 
 ### P3.1 Canonical Master Asset Contract V002｜LOCKED / PRODUCT OWNER APPROVED / D-036
 
@@ -80,54 +79,43 @@ PASS 仍要求 DoD 9/9、全部 MASTER_REQUIRED 100% Master coverage、Variant/e
 - `docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md`
 - `production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json`
 
-V001（D-034）保留为历史版本，但 **V002 supersedes V001 for all future Master production**。
-
-V002 继承原全部 Locked rules，并仅修正柱头栌斗字段映射：
-
-- top width / 面阔总宽 = `475.1 mm`
-- bottom width / 面阔下宽 = `327.1 mm`
-- top depth / 进深总深 = `446.3 mm`
-- bottom depth / 进深下深 = `305.5 mm`
-
-其余核心规则继续不变：
-
-- unit = mm；+Z = up；+X = 主水平长度/跨度；+Y = 横向深度；
-- Master transform = location 0 / rotation 0 / scale 1；
-- LOD = `EVIDENCE_BOUNDED_MEDIUM_LOD`；world placement 不得写入 Master；
-- UNKNOWN 不得静默填值；RC/HCI 不得升级为 CONFIRMED；
-- `Z-006` 保持 UNKNOWN；`Z-006-RC-01` 独立可替换；`DG-114` 不形成统一小斗规格；`HIS-002` originality unknown；
-- 不建无证据榫卯、暗槽、内部空腔、耳瓣或端部细节；
-- Variant 必须参数驱动，placement-only 不创建 Variant，Object Scale 不得形成正式 Variant；
-- 上下六椽栿完整长度仍未被证实，只允许显式、可追溯的 length parameter；max thickness 仅作为 bounded outer envelope；
-- standard review set + semantic snapshot + deterministic semantic regeneration + independent reopen + mutation validation + Registry registration 为正式资产链要求。
+核心规则继续有效：unit=mm；标准局部坐标与 Scale=1；`EVIDENCE_BOUNDED_MEDIUM_LOD`；UNKNOWN 不得静默填值；RC/HCI 不得升级为 CONFIRMED；不建无证据榫卯、暗槽、内部空腔、耳瓣或端部细节；Variant 必须参数驱动；standard review set + semantic snapshot + deterministic regeneration + independent reopen + mutation validation + Registry registration 为正式资产链要求。
 
 ### T-011｜CMP-COLUMN-001 Column Master Pilot｜APPROVED / CLOSED / D-035
 
-- Engineering：22/22 machine checks PASS。
-- Blender execution：3.6.23 CLI/background / RC-008 COMPLIANT。
+- 22/22 machine checks PASS。
 - deterministic regeneration / independent reopen / synthetic mutation / canonical rebuild / Registry registration：PASS。
-- P2 frozen baseline：19 hashes unchanged。
 - Review package：6/6，ChatGPT visual PASS，Product Owner APPROVED。
-- `CMP-COLUMN-001` 为第 1 个 approved canonical Master；V002 字段纠错不影响该资产。
 
 ### T-012｜Dou Master Lean Batch V002｜APPROVED / CLOSED / D-037
 
-- Execution Mode：`LEAN_PRODUCTION_MODE_V001`。
 - First Article `CMP-LUDOU-COLUMN-001`：PASS。
-- Shared pipeline：PASS。
-- Scope：3/3 engineering PASS。
-- semantic snapshot / deterministic regeneration / independent reopen / synthetic mutation / canonical rebuild：3/3 PASS。
+- 3/3 engineering PASS；3/3 deterministic regeneration / reopen / mutation / rebuild PASS。
 - Review：18/18 individual + 1/1 batch overview = **19/19 visual PASS**。
-- Product Owner：`T-012｜P3_1_DOU_MASTER_BATCH_V002｜APPROVED`。
 - Approved Masters：柱头栌斗、单向长开斗、交互斗。
-- P3.1 Master coverage：**4 / 6 approved**。
-- Lean Production Mode 首次正式闭环验证成功；后续同质批次可按 RC-009 复用，实质变化仍须新首件/试点。
-- Visual Review：`docs/production/zhenguo_wanfo/P3_1_T012_DOU_MASTER_VISUAL_REVIEW_2026-09-13.md`。
+- P3.1 Master coverage：4 / 6 approved。
+
+### T-013｜Six-Chuanfu Master Batch V002｜APPROVED / CLOSED / D-039
+
+- Execution Mode：`CHAT_FIRST_CODEX_EXECUTOR_MODE_TRIAL + LEAN_PRODUCTION_MODE_V001`。
+- First Article：`CMP-FRAME-LOWER-SIX-CHUANFU-001` PASS；之后 `CMP-FRAME-UPPER-SIX-CHUANFU-001` PASS。
+- 两件各 26/26 machine checks PASS；deterministic regeneration / independent reopen / length mutation / tenon metadata-only mutation / canonical rebuild：2/2 PASS。
+- historical full length：两件均保持 `UNKNOWN / null`。
+- `canonical_reference_length_mm=1000`：仅 `PROJECT_RULE / NON_HISTORICAL / REPLACEABLE` reference specimen。
+- `tenon_area_thickness`：metadata-only / geometry use = 0。
+- `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY`：继续作为后续 Hard Fail。
+- 初次 review 12/13 PASS；Batch Overview 因视觉叠合 HOLD，仅重渲染 overview，canonical Masters 与其他 12 张图未修改。
+- 修正版 overview SHA256：`fd03116ba035dd98a66363d7bb4699634ebb62484c58c04c3befae32c33d9f32`。
+- 最终视觉审核：**13/13 PASS**。
+- Product Owner：`APPROVED / CLOSED / D-039`。
+- Approved Masters：下六椽栿、上六椽栿。
+- P3.1 Master coverage：**6 / 6 approved**。
 
 ### P3.1 Current Boundary / Next Step
 
 - 当前无 active Codex task。
-- Master coverage：**4 / 6 approved**。
-- 剩余：`CMP-FRAME-LOWER-SIX-CHUANFU-001`、`CMP-FRAME-UPPER-SIX-CHUANFU-001`。
-- 两个梁架 Master **尚未授权 Blender 生产**。
-- 下一步：设计并审核梁架类正式 Task Contract；由于几何方法与斗类不同，必须保留新的 First Article Gate，批准前不执行 Codex。
+- Master coverage：**6 / 6 approved / 100%**。
+- T-010 / T-011 / T-012 / T-013 均已完成其当前职责。
+- **P3.1 尚未自动 PASS / CLOSED**：Master coverage 达成只是 Gate Review 的必要条件，不替代 DoD 总验收。
+- 下一步：执行独立 `P3.1 Gate Review`，逐项核对 `P3_1_DEFINITION_OF_DONE_V001.md` 的 9 项 DoD。
+- Product Owner 明确批准 P3.1 PASS / CLOSED 前，P3.2 继续 LOCKED，不创建新的 P3.2 工程任务。
