@@ -95,15 +95,36 @@
 - Visual review record：`docs/production/zhenguo_wanfo/P3_1_T012_DOU_MASTER_VISUAL_REVIEW_2026-09-13.md`。
 - RC-009 Lean Production Mode 首次正式闭环验证成功；未来仅对同质批次默认复用，实质变化仍须新 First Article / Pilot。
 
-## Current Execution State｜R064｜2026-09-13
+## T-013｜P3.1 Six-Chuanfu Master Batch V002｜ENGINEERING PASS / REMOTE PUBLISHED / VISUAL REVIEW PENDING
+
+- Execution Mode：`CHAT_FIRST_CODEX_EXECUTOR_MODE_TRIAL + LEAN_PRODUCTION_MODE_V001`；Codex default Think = MEDIUM。
+- Authorization：D-038。
+- First Article `CMP-FRAME-LOWER-SIX-CHUANFU-001` 先完成并 PASS；之后 `CMP-FRAME-UPPER-SIX-CHUANFU-001` PASS。
+- Shared long-member pipeline：PASS。
+- 两件各 **26/26 machine checks PASS**；总计 52 项逐资产检查 PASS；无 unexplained validation errors。
+- 历史完整长度持续 `UNKNOWN / null`；`canonical_reference_length_mm=1000` 仅为 non-historical PROJECT_RULE / replaceable reference specimen；三层长度隔离与 `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` hard-fail carry-forward PASS。
+- `max_thickness` 保持 observed bound 语义；未提升为全长统一厚度历史事实。
+- `tenon_area_thickness` 保持 metadata-only / geometry use = 0；metadata mutation 时几何不变。
+- deterministic semantic regeneration / independent reopen / length mutation / tenon metadata mutation / canonical rebuild：2/2 PASS。
+- Unsupported geometry = 0；P2 PRIMARY_FRAME proxy geometry non-use PASS。
+- Review package：12/12 individual + 1/1 batch overview 已生成并 machine checked，待 ChatGPT / Product Owner 视觉审核。
+- Registry：2 条独立 `PENDING_CHATGPT_PRODUCT_OWNER_REVIEW` records；已批准四件 Master 保持不变。
+- P2 frozen baseline、Contract V002、四件已批准 Master 保护性检查 PASS；`.blend/.blend1` 未进入 Git。
+- Canonical `.blend` SHA256：
+  - Lower `71b6c0aecc179ff79b95c48fad38645108854e2b14d572d4f11f454e0856a1fd`
+  - Upper `c4b83d0c0dc179c3946b2744b9c3887301fb81c3d835bd0f24a96336616a07e7`
+- Engineering commit：`f607245444927b9853e0976b891673e387a14750`；push `SUCCESS`；remote `main` verified at same engineering commit before subsequent ChatGPT Project Control commits。
+- Engineering review：`docs/production/zhenguo_wanfo/P3_1_T013_ENGINEERING_REVIEW_2026-09-13.md`。
+- Boundary：engineering PASS **不等于** 两件 Master approved，也不等于 P3.1 PASS。
+
+## Current Execution State｜R068｜2026-09-13
 
 - P0：CLOSED / APPROVED。
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO。
 - P2：CLOSED / 4/4 PASS / PRODUCT OWNER APPROVED。
 - P3：ACTIVE / 1/4 PASS。
 - P3.0：CLOSED / APPROVED。
-- P3.1：ACTIVE / DoD LOCKED / Contract V002 LOCKED / **4 OF 6 MASTERS APPROVED**。
+- P3.1：ACTIVE / DoD LOCKED / Contract V002 LOCKED / **4 OF 6 MASTERS APPROVED + 2 ENGINEERING PASS PENDING VISUAL APPROVAL**。
 - Current engineering blocker：NONE。
-- Current task：NONE。
-- Remaining Masters：下六椽栿、上六椽栿。
-- Next action：设计并审核梁架类正式 Task Contract；因几何方法不同，必须设置新的 First Article Gate；Product Owner 授权前不启动 Codex / Blender。
+- Current task：T-013 V002 / ENGINEERING PASS / VISUAL REVIEW PENDING。
+- Next action：ChatGPT / Product Owner 审核 T-013 的 13 张 review assets；视觉 PASS + Product Owner 明确批准前，不提升两件 frame Master Registry 状态，不关闭 P3.1。
