@@ -96,7 +96,7 @@
 
 最终 V002 diagnostic：
 
-- priority = `UNKNOWN / PLACEHOLDER > REASONABLE COMPLETION / APPROVED OVERRIDE > HIGH_CONFIDENCE_INFERENCE > CONFIRMED`；
+- priority = `UNKNOWN / PLACEHOLDER > REASONABLE_COMPLETION / APPROVED OVERRIDE > HIGH_CONFIDENCE_INFERENCE > CONFIRMED`；
 - counts = CONFIRMED 0 / HCI 0 / RC 35 / UNKNOWN-placeholder 330；
 - 0-count 类别保留 legend；
 - Product Owner 直接审核 PASS。
@@ -120,7 +120,7 @@ P2 Closure Archive：`docs/project_control/phase_archive/P2_closure.md`。
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
 | P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11 families / 40 variants / 365 instances 的语义审计与迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；orphan 0/0/0；D-031。 |
-| P3.1｜Component Master & Variant Library | 为正式历史构件建立独立 3D Master、参数化 Variant、标准审核图与资产登记 | **ENTERED / DOD REQUIRED** | P3.0 Registry 为正式输入；DoD 批准前不得创建 T-010 或新增构件几何。 |
+| P3.1｜Component Master & Variant Library | 为证据资格成立的历史构件建立 canonical 3D Master、参数化 Variant、标准审核图与资产登记 | **ACTIVE / DOD LOCKED / T-010 PLANNING READY** | Master 数量由证据资格决定；`MASTER_REQUIRED` 必须100%覆盖；D-032。 |
 | P3.2｜Assembly Relationship Model | 建立构件之间组合、支承、连接、定位、重复和 Assembly Unit 关系 | **LOCKED** | 等待 P3.1 PASS。 |
 | P3.3｜Component-driven Building Reconstruction | 验证可由构件库 + Variant + Assembly Rules 重新装配万佛殿并形成可解释成果 | **LOCKED** | 等待 P3.2 PASS；Evidence Visualization 双层规则继续生效。 |
 
@@ -146,11 +146,25 @@ P2 Closure Archive：`docs/project_control/phase_archive/P2_closure.md`。
 - `BRACKET_ARM / PRIMARY_FRAME` 等 unresolved/proxy 必须在后续回到证据后再拆分，不得因 P3.1 建模需求静默升级。
 - `Z-006`、`Z-006-RC-01`、`DG-114`、`HIS-002`、45°转角、榫卯、隐角梁等边界继续生效。
 
-### P3.1 Entry Boundary
+### P3.1 Definition of Done V001｜LOCKED / PRODUCT OWNER APPROVED
 
-P3.1 已解锁并进入，但在其 Definition of Done 正式批准并锁定前：
+正式 DoD：`docs/production/zhenguo_wanfo/P3_1_DEFINITION_OF_DONE_V001.md`。Decision：D-032。
 
-- 不创建 T-010；
-- 不启动新的独立构件几何生产；
-- 不把 unresolved proxy 直接提升为正式 Component Master；
-- 下一步先定义 P3.1 的构件选择范围、Master/Variant资产标准、证据门槛和审核要求。
+PASS 必须同时满足：
+
+- DoD 9/9；
+- Scope Matrix coverage = 100%；
+- 所有 `MASTER_REQUIRED` Master coverage = 100%；
+- 所有 `EVIDENCE_REVIEW_BEFORE_MASTER` 得到明确升级 / Proxy / Deferred 结论；
+- CONTROL / ENVELOPE 被错误历史化建模数量 = 0；
+- orphan Master / Variant = 0；
+- evidence traceability / parameter mutation / replaceability / reproducibility / independent reopen 全部 PASS；
+- P2 frozen baseline 未修改；
+- Product Owner 最终明确批准。
+
+### P3.1 Current Boundary
+
+- P3.1 不设固定 Master 数量，资产范围由证据资格决定。
+- P1 已直接核实但未被 P2 独立 family 表达的柱头栌斗、三类长开斗、上下六椽栿等必须进入资格审查。
+- 首个工程任务应先处理 Scope Matrix + Evidence-backed Identity Resolution；未完成资格判定前，不进行批量 Master 几何生产。
+- P3.1 可以拆分为多个 T 任务，不强制由 T-010 一次完成整个 Gate。
