@@ -42,5 +42,7 @@
   "geometry_semantics": "PROJECT_RULE / BOUNDED_OUTER_ENVELOPE_REFERENCE / REPLACEABLE",
   "historical_full_length_mm": null,
   "master_version": "V001",
-  "status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW"
+  "status": "APPROVED_REVIEW_PACKAGE",
+  "visual_review_status": "CHATGPT_VISUAL_PASS_6_OF_6_PRODUCT_OWNER_APPROVED_D039",
+  "approval_decision_id": "D-039"
 }
