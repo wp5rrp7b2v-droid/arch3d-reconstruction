@@ -1,0 +1,46 @@
+{
+  "assets": [
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/FRONT.png",
+      "sha256": "edfd9c08b48be655eb226c18fda612ecde4da2ef2d8cbfecff16565bda950696",
+      "status": "PASS",
+      "view": "FRONT"
+    },
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/SIDE.png",
+      "sha256": "5d99b206eeecfe3512d90ab2a0f3fa999b6ce018d2ff74bc93579fb05b0a8c65",
+      "status": "PASS",
+      "view": "SIDE"
+    },
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/TOP.png",
+      "sha256": "acc493654e3643b6d5ec1aa965173b063a9769e496c4a3ea3290c5f7213f50b2",
+      "status": "PASS",
+      "view": "TOP"
+    },
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/AXON.png",
+      "sha256": "03c68c56d8f07ad6709a866206fa5e7a82c614fd8d7f56698debffc9079a05a6",
+      "status": "PASS",
+      "view": "AXON"
+    },
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/DIMENSION_PARAMETER_SUMMARY.png",
+      "sha256": "73b8f5491a2c298b7be89560c03dcdff1b804a9e1bd3b8f012be922336fdeb14",
+      "status": "PASS",
+      "view": "DIMENSION_PARAMETER_SUMMARY"
+    },
+    {
+      "path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/EVIDENCE_UNCERTAINTY_SUMMARY.png",
+      "sha256": "0fec75deb5f718a453fc1581608f35851f40eae7c451d90cd398edb44485fa8f",
+      "status": "PASS",
+      "view": "EVIDENCE_UNCERTAINTY_SUMMARY"
+    }
+  ],
+  "canonical_reference_length_mm": 1000.0,
+  "component_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+  "geometry_semantics": "PROJECT_RULE / BOUNDED_OUTER_ENVELOPE_REFERENCE / REPLACEABLE",
+  "historical_full_length_mm": null,
+  "master_version": "V001",
+  "status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW"
+}

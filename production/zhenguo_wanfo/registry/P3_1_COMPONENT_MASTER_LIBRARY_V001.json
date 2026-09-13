@@ -87,10 +87,74 @@
       "shared_generator_path": "production/zhenguo_wanfo/scripts/dou_master_common_v001.py",
       "validation_status": "T012_ENGINEERING_PASS_VISUAL_PASS_APPROVED_D037",
       "variant_ids": []
+    },
+    {
+      "approval_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+      "canonical_asset_sha256": "71b6c0aecc179ff79b95c48fad38645108854e2b14d572d4f11f454e0856a1fd",
+      "canonical_asset_status": "LOCAL_ONLY_GENERATED",
+      "component_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "evidence_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md",
+        "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json",
+        "docs/tasks/T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V002.md"
+      ],
+      "generator_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/build_six_chuanfu_master_v001.py",
+      "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+      "known_unknowns": [
+        "HIS-002: 963 component originality UNKNOWN",
+        "Historical full length UNKNOWN / null",
+        "Maximum thickness is an observed bound, not a proven uniform full-length section",
+        "Tenon-area location/extent, camber, end profile, joinery and hidden connections are not evidenced"
+      ],
+      "local_binary_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/asset/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_V001.blend",
+      "master_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+      "master_version": "V001",
+      "originality_status": "unknown",
+      "parameter_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+      "reuse_scope": "Replaceable bounded long-member outer-envelope reference; assembly requires separately approved building-specific length.",
+      "review_metadata_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/REVIEW_PACKAGE_V001.json",
+      "review_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+      "shared_generator_path": "production/zhenguo_wanfo/scripts/six_chuanfu_master_common_v001.py",
+      "validation_status": "T013_ENGINEERING_PASS",
+      "variant_ids": []
+    },
+    {
+      "approval_status": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+      "canonical_asset_sha256": "c4b83d0c0dc179c3946b2744b9c3887301fb81c3d835bd0f24a96336616a07e7",
+      "canonical_asset_status": "LOCAL_ONLY_GENERATED",
+      "component_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "evidence_references": [
+        "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+        "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md",
+        "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json",
+        "docs/tasks/T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V002.md"
+      ],
+      "generator_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/build_six_chuanfu_master_v001.py",
+      "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+      "known_unknowns": [
+        "HIS-002: 963 component originality UNKNOWN",
+        "Historical full length UNKNOWN / null",
+        "Maximum thickness is an observed bound, not a proven uniform full-length section",
+        "Tenon-area location/extent, camber, end profile, joinery and hidden connections are not evidenced"
+      ],
+      "local_binary_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/asset/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_V001.blend",
+      "master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "master_version": "V001",
+      "originality_status": "unknown",
+      "parameter_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+      "reuse_scope": "Replaceable bounded long-member outer-envelope reference; assembly requires separately approved building-specific length.",
+      "review_metadata_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/REVIEW_PACKAGE_V001.json",
+      "review_path": "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+      "shared_generator_path": "production/zhenguo_wanfo/scripts/six_chuanfu_master_common_v001.py",
+      "validation_status": "T013_ENGINEERING_PASS",
+      "variant_ids": []
     }
   ],
   "phase": "P3.1",
-  "status": "COLUMN_D035_DOU_BATCH_D037_APPROVED_4_OF_6",
-  "task": "T-012",
+  "status": "FOUR_APPROVED_TWO_FRAME_ENGINEERING_COMPLETE_PENDING_REVIEW",
+  "task": "T-013",
   "version": "V001"
 }

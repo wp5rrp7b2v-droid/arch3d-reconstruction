@@ -1,0 +1,52 @@
+{
+  "approval_boundary": "PENDING_CHATGPT_PRODUCT_OWNER_REVIEW; not P3.1 PASS",
+  "approved_four_preserved": true,
+  "blender_execution_mode": "CLI_BACKGROUND",
+  "blender_version": "3.6.23",
+  "components": [
+    {
+      "canonical_blend_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/asset/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_V001.blend",
+      "canonical_blend_sha256": "71b6c0aecc179ff79b95c48fad38645108854e2b14d572d4f11f454e0856a1fd",
+      "check_count": 26,
+      "component_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "review_count": 6,
+      "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+      "validation_path": "production/zhenguo_wanfo/validation/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_VALIDATION_V001.json"
+    },
+    {
+      "canonical_blend_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/asset/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_V001.blend",
+      "canonical_blend_sha256": "c4b83d0c0dc179c3946b2744b9c3887301fb81c3d835bd0f24a96336616a07e7",
+      "check_count": 26,
+      "component_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "review_count": 6,
+      "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+      "validation_path": "production/zhenguo_wanfo/validation/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_VALIDATION_V001.json"
+    }
+  ],
+  "contract": "P3_1_MASTER_ASSET_CONTRACT_V002 / D-036",
+  "contract_v002_preserved": true,
+  "execution_contract": "P3_1_SIX_CHUANFU_MASTER_BATCH_V002",
+  "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE_TRIAL + LEAN_PRODUCTION_MODE_V001",
+  "extra_masters_produced": false,
+  "first_article": "PASS",
+  "overview": {
+    "path": "production/zhenguo_wanfo/review/P3_1/batches/SIX_CHUANFU_MASTER_BATCH_V001_OVERVIEW.png",
+    "reference_length_mm": 1000.0,
+    "relative_section_scale": "TRUE_1_TO_1_MESH_DIMENSIONS",
+    "sha256": "725cc372003a044e104a285c8df323d863dfbf319cfc0d645b6e55377e470799",
+    "status": "PASS"
+  },
+  "p2_frozen_baseline_preserved": true,
+  "protected_hashes": {
+    "approved_master_count": 4,
+    "p2_count": 19,
+    "protected_tracked_count": 48,
+    "status": "PASS"
+  },
+  "registry_registration": "PASS",
+  "review_count": 12,
+  "shared_pipeline": "PASS",
+  "status": "PASS",
+  "task": "T-013",
+  "unexplained_validation_errors": []
+}

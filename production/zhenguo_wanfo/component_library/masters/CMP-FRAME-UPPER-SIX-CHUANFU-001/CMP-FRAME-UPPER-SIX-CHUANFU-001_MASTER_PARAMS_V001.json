@@ -1,0 +1,187 @@
+{
+  "assembly_length_rule": {
+    "default_to_canonical_reference_allowed": false,
+    "hard_fail_id": "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY",
+    "historical_full_length_remains_null": true,
+    "requires_explicit_building_specific_approved_length": true
+  },
+  "canonical_asset_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/asset/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_V001.blend",
+  "canonical_name_zh": "上六椽栿",
+  "canonical_transform": {
+    "location": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "component_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+  "contract_decision_id": "D-036",
+  "contract_version": "P3_1_MASTER_ASSET_CONTRACT_V002",
+  "coordinate_convention": {
+    "+X": "member_longitudinal",
+    "+Y": "section_width",
+    "+Z": "vertical_thickness",
+    "handedness": "right_handed"
+  },
+  "evidence_references": [
+    "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+    "docs/production/zhenguo_wanfo/P3_1_MASTER_ASSET_CONTRACT_V002.md",
+    "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json",
+    "docs/tasks/T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V002.md"
+  ],
+  "generator_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/build_six_chuanfu_master_v001.py",
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "geometry_semantics": "PROJECT_RULE / BOUNDED_OUTER_ENVELOPE_REFERENCE / REPLACEABLE",
+  "historical_state": {
+    "historical_claim": false,
+    "historical_full_length_mm": null,
+    "model_layer": "observed_as_measured_section_plus_non_historical_reference_length",
+    "reconstructed_963_candidate": "not_inferred",
+    "report_ideal_model": "separate_not_inferred"
+  },
+  "interpretation_boundary": [
+    "Present measured section data are not proven 963 original design.",
+    "Reference and realization length are non-historical engineering values.",
+    "Bounded outer envelope does not claim uniform historical section along full member.",
+    "Tenon-area thickness is metadata only and drives no geometry."
+  ],
+  "known_unknowns": [
+    "HIS-002: 963 component originality UNKNOWN",
+    "Historical full length UNKNOWN / null",
+    "Maximum thickness is an observed bound, not a proven uniform full-length section",
+    "Tenon-area location/extent, camber, end profile, joinery and hidden connections are not evidenced"
+  ],
+  "master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+  "master_version": "V001",
+  "origin_convention": "longitudinal_midpoint_transverse_center_lower_reference_plane",
+  "originality_parameter_id": "HIS-002",
+  "originality_status": "unknown",
+  "p2_primary_frame_proxy_geometry_use_count": 0,
+  "parameters": [
+    {
+      "classification": "UNKNOWN",
+      "historical_claim": false,
+      "key": "historical_full_length_mm",
+      "production_use": "DO_NOT_LOCK",
+      "replaceable": true,
+      "source_ids": [
+        "D-009",
+        "HIS-002"
+      ],
+      "source_layer": "EVIDENCE_GAP",
+      "time_layer": "historical_full_length_unknown",
+      "unit": "mm",
+      "value": null
+    },
+    {
+      "classification": "PROJECT_RULE",
+      "historical_claim": false,
+      "key": "canonical_reference_length_mm",
+      "production_use": "CANONICAL_REFERENCE_ONLY",
+      "replaceable": true,
+      "source_ids": [
+        "D-038",
+        "T-013"
+      ],
+      "source_layer": "ENGINEERING_REFERENCE",
+      "time_layer": "NON_HISTORICAL_REFERENCE_REALIZATION",
+      "unit": "mm",
+      "value": 1000.0
+    },
+    {
+      "classification": "PROJECT_RULE",
+      "derives_from": "canonical_reference_length_mm",
+      "historical_claim": false,
+      "key": "realization_length_mm",
+      "production_use": "GEOMETRY_EXECUTION_VALUE",
+      "replaceable": true,
+      "role": "GEOMETRY_EXECUTION_VALUE",
+      "source_ids": [
+        "D-038",
+        "T-013"
+      ],
+      "source_layer": "ENGINEERING_EXECUTION",
+      "time_layer": "NON_HISTORICAL_REFERENCE_REALIZATION",
+      "unit": "mm",
+      "value": 1000.0
+    },
+    {
+      "classification": "CONFIRMED",
+      "key": "width_mm",
+      "production_use": "OBSERVED_REFERENCE_OUTER_ENVELOPE",
+      "replaceable": false,
+      "source_ids": [
+        "D-009",
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 334.0
+    },
+    {
+      "classification": "CONFIRMED",
+      "key": "max_thickness_mm",
+      "production_use": "OBSERVED_MAXIMUM_BOUND_ONLY",
+      "replaceable": false,
+      "source_ids": [
+        "D-009",
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 240.5
+    },
+    {
+      "classification": "CONFIRMED",
+      "geometry_use_count": 0,
+      "key": "tenon_area_thickness_mm",
+      "production_use": "EVIDENCE_METADATA_ONLY",
+      "replaceable": false,
+      "source_ids": [
+        "D-009",
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 209.0
+    }
+  ],
+  "placement_only_attributes": [
+    "support_points",
+    "world_position",
+    "world_rotation",
+    "instance_number"
+  ],
+  "reuse_scope": "Replaceable bounded long-member outer-envelope reference; assembly requires separately approved building-specific length.",
+  "review_asset_paths": [
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/FRONT.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/SIDE.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/TOP.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/AXON.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/DIMENSION_PARAMETER_SUMMARY.png",
+    "production/zhenguo_wanfo/review/P3_1/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/EVIDENCE_UNCERTAINTY_SUMMARY.png"
+  ],
+  "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+  "shared_generator_path": "production/zhenguo_wanfo/scripts/six_chuanfu_master_common_v001.py",
+  "task_decision_id": "D-038",
+  "unit": "mm",
+  "unsupported_geometry": [],
+  "variant_axes": [
+    "length_mm",
+    "evidence_supported_section_difference"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "canonical_blend_sha256": "71b6c0aecc179ff79b95c48fad38645108854e2b14d572d4f11f454e0856a1fd",
+  "check_count": 26,
+  "component_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+  "per_asset_report": "production/zhenguo_wanfo/validation/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_VALIDATION_V001.json",
+  "protected_preflight": {
+    "approved_master_count": 4,
+    "p2_count": 19,
+    "protected_tracked_count": 48,
+    "status": "PASS"
+  },
+  "review_count": 6,
+  "stage_c_authorized": true,
+  "status": "PASS"
+}

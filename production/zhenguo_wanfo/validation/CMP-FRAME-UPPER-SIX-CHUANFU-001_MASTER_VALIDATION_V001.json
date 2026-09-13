@@ -1,0 +1,64 @@
+{
+  "approval_boundary": "ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+  "blender_version": "3.6.23",
+  "canonical_blend_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/asset/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_V001.blend",
+  "canonical_blend_sha256": "c4b83d0c0dc179c3946b2744b9c3887301fb81c3d835bd0f24a96336616a07e7",
+  "check_count": 26,
+  "checks": {
+    "approved_reference_length_from_contract": "PASS",
+    "assembly_length_leak_hard_fail_carried_forward": "PASS",
+    "authoritative_contract": "PASS",
+    "bbox_extents_origin_axes": "PASS",
+    "blend_local_only": "PASS",
+    "bounded_reference_semantics": "PASS",
+    "canonical_hashes": "PASS",
+    "canonical_rebuild_after_both_mutations": "PASS",
+    "d009_measured_section_trace": "PASS",
+    "deterministic_regeneration_semantic": "PASS",
+    "historical_length_null_all_layers": "PASS",
+    "historical_length_unknown_not_locked": "PASS",
+    "independent_reopen": "PASS",
+    "length_mutation_x_only_historical_null": "PASS",
+    "max_thickness_bound_not_uniform_claim": "PASS",
+    "no_component_or_reference_naked_constants_in_shared_geometry": "PASS",
+    "no_reference_as_historical_claim": "PASS",
+    "nonhistorical_reference_semantics": "PASS",
+    "p2_proxy_geometry_nonuse": "PASS",
+    "realization_explicitly_derived": "PASS",
+    "six_review_assets_machine_checked": "PASS",
+    "tenon_metadata_mutation_geometry_unchanged": "PASS",
+    "tenon_metadata_only": "PASS",
+    "unique_component_master_id": "PASS",
+    "unit_transform_single_body": "PASS",
+    "unsupported_geometry_zero": "PASS"
+  },
+  "component_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+  "mutation_evidence": {
+    "canonical_rebuilt": true,
+    "classification": "ENGINEERING_TEST_ONLY",
+    "length": {
+      "baseline_mm": 1000.0,
+      "historical_null": true,
+      "mutated_mm": 1100.0,
+      "x_only": true
+    },
+    "not_historical_variant": true,
+    "tenon": {
+      "baseline_mm": 209.0,
+      "geometry_unchanged": true,
+      "mutated_mm": 229.9
+    }
+  },
+  "reopen_evidence": {
+    "blend_sha256": "66ce50dbb35443424ebda8659cfce3ca12a0b386f677af0f666a84f9f8f62db8",
+    "component_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+    "historical_full_length_mm": null,
+    "semantic_geometry_signature": "f0fd7d882fffa2c89079da5b3e868bf496faadfe18e1a31f50c890eee6239340",
+    "status": "PASS"
+  },
+  "review_count": 6,
+  "semantic_geometry_signature": "f0fd7d882fffa2c89079da5b3e868bf496faadfe18e1a31f50c890eee6239340",
+  "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+  "status": "PASS",
+  "task": "T-013"
+}
