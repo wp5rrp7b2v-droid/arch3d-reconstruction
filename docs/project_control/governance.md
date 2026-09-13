@@ -69,6 +69,29 @@ git config --local https.proxy http://127.0.0.1:15236
 
 设置后，本仓库后续普通 `git pull / fetch / push` 应自动使用代理，无需每个 T-### 重复显式添加 `-c http.proxy=...`。
 
+### 4.2 本地 Blender 自动执行规则
+
+本项目已验证本机 **Blender 3.6.23 / Intel x64** 可完成脚本化生成、保存、独立重开与审核。Codex 执行本地 Blender 工程时，默认不得依赖 macOS GUI 启动链路。
+
+本地/Codex 执行规则：
+
+1. 默认禁止使用 `open -a Blender`、Finder 双击、AppleScript UI 控制或“先打开 Blender 窗口再执行”的 GUI 自动化方式作为正式工程链；
+2. 默认固定调用本机 Blender executable：`/Applications/Blender.app/Contents/MacOS/Blender`；
+3. 自动生成、验证、保存、重开检查与自动渲染优先使用 `--background` / CLI，例如：
+
+```bash
+/Applications/Blender.app/Contents/MacOS/Blender \
+  --background \
+  --python <script.py>
+```
+
+4. Task Contract 若未另行批准，不得自动尝试下载安装其他 Blender 版本，也不得因为 GUI 打开失败而改用不受控版本；
+5. 若 executable 路径不存在或版本与任务基线不符，Codex 应 STOP 并报告实际路径/版本，不得静默替换；
+6. 只有 Product Owner 需要人工视觉检查时，才需要手动打开 `.blend` 或直接查看正式 review PNG；人工检查不是自动工程执行的前置条件；
+7. GUI / LaunchServices 报错不等于 Blender engine 不可用。应优先验证 executable + `--background` 是否正常；只有 CLI/background 也失败时才按 Blender runtime blocker 处理。
+
+该规则适用于后续所有本地 Blender T-###，除非某个 Task Contract 经明确批准要求交互式 GUI 操作。
+
 ## 5. Checkpoint 的职责
 
 Checkpoint **不负责首次落档**。它只负责：
