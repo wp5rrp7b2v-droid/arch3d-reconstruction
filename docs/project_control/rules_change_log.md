@@ -12,6 +12,7 @@
 | **RC-006** | **2026-09-12** | **Dashboard 显示约束：`Overall Gate Status` 固定显示 6 条记录，新增 Gate 采用框内滚动；`Current Gate` 必须显示 Gate 完成度（如 3/4）；`Final Review Set` 等长标签区域必须使用独立响应式列宽，禁止文字重叠。** | **保持 Dashboard 全局观稳定，不因 Gate 数量或长标签增加而继续拉长、破坏可读性。** | **ACTIVE / DASHBOARD UI RULE** |
 | **RC-007** | **2026-09-13** | **GitHub 网络失败与 Git 冲突正式分流：本项目仓库使用 repository-local Git proxy；当前已验证代理为 `http://127.0.0.1:15236`。`github.com:443` timeout/connection failure 视为网络问题，Codex 自动检查/应用当前本地代理并重试；只有 non-fast-forward、unknown tracked changes、同文件并行修改或真实 merge conflict 才 STOP。禁止为网络错误使用 force/reset/overwrite。** | **本机系统代理可访问 GitHub，但 Terminal/Git 直连 443 会失败；避免每个 T 任务重复人工判断与临时加代理参数。** | **ACTIVE / LOCAL GIT CONNECTIVITY RULE** |
 | **RC-008** | **2026-09-13** | **本地 Blender 自动执行统一改为 CLI/background：Codex 默认固定调用 `/Applications/Blender.app/Contents/MacOS/Blender --background --python ...`，禁止将 `open -a Blender`、Finder/AppleScript GUI 启动作为正式自动工程链。GUI/LaunchServices 报错不视为 Blender engine failure；先验证 executable + background。只有任务明确需要交互式 GUI 时才例外。** | **本机 Blender 3.6.23 Intel 已验证可运行，但 Codex 经 GUI/LaunchServices 启动时反复报错；把自动化与桌面 GUI 解耦可减少重复故障，并使生成、验证、保存、重开和渲染更确定。** | **ACTIVE / LOCAL BLENDER EXECUTION RULE** |
+| **RC-009** | **2026-09-13** | **引入 `LEAN_PRODUCTION_MODE`：在代表性 Pilot / First Article 已验证共享 pipeline 后，同类批量生产默认优先采用共享 generator utility、batch runner、validator、renderer 与首件闸门；减少重复读取、重复代码、重复启动和重复解释，但每个正式资产仍必须独立参数、独立 binary/hash/semantic/Registry，并逐资产完成 deterministic regeneration、reopen、mutation、canonical rebuild、evidence/transform validation 与正式 review package。首件失败立即停止批量扩展；同一根因最多 2 次有证据的修正重试。若几何方法、证据语义或执行环境发生实质变化，必须回到 standalone/pilot mode。** | **在不降低 DoD、Hard Fail、Evidence Boundary 或 Visual Review 的前提下，降低 Codex 额度、重复工程与调试成本，并将 Pilot→批量生产转化为可复用生产范式。** | **ACTIVE / LEAN PRODUCTION RULE** |
 
 ## 当前有效原则摘要
 
@@ -38,5 +39,7 @@
 `Repository-local Git proxy = preferred; no global proxy mutation`
 
 `Local Blender automation = fixed executable + CLI/background; GUI launch is not the default execution path`
+
+`Lean Production = shared pipeline + first-article gate + independent per-asset acceptance; reduce duplication, not quality`
 
 `同步模式 = TRIAL；价值不足时可调整`
