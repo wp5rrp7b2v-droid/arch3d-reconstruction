@@ -119,17 +119,32 @@ P2 Closure Archive：`docs/project_control/phase_archive/P2_closure.md`。
 
 | Gate | 验收标准 | 当前状态 | 关键边界 |
 |---|---|---|---|
-| P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11 families / 40 variants / 365 instances 的语义审计与迁移 | **ENTERED / DOD DRAFT** | 不新增几何；historical component 与 control/proxy/envelope 必须分离；T-009 未授权。 |
+| P3.0｜Component Ontology & Registry | 建立构件本体、命名/ID、Registry Schema，并完成 P2 11 families / 40 variants / 365 instances 的语义审计与迁移 | **ACTIVE / DOD LOCKED / T-009 AUTHORIZED** | 不新增几何；historical component 与 control/proxy/envelope 必须分离；D-030。 |
 | P3.1｜Component Master & Variant Library | 为正式历史构件建立独立 3D Master、参数化 Variant、标准审核图与资产登记 | **LOCKED** | 等待 P3.0 PASS。 |
 | P3.2｜Assembly Relationship Model | 建立构件之间组合、支承、连接、定位、重复和 Assembly Unit 关系 | **LOCKED** | 等待 P3.1 PASS。 |
 | P3.3｜Component-driven Building Reconstruction | 验证可由构件库 + Variant + Assembly Rules 重新装配万佛殿并形成可解释成果 | **LOCKED** | 等待 P3.2 PASS；Evidence Visualization 双层规则继续生效。 |
 
 **P3 Gate Progress：0 / 4。**
 
+### P3.0 Definition of Done V001｜LOCKED / PRODUCT OWNER APPROVED
+
+正式 DoD：`docs/production/zhenguo_wanfo/P3_0_DEFINITION_OF_DONE_V001.md`。Decision：D-030。
+
+PASS 必须同时满足：
+
+- DoD 9/9；
+- P2 family migration = 11/11；
+- P2 variant migration = 40/40；
+- P2 instance migration = 365/365；
+- orphan family / variant / instance = 0；
+- historical component 与 engineering/control object 明确分离；
+- evidence / uncertainty 无静默升级；
+- Registry Schema 可扩展至下一座建筑；
+- Product Owner 最终明确批准。
+
 ### P3.0 Current Boundary
 
-- 正式 DoD Draft：`docs/production/zhenguo_wanfo/P3_0_DEFINITION_OF_DONE_V001.md`。
 - P2 冻结为 Reconstruction Engineering Baseline，不重做。
 - P3.0 首先审计 P2 工程 family 是否真对应历史构件。
 - 现有 P2 family 中已明确混有 CONTROL / DIAGNOSTIC / ENVELOPE 类对象，因此不得直接将 11 families 解释为 11 种古建筑构件。
-- P3.0 DoD 经 Product Owner 批准并锁定前，不创建 T-009、不做新增 Blender 几何。
+- T-009 已获授权，仅执行 ontology / registry / migration / validation；不得新增 Blender 几何。
