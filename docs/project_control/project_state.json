@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R072",
+  "state_revision": "R073",
   "last_updated": "2026-09-14",
-  "session_status": "ACTIVE / P3.2_DOD_LOCKED / ENGINEERING_PLANNING_READY / P3.1_PASS_APPROVED_CLOSED",
+  "session_status": "ACTIVE / P3.2_T015_APPROVED_CLOSED / REPRESENTATIVE_ASSEMBLY_PLANNING_READY",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,11 +17,11 @@
     "id": "P3.2",
     "name": "构件组合关系模型",
     "english_name": "Assembly Relationship Model",
-    "status": "ACTIVE / DOD LOCKED / ENGINEERING PLANNING READY",
+    "status": "ACTIVE / T-015 APPROVED CLOSED / NEXT TASK PLANNING READY",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
-      "P3.2": "ACTIVE / DOD LOCKED / D-041 / ENGINEERING PLANNING READY",
+      "P3.2": "ACTIVE / DOD LOCKED / D-041 / T-015 APPROVED CLOSED / D-042",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
@@ -68,7 +68,7 @@
     }
   },
   "p3_2": {
-    "status": "ACTIVE / DOD LOCKED / ENGINEERING PLANNING READY",
+    "status": "ACTIVE / T-015 APPROVED CLOSED / REPRESENTATIVE_ASSEMBLY PLANNING READY",
     "gate_name": "构件组合关系模型",
     "engineering_subtitle": "Assembly Relationship Model",
     "dod_version": "V001",
@@ -77,6 +77,18 @@
     "dod_count": 9,
     "hard_fail_count": 3,
     "engineering_authorized": true,
+    "t015": {
+      "task_id": "T-015",
+      "engineering_id": "P3_2_RELATIONSHIP_FOUNDATION_V001",
+      "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-042",
+      "engineering_commit": "49b0415479d811a26d4f44588d15cd863467edf4",
+      "machine_validation": "31/31 PASS",
+      "negative_tests": "21/21 EXPECTED REJECTION PASS",
+      "approved_master_mapping": "6/6 PASS",
+      "relationship_types": "5/5 PASS",
+      "hard_fails_canonical": 0,
+      "review_file": "docs/production/zhenguo_wanfo/P3_2_RELATIONSHIP_FOUNDATION_REVIEW_V001.md"
+    },
     "approved_component_nodes_from_p3_1": [
       "CMP-COLUMN-001",
       "CMP-LUDOU-COLUMN-001",
@@ -105,12 +117,13 @@
       "Preserve P3.1 evidence and component identity boundaries.",
       "Do not allow six-chuanfu canonical 1000 mm reference length to leak into building assembly.",
       "Do not silently historicize Proxy / Control / Envelope / Deferred / UNKNOWN objects or relationships.",
-      "P3.2 does not require full-building reconstruction; P3.3 remains locked until P3.2 PASS."
+      "P3.2 does not require full-building reconstruction; P3.3 remains locked until P3.2 PASS.",
+      "Representative assembly work must explicitly validate real upper/lower support and positioning interfaces instead of mechanically treating the generic lower reference plane as every historical contact surface."
     ]
   },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
-    "status": "T013 TRIAL COMPLETE / EVALUATION PENDING",
+    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / LONG-TERM EVALUATION PENDING",
     "principle": "ChatGPT handles analysis/decision/diagnosis/review; Codex handles deterministic execution/machine validation",
     "quality_preservation": "NO REDUCTION TO DOD / HARD FAIL / PER-ASSET VALIDATION / REVIEW / PRODUCT OWNER APPROVAL"
   },
@@ -124,16 +137,16 @@
     "assembly_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY"
   },
   "latest_material_decision": {
-    "id": "D-041",
+    "id": "D-042",
     "date": "2026-09-14",
-    "decision": "Product Owner approved and locked P3.2 Definition of Done V001 for 构件组合关系模型: 9 DoD + 3 Hard Fails. P3.2 engineering planning is now authorized; P3.3 remains locked until P3.2 PASS."
+    "decision": "Product Owner approved and closed T-015 P3.2 Relationship Foundation V001 after 31/31 machine checks, 21/21 negative rejection tests, ChatGPT structural review PASS, and zero canonical Hard Fail. P3.2 remains ACTIVE; P3.3 remains locked."
   },
-  "next_action": "Design the first P3.2 engineering Task Contract against the locked 9-item DoD, starting with the minimum relationship schema / component qualification / interface-and-placement foundation rather than full-building reconstruction.",
+  "next_action": "Design the next P3.2 representative assembly relationship validation task, covering a vertical support chain, a horizontal/frame chain, and a repeat relationship while explicitly validating real support/positioning interfaces and preserving evidence boundaries.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v028",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_R072 / REFRESH REQUIRED"
+    "refresh_status": "STALE_AFTER_R073 / REFRESH REQUIRED"
   }
 }
