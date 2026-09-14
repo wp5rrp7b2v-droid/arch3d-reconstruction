@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R076",
+  "state_revision": "R077",
   "last_updated": "2026-09-14",
   "session_status": "ACTIVE / P3.2_T016_AUTHORIZED / IN_EXECUTION",
   "phase": {
@@ -27,6 +27,25 @@
   },
   "decision_required": false,
   "blocker": null,
+  "temporary_operating_mode": {
+    "rule_id": "RC-014",
+    "name": "CLOUD_MODE_2026-09-16_20",
+    "status": "APPROVED / PLANNED",
+    "approved_on": "2026-09-14",
+    "expected_start": "2026-09-16",
+    "expected_end": "2026-09-20",
+    "scope": "ARCH3D-001 ONLY",
+    "tools": [
+      "ChatGPT App",
+      "Codex Cloud",
+      "GitHub Web/App"
+    ],
+    "local_mac": "TEMPORARILY UNAVAILABLE DURING ACTIVE WINDOW",
+    "canonical_rule_file": "docs/project_control/CLOUD_MODE_2026-09-16_20.md",
+    "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
+    "local_dependency_rule": "No local-Mac-dependent work may be marked PASS during Cloud Mode unless equivalent execution and validation capability has been separately approved.",
+    "pre_activation_note": "If local work continues on 2026-09-15, refresh the final pre-Cloud snapshot and pending-local list before activation."
+  },
   "current_task": {
     "task_id": "T-016",
     "name": "P3.2 代表性构件组合验证",
@@ -178,16 +197,16 @@
     "assembly_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY"
   },
   "latest_material_decision": {
-    "id": "T-016-EXECUTION-AUTHORIZATION",
+    "id": "RC-014-CLOUD-MODE-APPROVAL",
     "date": "2026-09-14",
-    "decision": "Product Owner explicitly authorized the start of T-016. Engineering execution is now active under the locked D-043 representative assembly design and existing T-016 Task Contract. This does not approve T-016 results, does not pass P3.2, and does not unlock P3.3."
+    "decision": "Product Owner approved a temporary Cloud-only operating mode for ARCH3D-001, expected 2026-09-16 through 2026-09-20. GitHub remains canonical; ChatGPT App handles control/review; Codex Cloud handles repository-contained verifiable execution; local-Mac-dependent work cannot be marked PASS without separately approved equivalent capability. This does not alter P3.2 technical criteria or current T-016 authorization."
   },
-  "next_action": "Codex executes T-016 after final local main/origin-main sync check. On completion return ENGINEERING COMPLETE / REVIEW REQUIRED with the contract-defined report; then ChatGPT performs structural and visual review before any Product Owner approval.",
+  "next_action": "Continue current authorized T-016 under normal local workflow while local Mac remains available. If work continues on 2026-09-15, refresh the final pre-Cloud snapshot and pending-local list. When Cloud Mode activates, re-read GitHub main and apply RC-014 without lowering P3.2 DoD or local-Blender-dependent acceptance requirements.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v028",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_R076 / REFRESH REQUIRED"
+    "refresh_status": "STALE_AFTER_R077 / REFRESH REQUIRED"
   }
 }
