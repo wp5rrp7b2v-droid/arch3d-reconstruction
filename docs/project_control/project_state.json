@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R074",
+  "state_revision": "R075",
   "last_updated": "2026-09-14",
-  "session_status": "ACTIVE / P3.2_REPRESENTATIVE_ASSEMBLY_DESIGN_LOCKED / T016_PLANNING_READY",
+  "session_status": "ACTIVE / P3.2_T016_CONTRACT_CREATED / NOT_STARTED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,25 @@
     "id": "P3.2",
     "name": "构件组合关系模型",
     "english_name": "Assembly Relationship Model",
-    "status": "ACTIVE / REPRESENTATIVE ASSEMBLY DESIGN LOCKED / T-016 PLANNING READY",
+    "status": "ACTIVE / T-016 CONTRACT CREATED / NOT STARTED",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
-      "P3.2": "ACTIVE / DOD LOCKED / D-041 / T-015 CLOSED D-042 / REPRESENTATIVE DESIGN LOCKED D-043",
+      "P3.2": "ACTIVE / DOD LOCKED D-041 / T-015 CLOSED D-042 / REPRESENTATIVE DESIGN LOCKED D-043 / T-016 CONTRACT CREATED NOT STARTED",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
   "decision_required": false,
   "blocker": null,
-  "current_task": null,
+  "current_task": {
+    "task_id": "T-016",
+    "name": "P3.2 代表性构件组合验证",
+    "engineering_id": "P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001",
+    "status": "CONTRACT CREATED / READY FOR EXECUTION / NOT STARTED",
+    "think_level": "MEDIUM",
+    "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
+    "contract_file": "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+  },
   "current_case": {
     "name": "平遥镇国寺万佛殿",
     "selection_status": "LOCKED"
@@ -68,7 +76,7 @@
     }
   },
   "p3_2": {
-    "status": "ACTIVE / REPRESENTATIVE ASSEMBLY DESIGN LOCKED / T-016 PLANNING READY",
+    "status": "ACTIVE / T-016 CONTRACT CREATED / NOT STARTED",
     "gate_name": "构件组合关系模型",
     "engineering_subtitle": "Assembly Relationship Model",
     "dod_version": "V001",
@@ -104,8 +112,18 @@
         "LOCATE",
         "REPEAT",
         "BELONG"
-      ],
-      "t016_planning_ready": true
+      ]
+    },
+    "t016": {
+      "task_id": "T-016",
+      "engineering_id": "P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001",
+      "status": "CONTRACT CREATED / READY FOR EXECUTION / NOT STARTED",
+      "contract_file": "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md",
+      "think_level": "MEDIUM",
+      "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
+      "scope": "Implement locked A/B/C representative assembly validation. A and C use minimal deterministic Blender generation; B remains semantic-valid/full-length-geometry-blocked unless a separately approved building-specific six-chuanfu length exists.",
+      "review_asset_target_count": 4,
+      "execution_started": false
     },
     "approved_component_nodes_from_p3_1": [
       "CMP-COLUMN-001",
@@ -143,7 +161,7 @@
   },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
-    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / LONG-TERM EVALUATION PENDING",
+    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 CONTRACT CREATED / LONG-TERM EVALUATION PENDING",
     "principle": "ChatGPT handles analysis/decision/diagnosis/review; Codex handles deterministic execution/machine validation",
     "quality_preservation": "NO REDUCTION TO DOD / HARD FAIL / PER-ASSET VALIDATION / REVIEW / PRODUCT OWNER APPROVAL"
   },
@@ -159,14 +177,14 @@
   "latest_material_decision": {
     "id": "D-043",
     "date": "2026-09-14",
-    "decision": "Product Owner approved and locked P3.2 Representative Assembly Design V001. A validates column-ludou support/locate assembly; B validates frame-tier semantic relationships while blocking illegal full-length geometry; C validates PM-005-driven column repeat and mutation/restore. T-016 Task Contract planning is ready; P3.2 remains ACTIVE and P3.3 remains locked."
+    "decision": "Product Owner approved and locked P3.2 Representative Assembly Design V001. A validates column-ludou support/locate assembly; B validates frame-tier semantic relationships while blocking illegal full-length geometry; C validates PM-005-driven column repeat and mutation/restore. T-016 contract is now created but engineering execution has not started."
   },
-  "next_action": "Create T-016 Task Contract to implement the locked representative assembly design V001 without redefining relationship semantics or historical evidence.",
+  "next_action": "Sync local main, then explicitly authorize/start Codex execution of T-016 using the locked Task Contract. Do not treat contract creation as engineering completion or P3.2 PASS.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v028",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_R074 / REFRESH REQUIRED"
+    "refresh_status": "STALE_AFTER_R075 / REFRESH REQUIRED"
   }
 }
