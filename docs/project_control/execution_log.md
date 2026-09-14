@@ -94,8 +94,7 @@
 ## T-015｜P3.2 构件组合关系基础工程实现｜PASS / APPROVED / CLOSED / D-042
 
 - Execution Mode：`CHAT_FIRST_CODEX_EXECUTOR_MODE`；Think Level：MEDIUM。
-- Design baseline：`P3_2_RELATIONSHIP_FOUNDATION_DESIGN_V001`。
-- Engineering commit：`49b0415479d811a26d4f44588d15cd863467edf4`；`origin/main` 同 SHA。
+- Engineering commit：`49b0415479d811a26d4f44588d15cd863467edf4`。
 - 正式节点 6/6；基础关系 5/5；Interface foundation PASS。
 - Machine validation 31/31 PASS；Negative tests 21/21 expected rejection PASS；canonical Hard Fail=0。
 - P2 frozen baseline / P3.1 canonical Masters UNCHANGED；ChatGPT structural review PASS；Product Owner D-042 APPROVED / CLOSED。
@@ -103,7 +102,7 @@
 ## T-016｜P3.2 代表性构件组合验证｜PASS / APPROVED / CLOSED / D-045
 
 - Authorization D-044；Execution Mode=`CHAT_FIRST_CODEX_EXECUTOR_MODE`；Think Level=MEDIUM。
-- Engineering commit：`fc01ecb4f61128faa95ecf8022d2077a36977a8c`；`origin/main` 同 SHA。
+- Engineering commit：`fc01ecb4f61128faa95ecf8022d2077a36977a8c`。
 - Machine validation 65/65 PASS；negative tests 15/15 expected rejection PASS；canonical Hard Fail=0；五类关系代表性覆盖 5/5。
 - A｜柱—柱头栌斗：显式承托/定位接口、Blender CLI generation、independent reopen、deterministic regeneration PASS；Z-006 / RC / joinery 边界保持。
 - B｜六椽栿梁架层位：Control / Proxy 不历史化；canonical=`SEMANTIC_ASSEMBLY_VALID / FULL_LENGTH_GEOMETRY_BLOCKED`；1000 mm actual/building length injection 稳定触发 `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY`。
@@ -137,5 +136,9 @@
 ## Daily Closing Project Control Consistency Audit｜2026-09-14
 
 - Scope：project_state / acceptance_matrix / decision_log / execution_log / governance / rules_change_log / dashboard / phase_archive applicability。
+- Cross-file result：R080、D-046、P3.2 CLOSED、P3.3 ENTERED、P3 Gate Progress 3/4、Current Task NONE、Next Action=P3.3 DoD definition 在 Project Control 与 Dashboard v029 中一致。
+- Governance / Rules：RC-015 已双向落档；Governance 4.6 语言分层规则通过 RC-016 补齐 Rules Change Log 镜像；Governance Current P3 已更新为 P3.3 DoD 阶段。
+- Dashboard：v029 / State R080，与 project_state 当前 Phase / Gate / Progress / Current Task / Next Action 一致。
 - Phase archive：P3 尚未关闭，本次无需新增 P3 closure；既有已关闭 Phase 历史档案不改写。
-- Audit verdict：**PENDING FINAL CROSS-FILE VERIFICATION AFTER CLOSING UPDATES**。
+- Known exceptions：NONE。
+- **DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT = PASS**。
