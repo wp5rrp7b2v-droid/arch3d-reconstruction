@@ -125,7 +125,19 @@
 - Review：`docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_REVIEW_V001.md`。
 - **T-016 CLOSED 不等于 P3.2 PASS；下一步必须执行 P3.2 Gate Review。**
 
-## Current Execution State｜R078｜2026-09-14
+## P3.2 Gate Review｜9/9 PASS / PRODUCT OWNER APPROVAL REQUIRED
+
+- Gate Review file：`docs/production/zhenguo_wanfo/P3_2_GATE_REVIEW_2026-09-14.md`。
+- DoD：9/9 PASS。
+- Canonical Hard Fail：0。
+- P3.3 foundational readiness：PASS；无需在 P3.3 前重新发明基础关系体系。
+- Additional engineering task required before Gate decision：NO。
+- Carry-forward 不构成 P3.2 blocker：六椽栿 historical full length UNKNOWN/null 且在缺少 approved building-specific length 时继续 geometry BLOCKED；Z-006 / RC、joinery、hidden connection、45° corner 等继续保持既有 evidence boundary；Deferred / Proxy / Control / Envelope / UNKNOWN 不得静默历史化。
+- ChatGPT Gate Review：PASS。
+- Product Owner Gate Approval：PENDING。
+- P3.3：继续 LOCKED，直到 Product Owner 明确批准 P3.2 Gate。
+
+## Current Execution State｜R079｜2026-09-14
 
 - P0：CLOSED / APPROVED。
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO。
@@ -133,8 +145,8 @@
 - P3：ACTIVE / **2/4 PASS**。
 - P3.0：PASS / APPROVED / CLOSED。
 - P3.1：PASS / APPROVED / CLOSED / D-040。
-- P3.2：**ACTIVE / DOD LOCKED D-041 / T-015 CLOSED D-042 / T-016 CLOSED D-045 / GATE REVIEW READY**。
-- P3.3：LOCKED / WAITING_FOR_P3.2_PASS。
+- P3.2：**ACTIVE / GATE REVIEW 9/9 PASS / CANONICAL HARD FAIL 0 / PRODUCT OWNER APPROVAL REQUIRED**。
+- P3.3：LOCKED / WAITING_FOR_P3.2_PRODUCT_OWNER_APPROVAL。
 - Current engineering blocker：NONE。
 - Current task：NONE。
-- Next action：执行正式 P3.2 Gate Review；逐项核对 9 项 DoD 与三项 Gate Hard Fail。只有 9/9 PASS + 0 Hard Fail + Product Owner Gate Approval 后，P3.2 才可 CLOSED 并解锁 P3.3。
+- Next action：Product Owner 对 P3.2 Gate 做最终批准/不批准决定；批准后 P3.2 CLOSED、P3 Gate Progress=3/4、P3.3 解锁并进入 DoD 定义。
