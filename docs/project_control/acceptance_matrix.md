@@ -16,7 +16,7 @@
 ## P1｜选题取证｜CLOSED / APPROVED 2026-09-12
 
 | Gate | 最终状态 | 关键证据 / 限制 |
-|---|---|---|
+|---|---|---|---|
 | P1.0｜选题标准锁定 | **PASS** | 五项加权标准锁定。 |
 | P1.1｜候选案例比较与定选 | **PASS** | 山西平遥镇国寺万佛殿正式定选。 |
 | P1.2｜正式证据包建立 | **PASS** | `SRC-ZG-WF-001` 完整精细测绘报告直接核读；Gate Review 10/10 PASS。 |
@@ -29,7 +29,7 @@
 ## P2｜正式参数化与3D复原｜CLOSED / APPROVED 2026-09-12
 
 | Gate | 最终状态 | 关键边界 |
-|---|---|---|
+|---|---|---|---|
 | P2.0｜Evidence-aware Parameter Schema | **PASS / APPROVED** | CG-01 satisfied. |
 | P2.1｜Formal Production Parameter Set | **PASS / APPROVED / CLOSED** | Z-006 remains UNKNOWN；RC-01 replaceable。 |
 | P2.2｜Parametric Structural Skeleton | **PASS / APPROVED / CLOSED** | 217 = machine objects，不等于历史构件数。 |
@@ -45,8 +45,8 @@
 |---|---|---|---|
 | P3.0｜Component Ontology & Registry | 构件本体、Naming/ID、Registry、P2 语义迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；D-031。 |
 | P3.1｜Component Master & Variant Library | 建立 evidence-qualified canonical Master / Variant / review / Registry | **PASS / APPROVED / CLOSED** | DoD 9/9；6/6 Master Approved；D-040。 |
-| P3.2｜构件组合关系模型 | 建立构件资格、承托/连接/定位/重复/从属、接口、参数传递、组合单元、重建验证 | **ACTIVE / T-015 + T-016 APPROVED CLOSED / GATE REVIEW READY** | DoD V001 / D-041；T-015 / D-042；T-016 / D-045；尚未执行最终 Gate Review。 |
-| P3.3｜Component-driven Building Reconstruction | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **LOCKED** | 等待 P3.2 正式 PASS。 |
+| P3.2｜构件组合关系模型 | 建立构件资格、承托/连接/定位/重复/从属、接口、参数传递、组合单元、重建验证 | **GATE REVIEW 9/9 PASS / PO APPROVAL REQUIRED** | T-015 / D-042；T-016 / D-045；canonical Hard Fail=0；Gate Review 已通过，尚未由 Product Owner 关闭 Gate。 |
+| P3.3｜Component-driven Building Reconstruction | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **LOCKED** | 等待 P3.2 Product Owner Gate Approval。 |
 
 **P3 Gate Progress：2 / 4。**
 
@@ -113,19 +113,24 @@ P3.2 PASS 必须满足：9/9 DoD PASS + 0 Hard Fail + Product Owner Approval。�
 - Product Owner：APPROVED / CLOSED。
 - Review：`docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_REVIEW_V001.md`。
 
-**T-015 + T-016 完成并不自动等于 P3.2 PASS。**
+### P3.2 Gate Review｜9/9 PASS / PRODUCT OWNER APPROVAL REQUIRED
 
-### P3.2 Current Boundary / Next Step
+正式文件：`docs/production/zhenguo_wanfo/P3_2_GATE_REVIEW_2026-09-14.md`
 
-下一步是**正式 P3.2 Gate Review**。Gate Review 必须逐项核对 DoD V001 的 9 项要求及三项 Gate Hard Fail。
+- DoD：**9 / 9 PASS**。
+- Canonical Hard Fail：**0**。
+- P3.3 foundational readiness：**PASS**。
+- Additional engineering task required before Gate decision：**NO**。
+- T-015 foundation：31/31 PASS + 21/21 negative expected rejection PASS。
+- T-016 representative assembly：65/65 PASS + 15/15 negative expected rejection PASS + 4/4 direct GitHub visual review PASS。
+- B 的 `FULL_LENGTH_GEOMETRY_BLOCKED` 为正确就绪行为：六椽栿 historical full length 仍 UNKNOWN/null；缺少合法 building-specific full length 时应阻断，而不是把 1000mm reference specimen 泄漏为建筑实际尺寸。
+- 进入 P3.3 后可在既有五类关系、接口/定位、Assembly Unit、runtime instance、building-level parameter 与 validator 体系上扩展具体整殿关系实例，无需重新发明基础组合机制。
 
-只有当 Gate Review 结论为：
+Carry-forward 到 P3.3：
 
-- 9/9 DoD PASS；
-- canonical Hard Fail = 0；
-- 无需重新发明基础构件组合机制即可进入 P3.3；
-- Product Owner 最终批准 Gate；
+- 六椽栿 historical full length UNKNOWN/null；未获独立批准前继续 geometry BLOCKED；
+- Z-006 UNKNOWN/null/DO_NOT_LOCK；Z-006-RC-01 继续 replaceable RC；
+- 具体榫卯、隐藏连接、45°转角、隐角梁等继续保持现有 evidence boundary；
+- Deferred / Proxy / Control / Envelope / UNKNOWN 不得因 P3.3 整殿重建而静默历史化。
 
-P3.2 才能标记为 **PASS / APPROVED / CLOSED**，P3 Gate Progress 才从 2/4 变为 3/4，并正式解锁 P3.3。
-
-P3.3 当前继续 LOCKED。
+**Gate Review 已完成并通过，但 P3.2 尚未 CLOSED。最终还差 Product Owner Gate Approval；在批准前 P3.3 继续 LOCKED，P3 Gate Progress 仍为 2/4。**
