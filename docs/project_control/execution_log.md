@@ -32,15 +32,13 @@
 - Think Level: HIGH；Blender 3.6.23。
 - Structural scope 6/6；217 stable machine objects（不等于历史构件数）。
 - Machine geometry validation / 32 tests / naked historical constant scan / deterministic rebuild / independent reopen PASS。
-- Local-only `.blend` SHA256：`3b61ccbaca17836bd63d9369ebc3a4c6e25fb27f0d274ea67e64f732ad3000e4`。
 - Engineering commit：`a5a4181499c0494d16fbaf59d29337fa7d688e9d`。
 
 ## T-008｜P2.3 Integrated Reconstruction Candidate｜PASS / APPROVED
 
 - 11 families / 40 variants / 365 stable mesh instances。
 - 33/33 tests、34/34 machine QC、Local3.6→Cloud4.5→Local3.6 roundtrip PASS；core semantic diff NONE。
-- Final local-only candidate SHA256：`ee91e5eb2b5737174ffd0f93626ebf4f6ddaf3ae8fb427f9bfd2f66568e2f512`。
-- Final engineering commit：`93aef4803d2c0d3f7e3e3d29e9ab235c2f92d8f3`；P2 CLOSED / D-028。
+- Engineering commit：`93aef4803d2c0d3f7e3e3d29e9ab235c2f92d8f3`；P2 CLOSED / D-028。
 
 ## T-009｜P3.0 Component Ontology & Registry Migration｜PASS / APPROVED / CLOSED
 
@@ -56,84 +54,71 @@
 
 ## T-011｜P3.1 Column Master Pilot｜PASS / APPROVED / CLOSED
 
-- Blender 3.6.23 CLI/background；22/22 machine checks PASS。
+- 22/22 machine checks PASS。
 - deterministic regeneration / independent reopen / synthetic mutation / canonical rebuild / Registry registration PASS。
 - Review 6/6 visual PASS；Product Owner APPROVED / D-035。
-- Canonical `.blend` SHA256：`98211701fcc358f6174829257ef13310baa4d1a2d5e762637c25c812a4362487`。
 - Engineering commit：`4eb79f37d31202ab2088724008b5412cba4d38b0`。
 
 ## T-012｜P3.1 Dou Master Lean Batch V002｜PASS / APPROVED / CLOSED
 
-- Execution Mode：`LEAN_PRODUCTION_MODE_V001`。
-- First Article `CMP-LUDOU-COLUMN-001` PASS；shared pipeline PASS；3/3 engineering PASS。
-- deterministic regeneration / independent reopen / synthetic mutation / canonical rebuild：3/3 PASS。
-- Review：18/18 individual + 1/1 overview = 19/19 visual PASS；Product Owner APPROVED / D-037。
+- First Article `CMP-LUDOU-COLUMN-001` PASS；3/3 engineering PASS。
+- deterministic regeneration / reopen / mutation / rebuild：3/3 PASS。
+- Review：19/19 visual PASS；Product Owner APPROVED / D-037。
 - Engineering commit：`d1ae53ee368729a395623a8d9a4342f7455e2e9b`。
-- Canonical SHA256：Ludou `bc46dbcd...bf57`；Single-longkai `dc1cc930...be32`；Interactive `d7a78d63...73d0c`。
-- RC-009 Lean Production Mode 首次闭环验证成功。
 
 ## T-013｜P3.1 Six-Chuanfu Master Batch V002｜PASS / APPROVED / CLOSED
 
-- Execution Mode：`CHAT_FIRST_CODEX_EXECUTOR_MODE_TRIAL + LEAN_PRODUCTION_MODE_V001`；Codex default Think = MEDIUM。
-- Authorization：D-038；final approval/closure：D-039。
-- First Article `CMP-FRAME-LOWER-SIX-CHUANFU-001` 先 PASS；`CMP-FRAME-UPPER-SIX-CHUANFU-001` 后续 PASS。
-- Shared long-member pipeline：PASS。
-- 两件各 26/26 machine checks PASS；52 项逐资产检查 PASS；无 unexplained validation errors。
-- deterministic semantic regeneration / independent reopen / length mutation / tenon metadata mutation / canonical rebuild：2/2 PASS。
+- `CHAT_FIRST_CODEX_EXECUTOR_MODE_TRIAL + LEAN_PRODUCTION_MODE_V001`；Codex MEDIUM。
+- 两件各 26/26 machine checks PASS；52 项逐资产检查 PASS。
+- deterministic regeneration / independent reopen / mutation / canonical rebuild：2/2 PASS。
 - historical full length = `UNKNOWN / null`；`canonical_reference_length_mm=1000` 仅为 NON-HISTORICAL / REPLACEABLE PROJECT_RULE reference specimen。
-- `max_thickness` 保持 observed upper bound；`tenon_area_thickness` 保持 metadata-only / geometry use = 0。
-- Unsupported geometry = 0；P2 PRIMARY_FRAME proxy non-use PASS；`REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` carry-forward active。
-- P2 frozen baseline、Contract V002、四件既有 approved Master 保护性检查 PASS；`.blend/.blend1` 未进入 Git。
-- Canonical `.blend` SHA256：
-  - Lower `71b6c0aecc179ff79b95c48fad38645108854e2b14d572d4f11f454e0856a1fd`
-  - Upper `c4b83d0c0dc179c3946b2744b9c3887301fb81c3d835bd0f24a96336616a07e7`
-- Engineering commit：`f607245444927b9853e0976b891673e387a14750`，发布 SUCCESS。
-- 初次视觉审核：12/13 PASS；Batch Overview 因两构件视觉叠合造成潜在局部削形误读，判定为 presentation-only defect。
-- 仅重渲染 Overview；其余 12 review assets 与 canonical Masters unchanged。
-- Overview correction commit：`cbc0a5417e56b6851778c254a8c4b5a87fc413d3`，发布 SUCCESS。
-- Corrected overview SHA256：`fd03116ba035dd98a66363d7bb4699634ebb62484c58c04c3befae32c33d9f32`。
-- 最终 Review：**13/13 visual PASS**；Product Owner `APPROVED / CLOSED / D-039`。
-- 两个 frame Master Registry 状态提升为 `PRODUCT_OWNER_APPROVED_D039`。
-- P3.1 Master coverage：**6/6 approved**。
+- 最终 Review：13/13 visual PASS；Product Owner APPROVED / D-039。
+- Engineering commit：`f607245444927b9853e0976b891673e387a14750`；Overview correction `cbc0a5417e56b6851778c254a8c4b5a87fc413d3`。
+- P3.1 Master coverage：6/6 approved。
 
 ## T-014｜P3.1 Master Library Overview V001｜PASS / CLOSED
 
-- Think Level: LOW / Light。
-- Purpose：补齐 P3.1 DoD-07 whole-library Overview，不修改 Blender Master / params / Registry 语义 / P2 baseline。
-- Source components：6/6 approved Masters。
-- Formal registered variants：0。
-- Final overview：`production/zhenguo_wanfo/review/P3_1/P3_1_MASTER_LIBRARY_OVERVIEW_V001.png`。
-- Final SHA256：`4719a31c18de13b0453a64d29847381d8e45af0f145bcb37bf7fee0abf9671a7`。
-- 中文名称：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿；依据 `SRC-ZG-WF-001` / project canonical naming，不标为宋代原称或古籍原称。
-- 三类斗说明统一为 `Evidence-bounded medium-LOD`。
-- Validation：canonical Masters unchanged / individual review assets unchanged / batch overviews unchanged / P2 frozen unchanged / Contract V002 unchanged / P3.2 files created NO / new Variant records 0。
-- Final local commit：`ecdec887ba4c67018e3dfea63920263ed47cce30`。
+- whole-library Overview 覆盖 6/6 approved Masters；formal variants = 0。
+- canonical Masters / individual review assets / batch overviews / P2 frozen baseline / Contract V002：UNCHANGED。
+- Final Overview SHA256：`4719a31c18de13b0453a64d29847381d8e45af0f145bcb37bf7fee0abf9671a7`。
 - Publication merge commit：`c15064bcd7d5cf2f3e58cdbffccc256043836413`。
 - ChatGPT final visual review：PASS。
-- Result：DoD-07 closure completed。
 
 ## P3.1 Gate Review｜9/9 PASS / APPROVED / CLOSED / D-040
 
-- DoD-01～09：全部 PASS。
 - MASTER_REQUIRED coverage：6/6 / 100%。
-- `EVIDENCE_REVIEW_BEFORE_MASTER=0`。
-- Formal registered variants：0；parameterized variant capability verified by mutation / rebuild tests。
 - Proxy 4 / Control 3 / Envelope 1 / Deferred 13 保持非历史化。
 - Registry / evidence traceability / replaceability / deterministic regeneration / independent reopen / P2 frozen baseline：PASS。
-- Product Owner explicit approval：`P3.1｜Component Master & Variant Library｜PASS / APPROVED / CLOSED`。
-- Decision：D-040。
-- P3.2 `Assembly Relationship Model` 解锁并进入。
+- P3.2｜构件组合关系模型解锁并进入。
 
-## Current Execution State｜R071｜2026-09-13
+## T-015｜P3.2 构件组合关系基础工程实现｜PASS / APPROVED / CLOSED / D-042
+
+- Execution Mode：`CHAT_FIRST_CODEX_EXECUTOR_MODE`；Think Level：MEDIUM。
+- Design baseline：`P3_2_RELATIONSHIP_FOUNDATION_DESIGN_V001`（T-015A / Chat design）。
+- Engineering commit：`49b0415479d811a26d4f44588d15cd863467edf4`；`origin/main` 同 SHA。
+- 正式节点：6/6 approved Masters 唯一映射；未创建重复 component identity。
+- 基础关系：5/5（承托、连接、定位、重复、从属）。
+- Interface foundation：PASS；6 个 Master 共 18 个最小局部接口。
+- Machine validation：31/31 PASS。
+- Negative tests：21/21 expected rejection PASS。
+- Gate Hard Fail 触发测试：`REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY`、`SILENT_HISTORICIZATION`、`BAKED_MANUAL_ASSEMBLY` 均可触发；canonical state = 0 Hard Fail。
+- P2 frozen baseline：UNCHANGED；P3.1 canonical Masters：UNCHANGED；unrelated untracked files：UNTOUCHED。
+- 独立 Git diff 核对：`2685a80 → 49b0415` 仅新增 8 个 T-015 文件，P2/P3.1 既有 tracked files 无修改。
+- ChatGPT structural review：PASS。
+- Product Owner：APPROVED / CLOSED / D-042。
+- 非阻断 carry-forward：后续真实代表性组合不得机械使用统一“局部下参考面”替代全部承托/连接界面；应按关系显式建立/验证上承托、下承托及中心/轴线定位基准，并区分工程接口与历史接触关系。
+- **T-015 CLOSED 不等于 P3.2 PASS。**
+
+## Current Execution State｜R073｜2026-09-14
 
 - P0：CLOSED / APPROVED。
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO。
 - P2：CLOSED / 4/4 PASS / PRODUCT OWNER APPROVED。
 - P3：ACTIVE / **2/4 PASS**。
-- P3.0：CLOSED / APPROVED。
-- P3.1：**PASS / APPROVED / CLOSED / D-040**。
-- P3.2：**ACTIVE / ENTERED / DOD REQUIRED**。
+- P3.0：PASS / APPROVED / CLOSED。
+- P3.1：PASS / APPROVED / CLOSED / D-040。
+- P3.2：**ACTIVE / DOD LOCKED / T-015 APPROVED CLOSED / NEXT TASK PLANNING READY**。
 - P3.3：LOCKED / WAITING_FOR_P3.2_PASS。
 - Current engineering blocker：NONE。
 - Current task：NONE。
-- Next action：定义并锁定 `P3.2 Definition of Done`；在 Product Owner 批准 P3.2 DoD 前，不创建新的 P3.2 工程任务。
+- Next action：设计 P3.2 下一项“代表性构件组合关系验证”任务，覆盖竖向承托链、横向梁架链与重复关系，并显式验证真实接口和证据边界。
