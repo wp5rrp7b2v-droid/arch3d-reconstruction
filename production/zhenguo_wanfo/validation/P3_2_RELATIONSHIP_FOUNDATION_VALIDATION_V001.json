@@ -1,0 +1,170 @@
+{
+  "check_pass_count": 31,
+  "check_total": 31,
+  "checks": {
+    "approved_master_mapping_6_of_6": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "assembly_schema_valid": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "building_parameter_isolation": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "empty_foundation_graph_valid": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "five_relation_types_only": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "hard_fail_codes_present": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "interface_schema_records": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "interface_unique_ids": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_binary_hash_CMP-COLUMN-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_binary_hash_CMP-DOU-INTERACTIVE-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_binary_hash_CMP-DOU-SINGLE-LONGKAI-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_binary_hash_CMP-FRAME-LOWER-SIX-CHUANFU-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_binary_hash_CMP-FRAME-UPPER-SIX-CHUANFU-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_binary_hash_CMP-LUDOU-COLUMN-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_identity_CMP-COLUMN-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_identity_CMP-DOU-INTERACTIVE-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_identity_CMP-DOU-SINGLE-LONGKAI-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_identity_CMP-FRAME-LOWER-SIX-CHUANFU-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_identity_CMP-FRAME-UPPER-SIX-CHUANFU-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "master_identity_CMP-LUDOU-COLUMN-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "node_schema_records": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "nonhistorical_rules": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "p2_frozen_19_asset_hashes": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "p2_frozen_baseline": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "p3_1_tracked_assets_unchanged": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "relationship_type_contract": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "scope_registry_identity": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "separate_evidence_fields": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "six_chuanfu_reference_boundary_CMP-FRAME-LOWER-SIX-CHUANFU-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "six_chuanfu_reference_boundary_CMP-FRAME-UPPER-SIX-CHUANFU-001": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "six_interface_owners": {
+      "error_code": null,
+      "status": "PASS"
+    }
+  },
+  "gate_status": "ENGINEERING_COMPLETE_REVIEW_REQUIRED_NOT_P3_2_PASS",
+  "hard_fail_trigger_tests": {
+    "BAKED_MANUAL_ASSEMBLY": "test_world_coordinate_only_placement",
+    "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY": "test_six_chuanfu_reference_length_leak",
+    "SILENT_HISTORICIZATION": "test_nonhistorical_silent_upgrade"
+  },
+  "hard_fails_canonical": [],
+  "input_sha256": {
+    "docs/production/zhenguo_wanfo/P3_2_DEFINITION_OF_DONE_V001.md": "a7c5dc25a9e1fa4146595602f2f1a28b2a19d59855590354acf87a27df0f4bd5",
+    "docs/production/zhenguo_wanfo/P3_2_RELATIONSHIP_FOUNDATION_DESIGN_V001.md": "ae247e2b97434e8cfceb674b12c966a008a471d7cc756e1d81f3ef704e09ad76",
+    "docs/tasks/T-015_P3_2_RELATIONSHIP_FOUNDATION_V001.md": "cc0ce46a9abe69832d4024abb0dd77930cba0a9df2972c90e989d72fd48f7b9d",
+    "production/zhenguo_wanfo/assembly/P3_2_ASSEMBLY_NODE_REGISTRY_V001.json": "793ff822418d254f7f9957018f71649c9b35af400cf3cfef3d31960b716dd8ae",
+    "production/zhenguo_wanfo/assembly/P3_2_ASSEMBLY_SCHEMA_V001.json": "6a01cde7b8eb915a4f4793716377f5b177b9e99593ddd6067bc8caa5c7f000fd",
+    "production/zhenguo_wanfo/assembly/P3_2_INTERFACE_REGISTRY_V001.json": "7e3a327f796249a62e4ca3e57e17699e482a100ae12b4bb1abe1abeaa095db30",
+    "production/zhenguo_wanfo/assembly/P3_2_RELATIONSHIP_TYPES_V001.json": "e8fb60629f5a517b920a338b27bb078e390d85da0d8cd7bf10e7bc40c4af5f97",
+    "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json": "07676d390a709c6baaed39986033725550b543b88239d167e6dd4bbabed25739",
+    "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json": "61e4b790e71a319a880c9810cf747a9e7dc56ab7e03e3b0d4e3ddea566cfc768",
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_PARAMS_V001.json": "6266d4b3666c3f68052e05d9d4bd6c875a5aab948a34b86c4102decdb433f421",
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_SEMANTIC_V001.json": "c47feba104c0eb0fcab54e532b2543233395648603ad7b3c1a603625f5e93ee1",
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_PARAMS_V001.json": "6618907bb2ed4e4c749a15132384303b8ee0eeb8f7e0d35d395357f9b3dc50c7",
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_SEMANTIC_V001.json": "41346c4cfc850142c7f0a046c6da4f9aaad55847c7db2cb682b2f890b67406bc",
+    "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json": "b111e4eda535d619a117a9c67519793b64af68231eb9e23d26b5860a6ff16a89",
+    "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json": "689afbabedd0fd776d7db1ccbce9f30244317d1959c922f2531683b2905f8056",
+    "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json": "ef998ccb4aa61e38016e2cf201ff156de42a42ea0e86bdbc8d9c132039a3ceb7",
+    "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json": "592783c66e4d516ac0d52f5da9b38f7910706cf4bb6234108821e699633876a8",
+    "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_PARAMS_V001.json": "fd75ef3cbaf082e67c40fec9b3dc988170675fa1ae6545f90c10857da259ef48",
+    "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_SEMANTIC_V001.json": "f1f514a8a05df3d37a4b89511af8f2b2e71d40fe7252baa0d96c6ee09d862fb6",
+    "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_V001.json": "286af1d0105da0b1702ed5ec8b1528e269cdc4c707fee502cd730c6a77b1094d",
+    "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json": "aaae64affca06c23651264fc6036a3591d69484a1df52a128452c9ff328234b7",
+    "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_SCOPE_MATRIX_V001.json": "b3e8ea329ed20f9a1e94d85191a4c11de7182bc840cf16b7709dddec5af314d3",
+    "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json": "9075d971c02a0ffa905d70761930d031d4fcb8be987616e23d59a14ccb8d83df"
+  },
+  "negative_tests": {
+    "passed": 21,
+    "status": "PASS",
+    "total": 21
+  },
+  "status": "PASS",
+  "task": "T-015",
+  "version": "V001"
+}

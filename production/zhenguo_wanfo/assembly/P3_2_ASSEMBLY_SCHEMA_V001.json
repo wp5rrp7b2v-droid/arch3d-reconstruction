@@ -1,0 +1,511 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/arch3d/p3_2_assembly_schema_v001.json",
+  "title": "P3.2 Assembly Foundation V001",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "nodes",
+    "interfaces",
+    "relationships",
+    "placements",
+    "building_parameters"
+  ],
+  "properties": {
+    "nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/node"
+      }
+    },
+    "interfaces": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/interface"
+      }
+    },
+    "relationships": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relationship"
+      }
+    },
+    "placements": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/placement"
+      }
+    },
+    "building_parameters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/building_parameter"
+      }
+    },
+    "require_connected": {
+      "type": "boolean"
+    },
+    "required_relation_types": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "SUPPORT",
+          "CONNECT",
+          "LOCATE",
+          "REPEAT",
+          "BELONG"
+        ]
+      },
+      "uniqueItems": true
+    }
+  },
+  "$defs": {
+    "node": {
+      "type": "object",
+      "required": [
+        "node_id",
+        "component_id",
+        "canonical_name_zh",
+        "node_class",
+        "historical_role",
+        "qualification_status",
+        "evidence_status",
+        "provenance",
+        "replaceability"
+      ],
+      "properties": {
+        "node_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_name_zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "node_class": {
+          "type": "string",
+          "minLength": 1
+        },
+        "historical_role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "qualification_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "master_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "engineering_use": {
+          "type": "string",
+          "minLength": 1
+        },
+        "component_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "provenance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "replaceability": {
+          "type": "boolean"
+        },
+        "historical_claim": {
+          "type": "boolean"
+        },
+        "source_registry": {
+          "type": "string",
+          "minLength": 1
+        },
+        "noncomponent_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "interface": {
+      "type": "object",
+      "required": [
+        "interface_id",
+        "owner_node",
+        "canonical_name_zh",
+        "interface_type",
+        "coordinate_space",
+        "local_datum",
+        "primary_direction",
+        "allowed_relation_types",
+        "evidence_status",
+        "provenance",
+        "replaceability"
+      ],
+      "properties": {
+        "interface_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "owner_node": {
+          "type": "string",
+          "minLength": 1
+        },
+        "canonical_name_zh": {
+          "type": "string",
+          "minLength": 1
+        },
+        "interface_type": {
+          "enum": [
+            "POINT",
+            "AXIS",
+            "PLANE"
+          ]
+        },
+        "coordinate_space": {
+          "const": "MASTER_LOCAL"
+        },
+        "local_datum": {
+          "type": "object",
+          "required": [
+            "origin_mm",
+            "definition"
+          ],
+          "properties": {
+            "origin_mm": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "definition": {
+              "type": "string",
+              "minLength": 1
+            },
+            "normal": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            }
+          },
+          "additionalProperties": false
+        },
+        "primary_direction": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        },
+        "allowed_relation_types": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "SUPPORT",
+              "CONNECT",
+              "LOCATE",
+              "REPEAT",
+              "BELONG"
+            ]
+          },
+          "uniqueItems": true,
+          "minItems": 1
+        },
+        "evidence_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provenance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "replaceability": {
+          "type": "boolean"
+        },
+        "historical_claim": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "relationship": {
+      "type": "object",
+      "required": [
+        "relationship_id",
+        "relation_type",
+        "source_node",
+        "target_node",
+        "directionality",
+        "evidence_status",
+        "evidence_basis",
+        "provenance",
+        "replaceability",
+        "parameter_refs",
+        "notes"
+      ],
+      "properties": {
+        "relationship_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "relation_type": {
+          "enum": [
+            "SUPPORT",
+            "CONNECT",
+            "LOCATE",
+            "REPEAT",
+            "BELONG"
+          ]
+        },
+        "source_node": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_node": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_interface": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_interface": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "directionality": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prior_evidence_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provenance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "replaceability": {
+          "type": "boolean"
+        },
+        "parameter_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "notes": {
+          "type": "string"
+        },
+        "joinery_detail_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "joinery_detail_basis": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repeat_rule": {
+          "type": "object",
+          "required": [
+            "count_ref",
+            "direction",
+            "spacing_ref",
+            "start_interface",
+            "parameter_source"
+          ],
+          "properties": {
+            "count_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "direction": {
+              "type": "array",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 3,
+              "maxItems": 3
+            },
+            "spacing_ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "start_interface": {
+              "type": "string",
+              "minLength": 1
+            },
+            "parameter_source": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "placement": {
+      "type": "object",
+      "required": [
+        "node_id",
+        "interface_id",
+        "method",
+        "rule_id",
+        "coordinate_space",
+        "parameter_refs"
+      ],
+      "properties": {
+        "node_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "interface_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "method": {
+          "const": "INTERFACE_PARAMETER_RULE"
+        },
+        "rule_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coordinate_space": {
+          "const": "MASTER_LOCAL"
+        },
+        "parameter_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "world_result_mm": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 3,
+          "maxItems": 3
+        }
+      },
+      "additionalProperties": false
+    },
+    "building_parameter": {
+      "type": "object",
+      "required": [
+        "parameter_id",
+        "source_layer",
+        "evidence_status",
+        "provenance",
+        "replaceable",
+        "historical_claim"
+      ],
+      "properties": {
+        "parameter_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "component_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_layer": {
+          "enum": [
+            "BUILDING_LEVEL_APPROVED",
+            "BUILDING_LEVEL_REPLACEABLE"
+          ]
+        },
+        "evidence_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "provenance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "replaceable": {
+          "type": "boolean"
+        },
+        "historical_claim": {
+          "type": "boolean"
+        },
+        "actual_length_mm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "derives_from": {
+          "type": "string",
+          "minLength": 1
+        },
+        "value": {
+          "type": [
+            "number",
+            "string"
+          ]
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "x-hard-fail-codes": [
+    "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY",
+    "SILENT_HISTORICIZATION",
+    "BAKED_MANUAL_ASSEMBLY"
+  ],
+  "x-dimension-flow": [
+    "component_id",
+    "relationship",
+    "building_parameter",
+    "actual_realization_dimension"
+  ],
+  "x-unknown-policy": "NO_AUTOMATIC_EVIDENCE_OR_HISTORICAL_UPGRADE"
+}

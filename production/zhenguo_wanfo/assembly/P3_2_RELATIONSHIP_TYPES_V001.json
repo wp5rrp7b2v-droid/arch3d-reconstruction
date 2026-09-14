@@ -1,0 +1,190 @@
+{
+  "version": "V001",
+  "task": "T-015",
+  "relationship_types": [
+    {
+      "relation_type": "SUPPORT",
+      "canonical_name_zh": "承托",
+      "definition_zh": "承托者指向被承托者；接触位置、支承方向、直接性与关系证据分别记录",
+      "directionality": "DIRECTED",
+      "source_node_classes": [
+        "FORMAL_COMPONENT",
+        "PROXY"
+      ],
+      "target_node_classes": [
+        "FORMAL_COMPONENT",
+        "PROXY"
+      ],
+      "self_link_allowed": false,
+      "cycle_policy": "ACYCLIC",
+      "required_interface_fields": [
+        "source_interface",
+        "target_interface"
+      ],
+      "required_fields": [
+        "relationship_id",
+        "relation_type",
+        "source_node",
+        "target_node",
+        "directionality",
+        "evidence_status",
+        "evidence_basis",
+        "provenance",
+        "replaceability",
+        "parameter_refs",
+        "notes",
+        "source_interface",
+        "target_interface"
+      ],
+      "relationship_evidence_independent_of_component": true
+    },
+    {
+      "relation_type": "CONNECT",
+      "canonical_name_zh": "连接",
+      "definition_zh": "仅表示直接连接存在；具体榫卯细节可为 UNKNOWN",
+      "directionality": "UNDIRECTED",
+      "source_node_classes": [
+        "FORMAL_COMPONENT",
+        "PROXY"
+      ],
+      "target_node_classes": [
+        "FORMAL_COMPONENT",
+        "PROXY"
+      ],
+      "self_link_allowed": false,
+      "cycle_policy": "CYCLE_ALLOWED",
+      "required_interface_fields": [
+        "source_interface",
+        "target_interface"
+      ],
+      "required_fields": [
+        "relationship_id",
+        "relation_type",
+        "source_node",
+        "target_node",
+        "directionality",
+        "evidence_status",
+        "evidence_basis",
+        "provenance",
+        "replaceability",
+        "parameter_refs",
+        "notes",
+        "source_interface",
+        "target_interface"
+      ],
+      "relationship_evidence_independent_of_component": true
+    },
+    {
+      "relation_type": "LOCATE",
+      "canonical_name_zh": "定位",
+      "definition_zh": "位置或方向由构件接口或控制基准决定；不推出连接或承托",
+      "directionality": "DIRECTED",
+      "source_node_classes": [
+        "FORMAL_COMPONENT",
+        "CONTROL",
+        "PROXY"
+      ],
+      "target_node_classes": [
+        "FORMAL_COMPONENT",
+        "PROXY"
+      ],
+      "self_link_allowed": false,
+      "cycle_policy": "ACYCLIC",
+      "required_interface_fields": [
+        "source_interface",
+        "target_interface"
+      ],
+      "required_fields": [
+        "relationship_id",
+        "relation_type",
+        "source_node",
+        "target_node",
+        "directionality",
+        "evidence_status",
+        "evidence_basis",
+        "provenance",
+        "replaceability",
+        "parameter_refs",
+        "notes",
+        "source_interface",
+        "target_interface"
+      ],
+      "relationship_evidence_independent_of_component": true
+    },
+    {
+      "relation_type": "REPEAT",
+      "canonical_name_zh": "重复",
+      "definition_zh": "由起点、数量、方向、间距及参数来源驱动；非 Blender Copy",
+      "directionality": "DIRECTED",
+      "source_node_classes": [
+        "FORMAL_COMPONENT",
+        "CONTROL",
+        "PROXY"
+      ],
+      "target_node_classes": [
+        "FORMAL_COMPONENT",
+        "PROXY"
+      ],
+      "self_link_allowed": false,
+      "cycle_policy": "CYCLE_ALLOWED",
+      "required_interface_fields": [],
+      "required_fields": [
+        "relationship_id",
+        "relation_type",
+        "source_node",
+        "target_node",
+        "directionality",
+        "evidence_status",
+        "evidence_basis",
+        "provenance",
+        "replaceability",
+        "parameter_refs",
+        "notes"
+      ],
+      "relationship_evidence_independent_of_component": true
+    },
+    {
+      "relation_type": "BELONG",
+      "canonical_name_zh": "从属",
+      "definition_zh": "成员指向上级组合单元；仅为组织层级",
+      "directionality": "DIRECTED",
+      "source_node_classes": [
+        "FORMAL_COMPONENT",
+        "PROXY",
+        "CONTROL",
+        "ENVELOPE",
+        "DEFERRED",
+        "UNKNOWN",
+        "ASSEMBLY_UNIT"
+      ],
+      "target_node_classes": [
+        "ASSEMBLY_UNIT"
+      ],
+      "self_link_allowed": false,
+      "cycle_policy": "ACYCLIC_SINGLE_PARENT",
+      "required_interface_fields": [],
+      "required_fields": [
+        "relationship_id",
+        "relation_type",
+        "source_node",
+        "target_node",
+        "directionality",
+        "evidence_status",
+        "evidence_basis",
+        "provenance",
+        "replaceability",
+        "parameter_refs",
+        "notes"
+      ],
+      "relationship_evidence_independent_of_component": true
+    }
+  ],
+  "semantic_boundary_zh": [
+    "承托不等于连接",
+    "连接不证明榫卯已知",
+    "定位不等于连接",
+    "从属不等于接触",
+    "重复不等于 Blender Copy",
+    "视觉接触不证明结构关系"
+  ]
+}

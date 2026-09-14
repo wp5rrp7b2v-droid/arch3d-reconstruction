@@ -1,0 +1,614 @@
+{
+  "version": "V001",
+  "task": "T-015",
+  "coordinate_unit": "mm",
+  "coordinate_space": "MASTER_LOCAL",
+  "interfaces": [
+    {
+      "interface_id": "CMP-COLUMN-001__ORIGIN",
+      "owner_node": "CMP-COLUMN-001",
+      "canonical_name_zh": "柱｜局部原点基准",
+      "interface_type": "POINT",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master local origin; engineering datum, no contact or joinery claim"
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-COLUMN-001__AXIS",
+      "owner_node": "CMP-COLUMN-001",
+      "canonical_name_zh": "柱｜主轴基准",
+      "interface_type": "AXIS",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master primary local axis through local origin; engineering datum"
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-COLUMN-001__LOWER-PLANE",
+      "owner_node": "CMP-COLUMN-001",
+      "canonical_name_zh": "柱｜局部下参考面",
+      "interface_type": "PLANE",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "z=0 local reference plane of bounded Master body; not a proven historical contact plane",
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-LUDOU-COLUMN-001__ORIGIN",
+      "owner_node": "CMP-LUDOU-COLUMN-001",
+      "canonical_name_zh": "柱头栌斗｜局部原点基准",
+      "interface_type": "POINT",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master local origin; engineering datum, no contact or joinery claim"
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-LUDOU-COLUMN-001__AXIS",
+      "owner_node": "CMP-LUDOU-COLUMN-001",
+      "canonical_name_zh": "柱头栌斗｜主轴基准",
+      "interface_type": "AXIS",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master primary local axis through local origin; engineering datum"
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-LUDOU-COLUMN-001__LOWER-PLANE",
+      "owner_node": "CMP-LUDOU-COLUMN-001",
+      "canonical_name_zh": "柱头栌斗｜局部下参考面",
+      "interface_type": "PLANE",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "z=0 local reference plane of bounded Master body; not a proven historical contact plane",
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-DOU-SINGLE-LONGKAI-001__ORIGIN",
+      "owner_node": "CMP-DOU-SINGLE-LONGKAI-001",
+      "canonical_name_zh": "单向长开斗｜局部原点基准",
+      "interface_type": "POINT",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master local origin; engineering datum, no contact or joinery claim"
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-DOU-SINGLE-LONGKAI-001__AXIS",
+      "owner_node": "CMP-DOU-SINGLE-LONGKAI-001",
+      "canonical_name_zh": "单向长开斗｜主轴基准",
+      "interface_type": "AXIS",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master primary local axis through local origin; engineering datum"
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-DOU-SINGLE-LONGKAI-001__LOWER-PLANE",
+      "owner_node": "CMP-DOU-SINGLE-LONGKAI-001",
+      "canonical_name_zh": "单向长开斗｜局部下参考面",
+      "interface_type": "PLANE",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "z=0 local reference plane of bounded Master body; not a proven historical contact plane",
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-DOU-INTERACTIVE-001__ORIGIN",
+      "owner_node": "CMP-DOU-INTERACTIVE-001",
+      "canonical_name_zh": "交互斗｜局部原点基准",
+      "interface_type": "POINT",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master local origin; engineering datum, no contact or joinery claim"
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-DOU-INTERACTIVE-001__AXIS",
+      "owner_node": "CMP-DOU-INTERACTIVE-001",
+      "canonical_name_zh": "交互斗｜主轴基准",
+      "interface_type": "AXIS",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master primary local axis through local origin; engineering datum"
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-DOU-INTERACTIVE-001__LOWER-PLANE",
+      "owner_node": "CMP-DOU-INTERACTIVE-001",
+      "canonical_name_zh": "交互斗｜局部下参考面",
+      "interface_type": "PLANE",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "z=0 local reference plane of bounded Master body; not a proven historical contact plane",
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001__ORIGIN",
+      "owner_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "canonical_name_zh": "下六椽栿｜局部原点基准",
+      "interface_type": "POINT",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master local origin; engineering datum, no contact or joinery claim"
+      },
+      "primary_direction": [
+        1,
+        0,
+        0
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001__AXIS",
+      "owner_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "canonical_name_zh": "下六椽栿｜主轴基准",
+      "interface_type": "AXIS",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master primary local axis through local origin; engineering datum"
+      },
+      "primary_direction": [
+        1,
+        0,
+        0
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001__LOWER-PLANE",
+      "owner_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "canonical_name_zh": "下六椽栿｜局部下参考面",
+      "interface_type": "PLANE",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "z=0 local reference plane of bounded Master body; not a proven historical contact plane",
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001__ORIGIN",
+      "owner_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "canonical_name_zh": "上六椽栿｜局部原点基准",
+      "interface_type": "POINT",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master local origin; engineering datum, no contact or joinery claim"
+      },
+      "primary_direction": [
+        1,
+        0,
+        0
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001__AXIS",
+      "owner_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "canonical_name_zh": "上六椽栿｜主轴基准",
+      "interface_type": "AXIS",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "approved Master primary local axis through local origin; engineering datum"
+      },
+      "primary_direction": [
+        1,
+        0,
+        0
+      ],
+      "allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001__LOWER-PLANE",
+      "owner_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "canonical_name_zh": "上六椽栿｜局部下参考面",
+      "interface_type": "PLANE",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "z=0 local reference plane of bounded Master body; not a proven historical contact plane",
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    }
+  ],
+  "placement_contract": {
+    "method": "INTERFACE_PARAMETER_RULE",
+    "required_inputs": [
+      "component_id",
+      "relationship_id",
+      "interface_id",
+      "building_level_parameter_refs"
+    ],
+    "world_coordinates_role": "DERIVED_OUTPUT_ONLY",
+    "manual_placement_role": "NOT_CANONICAL",
+    "six_chuanfu_reference_length_role": "NON_HISTORICAL_MASTER_SPECIMEN_ONLY"
+  }
+}

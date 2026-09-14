@@ -1,0 +1,160 @@
+{
+  "version": "V001",
+  "task": "T-015",
+  "source_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
+  "source_scope": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_SCOPE_MATRIX_V001.json",
+  "nodes": [
+    {
+      "node_id": "CMP-COLUMN-001",
+      "component_id": "CMP-COLUMN-001",
+      "canonical_name_zh": "柱",
+      "node_class": "FORMAL_COMPONENT",
+      "historical_role": "EVIDENCE_BOUNDED_COMPONENT_MASTER",
+      "qualification_status": "FORMAL_APPROVED_MASTER",
+      "evidence_status": "SOURCE_ATTRIBUTE_LEVEL_ONLY",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json",
+        "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false,
+      "master_id": "CMP-COLUMN-001_MASTER",
+      "source_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+    },
+    {
+      "node_id": "CMP-LUDOU-COLUMN-001",
+      "component_id": "CMP-LUDOU-COLUMN-001",
+      "canonical_name_zh": "柱头栌斗",
+      "node_class": "FORMAL_COMPONENT",
+      "historical_role": "EVIDENCE_BOUNDED_COMPONENT_MASTER",
+      "qualification_status": "FORMAL_APPROVED_MASTER",
+      "evidence_status": "SOURCE_ATTRIBUTE_LEVEL_ONLY",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_SEMANTIC_V001.json",
+        "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false,
+      "master_id": "CMP-LUDOU-COLUMN-001_MASTER",
+      "source_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+    },
+    {
+      "node_id": "CMP-DOU-SINGLE-LONGKAI-001",
+      "component_id": "CMP-DOU-SINGLE-LONGKAI-001",
+      "canonical_name_zh": "单向长开斗",
+      "node_class": "FORMAL_COMPONENT",
+      "historical_role": "EVIDENCE_BOUNDED_COMPONENT_MASTER",
+      "qualification_status": "FORMAL_APPROVED_MASTER",
+      "evidence_status": "SOURCE_ATTRIBUTE_LEVEL_ONLY",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_SEMANTIC_V001.json",
+        "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false,
+      "master_id": "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+      "source_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+    },
+    {
+      "node_id": "CMP-DOU-INTERACTIVE-001",
+      "component_id": "CMP-DOU-INTERACTIVE-001",
+      "canonical_name_zh": "交互斗",
+      "node_class": "FORMAL_COMPONENT",
+      "historical_role": "EVIDENCE_BOUNDED_COMPONENT_MASTER",
+      "qualification_status": "FORMAL_APPROVED_MASTER",
+      "evidence_status": "SOURCE_ATTRIBUTE_LEVEL_ONLY",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_SEMANTIC_V001.json",
+        "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false,
+      "master_id": "CMP-DOU-INTERACTIVE-001_MASTER",
+      "source_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+    },
+    {
+      "node_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "component_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "canonical_name_zh": "下六椽栿",
+      "node_class": "FORMAL_COMPONENT",
+      "historical_role": "EVIDENCE_BOUNDED_COMPONENT_MASTER",
+      "qualification_status": "FORMAL_APPROVED_MASTER",
+      "evidence_status": "SOURCE_ATTRIBUTE_LEVEL_ONLY",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+        "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false,
+      "master_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+      "source_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+    },
+    {
+      "node_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "component_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "canonical_name_zh": "上六椽栿",
+      "node_class": "FORMAL_COMPONENT",
+      "historical_role": "EVIDENCE_BOUNDED_COMPONENT_MASTER",
+      "qualification_status": "FORMAL_APPROVED_MASTER",
+      "evidence_status": "SOURCE_ATTRIBUTE_LEVEL_ONLY",
+      "provenance": [
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+        "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+        "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+      ],
+      "replaceability": true,
+      "historical_claim": false,
+      "master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "source_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+    }
+  ],
+  "nonhistorical_qualification_rules": {
+    "PROXY": {
+      "historical_role": "NON_HISTORICAL_FORMAL",
+      "qualification_status": "PROXY_ONLY",
+      "allowed_use": "engineering approximation or relation test",
+      "requires_explicit_engineering_use": false,
+      "historical_claim_allowed": false,
+      "auto_upgrade_allowed": false
+    },
+    "CONTROL": {
+      "historical_role": "NON_HISTORICAL_FORMAL",
+      "qualification_status": "CONTROL_ONLY",
+      "allowed_use": "axis position dimension repetition control",
+      "requires_explicit_engineering_use": false,
+      "historical_claim_allowed": false,
+      "auto_upgrade_allowed": false
+    },
+    "ENVELOPE": {
+      "historical_role": "NON_HISTORICAL_FORMAL",
+      "qualification_status": "ENVELOPE_ONLY",
+      "allowed_use": "spatial boundary only",
+      "requires_explicit_engineering_use": false,
+      "historical_claim_allowed": false,
+      "auto_upgrade_allowed": false
+    },
+    "DEFERRED": {
+      "historical_role": "NON_HISTORICAL_FORMAL",
+      "qualification_status": "DEFERRED_INSUFFICIENT_EVIDENCE",
+      "allowed_use": "explicit engineering reference only",
+      "requires_explicit_engineering_use": true,
+      "historical_claim_allowed": false,
+      "auto_upgrade_allowed": false
+    },
+    "UNKNOWN": {
+      "historical_role": "NON_HISTORICAL_FORMAL",
+      "qualification_status": "UNKNOWN_UNRESOLVED",
+      "allowed_use": "unknown attribute or unresolved object only",
+      "requires_explicit_engineering_use": false,
+      "historical_claim_allowed": false,
+      "auto_upgrade_allowed": false
+    }
+  },
+  "identity_rule": "FORMAL_COMPONENT node_id and component_id must equal approved P3.1 component_id; no duplicate component identity",
+  "unknown_policy": "UNKNOWN remains UNKNOWN without separately approved evidence"
+}
