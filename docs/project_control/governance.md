@@ -59,13 +59,10 @@
 1. **禁止持久化动态代理端口**：不得在 global 或 repository-local Git config 中长期保存类似 `127.0.0.1:15236` 的 VPN/proxy 动态端口；固定端口方案 RC-007 已由 RC-010 取代。
 2. **动态检测**：每次 Git 网络操作由 helper 读取当前 `scutil --proxy`，优先使用当前有效 HTTP/HTTPS/SOCKS 系统代理；代理值仅通过本次 Git command 的 `-c http.proxy=...` 注入。
 3. **协议稳定性**：经过本地 HTTP/HTTPS proxy 时默认使用 `http.version=HTTP/1.1`；push 可使用受控 `http.postBuffer` 以降低部分本地代理对 chunked POST 的兼容问题。
-4. **push 结果必须验证**：若 push 正常返回成功，则结束；若发生 `unexpected disconnect`、`remote end hung up`、timeout 或等价异常，helper 应只读查询远端 branch SHA：
-   - remote SHA == local intended HEAD → `SUCCESS_WITH_ACK_LOSS`；
-   - remote SHA != local intended HEAD → `NETWORK_PUSH_FAILED`。
-5. **不无限重试**：同一网络失败不得无上限重复 push；确认真实失败后停止并报告网络 blocker，避免无效消耗工程额度。
-6. **冲突与网络严格分流**：只有 non-fast-forward、unknown tracked changes、同文件并行修改或真实 merge conflict 才进入 Git conflict STOP；普通 443 timeout / proxy disconnect 不得触发 force、reset、rebase、overwrite 或改写历史。
-7. **helper 路径**：当前本机复用 helper 为 `$HOME/.local/bin/git-proxy-auto`；其职责仅是网络层适配，不改变 Git 历史或项目内容。
-8. **验证记录**：T-012 发布过程中，固定代理链路出现 sideband disconnect；升级为动态 helper + HTTP/1.1 + push 保护后，提交 `d1ae53ee368729a395623a8d9a4342f7455e2e9b` 已成功发布到 `origin/main`。
+4. **push 结果必须验证**：若 push 正常返回成功，则结束；若发生 `unexpected disconnect`、`remote end hung up`、timeout 或等价异常，helper 应只读查询远端 branch SHA：remote SHA == local intended HEAD → `SUCCESS_WITH_ACK_LOSS`；否则 → `NETWORK_PUSH_FAILED`。
+5. **不无限重试**：同一网络失败不得无上限重复 push；确认真实失败后停止并报告网络 blocker。
+6. **冲突与网络严格分流**：只有 non-fast-forward、unknown tracked changes、同文件并行修改或真实 merge conflict 才进入 Git conflict STOP；普通网络异常不得触发 force/reset/rebase/overwrite。
+7. **helper 路径**：`$HOME/.local/bin/git-proxy-auto`；其职责仅是网络层适配，不改变 Git 历史或项目内容。
 
 推荐日常用法：
 
@@ -80,176 +77,117 @@ git-proxy-auto ls-remote origin refs/heads/main
 
 本项目已验证本机 **Blender 3.6.23 / Intel x64** 可完成脚本化生成、保存、独立重开与审核。Codex 执行本地 Blender 工程时，默认不得依赖 macOS GUI 启动链路。
 
-本地/Codex 执行规则：
-
-1. 默认禁止使用 `open -a Blender`、Finder 双击、AppleScript UI 控制或“先打开 Blender 窗口再执行”的 GUI 自动化方式作为正式工程链；
-2. 默认固定调用本机 Blender executable：`/Applications/Blender.app/Contents/MacOS/Blender`；
-3. 自动生成、验证、保存、重开检查与自动渲染优先使用 `--background` / CLI，例如：
-
-```bash
-/Applications/Blender.app/Contents/MacOS/Blender \
-  --background \
-  --python <script.py>
-```
-
-4. Task Contract 若未另行批准，不得自动尝试下载安装其他 Blender 版本，也不得因为 GUI 打开失败而改用不受控版本；
-5. 若 executable 路径不存在或版本与任务基线不符，Codex 应 STOP 并报告实际路径/版本，不得静默替换；
-6. 只有 Product Owner 需要人工视觉检查时，才需要手动打开 `.blend` 或直接查看正式 review PNG；人工检查不是自动工程执行的前置条件；
-7. GUI / LaunchServices 报错不等于 Blender engine 不可用。应优先验证 executable + `--background` 是否正常；只有 CLI/background 也失败时才按 Blender runtime blocker 处理。
-
-该规则适用于后续所有本地 Blender T-###，除非某个 Task Contract 经明确批准要求交互式 GUI 操作。
+1. 默认禁止使用 `open -a Blender`、Finder 双击、AppleScript UI 控制作为正式工程链；
+2. 固定调用 `/Applications/Blender.app/Contents/MacOS/Blender`；
+3. 自动生成、验证、保存、重开与渲染优先使用 `--background` / CLI；
+4. 未经批准不得自动安装或切换 Blender 版本；
+5. executable 路径不存在或版本不符时 STOP；
+6. Product Owner 人工视觉检查时才需要手动打开 `.blend` 或查看正式 review PNG；
+7. GUI / LaunchServices 报错不等于 Blender engine failure，优先验证 CLI/background。
 
 ### 4.3 Lean Production Mode｜Pilot 后的精益批量生产
 
-当某类生产已经通过代表性 Pilot 或 First Article 验证，且后续批次共享明确的生成方法、资产合同与验证逻辑时，默认优先采用 `LEAN_PRODUCTION_MODE`。
+当某类生产已通过代表性 Pilot / First Article，且后续批次共享生成方法、资产合同与验证逻辑时，默认优先采用 `LEAN_PRODUCTION_MODE`。
 
-规则：
+1. 共享 generator utility / batch runner / validator / renderer / semantic helper；
+2. 先做首件闸门，首件未 PASS 不批量扩展；
+3. 每个正式资产仍须独立参数、binary/hash/semantic/Registry，并逐资产完成 regeneration、reopen、mutation、canonical rebuild、evidence/transform validation 与 review package；
+4. 锁定输入优先做 hash/manifest 保护检查；
+5. Codex 生成 review assets 与机器检查，视觉审核由 ChatGPT / Product Owner 完成；
+6. 同一根因最多 2 次有证据修正重试；
+7. Lean 不得删除 DoD、Hard Fail、Evidence Boundary、逐资产 validation 或正式视觉审核；
+8. 几何方法、证据语义、资产合同或执行环境发生实质变化时回到 standalone / pilot mode。
 
-1. **共享工具链**：可共享 generator utility、batch runner、validator、renderer、semantic helper，避免为同类资产重复编写相同逻辑；
-2. **首件闸门**：先选择风险最高或参数最复杂的代表资产完成完整验证，首件未 PASS 前不得批量扩展；
-3. **逐资产独立验收**：每个正式资产仍必须独立 parameter set、canonical binary、SHA256、semantic snapshot、Registry record，并逐资产完成 deterministic regeneration、independent reopen、synthetic mutation、canonical rebuild、transform/evidence validation 与 review package；
-4. **保护性输入用 hash check**：对已锁定且无需重新解释的 P2 baseline、approved assets、Contract 等，优先做前后 hash/manifest 比较；hash 不变则不重复通读分析，hash mismatch 才展开调查；
-5. **视觉职责分离**：Codex 负责生成正式 review assets 和机器可读检查，不重复消耗额度做逐图视觉判断；视觉审核由 ChatGPT / Product Owner 完成；
-6. **重试上限**：同一根因最多 2 次有证据的修正重试；仍失败则 STOP 回报，禁止无上限猜测式调试；
-7. **不降低标准**：Lean 只能减少重复读取、重复代码、重复启动、重复解释和非必要中间产物，不得删除 DoD、Hard Fail、Evidence Boundary、逐资产 validation 或正式视觉审核；
-8. **适用边界**：若批次之间几何方法、证据语义、资产合同或执行环境发生实质变化，必须回到 standalone / pilot mode，不得机械复用 Lean。
+### 4.4 Chat-first Codex-executor Mode｜试运行后持续复用 / 长期评估待定
 
-该模式的目标是：**共享生产工具，保留逐资产验收；降低 Codex 额度与工程冗余，而非降低工程质量。**
+`CHAT_FIRST_CODEX_EXECUTOR_MODE` 已在 T-013 试运行，并在 T-015、T-016 成功复用；长期是否升级为全项目默认模式仍待正式评估。
 
-### 4.4 Chat-first Codex-executor Mode｜T-013 试运行完成 / 评估待定
-
-`CHAT_FIRST_CODEX_EXECUTOR_MODE` 已在 T-013 完成一次正式试运行，结果为工程链完成、逐资产验证完整，并出现一次仅影响呈现的 Overview 修正。当前状态为 **TRIAL COMPLETE / EVALUATION PENDING**，尚未自动升级为全项目长期默认模式。
-
-在正式评估完成前：
-
-1. **职责分离保持明确**：ChatGPT 负责证据解释、Task Contract、参数/几何语义、Hard Fail、非显然异常诊断、视觉审核与 Project Control；Codex 负责确定性工程执行、机器验证、资产生成和经授权的提交；
-2. **合同外问题必须返回**：证据冲突、几何方法变化、参数语义不明、非显然 validation failure 或历史解释扩张，Codex 必须 STOP 并把最小失败证据交回 ChatGPT；
-3. **Think Level**：显式采用该模式的任务中 Codex 默认 MEDIUM；只有 ChatGPT 判断存在结构性工程问题后才针对性升级 HIGH；
-4. **不降低验收标准**：DoD、Hard Fail、逐资产 validation、mutation、independent reopen、review package 和 Product Owner approval 均保持；
-5. **不自动继承**：在是否转为长期默认规则的评价完成前，后续任务只有在 Task Contract 明确采用时才使用该执行模式；
-6. **不阻塞当前 Gate 设计**：RC-011 的长期评估不阻塞 P3.2 Definition of Done 的定义与审批。
+1. ChatGPT 负责证据解释、Task Contract、参数/几何语义、Hard Fail、非显然异常诊断、视觉审核与 Project Control；Codex 负责确定性工程执行、机器验证、资产生成和经授权提交；
+2. 合同外证据冲突、几何方法变化、参数语义不明或非显然 validation failure 必须返回 ChatGPT；
+3. 显式采用该模式的任务默认 MEDIUM，结构性问题才针对性升级 HIGH；
+4. DoD、Hard Fail、逐资产 validation、mutation、independent reopen、review package 和 Product Owner approval 均不降低；
+5. 长期默认化前，后续任务仍需在 Task Contract 中明确采用。
 
 ### 4.5 Chinese Component Naming in Visual Assets｜中文构件命名规则
 
-该规则适用于所有正式面向人工审核、项目展示或证据表达的**构件图、装配图、Library Overview、Evidence Visualization 及同类视觉资产**。只要图中标识具体构件身份，就必须遵守：
+正式面向人工审核/展示的构件、组合与证据视觉资产，只要标识具体构件身份：
 
-1. **中文名称必显**：必须显示项目正式中文构件名；`component_id` 可并列，英文可作为辅助，但不得只显示英文或 ID 而省略中文名称；
-2. **证据优先**：中文名称优先继承当前直接证据来源中使用的古建筑专业术语；如项目已形成正式 canonical naming，则以项目 canonical 中文名作为视觉主名称，并在文档/metadata 中保留来源追溯；
-3. **不得自行改名**：未经证据或正式决策，不得擅自现代化翻译、简称、俗称替换或重命名专业构件；
-4. **现代术语与古籍术语分层**：现代测绘报告名称、项目 canonical naming 与历史文献原称属于不同证据层，不得混写；
-5. **古称声明需直接证据**：不得未经直接历史文献核证，把现代测绘/项目术语标注成“宋代原称”“古籍原称”或《营造法式》原称；只有存在直接历史文献证据时，才能单独标注古籍原称及出处；
-6. **来源不明时不臆造**：若历史原称无法核证，保持项目 canonical 中文名并明确其来源层级，不为版面完整性补造古称。
-
-本规则从 T-014 `P3_1_MASTER_LIBRARY_OVERVIEW_V001` 的命名修订中正式抽象为跨阶段长期规则，后续 P3.2、P3.3 及其他正式人工审核视觉资产默认继承。
+1. 必须显示项目正式中文构件名；ID/英文仅作辅助；
+2. 中文名称优先继承直接证据或项目 canonical naming；
+3. 不得未经证据自行改名；
+4. 现代测绘名、项目名与历史文献原称分层；
+5. 古称声明必须有直接历史文献证据；
+6. 来源不明时不为版面完整性补造古称。
 
 ### 4.6 Project Language & Terminology Layering｜项目语言与术语分层规则
 
-本项目研究对象为中国古建筑。凡涉及**建筑本体、构件名称、构件组合关系、空间与结构关系、史料解释、证据表达以及面向人工理解的复原内容**，默认以中文专业术语作为主表达；英文不得反客为主，也不得为了工程感将已有清晰中文含义的古建筑内容重新包装为英文术语体系。
+本项目研究对象为中国古建筑。凡涉及建筑本体、构件名称、构件组合关系、空间与结构关系、史料解释、证据表达以及面向人工理解的复原内容，默认以中文专业术语为主表达。
 
-统一分为三层：
+1. **古建筑内容层｜中文优先**：柱、栌斗、六椽栿、承托关系、连接关系、定位关系、重复关系、从属关系、构件组合、组合单元、定位基准等优先使用中文专业术语。
+2. **项目管理与工程控制层｜允许成熟英文术语**：DoD、PASS、HOLD、Hard Fail、Task Contract、Registry、Baseline、Dashboard 等可保留。
+3. **机器实现层｜英文稳定字段**：JSON、脚本、Registry、验证字段可保持稳定英文 key；人类可读文档、Dashboard、审核图须映射清晰中文含义。
 
-1. **古建筑内容层｜中文优先**：构件、结构、空间、组合关系、史料与复原判断，应优先采用中文专业术语。例如使用“柱、栌斗、六椽栿、承托关系、连接关系、定位关系、重复关系、从属关系、构件组合、组合单元、定位基准、构件关系分类体系”等；若存在测绘报告、古籍或项目 canonical 中文名，应优先继承，不以英文直译替代。
-2. **项目管理与工程控制层｜允许成熟英文术语**：用于项目治理、状态控制和软件工程的成熟术语可保留英文或中英并列，例如 `DoD`、`PASS`、`HOLD`、`CLOSED`、`Hard Fail`、`Task Contract`、`Registry`、`Baseline`、`Dashboard`。此类英文只描述管理或工程控制，不用于替代中国古建筑本体概念。
-3. **机器实现层｜英文稳定字段**：JSON、脚本、Registry、自动验证、文件字段和代码标识可继续使用稳定英文字段，例如 `component_id`、`relation_type`、`canonical_reference_length_mm`、`historical_full_length_mm`。机器字段的稳定性优先于展示语言，但在人类可读文档、Dashboard、审核图和说明中，应同时提供或映射到清晰中文含义。
-
-表达规则：
-
-- **中文有准确专业称谓时，不造新的英文主名称**；英文若保留，应作为副标题、工程别名或机器标识。
-- **项目内容与工程实现分层**：描述古建筑本身时优先用“组合、承托、定位、构件关系”等；描述 Blender / 程序执行动作时，可使用“装配、生成、实例化、验证”等工程术语。
-- **Gate 名称允许中英并列，但中文为主**。例如 P3.2 正式人工可读名称优先为“构件组合关系模型”，`Assembly Relationship Model` 可作为工程副标题，不作为项目内容主称。
-- **DoD、Task Contract、Dashboard、Review、Project Control 文档均受本规则约束**：面向 Product Owner 或人工审核时，项目内容术语应中文化；不得因模板沿用而持续扩散不必要英文。
-- **不追求机械翻译**：专业古建筑术语应尊重中国建筑史、测绘报告及项目证据体系；无法确认准确中文术语时，应保留中性项目描述并标明证据边界，不以英文术语掩盖概念未决。
-- **既有机器字段与 ID 不因本规则强制改名**：除非另有迁移决策，本规则不触发 Registry key、JSON field、文件 ID、component_id 或已被代码依赖的字段重命名，以避免无必要的兼容性风险。
-
-本规则为跨阶段长期规则，自 P3.2 DoD 定义起正式适用；后续 P3.2、P3.3 以及相关 Dashboard、正式文档、审核材料与任务说明默认继承。
+中文有准确专业称谓时不造新的英文主名称；工程实现动作可使用“装配、生成、实例化、验证”；Gate 可中英并列但中文为主；不因本规则强制改名既有机器字段和 ID。
 
 ### 4.7 Direct GitHub Visual Review｜GitHub 正式审核图直接调阅规则
 
-当正式 review PNG/JPG 已进入本项目 GitHub `main` 时，默认不再要求 Product Owner 将同一图片重复上传到 Chat。ChatGPT 应直接从 GitHub 调阅并**实际打开图片内容**完成视觉审核。
+当正式 review PNG/JPG 已进入 GitHub `main` 时，不再要求 Product Owner 重复上传到 Chat。
 
-规则：
-
-1. **实际打开后才能判 Visual PASS**：仅检查文件存在、生成脚本、尺寸、hash、metadata 或 canonical 数据，不等于完成视觉审核；只有图片实际被打开并逐张目视检查后，才可写 `VISUAL REVIEW PASS`。
-2. **GitHub 优先**：已提交到 GitHub 的正式 review assets 由 ChatGPT 自行调阅；Product Owner 无需重复上传。
-3. **Local-only 例外**：只存在本地 Mac、`.blend`、未提交图片或 GitHub 当前无法读取的视觉资产，ChatGPT 不能仅凭本地路径宣称已看过；此时必须由 Product Owner 上传到 Chat，或先把允许入库的 review image 提交 GitHub。
-4. **结构审核与视觉审核分开记录**：脚本/JSON/Validator/commit diff 的结构审核可以先进行，但不得用其替代视觉审核；结论应明确区分 `STRUCTURAL REVIEW` 与 `VISUAL REVIEW`。
-5. **Product Owner 仍保留最终批准权**：ChatGPT 完成结构 + 实际视觉审核后给出推荐结论；正式 T-### Approval / Gate Approval 仍由 Product Owner 决定。
-6. **适用范围**：后续所有进入 GitHub 的正式构件图、组合图、Overview、Evidence Visualization、Gate Review 图等默认遵循本规则。
-
-该规则从 T-016 四张正式审核图的审核流程中确认并长期生效。
+1. 只有实际打开并逐张目视检查后才可写 `VISUAL REVIEW PASS`；
+2. 已提交 GitHub 的正式 review assets 由 ChatGPT 自行调阅；
+3. local-only、未提交或 GitHub 无法读取的视觉资产仍须上传 Chat 或先提交允许入库的 review image；
+4. 结构审核与视觉审核分开记录；
+5. Product Owner 保留最终批准权。
 
 ## 5. Checkpoint 的职责
 
-Checkpoint **不负责首次落档**。它只负责：
-
-1. 核对 Project Control 文件之间是否一致；
-2. 合并重复或过细记录；
-3. 到 Phase 结束时生成 `phase_archive/Px_closure.md`；
-4. 根据最新 Project Control 重新生成 `dashboard.html`。
-
-典型 Checkpoint：阶段 / Gate Review 完成、重大方向变更、切换 Chat、当天结束、Product Owner 明确要求刷新 Dashboard。
+Checkpoint 不负责首次落档，只负责一致性核对、压缩、Phase Closure 与 Dashboard 刷新。
 
 ### 5.1 Daily Closing Project Control Consistency Audit｜每日收尾一致性审计
 
-**每天正式结束项目工作前必须执行一次。**该审计属于 Project Control Maintenance / Checkpoint，不占 T-### 编号。
+每天正式结束项目工作前必须执行一次，最低核对：
 
-最低核对范围：
+1. `project_state.json`；
+2. `acceptance_matrix.md`；
+3. `decision_log.md`；
+4. `execution_log.md`；
+5. `governance.md` + `rules_change_log.md`；
+6. `dashboard.html`；
+7. `phase_archive/`（相关时）。
 
-1. `project_state.json`：Phase、Gate、Current Task、Blocker、Next Action、State Revision；
-2. `acceptance_matrix.md`：Gate 状态、DoD、限制与通过依据；
-3. `decision_log.md`：当日形成且已批准的重大决策是否完整登记，Decision ID 与当前状态是否一致；
-4. `execution_log.md`：当日 T-### 执行事实、PASS/HOLD/CLOSED 状态和关键提交/证据是否与其他文件一致；
-5. `governance.md` + `rules_change_log.md`：新增、修改、替代或结束试运行的规则是否双向同步；
-6. `dashboard.html`：作为派生可视化，其 Phase / Gate / Current Task / Blocker / Next Action / Snapshot version 是否与 `project_state.json` 一致，并继续遵守 Dashboard UI 规则；
-7. `phase_archive/`：仅在相关时核对索引与已关闭 Phase 的 Closure 是否存在、状态正确；Closure 作为关闭时点历史快照，除事实性纠错外不得因后续阶段推进而改写旧状态。
-
-审计判定：
-
-- **PASS**：未发现跨文件矛盾、过期当前状态或应登记而漏登记的正式事实；
-- **PASS WITH KNOWN EXCEPTION**：存在已明确识别、不会导致当前状态误读且已登记的例外；
-- **HOLD**：存在尚未澄清的实质冲突、状态漂移或关键漏档。HOLD 时不得声称当天 Project Control 收尾完成。
-
-处理规则：
-
-- 明确可纠正的不一致应在当天直接修正；
-- 无法当场判断的差异必须显式记录为 known exception / HOLD，不得静默带入下一工作日；
-- 纯一致性维护若不改变 Phase / Gate / Current Task / Blocker / Next Action 等项目状态事实，不要求递增 `state_revision`；Dashboard 只有实际重生成或内容发生变化时才递增 Visualization Snapshot 版本。
-
-每天收尾汇报应明确给出：**`DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT = PASS / PASS WITH KNOWN EXCEPTION / HOLD`**。
+审计判定：PASS / PASS WITH KNOWN EXCEPTION / HOLD。明确可纠正的不一致应当天直接修正；无法判断的差异必须登记 known exception / HOLD。
 
 ## 6. Dashboard 规则
 
-- Dashboard 只展示 Product Owner 当前管理与决策所需信息。
-- 不保存完整 Decision Log、Execution Log、Acceptance Matrix 或 Rules Change Log 历史。
-- canonical Dashboard 路径固定为 `docs/project_control/dashboard.html`；其历史由 Git 负责，不靠文件名堆叠版本。
-- Dashboard 内可包含从 `project_state.json` 派生的 compact snapshot，便于跨 Chat handoff，但该 snapshot 不是 Project Control 事实本体。
-- Dashboard Architecture Baseline：**v006**；当前 Visualization Snapshot 版本单独记录在 `project_state.json` 与 `dashboard.html`，两者不得混为同一版本号。
+- Dashboard 只展示 Product Owner 当前管理与决策所需信息；
+- canonical 路径固定为 `docs/project_control/dashboard.html`；
+- Dashboard snapshot 非 Project Control 事实本体；
+- Dashboard Architecture Baseline：**v006**；Visualization Snapshot 版本独立记录；
+- `Overall Gate Status` 固定显示 6 条记录并允许内部滚动；`Current Gate` 必须显示 Gate 完成度；长标签区域不得重叠。
 
 ## 7. Codex Task Contract 与权限边界
 
-- 只有实际交给 Codex 执行的工程任务占用 T-###。
-- ChatGPT 的分析、项目管理、Gate Review、Prompt 设计和 Project Control 判断本身不占 T 编号。
-- 同一任务目标只递增 V###；只有任务目标变化才创建新 T。
-- 正式命名：`【中国古建筑3D复原｜T-###｜TASK_KEY_V###｜中文任务名】`
-- 每份正式 Codex 指令必须明确 Think Level：LOW / MEDIUM / HIGH / XHIGH。
-- LOW：机械、确定性操作；MEDIUM：默认工程执行；HIGH：复杂调试、跨环境推理；XHIGH：仅 High 明确不足或 Product Owner 指定。
-- Codex 默认可读取 Project Control，但不得自行改变重大决策、Gate 结论或 Governance。
-- 只有 Task Contract / Project Control Maintenance 指令明确授权时，Codex 才可修改 Project Control。
-- Product Owner 与 ChatGPT 负责决定哪些事实应进入正式 Project Control。
+- 只有实际交给 Codex 执行的工程任务占用 T-###；
+- ChatGPT 分析、项目管理、Gate Review、设计与 Project Control 判断不占 T 编号；
+- 同一任务目标只递增 V###；任务目标变化才创建新 T；
+- 正式命名：`【中国古建筑3D复原｜T-###｜TASK_KEY_V###｜中文任务名】`；
+- 每份正式 Codex 指令必须明确 Think Level；
+- Codex 默认可读取 Project Control，但不得自行改变重大决策、Gate 或 Governance；
+- 只有明确授权时 Codex 才可修改 Project Control。
 
 ## 8. 决策与变更
 
-- 用户质疑本身不自动改变正式方案；只有新证据、逻辑错误、前提变化或实验失败才触发改向。
-- 重大方向变化应形成 Change Proposal 或等价的明确方案，由 Product Owner 批准后进入 Decision Log。
-- 决策若被后续规则替代，不删除历史，而是在 Decision Log / Rules Change Log 中标记 `SUPERSEDED`。
+- 用户质疑本身不自动改变正式方案；只有新证据、逻辑错误、前提变化或实验失败才触发改向；
+- 重大方向变化应形成 Change Proposal 或等价明确方案，由 Product Owner 批准后进入 Decision Log；
+- 被后续规则替代的决策不删除历史，而标记 `SUPERSEDED`。
 
 ## 9. 角色
 
-- **Product Owner**：用户；负责目标、重大决策、Gate Approval。
-- **ChatGPT**：项目控制、方案、验证设计、审核、Change Proposal，并优先维护 Project Control。
-- **Codex**：本地工程执行；按明确 Task Contract 工作。
-- **GitHub Actions / Cloud**：自动化、Cloud Blender 与工程执行节点。
-- **GitHub private repo**：当前试运行中的正式提交状态、版本历史、备份和跨环境访问层。
+- **Product Owner**：目标、重大决策、Gate Approval；
+- **ChatGPT**：项目控制、方案、验证设计、审核、Change Proposal；
+- **Codex**：按明确 Task Contract 做工程执行；
+- **GitHub Actions / Cloud**：自动化与云执行节点；
+- **GitHub private repo**：正式提交状态、版本历史、备份和跨环境访问层。
 
 ## 10. Scope / Non-goals｜当前 P3
 
@@ -257,10 +195,11 @@ Checkpoint **不负责首次落档**。它只负责：
 
 当前边界：
 
-- P3.0、P3.1 已关闭；P3.2 `构件组合关系模型` ACTIVE，DoD V001 已由 D-041 锁定；T-015 与 T-016 已完成并获 Product Owner 批准，下一步进入 P3.2 Gate Review；
-- P3.2 只有在 Gate Review 证明 **9/9 DoD PASS + canonical Hard Fail = 0**，并经 Product Owner 最终 Gate Approval 后，才可标记 PASS / CLOSED；
-- P3.3 在 P3.2 正式 PASS 前保持 LOCKED；
-- P1/P2/P3.1 的 evidence boundary 持续有效，不因进入组合阶段而把 UNKNOWN、Proxy、Control、Envelope、Deferred 对象静默历史化；
-- 六椽栿 `canonical_reference_length_mm=1000` 仅为非历史 reference specimen，严禁作为建筑实际组合长度自动继承；`REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` 继续作为 Hard Fail；
+- P3.0、P3.1、P3.2 已关闭；P3.2 Gate Review 9/9 PASS、canonical Hard Fail=0，并由 D-046 正式批准关闭；P3 Gate Progress=3/4；
+- P3.3 `构件驱动整殿重建` 已 UNLOCKED / ENTERED，但当前仅进入 **DoD 定义阶段**；P3.3 DoD 获 Product Owner 批准前不得创建 P3.3 工程 Task Contract 或启动整殿生产；
+- P3.3 必须继承 P3.2 的五类基础关系、接口/定位、Assembly Unit、runtime instance、building-level parameter、Validator 与 Hard Fail，不重新发明基础组合机制；
+- P1/P2/P3.1/P3.2 的 evidence boundary 持续有效，UNKNOWN、Proxy、Control、Envelope、Deferred 不得因整殿重建而静默历史化；
+- 六椽栿 `canonical_reference_length_mm=1000` 仅为非历史 reference specimen；在独立 approved building-specific full length 出现前，实际全长几何继续 BLOCKED；
+- Z-006 继续 UNKNOWN/null/DO_NOT_LOCK；Z-006-RC-01 保持 replaceable REASONABLE_COMPLETION；具体榫卯、隐藏连接、45°转角、隐角梁继续保持当前证据边界；
 - 未经验证或未经 Task Contract 授权的 AI / Cloud / Blender 能力不得直接视为正式生产能力；
 - 不以视觉完整性替代历史证据，不因构件系统可组合而宣称“完全还原963原貌”。
