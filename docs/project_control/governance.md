@@ -163,6 +163,21 @@ git-proxy-auto ls-remote origin refs/heads/main
 
 本规则为跨阶段长期规则，自 P3.2 DoD 定义起正式适用；后续 P3.2、P3.3 以及相关 Dashboard、正式文档、审核材料与任务说明默认继承。
 
+### 4.7 Direct GitHub Visual Review｜GitHub 正式审核图直接调阅规则
+
+当正式 review PNG/JPG 已进入本项目 GitHub `main` 时，默认不再要求 Product Owner 将同一图片重复上传到 Chat。ChatGPT 应直接从 GitHub 调阅并**实际打开图片内容**完成视觉审核。
+
+规则：
+
+1. **实际打开后才能判 Visual PASS**：仅检查文件存在、生成脚本、尺寸、hash、metadata 或 canonical 数据，不等于完成视觉审核；只有图片实际被打开并逐张目视检查后，才可写 `VISUAL REVIEW PASS`。
+2. **GitHub 优先**：已提交到 GitHub 的正式 review assets 由 ChatGPT 自行调阅；Product Owner 无需重复上传。
+3. **Local-only 例外**：只存在本地 Mac、`.blend`、未提交图片或 GitHub 当前无法读取的视觉资产，ChatGPT 不能仅凭本地路径宣称已看过；此时必须由 Product Owner 上传到 Chat，或先把允许入库的 review image 提交 GitHub。
+4. **结构审核与视觉审核分开记录**：脚本/JSON/Validator/commit diff 的结构审核可以先进行，但不得用其替代视觉审核；结论应明确区分 `STRUCTURAL REVIEW` 与 `VISUAL REVIEW`。
+5. **Product Owner 仍保留最终批准权**：ChatGPT 完成结构 + 实际视觉审核后给出推荐结论；正式 T-### Approval / Gate Approval 仍由 Product Owner 决定。
+6. **适用范围**：后续所有进入 GitHub 的正式构件图、组合图、Overview、Evidence Visualization、Gate Review 图等默认遵循本规则。
+
+该规则从 T-016 四张正式审核图的审核流程中确认并长期生效。
+
 ## 5. Checkpoint 的职责
 
 Checkpoint **不负责首次落档**。它只负责：
@@ -238,14 +253,14 @@ Checkpoint **不负责首次落档**。它只负责：
 
 ## 10. Scope / Non-goals｜当前 P3
 
-当前正式案例仍为**平遥镇国寺万佛殿**。P3 的目标是建立可登记、可解释、可复用、可组合的古建筑构件系统，并验证构件之间的装配关系与构件驱动重建能力，不把阶段目标扩大为寺院群、城市级或无限精细化建模。
+当前正式案例仍为**平遥镇国寺万佛殿**。P3 的目标是建立可登记、可解释、可复用、可组合的古建筑构件系统，并验证构件之间的组合关系与构件驱动重建能力，不把阶段目标扩大为寺院群、城市级或无限精细化建模。
 
 当前边界：
 
-- P3.0、P3.1 已关闭；P3.2 `Assembly Relationship Model` 已进入，但其 Definition of Done 尚未批准；
-- P3.2 DoD 获 Product Owner 明确批准前，不创建 P3.2 工程任务，不提前进行装配工程实现；
-- P3.3 在 P3.2 PASS 前保持 LOCKED；
-- P1/P2/P3.1 的 evidence boundary 持续有效，不因进入装配阶段而把 UNKNOWN、Proxy、Control、Envelope、Deferred 对象静默历史化；
-- 六椽栿 `canonical_reference_length_mm=1000` 仅为非历史 reference specimen，严禁作为建筑实际装配长度自动继承；`REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` 继续作为 Hard Fail；
+- P3.0、P3.1 已关闭；P3.2 `构件组合关系模型` ACTIVE，DoD V001 已由 D-041 锁定；T-015 与 T-016 已完成并获 Product Owner 批准，下一步进入 P3.2 Gate Review；
+- P3.2 只有在 Gate Review 证明 **9/9 DoD PASS + canonical Hard Fail = 0**，并经 Product Owner 最终 Gate Approval 后，才可标记 PASS / CLOSED；
+- P3.3 在 P3.2 正式 PASS 前保持 LOCKED；
+- P1/P2/P3.1 的 evidence boundary 持续有效，不因进入组合阶段而把 UNKNOWN、Proxy、Control、Envelope、Deferred 对象静默历史化；
+- 六椽栿 `canonical_reference_length_mm=1000` 仅为非历史 reference specimen，严禁作为建筑实际组合长度自动继承；`REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY` 继续作为 Hard Fail；
 - 未经验证或未经 Task Contract 授权的 AI / Cloud / Blender 能力不得直接视为正式生产能力；
 - 不以视觉完整性替代历史证据，不因构件系统可组合而宣称“完全还原963原貌”。
