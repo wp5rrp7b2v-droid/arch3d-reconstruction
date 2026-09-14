@@ -45,8 +45,8 @@
 |---|---|---|---|
 | P3.0｜Component Ontology & Registry | 构件本体、Naming/ID、Registry、P2 语义迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；D-031。 |
 | P3.1｜Component Master & Variant Library | 建立 evidence-qualified canonical Master / Variant / review / Registry | **PASS / APPROVED / CLOSED** | DoD 9/9；6/6 Master Approved；D-040。 |
-| P3.2｜构件组合关系模型 | 建立构件资格、承托/连接/定位/重复/从属、接口、参数传递、组合单元、重建验证 | **ACTIVE / DOD LOCKED / T-015 APPROVED CLOSED** | DoD V001 / D-041；T-015 / D-042；P3.2 尚未 PASS。 |
-| P3.3｜Component-driven Building Reconstruction | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **LOCKED** | 等待 P3.2 PASS。 |
+| P3.2｜构件组合关系模型 | 建立构件资格、承托/连接/定位/重复/从属、接口、参数传递、组合单元、重建验证 | **ACTIVE / T-015 + T-016 APPROVED CLOSED / GATE REVIEW READY** | DoD V001 / D-041；T-015 / D-042；T-016 / D-045；尚未执行最终 Gate Review。 |
+| P3.3｜Component-driven Building Reconstruction | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **LOCKED** | 等待 P3.2 正式 PASS。 |
 
 **P3 Gate Progress：2 / 4。**
 
@@ -97,16 +97,35 @@ P3.2 PASS 必须满足：9/9 DoD PASS + 0 Hard Fail + Product Owner Approval。�
 - ChatGPT structural review：PASS；Product Owner APPROVED / CLOSED。
 - Review：`docs/production/zhenguo_wanfo/P3_2_RELATIONSHIP_FOUNDATION_REVIEW_V001.md`。
 
-**T-015 仅完成 P3.2 的关系基础，不等于 P3.2 PASS。**
+### T-016｜代表性构件组合验证｜PASS / APPROVED / CLOSED / D-045
+
+- Engineering commit：`fc01ecb4f61128faa95ecf8022d2077a36977a8c`。
+- Machine validation：65/65 PASS。
+- Negative tests：15/15 expected rejection PASS。
+- Canonical Hard Fail：0。
+- 五类关系代表性覆盖：5/5。
+- A｜柱—柱头栌斗：SUPPORT / LOCATE / BELONG + interface-driven Blender rebuild / independent reopen / determinism PASS；Z-006 与 joinery evidence boundary 保持。
+- B｜六椽栿梁架层位：`SEMANTIC_ASSEMBLY_VALID / FULL_LENGTH_GEOMETRY_BLOCKED` 为预期 PASS；未生成实际全长几何；1000 mm reference leakage 可稳定拦截。
+- C｜柱网重复：`PM-005=3505.7mm` 驱动同一 `CMP-COLUMN-001` 的 runtime instances；2→3→2 mutation / restore PASS；无新 component identity。
+- P2 frozen baseline / 6 个 P3.1 canonical Masters：UNCHANGED。
+- ChatGPT structural review：PASS。
+- 正式 review PNG：4/4 已从 GitHub 直接调阅并实际逐张目视审核 PASS；遵循 RC-015。
+- Product Owner：APPROVED / CLOSED。
+- Review：`docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_REVIEW_V001.md`。
+
+**T-015 + T-016 完成并不自动等于 P3.2 PASS。**
 
 ### P3.2 Current Boundary / Next Step
 
-下一项应进入**代表性构件组合关系验证**，至少覆盖：
+下一步是**正式 P3.2 Gate Review**。Gate Review 必须逐项核对 DoD V001 的 9 项要求及三项 Gate Hard Fail。
 
-1. 竖向承托链；
-2. 横向梁架链；
-3. 至少一种重复关系。
+只有当 Gate Review 结论为：
 
-同时必须显式验证实际需要的上/下承托基准与中心/轴线定位基准；不得把 T-015 的通用“局部下参考面”机械解释为所有历史承托/连接界面。关系证据与构件证据继续独立，未知榫卯/隐藏连接保持 UNKNOWN。
+- 9/9 DoD PASS；
+- canonical Hard Fail = 0；
+- 无需重新发明基础构件组合机制即可进入 P3.3；
+- Product Owner 最终批准 Gate；
 
-P3.3 继续 LOCKED。
+P3.2 才能标记为 **PASS / APPROVED / CLOSED**，P3 Gate Progress 才从 2/4 变为 3/4，并正式解锁 P3.3。
+
+P3.3 当前继续 LOCKED。
