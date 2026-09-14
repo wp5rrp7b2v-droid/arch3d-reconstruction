@@ -109,7 +109,23 @@
 - 非阻断 carry-forward：后续真实代表性组合不得机械使用统一“局部下参考面”替代全部承托/连接界面；应按关系显式建立/验证上承托、下承托及中心/轴线定位基准，并区分工程接口与历史接触关系。
 - **T-015 CLOSED 不等于 P3.2 PASS。**
 
-## Current Execution State｜R073｜2026-09-14
+## T-016｜P3.2 代表性构件组合验证｜PASS / APPROVED / CLOSED / D-045
+
+- Authorization：D-044；Execution Mode=`CHAT_FIRST_CODEX_EXECUTOR_MODE`；Think Level=MEDIUM。
+- Engineering commit：`fc01ecb4f61128faa95ecf8022d2077a36977a8c`；`origin/main` 同 SHA。
+- Machine validation：65/65 PASS；negative tests：15/15 expected rejection PASS；canonical Hard Fail=0。
+- 五类关系代表性覆盖：SUPPORT / CONNECT / LOCATE / REPEAT / BELONG = 5/5。
+- A｜`AU-COLUMN-LUDOU-001`：显式 top/lower support interface + axis LOCATE；Blender CLI generation、independent reopen、deterministic regeneration PASS；Z-006 UNKNOWN、Z-006-RC-01 replaceable RC、joinery UNKNOWN 保持。
+- B｜`AU-FRAME-TIER-001`：Control=CONTROL_ONLY、Proxy=PROXY_ONLY；semantic graph PASS；canonical=`SEMANTIC_ASSEMBLY_VALID / FULL_LENGTH_GEOMETRY_BLOCKED`；未生成 actual full-length `.blend`；1000 mm actual/building length injection 稳定触发 `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY`。
+- C｜`AU-COLUMN-GRID-001`：PM-005=3505.7 mm 驱动两个 runtime instances，均引用 `CMP-COLUMN-001`；2→3→2 mutation/rebuild/restore、independent reopen、determinism PASS；PM-005 未修改。
+- P2 frozen baseline / 六个 P3.1 canonical Masters：UNCHANGED；unrelated untracked files：UNTOUCHED；P3.3 files created=0。
+- ChatGPT structural review：PASS。
+- 四张正式 review PNG 已直接从 GitHub 调阅并实际逐张打开目视审核，4/4 PASS；该流程正式固化为 RC-015。
+- Product Owner：APPROVED / CLOSED / D-045。
+- Review：`docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_REVIEW_V001.md`。
+- **T-016 CLOSED 不等于 P3.2 PASS；下一步必须执行 P3.2 Gate Review。**
+
+## Current Execution State｜R078｜2026-09-14
 
 - P0：CLOSED / APPROVED。
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO。
@@ -117,8 +133,8 @@
 - P3：ACTIVE / **2/4 PASS**。
 - P3.0：PASS / APPROVED / CLOSED。
 - P3.1：PASS / APPROVED / CLOSED / D-040。
-- P3.2：**ACTIVE / DOD LOCKED / T-015 APPROVED CLOSED / NEXT TASK PLANNING READY**。
+- P3.2：**ACTIVE / DOD LOCKED D-041 / T-015 CLOSED D-042 / T-016 CLOSED D-045 / GATE REVIEW READY**。
 - P3.3：LOCKED / WAITING_FOR_P3.2_PASS。
 - Current engineering blocker：NONE。
 - Current task：NONE。
-- Next action：设计 P3.2 下一项“代表性构件组合关系验证”任务，覆盖竖向承托链、横向梁架链与重复关系，并显式验证真实接口和证据边界。
+- Next action：执行正式 P3.2 Gate Review；逐项核对 9 项 DoD 与三项 Gate Hard Fail。只有 9/9 PASS + 0 Hard Fail + Product Owner Gate Approval 后，P3.2 才可 CLOSED 并解锁 P3.3。
