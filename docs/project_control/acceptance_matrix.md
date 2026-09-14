@@ -29,7 +29,7 @@
 ## P2｜正式参数化与3D复原｜CLOSED / APPROVED 2026-09-12
 
 | Gate | 最终状态 | 关键边界 |
-|---|---|---|---|
+|---|---|---|
 | P2.0｜Evidence-aware Parameter Schema | **PASS / APPROVED** | CG-01 satisfied. |
 | P2.1｜Formal Production Parameter Set | **PASS / APPROVED / CLOSED** | Z-006 remains UNKNOWN；RC-01 replaceable。 |
 | P2.2｜Parametric Structural Skeleton | **PASS / APPROVED / CLOSED** | 217 = machine objects，不等于历史构件数。 |
@@ -45,10 +45,10 @@
 |---|---|---|---|
 | P3.0｜Component Ontology & Registry | 构件本体、Naming/ID、Registry、P2 语义迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；D-031。 |
 | P3.1｜Component Master & Variant Library | 建立 evidence-qualified canonical Master / Variant / review / Registry | **PASS / APPROVED / CLOSED** | DoD 9/9；6/6 Master Approved；D-040。 |
-| P3.2｜构件组合关系模型 | 建立构件资格、承托/连接/定位/重复/从属、接口、参数传递、组合单元、重建验证 | **GATE REVIEW 9/9 PASS / PO APPROVAL REQUIRED** | T-015 / D-042；T-016 / D-045；canonical Hard Fail=0；Gate Review 已通过，尚未由 Product Owner 关闭 Gate。 |
-| P3.3｜Component-driven Building Reconstruction | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **LOCKED** | 等待 P3.2 Product Owner Gate Approval。 |
+| P3.2｜构件组合关系模型 | 建立构件资格、承托/连接/定位/重复/从属、接口、参数传递、组合单元、重建验证 | **PASS / APPROVED / CLOSED** | DoD 9/9；canonical Hard Fail=0；T-015 / D-042；T-016 / D-045；Gate closure D-046。 |
+| P3.3｜构件驱动整殿重建 | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED** | P3.2 已关闭；P3.3 DoD 批准前不得创建工程任务。 |
 
-**P3 Gate Progress：2 / 4。**
+**P3 Gate Progress：3 / 4。**
 
 ### P3.1 Gate Final｜PASS / APPROVED / CLOSED / D-040
 
@@ -64,56 +64,29 @@ Carry-forward：Z-006 UNKNOWN/null；Z-006-RC-01 replaceable；DG-114 UNKNOWN；
 
 正式文件：`docs/production/zhenguo_wanfo/P3_2_DEFINITION_OF_DONE_V001.md`
 
-9 项 DoD：
+9 项 DoD：组合范围与构件资格；构件关系分类体系；构件接口与定位规则；代表性组合单元与关系覆盖；尺寸与参数传递；史料依据与不确定性边界；机器验证与组合关系完整性；确定性重建与参数变更验证；P3.3 整殿重建就绪性验证。
 
-1. 组合范围与构件资格；
-2. 构件关系分类体系；
-3. 构件接口与定位规则；
-4. 代表性组合单元与关系覆盖；
-5. 尺寸与参数传递；
-6. 史料依据与不确定性边界；
-7. 机器验证与组合关系完整性；
-8. 确定性重建与参数变更验证；
-9. P3.3 整殿重建就绪性验证。
-
-Gate Hard Fail：
-
-- `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY`
-- `SILENT_HISTORICIZATION`
-- `BAKED_MANUAL_ASSEMBLY`
-
-P3.2 PASS 必须满足：9/9 DoD PASS + 0 Hard Fail + Product Owner Approval。进入 P3.3 后不得需要重新发明基础构件组合机制。
+Gate Hard Fail：`REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY`、`SILENT_HISTORICIZATION`、`BAKED_MANUAL_ASSEMBLY`。
 
 ### T-015｜构件组合关系基础工程实现｜PASS / APPROVED / CLOSED / D-042
 
 - Engineering commit：`49b0415479d811a26d4f44588d15cd863467edf4`。
-- Approved Master node mapping：6/6 PASS。
-- 五类基础关系：5/5（承托、连接、定位、重复、从属）。
-- Interface foundation：6 个 Master / 18 个最小局部接口。
-- Machine validation：31/31 PASS。
-- Negative tests：21/21 expected rejection PASS。
-- 三项 Gate Hard Fail 均有真实触发测试；canonical state = 0 Hard Fail。
+- Approved Master node mapping：6/6 PASS；五类基础关系 5/5；6 个 Master / 18 个最小局部接口。
+- Machine validation：31/31 PASS；Negative tests：21/21 expected rejection PASS；canonical Hard Fail=0。
 - P2 frozen baseline / P3.1 canonical Masters：UNCHANGED。
-- ChatGPT structural review：PASS；Product Owner APPROVED / CLOSED。
 - Review：`docs/production/zhenguo_wanfo/P3_2_RELATIONSHIP_FOUNDATION_REVIEW_V001.md`。
 
 ### T-016｜代表性构件组合验证｜PASS / APPROVED / CLOSED / D-045
 
 - Engineering commit：`fc01ecb4f61128faa95ecf8022d2077a36977a8c`。
-- Machine validation：65/65 PASS。
-- Negative tests：15/15 expected rejection PASS。
-- Canonical Hard Fail：0。
-- 五类关系代表性覆盖：5/5。
-- A｜柱—柱头栌斗：SUPPORT / LOCATE / BELONG + interface-driven Blender rebuild / independent reopen / determinism PASS；Z-006 与 joinery evidence boundary 保持。
-- B｜六椽栿梁架层位：`SEMANTIC_ASSEMBLY_VALID / FULL_LENGTH_GEOMETRY_BLOCKED` 为预期 PASS；未生成实际全长几何；1000 mm reference leakage 可稳定拦截。
-- C｜柱网重复：`PM-005=3505.7mm` 驱动同一 `CMP-COLUMN-001` 的 runtime instances；2→3→2 mutation / restore PASS；无新 component identity。
-- P2 frozen baseline / 6 个 P3.1 canonical Masters：UNCHANGED。
-- ChatGPT structural review：PASS。
-- 正式 review PNG：4/4 已从 GitHub 直接调阅并实际逐张目视审核 PASS；遵循 RC-015。
-- Product Owner：APPROVED / CLOSED。
+- Machine validation：65/65 PASS；Negative tests：15/15 expected rejection PASS；Canonical Hard Fail：0；五类关系代表性覆盖 5/5。
+- A｜柱—柱头栌斗：interface-driven Blender rebuild / independent reopen / determinism PASS。
+- B｜六椽栿梁架层位：`SEMANTIC_ASSEMBLY_VALID / FULL_LENGTH_GEOMETRY_BLOCKED` 为预期 PASS；1000 mm reference leakage 可稳定拦截。
+- C｜柱网重复：`PM-005=3505.7mm` 驱动同一 `CMP-COLUMN-001` runtime instances；2→3→2 mutation / restore PASS。
+- 正式 review PNG：4/4 direct GitHub visual review PASS；P2 frozen baseline / 6 个 P3.1 canonical Masters UNCHANGED。
 - Review：`docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_REVIEW_V001.md`。
 
-### P3.2 Gate Review｜9/9 PASS / PRODUCT OWNER APPROVAL REQUIRED
+### P3.2 Gate Final｜PASS / APPROVED / CLOSED / D-046
 
 正式文件：`docs/production/zhenguo_wanfo/P3_2_GATE_REVIEW_2026-09-14.md`
 
@@ -121,16 +94,14 @@ P3.2 PASS 必须满足：9/9 DoD PASS + 0 Hard Fail + Product Owner Approval。�
 - Canonical Hard Fail：**0**。
 - P3.3 foundational readiness：**PASS**。
 - Additional engineering task required before Gate decision：**NO**。
-- T-015 foundation：31/31 PASS + 21/21 negative expected rejection PASS。
-- T-016 representative assembly：65/65 PASS + 15/15 negative expected rejection PASS + 4/4 direct GitHub visual review PASS。
-- B 的 `FULL_LENGTH_GEOMETRY_BLOCKED` 为正确就绪行为：六椽栿 historical full length 仍 UNKNOWN/null；缺少合法 building-specific full length 时应阻断，而不是把 1000mm reference specimen 泄漏为建筑实际尺寸。
-- 进入 P3.3 后可在既有五类关系、接口/定位、Assembly Unit、runtime instance、building-level parameter 与 validator 体系上扩展具体整殿关系实例，无需重新发明基础组合机制。
+- Product Owner：**APPROVED / D-046**。
 
 Carry-forward 到 P3.3：
 
 - 六椽栿 historical full length UNKNOWN/null；未获独立批准前继续 geometry BLOCKED；
 - Z-006 UNKNOWN/null/DO_NOT_LOCK；Z-006-RC-01 继续 replaceable RC；
 - 具体榫卯、隐藏连接、45°转角、隐角梁等继续保持现有 evidence boundary；
-- Deferred / Proxy / Control / Envelope / UNKNOWN 不得因 P3.3 整殿重建而静默历史化。
+- Deferred / Proxy / Control / Envelope / UNKNOWN 不得因整殿重建而静默历史化；
+- P3.3 可在已批准五类关系、接口/定位、Assembly Unit、runtime instance、building-level parameter 与 validator 体系上扩展具体整殿实例，但不得重新定义基础关系体系。
 
-**Gate Review 已完成并通过，但 P3.2 尚未 CLOSED。最终还差 Product Owner Gate Approval；在批准前 P3.3 继续 LOCKED，P3 Gate Progress 仍为 2/4。**
+**P3.2 正式 CLOSED；P3.3 已 UNLOCKED / ENTERED。P3.3 DoD 获 Product Owner 批准前，工程生产仍未授权。**
