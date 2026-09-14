@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R077",
+  "state_revision": "R078",
   "last_updated": "2026-09-14",
-  "session_status": "ACTIVE / P3.2_T016_AUTHORIZED / IN_EXECUTION",
+  "session_status": "ACTIVE / P3.2_T016_APPROVED_CLOSED / GATE_REVIEW_READY",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,11 +17,11 @@
     "id": "P3.2",
     "name": "构件组合关系模型",
     "english_name": "Assembly Relationship Model",
-    "status": "ACTIVE / T-016 AUTHORIZED / IN EXECUTION",
+    "status": "ACTIVE / T-016 APPROVED CLOSED / GATE REVIEW READY",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
-      "P3.2": "ACTIVE / DOD LOCKED D-041 / T-015 CLOSED D-042 / REPRESENTATIVE DESIGN LOCKED D-043 / T-016 AUTHORIZED IN EXECUTION",
+      "P3.2": "ACTIVE / DOD LOCKED D-041 / T-015 CLOSED D-042 / REPRESENTATIVE DESIGN LOCKED D-043 / T-016 CLOSED D-045 / GATE REVIEW READY",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
@@ -46,17 +46,7 @@
     "local_dependency_rule": "No local-Mac-dependent work may be marked PASS during Cloud Mode unless equivalent execution and validation capability has been separately approved.",
     "pre_activation_note": "If local work continues on 2026-09-15, refresh the final pre-Cloud snapshot and pending-local list before activation."
   },
-  "current_task": {
-    "task_id": "T-016",
-    "name": "P3.2 代表性构件组合验证",
-    "engineering_id": "P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001",
-    "status": "AUTHORIZED / IN EXECUTION",
-    "think_level": "MEDIUM",
-    "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
-    "contract_file": "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md",
-    "authorization_source": "Product Owner explicit instruction: 开始执行 T-016",
-    "execution_started": true
-  },
+  "current_task": null,
   "current_case": {
     "name": "平遥镇国寺万佛殿",
     "selection_status": "LOCKED"
@@ -97,7 +87,7 @@
     }
   },
   "p3_2": {
-    "status": "ACTIVE / T-016 AUTHORIZED / IN EXECUTION",
+    "status": "ACTIVE / T-016 APPROVED CLOSED / GATE REVIEW READY",
     "gate_name": "构件组合关系模型",
     "engineering_subtitle": "Assembly Relationship Model",
     "dod_version": "V001",
@@ -138,14 +128,21 @@
     "t016": {
       "task_id": "T-016",
       "engineering_id": "P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001",
-      "status": "AUTHORIZED / IN EXECUTION",
+      "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-045",
       "contract_file": "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md",
+      "review_file": "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_REVIEW_V001.md",
+      "engineering_commit": "fc01ecb4f61128faa95ecf8022d2077a36977a8c",
+      "machine_validation": "65/65 PASS",
+      "negative_tests": "15/15 EXPECTED REJECTION PASS",
+      "relationship_coverage": "5/5 PASS",
+      "review_assets": "4/4 VISUAL PASS / DIRECT GITHUB INSPECTION",
+      "hard_fails_canonical": 0,
       "think_level": "MEDIUM",
       "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
-      "scope": "Implement locked A/B/C representative assembly validation. A and C use minimal deterministic Blender generation; B remains semantic-valid/full-length-geometry-blocked unless a separately approved building-specific six-chuanfu length exists.",
-      "review_asset_target_count": 4,
+      "scope": "A interface-driven geometric assembly PASS; B semantic-valid/full-length-geometry-blocked PASS; C PM-005-driven repeat + 2→3→2 mutation/restore PASS.",
       "execution_started": true,
-      "authorization_source": "Product Owner explicit start instruction on 2026-09-14"
+      "authorization_decision": "D-044",
+      "approval_decision": "D-045"
     },
     "approved_component_nodes_from_p3_1": [
       "CMP-COLUMN-001",
@@ -183,9 +180,14 @@
   },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
-    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 AUTHORIZED IN EXECUTION / LONG-TERM EVALUATION PENDING",
+    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 SUCCESSFUL REUSE / LONG-TERM EVALUATION PENDING",
     "principle": "ChatGPT handles analysis/decision/diagnosis/review; Codex handles deterministic execution/machine validation",
     "quality_preservation": "NO REDUCTION TO DOD / HARD FAIL / PER-ASSET VALIDATION / REVIEW / PRODUCT OWNER APPROVAL"
+  },
+  "visual_review_workflow": {
+    "rule_id": "RC-015",
+    "status": "ACTIVE",
+    "principle": "Review images already committed to GitHub are directly retrieved and actually opened by ChatGPT; duplicate Chat upload is not required. VISUAL REVIEW PASS requires actual image inspection."
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -197,16 +199,16 @@
     "assembly_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY"
   },
   "latest_material_decision": {
-    "id": "RC-014-CLOUD-MODE-APPROVAL",
+    "id": "D-045",
     "date": "2026-09-14",
-    "decision": "Product Owner approved a temporary Cloud-only operating mode for ARCH3D-001, expected 2026-09-16 through 2026-09-20. GitHub remains canonical; ChatGPT App handles control/review; Codex Cloud handles repository-contained verifiable execution; local-Mac-dependent work cannot be marked PASS without separately approved equivalent capability. This does not alter P3.2 technical criteria or current T-016 authorization."
+    "decision": "Product Owner approved and closed T-016 after 65/65 machine checks, 15/15 expected negative rejections, 0 canonical Hard Fail, structural review PASS and 4/4 direct GitHub visual review PASS. P3.2 itself remains ACTIVE until formal Gate Review proves 9/9 DoD PASS + 0 Hard Fail and receives Product Owner Gate Approval."
   },
-  "next_action": "Continue current authorized T-016 under normal local workflow while local Mac remains available. If work continues on 2026-09-15, refresh the final pre-Cloud snapshot and pending-local list. When Cloud Mode activates, re-read GitHub main and apply RC-014 without lowering P3.2 DoD or local-Blender-dependent acceptance requirements.",
+  "next_action": "Run formal P3.2 Gate Review against DoD V001. If and only if the Gate Review concludes 9/9 DoD PASS with canonical Hard Fail = 0 and Product Owner gives final Gate Approval, close P3.2 and unlock P3.3. If review is deferred into Cloud Mode, RC-014 remains binding and no local-Mac-dependent PASS may be inferred without equivalent approved capability.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v028",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_R077 / REFRESH REQUIRED"
+    "refresh_status": "STALE_AFTER_R078 / REFRESH REQUIRED"
   }
 }
