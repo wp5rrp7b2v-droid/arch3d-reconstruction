@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R073",
+  "state_revision": "R074",
   "last_updated": "2026-09-14",
-  "session_status": "ACTIVE / P3.2_T015_APPROVED_CLOSED / REPRESENTATIVE_ASSEMBLY_PLANNING_READY",
+  "session_status": "ACTIVE / P3.2_REPRESENTATIVE_ASSEMBLY_DESIGN_LOCKED / T016_PLANNING_READY",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,11 +17,11 @@
     "id": "P3.2",
     "name": "构件组合关系模型",
     "english_name": "Assembly Relationship Model",
-    "status": "ACTIVE / T-015 APPROVED CLOSED / NEXT TASK PLANNING READY",
+    "status": "ACTIVE / REPRESENTATIVE ASSEMBLY DESIGN LOCKED / T-016 PLANNING READY",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
-      "P3.2": "ACTIVE / DOD LOCKED / D-041 / T-015 APPROVED CLOSED / D-042",
+      "P3.2": "ACTIVE / DOD LOCKED / D-041 / T-015 CLOSED D-042 / REPRESENTATIVE DESIGN LOCKED D-043",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
@@ -68,7 +68,7 @@
     }
   },
   "p3_2": {
-    "status": "ACTIVE / T-015 APPROVED CLOSED / REPRESENTATIVE_ASSEMBLY PLANNING READY",
+    "status": "ACTIVE / REPRESENTATIVE ASSEMBLY DESIGN LOCKED / T-016 PLANNING READY",
     "gate_name": "构件组合关系模型",
     "engineering_subtitle": "Assembly Relationship Model",
     "dod_version": "V001",
@@ -88,6 +88,24 @@
       "relationship_types": "5/5 PASS",
       "hard_fails_canonical": 0,
       "review_file": "docs/production/zhenguo_wanfo/P3_2_RELATIONSHIP_FOUNDATION_REVIEW_V001.md"
+    },
+    "representative_assembly_design": {
+      "status": "LOCKED / PRODUCT OWNER APPROVED / D-043",
+      "version": "V001",
+      "file": "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+      "units": {
+        "A": "AU-COLUMN-LUDOU-001 / 柱头承托组合单元 / deterministic geometric assembly allowed",
+        "B": "AU-FRAME-TIER-001 / 六椽栿梁架层位组合单元 / semantic assembly valid + full-length geometry blocked until approved building-specific length exists",
+        "C": "AU-COLUMN-GRID-001 / 柱网重复组合单元 / PM-005-driven repeat + mutation/restore"
+      },
+      "relationship_coverage": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "t016_planning_ready": true
     },
     "approved_component_nodes_from_p3_1": [
       "CMP-COLUMN-001",
@@ -118,7 +136,9 @@
       "Do not allow six-chuanfu canonical 1000 mm reference length to leak into building assembly.",
       "Do not silently historicize Proxy / Control / Envelope / Deferred / UNKNOWN objects or relationships.",
       "P3.2 does not require full-building reconstruction; P3.3 remains locked until P3.2 PASS.",
-      "Representative assembly work must explicitly validate real upper/lower support and positioning interfaces instead of mechanically treating the generic lower reference plane as every historical contact surface."
+      "A uses explicit engineering support/axis interfaces without claiming historical joinery.",
+      "B must remain SEMANTIC_ASSEMBLY_VALID / FULL_LENGTH_GEOMETRY_BLOCKED until a separately approved building-specific six-chuanfu full length exists.",
+      "C validates PM-005-driven repeat with runtime instances; repeated instances must not create new component_id identities."
     ]
   },
   "chat_first_codex_executor": {
@@ -137,16 +157,16 @@
     "assembly_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY"
   },
   "latest_material_decision": {
-    "id": "D-042",
+    "id": "D-043",
     "date": "2026-09-14",
-    "decision": "Product Owner approved and closed T-015 P3.2 Relationship Foundation V001 after 31/31 machine checks, 21/21 negative rejection tests, ChatGPT structural review PASS, and zero canonical Hard Fail. P3.2 remains ACTIVE; P3.3 remains locked."
+    "decision": "Product Owner approved and locked P3.2 Representative Assembly Design V001. A validates column-ludou support/locate assembly; B validates frame-tier semantic relationships while blocking illegal full-length geometry; C validates PM-005-driven column repeat and mutation/restore. T-016 Task Contract planning is ready; P3.2 remains ACTIVE and P3.3 remains locked."
   },
-  "next_action": "Design the next P3.2 representative assembly relationship validation task, covering a vertical support chain, a horizontal/frame chain, and a repeat relationship while explicitly validating real support/positioning interfaces and preserving evidence boundaries.",
+  "next_action": "Create T-016 Task Contract to implement the locked representative assembly design V001 without redefining relationship semantics or historical evidence.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v028",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_R073 / REFRESH REQUIRED"
+    "refresh_status": "STALE_AFTER_R074 / REFRESH REQUIRED"
   }
 }
