@@ -18,6 +18,7 @@
 | **RC-012** | **2026-09-13** | **正式面向人工审核/展示的构件、装配与证据视觉资产，只要标识具体构件身份，就必须显示项目正式中文构件名；component ID 可并列，英文可作为辅助但不得替代中文。中文名称优先继承直接证据来源使用的专业术语；如项目已形成 canonical naming，则按项目正式名称显示并保留来源追溯。不得未经核证自行现代化翻译、简称、改名，也不得把现代测绘/项目术语标注为“宋代原称”“古籍原称”或《营造法式》原称。只有存在直接历史文献证据时，才可单独标注古籍原称及出处。** | **保证古建专业视觉资产对中文专业术语可读、可追溯，同时严格区分现代测绘名称、项目 canonical naming 与历史文献原称，避免视觉展示造成历史术语误读。** | **ACTIVE / CHINESE COMPONENT VISUAL NAMING RULE** |
 | **RC-013** | **2026-09-13** | **每天正式收尾前必须执行 `DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT`：逐项核对 `project_state.json`、`acceptance_matrix.md`、`decision_log.md`、`execution_log.md`、`governance.md`、`rules_change_log.md`、`dashboard.html`，以及当日相关的 `phase_archive/` 索引/Closure 文件，确认 Phase、Gate、Current Task、Blocker、Next Action、Decision/Task/Rule 状态、Dashboard snapshot 与历史归档边界彼此一致。发现明确不一致应在当日修正；不能立即判断的差异必须明确登记为 known exception / HOLD，不得静默留到次日。审计本身不占 T 编号；若只做一致性维护且项目状态事实未变化，不强制递增 State Revision。** | **防止一天内多次 Project Control 更新后产生跨文件状态漂移、旧状态残留或规则只落在单一文件中；把“每天结束的一致性核对”从临时人工习惯固化为强制收尾 Gate。** | **ACTIVE / DAILY CLOSING CONSISTENCY AUDIT** |
 | **RC-014** | **2026-09-14** | **建立 `CLOUD_MODE_2026-09-16_20` 临时运行规则：在 Product Owner 无本地 Mac 期间，仅使用 ChatGPT App、Codex Cloud 与 GitHub 继续项目；GitHub main 仍为 canonical committed state，ChatGPT 负责判断/审核/Project Control，Codex Cloud 负责 GitHub 仓库内可验证工程；默认采用 One Task = One Branch = One PR；任何依赖 local-only `.blend`、本地 Blender、未入库二进制或本地视觉验收的工作不得伪造 PASS，只能标记为 `DESIGN COMPLETE / LOCAL EXECUTION OR REVIEW PENDING` 或 `DEFERRED / LOCAL_MAC_REQUIRED`。该规则仅适用于《中国古建筑3D复原》，预计 2026-09-16 至 2026-09-20 生效，若 9 月 15 日继续本地开工则在进入 Cloud Mode 前更新最终 snapshot / pending list。** | **保证短期无 Mac 环境下项目仍可推进结构化工程工作，同时保持现有 DoD、Hard Fail、Evidence Boundary 与本地 Blender 基线不降级，并确保回到 Mac 后可无缝恢复。** | **APPROVED / PLANNED TEMPORARY MODE** |
+| **RC-015** | **2026-09-14** | **正式审核图若已提交 GitHub `main`，ChatGPT 默认直接从 GitHub 调阅并实际打开图片完成视觉审核，不再要求 Product Owner 将同一图片重复上传 Chat。只有“实际打开并逐张目视检查”后才允许写 `VISUAL REVIEW PASS`；文件存在、生成脚本、hash、metadata、canonical 数据或结构审核均不能替代目视审核。仅 local-only、未入库或 GitHub 无法读取的图片仍需 Product Owner 上传 Chat 或先提交可入库 review image。结构审核与视觉审核必须分开记录。** | **消除已入库审核资产的重复上传步骤，同时修正仅凭脚本/文件存在就提前宣称视觉审核完成的风险，确保审核结论可验证。** | **ACTIVE / DIRECT GITHUB VISUAL REVIEW RULE** |
 
 ## 当前有效原则摘要
 
@@ -50,6 +51,8 @@
 `Chat-first Codex-executor = T013 trial complete / evaluation pending; ChatGPT decides/diagnoses/reviews; Codex executes/validates; contract-external ambiguity returns to ChatGPT; Codex MEDIUM by default when explicitly adopted`
 
 `Formal human-facing component/assembly/evidence visuals = Chinese canonical component name required; English/ID may assist but not replace Chinese; historical original-name claims require direct historical-source verification`
+
+`Direct GitHub visual review = already-committed review images are opened and inspected directly by ChatGPT; no duplicate Chat upload; no VISUAL PASS without actual image inspection`
 
 `Daily closing = mandatory cross-file Project Control consistency audit; fix same-day inconsistencies or explicitly record known exception / HOLD`
 
