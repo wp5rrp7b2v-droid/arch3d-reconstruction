@@ -17,7 +17,7 @@
 | **RC-011** | **2026-09-13** | **试运行 `CHAT_FIRST_CODEX_EXECUTOR_MODE`：ChatGPT 负责证据/Task Contract/语义/异常诊断/视觉审核/Project Control；Codex 负责确定性执行与机器验证；合同外问题 STOP 回 ChatGPT；默认 MEDIUM。** | **把推理额度集中在必要判断和工程执行。** | **T013 TRIAL COMPLETE / T015 + T016 SUCCESSFUL REUSE / LONG-TERM EVALUATION PENDING** |
 | **RC-012** | **2026-09-13** | **正式人工审核/展示的构件、组合与证据视觉资产必须显示项目正式中文构件名；ID/英文可辅助但不得替代中文；历史原称声明需直接文献证据。** | **保证古建专业术语可读、可追溯并避免历史术语误读。** | **ACTIVE / CHINESE COMPONENT VISUAL NAMING RULE** |
 | **RC-013** | **2026-09-13** | **每天正式收尾前必须执行 `DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT`，核对 project_state、acceptance_matrix、decision_log、execution_log、governance、rules_change_log、dashboard 及相关 phase_archive；明确差异当天修正，不能判断则登记 known exception / HOLD。** | **防止一天内多次更新后产生跨文件状态漂移。** | **ACTIVE / DAILY CLOSING CONSISTENCY AUDIT** |
-| **RC-014** | **2026-09-14** | **建立 `CLOUD_MODE_2026-09-16_20` 临时运行规则：无本地 Mac 期间仅使用 ChatGPT App、Codex Cloud、GitHub；One Task = One Branch = One PR；local-Mac-dependent 工作不得伪造 PASS。** | **保证短期无 Mac 环境项目可继续推进且不降低验收标准。** | **APPROVED / PLANNED TEMPORARY MODE** |
+| **RC-014** | **2026-09-14** | **建立并更新 `CLOUD_MODE_2026-09-16_20`：无本地 Mac 期间使用 ChatGPT App、Codex Cloud、GitHub；One Task = One Branch = One PR；依据 R080 将运行重点切换为 P3.3 DoD→执行能力分类→Cloud-native 基础工程；local-Mac-dependent 工作不得伪造 PASS；GitHub 已提交 review image 可按 RC-015 直接视觉审核。** | **P3.2 已 9/9 PASS / CLOSED，P3.3 已 ENTERED 但 DoD 未定义；Cloud Mode 必须与最新 Gate 状态和直接 GitHub 视觉审核能力对齐。** | **APPROVED / PLANNED TEMPORARY MODE / UPDATED FOR P3.3 ENTRY** |
 | **RC-015** | **2026-09-14** | **GitHub `main` 已有正式审核图时，ChatGPT 默认直接调阅并实际打开；只有实际逐张目视后才允许 `VISUAL REVIEW PASS`；local-only 或不可读图片仍需上传 Chat。** | **消除重复上传并防止仅凭脚本/metadata 提前宣称视觉审核完成。** | **ACTIVE / DIRECT GITHUB VISUAL REVIEW RULE** |
 | **RC-016** | **2026-09-14** | **补登记 Governance 4.6《Project Language & Terminology Layering｜项目语言与术语分层规则》：古建筑内容层中文优先；项目管理/工程控制层允许成熟英文术语；机器实现层保持稳定英文字段，人类可读材料需映射清晰中文。本次为既有已生效规则的 Rules Change Log 镜像补登记，不改变原规则内容。** | **Daily Closing Audit 发现 Governance 与 Rules Change Log 未双向镜像，按 RC-013 当日修正，避免规则只存在单一文件。** | **ACTIVE / LANGUAGE & TERMINOLOGY LAYERING RULE / BACKFILLED MIRROR** |
 
@@ -55,6 +55,6 @@
 
 `Daily closing = mandatory cross-file Project Control consistency audit`
 
-`Cloud Mode 2026-09-16→20 = ChatGPT App + Codex Cloud + GitHub only; no local-Mac-dependent PASS; One Task = One Branch = One PR`
+`Cloud Mode 2026-09-16→20 = current baseline R080 / P3.3 entered; first define and approve P3.3 DoD, then classify CLOUD_EXECUTABLE / DESIGN_ONLY / LOCAL_MAC_REQUIRED; no local-Mac-dependent PASS; One Task = One Branch = One PR`
 
 `同步模式 = TRIAL；价值不足时可调整`
