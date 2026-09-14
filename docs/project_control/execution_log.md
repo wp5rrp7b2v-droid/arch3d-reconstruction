@@ -94,59 +94,48 @@
 ## T-015｜P3.2 构件组合关系基础工程实现｜PASS / APPROVED / CLOSED / D-042
 
 - Execution Mode：`CHAT_FIRST_CODEX_EXECUTOR_MODE`；Think Level：MEDIUM。
-- Design baseline：`P3_2_RELATIONSHIP_FOUNDATION_DESIGN_V001`（T-015A / Chat design）。
+- Design baseline：`P3_2_RELATIONSHIP_FOUNDATION_DESIGN_V001`。
 - Engineering commit：`49b0415479d811a26d4f44588d15cd863467edf4`；`origin/main` 同 SHA。
-- 正式节点：6/6 approved Masters 唯一映射；未创建重复 component identity。
-- 基础关系：5/5（承托、连接、定位、重复、从属）。
-- Interface foundation：PASS；6 个 Master 共 18 个最小局部接口。
-- Machine validation：31/31 PASS。
-- Negative tests：21/21 expected rejection PASS。
-- Gate Hard Fail 触发测试：`REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY`、`SILENT_HISTORICIZATION`、`BAKED_MANUAL_ASSEMBLY` 均可触发；canonical state = 0 Hard Fail。
-- P2 frozen baseline：UNCHANGED；P3.1 canonical Masters：UNCHANGED；unrelated untracked files：UNTOUCHED。
-- 独立 Git diff 核对：`2685a80 → 49b0415` 仅新增 8 个 T-015 文件，P2/P3.1 既有 tracked files 无修改。
-- ChatGPT structural review：PASS。
-- Product Owner：APPROVED / CLOSED / D-042。
-- 非阻断 carry-forward：后续真实代表性组合不得机械使用统一“局部下参考面”替代全部承托/连接界面；应按关系显式建立/验证上承托、下承托及中心/轴线定位基准，并区分工程接口与历史接触关系。
-- **T-015 CLOSED 不等于 P3.2 PASS。**
+- 正式节点 6/6；基础关系 5/5；Interface foundation PASS。
+- Machine validation 31/31 PASS；Negative tests 21/21 expected rejection PASS；canonical Hard Fail=0。
+- P2 frozen baseline / P3.1 canonical Masters UNCHANGED；ChatGPT structural review PASS；Product Owner D-042 APPROVED / CLOSED。
 
 ## T-016｜P3.2 代表性构件组合验证｜PASS / APPROVED / CLOSED / D-045
 
-- Authorization：D-044；Execution Mode=`CHAT_FIRST_CODEX_EXECUTOR_MODE`；Think Level=MEDIUM。
+- Authorization D-044；Execution Mode=`CHAT_FIRST_CODEX_EXECUTOR_MODE`；Think Level=MEDIUM。
 - Engineering commit：`fc01ecb4f61128faa95ecf8022d2077a36977a8c`；`origin/main` 同 SHA。
-- Machine validation：65/65 PASS；negative tests：15/15 expected rejection PASS；canonical Hard Fail=0。
-- 五类关系代表性覆盖：SUPPORT / CONNECT / LOCATE / REPEAT / BELONG = 5/5。
-- A｜`AU-COLUMN-LUDOU-001`：显式 top/lower support interface + axis LOCATE；Blender CLI generation、independent reopen、deterministic regeneration PASS；Z-006 UNKNOWN、Z-006-RC-01 replaceable RC、joinery UNKNOWN 保持。
-- B｜`AU-FRAME-TIER-001`：Control=CONTROL_ONLY、Proxy=PROXY_ONLY；semantic graph PASS；canonical=`SEMANTIC_ASSEMBLY_VALID / FULL_LENGTH_GEOMETRY_BLOCKED`；未生成 actual full-length `.blend`；1000 mm actual/building length injection 稳定触发 `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY`。
-- C｜`AU-COLUMN-GRID-001`：PM-005=3505.7 mm 驱动两个 runtime instances，均引用 `CMP-COLUMN-001`；2→3→2 mutation/rebuild/restore、independent reopen、determinism PASS；PM-005 未修改。
-- P2 frozen baseline / 六个 P3.1 canonical Masters：UNCHANGED；unrelated untracked files：UNTOUCHED；P3.3 files created=0。
-- ChatGPT structural review：PASS。
-- 四张正式 review PNG 已直接从 GitHub 调阅并实际逐张打开目视审核，4/4 PASS；该流程正式固化为 RC-015。
-- Product Owner：APPROVED / CLOSED / D-045。
-- Review：`docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_REVIEW_V001.md`。
-- **T-016 CLOSED 不等于 P3.2 PASS；下一步必须执行 P3.2 Gate Review。**
+- Machine validation 65/65 PASS；negative tests 15/15 expected rejection PASS；canonical Hard Fail=0；五类关系代表性覆盖 5/5。
+- A｜柱—柱头栌斗：显式承托/定位接口、Blender CLI generation、independent reopen、deterministic regeneration PASS；Z-006 / RC / joinery 边界保持。
+- B｜六椽栿梁架层位：Control / Proxy 不历史化；canonical=`SEMANTIC_ASSEMBLY_VALID / FULL_LENGTH_GEOMETRY_BLOCKED`；1000 mm actual/building length injection 稳定触发 `REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY`。
+- C｜柱网重复：PM-005=3505.7 mm 驱动同一 Master runtime instances；2→3→2 mutation/rebuild/restore、independent reopen、determinism PASS。
+- P2 frozen baseline / 六个 P3.1 canonical Masters UNCHANGED；P3.3 files created=0。
+- ChatGPT structural review PASS；四张正式 review PNG 按 RC-015 实际逐张打开目视审核 4/4 PASS；Product Owner D-045 APPROVED / CLOSED。
 
-## P3.2 Gate Review｜9/9 PASS / PRODUCT OWNER APPROVAL REQUIRED
+## P3.2 Gate Review｜PASS / APPROVED / CLOSED / D-046
 
 - Gate Review file：`docs/production/zhenguo_wanfo/P3_2_GATE_REVIEW_2026-09-14.md`。
-- DoD：9/9 PASS。
-- Canonical Hard Fail：0。
-- P3.3 foundational readiness：PASS；无需在 P3.3 前重新发明基础关系体系。
+- DoD：9/9 PASS；Canonical Hard Fail：0；P3.3 foundational readiness：PASS。
 - Additional engineering task required before Gate decision：NO。
-- Carry-forward 不构成 P3.2 blocker：六椽栿 historical full length UNKNOWN/null 且在缺少 approved building-specific length 时继续 geometry BLOCKED；Z-006 / RC、joinery、hidden connection、45° corner 等继续保持既有 evidence boundary；Deferred / Proxy / Control / Envelope / UNKNOWN 不得静默历史化。
-- ChatGPT Gate Review：PASS。
-- Product Owner Gate Approval：PENDING。
-- P3.3：继续 LOCKED，直到 Product Owner 明确批准 P3.2 Gate。
+- Product Owner：APPROVED / D-046。
+- Carry-forward：六椽栿 historical full length UNKNOWN/null 且缺少 approved building-specific length 时继续 geometry BLOCKED；Z-006 / RC、joinery、hidden connection、45° corner 保持既有 evidence boundary；Deferred / Proxy / Control / Envelope / UNKNOWN 不得静默历史化。
+- P3.2 正式 CLOSED；P3 Gate Progress 3/4；P3.3 UNLOCKED / ENTERED。
 
-## Current Execution State｜R079｜2026-09-14
+## Current Execution State｜R080｜2026-09-14
 
 - P0：CLOSED / APPROVED。
 - P1：CLOSED / 4/4 PASS / CONDITIONAL GO。
 - P2：CLOSED / 4/4 PASS / PRODUCT OWNER APPROVED。
-- P3：ACTIVE / **2/4 PASS**。
+- P3：ACTIVE / **3/4 PASS**。
 - P3.0：PASS / APPROVED / CLOSED。
 - P3.1：PASS / APPROVED / CLOSED / D-040。
-- P3.2：**ACTIVE / GATE REVIEW 9/9 PASS / CANONICAL HARD FAIL 0 / PRODUCT OWNER APPROVAL REQUIRED**。
-- P3.3：LOCKED / WAITING_FOR_P3.2_PRODUCT_OWNER_APPROVAL。
+- P3.2：**PASS / APPROVED / CLOSED / D-046**。
+- P3.3：**ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED**。
 - Current engineering blocker：NONE。
 - Current task：NONE。
-- Next action：Product Owner 对 P3.2 Gate 做最终批准/不批准决定；批准后 P3.2 CLOSED、P3 Gate Progress=3/4、P3.3 解锁并进入 DoD 定义。
+- Next action：定义并由 Product Owner 批准 P3.3 Definition of Done；DoD 批准前不创建 P3.3 工程 Task Contract。
+
+## Daily Closing Project Control Consistency Audit｜2026-09-14
+
+- Scope：project_state / acceptance_matrix / decision_log / execution_log / governance / rules_change_log / dashboard / phase_archive applicability。
+- Phase archive：P3 尚未关闭，本次无需新增 P3 closure；既有已关闭 Phase 历史档案不改写。
+- Audit verdict：**PENDING FINAL CROSS-FILE VERIFICATION AFTER CLOSING UPDATES**。
