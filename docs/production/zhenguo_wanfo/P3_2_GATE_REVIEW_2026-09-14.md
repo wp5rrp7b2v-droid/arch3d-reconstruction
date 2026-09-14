@@ -5,8 +5,8 @@
 - Gate：P3.2｜构件组合关系模型
 - Review date：2026-09-14
 - DoD baseline：`P3_2_DEFINITION_OF_DONE_V001.md` / D-041
-- Review status：**CHATGPT GATE REVIEW PASS / 9 OF 9 DOD PASS / CANONICAL HARD FAIL = 0 / PRODUCT OWNER APPROVAL REQUIRED**
-- P3.3：**LOCKED UNTIL PRODUCT OWNER GATE APPROVAL**
+- Review status：**PASS / PRODUCT OWNER APPROVED / CLOSED / D-046**
+- P3.3：**UNLOCKED / ENTERED / DOD REQUIRED**
 
 ## 1. Review Scope
 
@@ -82,18 +82,16 @@ T-016 四张正式 review PNG 已按 RC-015 从 GitHub 直接调阅并实际逐�
 - P3.3 foundational readiness：**PASS**
 - Additional engineering task required before Gate decision：**NO**
 - ChatGPT Gate Review：**PASS**
-- Product Owner Gate Approval：**REQUIRED / PENDING**
+- Product Owner Gate Approval：**APPROVED / D-046**
 
-### Recommended Product Owner Decision
-
-建议批准：
+### Final Decision
 
 > **P3.2｜构件组合关系模型 = PASS / APPROVED / CLOSED**
 
-批准后：
+批准后状态：
 
 - P3 Gate Progress：2/4 → 3/4；
-- P3.3｜构件驱动整殿重建正式 UNLOCKED / ENTERED；
-- P3.3 开始前应先定义并批准其 Definition of Done，不直接创建整殿工程任务。
+- P3.3｜构件驱动整殿重建正式 **UNLOCKED / ENTERED**；
+- P3.3 开始工程生产前必须先定义并批准其 Definition of Done，不直接创建整殿工程任务。
 
-在 Product Owner 明确批准前，P3.2 仍保持 `ACTIVE / GATE REVIEW PASS / PO APPROVAL REQUIRED`，P3.3 继续 LOCKED。
+P3.2 于 2026-09-14 正式关闭，Decision = **D-046**。
