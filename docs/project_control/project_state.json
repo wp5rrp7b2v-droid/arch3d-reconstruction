@@ -5,7 +5,7 @@
   "project_name": "中国古建筑3D复原",
   "state_revision": "R080",
   "last_updated": "2026-09-14",
-  "session_status": "ACTIVE / P3.2_CLOSED / P3.3_ENTERED / DOD_REQUIRED / DAILY_CLOSING",
+  "session_status": "ACTIVE / P3.2_CLOSED / P3.3_ENTERED / DOD_REQUIRED / DAILY_CLOSING_COMPLETE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -35,11 +35,7 @@
     "expected_start": "2026-09-16",
     "expected_end": "2026-09-20",
     "scope": "ARCH3D-001 ONLY",
-    "tools": [
-      "ChatGPT App",
-      "Codex Cloud",
-      "GitHub Web/App"
-    ],
+    "tools": ["ChatGPT App", "Codex Cloud", "GitHub Web/App"],
     "local_mac": "TEMPORARILY UNAVAILABLE DURING ACTIVE WINDOW",
     "canonical_rule_file": "docs/project_control/CLOUD_MODE_2026-09-16_20.md",
     "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
@@ -47,10 +43,7 @@
     "pre_activation_note": "If local work continues on 2026-09-15, refresh the final pre-Cloud snapshot and pending-local list before activation."
   },
   "current_task": null,
-  "current_case": {
-    "name": "平遥镇国寺万佛殿",
-    "selection_status": "LOCKED"
-  },
+  "current_case": {"name": "平遥镇国寺万佛殿", "selection_status": "LOCKED"},
   "p2_closure": {
     "status": "CLOSED / APPROVED / FROZEN ENGINEERING BASELINE",
     "decision_id": "D-028",
@@ -62,29 +55,12 @@
     "dod_decision_id": "D-032",
     "qualification_decision_id": "D-033",
     "asset_contract_v002_decision_id": "D-036",
-    "frame_batch_authorization_decision_id": "D-038",
-    "frame_batch_approval_decision_id": "D-039",
     "gate_closure_decision_id": "D-040",
     "gate_review_file": "docs/production/zhenguo_wanfo/P3_1_GATE_REVIEW_2026-09-13.md",
     "gate_score": "9/9 PASS",
     "master_scope_count": 6,
     "approved_master_count": 6,
-    "engineering_complete_pending_visual_count": 0,
-    "formal_variant_count": 0,
-    "approved_components": [
-      "CMP-COLUMN-001",
-      "CMP-LUDOU-COLUMN-001",
-      "CMP-DOU-SINGLE-LONGKAI-001",
-      "CMP-DOU-INTERACTIVE-001",
-      "CMP-FRAME-LOWER-SIX-CHUANFU-001",
-      "CMP-FRAME-UPPER-SIX-CHUANFU-001"
-    ],
-    "non_historicized_counts": {
-      "proxy": 4,
-      "control": 3,
-      "envelope": 1,
-      "deferred_insufficient_evidence": 13
-    }
+    "formal_variant_count": 0
   },
   "p3_2": {
     "status": "PASS / APPROVED / CLOSED / D-046",
@@ -93,82 +69,25 @@
     "dod_version": "V001",
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-041",
     "dod_file": "docs/production/zhenguo_wanfo/P3_2_DEFINITION_OF_DONE_V001.md",
-    "dod_count": 9,
-    "hard_fail_count": 3,
     "gate_closure_decision_id": "D-046",
     "gate_review_file": "docs/production/zhenguo_wanfo/P3_2_GATE_REVIEW_2026-09-14.md",
     "gate_score": "9/9 PASS",
     "canonical_hard_fail_count": 0,
     "p3_3_foundational_readiness": "PASS",
     "t015": {
-      "task_id": "T-015",
-      "engineering_id": "P3_2_RELATIONSHIP_FOUNDATION_V001",
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-042",
       "engineering_commit": "49b0415479d811a26d4f44588d15cd863467edf4",
       "machine_validation": "31/31 PASS",
-      "negative_tests": "21/21 EXPECTED REJECTION PASS",
-      "approved_master_mapping": "6/6 PASS",
-      "relationship_types": "5/5 PASS",
-      "hard_fails_canonical": 0,
-      "review_file": "docs/production/zhenguo_wanfo/P3_2_RELATIONSHIP_FOUNDATION_REVIEW_V001.md"
-    },
-    "representative_assembly_design": {
-      "status": "LOCKED / PRODUCT OWNER APPROVED / D-043",
-      "version": "V001",
-      "file": "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
-      "units": {
-        "A": "AU-COLUMN-LUDOU-001 / 柱头承托组合单元 / deterministic geometric assembly allowed",
-        "B": "AU-FRAME-TIER-001 / 六椽栿梁架层位组合单元 / semantic assembly valid + full-length geometry blocked until approved building-specific length exists",
-        "C": "AU-COLUMN-GRID-001 / 柱网重复组合单元 / PM-005-driven repeat + mutation/restore"
-      },
-      "relationship_coverage": [
-        "SUPPORT",
-        "CONNECT",
-        "LOCATE",
-        "REPEAT",
-        "BELONG"
-      ]
+      "negative_tests": "21/21 EXPECTED REJECTION PASS"
     },
     "t016": {
-      "task_id": "T-016",
-      "engineering_id": "P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001",
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-045",
-      "contract_file": "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md",
-      "review_file": "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_REVIEW_V001.md",
       "engineering_commit": "fc01ecb4f61128faa95ecf8022d2077a36977a8c",
       "machine_validation": "65/65 PASS",
       "negative_tests": "15/15 EXPECTED REJECTION PASS",
-      "relationship_coverage": "5/5 PASS",
-      "review_assets": "4/4 VISUAL PASS / DIRECT GITHUB INSPECTION",
-      "hard_fails_canonical": 0,
-      "think_level": "MEDIUM",
-      "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
-      "scope": "A interface-driven geometric assembly PASS; B semantic-valid/full-length-geometry-blocked PASS; C PM-005-driven repeat + 2→3→2 mutation/restore PASS.",
-      "authorization_decision": "D-044",
-      "approval_decision": "D-045"
+      "review_assets": "4/4 VISUAL PASS / DIRECT GITHUB INSPECTION"
     },
-    "gate_review": {
-      "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-046",
-      "file": "docs/production/zhenguo_wanfo/P3_2_GATE_REVIEW_2026-09-14.md",
-      "dod_score": "9/9 PASS",
-      "canonical_hard_fail_count": 0,
-      "p3_3_foundational_readiness": "PASS",
-      "additional_engineering_task_required_before_gate_decision": false,
-      "product_owner_approval": "APPROVED / D-046"
-    },
-    "approved_component_nodes_from_p3_1": [
-      "CMP-COLUMN-001",
-      "CMP-LUDOU-COLUMN-001",
-      "CMP-DOU-SINGLE-LONGKAI-001",
-      "CMP-DOU-INTERACTIVE-001",
-      "CMP-FRAME-LOWER-SIX-CHUANFU-001",
-      "CMP-FRAME-UPPER-SIX-CHUANFU-001"
-    ],
-    "hard_fails": [
-      "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY",
-      "SILENT_HISTORICIZATION",
-      "BAKED_MANUAL_ASSEMBLY"
-    ],
+    "hard_fails": ["REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY", "SILENT_HISTORICIZATION", "BAKED_MANUAL_ASSEMBLY"],
     "carry_forward_constraints": [
       "Preserve P3.1 evidence and component identity boundaries.",
       "Do not allow six-chuanfu canonical 1000 mm reference length to leak into building reconstruction.",
@@ -187,9 +106,7 @@
   },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
-    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 SUCCESSFUL REUSE / LONG-TERM EVALUATION PENDING",
-    "principle": "ChatGPT handles analysis/decision/diagnosis/review; Codex handles deterministic execution/machine validation",
-    "quality_preservation": "NO REDUCTION TO DOD / HARD FAIL / PER-ASSET VALIDATION / REVIEW / PRODUCT OWNER APPROVAL"
+    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 SUCCESSFUL REUSE / LONG-TERM EVALUATION PENDING"
   },
   "visual_review_workflow": {
     "rule_id": "RC-015",
@@ -208,7 +125,7 @@
   "latest_material_decision": {
     "id": "D-046",
     "date": "2026-09-14",
-    "decision": "Product Owner approved P3.2 Gate closure after 9/9 DoD PASS, canonical Hard Fail=0 and P3.3 foundational readiness PASS. P3.2 is PASS / APPROVED / CLOSED; P3 Gate progress advances to 3/4; P3.3 is unlocked and entered, but no P3.3 engineering task may be created until its Definition of Done is defined and approved."
+    "decision": "Product Owner approved P3.2 Gate closure after 9/9 DoD PASS, canonical Hard Fail=0 and P3.3 foundational readiness PASS. P3.2 is PASS / APPROVED / CLOSED; P3 Gate progress is 3/4; P3.3 is unlocked and entered, but no P3.3 engineering task may be created until its Definition of Done is defined and approved."
   },
   "next_action": "Define and Product-Owner-approve P3.3 Definition of Done before creating any P3.3 engineering Task Contract. If local work continues on 2026-09-15, refresh the final pre-Cloud snapshot and pending-local list before Cloud Mode activation.",
   "dashboard": {
@@ -216,6 +133,14 @@
     "visualization_version": "v029",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "REFRESH REQUIRED FOR R080 CLOSING SNAPSHOT"
+    "refresh_status": "CURRENT / R080 CLOSING SNAPSHOT"
+  },
+  "daily_closing_audit": {
+    "date": "2026-09-14",
+    "rule_id": "RC-013",
+    "verdict": "PASS",
+    "checked": ["project_state", "acceptance_matrix", "decision_log", "execution_log", "governance", "rules_change_log", "dashboard", "phase_archive_applicability"],
+    "known_exceptions": [],
+    "phase_archive_action": "NONE / P3 ACTIVE"
   }
 }
