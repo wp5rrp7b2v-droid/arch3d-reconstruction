@@ -3,29 +3,29 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R079",
+  "state_revision": "R080",
   "last_updated": "2026-09-14",
-  "session_status": "ACTIVE / P3.2_GATE_REVIEW_PASS / PRODUCT_OWNER_APPROVAL_REQUIRED",
+  "session_status": "ACTIVE / P3.2_CLOSED / P3.3_ENTERED / DOD_REQUIRED / DAILY_CLOSING",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
     "english_name": "Component System & Assembly Architecture",
     "status": "ACTIVE",
-    "gate_progress": "2/4"
+    "gate_progress": "3/4"
   },
   "current_gate": {
-    "id": "P3.2",
-    "name": "构件组合关系模型",
-    "english_name": "Assembly Relationship Model",
-    "status": "GATE REVIEW 9/9 PASS / CANONICAL HARD FAIL 0 / PRODUCT OWNER APPROVAL REQUIRED",
+    "id": "P3.3",
+    "name": "构件驱动整殿重建",
+    "english_name": "Component-driven Building Reconstruction",
+    "status": "ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
-      "P3.2": "ACTIVE / DOD LOCKED D-041 / T-015 CLOSED D-042 / REPRESENTATIVE DESIGN LOCKED D-043 / T-016 CLOSED D-045 / GATE REVIEW 9/9 PASS / PO APPROVAL REQUIRED",
-      "P3.3": "LOCKED / WAITING_FOR_P3.2_PRODUCT_OWNER_APPROVAL"
+      "P3.2": "PASS / APPROVED / CLOSED / D-046",
+      "P3.3": "ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED"
     }
   },
-  "decision_required": true,
+  "decision_required": false,
   "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
@@ -87,7 +87,7 @@
     }
   },
   "p3_2": {
-    "status": "ACTIVE / GATE REVIEW 9/9 PASS / PRODUCT OWNER APPROVAL REQUIRED",
+    "status": "PASS / APPROVED / CLOSED / D-046",
     "gate_name": "构件组合关系模型",
     "engineering_subtitle": "Assembly Relationship Model",
     "dod_version": "V001",
@@ -95,7 +95,11 @@
     "dod_file": "docs/production/zhenguo_wanfo/P3_2_DEFINITION_OF_DONE_V001.md",
     "dod_count": 9,
     "hard_fail_count": 3,
-    "engineering_authorized": true,
+    "gate_closure_decision_id": "D-046",
+    "gate_review_file": "docs/production/zhenguo_wanfo/P3_2_GATE_REVIEW_2026-09-14.md",
+    "gate_score": "9/9 PASS",
+    "canonical_hard_fail_count": 0,
+    "p3_3_foundational_readiness": "PASS",
     "t015": {
       "task_id": "T-015",
       "engineering_id": "P3_2_RELATIONSHIP_FOUNDATION_V001",
@@ -140,18 +144,17 @@
       "think_level": "MEDIUM",
       "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
       "scope": "A interface-driven geometric assembly PASS; B semantic-valid/full-length-geometry-blocked PASS; C PM-005-driven repeat + 2→3→2 mutation/restore PASS.",
-      "execution_started": true,
       "authorization_decision": "D-044",
       "approval_decision": "D-045"
     },
     "gate_review": {
-      "status": "PASS / PRODUCT OWNER APPROVAL REQUIRED",
+      "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-046",
       "file": "docs/production/zhenguo_wanfo/P3_2_GATE_REVIEW_2026-09-14.md",
       "dod_score": "9/9 PASS",
       "canonical_hard_fail_count": 0,
       "p3_3_foundational_readiness": "PASS",
       "additional_engineering_task_required_before_gate_decision": false,
-      "product_owner_approval": "PENDING"
+      "product_owner_approval": "APPROVED / D-046"
     },
     "approved_component_nodes_from_p3_1": [
       "CMP-COLUMN-001",
@@ -161,31 +164,26 @@
       "CMP-FRAME-LOWER-SIX-CHUANFU-001",
       "CMP-FRAME-UPPER-SIX-CHUANFU-001"
     ],
-    "dod_items": [
-      "组合范围与构件资格",
-      "构件关系分类体系",
-      "构件接口与定位规则",
-      "代表性组合单元与关系覆盖",
-      "尺寸与参数传递",
-      "史料依据与不确定性边界",
-      "机器验证与组合关系完整性",
-      "确定性重建与参数变更验证",
-      "P3.3 整殿重建就绪性验证"
-    ],
     "hard_fails": [
       "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY",
       "SILENT_HISTORICIZATION",
       "BAKED_MANUAL_ASSEMBLY"
     ],
-    "active_constraints": [
+    "carry_forward_constraints": [
       "Preserve P3.1 evidence and component identity boundaries.",
-      "Do not allow six-chuanfu canonical 1000 mm reference length to leak into building assembly.",
+      "Do not allow six-chuanfu canonical 1000 mm reference length to leak into building reconstruction.",
       "Do not silently historicize Proxy / Control / Envelope / Deferred / UNKNOWN objects or relationships.",
-      "A uses explicit engineering support/axis interfaces without claiming historical joinery.",
-      "B must remain SEMANTIC_ASSEMBLY_VALID / FULL_LENGTH_GEOMETRY_BLOCKED until a separately approved building-specific six-chuanfu full length exists.",
-      "C validates PM-005-driven repeat with runtime instances; repeated instances must not create new component_id identities.",
+      "B remains FULL_LENGTH_GEOMETRY_BLOCKED until a separately approved building-specific six-chuanfu full length exists.",
       "P3.3 may extend building-level interfaces and relationship instances within the approved P3.2 schema, but must not redefine the five foundational relation types or bypass P3.2 validators."
     ]
+  },
+  "p3_3": {
+    "status": "ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED",
+    "gate_name": "构件驱动整殿重建",
+    "engineering_subtitle": "Component-driven Building Reconstruction",
+    "entry_decision_id": "D-046",
+    "dod_status": "NOT DEFINED / REQUIRED",
+    "engineering_authorized": false
   },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
@@ -208,16 +206,16 @@
     "assembly_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY"
   },
   "latest_material_decision": {
-    "id": "P3.2-GATE-REVIEW-RESULT",
+    "id": "D-046",
     "date": "2026-09-14",
-    "decision": "ChatGPT completed the formal P3.2 Gate Review against DoD V001. Result: 9/9 DoD PASS, canonical Hard Fail=0, P3.3 foundational readiness PASS, no additional engineering task required before Gate decision. This is a review conclusion, not Product Owner Gate Approval; P3.2 remains ACTIVE and P3.3 remains LOCKED until explicit Product Owner approval."
+    "decision": "Product Owner approved P3.2 Gate closure after 9/9 DoD PASS, canonical Hard Fail=0 and P3.3 foundational readiness PASS. P3.2 is PASS / APPROVED / CLOSED; P3 Gate progress advances to 3/4; P3.3 is unlocked and entered, but no P3.3 engineering task may be created until its Definition of Done is defined and approved."
   },
-  "next_action": "Product Owner decides whether to approve P3.2 Gate. If approved, record the Gate closure decision, set P3.2 PASS / APPROVED / CLOSED, advance P3 Gate Progress to 3/4, unlock/enter P3.3, and define P3.3 Definition of Done before creating any P3.3 engineering task.",
+  "next_action": "Define and Product-Owner-approve P3.3 Definition of Done before creating any P3.3 engineering Task Contract. If local work continues on 2026-09-15, refresh the final pre-Cloud snapshot and pending-local list before Cloud Mode activation.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v028",
+    "visualization_version": "v029",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE_AFTER_R079 / REFRESH REQUIRED"
+    "refresh_status": "REFRESH REQUIRED FOR R080 CLOSING SNAPSHOT"
   }
 }
