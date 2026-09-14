@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R071",
-  "last_updated": "2026-09-13",
-  "session_status": "ACTIVE / P3.2_ENTERED / P3.1_PASS_APPROVED_CLOSED / P3.2_DOD_REQUIRED",
+  "state_revision": "R072",
+  "last_updated": "2026-09-14",
+  "session_status": "ACTIVE / P3.2_DOD_LOCKED / ENGINEERING_PLANNING_READY / P3.1_PASS_APPROVED_CLOSED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -15,16 +15,17 @@
   },
   "current_gate": {
     "id": "P3.2",
-    "name": "Assembly Relationship Model",
-    "status": "ACTIVE / ENTERED / DOD REQUIRED",
+    "name": "构件组合关系模型",
+    "english_name": "Assembly Relationship Model",
+    "status": "ACTIVE / DOD LOCKED / ENGINEERING PLANNING READY",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
-      "P3.2": "ACTIVE / ENTERED / DOD REQUIRED",
+      "P3.2": "ACTIVE / DOD LOCKED / D-041 / ENGINEERING PLANNING READY",
       "P3.3": "LOCKED / WAITING_FOR_P3.2_PASS"
     }
   },
-  "decision_required": true,
+  "decision_required": false,
   "blocker": null,
   "current_task": null,
   "current_case": {
@@ -51,7 +52,6 @@
     "approved_master_count": 6,
     "engineering_complete_pending_visual_count": 0,
     "formal_variant_count": 0,
-    "variant_gate_interpretation": "PASS: no evidence-qualified within-Master historical variants are currently registered; parameterized variant capability and mutation behavior are proven, and distinct dou / lower-upper six-chuanfu identities are separate components rather than variants.",
     "approved_components": [
       "CMP-COLUMN-001",
       "CMP-LUDOU-COLUMN-001",
@@ -65,50 +65,18 @@
       "control": 3,
       "envelope": 1,
       "deferred_insufficient_evidence": 13
-    },
-    "t014_library_overview": {
-      "status": "PASS / VISUAL PASS / PUBLISHED",
-      "task_id": "T-014",
-      "overview_path": "production/zhenguo_wanfo/review/P3_1/P3_1_MASTER_LIBRARY_OVERVIEW_V001.png",
-      "overview_sha256": "4719a31c18de13b0453a64d29847381d8e45af0f145bcb37bf7fee0abf9671a7",
-      "validation_path": "production/zhenguo_wanfo/validation/P3_1_MASTER_LIBRARY_OVERVIEW_VALIDATION_V001.json",
-      "source_components": "6/6",
-      "formal_variants": 0,
-      "canonical_masters_unchanged": true,
-      "individual_review_assets_unchanged": true,
-      "p2_frozen_baseline_unchanged": true,
-      "p3_2_files_created": false,
-      "local_final_commit": "ecdec887ba4c67018e3dfea63920263ed47cce30",
-      "publication_merge_commit": "c15064bcd7d5cf2f3e58cdbffccc256043836413"
-    },
-    "frame_batch": {
-      "status": "APPROVED / CLOSED / D-039",
-      "task_id": "T-013",
-      "task_contract": "docs/tasks/T-013_P3_1_SIX_CHUANFU_MASTER_BATCH_V002.md",
-      "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE_TRIAL + LEAN_PRODUCTION_MODE_V001",
-      "engineering_commit": "f607245444927b9853e0976b891673e387a14750",
-      "overview_fix_commit": "cbc0a5417e56b6851778c254a8c4b5a87fc413d3",
-      "shared_pipeline": "PASS",
-      "first_article_gate": "PASS",
-      "machine_validation": "26/26 PASS EACH / 52 TOTAL",
-      "review_package": "13/13 VISUAL PASS / PRODUCT OWNER APPROVED",
-      "canonical_blend_sha256": {
-        "CMP-FRAME-LOWER-SIX-CHUANFU-001": "71b6c0aecc179ff79b95c48fad38645108854e2b14d572d4f11f454e0856a1fd",
-        "CMP-FRAME-UPPER-SIX-CHUANFU-001": "c4b83d0c0dc179c3946b2744b9c3887301fb81c3d835bd0f24a96336616a07e7"
-      },
-      "historical_full_length": "UNKNOWN / null preserved for both",
-      "canonical_reference_length": "1000 mm PROJECT_RULE / NON_HISTORICAL / REPLACEABLE",
-      "length_layer_isolation": "historical_full_length_mm=null / canonical_reference_length_mm=1000 / realization_length_mm derived",
-      "tenon_area_thickness": "METADATA_ONLY / GEOMETRY_USE_0",
-      "assembly_hard_fail_carry_forward": "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY",
-      "protected_assets": "P2 FROZEN BASELINE PASS / FOUR PREVIOUSLY APPROVED MASTERS PASS / CONTRACT V002 PASS",
-      "git_binary_rule": ".blend/.blend1 local-only / not committed"
     }
   },
   "p3_2": {
-    "status": "ACTIVE / ENTERED / DOD REQUIRED",
-    "gate_name": "Assembly Relationship Model",
-    "engineering_authorized": false,
+    "status": "ACTIVE / DOD LOCKED / ENGINEERING PLANNING READY",
+    "gate_name": "构件组合关系模型",
+    "engineering_subtitle": "Assembly Relationship Model",
+    "dod_version": "V001",
+    "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-041",
+    "dod_file": "docs/production/zhenguo_wanfo/P3_2_DEFINITION_OF_DONE_V001.md",
+    "dod_count": 9,
+    "hard_fail_count": 3,
+    "engineering_authorized": true,
     "approved_component_nodes_from_p3_1": [
       "CMP-COLUMN-001",
       "CMP-LUDOU-COLUMN-001",
@@ -117,19 +85,34 @@
       "CMP-FRAME-LOWER-SIX-CHUANFU-001",
       "CMP-FRAME-UPPER-SIX-CHUANFU-001"
     ],
-    "entry_constraints": [
-      "Define and Product-Owner-approve P3.2 Definition of Done before creating any engineering task.",
+    "dod_items": [
+      "组合范围与构件资格",
+      "构件关系分类体系",
+      "构件接口与定位规则",
+      "代表性组合单元与关系覆盖",
+      "尺寸与参数传递",
+      "史料依据与不确定性边界",
+      "机器验证与组合关系完整性",
+      "确定性重建与参数变更验证",
+      "P3.3 整殿重建就绪性验证"
+    ],
+    "hard_fails": [
+      "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY",
+      "SILENT_HISTORICIZATION",
+      "BAKED_MANUAL_ASSEMBLY"
+    ],
+    "active_constraints": [
       "Preserve P3.1 evidence and component identity boundaries.",
       "Do not allow six-chuanfu canonical 1000 mm reference length to leak into building assembly.",
-      "Do not silently historicize Proxy / Control / Envelope / Deferred objects."
+      "Do not silently historicize Proxy / Control / Envelope / Deferred / UNKNOWN objects or relationships.",
+      "P3.2 does not require full-building reconstruction; P3.3 remains locked until P3.2 PASS."
     ]
   },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
     "status": "T013 TRIAL COMPLETE / EVALUATION PENDING",
     "principle": "ChatGPT handles analysis/decision/diagnosis/review; Codex handles deterministic execution/machine validation",
-    "quality_preservation": "NO REDUCTION TO DOD / HARD FAIL / PER-ASSET VALIDATION / REVIEW / PRODUCT OWNER APPROVAL",
-    "trial_evaluation_status": "T013 completed successfully with one presentation-only correction; evaluate before deciding whether RC-011 becomes a long-term default. This evaluation does not block P3.2 DoD definition."
+    "quality_preservation": "NO REDUCTION TO DOD / HARD FAIL / PER-ASSET VALIDATION / REVIEW / PRODUCT OWNER APPROVAL"
   },
   "historical_boundaries": {
     "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
@@ -141,16 +124,16 @@
     "assembly_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_ASSEMBLY"
   },
   "latest_material_decision": {
-    "id": "D-040",
-    "date": "2026-09-13",
-    "decision": "P3.1 Component Master & Variant Library passed 9/9, approved and closed. P3.2 Assembly Relationship Model is unlocked and entered; P3.2 Definition of Done is required before engineering."
+    "id": "D-041",
+    "date": "2026-09-14",
+    "decision": "Product Owner approved and locked P3.2 Definition of Done V001 for 构件组合关系模型: 9 DoD + 3 Hard Fails. P3.2 engineering planning is now authorized; P3.3 remains locked until P3.2 PASS."
   },
-  "next_action": "Define and lock P3.2 Definition of Done for Assembly Relationship Model. Do not create a P3.2 engineering task until Product Owner explicitly approves that DoD.",
+  "next_action": "Design the first P3.2 engineering Task Contract against the locked 9-item DoD, starting with the minimum relationship schema / component qualification / interface-and-placement foundation rather than full-building reconstruction.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v028",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT_R071"
+    "refresh_status": "STALE_AFTER_R072 / REFRESH REQUIRED"
   }
 }
