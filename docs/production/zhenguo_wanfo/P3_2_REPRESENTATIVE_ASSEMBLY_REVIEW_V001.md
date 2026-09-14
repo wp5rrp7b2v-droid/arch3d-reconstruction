@@ -1,9 +1,14 @@
 # T-016｜P3.2 代表性构件组合工程审核摘要 V001
 
-- 状态：**ENGINEERING COMPLETE / REVIEW REQUIRED**。本文件只记录工程验证结果，不作 T-016 Product Owner 批准或 P3.2 Gate PASS 判定。
+- 状态：**PASS / PRODUCT OWNER APPROVED / CLOSED / D-045**。
 - 设计依据：D-043《P3.2 代表性构件组合验证设计 V001》；沿用 T-015 已批准的五类关系与六个正式 Master 身份。
-- 起始 `main` / `origin/main`：`e3d5decd90f4ebf12235a099d3c84ce7b3e00bdd`；执行前经 `git-proxy-auto fetch` 与 `pull --ff-only` 核实最新。
+- 执行授权：D-044。
+- Engineering commit：`fc01ecb4f61128faa95ecf8022d2077a36977a8c`。
 - 机器报告：`production/zhenguo_wanfo/validation/P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.json`，65/65 PASS；15/15 负向用例按预期拒绝；canonical Hard Fail = 0。
+- ChatGPT structural review：PASS。
+- ChatGPT visual review：**4/4 PASS；四张正式 review PNG 已从 GitHub 直接调阅并实际逐张打开目视审核。**
+- Product Owner approval：2026-09-14 / D-045。
+- **本任务批准不等于 P3.2 Gate PASS。下一步进入正式 P3.2 Gate Review。**
 
 ## A｜柱—柱头栌斗
 
@@ -23,16 +28,18 @@ Canonical 结果固定为 **`SEMANTIC_ASSEMBLY_VALID / FULL_LENGTH_GEOMETRY_BLOC
 
 执行 `2 → 3 → 2`：三柱测试场景和独立重开均确认恰好三个实例，恢复后两柱结果与 canonical 对象签名一致。PM-005 正式参数文件未修改。
 
-## 审核资产与二进制
+## 审核资产与视觉结论
 
 四张正式审核图位于 `production/zhenguo_wanfo/review/P3_2/representative_assembly_v001/`：
 
-1. `A_COLUMN_LUDOU_SUPPORT.png`
-2. `B_FRAME_TIER_SEMANTIC_BLOCKED.png`
-3. `C_COLUMN_GRID_REPEAT.png`
-4. `P3_2_REPRESENTATIVE_ASSEMBLY_OVERVIEW_V001.png`
+1. `A_COLUMN_LUDOU_SUPPORT.png` — **PASS**：工程承托基准面、SUPPORT / LOCATE、Z-006 / RC 边界和 joinery UNKNOWN 表达清楚。
+2. `B_FRAME_TIER_SEMANTIC_BLOCKED.png` — **PASS**：`FULL-LENGTH GEOMETRY BLOCKED` 清晰突出；没有绘制实际梁长几何，没有造成 1000 mm 为实际梁长的视觉误读。
+3. `C_COLUMN_GRID_REPEAT.png` — **PASS**：一个正式 Master → 两个 runtime instance → PM-005 参数驱动关系清楚。
+4. `P3_2_REPRESENTATIVE_ASSEMBLY_OVERVIEW_V001.png` — **PASS**：A 能组合 / B 能正确阻断 / C 能重复三种系统行为表达准确，且未提前宣称 P3.2 PASS 或 P3.3 解锁。
 
-审核图是关系与证据边界示意，非实测比例图；B 图没有实际梁长几何。A/C 的本地 `.blend` 只用于 CLI 工程验证，不进入 Git：
+本次视觉审核按 RC-015 执行：GitHub 中已有正式 review image 时，ChatGPT 直接调阅并**实际打开图片**；仅检查脚本、文件存在、hash 或 metadata 不构成 Visual Review。
+
+审核图是关系与证据边界示意，非实测比例图。A/C 的本地 `.blend` 只用于 CLI 工程验证，不进入 Git：
 
 | 单元 | 本地路径 | SHA256 |
 |---|---|---|
@@ -51,4 +58,11 @@ python3 -m unittest production/zhenguo_wanfo/tests/test_p3_2_representative_asse
 python3 production/zhenguo_wanfo/scripts/validate_p3_2_representative_assembly_v001.py
 ```
 
-下一步由 ChatGPT 审核结构与四张图，随后提交 Product Owner 审核。P3.3 继续 LOCKED。
+## Final Review Conclusion
+
+- T-016 Engineering：**PASS**
+- ChatGPT Structural Review：**PASS**
+- ChatGPT Visual Review：**4/4 PASS / DIRECT GITHUB INSPECTION**
+- Product Owner：**APPROVED / CLOSED / D-045**
+- P3.2 Gate：**ACTIVE / GATE REVIEW READY / NOT PASS YET**
+- Recommended next action：执行正式 P3.2 Gate Review，逐项核对 DoD V001 9项要求与三项 Gate Hard Fail。只有 9/9 PASS + 0 Hard Fail + Product Owner Gate Approval 后，P3.2 才可 CLOSED 并解锁 P3.3。
