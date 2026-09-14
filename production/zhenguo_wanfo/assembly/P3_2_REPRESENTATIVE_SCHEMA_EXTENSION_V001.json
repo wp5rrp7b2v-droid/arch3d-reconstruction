@@ -1,0 +1,26 @@
+{
+  "version": "V001",
+  "task": "T-016",
+  "extends": "P3_2_ASSEMBLY_SCHEMA_V001.json",
+  "interface_local_datum_properties": {
+    "z_parameter_ref": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "relationship_properties": {
+    "historical_claim": {
+      "type": "boolean"
+    },
+    "historical_connector_identity": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "repeat_rule_properties": {
+    "direction_interface": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

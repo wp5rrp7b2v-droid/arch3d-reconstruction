@@ -1,0 +1,43 @@
+{
+  "version": "V001",
+  "task": "T-016",
+  "units": [
+    {
+      "assembly_unit_id": "AU-COLUMN-LUDOU-001",
+      "canonical_name_zh": "柱头承托组合单元",
+      "members": [
+        "CMP-COLUMN-001",
+        "CMP-LUDOU-COLUMN-001"
+      ],
+      "geometry_policy": "MINIMAL_INTERFACE_DERIVED",
+      "historical_claim": false,
+      "evidence_status": "PROJECT_RULE"
+    },
+    {
+      "assembly_unit_id": "AU-FRAME-TIER-001",
+      "canonical_name_zh": "六椽栿梁架层位组合单元",
+      "members": [
+        "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+        "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+        "CTL-FRAME-001",
+        "PRX-FRAME-CONNECTOR-001"
+      ],
+      "geometry_policy": "FULL_LENGTH_GEOMETRY_BLOCKED",
+      "semantic_status": "SEMANTIC_ASSEMBLY_VALID",
+      "historical_claim": false,
+      "evidence_status": "PROJECT_RULE"
+    },
+    {
+      "assembly_unit_id": "AU-COLUMN-GRID-001",
+      "canonical_name_zh": "柱网重复组合单元",
+      "members": [
+        "CTL-GRID-001",
+        "CMP-COLUMN-001"
+      ],
+      "geometry_policy": "PM-005_REPEAT",
+      "historical_claim": false,
+      "evidence_status": "PROJECT_RULE"
+    }
+  ],
+  "source_component_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+}

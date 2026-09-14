@@ -1,0 +1,617 @@
+{
+  "blender_signatures": {
+    "A_regen": {
+      "objects": [
+        {
+          "bounds_mm": [
+            460.0,
+            460.0,
+            3534.3
+          ],
+          "faces": 130,
+          "instance_id": "ASM-A-CMP-COLUMN-001",
+          "location_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "placement_rule": "INTERFACE_PARAMETER_RULE",
+          "source_component_id": "CMP-COLUMN-001",
+          "vertices": 256
+        },
+        {
+          "bounds_mm": [
+            475.1,
+            446.3,
+            293.8
+          ],
+          "faces": 6,
+          "instance_id": "ASM-A-CMP-LUDOU-COLUMN-001",
+          "location_mm": [
+            0.0,
+            0.0,
+            3534.3
+          ],
+          "placement_rule": "INTERFACE_PARAMETER_RULE",
+          "source_component_id": "CMP-LUDOU-COLUMN-001",
+          "vertices": 8
+        }
+      ],
+      "unit": "AU-COLUMN-LUDOU-001"
+    },
+    "A_reopen": {
+      "objects": [
+        {
+          "bounds_mm": [
+            460.0,
+            460.0,
+            3534.3
+          ],
+          "faces": 130,
+          "instance_id": "ASM-A-CMP-COLUMN-001",
+          "location_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "placement_rule": "INTERFACE_PARAMETER_RULE",
+          "source_component_id": "CMP-COLUMN-001",
+          "vertices": 256
+        },
+        {
+          "bounds_mm": [
+            475.1,
+            446.3,
+            293.8
+          ],
+          "faces": 6,
+          "instance_id": "ASM-A-CMP-LUDOU-COLUMN-001",
+          "location_mm": [
+            0.0,
+            0.0,
+            3534.3
+          ],
+          "placement_rule": "INTERFACE_PARAMETER_RULE",
+          "source_component_id": "CMP-LUDOU-COLUMN-001",
+          "vertices": 8
+        }
+      ],
+      "unit": "AU-COLUMN-LUDOU-001"
+    },
+    "C_mutation_reopen": {
+      "objects": [
+        {
+          "bounds_mm": [
+            460.0,
+            460.0,
+            3534.3
+          ],
+          "faces": 130,
+          "instance_id": "INST-COLUMN-SIDEBAY-001",
+          "location_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "placement_rule": "INTERFACE_PARAMETER_RULE",
+          "source_component_id": "CMP-COLUMN-001",
+          "vertices": 256
+        },
+        {
+          "bounds_mm": [
+            460.0,
+            460.0,
+            3534.3
+          ],
+          "faces": 130,
+          "instance_id": "INST-COLUMN-SIDEBAY-002",
+          "location_mm": [
+            3505.7,
+            0.0,
+            0.0
+          ],
+          "placement_rule": "INTERFACE_PARAMETER_RULE",
+          "source_component_id": "CMP-COLUMN-001",
+          "vertices": 256
+        },
+        {
+          "bounds_mm": [
+            460.0,
+            460.0,
+            3534.3
+          ],
+          "faces": 130,
+          "instance_id": "INST-COLUMN-SIDEBAY-003",
+          "location_mm": [
+            7011.4,
+            0.0,
+            0.0
+          ],
+          "placement_rule": "INTERFACE_PARAMETER_RULE",
+          "source_component_id": "CMP-COLUMN-001",
+          "vertices": 256
+        }
+      ],
+      "unit": "AU-COLUMN-GRID-001"
+    },
+    "C_reopen": {
+      "objects": [
+        {
+          "bounds_mm": [
+            460.0,
+            460.0,
+            3534.3
+          ],
+          "faces": 130,
+          "instance_id": "INST-COLUMN-SIDEBAY-001",
+          "location_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "placement_rule": "INTERFACE_PARAMETER_RULE",
+          "source_component_id": "CMP-COLUMN-001",
+          "vertices": 256
+        },
+        {
+          "bounds_mm": [
+            460.0,
+            460.0,
+            3534.3
+          ],
+          "faces": 130,
+          "instance_id": "INST-COLUMN-SIDEBAY-002",
+          "location_mm": [
+            3505.7,
+            0.0,
+            0.0
+          ],
+          "placement_rule": "INTERFACE_PARAMETER_RULE",
+          "source_component_id": "CMP-COLUMN-001",
+          "vertices": 256
+        }
+      ],
+      "unit": "AU-COLUMN-GRID-001"
+    },
+    "C_restore": {
+      "objects": [
+        {
+          "bounds_mm": [
+            460.0,
+            460.0,
+            3534.3
+          ],
+          "faces": 130,
+          "instance_id": "INST-COLUMN-SIDEBAY-001",
+          "location_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "placement_rule": "INTERFACE_PARAMETER_RULE",
+          "source_component_id": "CMP-COLUMN-001",
+          "vertices": 256
+        },
+        {
+          "bounds_mm": [
+            460.0,
+            460.0,
+            3534.3
+          ],
+          "faces": 130,
+          "instance_id": "INST-COLUMN-SIDEBAY-002",
+          "location_mm": [
+            3505.7,
+            0.0,
+            0.0
+          ],
+          "placement_rule": "INTERFACE_PARAMETER_RULE",
+          "source_component_id": "CMP-COLUMN-001",
+          "vertices": 256
+        }
+      ],
+      "unit": "AU-COLUMN-GRID-001"
+    }
+  },
+  "canonical_errors": [],
+  "check_pass_count": 65,
+  "check_total": 65,
+  "checks": {
+    "A_schema_topology_valid": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "B_schema_topology_valid": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "C_schema_topology_valid": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_axis_alignment": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_belong_2_of_2": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_derived_not_manual": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_deterministic_regen": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_independent_reopen": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_joinery_unknown": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_locate_relation": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_lower_support_interface": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_members_complete": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_rc_replaceable": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_support_plane_alignment": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_support_relation": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_top_support_interface": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "a_z006_unknown": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "approved_component_mapping_6_of_6": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "assembly_units_organizational": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_belong_4_of_4": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_block_reason_stable": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_connect_2_of_2": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_connector_identity_unknown": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_control_only": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_geometry_block_expected": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_joinery_unknown": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_locate_2_of_2": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_members_complete": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_no_approved_building_full_length": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_no_blender_actual_geometry": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_no_direct_frame_connect": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_proxy_only": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_reference_leak_fixture": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_review_explicit_block": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "b_semantic_valid": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_belong_2_of_2": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_blender_restore_deterministic": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_canonical_count_2": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_independent_reopen": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_manifest_matches": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_mutation_blender_reopen_3": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_mutation_count_3": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_mutation_same_component": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_pm005_evidence": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_pm005_file_unchanged": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_pm005_resolved": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_repeat_project_rule": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_repeat_rule_parameterized": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_restore_deterministic": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_runtime_ids": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_runtime_instance_count_2": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_single_component_identity": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "c_spacing_derived": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "five_relationship_types_covered": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "four_review_assets": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "no_historical_relation_claims": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "p2_frozen_baseline": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "p31_master_binaries": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "p31_tracked_assets": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "p33_scope_zero": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "representative_validator_zero_error": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "required_negative_15_of_15": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "t015_foundation_31_of_31": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "three_unique_units": {
+      "error_code": null,
+      "status": "PASS"
+    },
+    "unrelated_untracked_not_staged": {
+      "error_code": null,
+      "status": "PASS"
+    }
+  },
+  "derived_result": {
+    "A": {
+      "axis_aligned": true,
+      "height_evidence": "REASONABLE_COMPLETION",
+      "height_source": "Z-006-RC-01",
+      "joinery_detail_status": "UNKNOWN",
+      "lower_plane_world_z_mm": 3534.3,
+      "placements_mm": {
+        "CMP-COLUMN-001": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "CMP-LUDOU-COLUMN-001": [
+          0.0,
+          0.0,
+          3534.3
+        ]
+      },
+      "status": "INTERFACE_ASSEMBLY_VALID",
+      "support_plane_world_z_mm": 3534.3
+    },
+    "B": {
+      "actual_full_length_geometry_created": false,
+      "blocked_reason": "BUILDING_SPECIFIC_APPROVED_FULL_LENGTH_ABSENT",
+      "geometry_status": "FULL_LENGTH_GEOMETRY_BLOCKED",
+      "historical_connector_identity": "UNKNOWN",
+      "historical_full_length": null,
+      "joinery_detail_status": "UNKNOWN",
+      "semantic_status": "SEMANTIC_ASSEMBLY_VALID"
+    },
+    "C": {
+      "count": 2,
+      "instances": [
+        {
+          "assembly_unit_id": "AU-COLUMN-GRID-001",
+          "derived_transform": {
+            "location_mm": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "rotation_euler_rad": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          "generated_by_relation_id": "C-R01",
+          "instance_id": "INST-COLUMN-SIDEBAY-001",
+          "ordinal": 1,
+          "parameter_refs": [
+            "PM-005",
+            "RULE-C-COUNT"
+          ],
+          "source_component_id": "CMP-COLUMN-001"
+        },
+        {
+          "assembly_unit_id": "AU-COLUMN-GRID-001",
+          "derived_transform": {
+            "location_mm": [
+              3505.7,
+              0.0,
+              0.0
+            ],
+            "rotation_euler_rad": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1,
+              1,
+              1
+            ]
+          },
+          "generated_by_relation_id": "C-R01",
+          "instance_id": "INST-COLUMN-SIDEBAY-002",
+          "ordinal": 2,
+          "parameter_refs": [
+            "PM-005",
+            "RULE-C-COUNT"
+          ],
+          "source_component_id": "CMP-COLUMN-001"
+        }
+      ],
+      "repeat_evidence": "PROJECT_RULE",
+      "resolved_spacing_mm": 3505.7,
+      "spacing_evidence": {
+        "classification": "CONFIRMED",
+        "source_layer": "DIRECT_PRIMARY",
+        "time_layer": "observed_as_measured"
+      },
+      "spacing_ref": "PM-005"
+    }
+  },
+  "engineering_id": "P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001",
+  "gate_status": "P3_2_ACTIVE_P3_3_LOCKED_PRODUCT_OWNER_REVIEW_REQUIRED",
+  "hard_fails_canonical": [],
+  "input_sha256": {
+    "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_ASSEMBLY_REGISTRY_V001.json": "03e288fef59155427d7bdcbee5281c63f36a536e6a9a04ccdc112e0601a42778",
+    "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_INTERFACE_EXTENSION_V001.json": "c889583b56356002630d59309b85d5e683b22e15212edfb6c2e86394168b6ac9",
+    "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_RELATIONSHIP_GRAPH_V001.json": "5073ae9e9b8439c28ca68b61e38b397f94b6dfedbcfb6925b1c78cd9093d7b82",
+    "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_SCHEMA_EXTENSION_V001.json": "1f7807665292abc48e55c0941bc1f5f3204a124dd5961490ded930a5505d8a49",
+    "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json": "37bc365a50bd6a43e178c3102c19ad76cbf0cb533f4d76710a793afa318c0889",
+    "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json": "aaae64affca06c23651264fc6036a3591d69484a1df52a128452c9ff328234b7"
+  },
+  "local_only_blends": {
+    "A": {
+      "path": "production/zhenguo_wanfo/assembly/local/AU-COLUMN-LUDOU-001_V001.blend",
+      "sha256": "07c2471b6966e534cd791f86b7ffdf681d8204011d907fab5f5bdfb25482c2d1"
+    },
+    "C": {
+      "path": "production/zhenguo_wanfo/assembly/local/AU-COLUMN-GRID-001_V001.blend",
+      "sha256": "7ada16b92c3d09d02620941c56b0aea7b5af2d7b22cdfbe883e7543d76143ce3"
+    }
+  },
+  "negative_tests": {
+    "passed": 15,
+    "status": "PASS",
+    "total": 15
+  },
+  "p3_3_files_created": 0,
+  "review_assets": [
+    "production/zhenguo_wanfo/review/P3_2/representative_assembly_v001/A_COLUMN_LUDOU_SUPPORT.png",
+    "production/zhenguo_wanfo/review/P3_2/representative_assembly_v001/B_FRAME_TIER_SEMANTIC_BLOCKED.png",
+    "production/zhenguo_wanfo/review/P3_2/representative_assembly_v001/C_COLUMN_GRID_REPEAT.png",
+    "production/zhenguo_wanfo/review/P3_2/representative_assembly_v001/P3_2_REPRESENTATIVE_ASSEMBLY_OVERVIEW_V001.png"
+  ],
+  "status": "ENGINEERING_COMPLETE_REVIEW_REQUIRED",
+  "task": "T-016"
+}

@@ -1,0 +1,101 @@
+{
+  "A": {
+    "axis_aligned": true,
+    "height_evidence": "REASONABLE_COMPLETION",
+    "height_source": "Z-006-RC-01",
+    "joinery_detail_status": "UNKNOWN",
+    "lower_plane_world_z_mm": 3534.3,
+    "placements_mm": {
+      "CMP-COLUMN-001": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "CMP-LUDOU-COLUMN-001": [
+        0.0,
+        0.0,
+        3534.3
+      ]
+    },
+    "status": "INTERFACE_ASSEMBLY_VALID",
+    "support_plane_world_z_mm": 3534.3
+  },
+  "B": {
+    "actual_full_length_geometry_created": false,
+    "blocked_reason": "BUILDING_SPECIFIC_APPROVED_FULL_LENGTH_ABSENT",
+    "geometry_status": "FULL_LENGTH_GEOMETRY_BLOCKED",
+    "historical_connector_identity": "UNKNOWN",
+    "historical_full_length": null,
+    "joinery_detail_status": "UNKNOWN",
+    "semantic_status": "SEMANTIC_ASSEMBLY_VALID"
+  },
+  "C": {
+    "count": 2,
+    "instances": [
+      {
+        "assembly_unit_id": "AU-COLUMN-GRID-001",
+        "derived_transform": {
+          "location_mm": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation_euler_rad": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "generated_by_relation_id": "C-R01",
+        "instance_id": "INST-COLUMN-SIDEBAY-001",
+        "ordinal": 1,
+        "parameter_refs": [
+          "PM-005",
+          "RULE-C-COUNT"
+        ],
+        "source_component_id": "CMP-COLUMN-001"
+      },
+      {
+        "assembly_unit_id": "AU-COLUMN-GRID-001",
+        "derived_transform": {
+          "location_mm": [
+            3505.7,
+            0.0,
+            0.0
+          ],
+          "rotation_euler_rad": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        "generated_by_relation_id": "C-R01",
+        "instance_id": "INST-COLUMN-SIDEBAY-002",
+        "ordinal": 2,
+        "parameter_refs": [
+          "PM-005",
+          "RULE-C-COUNT"
+        ],
+        "source_component_id": "CMP-COLUMN-001"
+      }
+    ],
+    "repeat_evidence": "PROJECT_RULE",
+    "resolved_spacing_mm": 3505.7,
+    "spacing_evidence": {
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured"
+    },
+    "spacing_ref": "PM-005"
+  }
+}

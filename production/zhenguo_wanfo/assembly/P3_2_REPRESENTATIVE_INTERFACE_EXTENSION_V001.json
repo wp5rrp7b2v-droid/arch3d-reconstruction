@@ -1,0 +1,260 @@
+{
+  "version": "V001",
+  "task": "T-016",
+  "extends": "P3_2_INTERFACE_REGISTRY_V001.json",
+  "interfaces": [
+    {
+      "interface_id": "CMP-COLUMN-001__TOP-SUPPORT-PLANE",
+      "owner_node": "CMP-COLUMN-001",
+      "canonical_name_zh": "柱｜上承托工程基准面",
+      "interface_type": "PLANE",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "z resolved from current height_mm; Z-006-RC-01 replaceable, not historical machining plane",
+        "normal": [
+          0,
+          0,
+          1
+        ],
+        "z_parameter_ref": "CMP-COLUMN-001:height_mm"
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "SUPPORT",
+        "LOCATE"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+        "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CMP-LUDOU-COLUMN-001__LOWER-SUPPORT-PLANE",
+      "owner_node": "CMP-LUDOU-COLUMN-001",
+      "canonical_name_zh": "柱头栌斗｜下承托工程基准面",
+      "interface_type": "PLANE",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "z=0 at approved bottom_footprint_center; not historical contact machining plane",
+        "normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "primary_direction": [
+        0,
+        0,
+        1
+      ],
+      "allowed_relation_types": [
+        "SUPPORT",
+        "LOCATE"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+        "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CTL-FRAME-001__LOWER-TIER-DATUM",
+      "owner_node": "CTL-FRAME-001",
+      "canonical_name_zh": "梁架控制｜下层位基准",
+      "interface_type": "POINT",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "LOWER tier semantic ordinal only; no historical elevation"
+      },
+      "primary_direction": [
+        1,
+        0,
+        0
+      ],
+      "allowed_relation_types": [
+        "LOCATE"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+        "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CTL-FRAME-001__UPPER-TIER-DATUM",
+      "owner_node": "CTL-FRAME-001",
+      "canonical_name_zh": "梁架控制｜上层位基准",
+      "interface_type": "POINT",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "UPPER tier semantic ordinal only; no historical elevation"
+      },
+      "primary_direction": [
+        1,
+        0,
+        0
+      ],
+      "allowed_relation_types": [
+        "LOCATE"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+        "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "PRX-FRAME-CONNECTOR-001__LOWER-ENDPOINT",
+      "owner_node": "PRX-FRAME-CONNECTOR-001",
+      "canonical_name_zh": "连接代理｜下端点",
+      "interface_type": "POINT",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "semantic proxy endpoint; no historical connector identity or joinery"
+      },
+      "primary_direction": [
+        1,
+        0,
+        0
+      ],
+      "allowed_relation_types": [
+        "CONNECT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+        "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "PRX-FRAME-CONNECTOR-001__UPPER-ENDPOINT",
+      "owner_node": "PRX-FRAME-CONNECTOR-001",
+      "canonical_name_zh": "连接代理｜上端点",
+      "interface_type": "POINT",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "semantic proxy endpoint; no historical connector identity or joinery"
+      },
+      "primary_direction": [
+        1,
+        0,
+        0
+      ],
+      "allowed_relation_types": [
+        "CONNECT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+        "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CTL-GRID-001__SIDEBAY-START",
+      "owner_node": "CTL-GRID-001",
+      "canonical_name_zh": "次间｜重复起点",
+      "interface_type": "POINT",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "unit-local engineering start"
+      },
+      "primary_direction": [
+        1,
+        0,
+        0
+      ],
+      "allowed_relation_types": [
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+        "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    },
+    {
+      "interface_id": "CTL-GRID-001__X-AXIS",
+      "owner_node": "CTL-GRID-001",
+      "canonical_name_zh": "次间｜X向重复轴",
+      "interface_type": "AXIS",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum": {
+        "origin_mm": [
+          0,
+          0,
+          0
+        ],
+        "definition": "unit-local X axis; not whole-building grid reconstruction"
+      },
+      "primary_direction": [
+        1,
+        0,
+        0
+      ],
+      "allowed_relation_types": [
+        "REPEAT"
+      ],
+      "evidence_status": "PROJECT_RULE",
+      "provenance": [
+        "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+        "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+      ],
+      "replaceability": true,
+      "historical_claim": false
+    }
+  ]
+}

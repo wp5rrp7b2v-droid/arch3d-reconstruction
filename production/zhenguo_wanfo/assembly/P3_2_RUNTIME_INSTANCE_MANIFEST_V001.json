@@ -1,0 +1,64 @@
+{
+  "assembly_unit_id": "AU-COLUMN-GRID-001",
+  "instances": [
+    {
+      "assembly_unit_id": "AU-COLUMN-GRID-001",
+      "derived_transform": {
+        "location_mm": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "generated_by_relation_id": "C-R01",
+      "instance_id": "INST-COLUMN-SIDEBAY-001",
+      "ordinal": 1,
+      "parameter_refs": [
+        "PM-005",
+        "RULE-C-COUNT"
+      ],
+      "source_component_id": "CMP-COLUMN-001"
+    },
+    {
+      "assembly_unit_id": "AU-COLUMN-GRID-001",
+      "derived_transform": {
+        "location_mm": [
+          3505.7,
+          0.0,
+          0.0
+        ],
+        "rotation_euler_rad": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "generated_by_relation_id": "C-R01",
+      "instance_id": "INST-COLUMN-SIDEBAY-002",
+      "ordinal": 2,
+      "parameter_refs": [
+        "PM-005",
+        "RULE-C-COUNT"
+      ],
+      "source_component_id": "CMP-COLUMN-001"
+    }
+  ],
+  "source_relation_id": "C-R01",
+  "task": "T-016",
+  "version": "V001"
+}

@@ -1,0 +1,1035 @@
+{
+  "version": "V001",
+  "task": "T-016",
+  "unit_graphs": {
+    "A": {
+      "nodes": [
+        {
+          "node_id": "CMP-COLUMN-001",
+          "component_id": "CMP-COLUMN-001",
+          "canonical_name_zh": "柱",
+          "node_class": "FORMAL_COMPONENT",
+          "historical_role": "EVIDENCE_BOUNDED_COMPONENT_MASTER",
+          "qualification_status": "FORMAL_APPROVED_MASTER",
+          "evidence_status": "SOURCE_ATTRIBUTE_LEVEL_ONLY",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json",
+            "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false,
+          "master_id": "CMP-COLUMN-001_MASTER",
+          "source_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+        },
+        {
+          "node_id": "CMP-LUDOU-COLUMN-001",
+          "component_id": "CMP-LUDOU-COLUMN-001",
+          "canonical_name_zh": "柱头栌斗",
+          "node_class": "FORMAL_COMPONENT",
+          "historical_role": "EVIDENCE_BOUNDED_COMPONENT_MASTER",
+          "qualification_status": "FORMAL_APPROVED_MASTER",
+          "evidence_status": "SOURCE_ATTRIBUTE_LEVEL_ONLY",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_SEMANTIC_V001.json",
+            "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false,
+          "master_id": "CMP-LUDOU-COLUMN-001_MASTER",
+          "source_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+        },
+        {
+          "node_id": "AU-COLUMN-LUDOU-001",
+          "component_id": null,
+          "canonical_name_zh": "柱头承托组合单元",
+          "node_class": "ASSEMBLY_UNIT",
+          "historical_role": "ORGANIZATIONAL_UNIT",
+          "qualification_status": "ORGANIZATIONAL_ONLY",
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false,
+          "noncomponent_ref": "AU-COLUMN-LUDOU-001"
+        }
+      ],
+      "interfaces": [
+        {
+          "interface_id": "CMP-COLUMN-001__TOP-SUPPORT-PLANE",
+          "owner_node": "CMP-COLUMN-001",
+          "canonical_name_zh": "柱｜上承托工程基准面",
+          "interface_type": "PLANE",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "z resolved from current height_mm; Z-006-RC-01 replaceable, not historical machining plane",
+            "normal": [
+              0,
+              0,
+              1
+            ],
+            "z_parameter_ref": "CMP-COLUMN-001:height_mm"
+          },
+          "primary_direction": [
+            0,
+            0,
+            1
+          ],
+          "allowed_relation_types": [
+            "SUPPORT",
+            "LOCATE"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "CMP-LUDOU-COLUMN-001__LOWER-SUPPORT-PLANE",
+          "owner_node": "CMP-LUDOU-COLUMN-001",
+          "canonical_name_zh": "柱头栌斗｜下承托工程基准面",
+          "interface_type": "PLANE",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "z=0 at approved bottom_footprint_center; not historical contact machining plane",
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          },
+          "primary_direction": [
+            0,
+            0,
+            1
+          ],
+          "allowed_relation_types": [
+            "SUPPORT",
+            "LOCATE"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "CMP-COLUMN-001__AXIS",
+          "owner_node": "CMP-COLUMN-001",
+          "canonical_name_zh": "柱｜主轴基准",
+          "interface_type": "AXIS",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "approved Master primary local axis through local origin; engineering datum"
+          },
+          "primary_direction": [
+            0,
+            0,
+            1
+          ],
+          "allowed_relation_types": [
+            "LOCATE",
+            "REPEAT"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "CMP-LUDOU-COLUMN-001__AXIS",
+          "owner_node": "CMP-LUDOU-COLUMN-001",
+          "canonical_name_zh": "柱头栌斗｜主轴基准",
+          "interface_type": "AXIS",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "approved Master primary local axis through local origin; engineering datum"
+          },
+          "primary_direction": [
+            0,
+            0,
+            1
+          ],
+          "allowed_relation_types": [
+            "LOCATE",
+            "REPEAT"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_SEMANTIC_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        }
+      ],
+      "relationships": [
+        {
+          "relationship_id": "A-R01",
+          "relation_type": "SUPPORT",
+          "source_node": "CMP-COLUMN-001",
+          "target_node": "CMP-LUDOU-COLUMN-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "source_interface": "CMP-COLUMN-001__TOP-SUPPORT-PLANE",
+          "target_interface": "CMP-LUDOU-COLUMN-001__LOWER-SUPPORT-PLANE",
+          "joinery_detail_status": "UNKNOWN",
+          "historical_claim": false
+        },
+        {
+          "relationship_id": "A-R02",
+          "relation_type": "LOCATE",
+          "source_node": "CMP-COLUMN-001",
+          "target_node": "CMP-LUDOU-COLUMN-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "source_interface": "CMP-COLUMN-001__AXIS",
+          "target_interface": "CMP-LUDOU-COLUMN-001__AXIS",
+          "historical_claim": false
+        },
+        {
+          "relationship_id": "A-R03",
+          "relation_type": "BELONG",
+          "source_node": "CMP-COLUMN-001",
+          "target_node": "AU-COLUMN-LUDOU-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "historical_claim": false
+        },
+        {
+          "relationship_id": "A-R04",
+          "relation_type": "BELONG",
+          "source_node": "CMP-LUDOU-COLUMN-001",
+          "target_node": "AU-COLUMN-LUDOU-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "historical_claim": false
+        }
+      ],
+      "placements": [],
+      "building_parameters": [],
+      "required_relation_types": [
+        "BELONG",
+        "LOCATE",
+        "SUPPORT"
+      ],
+      "require_connected": true
+    },
+    "B": {
+      "nodes": [
+        {
+          "node_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+          "component_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+          "canonical_name_zh": "下六椽栿",
+          "node_class": "FORMAL_COMPONENT",
+          "historical_role": "EVIDENCE_BOUNDED_COMPONENT_MASTER",
+          "qualification_status": "FORMAL_APPROVED_MASTER",
+          "evidence_status": "SOURCE_ATTRIBUTE_LEVEL_ONLY",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+            "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false,
+          "master_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+          "source_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+        },
+        {
+          "node_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+          "component_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+          "canonical_name_zh": "上六椽栿",
+          "node_class": "FORMAL_COMPONENT",
+          "historical_role": "EVIDENCE_BOUNDED_COMPONENT_MASTER",
+          "qualification_status": "FORMAL_APPROVED_MASTER",
+          "evidence_status": "SOURCE_ATTRIBUTE_LEVEL_ONLY",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+            "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false,
+          "master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+          "source_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+        },
+        {
+          "node_id": "CTL-FRAME-001",
+          "component_id": "CTL-FRAME-001",
+          "canonical_name_zh": "梁架层位控制对象",
+          "node_class": "CONTROL",
+          "historical_role": "NON_HISTORICAL_FORMAL",
+          "qualification_status": "CONTROL_ONLY",
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "node_id": "PRX-FRAME-CONNECTOR-001",
+          "component_id": "PRX-FRAME-CONNECTOR-001",
+          "canonical_name_zh": "梁架层位连接代理",
+          "node_class": "PROXY",
+          "historical_role": "NON_HISTORICAL_FORMAL",
+          "qualification_status": "PROXY_ONLY",
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "node_id": "AU-FRAME-TIER-001",
+          "component_id": null,
+          "canonical_name_zh": "六椽栿梁架层位组合单元",
+          "node_class": "ASSEMBLY_UNIT",
+          "historical_role": "ORGANIZATIONAL_UNIT",
+          "qualification_status": "ORGANIZATIONAL_ONLY",
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false,
+          "noncomponent_ref": "AU-FRAME-TIER-001"
+        }
+      ],
+      "interfaces": [
+        {
+          "interface_id": "CTL-FRAME-001__LOWER-TIER-DATUM",
+          "owner_node": "CTL-FRAME-001",
+          "canonical_name_zh": "梁架控制｜下层位基准",
+          "interface_type": "POINT",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "LOWER tier semantic ordinal only; no historical elevation"
+          },
+          "primary_direction": [
+            1,
+            0,
+            0
+          ],
+          "allowed_relation_types": [
+            "LOCATE"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "CTL-FRAME-001__UPPER-TIER-DATUM",
+          "owner_node": "CTL-FRAME-001",
+          "canonical_name_zh": "梁架控制｜上层位基准",
+          "interface_type": "POINT",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "UPPER tier semantic ordinal only; no historical elevation"
+          },
+          "primary_direction": [
+            1,
+            0,
+            0
+          ],
+          "allowed_relation_types": [
+            "LOCATE"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "PRX-FRAME-CONNECTOR-001__LOWER-ENDPOINT",
+          "owner_node": "PRX-FRAME-CONNECTOR-001",
+          "canonical_name_zh": "连接代理｜下端点",
+          "interface_type": "POINT",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "semantic proxy endpoint; no historical connector identity or joinery"
+          },
+          "primary_direction": [
+            1,
+            0,
+            0
+          ],
+          "allowed_relation_types": [
+            "CONNECT"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "PRX-FRAME-CONNECTOR-001__UPPER-ENDPOINT",
+          "owner_node": "PRX-FRAME-CONNECTOR-001",
+          "canonical_name_zh": "连接代理｜上端点",
+          "interface_type": "POINT",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "semantic proxy endpoint; no historical connector identity or joinery"
+          },
+          "primary_direction": [
+            1,
+            0,
+            0
+          ],
+          "allowed_relation_types": [
+            "CONNECT"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001__ORIGIN",
+          "owner_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+          "canonical_name_zh": "下六椽栿｜局部原点基准",
+          "interface_type": "POINT",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "approved Master local origin; engineering datum, no contact or joinery claim"
+          },
+          "primary_direction": [
+            1,
+            0,
+            0
+          ],
+          "allowed_relation_types": [
+            "LOCATE",
+            "REPEAT"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001__ORIGIN",
+          "owner_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+          "canonical_name_zh": "上六椽栿｜局部原点基准",
+          "interface_type": "POINT",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "approved Master local origin; engineering datum, no contact or joinery claim"
+          },
+          "primary_direction": [
+            1,
+            0,
+            0
+          ],
+          "allowed_relation_types": [
+            "LOCATE",
+            "REPEAT"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001__LOWER-PLANE",
+          "owner_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+          "canonical_name_zh": "下六椽栿｜局部下参考面",
+          "interface_type": "PLANE",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "z=0 local reference plane of bounded Master body; not a proven historical contact plane",
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          },
+          "primary_direction": [
+            0,
+            0,
+            1
+          ],
+          "allowed_relation_types": [
+            "SUPPORT",
+            "CONNECT",
+            "LOCATE"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001__LOWER-PLANE",
+          "owner_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+          "canonical_name_zh": "上六椽栿｜局部下参考面",
+          "interface_type": "PLANE",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "z=0 local reference plane of bounded Master body; not a proven historical contact plane",
+            "normal": [
+              0,
+              0,
+              1
+            ]
+          },
+          "primary_direction": [
+            0,
+            0,
+            1
+          ],
+          "allowed_relation_types": [
+            "SUPPORT",
+            "CONNECT",
+            "LOCATE"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        }
+      ],
+      "relationships": [
+        {
+          "relationship_id": "B-R01",
+          "relation_type": "LOCATE",
+          "source_node": "CTL-FRAME-001",
+          "target_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "source_interface": "CTL-FRAME-001__LOWER-TIER-DATUM",
+          "target_interface": "CMP-FRAME-LOWER-SIX-CHUANFU-001__ORIGIN",
+          "historical_claim": false
+        },
+        {
+          "relationship_id": "B-R02",
+          "relation_type": "LOCATE",
+          "source_node": "CTL-FRAME-001",
+          "target_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "source_interface": "CTL-FRAME-001__UPPER-TIER-DATUM",
+          "target_interface": "CMP-FRAME-UPPER-SIX-CHUANFU-001__ORIGIN",
+          "historical_claim": false
+        },
+        {
+          "relationship_id": "B-R03",
+          "relation_type": "CONNECT",
+          "source_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+          "target_node": "PRX-FRAME-CONNECTOR-001",
+          "directionality": "UNDIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "source_interface": "CMP-FRAME-LOWER-SIX-CHUANFU-001__LOWER-PLANE",
+          "target_interface": "PRX-FRAME-CONNECTOR-001__LOWER-ENDPOINT",
+          "joinery_detail_status": "UNKNOWN",
+          "historical_claim": false,
+          "historical_connector_identity": "UNKNOWN"
+        },
+        {
+          "relationship_id": "B-R04",
+          "relation_type": "CONNECT",
+          "source_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+          "target_node": "PRX-FRAME-CONNECTOR-001",
+          "directionality": "UNDIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "source_interface": "CMP-FRAME-UPPER-SIX-CHUANFU-001__LOWER-PLANE",
+          "target_interface": "PRX-FRAME-CONNECTOR-001__UPPER-ENDPOINT",
+          "joinery_detail_status": "UNKNOWN",
+          "historical_claim": false,
+          "historical_connector_identity": "UNKNOWN"
+        },
+        {
+          "relationship_id": "B-R05",
+          "relation_type": "BELONG",
+          "source_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+          "target_node": "AU-FRAME-TIER-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "historical_claim": false
+        },
+        {
+          "relationship_id": "B-R06",
+          "relation_type": "BELONG",
+          "source_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+          "target_node": "AU-FRAME-TIER-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "historical_claim": false
+        },
+        {
+          "relationship_id": "B-R07",
+          "relation_type": "BELONG",
+          "source_node": "CTL-FRAME-001",
+          "target_node": "AU-FRAME-TIER-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "historical_claim": false
+        },
+        {
+          "relationship_id": "B-R08",
+          "relation_type": "BELONG",
+          "source_node": "PRX-FRAME-CONNECTOR-001",
+          "target_node": "AU-FRAME-TIER-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "historical_claim": false
+        }
+      ],
+      "placements": [],
+      "building_parameters": [],
+      "required_relation_types": [
+        "BELONG",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "require_connected": true
+    },
+    "C": {
+      "nodes": [
+        {
+          "node_id": "CTL-GRID-001",
+          "component_id": "CTL-GRID-001",
+          "canonical_name_zh": "柱网定位控制对象",
+          "node_class": "CONTROL",
+          "historical_role": "NON_HISTORICAL_FORMAL",
+          "qualification_status": "CONTROL_ONLY",
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "node_id": "CMP-COLUMN-001",
+          "component_id": "CMP-COLUMN-001",
+          "canonical_name_zh": "柱",
+          "node_class": "FORMAL_COMPONENT",
+          "historical_role": "EVIDENCE_BOUNDED_COMPONENT_MASTER",
+          "qualification_status": "FORMAL_APPROVED_MASTER",
+          "evidence_status": "SOURCE_ATTRIBUTE_LEVEL_ONLY",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json",
+            "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false,
+          "master_id": "CMP-COLUMN-001_MASTER",
+          "source_registry": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json"
+        },
+        {
+          "node_id": "AU-COLUMN-GRID-001",
+          "component_id": null,
+          "canonical_name_zh": "柱网重复组合单元",
+          "node_class": "ASSEMBLY_UNIT",
+          "historical_role": "ORGANIZATIONAL_UNIT",
+          "qualification_status": "ORGANIZATIONAL_ONLY",
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false,
+          "noncomponent_ref": "AU-COLUMN-GRID-001"
+        }
+      ],
+      "interfaces": [
+        {
+          "interface_id": "CTL-GRID-001__SIDEBAY-START",
+          "owner_node": "CTL-GRID-001",
+          "canonical_name_zh": "次间｜重复起点",
+          "interface_type": "POINT",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "unit-local engineering start"
+          },
+          "primary_direction": [
+            1,
+            0,
+            0
+          ],
+          "allowed_relation_types": [
+            "REPEAT"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "CTL-GRID-001__X-AXIS",
+          "owner_node": "CTL-GRID-001",
+          "canonical_name_zh": "次间｜X向重复轴",
+          "interface_type": "AXIS",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "unit-local X axis; not whole-building grid reconstruction"
+          },
+          "primary_direction": [
+            1,
+            0,
+            0
+          ],
+          "allowed_relation_types": [
+            "REPEAT"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        },
+        {
+          "interface_id": "CMP-COLUMN-001__ORIGIN",
+          "owner_node": "CMP-COLUMN-001",
+          "canonical_name_zh": "柱｜局部原点基准",
+          "interface_type": "POINT",
+          "coordinate_space": "MASTER_LOCAL",
+          "local_datum": {
+            "origin_mm": [
+              0,
+              0,
+              0
+            ],
+            "definition": "approved Master local origin; engineering datum, no contact or joinery claim"
+          },
+          "primary_direction": [
+            0,
+            0,
+            1
+          ],
+          "allowed_relation_types": [
+            "LOCATE",
+            "REPEAT"
+          ],
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json",
+            "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json"
+          ],
+          "replaceability": true,
+          "historical_claim": false
+        }
+      ],
+      "relationships": [
+        {
+          "relationship_id": "C-R01",
+          "relation_type": "REPEAT",
+          "source_node": "CTL-GRID-001",
+          "target_node": "CMP-COLUMN-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [
+            "RULE-C-COUNT",
+            "PM-005"
+          ],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "repeat_rule": {
+            "count_ref": "RULE-C-COUNT",
+            "direction": [
+              1,
+              0,
+              0
+            ],
+            "spacing_ref": "PM-005",
+            "start_interface": "CTL-GRID-001__SIDEBAY-START",
+            "parameter_source": "P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001:PM-005",
+            "direction_interface": "CTL-GRID-001__X-AXIS"
+          },
+          "historical_claim": false
+        },
+        {
+          "relationship_id": "C-R02",
+          "relation_type": "BELONG",
+          "source_node": "CTL-GRID-001",
+          "target_node": "AU-COLUMN-GRID-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "historical_claim": false
+        },
+        {
+          "relationship_id": "C-R03",
+          "relation_type": "BELONG",
+          "source_node": "CMP-COLUMN-001",
+          "target_node": "AU-COLUMN-GRID-001",
+          "directionality": "DIRECTED",
+          "evidence_status": "PROJECT_RULE",
+          "evidence_basis": "D-043_LOCKED_ENGINEERING_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceability": true,
+          "parameter_refs": [],
+          "notes": "Engineering relationship; no historical contact or joinery claim.",
+          "historical_claim": false
+        }
+      ],
+      "placements": [],
+      "building_parameters": [
+        {
+          "parameter_id": "PM-005",
+          "source_layer": "BUILDING_LEVEL_APPROVED",
+          "evidence_status": "CONFIRMED",
+          "provenance": [
+            "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json"
+          ],
+          "replaceable": false,
+          "historical_claim": false,
+          "value": 3505.7,
+          "unit": "mm"
+        },
+        {
+          "parameter_id": "RULE-C-COUNT",
+          "source_layer": "BUILDING_LEVEL_REPLACEABLE",
+          "evidence_status": "PROJECT_RULE",
+          "provenance": [
+            "docs/production/zhenguo_wanfo/P3_2_REPRESENTATIVE_ASSEMBLY_DESIGN_V001.md",
+            "docs/tasks/T-016_P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.md"
+          ],
+          "replaceable": true,
+          "historical_claim": false,
+          "value": 2,
+          "unit": "count"
+        }
+      ],
+      "required_relation_types": [
+        "BELONG",
+        "REPEAT"
+      ],
+      "require_connected": true
+    }
+  },
+  "relationship_count": 15,
+  "historical_connector_identity": "UNKNOWN",
+  "joinery_detail_status": "UNKNOWN",
+  "b_canonical_status": "SEMANTIC_ASSEMBLY_VALID / FULL_LENGTH_GEOMETRY_BLOCKED"
+}
