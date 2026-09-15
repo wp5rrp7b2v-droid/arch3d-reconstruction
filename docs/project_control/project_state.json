@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R080",
-  "last_updated": "2026-09-14",
-  "session_status": "ACTIVE / P3.2_CLOSED / P3.3_ENTERED / DOD_REQUIRED / DAILY_CLOSING_COMPLETE",
+  "state_revision": "R081",
+  "last_updated": "2026-09-15",
+  "session_status": "ACTIVE / P3.2_CLOSED / P3.3_ENTERED / DOD_REQUIRED / CLOUD_PREFLIGHT_VERIFIED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -30,7 +30,7 @@
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
-    "status": "APPROVED / PLANNED",
+    "status": "APPROVED / PLANNED / PREFLIGHT VERIFIED",
     "approved_on": "2026-09-14",
     "expected_start": "2026-09-16",
     "expected_end": "2026-09-20",
@@ -40,7 +40,20 @@
     "canonical_rule_file": "docs/project_control/CLOUD_MODE_2026-09-16_20.md",
     "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
     "local_dependency_rule": "No local-Mac-dependent work may be marked PASS during Cloud Mode unless equivalent execution and validation capability has been separately approved.",
-    "pre_activation_note": "If local work continues on 2026-09-15, refresh the final pre-Cloud snapshot and pending-local list before activation."
+    "cloud_git_workflow_preflight": {
+      "date": "2026-09-15",
+      "drill_id": "CLOUD-DRILL-002",
+      "status": "PASS / VERIFIED",
+      "source_main_sha": "ebe8599094c42274826c47b4246716a0892011ea",
+      "pr_number": 1,
+      "pr_head_branch": "codex/codex-cloud-pr",
+      "pr_head_sha": "14fd97fab03345f75ac138a004273058d8efc0b8",
+      "merge_commit": "2528221a1ad08576878fc087e5e5474631a6be75",
+      "scope_validation": "1 drill-only file added; no existing file modified; docs/project_control unchanged by drill; no production or P3.3 engineering file changed",
+      "verified_workflow": "GitHub main -> Codex Cloud checkout -> isolated cloud modification -> commit -> Codex UI Create PR -> ChatGPT GitHub review -> Product Owner authorized merge -> GitHub main",
+      "operational_note": "Codex task container is not required to expose a conventional git remote or gh authentication. PR publication may occur through the Codex Cloud UI/platform handoff; GitHub main remains the canonical committed state."
+    },
+    "pre_activation_note": "Before Cloud Mode activation on 2026-09-16, refresh the final pre-Cloud snapshot and pending-local list if additional work occurs on 2026-09-15."
   },
   "current_task": null,
   "current_case": {"name": "平遥镇国寺万佛殿", "selection_status": "LOCKED"},
@@ -127,13 +140,13 @@
     "date": "2026-09-14",
     "decision": "Product Owner approved P3.2 Gate closure after 9/9 DoD PASS, canonical Hard Fail=0 and P3.3 foundational readiness PASS. P3.2 is PASS / APPROVED / CLOSED; P3 Gate progress is 3/4; P3.3 is unlocked and entered, but no P3.3 engineering task may be created until its Definition of Done is defined and approved."
   },
-  "next_action": "Define and Product-Owner-approve P3.3 Definition of Done before creating any P3.3 engineering Task Contract. If local work continues on 2026-09-15, refresh the final pre-Cloud snapshot and pending-local list before Cloud Mode activation.",
+  "next_action": "Define and Product-Owner-approve P3.3 Definition of Done before creating any P3.3 engineering Task Contract. Before Cloud Mode activation on 2026-09-16, refresh the final pre-Cloud snapshot if additional work occurs on 2026-09-15.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v029",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R080 CLOSING SNAPSHOT"
+    "refresh_status": "REFRESH REQUIRED / LAST VISUALIZED R080; R081 IS CLOUD PREFLIGHT OPERATIONAL UPDATE"
   },
   "daily_closing_audit": {
     "date": "2026-09-14",
