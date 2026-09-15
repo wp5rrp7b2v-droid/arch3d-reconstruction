@@ -156,3 +156,26 @@
 - 验证闭环：`GitHub main → Codex Cloud checkout → isolated modification → commit → Codex UI Create PR → ChatGPT review → Product Owner merge authorization → GitHub main`。
 - Operational conclusion：**Cloud Mode Git workflow = VERIFIED**。Codex Cloud 任务容器中的内部 commit SHA 与最终发布到 GitHub 的 PR head SHA 可能不同；正式事实以 GitHub PR / commit / `main` 为准。
 - Project status impact：NONE；P3.3 仍为 `ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED`；Next Action 仍为定义并批准 P3.3 DoD。
+
+## Final Pre-Cloud Snapshot｜R082｜2026-09-15
+
+- P3：ACTIVE / 3/4 PASS；P3.0–P3.2 均已 CLOSED；当前 Gate=P3.3。
+- P3.3：`ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED`。
+- Current Task：NONE；Blocker：NONE；active pending-local engineering task：NONE。
+- Cloud Mode RC-014：`APPROVED / READY / PREFLIGHT VERIFIED`，有效期 2026-09-16→09-20。
+- CLOUD-DRILL-002：PASS / VERIFIED；PR #1 已 merge；Cloud Git workflow 可投入临时运行模式。
+- Dashboard：v030 / State R082；Final Pre-Cloud Snapshot 已可视化。
+- Next Action：定义并由 Product Owner 批准 P3.3 Definition of Done；批准前不得创建 P3.3 工程 T-###。
+- 本地同步：Product Owner 在本地 Mac 关闭前执行一次 `git-proxy-auto pull --ff-only origin main`，使 working copy 对齐最终 GitHub canonical state。
+
+## Daily Closing Project Control Consistency Audit｜2026-09-15
+
+- Scope：project_state / acceptance_matrix / decision_log / execution_log / governance / rules_change_log / dashboard / phase_archive applicability / RC-014 Cloud Mode / PR #1 merge。
+- Cross-file result：P3.2=`PASS / APPROVED / CLOSED / D-046`；P3.3=`ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED`；P3 Gate=3/4；Current Task=NONE；Blocker=NONE；Next Action=P3.3 DoD；Cloud workflow preflight=PASS / VERIFIED。
+- Acceptance Matrix：无需改动；Gate 状态与 project_state 一致。
+- Decision Log：无需新增重大产品/技术决策；D-046 仍是最新 material Gate decision。
+- Governance / Rules：RC-014 / RC-015 / RC-016 状态一致；今日无新增长期治理规则。
+- Dashboard：v030 / State R082，与 Final Pre-Cloud Snapshot 一致。
+- Phase archive：P3 尚未关闭，本次无新增 archive action。
+- Known exceptions：NONE。
+- **DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT = PASS**。
