@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R081",
+  "state_revision": "R082",
   "last_updated": "2026-09-15",
-  "session_status": "ACTIVE / P3.2_CLOSED / P3.3_ENTERED / DOD_REQUIRED / CLOUD_PREFLIGHT_VERIFIED",
+  "session_status": "ACTIVE / P3.2_CLOSED / P3.3_ENTERED / DOD_REQUIRED / CLOUD_MODE_READY / DAILY_CLOSING_COMPLETE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -30,7 +30,7 @@
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
-    "status": "APPROVED / PLANNED / PREFLIGHT VERIFIED",
+    "status": "APPROVED / READY / PREFLIGHT VERIFIED / FINAL PRE-CLOUD SNAPSHOT",
     "approved_on": "2026-09-14",
     "expected_start": "2026-09-16",
     "expected_end": "2026-09-20",
@@ -53,7 +53,17 @@
       "verified_workflow": "GitHub main -> Codex Cloud checkout -> isolated cloud modification -> commit -> Codex UI Create PR -> ChatGPT GitHub review -> Product Owner authorized merge -> GitHub main",
       "operational_note": "Codex task container is not required to expose a conventional git remote or gh authentication. PR publication may occur through the Codex Cloud UI/platform handoff; GitHub main remains the canonical committed state."
     },
-    "pre_activation_note": "Before Cloud Mode activation on 2026-09-16, refresh the final pre-Cloud snapshot and pending-local list if additional work occurs on 2026-09-15."
+    "final_pre_cloud_snapshot": {
+      "date": "2026-09-15",
+      "status": "FINAL / LOCKED FOR 2026-09-16 START",
+      "current_task": null,
+      "blocker": null,
+      "pending_local_engineering_tasks": [],
+      "p3_3_engineering_authorized": false,
+      "next_action": "Define and Product-Owner-approve P3.3 Definition of Done",
+      "local_sync_required_before_mac_shutdown": true
+    },
+    "pre_activation_note": "FINAL PRE-CLOUD SNAPSHOT completed on 2026-09-15. On 2026-09-16 start from GitHub main and re-read Project Control before any work."
   },
   "current_task": null,
   "current_case": {"name": "平遥镇国寺万佛殿", "selection_status": "LOCKED"},
@@ -140,20 +150,21 @@
     "date": "2026-09-14",
     "decision": "Product Owner approved P3.2 Gate closure after 9/9 DoD PASS, canonical Hard Fail=0 and P3.3 foundational readiness PASS. P3.2 is PASS / APPROVED / CLOSED; P3 Gate progress is 3/4; P3.3 is unlocked and entered, but no P3.3 engineering task may be created until its Definition of Done is defined and approved."
   },
-  "next_action": "Define and Product-Owner-approve P3.3 Definition of Done before creating any P3.3 engineering Task Contract. Before Cloud Mode activation on 2026-09-16, refresh the final pre-Cloud snapshot if additional work occurs on 2026-09-15.",
+  "next_action": "Define and Product-Owner-approve P3.3 Definition of Done before creating any P3.3 engineering Task Contract.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v029",
+    "visualization_version": "v030",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "REFRESH REQUIRED / LAST VISUALIZED R080; R081 IS CLOUD PREFLIGHT OPERATIONAL UPDATE"
+    "refresh_status": "CURRENT / R082 FINAL PRE-CLOUD SNAPSHOT"
   },
   "daily_closing_audit": {
-    "date": "2026-09-14",
+    "date": "2026-09-15",
     "rule_id": "RC-013",
     "verdict": "PASS",
-    "checked": ["project_state", "acceptance_matrix", "decision_log", "execution_log", "governance", "rules_change_log", "dashboard", "phase_archive_applicability"],
+    "checked": ["project_state", "acceptance_matrix", "decision_log", "execution_log", "governance", "rules_change_log", "dashboard", "phase_archive_applicability", "RC-014_cloud_mode", "PR_1_merge"],
     "known_exceptions": [],
-    "phase_archive_action": "NONE / P3 ACTIVE"
+    "phase_archive_action": "NONE / P3 ACTIVE",
+    "cross_file_result": "P3.2 CLOSED / D-046; P3.3 ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED; Current Task NONE; Blocker NONE; Cloud workflow preflight PASS / VERIFIED; Dashboard v030; final Pre-Cloud snapshot aligned."
   }
 }
