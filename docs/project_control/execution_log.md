@@ -142,3 +142,17 @@
 - Phase archive：P3 尚未关闭，本次无需新增 P3 closure；既有已关闭 Phase 历史档案不改写。
 - Known exceptions：NONE。
 - **DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT = PASS**。
+
+## CLOUD-DRILL-002｜Codex Cloud → PR Workflow Preflight｜PASS / VERIFIED｜2026-09-15
+
+- 性质：Cloud Mode 上线前操作链路演练；不是 P3.3 工程任务，不占用 T-###，不改变 Gate / DoD / 历史证据边界。
+- Source main SHA：`ebe8599094c42274826c47b4246716a0892011ea`。
+- Codex Cloud：从平台提供的 repository checkout 开始；任务容器内不要求传统 `origin/main`、`gh auth` 或直接 GitHub 网络访问。
+- Drill change：仅新增 `docs/drills/CODEX_CLOUD_BRANCH_PR_DRILL_2026-09-15.md`；既有文件修改=0；`docs/project_control/` 修改=0；生产文件 / P3.3 工程文件修改=0。
+- GitHub PR：`#1`；head=`codex/codex-cloud-pr`；PR head SHA=`14fd97fab03345f75ac138a004273058d8efc0b8`；target=`main`。
+- ChatGPT GitHub review：PASS；变更范围与内容均符合 drill contract。
+- Product Owner：授权 merge。
+- Merge result：PASS；merge commit=`2528221a1ad08576878fc087e5e5474631a6be75`；`main` 已包含 drill 文件。
+- 验证闭环：`GitHub main → Codex Cloud checkout → isolated modification → commit → Codex UI Create PR → ChatGPT review → Product Owner merge authorization → GitHub main`。
+- Operational conclusion：**Cloud Mode Git workflow = VERIFIED**。Codex Cloud 任务容器中的内部 commit SHA 与最终发布到 GitHub 的 PR head SHA 可能不同；正式事实以 GitHub PR / commit / `main` 为准。
+- Project status impact：NONE；P3.3 仍为 `ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED`；Next Action 仍为定义并批准 P3.3 DoD。
