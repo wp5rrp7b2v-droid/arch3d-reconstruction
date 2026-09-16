@@ -236,3 +236,19 @@
 - Remaining T-018 corrections：formal geometry must use approved formal generation where available；placement must derive from authoritative graph/parameters/rules；Actions evidence must bind PR head SHA；Blender 4.5.13 version check must accept valid `LTS` suffix while remaining version-locked。
 - Previous Actions Run #35101537343 remains debugging-only / NOT formal evidence；Run A/B/C/D did not execute。
 - Next action：return to the original T-018 Codex task, update from latest main, implement the four corrections, use Codex UI `Update Branch` to update the same PR #3, rerun GitHub Actions, then return evidence to ChatGPT；do not create a new T-018 PR and do not merge PR #3。
+
+## Daily Closing Project Control Consistency Audit｜2026-09-16
+
+- Scope：`project_state.json` / `acceptance_matrix.md` / `decision_log.md` / `execution_log.md` / `governance.md` / `rules_change_log.md` / `dashboard.html` / `phase_archive/` / P3.3 Task Contracts / PR #2/#3/#4 / RC-014 Cloud Mode / 9/16–20 Sync Ledger。
+- Cross-file result：P3=`ACTIVE / 3/4`；P3.0–P3.2=`PASS / CLOSED`；P3.3=`ACTIVE / DOD LOCKED`；T-017=`CLOSED / D-050 / corrected foundation`；T-019=`PASS / APPROVED / CLOSED / D-055`；T-018=`RESUME READY / CORRECTIONS REQUIRED / PR #3 OPEN`。状态一致。
+- Decision Log：D-047～D-055 全部已登记；D-055 为当前 latest material decision。
+- Acceptance Matrix：已反映 T-017、T-019 与 T-018 resume/correction 状态；P3.3 未提前标记 PASS。
+- Execution Log：T-017/T-019 的工程与 merge 事实已登记；T-018 首轮 Actions failure 明确为 debugging-only，不构成正式 evidence。
+- Governance / Rules：RC-014 仍严格仅覆盖 2026-09-16→20；RC-017 scripted Blender pipeline ACTIVE；9/21 自动恢复正常模式，不自动延长 RC-014。
+- Dashboard：v042 / State R098 与 Project State 一致；Current Task=T-018；PR #3 merge authorization=FALSE。
+- PR audit：PR #2 MERGED；PR #4 MERGED；PR #3 OPEN / NOT MERGED。Open PR 内容不属于 canonical `main`。
+- Evidence Boundary：7/7 PURLIN canonical dispositions=`DEFERRED`；PURLIN qualification=`DEFERRED_INSUFFICIENT_EVIDENCE`；六椽栿 historical full length 继续 UNKNOWN/null；1000mm reference 继续 non-historical only；P2 whole-building transforms/.blend 禁止作为 P3.3 generative input。
+- Phase archive：仅 P0/P1/P2 closure；P3 尚未关闭，因此无需且不得创建 P3 closure archive。
+- 9/21 防遗漏登记：已新增 `docs/project_control/CLOUD_MODE_SYNC_LEDGER_2026-09-16_20.md`，记录 9/16 Day-1 云端变化、9/17～20 每日追加模板，以及 9/21 `main + open PR + Actions artifact + local-only assets + Project Control` 五类同步核验清单。
+- Known exceptions：T-018 PR #3 尚未 merge 且四项修正未完成；这是明确的 active work，不是 Project Control inconsistency。9/21 前如继续云端工作，必须每日更新 Sync Ledger。
+- **DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT = PASS**。
