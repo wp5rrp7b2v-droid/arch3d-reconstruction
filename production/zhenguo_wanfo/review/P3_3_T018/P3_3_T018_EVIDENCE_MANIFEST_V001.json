@@ -1,0 +1,16 @@
+{
+  "artifact_id": null,
+  "artifact_name": "P3_3_T018_HEADLESS_EVIDENCE_V001",
+  "blender_version": "4.5.13 linux-x64 (workflow pinned; not executed in Codex Cloud)",
+  "canonical_blend_sha256": null,
+  "canonical_semantic_snapshot_sha256": "7af2c5552fef0de3c2d744ea0eadc3c495e2f5a020e92ad0c70b6c2e05e1f6bb",
+  "claim_boundary": "No Actions PASS, Blender artifact, or PNG is claimed before an actual workflow run.",
+  "github_actions_run_id": null,
+  "head_sha": null,
+  "local_mac_required": "FINAL_GATE_REVIEW_OUT_OF_SCOPE; SCRIPTED_T018_CHAIN_USES_GITHUB_ACTIONS",
+  "review_images": {},
+  "run_attempt": null,
+  "status": "PENDING_GITHUB_ACTIONS",
+  "task": "T-018",
+  "version": "V001"
+}

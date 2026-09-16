@@ -1,0 +1,16 @@
+{
+  "all_changed_objects_declare_pm005": true,
+  "blender_execution": "PENDING_GITHUB_ACTIONS",
+  "canonical_restore_exact": true,
+  "canonical_value_mm": 3505.7,
+  "delta_mm": 100.0,
+  "dependent_objects_changed": 20,
+  "evidence_classification_unchanged": true,
+  "mutated_value_mm": 3605.7,
+  "non_dependent_drift": 0,
+  "parameter_id": "PM-005",
+  "runtime_copy_only": true,
+  "status": "PASS_NON_BLENDER_PREFLIGHT",
+  "task": "T-018",
+  "version": "V001"
+}

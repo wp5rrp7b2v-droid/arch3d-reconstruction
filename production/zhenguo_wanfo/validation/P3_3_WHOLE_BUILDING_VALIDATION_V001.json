@@ -1,0 +1,84 @@
+{
+  "canonical_failures": [],
+  "canonical_hard_fail_count": 0,
+  "clean_state_generation": "PASS",
+  "evidence_boundary": "PASS",
+  "identity_integrity": "PASS",
+  "mode": "canonical",
+  "mutation_validation": null,
+  "negative_fixtures": [
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/REFERENCE_LENGTH_LEAKS_INTO_BUILDING.json",
+      "hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/SILENT_HISTORICIZATION.json",
+      "hard_fail": "SILENT_HISTORICIZATION"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/BAKED_MANUAL_BUILDING.json",
+      "hard_fail": "BAKED_MANUAL_BUILDING"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/SILENT_BUILDING_OMISSION.json",
+      "hard_fail": "SILENT_BUILDING_OMISSION"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/BROKEN_COMPONENT_IDENTITY.json",
+      "hard_fail": "BROKEN_COMPONENT_IDENTITY"
+    }
+  ],
+  "normalized_snapshot_comparison": "PASS",
+  "p2_transform_scan": {
+    "authoritative_usage_count": 0,
+    "status": "PASS"
+  },
+  "p3_2_traceability": "PASS",
+  "parameter_rule_provenance": "PASS",
+  "protected_inputs": "PASS",
+  "runtime_accounting": {
+    "anonymous_formal_mesh": 0,
+    "broken_identity": 0,
+    "input_count": 365,
+    "outcome_count": 365,
+    "outcome_counts": {
+      "GENERATED_CONTROL": 66,
+      "GENERATED_ENVELOPE": 6,
+      "GENERATED_FORMAL_GEOMETRY": 19,
+      "GENERATED_PROXY": 178,
+      "UNKNOWN_BLOCKED": 96
+    },
+    "unexplained_runtime_omission": 0
+  },
+  "save_reopen": {
+    "executed": false,
+    "status": "PENDING_GITHUB_ACTIONS"
+  },
+  "spatial_validation": {
+    "checks": [
+      "bay/depth/grid propagation",
+      "column organization",
+      "repeat spacing/counts",
+      "major elevations",
+      "frame hierarchy",
+      "roof/gable/control/envelope roles"
+    ],
+    "linear_tolerance_mm": 0.01,
+    "rotation_tolerance_rad": 1e-06,
+    "scale_tolerance": 1e-06,
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "task": "T-018",
+  "version": "V001"
+}
