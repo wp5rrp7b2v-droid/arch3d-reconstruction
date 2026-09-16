@@ -46,7 +46,7 @@
 | P3.0｜Component Ontology & Registry | 构件本体、Naming/ID、Registry、P2 语义迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；D-031。 |
 | P3.1｜Component Master & Variant Library | 建立 evidence-qualified canonical Master / Variant / review / Registry | **PASS / APPROVED / CLOSED** | DoD 9/9；6/6 Master Approved；D-040。 |
 | P3.2｜构件组合关系模型 | 建立构件资格、承托/连接/定位/重复/从属、接口、参数传递、组合单元、重建验证 | **PASS / APPROVED / CLOSED** | DoD 9/9；canonical Hard Fail=0；T-015 / D-042；T-016 / D-045；Gate closure D-046。 |
-| P3.3｜构件驱动整殿重建 | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED** | P3.2 已关闭；P3.3 DoD 批准前不得创建工程任务。 |
+| P3.3｜构件驱动整殿重建 | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / ENGINEERING PLANNING AUTHORIZED** | DoD V001 已锁定；Current Task=None；任何工程执行仍需单独 Task Contract 与 Product Owner 授权。 |
 
 **P3 Gate Progress：3 / 4。**
 
@@ -104,4 +104,18 @@ Carry-forward 到 P3.3：
 - Deferred / Proxy / Control / Envelope / UNKNOWN 不得因整殿重建而静默历史化；
 - P3.3 可在已批准五类关系、接口/定位、Assembly Unit、runtime instance、building-level parameter 与 validator 体系上扩展具体整殿实例，但不得重新定义基础关系体系。
 
-**P3.2 正式 CLOSED；P3.3 已 UNLOCKED / ENTERED。P3.3 DoD 获 Product Owner 批准前，工程生产仍未授权。**
+### P3.3 Definition of Done V001｜LOCKED / PRODUCT OWNER APPROVED / D-047
+
+正式文件：`docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md`
+
+9 项 DoD：正式输入基线；整殿 Assembly Graph；建筑参数驱动与参数传递；全殿语义覆盖与对象 accounting；确定性整殿生成；空间/几何/结构一致性；Evidence Boundary 保持；机器验证/Hard Fail/参数 Mutation；独立重建与最终 Gate Evidence Package。
+
+Gate Hard Fail：
+
+- `REFERENCE_LENGTH_LEAKS_INTO_BUILDING`
+- `SILENT_HISTORICIZATION`
+- `BAKED_MANUAL_BUILDING`
+- `SILENT_BUILDING_OMISSION`
+- `BROKEN_COMPONENT_IDENTITY`
+
+RC-014 Cloud Mode 中，每个后续工程任务必须先分类为 `CLOUD_EXECUTABLE`、`DESIGN_ONLY` 或 `LOCAL_MAC_REQUIRED`。DoD 批准只解锁工程规划与 Task Contract 创建；**当前无活动工程任务，T-017 尚未执行授权。**
