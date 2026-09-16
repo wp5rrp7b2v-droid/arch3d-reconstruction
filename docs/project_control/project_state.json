@@ -196,9 +196,9 @@
   "next_action": "Execute T-019 in Codex Cloud from the latest canonical main. Implement only the locked upstream disposition consistency correction and regression validation. After the first internal engineering commit, use Codex UI Create PR to publish exactly one independent T-019 PR. Return to ChatGPT for formal review. Do not merge and do not touch T-018 PR #3.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v039",
+    "visualization_version": "v040",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE / TARGET R096 / T-019 EXECUTION AUTHORIZED"
+    "refresh_status": "CURRENT / R096 / T-019 EXECUTION AUTHORIZED"
   }
 }
