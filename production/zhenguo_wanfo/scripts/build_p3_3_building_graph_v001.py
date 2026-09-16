@@ -99,14 +99,45 @@ def write(path: Path, value) -> None:
     path.write_text(serialize(value), encoding="utf-8")
 
 
-def disposition(role: str, ontology: str) -> str:
+QUALIFICATION_DISPOSITIONS = {
+    "DEFERRED_INSUFFICIENT_EVIDENCE": "DEFERRED",
+    "PROXY_ONLY": "PROXY_ONLY",
+    "CONTROL_ONLY": "CONTROL_ONLY",
+    "ENVELOPE_ONLY": "ENVELOPE_ONLY",
+}
+
+
+def direct_identity_qualifications(scope: dict, identity: dict) -> dict[str, str]:
+    """Resolve P3.1 qualifications by explicit identity fields, never by family."""
+    resolved: dict[str, set[str]] = {}
+    for document in (scope, identity):
+        for record in document.get("records", []):
+            for key in ("candidate_id", "source_registry_id"):
+                direct_id = record.get(key)
+                if direct_id:
+                    resolved.setdefault(direct_id, set()).add(record["eligibility_status"])
+    conflicts = {key: values for key, values in resolved.items() if len(values) != 1}
+    if conflicts:
+        raise ValueError(f"ambiguous explicit P3.1 identity qualification: {conflicts}")
+    return {key: next(iter(values)) for key, values in resolved.items()}
+
+
+def disposition(role: str, ontology: str, qualification: str | None, approved_master: bool) -> str:
     if role == "CONTROL_OBJECT":
-        return "CONTROL_ONLY"
-    if role == "ENVELOPE_SURFACE":
-        return "ENVELOPE_ONLY"
-    if role == "GEOMETRIC_PROXY":
-        return "UNKNOWN_BLOCKED" if ontology == "UNKNOWN_UNRESOLVED_COMPONENT" else "PROXY_ONLY"
-    return "GENERATE_FROM_FORMAL_COMPONENT"
+        role_disposition = "CONTROL_ONLY"
+    elif role == "ENVELOPE_SURFACE":
+        role_disposition = "ENVELOPE_ONLY"
+    elif role == "GEOMETRIC_PROXY":
+        role_disposition = "UNKNOWN_BLOCKED" if ontology == "UNKNOWN_UNRESOLVED_COMPONENT" else "PROXY_ONLY"
+    else:
+        role_disposition = "GENERATE_FROM_FORMAL_COMPONENT"
+    if role_disposition != "GENERATE_FROM_FORMAL_COMPONENT":
+        return role_disposition
+    if qualification in QUALIFICATION_DISPOSITIONS:
+        return QUALIFICATION_DISPOSITIONS[qualification]
+    if qualification == "MASTER_REQUIRED" and not approved_master:
+        return "DEFERRED"
+    return role_disposition
 
 
 def input_record(path: Path, classification, role: str, allowed_fields=None, prohibited_fields=None):
@@ -129,6 +160,10 @@ def compile_assets() -> dict:
     overrides = load(PATHS["overrides"])
     dependencies = load(PATHS["dependency"])["entries"]
     masters = load(PATHS["masters"])
+    scope = load(PATHS["p3_1_scope"])
+    identity = load(PATHS["p3_1_identity"])
+    qualifications = direct_identity_qualifications(scope, identity)
+    approved_component_ids = {item["component_id"] for item in masters["masters"]}
     relation_source = load(PATHS["relationships"])
     relation_types = [item["relation_type"] for item in relation_source["relationship_types"]]
 
@@ -272,7 +307,12 @@ def compile_assets() -> dict:
                 "component_id": component["component_id"],
                 "semantic_class": component["ontology_type"],
                 "asset_role": component["current_asset_role"],
-                "p3_3_disposition": disposition(component["current_asset_role"], component["ontology_type"]),
+                "p3_3_disposition": disposition(
+                    component["current_asset_role"],
+                    component["ontology_type"],
+                    qualifications.get(component["component_id"]),
+                    component["component_id"] in approved_component_ids,
+                ),
                 "evidence_boundary": {
                     "bounded_placeholder": source.get("bounded_placeholder", False),
                     "originality_status": source.get("originality_status", "unknown"),

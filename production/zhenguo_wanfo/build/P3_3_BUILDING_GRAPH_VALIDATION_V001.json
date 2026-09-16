@@ -49,7 +49,16 @@
       "variants_expected": 40
     },
     "building_organization": "PASS",
+    "cross_layer_disposition_consistency": {
+      "conflict_count": 0,
+      "status": "PASS"
+    },
     "deterministic_regeneration_stable_serialization": "PASS",
+    "disposition_regression": {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "machine_error": "MASTER_SCOPE_DISPOSITION_CONFLICT"
+    },
     "evidence_boundary": "PASS",
     "identity_orphan": "PASS",
     "input_baseline": "PASS",
@@ -60,6 +69,12 @@
       "status": "PASS"
     },
     "protected_inputs_unchanged": true,
+    "purlin_correction": {
+      "component_id": "CMP-PURLIN-001",
+      "deferred": 7,
+      "expected": 7,
+      "status": "PASS"
+    },
     "relationship_types": "5/5 PASS",
     "required_outputs": {
       "expected": 5,

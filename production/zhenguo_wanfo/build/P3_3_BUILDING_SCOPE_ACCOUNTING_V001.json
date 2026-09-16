@@ -8761,7 +8761,7 @@
       "graph_inclusion_status": "INCLUDED",
       "graph_parent_node_id": "ORG-ROOF-SYSTEM",
       "legacy_instance_id": "ROOF_PURLIN_N_00",
-      "p3_3_disposition": "GENERATE_FROM_FORMAL_COMPONENT",
+      "p3_3_disposition": "DEFERRED",
       "parameter_ids": [
         "FR-007",
         "ROOF-007",
@@ -8795,7 +8795,7 @@
       "graph_inclusion_status": "INCLUDED",
       "graph_parent_node_id": "ORG-ROOF-SYSTEM",
       "legacy_instance_id": "ROOF_PURLIN_N_01",
-      "p3_3_disposition": "GENERATE_FROM_FORMAL_COMPONENT",
+      "p3_3_disposition": "DEFERRED",
       "parameter_ids": [
         "FR-007",
         "ROOF-007",
@@ -8829,7 +8829,7 @@
       "graph_inclusion_status": "INCLUDED",
       "graph_parent_node_id": "ORG-ROOF-SYSTEM",
       "legacy_instance_id": "ROOF_PURLIN_N_02",
-      "p3_3_disposition": "GENERATE_FROM_FORMAL_COMPONENT",
+      "p3_3_disposition": "DEFERRED",
       "parameter_ids": [
         "FR-007",
         "ROOF-007",
@@ -8863,7 +8863,7 @@
       "graph_inclusion_status": "INCLUDED",
       "graph_parent_node_id": "ORG-ROOF-SYSTEM",
       "legacy_instance_id": "ROOF_PURLIN_N_03",
-      "p3_3_disposition": "GENERATE_FROM_FORMAL_COMPONENT",
+      "p3_3_disposition": "DEFERRED",
       "parameter_ids": [
         "FR-007",
         "ROOF-007",
@@ -8897,7 +8897,7 @@
       "graph_inclusion_status": "INCLUDED",
       "graph_parent_node_id": "ORG-ROOF-SYSTEM",
       "legacy_instance_id": "ROOF_PURLIN_S_00",
-      "p3_3_disposition": "GENERATE_FROM_FORMAL_COMPONENT",
+      "p3_3_disposition": "DEFERRED",
       "parameter_ids": [
         "FR-007",
         "ROOF-007",
@@ -8931,7 +8931,7 @@
       "graph_inclusion_status": "INCLUDED",
       "graph_parent_node_id": "ORG-ROOF-SYSTEM",
       "legacy_instance_id": "ROOF_PURLIN_S_01",
-      "p3_3_disposition": "GENERATE_FROM_FORMAL_COMPONENT",
+      "p3_3_disposition": "DEFERRED",
       "parameter_ids": [
         "FR-007",
         "ROOF-007",
@@ -8965,7 +8965,7 @@
       "graph_inclusion_status": "INCLUDED",
       "graph_parent_node_id": "ORG-ROOF-SYSTEM",
       "legacy_instance_id": "ROOF_PURLIN_S_02",
-      "p3_3_disposition": "GENERATE_FROM_FORMAL_COMPONENT",
+      "p3_3_disposition": "DEFERRED",
       "parameter_ids": [
         "FR-007",
         "ROOF-007",
