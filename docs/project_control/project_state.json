@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R096",
+  "state_revision": "R097",
   "last_updated": "2026-09-16",
-  "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-019_EXECUTION_AUTHORIZED / CODEX_CLOUD_READY / T-018_STOP_HOLD / PR_3_OPEN / CLOUD_MODE_ACTIVE",
+  "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-019_STRUCTURAL_REVIEW_PASS / AWAITING_PRODUCT_OWNER_APPROVAL / T-018_STOP_HOLD / PR_3_OPEN / PR_4_OPEN / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-019 EXECUTION AUTHORIZED / T-018 STOP HOLD",
+    "status": "DOD LOCKED / T-019 STRUCTURAL REVIEW PASS / T-018 STOP HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 WITH CORRECTIVE FOLLOW-UP / T-018 STOP-HOLD / T-019 CONTRACT D-053 / EXECUTION AUTHORIZED D-054"
+      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 WITH CORRECTIVE FOLLOW-UP / T-018 STOP-HOLD / T-019 CONTRACT D-053 / EXECUTION D-054 / STRUCTURAL REVIEW PASS"
     }
   },
-  "decision_required": false,
-  "blocker": "UPSTREAM_PROTECTED_INPUT_CONFLICT remains active until T-019 is engineered, reviewed, approved and merged. T-019 execution is now authorized specifically to resolve this blocker. T-018 remains STOP/HOLD and PR #3 remains open/unmerged.",
+  "decision_required": true,
+  "blocker": "Canonical main still contains the upstream protected-input conflict until T-019 PR #4 is Product-Owner-approved and merged. The engineering correction itself has passed ChatGPT structural review. T-018 remains STOP/HOLD and PR #3 remains open/unmerged until T-019 merge completes.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -43,13 +43,13 @@
       "executor": "GitHub Actions",
       "excludes": "INTERACTIVE LOCAL_MAC_REQUIRED OR LOCAL-ONLY EVIDENCE"
     },
-    "active_window_note": "T-019 is CLOUD_EXECUTABLE and execution is authorized. It requires no Blender or Local Mac. T-018 PR #3 remains open and unmerged while T-019 corrects the upstream canonical disposition conflict in a separate task branch/PR."
+    "active_window_note": "T-019 requires no Blender or Local Mac. PR #4 has passed structural review and awaits Product Owner approval/merge authorization. T-018 PR #3 remains open and unmerged."
   },
   "current_task": {
     "id": "T-019",
     "engineering_id": "P3_3_UPSTREAM_DISPOSITION_CONSISTENCY_CORRECTION_V001",
     "name": "上游 Disposition 一致性修正",
-    "status": "EXECUTION AUTHORIZED / CODEX CLOUD READY / ENGINEERING RESULT PENDING",
+    "status": "STRUCTURAL REVIEW PASS / AWAITING PRODUCT OWNER APPROVAL / PR #4 OPEN / NOT MERGED",
     "task_contract": "docs/tasks/T-019_P3_3_UPSTREAM_DISPOSITION_CONSISTENCY_CORRECTION_V001.md",
     "contract_decision_id": "D-053",
     "execution_authorization_decision_id": "D-054",
@@ -59,20 +59,32 @@
     "primary_executor": "Codex Cloud",
     "blender_requirement": "NONE",
     "execution_authorized": true,
-    "internal_branch_suggestion": "codex/t019-p3-3-upstream-disposition-consistency-v001",
-    "github_branch_policy": "DO NOT PRECREATE; FIRST CODEX COMMIT THEN UI CREATE PR; GITHUB-VISIBLE HEAD BECOMES CANONICAL TASK BRANCH",
-    "github_pr_number": null,
-    "github_visible_head_branch": null,
-    "github_visible_head_sha": null,
+    "github_pr_number": 4,
+    "github_visible_head_branch": "codex/disposition",
+    "github_visible_head_sha": "91723a7a2b3c3ca78473bba3cb344450e43fbb3f",
+    "formal_review_status": "PASS / AWAITING PRODUCT OWNER APPROVAL",
     "pr_merge_authorized": false,
     "known_correction": {
       "component_id": "CMP-PURLIN-001",
       "affected_instance_count": 7,
-      "current_erroneous_disposition": "GENERATE_FROM_FORMAL_COMPONENT",
-      "required_disposition": "DEFERRED",
+      "before_disposition": "GENERATE_FROM_FORMAL_COMPONENT",
+      "after_disposition": "DEFERRED",
       "p3_1_qualification": "DEFERRED_INSUFFICIENT_EVIDENCE"
     },
-    "required_regression": "direct-identity cross-layer disposition consistency validation; synthetic PURLIN formal-generation upgrade must be rejected",
+    "review_evidence": {
+      "changed_files": 6,
+      "purlin_corrected": "7/7",
+      "cross_layer_direct_identity_conflicts": 0,
+      "new_regression": "EXPECTED_REJECTION / MASTER_SCOPE_DISPOSITION_CONFLICT",
+      "accounting": "11/11 families / 40/40 variants / 365/365 instances",
+      "canonical_hard_fail_count": 0,
+      "existing_negative_fixtures": "5/5 EXPECTED_REJECTION",
+      "deterministic_regeneration_stable_serialization": "PASS",
+      "p2_authoritative_numeric_transform_usage": 0,
+      "protected_layers": "UNCHANGED",
+      "blender_invocations": 0,
+      "blend_files_created": 0
+    },
     "protected_layers": [
       "P2 frozen baseline",
       "P3.0 canonical Registry / identity",
@@ -80,21 +92,12 @@
       "P3.2 canonical assembly foundation",
       "P3.3 DoD",
       "T-018 PR #3 engineering branch"
-    ],
-    "execution_constraints": [
-      "No Blender / no .blend",
-      "Do not create PURLIN Master",
-      "Do not invent PURLIN dimensions or end conditions",
-      "Do not modify P3.1/P3.2 canonical layers",
-      "Do not modify T-018 PR #3",
-      "Do not add a sixth P3.3 Hard Fail",
-      "Stop if conflicts beyond the known 7 direct-identity PURLIN records are discovered"
     ]
   },
   "paused_task": {
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001",
-    "status": "STOP / REVIEW HOLD / UPSTREAM CORRECTION REQUIRED",
+    "status": "STOP / REVIEW HOLD / UPSTREAM CORRECTION AWAITING MERGE",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001.md",
     "github_pr_number": 3,
     "github_visible_head_branch": "codex/t-018",
@@ -116,7 +119,7 @@
   "last_completed_task": {
     "id": "T-017",
     "engineering_id": "P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001",
-    "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-050 / CORRECTIVE FOLLOW-UP REQUIRED",
+    "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-050 / CORRECTIVE FOLLOW-UP IN T-019",
     "github_pr_number": 2,
     "reviewed_head_sha": "f117cb98da713e5279174248076421caa9d9e6f4",
     "merge_commit": "1095440af761fc95cc18d0ce01523a097fc8ce5f",
@@ -145,7 +148,7 @@
     "p3_3_foundational_readiness": "PASS"
   },
   "p3_3": {
-    "status": "DOD LOCKED / D-047 / D-048 PIPELINE APPROVED / T-019 EXECUTION AUTHORIZED D-054 / T-018 STOP HOLD",
+    "status": "DOD LOCKED / D-047 / D-048 PIPELINE APPROVED / T-019 STRUCTURAL REVIEW PASS / T-018 STOP HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V001",
@@ -154,7 +157,7 @@
     "engineering_planning_authorized": true,
     "engineering_execution_authorized": true,
     "t017": {
-      "status": "CLOSED / D-050 / CORRECTIVE FOLLOW-UP REQUIRED",
+      "status": "CLOSED / D-050 / CORRECTIVE FOLLOW-UP IN T-019",
       "conflict": "7 PURLIN instances marked GENERATE_FROM_FORMAL_COMPONENT despite P3.1 CMP-PURLIN-001 deferred qualification"
     },
     "t018": {
@@ -162,7 +165,9 @@
       "github_pr_number": 3
     },
     "t019": {
-      "status": "EXECUTION AUTHORIZED / D-054 / CODEX CLOUD READY",
+      "status": "STRUCTURAL REVIEW PASS / PR #4 / AWAITING PRODUCT OWNER APPROVAL",
+      "github_pr_number": 4,
+      "github_visible_head_sha": "91723a7a2b3c3ca78473bba3cb344450e43fbb3f",
       "task_contract": "docs/tasks/T-019_P3_3_UPSTREAM_DISPOSITION_CONSISTENCY_CORRECTION_V001.md"
     },
     "remaining_gate_work_after_t018_if_pass": [
@@ -191,14 +196,14 @@
   "latest_material_decision": {
     "id": "D-054",
     "date": "2026-09-16",
-    "decision": "Product Owner explicitly authorized start of T-019 under the locked D-053 Task Contract. T-019 may execute in Codex Cloud as a separate task/PR with no Blender. This authorization does not approve T-019, unlock T-018, authorize any merge, or permit changes to T-018 PR #3."
+    "decision": "Product Owner explicitly authorized start of T-019 under the locked D-053 Task Contract. T-019 engineering has since passed formal structural review; separate Product Owner approval and merge authorization are now required."
   },
-  "next_action": "Execute T-019 in Codex Cloud from the latest canonical main. Implement only the locked upstream disposition consistency correction and regression validation. After the first internal engineering commit, use Codex UI Create PR to publish exactly one independent T-019 PR. Return to ChatGPT for formal review. Do not merge and do not touch T-018 PR #3.",
+  "next_action": "Await Product Owner approval of T-019 and explicit authorization to merge PR #4. Do not merge until authorized. After merge, verify corrected T-017 canonical outputs on main, then return to the original T-018 Codex task and update the same PR #3 from latest main before addressing its remaining review findings.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v040",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R096 / T-019 EXECUTION AUTHORIZED"
+    "refresh_status": "STALE / TARGET R097 / T-019 STRUCTURAL REVIEW PASS"
   }
 }
