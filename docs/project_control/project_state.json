@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R084",
+  "state_revision": "R085",
   "last_updated": "2026-09-16",
-  "session_status": "ACTIVE / P3.3_DOD_LOCKED / ENGINEERING_PLANNING_AUTHORIZED / GITHUB_ACTIONS_BLENDER_PIPELINE_APPROVED / CLOUD_MODE_ACTIVE",
+  "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-017_CONTRACT_LOCKED / AWAITING_EXECUTION_AUTHORIZATION / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,15 +17,15 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / ENGINEERING PLANNING AUTHORIZED / GITHUB ACTIONS BLENDER PIPELINE APPROVED / NO ACTIVE TASK",
+    "status": "DOD LOCKED / T-017 CONTRACT LOCKED / AWAITING EXECUTION AUTHORIZATION",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / ENGINEERING PLANNING AUTHORIZED"
+      "P3.3": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 CONTRACT LOCKED / ENGINEERING EXECUTION NOT AUTHORIZED"
     }
   },
-  "decision_required": false,
+  "decision_required": true,
   "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
@@ -70,9 +70,21 @@
       "next_action": "Define and Product-Owner-approve P3.3 Definition of Done",
       "local_sync_required_before_mac_shutdown": true
     },
-    "active_window_note": "Cloud Mode active. P3.3 DoD D-047 and scripted Blender execution pipeline D-048/RC-017 are approved. Each engineering task must still be classified before execution; interactive/local-only DoD items remain pending until genuinely executed in an approved environment."
+    "active_window_note": "Cloud Mode active. T-017 is classified CLOUD_EXECUTABLE and requires no Blender or Local Mac. One task = one branch = one PR applies once Product Owner explicitly authorizes execution."
   },
-  "current_task": null,
+  "current_task": {
+    "id": "T-017",
+    "engineering_id": "P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001",
+    "name": "整殿输入基线与 Assembly Graph 基础工程",
+    "status": "CONTRACT LOCKED / READY FOR EXECUTION / NOT STARTED / EXECUTION NOT AUTHORIZED",
+    "task_contract": "docs/tasks/T-017_P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001.md",
+    "cloud_mode_classification": "CLOUD_EXECUTABLE",
+    "think_level": "MEDIUM",
+    "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
+    "executor": "Codex Cloud",
+    "blender_required": false,
+    "execution_authorized": false
+  },
   "current_case": {"name": "平遥镇国寺万佛殿", "selection_status": "LOCKED"},
   "p2_closure": {
     "status": "CLOSED / APPROVED / FROZEN ENGINEERING BASELINE",
@@ -127,7 +139,7 @@
     ]
   },
   "p3_3": {
-    "status": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / ENGINEERING PLANNING AUTHORIZED",
+    "status": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 CONTRACT LOCKED / AWAITING EXECUTION AUTHORIZATION",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "entry_decision_id": "D-046",
@@ -136,14 +148,21 @@
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md",
     "engineering_planning_authorized": true,
     "engineering_execution_authorized": false,
-    "current_task": null,
+    "current_task": {
+      "id": "T-017",
+      "engineering_id": "P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001",
+      "contract_status": "LOCKED / READY / NOT STARTED / EXECUTION NOT AUTHORIZED",
+      "cloud_mode_classification": "CLOUD_EXECUTABLE",
+      "task_contract": "docs/tasks/T-017_P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001.md"
+    },
     "blender_execution_workflow": {
       "decision_id": "D-048",
       "rule_id": "RC-017",
       "status": "APPROVED / ACTIVE",
       "flow": "Codex Cloud generator/validator -> GitHub Actions headless Blender -> GitHub outputs/validation evidence -> ChatGPT review -> Local Mac only for genuinely interactive/final inspection",
       "github_actions_equivalent_execution_scope": "SCRIPTED / HEADLESS / DETERMINISTIC BLENDER GENERATION AND VALIDATION",
-      "local_mac_preserved_scope": "INTERACTIVE INSPECTION / LOCAL-ONLY EVIDENCE / FINAL LOCAL COMPATIBILITY WHEN REQUIRED"
+      "local_mac_preserved_scope": "INTERACTIVE INSPECTION / LOCAL-ONLY EVIDENCE / FINAL LOCAL COMPATIBILITY WHEN REQUIRED",
+      "t017_usage": "NOT USED / T-017 REQUIRES NO BLENDER"
     },
     "hard_fails": [
       "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
@@ -156,7 +175,7 @@
   },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
-    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 SUCCESSFUL REUSE / LONG-TERM EVALUATION PENDING"
+    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 SUCCESSFUL REUSE / T017 CONTRACT LOCKED / LONG-TERM EVALUATION PENDING"
   },
   "visual_review_workflow": {
     "rule_id": "RC-015",
@@ -175,15 +194,15 @@
   "latest_material_decision": {
     "id": "D-048",
     "date": "2026-09-16",
-    "decision": "Product Owner approved the P3.3 scripted Blender execution chain: Codex Cloud writes generators/validators, GitHub Actions runs deterministic headless Blender, GitHub records outputs and evidence, ChatGPT reviews committed evidence, and Local Mac is reserved for genuinely interactive or local-only checks. This approves the execution environment, not T-017 execution."
+    "decision": "Product Owner approved the P3.3 scripted Blender execution chain. T-017 Task Contract was subsequently created and locked as task-control state without consuming a separate Decision ID; execution remains unauthorized."
   },
-  "next_action": "Create and lock the T-017 Task Contract for P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001, classify it CLOUD_EXECUTABLE, then obtain Product Owner execution authorization before starting Codex Cloud engineering.",
+  "next_action": "Obtain explicit Product Owner authorization to start T-017. Only then launch Codex Cloud on a dedicated T-017 branch/PR; do not run Blender for T-017.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v030",
+    "visualization_version": "v031",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE / R082 PRE-D047-D048 / REFRESH AFTER T-017 CONTRACT STATE IS LOCKED"
+    "refresh_status": "REFRESH REQUIRED / TARGET R085 T-017 CONTRACT LOCKED"
   },
   "daily_closing_audit": {
     "date": "2026-09-15",
@@ -192,6 +211,6 @@
     "checked": ["project_state", "acceptance_matrix", "decision_log", "execution_log", "governance", "rules_change_log", "dashboard", "phase_archive_applicability", "RC-014_cloud_mode", "PR_1_merge"],
     "known_exceptions": [],
     "phase_archive_action": "NONE / P3 ACTIVE",
-    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R084 / D-048 on 2026-09-16."
+    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R085 T-017 contract state on 2026-09-16."
   }
 }
