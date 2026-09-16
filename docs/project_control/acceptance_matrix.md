@@ -16,7 +16,7 @@
 ## P1｜选题取证｜CLOSED / APPROVED 2026-09-12
 
 | Gate | 最终状态 | 关键证据 / 限制 |
-|---|---|---|---|
+|---|---|---|
 | P1.0｜选题标准锁定 | **PASS** | 五项加权标准锁定。 |
 | P1.1｜候选案例比较与定选 | **PASS** | 山西平遥镇国寺万佛殿正式定选。 |
 | P1.2｜正式证据包建立 | **PASS** | `SRC-ZG-WF-001` 完整精细测绘报告直接核读；Gate Review 10/10 PASS。 |
@@ -46,7 +46,7 @@
 | P3.0｜Component Ontology & Registry | 构件本体、Naming/ID、Registry、P2 语义迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；D-031。 |
 | P3.1｜Component Master & Variant Library | 建立 evidence-qualified canonical Master / Variant / review / Registry | **PASS / APPROVED / CLOSED** | DoD 9/9；6/6 Master Approved；D-040。 |
 | P3.2｜构件组合关系模型 | 建立构件资格、承托/连接/定位/重复/从属、接口、参数传递、组合单元、重建验证 | **PASS / APPROVED / CLOSED** | DoD 9/9；canonical Hard Fail=0；T-015 / D-042；T-016 / D-045；Gate closure D-046。 |
-| P3.3｜构件驱动整殿重建 | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **ACTIVE / T-017 PASS / D-050 / NEXT ENGINEERING TASK REQUIRED** | T-017 已完成 DoD-01～04 的基础工程与 DoD-07/08 的部分验证基础；P3.3 尚未 Gate PASS。 |
+| P3.3｜构件驱动整殿重建 | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **ACTIVE / T-017 PASS / T-019 PASS / T-018 RESUME READY** | T-019 已修正 T-017 与 P3.1 的 PURLIN disposition 冲突；T-018 仍需完成 formal geometry、graph-derived placement 与 GitHub Actions 证据链，P3.3 尚未 Gate PASS。 |
 
 **P3 Gate Progress：3 / 4。**
 
@@ -132,4 +132,27 @@ RC-014 Cloud Mode 中，每个后续工程任务必须先分类为 `CLOUD_EXECUT
 - Deterministic regeneration / stable serialization PASS；protected inputs unchanged；Blender invocations=0；`.blend` created=0。
 - Product Owner：**APPROVED / D-050**；T-017 CLOSED。
 
-T-017 的关闭只证明 P3.3 的输入、参数绑定、语义 accounting、Assembly Graph 与基础验证体系成立；**不等于 P3.3 Gate PASS**。后续仍需完成至少 DoD-05 确定性整殿生成、DoD-06 空间/几何/结构一致性、DoD-08 building-parameter mutation/rebuild 的正式执行证据，以及 DoD-09 independent rebuild / final Gate Evidence Package。
+T-017 的关闭只证明 P3.3 的输入、参数绑定、语义 accounting、Assembly Graph 与基础验证体系成立；**不等于 P3.3 Gate PASS**。
+
+### T-019｜上游 Disposition 一致性修正｜PASS / APPROVED / CLOSED / D-055
+
+- GitHub PR：`#4`；reviewed head：`91723a7a2b3c3ca78473bba3cb344450e43fbb3f`；merge commit：`b9803fb416e375fd2f94f5d83df5fab73fe00063`。
+- 已知冲突修正：7/7 `CMP-PURLIN-001` legacy instances 在 Scope Accounting 与 Assembly Graph 中均从 `GENERATE_FROM_FORMAL_COMPONENT` 修正为 `DEFERRED`。
+- P3.1 qualification 保持 `DEFERRED_INSUFFICIENT_EVIDENCE`，未创建 PURLIN Master，未补齐未知截面、长度或端部条件。
+- direct-identity qualification 通过 `candidate_id` / `source_registry_id` 解析；family-only silent upgrade 被禁止。
+- Cross-layer conflict count：0；synthetic regression：`MASTER_SCOPE_DISPOSITION_CONFLICT / EXPECTED_REJECTION`。
+- 11/11 families、40/40 variants、365/365 instances 保持完整；canonical P3.3 Hard Fail=0；existing 5/5 negatives expected rejection；deterministic regeneration / stable serialization PASS。
+- P3.1 / P3.2 canonical layers、T-018 PR #3、Blender/.blend：UNCHANGED。
+- T-019 merge 只解除 T-018 的 `UPSTREAM_PROTECTED_INPUT_CONFLICT`；**不等于 T-018 PASS，也不等于 P3.3 Gate PASS**。
+
+### T-018｜整殿确定性生成与参数变更验证｜RESUME READY / REVIEW CORRECTIONS STILL REQUIRED
+
+T-019 merge 后，上游 canonical disposition 冲突已解除。T-018 可以回到原 Codex task 并更新同一个 PR #3，但仍须完成以下正式修正后重新验收：
+
+1. formal component geometry 不得以 generic primitive cube 代替已有 approved formal generation；
+2. placement 必须机械来源于 authoritative Assembly Graph / parameters / rules，而不是 synthetic hard-coded family layout；
+3. GitHub Actions formal evidence 必须明确绑定 canonical PR head SHA；
+4. Blender 4.5.13 version check 必须接受合法 `LTS` suffix，同时仍锁定 4.5.13；
+5. 修正后重新运行 Run A/B/C/D、machine validation、mutation/restore、review PNG 与正式 Actions evidence。
+
+P3.3 后续仍需完成 DoD-05、DoD-06、DoD-08 的正式整殿执行证据以及 DoD-09 independent rebuild / final Gate Evidence Package。
