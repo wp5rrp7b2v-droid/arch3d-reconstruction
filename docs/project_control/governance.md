@@ -139,6 +139,22 @@ git-proxy-auto ls-remote origin refs/heads/main
 4. 结构审核与视觉审核分开记录；
 5. Product Owner 保留最终批准权。
 
+### 4.8 P3.3 GitHub Actions Blender Execution｜P3.3 云端 Blender 执行规则
+
+P3.3 中凡能够脚本化、无交互、可确定性重放的 Blender 生成与验证，默认采用以下正式链路：
+
+`Codex Cloud writes/updates generator → GitHub Actions runs headless Blender → GitHub records outputs and validation evidence → ChatGPT reviews committed evidence → Local Mac only when interactive/final inspection is genuinely required`
+
+1. **Codex Cloud**：负责 generator、validator、workflow 调整及机器测试，不把 Codex Cloud 本身视为 Blender runtime；
+2. **GitHub Actions**：作为脚本化 Blender 的默认 headless executor，负责 clean-state generation、save/reopen、mutation、canonical rebuild、render/review asset、manifest/hash/validation 等可自动化步骤；
+3. **GitHub**：保存 commit、workflow run、review PNG、机器 validation 与必要 artifact，形成可追溯证据链；
+4. **ChatGPT**：按 RC-015 实际调阅已提交 review images，并审核机器结果、证据边界和 Task Contract 符合性；
+5. **Local Mac**：仅保留无法被 approved headless pipeline 等价替代的交互式检查、手动旋转/遮挡/拓扑检查或最终本地兼容性复核；
+6. **Cloud Mode 等价规则**：在 RC-014 有效期内，GitHub Actions 被批准作为“脚本化 Blender 生成与验证”的 equivalent execution/validation environment，因此这类工作不再因本地 Mac 暂时不可用而自动 BLOCKED；
+7. **不得越权替代**：若某一 DoD/Task Contract 明确要求交互式 Blender 检查或 local-only binary evidence，仍必须标为 `LOCAL_MAC_REQUIRED / PENDING`，不得用 GitHub Actions 结果伪造本地 PASS；
+8. **版本与重现性**：每个 Blender Task Contract 必须明确 runner、Blender version、formal inputs、output/evidence、mutation/rebuild 与 failure criteria；未经批准不得静默切换 Blender 版本或历史输入；
+9. **审批边界**：本规则批准执行环境与职责分工，不自动授权任何具体 T-### 工程任务，也不自动改变 Gate PASS 状态。
+
 ## 5. Checkpoint 的职责
 
 Checkpoint 不负责首次落档，只负责一致性核对、压缩、Phase Closure 与 Dashboard 刷新。
@@ -186,7 +202,7 @@ Checkpoint 不负责首次落档，只负责一致性核对、压缩、Phase Clo
 - **Product Owner**：目标、重大决策、Gate Approval；
 - **ChatGPT**：项目控制、方案、验证设计、审核、Change Proposal；
 - **Codex**：按明确 Task Contract 做工程执行；
-- **GitHub Actions / Cloud**：自动化与云执行节点；
+- **GitHub Actions / Cloud**：自动化与云执行节点；P3.3 中 GitHub Actions 为脚本化 headless Blender 默认 executor；
 - **GitHub private repo**：正式提交状态、版本历史、备份和跨环境访问层。
 
 ## 10. Scope / Non-goals｜当前 P3
@@ -196,10 +212,11 @@ Checkpoint 不负责首次落档，只负责一致性核对、压缩、Phase Clo
 当前边界：
 
 - P3.0、P3.1、P3.2 已关闭；P3.2 Gate Review 9/9 PASS、canonical Hard Fail=0，并由 D-046 正式批准关闭；P3 Gate Progress=3/4；
-- P3.3 `构件驱动整殿重建` 已 UNLOCKED / ENTERED，但当前仅进入 **DoD 定义阶段**；P3.3 DoD 获 Product Owner 批准前不得创建 P3.3 工程 Task Contract 或启动整殿生产；
+- P3.3 `构件驱动整殿重建` 的 `Definition of Done V001` 已由 D-047 正式批准并锁定；当前已进入工程规划阶段，但尚无 active T-###，任何具体工程执行仍需 Product Owner 单独授权；
+- D-048 / RC-017 已批准 P3.3 的 Blender 执行链：Codex Cloud 编写 generator，GitHub Actions 执行脚本化 headless Blender，GitHub 保存证据，ChatGPT 审核，Local Mac 仅承担真正需要交互式/最终本地检查的项目；
 - P3.3 必须继承 P3.2 的五类基础关系、接口/定位、Assembly Unit、runtime instance、building-level parameter、Validator 与 Hard Fail，不重新发明基础组合机制；
 - P1/P2/P3.1/P3.2 的 evidence boundary 持续有效，UNKNOWN、Proxy、Control、Envelope、Deferred 不得因整殿重建而静默历史化；
 - 六椽栿 `canonical_reference_length_mm=1000` 仅为非历史 reference specimen；在独立 approved building-specific full length 出现前，实际全长几何继续 BLOCKED；
 - Z-006 继续 UNKNOWN/null/DO_NOT_LOCK；Z-006-RC-01 保持 replaceable REASONABLE_COMPLETION；具体榫卯、隐藏连接、45°转角、隐角梁继续保持当前证据边界；
-- 未经验证或未经 Task Contract 授权的 AI / Cloud / Blender 能力不得直接视为正式生产能力；
+- GitHub Actions 可替代脚本化 Blender 的执行环境，但不得替代 Task Contract 明确要求的交互式 `LOCAL_MAC_REQUIRED` 证据；
 - 不以视觉完整性替代历史证据，不因构件系统可组合而宣称“完全还原963原貌”。
