@@ -46,7 +46,7 @@
 | P3.0｜Component Ontology & Registry | 构件本体、Naming/ID、Registry、P2 语义迁移 | **PASS / APPROVED / CLOSED** | DoD 9/9；11/40/365 全量迁移；D-031。 |
 | P3.1｜Component Master & Variant Library | 建立 evidence-qualified canonical Master / Variant / review / Registry | **PASS / APPROVED / CLOSED** | DoD 9/9；6/6 Master Approved；D-040。 |
 | P3.2｜构件组合关系模型 | 建立构件资格、承托/连接/定位/重复/从属、接口、参数传递、组合单元、重建验证 | **PASS / APPROVED / CLOSED** | DoD 9/9；canonical Hard Fail=0；T-015 / D-042；T-016 / D-045；Gate closure D-046。 |
-| P3.3｜构件驱动整殿重建 | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / ENGINEERING PLANNING AUTHORIZED** | DoD V001 已锁定；Current Task=None；任何工程执行仍需单独 Task Contract 与 Product Owner 授权。 |
+| P3.3｜构件驱动整殿重建 | 用构件库 + 构件组合关系 + 建筑参数重组万佛殿 | **ACTIVE / T-017 PASS / D-050 / NEXT ENGINEERING TASK REQUIRED** | T-017 已完成 DoD-01～04 的基础工程与 DoD-07/08 的部分验证基础；P3.3 尚未 Gate PASS。 |
 
 **P3 Gate Progress：3 / 4。**
 
@@ -118,4 +118,18 @@ Gate Hard Fail：
 - `SILENT_BUILDING_OMISSION`
 - `BROKEN_COMPONENT_IDENTITY`
 
-RC-014 Cloud Mode 中，每个后续工程任务必须先分类为 `CLOUD_EXECUTABLE`、`DESIGN_ONLY` 或 `LOCAL_MAC_REQUIRED`。DoD 批准只解锁工程规划与 Task Contract 创建；**当前无活动工程任务，T-017 尚未执行授权。**
+RC-014 Cloud Mode 中，每个后续工程任务必须先分类为 `CLOUD_EXECUTABLE`、`DESIGN_ONLY` 或 `LOCAL_MAC_REQUIRED`。
+
+### T-017｜整殿输入基线与 Assembly Graph 基础工程｜PASS / APPROVED / CLOSED / D-050
+
+- GitHub PR：`#2`；reviewed head：`f117cb98da713e5279174248076421caa9d9e6f4`；merge commit：`1095440af761fc95cc18d0ce01523a097fc8ce5f`。
+- 五个正式机器输出：**5 / 5 PASS**。
+- Scope accounting：**11 / 11 families；40 / 40 variants；365 / 365 instances**；unexplained omission=0；orphan=0。
+- Input Baseline：四类输入分类完整；P2 numeric world transforms 明确为 `PROHIBITED_AS_GENERATIVE_INPUT`。
+- Parameter Bindings：参数 → evidence/time layer → building role → graph node / relationship / rule dependency 显式可追溯。
+- Assembly Graph：`BUILDING_ROOT → ORG-BUILDING → assembly organization → runtime nodes`；P3.2 foundation traceability PASS。
+- Canonical Hard Fail：**0**；5/5 synthetic negative fixtures expected rejection；HF-01 真实注入六椽栿 1000mm reference leakage，HF-03 真实注入 P2 location/rotation/scale。
+- Deterministic regeneration / stable serialization PASS；protected inputs unchanged；Blender invocations=0；`.blend` created=0。
+- Product Owner：**APPROVED / D-050**；T-017 CLOSED。
+
+T-017 的关闭只证明 P3.3 的输入、参数绑定、语义 accounting、Assembly Graph 与基础验证体系成立；**不等于 P3.3 Gate PASS**。后续仍需完成至少 DoD-05 确定性整殿生成、DoD-06 空间/几何/结构一致性、DoD-08 building-parameter mutation/rebuild 的正式执行证据，以及 DoD-09 independent rebuild / final Gate Evidence Package。
