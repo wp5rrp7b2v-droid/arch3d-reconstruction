@@ -1,0 +1,14 @@
+{
+  "description": "Inject an actual P2 numeric world transform into a runtime node's authoritative P3.3 placement path.",
+  "expected": "REJECT",
+  "expected_hard_fail": "BAKED_MANUAL_BUILDING",
+  "mutation": {
+    "injected_p2_transform": {
+      "location_mm": [-5921.1001, -5355.0, 3635.6626],
+      "rotation_euler_rad": [1.35544, 0.0, -1.5708],
+      "scale": [1.0, 1.0, 1.0]
+    },
+    "operation": "inject_p2_world_transform_as_authoritative_placement",
+    "source": "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json#/instances/0/transform"
+  }
+}

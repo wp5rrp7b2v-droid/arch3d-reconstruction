@@ -1,0 +1,9 @@
+{
+  "description": "Point one accounted instance at an identity absent from the P3.0 registry.",
+  "expected": "REJECT",
+  "expected_hard_fail": "BROKEN_COMPONENT_IDENTITY",
+  "mutation": {
+    "component_id": "CMP-NOT-IN-REGISTRY",
+    "operation": "replace_component_identity"
+  }
+}

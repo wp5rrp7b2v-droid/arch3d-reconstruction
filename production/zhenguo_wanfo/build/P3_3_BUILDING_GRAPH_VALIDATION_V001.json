@@ -1,0 +1,72 @@
+{
+  "blend_files_created": 0,
+  "blender_invocations": 0,
+  "canonical_failures": [],
+  "canonical_hard_fail_count": 0,
+  "negative_fixtures": [
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/BAKED_MANUAL_BUILDING.json",
+      "hard_fail": "BAKED_MANUAL_BUILDING"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/BROKEN_COMPONENT_IDENTITY.json",
+      "hard_fail": "BROKEN_COMPONENT_IDENTITY"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/REFERENCE_LENGTH_LEAKS_INTO_BUILDING.json",
+      "hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/SILENT_BUILDING_OMISSION.json",
+      "hard_fail": "SILENT_BUILDING_OMISSION"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/SILENT_HISTORICIZATION.json",
+      "hard_fail": "SILENT_HISTORICIZATION"
+    }
+  ],
+  "status": "PASS",
+  "task": "T-017",
+  "validations": {
+    "accounting": {
+      "families_accounted": 11,
+      "families_expected": 11,
+      "instances_accounted": 365,
+      "instances_expected": 365,
+      "orphan_identities": 0,
+      "unexplained_omissions": 0,
+      "variants_accounted": 40,
+      "variants_expected": 40
+    },
+    "building_organization": "PASS",
+    "deterministic_regeneration_stable_serialization": "PASS",
+    "evidence_boundary": "PASS",
+    "identity_orphan": "PASS",
+    "input_baseline": "PASS",
+    "p3_2_traceability": "PASS",
+    "parameter_provenance_bindings": "PASS",
+    "prohibited_transform_scan": {
+      "authoritative_generation_usage_count": 0,
+      "status": "PASS"
+    },
+    "protected_inputs_unchanged": true,
+    "relationship_types": "5/5 PASS",
+    "required_outputs": {
+      "expected": 5,
+      "machine_readable": true,
+      "present": 5,
+      "status": "PASS"
+    }
+  },
+  "version": "V001"
+}

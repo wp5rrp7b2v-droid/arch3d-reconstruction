@@ -1,0 +1,2487 @@
+{
+  "bindings": [
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "building_role": "现状形变校核",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DEF-001",
+      "parameter_key": "bracket_inward_outward_vertical_mm",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "unit": "mm",
+      "value": [
+        0,
+        66
+      ]
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "building_role": "现状形变校核",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DEF-002",
+      "parameter_key": "bracket_inward_outward_parallel_mm",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "unit": "mm",
+      "value": [
+        0,
+        39
+      ]
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "building_role": "现状形变校核",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DEF-003",
+      "parameter_key": "bracket_settlement_mm",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "unit": "mm",
+      "value": [
+        49,
+        126
+      ]
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "building_role": "现状形变校核",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DEF-004",
+      "parameter_key": "roof_purlin_relative_settlement_mm",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "unit": "mm",
+      "value": [
+        0,
+        79
+      ]
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "building_role": "现状形变校核",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DEF-005",
+      "parameter_key": "purlin_inward_outward_mm",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "unit": "mm",
+      "value": [
+        0,
+        34
+      ]
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "building_role": "现状形变校核",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DEF-006",
+      "parameter_key": "purlin_roll_mm",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "unit": "mm",
+      "value": [
+        10,
+        60
+      ]
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "building_role": "现状形变校核",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DEF-007",
+      "parameter_key": "max_six_chuanfu_deflection_mm",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "unit": "mm",
+      "value": 56
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "CONFIRMED",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-001",
+      "parameter_key": "column_head_puzuo_type",
+      "production_use": "BASE_TOPOLOGY",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PLUS_SUPPORT",
+      "time_layer": "observed_current_topology",
+      "unit": null,
+      "value": "七铺作、双杪双下昂"
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "CONFIRMED",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-002",
+      "parameter_key": "intercolumn_puzuo_type",
+      "production_use": "BASE_TOPOLOGY",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PLUS_SUPPORT",
+      "time_layer": "observed_current_topology",
+      "unit": null,
+      "value": "五铺作、双杪偷心"
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-101",
+      "parameter_key": "column_ludou_top_width_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 475.1
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-102",
+      "parameter_key": "column_ludou_bottom_width_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 327.1
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-103",
+      "parameter_key": "column_ludou_top_depth_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 446.3
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-104",
+      "parameter_key": "column_ludou_bottom_depth_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 305.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-105",
+      "parameter_key": "bottom_long_kai_dou_top_width_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 255.56
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-106",
+      "parameter_key": "bottom_long_kai_dou_bottom_width_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 178.56
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-107",
+      "parameter_key": "single_long_kai_dou_top_width_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 236.2
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-108",
+      "parameter_key": "cross_dou_top_width_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 255.2
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-109",
+      "parameter_key": "cross_dou_top_depth_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 240.0
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-110",
+      "parameter_key": "first_second_jump_total_fen",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 48
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-111",
+      "parameter_key": "third_fourth_jump_total_fen",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 47
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-112",
+      "parameter_key": "lower_ang_run_fen",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 47
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-113",
+      "parameter_key": "lower_ang_rise_fen",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 21
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "building_role": "斗栱拓扑骨架",
+      "classification": "UNKNOWN",
+      "dependency_role": "NOT_USED_IN_P2_2",
+      "historical_claim_upgrade": false,
+      "parameter_id": "DG-114",
+      "parameter_key": "small_dou_unified_design_rule",
+      "production_use": "DO_NOT_LOCK",
+      "replaceable": true,
+      "source_ids": [
+        "P1_2_DIRECT_PAGE_REVIEW_V001",
+        "P1_3_FULL_CRITICAL_PARAMETER_CLASSIFICATION_V001"
+      ],
+      "source_layer": "A_BRIDGE_UNRESOLVED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": null,
+      "value": null
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "building_role": "屋架水平控制",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "FR-001",
+      "parameter_key": "frame_depth_1_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 1747.6
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "building_role": "屋架水平控制",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "FR-002",
+      "parameter_key": "frame_depth_2_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 1757.2
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "building_role": "屋架水平控制",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "FR-003",
+      "parameter_key": "frame_depth_3_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 1841
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "building_role": "屋架水平控制",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "FR-004",
+      "parameter_key": "frame_depth_1_design_mm",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "mm",
+      "value": 1759.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "building_role": "屋架水平控制",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "FR-005",
+      "parameter_key": "frame_depth_2_design_mm",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "mm",
+      "value": 1759.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "building_role": "屋架水平控制",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "FR-006",
+      "parameter_key": "frame_depth_3_design_mm",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "mm",
+      "value": 1836
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "building_role": "屋架水平控制",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "FR-007",
+      "parameter_key": "roof_horizontal_sequence_fen",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": [
+        120,
+        115,
+        210
+      ]
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-EVIDENCE-METADATA"
+        ]
+      },
+      "building_role": "构件历史元数据",
+      "classification": "CONFIRMED",
+      "dependency_role": "METADATA_ONLY",
+      "historical_claim_upgrade": false,
+      "parameter_id": "HIS-001",
+      "parameter_key": "repair_events_confirmed",
+      "production_use": "HISTORICAL_TIMELINE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "historical_events",
+      "unit": null,
+      "value": "1151 / 1540 / 1752前后 / 1811–1816 / 1895–1904 / 1949后局部维修"
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-EVIDENCE-METADATA"
+        ]
+      },
+      "building_role": "构件历史元数据",
+      "classification": "UNKNOWN",
+      "dependency_role": "METADATA_ONLY",
+      "historical_claim_upgrade": false,
+      "parameter_id": "HIS-002",
+      "parameter_key": "component_level_963_originality",
+      "production_use": "PER_COMPONENT_METADATA_REQUIRED",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001",
+        "P1_3_HIGH_RISK_CLASSIFICATION_V001"
+      ],
+      "source_layer": "DIRECT_GAP",
+      "time_layer": "component_history",
+      "unit": null,
+      "value": null
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "building_role": "设计模数与主要构件比例",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "MOD-001",
+      "parameter_key": "yingzao_chi_mm",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "mm",
+      "value": 306
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "building_role": "设计模数与主要构件比例",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "MOD-002",
+      "parameter_key": "fen_mm",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "mm",
+      "value": 15.3
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "building_role": "设计模数与主要构件比例",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "MOD-003",
+      "parameter_key": "single_cai_width_fen",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 14
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "building_role": "设计模数与主要构件比例",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "MOD-004",
+      "parameter_key": "single_cai_thickness_fen",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 10
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "building_role": "设计模数与主要构件比例",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "MOD-005",
+      "parameter_key": "full_cai_height_fen",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 21
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "building_role": "设计模数与主要构件比例",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "MOD-006",
+      "parameter_key": "full_cai_height_mm",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "mm",
+      "value": 321.3
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "building_role": "屋顶山面控制几何",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "OUT-001",
+      "parameter_key": "gable_projection_east_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 1385
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "building_role": "屋顶山面控制几何",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "OUT-002",
+      "parameter_key": "gable_projection_west_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 1411
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "building_role": "屋顶山面控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "OUT-003",
+      "parameter_key": "gable_projection_design_fen",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 92
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "building_role": "屋顶山面控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "OUT-004",
+      "parameter_key": "rafter_head_to_column_center_mm",
+      "production_use": "PROVISIONAL_REFERENCE",
+      "replaceable": true,
+      "source_ids": [
+        "P1_2_CORE_EVIDENCE_BATCH_04",
+        "P1_2_PARAMETER_CANDIDATE_MATRIX_V002"
+      ],
+      "source_layer": "A_BRIDGE_VERIFIED",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 2677.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "building_role": "屋顶山面控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "OUT-005",
+      "parameter_key": "rafter_head_to_liaoyanfang_mm",
+      "production_use": "PROVISIONAL_REFERENCE",
+      "replaceable": true,
+      "source_ids": [
+        "P1_2_CORE_EVIDENCE_BATCH_04",
+        "P1_2_PARAMETER_CANDIDATE_MATRIX_V002"
+      ],
+      "source_layer": "A_BRIDGE_VERIFIED",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 1224
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "building_role": "屋顶山面控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "OUT-006",
+      "parameter_key": "bracket_outjump_mm",
+      "production_use": "PROVISIONAL_REFERENCE",
+      "replaceable": true,
+      "source_ids": [
+        "P1_2_CORE_EVIDENCE_BATCH_04",
+        "P1_2_PARAMETER_CANDIDATE_MATRIX_V002"
+      ],
+      "source_layer": "A_BRIDGE_VERIFIED",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 1453.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "CONFIRMED",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-001",
+      "parameter_key": "bay_count_front",
+      "production_use": "BASE_TOPOLOGY",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_current_topology",
+      "unit": null,
+      "value": 3
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "CONFIRMED",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-002",
+      "parameter_key": "bay_count_depth",
+      "production_use": "BASE_TOPOLOGY",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_current_topology",
+      "unit": null,
+      "value": 3
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-003",
+      "parameter_key": "front_center_bay_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 4481.3
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-004",
+      "parameter_key": "depth_center_bay_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 3676.8
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-005",
+      "parameter_key": "side_bay_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 3505.7
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-006",
+      "parameter_key": "overall_width_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 11492.7
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-007",
+      "parameter_key": "overall_depth_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 10688.2
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-008",
+      "parameter_key": "front_center_bay_design_chi",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "chi",
+      "value": 14.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-009",
+      "parameter_key": "depth_center_bay_design_chi",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "chi",
+      "value": 12
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-010",
+      "parameter_key": "side_bay_design_chi",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "chi",
+      "value": 11.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-011",
+      "parameter_key": "overall_width_design_mm",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "mm",
+      "value": 11475
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-012",
+      "parameter_key": "overall_depth_design_mm",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "mm",
+      "value": 10710
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "CONFIRMED",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-013",
+      "parameter_key": "perimeter_column_count",
+      "production_use": "BASE_TOPOLOGY",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_current_topology",
+      "unit": null,
+      "value": 12
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "building_role": "柱网与主要空间关系",
+      "classification": "CONFIRMED",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "PM-014",
+      "parameter_key": "interior_column_count",
+      "production_use": "BASE_TOPOLOGY",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_current_topology",
+      "unit": null,
+      "value": 0
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "building_role": "主体梁架",
+      "classification": "CONFIRMED",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "RF-001",
+      "parameter_key": "frame_system",
+      "production_use": "BASE_TOPOLOGY",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_current_topology",
+      "unit": null,
+      "value": "复合式六椽栿通檐用两柱、彻上露明"
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "building_role": "主体梁架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "RF-002",
+      "parameter_key": "lower_six_chuanfu_width_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 493.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "building_role": "主体梁架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "RF-003",
+      "parameter_key": "lower_six_chuanfu_tenon_thickness_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 375
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "building_role": "主体梁架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "RF-004",
+      "parameter_key": "lower_six_chuanfu_max_thickness_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 444
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "building_role": "主体梁架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "RF-005",
+      "parameter_key": "upper_six_chuanfu_width_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 334
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "building_role": "主体梁架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "RF-006",
+      "parameter_key": "upper_six_chuanfu_tenon_thickness_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 209
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "building_role": "主体梁架",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "RF-007",
+      "parameter_key": "upper_six_chuanfu_max_thickness_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 240.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-001",
+      "parameter_key": "rise_interval_A_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 383.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-002",
+      "parameter_key": "rise_interval_B_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 602.3
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-003",
+      "parameter_key": "rise_interval_C_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 1249.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-004",
+      "parameter_key": "rise_interval_A_design_fen",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 25
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-005",
+      "parameter_key": "rise_interval_B_design_fen",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 40
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-006",
+      "parameter_key": "rise_interval_C_design_fen",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 82
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-007",
+      "parameter_key": "eave_to_lower_purlin_rise_fen",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 88
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-008",
+      "parameter_key": "lower_to_upper_purlin_rise_fen",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 61
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-009",
+      "parameter_key": "upper_to_ridge_purlin_rise_fen",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 82
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "REASONABLE_COMPLETION",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-010",
+      "parameter_key": "total_roof_rise_fen",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "fen",
+      "value": 231
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "REASONABLE_COMPLETION",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-011",
+      "parameter_key": "total_roof_rise_candidate_mm",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "mm",
+      "value": 3534.3
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-012",
+      "parameter_key": "upper_purlin_drop_fen",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 20
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "building_role": "屋顶Z向控制几何",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "ROOF-013",
+      "parameter_key": "lower_purlin_additional_drop_fen",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "unit": "fen",
+      "value": 8
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "building_role": "柱与屋架绝对Z控制",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "Z-001",
+      "parameter_key": "column_diameter_observed_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 460
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "building_role": "柱与屋架绝对Z控制",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "Z-002",
+      "parameter_key": "column_diameter_design_mm",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "mm",
+      "value": 459
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "building_role": "柱与屋架绝对Z控制",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "Z-003",
+      "parameter_key": "corner_column_rise_valid_range_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": [
+        51,
+        68
+      ]
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "building_role": "柱与屋架绝对Z控制",
+      "classification": "CONFIRMED",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "Z-004",
+      "parameter_key": "corner_column_rise_mean_mm",
+      "production_use": "OBSERVED_REFERENCE",
+      "replaceable": false,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "unit": "mm",
+      "value": 59.5
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "building_role": "柱与屋架绝对Z控制",
+      "classification": "REASONABLE_COMPLETION",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "Z-005",
+      "parameter_key": "corner_column_rise_design_mm",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001"
+      ],
+      "source_layer": "REPORT_INFERRED_GUESS",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "mm",
+      "value": 61.2
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "building_role": "柱与屋架绝对Z控制",
+      "classification": "UNKNOWN",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "historical_claim_upgrade": false,
+      "parameter_id": "Z-006",
+      "parameter_key": "column_height_963_design_mm",
+      "production_use": "DO_NOT_LOCK",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001",
+        "P1_3_HIGH_RISK_CLASSIFICATION_V001"
+      ],
+      "source_layer": "UNKNOWN",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "mm",
+      "value": null
+    },
+    {
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "building_role": "柱与屋架绝对Z控制",
+      "classification": "REASONABLE_COMPLETION",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "historical_claim_upgrade": false,
+      "parameter_id": "Z-007",
+      "parameter_key": "global_z_datum",
+      "production_use": "PROJECT_COORDINATE_RULE",
+      "replaceable": true,
+      "source_ids": [
+        "SRC-ZG-WF-001",
+        "P1_3_HIGH_RISK_CLASSIFICATION_V001"
+      ],
+      "source_layer": "PROJECT_RULE",
+      "time_layer": "project_model_datum",
+      "unit": null,
+      "value": "Z = 0; abstract column-foot design plane"
+    },
+    {
+      "binding_targets": {
+        "depends_on": [
+          "MOD-006"
+        ],
+        "formula": "11 * MOD-006",
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "building_role": "柱与屋架绝对Z控制",
+      "classification": "REASONABLE_COMPLETION",
+      "dependency_role": "APPROVED_REPLACEABLE_RULE",
+      "historical_claim_boundary": "仅为reconstructed_963_candidate的可替换生产解析值，不是已证实的963年原设计柱高。",
+      "historical_claim_upgrade": false,
+      "parameter_id": "Z-006-RC-01",
+      "parameter_key": "column_height_963_design_mm",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "replaceable": true,
+      "source_ids": [
+        "E-018",
+        "HR-01A",
+        "D-023",
+        "D-023"
+      ],
+      "source_layer": "APPROVED_OVERRIDE",
+      "time_layer": "reconstructed_963_candidate",
+      "unit": "mm",
+      "value": 3534.3
+    }
+  ],
+  "mandatory_boundaries": {
+    "DG-114": "UNKNOWN / no unified small-dou historical specification claim",
+    "HIS-002": "component originality unknown",
+    "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
+    "Z-006-RC-01": "REASONABLE_COMPLETION / replaceable / D-023",
+    "canonical_reference_length_mm_usage": "NON_HISTORICAL_ENGINEERING_REFERENCE_ONLY",
+    "six_chuanfu_historical_full_length": null
+  },
+  "p3_2_validated_dependencies": [
+    {
+      "assembly_unit_id": "AU-COLUMN-GRID-001",
+      "boundary": "P3.2 validated representative dependency; observed reference remains observed reference.",
+      "parameter_id": "PM-005",
+      "relationship_type": "REPEAT",
+      "source": "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_RELATIONSHIP_GRAPH_V001.json"
+    },
+    {
+      "assembly_unit_id": "AU-COLUMN-LUDOU-001",
+      "boundary": "Approved replaceable candidate, not confirmed historical column height.",
+      "parameter_id": "Z-006-RC-01",
+      "relationship_type": "LOCATE",
+      "source": "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_RELATIONSHIP_GRAPH_V001.json"
+    }
+  ],
+  "status": "CANONICAL",
+  "task": "T-017",
+  "version": "V001"
+}
