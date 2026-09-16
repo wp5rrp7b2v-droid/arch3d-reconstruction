@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R087",
+  "state_revision": "R088",
   "last_updated": "2026-09-16",
-  "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-017_ENGINEERING_REPORTED_COMPLETE / GITHUB_PUBLICATION_BLOCKED / REVIEW_HOLD / CLOUD_MODE_ACTIVE",
+  "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-017_CORRECTIONS_REPORTED_COMPLETE / CORRECTION_PUBLICATION_BLOCKED / REVIEW_HOLD / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-017 ENGINEERING REPORTED COMPLETE / GITHUB PUBLICATION BLOCKED / REVIEW HOLD",
+    "status": "DOD LOCKED / T-017 CORRECTIONS REPORTED COMPLETE / CORRECTION PUBLICATION BLOCKED / REVIEW HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 EXECUTION AUTHORIZED / D-049 / REVIEW HOLD PENDING GITHUB PUBLICATION"
+      "P3.3": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 EXECUTION AUTHORIZED / D-049 / REVIEW HOLD PENDING CORRECTION PUBLICATION"
     }
   },
   "decision_required": false,
-  "blocker": "T-017 Codex Cloud reports internal commit bd0d375c29e5676def6084fcb014ecd283c704fc and PR handoff, but GitHub cannot resolve that commit, no T-017 PR is visible, and branch codex/t017-p3-3-building-input-assembly-graph-v001 remains identical to main at 87301b17fb9ac09681c4f118a2abe3e54808b526. Formal review is HOLD until the engineering commit is published to GitHub and a PR exists.",
+  "blocker": "Codex Cloud reports T-017 correction commit 4c0d6d9976ac4b1f8ce6305710d3a60cbe688fef and says PR #2 was updated, but GitHub cannot resolve that commit. PR #2 remains OPEN with one commit and head 578fb4b3cde151e3a83317359d1aa9bbc6c4bad1 on branch codex/-p3.3. Formal re-review remains HOLD until the correction commit is actually published to the existing PR #2.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -57,7 +57,7 @@
       "pr_head_sha": "14fd97fab03345f75ac138a004273058d8efc0b8",
       "merge_commit": "2528221a1ad08576878fc087e5e5474631a6be75",
       "scope_validation": "1 drill-only file added; no existing file modified; docs/project_control unchanged by drill; no production or P3.3 engineering file changed",
-      "verified_workflow": "GitHub main -> Codex Cloud checkout -> isolated cloud modification -> commit -> Codex UI Create PR -> ChatGPT GitHub review -> Product Owner authorized merge -> GitHub main",
+      "verified_workflow": "GitHub main -> Codex Cloud checkout -> isolated cloud modification -> PR publication -> ChatGPT GitHub review -> Product Owner authorized merge -> GitHub main",
       "operational_note": "Codex task container is not required to expose a conventional git remote or gh authentication. PR publication may occur through the Codex Cloud UI/platform handoff; GitHub main remains the canonical committed state."
     },
     "final_pre_cloud_snapshot": {
@@ -70,27 +70,29 @@
       "next_action": "Define and Product-Owner-approve P3.3 Definition of Done",
       "local_sync_required_before_mac_shutdown": true
     },
-    "active_window_note": "Cloud Mode active. T-017 engineering is reported complete inside Codex Cloud, but publication to GitHub has not completed. No local Mac or Blender is needed to resolve this blocker; publish the task changes through the Codex Cloud PR handoff, then resume GitHub review."
+    "active_window_note": "Cloud Mode active. T-017 correction engineering is reported complete inside Codex Cloud, but the correction commit has not reached GitHub PR #2. No local Mac or Blender is needed; publish the correction to the existing PR and then resume formal GitHub re-review."
   },
   "current_task": {
     "id": "T-017",
     "engineering_id": "P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001",
     "name": "整殿输入基线与 Assembly Graph 基础工程",
-    "status": "ENGINEERING REPORTED COMPLETE / GITHUB PUBLICATION MISSING / REVIEW HOLD",
+    "status": "CORRECTIONS REPORTED COMPLETE / GITHUB CORRECTION PUBLICATION MISSING / REVIEW HOLD",
     "task_contract": "docs/tasks/T-017_P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001.md",
     "cloud_mode_classification": "CLOUD_EXECUTABLE",
     "think_level": "MEDIUM",
     "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
     "executor": "Codex Cloud",
-    "branch": "codex/t017-p3-3-building-input-assembly-graph-v001",
+    "reported_branch": "codex/t017-p3-3-building-input-assembly-graph-v001",
+    "github_pr_number": 2,
+    "github_pr_head_branch": "codex/-p3.3",
+    "github_pr_head_sha": "578fb4b3cde151e3a83317359d1aa9bbc6c4bad1",
     "blender_required": false,
     "execution_authorized": true,
     "authorization_decision_id": "D-049",
-    "reported_internal_commit": "bd0d375c29e5676def6084fcb014ecd283c704fc",
-    "github_commit_visible": false,
-    "github_branch_head": "87301b17fb9ac09681c4f118a2abe3e54808b526",
-    "github_pr_status": "NOT FOUND",
-    "formal_review_status": "HOLD / EVIDENCE NOT YET PUBLISHED TO GITHUB",
+    "reported_correction_commit": "4c0d6d9976ac4b1f8ce6305710d3a60cbe688fef",
+    "github_correction_commit_visible": false,
+    "github_pr_status": "OPEN / HEAD NOT UPDATED WITH REPORTED CORRECTION",
+    "formal_review_status": "HOLD / CORRECTION EVIDENCE NOT YET PUBLISHED TO GITHUB",
     "pr_merge_authorized": false
   },
   "current_case": {"name": "平遥镇国寺万佛殿", "selection_status": "LOCKED"},
@@ -147,7 +149,7 @@
     ]
   },
   "p3_3": {
-    "status": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 EXECUTION AUTHORIZED / D-049 / REVIEW HOLD PENDING GITHUB PUBLICATION",
+    "status": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 EXECUTION AUTHORIZED / D-049 / REVIEW HOLD PENDING CORRECTION PUBLICATION",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "entry_decision_id": "D-046",
@@ -160,13 +162,16 @@
       "id": "T-017",
       "engineering_id": "P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001",
       "contract_status": "LOCKED",
-      "execution_status": "REPORTED COMPLETE IN CODEX CLOUD / GITHUB PUBLICATION MISSING / REVIEW HOLD",
+      "execution_status": "CORRECTIONS REPORTED COMPLETE / GITHUB CORRECTION PUBLICATION MISSING / REVIEW HOLD",
       "authorization_decision_id": "D-049",
       "cloud_mode_classification": "CLOUD_EXECUTABLE",
-      "branch": "codex/t017-p3-3-building-input-assembly-graph-v001",
-      "reported_internal_commit": "bd0d375c29e5676def6084fcb014ecd283c704fc",
-      "github_commit_visible": false,
-      "github_pr_status": "NOT FOUND",
+      "reported_branch": "codex/t017-p3-3-building-input-assembly-graph-v001",
+      "github_pr_number": 2,
+      "github_pr_head_branch": "codex/-p3.3",
+      "github_pr_head_sha": "578fb4b3cde151e3a83317359d1aa9bbc6c4bad1",
+      "reported_correction_commit": "4c0d6d9976ac4b1f8ce6305710d3a60cbe688fef",
+      "github_correction_commit_visible": false,
+      "github_pr_status": "OPEN / HEAD NOT UPDATED WITH REPORTED CORRECTION",
       "task_contract": "docs/tasks/T-017_P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001.md"
     },
     "blender_execution_workflow": {
@@ -189,7 +194,7 @@
   },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
-    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 SUCCESSFUL REUSE / T017 ENGINEERING REPORTED COMPLETE / PUBLICATION BLOCKED / LONG-TERM EVALUATION PENDING"
+    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 SUCCESSFUL REUSE / T017 CORRECTIONS REPORTED COMPLETE / CORRECTION PUBLICATION BLOCKED / LONG-TERM EVALUATION PENDING"
   },
   "visual_review_workflow": {
     "rule_id": "RC-015",
@@ -210,13 +215,13 @@
     "date": "2026-09-16",
     "decision": "Product Owner explicitly authorized T-017 engineering execution in Codex Cloud under the locked Task Contract. T-017 is CLOUD_EXECUTABLE, uses one dedicated branch and one PR, requires no Blender, and PR merge remains unauthorized until separate Product Owner approval."
   },
-  "next_action": "In the existing T-017 Codex Cloud task, publish the completed engineering changes through the Codex UI/platform Create PR handoff so that a GitHub-visible commit and PR are created. Do not rerun or redesign T-017 unless publication fails irrecoverably. After publication, return to ChatGPT for formal GitHub review; do not merge.",
+  "next_action": "In the existing T-017 Codex Cloud task, publish correction commit 4c0d6d9976ac4b1f8ce6305710d3a60cbe688fef to the existing GitHub PR #2. Confirm the PR head SHA changes from 578fb4b3cde151e3a83317359d1aa9bbc6c4bad1 and the PR commit count increases. Then return to ChatGPT for formal re-review. Do not create another PR and do not merge.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v032",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE / TARGET R087 / T-017 PUBLICATION BLOCKER"
+    "refresh_status": "STALE / TARGET R088 / T-017 CORRECTION PUBLICATION BLOCKER"
   },
   "daily_closing_audit": {
     "date": "2026-09-15",
@@ -225,6 +230,6 @@
     "checked": ["project_state", "acceptance_matrix", "decision_log", "execution_log", "governance", "rules_change_log", "dashboard", "phase_archive_applicability", "RC-014_cloud_mode", "PR_1_merge"],
     "known_exceptions": [],
     "phase_archive_action": "NONE / P3 ACTIVE",
-    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R087 T-017 publication blocker on 2026-09-16."
+    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R088 T-017 correction publication blocker on 2026-09-16."
   }
 }
