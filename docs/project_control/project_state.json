@@ -225,10 +225,10 @@
   "next_action": "Design the next P3.3 engineering task contract for deterministic whole-building generation and its GitHub Actions headless Blender evidence chain. Do not authorize execution until the Product Owner reviews and explicitly approves the new Task Contract.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v034",
+    "visualization_version": "v035",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "REFRESH REQUIRED / TARGET R091 / T-017 CLOSED"
+    "refresh_status": "CURRENT / R091 / T-017 CLOSED / NEXT TASK PLANNING"
   },
   "daily_closing_audit": {
     "date": "2026-09-15",
