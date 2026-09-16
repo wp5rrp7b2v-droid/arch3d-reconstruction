@@ -202,7 +202,7 @@
     "visualization_version": "v031",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "REFRESH REQUIRED / TARGET R085 T-017 CONTRACT LOCKED"
+    "refresh_status": "CURRENT / R085 / T-017 CONTRACT LOCKED"
   },
   "daily_closing_audit": {
     "date": "2026-09-15",
