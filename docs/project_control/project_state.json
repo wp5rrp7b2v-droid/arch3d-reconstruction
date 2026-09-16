@@ -3,23 +3,190 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R094",
+  "state_revision": "R095",
   "last_updated": "2026-09-16",
-  "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-018_STOP_HOLD / UPSTREAM_PROTECTED_INPUT_CONFLICT / PR_3_OPEN / CLOUD_MODE_ACTIVE",
-  "phase": {"id":"P3","name":"古建筑构件系统化与组合建模","english_name":"Component System & Assembly Architecture","status":"ACTIVE","gate_progress":"3/4"},
-  "current_gate": {"id":"P3.3","name":"构件驱动整殿重建","english_name":"Component-driven Building Reconstruction","status":"DOD LOCKED / T-017 CLOSED BUT UPSTREAM CORRECTION REQUIRED / T-018 STOP HOLD","items":{"P3.0":"PASS / APPROVED / CLOSED","P3.1":"PASS / APPROVED / CLOSED / D-040","P3.2":"PASS / APPROVED / CLOSED / D-046","P3.3":"DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-018 AUTHORIZED D-052 / T-018 STOP HOLD"}},
-  "decision_required": true,
-  "blocker": "T-018 review exposed a protected-input conflict: P3.1 Master Scope classifies CMP-PURLIN-001 as DEFERRED_INSUFFICIENT_EVIDENCE, while T-017 canonical scope accounting marks 7 PURLIN legacy instances as GENERATE_FROM_FORMAL_COMPONENT. T-018 is forbidden to modify T-017 protected foundation outputs or silently reinterpret this conflict. Formal generation must stop until an upstream corrective task is approved and completed.",
-  "temporary_operating_mode": {"rule_id":"RC-014","name":"CLOUD_MODE_2026-09-16_20","status":"ACTIVE / APPROVED / PREFLIGHT VERIFIED","expected_start":"2026-09-16","expected_end":"2026-09-20","tools":["ChatGPT App","Codex Cloud","GitHub Web/App"],"local_mac":"TEMPORARILY UNAVAILABLE DURING ACTIVE WINDOW","branch_policy":"ONE TASK = ONE BRANCH = ONE PR","approved_equivalent_execution":{"decision_id":"D-048","rule_id":"RC-017","scope":"SCRIPTED / HEADLESS / DETERMINISTIC BLENDER GENERATION AND VALIDATION","executor":"GitHub Actions","excludes":"INTERACTIVE LOCAL_MAC_REQUIRED OR LOCAL-ONLY EVIDENCE"},"active_window_note":"T-018 PR #3 exists but is formally STOP/HOLD. No Local Mac is required to resolve the blocker; the blocker is an upstream canonical accounting/evidence inconsistency that must be corrected through a separately approved engineering task."},
-  "current_task": {"id":"T-018","engineering_id":"P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001","name":"整殿确定性生成与参数变更验证","status":"STOP / REVIEW HOLD / UPSTREAM CORRECTION REQUIRED","task_contract":"docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001.md","contract_decision_id":"D-051","execution_authorization_decision_id":"D-052","cloud_mode_classification":"CLOUD_EXECUTABLE / D-048 EQUIVALENT HEADLESS EXECUTION","think_level":"HIGH","execution_mode":"CHAT_FIRST_CODEX_EXECUTOR_MODE","primary_executor":"Codex Cloud","blender_executor":"GitHub Actions Hosted Runner","runner":"ubuntu-latest","blender_version":"4.5.13 linux-x64","execution_authorized":true,"github_pr_number":3,"github_visible_head_branch":"codex/t-018","github_visible_head_sha":"ea52590daf5659074fc181aa0288ce223a3d7686","pr_merge_authorized":false,"formal_review_status":"STOP / HOLD","formal_review_findings":["P3.1 CMP-PURLIN-001=DEFERRED_INSUFFICIENT_EVIDENCE conflicts with T-017 disposition GENERATE_FROM_FORMAL_COMPONENT for 7 PURLIN instances","current GENERATED_FORMAL_GEOMETRY Blender realization uses generic primitive_cube_add placeholders rather than approved formal component generation","runtime placement uses synthetic hard-coded family layout constants instead of mechanically deriving placement from T-017 graph/bindings and approved parameters","pull_request Actions checkout uses merge ref/GITHUB_SHA instead of explicitly recording the canonical PR head SHA required by contract","workflow version verification uses an over-strict exact-line check and fails on valid output Blender 4.5.13 LTS"],"actions":{"latest_run_id":35101537343,"run_number":1,"status":"completed","conclusion":"failure","job_id":104811920588,"failure_step":"Install and pin Blender 4.5.13 linux-x64","failure_reason":"Blender downloaded and launched successfully as 'Blender 4.5.13 LTS', but grep -Fx expected exact line 'Blender 4.5.13'; Run A/B/C/D were skipped","formal_acceptance_value":"DEBUGGING ONLY / NOT T-018 EVIDENCE"},"preflight_results":{"runtime_accounting":"365/365","reported_outcome_counts":{"GENERATED_FORMAL_GEOMETRY":19,"GENERATED_PROXY":178,"GENERATED_CONTROL":66,"GENERATED_ENVELOPE":6,"UNKNOWN_BLOCKED":96},"canonical_hard_fail_count":0,"negative_fixtures":"5/5 EXPECTED_REJECTION","p2_numeric_transform_usage":0,"pm005_preflight":"PASS","protected_inputs":"UNCHANGED"},"mutation_contract":{"parameter_id":"PM-005","canonical_value_mm":3505.7,"test_only_mutated_value_mm":3605.7,"delta_mm":100.0,"canonical_source_must_remain_unchanged":true},"explicitly_not_closed_by_task":["DoD-09 final Gate Evidence Package","P3.3 Gate PASS / CLOSED","interactive LOCAL_MAC_REQUIRED evidence if later found necessary"]},
-  "last_completed_task": {"id":"T-017","engineering_id":"P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001","status":"PASS / PRODUCT OWNER APPROVED / CLOSED / D-050 / LATENT UPSTREAM DISPOSITION CONFLICT DISCOVERED BY T-018","github_pr_number":2,"reviewed_head_sha":"f117cb98da713e5279174248076421caa9d9e6f4","merge_commit":"1095440af761fc95cc18d0ce01523a097fc8ce5f","correction_required":true},
-  "current_case": {"name":"平遥镇国寺万佛殿","selection_status":"LOCKED"},
-  "p2_closure": {"status":"CLOSED / APPROVED / FROZEN ENGINEERING BASELINE","decision_id":"D-028","formal_model":"P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001","component_architecture":"11 families / 40 variants / 365 stable mesh instances"},
-  "p3_1": {"status":"PASS / APPROVED / CLOSED / D-040","gate_score":"9/9 PASS","approved_master_count":6,"relevant_locked_boundary":"CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE"},
-  "p3_2": {"status":"PASS / APPROVED / CLOSED / D-046","gate_score":"9/9 PASS","canonical_hard_fail_count":0,"p3_3_foundational_readiness":"PASS"},
-  "p3_3": {"status":"DOD LOCKED / D-047 / D-048 PIPELINE APPROVED / T-017 UPSTREAM CORRECTION REQUIRED / T-018 STOP HOLD","gate_name":"构件驱动整殿重建","engineering_subtitle":"Component-driven Building Reconstruction","dod_version":"V001","dod_status":"LOCKED / PRODUCT OWNER APPROVED / D-047","dod_file":"docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md","engineering_planning_authorized":true,"engineering_execution_authorized":true,"t017":{"status":"CLOSED / D-050 / CORRECTIVE FOLLOW-UP REQUIRED","conflict":"7 PURLIN instances marked GENERATE_FROM_FORMAL_COMPONENT despite P3.1 CMP-PURLIN-001 deferred qualification"},"current_task":{"id":"T-018","contract_status":"LOCKED / PRODUCT OWNER APPROVED / D-051","execution_status":"STOP / REVIEW HOLD","github_pr_number":3,"task_contract":"docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001.md"},"remaining_gate_work_after_t018_if_pass":["DoD-09 independent final rebuild and Gate Evidence Package","any genuinely interactive/local-only evidence discovered during T-018 review","final P3.3 Gate Review and Product Owner approval"],"hard_fails":["REFERENCE_LENGTH_LEAKS_INTO_BUILDING","SILENT_HISTORICIZATION","BAKED_MANUAL_BUILDING","SILENT_BUILDING_OMISSION","BROKEN_COMPONENT_IDENTITY"]},
-  "historical_boundaries": {"Z-006":"UNKNOWN / null / DO_NOT_LOCK","Z-006-RC-01":"REASONABLE_COMPLETION / replaceable / D-023","DG-114":"UNKNOWN / no unified small-dou historical specification claim","HIS-002":"component originality unknown","six_chuanfu_length":"UNKNOWN / null; 1000 mm is non-historical canonical reference only","purlin":"CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE; position-specific sections, lengths and end conditions unresolved","corner_and_joinery":"45-degree corner, mortise and hidden-angle beam unresolved / bounded","building_hard_fail":"REFERENCE_LENGTH_LEAKS_INTO_BUILDING"},
-  "latest_material_decision": {"id":"D-052","date":"2026-09-16","decision":"Product Owner explicitly authorized start of T-018 under the locked D-051 Task Contract. T-018 has since encountered a contract-defined STOP condition; no new Product Owner decision has yet authorized upstream correction."},
-  "next_action": "Design and Product-Owner-approve a separate upstream corrective engineering task for the T-017/P3.1 disposition consistency conflict before T-018 continues. Keep PR #3 open and unmerged. Do not use T-018 to modify protected T-017 outputs. After upstream correction is merged, rebase/update the same T-018 PR #3 and address the remaining formal-geometry, graph-derived placement, PR-head evidence SHA, and Blender version-check issues.",
-  "dashboard": {"path":"docs/project_control/dashboard.html","visualization_version":"v038","role":"DERIVED_VISUALIZATION","authoritative":false,"refresh_status":"CURRENT / R094 / T-018 STOP HOLD"}
+  "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-019_CONTRACT_LOCKED / EXECUTION_NOT_AUTHORIZED / T-018_STOP_HOLD / PR_3_OPEN / CLOUD_MODE_ACTIVE",
+  "phase": {
+    "id": "P3",
+    "name": "古建筑构件系统化与组合建模",
+    "english_name": "Component System & Assembly Architecture",
+    "status": "ACTIVE",
+    "gate_progress": "3/4"
+  },
+  "current_gate": {
+    "id": "P3.3",
+    "name": "构件驱动整殿重建",
+    "english_name": "Component-driven Building Reconstruction",
+    "status": "DOD LOCKED / T-019 CONTRACT LOCKED / T-018 STOP HOLD",
+    "items": {
+      "P3.0": "PASS / APPROVED / CLOSED",
+      "P3.1": "PASS / APPROVED / CLOSED / D-040",
+      "P3.2": "PASS / APPROVED / CLOSED / D-046",
+      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 WITH CORRECTIVE FOLLOW-UP / T-018 STOP-HOLD / T-019 CONTRACT LOCKED D-053"
+    }
+  },
+  "decision_required": false,
+  "blocker": "UPSTREAM_PROTECTED_INPUT_CONFLICT: P3.1 locks CMP-PURLIN-001 as DEFERRED_INSUFFICIENT_EVIDENCE, while T-017 canonical scope accounting marks 7 PURLIN legacy instances as GENERATE_FROM_FORMAL_COMPONENT. T-018 remains STOP/HOLD until T-019 is executed, reviewed, approved and merged.",
+  "temporary_operating_mode": {
+    "rule_id": "RC-014",
+    "name": "CLOUD_MODE_2026-09-16_20",
+    "status": "ACTIVE / APPROVED / PREFLIGHT VERIFIED",
+    "expected_start": "2026-09-16",
+    "expected_end": "2026-09-20",
+    "tools": ["ChatGPT App", "Codex Cloud", "GitHub Web/App"],
+    "local_mac": "TEMPORARILY UNAVAILABLE DURING ACTIVE WINDOW",
+    "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
+    "approved_equivalent_execution": {
+      "decision_id": "D-048",
+      "rule_id": "RC-017",
+      "scope": "SCRIPTED / HEADLESS / DETERMINISTIC BLENDER GENERATION AND VALIDATION",
+      "executor": "GitHub Actions",
+      "excludes": "INTERACTIVE LOCAL_MAC_REQUIRED OR LOCAL-ONLY EVIDENCE"
+    },
+    "active_window_note": "T-019 is CLOUD_EXECUTABLE and requires no Blender or Local Mac. T-018 PR #3 remains open and unmerged while T-019 corrects the upstream canonical disposition conflict in a separate task branch/PR."
+  },
+  "current_task": {
+    "id": "T-019",
+    "engineering_id": "P3_3_UPSTREAM_DISPOSITION_CONSISTENCY_CORRECTION_V001",
+    "name": "上游 Disposition 一致性修正",
+    "status": "CONTRACT LOCKED / PRODUCT OWNER APPROVED / READY / EXECUTION NOT AUTHORIZED",
+    "task_contract": "docs/tasks/T-019_P3_3_UPSTREAM_DISPOSITION_CONSISTENCY_CORRECTION_V001.md",
+    "contract_decision_id": "D-053",
+    "execution_authorization_decision_id": null,
+    "cloud_mode_classification": "CLOUD_EXECUTABLE",
+    "think_level": "MEDIUM",
+    "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
+    "primary_executor": "Codex Cloud",
+    "blender_requirement": "NONE",
+    "execution_authorized": false,
+    "github_pr_number": null,
+    "github_visible_head_branch": null,
+    "github_visible_head_sha": null,
+    "pr_merge_authorized": false,
+    "known_correction": {
+      "component_id": "CMP-PURLIN-001",
+      "affected_instance_count": 7,
+      "current_erroneous_disposition": "GENERATE_FROM_FORMAL_COMPONENT",
+      "required_disposition": "DEFERRED",
+      "p3_1_qualification": "DEFERRED_INSUFFICIENT_EVIDENCE"
+    },
+    "required_regression": "direct-identity cross-layer disposition consistency validation; synthetic PURLIN formal-generation upgrade must be rejected",
+    "protected_layers": [
+      "P2 frozen baseline",
+      "P3.0 canonical Registry / identity",
+      "P3.1 Scope / Identity / Master Library / six approved Masters",
+      "P3.2 canonical assembly foundation",
+      "P3.3 DoD",
+      "T-018 PR #3 engineering branch"
+    ]
+  },
+  "paused_task": {
+    "id": "T-018",
+    "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001",
+    "status": "STOP / REVIEW HOLD / UPSTREAM CORRECTION REQUIRED",
+    "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001.md",
+    "github_pr_number": 3,
+    "github_visible_head_branch": "codex/t-018",
+    "github_visible_head_sha": "ea52590daf5659074fc181aa0288ce223a3d7686",
+    "pr_merge_authorized": false,
+    "actions_latest_run": {
+      "run_id": 35101537343,
+      "run_number": 1,
+      "conclusion": "failure",
+      "formal_acceptance_value": "DEBUGGING ONLY / NOT T-018 EVIDENCE"
+    },
+    "remaining_review_findings_after_upstream_correction": [
+      "formal component geometry must not use generic primitive cubes where approved formal generation exists",
+      "placement must be mechanically derived from authoritative graph / parameters / rules rather than synthetic family constants",
+      "Actions evidence must explicitly bind to canonical PR head SHA",
+      "Blender 4.5.13 version check must accept valid LTS suffix while remaining version-locked"
+    ]
+  },
+  "last_completed_task": {
+    "id": "T-017",
+    "engineering_id": "P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001",
+    "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-050 / CORRECTIVE FOLLOW-UP REQUIRED",
+    "github_pr_number": 2,
+    "reviewed_head_sha": "f117cb98da713e5279174248076421caa9d9e6f4",
+    "merge_commit": "1095440af761fc95cc18d0ce01523a097fc8ce5f",
+    "correction_required": true
+  },
+  "current_case": {
+    "name": "平遥镇国寺万佛殿",
+    "selection_status": "LOCKED"
+  },
+  "p2_closure": {
+    "status": "CLOSED / APPROVED / FROZEN ENGINEERING BASELINE",
+    "decision_id": "D-028",
+    "formal_model": "P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001",
+    "component_architecture": "11 families / 40 variants / 365 stable mesh instances"
+  },
+  "p3_1": {
+    "status": "PASS / APPROVED / CLOSED / D-040",
+    "gate_score": "9/9 PASS",
+    "approved_master_count": 6,
+    "relevant_locked_boundary": "CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE"
+  },
+  "p3_2": {
+    "status": "PASS / APPROVED / CLOSED / D-046",
+    "gate_score": "9/9 PASS",
+    "canonical_hard_fail_count": 0,
+    "p3_3_foundational_readiness": "PASS"
+  },
+  "p3_3": {
+    "status": "DOD LOCKED / D-047 / D-048 PIPELINE APPROVED / T-019 CONTRACT LOCKED D-053 / T-018 STOP HOLD",
+    "gate_name": "构件驱动整殿重建",
+    "engineering_subtitle": "Component-driven Building Reconstruction",
+    "dod_version": "V001",
+    "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-047",
+    "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md",
+    "engineering_planning_authorized": true,
+    "t017": {
+      "status": "CLOSED / D-050 / CORRECTIVE FOLLOW-UP REQUIRED",
+      "conflict": "7 PURLIN instances marked GENERATE_FROM_FORMAL_COMPONENT despite P3.1 CMP-PURLIN-001 deferred qualification"
+    },
+    "t018": {
+      "status": "STOP / REVIEW HOLD",
+      "github_pr_number": 3
+    },
+    "t019": {
+      "status": "CONTRACT LOCKED / D-053 / EXECUTION NOT AUTHORIZED",
+      "task_contract": "docs/tasks/T-019_P3_3_UPSTREAM_DISPOSITION_CONSISTENCY_CORRECTION_V001.md"
+    },
+    "remaining_gate_work_after_t018_if_pass": [
+      "DoD-09 independent final rebuild and Gate Evidence Package",
+      "any genuinely interactive/local-only evidence discovered during T-018 review",
+      "final P3.3 Gate Review and Product Owner approval"
+    ],
+    "hard_fails": [
+      "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+      "SILENT_HISTORICIZATION",
+      "BAKED_MANUAL_BUILDING",
+      "SILENT_BUILDING_OMISSION",
+      "BROKEN_COMPONENT_IDENTITY"
+    ]
+  },
+  "historical_boundaries": {
+    "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
+    "Z-006-RC-01": "REASONABLE_COMPLETION / replaceable / D-023",
+    "DG-114": "UNKNOWN / no unified small-dou historical specification claim",
+    "HIS-002": "component originality unknown",
+    "six_chuanfu_length": "UNKNOWN / null; 1000 mm is non-historical canonical reference only",
+    "purlin": "CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE; position-specific sections, lengths and end conditions unresolved",
+    "corner_and_joinery": "45-degree corner, mortise and hidden-angle beam unresolved / bounded",
+    "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
+  },
+  "latest_material_decision": {
+    "id": "D-053",
+    "date": "2026-09-16",
+    "decision": "Product Owner approved and locked T-019 upstream disposition consistency correction Task Contract. Execution remains unauthorized; T-018 remains STOP/HOLD and PR #3 remains open/unmerged."
+  },
+  "next_action": "Await explicit Product Owner authorization to start T-019. Do not run Codex, create a T-019 PR, modify T-018 PR #3, or merge anything until that authorization is given.",
+  "dashboard": {
+    "path": "docs/project_control/dashboard.html",
+    "visualization_version": "v039",
+    "role": "DERIVED_VISUALIZATION",
+    "authoritative": false,
+    "refresh_status": "PENDING UPDATE TO R095"
+  }
 }
