@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R083",
+  "state_revision": "R084",
   "last_updated": "2026-09-16",
-  "session_status": "ACTIVE / P3.3_DOD_LOCKED / ENGINEERING_PLANNING_AUTHORIZED / CLOUD_MODE_ACTIVE",
+  "session_status": "ACTIVE / P3.3_DOD_LOCKED / ENGINEERING_PLANNING_AUTHORIZED / GITHUB_ACTIONS_BLENDER_PIPELINE_APPROVED / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,12 +17,12 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / ENGINEERING PLANNING AUTHORIZED / NO ACTIVE TASK",
+    "status": "DOD LOCKED / ENGINEERING PLANNING AUTHORIZED / GITHUB ACTIONS BLENDER PIPELINE APPROVED / NO ACTIVE TASK",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / ENGINEERING PLANNING AUTHORIZED"
+      "P3.3": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / ENGINEERING PLANNING AUTHORIZED"
     }
   },
   "decision_required": false,
@@ -40,6 +40,13 @@
     "canonical_rule_file": "docs/project_control/CLOUD_MODE_2026-09-16_20.md",
     "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
     "local_dependency_rule": "No local-Mac-dependent work may be marked PASS during Cloud Mode unless equivalent execution and validation capability has been separately approved.",
+    "approved_equivalent_execution": {
+      "decision_id": "D-048",
+      "rule_id": "RC-017",
+      "scope": "SCRIPTED / HEADLESS / DETERMINISTIC BLENDER GENERATION AND VALIDATION",
+      "executor": "GitHub Actions",
+      "excludes": "INTERACTIVE LOCAL_MAC_REQUIRED OR LOCAL-ONLY EVIDENCE"
+    },
     "cloud_git_workflow_preflight": {
       "date": "2026-09-15",
       "drill_id": "CLOUD-DRILL-002",
@@ -63,7 +70,7 @@
       "next_action": "Define and Product-Owner-approve P3.3 Definition of Done",
       "local_sync_required_before_mac_shutdown": true
     },
-    "active_window_note": "Cloud Mode active. P3.3 DoD D-047 approved on 2026-09-16. Each engineering task must be classified CLOUD_EXECUTABLE, DESIGN_ONLY, or LOCAL_MAC_REQUIRED before execution."
+    "active_window_note": "Cloud Mode active. P3.3 DoD D-047 and scripted Blender execution pipeline D-048/RC-017 are approved. Each engineering task must still be classified before execution; interactive/local-only DoD items remain pending until genuinely executed in an approved environment."
   },
   "current_task": null,
   "current_case": {"name": "平遥镇国寺万佛殿", "selection_status": "LOCKED"},
@@ -120,7 +127,7 @@
     ]
   },
   "p3_3": {
-    "status": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / ENGINEERING PLANNING AUTHORIZED",
+    "status": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / ENGINEERING PLANNING AUTHORIZED",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "entry_decision_id": "D-046",
@@ -130,6 +137,14 @@
     "engineering_planning_authorized": true,
     "engineering_execution_authorized": false,
     "current_task": null,
+    "blender_execution_workflow": {
+      "decision_id": "D-048",
+      "rule_id": "RC-017",
+      "status": "APPROVED / ACTIVE",
+      "flow": "Codex Cloud generator/validator -> GitHub Actions headless Blender -> GitHub outputs/validation evidence -> ChatGPT review -> Local Mac only for genuinely interactive/final inspection",
+      "github_actions_equivalent_execution_scope": "SCRIPTED / HEADLESS / DETERMINISTIC BLENDER GENERATION AND VALIDATION",
+      "local_mac_preserved_scope": "INTERACTIVE INSPECTION / LOCAL-ONLY EVIDENCE / FINAL LOCAL COMPATIBILITY WHEN REQUIRED"
+    },
     "hard_fails": [
       "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
       "SILENT_HISTORICIZATION",
@@ -158,17 +173,17 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-047",
+    "id": "D-048",
     "date": "2026-09-16",
-    "decision": "Product Owner approved and locked P3.3 Definition of Done V001. P3.3 engineering planning and Task Contract creation are unlocked, but no T-017 execution is authorized yet. Each Cloud Mode task must be classified before execution; local-dependent DoD items remain pending until genuinely executed in an approved environment."
+    "decision": "Product Owner approved the P3.3 scripted Blender execution chain: Codex Cloud writes generators/validators, GitHub Actions runs deterministic headless Blender, GitHub records outputs and evidence, ChatGPT reviews committed evidence, and Local Mac is reserved for genuinely interactive or local-only checks. This approves the execution environment, not T-017 execution."
   },
-  "next_action": "Design the first P3.3 engineering Task Contract (T-017 candidate), classify it under RC-014, and obtain Product Owner execution authorization before starting Codex Cloud engineering.",
+  "next_action": "Create and lock the T-017 Task Contract for P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001, classify it CLOUD_EXECUTABLE, then obtain Product Owner execution authorization before starting Codex Cloud engineering.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v030",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "STALE / R082 PRE-D047 / REFRESH REQUIRED AFTER CURRENT CONTROL UPDATE"
+    "refresh_status": "STALE / R082 PRE-D047-D048 / REFRESH AFTER T-017 CONTRACT STATE IS LOCKED"
   },
   "daily_closing_audit": {
     "date": "2026-09-15",
@@ -177,6 +192,6 @@
     "checked": ["project_state", "acceptance_matrix", "decision_log", "execution_log", "governance", "rules_change_log", "dashboard", "phase_archive_applicability", "RC-014_cloud_mode", "PR_1_merge"],
     "known_exceptions": [],
     "phase_archive_action": "NONE / P3 ACTIVE",
-    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R083 / D-047 on 2026-09-16."
+    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R084 / D-048 on 2026-09-16."
   }
 }
