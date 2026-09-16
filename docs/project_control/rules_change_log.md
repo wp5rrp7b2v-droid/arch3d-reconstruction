@@ -20,6 +20,7 @@
 | **RC-014** | **2026-09-14** | **建立 `CLOUD_MODE_2026-09-16_20`：仅在 2026-09-16 至 09-20 五个自然日覆盖正常执行模式；期间使用 ChatGPT App、Codex Cloud、GitHub，重点为 P3.3 DoD→执行能力分类→Cloud-native 基础工程；local-Mac-dependent 工作不得伪造 PASS；GitHub 已提交 review image 可按 RC-015 直接视觉审核；2026-09-21 起自动恢复原有正常运行模式。** | **Product Owner 仅在 09-16→09-20 暂时无法使用本地 Mac；该临时模式不得自动延长或沉淀为长期默认规则。** | **APPROVED / STRICTLY TEMPORARY / AUTO-EXPIRES AFTER 2026-09-20** |
 | **RC-015** | **2026-09-14** | **GitHub `main` 已有正式审核图时，ChatGPT 默认直接调阅并实际打开；只有实际逐张目视后才允许 `VISUAL REVIEW PASS`；local-only 或不可读图片仍需上传 Chat。** | **消除重复上传并防止仅凭脚本/metadata 提前宣称视觉审核完成。** | **ACTIVE / DIRECT GITHUB VISUAL REVIEW RULE** |
 | **RC-016** | **2026-09-14** | **补登记 Governance 4.6《Project Language & Terminology Layering｜项目语言与术语分层规则》：古建筑内容层中文优先；项目管理/工程控制层允许成熟英文术语；机器实现层保持稳定英文字段，人类可读材料需映射清晰中文。本次为既有已生效规则的 Rules Change Log 镜像补登记，不改变原规则内容。** | **Daily Closing Audit 发现 Governance 与 Rules Change Log 未双向镜像，按 RC-013 当日修正，避免规则只存在单一文件。** | **ACTIVE / LANGUAGE & TERMINOLOGY LAYERING RULE / BACKFILLED MIRROR** |
+| **RC-017** | **2026-09-16** | **P3.3 脚本化 Blender 正式执行默认采用 `Codex Cloud writes generator → GitHub Actions headless Blender executes → GitHub records outputs/validation → ChatGPT reviews committed evidence → Local Mac only when interactive/final inspection is genuinely required`。GitHub Actions 可作为 RC-014 下脚本化 Blender 的 approved equivalent execution/validation environment；但不能替代必须依赖交互式 Blender 检查的 LOCAL_MAC_REQUIRED 项。** | **提高确定性、可重复性与证据链完整度，并允许 2026-09-16→20 Cloud Mode 在不伪造本地 PASS 的前提下继续推进可自动化 Blender 工作。** | **ACTIVE / P3.3 GITHUB ACTIONS BLENDER EXECUTION RULE / D-048** |
 
 ## 当前有效原则摘要
 
@@ -52,6 +53,8 @@
 `Project language layering = ancient-architecture content Chinese-first; project/engineering English allowed; machine fields stable English with human-readable Chinese mapping`
 
 `Direct GitHub visual review = no duplicate Chat upload for committed review images; no VISUAL PASS without actual image inspection`
+
+`P3.3 scripted Blender = Codex Cloud generator + GitHub Actions headless execution + GitHub evidence + ChatGPT review; Local Mac reserved for genuinely interactive/final inspection`
 
 `Daily closing = mandatory cross-file Project Control consistency audit`
 
