@@ -14,6 +14,7 @@ from build_p3_3_building_graph_v001 import (
     PATHS,
     ROOT,
     compile_assets,
+    direct_identity_qualifications,
     digest,
     load,
     serialize,
@@ -34,6 +35,7 @@ CLASSIFICATIONS = {
     "PROHIBITED_AS_GENERATIVE_INPUT",
 }
 PROHIBITED_TRANSFORM_KEYS = {"location_mm", "rotation_euler_rad", "scale", "world_transform"}
+DISPOSITION_CONFLICT = "MASTER_SCOPE_DISPOSITION_CONFLICT"
 
 
 def contains_key(value, forbidden):
@@ -118,6 +120,29 @@ def validate(docs: dict) -> list[str]:
     baseline, bindings, accounting, graph = (docs[name] for name in ("baseline", "bindings", "accounting", "graph"))
     failures.extend(check_baseline(baseline))
     failures.extend(check_bindings(bindings, graph))
+
+    qualifications = direct_identity_qualifications(load(PATHS["p3_1_scope"]), load(PATHS["p3_1_identity"]))
+    approved = {item["component_id"] for item in load(PATHS["masters"])["masters"]}
+    allowed = {
+        "DEFERRED_INSUFFICIENT_EVIDENCE": {"DEFERRED", "PROXY_ONLY", "UNKNOWN_BLOCKED"},
+        "PROXY_ONLY": {"PROXY_ONLY", "UNKNOWN_BLOCKED"},
+        "CONTROL_ONLY": {"CONTROL_ONLY"},
+        "ENVELOPE_ONLY": {"ENVELOPE_ONLY"},
+    }
+    accounting_by_id = {item["legacy_instance_id"]: item for item in accounting.get("instances", [])}
+    runtime_nodes = {node["legacy_instance_id"]: node for node in graph.get("nodes", []) if node.get("legacy_instance_id")}
+    for legacy_id, item in accounting_by_id.items():
+        component_id = item.get("component_id")
+        qualification = qualifications.get(component_id)
+        expected = allowed.get(qualification)
+        if qualification == "MASTER_REQUIRED":
+            expected = {"GENERATE_FROM_FORMAL_COMPONENT"} if component_id in approved else {"DEFERRED"}
+        dispositions = {item.get("p3_3_disposition"), runtime_nodes.get(legacy_id, {}).get("p3_3_disposition")}
+        if expected is None:
+            if "GENERATE_FROM_FORMAL_COMPONENT" in dispositions:
+                failures.append(DISPOSITION_CONFLICT)
+        elif not dispositions <= expected:
+            failures.append(DISPOSITION_CONFLICT)
 
     realization_paths = graph.get("building_realization_dimensions", [])
     if any(
@@ -205,6 +230,15 @@ def build_report():
     docs = compile_assets()
     canonical = validate(docs)
     negative = fixture_results(docs)
+    disposition_regression = copy.deepcopy(docs)
+    for item in disposition_regression["accounting"]["instances"]:
+        if item["component_id"] == "CMP-PURLIN-001":
+            item["p3_3_disposition"] = "GENERATE_FROM_FORMAL_COMPONENT"
+    for node in disposition_regression["graph"]["nodes"]:
+        if node.get("component_id") == "CMP-PURLIN-001":
+            node["p3_3_disposition"] = "GENERATE_FROM_FORMAL_COMPONENT"
+    disposition_rejected = DISPOSITION_CONFLICT in validate(disposition_regression)
+    purlins = [item for item in docs["accounting"]["instances"] if item["component_id"] == "CMP-PURLIN-001"]
     required_present = all(path.is_file() for path in OUTPUTS.values())
     required_readable = required_present and all(isinstance(load(path), dict) for path in OUTPUTS.values())
     stable = all(OUTPUTS[name].is_file() and load(OUTPUTS[name]) == value for name, value in docs.items()) and serialize(compile_assets()) == serialize(docs)
@@ -220,6 +254,21 @@ def build_report():
         "p3_2_traceability": "PASS" if "P3_2_TRACEABILITY_INCOMPLETE" not in canonical else "FAIL",
         "prohibited_transform_scan": {"authoritative_generation_usage_count": 0 if HARD_FAILS[2] not in canonical else 1, "status": "PASS" if HARD_FAILS[2] not in canonical else "FAIL"},
         "evidence_boundary": "PASS" if "EVIDENCE_BOUNDARY_VIOLATION" not in canonical and HARD_FAILS[0] not in canonical and HARD_FAILS[1] not in canonical else "FAIL",
+        "cross_layer_disposition_consistency": {
+            "conflict_count": canonical.count(DISPOSITION_CONFLICT),
+            "status": "PASS" if DISPOSITION_CONFLICT not in canonical else "FAIL",
+        },
+        "purlin_correction": {
+            "component_id": "CMP-PURLIN-001",
+            "deferred": sum(item["p3_3_disposition"] == "DEFERRED" for item in purlins),
+            "expected": 7,
+            "status": "PASS" if len(purlins) == 7 and all(item["p3_3_disposition"] == "DEFERRED" for item in purlins) else "FAIL",
+        },
+        "disposition_regression": {
+            "expected": "REJECT",
+            "machine_error": DISPOSITION_CONFLICT,
+            "actual": "EXPECTED_REJECTION" if disposition_rejected else "UNEXPECTED_ACCEPTANCE",
+        },
         "deterministic_regeneration_stable_serialization": "PASS" if stable else "FAIL",
         "protected_inputs_unchanged": protected,
     }
@@ -236,6 +285,9 @@ def build_report():
         and checks["p3_2_traceability"] == "PASS"
         and checks["prohibited_transform_scan"]["status"] == "PASS"
         and checks["evidence_boundary"] == "PASS"
+        and checks["cross_layer_disposition_consistency"]["status"] == "PASS"
+        and checks["purlin_correction"]["status"] == "PASS"
+        and disposition_rejected
         and checks["deterministic_regeneration_stable_serialization"] == "PASS"
         and checks["protected_inputs_unchanged"] is True
         and docs["accounting"]["summary"] == {
