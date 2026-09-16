@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R090",
+  "state_revision": "R091",
   "last_updated": "2026-09-16",
-  "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-017_STRUCTURAL_REVIEW_PASS / AWAITING_PRODUCT_OWNER_APPROVAL / CLOUD_MODE_ACTIVE",
+  "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-017_PASS_APPROVED_CLOSED / NEXT_TASK_PLANNING / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,15 +17,15 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-017 STRUCTURAL REVIEW PASS / PRODUCT OWNER APPROVAL REQUIRED",
+    "status": "DOD LOCKED / T-017 PASS APPROVED CLOSED / NEXT ENGINEERING TASK PLANNING",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 EXECUTION AUTHORIZED / D-049 / T-017 STRUCTURAL REVIEW PASS"
+      "P3.3": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 PASS APPROVED CLOSED / D-050"
     }
   },
-  "decision_required": true,
+  "decision_required": false,
   "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
@@ -58,7 +58,7 @@
       "merge_commit": "2528221a1ad08576878fc087e5e5474631a6be75",
       "scope_validation": "1 drill-only file added; no existing file modified; docs/project_control unchanged by drill; no production or P3.3 engineering file changed",
       "verified_workflow": "GitHub main -> Codex Cloud checkout -> isolated cloud modification -> PR publication -> ChatGPT GitHub review -> Product Owner authorized merge -> GitHub main",
-      "operational_note": "Codex task container is not required to expose a conventional git remote or gh authentication. PR publication may occur through the Codex Cloud UI/platform handoff; GitHub main remains the canonical committed state."
+      "operational_note": "Codex internal commit SHA may differ from the GitHub-published PR head SHA; GitHub PR/main is canonical. Updating an existing Codex PR after corrections requires the Codex UI Update Branch action."
     },
     "final_pre_cloud_snapshot": {
       "date": "2026-09-15",
@@ -70,29 +70,25 @@
       "next_action": "Define and Product-Owner-approve P3.3 Definition of Done",
       "local_sync_required_before_mac_shutdown": true
     },
-    "active_window_note": "Cloud Mode active. T-017 correction has been published to GitHub PR #2 and passed ChatGPT structural re-review. Await Product Owner approval and explicit merge authorization."
+    "active_window_note": "Cloud Mode active. T-017 completed, approved, and merged without Local Mac or Blender. Next P3.3 task must be separately designed, classified, contracted, and authorized."
   },
-  "current_task": {
+  "current_task": null,
+  "last_completed_task": {
     "id": "T-017",
     "engineering_id": "P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001",
     "name": "整殿输入基线与 Assembly Graph 基础工程",
-    "status": "STRUCTURAL REVIEW PASS / AWAITING PRODUCT OWNER APPROVAL",
+    "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-050",
     "task_contract": "docs/tasks/T-017_P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001.md",
     "cloud_mode_classification": "CLOUD_EXECUTABLE",
     "think_level": "MEDIUM",
     "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
     "executor": "Codex Cloud",
-    "reported_branch": "codex/t017-p3-3-building-input-assembly-graph-v001",
     "github_pr_number": 2,
     "github_pr_head_branch": "codex/-p3.3",
-    "github_pr_head_sha": "f117cb98da713e5279174248076421caa9d9e6f4",
-    "github_pr_commit_count": 2,
-    "blender_required": false,
-    "execution_authorized": true,
+    "reviewed_head_sha": "f117cb98da713e5279174248076421caa9d9e6f4",
+    "merge_commit": "1095440af761fc95cc18d0ce01523a097fc8ce5f",
     "authorization_decision_id": "D-049",
-    "github_correction_commit_visible": true,
-    "github_pr_status": "OPEN / STRUCTURAL REVIEW PASS / NOT MERGED",
-    "formal_review_status": "PASS / CHATGPT STRUCTURAL REVIEW COMPLETE",
+    "approval_decision_id": "D-050",
     "acceptance_summary": {
       "required_outputs": "5/5",
       "family_accounting": "11/11",
@@ -107,8 +103,7 @@
       "protected_inputs_unchanged": true,
       "blender_invocations": 0,
       "blend_files_created": 0
-    },
-    "pr_merge_authorized": false
+    }
   },
   "current_case": {"name": "平遥镇国寺万佛殿", "selection_status": "LOCKED"},
   "p2_closure": {
@@ -164,7 +159,7 @@
     ]
   },
   "p3_3": {
-    "status": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 STRUCTURAL REVIEW PASS / PRODUCT OWNER APPROVAL REQUIRED",
+    "status": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 PASS APPROVED CLOSED / D-050 / NEXT TASK PLANNING",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "entry_decision_id": "D-046",
@@ -172,28 +167,28 @@
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-047",
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md",
     "engineering_planning_authorized": true,
-    "engineering_execution_authorized": true,
-    "current_task": {
-      "id": "T-017",
-      "engineering_id": "P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001",
-      "contract_status": "LOCKED",
-      "execution_status": "STRUCTURAL REVIEW PASS / AWAITING PRODUCT OWNER APPROVAL",
-      "authorization_decision_id": "D-049",
-      "cloud_mode_classification": "CLOUD_EXECUTABLE",
+    "engineering_execution_authorized": false,
+    "current_task": null,
+    "t017": {
+      "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-050",
       "github_pr_number": 2,
-      "github_pr_head_branch": "codex/-p3.3",
-      "github_pr_head_sha": "f117cb98da713e5279174248076421caa9d9e6f4",
-      "github_pr_status": "OPEN / NOT MERGED",
-      "task_contract": "docs/tasks/T-017_P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001.md"
+      "reviewed_head_sha": "f117cb98da713e5279174248076421caa9d9e6f4",
+      "merge_commit": "1095440af761fc95cc18d0ce01523a097fc8ce5f",
+      "coverage": "DoD-01 through DoD-04 foundation complete; DoD-07/08 validation foundation established; P3.3 Gate remains open"
     },
+    "remaining_gate_work": [
+      "DoD-05 deterministic whole-building generation",
+      "DoD-06 spatial / geometric / structural consistency",
+      "DoD-08 building-parameter mutation -> rebuild -> validate -> restore execution evidence",
+      "DoD-09 independent rebuild and final Gate Evidence Package"
+    ],
     "blender_execution_workflow": {
       "decision_id": "D-048",
       "rule_id": "RC-017",
       "status": "APPROVED / ACTIVE",
       "flow": "Codex Cloud generator/validator -> GitHub Actions headless Blender -> GitHub outputs/validation evidence -> ChatGPT review -> Local Mac only for genuinely interactive/final inspection",
       "github_actions_equivalent_execution_scope": "SCRIPTED / HEADLESS / DETERMINISTIC BLENDER GENERATION AND VALIDATION",
-      "local_mac_preserved_scope": "INTERACTIVE INSPECTION / LOCAL-ONLY EVIDENCE / FINAL LOCAL COMPATIBILITY WHEN REQUIRED",
-      "t017_usage": "NOT USED / T-017 REQUIRES NO BLENDER"
+      "local_mac_preserved_scope": "INTERACTIVE INSPECTION / LOCAL-ONLY EVIDENCE / FINAL LOCAL COMPATIBILITY WHEN REQUIRED"
     },
     "hard_fails": [
       "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
@@ -206,7 +201,7 @@
   },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
-    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 SUCCESSFUL REUSE / T017 STRUCTURAL REVIEW PASS / LONG-TERM EVALUATION PENDING"
+    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 SUCCESSFUL REUSE / T017 SUCCESSFUL REUSE / LONG-TERM EVALUATION PENDING"
   },
   "visual_review_workflow": {
     "rule_id": "RC-015",
@@ -223,17 +218,17 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-049",
+    "id": "D-050",
     "date": "2026-09-16",
-    "decision": "Product Owner explicitly authorized T-017 engineering execution in Codex Cloud under the locked Task Contract. T-017 is CLOUD_EXECUTABLE, uses one dedicated task PR, requires no Blender, and PR merge remains unauthorized until separate Product Owner approval."
+    "decision": "Product Owner approved and closed T-017 after ChatGPT structural review PASS and authorized merge of GitHub PR #2. Merge completed successfully. This does not constitute P3.3 Gate PASS."
   },
-  "next_action": "Product Owner reviews T-017 structural PASS and explicitly decides whether to approve T-017 and authorize merge of GitHub PR #2. Do not merge without that approval.",
+  "next_action": "Design the next P3.3 engineering task contract for deterministic whole-building generation and its GitHub Actions headless Blender evidence chain. Do not authorize execution until the Product Owner reviews and explicitly approves the new Task Contract.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v034",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R090 / T-017 STRUCTURAL REVIEW PASS"
+    "refresh_status": "REFRESH REQUIRED / TARGET R091 / T-017 CLOSED"
   },
   "daily_closing_audit": {
     "date": "2026-09-15",
@@ -242,6 +237,6 @@
     "checked": ["project_state", "acceptance_matrix", "decision_log", "execution_log", "governance", "rules_change_log", "dashboard", "phase_archive_applicability", "RC-014_cloud_mode", "PR_1_merge"],
     "known_exceptions": [],
     "phase_archive_action": "NONE / P3 ACTIVE",
-    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R090 T-017 structural review PASS on 2026-09-16."
+    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R091 T-017 closure on 2026-09-16."
   }
 }
