@@ -4,9 +4,11 @@ This T-017 package compiles a semantic, evidence-aware whole-building baseline. 
 
 ## Inputs and boundary
 
-The compiler reads the locked P3.0 registry, P3.1 Master Library, P3.2 schema and five relationship definitions, P2.1 formal parameters/approved overrides/dependency matrix, and the P2.3 integration manifest. P2.3 is accounting/comparison input only. Its `transform.location_mm`, `transform.rotation_euler_rad`, and `transform.scale` fields are deliberately never copied or read into generated placement rules.
+The compiler inventories the locked P3.0 identity/schema layer, P3.1 qualification/contract layer and approved Master snapshots, P3.2 node/interface/representative-assembly foundation, P2.1 evidence-aware parameters, approved overrides and dependency matrix. It models all four input classifications explicitly. P2.3 is `ACCOUNTING_REFERENCE_ONLY` and `COMPARISON_ONLY`; its `transform.location_mm`, `transform.rotation_euler_rad`, and `transform.scale` fields are individually declared `PROHIBITED_AS_GENERATIVE_INPUT` and are never copied into generated placement rules.
 
 The P2 baseline and all P3.0/P3.1/P3.2 inputs are read-only. Their SHA-256 values are recorded in the input baseline and checked by the validator. Unknown, proxy, control, envelope, deferred, and reasonable-completion states retain their evidence boundaries.
+
+Every formal parameter retains its evidence and time layer and binds to concrete organizational nodes, locked relationship types, and named rules. The graph hierarchy is `BUILDING_ROOT → ORG-BUILDING → assembly organization → runtime node`. It traces the validated P3.2 representative assembly units without inventing unsupported building-instance `SUPPORT` or `CONNECT` edges.
 
 ## Commands
 
@@ -19,7 +21,7 @@ python3 production/zhenguo_wanfo/scripts/build_p3_3_building_graph_v001.py --che
 python3 -m unittest production.zhenguo_wanfo.tests.test_p3_3_building_graph_v001
 ```
 
-The builder uses sorted keys, stable instance ordering, UTF-8, two-space indentation, and a terminal newline. `--check` recompiles in memory and rejects stale or non-deterministic committed outputs. The validator rejects all five T-017 Hard Fails and writes the canonical validation report only when requested.
+The builder uses sorted keys, stable instance ordering, UTF-8, two-space indentation, and a terminal newline. `--check` recompiles twice and rejects stale or non-deterministic committed outputs. The validator mechanically derives every reported status from the generated assets, protected hashes, committed serialization, and five T-017 Hard Fail fixtures; it writes the canonical validation report only when requested.
 
 ## Outputs
 

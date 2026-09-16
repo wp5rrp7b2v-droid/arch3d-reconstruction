@@ -1,1 +1,9 @@
-{"description":"Upgrade a bounded non-historical node to historically confirmed.","expected":"REJECT","expected_hard_fail":"SILENT_HISTORICIZATION","mutation":"SILENT_HISTORICIZATION"}
+{
+  "description": "Upgrade a bounded non-historical node to historically confirmed.",
+  "expected": "REJECT",
+  "expected_hard_fail": "SILENT_HISTORICIZATION",
+  "mutation": {
+    "historical_claim": "HISTORICAL_CONFIRMED",
+    "operation": "upgrade_bounded_node_historical_claim"
+  }
+}

@@ -1,1 +1,16 @@
-{"description":"Inject the 1000 mm engineering reference as a building actual length.","expected":"REJECT","expected_hard_fail":"REFERENCE_LENGTH_LEAKS_INTO_BUILDING","mutation":"REFERENCE_LENGTH_LEAKS_INTO_BUILDING"}
+{
+  "description": "Inject the lower six-chuanfu 1000 mm non-historical canonical reference specimen into an actual full building realization length path.",
+  "expected": "REJECT",
+  "expected_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+  "mutation": {
+    "injected_dimension": {
+      "building_path": "ORG-FRAME-SYSTEM/runtime/P3_3:PRIMARY_FRAME_X00/actual_full_length_mm",
+      "source_component_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "source_parameter": "canonical_reference_length_mm",
+      "source_semantics": "NON_HISTORICAL_ENGINEERING_REFERENCE",
+      "use": "ACTUAL_FULL_LENGTH",
+      "value_mm": 1000
+    },
+    "operation": "inject_six_chuanfu_reference_as_actual_full_length"
+  }
+}

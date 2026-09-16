@@ -1,1 +1,8 @@
-{"description":"Remove one of the 365 accounted legacy instances.","expected":"REJECT","expected_hard_fail":"SILENT_BUILDING_OMISSION","mutation":"SILENT_BUILDING_OMISSION"}
+{
+  "description": "Remove one of the 365 accounted legacy instances without an exclusion record.",
+  "expected": "REJECT",
+  "expected_hard_fail": "SILENT_BUILDING_OMISSION",
+  "mutation": {
+    "operation": "remove_last_accounting_instance"
+  }
+}

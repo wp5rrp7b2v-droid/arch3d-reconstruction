@@ -7,20 +7,20 @@
     {
       "actual": "EXPECTED_REJECTION",
       "expected": "REJECT",
-      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/REFERENCE_LENGTH_LEAKS_INTO_BUILDING.json",
-      "hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
-    },
-    {
-      "actual": "EXPECTED_REJECTION",
-      "expected": "REJECT",
-      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/SILENT_HISTORICIZATION.json",
-      "hard_fail": "SILENT_HISTORICIZATION"
-    },
-    {
-      "actual": "EXPECTED_REJECTION",
-      "expected": "REJECT",
       "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/BAKED_MANUAL_BUILDING.json",
       "hard_fail": "BAKED_MANUAL_BUILDING"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/BROKEN_COMPONENT_IDENTITY.json",
+      "hard_fail": "BROKEN_COMPONENT_IDENTITY"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/REFERENCE_LENGTH_LEAKS_INTO_BUILDING.json",
+      "hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
     },
     {
       "actual": "EXPECTED_REJECTION",
@@ -31,11 +31,10 @@
     {
       "actual": "EXPECTED_REJECTION",
       "expected": "REJECT",
-      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/BROKEN_COMPONENT_IDENTITY.json",
-      "hard_fail": "BROKEN_COMPONENT_IDENTITY"
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/SILENT_HISTORICIZATION.json",
+      "hard_fail": "SILENT_HISTORICIZATION"
     }
   ],
-  "required_outputs": "5/5",
   "status": "PASS",
   "task": "T-017",
   "validations": {
@@ -49,17 +48,25 @@
       "variants_accounted": 40,
       "variants_expected": 40
     },
+    "building_organization": "PASS",
     "deterministic_regeneration_stable_serialization": "PASS",
     "evidence_boundary": "PASS",
     "identity_orphan": "PASS",
     "input_baseline": "PASS",
-    "parameter_provenance": "PASS",
+    "p3_2_traceability": "PASS",
+    "parameter_provenance_bindings": "PASS",
     "prohibited_transform_scan": {
       "authoritative_generation_usage_count": 0,
       "status": "PASS"
     },
     "protected_inputs_unchanged": true,
-    "relationship_types": "5/5 PASS"
+    "relationship_types": "5/5 PASS",
+    "required_outputs": {
+      "expected": 5,
+      "machine_readable": true,
+      "present": 5,
+      "status": "PASS"
+    }
   },
   "version": "V001"
 }

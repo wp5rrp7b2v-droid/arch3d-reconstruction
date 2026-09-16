@@ -1,4 +1,10 @@
 {
+  "input_classifications": {
+    "ACCOUNTING_REFERENCE_ONLY": "May establish identity and scope accounting only.",
+    "AUTHORITATIVE_GENERATIVE": "May drive P3.3 rules within its evidence boundary.",
+    "COMPARISON_ONLY": "May be used for diagnostics/comparison, never generation.",
+    "PROHIBITED_AS_GENERATIVE_INPUT": "Must never enter generation or placement paths."
+  },
   "inputs": [
     {
       "allowed_fields": [
@@ -9,6 +15,10 @@
         "parameter references",
         "counts"
       ],
+      "classifications": [
+        "ACCOUNTING_REFERENCE_ONLY",
+        "COMPARISON_ONLY"
+      ],
       "path": "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
       "prohibited_fields": [
         "instances[].transform.location_mm",
@@ -16,109 +26,553 @@
         "instances[].transform.scale"
       ],
       "protection": "READ_ONLY",
-      "role": "ACCOUNTING_REFERENCE_ONLY",
+      "role": "P2 frozen instance identity, coverage, evidence and comparison source only",
       "sha256": "5b10f3d83c4d72cc312c5f896e7cff5838365986612a885a310e2799e2a844a7"
     },
     {
       "allowed_fields": [
-        "ALL_EXCEPT_PROHIBITED_FIELDS"
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
       ],
-      "path": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_V001.json",
-      "prohibited_fields": [],
-      "protection": "READ_ONLY",
-      "role": "AUTHORITATIVE_GENERATIVE",
-      "sha256": "286af1d0105da0b1702ed5ec8b1528e269cdc4c707fee502cd730c6a77b1094d"
-    },
-    {
-      "allowed_fields": [
-        "ALL_EXCEPT_PROHIBITED_FIELDS"
+      "classifications": [
+        "ACCOUNTING_REFERENCE_ONLY"
       ],
       "path": "production/zhenguo_wanfo/registry/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.json",
       "prohibited_fields": [],
       "protection": "READ_ONLY",
-      "role": "ACCOUNTING_REFERENCE_ONLY",
+      "role": "P3.0-approved P2 identity migration accounting",
       "sha256": "6714598ea5e5da55da53c20e03c412c593364a8cd56863a85c980ce3d4580818"
     },
     {
       "allowed_fields": [
-        "ALL_EXCEPT_PROHIBITED_FIELDS"
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
       ],
-      "path": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/assembly/P3_2_ASSEMBLY_NODE_REGISTRY_V001.json",
       "prohibited_fields": [],
       "protection": "READ_ONLY",
-      "role": "AUTHORITATIVE_GENERATIVE",
-      "sha256": "aaae64affca06c23651264fc6036a3591d69484a1df52a128452c9ff328234b7"
+      "role": "ASSEMBLY_NODES",
+      "sha256": "793ff822418d254f7f9957018f71649c9b35af400cf3cfef3d31960b716dd8ae"
     },
     {
       "allowed_fields": [
-        "ALL_EXCEPT_PROHIBITED_FIELDS"
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
       ],
       "path": "production/zhenguo_wanfo/assembly/P3_2_ASSEMBLY_SCHEMA_V001.json",
       "prohibited_fields": [],
       "protection": "READ_ONLY",
-      "role": "AUTHORITATIVE_GENERATIVE",
+      "role": "ASSEMBLY_SCHEMA",
       "sha256": "6a01cde7b8eb915a4f4793716377f5b177b9e99593ddd6067bc8caa5c7f000fd"
     },
     {
       "allowed_fields": [
-        "ALL_EXCEPT_PROHIBITED_FIELDS"
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
       ],
-      "path": "production/zhenguo_wanfo/assembly/P3_2_RELATIONSHIP_TYPES_V001.json",
-      "prohibited_fields": [],
-      "protection": "READ_ONLY",
-      "role": "AUTHORITATIVE_GENERATIVE",
-      "sha256": "e8fb60629f5a517b920a338b27bb078e390d85da0d8cd7bf10e7bc40c4af5f97"
-    },
-    {
-      "allowed_fields": [
-        "ALL_EXCEPT_PROHIBITED_FIELDS"
-      ],
-      "path": "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json",
-      "prohibited_fields": [],
-      "protection": "READ_ONLY",
-      "role": "AUTHORITATIVE_GENERATIVE",
-      "sha256": "37bc365a50bd6a43e178c3102c19ad76cbf0cb533f4d76710a793afa318c0889"
-    },
-    {
-      "allowed_fields": [
-        "ALL_EXCEPT_PROHIBITED_FIELDS"
-      ],
-      "path": "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
-      "prohibited_fields": [],
-      "protection": "READ_ONLY",
-      "role": "AUTHORITATIVE_GENERATIVE",
-      "sha256": "3436050b33508d55633d1699c9f263f976f6e4b30b534c5607f89752735116c3"
-    },
-    {
-      "allowed_fields": [
-        "ALL_EXCEPT_PROHIBITED_FIELDS"
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
       ],
       "path": "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
       "prohibited_fields": [],
       "protection": "READ_ONLY",
-      "role": "AUTHORITATIVE_GENERATIVE",
+      "role": "DEPENDENCY",
       "sha256": "3e77d4c03acbd3595c28e93b1d04166730ede1bd08741c9aa94b28164f3764e4"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/schema/evidence_aware_parameter_schema_v001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "EVIDENCE_SCHEMA",
+      "sha256": "3348bddc0509e004ff6b99c48fc047c8b080bdc98bf6fd069acc6454589328ed"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/assembly/P3_2_INTERFACE_REGISTRY_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "INTERFACES",
+      "sha256": "7e3a327f796249a62e4ca3e57e17699e482a100ae12b4bb1abe1abeaa095db30"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "MASTERS",
+      "sha256": "aaae64affca06c23651264fc6036a3591d69484a1df52a128452c9ff328234b7"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "OVERRIDES",
+      "sha256": "3436050b33508d55633d1699c9f263f976f6e4b30b534c5607f89752735116c3"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_ONTOLOGY_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3_0_ONTOLOGY",
+      "sha256": "e28bb821873f663698a3b4929ac0aa580a3bad72b5e9bd9688576e481ba4e6a4"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_SCHEMA_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3_0_SCHEMA",
+      "sha256": "425bda44a857d7507adfe4c71eaa3be22fddd65c654d0a5d778d0f9d81fd2597"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3_1_CONTRACT",
+      "sha256": "9075d971c02a0ffa905d70761930d031d4fcb8be987616e23d59a14ccb8d83df"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_IDENTITY_RESOLUTION_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3_1_IDENTITY",
+      "sha256": "2b5a3f84ceba88d1a0a20cd2b86f38fb4bfc29801bbdf50490b43567d471d9e8"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_SCOPE_MATRIX_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3_1_SCOPE",
+      "sha256": "b3e8ea329ed20f9a1e94d85191a4c11de7182bc840cf16b7709dddec5af314d3"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/tests/test_p3_2_representative_assembly_v001.py",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3_2_REPRESENTATIVE_TESTS",
+      "sha256": "72439b6f1a76754eae6aa8dc6f24af7b732ee75aab188e3448f208f4b303049e"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/validation/P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3_2_REPRESENTATIVE_VALIDATION",
+      "sha256": "55952c9c529de6de952e1d823a066a684f983bb9f558a3aa91979f45243d083f"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/scripts/validate_p3_2_representative_assembly_v001.py",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3_2_REPRESENTATIVE_VALIDATOR",
+      "sha256": "9b1d364d7eca0624dc8df06b7ee0ddaa02205de4073563eba9feb7b8fa94042e"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/tests/test_p3_2_relationship_foundation_v001.py",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3_2_TESTS",
+      "sha256": "920d139fd4c8dc408c4772be37785966f88fc13342da6e2a4939645de8c8d533"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/validation/P3_2_RELATIONSHIP_FOUNDATION_VALIDATION_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3_2_VALIDATION",
+      "sha256": "ad1966d928004ea05501c4edf79d84ef75e79552285063cc009bf48d456198a9"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/scripts/validate_p3_2_relationship_foundation_v001.py",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3_2_VALIDATOR",
+      "sha256": "b6b8ed73878b445e84a4c18a05a69754d3438dd04d0c3db8a39e6f54fff70143"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "PARAMETERS",
+      "sha256": "37bc365a50bd6a43e178c3102c19ad76cbf0cb533f4d76710a793afa318c0889"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "REGISTRY",
+      "sha256": "286af1d0105da0b1702ed5ec8b1528e269cdc4c707fee502cd730c6a77b1094d"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/assembly/P3_2_RELATIONSHIP_TYPES_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "RELATIONSHIPS",
+      "sha256": "e8fb60629f5a517b920a338b27bb078e390d85da0d8cd7bf10e7bc40c4af5f97"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_ASSEMBLY_REGISTRY_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "REPRESENTATIVE_ASSEMBLIES",
+      "sha256": "03e288fef59155427d7bdcbee5281c63f36a536e6a9a04ccdc112e0601a42778"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_RELATIONSHIP_GRAPH_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "REPRESENTATIVE_GRAPH",
+      "sha256": "5073ae9e9b8439c28ca68b61e38b397f94b6dfedbcfb6925b1c78cd9093d7b82"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_INTERFACE_EXTENSION_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "REPRESENTATIVE_INTERFACES",
+      "sha256": "c889583b56356002630d59309b85d5e683b22e15212edfb6c2e86394168b6ac9"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "07676d390a709c6baaed39986033725550b543b88239d167e6dd4bbabed25739"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "61e4b790e71a319a880c9810cf747a9e7dc56ab7e03e3b0d4e3ddea566cfc768"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_PARAMS_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "6266d4b3666c3f68052e05d9d4bd6c875a5aab948a34b86c4102decdb433f421"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_SEMANTIC_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "c47feba104c0eb0fcab54e532b2543233395648603ad7b3c1a603625f5e93ee1"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_PARAMS_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "6618907bb2ed4e4c749a15132384303b8ee0eeb8f7e0d35d395357f9b3dc50c7"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_SEMANTIC_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "41346c4cfc850142c7f0a046c6da4f9aaad55847c7db2cb682b2f890b67406bc"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "b111e4eda535d619a117a9c67519793b64af68231eb9e23d26b5860a6ff16a89"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "689afbabedd0fd776d7db1ccbce9f30244317d1959c922f2531683b2905f8056"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "ef998ccb4aa61e38016e2cf201ff156de42a42ea0e86bdbc8d9c132039a3ceb7"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "592783c66e4d516ac0d52f5da9b38f7910706cf4bb6234108821e699633876a8"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_PARAMS_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "fd75ef3cbaf082e67c40fec9b3dc988170675fa1ae6545f90c10857da259ef48"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
+      "path": "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_SEMANTIC_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "P3.1_APPROVED_MASTER_PARAMETER_OR_SEMANTIC_SNAPSHOT",
+      "sha256": "f1f514a8a05df3d37a4b89511af8f2b2e71d40fe7252baa0d96c6ee09d862fb6"
     }
   ],
-  "prohibited_as_generative_input": {
-    "fields": [
-      "transform.location_mm",
-      "transform.rotation_euler_rad",
-      "transform.scale"
-    ],
-    "source": "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
-    "usage_count": 0
-  },
+  "prohibited_inputs": [
+    {
+      "authoritative_generation_usage_count": 0,
+      "classification": "PROHIBITED_AS_GENERATIVE_INPUT",
+      "field_path": "instances[].transform.location_mm",
+      "reason": "P2 numeric world transform is comparison/diagnostic evidence, never a P3.3 placement source.",
+      "source_path": "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json"
+    },
+    {
+      "authoritative_generation_usage_count": 0,
+      "classification": "PROHIBITED_AS_GENERATIVE_INPUT",
+      "field_path": "instances[].transform.rotation_euler_rad",
+      "reason": "P2 numeric world transform is comparison/diagnostic evidence, never a P3.3 placement source.",
+      "source_path": "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json"
+    },
+    {
+      "authoritative_generation_usage_count": 0,
+      "classification": "PROHIBITED_AS_GENERATIVE_INPUT",
+      "field_path": "instances[].transform.scale",
+      "reason": "P2 numeric world transform is comparison/diagnostic evidence, never a P3.3 placement source.",
+      "source_path": "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json"
+    }
+  ],
   "protection_hashes": {
+    "production/zhenguo_wanfo/assembly/P3_2_ASSEMBLY_NODE_REGISTRY_V001.json": "793ff822418d254f7f9957018f71649c9b35af400cf3cfef3d31960b716dd8ae",
     "production/zhenguo_wanfo/assembly/P3_2_ASSEMBLY_SCHEMA_V001.json": "6a01cde7b8eb915a4f4793716377f5b177b9e99593ddd6067bc8caa5c7f000fd",
+    "production/zhenguo_wanfo/assembly/P3_2_INTERFACE_REGISTRY_V001.json": "7e3a327f796249a62e4ca3e57e17699e482a100ae12b4bb1abe1abeaa095db30",
     "production/zhenguo_wanfo/assembly/P3_2_RELATIONSHIP_TYPES_V001.json": "e8fb60629f5a517b920a338b27bb078e390d85da0d8cd7bf10e7bc40c4af5f97",
+    "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_ASSEMBLY_REGISTRY_V001.json": "03e288fef59155427d7bdcbee5281c63f36a536e6a9a04ccdc112e0601a42778",
+    "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_INTERFACE_EXTENSION_V001.json": "c889583b56356002630d59309b85d5e683b22e15212edfb6c2e86394168b6ac9",
+    "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_RELATIONSHIP_GRAPH_V001.json": "5073ae9e9b8439c28ca68b61e38b397f94b6dfedbcfb6925b1c78cd9093d7b82",
     "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json": "5b10f3d83c4d72cc312c5f896e7cff5838365986612a885a310e2799e2a844a7",
+    "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json": "07676d390a709c6baaed39986033725550b543b88239d167e6dd4bbabed25739",
+    "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json": "61e4b790e71a319a880c9810cf747a9e7dc56ab7e03e3b0d4e3ddea566cfc768",
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_PARAMS_V001.json": "6266d4b3666c3f68052e05d9d4bd6c875a5aab948a34b86c4102decdb433f421",
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_SEMANTIC_V001.json": "c47feba104c0eb0fcab54e532b2543233395648603ad7b3c1a603625f5e93ee1",
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_PARAMS_V001.json": "6618907bb2ed4e4c749a15132384303b8ee0eeb8f7e0d35d395357f9b3dc50c7",
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-SINGLE-LONGKAI-001/CMP-DOU-SINGLE-LONGKAI-001_MASTER_SEMANTIC_V001.json": "41346c4cfc850142c7f0a046c6da4f9aaad55847c7db2cb682b2f890b67406bc",
+    "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json": "b111e4eda535d619a117a9c67519793b64af68231eb9e23d26b5860a6ff16a89",
+    "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json": "689afbabedd0fd776d7db1ccbce9f30244317d1959c922f2531683b2905f8056",
+    "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json": "ef998ccb4aa61e38016e2cf201ff156de42a42ea0e86bdbc8d9c132039a3ceb7",
+    "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-UPPER-SIX-CHUANFU-001/CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SEMANTIC_V001.json": "592783c66e4d516ac0d52f5da9b38f7910706cf4bb6234108821e699633876a8",
+    "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_PARAMS_V001.json": "fd75ef3cbaf082e67c40fec9b3dc988170675fa1ae6545f90c10857da259ef48",
+    "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/CMP-LUDOU-COLUMN-001_MASTER_SEMANTIC_V001.json": "f1f514a8a05df3d37a4b89511af8f2b2e71d40fe7252baa0d96c6ee09d862fb6",
     "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json": "3e77d4c03acbd3595c28e93b1d04166730ede1bd08741c9aa94b28164f3764e4",
     "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json": "3436050b33508d55633d1699c9f263f976f6e4b30b534c5607f89752735116c3",
     "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json": "37bc365a50bd6a43e178c3102c19ad76cbf0cb533f4d76710a793afa318c0889",
+    "production/zhenguo_wanfo/registry/P3_0_COMPONENT_ONTOLOGY_V001.json": "e28bb821873f663698a3b4929ac0aa580a3bad72b5e9bd9688576e481ba4e6a4",
+    "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_SCHEMA_V001.json": "425bda44a857d7507adfe4c71eaa3be22fddd65c654d0a5d778d0f9d81fd2597",
     "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_V001.json": "286af1d0105da0b1702ed5ec8b1528e269cdc4c707fee502cd730c6a77b1094d",
     "production/zhenguo_wanfo/registry/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.json": "6714598ea5e5da55da53c20e03c412c593364a8cd56863a85c980ce3d4580818",
-    "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json": "aaae64affca06c23651264fc6036a3591d69484a1df52a128452c9ff328234b7"
+    "production/zhenguo_wanfo/registry/P3_1_COMPONENT_IDENTITY_RESOLUTION_V001.json": "2b5a3f84ceba88d1a0a20cd2b86f38fb4bfc29801bbdf50490b43567d471d9e8",
+    "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json": "aaae64affca06c23651264fc6036a3591d69484a1df52a128452c9ff328234b7",
+    "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_SCOPE_MATRIX_V001.json": "b3e8ea329ed20f9a1e94d85191a4c11de7182bc840cf16b7709dddec5af314d3",
+    "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json": "9075d971c02a0ffa905d70761930d031d4fcb8be987616e23d59a14ccb8d83df",
+    "production/zhenguo_wanfo/schema/evidence_aware_parameter_schema_v001.json": "3348bddc0509e004ff6b99c48fc047c8b080bdc98bf6fd069acc6454589328ed",
+    "production/zhenguo_wanfo/scripts/validate_p3_2_relationship_foundation_v001.py": "b6b8ed73878b445e84a4c18a05a69754d3438dd04d0c3db8a39e6f54fff70143",
+    "production/zhenguo_wanfo/scripts/validate_p3_2_representative_assembly_v001.py": "9b1d364d7eca0624dc8df06b7ee0ddaa02205de4073563eba9feb7b8fa94042e",
+    "production/zhenguo_wanfo/tests/test_p3_2_relationship_foundation_v001.py": "920d139fd4c8dc408c4772be37785966f88fc13342da6e2a4939645de8c8d533",
+    "production/zhenguo_wanfo/tests/test_p3_2_representative_assembly_v001.py": "72439b6f1a76754eae6aa8dc6f24af7b732ee75aab188e3448f208f4b303049e",
+    "production/zhenguo_wanfo/validation/P3_2_RELATIONSHIP_FOUNDATION_VALIDATION_V001.json": "ad1966d928004ea05501c4edf79d84ef75e79552285063cc009bf48d456198a9",
+    "production/zhenguo_wanfo/validation/P3_2_REPRESENTATIVE_ASSEMBLY_VALIDATION_V001.json": "55952c9c529de6de952e1d823a066a684f983bb9f558a3aa91979f45243d083f"
   },
   "status": "CANONICAL",
   "task": "T-017",
