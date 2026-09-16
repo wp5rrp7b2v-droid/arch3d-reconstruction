@@ -1,0 +1,1 @@
+{"description":"Point one accounted instance at an absent registry identity.","expected":"REJECT","expected_hard_fail":"BROKEN_COMPONENT_IDENTITY","mutation":"BROKEN_COMPONENT_IDENTITY"}

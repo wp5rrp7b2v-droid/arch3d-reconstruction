@@ -1,0 +1,1 @@
+{"description":"Inject the 1000 mm engineering reference as a building actual length.","expected":"REJECT","expected_hard_fail":"REFERENCE_LENGTH_LEAKS_INTO_BUILDING","mutation":"REFERENCE_LENGTH_LEAKS_INTO_BUILDING"}

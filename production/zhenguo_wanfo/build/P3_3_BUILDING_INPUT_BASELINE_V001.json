@@ -1,0 +1,126 @@
+{
+  "inputs": [
+    {
+      "allowed_fields": [
+        "instance_id",
+        "family_id",
+        "variant_id",
+        "evidence metadata",
+        "parameter references",
+        "counts"
+      ],
+      "path": "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+      "prohibited_fields": [
+        "instances[].transform.location_mm",
+        "instances[].transform.rotation_euler_rad",
+        "instances[].transform.scale"
+      ],
+      "protection": "READ_ONLY",
+      "role": "ACCOUNTING_REFERENCE_ONLY",
+      "sha256": "5b10f3d83c4d72cc312c5f896e7cff5838365986612a885a310e2799e2a844a7"
+    },
+    {
+      "allowed_fields": [
+        "ALL_EXCEPT_PROHIBITED_FIELDS"
+      ],
+      "path": "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "AUTHORITATIVE_GENERATIVE",
+      "sha256": "286af1d0105da0b1702ed5ec8b1528e269cdc4c707fee502cd730c6a77b1094d"
+    },
+    {
+      "allowed_fields": [
+        "ALL_EXCEPT_PROHIBITED_FIELDS"
+      ],
+      "path": "production/zhenguo_wanfo/registry/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "ACCOUNTING_REFERENCE_ONLY",
+      "sha256": "6714598ea5e5da55da53c20e03c412c593364a8cd56863a85c980ce3d4580818"
+    },
+    {
+      "allowed_fields": [
+        "ALL_EXCEPT_PROHIBITED_FIELDS"
+      ],
+      "path": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "AUTHORITATIVE_GENERATIVE",
+      "sha256": "aaae64affca06c23651264fc6036a3591d69484a1df52a128452c9ff328234b7"
+    },
+    {
+      "allowed_fields": [
+        "ALL_EXCEPT_PROHIBITED_FIELDS"
+      ],
+      "path": "production/zhenguo_wanfo/assembly/P3_2_ASSEMBLY_SCHEMA_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "AUTHORITATIVE_GENERATIVE",
+      "sha256": "6a01cde7b8eb915a4f4793716377f5b177b9e99593ddd6067bc8caa5c7f000fd"
+    },
+    {
+      "allowed_fields": [
+        "ALL_EXCEPT_PROHIBITED_FIELDS"
+      ],
+      "path": "production/zhenguo_wanfo/assembly/P3_2_RELATIONSHIP_TYPES_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "AUTHORITATIVE_GENERATIVE",
+      "sha256": "e8fb60629f5a517b920a338b27bb078e390d85da0d8cd7bf10e7bc40c4af5f97"
+    },
+    {
+      "allowed_fields": [
+        "ALL_EXCEPT_PROHIBITED_FIELDS"
+      ],
+      "path": "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "AUTHORITATIVE_GENERATIVE",
+      "sha256": "37bc365a50bd6a43e178c3102c19ad76cbf0cb533f4d76710a793afa318c0889"
+    },
+    {
+      "allowed_fields": [
+        "ALL_EXCEPT_PROHIBITED_FIELDS"
+      ],
+      "path": "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "AUTHORITATIVE_GENERATIVE",
+      "sha256": "3436050b33508d55633d1699c9f263f976f6e4b30b534c5607f89752735116c3"
+    },
+    {
+      "allowed_fields": [
+        "ALL_EXCEPT_PROHIBITED_FIELDS"
+      ],
+      "path": "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "AUTHORITATIVE_GENERATIVE",
+      "sha256": "3e77d4c03acbd3595c28e93b1d04166730ede1bd08741c9aa94b28164f3764e4"
+    }
+  ],
+  "prohibited_as_generative_input": {
+    "fields": [
+      "transform.location_mm",
+      "transform.rotation_euler_rad",
+      "transform.scale"
+    ],
+    "source": "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json",
+    "usage_count": 0
+  },
+  "protection_hashes": {
+    "production/zhenguo_wanfo/assembly/P3_2_ASSEMBLY_SCHEMA_V001.json": "6a01cde7b8eb915a4f4793716377f5b177b9e99593ddd6067bc8caa5c7f000fd",
+    "production/zhenguo_wanfo/assembly/P3_2_RELATIONSHIP_TYPES_V001.json": "e8fb60629f5a517b920a338b27bb078e390d85da0d8cd7bf10e7bc40c4af5f97",
+    "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json": "5b10f3d83c4d72cc312c5f896e7cff5838365986612a885a310e2799e2a844a7",
+    "production/zhenguo_wanfo/dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json": "3e77d4c03acbd3595c28e93b1d04166730ede1bd08741c9aa94b28164f3764e4",
+    "production/zhenguo_wanfo/params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json": "3436050b33508d55633d1699c9f263f976f6e4b30b534c5607f89752735116c3",
+    "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json": "37bc365a50bd6a43e178c3102c19ad76cbf0cb533f4d76710a793afa318c0889",
+    "production/zhenguo_wanfo/registry/P3_0_COMPONENT_REGISTRY_V001.json": "286af1d0105da0b1702ed5ec8b1528e269cdc4c707fee502cd730c6a77b1094d",
+    "production/zhenguo_wanfo/registry/P3_0_P2_COMPONENT_MIGRATION_AUDIT_V001.json": "6714598ea5e5da55da53c20e03c412c593364a8cd56863a85c980ce3d4580818",
+    "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json": "aaae64affca06c23651264fc6036a3591d69484a1df52a128452c9ff328234b7"
+  },
+  "status": "CANONICAL",
+  "task": "T-017",
+  "version": "V001"
+}

@@ -1,0 +1,1 @@
+{"description":"Upgrade a bounded non-historical node to historically confirmed.","expected":"REJECT","expected_hard_fail":"SILENT_HISTORICIZATION","mutation":"SILENT_HISTORICIZATION"}

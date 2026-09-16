@@ -1,0 +1,1 @@
+{"description":"Remove one of the 365 accounted legacy instances.","expected":"REJECT","expected_hard_fail":"SILENT_BUILDING_OMISSION","mutation":"SILENT_BUILDING_OMISSION"}

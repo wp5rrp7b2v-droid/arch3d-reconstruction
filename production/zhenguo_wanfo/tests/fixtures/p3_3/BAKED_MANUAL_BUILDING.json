@@ -1,0 +1,1 @@
+{"description":"Enable manual baked placement as a generation dependency.","expected":"REJECT","expected_hard_fail":"BAKED_MANUAL_BUILDING","mutation":"BAKED_MANUAL_BUILDING"}
