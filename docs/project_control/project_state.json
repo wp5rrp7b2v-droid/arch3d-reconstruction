@@ -208,7 +208,7 @@
     "visualization_version": "v032",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "REFRESH REQUIRED / TARGET R086 T-017 EXECUTION AUTHORIZED"
+    "refresh_status": "CURRENT / R086 / T-017 EXECUTION AUTHORIZED"
   },
   "daily_closing_audit": {
     "date": "2026-09-15",
