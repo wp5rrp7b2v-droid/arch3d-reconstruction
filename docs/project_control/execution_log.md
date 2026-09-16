@@ -179,3 +179,33 @@
 - Phase archive：P3 尚未关闭，本次无新增 archive action。
 - Known exceptions：NONE。
 - **DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT = PASS**。
+
+## T-017｜P3.3 整殿输入基线与 Assembly Graph 基础工程｜PASS / APPROVED / CLOSED / D-050｜2026-09-16
+
+- Authorization：D-049；Execution Mode=`CHAT_FIRST_CODEX_EXECUTOR_MODE`；Think Level=MEDIUM；Cloud Mode=`CLOUD_EXECUTABLE`；Blender requirement=NONE。
+- GitHub PR：`#2`；reviewed head=`f117cb98da713e5279174248076421caa9d9e6f4`；14 changed files；2 commits；Product Owner D-050 authorized merge。
+- Merge result：PASS；merge commit=`1095440af761fc95cc18d0ce01523a097fc8ce5f`。
+- 正式机器输出：5/5 present and machine-readable。
+- Scope accounting：11/11 families；40/40 variants；365/365 instances；unexplained omissions=0；orphan identities=0。
+- Input Baseline：四类输入分类完整；P2.3 manifest 仅 accounting/comparison；`transform.location_mm` / `rotation_euler_rad` / `scale` 明确 `PROHIBITED_AS_GENERATIVE_INPUT`。
+- Parameter Bindings：formal parameter → evidence/time layer → building role → graph node / relationship / rule dependency 显式可追溯。
+- Assembly Graph：`BUILDING_ROOT → ORG-BUILDING → assembly organization → runtime nodes`；P3.2 validated assembly foundation traceability PASS；基础关系仍只允许 SUPPORT / CONNECT / LOCATE / REPEAT / BELONG。
+- Canonical Hard Fail=0；5/5 synthetic negative fixtures expected rejection。HF-01 真实注入六椽栿 `canonical_reference_length_mm=1000` 到 actual full-length path；HF-03 真实注入 P2 location / rotation / scale 到 authoritative placement path，均稳定拒绝。
+- Mechanical validation：required outputs / input baseline / parameter provenance / building organization / P3.2 traceability / prohibited-transform scan / evidence boundary / deterministic regeneration & stable serialization / protected hashes 均由 validator 实际计算并 PASS。
+- T-017 unit tests：12 tests PASS；deterministic `--check` PASS；JSON parse / compileall / `git diff --check` PASS。
+- Protected inputs：P2 frozen baseline、P3.0 canonical identity、P3.1 approved Masters、P3.2 foundational definitions UNCHANGED。
+- Blender invocations=0；`.blend` files created=0。
+- ChatGPT first structural review：HOLD / 5 corrections required；correction publication 经 Codex UI `Update Branch` 进入同一 PR #2 后，second structural review=PASS。
+- Product Owner：APPROVED / CLOSED / D-050。
+- Gate impact：T-017 closure **不等于 P3.3 PASS**。T-017 已建立 DoD-01～04 基础与 DoD-07/08 验证基础；DoD-05、DoD-06、DoD-08 的 building-parameter mutation execution evidence、DoD-09 final Gate Evidence Package 仍待后续任务完成。
+
+## Current Execution State｜R091｜2026-09-16
+
+- P3：ACTIVE / **3/4 PASS**。
+- P3.0：PASS / APPROVED / CLOSED。
+- P3.1：PASS / APPROVED / CLOSED / D-040。
+- P3.2：PASS / APPROVED / CLOSED / D-046。
+- P3.3：ACTIVE / DOD LOCKED / T-017 PASS / NEXT TASK PLANNING。
+- Current task：NONE。
+- Current blocker：NONE。
+- Next action：设计下一项 P3.3 Task Contract，目标为确定性整殿生成及 GitHub Actions headless Blender 证据链；未经 Product Owner 明确批准不得执行。
