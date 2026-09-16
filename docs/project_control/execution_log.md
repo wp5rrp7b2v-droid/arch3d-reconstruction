@@ -209,3 +209,30 @@
 - Current task：NONE。
 - Current blocker：NONE。
 - Next action：设计下一项 P3.3 Task Contract，目标为确定性整殿生成及 GitHub Actions headless Blender 证据链；未经 Product Owner 明确批准不得执行。
+
+## T-019｜P3.3 上游 Disposition 一致性修正｜PASS / APPROVED / CLOSED / D-055｜2026-09-16
+
+- Contract：D-053；Execution Authorization：D-054；Execution Mode=`CHAT_FIRST_CODEX_EXECUTOR_MODE`；Think Level=MEDIUM；Cloud Mode=`CLOUD_EXECUTABLE`；Blender requirement=NONE。
+- GitHub PR：`#4`；reviewed head=`91723a7a2b3c3ca78473bba3cb344450e43fbb3f`；6 changed files；Product Owner D-055 authorized merge。
+- Merge result：PASS；merge commit=`b9803fb416e375fd2f94f5d83df5fab73fe00063`。
+- Known correction：7/7 `CMP-PURLIN-001` legacy instances in Scope Accounting and Assembly Graph changed from `GENERATE_FROM_FORMAL_COMPONENT` to `DEFERRED`。
+- P3.1 qualification remains `DEFERRED_INSUFFICIENT_EVIDENCE`；no PURLIN Master created；no unknown purlin sections/lengths/end conditions invented。
+- Direct-identity qualification uses explicit `candidate_id` / `source_registry_id`；family-only silent upgrade prohibited。
+- Validator consistency error：`MASTER_SCOPE_DISPOSITION_CONFLICT`；not added to the five canonical P3.3 Hard Fails。
+- Cross-layer direct-identity conflicts=0；new synthetic regression=`EXPECTED_REJECTION / MASTER_SCOPE_DISPOSITION_CONFLICT`。
+- Accounting remains 11/11 families / 40/40 variants / 365/365 instances；unexplained omissions=0；orphan identities=0；P2 authoritative numeric-transform usage=0；five relation types unchanged；canonical Hard Fail=0；existing negatives=5/5 expected rejection。
+- Deterministic regeneration / stable serialization PASS；P3.1 / P3.2 / T-018 PR #3 / Blender / `.blend` unchanged。
+- Canonical `main` verification after merge：PASS；7/7 PURLIN building instances read as `DEFERRED`。
+- Gate impact：T-019 closure resolves T-018 `UPSTREAM_PROTECTED_INPUT_CONFLICT` only；**does not make T-018 PASS and does not make P3.3 PASS**。
+
+## Current Execution State｜R098｜2026-09-16
+
+- P3：ACTIVE / **3/4 PASS**。
+- P3.3：ACTIVE / DOD LOCKED。
+- T-017：CLOSED / D-050 / canonical foundation corrected by T-019。
+- T-019：PASS / APPROVED / CLOSED / D-055。
+- Current task：T-018 / RESUME READY / CORRECTIONS REQUIRED / PR #3 OPEN。
+- Previous upstream STOP：CLEARED。
+- Remaining T-018 corrections：formal geometry must use approved formal generation where available；placement must derive from authoritative graph/parameters/rules；Actions evidence must bind PR head SHA；Blender 4.5.13 version check must accept valid `LTS` suffix while remaining version-locked。
+- Previous Actions Run #35101537343 remains debugging-only / NOT formal evidence；Run A/B/C/D did not execute。
+- Next action：return to the original T-018 Codex task, update from latest main, implement the four corrections, use Codex UI `Update Branch` to update the same PR #3, rerun GitHub Actions, then return evidence to ChatGPT；do not create a new T-018 PR and do not merge PR #3。
