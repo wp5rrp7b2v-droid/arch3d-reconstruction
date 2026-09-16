@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R089",
+  "state_revision": "R090",
   "last_updated": "2026-09-16",
   "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-017_STRUCTURAL_REVIEW_PASS / AWAITING_PRODUCT_OWNER_APPROVAL / CLOUD_MODE_ACTIVE",
   "phase": {
@@ -230,10 +230,10 @@
   "next_action": "Product Owner reviews T-017 structural PASS and explicitly decides whether to approve T-017 and authorize merge of GitHub PR #2. Do not merge without that approval.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v033",
+    "visualization_version": "v034",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "REFRESH REQUIRED / TARGET R089 / T-017 STRUCTURAL REVIEW PASS"
+    "refresh_status": "CURRENT / R090 / T-017 STRUCTURAL REVIEW PASS"
   },
   "daily_closing_audit": {
     "date": "2026-09-15",
@@ -242,6 +242,6 @@
     "checked": ["project_state", "acceptance_matrix", "decision_log", "execution_log", "governance", "rules_change_log", "dashboard", "phase_archive_applicability", "RC-014_cloud_mode", "PR_1_merge"],
     "known_exceptions": [],
     "phase_archive_action": "NONE / P3 ACTIVE",
-    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R089 T-017 structural review PASS on 2026-09-16."
+    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R090 T-017 structural review PASS on 2026-09-16."
   }
 }
