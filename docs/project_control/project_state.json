@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R085",
+  "state_revision": "R086",
   "last_updated": "2026-09-16",
-  "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-017_CONTRACT_LOCKED / AWAITING_EXECUTION_AUTHORIZATION / CLOUD_MODE_ACTIVE",
+  "session_status": "ACTIVE / P3.3_DOD_LOCKED / T-017_EXECUTION_AUTHORIZED / CODEX_CLOUD_READY / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,15 +17,15 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-017 CONTRACT LOCKED / AWAITING EXECUTION AUTHORIZATION",
+    "status": "DOD LOCKED / T-017 EXECUTION AUTHORIZED / CODEX CLOUD READY",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 CONTRACT LOCKED / ENGINEERING EXECUTION NOT AUTHORIZED"
+      "P3.3": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 EXECUTION AUTHORIZED / D-049"
     }
   },
-  "decision_required": true,
+  "decision_required": false,
   "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
@@ -70,20 +70,23 @@
       "next_action": "Define and Product-Owner-approve P3.3 Definition of Done",
       "local_sync_required_before_mac_shutdown": true
     },
-    "active_window_note": "Cloud Mode active. T-017 is classified CLOUD_EXECUTABLE and requires no Blender or Local Mac. One task = one branch = one PR applies once Product Owner explicitly authorizes execution."
+    "active_window_note": "Cloud Mode active. T-017 is authorized as CLOUD_EXECUTABLE, requires no Blender or Local Mac, and must execute on one dedicated branch and one PR. PR merge remains separately controlled by Product Owner."
   },
   "current_task": {
     "id": "T-017",
     "engineering_id": "P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001",
     "name": "整殿输入基线与 Assembly Graph 基础工程",
-    "status": "CONTRACT LOCKED / READY FOR EXECUTION / NOT STARTED / EXECUTION NOT AUTHORIZED",
+    "status": "EXECUTION AUTHORIZED / CODEX CLOUD READY / ENGINEERING RESULT PENDING",
     "task_contract": "docs/tasks/T-017_P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001.md",
     "cloud_mode_classification": "CLOUD_EXECUTABLE",
     "think_level": "MEDIUM",
     "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
     "executor": "Codex Cloud",
+    "branch": "codex/t017-p3-3-building-input-assembly-graph-v001",
     "blender_required": false,
-    "execution_authorized": false
+    "execution_authorized": true,
+    "authorization_decision_id": "D-049",
+    "pr_merge_authorized": false
   },
   "current_case": {"name": "平遥镇国寺万佛殿", "selection_status": "LOCKED"},
   "p2_closure": {
@@ -139,7 +142,7 @@
     ]
   },
   "p3_3": {
-    "status": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 CONTRACT LOCKED / AWAITING EXECUTION AUTHORIZATION",
+    "status": "DOD LOCKED / PRODUCT OWNER APPROVED / D-047 / GITHUB ACTIONS BLENDER PIPELINE APPROVED / D-048 / T-017 EXECUTION AUTHORIZED / D-049",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "entry_decision_id": "D-046",
@@ -147,12 +150,15 @@
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-047",
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md",
     "engineering_planning_authorized": true,
-    "engineering_execution_authorized": false,
+    "engineering_execution_authorized": true,
     "current_task": {
       "id": "T-017",
       "engineering_id": "P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001",
-      "contract_status": "LOCKED / READY / NOT STARTED / EXECUTION NOT AUTHORIZED",
+      "contract_status": "LOCKED",
+      "execution_status": "AUTHORIZED / CODEX CLOUD READY / RESULT PENDING",
+      "authorization_decision_id": "D-049",
       "cloud_mode_classification": "CLOUD_EXECUTABLE",
+      "branch": "codex/t017-p3-3-building-input-assembly-graph-v001",
       "task_contract": "docs/tasks/T-017_P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001.md"
     },
     "blender_execution_workflow": {
@@ -175,7 +181,7 @@
   },
   "chat_first_codex_executor": {
     "rule_id": "RC-011",
-    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 SUCCESSFUL REUSE / T017 CONTRACT LOCKED / LONG-TERM EVALUATION PENDING"
+    "status": "T013 TRIAL COMPLETE / T015 SUCCESSFUL REUSE / T016 SUCCESSFUL REUSE / T017 EXECUTION AUTHORIZED / LONG-TERM EVALUATION PENDING"
   },
   "visual_review_workflow": {
     "rule_id": "RC-015",
@@ -192,17 +198,17 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-048",
+    "id": "D-049",
     "date": "2026-09-16",
-    "decision": "Product Owner approved the P3.3 scripted Blender execution chain. T-017 Task Contract was subsequently created and locked as task-control state without consuming a separate Decision ID; execution remains unauthorized."
+    "decision": "Product Owner explicitly authorized T-017 engineering execution in Codex Cloud under the locked Task Contract. T-017 is CLOUD_EXECUTABLE, uses one dedicated branch and one PR, requires no Blender, and PR merge remains unauthorized until separate Product Owner approval."
   },
-  "next_action": "Obtain explicit Product Owner authorization to start T-017. Only then launch Codex Cloud on a dedicated T-017 branch/PR; do not run Blender for T-017.",
+  "next_action": "Run T-017 in Codex Cloud on branch codex/t017-p3-3-building-input-assembly-graph-v001, create one PR, return machine evidence and changed files for ChatGPT review; do not merge the PR.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v031",
+    "visualization_version": "v032",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R085 / T-017 CONTRACT LOCKED"
+    "refresh_status": "REFRESH REQUIRED / TARGET R086 T-017 EXECUTION AUTHORIZED"
   },
   "daily_closing_audit": {
     "date": "2026-09-15",
@@ -211,6 +217,6 @@
     "checked": ["project_state", "acceptance_matrix", "decision_log", "execution_log", "governance", "rules_change_log", "dashboard", "phase_archive_applicability", "RC-014_cloud_mode", "PR_1_merge"],
     "known_exceptions": [],
     "phase_archive_action": "NONE / P3 ACTIVE",
-    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R085 T-017 contract state on 2026-09-16."
+    "cross_file_result": "Historical closing audit for 2026-09-15. Superseded for current-state reading by R086 / D-049 on 2026-09-16."
   }
 }
