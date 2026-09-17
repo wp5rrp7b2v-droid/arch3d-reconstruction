@@ -26,50 +26,43 @@ jobs:
           test -d .tmp_t018_round2
           python - <<'PY'
           from pathlib import Path
-          import base64, gzip, hashlib, re
+          import base64, gzip, hashlib
 
           expected_sha = '99a22d0e93525be91de9e6f93912d8fbec53fb48b3c65d63a7cd1b466b6cf41f'
           files = [Path(f'.tmp_t018_round2/part{n}.b64') for n in range(1, 7)]
           parts = [p.read_text(encoding='ascii') for p in files]
           alphabet = set('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=')
           clean = [''.join(ch for ch in part if ch in alphabet) for part in parts]
+          for i, s in enumerate(clean, 1):
+              print(f'part{i}: len={len(s)} mod4={len(s)%4} eq={s.count("=")} head={s[:24]!r} tail={s[-24:]!r}')
+          for i in range(5):
+              a, b = clean[i], clean[i+1]
+              overlaps = []
+              for k in range(1, 65):
+                  if a[-k:] == b[:k]: overlaps.append(k)
+              print(f'boundary{i+1}-{i+2}: overlaps={overlaps[-10:]}')
 
-          def padded(s):
-              return s + '=' * ((-len(s)) % 4)
-
-          candidates = []
-          # Strategy A: pieces are substrings of one base64 text stream.
-          joined = ''.join(clean)
-          for label, s in [('joined', joined), ('joined-no-padding', joined.replace('=', ''))]:
-              try:
-                  candidates.append((label, base64.b64decode(padded(s), validate=False)))
-              except Exception as exc:
-                  print(label, 'base64 decode failed:', exc)
-          # Strategy B: pieces are independently base64-encoded binary chunks of one gzip stream.
+          def padded(s): return s + '=' * ((-len(s)) % 4)
+          candidates=[]
+          joined=''.join(clean)
+          for label,s in [('joined',joined),('joined-no-padding',joined.replace('=',''))]:
+              try: candidates.append((label,base64.b64decode(padded(s),validate=False)))
+              except Exception as exc: print(label,'base64 decode failed:',exc)
           try:
-              candidates.append(('decoded-chunks', b''.join(base64.b64decode(padded(s), validate=False) for s in clean)))
-          except Exception as exc:
-              print('decoded-chunks base64 decode failed:', exc)
-
-          for label, raw in candidates:
-              try:
-                  patch = gzip.decompress(raw)
+              candidates.append(('decoded-chunks',b''.join(base64.b64decode(padded(s),validate=False) for s in clean)))
+          except Exception as exc: print('decoded-chunks base64 decode failed:',exc)
+          for label,raw in candidates:
+              try: patch=gzip.decompress(raw)
               except Exception as exc:
-                  print(label, 'gzip failed:', exc, 'raw_bytes=', len(raw))
-                  continue
-              digest = hashlib.sha256(patch).hexdigest()
-              print(label, 'patch_bytes=', len(patch), 'sha256=', digest)
-              if digest == expected_sha:
-                  Path('/tmp/t018_round2.patch').write_bytes(patch)
-                  break
+                  print(label,'gzip failed:',exc,'raw_bytes=',len(raw)); continue
+              digest=hashlib.sha256(patch).hexdigest(); print(label,'patch_bytes=',len(patch),'sha256=',digest)
+              if digest==expected_sha:
+                  Path('/tmp/t018_round2.patch').write_bytes(patch); break
           else:
               raise SystemExit('No transport reconstruction matched the approved Round 2 patch SHA256')
-
-          text = Path('/tmp/t018_round2.patch').read_text(encoding='utf-8')
-          if text.count('diff --git ') != 10:
-              raise SystemExit('Unexpected diff count')
-          if 'diff --git a/.github/workflows/p3_3_t018_whole_building.yml b/.github/workflows/p3_3_t018_whole_building.yml' not in text:
-              raise SystemExit('Expected T-018 workflow diff missing')
+          text=Path('/tmp/t018_round2.patch').read_text(encoding='utf-8')
+          if text.count('diff --git ') != 10: raise SystemExit('Unexpected diff count')
+          if 'diff --git a/.github/workflows/p3_3_t018_whole_building.yml b/.github/workflows/p3_3_t018_whole_building.yml' not in text: raise SystemExit('Expected T-018 workflow diff missing')
           PY
 
       - name: Materialize payload in isolated empty repository
@@ -84,22 +77,9 @@ jobs:
           git apply /tmp/t018_round2.patch
           python - <<'PY'
           from pathlib import Path
-          expected = {
-              '.github/workflows/p3_3_t018_whole_building.yml',
-              'production/zhenguo_wanfo/build/P3_3_WHOLE_BUILDING_RUNTIME_MANIFEST_V001.json',
-              'production/zhenguo_wanfo/review/P3_3_T018/P3_3_T018_EVIDENCE_MANIFEST_V001.json',
-              'production/zhenguo_wanfo/scripts/build_p3_3_whole_building_v001.py',
-              'production/zhenguo_wanfo/scripts/p3_3_whole_building_common_v001.py',
-              'production/zhenguo_wanfo/scripts/render_p3_3_whole_building_review_v001.py',
-              'production/zhenguo_wanfo/scripts/validate_p3_3_whole_building_v001.py',
-              'production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py',
-              'production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_MUTATION_V001.json',
-              'production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_VALIDATION_V001.json',
-          }
-          root = Path('/tmp/t018_round2_materialized')
-          actual = {str(p.relative_to(root)) for p in root.rglob('*') if p.is_file() and '.git/' not in str(p)}
-          if actual != expected:
-              raise SystemExit(f'Unexpected materialized paths: extra={sorted(actual-expected)} missing={sorted(expected-actual)}')
+          expected={'.github/workflows/p3_3_t018_whole_building.yml','production/zhenguo_wanfo/build/P3_3_WHOLE_BUILDING_RUNTIME_MANIFEST_V001.json','production/zhenguo_wanfo/review/P3_3_T018/P3_3_T018_EVIDENCE_MANIFEST_V001.json','production/zhenguo_wanfo/scripts/build_p3_3_whole_building_v001.py','production/zhenguo_wanfo/scripts/p3_3_whole_building_common_v001.py','production/zhenguo_wanfo/scripts/render_p3_3_whole_building_review_v001.py','production/zhenguo_wanfo/scripts/validate_p3_3_whole_building_v001.py','production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py','production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_MUTATION_V001.json','production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_VALIDATION_V001.json'}
+          root=Path('/tmp/t018_round2_materialized'); actual={str(p.relative_to(root)) for p in root.rglob('*') if p.is_file() and '.git/' not in str(p)}
+          if actual != expected: raise SystemExit(f'Unexpected materialized paths: extra={sorted(actual-expected)} missing={sorted(expected-actual)}')
           PY
 
       - name: Replace only the approved T-018 files
@@ -109,24 +89,10 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import shutil
-          src = Path('/tmp/t018_round2_materialized')
-          dst = Path.cwd()
-          paths = [
-              '.github/workflows/p3_3_t018_whole_building.yml',
-              'production/zhenguo_wanfo/build/P3_3_WHOLE_BUILDING_RUNTIME_MANIFEST_V001.json',
-              'production/zhenguo_wanfo/review/P3_3_T018/P3_3_T018_EVIDENCE_MANIFEST_V001.json',
-              'production/zhenguo_wanfo/scripts/build_p3_3_whole_building_v001.py',
-              'production/zhenguo_wanfo/scripts/p3_3_whole_building_common_v001.py',
-              'production/zhenguo_wanfo/scripts/render_p3_3_whole_building_review_v001.py',
-              'production/zhenguo_wanfo/scripts/validate_p3_3_whole_building_v001.py',
-              'production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py',
-              'production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_MUTATION_V001.json',
-              'production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_VALIDATION_V001.json',
-          ]
+          src=Path('/tmp/t018_round2_materialized'); dst=Path.cwd()
+          paths=['.github/workflows/p3_3_t018_whole_building.yml','production/zhenguo_wanfo/build/P3_3_WHOLE_BUILDING_RUNTIME_MANIFEST_V001.json','production/zhenguo_wanfo/review/P3_3_T018/P3_3_T018_EVIDENCE_MANIFEST_V001.json','production/zhenguo_wanfo/scripts/build_p3_3_whole_building_v001.py','production/zhenguo_wanfo/scripts/p3_3_whole_building_common_v001.py','production/zhenguo_wanfo/scripts/render_p3_3_whole_building_review_v001.py','production/zhenguo_wanfo/scripts/validate_p3_3_whole_building_v001.py','production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py','production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_MUTATION_V001.json','production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_VALIDATION_V001.json']
           for rel in paths:
-              target = dst / rel
-              target.parent.mkdir(parents=True, exist_ok=True)
-              shutil.copy2(src / rel, target)
+              target=dst/rel; target.parent.mkdir(parents=True,exist_ok=True); shutil.copy2(src/rel,target)
           PY
           rm -rf .tmp_t018_round2
           rm -f .github/workflows/t018_round2_transport_apply.yml
@@ -139,10 +105,7 @@ jobs:
           python -m unittest production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py production/zhenguo_wanfo/tests/test_p3_3_building_graph_v001.py production/zhenguo_wanfo/tests/test_p2_2_structural_skeleton_v001.py
           python -m compileall -q production/zhenguo_wanfo/scripts production/zhenguo_wanfo/tests
           git diff --check
-          if git diff --name-only | grep -q '^docs/project_control/'; then
-            echo 'Project Control modification is forbidden' >&2
-            exit 1
-          fi
+          if git diff --name-only | grep -q '^docs/project_control/'; then echo 'Project Control modification is forbidden' >&2; exit 1; fi
 
       - name: Publish Round 2 to existing PR branch
         shell: bash
