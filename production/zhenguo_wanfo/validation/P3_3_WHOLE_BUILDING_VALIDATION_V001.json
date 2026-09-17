@@ -46,6 +46,25 @@
   "p3_2_traceability": "PASS",
   "parameter_rule_provenance": "PASS",
   "protected_inputs": "PASS",
+  "representation_validation": {
+    "errors": [],
+    "formal_count": 12,
+    "generic_octahedron_count": 0,
+    "geometry_class_counts": {
+      "BRACKET_CONTACT_GLYPH": 88,
+      "DEFERRED_PURLIN_DATUM": 7,
+      "FRAME_CONTROL_SEGMENT": 54,
+      "FRAME_SUPPORT_CONNECTOR": 54,
+      "GABLE_CONTROL_POLYLINE": 4,
+      "GRID_AXIS_LINE": 8,
+      "PRIMARY_FRAME_SEMANTIC_AXIS": 8,
+      "RAFTER_PROXY_SLOPE_SEGMENT": 36,
+      "ROOF_ENVELOPE_CONTROL_SURFACE": 6,
+      "UNKNOWN_BRACKET_WIRE_CROSS": 88
+    },
+    "status": "PASS",
+    "technical_count": 353
+  },
   "runtime_accounting": {
     "anonymous_formal_mesh": 0,
     "broken_identity": 0,
