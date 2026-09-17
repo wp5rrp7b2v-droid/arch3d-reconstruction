@@ -6,116 +6,145 @@
 **目标同步日:** 2026-09-21  
 **状态:** ACTIVE / TEMPORARY / LOCAL_SYNC_VERIFICATION_PENDING  
 **关联规则:** RC-014｜CLOUD_MODE_2026-09-16_20  
-**事实优先级:** 本登记是操作型补充清单；如与 `project_state.json`、Decision Log、Execution Log、Acceptance Matrix 或 GitHub `main` 冲突，以正式 Project Control + GitHub `main` 为准。
+**事实优先级:** 如与 `project_state.json`、Decision Log、Execution Log、Acceptance Matrix 或 GitHub `main` 冲突，以正式 Project Control + GitHub `main` 为准。
 
 ---
 
-## 1. 为什么单独建立本登记
-
-2026-09-16～20 期间 Product Owner 暂无本地 Mac，项目仍通过 ChatGPT App、Codex Cloud、GitHub / GitHub Actions 推进。为了避免 2026-09-21 恢复本地工作时出现以下遗漏，建立本临时登记：
-
-- 云端期间已有 merge，但本地 working copy 尚未 pull；
-- 仍 OPEN 的 PR 被误认为已经进入 `main`；
-- GitHub Actions artifact 被误认为会随 `git pull` 自动进入本地；
-- local-only `.blend` / 二进制资产与 Git 仓库状态混淆；
-- Cloud Mode 期间新增的 Task Contract / Decision / Project Control 未在本地核验；
-- 9/21 恢复正常模式时忘记关闭 RC-014 临时运行层。
-
-本文件在 9/16～20 每日收尾时更新；9/21 完成本地同步核验后改为 `LOCAL_SYNC_VERIFIED / CLOSED`，保留作审计记录。
-
----
-
-## 2. Cloud Mode 进入基线
+## 1. Cloud Mode 进入基线
 
 - Pre-Cloud Project State：`R082 / 2026-09-15 FINAL PRE-CLOUD SNAPSHOT`
-- P3：`ACTIVE / 3 of 4`
+- P3：ACTIVE / 3 of 4
 - P3.0～P3.2：PASS / CLOSED
-- P3.3：当时为 `ENTERED / DOD REQUIRED / ENGINEERING NOT AUTHORIZED`
+- P3.3：ENTERED
 - Cloud workflow preflight：`CLOUD-DRILL-002 PASS / VERIFIED`
-- RC-014：2026-09-16～20 临时生效，2026-09-21 自动失效
+- RC-014：2026-09-16～20 临时生效；2026-09-21 自动失效
 - Local Mac：Cloud Mode 有效期内视为 TEMPORARILY UNAVAILABLE
 
 ---
 
-## 3. 2026-09-16｜Day 1 Closing Register
+## 2. 2026-09-16｜Day 1 Closing Register
 
-### 3.1 P3.3 Gate / Governance
-
-- `D-047`：P3.3 Definition of Done V001 批准并锁定；9 项 DoD；5 项 P3.3 Hard Fail 固定。
-- `D-048 / RC-017`：批准 P3.3 脚本化 Blender 执行链：Codex Cloud 编写 → GitHub Actions headless Blender → GitHub evidence → ChatGPT review → Local Mac 仅保留真正交互式/最终本地检查。
-- P3 Gate 总体仍为 `3/4`；P3.3 仍 ACTIVE，未 Gate PASS。
-
-### 3.2 T-017｜整殿输入基线与 Assembly Graph
-
-- `D-049`：授权执行。
-- GitHub PR：`#2`
-- Reviewed head：`f117cb98da713e5279174248076421caa9d9e6f4`
-- `D-050`：Product Owner APPROVED / CLOSED / merge authorized。
-- Merge commit：`1095440af761fc95cc18d0ce01523a097fc8ce5f`
-- 正式基础：11/11 families、40/40 variants、365/365 instances；P2 numeric world transforms 不得作为生成输入；五类关系保持锁定。
-- 后续发现的 PURLIN disposition 冲突已由 T-019 修正，不推翻 T-017 其他基础成果。
-
-### 3.3 T-018｜整殿确定性生成与参数变更验证
-
-- `D-051`：Task Contract LOCKED。
-- `D-052`：执行授权；该授权在 T-019 完成后继续有效。
-- GitHub PR：`#3`
-- 当前 GitHub-visible head（9/16 收尾时）：`ea52590daf5659074fc181aa0288ce223a3d7686`
-- PR 状态：`OPEN / NOT MERGED`
-- 首轮 Actions Run：`35101537343 / run #1 / FAILURE / DEBUGGING ONLY`
-- 首轮 Actions 失败直接原因：Blender 实际输出 `Blender 4.5.13 LTS`，workflow 用 exact-line `Blender 4.5.13` 校验，Run A/B/C/D 尚未执行。
-- 正式审核同时发现四项待修正：
-  1. Formal component geometry 不得用 generic primitive cube 代替已有 approved formal generation；
-  2. Placement 必须机械来源于 authoritative Assembly Graph / parameters / rules，不得使用 synthetic hard-coded family layout；
-  3. GitHub Actions formal evidence 必须显式绑定 canonical PR head SHA；
-  4. Blender 4.5.13 version check 必须接受合法 `LTS` suffix，同时保持版本锁定。
-- 另外曾触发 upstream PURLIN protected-input STOP；该 STOP 已由 T-019/D-055 清除。
-- **9/16 收尾状态：`RESUME READY / CORRECTIONS REQUIRED / SAME PR #3 ONLY`。**
-
-### 3.4 T-019｜上游 Disposition 一致性修正
-
-- `D-053`：Task Contract LOCKED。
-- `D-054`：执行授权。
-- GitHub PR：`#4`
-- Reviewed head：`91723a7a2b3c3ca78473bba3cb344450e43fbb3f`
-- `D-055`：Product Owner APPROVED / CLOSED / merge authorized。
-- Merge commit：`b9803fb416e375fd2f94f5d83df5fab73fe00063`
-- 7/7 `CMP-PURLIN-001` building instances：`GENERATE_FROM_FORMAL_COMPONENT → DEFERRED`
-- P3.1 qualification 保持 `DEFERRED_INSUFFICIENT_EVIDENCE`；未创建 PURLIN Master；未补造尺寸/截面/端部条件。
-- Cross-layer direct-identity conflicts：0；new regression：`MASTER_SCOPE_DISPOSITION_CONFLICT / EXPECTED_REJECTION`。
-- canonical `main` 已实际验证 7/7 PURLIN = `DEFERRED`。
-
-### 3.5 9/16 Project Control Closing State
-
-- Project State：`R098`
-- Dashboard：`v042`
-- Latest material decision：`D-055`
-- Current Task：`T-018 / RESUME READY / CORRECTIONS REQUIRED`
-- Current blocker：仅 T-018 四项工程修正；**无上游 PURLIN protected-input blocker**
-- PR #2：MERGED
-- PR #3：OPEN / NOT MERGED
-- PR #4：MERGED
-- Pre-ledger closing `main` SHA：`5e5996080a0e983373434e36d2ce8425043b01d1`
-- Local Mac sync：PENDING until 2026-09-21
+- D-047：P3.3 DoD V001 APPROVED / LOCKED。
+- D-048 / RC-017：GitHub Actions headless Blender pipeline APPROVED。
+- T-017 / PR #2：PASS / D-050 / MERGED；11/11 families、40/40 variants、365/365 instances。
+- T-018 / PR #3：OPEN / NOT MERGED；D-051 contract locked；D-052 execution authorized；9/16 close status = RESUME READY / CORRECTIONS REQUIRED。
+- T-019 / PR #4：PASS / D-055 / MERGED；7/7 PURLIN corrected to DEFERRED；merge commit `b9803fb416e375fd2f94f5d83df5fab73fe00063`。
+- Latest formal decision：D-055。
+- Local sync：PENDING until 2026-09-21。
 
 ---
 
-## 4. 2026-09-17～20｜每日追加模板
+## 3. 2026-09-17｜Day 2 Closing Register
 
-后续每一天如有工作，只在对应日期追加“发生变化的事实”，不要重复整个历史。
+- Start canonical main SHA：`574a00831ac827d67dd58667f80fb57d1dd0c77e`
+- Project State at close：`R100`
+- Dashboard at close：`v044`
+- New formal Decision ID：NONE；latest remains `D-055`
+- Detailed daily archive：`docs/project_control/DAILY_CLOSE_2026-09-17.md`
 
-### 2026-09-17
+### 3.1 T-018 status change
 
-- Start main SHA：TBD
-- End main SHA：TBD
-- New / changed Decision IDs：TBD
-- Task status changes：TBD
-- PR opened / updated / merged：TBD
-- GitHub Actions run / artifact：TBD
-- New files requiring local sync：TBD
-- Open PRs not yet in main：TBD
-- LOCAL_MAC_REQUIRED / local-only follow-up：TBD
-- Daily closing audit：TBD
+T-018 continued on the **same** branch / PR only:
+
+- branch：`codex/t-018`
+- PR：`#3`
+- PR status：`OPEN / NOT MERGED`
+- GitHub-visible head：`8693c13bf3f04b7e7f7d7d3f24552e1aac8d5750`
+- Merge authorization：FALSE
+
+Round 2 result：
+
+- 365/365 `RULE_DERIVED`
+- `NOT_REALIZED_NO_APPROVED_PLACEMENT_RULE=0`
+- 12 Formal / 178 Proxy / 66 Control / 6 Envelope / 96 UNKNOWN_BLOCKED / 7 DEFERRED
+- omission=0；anonymous formal mesh=0；broken identity=0
+- PM-005 mutation / restore machine PASS
+- visual review FAIL：non-formal representation largely generic point/octahedron markers
+
+Round 3 result：
+
+- differentiated engineering representation geometry by family
+- generic octahedron-for-all-nonformal = 0
+- view-aware projected-in-frame evidence added
+- machine / representation validation PASS
+
+### 3.2 Final Actions evidence
+
+- Workflow：`T-018 P3.3 Deterministic Whole Building`
+- Run ID：`35226626839`
+- Run number：29
+- Head SHA：`8693c13bf3f04b7e7f7d7d3f24552e1aac8d5750`
+- Conclusion：SUCCESS
+- Run A / B / Render / C / D：PASS
+- Artifact ID：`10499236860`
+- Artifact：`P3_3_T018_HEADLESS_EVIDENCE_V001`
+- Digest：`sha256:1acb510ed409e490319d62dad2232d082f163413ab81a209484f00b8b67329fa`
+- Artifact expiry：2026-10-17
+
+### 3.3 Formal visual review / roof audit
+
+Four review PNGs (PLAN / FRONT / SIDE / AXON) were directly inspected by ChatGPT。
+
+Final status：
+
+`T-018 = HOLD / MACHINE PASS / FORMAL VISUAL REVIEW FAIL / UPSTREAM RULE GAP`
+
+Root cause found by read-only audit：
+
+- canonical PURLIN control identity topology = `N00,N01,N02,N03(shared ridge),S00,S01,S02`; no S03
+- FR-007 = `[120,115,210] fen` in eave→ridge order
+- MOD-002 = 15.3 mm/fen; half-run = 6808.5 mm
+- existing inputs authorize the **relative** two-sided chain to one shared ridge
+- existing inputs do **not** authorize the absolute shared-ridge coordinate in the T-018 whole-building coordinate frame
+- Round 2/3 mixed observed/as-measured grid coordinates with reconstructed-963 roof-control sequence
+- Round 3 `COLUMN_GRID_Y_MIRROR_RULE` is synthetic / unauthorized
+- previous Round 2 roof-placement freeze assumption is withdrawn
+
+At minimum, after an approved upstream datum rule exists, rederive 7 PURLIN controls, 36 RAFTER proxies, 6 ROOF_ENVELOPE, 4 GABLE_CONTROL and roof-dependent FRAME endpoints。
+
+Root-cause classification：
+
+`UPSTREAM ENGINEERING RULE MODELING OMISSION + T018 FAILURE TO STOP`
+
+This is not a newly discovered historical-evidence gap。
+
+### 3.4 Proposed T-020
+
+`T-020｜P3.3_ROOF_SHARED_RIDGE_DATUM_RULE_V001｜屋顶共享脊基准与设计坐标层对齐规则`
+
+Status：`PROPOSED / NOT AUTHORIZED / NO BRANCH / NO PR`
+
+Purpose：补齐 project-level engineering datum / LOCATE semantics，不新增历史尺寸；保持 7/7 PURLIN DEFERRED；禁止 observed reference layer 静默成为 reconstructed-design placement source；P2 numeric world transforms 继续禁止。
+
+### 3.5 Files / assets requiring 2026-09-21 awareness
+
+Main-tracked Project Control additions/updates today：
+
+- `docs/project_control/DAILY_CLOSE_2026-09-17.md`
+- `docs/project_control/project_state.json` → R100
+- `docs/project_control/dashboard.html` → v044
+- `docs/project_control/acceptance_matrix.md`
+- `docs/project_control/execution_log.md`
+- `docs/project_control/CLOUD_MODE_SYNC_LEDGER_2026-09-16_20.md`
+
+Open PR not in main：
+
+- PR #3 / `codex/t-018` / head `8693c13...`
+
+Actions artifact not brought by `git pull`：
+
+- Artifact `10499236860` / T-018 headless evidence
+
+LOCAL_MAC_REQUIRED / local-only follow-up：
+
+- 2026-09-21 must verify local-only `.blend` assets separately
+- do not mistake absent PR #3 content in local `main` for sync failure
+
+Daily closing audit：`PASS`
+
+---
+
+## 4. 2026-09-18～20｜Daily templates
 
 ### 2026-09-18
 
@@ -124,10 +153,9 @@
 - New / changed Decision IDs：TBD
 - Task status changes：TBD
 - PR opened / updated / merged：TBD
-- GitHub Actions run / artifact：TBD
-- New files requiring local sync：TBD
-- Open PRs not yet in main：TBD
-- LOCAL_MAC_REQUIRED / local-only follow-up：TBD
+- Actions / artifact：TBD
+- Open PRs not in main：TBD
+- LOCAL_MAC_REQUIRED follow-up：TBD
 - Daily closing audit：TBD
 
 ### 2026-09-19
@@ -137,10 +165,9 @@
 - New / changed Decision IDs：TBD
 - Task status changes：TBD
 - PR opened / updated / merged：TBD
-- GitHub Actions run / artifact：TBD
-- New files requiring local sync：TBD
-- Open PRs not yet in main：TBD
-- LOCAL_MAC_REQUIRED / local-only follow-up：TBD
+- Actions / artifact：TBD
+- Open PRs not in main：TBD
+- LOCAL_MAC_REQUIRED follow-up：TBD
 - Daily closing audit：TBD
 
 ### 2026-09-20
@@ -153,25 +180,22 @@
 - Task status changes：TBD
 - PR opened / updated / merged：TBD
 - Open PRs carried into 9/21：TBD
-- GitHub Actions artifacts requiring separate download：TBD
-- LOCAL_MAC_REQUIRED / local-only follow-up：TBD
+- Actions artifacts requiring separate download：TBD
 - RC-014 closure readiness：TBD
 - Daily closing audit：TBD
 
 ---
 
-## 5. 2026-09-21｜Local Mac Sync Checklist｜必须逐项完成
+## 5. 2026-09-21｜Local Mac Sync Checklist
 
-### A. 同步前保护检查
+### A. Protect local work first
 
-1. 打开本地项目：`/Users/caroline/中国古建筑3D复原`
-2. 先执行 `git status --short`。
-3. 若存在不明 tracked changes、未提交 Project Control 修改或与云端同时修改的文件：**STOP，不 pull，不 reset，不 force，不覆盖。**
-4. 本地 `.blend` / `.blend1` / 其他 local-only binary 不因 Git pull 自动上传或替换；确认这些资产仍位于预期本地路径。
+1. `cd "/Users/caroline/中国古建筑3D复原"`
+2. `git status --short`
+3. Any unexplained tracked changes / local Project Control edits → **STOP**; do not reset / force / overwrite.
+4. Confirm local-only `.blend` / `.blend1` / binary assets separately.
 
-### B. GitHub canonical main 同步
-
-按 RC-010 使用：
+### B. Sync canonical main
 
 ```bash
 git-proxy-auto fetch origin
@@ -180,84 +204,57 @@ git rev-parse HEAD
 git-proxy-auto ls-remote origin refs/heads/main
 ```
 
-要求：
+Requirements：fast-forward only；local HEAD == origin/main；otherwise STOP and diagnose。
 
-- pull 必须为 fast-forward；
-- 本地 `HEAD` 必须等于当时 GitHub `origin/main` SHA；
-- 若不相等或出现 non-fast-forward：STOP，先诊断，不 force/reset/rebase。
+### C. Verify Project Control
 
-### C. Project Control 核验
+- `project_state.json` latest revision
+- `dashboard.html` latest visualization version
+- `decision_log.md` latest formal decisions
+- `execution_log.md` includes Cloud Mode engineering results
+- `acceptance_matrix.md` matches P3.3 state
+- `CLOUD_MODE_SYNC_LEDGER_2026-09-16_20.md` present
+- `DAILY_CLOSE_2026-09-17.md` present
+- RC-014 expires on 2026-09-21; RC-017 remains valid unless formally changed
 
-同步后逐项确认：
+### D. Verify P3.3 separately
 
-- `docs/project_control/project_state.json` = GitHub 最新 State Revision；
-- `docs/project_control/dashboard.html` = GitHub 最新 Dashboard Version；
-- `decision_log.md` 至少包含 D-047～D-055，以及 9/17～20 新增的后续决策；
-- `execution_log.md` 包含 Cloud Mode 期间所有实际 T-### 结果；
-- `acceptance_matrix.md` 与 current P3.3 状态一致；
-- `rules_change_log.md` 保留 RC-014 / RC-017；RC-014 在 9/21 不再作为 active execution overlay；
-- 本 `CLOUD_MODE_SYNC_LEDGER_2026-09-16_20.md` 已同步到本地。
+`git pull main` does **not** bring back：
 
-### D. P3.3 / Production 核验
+- unmerged PR #3 branch content
+- Actions artifact ZIP / `.blend`
+- Codex internal commits
+- local-only binary assets
 
-至少检查：
+Therefore separately check：
 
-- `docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md`
-- `docs/tasks/T-017_P3_3_BUILDING_INPUT_AND_ASSEMBLY_GRAPH_V001.md`
-- `docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001.md`
-- `docs/tasks/T-019_P3_3_UPSTREAM_DISPOSITION_CONSISTENCY_CORRECTION_V001.md`
-- T-017 五项 canonical foundation outputs；
-- `P3_3_BUILDING_SCOPE_ACCOUNTING_V001.json` 中 7/7 `CMP-PURLIN-001` 为 `DEFERRED`；
-- T-019 validator / regression 已进入 main；
-- 如 T-018 在 9/17～20 已 merge，则核对其正式 outputs / workflow / review evidence 也已进入 main；如仍未 merge，则**不要因为本地 main 没有 PR #3 的工程内容而误判同步失败**。
+1. PR #3 current status / head
+2. latest T-018 Actions run
+3. artifact `10499236860` or any newer replacement
+4. any LOCAL_MAC_REQUIRED final inspection
+5. proposed/approved T-020 status if work continued after 9/17
 
-### E. Open PR / Actions / Artifact 单独核验
-
-`git pull origin main` **不会**自动带回：
-
-- 尚未 merge 的 PR branch 内容；
-- GitHub Actions artifact ZIP / `.blend` artifact；
-- 未提交到 Git 的 review outputs；
-- Codex Cloud 任务内部 commit。
-
-因此 9/21 必须额外检查：
-
-1. 当时所有 OPEN PR（特别是 T-018 PR #3，如届时仍 OPEN）；
-2. 最新 GitHub Actions run 状态；
-3. 是否存在需要下载到本地的正式 `.blend` / evidence artifact；
-4. 是否存在 `LOCAL_MAC_REQUIRED` 的交互式/final inspection；
-5. Codex internal SHA 只作辅助，正式以 GitHub-visible PR/head/main 为准。
-
-### F. RC-014 退出核验
-
-- 2026-09-21 起 RC-014 自动失效，不得自动延长；
-- 恢复正常运行模式；
-- `ONE TASK = ONE BRANCH = ONE PR` 不再因 RC-014 强制，但正式 Task Contract 自身如仍要求则继续遵守；
-- Local Mac 可重新作为正式本地 Blender / working-copy 执行环境；
-- GitHub Actions / RC-017 作为已批准 P3.3 scripted Blender pipeline 仍继续有效，除非后续正式决策修改。
-
-### G. Local Sync Closure Record｜9/21 填写
+### E. Local Sync Closure Record
 
 - GitHub main SHA at sync：TBD
 - Local HEAD after pull：TBD
-- `HEAD == origin/main`：TBD
+- HEAD == origin/main：TBD
 - Project State revision：TBD
 - Dashboard version：TBD
 - Open PRs carried forward：TBD
 - Actions artifacts downloaded separately：TBD
 - Local-only binaries present：TBD
-- Local Blender executable/version check：TBD
 - RC-014 expired：TBD
-- Remaining local review / execution items：TBD
+- Remaining work：TBD
 - Final result：`LOCAL_SYNC_VERIFIED / CLOSED` or `HOLD + reason`
 
 ---
 
-## 6. 强制防遗漏原则
+## 6. Mandatory anti-omission rules
 
-- **GitHub `main` 是云端期间唯一 canonical committed state。**
-- **PR OPEN ≠ main 已包含。**
-- **Actions artifact ≠ git-tracked file。**
-- **Codex internal SHA ≠ GitHub-visible canonical SHA。**
-- **Local-only binary ≠ GitHub asset。**
-- 9/21 同步必须同时检查：`main + open PR + Actions artifact + local-only assets + Project Control`，不能只执行一次 `git pull` 就认为同步完成。
+- GitHub `main` = Cloud Mode canonical committed state。
+- PR OPEN ≠ main contains it。
+- Actions artifact ≠ git-tracked file。
+- Codex internal SHA ≠ canonical GitHub SHA。
+- Local-only binary ≠ GitHub asset。
+- 2026-09-21 sync must check `main + open PR + Actions artifacts + local-only assets + Project Control` together。
