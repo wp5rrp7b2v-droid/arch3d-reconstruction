@@ -1,0 +1,77 @@
+name: TEMP T-018 Round 2 Payload Apply
+
+on:
+  push:
+    branches:
+      - codex/t-018
+    paths:
+      - '.github/workflows/t018_round2_apply_payload.yml'
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  apply-payload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/t-018
+          fetch-depth: 0
+      - name: Restore exact Codex payload and preserve prior runtime fixes
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .tmp_t018_round2/part*.b64 | base64 -d > /tmp/t018_round2.tar.gz
+          tar -xzf /tmp/t018_round2.tar.gz
+
+          test "$(git hash-object .github/workflows/p3_3_t018_whole_building.yml)" = "3d6e8e776653faa6e8879604bbb2bde7f68e48ae"
+          test "$(git hash-object production/zhenguo_wanfo/build/P3_3_WHOLE_BUILDING_RUNTIME_MANIFEST_V001.json)" = "1e9425e6419b8b80ee386fc96c937c6e08a51e86"
+          test "$(git hash-object production/zhenguo_wanfo/review/P3_3_T018/P3_3_T018_EVIDENCE_MANIFEST_V001.json)" = "1e530d10011227c574d2a9d7cb990e4ee2e44c28"
+          test "$(git hash-object production/zhenguo_wanfo/scripts/build_p3_3_whole_building_v001.py)" = "557a859ed02d37ea08816c31d7628612296ec06c"
+          test "$(git hash-object production/zhenguo_wanfo/scripts/p3_3_whole_building_common_v001.py)" = "9581226368a8649ee337371f09770f391913c6c3"
+          test "$(git hash-object production/zhenguo_wanfo/scripts/render_p3_3_whole_building_review_v001.py)" = "599f5106dd72bc6a8dae8dafde09d1820a47a331"
+          test "$(git hash-object production/zhenguo_wanfo/scripts/validate_p3_3_whole_building_v001.py)" = "e03f908d18f546e3023fdc3684bfb211d7a43be7"
+          test "$(git hash-object production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py)" = "6ee1080fdc6d1aa111f0ace0c0ceeffe5aef3a95"
+          test "$(git hash-object production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_MUTATION_V001.json)" = "615f00664f3ae86470de8c2105e4193226e27db4"
+          test "$(git hash-object production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_VALIDATION_V001.json)" = "9c966ed405e825b90fc20cddb2cb70a5f89ce921"
+
+          python - <<'PY'
+          from pathlib import Path
+
+          workflow = Path('.github/workflows/p3_3_t018_whole_building.yml')
+          text = workflow.read_text(encoding='utf-8')
+          needle = '          set -euo pipefail\n          curl --fail'
+          replacement = '          set -euo pipefail\n          sudo apt-get update\n          sudo apt-get install -y libegl1\n          curl --fail'
+          if needle not in text:
+              raise SystemExit('Could not preserve libEGL fix: expected workflow anchor missing')
+          workflow.write_text(text.replace(needle, replacement, 1), encoding='utf-8')
+
+          renderer = Path('production/zhenguo_wanfo/scripts/render_p3_3_whole_building_review_v001.py')
+          text = renderer.read_text(encoding='utf-8')
+          needle = "scene.display.shading.light='STUDIO'; scene.display.shading.color_type='MATERIAL'; scene.world.color=(0.04,0.04,0.04)"
+          replacement = "scene.display.shading.light='STUDIO'; scene.display.shading.color_type='MATERIAL'\n    if scene.world is None:\n        scene.world=bpy.data.worlds.new('T018_REVIEW_WORLD')\n    scene.world.color=(0.04,0.04,0.04)"
+          if needle not in text:
+              raise SystemExit('Could not preserve World initialization fix: expected renderer anchor missing')
+          text = text.replace(needle, replacement, 1)
+          needle = "bpy.ops.object.camera_add(); cam=bpy.context.object; cam.name='TECHNICAL_REVIEW_CAMERA'; cam.data.type='ORTHO'; cam.data.ortho_scale=span*1.25; scene.camera=cam"
+          replacement = "bpy.ops.object.camera_add(); cam=bpy.context.object; cam.name='TECHNICAL_REVIEW_CAMERA'; cam.data.type='ORTHO'; cam.data.ortho_scale=span*1.25; cam.data.clip_start=1; cam.data.clip_end=max(50000,distance*4); scene.camera=cam"
+          if needle not in text:
+              raise SystemExit('Could not preserve camera clipping fix: expected renderer anchor missing')
+          renderer.write_text(text.replace(needle, replacement, 1), encoding='utf-8')
+          PY
+
+          rm -rf .tmp_t018_round2
+          rm -f .github/workflows/t018_round2_apply_payload.yml
+
+          python -m compileall -q production/zhenguo_wanfo/scripts production/zhenguo_wanfo/tests
+          python -m unittest production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py production/zhenguo_wanfo/tests/test_p3_3_building_graph_v001.py production/zhenguo_wanfo/tests/test_p2_2_structural_skeleton_v001.py
+          git diff --check
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'T-018: complete whole-building rule consumers'
+          git push origin HEAD:codex/t-018
