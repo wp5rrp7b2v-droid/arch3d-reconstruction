@@ -1,0 +1,115 @@
+name: T-018 Round 2 Transport Apply
+
+on:
+  push:
+    branches:
+      - codex/t-018
+
+permissions:
+  contents: write
+
+jobs:
+  apply-round2-payload:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/t-018
+          fetch-depth: 0
+
+      - name: Reassemble and verify Round 2 payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -d .tmp_t018_round2
+          for n in 1 2 3 4 5 6; do test -s ".tmp_t018_round2/part${n}.b64"; done
+          cat .tmp_t018_round2/part{1,2,3,4,5,6}.b64 | tr -d '\r\n' | base64 -d | gzip -dc > /tmp/t018_round2.patch
+          ACTUAL_SHA="$(sha256sum /tmp/t018_round2.patch | awk '{print $1}')"
+          EXPECTED_SHA="99a22d0e93525be91de9e6f93912d8fbec53fb48b3c65d63a7cd1b466b6cf41f"
+          test "$ACTUAL_SHA" = "$EXPECTED_SHA"
+          grep -q '^diff --git a/.github/workflows/p3_3_t018_whole_building.yml ' /tmp/t018_round2.patch
+          test "$(grep -c '^diff --git ' /tmp/t018_round2.patch)" = 10
+
+      - name: Materialize payload in isolated empty repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/t018_round2_materialized
+          mkdir -p /tmp/t018_round2_materialized
+          cd /tmp/t018_round2_materialized
+          git init -q
+          git apply --check /tmp/t018_round2.patch
+          git apply /tmp/t018_round2.patch
+          python - <<'PY'
+          from pathlib import Path
+          expected = {
+              '.github/workflows/p3_3_t018_whole_building.yml',
+              'production/zhenguo_wanfo/build/P3_3_WHOLE_BUILDING_RUNTIME_MANIFEST_V001.json',
+              'production/zhenguo_wanfo/review/P3_3_T018/P3_3_T018_EVIDENCE_MANIFEST_V001.json',
+              'production/zhenguo_wanfo/scripts/build_p3_3_whole_building_v001.py',
+              'production/zhenguo_wanfo/scripts/p3_3_whole_building_common_v001.py',
+              'production/zhenguo_wanfo/scripts/render_p3_3_whole_building_review_v001.py',
+              'production/zhenguo_wanfo/scripts/validate_p3_3_whole_building_v001.py',
+              'production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py',
+              'production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_MUTATION_V001.json',
+              'production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_VALIDATION_V001.json',
+          }
+          root = Path('/tmp/t018_round2_materialized')
+          actual = {str(p.relative_to(root)) for p in root.rglob('*') if p.is_file() and '.git/' not in str(p)}
+          if actual != expected:
+              raise SystemExit(f'Unexpected materialized paths: extra={sorted(actual-expected)} missing={sorted(expected-actual)}')
+          PY
+
+      - name: Replace only the approved T-018 files
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import shutil
+          src = Path('/tmp/t018_round2_materialized')
+          dst = Path.cwd()
+          paths = [
+              '.github/workflows/p3_3_t018_whole_building.yml',
+              'production/zhenguo_wanfo/build/P3_3_WHOLE_BUILDING_RUNTIME_MANIFEST_V001.json',
+              'production/zhenguo_wanfo/review/P3_3_T018/P3_3_T018_EVIDENCE_MANIFEST_V001.json',
+              'production/zhenguo_wanfo/scripts/build_p3_3_whole_building_v001.py',
+              'production/zhenguo_wanfo/scripts/p3_3_whole_building_common_v001.py',
+              'production/zhenguo_wanfo/scripts/render_p3_3_whole_building_review_v001.py',
+              'production/zhenguo_wanfo/scripts/validate_p3_3_whole_building_v001.py',
+              'production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py',
+              'production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_MUTATION_V001.json',
+              'production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_VALIDATION_V001.json',
+          ]
+          for rel in paths:
+              target = dst / rel
+              target.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copy2(src / rel, target)
+          PY
+          rm -rf .tmp_t018_round2
+          rm -f .github/workflows/t018_round2_transport_apply.yml
+
+      - name: Pre-publish regression
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m unittest production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py production/zhenguo_wanfo/tests/test_p3_3_building_graph_v001.py production/zhenguo_wanfo/tests/test_p2_2_structural_skeleton_v001.py
+          python -m compileall -q production/zhenguo_wanfo/scripts production/zhenguo_wanfo/tests
+          git diff --check
+          if git diff --name-only | grep -q '^docs/project_control/'; then
+            echo 'Project Control modification is forbidden' >&2
+            exit 1
+          fi
+
+      - name: Publish Round 2 to existing PR branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'Caroline'
+          git config user.email 'wp5rrp7b2v@privaterelay.appleid.com'
+          git add -A
+          git diff --cached --check
+          test -z "$(git diff --cached --name-only | grep '^docs/project_control/' || true)"
+          git commit -m 'Apply T-018 Round 2 whole-building rule consumer correction'
+          git push origin HEAD:codex/t-018
