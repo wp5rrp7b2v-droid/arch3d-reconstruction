@@ -15,7 +15,7 @@ def main():
     if scene.world is None:
         scene.world=bpy.data.worlds.new('T018_REVIEW_WORLD')
     scene.world.color=(0.04,0.04,0.04)
-    bpy.ops.object.camera_add(); cam=bpy.context.object; cam.name='TECHNICAL_REVIEW_CAMERA'; cam.data.type='ORTHO'; cam.data.ortho_scale=16000; scene.camera=cam
+    bpy.ops.object.camera_add(); cam=bpy.context.object; cam.name='TECHNICAL_REVIEW_CAMERA'; cam.data.type='ORTHO'; cam.data.ortho_scale=16000; cam.data.clip_start=1; cam.data.clip_end=50000; scene.camera=cam
     from mathutils import Vector
     views={"PLAN":(5258.55,5258.55,18000),"FRONT_ELEVATION":(5258.55,-18000,3500),"SIDE_ELEVATION":(18000,5258.55,3500),"AXON":(16000,-12000,12000)}
     hashes={}
