@@ -10,6 +10,10 @@ import re
 import sys
 from pathlib import Path
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
 from p3_3_whole_building_common_v001 import (ALLOWED_OUTCOMES, CANONICAL_PM005, MUTATED_PM005, ROOT,
     compile_runtime, load, normalized_snapshot, protected_hashes, stable_json, write_json)
 

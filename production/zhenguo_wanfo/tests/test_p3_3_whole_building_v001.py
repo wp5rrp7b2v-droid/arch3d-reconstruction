@@ -1,6 +1,9 @@
 import copy
 import json
+import os
+import runpy
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -13,6 +16,32 @@ from validate_p3_3_whole_building_v001 import (HARD_FAILS, failures, mutated_fix
 
 class WholeBuildingTests(unittest.TestCase):
     def setUp(self): self.canonical = compile_runtime()
+
+    def test_blender_style_entrypoints_bootstrap_sibling_imports(self):
+        scripts = ROOT / "production/zhenguo_wanfo/scripts"
+        build_script = scripts / "build_p3_3_whole_building_v001.py"
+        validate_script = scripts / "validate_p3_3_whole_building_v001.py"
+        original_cwd = Path.cwd()
+        original_path = list(sys.path)
+        original_common = sys.modules.get("p3_3_whole_building_common_v001")
+        try:
+            with tempfile.TemporaryDirectory() as td:
+                os.chdir(td)
+                sys.path[:] = [entry for entry in original_path if Path(entry or ".").resolve() != scripts.resolve()]
+                sys.modules.pop("p3_3_whole_building_common_v001", None)
+                build_ns = runpy.run_path(str(build_script))
+                manifest = build_ns["compile_runtime"]()
+                self.assertEqual(len(manifest["runtime_objects"]), 365)
+
+                sys.path[:] = [entry for entry in original_path if Path(entry or ".").resolve() != scripts.resolve()]
+                sys.modules.pop("p3_3_whole_building_common_v001", None)
+                validate_ns = runpy.run_path(str(validate_script))
+                self.assertEqual(validate_ns["report"](manifest)["status"], "PASS")
+        finally:
+            os.chdir(original_cwd)
+            sys.path[:] = original_path
+            if original_common is not None:
+                sys.modules["p3_3_whole_building_common_v001"] = original_common
 
     def test_clean_contract_and_365_outcomes(self):
         self.assertFalse(failures(self.canonical)); self.assertEqual(len(self.canonical["runtime_objects"]), 365)
