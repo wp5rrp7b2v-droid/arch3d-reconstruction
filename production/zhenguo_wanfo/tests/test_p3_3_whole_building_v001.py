@@ -7,8 +7,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "production/zhenguo_wanfo/scripts"))
 from p3_3_whole_building_common_v001 import CANONICAL_PM005, MUTATED_PM005, compile_runtime, normalized_snapshot, stable_json
+from build_p3_3_whole_building_v001 import representation_spec
 from validate_p3_3_whole_building_v001 import (HARD_FAILS, failures, mutated_fixture, negative_results,
-    spatial_audit, valid_blender_version, validate_pr_head_binding)
+    representation_audit, spatial_audit, valid_blender_version, validate_pr_head_binding)
 
 
 class WholeBuildingTests(unittest.TestCase):
@@ -99,5 +100,28 @@ class WholeBuildingTests(unittest.TestCase):
         missing=copy.deepcopy(self.canonical); missing["runtime_objects"].pop(); cases.append(missing)
         bracket_count=copy.deepcopy(self.canonical); bracket_count["runtime_objects"].pop(next(i for i,x in enumerate(bracket_count["runtime_objects"]) if x["family"]=="BRACKET_CONTACT")); cases.append(bracket_count)
         for case in cases: self.assertTrue(failures(case))
+
+    def test_family_specific_engineering_representation_geometry(self):
+        audit=representation_audit(self.canonical); self.assertEqual(audit["status"],"PASS"); self.assertEqual(audit["technical_count"],353); self.assertEqual(audit["generic_octahedron_count"],0)
+        specs={}
+        for record in self.canonical["runtime_objects"]:
+            if record["family"]!="COLUMN": specs.setdefault(record["family"],representation_spec(record,self.canonical["runtime_objects"]))
+        self.assertEqual(len({x["geometry_class"] for x in specs.values()}),10)
+        self.assertEqual(specs["ROOF_ENVELOPE"]["kind"],"SURFACE")
+        self.assertEqual(specs["PURLIN"]["geometry_class"],"DEFERRED_PURLIN_DATUM")
+        self.assertEqual(specs["RAFTER"]["endpoint_source_ids"][:2],["ROOF_PURLIN_N_00","ROOF_PURLIN_N_01"])
+        self.assertTrue(all(len(x["world_points"])>=2 and x["endpoint_source_ids"] for x in specs.values()))
+
+    def test_representation_boundary_mutations_are_rejected(self):
+        cases=[]
+        for family,bad_class in (("FRAME_CONTROL","POINT_ONLY"),("FRAME_SUPPORT","MISSING_CONNECTOR"),("RAFTER","SYNTHETIC_LENGTH"),("ROOF_ENVELOPE","POINT_ONLY"),("BRACKET_ARM","SOLID_HISTORIC_MEMBER"),("PURLIN","BEAM_CYLINDER")):
+            value=copy.deepcopy(self.canonical); item=next(x for x in value["runtime_objects"] if x["family"]==family); item["representation"]["geometry_class"]=bad_class; cases.append(value)
+        identity=copy.deepcopy(self.canonical); next(x for x in identity["runtime_objects"] if x["family"]=="FRAME_CONTROL")["runtime_instance_id"]=""; cases.append(identity)
+        for value in cases: self.assertTrue(representation_audit(value)["errors"] or failures(value))
+
+    def test_review_counts_are_view_aware_not_global_copies(self):
+        source=(ROOT/"production/zhenguo_wanfo/scripts/render_p3_3_whole_building_review_v001.py").read_text(encoding="utf-8")
+        self.assertIn("projected_in_frame_count",source); self.assertIn("per_family_in_frame_count",source); self.assertIn("model_projected_bounds",source)
+        self.assertNotIn("formal_visible_count",source); self.assertNotIn("proxy_visible_represented_count",source)
 
 if __name__=="__main__": unittest.main()

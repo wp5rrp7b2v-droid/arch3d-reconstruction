@@ -28,6 +28,13 @@ FAMILY_RULES={
  "RAFTER":(["RULE-ROOF-OUTLINE","RULE-ROOF-ELEVATIONS"],["LOCATE","REPEAT"],[],[]),
  "ROOF_ENVELOPE":(["RULE-ROOF-OUTLINE","RULE-ROOF-ELEVATIONS"],["LOCATE"],[],[]),
 }
+REPRESENTATION_GEOMETRY={
+ "GRID_CONTROL":"GRID_AXIS_LINE", "BRACKET_CONTACT":"BRACKET_CONTACT_GLYPH",
+ "BRACKET_ARM":"UNKNOWN_BRACKET_WIRE_CROSS", "FRAME_CONTROL":"FRAME_CONTROL_SEGMENT",
+ "FRAME_SUPPORT":"FRAME_SUPPORT_CONNECTOR", "PRIMARY_FRAME":"PRIMARY_FRAME_SEMANTIC_AXIS",
+ "GABLE_CONTROL":"GABLE_CONTROL_POLYLINE", "PURLIN":"DEFERRED_PURLIN_DATUM",
+ "RAFTER":"RAFTER_PROXY_SLOPE_SEGMENT", "ROOF_ENVELOPE":"ROOF_ENVELOPE_CONTROL_SURFACE",
+}
 
 def load(path): return json.loads(Path(path).read_text(encoding="utf-8"))
 def stable_json(v): return json.dumps(v,ensure_ascii=False,indent=2,sort_keys=True,separators=(",",": "))+"\n"
@@ -85,8 +92,7 @@ def compile_runtime(pm005=CANONICAL_PM005):
   cid=source["component_id"]; disposition="DEFERRED" if cid=="CMP-PURLIN-001" else source["p3_3_disposition"]; outcome=OUTCOMES[disposition]; master=masters.get(cid) if outcome=="GENERATED_FORMAL_GEOMETRY" else None
   if outcome=="GENERATED_FORMAL_GEOMETRY" and not master: raise ValueError(f"formal component has no approved Master: {cid}")
   node=f"P3_3:{source['legacy_instance_id']}"; placement=_placement(source,values,relations[node],bound)
-  technical_size={"GENERATED_PROXY":90.0,"GENERATED_CONTROL":65.0,"GENERATED_ENVELOPE":240.0,"UNKNOWN_BLOCKED":55.0,"DEFERRED":75.0}.get(outcome)
-  rep={"class":"FORMAL_MASTER_GEOMETRY" if master else ("SEMANTIC_MARKER" if outcome in {"UNKNOWN_BLOCKED","DEFERRED"} else "TECHNICAL_ENGINEERING_REPRESENTATION"),"historical_geometry":bool(master),"evidence_upgrade":False,"display_dimensions_policy":"TECHNICAL_REVIEW_ONLY" if not master else "MASTER_PARAMETERS","marker_geometry":None if master else {"primitive":"TECHNICAL_OCTAHEDRON","display_radius_mm":technical_size,"structural_dimension":False}}
+  rep={"class":"FORMAL_MASTER_GEOMETRY" if master else ("SEMANTIC_MARKER" if outcome in {"UNKNOWN_BLOCKED","DEFERRED"} else "TECHNICAL_ENGINEERING_REPRESENTATION"),"historical_geometry":bool(master),"evidence_upgrade":False,"display_dimensions_policy":"TECHNICAL_REVIEW_ONLY" if not master else "MASTER_PARAMETERS","geometry_class":"APPROVED_P3_1_MASTER" if master else REPRESENTATION_GEOMETRY[source["source_family_id"]],"structural_dimension_source":False if not master else "MASTER_PARAMETERS"}
   objects.append({"runtime_instance_id":f"P3_3_RUNTIME_{sequence+1:03d}","legacy_instance_id":source["legacy_instance_id"],"component_id":cid,"explicit_non_component_identity":None,"source_family_id":source["source_family_id"],"family":source["source_family_id"],"graph_parent_node_id":source["graph_parent_node_id"],"p3_3_disposition":outcome,"evidence_status":source["evidence_boundary"],"historical_claim_boundary":"NOT_UPGRADED","placement":placement,"representation":rep,"parameter_rule_provenance":placement["derivation"],"formal_master":None if not master else {k:master[k] for k in ("master_id","master_version","generator_path","parameter_path","geometry_mode","approval_status")}})
  counts=Counter(x["p3_3_disposition"] for x in objects); snapshot={"pm005_mm":pm005,"runtime_objects":objects}
  return {"version":"V001","task":"T-018","status":"CANONICAL" if pm005==CANONICAL_PM005 else "TEST_ONLY_MUTATION","generator_contract":{"clean_scene":True,"p2_blend_loaded":False,"p2_numeric_transform_usage":0,"blender_version":"4.5.13","relationship_vocabulary":["SUPPORT","CONNECT","LOCATE","REPEAT","BELONG"],"formal_geometry_policy":"APPROVED_P3_1_MASTER_GENERATOR_ONLY"},"parameter_state":{"PM-005":{"value_mm":pm005,"canonical_value_mm":CANONICAL_PM005,"source":str(BINDINGS.relative_to(ROOT))}},"input_hashes":protected_hashes(),"runtime_objects":objects,"runtime_accounting":{"input_count":365,"outcome_count":len(objects),"outcome_counts":dict(sorted(counts.items())),"unexplained_runtime_omission":0,"anonymous_formal_mesh":0,"broken_identity":0,"rule_derived":sum(x["placement"]["status"]=="RULE_DERIVED" for x in objects),"not_realized_no_approved_placement_rule":0},"technical_helpers":{"count":353,"historical_component_count":0},"canonical_semantic_snapshot_sha256":hashlib.sha256(stable_json(snapshot).encode()).hexdigest(),"blend_artifact":{"path":"artifacts/P3_3_WHOLE_BUILDING_CANONICAL_V001.blend","sha256":"POPULATED_BY_GITHUB_ACTIONS"}}

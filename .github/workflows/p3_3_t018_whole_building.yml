@@ -31,7 +31,7 @@ jobs:
         run: |
           set -euo pipefail
           sudo apt-get update
-          sudo apt-get install -y libegl1
+          sudo apt-get install -y --no-install-recommends libegl1
           curl --fail --location --show-error --retry 3 -o /tmp/blender.tar.xz https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
           tar -xf /tmp/blender.tar.xz -C /tmp
           "$BLENDER" --version | tee /tmp/blender-version.txt
@@ -43,21 +43,21 @@ jobs:
           PY
           test "$(git rev-parse HEAD)" = "$PR_HEAD_SHA"
           if [ "$GITHUB_EVENT_NAME" = pull_request ]; then test "$PR_NUMBER" = 3; fi
-      - name: Run A — clean canonical build and save
+      - name: Run A - clean canonical build and save
         run: |
           mkdir -p "$ARTIFACT_DIR" "$REVIEW_DIR"
           "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT_DIR/build_p3_3_whole_building_v001.py" -- --blend "$ARTIFACT_DIR/P3_3_WHOLE_BUILDING_CANONICAL_V001.blend" --manifest "$ARTIFACT_DIR/run_a_manifest.json" --snapshot "$ARTIFACT_DIR/run_a_snapshot.json"
-      - name: Run B — independent reopen and machine validation
+      - name: Run B - independent reopen and machine validation
         run: |
           "$BLENDER" --background "$ARTIFACT_DIR/P3_3_WHOLE_BUILDING_CANONICAL_V001.blend" --python-exit-code 10 --python "$SCRIPT_DIR/validate_p3_3_whole_building_v001.py" -- --manifest "$ARTIFACT_DIR/run_a_manifest.json" --output "$ARTIFACT_DIR/run_b_reopen_validation.json" --compare "$ARTIFACT_DIR/run_a_snapshot.json"
       - name: Fixed scripted review rendering
         run: |
           "$BLENDER" --background "$ARTIFACT_DIR/P3_3_WHOLE_BUILDING_CANONICAL_V001.blend" --python-exit-code 10 --python "$SCRIPT_DIR/render_p3_3_whole_building_review_v001.py" -- --manifest "$ARTIFACT_DIR/run_a_manifest.json" --output-dir "$REVIEW_DIR"
-      - name: Run C — PM-005 test-only mutation build and validation
+      - name: Run C - PM-005 test-only mutation build and validation
         run: |
           "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT_DIR/build_p3_3_whole_building_v001.py" -- --pm005 3605.7 --blend "$ARTIFACT_DIR/run_c_mutation.blend" --manifest "$ARTIFACT_DIR/run_c_manifest.json" --snapshot "$ARTIFACT_DIR/run_c_snapshot.json"
           "$BLENDER" --background "$ARTIFACT_DIR/run_c_mutation.blend" --python-exit-code 10 --python "$SCRIPT_DIR/validate_p3_3_whole_building_v001.py" -- --manifest "$ARTIFACT_DIR/run_c_manifest.json" --output "$ARTIFACT_DIR/run_c_validation.json" --mode mutation
-      - name: Run D — discard mutation and clean canonical restore
+      - name: Run D - discard mutation and clean canonical restore
         run: |
           rm -f "$ARTIFACT_DIR/run_c_mutation.blend"
           "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT_DIR/build_p3_3_whole_building_v001.py" -- --blend "$ARTIFACT_DIR/run_d_restore.blend" --manifest "$ARTIFACT_DIR/run_d_manifest.json" --snapshot "$ARTIFACT_DIR/run_d_snapshot.json"

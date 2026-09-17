@@ -14,8 +14,9 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path: sys.path.insert(0, str(SCRIPT_DIR))
 
-from p3_3_whole_building_common_v001 import (ALLOWED_OUTCOMES, CANONICAL_PM005, MUTATED_PM005, ROOT,
+from p3_3_whole_building_common_v001 import (ALLOWED_OUTCOMES, CANONICAL_PM005, MUTATED_PM005, REPRESENTATION_GEOMETRY, ROOT,
     compile_runtime, load, normalized_snapshot, protected_hashes, stable_json, write_json)
+from build_p3_3_whole_building_v001 import representation_spec
 
 HARD_FAILS = ["REFERENCE_LENGTH_LEAKS_INTO_BUILDING", "SILENT_HISTORICIZATION", "BAKED_MANUAL_BUILDING",
               "SILENT_BUILDING_OMISSION", "BROKEN_COMPONENT_IDENTITY"]
@@ -55,6 +56,26 @@ def spatial_audit(manifest: dict) -> dict:
     return {"status":"PASS" if not errors else "FAIL","expected_count":365,"realized_count":sum(r["realized_count"] for r in families.values()),"semantic_marker_count":sum(r["semantic_marker_count"] for r in families.values()),"not_realized_no_approved_placement_rule":sum(x.get("placement",{}).get("status")=="NOT_REALIZED_NO_APPROVED_PLACEMENT_RULE" for x in actual.values()),"linear_tolerance_mm":0.01,"rule_id_coverage":rule_ids,"per_family":families,"errors":sorted(set(errors))}
 
 
+def representation_audit(manifest: dict) -> dict:
+    errors=[]; records=manifest.get("runtime_objects",[]); formal=[x for x in records if x.get("p3_3_disposition")=="GENERATED_FORMAL_GEOMETRY"]
+    if len(formal)!=12 or any(x.get("family")!="COLUMN" or x.get("representation",{}).get("geometry_class")!="APPROVED_P3_1_MASTER" for x in formal): errors.append("FORMAL_REPRESENTATION_INVALID")
+    expected_disposition={"BRACKET_CONTACT":"GENERATED_PROXY","FRAME_SUPPORT":"GENERATED_PROXY","RAFTER":"GENERATED_PROXY","GRID_CONTROL":"GENERATED_CONTROL","FRAME_CONTROL":"GENERATED_CONTROL","GABLE_CONTROL":"GENERATED_CONTROL","ROOF_ENVELOPE":"GENERATED_ENVELOPE","BRACKET_ARM":"UNKNOWN_BLOCKED","PRIMARY_FRAME":"UNKNOWN_BLOCKED","PURLIN":"DEFERRED"}
+    specs=[]
+    for record in records:
+        if record.get("family")=="COLUMN": continue
+        fam=record.get("family"); rep=record.get("representation",{})
+        if fam not in REPRESENTATION_GEOMETRY or rep.get("geometry_class")!=REPRESENTATION_GEOMETRY[fam]: errors.append(f"REPRESENTATION_CLASS_INVALID:{fam}"); continue
+        if record.get("p3_3_disposition")!=expected_disposition[fam] or rep.get("historical_geometry") or rep.get("evidence_upgrade") or rep.get("display_dimensions_policy")!="TECHNICAL_REVIEW_ONLY": errors.append(f"EVIDENCE_BOUNDARY_INVALID:{fam}")
+        try: spec=representation_spec(record,records)
+        except (KeyError,ValueError) as exc: errors.append(f"REPRESENTATION_DERIVATION_MISSING:{fam}:{exc}"); continue
+        if not spec["endpoint_source_ids"] or len(spec["world_points"])<2: errors.append(f"POINT_ONLY_REPRESENTATION:{fam}")
+        if fam=="ROOF_ENVELOPE" and spec["kind"]!="SURFACE": errors.append("ROOF_ENVELOPE_NOT_SURFACE")
+        if fam=="PURLIN" and spec["geometry_class"]!="DEFERRED_PURLIN_DATUM": errors.append("PURLIN_HISTORICIZED")
+        specs.append(spec)
+    if any(s["geometry_class"]=="TECHNICAL_OCTAHEDRON" for s in specs): errors.append("GENERIC_OCTAHEDRON_FOR_NONFORMAL")
+    return {"status":"PASS" if not errors else "FAIL","formal_count":len(formal),"technical_count":len(specs),"generic_octahedron_count":sum(s["geometry_class"]=="TECHNICAL_OCTAHEDRON" for s in specs),"geometry_class_counts":dict(sorted(__import__('collections').Counter(s["geometry_class"] for s in specs).items())),"errors":sorted(set(errors))}
+
+
 def failures(manifest: dict) -> list[str]:
     out = []
     objects = manifest.get("runtime_objects", [])
@@ -74,6 +95,8 @@ def failures(manifest: dict) -> list[str]:
     if manifest.get("input_hashes") != protected_hashes(): out.append("PROTECTED_INPUT_CHANGED")
     audit=spatial_audit(manifest)
     if audit["status"]!="PASS": out.extend(audit["errors"])
+    representation=representation_audit(manifest)
+    if representation["status"]!="PASS": out.extend(representation["errors"])
     return sorted(set(out))
 
 
@@ -102,7 +125,7 @@ def validate_blender_scene(manifest):
     approved_geometry = len(formal) == 12 and all(o.type == "MESH" and o.get("formal_geometry_source", "").endswith("build_column_master_v001.py") and o.get("formal_geometry_mode") == "PARAMETRIC_CIRCULAR_COLUMN_BODY" for o in formal)
     records={x["runtime_instance_id"]:x for x in manifest["runtime_objects"]}; spatial=all(max(abs(float(a)-float(b)) for a,b in zip(o.location,records[o["runtime_instance_id"]]["placement"]["location_mm"]))<=0.01 for o in runtime)
     technical=[o for o in runtime if o.get("p3_3_disposition")!="GENERATED_FORMAL_GEOMETRY"]
-    represented=len(technical)==353 and all(o.type=="MESH" and o.get("display_dimensions_policy")=="TECHNICAL_REVIEW_ONLY" and o.get("non_historical_geometry") for o in technical)
+    represented=len(technical)==353 and all(o.type in {"MESH","CURVE"} and o.get("display_dimensions_policy")=="TECHNICAL_REVIEW_ONLY" and o.get("non_historical_geometry") and o.get("not_evidence_upgraded") and o.get("TECHNICAL_REVIEW_ONLY") and o.get("NON_HISTORICAL_GEOMETRY") and o.get("NOT_EVIDENCE_UPGRADED") and o.get("representation_geometry_class")==REPRESENTATION_GEOMETRY[o.get("family")] for o in technical)
     passed = len(runtime) == 365 and approved_geometry and represented and spatial and scene_manifest["canonical_semantic_snapshot_sha256"] == manifest["canonical_semantic_snapshot_sha256"]
     return {"executed": True, "status": "PASS" if passed else "FAIL", "runtime_objects": len(runtime), "formal_master_geometry": "PASS" if approved_geometry else "FAIL","technical_representations":len(technical),"scene_coordinate_validation":"PASS" if spatial else "FAIL"}
 
@@ -128,11 +151,12 @@ def report(manifest, mode="canonical", compare=None):
     if compare:
         other = load(compare); comparison = normalized_snapshot(manifest) == other.get("normalized", other)
     status = not canonical_failures and all(x["actual"] == "EXPECTED_REJECTION" for x in negatives) and scene["status"] != "FAIL" and comparison is not False
-    spatial=spatial_audit(manifest)
+    spatial=spatial_audit(manifest); representation=representation_audit(manifest)
     return {"version":"V001", "task":"T-018", "mode":mode, "status":"PASS" if status else "FAIL",
             "clean_state_generation":"PASS", "save_reopen":scene, "runtime_accounting":manifest["runtime_accounting"],
             "identity_integrity":"PASS" if not set(canonical_failures)&{HARD_FAILS[3],HARD_FAILS[4]} else "FAIL",
             "spatial_validation":spatial,
+            "representation_validation":representation,
             "p3_2_traceability":"PASS", "parameter_rule_provenance":"PASS", "evidence_boundary":"PASS" if not set(canonical_failures)&set(HARD_FAILS[:2]) else "FAIL",
             "p2_transform_scan":{"authoritative_usage_count":0 if HARD_FAILS[2] not in canonical_failures else 1,"status":"PASS" if HARD_FAILS[2] not in canonical_failures else "FAIL"},
             "canonical_hard_fail_count":len(set(canonical_failures)&set(HARD_FAILS)), "canonical_failures":canonical_failures,

@@ -1,0 +1,63 @@
+name: TEMP T-018 Round 3 Finalize Canonical Outputs
+
+on:
+  push:
+    branches:
+      - codex/t-018
+    paths:
+      - '.github/workflows/t018_round3_finalize.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  finalize-round3:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/t-018
+          fetch-depth: 0
+
+      - name: Verify exact reviewed Round 3 source blobs
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git hash-object .github/workflows/p3_3_t018_whole_building.yml)" = "8d8fa0672e4a9a3fcb6c1c40bd7c2685b80aba75"
+          test "$(git hash-object production/zhenguo_wanfo/scripts/p3_3_whole_building_common_v001.py)" = "10bba7b5a44a4e72b2cf172cf46b08bcfc98211f"
+          test "$(git hash-object production/zhenguo_wanfo/scripts/build_p3_3_whole_building_v001.py)" = "3f8d365abb4672878fc4e1a42b43fd227ef47d9a"
+          test "$(git hash-object production/zhenguo_wanfo/scripts/render_p3_3_whole_building_review_v001.py)" = "854b0827292f899f02f08ede076ceba9ac76e0ea"
+          test "$(git hash-object production/zhenguo_wanfo/scripts/validate_p3_3_whole_building_v001.py)" = "eed2a6f500b6f81391161eedcfb3df00f0bd77fa"
+          test "$(git hash-object production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py)" = "9040cdf96f2a170a93ec3b207df641ea279acff9"
+          test "$(git hash-object production/zhenguo_wanfo/review/P3_3_T018/P3_3_T018_EVIDENCE_MANIFEST_V001.json)" = "9304b137b49603e3a368dbef7127fca0fcd7cb3a"
+
+      - name: Run Round 3 regression and regenerate canonical JSON outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m compileall -q production/zhenguo_wanfo/scripts production/zhenguo_wanfo/tests
+          python -m unittest production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py production/zhenguo_wanfo/tests/test_p3_3_building_graph_v001.py production/zhenguo_wanfo/tests/test_p2_2_structural_skeleton_v001.py
+          ruby -e "require 'yaml'; YAML.load_file('.github/workflows/p3_3_t018_whole_building.yml')"
+          python production/zhenguo_wanfo/scripts/build_p3_3_whole_building_v001.py --manifest-only
+          python production/zhenguo_wanfo/scripts/validate_p3_3_whole_building_v001.py --manifest production/zhenguo_wanfo/build/P3_3_WHOLE_BUILDING_RUNTIME_MANIFEST_V001.json --output production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_VALIDATION_V001.json
+          python production/zhenguo_wanfo/scripts/build_p3_3_whole_building_v001.py --pm005 3605.7 --manifest /tmp/t018_round3_mutation_manifest.json --manifest-only
+          python production/zhenguo_wanfo/scripts/validate_p3_3_whole_building_v001.py --manifest /tmp/t018_round3_mutation_manifest.json --output production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_MUTATION_V001.json --mode mutation
+          test "$(git hash-object production/zhenguo_wanfo/build/P3_3_WHOLE_BUILDING_RUNTIME_MANIFEST_V001.json)" = "fb4d7c5b11d28fb417da6cef714c3c239058208c"
+          test "$(git hash-object production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_VALIDATION_V001.json)" = "c41f0d9e1fbf49d695352257eeec9a7d94f2c389"
+          test "$(git hash-object production/zhenguo_wanfo/validation/P3_3_WHOLE_BUILDING_MUTATION_V001.json)" = "22c7f685c58eefa2074746b6785fd5086ada817b"
+          git diff --check
+          test -z "$(git diff --name-only | grep '^docs/project_control/' || true)"
+
+      - name: Commit generated outputs and remove temporary finalizer
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/t018_round3_finalize.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git diff --cached --check
+          test -z "$(git diff --cached --name-only | grep '^docs/project_control/' || true)"
+          git commit -m 'T-018: finalize Round 3 canonical outputs'
+          git push origin HEAD:codex/t-018
