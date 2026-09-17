@@ -1,5 +1,5 @@
 name: T-018 Round 2 Transport Apply
-# transport payload is one gzip stream split into six binary chunks, each base64 encoded separately
+# strict SHA-gated transport reconstruction for the existing T-018 PR branch
 
 on:
   push:
@@ -24,17 +24,53 @@ jobs:
         run: |
           set -euo pipefail
           test -d .tmp_t018_round2
-          : > /tmp/t018_round2.patch.gz
-          for n in 1 2 3 4 5 6; do
-            test -s ".tmp_t018_round2/part${n}.b64"
-            tr -d '\r\n' < ".tmp_t018_round2/part${n}.b64" | base64 -d >> /tmp/t018_round2.patch.gz
-          done
-          gzip -dc /tmp/t018_round2.patch.gz > /tmp/t018_round2.patch
-          ACTUAL_SHA="$(sha256sum /tmp/t018_round2.patch | awk '{print $1}')"
-          EXPECTED_SHA="99a22d0e93525be91de9e6f93912d8fbec53fb48b3c65d63a7cd1b466b6cf41f"
-          test "$ACTUAL_SHA" = "$EXPECTED_SHA"
-          grep -q '^diff --git a/.github/workflows/p3_3_t018_whole_building.yml ' /tmp/t018_round2.patch
-          test "$(grep -c '^diff --git ' /tmp/t018_round2.patch)" = 10
+          python - <<'PY'
+          from pathlib import Path
+          import base64, gzip, hashlib, re
+
+          expected_sha = '99a22d0e93525be91de9e6f93912d8fbec53fb48b3c65d63a7cd1b466b6cf41f'
+          files = [Path(f'.tmp_t018_round2/part{n}.b64') for n in range(1, 7)]
+          parts = [p.read_text(encoding='ascii') for p in files]
+          alphabet = set('ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=')
+          clean = [''.join(ch for ch in part if ch in alphabet) for part in parts]
+
+          def padded(s):
+              return s + '=' * ((-len(s)) % 4)
+
+          candidates = []
+          # Strategy A: pieces are substrings of one base64 text stream.
+          joined = ''.join(clean)
+          for label, s in [('joined', joined), ('joined-no-padding', joined.replace('=', ''))]:
+              try:
+                  candidates.append((label, base64.b64decode(padded(s), validate=False)))
+              except Exception as exc:
+                  print(label, 'base64 decode failed:', exc)
+          # Strategy B: pieces are independently base64-encoded binary chunks of one gzip stream.
+          try:
+              candidates.append(('decoded-chunks', b''.join(base64.b64decode(padded(s), validate=False) for s in clean)))
+          except Exception as exc:
+              print('decoded-chunks base64 decode failed:', exc)
+
+          for label, raw in candidates:
+              try:
+                  patch = gzip.decompress(raw)
+              except Exception as exc:
+                  print(label, 'gzip failed:', exc, 'raw_bytes=', len(raw))
+                  continue
+              digest = hashlib.sha256(patch).hexdigest()
+              print(label, 'patch_bytes=', len(patch), 'sha256=', digest)
+              if digest == expected_sha:
+                  Path('/tmp/t018_round2.patch').write_bytes(patch)
+                  break
+          else:
+              raise SystemExit('No transport reconstruction matched the approved Round 2 patch SHA256')
+
+          text = Path('/tmp/t018_round2.patch').read_text(encoding='utf-8')
+          if text.count('diff --git ') != 10:
+              raise SystemExit('Unexpected diff count')
+          if 'diff --git a/.github/workflows/p3_3_t018_whole_building.yml b/.github/workflows/p3_3_t018_whole_building.yml' not in text:
+              raise SystemExit('Expected T-018 workflow diff missing')
+          PY
 
       - name: Materialize payload in isolated empty repository
         shell: bash
@@ -94,6 +130,7 @@ jobs:
           PY
           rm -rf .tmp_t018_round2
           rm -f .github/workflows/t018_round2_transport_apply.yml
+          rm -f .github/workflows/t018_round2_apply_payload.yml
 
       - name: Pre-publish regression
         shell: bash
