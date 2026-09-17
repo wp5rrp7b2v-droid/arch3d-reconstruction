@@ -52,9 +52,10 @@
     "input_count": 365,
     "outcome_count": 365,
     "outcome_counts": {
+      "DEFERRED": 7,
       "GENERATED_CONTROL": 66,
       "GENERATED_ENVELOPE": 6,
-      "GENERATED_FORMAL_GEOMETRY": 19,
+      "GENERATED_FORMAL_GEOMETRY": 12,
       "GENERATED_PROXY": 178,
       "UNKNOWN_BLOCKED": 96
     },

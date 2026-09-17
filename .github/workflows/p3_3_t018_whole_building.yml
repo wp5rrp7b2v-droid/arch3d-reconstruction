@@ -19,8 +19,12 @@ jobs:
       SCRIPT_DIR: production/zhenguo_wanfo/scripts
       ARTIFACT_DIR: artifacts/t018
       REVIEW_DIR: production/zhenguo_wanfo/review/P3_3_T018
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      PR_NUMBER: ${{ github.event.pull_request.number || 'workflow_dispatch' }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - name: Non-Blender contract tests
         run: python -m unittest production/zhenguo_wanfo/tests/test_p3_3_whole_building_v001.py
       - name: Install and pin Blender 4.5.13 linux-x64
@@ -29,7 +33,14 @@ jobs:
           curl --fail --location --show-error --retry 3 -o /tmp/blender.tar.xz https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
           tar -xf /tmp/blender.tar.xz -C /tmp
           "$BLENDER" --version | tee /tmp/blender-version.txt
-          grep -Fx 'Blender 4.5.13' /tmp/blender-version.txt
+          python - <<'PY'
+          import re
+          line = open('/tmp/blender-version.txt', encoding='utf-8').readline().strip()
+          if re.fullmatch(r'Blender 4\.5\.13(?: LTS)?', line) is None:
+              raise SystemExit(f'Unexpected Blender version: {line!r}')
+          PY
+          test "$(git rev-parse HEAD)" = "$PR_HEAD_SHA"
+          if [ "$GITHUB_EVENT_NAME" = pull_request ]; then test "$PR_NUMBER" = 3; fi
       - name: Run A — clean canonical build and save
         run: |
           mkdir -p "$ARTIFACT_DIR" "$REVIEW_DIR"
@@ -58,9 +69,10 @@ jobs:
           import hashlib,json,os,pathlib
           root=pathlib.Path('.'); out=pathlib.Path(os.environ['ARTIFACT_DIR']); review=pathlib.Path(os.environ['REVIEW_DIR'])
           digest=lambda p: hashlib.sha256(p.read_bytes()).hexdigest()
-          data={'version':'V001','task':'T-018','status':'ACTIONS_EVIDENCE','github_actions_run_id':os.getenv('GITHUB_RUN_ID'),'run_attempt':os.getenv('GITHUB_RUN_ATTEMPT'),'head_sha':os.getenv('GITHUB_SHA'),'blender_version':'4.5.13','artifact_name':'P3_3_T018_HEADLESS_EVIDENCE_V001','artifact_id':'AVAILABLE_AFTER_UPLOAD','canonical_blend_sha256':digest(out/'P3_3_WHOLE_BUILDING_CANONICAL_V001.blend'),'review_images':{p.name:digest(p) for p in sorted(review.glob('*.png'))},'local_mac_required':'NO_FOR_SCRIPTED_T018_CHAIN; FINAL_GATE_REVIEW_OUT_OF_SCOPE'}
+          data={'version':'V001','task':'T-018','status':'ACTIONS_EVIDENCE','github_event_name':os.getenv('GITHUB_EVENT_NAME'),'github_actions_run_id':os.getenv('GITHUB_RUN_ID'),'run_attempt':os.getenv('GITHUB_RUN_ATTEMPT'),'pr_number':os.environ['PR_NUMBER'],'pr_head_sha':os.environ['PR_HEAD_SHA'],'workflow_checkout_sha':os.popen('git rev-parse HEAD').read().strip(),'github_sha':os.getenv('GITHUB_SHA'),'blender_version':'4.5.13','artifact_name':'P3_3_T018_HEADLESS_EVIDENCE_V001','artifact_id':'AVAILABLE_AFTER_UPLOAD','canonical_blend_sha256':digest(out/'P3_3_WHOLE_BUILDING_CANONICAL_V001.blend'),'review_images':{p.name:digest(p) for p in sorted(review.glob('*.png'))},'local_mac_required':'NO_FOR_SCRIPTED_T018_CHAIN; FINAL_GATE_REVIEW_OUT_OF_SCOPE'}
           (out/'P3_3_T018_EVIDENCE_MANIFEST_V001.json').write_text(json.dumps(data,ensure_ascii=False,indent=2,sort_keys=True)+'\n')
           PY
+          python "$SCRIPT_DIR/validate_p3_3_whole_building_v001.py" --manifest "$ARTIFACT_DIR/run_a_manifest.json" --output "$ARTIFACT_DIR/pr_head_binding_validation.json" --evidence "$ARTIFACT_DIR/P3_3_T018_EVIDENCE_MANIFEST_V001.json" --expected-pr-head-sha "$PR_HEAD_SHA"
       - name: Upload formal evidence
         uses: actions/upload-artifact@v4
         with:

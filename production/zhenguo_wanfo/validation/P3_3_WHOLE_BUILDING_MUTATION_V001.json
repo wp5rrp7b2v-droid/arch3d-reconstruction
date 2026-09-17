@@ -4,7 +4,7 @@
   "canonical_restore_exact": true,
   "canonical_value_mm": 3505.7,
   "delta_mm": 100.0,
-  "dependent_objects_changed": 20,
+  "dependent_objects_changed": 12,
   "evidence_classification_unchanged": true,
   "mutated_value_mm": 3605.7,
   "non_dependent_drift": 0,
