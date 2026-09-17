@@ -209,3 +209,46 @@
 - Current task：NONE。
 - Current blocker：NONE。
 - Next action：设计下一项 P3.3 Task Contract，目标为确定性整殿生成及 GitHub Actions headless Blender 证据链；未经 Product Owner 明确批准不得执行。
+
+## T-019｜P3.3 上游 Disposition 一致性修正｜PASS / APPROVED / CLOSED / D-055｜2026-09-16
+
+- Contract：D-053；Execution Authorization：D-054；Execution Mode=`CHAT_FIRST_CODEX_EXECUTOR_MODE`；Think Level=MEDIUM；Cloud Mode=`CLOUD_EXECUTABLE`；Blender requirement=NONE。
+- GitHub PR：`#4`；reviewed head=`91723a7a2b3c3ca78473bba3cb344450e43fbb3f`；6 changed files；Product Owner D-055 authorized merge。
+- Merge result：PASS；merge commit=`b9803fb416e375fd2f94f5d83df5fab73fe00063`。
+- Known correction：7/7 `CMP-PURLIN-001` legacy instances in Scope Accounting and Assembly Graph changed from `GENERATE_FROM_FORMAL_COMPONENT` to `DEFERRED`。
+- P3.1 qualification remains `DEFERRED_INSUFFICIENT_EVIDENCE`；no PURLIN Master created；no unknown purlin sections/lengths/end conditions invented。
+- Direct-identity qualification uses explicit `candidate_id` / `source_registry_id`；family-only silent upgrade prohibited。
+- Validator consistency error：`MASTER_SCOPE_DISPOSITION_CONFLICT`；not added to the five canonical P3.3 Hard Fails。
+- Cross-layer direct-identity conflicts=0；new synthetic regression=`EXPECTED_REJECTION / MASTER_SCOPE_DISPOSITION_CONFLICT`。
+- Accounting remains 11/11 families / 40/40 variants / 365/365 instances；unexplained omissions=0；orphan identities=0；P2 authoritative numeric-transform usage=0；five relation types unchanged；canonical Hard Fail=0；existing negatives=5/5 expected rejection。
+- Deterministic regeneration / stable serialization PASS；P3.1 / P3.2 / T-018 PR #3 / Blender / `.blend` unchanged。
+- Canonical `main` verification after merge：PASS；7/7 PURLIN building instances read as `DEFERRED`。
+- Gate impact：T-019 closure resolves T-018 `UPSTREAM_PROTECTED_INPUT_CONFLICT` only；**does not make T-018 PASS and does not make P3.3 PASS**。
+
+## Current Execution State｜R098｜2026-09-16
+
+- P3：ACTIVE / **3/4 PASS**。
+- P3.3：ACTIVE / DOD LOCKED。
+- T-017：CLOSED / D-050 / canonical foundation corrected by T-019。
+- T-019：PASS / APPROVED / CLOSED / D-055。
+- Current task：T-018 / RESUME READY / CORRECTIONS REQUIRED / PR #3 OPEN。
+- Previous upstream STOP：CLEARED。
+- Remaining T-018 corrections：formal geometry must use approved formal generation where available；placement must derive from authoritative graph/parameters/rules；Actions evidence must bind PR head SHA；Blender 4.5.13 version check must accept valid `LTS` suffix while remaining version-locked。
+- Previous Actions Run #35101537343 remains debugging-only / NOT formal evidence；Run A/B/C/D did not execute。
+- Next action：return to the original T-018 Codex task, update from latest main, implement the four corrections, use Codex UI `Update Branch` to update the same PR #3, rerun GitHub Actions, then return evidence to ChatGPT；do not create a new T-018 PR and do not merge PR #3。
+
+## Daily Closing Project Control Consistency Audit｜2026-09-16
+
+- Scope：`project_state.json` / `acceptance_matrix.md` / `decision_log.md` / `execution_log.md` / `governance.md` / `rules_change_log.md` / `dashboard.html` / `phase_archive/` / P3.3 Task Contracts / PR #2/#3/#4 / RC-014 Cloud Mode / 9/16–20 Sync Ledger。
+- Cross-file result：P3=`ACTIVE / 3/4`；P3.0–P3.2=`PASS / CLOSED`；P3.3=`ACTIVE / DOD LOCKED`；T-017=`CLOSED / D-050 / corrected foundation`；T-019=`PASS / APPROVED / CLOSED / D-055`；T-018=`RESUME READY / CORRECTIONS REQUIRED / PR #3 OPEN`。状态一致。
+- Decision Log：D-047～D-055 全部已登记；D-055 为当前 latest material decision。
+- Acceptance Matrix：已反映 T-017、T-019 与 T-018 resume/correction 状态；P3.3 未提前标记 PASS。
+- Execution Log：T-017/T-019 的工程与 merge 事实已登记；T-018 首轮 Actions failure 明确为 debugging-only，不构成正式 evidence。
+- Governance / Rules：RC-014 仍严格仅覆盖 2026-09-16→20；RC-017 scripted Blender pipeline ACTIVE；9/21 自动恢复正常模式，不自动延长 RC-014。
+- Dashboard：v042 / State R098 与 Project State 一致；Current Task=T-018；PR #3 merge authorization=FALSE。
+- PR audit：PR #2 MERGED；PR #4 MERGED；PR #3 OPEN / NOT MERGED。Open PR 内容不属于 canonical `main`。
+- Evidence Boundary：7/7 PURLIN canonical dispositions=`DEFERRED`；PURLIN qualification=`DEFERRED_INSUFFICIENT_EVIDENCE`；六椽栿 historical full length 继续 UNKNOWN/null；1000mm reference 继续 non-historical only；P2 whole-building transforms/.blend 禁止作为 P3.3 generative input。
+- Phase archive：仅 P0/P1/P2 closure；P3 尚未关闭，因此无需且不得创建 P3 closure archive。
+- 9/21 防遗漏登记：已新增 `docs/project_control/CLOUD_MODE_SYNC_LEDGER_2026-09-16_20.md`，记录 9/16 Day-1 云端变化、9/17～20 每日追加模板，以及 9/21 `main + open PR + Actions artifact + local-only assets + Project Control` 五类同步核验清单。
+- Known exceptions：T-018 PR #3 尚未 merge 且四项修正未完成；这是明确的 active work，不是 Project Control inconsistency。9/21 前如继续云端工作，必须每日更新 Sync Ledger。
+- **DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT = PASS**。

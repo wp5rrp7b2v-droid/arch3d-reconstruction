@@ -11,6 +11,7 @@ sys.path.insert(0, str(SCRIPTS))
 from build_p3_3_building_graph_v001 import OUTPUTS, compile_assets  # noqa: E402
 from validate_p3_3_building_graph_v001 import (  # noqa: E402
     CLASSIFICATIONS,
+    DISPOSITION_CONFLICT,
     HARD_FAILS,
     mutate,
     validate,
@@ -91,6 +92,22 @@ class BuildingGraphTests(unittest.TestCase):
         self.assertNotIn('"location_mm"', graph_text)
         self.assertNotIn('"rotation_euler_rad"', graph_text)
         self.assertNotIn('"scale"', graph_text)
+
+    def test_purlin_disposition_is_deferred(self):
+        records = [item for item in self.assets["accounting"]["instances"] if item["component_id"] == "CMP-PURLIN-001"]
+        self.assertEqual(len(records), 7)
+        self.assertEqual({item["p3_3_disposition"] for item in records}, {"DEFERRED"})
+
+    def test_purlin_formal_generation_regression_is_rejected(self):
+        def silently_upgrade(docs):
+            for item in docs["accounting"]["instances"]:
+                if item["component_id"] == "CMP-PURLIN-001":
+                    item["p3_3_disposition"] = "GENERATE_FROM_FORMAL_COMPONENT"
+            for node in docs["graph"]["nodes"]:
+                if node.get("component_id") == "CMP-PURLIN-001":
+                    node["p3_3_disposition"] = "GENERATE_FROM_FORMAL_COMPONENT"
+
+        self.assert_rejected_after(silently_upgrade, DISPOSITION_CONFLICT)
 
 
 if __name__ == "__main__":
