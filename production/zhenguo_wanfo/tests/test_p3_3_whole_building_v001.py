@@ -99,7 +99,8 @@ class WholeBuildingTests(unittest.TestCase):
                   alter("PURLIN",lambda x:x.__setitem__("p3_3_disposition","GENERATED_FORMAL_GEOMETRY"))]
         missing=copy.deepcopy(self.canonical); missing["runtime_objects"].pop(); cases.append(missing)
         bracket_count=copy.deepcopy(self.canonical); bracket_count["runtime_objects"].pop(next(i for i,x in enumerate(bracket_count["runtime_objects"]) if x["family"]=="BRACKET_CONTACT")); cases.append(bracket_count)
-        for case in cases: self.assertTrue(failures(case))
+        for index,case in enumerate(cases):
+            with self.subTest(case_index=index): self.assertTrue(failures(case))
 
     def test_family_specific_engineering_representation_geometry(self):
         audit=representation_audit(self.canonical); self.assertEqual(audit["status"],"PASS"); self.assertEqual(audit["technical_count"],353); self.assertEqual(audit["generic_octahedron_count"],0)

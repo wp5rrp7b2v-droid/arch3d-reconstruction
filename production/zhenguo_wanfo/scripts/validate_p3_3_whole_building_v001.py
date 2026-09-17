@@ -44,7 +44,8 @@ def spatial_audit(manifest: dict) -> dict:
         p=got.get("placement",{}); d=p.get("derivation",{}); ep=exp["placement"]; row["realized_count"]+=p.get("status")=="RULE_DERIVED"; row["semantic_marker_count"]+=got.get("representation",{}).get("class")=="SEMANTIC_MARKER"
         row["rule_ids"].update(d.get("rule_ids",[])); row["parameter_ids"].update(d.get("parameter_ids",[])); row["assembly_refs"].update(d.get("assembly_refs",[])); row["interface_ids"].update(d.get("interface_ids",[]))
         coords=p.get("location_mm") or [float("inf")]*3; expected_coords=ep["location_mm"]; delta=max(abs(float(a)-float(b)) for a,b in zip(coords,expected_coords))
-        ok=(p.get("status")=="RULE_DERIVED" and required<=set(d) and d==ep["derivation"] and got.get("p3_3_disposition")==exp["p3_3_disposition"] and got.get("representation")==exp["representation"] and delta<=0.01)
+        immutable_match=all(got.get(k)==exp.get(k) for k in ("runtime_instance_id","legacy_instance_id","component_id","source_family_id","family","graph_parent_node_id","p3_3_disposition","evidence_status","historical_claim_boundary","formal_master"))
+        ok=(p.get("status")=="RULE_DERIVED" and required<=set(d) and d==ep["derivation"] and immutable_match and got.get("representation")==exp["representation"] and delta<=0.01)
         if not ok: errors.append(f"SPATIAL_MISMATCH:{fam}:{exp['legacy_instance_id']}"); row["failures"]+=1
         row["measurements"].append({"instance_id":exp["legacy_instance_id"],"actual_coordinate_mm":coords,"expected_coordinate_mm":expected_coords,"max_delta_mm":delta,"tolerance_mm":0.01,"status":"PASS" if ok else "FAIL"})
     if len(actual)!=365: errors.append("MISSING_RUNTIME_REALIZATION")
