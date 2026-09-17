@@ -1,5 +1,5 @@
 name: T-018 Round 2 Transport Apply
-# second push intentionally triggers this already-registered branch workflow
+# transport payload consists of six independently base64+gzip encoded chunks
 
 on:
   push:
@@ -24,8 +24,11 @@ jobs:
         run: |
           set -euo pipefail
           test -d .tmp_t018_round2
-          for n in 1 2 3 4 5 6; do test -s ".tmp_t018_round2/part${n}.b64"; done
-          cat .tmp_t018_round2/part{1,2,3,4,5,6}.b64 | tr -d '\r\n' | base64 -d | gzip -dc > /tmp/t018_round2.patch
+          : > /tmp/t018_round2.patch
+          for n in 1 2 3 4 5 6; do
+            test -s ".tmp_t018_round2/part${n}.b64"
+            tr -d '\r\n' < ".tmp_t018_round2/part${n}.b64" | base64 -d | gzip -dc >> /tmp/t018_round2.patch
+          done
           ACTUAL_SHA="$(sha256sum /tmp/t018_round2.patch | awk '{print $1}')"
           EXPECTED_SHA="99a22d0e93525be91de9e6f93912d8fbec53fb48b3c65d63a7cd1b466b6cf41f"
           test "$ACTUAL_SHA" = "$EXPECTED_SHA"
