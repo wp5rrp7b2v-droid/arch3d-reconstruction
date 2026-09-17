@@ -9,9 +9,9 @@ import json
 import sys
 from pathlib import Path
 
+# Blender --python does not promise the script directory on sys.path.
 SCRIPT_DIR = Path(__file__).resolve().parent
-if str(SCRIPT_DIR) not in sys.path:
-    sys.path.insert(0, str(SCRIPT_DIR))
+if str(SCRIPT_DIR) not in sys.path: sys.path.insert(0, str(SCRIPT_DIR))
 
 from p3_3_whole_building_common_v001 import CANONICAL_PM005, RUNTIME_MANIFEST, compile_runtime, write_json
 
@@ -44,6 +44,14 @@ def build_blender(manifest, blend_path: Path):
         mat = bpy.data.materials.new(f"MAT_{outcome}"); mat.diffuse_color = color; mat["technical_role"] = "EVIDENCE_CLASSIFICATION"
         collections[outcome]["material_name"] = mat.name
     loaded_generators = {}
+    def technical_mesh(record, material):
+        """Visible review-only octahedron; its size is never a historical dimension."""
+        size=float(record["representation"]["marker_geometry"]["display_radius_mm"])
+        verts=[(size,0,0),(-size,0,0),(0,size,0),(0,-size,0),(0,0,size),(0,0,-size)]
+        faces=[(0,2,4),(2,1,4),(1,3,4),(3,0,4),(2,0,5),(1,2,5),(3,1,5),(0,3,5)]
+        mesh=bpy.data.meshes.new(record["runtime_instance_id"]+"_TECHNICAL_MESH"); mesh.from_pydata(verts,[],faces); mesh.materials.append(material)
+        obj=bpy.data.objects.new(record["runtime_instance_id"],mesh); obj["representation_class"]=record["representation"]["class"]
+        obj["display_dimensions_policy"]="TECHNICAL_REVIEW_ONLY"; obj["non_historical_geometry"]=True; return obj
     for record in manifest["runtime_objects"]:
         outcome = record["p3_3_disposition"]
         if outcome == "GENERATED_FORMAL_GEOMETRY":
@@ -66,20 +74,20 @@ def build_blender(manifest, blend_path: Path):
             obj["formal_geometry_source"] = key
             obj["formal_geometry_mode"] = master["geometry_mode"]
         else:
-            obj = bpy.data.objects.new(record["runtime_instance_id"], None)
-            obj.empty_display_type = 'CUBE'; obj.empty_display_size = 0.18
+            obj = technical_mesh(record, bpy.data.materials[collections[outcome]["material_name"]])
             collections[outcome].objects.link(obj)
-            obj.hide_render = True
         if record["placement"]["status"] == "RULE_DERIVED":
             obj.location = record["placement"]["location_mm"]
             obj.rotation_euler = record["placement"]["rotation_euler_rad"]
             obj.scale = record["placement"]["scale"]
         obj.name = record["runtime_instance_id"]
-        for key in ("runtime_instance_id", "legacy_instance_id", "component_id", "graph_parent_node_id", "p3_3_disposition", "historical_claim_boundary"):
+        for key in ("runtime_instance_id", "legacy_instance_id", "component_id", "family", "graph_parent_node_id", "p3_3_disposition", "historical_claim_boundary"):
             obj[key] = record[key]
         obj["evidence_status_json"] = json.dumps(record["evidence_status"], sort_keys=True)
         obj["parameter_rule_provenance_json"] = json.dumps(record["parameter_rule_provenance"], sort_keys=True)
         obj["placement_status"] = record["placement"]["status"]
+        obj["datum_type"] = record["placement"]["datum_type"]
+        obj["representation_json"] = json.dumps(record["representation"], sort_keys=True)
     bpy.context.scene["t018_manifest_json"] = json.dumps(manifest, ensure_ascii=False, sort_keys=True)
     bpy.context.scene["clean_state_generation"] = True
     blend_path.parent.mkdir(parents=True, exist_ok=True)

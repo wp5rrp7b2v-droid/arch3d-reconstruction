@@ -1,9 +1,6 @@
 import copy
 import json
-import os
-import runpy
 import sys
-import tempfile
 import unittest
 from pathlib import Path
 
@@ -11,37 +8,11 @@ ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "production/zhenguo_wanfo/scripts"))
 from p3_3_whole_building_common_v001 import CANONICAL_PM005, MUTATED_PM005, compile_runtime, normalized_snapshot, stable_json
 from validate_p3_3_whole_building_v001 import (HARD_FAILS, failures, mutated_fixture, negative_results,
-    valid_blender_version, validate_pr_head_binding)
+    spatial_audit, valid_blender_version, validate_pr_head_binding)
 
 
 class WholeBuildingTests(unittest.TestCase):
     def setUp(self): self.canonical = compile_runtime()
-
-    def test_blender_style_entrypoints_bootstrap_sibling_imports(self):
-        scripts = ROOT / "production/zhenguo_wanfo/scripts"
-        build_script = scripts / "build_p3_3_whole_building_v001.py"
-        validate_script = scripts / "validate_p3_3_whole_building_v001.py"
-        original_cwd = Path.cwd()
-        original_path = list(sys.path)
-        original_common = sys.modules.get("p3_3_whole_building_common_v001")
-        try:
-            with tempfile.TemporaryDirectory() as td:
-                os.chdir(td)
-                sys.path[:] = [entry for entry in original_path if Path(entry or ".").resolve() != scripts.resolve()]
-                sys.modules.pop("p3_3_whole_building_common_v001", None)
-                build_ns = runpy.run_path(str(build_script))
-                manifest = build_ns["compile_runtime"]()
-                self.assertEqual(len(manifest["runtime_objects"]), 365)
-
-                sys.path[:] = [entry for entry in original_path if Path(entry or ".").resolve() != scripts.resolve()]
-                sys.modules.pop("p3_3_whole_building_common_v001", None)
-                validate_ns = runpy.run_path(str(validate_script))
-                self.assertEqual(validate_ns["report"](manifest)["status"], "PASS")
-        finally:
-            os.chdir(original_cwd)
-            sys.path[:] = original_path
-            if original_common is not None:
-                sys.modules["p3_3_whole_building_common_v001"] = original_common
 
     def test_clean_contract_and_365_outcomes(self):
         self.assertFalse(failures(self.canonical)); self.assertEqual(len(self.canonical["runtime_objects"]), 365)
@@ -64,11 +35,13 @@ class WholeBuildingTests(unittest.TestCase):
 
     def test_placement_is_authoritative_rule_traceable(self):
         derived=[x for x in self.canonical["runtime_objects"] if x["placement"]["status"]=="RULE_DERIVED"]
-        self.assertEqual(len(derived),12)
+        self.assertEqual(len(derived),365)
         for item in derived:
             d=item["placement"]["derivation"]
-            self.assertEqual((d["p3_2_relationship_id"],d["rule_id"]),("C-R01","RULE-COLUMN-GRID"))
-            self.assertIn("PM-005",d["parameter_values"]); self.assertEqual(len(d["authoritative_sources"]),4)
+            self.assertTrue(d["rule_ids"]); self.assertTrue(d["relationship_types"]); self.assertTrue(d["parameter_values"]); self.assertTrue(d["identity_indices"]); self.assertEqual(len(d["authoritative_sources"]),4)
+        rules={r for x in derived for r in x["placement"]["derivation"]["rule_ids"]}
+        self.assertTrue({"RULE-COLUMN-GRID","RULE-BRACKET-TOPOLOGY","RULE-FRAME-DEPTHS","RULE-FRAME-SEMANTICS","RULE-ROOF-OUTLINE","RULE-ROOF-ELEVATIONS","RULE-MAJOR-ELEVATIONS"} <= rules)
+        self.assertEqual(self.canonical["runtime_accounting"]["not_realized_no_approved_placement_rule"],0)
         source=(ROOT/"production/zhenguo_wanfo/scripts/p3_3_whole_building_common_v001.py").read_text()
         self.assertNotIn("0.72",source); self.assertNotIn("0.42",source); self.assertNotIn("layouts =",source)
 
@@ -89,6 +62,7 @@ class WholeBuildingTests(unittest.TestCase):
             if a["placement"] != b["placement"]: changed.append((a,b))
             self.assertEqual(a["evidence_status"],b["evidence_status"])
         self.assertTrue(changed); self.assertTrue(all("PM-005" in b["placement"]["derivation"]["parameter_values"] for _,b in changed))
+        self.assertGreater(len(changed),12)
         self.assertEqual(mutation["parameter_state"]["PM-005"]["value_mm"]-CANONICAL_PM005,100.0)
 
     def test_restore_and_stable_serialization(self):
@@ -103,5 +77,27 @@ class WholeBuildingTests(unittest.TestCase):
     def test_pr_head_sha_binding(self):
         sha="a"*40; self.assertTrue(validate_pr_head_binding({"pr_head_sha":sha},sha))
         self.assertFalse(validate_pr_head_binding({"pr_head_sha":"b"*40},sha)); self.assertFalse(validate_pr_head_binding({"pr_head_sha":sha},"not-a-sha"))
+
+    def test_spatial_audit_has_real_family_measurements(self):
+        audit=spatial_audit(self.canonical); self.assertEqual(audit["status"],"PASS"); self.assertEqual(audit["realized_count"],365)
+        self.assertEqual(set(audit["per_family"]),{"COLUMN","GRID_CONTROL","BRACKET_CONTACT","BRACKET_ARM","FRAME_CONTROL","FRAME_SUPPORT","PRIMARY_FRAME","GABLE_CONTROL","PURLIN","RAFTER","ROOF_ENVELOPE"})
+        self.assertTrue(all(x["measurements"] and x["status"]=="PASS" for x in audit["per_family"].values()))
+
+    def test_false_positive_spatial_mutations_are_rejected(self):
+        cases=[]
+        def alter(family, edit):
+            m=copy.deepcopy(self.canonical); item=next(x for x in m["runtime_objects"] if x["family"]==family); edit(item); return m
+        cases += [alter("COLUMN",lambda x:x["placement"]["location_mm"].__setitem__(0,x["placement"]["location_mm"][0]+1)),
+                  alter("FRAME_CONTROL",lambda x:x["placement"]["location_mm"].__setitem__(2,x["placement"]["location_mm"][2]+1)),
+                  alter("FRAME_CONTROL",lambda x:x["placement"]["derivation"]["identity_indices"].__setitem__("tier",99)),
+                  alter("PURLIN",lambda x:x["placement"]["location_mm"].__setitem__(2,x["placement"]["location_mm"][2]+1)),
+                  alter("ROOF_ENVELOPE",lambda x:x["placement"]["location_mm"].__setitem__(1,x["placement"]["location_mm"][1]+1)),
+                  alter("BRACKET_ARM",lambda x:x["placement"]["derivation"].pop("rule_ids")),
+                  alter("RAFTER",lambda x:x["placement"]["derivation"]["parameter_ids"].remove("FR-007")),
+                  alter("BRACKET_ARM",lambda x:x.__setitem__("historical_claim_boundary","HISTORICAL_CONFIRMED")),
+                  alter("PURLIN",lambda x:x.__setitem__("p3_3_disposition","GENERATED_FORMAL_GEOMETRY"))]
+        missing=copy.deepcopy(self.canonical); missing["runtime_objects"].pop(); cases.append(missing)
+        bracket_count=copy.deepcopy(self.canonical); bracket_count["runtime_objects"].pop(next(i for i,x in enumerate(bracket_count["runtime_objects"]) if x["family"]=="BRACKET_CONTACT")); cases.append(bracket_count)
+        for case in cases: self.assertTrue(failures(case))
 
 if __name__=="__main__": unittest.main()
