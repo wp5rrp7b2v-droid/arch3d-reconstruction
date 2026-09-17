@@ -30,6 +30,8 @@ jobs:
       - name: Install and pin Blender 4.5.13 linux-x64
         run: |
           set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y libegl1
           curl --fail --location --show-error --retry 3 -o /tmp/blender.tar.xz https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
           tar -xf /tmp/blender.tar.xz -C /tmp
           "$BLENDER" --version | tee /tmp/blender-version.txt
