@@ -646,9 +646,10 @@ Verified present on `main`:
 - Cloud Mode Day 3 record;
 - Dashboard v061 / Project State R119.
 
-Minor correction made:
+Minor corrections made:
 
-- Cloud Mode Sync Ledger originally retained an intermediate wording `R118 initially; final revision to be verified` after Project State had already finalized at R119. The ledger was corrected to explicitly record **R119 / v061**.
+- Cloud Mode Sync Ledger originally retained an intermediate wording `R118 initially; final revision to be verified`; it was corrected and then reconciled after the omission audit to the final post-audit state **R121 / v062**.
+- Dashboard state label and `daily_closing_audit.project_state_revision` were also reconciled after the omission audit so no R119-as-latest residue remains.
 
 PR status was also rechecked:
 
