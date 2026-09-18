@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R114",
+  "state_revision": "R115",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_RZ_CONTRACT_LOCKED / EXECUTION_NOT_AUTHORIZED / FV_NEXT_DESIGN / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_FV_DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / RZ_LOCKED / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": true,
-  "blocker": "RZ design is locked under D-063 but not implemented. FV Frame Vertical Placement bridge remains unresolved. CP-03 cannot restart until FV is also closed and RZ is eventually published/validated.",
+  "blocker": "FV design complete. Recommended candidate FV-B is not yet locked. Implementation remains frozen until Product Owner approves/amends/rejects the FV bridge.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,7 +62,7 @@
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 RZ CONTRACT LOCKED / D-063 / EXECUTION NOT AUTHORIZED / FV NEXT",
+    "status": "V002 FV DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED / RZ LOCKED / IMPLEMENTATION FROZEN",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
     "execution_authorization_decision_id": "D-061",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "RZ DESIGN LOCKED / FV DESIGN PENDING",
+    "formal_review_status": "FV DESIGN COMPLETE / AWAITING PRODUCT OWNER",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +115,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "PRE-AUTHORITY-CORRECTION / RZ_LOCKED / FV_PENDING",
+      "current_stage": "PRE-AUTHORITY-CORRECTION / RZ_LOCKED / FV_DESIGN_COMPLETE",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -279,6 +279,30 @@
         "P3.2 vocabulary"
       ],
       "publication_authorized": false
+    },
+    "fv": {
+      "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / NOT_LOCKED",
+      "design_artifact": "docs/evidence/t018_v002/P3_3_T018_V002_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_DESIGN_V001.md",
+      "recommended_candidate": "FV-B_BOUNDed_ROOF_ELEVATION_BRIDGE_WITHOUT_DG-113",
+      "rejected_candidates": [
+        "FV-A_LEGACY_P2_WITH_DG-113",
+        "FV-C_ROOF_PROFILE_DROP_INTERPOLATION"
+      ],
+      "fallback": "FV-D_SEMANTIC_ONLY_DOWNGRADE",
+      "recommended_formula": {
+        "FRAME_BASE_Z": "Z-007.datum + Z-006-RC-01",
+        "FRAME_TIER_01_Z": "FRAME_BASE_Z + (ROOF-004 + ROOF-005 + ROOF-006) * MOD-002",
+        "FRAME_TIER_02_Z": "FRAME_BASE_Z + (ROOF-004 + ROOF-005) * MOD-002",
+        "FRAME_TIER_03_Z": "FRAME_BASE_Z + ROOF-004 * MOD-002"
+      },
+      "current_candidate_values_mm": {
+        "FRAME_BASE_Z": 3534.3,
+        "FRAME_TIER_01_Z": 5783.4,
+        "FRAME_TIER_02_Z": 4528.8,
+        "FRAME_TIER_03_Z": 3916.8
+      },
+      "key_boundary": "DG-113 generative-use for Frame = 0; ROOF-004/005/006 remain Roof-owned and are consumed only through an explicit project-level one-way engineering bridge.",
+      "locked": false
     }
   },
   "proposed_next_task": {
@@ -347,10 +371,10 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 RZ LOCKED D-063 / FV PENDING / STAGE B HOLD",
+      "status": "V002 RZ LOCKED D-063 / FV DESIGN COMPLETE / PO REVIEW REQUIRED / STAGE B HOLD",
       "github_pr_number": 6,
       "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-      "note": "RZ design locked; no implementation/publication. CP-03 remains stopped; PR #6 HOLD."
+      "note": "FV-B recommended but not locked. No implementation/publication. CP-03 remains stopped; PR #6 HOLD."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -406,9 +430,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "RZ DESIGN LOCKED / BOUNDED / NO NEW HISTORICAL DIMENSION",
-    "evidence": "docs/tasks/T-018_RZ_ROOF_Z_CUMULATIVE_CLOSURE_V001.md",
-    "decision_required": "Proceed to FV design or hold. RZ implementation is not authorized."
+    "result": "FV FRAME VERTICAL PLACEMENT BRIDGE DESIGN COMPLETE / FV-B RECOMMENDED",
+    "evidence": "docs/evidence/t018_v002/P3_3_T018_V002_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_DESIGN_V001.md",
+    "decision_required": "Approve, amend, or reject FV-B. Not locked yet."
   },
   "daily_closing_audit": {
     "date": "2026-09-17",
@@ -418,13 +442,13 @@
     "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
     "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
   },
-  "next_action": "Design and review FV Frame Vertical Placement bridge. Do not implement/publish RZ, restart CP-03, or modify PR #6 until separate authorization.",
+  "next_action": "Product Owner reviews FV-B. If approved, create and lock the FV sub-contract. No implementation/publication, CP-03 restart, Blender/Actions, or PR #6 work before that approval.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v057",
+    "visualization_version": "v058",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R114 / RZ LOCKED / FV NEXT / IMPLEMENTATION FROZEN"
+    "refresh_status": "CURRENT / R115 / FV DESIGN COMPLETE / PO REVIEW REQUIRED"
   },
   "superseded_prs": [
     {
