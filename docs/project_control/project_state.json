@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R117",
+  "state_revision": "R118",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_RZ_AND_FV_CONTRACTS_LOCKED / MINIMAL_AUTHORITY_PUBLICATION_DECISION_REQUIRED / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
+  "session_status": "DAILY_CLOSE_COMPLETE / P3.3_ACTIVE / T-018_V002_HOLD / RZ_FV_DESIGN_LOCKED_NOT_PRODUCTION_PROVEN / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 RZ+FV CONTRACTS LOCKED",
+    "status": "P3.3 ACTIVE / NOT PASS / T-018 V002 DAILY HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / OUTCOME B / BOUNDED DESIGN D-062 / RZ LOCKED D-063 / FV LOCKED D-064 / IMPLEMENTATION FROZEN"
+      "P3.3": "DOD LOCKED / D-047 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / OUTCOME B CURRENT WORKING CLASSIFICATION / RZ DESIGN LOCKED D-063 / FV PROJECT-RULE DESIGN LOCKED D-064 / PRODUCTION DIRECTION NOT YET PROVEN / IMPLEMENTATION FROZEN"
     }
   },
-  "decision_required": true,
-  "blocker": "RZ D-063 and FV D-064 are both design-locked, but neither has been published as machine-readable production authority. Stage A closure regression and CP-03 remain blocked until a separately authorized minimal authority publication package is executed and validated.",
+  "decision_required": false,
+  "blocker": "END-OF-DAY HOLD. RZ D-063 and FV D-064 are design/policy locked only. Correct production direction is not yet proven. No machine-readable authority publication, Stage-A closure regression, CP-03 restart, PR #6 patch, Blender/Actions, Stage C, or merge is authorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -49,20 +49,20 @@
     },
     "sync_ledger": {
       "path": "docs/project_control/CLOUD_MODE_SYNC_LEDGER_2026-09-16_20.md",
-      "status": "ACTIVE / LOCAL_SYNC_VERIFICATION_PENDING / DAY 3 IN PROGRESS / T-020 CLOSED",
+      "status": "ACTIVE / LOCAL_SYNC_VERIFICATION_PENDING / DAY 3 COMPLETE",
       "target_local_sync_date": "2026-09-21",
       "day_1_register": "COMPLETE / 2026-09-16",
       "day_2_register": "COMPLETE / 2026-09-17",
       "required_daily_update_through": "2026-09-20",
-      "day_3_register": "IN PROGRESS / 2026-09-18 / T-018 V002 closure review Outcome B + bounded completion design complete D-062 / implementation frozen / PR #6 HOLD"
+      "day_3_register": "COMPLETE / 2026-09-18 / detailed daily close recorded / latest formal decision D-064 / T-018 V002 HOLD / RZ+FV design locked only / production direction not yet proven / PR #3 superseded / PR #6 HOLD"
     },
-    "active_window_note": "T-018 V002 bounded completion design is COMPLETE under D-062. Implementation remains frozen; Stage B STOP/HOLD; PR #3 superseded/read-only; PR #6 HOLD/untouched; no Blender/Actions/365 runtime."
+    "active_window_note": "2026-09-18 DAILY CLOSE COMPLETE. T-018 V002 remains HOLD; RZ/FV design contracts locked but not production-proven; CP-03 STOP; PR #3 superseded/read-only; PR #6 HOLD; no post-review Blender/Actions/365 runtime."
   },
   "current_task": {
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 RZ+FV CONTRACTS LOCKED / D-063+D-064 / EXECUTION NOT AUTHORIZED",
+    "status": "V002 DAILY CLOSE / HOLD / RZ+FV DESIGN LOCKED ONLY / PRODUCTION DIRECTION NOT YET PROVEN",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
     "execution_authorization_decision_id": "D-061",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "RZ+FV DESIGN AUTHORITY LOCKED / PUBLICATION NOT AUTHORIZED",
+    "formal_review_status": "DAILY CLOSE / PRE-PUBLICATION READINESS REVIEW REQUIRED BEFORE ANY NEW AUTHORIZATION",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +115,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "PRE-AUTHORITY-PUBLICATION / RZ_LOCKED / FV_LOCKED",
+      "current_stage": "DAILY_HOLD / PRE-PUBLICATION_READINESS_REVIEW_PENDING",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -125,7 +125,7 @@
       "status": "SUPERSEDED FOR V002 / HISTORICAL ONLY",
       "note": "D-052 authorized V001 execution only and does not authorize V002."
     },
-    "execution_authorization_scope": "NONE / RZ+FV DESIGN AUTHORITY LOCKED ONLY",
+    "execution_authorization_scope": "NONE / END-OF-DAY HOLD",
     "stage_b_authorized": false,
     "stage_a": {
       "status": "REOPENED / AUTHORITY COVERAGE ISSUE",
@@ -318,6 +318,50 @@
       "contract": "docs/tasks/T-018_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_V001.md",
       "policy_classification": "NON_HISTORICAL_PROJECT_RECONSTRUCTION_CONVENTION",
       "publication_authorized": false
+    },
+    "end_of_day_2026_09_18": {
+      "status": "CLOSED / PASS WITH CAUTION",
+      "daily_close": "docs/project_control/DAILY_CLOSE_2026-09-18.md",
+      "latest_formal_decision": "D-064",
+      "new_execution_authorization_at_close": false,
+      "core_caution": "RZ/FV design locks do not prove the final correct production architecture. They remain controlled, replaceable project-rule designs pending pre-publication readiness review, machine-readable publication authorization, closure regression, and later CP-03 validation.",
+      "stable_facts": [
+        "P3.0/P3.1/P3.2 remain CLOSED",
+        "P3.3 remains ACTIVE / NOT PASS",
+        "365/365 accounting remains foundation",
+        "7/7 PURLIN remain DEFERRED",
+        "T-020 X/Y datum + RIDGE_Y=0 + N03 sole ridge remain canonical",
+        "P2 world transforms remain prohibited",
+        "CP-03 STOP remains valid"
+      ],
+      "superseded_or_do_not_reuse": [
+        "Stage A stage_b_critical_authority_gaps=0",
+        "T-018 READY TO RESUME immediately after T-020",
+        "PR #3 as active implementation",
+        "PR #6 as V002-ready implementation",
+        "legacy P2 Frame Tier formula as authority",
+        "FV-B as source-derived Frame elevation",
+        "RZ/FV design lock as proof of final correctness",
+        "Outcome B as proof that no deeper gap exists",
+        "V003 definitely not required"
+      ],
+      "prohibited_until_new_authorization": [
+        "RZ_FV_PRODUCTION_PUBLICATION",
+        "PROTECTED_UPSTREAM_MUTATION_TO_FIT_RZ_FV",
+        "CP03_RESTART",
+        "CP04",
+        "CP05",
+        "PR6_PATCH",
+        "ACTIONS_RERUN",
+        "BLENDER",
+        "STAGE_C",
+        "365_RUNTIME_EXPANSION",
+        "MUTATION_EXECUTION",
+        "PR3_MERGE",
+        "PR6_MERGE",
+        "T018_PASS_DECLARATION",
+        "P3_3_PASS_DECLARATION"
+      ]
     }
   },
   "proposed_next_task": {
@@ -386,10 +430,10 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 RZ LOCKED D-063 / FV LOCKED D-064 / AUTHORITY PUBLICATION PENDING / STAGE B HOLD",
+      "status": "V002 DAILY HOLD / RZ D-063 + FV D-064 DESIGN LOCKED / PRODUCTION DIRECTION NOT YET PROVEN / STAGE B STOP",
       "github_pr_number": 6,
       "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-      "note": "RZ and FV design authority are locked. No production publication/implementation yet. CP-03 remains stopped; PR #6 HOLD."
+      "note": "Daily close 2026-09-18: do not interpret RZ/FV locks as production proof. Pre-publication readiness review is required before any new execution/publication authorization."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -445,25 +489,28 @@
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "RZ D-063 + FV D-064 BOTH LOCKED / MINIMAL AUTHORITY PUBLICATION PENDING",
-    "evidence": "docs/tasks/T-018_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_V001.md",
-    "decision_required": "Authorize or hold the minimal machine-readable authority publication package for RZ+FV."
+    "result": "DAILY CLOSE PASS WITH CAUTION / PROBLEM BETTER BOUNDED / FINAL DIRECTION NOT YET PROVEN",
+    "evidence": "docs/project_control/DAILY_CLOSE_2026-09-18.md",
+    "decision_required": "NONE AT DAILY CLOSE. New authorization requires next-session pre-publication readiness review first."
   },
   "daily_closing_audit": {
-    "date": "2026-09-17",
-    "status": "PASS",
-    "execution_log_recorded": true,
+    "date": "2026-09-18",
+    "status": "PASS WITH CAUTION",
+    "execution_log_recorded": false,
+    "acceptance_matrix_recorded": false,
+    "dashboard_aligned": false,
+    "sync_ledger_day3_complete": false,
+    "detailed_close": "docs/project_control/DAILY_CLOSE_2026-09-18.md",
     "phase_archive_action": "NONE / P3 ACTIVE",
-    "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
-    "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
+    "caution": "Do not carry forward a 'solution found' narrative. Carry forward a bounded HOLD and re-review before publication."
   },
-  "next_action": "Product Owner decides whether to authorize the minimal authority publication package for RZ + FV, followed by Stage-A authority-closure regression. Do not restart CP-03 or modify PR #6 before publication/validation passes.",
+  "next_action": "NEXT SESSION ONLY: read latest main + project_state + DAILY_CLOSE_2026-09-18; verify PR #3/#6 unchanged; perform a bounded Pre-Publication Readiness Review of RZ+FV coexistence, authority uniqueness, remaining closure-matrix OPEN cells, RT/BA sufficiency, and protected-upstream immutability. Only after that review may Product Owner consider a new authorization for minimal authority publication.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v060",
+    "visualization_version": "v061",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R117 / RZ+FV LOCKED / PUBLICATION DECISION REQUIRED"
+    "refresh_status": "CURRENT / R118 / DAILY CLOSE HOLD / FINAL DIRECTION NOT YET PROVEN"
   },
   "superseded_prs": [
     {
