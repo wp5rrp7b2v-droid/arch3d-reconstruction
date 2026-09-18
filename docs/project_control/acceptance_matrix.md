@@ -295,3 +295,13 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - FV-B as explicit PROJECT_RULE reconstruction convention：POSSIBLE / not yet approved。
 - Semantic-only Frame Tier without exact Z：SAFE alternative / requires CP-03 acceptance adjustment。
 - No Rule locked；implementation frozen；RZ D-063 unchanged。
+
+
+#### FV｜Frame Vertical Placement Bridge｜CONTRACT LOCKED / D-064
+
+- Policy：A / FV_PROJECT_RULE。
+- Evidence status：PROJECT_RULE / historical_claim=false / replaceable=true。
+- DG-113 Frame generative-use：PROHIBITED。
+- ROOF-004/005/006：remain Roof-owned；consumed only through explicit one-way project bridge。
+- No new historical dimensions；no P3.0/P3.1/P3.2 reopen；no T-020 modification。
+- Production publication / implementation：NOT AUTHORIZED。
