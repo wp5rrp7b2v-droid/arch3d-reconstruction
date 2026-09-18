@@ -409,3 +409,17 @@ No T-020 engineering work has started。
 - CP-04：NOT STARTED；CP-05：NOT STARTED；Blender：NOT STARTED；PR #6：UNTOUCHED。
 - Stage A retained results remain valid except the previous claim `stage_b_critical_authority_gaps=0`，which is superseded by this finding。
 - Diagnostic：`docs/evidence/t018_v002/P3_3_T018_V002_CP03_AUTHORITY_GAP_DIAGNOSTIC.json`。
+
+
+---
+
+# T-018 V002 Architecture Closure Review｜2026-09-18
+
+- Review scope：bounded / no implementation / no upstream mutation / PR #6 untouched。
+- Formal evidence：`docs/evidence/t018_v002/T018_V002_ARCHITECTURE_CLOSURE_REVIEW_V001.md`。
+- Outcome：**B｜有限同类缺口**。
+- Not A：缺口不只 FRAME_TIER；还包括 exact roof-Z closure、roof runtime topology、downstream proxy/control anchoring。
+- Not C：P3.0/P3.1/P3.2 identity/Master/relationship vocabulary、T-017 accounting and parameter classification、T-019 PURLIN disposition、T-020 shared-ridge X/Y authority currently remain usable。
+- All identified gaps cluster at one seam：`canonical parameters + P3.2 semantics -> explicit whole-building control placement/topology`。
+- Implementation remains frozen；no Rule added；CP-03 not restarted；CP-04/CP-05 not started；Blender/Actions not run；PR #6 untouched。
+- Bounded next design, if Product Owner approves：Placement Authority Closure Matrix + Cross-System Dependency DAG + Control Topology Map + Impact/Non-Impact Contract。
