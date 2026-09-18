@@ -614,3 +614,47 @@ Final close statement:
 > **2026-09-18 ends with the problem better bounded, not with the final direction proven correct.**
 >
 > **RZ/FV are controlled design hypotheses / project rules awaiting publication-readiness review and later regression, not production truth.**
+
+
+---
+
+## 15. Post-close omission audit
+
+A second omission audit was performed after the daily close.
+
+Result：**PASS AFTER ONE MINOR RECORD CORRECTION**。
+
+Verified present on `main`:
+
+- T-018 V002 parent contract;
+- RZ contract;
+- FV contract;
+- CP-03 authority-gap diagnostic;
+- Upstream Compatibility Audit;
+- Authority Resolution Report;
+- Architecture Closure Review;
+- Placement Authority Closure Matrix;
+- Cross-System Dependency DAG;
+- Control Topology Map;
+- Impact / Non-Impact Contract;
+- Control Placement Authority Completion Package;
+- FV design comparison;
+- FV Semantic Validity Check;
+- Decision Log D-059 through D-064;
+- Execution Log daily close entry;
+- Acceptance Matrix daily close entry;
+- Cloud Mode Day 3 record;
+- Dashboard v061 / Project State R119.
+
+Minor correction made:
+
+- Cloud Mode Sync Ledger originally retained an intermediate wording `R118 initially; final revision to be verified` after Project State had already finalized at R119. The ledger was corrected to explicitly record **R119 / v061**.
+
+PR status was also rechecked:
+
+- PR #3：OPEN / NOT MERGED / governance remains SUPERSEDED / DO NOT MERGE;
+- PR #6：OPEN / NOT MERGED / governance remains HOLD / DO NOT MERGE.
+
+**Important:** GitHub `mergeable` is a volatile computed property and changed during the post-close check. It is not a governance field and must never override the explicit Project Control merge prohibition. Future sessions must re-query PR status rather than relying on a recorded mergeable value.
+
+No missing decision, task contract, evidence artifact, Project Control close record, or Cloud Mode Day-3 registration was found after the correction above.
