@@ -213,3 +213,17 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Structural Review：PATCH REQUIRED。Replacement 必须恢复 P3.1 formal Master geometry、differentiated technical representation、T-017/P3.2 traceability、protected-input checks、runtime evidence metadata、true independent reopen、robust fixed review rendering、PR-head SHA binding、完整 Run A/B/C/D evidence chain，同时保持 T-020 datum / RIDGE_Y=0 / N03 sole ridge / no S03 / 7 PURLIN DEFERRED。
 - Contract issue：D-051 锁定的 PM-005 mutation 在 T-020 D-058 后只能作为 observed-boundary isolation regression，不能再单独满足 generative mutation propagation。正式 replacement generative parameter 需要 Product Owner amendment。
 - T-018：NOT PASS / NO MERGE。
+
+
+---
+
+### T-018 V002 Rebaseline｜DRAFT / ENGINEERING HOLD
+
+- Same Task ID：T-018；Task goal unchanged；version advances V001 → V002 only after Product Owner approval.
+- Management stages：A Rule Baseline / B Critical Skeleton First Article / C Full 365 Runtime / D Formal Execution Acceptance.
+- Technical checkpoints：CP-01～CP-09 remain internal; no safety check is removed by the 4-stage management compression.
+- Key safety changes：single canonical authority consumption；single geometry calculation before Blender；independent invariant validation；skeleton first article before 365 expansion；Golden Capability Contract；observed-isolation + generative-propagation dual mutation；Blender dumb-executor rule.
+- Existing P3.3 Hard Fails remain unchanged.
+- PR #3：SUPERSEDED / READ-ONLY / DO NOT MERGE。
+- PR #6：HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE。
+- Current status：NOT APPROVED / NO ENGINEERING EXECUTION。

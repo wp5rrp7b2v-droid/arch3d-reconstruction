@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R103",
+  "state_revision": "R104",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_REPLACEMENT_PR6_PATCH_REQUIRED / MUTATION_CONTRACT_AMENDMENT_REQUIRED / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_REBASELINE_DESIGN / ENGINEERING_HOLD / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": true,
-  "blocker": "T-018 replacement PR #6 requires Review Patch 01 before formal Actions acceptance. In addition, D-051 fixed PM-005 as the formal mutation parameter, but T-020 D-058 now classifies PM-005 as observed-reference-only and prohibits it as reconstructed-design placement authority. PM-005 must remain an isolation regression; Product Owner must approve a contract amendment selecting a reconstructed-design generative parameter for the formal mutation/rebuild/restore test.",
+  "blocker": "T-018 V002 Rebaseline contract is in formal design review. Engineering on PR #3 and PR #6 is HOLD until Product Owner approves V002 and separately authorizes execution.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -56,14 +56,14 @@
       "required_daily_update_through": "2026-09-20",
       "day_3_register": "IN PROGRESS / 2026-09-18 / T-018 replacement PR #6 active / PR #3 superseded"
     },
-    "active_window_note": "T-020 is PASS/CLOSED/MERGED under D-058. T-018 PR #3 remains OPEN / NOT MERGED; its upstream datum STOP is cleared. Resume only on the existing PR #3 after syncing latest main and consuming the canonical T-020 datum rule. Cloud Mode Sync Ledger / daily close records remain required."
+    "active_window_note": "T-020 remains PASS/CLOSED/D-058. T-018 is in V002 Rebaseline Design; PR #3 is superseded, PR #6 is HOLD. No T-018 engineering execution until V002 approval and separate authorization."
   },
   "current_task": {
     "id": "T-018",
-    "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001",
+    "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "REPLACEMENT PR #6 ACTIVE / STRUCTURAL REVIEW PATCH REQUIRED / MUTATION AMENDMENT REQUIRED",
-    "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001.md",
+    "status": "V002 REBASELINE DESIGN / DRAFT / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING HOLD",
+    "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-051",
     "execution_authorization_decision_id": "D-052",
     "cloud_mode_classification": "CLOUD_EXECUTABLE / D-048 EQUIVALENT HEADLESS EXECUTION",
@@ -72,7 +72,7 @@
     "primary_executor": "Codex Cloud",
     "blender_executor": "GitHub Actions Hosted Runner",
     "blender_version": "4.5.13 linux-x64",
-    "execution_authorized": true,
+    "execution_authorized": false,
     "github_pr_number": 6,
     "github_visible_head_branch": "codex/-t-018",
     "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
@@ -94,8 +94,31 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "REPLACEMENT FORMAL STRUCTURAL REVIEW 01 / PATCH REQUIRED",
-    "mutation_contract_issue": "D-051 PM-005 mutation is no longer a valid generative propagation test after T-020 D-058. Keep PM-005 as observed-boundary isolation regression; choose a reconstructed-design generative parameter via Product Owner amendment."
+    "formal_review_status": "V002 DESIGN REVIEW PENDING",
+    "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
+    "rebaseline": {
+      "management_stages": [
+        "A_RULE_BASELINE",
+        "B_CRITICAL_SKELETON_FIRST_ARTICLE",
+        "C_FULL_365_RUNTIME",
+        "D_FORMAL_EXECUTION_ACCEPTANCE"
+      ],
+      "technical_checkpoints": [
+        "CP-01_UPSTREAM_COMPATIBILITY_AUDIT",
+        "CP-02_AUTHORITY_RESOLVER",
+        "CP-03_BUILDING_CONTROL_MODEL",
+        "CP-04_INDEPENDENT_INVARIANT_VALIDATOR",
+        "CP-05_CRITICAL_SKELETON_FIRST_ARTICLE",
+        "CP-06_365_RUNTIME_EXPANSION",
+        "CP-07_REPRESENTATION_CAPABILITY_REGRESSION",
+        "CP-08_DEPENDENCY_DUAL_MUTATION",
+        "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
+      ],
+      "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
+      "current_stage": "DESIGN_ONLY / PRE-STAGE-A",
+      "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
+      "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
+    }
   },
   "proposed_next_task": {
     "id": "P3.3_FINAL",
@@ -163,9 +186,10 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "READY TO RESUME / PR #3 OPEN / UPSTREAM DATUM STOP CLEARED / UPDATE BRANCH REQUIRED",
-      "github_pr_number": 3,
-      "github_visible_head_sha": "8693c13bf3f04b7e7f7d7d3f24552e1aac8d5750"
+      "status": "V002 REBASELINE DESIGN / DRAFT / ENGINEERING HOLD",
+      "github_pr_number": 6,
+      "github_visible_head_sha": "8693c13bf3f04b7e7f7d7d3f24552e1aac8d5750",
+      "note": "PR #3 superseded; PR #6 HOLD pending V002 approval. No engineering execution authorized."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -221,9 +245,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "T-018 replacement PR #6 / FORMAL STRUCTURAL REVIEW 01 / PATCH REQUIRED",
-    "evidence": "PR #6 head 65a63b011794dfe2af6a1f0be5ba497a52f23d5f; Actions Run #30 failed at Blender import; comparison against superseded PR #3 exposed regression in formal Master geometry, technical representation, traceability, reopen validation, review rendering, PR-head binding, and evidence chain.",
-    "decision_required": "Approve T-018 mutation contract amendment: keep PM-005 as observed isolation regression and select a reconstructed-design generative parameter for formal mutation/rebuild/restore."
+    "result": "T-018 V002 REBASELINE DESIGN STARTED / ENGINEERING HOLD",
+    "evidence": "Read-only re-audit confirmed T-017 already classifies PM-003..007 as VALIDATION_REFERENCE and PM-008..012 as reconstructed-design direct geometry candidates; T-020 supplies canonical design datum/shared ridge. Root issue is T-018 consumption/architecture, not evidence that T-017 accounting must be reopened.",
+    "decision_required": "Product Owner review of T-018 V002 Rebaseline contract."
   },
   "daily_closing_audit": {
     "date": "2026-09-17",
@@ -233,13 +257,13 @@
     "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
     "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
   },
-  "next_action": "Product Owner decides the T-018 mutation contract amendment. Then Codex patches PR #6 on the same replacement PR: restore prior T-018 approved capabilities while consuming T-020 datum authority, rerun Actions, and repeat formal four-view visual review. PR #3 remains superseded / do not merge.",
+  "next_action": "Review and approve or amend docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md. No Codex implementation work until V002 contract approval and separate execution authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v047",
+    "visualization_version": "v048",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R103 / T-018 REPLACEMENT PR #6 PATCH REQUIRED"
+    "refresh_status": "CURRENT / R104 / T-018 V002 REBASELINE DESIGN / ENGINEERING HOLD"
   },
   "superseded_prs": [
     {

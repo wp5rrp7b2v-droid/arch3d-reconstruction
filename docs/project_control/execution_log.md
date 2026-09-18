@@ -323,3 +323,15 @@ No T-020 engineering work has started。
 - Review Patch 01 comment posted to PR #6。
 - New contract conflict：PM-005 is observed-reference-only after T-020 D-058; retain as isolation regression, but formal generative mutation parameter requires Product Owner amendment。
 - NO MERGE。
+
+
+---
+
+# T-018 V002 Rebaseline Design Start｜2026-09-18
+
+- Product Owner directed T-018 to enter formal V002 Rebaseline design after repeated V001/replacement failures.
+- Engineering HOLD applied: PR #3 read-only superseded; PR #6 HOLD; no further patch, Actions rerun or merge during design.
+- Read-only upstream re-audit confirmed T-017 already classifies PM-003～007 as VALIDATION_REFERENCE and PM-008～012 as reconstructed-design geometry candidates; current evidence does not require reopening T-017 accounting.
+- V002 draft architecture: 4 management stages + 9 technical checkpoints; authority resolution, control model, independent validator, skeleton first article, 365 runtime, representation/capability regression, dual mutation, then Blender evidence.
+- Draft contract: `docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md`.
+- Status: DRAFT / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING HOLD.
