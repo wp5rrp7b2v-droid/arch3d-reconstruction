@@ -362,3 +362,21 @@ No T-020 engineering work has started。
 - Stage B：LOCKED。
 - PR #3：SUPERSEDED / READ-ONLY。
 - PR #6：HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE。
+
+
+---
+
+# T-018 V002 Stage A PASS｜2026-09-18
+
+- Authorization：D-060（Stage A only）。
+- CP-01 Upstream Compatibility Audit：PASS。
+- CP-02 Authority Resolver：PASS。
+- Formal outputs：`docs/evidence/t018_v002/P3_3_T018_V002_UPSTREAM_COMPATIBILITY_AUDIT.json`；`docs/evidence/t018_v002/P3_3_T018_V002_AUTHORITY_RESOLUTION_REPORT.json`。
+- 365/365 instances / 11 families；5/5 relationship vocabulary exact；7/7 PURLIN DEFERRED；T-020 RIDGE_Y=0 / N03 sole shared ridge / no ROOF_PURLIN_S_03；P2 numeric world-transform generative usage=0。
+- Authority Resolution：42 GENERATIVE_AUTHORITY / 41 VALIDATION_ONLY / 4 PROHIBITED_FOR_PLACEMENT / 0 UNRESOLVED。
+- Cross-checks PASS：PM-011=11475mm；PM-012=10710mm；FR-007 half-run=6808.5mm；ROOF-007+008+009=231fen=3534.3mm；Z-006-RC-01=11×MOD-006=3534.3mm。
+- Non-blocking guard：ORG-COLUMN-GRID 保留一个 PM-005 node-level parameter_refs 旧关联；该关联无 placement authority，PM-005 固定为 VALIDATION_ONLY。
+- Upstream canonical contradiction：0；Stage-B-critical authority gap：0。
+- Protected Upstream Baseline：ESTABLISHED FOR T-018 V002。
+- PR #6：未修改、未 rerun Actions。
+- Stage B：NOT AUTHORIZED。
