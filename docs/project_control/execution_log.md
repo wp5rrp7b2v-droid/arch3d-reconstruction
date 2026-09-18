@@ -380,3 +380,17 @@ No T-020 engineering work has started。
 - Protected Upstream Baseline：ESTABLISHED FOR T-018 V002。
 - PR #6：未修改、未 rerun Actions。
 - Stage B：NOT AUTHORIZED。
+
+
+---
+
+# T-018 V002 Stage B Entry｜2026-09-18
+
+- Decision：D-061。
+- Prerequisite：Stage A CP-01/CP-02 PASS；Protected Upstream Baseline established。
+- Authorized：CP-03 Building Control Model；CP-04 Independent Invariant Validator；CP-05 Critical Skeleton First Article。
+- Stage C：LOCKED。
+- 365 full runtime：NOT AUTHORIZED。
+- Mutation：NOT AUTHORIZED。
+- PR #3：SUPERSEDED / READ-ONLY。
+- PR #6：HOLD；not used as Stage B implementation baseline unless separately decided。
