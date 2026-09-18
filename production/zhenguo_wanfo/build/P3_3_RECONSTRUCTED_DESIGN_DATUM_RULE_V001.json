@@ -1,0 +1,44 @@
+{
+  "coordinate_frame": {
+    "axis_claim_boundary": "Project-model convention only; no historical orientation-system claim.",
+    "x": {"datum_mm": 0, "meaning": "reconstructed-design plan width center"},
+    "y": {"datum_mm": 0, "meaning": "reconstructed-design plan depth center"},
+    "z": {"authority": "Z-007", "datum_mm": 0, "meaning": "abstract column-foot design plane", "redefined_here": false}
+  },
+  "dependency_lineage": ["FR-007", "MOD-002", "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001"],
+  "design_placement_sources": {
+    "allowed_reconstructed_design_candidates": ["PM-008", "PM-009", "PM-010", "PM-011", "PM-012"],
+    "observed_reference_only": ["PM-003", "PM-004", "PM-005", "PM-006", "PM-007"],
+    "observed_reference_policy": "VALIDATION_REFERENCE_ONLY / PROHIBITED_AS_RECONSTRUCTED_DESIGN_PLACEMENT_SOURCE"
+  },
+  "historical_claim": false,
+  "historical_claim_upgrade": false,
+  "relationship_type": "LOCATE",
+  "replaceable": true,
+  "role": "RECONSTRUCTED_DESIGN_COORDINATE_DATUM_AUTHORITY",
+  "roof_control": {
+    "cumulative_half_run_mm": 6808.5,
+    "direction": "EAVE_TO_RIDGE",
+    "ridge_y_mm": 0,
+    "segment_lengths_mm": [1836.0, 1759.5, 3213.0],
+    "shared_ridge_terminal": "ROOF_PURLIN_N_03",
+    "south_terminal_prohibited": "ROOF_PURLIN_S_03",
+    "y_positions_mm": {
+      "ROOF_PURLIN_N_00": -6808.5,
+      "ROOF_PURLIN_N_01": -4972.5,
+      "ROOF_PURLIN_N_02": -3213.0,
+      "ROOF_PURLIN_N_03": 0.0,
+      "ROOF_PURLIN_S_00": 6808.5,
+      "ROOF_PURLIN_S_01": 4972.5,
+      "ROOF_PURLIN_S_02": 3213.0
+    },
+    "z_authority": ["Z-007", "Z-006-RC-01", "ROOF-007", "ROOF-008", "ROOF-009"],
+    "z_redefined_here": false
+  },
+  "rule_id": "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001",
+  "source_layer": "PROJECT_RULE",
+  "status": "CANONICAL",
+  "task": "T-020",
+  "time_layer": "project_model_datum",
+  "version": "V001"
+}

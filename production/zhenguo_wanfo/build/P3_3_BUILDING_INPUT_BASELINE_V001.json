@@ -88,6 +88,19 @@
       "classifications": [
         "AUTHORITATIVE_GENERATIVE"
       ],
+      "path": "production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json",
+      "prohibited_fields": [],
+      "protection": "READ_ONLY",
+      "role": "DESIGN_DATUM_RULE",
+      "sha256": "998cd06c7b8f3077f1ce3bd1a76b0f316625765e786451b3fe12bd8971056b95"
+    },
+    {
+      "allowed_fields": [
+        "ALL_CONTRACT_AUTHORIZED_FIELDS"
+      ],
+      "classifications": [
+        "AUTHORITATIVE_GENERATIVE"
+      ],
       "path": "production/zhenguo_wanfo/schema/evidence_aware_parameter_schema_v001.json",
       "prohibited_fields": [],
       "protection": "READ_ONLY",
@@ -543,6 +556,7 @@
     "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_INTERFACE_EXTENSION_V001.json": "c889583b56356002630d59309b85d5e683b22e15212edfb6c2e86394168b6ac9",
     "production/zhenguo_wanfo/assembly/P3_2_REPRESENTATIVE_RELATIONSHIP_GRAPH_V001.json": "5073ae9e9b8439c28ca68b61e38b397f94b6dfedbcfb6925b1c78cd9093d7b82",
     "production/zhenguo_wanfo/build/P2_3_INTEGRATION_MANIFEST_V001.json": "5b10f3d83c4d72cc312c5f896e7cff5838365986612a885a310e2799e2a844a7",
+    "production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json": "998cd06c7b8f3077f1ce3bd1a76b0f316625765e786451b3fe12bd8971056b95",
     "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_PARAMS_V001.json": "07676d390a709c6baaed39986033725550b543b88239d167e6dd4bbabed25739",
     "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/CMP-COLUMN-001_MASTER_SEMANTIC_V001.json": "61e4b790e71a319a880c9810cf747a9e7dc56ab7e03e3b0d4e3ddea566cfc768",
     "production/zhenguo_wanfo/component_library/masters/CMP-DOU-INTERACTIVE-001/CMP-DOU-INTERACTIVE-001_MASTER_PARAMS_V001.json": "6266d4b3666c3f68052e05d9d4bd6c875a5aab948a34b86c4102decdb433f421",

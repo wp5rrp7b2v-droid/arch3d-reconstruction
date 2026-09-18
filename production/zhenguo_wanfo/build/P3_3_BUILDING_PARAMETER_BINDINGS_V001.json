@@ -2455,6 +2455,47 @@
       "time_layer": "reconstructed_963_candidate",
       "unit": "mm",
       "value": 3534.3
+    },
+    {
+      "binding_targets": {
+        "depends_on": [
+          "FR-007",
+          "MOD-002",
+          "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001"
+        ],
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001"
+        ]
+      },
+      "building_role": "reconstructed-design plan / shared ridge datum",
+      "classification": "PROJECT_ENGINEERING_RULE",
+      "dependency_role": "PROJECT_COORDINATE_AUTHORITY",
+      "historical_claim": false,
+      "historical_claim_upgrade": false,
+      "parameter_id": "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001",
+      "parameter_key": "reconstructed_design_plan_and_shared_ridge_datum",
+      "production_use": "RECONSTRUCTED_DESIGN_COORDINATE_DATUM_AUTHORITY",
+      "replaceable": true,
+      "source_ids": [
+        "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001"
+      ],
+      "source_layer": "PROJECT_RULE",
+      "time_layer": "project_model_datum",
+      "unit": "mm",
+      "value": {
+        "plan_origin_mm": [
+          0,
+          0
+        ],
+        "ridge_y_mm": 0
+      }
     }
   ],
   "mandatory_boundaries": {
