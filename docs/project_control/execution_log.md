@@ -308,3 +308,18 @@ No T-020 engineering work has started。
 - Machine validation：PASS；canonical_failures=[]；5/5 required negatives EXPECTED_REJECTION；11/40/365 preserved；P2 numeric world-transform usage=0；P3.2 vocabulary unchanged；five P3.3 Hard Fail vocabulary unchanged。
 - Blender invocations：0；.blend created：0。
 - T-018 PR #3 remained unchanged through T-020 and is now eligible to resume after updating from latest main; merge remains unauthorized。
+
+
+---
+
+# T-018｜Replacement PR #6｜2026-09-18
+
+- 原 PR #3 因 Codex UI 无法在外部更新后继续写回，保留为 SUPERSEDED / OPEN / DO NOT MERGE。
+- Replacement source main：`09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9` / R102。
+- Replacement PR：#6；GitHub-visible branch `codex/-t-018`；head `65a63b011794dfe2af6a1f0be5ba497a52f23d5f`。
+- Changed files：9。
+- Actions Run #30 / `35308171567`：FAIL at canonical Blender build due missing script-directory import bootstrap。
+- ChatGPT structural review found regression versus PR #3 Round 3 in formal Master geometry, technical representation geometry, T-017/P3.2 traceability, protected-input validation, independent reopen, review framing/evidence, PR-head binding and complete evidence chain。
+- Review Patch 01 comment posted to PR #6。
+- New contract conflict：PM-005 is observed-reference-only after T-020 D-058; retain as isolation regression, but formal generative mutation parameter requires Product Owner amendment。
+- NO MERGE。

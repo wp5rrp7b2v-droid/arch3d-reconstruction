@@ -165,6 +165,12 @@ Daily closing audit：`PASS`
 - LOCAL_MAC_REQUIRED follow-up：none added by T-020；9/21 general sync obligations unchanged
 - Daily closing audit：TBD
 
+
+- T-018 replacement：PR #6 / head `65a63b011794dfe2af6a1f0be5ba497a52f23d5f` / base R102。
+- PR #3：SUPERSEDED / OPEN / DO NOT MERGE。
+- Actions Run #30：FAIL at Blender import; Review Patch 01 required。
+- Decision required：T-018 mutation contract amendment after T-020; PM-005 remains observed isolation regression, generative mutation parameter TBD by Product Owner。
+
 ### 2026-09-19
 
 - Start main SHA：TBD

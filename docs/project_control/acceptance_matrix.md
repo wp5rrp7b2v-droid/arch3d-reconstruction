@@ -199,3 +199,17 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - PR #3：OPEN / NOT MERGED / merge not authorized
 - PR #5：MERGED / T-020 CLOSED
 - P3 phase archive：NOT APPLICABLE YET
+
+
+---
+
+### T-018 Replacement PR #6｜STRUCTURAL REVIEW 01 / PATCH REQUIRED
+
+- Same Task ID：T-018；不是新 Task。
+- Base main：`09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9` / R102。
+- PR #6 head：`65a63b011794dfe2af6a1f0be5ba497a52f23d5f`。
+- PR #3：SUPERSEDED / OPEN / DO NOT MERGE。
+- Actions Run #30 / `35308171567`：FAIL；Blender 4.5.13 install PASS；canonical Blender build failed with `ModuleNotFoundError: p3_3_whole_building_common_v001`。
+- Structural Review：PATCH REQUIRED。Replacement 必须恢复 P3.1 formal Master geometry、differentiated technical representation、T-017/P3.2 traceability、protected-input checks、runtime evidence metadata、true independent reopen、robust fixed review rendering、PR-head SHA binding、完整 Run A/B/C/D evidence chain，同时保持 T-020 datum / RIDGE_Y=0 / N03 sole ridge / no S03 / 7 PURLIN DEFERRED。
+- Contract issue：D-051 锁定的 PM-005 mutation 在 T-020 D-058 后只能作为 observed-boundary isolation regression，不能再单独满足 generative mutation propagation。正式 replacement generative parameter 需要 Product Owner amendment。
+- T-018：NOT PASS / NO MERGE。
