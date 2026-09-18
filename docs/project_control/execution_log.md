@@ -476,3 +476,17 @@ No T-020 engineering work has started。
 - P3.2 Frame tier datums are semantic engineering controls and explicitly do not create historical elevations。
 - Allowed next paths only：FV_PROJECT_RULE non-historical project convention；or FV_SEMANTIC_ONLY no exact Z。
 - Implementation frozen；CP-03 STOP；PR #6 HOLD。
+
+
+---
+
+# T-018 FV Contract Locked｜2026-09-18
+
+- Decision：D-064。
+- Contract：`docs/tasks/T-018_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_V001.md`。
+- Policy：A / FV_PROJECT_RULE / non-historical project reconstruction convention。
+- Locked formula：Base=Z-007+Z-006-RC-01；Tier01=Base+(ROOF-004+005+006)×MOD-002；Tier02=Base+(ROOF-004+005)×MOD-002；Tier03=Base+ROOF-004×MOD-002。
+- DG-113 excluded；ROOF-004/005/006 remain Roof-owned；one-way bridge only。
+- Current values：3534.3 / 5783.4 / 4528.8 / 3916.8 mm；not historical fact。
+- Publication / implementation：NOT AUTHORIZED。
+- CP-03：STOP/HOLD；PR #6：HOLD/UNTOUCHED。
