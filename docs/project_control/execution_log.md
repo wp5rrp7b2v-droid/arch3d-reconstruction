@@ -451,3 +451,15 @@ No T-020 engineering work has started。
 - No new historical dimensions；T-020 Y/shared ridge unchanged；7/7 PURLIN remain DEFERRED。
 - Implementation/publication：NOT AUTHORIZED。
 - CP-03：STOP/HOLD；PR #6：HOLD/UNTOUCHED。
+
+
+---
+
+# T-018 FV Design Complete｜2026-09-18
+
+- Design artifact：`docs/evidence/t018_v002/P3_3_T018_V002_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_DESIGN_V001.md`。
+- Recommended：FV-B / bounded Roof-elevation bridge without DG-113。
+- Rejected：FV-A legacy P2 bridge with DG-113；FV-C roof-profile/drop interpolation。
+- Fallback：FV-D semantic-only downgrade。
+- Candidate values：FRAME_BASE 3534.3；Tier01 5783.4；Tier02 4528.8；Tier03 3916.8 mm。
+- FV-B is NOT LOCKED；implementation remains frozen；CP-03 STOP；PR #6 HOLD。
