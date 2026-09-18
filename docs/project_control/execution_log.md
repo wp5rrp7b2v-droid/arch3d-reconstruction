@@ -394,3 +394,18 @@ No T-020 engineering work has started。
 - Mutation：NOT AUTHORIZED。
 - PR #3：SUPERSEDED / READ-ONLY。
 - PR #6：HOLD；not used as Stage B implementation baseline unless separately decided。
+
+
+---
+
+# T-018 V002 CP-03 STOP｜2026-09-18
+
+- Stage B authorization：D-061。
+- CP-03 started and performed the required authority-completeness check before emitting the Building Control Model。
+- STOP code：`FRAME_TIER_VERTICAL_AUTHORITY_GAP`。
+- Exact vertical placement of `FRAME_TIER_N/S_01..03` and related `FRAME_POST_*_LOW/UP` controls is not fully authorized by current canonical cross-system rules。
+- Legacy P2 generator used a formula combining `Z-006-RC-01 + DG-113 + ROOF-004/005/006` and used `DG-113` as a roof-base offset；that implementation is diagnostic only and cannot be inherited because V002 resolver scopes DG-113 to ORG-BRACKET-SYSTEM and ROOF-004/005/006 to ORG-ROOF-SYSTEM, while T-020 defines roof-Z authority without DG-113。
+- Continuing would trigger `UNAUTHORIZED_AUTHORITY_USE` / recreate a hidden local rule。
+- CP-04：NOT STARTED；CP-05：NOT STARTED；Blender：NOT STARTED；PR #6：UNTOUCHED。
+- Stage A retained results remain valid except the previous claim `stage_b_critical_authority_gaps=0`，which is superseded by this finding。
+- Diagnostic：`docs/evidence/t018_v002/P3_3_T018_V002_CP03_AUTHORITY_GAP_DIAGNOSTIC.json`。
