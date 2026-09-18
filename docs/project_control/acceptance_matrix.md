@@ -268,3 +268,13 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Implementation：FROZEN。
 - CP-03/04/05：NOT AUTHORIZED TO RESUME。
 - PR #6：HOLD / UNTOUCHED。
+
+
+#### RZ｜Roof Z Cumulative Closure｜CONTRACT LOCKED / D-063
+
+- Design：PASS / Product Owner approved。
+- Inputs：Z-007 + Z-006-RC-01 + MOD-002 + ROOF-007/008/009。
+- ROOF-010/011：validation-only cross-check。
+- Excluded：DG-113；ROOF-004/005/006；ROOF-001/002/003；P2 transforms；Blender-local geometry rules。
+- Protected：T-020 Y positions；N03 sole ridge；7/7 PURLIN DEFERRED；365 identity/accounting；P3.2 vocabulary。
+- Publication / implementation：NOT AUTHORIZED。
