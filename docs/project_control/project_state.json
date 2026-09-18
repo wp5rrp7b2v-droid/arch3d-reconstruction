@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R106",
+  "state_revision": "R107",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_STAGE_A_ACTIVE / CP01_CP02_AUTHORIZED / STAGE_B_LOCKED / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_STAGE_A_PASS / STAGE_B_AWAITING_AUTHORIZATION / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 STAGE A ACTIVE",
+    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 STAGE A PASS",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / STAGE A AUTHORIZED D-060"
+      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / STAGE A PASS / STAGE B NOT AUTHORIZED"
     }
   },
-  "decision_required": false,
-  "blocker": "NONE at Stage A entry. CP-01/CP-02 formal audit outputs and review are pending. Stage B remains locked. PR #3 remains superseded/read-only; PR #6 remains HOLD with no patch, Actions rerun or merge.",
+  "decision_required": true,
+  "blocker": "NO TECHNICAL BLOCKER. T-018 V002 Stage A PASS. Stage B requires separate Product Owner authorization.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,7 +62,7 @@
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 STAGE A ACTIVE / CP-01 + CP-02 AUTHORIZED / STAGE B LOCKED",
+    "status": "V002 STAGE A PASS / CP-01 PASS / CP-02 PASS / STAGE B AWAITING AUTHORIZATION",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
     "execution_authorization_decision_id": "D-060",
@@ -72,7 +72,7 @@
     "primary_executor": "Codex Cloud",
     "blender_executor": "GitHub Actions Hosted Runner",
     "blender_version": "4.5.13 linux-x64",
-    "execution_authorized": true,
+    "execution_authorized": false,
     "github_pr_number": 6,
     "github_visible_head_branch": "codex/-t-018",
     "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "STAGE A IN PROGRESS / FORMAL PASS NOT YET DETERMINED",
+    "formal_review_status": "STAGE A FORMAL REVIEW PASS",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +115,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "A_RULE_BASELINE / ACTIVE / CP-01 + CP-02 AUTHORIZED",
+      "current_stage": "A_RULE_BASELINE / PASS / STAGE B LOCKED",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -125,37 +125,32 @@
       "status": "SUPERSEDED FOR V002 / HISTORICAL ONLY",
       "note": "D-052 authorized V001 execution only and does not authorize V002."
     },
-    "execution_authorization_scope": "STAGE_A_ONLY / CP-01_UPSTREAM_COMPATIBILITY_AUDIT + CP-02_AUTHORITY_RESOLVER",
+    "execution_authorization_scope": "D-060 COMPLETED / STAGE A ONLY",
     "stage_b_authorized": false,
     "stage_a": {
-      "status": "ACTIVE",
+      "status": "PASS",
       "authorization_decision_id": "D-060",
-      "authorized_checkpoints": [
-        "CP-01_UPSTREAM_COMPATIBILITY_AUDIT",
-        "CP-02_AUTHORITY_RESOLVER"
+      "checkpoints": {
+        "CP-01_UPSTREAM_COMPATIBILITY_AUDIT": "PASS",
+        "CP-02_AUTHORITY_RESOLVER": "PASS"
+      },
+      "outputs": [
+        "docs/evidence/t018_v002/P3_3_T018_V002_UPSTREAM_COMPATIBILITY_AUDIT.json",
+        "docs/evidence/t018_v002/P3_3_T018_V002_AUTHORITY_RESOLUTION_REPORT.json"
       ],
-      "execution_boundary": "READ-ONLY UPSTREAM AUDIT + DERIVED AUTHORITY RESOLUTION ONLY",
-      "prohibited": [
-        "STAGE_B",
-        "BLENDER",
-        "ACTIONS_RERUN",
-        "365_RUNTIME_EXPANSION",
-        "MUTATION",
-        "PR6_PATCH",
-        "MERGE"
-      ],
-      "formal_outputs": [
-        "P3_3_T018_V002_UPSTREAM_COMPATIBILITY_AUDIT.json",
-        "P3_3_T018_V002_AUTHORITY_RESOLUTION_REPORT.json"
-      ],
-      "preliminary_read_only_findings": {
-        "accounting": "365/365 across 11 families confirmed",
-        "relationship_vocabulary": "SUPPORT / CONNECT / LOCATE / REPEAT / BELONG confirmed",
-        "observed_design_boundary": "PM-003..007 validation-only confirmed; PM-008..012 reconstructed-design candidates confirmed",
-        "t020_datum": "RIDGE_Y=0 / N03 sole shared ridge / no S03 confirmed",
-        "purlin": "7/7 DEFERRED confirmed",
-        "note": "These are preliminary read-only checks only; Stage A PASS requires formal CP-01/CP-02 outputs and review."
-      }
+      "protected_upstream_baseline_status": "PROTECTED_FOR_T018_V002",
+      "summary": {
+        "accounting": "365/365 / 11 families",
+        "authority_resolution": "42 GENERATIVE_AUTHORITY / 41 VALIDATION_ONLY / 4 PROHIBITED_FOR_PLACEMENT / 0 UNRESOLVED",
+        "relation_vocabulary": "5/5 exact",
+        "purlin": "7/7 DEFERRED",
+        "shared_ridge": "RIDGE_Y=0 / N03 sole shared ridge / ROOF_PURLIN_S_03 prohibited",
+        "p2_world_transform_authoritative_usage": 0,
+        "canonical_contradictions": 0,
+        "stage_b_critical_authority_gaps": 0
+      },
+      "non_blocking_guard": "ORG-COLUMN-GRID retains one PM-005 node-level traceability ref; graph parameter_refs are non-authoritative and PM-005 remains VALIDATION_ONLY.",
+      "stage_b_readiness": "READY / AWAITING PRODUCT OWNER AUTHORIZATION"
     }
   },
   "proposed_next_task": {
@@ -224,10 +219,10 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 STAGE A ACTIVE / D-060 / CP-01 + CP-02 AUTHORIZED / STAGE B LOCKED",
+      "status": "V002 STAGE A PASS / CP-01+CP-02 PASS / STAGE B NOT AUTHORIZED",
       "github_pr_number": 6,
       "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-      "note": "PR #3 superseded/read-only; PR #6 HOLD. Stage A is read-only rule-baseline work only."
+      "note": "Protected Upstream Baseline established for V002. PR #3 superseded/read-only; PR #6 remains HOLD and untouched."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -283,9 +278,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "T-018 V002 STAGE A STARTED / READ-ONLY AUDIT IN PROGRESS",
-    "evidence": "Initial read-only checks on canonical main confirm 365/365 accounting, exact five P3.2 relation types, PM-003..007 validation-only classification, PM-008..012 design candidates, T-020 shared-ridge datum, and 7/7 PURLIN DEFERRED. Formal CP-01/CP-02 output review remains pending.",
-    "decision_required": "None unless Stage A exposes a canonical contradiction or missing authority."
+    "result": "T-018 V002 STAGE A FORMAL REVIEW PASS",
+    "evidence": "CP-01 and CP-02 formal JSON outputs committed under docs/evidence/t018_v002/",
+    "decision_required": "Authorize Stage B or hold. No Stage B execution is currently authorized."
   },
   "daily_closing_audit": {
     "date": "2026-09-17",
@@ -295,13 +290,13 @@
     "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
     "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
   },
-  "next_action": "Complete T-018 V002 Stage A CP-01 and CP-02 formal read-only audit. Determine whether any canonical contradiction or unresolved authority blocks Stage B. Do not modify PR #6 or start Stage B.",
+  "next_action": "Product Owner decides whether to authorize T-018 V002 Stage B. If authorized, execute CP-03 Building Control Model, CP-04 Independent Invariant Validator, and CP-05 Critical Skeleton First Article only.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v050",
+    "visualization_version": "v051",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R106 / T-018 V002 STAGE A ACTIVE / STAGE B LOCKED"
+    "refresh_status": "CURRENT / R107 / T-018 V002 STAGE A PASS / STAGE B AWAITING AUTHORIZATION"
   },
   "superseded_prs": [
     {
