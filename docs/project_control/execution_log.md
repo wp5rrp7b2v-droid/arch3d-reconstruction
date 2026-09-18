@@ -423,3 +423,17 @@ No T-020 engineering work has started。
 - All identified gaps cluster at one seam：`canonical parameters + P3.2 semantics -> explicit whole-building control placement/topology`。
 - Implementation remains frozen；no Rule added；CP-03 not restarted；CP-04/CP-05 not started；Blender/Actions not run；PR #6 untouched。
 - Bounded next design, if Product Owner approves：Placement Authority Closure Matrix + Cross-System Dependency DAG + Control Topology Map + Impact/Non-Impact Contract。
+
+
+---
+
+# T-018 V002 Bounded Completion Package Design Complete｜2026-09-18
+
+- Authorization：D-062 / DESIGN ONLY。
+- Four design artifacts completed：Placement Authority Closure Matrix；Cross-System Dependency DAG；Control Topology Map；Impact/Non-Impact Contract。
+- Package summary：`docs/evidence/t018_v002/P3_3_T018_V002_CONTROL_PLACEMENT_AUTHORITY_COMPLETION_PACKAGE_V001.md`。
+- Architecture Closure outcome remains **B**。
+- Minimum proposed authority completions：RZ Roof-Z cumulative closure；FV Frame Vertical Placement bridge。
+- RT topology / BA technical anchors / impact contract are technical specifications, not new authority。
+- No new historical dimensions introduced；no P3.0/P3.1/P3.2 reopen；no V003 required by current evidence。
+- Implementation remains frozen；no Rule created；CP-03 not restarted；PR #6 untouched。
