@@ -287,3 +287,11 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Boundary：ROOF-004/005/006 remain Roof-owned; FV is a one-way project-level engineering bridge into FRAME_CONTROL only。
 - No new historical dimensions；no P3.0/P3.1/P3.2 reopen；no T-020 modification。
 - Status：NOT LOCKED / implementation frozen。
+
+
+#### FV Semantic Validity Check｜COMPLETE / POLICY DECISION REQUIRED
+
+- FV-B as source-derived historical/reconstruction rule：FAIL / insufficient semantic evidence。
+- FV-B as explicit PROJECT_RULE reconstruction convention：POSSIBLE / not yet approved。
+- Semantic-only Frame Tier without exact Z：SAFE alternative / requires CP-03 acceptance adjustment。
+- No Rule locked；implementation frozen；RZ D-063 unchanged。
