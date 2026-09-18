@@ -149,27 +149,35 @@ Daily closing audit：`PASS`
 ### 2026-09-18
 
 - Start main SHA：`c1d68627cd8b34be889a3cfc10acd0a1fed6a824`
-- T-020 contract / authorization：D-056 / D-057
-- T-020 PR：#5 / reviewed head `671283f4ffdf8162c4b39de88564264865b29a50`
-- Formal Review 01：PATCH REQUIRED；Review Patch 01 published to same PR
-- Formal Review 02：PASS
-- Product Owner approval / merge authorization：D-058
-- T-020 merge commit：`6d83ed2f9b3b9281de364ab973edce73ac6dae02`
-- T-020 final status：PASS / CLOSED
-- Project State after closure：R102
-- Dashboard after closure：v046
-- T-018 status change：HOLD → READY TO RESUME / existing PR #3 / update branch required
-- T-018 PR #3：OPEN / NOT MERGED / head `8693c13bf3f04b7e7f7d7d3f24552e1aac8d5750` before branch sync
-- Actions / artifact：no T-020 Actions or Blender artifact; T-018 prior artifact `10499236860` remains historical evidence only
-- Open PRs not in main：PR #3 / `codex/t-018`
-- LOCAL_MAC_REQUIRED follow-up：none added by T-020；9/21 general sync obligations unchanged
-- Daily closing audit：TBD
-
-
-- T-018 replacement：PR #6 / head `65a63b011794dfe2af6a1f0be5ba497a52f23d5f` / base R102。
-- PR #3：SUPERSEDED / OPEN / DO NOT MERGE。
-- Actions Run #30：FAIL at Blender import; Review Patch 01 required。
-- Decision required：T-018 mutation contract amendment after T-020; PM-005 remains observed isolation regression, generative mutation parameter TBD by Product Owner。
+- Detailed daily archive：`docs/project_control/DAILY_CLOSE_2026-09-18.md`
+- Latest formal Product Owner decision：D-064
+- New execution/publication authorization at close：NONE
+- T-020：PASS / CLOSED / D-058 / PR #5 MERGED
+- T-018 V002 Rebaseline：D-059 LOCKED
+- Stage A：initial CP-01/02 PASS classifications retained；authority coverage reopened after CP-03
+- Stage B：D-061 had authorized CP-03/04/05, but CP-03 STOPPED on `FRAME_TIER_VERTICAL_AUTHORITY_GAP`; CP-04/05 NOT STARTED
+- Architecture Closure Review：Outcome B / current working classification only
+- Bounded completion design：D-062 / four closure specs complete
+- RZ：D-063 design contract LOCKED / not published / not implemented
+- FV semantic validity：source-derived claim rejected
+- FV：D-064 / A = FV_PROJECT_RULE / non-historical project reconstruction convention / design contract LOCKED / not published / not implemented
+- Project State at close：R118 initially; final post-close reconciliation revision to be verified from latest `project_state.json`
+- Dashboard at close target：v061
+- T-018 final status：HOLD / NOT PASS / production direction not yet proven
+- P3.3 final status：ACTIVE / NOT PASS
+- CP-03：STOP / not resumed
+- CP-04/05：NOT STARTED
+- Stage C：LOCKED
+- Blender/Actions after V002 architecture review：NONE
+- New Actions artifact after V002 review：NONE
+- PR #3：OPEN / SUPERSEDED / READ-ONLY / head `8693c13bf3f04b7e7f7d7d3f24552e1aac8d5750` / mergeable=false at close / DO NOT MERGE
+- PR #6：OPEN / HOLD / head `65a63b011794dfe2af6a1f0be5ba497a52f23d5f` / mergeable=false at close / DO NOT PATCH / DO NOT MERGE
+- Historical PR #6 Actions Run #30：FAIL / `ModuleNotFoundError: p3_3_whole_building_common_v001`
+- No new local-only binary produced today
+- LOCAL_MAC_REQUIRED follow-up：2026-09-21 still must verify local-only .blend/.blend1 and reconcile main + open PRs + Actions artifacts
+- Daily closing audit：**PASS WITH CAUTION**
+- Carry-forward rule：**do not interpret RZ/FV locks as proof the correct production direction has been established**
+- Next session must first run a bounded **Pre-Publication Readiness Review** before any new publication/execution authorization.
 
 ### 2026-09-19
 
