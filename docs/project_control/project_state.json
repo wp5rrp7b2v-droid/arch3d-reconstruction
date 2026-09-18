@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R109",
+  "state_revision": "R110",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_STAGE_A_AUTHORITY_COVERAGE_REOPENED / STAGE_B_STOP_HOLD / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_ARCHITECTURE_CLOSURE_REVIEW_COMPLETE / OUTCOME_B / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 STAGE B STOP",
+    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 ARCHITECTURE CLOSURE REVIEW COMPLETE",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / STAGE A AUTHORITY COVERAGE REOPENED / STAGE B STOP"
+      "P3.3": "DOD LOCKED / D-047 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / CLOSURE REVIEW OUTCOME B / IMPLEMENTATION FROZEN"
     }
   },
   "decision_required": true,
-  "blocker": "FRAME_TIER_VERTICAL_AUTHORITY_GAP: CP-03 found no canonical cross-system rule that authorizes exact FRAME_TIER_N/S_01..03 and related FRAME_POST_* vertical placement. Stage B is STOP/HOLD; CP-04/CP-05 not started.",
+  "blocker": "T-018 V002 has a bounded architectural seam: whole-building Control Placement Authority is incomplete across frame vertical placement, exact roof-Z closure, roof runtime topology, and downstream proxy/control anchoring. No evidence currently requires reopening P3.0/P3.1/P3.2 or escalating to V003.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,7 +62,7 @@
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 STAGE B STOP / STAGE A AUTHORITY COVERAGE REOPENED / DECISION REQUIRED",
+    "status": "V002 ARCHITECTURE CLOSURE REVIEW COMPLETE / OUTCOME B / IMPLEMENTATION FROZEN",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
     "execution_authorization_decision_id": "D-061",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "CP-03 STOP / FRAME_TIER_VERTICAL_AUTHORITY_GAP",
+    "formal_review_status": "ARCHITECTURE CLOSURE REVIEW COMPLETE / OUTCOME B",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +115,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "A_RULE_BASELINE / AUTHORITY_COVERAGE REOPENED / B_STAGE STOP",
+      "current_stage": "ARCHITECTURE_CLOSURE_REVIEW_COMPLETE / OUTCOME_B / PRE-CORRECTION_DESIGN",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -125,7 +125,7 @@
       "status": "SUPERSEDED FOR V002 / HISTORICAL ONLY",
       "note": "D-052 authorized V001 execution only and does not authorize V002."
     },
-    "execution_authorization_scope": "D-061 SUSPENDED BY CP-03 STOP",
+    "execution_authorization_scope": "NONE / D-061 SUSPENDED",
     "stage_b_authorized": false,
     "stage_a": {
       "status": "REOPENED / AUTHORITY COVERAGE ISSUE",
@@ -176,6 +176,43 @@
         "PR6_PATCH",
         "ACTIONS_RERUN",
         "STAGE_C"
+      ]
+    },
+    "architecture_closure_review": {
+      "status": "COMPLETE",
+      "outcome": "B_LIMITED_SAME_LAYER_GAPS",
+      "artifact": "docs/evidence/t018_v002/T018_V002_ARCHITECTURE_CLOSURE_REVIEW_V001.md",
+      "conclusion": "Identity/Master/evidence/accounting/P3.2 vocabulary/T-020 shared-ridge architecture remain usable. Gaps cluster at the seam between canonical parameters/semantics and explicit whole-building control placement/topology.",
+      "confirmed_gaps": [
+        "FRAME_VERTICAL_PLACEMENT_AUTHORITY",
+        "EXACT_ROOF_Z_CLOSURE",
+        "ROOF_RUNTIME_CONTROL_TOPOLOGY",
+        "DOWNSTREAM_PROXY_CONTROL_ANCHOR_CLOSURE"
+      ],
+      "protected_not_reopened": [
+        "P3.0",
+        "P3.1",
+        "P3.2",
+        "T-017 accounting/identity",
+        "T-019 PURLIN disposition",
+        "T-020 shared-ridge X/Y authority"
+      ],
+      "prohibited": [
+        "ADD_RULE_NOW",
+        "RESTART_CP03",
+        "CP04",
+        "CP05",
+        "BLENDER",
+        "PR6_PATCH",
+        "ACTIONS_RERUN",
+        "STAGE_C",
+        "V003_ESCALATION_WITHOUT_NEW_EVIDENCE"
+      ],
+      "bounded_next_design": [
+        "Placement Authority Closure Matrix",
+        "Cross-System Dependency Whitelist/DAG",
+        "Control Topology Map",
+        "Impact/Non-Impact Contract"
       ]
     }
   },
@@ -304,9 +341,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "T-018 V002 CP-03 STOP / STAGE A AUTHORITY COVERAGE REOPENED",
-    "evidence": "docs/evidence/t018_v002/P3_3_T018_V002_CP03_AUTHORITY_GAP_DIAGNOSTIC.json",
-    "decision_required": "Choose whether to design a minimal project-level frame-tier vertical authority completion. No correction is authorized yet."
+    "result": "T-018 V002 ARCHITECTURE CLOSURE REVIEW COMPLETE / OUTCOME B",
+    "evidence": "docs/evidence/t018_v002/T018_V002_ARCHITECTURE_CLOSURE_REVIEW_V001.md",
+    "decision_required": "Proceed with bounded completion-package design or hold. No Rule creation or implementation is authorized."
   },
   "daily_closing_audit": {
     "date": "2026-09-17",
@@ -316,13 +353,13 @@
     "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
     "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
   },
-  "next_action": "Resolve the frame-tier vertical authority gap at the authority layer. Do not continue Stage B. Product Owner decision is required before any upstream/project-rule correction is designed or executed.",
+  "next_action": "Product Owner decides whether to proceed with design of the bounded Control Placement Authority Completion Package. Design only; no implementation or upstream mutation until separately approved.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v053",
+    "visualization_version": "v054",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R109 / CP-03 STOP / STAGE A COVERAGE REOPENED"
+    "refresh_status": "CURRENT / R110 / T-018 V002 CLOSURE REVIEW OUTCOME B / IMPLEMENTATION FROZEN"
   },
   "superseded_prs": [
     {
