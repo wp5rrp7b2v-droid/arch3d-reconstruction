@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R120",
+  "state_revision": "R121",
   "last_updated": "2026-09-18",
   "session_status": "DAILY_CLOSE_FINAL / POST_CLOSE_OMISSION_AUDIT_PASS / P3.3_ACTIVE / T-018_V002_HOLD / PRODUCTION_DIRECTION_NOT_YET_PROVEN / IMPLEMENTATION_FROZEN / CLOUD_MODE_DAY3_COMPLETE",
   "phase": {
@@ -54,7 +54,7 @@
       "day_1_register": "COMPLETE / 2026-09-16",
       "day_2_register": "COMPLETE / 2026-09-17",
       "required_daily_update_through": "2026-09-20",
-      "day_3_register": "COMPLETE / 2026-09-18 / DAILY_CLOSE_2026-09-18 recorded / R119 / v061 / latest formal decision D-064 / no new execution authorization / T-018 HOLD / production direction not yet proven"
+      "day_3_register": "COMPLETE / 2026-09-18 / DAILY_CLOSE_2026-09-18 + post-close omission audit / R121 / v062 / latest formal decision D-064 / no new execution authorization / T-018 HOLD / production direction not yet proven"
     },
     "active_window_note": "2026-09-18 DAILY CLOSE COMPLETE. T-018 V002 remains HOLD; RZ/FV design contracts locked but not production-proven; CP-03 STOP; PR #3 superseded/read-only; PR #6 HOLD; no post-review Blender/Actions/365 runtime."
   },
@@ -508,9 +508,9 @@
     "new_execution_authorization_at_close": false,
     "pr3_merge_authorized": false,
     "pr6_merge_authorized": false,
-    "project_state_revision": "R119",
-    "dashboard_version": "v061",
-    "post_close_omission_audit": "PASS AFTER ONE MINOR SYNC-LEDGER WORDING CORRECTION",
+    "project_state_revision": "R121",
+    "dashboard_version": "v062",
+    "post_close_omission_audit": "PASS / FINAL / NO KNOWN MISSING REGISTRATIONS",
     "omission_audit_checked": [
       "D-059..D-064 decisions",
       "T-018 V002/RZ/FV contracts",
@@ -527,10 +527,10 @@
   "next_action": "NEXT SESSION: read latest main + project_state + DAILY_CLOSE_2026-09-18, verify PR #3/#6 status, then perform bounded Pre-Publication Readiness Review. Do not publish RZ/FV or restart CP-03 by default.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v061",
+    "visualization_version": "v062",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R120 / DAILY CLOSE FINAL / POST-CLOSE OMISSION AUDIT PASS"
+    "refresh_status": "CURRENT / R121 / DAILY CLOSE FINAL / POST-CLOSE OMISSION AUDIT PASS"
   },
   "superseded_prs": [
     {
