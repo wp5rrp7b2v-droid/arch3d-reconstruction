@@ -158,7 +158,7 @@ ChatGPT 实际审核 PLAN / FRONT / SIDE / AXON 四张 review PNG 后，发现�
 
 `HOLD / MACHINE PASS / FORMAL VISUAL REVIEW FAIL / UPSTREAM RULE GAP`
 
-### Proposed T-020｜P3.3 Roof Shared-Ridge Datum Rule｜NOT AUTHORIZED
+### T-020｜P3.3 Roof Shared-Ridge Datum Rule｜CONTRACT LOCKED / EXECUTION AUTHORIZED
 
 建议任务：
 
@@ -166,7 +166,7 @@ ChatGPT 实际审核 PLAN / FRONT / SIDE / AXON 四张 review PNG 后，发现�
 
 当前仅为：
 
-`PROPOSED / NOT AUTHORIZED / NO BRANCH / NO PR`
+`ACTIVE / CONTRACT LOCKED / D-056 / EXECUTION AUTHORIZED D-057 / CODEX CLOUD READY / NO PR YET`
 
 目标不是新增历史尺寸，而是补齐 project-level engineering datum / LOCATE semantics：
 
@@ -177,7 +177,7 @@ ChatGPT 实际审核 PLAN / FRONT / SIDE / AXON 四张 review PNG 后，发现�
 - 7/7 PURLIN 继续 DEFERRED；historical_claim=false；replaceable project rule；
 - 禁止通过 T-018-local invented `*_RULE` 填补缺口。
 
-在 T-020 获 Product Owner 批准、执行、审核并 merge 前，T-018 不得继续 placement correction。
+T-020 Task Contract 已由 Product Owner 批准并锁定（D-056），并已授权执行（D-057）。在 T-020 完成工程、ChatGPT formal review、Product Owner 批准并 merge 前，T-018 不得继续 placement correction。
 
 ---
 
@@ -191,8 +191,8 @@ ChatGPT 实际审核 PLAN / FRONT / SIDE / AXON 四张 review PNG 后，发现�
 - P3.1：PASS / CLOSED
 - P3.2：PASS / CLOSED
 - P3.3：ACTIVE / NOT PASS
-- Current Task：T-018 / HOLD
-- Proposed Next Task：T-020 / NOT AUTHORIZED
-- Latest formal Decision ID：D-055
+- Current Task：T-020 / EXECUTION AUTHORIZED / CODEX CLOUD READY
+- Held Downstream Task：T-018 / HOLD / PR #3 OPEN
+- Latest formal Decision ID：D-057
 - PR #3：OPEN / NOT MERGED
 - P3 phase archive：NOT APPLICABLE YET

@@ -148,14 +148,14 @@ Daily closing audit：`PASS`
 
 ### 2026-09-18
 
-- Start main SHA：TBD
-- End main SHA：TBD
-- New / changed Decision IDs：TBD
-- Task status changes：TBD
-- PR opened / updated / merged：TBD
-- Actions / artifact：TBD
-- Open PRs not in main：TBD
-- LOCAL_MAC_REQUIRED follow-up：TBD
+- Start main SHA：`c1d68627cd8b34be889a3cfc10acd0a1fed6a824`
+- Current main after T-020 contract / Project Control start：IN PROGRESS
+- New / changed Decision IDs：D-056 (T-020 contract locked)；D-057 (T-020 execution authorized)
+- Task status changes：T-020 PROPOSED → CONTRACT LOCKED / EXECUTION AUTHORIZED；T-018 remains HOLD
+- PR opened / updated / merged：T-020 none yet；T-018 PR #3 unchanged / open
+- Actions / artifact：none for T-020 at authorization point
+- Open PRs not in main：PR #3 / `codex/t-018` / HOLD
+- LOCAL_MAC_REQUIRED follow-up：none for T-020；9/21 general sync obligations unchanged
 - Daily closing audit：TBD
 
 ### 2026-09-19

@@ -276,3 +276,18 @@ No T-020 engineering work has started。
 - Detailed session archive：`docs/project_control/DAILY_CLOSE_2026-09-17.md`。
 
 **DAILY_PROJECT_CONTROL_CONSISTENCY_AUDIT = PASS**。
+
+
+---
+
+# T-020｜屋顶共享脊基准与设计坐标层对齐规则｜2026-09-18 START
+
+- Product Owner approved Task Contract：D-056。
+- Product Owner execution authorization：D-057。
+- Task Contract：`docs/tasks/T-020_P3_3_ROOF_SHARED_RIDGE_DATUM_RULE_V001.md`。
+- Classification：`CLOUD_EXECUTABLE`；Blender requirement：NONE。
+- Scope：minimal project-level reconstructed-design datum / shared-ridge authority patch only。
+- Required preservation：single N03 shared ridge / no S03；FR-007 eave→ridge chain；7/7 PURLIN DEFERRED；observed PM-003～007 remain validation reference；P2 numeric world transforms remain prohibited；historical_claim=false / replaceable project rule。
+- T-018 PR #3 remains OPEN / HOLD / NOT MERGED and is protected from T-020 changes。
+- Branch / PR at authorization record：NOT YET CREATED / Codex Cloud ready。
+- T-020 PASS：NOT YET ASSESSED。
