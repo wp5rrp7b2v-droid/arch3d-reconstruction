@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R108",
+  "state_revision": "R109",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_STAGE_B_ACTIVE / CP03_CP04_CP05_AUTHORIZED / STAGE_C_LOCKED / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_STAGE_A_AUTHORITY_COVERAGE_REOPENED / STAGE_B_STOP_HOLD / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 STAGE B ACTIVE",
+    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 STAGE B STOP",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / STAGE A PASS / STAGE B AUTHORIZED D-061"
+      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / STAGE A AUTHORITY COVERAGE REOPENED / STAGE B STOP"
     }
   },
-  "decision_required": false,
-  "blocker": "NONE at Stage B entry. CP-03/CP-04/CP-05 are authorized. Stage C remains locked.",
+  "decision_required": true,
+  "blocker": "FRAME_TIER_VERTICAL_AUTHORITY_GAP: CP-03 found no canonical cross-system rule that authorizes exact FRAME_TIER_N/S_01..03 and related FRAME_POST_* vertical placement. Stage B is STOP/HOLD; CP-04/CP-05 not started.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,7 +62,7 @@
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 STAGE B ACTIVE / CP-03 + CP-04 + CP-05 AUTHORIZED / STAGE C LOCKED",
+    "status": "V002 STAGE B STOP / STAGE A AUTHORITY COVERAGE REOPENED / DECISION REQUIRED",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
     "execution_authorization_decision_id": "D-061",
@@ -72,7 +72,7 @@
     "primary_executor": "Codex Cloud",
     "blender_executor": "GitHub Actions Hosted Runner",
     "blender_version": "4.5.13 linux-x64",
-    "execution_authorized": true,
+    "execution_authorized": false,
     "github_pr_number": 6,
     "github_visible_head_branch": "codex/-t-018",
     "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "STAGE B IN PROGRESS / PASS NOT YET DETERMINED",
+    "formal_review_status": "CP-03 STOP / FRAME_TIER_VERTICAL_AUTHORITY_GAP",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +115,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "B_CRITICAL_SKELETON_FIRST_ARTICLE / ACTIVE / CP-03+CP-04+CP-05 AUTHORIZED",
+      "current_stage": "A_RULE_BASELINE / AUTHORITY_COVERAGE REOPENED / B_STAGE STOP",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -125,10 +125,10 @@
       "status": "SUPERSEDED FOR V002 / HISTORICAL ONLY",
       "note": "D-052 authorized V001 execution only and does not authorize V002."
     },
-    "execution_authorization_scope": "STAGE_B_ONLY / CP-03_BUILDING_CONTROL_MODEL + CP-04_INDEPENDENT_INVARIANT_VALIDATOR + CP-05_CRITICAL_SKELETON_FIRST_ARTICLE",
-    "stage_b_authorized": true,
+    "execution_authorization_scope": "D-061 SUSPENDED BY CP-03 STOP",
+    "stage_b_authorized": false,
     "stage_a": {
-      "status": "PASS",
+      "status": "REOPENED / AUTHORITY COVERAGE ISSUE",
       "authorization_decision_id": "D-060",
       "checkpoints": {
         "CP-01_UPSTREAM_COMPATIBILITY_AUDIT": "PASS",
@@ -147,27 +147,36 @@
         "shared_ridge": "RIDGE_Y=0 / N03 sole shared ridge / ROOF_PURLIN_S_03 prohibited",
         "p2_world_transform_authoritative_usage": 0,
         "canonical_contradictions": 0,
-        "stage_b_critical_authority_gaps": 0
+        "stage_b_critical_authority_gaps": 1
       },
       "non_blocking_guard": "ORG-COLUMN-GRID retains one PM-005 node-level traceability ref; graph parameter_refs are non-authoritative and PM-005 remains VALIDATION_ONLY.",
-      "stage_b_readiness": "READY / AWAITING PRODUCT OWNER AUTHORIZATION"
+      "stage_b_readiness": "NOT READY / FRAME_TIER_VERTICAL_AUTHORITY_GAP",
+      "retained_passes": [
+        "365/365 accounting",
+        "authority classification 42/41/4/0",
+        "observed/design isolation",
+        "T-020 X/Y + shared ridge",
+        "7/7 PURLIN DEFERRED",
+        "P2 numeric world transform prohibition"
+      ]
     },
     "stage_c_authorized": false,
     "stage_b": {
-      "status": "ACTIVE",
+      "status": "STOP / HOLD",
       "authorization_decision_id": "D-061",
-      "authorized_checkpoints": [
-        "CP-03_BUILDING_CONTROL_MODEL",
-        "CP-04_INDEPENDENT_INVARIANT_VALIDATOR",
-        "CP-05_CRITICAL_SKELETON_FIRST_ARTICLE"
-      ],
-      "required_outputs": [
-        "P3_3_T018_V002_BUILDING_CONTROL_MODEL.json",
-        "P3_3_T018_V002_INDEPENDENT_INVARIANT_VALIDATION.json",
-        "Critical Skeleton First Article evidence including PLAN/FRONT/SIDE/AXON review"
-      ],
-      "execution_boundary": "Use Stage A Protected Upstream Baseline only. No 365 full runtime, no mutation, no Stage C.",
-      "pr_policy": "PR #6 remains HOLD and is not the Stage B implementation baseline unless a later publication decision explicitly changes that."
+      "cp03": "STOP / FRAME_TIER_VERTICAL_AUTHORITY_GAP",
+      "cp04": "NOT STARTED",
+      "cp05": "NOT STARTED",
+      "diagnostic": "docs/evidence/t018_v002/P3_3_T018_V002_CP03_AUTHORITY_GAP_DIAGNOSTIC.json",
+      "stop_reason": "Exact vertical placement of FRAME_TIER_N/S_01..03 and related FRAME_POST controls would require cross-system use of parameters outside their canonical binding targets or reuse of legacy P2 local formulas.",
+      "prohibited_next_actions": [
+        "CP-04",
+        "CP-05",
+        "BLENDER",
+        "PR6_PATCH",
+        "ACTIONS_RERUN",
+        "STAGE_C"
+      ]
     }
   },
   "proposed_next_task": {
@@ -295,9 +304,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "T-018 V002 STAGE A FORMAL REVIEW PASS",
-    "evidence": "CP-01 and CP-02 formal JSON outputs committed under docs/evidence/t018_v002/",
-    "decision_required": "Authorize Stage B or hold. No Stage B execution is currently authorized."
+    "result": "T-018 V002 CP-03 STOP / STAGE A AUTHORITY COVERAGE REOPENED",
+    "evidence": "docs/evidence/t018_v002/P3_3_T018_V002_CP03_AUTHORITY_GAP_DIAGNOSTIC.json",
+    "decision_required": "Choose whether to design a minimal project-level frame-tier vertical authority completion. No correction is authorized yet."
   },
   "daily_closing_audit": {
     "date": "2026-09-17",
@@ -307,13 +316,13 @@
     "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
     "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
   },
-  "next_action": "Execute Stage B CP-03, CP-04, CP-05 only. If any Stage A authority contradiction or placement ambiguity appears, STOP and return to the owning layer. Do not start Stage C.",
+  "next_action": "Resolve the frame-tier vertical authority gap at the authority layer. Do not continue Stage B. Product Owner decision is required before any upstream/project-rule correction is designed or executed.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v052",
+    "visualization_version": "v053",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R108 / T-018 V002 STAGE B ACTIVE / STAGE C LOCKED"
+    "refresh_status": "CURRENT / R109 / CP-03 STOP / STAGE A COVERAGE REOPENED"
   },
   "superseded_prs": [
     {
