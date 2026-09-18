@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R119",
+  "state_revision": "R120",
   "last_updated": "2026-09-18",
-  "session_status": "DAILY_CLOSE_FINAL / P3.3_ACTIVE / T-018_V002_HOLD / PRODUCTION_DIRECTION_NOT_YET_PROVEN / IMPLEMENTATION_FROZEN / CLOUD_MODE_DAY3_COMPLETE",
+  "session_status": "DAILY_CLOSE_FINAL / POST_CLOSE_OMISSION_AUDIT_PASS / P3.3_ACTIVE / T-018_V002_HOLD / PRODUCTION_DIRECTION_NOT_YET_PROVEN / IMPLEMENTATION_FROZEN / CLOUD_MODE_DAY3_COMPLETE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -509,7 +509,20 @@
     "pr3_merge_authorized": false,
     "pr6_merge_authorized": false,
     "project_state_revision": "R119",
-    "dashboard_version": "v061"
+    "dashboard_version": "v061",
+    "post_close_omission_audit": "PASS AFTER ONE MINOR SYNC-LEDGER WORDING CORRECTION",
+    "omission_audit_checked": [
+      "D-059..D-064 decisions",
+      "T-018 V002/RZ/FV contracts",
+      "11 t018_v002 evidence artifacts",
+      "Execution Log",
+      "Acceptance Matrix",
+      "Cloud Mode Day 3",
+      "Dashboard",
+      "PR #3/#6 open-unmerged state"
+    ],
+    "omission_audit_missing_items": [],
+    "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
   "next_action": "NEXT SESSION: read latest main + project_state + DAILY_CLOSE_2026-09-18, verify PR #3/#6 status, then perform bounded Pre-Publication Readiness Review. Do not publish RZ/FV or restart CP-03 by default.",
   "dashboard": {
@@ -517,7 +530,7 @@
     "visualization_version": "v061",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R119 / DAILY CLOSE FINAL / HOLD"
+    "refresh_status": "CURRENT / R120 / DAILY CLOSE FINAL / POST-CLOSE OMISSION AUDIT PASS"
   },
   "superseded_prs": [
     {
