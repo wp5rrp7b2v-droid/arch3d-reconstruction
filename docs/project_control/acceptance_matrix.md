@@ -158,30 +158,32 @@ ChatGPT 实际审核 PLAN / FRONT / SIDE / AXON 四张 review PNG 后，发现�
 
 `HOLD / MACHINE PASS / FORMAL VISUAL REVIEW FAIL / UPSTREAM RULE GAP`
 
-### T-020｜P3.3 Roof Shared-Ridge Datum Rule｜CONTRACT LOCKED / EXECUTION AUTHORIZED
+### T-020｜P3.3 Roof Shared-Ridge Datum Rule｜PASS / CLOSED / D-058
 
-建议任务：
+- Task：`T-020｜P3_3_ROOF_SHARED_RIDGE_DATUM_RULE_V001｜屋顶共享脊基准与设计坐标层对齐规则`
+- PR #5 reviewed head：`671283f4ffdf8162c4b39de88564264865b29a50`
+- Formal Review 02：PASS
+- Product Owner approval / merge authorization：D-058
+- Merge commit：`6d83ed2f9b3b9281de364ab973edce73ac6dae02`
+- Canonical rule：`P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json`
+- Project rule：`historical_claim=false / historical_claim_upgrade=false / replaceable=true`
+- Reconstructed-design plan datum：X=0 / Y=0；Z 继续引用 Z-007
+- Shared ridge：`RIDGE_Y=0`；N03 sole terminal；no S03
+- FR-007 + MOD-002 dependency lineage：PASS；half-run 6808.5mm
+- PM-003～007 observed isolation：PASS
+- 7/7 PURLIN：DEFERRED
+- accounting：11/40/365 preserved
+- P2 numeric world-transform authoritative usage：0
+- P3.2 relationship vocabulary：UNCHANGED
+- canonical P3.3 Hard Fail vocabulary：UNCHANGED
+- 5/5 required negatives：EXPECTED_REJECTION
+- Blender invocations / .blend created：0 / 0
+- T-018 PR #3：UNCHANGED during T-020
 
-`T-020｜P3.3_ROOF_SHARED_RIDGE_DATUM_RULE_V001｜屋顶共享脊基准与设计坐标层对齐规则`
-
-当前仅为：
-
-`ACTIVE / CONTRACT LOCKED / D-056 / EXECUTION AUTHORIZED D-057 / CODEX CLOUD READY / NO PR YET`
-
-目标不是新增历史尺寸，而是补齐 project-level engineering datum / LOCATE semantics：
-
-- 一个 shared ridge terminal；no S03；
-- FR-007 两侧 eave→ridge；
-- reconstructed-design roof 与 reconstructed-design building center datum 的坐标关系；
-- observed reference layer 不得静默成为 reconstructed-design placement source；
-- 7/7 PURLIN 继续 DEFERRED；historical_claim=false；replaceable project rule；
-- 禁止通过 T-018-local invented `*_RULE` 填补缺口。
-
-T-020 Task Contract 已由 Product Owner 批准并锁定（D-056），并已授权执行（D-057）。在 T-020 完成工程、ChatGPT formal review、Product Owner 批准并 merge 前，T-018 不得继续 placement correction。
-
+T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3 同步最新 main 并重新推导 roof-dependent placements。
 ---
 
-## Current Acceptance Snapshot｜2026-09-17
+## Current Acceptance Snapshot｜2026-09-18
 
 - P0：CLOSED / PASS
 - P1：CLOSED / PASS / CONDITIONAL GO
@@ -191,8 +193,9 @@ T-020 Task Contract 已由 Product Owner 批准并锁定（D-056），并已授�
 - P3.1：PASS / CLOSED
 - P3.2：PASS / CLOSED
 - P3.3：ACTIVE / NOT PASS
-- Current Task：T-020 / EXECUTION AUTHORIZED / CODEX CLOUD READY
-- Held Downstream Task：T-018 / HOLD / PR #3 OPEN
-- Latest formal Decision ID：D-057
-- PR #3：OPEN / NOT MERGED
+- Current Task：T-018 / READY TO RESUME / PR #3 UPDATE BRANCH REQUIRED
+- Last Completed Task：T-020 / PASS / CLOSED / D-058 / PR #5 MERGED
+- Latest formal Decision ID：D-058
+- PR #3：OPEN / NOT MERGED / merge not authorized
+- PR #5：MERGED / T-020 CLOSED
 - P3 phase archive：NOT APPLICABLE YET

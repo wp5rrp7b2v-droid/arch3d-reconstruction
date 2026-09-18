@@ -291,3 +291,20 @@ No T-020 engineering work has started。
 - T-018 PR #3 remains OPEN / HOLD / NOT MERGED and is protected from T-020 changes。
 - Branch / PR at authorization record：NOT YET CREATED / Codex Cloud ready。
 - T-020 PASS：NOT YET ASSESSED。
+
+
+## T-020｜FINAL / PASS / CLOSED / D-058
+
+- Engineering PR：#5 / `codex/-t-020`。
+- Initial head：`00d3f3510855d7c0a51a335f5dbf13d91998339a`。
+- Formal Review 01：PATCH REQUIRED（self-dependency / duplicate authority / observed-leak coverage / over-broad LOCATE metadata scope）。
+- Review Patch 01 GitHub-visible head：`671283f4ffdf8162c4b39de88564264865b29a50`。
+- Formal Review 02：PASS。
+- Product Owner approval / merge authorization：D-058。
+- Merge commit：`6d83ed2f9b3b9281de364ab973edce73ac6dae02`。
+- Canonical rule：reconstructed-design X/Y center datum + `RIDGE_Y=0`；Z authority remains Z-007；historical_claim=false；replaceable=true。
+- Identity/topology：N03 sole shared ridge terminal；no S03；FR-007 + MOD-002 chain preserved；6808.5mm half-run。
+- Evidence boundary：PM-003～007 observed validation reference only；PM-008～012 replaceable reconstructed-design candidates；7/7 PURLIN DEFERRED。
+- Machine validation：PASS；canonical_failures=[]；5/5 required negatives EXPECTED_REJECTION；11/40/365 preserved；P2 numeric world-transform usage=0；P3.2 vocabulary unchanged；five P3.3 Hard Fail vocabulary unchanged。
+- Blender invocations：0；.blend created：0。
+- T-018 PR #3 remained unchanged through T-020 and is now eligible to resume after updating from latest main; merge remains unauthorized。

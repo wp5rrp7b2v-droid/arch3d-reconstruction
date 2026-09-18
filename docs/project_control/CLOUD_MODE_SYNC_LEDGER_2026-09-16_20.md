@@ -149,13 +149,20 @@ Daily closing audit：`PASS`
 ### 2026-09-18
 
 - Start main SHA：`c1d68627cd8b34be889a3cfc10acd0a1fed6a824`
-- Current main after T-020 contract / Project Control start：IN PROGRESS
-- New / changed Decision IDs：D-056 (T-020 contract locked)；D-057 (T-020 execution authorized)
-- Task status changes：T-020 PROPOSED → CONTRACT LOCKED / EXECUTION AUTHORIZED；T-018 remains HOLD
-- PR opened / updated / merged：T-020 none yet；T-018 PR #3 unchanged / open
-- Actions / artifact：none for T-020 at authorization point
-- Open PRs not in main：PR #3 / `codex/t-018` / HOLD
-- LOCAL_MAC_REQUIRED follow-up：none for T-020；9/21 general sync obligations unchanged
+- T-020 contract / authorization：D-056 / D-057
+- T-020 PR：#5 / reviewed head `671283f4ffdf8162c4b39de88564264865b29a50`
+- Formal Review 01：PATCH REQUIRED；Review Patch 01 published to same PR
+- Formal Review 02：PASS
+- Product Owner approval / merge authorization：D-058
+- T-020 merge commit：`6d83ed2f9b3b9281de364ab973edce73ac6dae02`
+- T-020 final status：PASS / CLOSED
+- Project State after closure：R102
+- Dashboard after closure：v046
+- T-018 status change：HOLD → READY TO RESUME / existing PR #3 / update branch required
+- T-018 PR #3：OPEN / NOT MERGED / head `8693c13bf3f04b7e7f7d7d3f24552e1aac8d5750` before branch sync
+- Actions / artifact：no T-020 Actions or Blender artifact; T-018 prior artifact `10499236860` remains historical evidence only
+- Open PRs not in main：PR #3 / `codex/t-018`
+- LOCAL_MAC_REQUIRED follow-up：none added by T-020；9/21 general sync obligations unchanged
 - Daily closing audit：TBD
 
 ### 2026-09-19

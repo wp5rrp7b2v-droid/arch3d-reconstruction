@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R101",
+  "state_revision": "R102",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-020_EXECUTION_AUTHORIZED / T-018_HOLD_UPSTREAM_RULE_GAP / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-020_CLOSED_D058 / T-018_READY_TO_RESUME / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-020 ACTIVE / T-018 HOLD",
+    "status": "DOD LOCKED / T-020 CLOSED / T-018 READY TO RESUME",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 WITH T-019 CORRECTION / T-019 CLOSED D-055 / T-020 CONTRACT D-056 / EXECUTION AUTH D-057 / T-018 HOLD"
+      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 WITH T-019 CORRECTION / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 READY TO RESUME ON PR #3"
     }
   },
   "decision_required": false,
-  "blocker": "T-018 remains blocked until T-020 is executed, formally reviewed, approved, and merged. T-020 itself has no current blocker; execution is authorized under the minimal project-level reconstructed-design datum / shared-ridge rule scope.",
+  "blocker": "NONE / T-018 upstream shared-ridge datum rule gap is cleared by T-020 D-058. Existing PR #3 must update from latest main and rederive roof-dependent placements before re-review.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -49,187 +49,20 @@
     },
     "sync_ledger": {
       "path": "docs/project_control/CLOUD_MODE_SYNC_LEDGER_2026-09-16_20.md",
-      "status": "ACTIVE / LOCAL_SYNC_VERIFICATION_PENDING / DAY 3 IN PROGRESS",
+      "status": "ACTIVE / LOCAL_SYNC_VERIFICATION_PENDING / DAY 3 IN PROGRESS / T-020 CLOSED",
       "target_local_sync_date": "2026-09-21",
       "day_1_register": "COMPLETE / 2026-09-16",
       "day_2_register": "COMPLETE / 2026-09-17",
       "required_daily_update_through": "2026-09-20",
-      "day_3_register": "IN PROGRESS / 2026-09-18 / T-020 AUTHORIZED"
+      "day_3_register": "IN PROGRESS / 2026-09-18 / T-020 CLOSED D-058 / PR #5 MERGED"
     },
-    "active_window_note": "T-020 contract is locked and execution authorized. T-018 PR #3 remains OPEN / NOT MERGED / HOLD and must not be modified until T-020 is reviewed and merged. Cloud Mode Sync Ledger / daily close records remain required."
+    "active_window_note": "T-020 is PASS/CLOSED/MERGED under D-058. T-018 PR #3 remains OPEN / NOT MERGED; its upstream datum STOP is cleared. Resume only on the existing PR #3 after syncing latest main and consuming the canonical T-020 datum rule. Cloud Mode Sync Ledger / daily close records remain required."
   },
   "current_task": {
-    "id": "T-020",
-    "engineering_id": "P3_3_ROOF_SHARED_RIDGE_DATUM_RULE_V001",
-    "name": "屋顶共享脊基准与设计坐标层对齐规则",
-    "status": "ACTIVE / CONTRACT LOCKED / EXECUTION AUTHORIZED / CODEX CLOUD READY / NO PR YET",
-    "task_contract": "docs/tasks/T-020_P3_3_ROOF_SHARED_RIDGE_DATUM_RULE_V001.md",
-    "contract_decision_id": "D-056",
-    "execution_authorization_decision_id": "D-057",
-    "cloud_mode_classification": "CLOUD_EXECUTABLE",
-    "think_level": "HIGH",
-    "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
-    "primary_executor": "Codex Cloud",
-    "blender_requirement": "NONE",
-    "execution_authorized": true,
-    "github_pr_number": null,
-    "github_visible_head_branch": null,
-    "github_visible_head_sha": null,
-    "pr_merge_authorized": false,
-    "purpose": "Add the missing project-level engineering datum/LOCATE rule connecting the reconstructed-design roof system and the whole-building reconstructed-design coordinate system without creating new historical dimensions.",
-    "must_preserve": [
-      "7/7 PURLIN remain DEFERRED",
-      "single shared ridge terminal; no S03 identity",
-      "FR-007 eave-to-ridge relative chain",
-      "observed reference layer must not silently become reconstructed-design placement input",
-      "P2 numeric world transforms remain prohibited",
-      "historical_claim=false / replaceable project engineering rule"
-    ],
-    "stop_condition": "Any need for new historical dimensions, observed-as-design promotion, P3.2 schema change, PURLIN eligibility change, T-018 modification, or Blender execution."
-  },
-  "proposed_next_task": {
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "HELD DOWNSTREAM / RESUME ONLY AFTER T-020 MERGE",
-    "purpose": "Resume existing PR #3 after canonical T-020 datum authority is merged; rederive roof-dependent placements and repeat machine plus four-view review.",
-    "authorization_required": false
-  },
-  "last_completed_task": {
-    "id": "T-019",
-    "engineering_id": "P3_3_UPSTREAM_DISPOSITION_CONSISTENCY_CORRECTION_V001",
-    "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
-    "github_pr_number": 4,
-    "reviewed_head_sha": "91723a7a2b3c3ca78473bba3cb344450e43fbb3f",
-    "merge_commit": "b9803fb416e375fd2f94f5d83df5fab73fe00063",
-    "correction": "7/7 CMP-PURLIN-001 dispositions corrected from GENERATE_FROM_FORMAL_COMPONENT to DEFERRED; direct-identity consistency regression installed",
-    "canonical_main_verification": "PASS"
-  },
-  "t017_corrected_foundation": {
-    "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
-    "accounting": "11/11 families / 40/40 variants / 365/365 instances",
-    "purlin_component_id": "CMP-PURLIN-001",
-    "purlin_qualification": "DEFERRED_INSUFFICIENT_EVIDENCE",
-    "purlin_instance_count": 7,
-    "purlin_disposition": "DEFERRED",
-    "cross_layer_direct_identity_conflicts": 0,
-    "canonical_hard_fail_count": 0,
-    "new_regression": "MASTER_SCOPE_DISPOSITION_CONFLICT / EXPECTED_REJECTION",
-    "newly_discovered_gap": "No authoritative rule currently locates the shared reconstructed roof ridge datum in the whole-building reconstructed-design coordinate system."
-  },
-  "current_case": {
-    "name": "平遥镇国寺万佛殿",
-    "selection_status": "LOCKED"
-  },
-  "p2_closure": {
-    "status": "CLOSED / APPROVED / FROZEN ENGINEERING BASELINE",
-    "decision_id": "D-028",
-    "formal_model": "P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001",
-    "component_architecture": "11 families / 40 variants / 365 stable mesh instances"
-  },
-  "p3_1": {
-    "status": "PASS / APPROVED / CLOSED / D-040",
-    "gate_score": "9/9 PASS",
-    "approved_master_count": 6,
-    "relevant_locked_boundary": "CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE"
-  },
-  "p3_2": {
-    "status": "PASS / APPROVED / CLOSED / D-046",
-    "gate_score": "9/9 PASS",
-    "canonical_hard_fail_count": 0,
-    "p3_3_foundational_readiness": "PASS",
-    "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
-  },
-  "p3_3": {
-    "status": "DOD LOCKED / D-047 / D-048 PIPELINE APPROVED / T-019 CLOSED D-055 / T-018 HOLD / T-020 PROPOSED",
-    "gate_name": "构件驱动整殿重建",
-    "engineering_subtitle": "Component-driven Building Reconstruction",
-    "dod_version": "V001",
-    "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-047",
-    "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md",
-    "engineering_planning_authorized": true,
-    "engineering_execution_authorized": true,
-    "t017": {
-      "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
-    },
-    "t018": {
-      "status": "HOLD / MACHINE PASS / FORMAL VISUAL REVIEW FAIL / PR #3 OPEN",
-      "github_pr_number": 3,
-      "github_visible_head_sha": "8693c13bf3f04b7e7f7d7d3f24552e1aac8d5750"
-    },
-    "t019": {
-      "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
-      "github_pr_number": 4,
-      "merge_commit": "b9803fb416e375fd2f94f5d83df5fab73fe00063"
-    },
-    "t020": {
-      "status": "PROPOSED / NOT AUTHORIZED"
-    },
-    "remaining_gate_work_after_t018_if_pass": [
-      "DoD-09 independent final rebuild and Gate Evidence Package",
-      "any genuinely interactive/local-only evidence discovered during T-018 review",
-      "final P3.3 Gate Review and Product Owner approval"
-    ],
-    "hard_fails": [
-      "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
-      "SILENT_HISTORICIZATION",
-      "BAKED_MANUAL_BUILDING",
-      "SILENT_BUILDING_OMISSION",
-      "BROKEN_COMPONENT_IDENTITY"
-    ]
-  },
-  "roof_control_audit_2026_09_17": {
-    "status": "READ_ONLY / COMPLETE / B-STOP",
-    "purlin_identity_topology": "N00,N01,N02,N03(shared ridge),S00,S01,S02; no S03",
-    "fr007": "[120,115,210] fen; eave-to-ridge; total half-run 6808.5 mm using MOD-002=15.3 mm/fen",
-    "vertical_chain": "ROOF-007/008/009 = eave→lower / lower→upper / upper→ridge",
-    "authorized": "relative two-sided monotonic chain terminating at one shared ridge control",
-    "not_authorized": "absolute ridge coordinate R in T-018 whole-building coordinate space",
-    "synthetic_rule": "COLUMN_GRID_Y_MIRROR_RULE / UNAUTHORIZED",
-    "placement_impact": "Round 2/3 roof placements and dependent technical geometry require re-derivation after upstream rule approval"
-  },
-  "historical_boundaries": {
-    "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
-    "Z-006-RC-01": "REASONABLE_COMPLETION / replaceable / D-023",
-    "DG-114": "UNKNOWN / no unified small-dou historical specification claim",
-    "HIS-002": "component originality unknown",
-    "six_chuanfu_length": "UNKNOWN / null; 1000 mm is non-historical canonical reference only",
-    "purlin": "CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE; 7/7 building instances DEFERRED; current audit only clarifies control topology, not historical member identity/section/length/end conditions",
-    "corner_and_joinery": "45-degree corner, mortise and hidden-angle beam unresolved / bounded",
-    "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
-  },
-  "latest_material_decision": {
-    "id": "D-055",
-    "date": "2026-09-16",
-    "decision": "Product Owner approved and closed T-019 and authorized merge of PR #4. PR #4 merged successfully. No new formal Product Owner decision ID was created on 2026-09-17."
-  },
-  "latest_material_review": {
-    "date": "2026-09-17",
-    "result": "T-018 HOLD / MACHINE PASS / FORMAL VISUAL REVIEW FAIL / UPSTREAM RULE GAP",
-    "evidence": "Actions run 35226626839 + artifact 10499236860 + direct four-view review + read-only roof-control origin audit",
-    "archive": "docs/project_control/DAILY_CLOSE_2026-09-17.md"
-  },
-  "daily_closing_audit": {
-    "date": "2026-09-17",
-    "status": "PASS",
-    "execution_log_recorded": true,
-    "phase_archive_action": "NONE / P3 ACTIVE",
-    "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
-    "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
-  },
-  "next_action": "At the next work session, read GitHub main / Project Control first. Verify PR #3 remains OPEN / NOT MERGED. Do not continue T-018 placement correction. First design the minimal T-020 contract / DoD for the roof shared-ridge datum and reconstructed-design coordinate alignment rule, obtain Product Owner approval, then execute T-020 on its own branch/PR from main. Only after T-020 is reviewed and merged may T-018 sync the new upstream rule and resume correction on the existing PR #3.",
-  "dashboard": {
-    "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v044",
-    "role": "DERIVED_VISUALIZATION",
-    "authoritative": false,
-    "refresh_status": "CURRENT / R100 / DAILY CLOSE 2026-09-17"
-  },
-  "held_downstream_task": {
-    "id": "T-018",
-    "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001",
-    "name": "整殿确定性生成与参数变更验证",
-    "status": "HOLD / MACHINE PASS / FORMAL VISUAL REVIEW FAIL / UPSTREAM RULE GAP / PR #3 OPEN",
+    "status": "READY TO RESUME / UPSTREAM DATUM RULE MERGED / PR #3 OPEN / UPDATE BRANCH REQUIRED",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V001.md",
     "contract_decision_id": "D-051",
     "execution_authorization_decision_id": "D-052",
@@ -256,9 +89,153 @@
     },
     "round_2_result": "365/365 RULE_DERIVED; NOT_REALIZED_NO_APPROVED_PLACEMENT_RULE=0; 12 Formal / 178 Proxy / 66 Control / 6 Envelope / 96 UNKNOWN_BLOCKED / 7 DEFERRED; machine spatial/mutation/restore chain PASS; visual review failed because non-formal representation was largely generic point/octahedron markers.",
     "round_3_result": "Differentiated engineering representation geometry and view-aware review evidence implemented; generic octahedron count=0; Actions PASS; visual review exposed roof-control topology crossing at the ridge.",
-    "active_upstream_stop_condition": "ROOF_SHARED_RIDGE_DATUM_AND_COORDINATE_LAYER_ALIGNMENT_RULE_MISSING",
+    "active_upstream_stop_condition": null,
     "root_cause": "UPSTREAM_ENGINEERING_RULE_MODELING_OMISSION + T018_FAILURE_TO_STOP",
     "invalidated_assumption": "Round 2 roof placements are not frozen-correct. Roof-dependent placements must be re-derived after the upstream datum rule is approved.",
-    "required_next_correction": "After approved upstream rule is merged: remove COLUMN_GRID_Y_MIRROR_RULE, derive one shared ridge terminal, rederive PURLIN/RAFTER/ROOF_ENVELOPE/GABLE and any roof-dependent FRAME endpoints, rerun Actions and formal four-view visual review."
+    "required_next_correction": "Update existing codex/t-018 / PR #3 from latest main; remove unauthorized COLUMN_GRID_Y_MIRROR_RULE; consume canonical P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001; rederive 7 PURLIN controls, 36 RAFTER proxies, 6 ROOF_ENVELOPE records, 4 GABLE_CONTROL records and roof-dependent FRAME endpoints; rerun Actions and formal PLAN/FRONT/SIDE/AXON review.",
+    "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02"
+  },
+  "proposed_next_task": {
+    "id": "P3.3_FINAL",
+    "name": "P3.3 Final Independent Rebuild & Gate Evidence Package",
+    "status": "AFTER T-018 PASS",
+    "authorization_required": true
+  },
+  "last_completed_task": {
+    "id": "T-020",
+    "engineering_id": "P3_3_ROOF_SHARED_RIDGE_DATUM_RULE_V001",
+    "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-058",
+    "github_pr_number": 5,
+    "reviewed_head_sha": "671283f4ffdf8162c4b39de88564264865b29a50",
+    "merge_commit": "6d83ed2f9b3b9281de364ab973edce73ac6dae02",
+    "formal_review": "FORMAL REVIEW 02 PASS",
+    "machine_validation": "PASS / canonical_failures=[] / 5 required negatives EXPECTED_REJECTION",
+    "canonical_main_verification": "PASS",
+    "correction": "Established canonical reconstructed-design X/Y datum + single shared ridge RIDGE_Y=0; N03 sole terminal; no S03; observed/design layer isolation; FR-007 + MOD-002 lineage; no Blender."
+  },
+  "t017_corrected_foundation": {
+    "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
+    "accounting": "11/11 families / 40/40 variants / 365/365 instances",
+    "purlin_component_id": "CMP-PURLIN-001",
+    "purlin_qualification": "DEFERRED_INSUFFICIENT_EVIDENCE",
+    "purlin_instance_count": 7,
+    "purlin_disposition": "DEFERRED",
+    "cross_layer_direct_identity_conflicts": 0,
+    "canonical_hard_fail_count": 0,
+    "new_regression": "MASTER_SCOPE_DISPOSITION_CONFLICT / EXPECTED_REJECTION",
+    "newly_discovered_gap": "RESOLVED BY T-020 / D-058: canonical reconstructed-design plan datum and shared-ridge coordinate authority now exist."
+  },
+  "current_case": {
+    "name": "平遥镇国寺万佛殿",
+    "selection_status": "LOCKED"
+  },
+  "p2_closure": {
+    "status": "CLOSED / APPROVED / FROZEN ENGINEERING BASELINE",
+    "decision_id": "D-028",
+    "formal_model": "P2_3_INTEGRATED_RECONSTRUCTION_CANDIDATE_V001",
+    "component_architecture": "11 families / 40 variants / 365 stable mesh instances"
+  },
+  "p3_1": {
+    "status": "PASS / APPROVED / CLOSED / D-040",
+    "gate_score": "9/9 PASS",
+    "approved_master_count": 6,
+    "relevant_locked_boundary": "CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE"
+  },
+  "p3_2": {
+    "status": "PASS / APPROVED / CLOSED / D-046",
+    "gate_score": "9/9 PASS",
+    "canonical_hard_fail_count": 0,
+    "p3_3_foundational_readiness": "PASS",
+    "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
+  },
+  "p3_3": {
+    "status": "DOD LOCKED / D-047 / D-048 PIPELINE APPROVED / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 READY TO RESUME",
+    "gate_name": "构件驱动整殿重建",
+    "engineering_subtitle": "Component-driven Building Reconstruction",
+    "dod_version": "V001",
+    "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-047",
+    "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md",
+    "engineering_planning_authorized": true,
+    "engineering_execution_authorized": true,
+    "t017": {
+      "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
+    },
+    "t018": {
+      "status": "READY TO RESUME / PR #3 OPEN / UPSTREAM DATUM STOP CLEARED / UPDATE BRANCH REQUIRED",
+      "github_pr_number": 3,
+      "github_visible_head_sha": "8693c13bf3f04b7e7f7d7d3f24552e1aac8d5750"
+    },
+    "t019": {
+      "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
+      "github_pr_number": 4,
+      "merge_commit": "b9803fb416e375fd2f94f5d83df5fab73fe00063"
+    },
+    "t020": {
+      "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-058",
+      "github_pr_number": 5,
+      "reviewed_head_sha": "671283f4ffdf8162c4b39de88564264865b29a50",
+      "merge_commit": "6d83ed2f9b3b9281de364ab973edce73ac6dae02",
+      "canonical_rule": "production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json",
+      "machine_validation": "PASS"
+    },
+    "remaining_gate_work_after_t018_if_pass": [
+      "DoD-09 independent final rebuild and Gate Evidence Package",
+      "any genuinely interactive/local-only evidence discovered during T-018 review",
+      "final P3.3 Gate Review and Product Owner approval"
+    ],
+    "hard_fails": [
+      "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+      "SILENT_HISTORICIZATION",
+      "BAKED_MANUAL_BUILDING",
+      "SILENT_BUILDING_OMISSION",
+      "BROKEN_COMPONENT_IDENTITY"
+    ]
+  },
+  "roof_control_audit_2026_09_17": {
+    "status": "READ_ONLY / COMPLETE / B-STOP",
+    "purlin_identity_topology": "N00,N01,N02,N03(shared ridge),S00,S01,S02; no S03",
+    "fr007": "[120,115,210] fen; eave-to-ridge; total half-run 6808.5 mm using MOD-002=15.3 mm/fen",
+    "vertical_chain": "ROOF-007/008/009 = eave→lower / lower→upper / upper→ridge",
+    "authorized": "relative two-sided monotonic chain terminating at one shared ridge control",
+    "not_authorized": "absolute ridge coordinate R in T-018 whole-building coordinate space",
+    "synthetic_rule": "COLUMN_GRID_Y_MIRROR_RULE / UNAUTHORIZED",
+    "placement_impact": "Round 2/3 roof placements and dependent technical geometry require re-derivation after upstream rule approval",
+    "resolution": "RESOLVED BY T-020 / D-058 / canonical RIDGE_Y=0 project-model datum rule merged to main"
+  },
+  "historical_boundaries": {
+    "Z-006": "UNKNOWN / null / DO_NOT_LOCK",
+    "Z-006-RC-01": "REASONABLE_COMPLETION / replaceable / D-023",
+    "DG-114": "UNKNOWN / no unified small-dou historical specification claim",
+    "HIS-002": "component originality unknown",
+    "six_chuanfu_length": "UNKNOWN / null; 1000 mm is non-historical canonical reference only",
+    "purlin": "CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE; 7/7 building instances DEFERRED; current audit only clarifies control topology, not historical member identity/section/length/end conditions",
+    "corner_and_joinery": "45-degree corner, mortise and hidden-angle beam unresolved / bounded",
+    "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
+  },
+  "latest_material_decision": {
+    "id": "D-058",
+    "date": "2026-09-18",
+    "decision": "Product Owner approved and closed T-020 and authorized merge of PR #5 after Formal Review 02 PASS. PR #5 merged successfully; T-018 upstream datum STOP is cleared and existing execution authorization D-052 remains valid."
+  },
+  "latest_material_review": {
+    "date": "2026-09-18",
+    "result": "T-020 PASS / FORMAL REVIEW 02 PASS / PRODUCT OWNER APPROVED / PR #5 MERGED",
+    "evidence": "PR #5 reviewed head 671283f4ffdf8162c4b39de88564264865b29a50 + canonical validation report PASS + 5/5 required negatives EXPECTED_REJECTION + merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02"
+  },
+  "daily_closing_audit": {
+    "date": "2026-09-17",
+    "status": "PASS",
+    "execution_log_recorded": true,
+    "phase_archive_action": "NONE / P3 ACTIVE",
+    "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
+    "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
+  },
+  "next_action": "Resume T-018 on the existing PR #3 only: update codex/t-018 from latest main containing T-020 D-058, remove unauthorized COLUMN_GRID_Y_MIRROR_RULE, consume the canonical datum rule, rederive all roof-dependent placements, rerun GitHub Actions, then repeat formal four-view visual review. Do not merge PR #3 without Product Owner authorization.",
+  "dashboard": {
+    "path": "docs/project_control/dashboard.html",
+    "visualization_version": "v046",
+    "role": "DERIVED_VISUALIZATION",
+    "authoritative": false,
+    "refresh_status": "CURRENT / R102 / T-020 CLOSED D-058 / T-018 READY TO RESUME"
   }
 }
