@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R118",
+  "state_revision": "R119",
   "last_updated": "2026-09-18",
-  "session_status": "DAILY_CLOSE_COMPLETE / P3.3_ACTIVE / T-018_V002_HOLD / RZ_FV_DESIGN_LOCKED_NOT_PRODUCTION_PROVEN / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
+  "session_status": "DAILY_CLOSE_FINAL / P3.3_ACTIVE / T-018_V002_HOLD / PRODUCTION_DIRECTION_NOT_YET_PROVEN / IMPLEMENTATION_FROZEN / CLOUD_MODE_DAY3_COMPLETE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -54,7 +54,7 @@
       "day_1_register": "COMPLETE / 2026-09-16",
       "day_2_register": "COMPLETE / 2026-09-17",
       "required_daily_update_through": "2026-09-20",
-      "day_3_register": "COMPLETE / 2026-09-18 / detailed daily close recorded / latest formal decision D-064 / T-018 V002 HOLD / RZ+FV design locked only / production direction not yet proven / PR #3 superseded / PR #6 HOLD"
+      "day_3_register": "COMPLETE / 2026-09-18 / DAILY_CLOSE_2026-09-18 recorded / R119 / v061 / latest formal decision D-064 / no new execution authorization / T-018 HOLD / production direction not yet proven"
     },
     "active_window_note": "2026-09-18 DAILY CLOSE COMPLETE. T-018 V002 remains HOLD; RZ/FV design contracts locked but not production-proven; CP-03 STOP; PR #3 superseded/read-only; PR #6 HOLD; no post-review Blender/Actions/365 runtime."
   },
@@ -62,7 +62,7 @@
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 DAILY CLOSE / HOLD / RZ+FV DESIGN LOCKED ONLY / PRODUCTION DIRECTION NOT YET PROVEN",
+    "status": "V002 DAILY CLOSE FINAL / HOLD / NO EXECUTION AUTHORIZED",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
     "execution_authorization_decision_id": "D-061",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "DAILY CLOSE / PRE-PUBLICATION READINESS REVIEW REQUIRED BEFORE ANY NEW AUTHORIZATION",
+    "formal_review_status": "END-OF-DAY HOLD / PRE-PUBLICATION READINESS REVIEW REQUIRED NEXT SESSION",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +115,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "DAILY_HOLD / PRE-PUBLICATION_READINESS_REVIEW_PENDING",
+      "current_stage": "DAILY_CLOSE_FINAL / PRE-PUBLICATION_READINESS_REVIEW_PENDING",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -489,28 +489,35 @@
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "DAILY CLOSE PASS WITH CAUTION / PROBLEM BETTER BOUNDED / FINAL DIRECTION NOT YET PROVEN",
+    "result": "DAILY CLOSE FINAL / PASS WITH CAUTION / FINAL PRODUCTION DIRECTION NOT YET PROVEN",
     "evidence": "docs/project_control/DAILY_CLOSE_2026-09-18.md",
-    "decision_required": "NONE AT DAILY CLOSE. New authorization requires next-session pre-publication readiness review first."
+    "decision_required": "NONE AT CLOSE. Next substantive decision only after Pre-Publication Readiness Review."
   },
   "daily_closing_audit": {
     "date": "2026-09-18",
-    "status": "PASS WITH CAUTION",
-    "execution_log_recorded": false,
-    "acceptance_matrix_recorded": false,
-    "dashboard_aligned": false,
-    "sync_ledger_day3_complete": false,
+    "status": "PASS WITH CAUTION / FINAL",
+    "execution_log_recorded": true,
+    "acceptance_matrix_recorded": true,
+    "dashboard_aligned": true,
+    "sync_ledger_day3_complete": true,
     "detailed_close": "docs/project_control/DAILY_CLOSE_2026-09-18.md",
     "phase_archive_action": "NONE / P3 ACTIVE",
-    "caution": "Do not carry forward a 'solution found' narrative. Carry forward a bounded HOLD and re-review before publication."
+    "caution": "Do not carry forward a 'solution found' narrative. Carry forward a bounded HOLD and re-review before publication.",
+    "latest_formal_decision": "D-064",
+    "new_decision_at_close": false,
+    "new_execution_authorization_at_close": false,
+    "pr3_merge_authorized": false,
+    "pr6_merge_authorized": false,
+    "project_state_revision": "R119",
+    "dashboard_version": "v061"
   },
-  "next_action": "NEXT SESSION ONLY: read latest main + project_state + DAILY_CLOSE_2026-09-18; verify PR #3/#6 unchanged; perform a bounded Pre-Publication Readiness Review of RZ+FV coexistence, authority uniqueness, remaining closure-matrix OPEN cells, RT/BA sufficiency, and protected-upstream immutability. Only after that review may Product Owner consider a new authorization for minimal authority publication.",
+  "next_action": "NEXT SESSION: read latest main + project_state + DAILY_CLOSE_2026-09-18, verify PR #3/#6 status, then perform bounded Pre-Publication Readiness Review. Do not publish RZ/FV or restart CP-03 by default.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v061",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R118 / DAILY CLOSE HOLD / FINAL DIRECTION NOT YET PROVEN"
+    "refresh_status": "CURRENT / R119 / DAILY CLOSE FINAL / HOLD"
   },
   "superseded_prs": [
     {
