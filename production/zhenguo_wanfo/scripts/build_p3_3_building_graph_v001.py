@@ -268,7 +268,10 @@ def compile_assets() -> dict:
         {
             "parameter_id": datum["rule_id"],
             "parameter_key": "reconstructed_design_plan_and_shared_ridge_datum",
-            "value": {"plan_origin_mm": [0, 0], "ridge_y_mm": 0},
+            "value": {
+                "plan_origin_mm": [datum["coordinate_frame"]["x"]["datum_mm"], datum["coordinate_frame"]["y"]["datum_mm"]],
+                "ridge_y_mm": datum["roof_control"]["ridge_y_mm"],
+            },
             "unit": "mm",
             "classification": "PROJECT_ENGINEERING_RULE",
             "source_layer": datum["source_layer"],
@@ -414,8 +417,10 @@ def compile_assets() -> dict:
         {"relationship_id": f"BELONG-RUNTIME-{index:04d}", "relation_type": "BELONG", "source_node": "P3_3:" + item["legacy_instance_id"], "target_node": item["graph_parent_node_id"]}
         for index, item in enumerate(accounting, 1)
     )
+    datum_relation_ids = {"LOCATE-DESIGN-PLAN-DATUM", "LOCATE-SHARED-RIDGE-DATUM"}
     for relation in relations:
-        relation.update({"directionality": "DIRECTED", "provenance": [str(PATHS["relationships"].relative_to(ROOT)), str(PATHS["design_datum_rule"].relative_to(ROOT)) if relation["relation_type"] == "LOCATE" else "T-017 deterministic organization rule"], "parameter_refs": relation.get("parameter_refs", []), "evidence_status": "PROJECT_RULE" if relation["relation_type"] == "LOCATE" else "ORGANIZATIONAL_ONLY", "replaceability": True, "historical_claim": False})
+        is_datum_relation = relation["relationship_id"] in datum_relation_ids
+        relation.update({"directionality": "DIRECTED", "provenance": [str(PATHS["relationships"].relative_to(ROOT)), str(PATHS["design_datum_rule"].relative_to(ROOT)) if is_datum_relation else "T-017 deterministic organization rule"], "parameter_refs": relation.get("parameter_refs", []), "evidence_status": "PROJECT_RULE" if is_datum_relation else "ORGANIZATIONAL_ONLY", "replaceability": True, "historical_claim": False})
     graph = {
         "version": "V001",
         "task": "T-017",

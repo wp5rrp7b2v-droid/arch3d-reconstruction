@@ -2460,8 +2460,7 @@
       "binding_targets": {
         "depends_on": [
           "FR-007",
-          "MOD-002",
-          "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001"
+          "MOD-002"
         ],
         "graph_node_ids": [
           "ORG-COLUMN-GRID",

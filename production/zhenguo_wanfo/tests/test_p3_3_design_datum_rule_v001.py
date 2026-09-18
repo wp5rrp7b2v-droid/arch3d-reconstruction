@@ -15,12 +15,28 @@ class DesignDatumRuleTests(unittest.TestCase):
         self.rule, self.docs = load(PATHS["design_datum_rule"]), compile_assets()
 
     def test_canonical_rule_validates(self): self.assertEqual(validate(self.rule, self.docs), [])
+    def test_binding_consumes_canonical_value_without_self_dependency(self):
+        binding = next(item for item in self.docs["bindings"]["bindings"] if item.get("parameter_id") == self.rule["rule_id"])
+        self.assertEqual(binding["value"], {"plan_origin_mm": [self.rule["coordinate_frame"]["x"]["datum_mm"], self.rule["coordinate_frame"]["y"]["datum_mm"]], "ridge_y_mm": self.rule["roof_control"]["ridge_y_mm"]})
+        self.assertEqual(binding["binding_targets"]["depends_on"], ["FR-007", "MOD-002"])
+        self.assertNotIn(self.rule["rule_id"], self.rule["dependency_lineage"])
+
+    def test_unrelated_locate_does_not_inherit_datum_metadata(self):
+        docs = copy.deepcopy(self.docs)
+        docs["graph"]["relationships"].append({"relationship_id": "LOCATE-UNRELATED", "relation_type": "LOCATE", "provenance": ["unrelated"], "parameter_refs": [], "evidence_status": "ORGANIZATIONAL_ONLY"})
+        self.assertNotIn("DATUM_RELATION_SCOPE_INVALID", validate(self.rule, docs))
+
     def test_required_negatives_are_rejected(self):
         for expected, kind in NEGATIVES.items():
-            if kind == "local":
+            if kind == "observed":
+                docs = copy.deepcopy(self.docs)
+                datum_binding = next(item for item in docs["bindings"]["bindings"] if item.get("parameter_id") == self.rule["rule_id"])
+                datum_binding["binding_targets"]["depends_on"].append("PM-007")
+                self.assertIn(expected, validate(self.rule, docs))
+            elif kind == "local":
                 docs = copy.deepcopy(self.docs); docs["graph"]["generation_contract"]["local_coordinate_rules_without_canonical_authority"] = "COLUMN_GRID_Y_MIRROR_RULE"
                 self.assertIn(expected, validate(self.rule, docs))
-            else: self.assertTrue(validate(mutate(self.rule, kind), self.docs), kind)
+            else: self.assertIn(expected, validate(mutate(self.rule, kind), self.docs), kind)
     def test_report_passes(self): self.assertEqual(build_report()["status"], "PASS")
 
 

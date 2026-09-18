@@ -5,7 +5,7 @@
     "y": {"datum_mm": 0, "meaning": "reconstructed-design plan depth center"},
     "z": {"authority": "Z-007", "datum_mm": 0, "meaning": "abstract column-foot design plane", "redefined_here": false}
   },
-  "dependency_lineage": ["FR-007", "MOD-002", "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001"],
+  "dependency_lineage": ["FR-007", "MOD-002"],
   "design_placement_sources": {
     "allowed_reconstructed_design_candidates": ["PM-008", "PM-009", "PM-010", "PM-011", "PM-012"],
     "observed_reference_only": ["PM-003", "PM-004", "PM-005", "PM-006", "PM-007"],

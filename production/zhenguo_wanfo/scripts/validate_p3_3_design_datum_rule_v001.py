@@ -13,6 +13,7 @@ from validate_p3_3_building_graph_v001 import HARD_FAILS, validate as validate_b
 REPORT = ROOT / "production/zhenguo_wanfo/validation/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_VALIDATION_V001.json"
 OBSERVED = {f"PM-{number:03d}" for number in range(3, 8)}
 CANDIDATES = {f"PM-{number:03d}" for number in range(8, 13)}
+DATUM_RELATION_IDS = {"LOCATE-DESIGN-PLAN-DATUM", "LOCATE-SHARED-RIDGE-DATUM"}
 NEGATIVES = {
     "DESIGN_OBSERVED_LAYER_LEAK": "observed",
     "SHARED_RIDGE_IDENTITY_OR_CHAIN_INVALID": "s03",
@@ -36,7 +37,7 @@ def validate(rule: dict, docs: dict | None = None) -> list[str]:
         failures.append("SHARED_RIDGE_IDENTITY_OR_CHAIN_INVALID")
     if roof.get("segment_lengths_mm") != [1836.0, 1759.5, 3213.0] or roof.get("cumulative_half_run_mm") != 6808.5 or roof.get("direction") != "EAVE_TO_RIDGE" or roof.get("ridge_y_mm") != 0 or positions.get("ROOF_PURLIN_N_03") != roof.get("ridge_y_mm"):
         failures.append("FR007_MOD002_CHAIN_INVALID")
-    if not {"FR-007", "MOD-002", rule.get("rule_id")} <= set(rule.get("dependency_lineage", [])):
+    if set(rule.get("dependency_lineage", [])) != {"FR-007", "MOD-002"} or rule.get("rule_id") in rule.get("dependency_lineage", []):
         failures.append("DEPENDENCY_LINEAGE_INCOMPLETE")
     sources = rule.get("design_placement_sources", {})
     if set(sources.get("observed_reference_only", [])) != OBSERVED or set(sources.get("allowed_reconstructed_design_candidates", [])) != CANDIDATES or "PROHIBITED" not in sources.get("observed_reference_policy", ""):
@@ -45,7 +46,24 @@ def validate(rule: dict, docs: dict | None = None) -> list[str]:
     datum_binding = next((item for item in bindings if item.get("parameter_id") == rule.get("rule_id")), None)
     if not datum_binding or datum_binding.get("binding_targets", {}).get("relationship_types") != ["LOCATE"]:
         failures.append("CANONICAL_DATUM_BINDING_MISSING")
+    elif datum_binding.get("value") != {
+        "plan_origin_mm": [frame["x"]["datum_mm"], frame["y"]["datum_mm"]],
+        "ridge_y_mm": roof["ridge_y_mm"],
+    }:
+        failures.append("CANONICAL_DATUM_BINDING_VALUE_MISMATCH")
+    if datum_binding and (datum_binding.get("binding_targets", {}).get("depends_on") != rule.get("dependency_lineage") or rule.get("rule_id") in datum_binding.get("binding_targets", {}).get("depends_on", [])):
+        failures.append("DEPENDENCY_LINEAGE_INCOMPLETE")
     graph = docs["graph"]
+    datum_relations = [relation for relation in graph.get("relationships", []) if relation.get("relationship_id") in DATUM_RELATION_IDS]
+    generative_refs = set(datum_binding.get("binding_targets", {}).get("depends_on", [])) if datum_binding else set()
+    for relation in datum_relations:
+        generative_refs.update(relation.get("parameter_refs", []))
+    if generative_refs & OBSERVED:
+        failures.append("DESIGN_OBSERVED_LAYER_LEAK")
+    if len(datum_relations) != 2 or any(relation.get("evidence_status") != "PROJECT_RULE" or str(PATHS["design_datum_rule"].relative_to(ROOT)) not in relation.get("provenance", []) for relation in datum_relations):
+        failures.append("DATUM_RELATION_SCOPE_INVALID")
+    if any(relation.get("relationship_id") not in DATUM_RELATION_IDS and (relation.get("evidence_status") == "PROJECT_RULE" or str(PATHS["design_datum_rule"].relative_to(ROOT)) in relation.get("provenance", [])) for relation in graph.get("relationships", [])):
+        failures.append("DATUM_RELATION_SCOPE_INVALID")
     if graph.get("generation_contract", {}).get("local_coordinate_rules_without_canonical_authority") != "PROHIBITED":
         failures.append("UNAUTHORIZED_LOCAL_COORDINATE_RULE")
     if set(graph.get("foundational_relation_vocabulary", [])) != {"SUPPORT", "CONNECT", "LOCATE", "REPEAT", "BELONG"}:
@@ -57,8 +75,7 @@ def validate(rule: dict, docs: dict | None = None) -> list[str]:
 
 def mutate(rule: dict, kind: str) -> dict:
     changed = copy.deepcopy(rule)
-    if kind == "observed": changed["design_placement_sources"]["allowed_reconstructed_design_candidates"].append("PM-007")
-    elif kind == "s03": changed["roof_control"]["y_positions_mm"]["ROOF_PURLIN_S_03"] = 0.0
+    if kind == "s03": changed["roof_control"]["y_positions_mm"]["ROOF_PURLIN_S_03"] = 0.0
     elif kind == "split": changed["roof_control"]["y_positions_mm"]["ROOF_PURLIN_N_03"] = -1.0
     elif kind == "historical": changed["historical_claim"] = True
     return changed
@@ -69,10 +86,15 @@ def build_report() -> dict:
     canonical = validate(rule, docs)
     negatives = []
     for expected, kind in NEGATIVES.items():
-        if kind == "local":
+        if kind == "observed":
+            changed_docs = copy.deepcopy(docs)
+            datum_binding = next(item for item in changed_docs["bindings"]["bindings"] if item.get("parameter_id") == rule["rule_id"])
+            datum_binding["binding_targets"]["depends_on"].append("PM-007")
+            rejected = expected in validate(rule, changed_docs)
+        elif kind == "local":
             changed_docs = copy.deepcopy(docs); changed_docs["graph"]["generation_contract"]["local_coordinate_rules_without_canonical_authority"] = "COLUMN_GRID_Y_MIRROR_RULE"
             rejected = expected in validate(rule, changed_docs)
-        else: rejected = bool(validate(mutate(rule, kind), docs))
+        else: rejected = expected in validate(mutate(rule, kind), docs)
         negatives.append({"fixture": kind, "expected": "REJECT", "machine_error": expected, "actual": "EXPECTED_REJECTION" if rejected else "UNEXPECTED_ACCEPTANCE"})
     purlins = [item for item in docs["accounting"]["instances"] if item["component_id"] == "CMP-PURLIN-001"]
     checks = {
