@@ -217,7 +217,7 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 
 ---
 
-### T-018 V002 Rebaseline｜DRAFT / ENGINEERING HOLD
+### T-018 V002 Rebaseline｜CONTRACT LOCKED / D-059 / EXECUTION NOT AUTHORIZED
 
 - Same Task ID：T-018；Task goal unchanged；version advances V001 → V002 only after Product Owner approval.
 - Management stages：A Rule Baseline / B Critical Skeleton First Article / C Full 365 Runtime / D Formal Execution Acceptance.
@@ -226,4 +226,4 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Existing P3.3 Hard Fails remain unchanged.
 - PR #3：SUPERSEDED / READ-ONLY / DO NOT MERGE。
 - PR #6：HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE。
-- Current status：NOT APPROVED / NO ENGINEERING EXECUTION。
+- Current status：PRODUCT OWNER APPROVED / CONTRACT LOCKED / NO ENGINEERING EXECUTION。

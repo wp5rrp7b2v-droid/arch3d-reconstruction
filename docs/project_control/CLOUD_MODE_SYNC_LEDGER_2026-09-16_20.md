@@ -271,3 +271,5 @@ Therefore separately check：
 - Codex internal SHA ≠ canonical GitHub SHA。
 - Local-only binary ≠ GitHub asset。
 - 2026-09-21 sync must check `main + open PR + Actions artifacts + local-only assets + Project Control` together。
+
+- 2026-09-18：T-018 V002 Rebaseline contract approved/locked under D-059；execution not authorized；PR #3 superseded/read-only；PR #6 HOLD。

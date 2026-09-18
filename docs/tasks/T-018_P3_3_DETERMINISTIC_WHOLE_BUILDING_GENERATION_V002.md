@@ -1,6 +1,6 @@
 # T-018｜P3.3 整殿确定性生成与参数变更验证 V002
 
-## Rebaseline Task Contract｜DRAFT / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING HOLD
+## Rebaseline Task Contract｜LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT AUTHORIZED
 
 - Project：ARCH3D-001｜中国古建筑3D复原
 - Case：平遥镇国寺万佛殿
@@ -10,13 +10,16 @@
 - Engineering ID：`P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002`
 - 中文任务名：整殿确定性生成与参数变更验证
 - Task Goal：不变；V002 是同一 T-018 的 Rebaseline，不创建新 T 编号
-- Status：DRAFT / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING HOLD
+- Status：LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT AUTHORIZED
 - Date：2026-09-18
-- Supersedes on approval：T-018 V001 implementation design
+- Supersedes：T-018 V001 implementation design / D-051 contract
 - Existing implementation history：PR #3 SUPERSEDED / PR #6 HOLD
 - Merge authorization：FALSE
+- Decision authority：D-059
 
 > 本 V002 只重新设计 T-018 如何消费上游 canonical 成果，不默认重开 P3.0/P3.1/P3.2/T-017/T-019/T-020。任何上游矛盾必须 STOP 并单独处理，不得在 T-018 内静默修补。
+
+> D-052 是 V001 的历史工程执行授权，**不自动延续到 V002**。V002 进入 Stage A 前仍需 Product Owner 单独授权。
 
 ---
 
@@ -484,7 +487,7 @@ T-018 V002 成功时最终必须证明：
 
 ## 9. 当前状态
 
-`DRAFT / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING HOLD`
+`LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT AUTHORIZED`
 
 当前禁止：
 
@@ -496,4 +499,4 @@ T-018 V002 成功时最终必须证明：
 
 下一动作：
 
-> ChatGPT 完成 V002 design review → Product Owner 审核/修改/批准 → 记录正式 rebaseline decision → 再授权 Stage A engineering execution。
+> V002 已由 Product Owner 批准并锁定。下一动作：等待 Product Owner 单独授权 Stage A engineering execution。

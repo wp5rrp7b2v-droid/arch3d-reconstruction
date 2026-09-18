@@ -335,3 +335,17 @@ No T-020 engineering work has started。
 - V002 draft architecture: 4 management stages + 9 technical checkpoints; authority resolution, control model, independent validator, skeleton first article, 365 runtime, representation/capability regression, dual mutation, then Blender evidence.
 - Draft contract: `docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md`.
 - Status: DRAFT / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING HOLD.
+
+
+---
+
+# T-018 V002 Contract Approval｜2026-09-18
+
+- Decision：D-059。
+- Product Owner approved and locked T-018 V002 Rebaseline Task Contract。
+- V002 supersedes V001 implementation design for future T-018 work；Task ID remains T-018。
+- D-052 remains historical V001 execution authorization only and does not authorize V002。
+- PR #3：SUPERSEDED / READ-ONLY / DO NOT MERGE。
+- PR #6：HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE。
+- Next executable scope after separate authorization：Stage A only (CP-01 + CP-02)。
+- Engineering status：NOT STARTED / NOT AUTHORIZED。

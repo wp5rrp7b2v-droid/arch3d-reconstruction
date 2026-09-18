@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R104",
+  "state_revision": "R105",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_REBASELINE_DESIGN / ENGINEERING_HOLD / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_CONTRACT_LOCKED / EXECUTION_NOT_AUTHORIZED / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-020 CLOSED / T-018 REPLACEMENT ACTIVE",
+    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 CONTRACT LOCKED",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 REPLACEMENT PR #6 PATCH REQUIRED"
+      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 CONTRACT LOCKED D-059 / EXECUTION NOT AUTHORIZED"
     }
   },
   "decision_required": true,
-  "blocker": "T-018 V002 Rebaseline contract is in formal design review. Engineering on PR #3 and PR #6 is HOLD until Product Owner approves V002 and separately authorizes execution.",
+  "blocker": "T-018 V002 Rebaseline contract is approved and locked under D-059. Stage A engineering execution is not yet authorized. PR #3 remains superseded/read-only and PR #6 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -54,18 +54,18 @@
       "day_1_register": "COMPLETE / 2026-09-16",
       "day_2_register": "COMPLETE / 2026-09-17",
       "required_daily_update_through": "2026-09-20",
-      "day_3_register": "IN PROGRESS / 2026-09-18 / T-018 replacement PR #6 active / PR #3 superseded"
+      "day_3_register": "IN PROGRESS / 2026-09-18 / T-018 V002 contract approved D-059 / execution not authorized / PR #6 HOLD"
     },
-    "active_window_note": "T-020 remains PASS/CLOSED/D-058. T-018 is in V002 Rebaseline Design; PR #3 is superseded, PR #6 is HOLD. No T-018 engineering execution until V002 approval and separate authorization."
+    "active_window_note": "T-020 remains PASS/CLOSED/D-058. T-018 V002 Rebaseline is CONTRACT LOCKED / D-059 / EXECUTION NOT AUTHORIZED. PR #3 superseded/read-only; PR #6 HOLD."
   },
   "current_task": {
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 REBASELINE DESIGN / DRAFT / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING HOLD",
+    "status": "V002 CONTRACT LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT AUTHORIZED",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
-    "contract_decision_id": "D-051",
-    "execution_authorization_decision_id": "D-052",
+    "contract_decision_id": "D-059",
+    "execution_authorization_decision_id": null,
     "cloud_mode_classification": "CLOUD_EXECUTABLE / D-048 EQUIVALENT HEADLESS EXECUTION",
     "think_level": "HIGH",
     "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "V002 DESIGN REVIEW PENDING",
+    "formal_review_status": "V002 DESIGN APPROVED / ENGINEERING NOT STARTED",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,9 +115,15 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "DESIGN_ONLY / PRE-STAGE-A",
+      "current_stage": "PRE-STAGE-A / CONTRACT LOCKED / EXECUTION NOT AUTHORIZED",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
+    },
+    "v001_authority_history": {
+      "contract_decision_id": "D-051",
+      "execution_authorization_decision_id": "D-052",
+      "status": "SUPERSEDED FOR V002 / HISTORICAL ONLY",
+      "note": "D-052 authorized V001 execution only and does not authorize V002."
     }
   },
   "proposed_next_task": {
@@ -174,22 +180,22 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "DOD LOCKED / D-047 / D-048 PIPELINE APPROVED / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 READY TO RESUME",
+    "status": "DOD LOCKED / D-047 / D-048 PIPELINE APPROVED / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 CONTRACT LOCKED D-059",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V001",
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-047",
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md",
     "engineering_planning_authorized": true,
-    "engineering_execution_authorized": true,
+    "engineering_execution_authorized": false,
     "t017": {
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 REBASELINE DESIGN / DRAFT / ENGINEERING HOLD",
+      "status": "V002 CONTRACT LOCKED / D-059 / EXECUTION NOT AUTHORIZED",
       "github_pr_number": 6,
-      "github_visible_head_sha": "8693c13bf3f04b7e7f7d7d3f24552e1aac8d5750",
-      "note": "PR #3 superseded; PR #6 HOLD pending V002 approval. No engineering execution authorized."
+      "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
+      "note": "PR #3 superseded/read-only. PR #6 HOLD. D-052 is V001 historical authorization only; V002 requires new explicit execution authorization."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -239,15 +245,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-058",
+    "id": "D-059",
     "date": "2026-09-18",
-    "decision": "Product Owner approved and closed T-020 and authorized merge of PR #5 after Formal Review 02 PASS. PR #5 merged successfully; T-018 upstream datum STOP is cleared and existing execution authorization D-052 remains valid."
+    "decision": "Product Owner approved and locked T-018 V002 Rebaseline. V002 supersedes the V001 implementation design/contract for future execution. Four management stages and nine technical checkpoints are locked. Engineering execution remains separately unauthorized; D-052 does not carry forward to V002."
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "T-018 V002 REBASELINE DESIGN STARTED / ENGINEERING HOLD",
-    "evidence": "Read-only re-audit confirmed T-017 already classifies PM-003..007 as VALIDATION_REFERENCE and PM-008..012 as reconstructed-design direct geometry candidates; T-020 supplies canonical design datum/shared ridge. Root issue is T-018 consumption/architecture, not evidence that T-017 accounting must be reopened.",
-    "decision_required": "Product Owner review of T-018 V002 Rebaseline contract."
+    "result": "T-018 V002 REBASELINE DESIGN / PRODUCT OWNER APPROVED / CONTRACT LOCKED",
+    "evidence": "V002 contract locks single-authority consumption, one geometry calculation before Blender, independent invariant validation, critical skeleton first article before 365 expansion, capability-regression protection, dual mutation, and no downstream patch-up.",
+    "decision_required": "Explicit authorization to start Stage A only."
   },
   "daily_closing_audit": {
     "date": "2026-09-17",
@@ -257,13 +263,13 @@
     "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
     "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
   },
-  "next_action": "Review and approve or amend docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md. No Codex implementation work until V002 contract approval and separate execution authorization.",
+  "next_action": "Await Product Owner explicit authorization to start T-018 V002 Stage A. Once authorized, execute CP-01 Upstream Compatibility Audit and CP-02 Authority Resolver only; do not proceed to Stage B without Stage A PASS.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v048",
+    "visualization_version": "v049",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R104 / T-018 V002 REBASELINE DESIGN / ENGINEERING HOLD"
+    "refresh_status": "CURRENT / R105 / T-018 V002 CONTRACT LOCKED / EXECUTION NOT AUTHORIZED"
   },
   "superseded_prs": [
     {
