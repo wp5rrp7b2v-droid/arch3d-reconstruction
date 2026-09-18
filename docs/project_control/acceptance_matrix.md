@@ -229,10 +229,11 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Current status：PRODUCT OWNER APPROVED / CONTRACT LOCKED / NO ENGINEERING EXECUTION。
 
 
-#### Stage A｜规则基线｜ACTIVE / D-060
+#### Stage A｜规则基线｜PASS / D-060
 
-- CP-01 Upstream Compatibility Audit：AUTHORIZED / IN PROGRESS。
-- CP-02 Authority Resolver：AUTHORIZED / IN PROGRESS。
+- CP-01 Upstream Compatibility Audit：PASS。
+- CP-02 Authority Resolver：PASS。
 - Required formal outputs：`P3_3_T018_V002_UPSTREAM_COMPATIBILITY_AUDIT.json`、`P3_3_T018_V002_AUTHORITY_RESOLUTION_REPORT.json`。
 - PASS requires：no unresolved canonical contradiction；no missing Stage-B authority；protected-input hashes captured；no unauthorized observed→placement authority；ChatGPT review PASS。
-- Stage B：LOCKED until Stage A formal PASS。
+- Stage A formal result：PASS；Protected Upstream Baseline established for T-018 V002。
+- Stage B：NOT AUTHORIZED / requires separate Product Owner authorization。
