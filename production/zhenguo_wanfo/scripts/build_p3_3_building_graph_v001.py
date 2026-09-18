@@ -33,6 +33,7 @@ PATHS = {
     "overrides": P / "params/P2_1_APPROVED_PRODUCTION_OVERRIDES_V001.json",
     "dependency": P / "dependency/P2_1_GEOMETRY_DEPENDENCY_MATRIX_V001.json",
     "evidence_schema": P / "schema/evidence_aware_parameter_schema_v001.json",
+    "design_datum_rule": BUILD / "P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json",
     "p3_2_validator": P / "scripts/validate_p3_2_relationship_foundation_v001.py",
     "p3_2_representative_validator": P / "scripts/validate_p3_2_representative_assembly_v001.py",
     "p3_2_tests": P / "tests/test_p3_2_relationship_foundation_v001.py",
@@ -262,6 +263,34 @@ def compile_assets() -> dict:
             "historical_claim_upgrade": False,
         }
     )
+    datum = load(PATHS["design_datum_rule"])
+    bindings.append(
+        {
+            "parameter_id": datum["rule_id"],
+            "parameter_key": "reconstructed_design_plan_and_shared_ridge_datum",
+            "value": {
+                "plan_origin_mm": [datum["coordinate_frame"]["x"]["datum_mm"], datum["coordinate_frame"]["y"]["datum_mm"]],
+                "ridge_y_mm": datum["roof_control"]["ridge_y_mm"],
+            },
+            "unit": "mm",
+            "classification": "PROJECT_ENGINEERING_RULE",
+            "source_layer": datum["source_layer"],
+            "time_layer": datum["time_layer"],
+            "production_use": datum["role"],
+            "replaceable": datum["replaceable"],
+            "source_ids": [datum["rule_id"]],
+            "building_role": "reconstructed-design plan / shared ridge datum",
+            "dependency_role": "PROJECT_COORDINATE_AUTHORITY",
+            "binding_targets": {
+                "graph_node_ids": ["ORG-COLUMN-GRID", "ORG-ROOF-SYSTEM"],
+                "relationship_types": ["LOCATE"],
+                "rule_ids": [datum["rule_id"]],
+                "depends_on": datum["dependency_lineage"],
+            },
+            "historical_claim": datum["historical_claim"],
+            "historical_claim_upgrade": datum["historical_claim_upgrade"],
+        }
+    )
     bindings_doc = {
         "version": "V001",
         "task": "T-017",
@@ -379,11 +408,19 @@ def compile_assets() -> dict:
         ],
     ]
     relations.extend(
+        [
+            {"relationship_id": "LOCATE-DESIGN-PLAN-DATUM", "relation_type": "LOCATE", "source_node": "ORG-COLUMN-GRID", "target_node": "ORG-BUILDING", "parameter_refs": [datum["rule_id"], "PM-008", "PM-009", "PM-010", "PM-011", "PM-012"]},
+            {"relationship_id": "LOCATE-SHARED-RIDGE-DATUM", "relation_type": "LOCATE", "source_node": "ORG-ROOF-SYSTEM", "target_node": "ORG-COLUMN-GRID", "parameter_refs": [datum["rule_id"], "FR-007", "MOD-002"]},
+        ]
+    )
+    relations.extend(
         {"relationship_id": f"BELONG-RUNTIME-{index:04d}", "relation_type": "BELONG", "source_node": "P3_3:" + item["legacy_instance_id"], "target_node": item["graph_parent_node_id"]}
         for index, item in enumerate(accounting, 1)
     )
+    datum_relation_ids = {"LOCATE-DESIGN-PLAN-DATUM", "LOCATE-SHARED-RIDGE-DATUM"}
     for relation in relations:
-        relation.update({"directionality": "DIRECTED", "provenance": [str(PATHS["relationships"].relative_to(ROOT)), "T-017 deterministic organization rule"], "parameter_refs": [], "evidence_status": "ORGANIZATIONAL_ONLY", "replaceability": True, "historical_claim": False})
+        is_datum_relation = relation["relationship_id"] in datum_relation_ids
+        relation.update({"directionality": "DIRECTED", "provenance": [str(PATHS["relationships"].relative_to(ROOT)), str(PATHS["design_datum_rule"].relative_to(ROOT)) if is_datum_relation else "T-017 deterministic organization rule"], "parameter_refs": relation.get("parameter_refs", []), "evidence_status": "PROJECT_RULE" if is_datum_relation else "ORGANIZATIONAL_ONLY", "replaceability": True, "historical_claim": False})
     graph = {
         "version": "V001",
         "task": "T-017",
@@ -401,7 +438,7 @@ def compile_assets() -> dict:
         "nodes": nodes,
         "relationships": relations,
         "unresolved_relationships": [{"scope": "45-degree corner, mortise, hidden-angle beam and unevidenced connections", "status": "UNKNOWN_BLOCKED", "reason": "No approved evidence; no sixth relationship type and no invented connector."}],
-        "generation_contract": {"authoritative_placement_sources": ["formal parameter bindings", "P3.2 relationship foundation"], "p2_numeric_world_transforms": "PROHIBITED", "manual_baked_placement": False},
+        "generation_contract": {"authoritative_placement_sources": ["formal parameter bindings", "P3.2 relationship foundation", str(PATHS["design_datum_rule"].relative_to(ROOT))], "local_coordinate_rules_without_canonical_authority": "PROHIBITED", "p2_numeric_world_transforms": "PROHIBITED", "manual_baked_placement": False},
     }
     return {"baseline": baseline, "bindings": bindings_doc, "accounting": accounting_doc, "graph": graph}
 

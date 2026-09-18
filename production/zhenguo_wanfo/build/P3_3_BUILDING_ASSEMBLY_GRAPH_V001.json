@@ -10,8 +10,10 @@
   "generation_contract": {
     "authoritative_placement_sources": [
       "formal parameter bindings",
-      "P3.2 relationship foundation"
+      "P3.2 relationship foundation",
+      "production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json"
     ],
+    "local_coordinate_rules_without_canonical_authority": "PROHIBITED",
     "manual_baked_placement": false,
     "p2_numeric_world_transforms": "PROHIBITED"
   },
@@ -11710,6 +11712,47 @@
       "replaceability": true,
       "source_node": "ORG-ROOF-SYSTEM",
       "target_node": "ORG-BUILDING"
+    },
+    {
+      "directionality": "DIRECTED",
+      "evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "parameter_refs": [
+        "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001",
+        "PM-008",
+        "PM-009",
+        "PM-010",
+        "PM-011",
+        "PM-012"
+      ],
+      "provenance": [
+        "production/zhenguo_wanfo/assembly/P3_2_RELATIONSHIP_TYPES_V001.json",
+        "production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json"
+      ],
+      "relation_type": "LOCATE",
+      "relationship_id": "LOCATE-DESIGN-PLAN-DATUM",
+      "replaceability": true,
+      "source_node": "ORG-COLUMN-GRID",
+      "target_node": "ORG-BUILDING"
+    },
+    {
+      "directionality": "DIRECTED",
+      "evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "parameter_refs": [
+        "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001",
+        "FR-007",
+        "MOD-002"
+      ],
+      "provenance": [
+        "production/zhenguo_wanfo/assembly/P3_2_RELATIONSHIP_TYPES_V001.json",
+        "production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json"
+      ],
+      "relation_type": "LOCATE",
+      "relationship_id": "LOCATE-SHARED-RIDGE-DATUM",
+      "replaceability": true,
+      "source_node": "ORG-ROOF-SYSTEM",
+      "target_node": "ORG-COLUMN-GRID"
     },
     {
       "directionality": "DIRECTED",
