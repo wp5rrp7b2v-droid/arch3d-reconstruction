@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R115",
+  "state_revision": "R116",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_FV_DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / RZ_LOCKED / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_FV_SEMANTIC_VALIDITY_CHECK_COMPLETE / FV-B_NOT_LOCKABLE_AS_SOURCE_DERIVED / PRODUCT_OWNER_POLICY_DECISION_REQUIRED / RZ_LOCKED / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": true,
-  "blocker": "FV design complete. Recommended candidate FV-B is not yet locked. Implementation remains frozen until Product Owner approves/amends/rejects the FV bridge.",
+  "blocker": "FV semantic validity check found insufficient source-semantic support for ROOF-004/005/006 -> exact Frame Tier Z mapping. FV-B may only proceed as an explicit non-historical PROJECT_RULE convention, or Frame Tier Z must remain semantic-only. CP-03 remains blocked.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,7 +62,7 @@
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 FV DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED / RZ LOCKED / IMPLEMENTATION FROZEN",
+    "status": "V002 FV SEMANTIC VALIDITY CHECK COMPLETE / POLICY DECISION REQUIRED / RZ LOCKED / IMPLEMENTATION FROZEN",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
     "execution_authorization_decision_id": "D-061",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "FV DESIGN COMPLETE / AWAITING PRODUCT OWNER",
+    "formal_review_status": "FV-B SOURCE-SEMANTIC SUPPORT INSUFFICIENT / DO NOT LOCK YET",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +115,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "PRE-AUTHORITY-CORRECTION / RZ_LOCKED / FV_DESIGN_COMPLETE",
+      "current_stage": "PRE-AUTHORITY-CORRECTION / RZ_LOCKED / FV_POLICY_DECISION_REQUIRED",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -302,7 +302,18 @@
         "FRAME_TIER_03_Z": 3916.8
       },
       "key_boundary": "DG-113 generative-use for Frame = 0; ROOF-004/005/006 remain Roof-owned and are consumed only through an explicit project-level one-way engineering bridge.",
-      "locked": false
+      "locked": false,
+      "semantic_validity_check": {
+        "status": "COMPLETE",
+        "artifact": "docs/evidence/t018_v002/P3_3_T018_V002_FV_SEMANTIC_VALIDITY_CHECK_V001.md",
+        "verdict_source_derived": "FAIL_NOT_SUPPORTED",
+        "verdict_project_convention": "POSSIBLE_WITH_EXPLICIT_POLICY_DECISION",
+        "reason": "ROOF-004/005/006 are source-supported roof/purlin elevation design candidates. P3.1 listing them as CTL-FRAME known inputs is inherited P2 engineering provenance, not independent proof of the cumulative Frame Tier mapping. P3.2 tier datums are semantic only and explicitly do not create historical elevation.",
+        "paths": [
+          "FV_PROJECT_RULE_NON_HISTORICAL_CONVENTION",
+          "FV_SEMANTIC_ONLY_NO_EXACT_Z"
+        ]
+      }
     }
   },
   "proposed_next_task": {
@@ -371,10 +382,10 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 RZ LOCKED D-063 / FV DESIGN COMPLETE / PO REVIEW REQUIRED / STAGE B HOLD",
+      "status": "V002 RZ LOCKED D-063 / FV SEMANTIC CHECK COMPLETE / POLICY DECISION REQUIRED / STAGE B HOLD",
       "github_pr_number": 6,
       "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-      "note": "FV-B recommended but not locked. No implementation/publication. CP-03 remains stopped; PR #6 HOLD."
+      "note": "FV-B cannot be locked as source-derived authority. Explicit project-convention decision or semantic-only downgrade required. No implementation/publication; CP-03 STOP; PR #6 HOLD."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -430,9 +441,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "FV FRAME VERTICAL PLACEMENT BRIDGE DESIGN COMPLETE / FV-B RECOMMENDED",
-    "evidence": "docs/evidence/t018_v002/P3_3_T018_V002_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_DESIGN_V001.md",
-    "decision_required": "Approve, amend, or reject FV-B. Not locked yet."
+    "result": "FV SEMANTIC VALIDITY CHECK COMPLETE / SOURCE-DERIVED CLAIM FAIL / PROJECT-CONVENTION PATH POSSIBLE",
+    "evidence": "docs/evidence/t018_v002/P3_3_T018_V002_FV_SEMANTIC_VALIDITY_CHECK_V001.md",
+    "decision_required": "Choose FV_PROJECT_RULE or FV_SEMANTIC_ONLY."
   },
   "daily_closing_audit": {
     "date": "2026-09-17",
@@ -442,13 +453,13 @@
     "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
     "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
   },
-  "next_action": "Product Owner reviews FV-B. If approved, create and lock the FV sub-contract. No implementation/publication, CP-03 restart, Blender/Actions, or PR #6 work before that approval.",
+  "next_action": "Product Owner chooses between: (A) explicitly approve FV-B as a non-historical project reconstruction convention; or (B) keep Frame Tier exact Z unresolved and revise CP-03 representation/acceptance for semantic-only control. Do not lock or implement FV before this policy decision.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v058",
+    "visualization_version": "v059",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R115 / FV DESIGN COMPLETE / PO REVIEW REQUIRED"
+    "refresh_status": "CURRENT / R116 / FV SEMANTIC VALIDITY CHECK COMPLETE / POLICY DECISION REQUIRED"
   },
   "superseded_prs": [
     {
