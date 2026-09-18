@@ -256,3 +256,15 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Outcome C：NOT SUPPORTED BY CURRENT EVIDENCE（no need yet to reopen P3.0/P3.1/P3.2 or escalate V003）。
 - Confirmed closure gaps：Frame vertical placement；exact roof-Z closure；roof runtime control topology；downstream proxy/control anchoring。
 - No Rule creation / no Stage B restart / no PR #6 work until bounded completion package is designed and approved。
+
+
+#### Bounded Control Placement Completion Package｜DESIGN COMPLETE / D-062
+
+- Outcome B remains valid。
+- Four closure specifications complete：Placement Authority Closure Matrix；Cross-System Dependency DAG；Control Topology Map；Impact/Non-Impact Contract。
+- Proposed authority completions：RZ Roof-Z cumulative closure；FV Frame Vertical Placement bridge。
+- No new historical dimensions；P3.0/P3.1/P3.2 remain protected；365 accounting unchanged；PURLIN 7/7 DEFERRED；T-020 shared-ridge X/Y unchanged。
+- RT topology / BA technical anchors are specification work only and do not create new authority。
+- Implementation：FROZEN。
+- CP-03/04/05：NOT AUTHORIZED TO RESUME。
+- PR #6：HOLD / UNTOUCHED。
