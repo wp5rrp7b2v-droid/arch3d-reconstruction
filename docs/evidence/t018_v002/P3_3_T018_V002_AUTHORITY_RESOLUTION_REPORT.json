@@ -1,0 +1,2154 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "P3_3_T018_V002_AUTHORITY_RESOLUTION_REPORT",
+  "version": "V001",
+  "task": "T-018",
+  "stage": "A_RULE_BASELINE",
+  "checkpoint": "CP-02_AUTHORITY_RESOLVER",
+  "source_main_sha": "91724e45115477d6a59ff1c41ba4184fffea9647",
+  "generated_date": "2026-09-18",
+  "artifact_role": "DERIVED_RESOLUTION_REPORT_ONLY",
+  "authority_status": "NOT_AN_AUTHORITY_SOURCE",
+  "result": "PASS",
+  "resolver_rules": [
+    "Canonical parameter binding metadata is primary for authority classification.",
+    "VALIDATION_REFERENCE => VALIDATION_ONLY.",
+    "DO_NOT_LOCK / NOT_USED_IN_P2_2 => PROHIBITED_FOR_PLACEMENT.",
+    "METADATA_ONLY => PROHIBITED_FOR_PLACEMENT.",
+    "DIRECT_GEOMETRY_INPUT / DERIVED_GEOMETRY_RULE / APPROVED_REPLACEABLE_RULE / PROJECT_COORDINATE_AUTHORITY => GENERATIVE_AUTHORITY only within canonical target/evidence boundaries.",
+    "Graph parameter_refs are traceability associations, never authority by themselves.",
+    "PM-003..PM-007 are prohibited from reconstructed-design placement by T-020 policy.",
+    "P2 numeric world transforms are prohibited from placement.",
+    "Local synthetic mirror/origin/ridge rules are prohibited.",
+    "T-020 is the project-model X/Y center + shared-ridge coordinate authority; Z continues from Z-007 plus approved vertical rules.",
+    "ROOF_PURLIN_S_03 is prohibited; unrelated FRAME_*_S_03 control labels are not a second ridge identity."
+  ],
+  "summary": {
+    "total_bindings": 87,
+    "counts": {
+      "VALIDATION_ONLY": 41,
+      "GENERATIVE_AUTHORITY": 42,
+      "PROHIBITED_FOR_PLACEMENT": 4
+    },
+    "unresolved_count": 0,
+    "p2_world_transform_authoritative_usage": 0
+  },
+  "explicit_guards": {
+    "PM_003_to_PM_007": "VALIDATION_ONLY",
+    "PM_005_graph_traceability_ref": "NON_AUTHORITATIVE",
+    "DG_114": "PROHIBITED_FOR_PLACEMENT",
+    "Z_006": "PROHIBITED_FOR_PLACEMENT",
+    "Z_006_RC_01": "GENERATIVE_AUTHORITY / APPROVED_REPLACEABLE_RULE",
+    "HIS_002": "PROHIBITED_FOR_PLACEMENT / METADATA_ONLY",
+    "COLUMN_GRID_Y_MIRROR_RULE": "PROHIBITED"
+  },
+  "entries": [
+    {
+      "parameter_id": "DEF-001",
+      "parameter_key": "bracket_inward_outward_vertical_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DEF-002",
+      "parameter_key": "bracket_inward_outward_parallel_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DEF-003",
+      "parameter_key": "bracket_settlement_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DEF-004",
+      "parameter_key": "roof_purlin_relative_settlement_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DEF-005",
+      "parameter_key": "purlin_inward_outward_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DEF-006",
+      "parameter_key": "purlin_roll_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DEF-007",
+      "parameter_key": "max_six_chuanfu_deflection_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_DEFORMATION_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_deformation",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-COMPARISON-ONLY-DEFORMATION"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-001",
+      "parameter_key": "column_head_puzuo_type",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "BASE_TOPOLOGY",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PLUS_SUPPORT",
+      "time_layer": "observed_current_topology",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-002",
+      "parameter_key": "intercolumn_puzuo_type",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "BASE_TOPOLOGY",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PLUS_SUPPORT",
+      "time_layer": "observed_current_topology",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-101",
+      "parameter_key": "column_ludou_top_width_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-102",
+      "parameter_key": "column_ludou_bottom_width_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-103",
+      "parameter_key": "column_ludou_top_depth_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-104",
+      "parameter_key": "column_ludou_bottom_depth_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-105",
+      "parameter_key": "bottom_long_kai_dou_top_width_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-106",
+      "parameter_key": "bottom_long_kai_dou_bottom_width_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-107",
+      "parameter_key": "single_long_kai_dou_top_width_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-108",
+      "parameter_key": "cross_dou_top_width_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-109",
+      "parameter_key": "cross_dou_top_depth_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-110",
+      "parameter_key": "first_second_jump_total_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-111",
+      "parameter_key": "third_fourth_jump_total_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-112",
+      "parameter_key": "lower_ang_run_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-113",
+      "parameter_key": "lower_ang_rise_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "DG-114",
+      "parameter_key": "small_dou_unified_design_rule",
+      "resolution": "PROHIBITED_FOR_PLACEMENT",
+      "reason": "DO_NOT_LOCK / NOT_USED",
+      "dependency_role": "NOT_USED_IN_P2_2",
+      "production_use": "DO_NOT_LOCK",
+      "classification": "UNKNOWN",
+      "source_layer": "A_BRIDGE_UNRESOLVED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BRACKET-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY"
+        ]
+      },
+      "value_is_null": true
+    },
+    {
+      "parameter_id": "FR-001",
+      "parameter_key": "frame_depth_1_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "FR-002",
+      "parameter_key": "frame_depth_2_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "FR-003",
+      "parameter_key": "frame_depth_3_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "FR-004",
+      "parameter_key": "frame_depth_1_design_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "FR-005",
+      "parameter_key": "frame_depth_2_design_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "FR-006",
+      "parameter_key": "frame_depth_3_design_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "FR-007",
+      "parameter_key": "roof_horizontal_sequence_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "HIS-001",
+      "parameter_key": "repair_events_confirmed",
+      "resolution": "PROHIBITED_FOR_PLACEMENT",
+      "reason": "metadata-only; preserve as evidence metadata only",
+      "dependency_role": "METADATA_ONLY",
+      "production_use": "HISTORICAL_TIMELINE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "historical_events",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-EVIDENCE-METADATA"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "HIS-002",
+      "parameter_key": "component_level_963_originality",
+      "resolution": "PROHIBITED_FOR_PLACEMENT",
+      "reason": "metadata-only; preserve as evidence metadata only",
+      "dependency_role": "METADATA_ONLY",
+      "production_use": "PER_COMPONENT_METADATA_REQUIRED",
+      "classification": "UNKNOWN",
+      "source_layer": "DIRECT_GAP",
+      "time_layer": "component_history",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-EVIDENCE-METADATA"
+        ]
+      },
+      "value_is_null": true
+    },
+    {
+      "parameter_id": "MOD-001",
+      "parameter_key": "yingzao_chi_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "MOD-002",
+      "parameter_key": "fen_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "MOD-003",
+      "parameter_key": "single_cai_width_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "MOD-004",
+      "parameter_key": "single_cai_thickness_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "MOD-005",
+      "parameter_key": "full_cai_height_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "MOD-006",
+      "parameter_key": "full_cai_height_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_SYSTEM",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-BUILDING"
+        ],
+        "relationship_types": [],
+        "rule_ids": [
+          "RULE-MODULAR-SYSTEM"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "OUT-001",
+      "parameter_key": "gable_projection_east_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "OUT-002",
+      "parameter_key": "gable_projection_west_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "OUT-003",
+      "parameter_key": "gable_projection_design_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "OUT-004",
+      "parameter_key": "rafter_head_to_column_center_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "PROVISIONAL_REFERENCE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "A_BRIDGE_VERIFIED",
+      "time_layer": "observed_as_measured",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "OUT-005",
+      "parameter_key": "rafter_head_to_liaoyanfang_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "PROVISIONAL_REFERENCE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "A_BRIDGE_VERIFIED",
+      "time_layer": "observed_as_measured",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "OUT-006",
+      "parameter_key": "bracket_outjump_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "PROVISIONAL_REFERENCE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "A_BRIDGE_VERIFIED",
+      "time_layer": "observed_as_measured",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-OUTLINE"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-001",
+      "parameter_key": "bay_count_front",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "BASE_TOPOLOGY",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_current_topology",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-002",
+      "parameter_key": "bay_count_depth",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "BASE_TOPOLOGY",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_current_topology",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-003",
+      "parameter_key": "front_center_bay_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-004",
+      "parameter_key": "depth_center_bay_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-005",
+      "parameter_key": "side_bay_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-006",
+      "parameter_key": "overall_width_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-007",
+      "parameter_key": "overall_depth_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-008",
+      "parameter_key": "front_center_bay_design_chi",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-009",
+      "parameter_key": "depth_center_bay_design_chi",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-010",
+      "parameter_key": "side_bay_design_chi",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-011",
+      "parameter_key": "overall_width_design_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-012",
+      "parameter_key": "overall_depth_design_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-013",
+      "parameter_key": "perimeter_column_count",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "BASE_TOPOLOGY",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_current_topology",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "PM-014",
+      "parameter_key": "interior_column_count",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "BASE_TOPOLOGY",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_current_topology",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID"
+        ],
+        "relationship_types": [
+          "LOCATE",
+          "REPEAT"
+        ],
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "RF-001",
+      "parameter_key": "frame_system",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "BASE_TOPOLOGY",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_current_topology",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "RF-002",
+      "parameter_key": "lower_six_chuanfu_width_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "RF-003",
+      "parameter_key": "lower_six_chuanfu_tenon_thickness_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "RF-004",
+      "parameter_key": "lower_six_chuanfu_max_thickness_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "RF-005",
+      "parameter_key": "upper_six_chuanfu_width_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "RF-006",
+      "parameter_key": "upper_six_chuanfu_tenon_thickness_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "RF-007",
+      "parameter_key": "upper_six_chuanfu_max_thickness_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "BELONG"
+        ],
+        "rule_ids": [
+          "RULE-FRAME-SEMANTICS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-001",
+      "parameter_key": "rise_interval_A_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-002",
+      "parameter_key": "rise_interval_B_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-003",
+      "parameter_key": "rise_interval_C_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-004",
+      "parameter_key": "rise_interval_A_design_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-005",
+      "parameter_key": "rise_interval_B_design_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-006",
+      "parameter_key": "rise_interval_C_design_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-007",
+      "parameter_key": "eave_to_lower_purlin_rise_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-008",
+      "parameter_key": "lower_to_upper_purlin_rise_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-009",
+      "parameter_key": "upper_to_ridge_purlin_rise_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-010",
+      "parameter_key": "total_roof_rise_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "classification": "REASONABLE_COMPLETION",
+      "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+      "time_layer": "reconstructed_963_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-011",
+      "parameter_key": "total_roof_rise_candidate_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "classification": "REASONABLE_COMPLETION",
+      "source_layer": "REPORT_INFERRED_HIGH_CAUTION",
+      "time_layer": "reconstructed_963_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-012",
+      "parameter_key": "upper_purlin_drop_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "ROOF-013",
+      "parameter_key": "lower_purlin_additional_drop_fen",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "DEFAULT_DESIGN_LOGIC",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_design_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "Z-001",
+      "parameter_key": "column_diameter_observed_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "Z-002",
+      "parameter_key": "column_diameter_design_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_963_CANDIDATE",
+      "classification": "HIGH_CONFIDENCE_INFERENCE",
+      "source_layer": "REPORT_INFERRED",
+      "time_layer": "reconstructed_963_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "Z-003",
+      "parameter_key": "corner_column_rise_valid_range_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "Z-004",
+      "parameter_key": "corner_column_rise_mean_mm",
+      "resolution": "VALIDATION_ONLY",
+      "reason": "dependency_role=VALIDATION_REFERENCE",
+      "dependency_role": "VALIDATION_REFERENCE",
+      "production_use": "OBSERVED_REFERENCE",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured",
+      "replaceable": false,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "Z-005",
+      "parameter_key": "corner_column_rise_design_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "classification": "REASONABLE_COMPLETION",
+      "source_layer": "REPORT_INFERRED_GUESS",
+      "time_layer": "reconstructed_963_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "Z-006",
+      "parameter_key": "column_height_963_design_mm",
+      "resolution": "PROHIBITED_FOR_PLACEMENT",
+      "reason": "DO_NOT_LOCK / NOT_USED",
+      "dependency_role": "DIRECT_GEOMETRY_INPUT",
+      "production_use": "DO_NOT_LOCK",
+      "classification": "UNKNOWN",
+      "source_layer": "UNKNOWN",
+      "time_layer": "reconstructed_963_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "value_is_null": true
+    },
+    {
+      "parameter_id": "Z-007",
+      "parameter_key": "global_z_datum",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "DERIVED_GEOMETRY_RULE",
+      "production_use": "PROJECT_COORDINATE_RULE",
+      "classification": "REASONABLE_COMPLETION",
+      "source_layer": "PROJECT_RULE",
+      "time_layer": "project_model_datum",
+      "replaceable": true,
+      "binding_targets": {
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "Z-006-RC-01",
+      "parameter_key": "column_height_963_design_mm",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "APPROVED_REPLACEABLE_RULE",
+      "production_use": "DEFAULT_REPLACEABLE_CANDIDATE",
+      "classification": "REASONABLE_COMPLETION",
+      "source_layer": "APPROVED_OVERRIDE",
+      "time_layer": "reconstructed_963_candidate",
+      "replaceable": true,
+      "binding_targets": {
+        "depends_on": [
+          "MOD-006"
+        ],
+        "formula": "11 * MOD-006",
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-FRAME-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-MAJOR-ELEVATIONS"
+        ]
+      },
+      "value_is_null": false
+    },
+    {
+      "parameter_id": "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001",
+      "parameter_key": "reconstructed_design_plan_and_shared_ridge_datum",
+      "resolution": "GENERATIVE_AUTHORITY",
+      "reason": "within canonical binding_targets and evidence/time-layer boundary only",
+      "dependency_role": "PROJECT_COORDINATE_AUTHORITY",
+      "production_use": "RECONSTRUCTED_DESIGN_COORDINATE_DATUM_AUTHORITY",
+      "classification": "PROJECT_ENGINEERING_RULE",
+      "source_layer": "PROJECT_RULE",
+      "time_layer": "project_model_datum",
+      "replaceable": true,
+      "binding_targets": {
+        "depends_on": [
+          "FR-007",
+          "MOD-002"
+        ],
+        "graph_node_ids": [
+          "ORG-COLUMN-GRID",
+          "ORG-ROOF-SYSTEM"
+        ],
+        "relationship_types": [
+          "LOCATE"
+        ],
+        "rule_ids": [
+          "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001"
+        ]
+      },
+      "value_is_null": false
+    }
+  ],
+  "unresolved": [],
+  "conclusion": "All canonical bindings resolve deterministically: 42 GENERATIVE_AUTHORITY, 41 VALIDATION_ONLY, 4 PROHIBITED_FOR_PLACEMENT, 0 UNRESOLVED. CP-02 PASS."
+}
