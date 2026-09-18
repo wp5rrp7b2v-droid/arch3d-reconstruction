@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R112",
+  "state_revision": "R113",
   "last_updated": "2026-09-18",
   "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_BOUNDED_COMPLETION_DESIGN_COMPLETE / PRODUCT_OWNER_DECISION_REQUIRED / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
   "phase": {
@@ -17,12 +17,12 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 ARCHITECTURE CLOSURE REVIEW COMPLETE",
+    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 BOUNDED COMPLETION DESIGN COMPLETE",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / CLOSURE REVIEW OUTCOME B / IMPLEMENTATION FROZEN"
+      "P3.3": "DOD LOCKED / D-047 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / CLOSURE REVIEW OUTCOME B / BOUNDED COMPLETION DESIGN COMPLETE D-062 / IMPLEMENTATION FROZEN"
     }
   },
   "decision_required": true,
@@ -54,9 +54,9 @@
       "day_1_register": "COMPLETE / 2026-09-16",
       "day_2_register": "COMPLETE / 2026-09-17",
       "required_daily_update_through": "2026-09-20",
-      "day_3_register": "IN PROGRESS / 2026-09-18 / T-018 V002 Stage A authorized D-060 / CP-01+CP-02 active / Stage B locked / PR #6 HOLD"
+      "day_3_register": "IN PROGRESS / 2026-09-18 / T-018 V002 closure review Outcome B + bounded completion design complete D-062 / implementation frozen / PR #6 HOLD"
     },
-    "active_window_note": "T-018 V002 Stage A is ACTIVE under D-060. Scope limited to CP-01/CP-02 read-only rule-baseline work. PR #3 superseded/read-only; PR #6 HOLD; no Blender/Actions/365 runtime."
+    "active_window_note": "T-018 V002 bounded completion design is COMPLETE under D-062. Implementation remains frozen; Stage B STOP/HOLD; PR #3 superseded/read-only; PR #6 HOLD/untouched; no Blender/Actions/365 runtime."
   },
   "current_task": {
     "id": "T-018",
@@ -307,10 +307,10 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 STAGE B ACTIVE / D-061 / CP-03+CP-04+CP-05 AUTHORIZED / STAGE C LOCKED",
+      "status": "V002 BOUNDED COMPLETION DESIGN COMPLETE / D-062 / PRODUCT OWNER DECISION REQUIRED / IMPLEMENTATION FROZEN",
       "github_pr_number": 6,
       "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-      "note": "Stage A PASS. Stage B active. PR #3 superseded/read-only; PR #6 HOLD."
+      "note": "Stage B remains STOP/HOLD after CP-03 authority gap. Four bounded closure specs are complete. No Rule creation, CP-03 restart, Blender/Actions, Stage C, or PR #6 work is authorized."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -381,10 +381,10 @@
   "next_action": "Product Owner reviews the bounded completion design and decides whether to authorize design/locking of the two minimal authority completions. Do not create Rules, restart CP-03, or modify PR #6 before that decision.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v055",
+    "visualization_version": "v056",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R112 / T-018 V002 BOUNDED DESIGN COMPLETE / DECISION REQUIRED"
+    "refresh_status": "CURRENT / R113 / T-018 V002 BOUNDED DESIGN COMPLETE / DECISION REQUIRED"
   },
   "superseded_prs": [
     {
