@@ -349,3 +349,16 @@ No T-020 engineering work has started。
 - PR #6：HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE。
 - Next executable scope after separate authorization：Stage A only (CP-01 + CP-02)。
 - Engineering status：NOT STARTED / NOT AUTHORIZED。
+
+
+---
+
+# T-018 V002 Stage A Entry｜2026-09-18
+
+- Decision：D-060。
+- Authorized scope：CP-01 Upstream Compatibility Audit + CP-02 Authority Resolver only。
+- Preliminary read-only checks：365/365 across 11 families；P3.2 relation vocabulary exact 5 types；PM-003～007 validation-only；PM-008～012 reconstructed-design candidates；T-020 RIDGE_Y=0 / N03 sole shared ridge / no S03；7/7 PURLIN DEFERRED。
+- Stage A formal outputs/review：PENDING。
+- Stage B：LOCKED。
+- PR #3：SUPERSEDED / READ-ONLY。
+- PR #6：HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE。

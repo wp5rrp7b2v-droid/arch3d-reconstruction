@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R105",
+  "state_revision": "R106",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_CONTRACT_LOCKED / EXECUTION_NOT_AUTHORIZED / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_STAGE_A_ACTIVE / CP01_CP02_AUTHORIZED / STAGE_B_LOCKED / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 CONTRACT LOCKED",
+    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 STAGE A ACTIVE",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 CONTRACT LOCKED D-059 / EXECUTION NOT AUTHORIZED"
+      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / STAGE A AUTHORIZED D-060"
     }
   },
-  "decision_required": true,
-  "blocker": "T-018 V002 Rebaseline contract is approved and locked under D-059. Stage A engineering execution is not yet authorized. PR #3 remains superseded/read-only and PR #6 remains HOLD.",
+  "decision_required": false,
+  "blocker": "NONE at Stage A entry. CP-01/CP-02 formal audit outputs and review are pending. Stage B remains locked. PR #3 remains superseded/read-only; PR #6 remains HOLD with no patch, Actions rerun or merge.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -54,25 +54,25 @@
       "day_1_register": "COMPLETE / 2026-09-16",
       "day_2_register": "COMPLETE / 2026-09-17",
       "required_daily_update_through": "2026-09-20",
-      "day_3_register": "IN PROGRESS / 2026-09-18 / T-018 V002 contract approved D-059 / execution not authorized / PR #6 HOLD"
+      "day_3_register": "IN PROGRESS / 2026-09-18 / T-018 V002 Stage A authorized D-060 / CP-01+CP-02 active / Stage B locked / PR #6 HOLD"
     },
-    "active_window_note": "T-020 remains PASS/CLOSED/D-058. T-018 V002 Rebaseline is CONTRACT LOCKED / D-059 / EXECUTION NOT AUTHORIZED. PR #3 superseded/read-only; PR #6 HOLD."
+    "active_window_note": "T-018 V002 Stage A is ACTIVE under D-060. Scope limited to CP-01/CP-02 read-only rule-baseline work. PR #3 superseded/read-only; PR #6 HOLD; no Blender/Actions/365 runtime."
   },
   "current_task": {
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 CONTRACT LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT AUTHORIZED",
+    "status": "V002 STAGE A ACTIVE / CP-01 + CP-02 AUTHORIZED / STAGE B LOCKED",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
-    "execution_authorization_decision_id": null,
+    "execution_authorization_decision_id": "D-060",
     "cloud_mode_classification": "CLOUD_EXECUTABLE / D-048 EQUIVALENT HEADLESS EXECUTION",
     "think_level": "HIGH",
     "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
     "primary_executor": "Codex Cloud",
     "blender_executor": "GitHub Actions Hosted Runner",
     "blender_version": "4.5.13 linux-x64",
-    "execution_authorized": false,
+    "execution_authorized": true,
     "github_pr_number": 6,
     "github_visible_head_branch": "codex/-t-018",
     "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "V002 DESIGN APPROVED / ENGINEERING NOT STARTED",
+    "formal_review_status": "STAGE A IN PROGRESS / FORMAL PASS NOT YET DETERMINED",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +115,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "PRE-STAGE-A / CONTRACT LOCKED / EXECUTION NOT AUTHORIZED",
+      "current_stage": "A_RULE_BASELINE / ACTIVE / CP-01 + CP-02 AUTHORIZED",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -124,6 +124,38 @@
       "execution_authorization_decision_id": "D-052",
       "status": "SUPERSEDED FOR V002 / HISTORICAL ONLY",
       "note": "D-052 authorized V001 execution only and does not authorize V002."
+    },
+    "execution_authorization_scope": "STAGE_A_ONLY / CP-01_UPSTREAM_COMPATIBILITY_AUDIT + CP-02_AUTHORITY_RESOLVER",
+    "stage_b_authorized": false,
+    "stage_a": {
+      "status": "ACTIVE",
+      "authorization_decision_id": "D-060",
+      "authorized_checkpoints": [
+        "CP-01_UPSTREAM_COMPATIBILITY_AUDIT",
+        "CP-02_AUTHORITY_RESOLVER"
+      ],
+      "execution_boundary": "READ-ONLY UPSTREAM AUDIT + DERIVED AUTHORITY RESOLUTION ONLY",
+      "prohibited": [
+        "STAGE_B",
+        "BLENDER",
+        "ACTIONS_RERUN",
+        "365_RUNTIME_EXPANSION",
+        "MUTATION",
+        "PR6_PATCH",
+        "MERGE"
+      ],
+      "formal_outputs": [
+        "P3_3_T018_V002_UPSTREAM_COMPATIBILITY_AUDIT.json",
+        "P3_3_T018_V002_AUTHORITY_RESOLUTION_REPORT.json"
+      ],
+      "preliminary_read_only_findings": {
+        "accounting": "365/365 across 11 families confirmed",
+        "relationship_vocabulary": "SUPPORT / CONNECT / LOCATE / REPEAT / BELONG confirmed",
+        "observed_design_boundary": "PM-003..007 validation-only confirmed; PM-008..012 reconstructed-design candidates confirmed",
+        "t020_datum": "RIDGE_Y=0 / N03 sole shared ridge / no S03 confirmed",
+        "purlin": "7/7 DEFERRED confirmed",
+        "note": "These are preliminary read-only checks only; Stage A PASS requires formal CP-01/CP-02 outputs and review."
+      }
     }
   },
   "proposed_next_task": {
@@ -192,10 +224,10 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 CONTRACT LOCKED / D-059 / EXECUTION NOT AUTHORIZED",
+      "status": "V002 STAGE A ACTIVE / D-060 / CP-01 + CP-02 AUTHORIZED / STAGE B LOCKED",
       "github_pr_number": 6,
       "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-      "note": "PR #3 superseded/read-only. PR #6 HOLD. D-052 is V001 historical authorization only; V002 requires new explicit execution authorization."
+      "note": "PR #3 superseded/read-only; PR #6 HOLD. Stage A is read-only rule-baseline work only."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -245,15 +277,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-059",
+    "id": "D-060",
     "date": "2026-09-18",
-    "decision": "Product Owner approved and locked T-018 V002 Rebaseline. V002 supersedes the V001 implementation design/contract for future execution. Four management stages and nine technical checkpoints are locked. Engineering execution remains separately unauthorized; D-052 does not carry forward to V002."
+    "decision": "Product Owner explicitly authorized entry into T-018 V002 Stage A only. Authorized scope is CP-01 Upstream Compatibility Audit plus CP-02 Authority Resolver. Stage B and all Blender/365/mutation work remain unauthorized."
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "T-018 V002 REBASELINE DESIGN / PRODUCT OWNER APPROVED / CONTRACT LOCKED",
-    "evidence": "V002 contract locks single-authority consumption, one geometry calculation before Blender, independent invariant validation, critical skeleton first article before 365 expansion, capability-regression protection, dual mutation, and no downstream patch-up.",
-    "decision_required": "Explicit authorization to start Stage A only."
+    "result": "T-018 V002 STAGE A STARTED / READ-ONLY AUDIT IN PROGRESS",
+    "evidence": "Initial read-only checks on canonical main confirm 365/365 accounting, exact five P3.2 relation types, PM-003..007 validation-only classification, PM-008..012 design candidates, T-020 shared-ridge datum, and 7/7 PURLIN DEFERRED. Formal CP-01/CP-02 output review remains pending.",
+    "decision_required": "None unless Stage A exposes a canonical contradiction or missing authority."
   },
   "daily_closing_audit": {
     "date": "2026-09-17",
@@ -263,13 +295,13 @@
     "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
     "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
   },
-  "next_action": "Await Product Owner explicit authorization to start T-018 V002 Stage A. Once authorized, execute CP-01 Upstream Compatibility Audit and CP-02 Authority Resolver only; do not proceed to Stage B without Stage A PASS.",
+  "next_action": "Complete T-018 V002 Stage A CP-01 and CP-02 formal read-only audit. Determine whether any canonical contradiction or unresolved authority blocks Stage B. Do not modify PR #6 or start Stage B.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v049",
+    "visualization_version": "v050",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R105 / T-018 V002 CONTRACT LOCKED / EXECUTION NOT AUTHORIZED"
+    "refresh_status": "CURRENT / R106 / T-018 V002 STAGE A ACTIVE / STAGE B LOCKED"
   },
   "superseded_prs": [
     {
