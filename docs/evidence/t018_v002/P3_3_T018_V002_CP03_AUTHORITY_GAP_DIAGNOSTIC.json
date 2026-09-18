@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "P3_3_T018_V002_CP03_AUTHORITY_GAP_DIAGNOSTIC",
+  "version": "V001",
+  "task": "T-018",
+  "stage": "B_CRITICAL_SKELETON_FIRST_ARTICLE",
+  "checkpoint": "CP-03_BUILDING_CONTROL_MODEL",
+  "generated_date": "2026-09-18",
+  "source_main_sha": "6aae7d16cc59dc860a1bc74cf36a6e729db65c22",
+  "status": "STOP",
+  "stop_code": "FRAME_TIER_VERTICAL_AUTHORITY_GAP",
+  "finding": {
+    "resolved_domains": {
+      "plan_grid": "RESOLVED by PM-008/009/010 + PM-011/012 + MOD-001 + T-020 X/Y datum",
+      "column_base_and_height": "RESOLVED by Z-007 + Z-006-RC-01",
+      "roof_plan_chain": "RESOLVED by T-020 RIDGE_Y=0 + FR-007 + MOD-002",
+      "roof_vertical_chain": "RESOLVED by T-020 vertical authority = Z-007 + Z-006-RC-01 + ROOF-007/008/009",
+      "gable_projection": "RESOLVED by OUT-003 + MOD-002",
+      "purlin_identity": "RESOLVED: N00/N01/N02/N03(shared ridge)/S02/S01/S00; no ROOF_PURLIN_S_03"
+    },
+    "unresolved_domain": "Vertical placement of FRAME_TIER_N/S_01..03 and related FRAME_POST_*_LOW/UP controls.",
+    "canonical_evidence": [
+      {
+        "parameter_ids": [
+          "FR-004",
+          "FR-005",
+          "FR-006"
+        ],
+        "authority": "GENERATIVE_AUTHORITY",
+        "binding_target": "ORG-FRAME-SYSTEM",
+        "contribution": "horizontal/depth control only; no canonical vertical-combination formula recorded"
+      },
+      {
+        "parameter_ids": [
+          "ROOF-004",
+          "ROOF-005",
+          "ROOF-006"
+        ],
+        "authority": "GENERATIVE_AUTHORITY",
+        "binding_target": "ORG-ROOF-SYSTEM",
+        "contribution": "roof elevation design rules; not authorized for ORG-FRAME-SYSTEM placement under V002 resolver target-boundary rule"
+      },
+      {
+        "parameter_ids": [
+          "DG-113"
+        ],
+        "authority": "GENERATIVE_AUTHORITY",
+        "binding_target": "ORG-BRACKET-SYSTEM",
+        "contribution": "lower-ang rise; not authorized for frame or roof placement under V002 target-boundary rule"
+      },
+      {
+        "parameter_ids": [
+          "Z-006-RC-01"
+        ],
+        "authority": "GENERATIVE_AUTHORITY",
+        "binding_target": "ORG-COLUMN-GRID + ORG-FRAME-SYSTEM",
+        "contribution": "column-height baseline only; does not by itself resolve internal frame-tier Z coordinates"
+      }
+    ],
+    "legacy_implementation_evidence": {
+      "source": "production/zhenguo_wanfo/scripts/generate_p2_2_structural_skeleton_v001.py",
+      "formula_summary": "legacy frame_tier_z combined Z-006-RC-01 + DG-113 + ROOF-004/005/006; legacy roof_z also used DG-113 as base offset",
+      "status": "DIAGNOSTIC_ONLY / NOT AUTHORITY",
+      "incompatibility": [
+        "DG-113 is canonically scoped to ORG-BRACKET-SYSTEM, so V002 cannot reuse it as frame/roof placement authority.",
+        "ROOF-004/005/006 are canonically scoped to ORG-ROOF-SYSTEM, so V002 cannot silently reuse them as ORG-FRAME-SYSTEM vertical authority.",
+        "T-020 explicitly states ridge Z continues from Z-007 + Z-006-RC-01 + ROOF-007/008/009, so the legacy DG-113 roof-base offset cannot be inherited silently."
+      ]
+    }
+  },
+  "stage_a_impact": {
+    "previous_stage_a_result": "PASS",
+    "invalidated_claim": "stage_b_critical_authority_gaps = 0",
+    "retained_valid_results": [
+      "365/365 accounting",
+      "authority classifications themselves",
+      "observed/design isolation",
+      "T-020 X/Y shared-ridge authority",
+      "PURLIN 7/7 DEFERRED",
+      "P2 numeric world transform prohibition"
+    ],
+    "required_action": "REOPEN Stage A authority coverage only; do not discard CP-01/CP-02 classification results."
+  },
+  "contract_response": {
+    "hard_stop_triggered": "UNAUTHORIZED_AUTHORITY_USE would be required to continue",
+    "required_behavior": "STOP CP-03; no CP-04/CP-05 execution; return to authority layer; no Blender; no PR #6 patch."
+  },
+  "blockers": [
+    "No canonical cross-system rule currently authorizes exact frame-tier vertical placement for Stage B critical skeleton."
+  ],
+  "conclusion": "Stage B cannot proceed safely without formalizing or otherwise resolving frame-tier vertical authority. Continuing would recreate the exact class of hidden local rule that V002 was designed to prevent."
+}
