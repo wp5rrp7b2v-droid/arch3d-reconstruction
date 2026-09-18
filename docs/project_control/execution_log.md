@@ -463,3 +463,16 @@ No T-020 engineering work has started。
 - Fallback：FV-D semantic-only downgrade。
 - Candidate values：FRAME_BASE 3534.3；Tier01 5783.4；Tier02 4528.8；Tier03 3916.8 mm。
 - FV-B is NOT LOCKED；implementation remains frozen；CP-03 STOP；PR #6 HOLD。
+
+
+---
+
+# T-018 FV Semantic Validity Check｜2026-09-18
+
+- Evidence：`docs/evidence/t018_v002/P3_3_T018_V002_FV_SEMANTIC_VALIDITY_CHECK_V001.md`。
+- Verdict：FV-B cannot be locked as source-derived Frame authority。
+- ROOF-004/005/006 are source-supported roof/purlin elevation design candidates；the exact cumulative mapping into Frame Tier Z is not directly established by source evidence。
+- P3.1 CTL-FRAME known-input list is inherited P2 engineering provenance, not independent semantic proof。
+- P3.2 Frame tier datums are semantic engineering controls and explicitly do not create historical elevations。
+- Allowed next paths only：FV_PROJECT_RULE non-historical project convention；or FV_SEMANTIC_ONLY no exact Z。
+- Implementation frozen；CP-03 STOP；PR #6 HOLD。
