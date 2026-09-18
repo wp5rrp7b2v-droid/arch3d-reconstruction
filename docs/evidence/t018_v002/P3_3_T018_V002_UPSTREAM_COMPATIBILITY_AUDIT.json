@@ -1,0 +1,229 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "P3_3_T018_V002_UPSTREAM_COMPATIBILITY_AUDIT",
+  "version": "V001",
+  "task": "T-018",
+  "stage": "A_RULE_BASELINE",
+  "checkpoint": "CP-01_UPSTREAM_COMPATIBILITY_AUDIT",
+  "source_main_sha": "2a97027c89240eeff4e352d354aa55a5b8daf4e0",
+  "generated_date": "2026-09-18",
+  "artifact_role": "DERIVED_AUDIT_EVIDENCE_ONLY",
+  "authority_status": "NOT_AN_AUTHORITY_SOURCE",
+  "result": "PASS",
+  "protected_upstream_baseline": {
+    "status": "PROTECTED_FOR_T018_V002",
+    "scope": [
+      "P3.0 canonical identity/schema",
+      "P3.1 approved Component Masters",
+      "P3.2 relationship/interface foundation",
+      "T-017 building input/accounting/Assembly Graph/parameter bindings",
+      "T-019 7/7 PURLIN correction",
+      "T-020 reconstructed-design datum/shared-ridge rule",
+      "P3.3 DoD V001"
+    ]
+  },
+  "checks": {
+    "accounting": {
+      "pass": true,
+      "instance_count": 365,
+      "family_count": 11,
+      "family_counts": {
+        "BRACKET_ARM": 88,
+        "COLUMN": 12,
+        "BRACKET_CONTACT": 88,
+        "PRIMARY_FRAME": 8,
+        "FRAME_CONTROL": 54,
+        "GABLE_CONTROL": 4,
+        "GRID_CONTROL": 8,
+        "PURLIN": 7,
+        "RAFTER": 36,
+        "ROOF_ENVELOPE": 6,
+        "FRAME_SUPPORT": 54
+      }
+    },
+    "p3_1_approved_masters": {
+      "pass": true,
+      "approved_master_count": 6
+    },
+    "relationship_vocabulary": {
+      "pass": true,
+      "actual": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ]
+    },
+    "observed_design_boundary": {
+      "pass": true,
+      "observed_reference_only": [
+        "PM-003",
+        "PM-004",
+        "PM-005",
+        "PM-006",
+        "PM-007"
+      ],
+      "reconstructed_design_candidates": [
+        "PM-008",
+        "PM-009",
+        "PM-010",
+        "PM-011",
+        "PM-012"
+      ],
+      "policy": "VALIDATION_REFERENCE_ONLY / PROHIBITED_AS_RECONSTRUCTED_DESIGN_PLACEMENT_SOURCE"
+    },
+    "shared_ridge": {
+      "pass": true,
+      "ridge_y_mm": 0,
+      "shared_ridge_terminal": "ROOF_PURLIN_N_03",
+      "prohibited_identity": "ROOF_PURLIN_S_03",
+      "y_positions_mm": {
+        "ROOF_PURLIN_N_00": -6808.5,
+        "ROOF_PURLIN_N_01": -4972.5,
+        "ROOF_PURLIN_N_02": -3213,
+        "ROOF_PURLIN_N_03": 0,
+        "ROOF_PURLIN_S_02": 3213,
+        "ROOF_PURLIN_S_01": 4972.5,
+        "ROOF_PURLIN_S_00": 6808.5
+      }
+    },
+    "purlin_disposition": {
+      "pass": true,
+      "count": 7,
+      "all_disposition": "DEFERRED"
+    },
+    "p2_world_transform_policy": {
+      "pass": true,
+      "authoritative_generation_usage_count": 0
+    },
+    "design_consistency": {
+      "pass": true,
+      "checks": [
+        {
+          "id": "PLAN_WIDTH",
+          "formula": "(14.5 + 2*11.5) * 306",
+          "computed_mm": 11475,
+          "canonical_mm": 11475
+        },
+        {
+          "id": "PLAN_DEPTH",
+          "formula": "(12 + 2*11.5) * 306",
+          "computed_mm": 10710,
+          "canonical_mm": 10710
+        },
+        {
+          "id": "ROOF_HORIZONTAL_SEGMENTS",
+          "computed_mm": [
+            1836,
+            1759.5,
+            3213
+          ],
+          "canonical_mm": [
+            1836,
+            1759.5,
+            3213
+          ]
+        },
+        {
+          "id": "ROOF_HALF_RUN",
+          "computed_mm": 6808.5,
+          "canonical_mm": 6808.5
+        },
+        {
+          "id": "ROOF_VERTICAL_CHAIN",
+          "computed_fen": 231,
+          "canonical_fen": 231
+        },
+        {
+          "id": "ROOF_TOTAL_RISE",
+          "computed_mm": 3534.3,
+          "canonical_mm": 3534.3
+        },
+        {
+          "id": "COLUMN_HEIGHT_OVERRIDE",
+          "computed_mm": 3534.3,
+          "canonical_mm": 3534.3
+        },
+        {
+          "id": "GABLE_PROJECTION_DESIGN",
+          "computed_mm": 1407.6,
+          "observed_validation_mm": [
+            1385,
+            1411
+          ]
+        }
+      ]
+    },
+    "stage_b_authority_coverage": {
+      "pass": true,
+      "plan_grid": [
+        "PM-001",
+        "PM-002",
+        "PM-008",
+        "PM-009",
+        "PM-010",
+        "PM-011",
+        "PM-012",
+        "PM-013",
+        "PM-014",
+        "MOD-001",
+        "Z-007",
+        "Z-006-RC-01"
+      ],
+      "frame_controls": [
+        "RF-001",
+        "FR-004",
+        "FR-005",
+        "FR-006",
+        "FR-007",
+        "Z-007",
+        "Z-006-RC-01"
+      ],
+      "roof_controls": [
+        "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001",
+        "FR-007",
+        "MOD-002",
+        "ROOF-007",
+        "ROOF-008",
+        "ROOF-009",
+        "Z-007",
+        "Z-006-RC-01"
+      ],
+      "gable_controls": [
+        "OUT-003",
+        "MOD-002",
+        "PM-011",
+        "PM-012",
+        "RULE-P3-3-RECONSTRUCTED-DESIGN-DATUM-001"
+      ]
+    }
+  },
+  "non_blocking_findings": [
+    {
+      "id": "LEGACY_ASSOCIATION_REF_PM005",
+      "severity": "NON_BLOCKING_GUARD_REQUIRED",
+      "fact": "ORG-COLUMN-GRID contains one node-level parameter_refs association to PM-005.",
+      "interpretation": "Traceability only; no placement_rule and no relationship authority. CP-02 classifies PM-005 as VALIDATION_ONLY."
+    },
+    {
+      "id": "DO_NOT_LOCK_VALUES",
+      "severity": "EXPECTED_BOUNDARY",
+      "parameters": [
+        "DG-114",
+        "Z-006"
+      ],
+      "interpretation": "Not placement authority. Z-006-RC-01 is the approved replaceable column-height rule."
+    },
+    {
+      "id": "HIS002_METADATA_GAP",
+      "severity": "EXPECTED_BOUNDARY",
+      "parameters": [
+        "HIS-002"
+      ],
+      "interpretation": "Metadata-only/unknown and cannot drive geometry."
+    }
+  ],
+  "blockers": [],
+  "conclusion": "No unresolved canonical contradiction or Stage-B-critical authority gap found. CP-01 PASS."
+}
