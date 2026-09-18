@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R107",
+  "state_revision": "R108",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_STAGE_A_PASS / STAGE_B_AWAITING_AUTHORIZATION / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_STAGE_B_ACTIVE / CP03_CP04_CP05_AUTHORIZED / STAGE_C_LOCKED / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 STAGE A PASS",
+    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 STAGE B ACTIVE",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / STAGE A PASS / STAGE B NOT AUTHORIZED"
+      "P3.3": "DOD LOCKED / D-047 / PIPELINE D-048 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / STAGE A PASS / STAGE B AUTHORIZED D-061"
     }
   },
-  "decision_required": true,
-  "blocker": "NO TECHNICAL BLOCKER. T-018 V002 Stage A PASS. Stage B requires separate Product Owner authorization.",
+  "decision_required": false,
+  "blocker": "NONE at Stage B entry. CP-03/CP-04/CP-05 are authorized. Stage C remains locked.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,17 +62,17 @@
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 STAGE A PASS / CP-01 PASS / CP-02 PASS / STAGE B AWAITING AUTHORIZATION",
+    "status": "V002 STAGE B ACTIVE / CP-03 + CP-04 + CP-05 AUTHORIZED / STAGE C LOCKED",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
-    "execution_authorization_decision_id": "D-060",
+    "execution_authorization_decision_id": "D-061",
     "cloud_mode_classification": "CLOUD_EXECUTABLE / D-048 EQUIVALENT HEADLESS EXECUTION",
     "think_level": "HIGH",
     "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
     "primary_executor": "Codex Cloud",
     "blender_executor": "GitHub Actions Hosted Runner",
     "blender_version": "4.5.13 linux-x64",
-    "execution_authorized": false,
+    "execution_authorized": true,
     "github_pr_number": 6,
     "github_visible_head_branch": "codex/-t-018",
     "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "STAGE A FORMAL REVIEW PASS",
+    "formal_review_status": "STAGE B IN PROGRESS / PASS NOT YET DETERMINED",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +115,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "A_RULE_BASELINE / PASS / STAGE B LOCKED",
+      "current_stage": "B_CRITICAL_SKELETON_FIRST_ARTICLE / ACTIVE / CP-03+CP-04+CP-05 AUTHORIZED",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -125,8 +125,8 @@
       "status": "SUPERSEDED FOR V002 / HISTORICAL ONLY",
       "note": "D-052 authorized V001 execution only and does not authorize V002."
     },
-    "execution_authorization_scope": "D-060 COMPLETED / STAGE A ONLY",
-    "stage_b_authorized": false,
+    "execution_authorization_scope": "STAGE_B_ONLY / CP-03_BUILDING_CONTROL_MODEL + CP-04_INDEPENDENT_INVARIANT_VALIDATOR + CP-05_CRITICAL_SKELETON_FIRST_ARTICLE",
+    "stage_b_authorized": true,
     "stage_a": {
       "status": "PASS",
       "authorization_decision_id": "D-060",
@@ -151,6 +151,23 @@
       },
       "non_blocking_guard": "ORG-COLUMN-GRID retains one PM-005 node-level traceability ref; graph parameter_refs are non-authoritative and PM-005 remains VALIDATION_ONLY.",
       "stage_b_readiness": "READY / AWAITING PRODUCT OWNER AUTHORIZATION"
+    },
+    "stage_c_authorized": false,
+    "stage_b": {
+      "status": "ACTIVE",
+      "authorization_decision_id": "D-061",
+      "authorized_checkpoints": [
+        "CP-03_BUILDING_CONTROL_MODEL",
+        "CP-04_INDEPENDENT_INVARIANT_VALIDATOR",
+        "CP-05_CRITICAL_SKELETON_FIRST_ARTICLE"
+      ],
+      "required_outputs": [
+        "P3_3_T018_V002_BUILDING_CONTROL_MODEL.json",
+        "P3_3_T018_V002_INDEPENDENT_INVARIANT_VALIDATION.json",
+        "Critical Skeleton First Article evidence including PLAN/FRONT/SIDE/AXON review"
+      ],
+      "execution_boundary": "Use Stage A Protected Upstream Baseline only. No 365 full runtime, no mutation, no Stage C.",
+      "pr_policy": "PR #6 remains HOLD and is not the Stage B implementation baseline unless a later publication decision explicitly changes that."
     }
   },
   "proposed_next_task": {
@@ -219,10 +236,10 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 STAGE A PASS / CP-01+CP-02 PASS / STAGE B NOT AUTHORIZED",
+      "status": "V002 STAGE B ACTIVE / D-061 / CP-03+CP-04+CP-05 AUTHORIZED / STAGE C LOCKED",
       "github_pr_number": 6,
       "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-      "note": "Protected Upstream Baseline established for V002. PR #3 superseded/read-only; PR #6 remains HOLD and untouched."
+      "note": "Stage A PASS. Stage B active. PR #3 superseded/read-only; PR #6 HOLD."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -272,9 +289,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-060",
+    "id": "D-061",
     "date": "2026-09-18",
-    "decision": "Product Owner explicitly authorized entry into T-018 V002 Stage A only. Authorized scope is CP-01 Upstream Compatibility Audit plus CP-02 Authority Resolver. Stage B and all Blender/365/mutation work remain unauthorized."
+    "decision": "Product Owner authorized T-018 V002 Stage B only: CP-03 Building Control Model, CP-04 Independent Invariant Validator, CP-05 Critical Skeleton First Article. Stage C remains unauthorized."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -290,13 +307,13 @@
     "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
     "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
   },
-  "next_action": "Product Owner decides whether to authorize T-018 V002 Stage B. If authorized, execute CP-03 Building Control Model, CP-04 Independent Invariant Validator, and CP-05 Critical Skeleton First Article only.",
+  "next_action": "Execute Stage B CP-03, CP-04, CP-05 only. If any Stage A authority contradiction or placement ambiguity appears, STOP and return to the owning layer. Do not start Stage C.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v051",
+    "visualization_version": "v052",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R107 / T-018 V002 STAGE A PASS / STAGE B AWAITING AUTHORIZATION"
+    "refresh_status": "CURRENT / R108 / T-018 V002 STAGE B ACTIVE / STAGE C LOCKED"
   },
   "superseded_prs": [
     {
