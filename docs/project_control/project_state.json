@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R113",
+  "state_revision": "R114",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_BOUNDED_COMPLETION_DESIGN_COMPLETE / PRODUCT_OWNER_DECISION_REQUIRED / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_RZ_CONTRACT_LOCKED / EXECUTION_NOT_AUTHORIZED / FV_NEXT_DESIGN / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 BOUNDED COMPLETION DESIGN COMPLETE",
+    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 RZ CONTRACT LOCKED",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / CLOSURE REVIEW OUTCOME B / BOUNDED COMPLETION DESIGN COMPLETE D-062 / IMPLEMENTATION FROZEN"
+      "P3.3": "DOD LOCKED / D-047 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / OUTCOME B / BOUNDED DESIGN D-062 / RZ LOCKED D-063 / IMPLEMENTATION FROZEN"
     }
   },
   "decision_required": true,
-  "blocker": "NO IMPLEMENTATION BLOCKER HAS BEEN RESOLVED YET. Design package is complete. Two bounded authority completions are proposed (Roof Z closure + Frame Vertical bridge); no Rule creation is authorized.",
+  "blocker": "RZ design is locked under D-063 but not implemented. FV Frame Vertical Placement bridge remains unresolved. CP-03 cannot restart until FV is also closed and RZ is eventually published/validated.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,7 +62,7 @@
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 BOUNDED COMPLETION DESIGN COMPLETE / D-062 / PRODUCT OWNER DECISION REQUIRED / IMPLEMENTATION FROZEN",
+    "status": "V002 RZ CONTRACT LOCKED / D-063 / EXECUTION NOT AUTHORIZED / FV NEXT",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
     "execution_authorization_decision_id": "D-061",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "BOUNDED COMPLETION PACKAGE DESIGN COMPLETE",
+    "formal_review_status": "RZ DESIGN LOCKED / FV DESIGN PENDING",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +115,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "BOUNDED_COMPLETION_PACKAGE_DESIGN_COMPLETE / PRE-AUTHORITY-DECISION",
+      "current_stage": "PRE-AUTHORITY-CORRECTION / RZ_LOCKED / FV_PENDING",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -125,7 +125,7 @@
       "status": "SUPERSEDED FOR V002 / HISTORICAL ONLY",
       "note": "D-052 authorized V001 execution only and does not authorize V002."
     },
-    "execution_authorization_scope": "NONE / DESIGN COMPLETE ONLY",
+    "execution_authorization_scope": "NONE / RZ DESIGN LOCKED ONLY",
     "stage_b_authorized": false,
     "stage_a": {
       "status": "REOPENED / AUTHORITY COVERAGE ISSUE",
@@ -239,6 +239,46 @@
         "v003_required": false,
         "upstream_reopen_required": false
       }
+    },
+    "rz": {
+      "status": "CONTRACT_LOCKED / PRODUCT_OWNER_APPROVED / EXECUTION_NOT_AUTHORIZED",
+      "decision_id": "D-063",
+      "contract": "docs/tasks/T-018_RZ_ROOF_Z_CUMULATIVE_CLOSURE_V001.md",
+      "formula": {
+        "Z_EAVE": "Z-007.datum + Z-006-RC-01",
+        "Z_LOWER": "Z_EAVE + ROOF-007 * MOD-002",
+        "Z_UPPER": "Z_LOWER + ROOF-008 * MOD-002",
+        "Z_RIDGE": "Z_UPPER + ROOF-009 * MOD-002"
+      },
+      "current_candidate_values_mm": {
+        "Z_EAVE": 3534.3,
+        "Z_LOWER": 4880.7,
+        "Z_UPPER": 5814,
+        "Z_RIDGE": 7068.6
+      },
+      "excluded": [
+        "DG-113",
+        "ROOF-004",
+        "ROOF-005",
+        "ROOF-006",
+        "ROOF-001",
+        "ROOF-002",
+        "ROOF-003",
+        "P2 world transforms",
+        "Blender-local re-derivation"
+      ],
+      "validation_only": [
+        "ROOF-010",
+        "ROOF-011"
+      ],
+      "protected": [
+        "T-020 Y coordinates",
+        "N03 sole shared ridge",
+        "7/7 PURLIN DEFERRED",
+        "365 identities/accounting",
+        "P3.2 vocabulary"
+      ],
+      "publication_authorized": false
     }
   },
   "proposed_next_task": {
@@ -307,10 +347,10 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 BOUNDED COMPLETION DESIGN COMPLETE / D-062 / PRODUCT OWNER DECISION REQUIRED / IMPLEMENTATION FROZEN",
+      "status": "V002 RZ LOCKED D-063 / FV PENDING / STAGE B HOLD",
       "github_pr_number": 6,
       "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-      "note": "Stage B remains STOP/HOLD after CP-03 authority gap. Four bounded closure specs are complete. No Rule creation, CP-03 restart, Blender/Actions, Stage C, or PR #6 work is authorized."
+      "note": "RZ design locked; no implementation/publication. CP-03 remains stopped; PR #6 HOLD."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -360,15 +400,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-061",
+    "id": "D-063",
     "date": "2026-09-18",
-    "decision": "Product Owner authorized T-018 V002 Stage B only: CP-03 Building Control Model, CP-04 Independent Invariant Validator, CP-05 Critical Skeleton First Article. Stage C remains unauthorized."
+    "decision": "Product Owner approved and locked T-018/RZ Roof Z Cumulative Closure V001 design. Execution/publication remains unauthorized."
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "T-018 V002 BOUNDED COMPLETION PACKAGE DESIGN COMPLETE / OUTCOME B REMAINS VALID",
-    "evidence": "docs/evidence/t018_v002/P3_3_T018_V002_CONTROL_PLACEMENT_AUTHORITY_COMPLETION_PACKAGE_V001.md",
-    "decision_required": "Approve or amend the proposed minimum authority-completion scope. Implementation remains frozen."
+    "result": "RZ DESIGN LOCKED / BOUNDED / NO NEW HISTORICAL DIMENSION",
+    "evidence": "docs/tasks/T-018_RZ_ROOF_Z_CUMULATIVE_CLOSURE_V001.md",
+    "decision_required": "Proceed to FV design or hold. RZ implementation is not authorized."
   },
   "daily_closing_audit": {
     "date": "2026-09-17",
@@ -378,13 +418,13 @@
     "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
     "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
   },
-  "next_action": "Product Owner reviews the bounded completion design and decides whether to authorize design/locking of the two minimal authority completions. Do not create Rules, restart CP-03, or modify PR #6 before that decision.",
+  "next_action": "Design and review FV Frame Vertical Placement bridge. Do not implement/publish RZ, restart CP-03, or modify PR #6 until separate authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v056",
+    "visualization_version": "v057",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R113 / T-018 V002 BOUNDED DESIGN COMPLETE / DECISION REQUIRED"
+    "refresh_status": "CURRENT / R114 / RZ LOCKED / FV NEXT / IMPLEMENTATION FROZEN"
   },
   "superseded_prs": [
     {
