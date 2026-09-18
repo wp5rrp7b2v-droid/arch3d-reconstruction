@@ -278,3 +278,12 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Excluded：DG-113；ROOF-004/005/006；ROOF-001/002/003；P2 transforms；Blender-local geometry rules。
 - Protected：T-020 Y positions；N03 sole ridge；7/7 PURLIN DEFERRED；365 identity/accounting；P3.2 vocabulary。
 - Publication / implementation：NOT AUTHORIZED。
+
+
+#### FV｜Frame Vertical Placement Bridge｜DESIGN COMPLETE / REVIEW REQUIRED
+
+- Recommended candidate：FV-B / no DG-113。
+- Inputs：Z-007 + Z-006-RC-01 + MOD-002 + ROOF-004/005/006。
+- Boundary：ROOF-004/005/006 remain Roof-owned; FV is a one-way project-level engineering bridge into FRAME_CONTROL only。
+- No new historical dimensions；no P3.0/P3.1/P3.2 reopen；no T-020 modification。
+- Status：NOT LOCKED / implementation frozen。
