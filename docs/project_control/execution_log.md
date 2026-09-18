@@ -437,3 +437,17 @@ No T-020 engineering work has started。
 - RT topology / BA technical anchors / impact contract are technical specifications, not new authority。
 - No new historical dimensions introduced；no P3.0/P3.1/P3.2 reopen；no V003 required by current evidence。
 - Implementation remains frozen；no Rule created；CP-03 not restarted；PR #6 untouched。
+
+
+---
+
+# T-018 RZ Contract Locked｜2026-09-18
+
+- Decision：D-063。
+- Contract：`docs/tasks/T-018_RZ_ROOF_Z_CUMULATIVE_CLOSURE_V001.md`。
+- Locked formula：Z_EAVE=D+H；Z_LOWER=Z_EAVE+ROOF-007×MOD-002；Z_UPPER=Z_LOWER+ROOF-008×MOD-002；Z_RIDGE=Z_UPPER+ROOF-009×MOD-002。
+- Current audit values：3534.3 / 4880.7 / 5814.0 / 7068.6 mm。
+- ROOF-010/011 validation-only；DG-113 and ROOF-004/005/006 excluded。
+- No new historical dimensions；T-020 Y/shared ridge unchanged；7/7 PURLIN remain DEFERRED。
+- Implementation/publication：NOT AUTHORIZED。
+- CP-03：STOP/HOLD；PR #6：HOLD/UNTOUCHED。
