@@ -161,8 +161,8 @@ Daily closing audit：`PASS`
 - RZ：D-063 design contract LOCKED / not published / not implemented
 - FV semantic validity：source-derived claim rejected
 - FV：D-064 / A = FV_PROJECT_RULE / non-historical project reconstruction convention / design contract LOCKED / not published / not implemented
-- Project State final close revision：R119
-- Dashboard final close version：v061
+- Project State final post-audit revision：R121
+- Dashboard final post-audit version：v062
 - T-018 final status：HOLD / NOT PASS / production direction not yet proven
 - P3.3 final status：ACTIVE / NOT PASS
 - CP-03：STOP / not resumed
