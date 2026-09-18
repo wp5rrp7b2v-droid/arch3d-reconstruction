@@ -229,20 +229,20 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Current status：PRODUCT OWNER APPROVED / CONTRACT LOCKED / NO ENGINEERING EXECUTION。
 
 
-#### Stage A｜规则基线｜PASS / D-060
+#### Stage A｜规则基线｜REOPENED / AUTHORITY COVERAGE ISSUE
 
 - CP-01 Upstream Compatibility Audit：PASS。
 - CP-02 Authority Resolver：PASS。
 - Required formal outputs：`P3_3_T018_V002_UPSTREAM_COMPATIBILITY_AUDIT.json`、`P3_3_T018_V002_AUTHORITY_RESOLUTION_REPORT.json`。
 - PASS requires：no unresolved canonical contradiction；no missing Stage-B authority；protected-input hashes captured；no unauthorized observed→placement authority；ChatGPT review PASS。
-- Stage A formal result：PASS；Protected Upstream Baseline established for T-018 V002。
+- Stage A classification/isolation checks remain PASS, but authority coverage is REOPENED after CP-03 exposed a missing frame-tier vertical authority.
 - Stage B：NOT AUTHORIZED / requires separate Product Owner authorization。
 
 
-#### Stage B｜关键骨架首件｜ACTIVE / D-061
+#### Stage B｜关键骨架首件｜STOP / HOLD / D-061
 
-- CP-03 Building Control Model：AUTHORIZED / IN PROGRESS。
-- CP-04 Independent Invariant Validator：AUTHORIZED / IN PROGRESS。
-- CP-05 Critical Skeleton First Article：AUTHORIZED / IN PROGRESS。
+- CP-03 Building Control Model：STOP / FRAME_TIER_VERTICAL_AUTHORITY_GAP。
+- CP-04 Independent Invariant Validator：NOT STARTED。
+- CP-05 Critical Skeleton First Article：NOT STARTED。
 - PASS requires：control model complete；independent invariants PASS；critical skeleton machine review PASS；PLAN/FRONT/SIDE/AXON actual visual review PASS；no structural/topological anomaly。
 - Stage C：LOCKED until Stage B formal PASS + separate Product Owner authorization。
