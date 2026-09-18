@@ -237,3 +237,12 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - PASS requires：no unresolved canonical contradiction；no missing Stage-B authority；protected-input hashes captured；no unauthorized observed→placement authority；ChatGPT review PASS。
 - Stage A formal result：PASS；Protected Upstream Baseline established for T-018 V002。
 - Stage B：NOT AUTHORIZED / requires separate Product Owner authorization。
+
+
+#### Stage B｜关键骨架首件｜ACTIVE / D-061
+
+- CP-03 Building Control Model：AUTHORIZED / IN PROGRESS。
+- CP-04 Independent Invariant Validator：AUTHORIZED / IN PROGRESS。
+- CP-05 Critical Skeleton First Article：AUTHORIZED / IN PROGRESS。
+- PASS requires：control model complete；independent invariants PASS；critical skeleton machine review PASS；PLAN/FRONT/SIDE/AXON actual visual review PASS；no structural/topological anomaly。
+- Stage C：LOCKED until Stage B formal PASS + separate Product Owner authorization。
