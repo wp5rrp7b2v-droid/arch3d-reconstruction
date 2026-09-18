@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R116",
+  "state_revision": "R117",
   "last_updated": "2026-09-18",
-  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_FV_SEMANTIC_VALIDITY_CHECK_COMPLETE / FV-B_NOT_LOCKABLE_AS_SOURCE_DERIVED / PRODUCT_OWNER_POLICY_DECISION_REQUIRED / RZ_LOCKED / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
+  "session_status": "WORKING / P3.3_ACTIVE / T-018_V002_RZ_AND_FV_CONTRACTS_LOCKED / MINIMAL_AUTHORITY_PUBLICATION_DECISION_REQUIRED / IMPLEMENTATION_FROZEN / CLOUD_MODE_ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 RZ CONTRACT LOCKED",
+    "status": "DOD LOCKED / T-020 CLOSED / T-018 V002 RZ+FV CONTRACTS LOCKED",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / OUTCOME B / BOUNDED DESIGN D-062 / RZ LOCKED D-063 / IMPLEMENTATION FROZEN"
+      "P3.3": "DOD LOCKED / D-047 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / OUTCOME B / BOUNDED DESIGN D-062 / RZ LOCKED D-063 / FV LOCKED D-064 / IMPLEMENTATION FROZEN"
     }
   },
   "decision_required": true,
-  "blocker": "FV semantic validity check found insufficient source-semantic support for ROOF-004/005/006 -> exact Frame Tier Z mapping. FV-B may only proceed as an explicit non-historical PROJECT_RULE convention, or Frame Tier Z must remain semantic-only. CP-03 remains blocked.",
+  "blocker": "RZ D-063 and FV D-064 are both design-locked, but neither has been published as machine-readable production authority. Stage A closure regression and CP-03 remain blocked until a separately authorized minimal authority publication package is executed and validated.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,7 +62,7 @@
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 FV SEMANTIC VALIDITY CHECK COMPLETE / POLICY DECISION REQUIRED / RZ LOCKED / IMPLEMENTATION FROZEN",
+    "status": "V002 RZ+FV CONTRACTS LOCKED / D-063+D-064 / EXECUTION NOT AUTHORIZED",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
     "execution_authorization_decision_id": "D-061",
@@ -94,7 +94,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "FV-B SOURCE-SEMANTIC SUPPORT INSUFFICIENT / DO NOT LOCK YET",
+    "formal_review_status": "RZ+FV DESIGN AUTHORITY LOCKED / PUBLICATION NOT AUTHORIZED",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +115,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "PRE-AUTHORITY-CORRECTION / RZ_LOCKED / FV_POLICY_DECISION_REQUIRED",
+      "current_stage": "PRE-AUTHORITY-PUBLICATION / RZ_LOCKED / FV_LOCKED",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -125,7 +125,7 @@
       "status": "SUPERSEDED FOR V002 / HISTORICAL ONLY",
       "note": "D-052 authorized V001 execution only and does not authorize V002."
     },
-    "execution_authorization_scope": "NONE / RZ DESIGN LOCKED ONLY",
+    "execution_authorization_scope": "NONE / RZ+FV DESIGN AUTHORITY LOCKED ONLY",
     "stage_b_authorized": false,
     "stage_a": {
       "status": "REOPENED / AUTHORITY COVERAGE ISSUE",
@@ -281,7 +281,7 @@
       "publication_authorized": false
     },
     "fv": {
-      "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / NOT_LOCKED",
+      "status": "CONTRACT_LOCKED / PRODUCT_OWNER_APPROVED / EXECUTION_NOT_AUTHORIZED",
       "design_artifact": "docs/evidence/t018_v002/P3_3_T018_V002_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_DESIGN_V001.md",
       "recommended_candidate": "FV-B_BOUNDed_ROOF_ELEVATION_BRIDGE_WITHOUT_DG-113",
       "rejected_candidates": [
@@ -302,7 +302,7 @@
         "FRAME_TIER_03_Z": 3916.8
       },
       "key_boundary": "DG-113 generative-use for Frame = 0; ROOF-004/005/006 remain Roof-owned and are consumed only through an explicit project-level one-way engineering bridge.",
-      "locked": false,
+      "locked": true,
       "semantic_validity_check": {
         "status": "COMPLETE",
         "artifact": "docs/evidence/t018_v002/P3_3_T018_V002_FV_SEMANTIC_VALIDITY_CHECK_V001.md",
@@ -313,7 +313,11 @@
           "FV_PROJECT_RULE_NON_HISTORICAL_CONVENTION",
           "FV_SEMANTIC_ONLY_NO_EXACT_Z"
         ]
-      }
+      },
+      "decision_id": "D-064",
+      "contract": "docs/tasks/T-018_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_V001.md",
+      "policy_classification": "NON_HISTORICAL_PROJECT_RECONSTRUCTION_CONVENTION",
+      "publication_authorized": false
     }
   },
   "proposed_next_task": {
@@ -382,10 +386,10 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 RZ LOCKED D-063 / FV SEMANTIC CHECK COMPLETE / POLICY DECISION REQUIRED / STAGE B HOLD",
+      "status": "V002 RZ LOCKED D-063 / FV LOCKED D-064 / AUTHORITY PUBLICATION PENDING / STAGE B HOLD",
       "github_pr_number": 6,
       "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-      "note": "FV-B cannot be locked as source-derived authority. Explicit project-convention decision or semantic-only downgrade required. No implementation/publication; CP-03 STOP; PR #6 HOLD."
+      "note": "RZ and FV design authority are locked. No production publication/implementation yet. CP-03 remains stopped; PR #6 HOLD."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -435,15 +439,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-063",
+    "id": "D-064",
     "date": "2026-09-18",
-    "decision": "Product Owner approved and locked T-018/RZ Roof Z Cumulative Closure V001 design. Execution/publication remains unauthorized."
+    "decision": "Product Owner selected A/FV_PROJECT_RULE and approved/locked FV-B as a non-historical, replaceable project reconstruction convention. Execution/publication remains unauthorized."
   },
   "latest_material_review": {
     "date": "2026-09-18",
-    "result": "FV SEMANTIC VALIDITY CHECK COMPLETE / SOURCE-DERIVED CLAIM FAIL / PROJECT-CONVENTION PATH POSSIBLE",
-    "evidence": "docs/evidence/t018_v002/P3_3_T018_V002_FV_SEMANTIC_VALIDITY_CHECK_V001.md",
-    "decision_required": "Choose FV_PROJECT_RULE or FV_SEMANTIC_ONLY."
+    "result": "RZ D-063 + FV D-064 BOTH LOCKED / MINIMAL AUTHORITY PUBLICATION PENDING",
+    "evidence": "docs/tasks/T-018_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_V001.md",
+    "decision_required": "Authorize or hold the minimal machine-readable authority publication package for RZ+FV."
   },
   "daily_closing_audit": {
     "date": "2026-09-17",
@@ -453,13 +457,13 @@
     "known_exception": "T-018 PR #3 remains open and is blocked by an upstream P3.3 roof-datum rule gap; proposed T-020 is not yet authorized",
     "cloud_sync_ledger": "ACTIVE / DAY 2 COMPLETE"
   },
-  "next_action": "Product Owner chooses between: (A) explicitly approve FV-B as a non-historical project reconstruction convention; or (B) keep Frame Tier exact Z unresolved and revise CP-03 representation/acceptance for semantic-only control. Do not lock or implement FV before this policy decision.",
+  "next_action": "Product Owner decides whether to authorize the minimal authority publication package for RZ + FV, followed by Stage-A authority-closure regression. Do not restart CP-03 or modify PR #6 before publication/validation passes.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v059",
+    "visualization_version": "v060",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R116 / FV SEMANTIC VALIDITY CHECK COMPLETE / POLICY DECISION REQUIRED"
+    "refresh_status": "CURRENT / R117 / RZ+FV LOCKED / PUBLICATION DECISION REQUIRED"
   },
   "superseded_prs": [
     {
