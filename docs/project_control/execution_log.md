@@ -490,3 +490,52 @@ No T-020 engineering work has started。
 - Current values：3534.3 / 5783.4 / 4528.8 / 3916.8 mm；not historical fact。
 - Publication / implementation：NOT AUTHORIZED。
 - CP-03：STOP/HOLD；PR #6：HOLD/UNTOUCHED。
+
+
+---
+
+# Daily Close 2026-09-18｜PASS WITH CAUTION
+
+- Detailed archive：`docs/project_control/DAILY_CLOSE_2026-09-18.md`。
+- Latest formal Product Owner decision：D-064。
+- New execution/publication authorization at close：NONE。
+- T-018 V002：HOLD / NOT PASS。
+- P3.3：ACTIVE / NOT PASS。
+- RZ D-063：DESIGN CONTRACT LOCKED / production publication not authorized / implementation not proven。
+- FV D-064：PROJECT_RULE DESIGN CONTRACT LOCKED / non-historical reconstruction convention / production publication not authorized / implementation not proven。
+- CP-03：STOP / not resumed。
+- CP-04 / CP-05：NOT STARTED。
+- Stage C：LOCKED。
+- PR #3：OPEN / SUPERSEDED / READ-ONLY / DO NOT MERGE / head `8693c13bf3f04b7e7f7d7d3f24552e1aac8d5750` / mergeable=false at close。
+- PR #6：OPEN / HOLD / DO NOT PATCH / DO NOT MERGE / head `65a63b011794dfe2af6a1f0be5ba497a52f23d5f` / mergeable=false at close。
+- No post-closure-review Blender run；no post-review Actions artifact；no 365 runtime expansion。
+
+## Carry-forward caution
+
+Today materially improved problem definition but did **not** prove the final correct production architecture.
+
+Do not reuse as current truth:
+
+- Stage A `stage_b_critical_authority_gaps=0`;
+- immediate post-T-020 `T-018 READY TO RESUME`;
+- PR #3 as active implementation;
+- PR #6 as V002-ready implementation;
+- legacy P2 Frame Tier formula as authority;
+- FV-B as source-derived Frame elevation;
+- RZ/FV design lock as technical validation;
+- Outcome B as proof no deeper gap exists;
+- any statement that V003 is definitely unnecessary.
+
+Current correct language:
+
+> Outcome B is the current bounded-review classification; current evidence does not require V003, but later closure regression may still escalate.
+
+> RZ/FV are controlled design/policy locks pending pre-publication readiness review, machine-readable publication authorization, authority-closure regression, and later CP-03 validation.
+
+## Next-session order
+
+1. Read latest main, `project_state.json`, and `DAILY_CLOSE_2026-09-18.md`.
+2. Recheck PR #3 / #6 status and heads.
+3. Perform bounded Pre-Publication Readiness Review only.
+4. Do not authorize publication by default.
+5. If wider ambiguity is exposed, STOP and reconsider Outcome B / V003 rather than forcing RZ/FV into production.
