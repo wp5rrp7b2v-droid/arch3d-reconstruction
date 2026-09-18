@@ -246,3 +246,13 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - CP-05 Critical Skeleton First Article：NOT STARTED。
 - PASS requires：control model complete；independent invariants PASS；critical skeleton machine review PASS；PLAN/FRONT/SIDE/AXON actual visual review PASS；no structural/topological anomaly。
 - Stage C：LOCKED until Stage B formal PASS + separate Product Owner authorization。
+
+
+#### T-018 V002 Architecture Closure Review｜COMPLETE / OUTCOME B
+
+- Review type：bounded architecture closure review；implementation frozen。
+- Outcome A：REJECTED（not a single isolated gap）。
+- Outcome B：SELECTED（finite same-layer closure gaps at control-placement seam）。
+- Outcome C：NOT SUPPORTED BY CURRENT EVIDENCE（no need yet to reopen P3.0/P3.1/P3.2 or escalate V003）。
+- Confirmed closure gaps：Frame vertical placement；exact roof-Z closure；roof runtime control topology；downstream proxy/control anchoring。
+- No Rule creation / no Stage B restart / no PR #6 work until bounded completion package is designed and approved。
