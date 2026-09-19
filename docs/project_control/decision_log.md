@@ -88,3 +88,6 @@
 
 
 | D-065 | 2026-09-19 | Product Owner 正式批准“构件登记 JSON → 自动生成 Excel”作为长期项目规则，并明确其治理逻辑与 Dashboard 相同：构件登记 JSON 是唯一正式事实源，Excel 是可重新生成的派生表格视图。正式建立 `P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json` 当前入口、版本化 Vxxx.json 快照、自动生成脚本、GitHub Actions workflow、CURRENT/Vxxx Excel 与同步 Manifest。禁止直接修改 Excel 来改变正式构件事实；任何数据变化必须先进入 JSON，再由自动链生成 Excel；CURRENT 与版本快照不一致、记录数不匹配或生成验证失败时必须 FAIL CLOSED。本决策只批准数据治理和派生同步机制，不授权 T-018、Blender 整殿执行、RZ/FV 发布、CP-03 重启、PR merge 或 P3.3 PASS。 | ACTIVE / RC-018 APPROVED / JSON CANONICAL + EXCEL DERIVED / T-018 HOLD |
+
+
+| D-066 | 2026-09-19 | Product Owner 正式批准并锁定 `P3.3｜真实构件驱动整殿重建｜Definition of Done / Implementation Plan V002`，以 V007 真实构件登记为当前事实基线，正式替代 D-047 / P3.3 DoD V001 作为当前 P3.3 实施路线。新路线固定为七阶段：①真实构件 Master 库；②构件变体与装配接口；③代表性组合验证；④整殿真实实例与拓扑；⑤整殿空间定位与标高规则；⑥确定性整殿生成；⑦整殿验收与 Gate Closure。旧 11/40/365 体系保留为历史工程基线/对照，不再作为真实构件生产真值；T-017 365 accounting 降为历史工程基线；T-020、RZ D-063、FV D-064 保留但推迟到 Stage 5 重新审查；T-018 V002 继续 HOLD，并在 Stage 6 前再决定 rebaseline 或 supersede。新增 Hard Fail：LEGACY_PROXY_AS_REAL_COMPONENT、REGISTRY_LAYER_DOUBLE_COUNT、UNDECLARED_PARAMETRIC_COMPLETION、MASTER_WITHOUT_EVIDENCE_BINDING、EXCEL_AS_CANONICAL_SOURCE。D-066 只锁定 P3.3 V002 实施计划，不授权 Codex 建模、新 T-###、Blender、T-018、RZ/FV 发布、CP-03、PR merge 或 P3.3 PASS。 | ACTIVE / P3.3 V002 LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT AUTHORIZED |
