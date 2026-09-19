@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R125",
+  "state_revision": "R126",
   "last_updated": "2026-09-19",
   "session_status": "P3.3 ACTIVE / T-018 V002 HOLD / V007 BUILD BASELINE + INSTANCE REGISTRY + EXCEL DERIVED SYNC ACTIVE / AUDIT STOP RULE ACTIVE / IMPLEMENTATION FROZEN / CLOUD_MODE_DAY4_IN_PROGRESS",
   "phase": {
@@ -484,9 +484,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-064",
-    "date": "2026-09-18",
-    "decision": "Product Owner selected A/FV_PROJECT_RULE and approved/locked FV-B as a non-historical, replaceable project reconstruction convention. Execution/publication remains unauthorized."
+    "id": "D-065",
+    "date": "2026-09-19",
+    "decision": "Product Owner approved RC-018: Component Registry JSON is canonical; Excel is an automatically regenerated derived view with fail-closed synchronization. This does not authorize T-018 execution."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -528,10 +528,10 @@
   "next_action": "Use V007 real-component build baseline to redesign Master completion order and whole-building assembly architecture. Component Excel now auto-derives from canonical registry JSON under RC-018. Do not resume T-018/RZ/FV/CP-03 execution by default.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v066",
+    "visualization_version": "v067",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R125 / V007 + RC-018 EXCEL SYNC PASS / T-018 HOLD"
+    "refresh_status": "CURRENT / R126 / V007 + RC-018 EXCEL SYNC PASS / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -612,6 +612,8 @@
     "excel_role": "DERIVED_VIEW",
     "manual_excel_fact_edits": "PROHIBITED",
     "fail_closed": true,
-    "t018_execution_impact": "NONE / T-018 remains HOLD"
+    "t018_execution_impact": "NONE / T-018 remains HOLD",
+    "project_state_revision": "R126",
+    "dashboard_version": "v067"
   }
 }
