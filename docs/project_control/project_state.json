@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R136",
+  "state_revision": "R137",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-021 READY FOR CORRECTED CLOUD RETRY / SHELL GIT REMOTE NOT A VALID CODEX-CLOUD GATE / V008 CURRENT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-021 EXECUTOR OVERRIDDEN TO CHATGPT DIRECT GITHUB / IMPLEMENTATION READY / V008 CURRENT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -63,11 +63,11 @@
     "id": "T-021",
     "engineering_id": "P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001",
     "name": "四椽栿 Master 首件生产",
-    "status": "READY FOR RETRY / CODEX CLOUD PLATFORM PR FLOW",
+    "status": "ACTIVE / EXECUTOR OVERRIDE APPROVED / IMPLEMENTATION READY",
     "task_contract": "docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md",
     "branch": "codex/t021-p3-3-four-chuanfu-master-first-article-v001",
     "pr_status": "NOT CREATED",
-    "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE / FIRST_ARTICLE_ONLY",
+    "execution_mode": "CHATGPT_DIRECT_GITHUB_EXECUTION / FIRST_ARTICLE_ONLY",
     "cloud_mode": "CLOUD_EXECUTABLE",
     "think_level": "MEDIUM DEFAULT",
     "blender_executor": "GitHub Actions headless / RC-017 / Blender 4.5.13",
@@ -81,7 +81,8 @@
     "engineering_changes": "NONE",
     "validation": "0/42",
     "retry": "T-021 Retry 01 / same task ID",
-    "next_retry": "Continue T-021 in the repo-selected Codex Cloud environment; implement files first, then use Codex Cloud/Create PR platform flow. If platform PR creation itself fails, STOP with that platform-level failure."
+    "next_retry": "Continue T-021 in the repo-selected Codex Cloud environment; implement files first, then use Codex Cloud/Create PR platform flow. If platform PR creation itself fails, STOP with that platform-level failure.",
+    "primary_engineering_executor": "ChatGPT direct GitHub execution"
   },
   "proposed_next_task": {
     "id": "P3.3_FINAL",
@@ -202,9 +203,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-070",
+    "id": "D-071",
     "date": "2026-09-19",
-    "decision": "Product Owner instructed creation of the Codex task. T-021 four-chuanfu Master First Article contract is created and locked; engineering execution is not yet authorized."
+    "decision": "Product Owner approved switching T-021 engineering execution from Codex Cloud to ChatGPT direct GitHub execution. GitHub Actions remains the Blender 4.5.13 executor; all T-021 technical and acceptance boundaries remain unchanged."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -243,13 +244,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Retry T-021 in Codex Cloud without shell remote/gh-auth precheck. Codex should implement params/generator/validator/workflow; Blender 4.5.13 runs only in GitHub Actions. After task diff is ready, use the Codex Cloud product PR flow. STOP only if product-level PR creation fails or GitHub Actions cannot obtain/run Blender 4.5.13.",
+  "next_action": "Execute T-021 directly through GitHub: create the task branch, implement params/semantic/generator/validator/workflow/review package plumbing, open PR, then let GitHub Actions run Blender 4.5.13. Do not merge without Product Owner approval.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v077",
+    "visualization_version": "v078",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R136 / T-021 CORRECTED CLOUD RETRY READY / V008 CURRENT / T-018 HOLD"
+    "refresh_status": "CURRENT / R137 / T-021 CHATGPT DIRECT GITHUB EXECUTION READY / V008 CURRENT / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -448,7 +449,7 @@
       "codex_first_article_authorized": false
     },
     "t021": {
-      "status": "READY FOR CORRECTED CLOUD RETRY",
+      "status": "ACTIVE / CHATGPT DIRECT GITHUB EXECUTION",
       "decision_id": "D-070",
       "task_contract": "docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md",
       "target_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
@@ -456,7 +457,8 @@
       "review_png_count": 6,
       "branch": "codex/t021-p3-3-four-chuanfu-master-first-article-v001",
       "stop_review": "docs/production/zhenguo_wanfo/P3_3_T021_STOP_ENVIRONMENT_REVIEW_V001.md",
-      "execution_interpretation_correction": "git remote -v / gh auth status are not mandatory Cloud capability gates; use Codex Cloud repo/environment + product PR flow."
+      "execution_interpretation_correction": "git remote -v / gh auth status are not mandatory Cloud capability gates; use Codex Cloud repo/environment + product PR flow.",
+      "executor_override_decision": "D-071"
     }
   }
 }
