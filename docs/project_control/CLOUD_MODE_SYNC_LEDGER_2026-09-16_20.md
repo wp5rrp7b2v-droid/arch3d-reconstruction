@@ -395,3 +395,18 @@ Therefore separately check：
 - New T-###：NONE
 - T-018：HOLD
 - Next：full V007 Master Coverage / Disposition Matrix
+
+
+### P3.3 Stage 1 coverage matrix / V008 proposal
+
+- Date：2026-09-19
+- Project State：R130
+- Dashboard：v071
+- Current V007 registry：472 records / 49 registered object types
+- Coverage matrix：COMPLETE
+- V008 targeted patch：DESIGN COMPLETE / APPROVAL REQUIRED
+- Proposed append：33 records
+- Expected V008：505 registry records
+- Pending source binding：板瓦 / 勾头 / 滴水 / 博风板 / 悬鱼 / 惹草 / 生头木
+- New T-###：NONE
+- T-018：HOLD
