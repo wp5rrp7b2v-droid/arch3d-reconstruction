@@ -513,3 +513,20 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Branch：`codex/t021-p3-3-four-chuanfu-master-first-article-v001`。
 - PR：required / do not merge。
 - T-018 / RZ / FV / CP-03：继续 HOLD / 不授权。
+
+
+## 2026-09-19｜T-021 Executor Override
+
+- Decision：D-071 / Product Owner APPROVED。
+- Task：T-021 continues under same task ID。
+- Old executor：Codex Cloud writes engineering files。
+- New executor：**ChatGPT direct GitHub execution**。
+- Blender executor：unchanged / GitHub Actions headless / Blender 4.5.13。
+- Spec：D-069 unchanged。
+- Validation：42 checks unchanged。
+- Mutation：3 probes unchanged。
+- Review：6 PNG unchanged。
+- Binary artifact/SHA：unchanged。
+- Branch/PR rule：ONE TASK = ONE BRANCH = ONE PR / DO NOT MERGE without Product Owner approval。
+- T-018：HOLD。
+- T-022：NOT CREATED。
