@@ -466,3 +466,20 @@ Therefore separately check：
 - Blender run：NONE
 - T-018：HOLD
 - Next：Product Owner explicit “开始 T-021”
+
+
+### T-021 Retry 00 STOP / infrastructure
+
+- Date：2026-09-19
+- Project State：R134
+- Dashboard：v075
+- Task：T-021
+- Result：STOP / ENVIRONMENT-INFRASTRUCTURE
+- Engineering changes：NONE
+- Validation：0/42
+- Blender direct download in Codex sandbox：HTTP 403
+- Git remote/auth：missing
+- Protected assets：PASS
+- Retry：T-021 Retry 01 after GitHub-connected execution path recovery
+- New task：DO NOT CREATE T-022
+- T-018：HOLD
