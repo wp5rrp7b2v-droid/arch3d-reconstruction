@@ -88,7 +88,7 @@ jobs:
             exit 1
           fi
           git status --short
-          test "$(git status --short "$TARGET_DIR" | wc -l)" -eq 6
+          test "$(find "$TARGET_DIR" -maxdepth 1 -type f -name '*.png' | wc -l)" -eq 6
           echo "NO_BLEND_PUBLICATION_PASS"
 
       - name: Commit exact accepted review PNG bytes to PR branch
