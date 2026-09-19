@@ -316,3 +316,15 @@ Therefore separately check：
 - PR merge authorization：none
 - Local Mac 2026-09-21 sync checklist remains required.
 - Day 4 status：IN PROGRESS; component-audit stream closed at V007.
+
+
+### V007 detailed instance registry sync
+
+- Date：2026-09-19
+- Project State：R124
+- Dashboard：v065
+- Added detailed machine-readable instance registry：
+  - `docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.json`
+- Purpose：preserve V007 per-instance / per-position baseline in GitHub so future sessions do not depend on the chat-generated spreadsheet binary.
+- The `.xlsx` workbook remains a review artifact; GitHub canonical truth is the V007 Markdown + baseline JSON + detailed instance registry JSON + Project Control.
+- T-018 remains HOLD; no engineering execution authorization.
