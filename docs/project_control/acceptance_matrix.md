@@ -414,3 +414,14 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - 新增 Hard Fail：`LEGACY_PROXY_AS_REAL_COMPONENT`、`REGISTRY_LAYER_DOUBLE_COUNT`、`UNDECLARED_PARAMETRIC_COMPLETION`、`MASTER_WITHOUT_EVIDENCE_BINDING`、`EXCEL_AS_CANONICAL_SOURCE`。
 - Existing five P3.3 Hard Fails continue active。
 - 本次无工程执行授权；Stage 1 需另行授权。
+
+
+## 2026-09-19｜P3.3 V002 Stage 1 进入授权
+
+- Decision：D-067 / Product Owner AUTHORIZED。
+- Stage：**Stage 1｜真实构件 Master 库 = ACTIVE**。
+- 当前首项：既有6个已批准 Master 对 V007 的重新绑定 / 覆盖 / evidence boundary 复核。
+- 复核对象：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿。
+- Stage 1 尚未 PASS；当前仍为工作开始状态。
+- ChatGPT 设计/复核不占 T-###；实际 Codex 建模任务才创建新 T-###。
+- T-018 / RZ / FV / CP-03：继续 HOLD / 不授权。
