@@ -765,3 +765,16 @@ Do not restart T-018 by default.
 - 7 items remain PENDING_SOURCE_BINDING: 板瓦 / 勾头 / 滴水 / 博风板 / 悬鱼 / 惹草 / 生头木。
 - Next design object：四椽栿 Master Spec。
 - No new T-### / no Blender / no T-018 restart。
+
+
+## P3.3 Stage 1｜四椽栿 Master Spec Locked｜2026-09-19
+
+- Product Owner instruction / approval：D-069。
+- Render-first direct source inspection completed on SRC-ZG-WF-001 PDF p82 / printed p67。
+- New direct source binding published for 四椽栿。
+- Master Spec V001 locked for `CMP-FRAME-FOUR-CHUANFU-001_MASTER`。
+- Canonical geometry authority：observed mean section 426.5×302mm。
+- Two raw measured section records retained：413×295mm and 440×309mm；their east/west mapping remains UNKNOWN。
+- Historical full length remains UNKNOWN/null。
+- 1000mm remains non-historical canonical reference only。
+- No Codex modeling / no Blender / no new T-### / T-018 remains HOLD。
