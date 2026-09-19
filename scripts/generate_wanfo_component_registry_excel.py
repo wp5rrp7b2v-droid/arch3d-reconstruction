@@ -275,7 +275,7 @@ def main() -> int:
         "versioned_json_snapshot": str(versioned_json).replace("\\", "/"),
         "source_commit": args.source_commit or "UNKNOWN",
         "source_json_sha256": source_sha,
-        "generator": str(Path(__file__)).replace("\\", "/"),
+        "generator": GENERATOR_REPO_PATH,
         "generator_version": GENERATOR_VERSION,
         "generator_sha256": generator_sha,
         "record_count": len(registry.get("items", [])),
