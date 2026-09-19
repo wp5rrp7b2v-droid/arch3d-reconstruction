@@ -1,10 +1,10 @@
 {
-  "schema_version": "V007",
+  "schema_version": "V008",
   "date": "2026-09-19",
   "status": "CURRENT_BUILD_BASELINE_INSTANCE_REGISTRY",
   "source": "SRC-ZG-WF-001",
-  "generation_note": "本登记表将V007已锁定的实体实例、位置单元、明确子集和参数化边界写入GitHub。COUNTING_UNIT_NOT_PHYSICAL与MEASUREMENT_SAMPLE_NOT_TOTAL不得计入实体总数。",
-  "item_count": 472,
+  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded.",
+  "item_count": 505,
   "items": [
     {
       "system": "主体木构",
@@ -4553,6 +4553,339 @@
       "location": "南立面大门东侧",
       "count_status": "LOCKED",
       "evidence": "报告直接记录"
+    },
+    {
+      "system": "围护",
+      "component": "墙体",
+      "id": "墙体-南立面",
+      "location": "南立面",
+      "count_status": "SYSTEM_PARAMETRIC",
+      "evidence": "V007：墙体砌筑与南墙局部厚度已记录",
+      "record_role": "SYSTEM",
+      "note": "墙砖均值277.4×134×63.1mm；南墙局部厚约820–880mm，仅局部适用"
+    },
+    {
+      "system": "围护",
+      "component": "墙体",
+      "id": "墙体-北立面",
+      "location": "北立面",
+      "count_status": "SYSTEM_PARAMETRIC",
+      "evidence": "V007：四立面墙体砌筑系统",
+      "record_role": "SYSTEM",
+      "note": "不得套用南墙局部820–880mm厚度"
+    },
+    {
+      "system": "围护",
+      "component": "墙体",
+      "id": "墙体-东立面",
+      "location": "东立面",
+      "count_status": "SYSTEM_PARAMETRIC",
+      "evidence": "V007：四立面墙体砌筑系统",
+      "record_role": "SYSTEM",
+      "note": "连续墙体/透风孔关系；统一墙厚UNKNOWN"
+    },
+    {
+      "system": "围护",
+      "component": "墙体",
+      "id": "墙体-西立面",
+      "location": "西立面",
+      "count_status": "SYSTEM_PARAMETRIC",
+      "evidence": "V007：四立面墙体砌筑系统",
+      "record_role": "SYSTEM",
+      "note": "连续墙体/透风孔关系；统一墙厚UNKNOWN"
+    },
+    {
+      "system": "围护",
+      "component": "墙砖族",
+      "id": "墙砖族-UNKNOWN",
+      "location": "四立面墙体",
+      "count_status": "FAMILY_UNKNOWN_COUNT",
+      "evidence": "V007墙砖样本统计",
+      "record_role": "FAMILY_UNKNOWN_COUNT",
+      "dimensions_mm": "均值277.4×134×63.1",
+      "total_count": "UNKNOWN"
+    },
+    {
+      "system": "室内地面",
+      "component": "室内地面系统",
+      "id": "室内地面-01",
+      "location": "万佛殿室内",
+      "count_status": "SYSTEM_PARAMETRIC",
+      "evidence": "V007地面铺砖记录",
+      "record_role": "SYSTEM"
+    },
+    {
+      "system": "室内地面",
+      "component": "室内条砖族",
+      "id": "室内条砖族-UNKNOWN",
+      "location": "室内地面边界/区域",
+      "count_status": "FAMILY_UNKNOWN_COUNT",
+      "evidence": "V007条砖统计",
+      "record_role": "FAMILY_UNKNOWN_COUNT",
+      "dimensions_mm": "约277.9×133.3；厚UNKNOWN",
+      "total_count": "UNKNOWN"
+    },
+    {
+      "system": "室内地面",
+      "component": "室内方砖族",
+      "id": "室内方砖-265型-UNKNOWN",
+      "location": "室内地面部分区域",
+      "count_status": "FAMILY_UNKNOWN_COUNT",
+      "evidence": "V007方砖类型记录",
+      "record_role": "FAMILY_UNKNOWN_COUNT",
+      "dimensions_mm": "约265×265；厚UNKNOWN",
+      "total_count": "UNKNOWN"
+    },
+    {
+      "system": "室内地面",
+      "component": "室内方砖族",
+      "id": "室内方砖-315x305型-UNKNOWN",
+      "location": "室内地面部分区域",
+      "count_status": "FAMILY_UNKNOWN_COUNT",
+      "evidence": "V007方砖类型记录",
+      "record_role": "FAMILY_UNKNOWN_COUNT",
+      "dimensions_mm": "约315×305；厚UNKNOWN",
+      "total_count": "UNKNOWN"
+    },
+    {
+      "system": "室内设施",
+      "component": "神台",
+      "id": "神台-01",
+      "location": "殿内中央区域",
+      "count_status": "SYSTEM_UNKNOWN_OVERALL_DIMENSIONS",
+      "evidence": "V007神台铺砖构造记录",
+      "record_role": "SYSTEM",
+      "note": "四周条砖立砌压脚、表面方砖；整体长宽高UNKNOWN"
+    },
+    {
+      "system": "屋面",
+      "component": "望板系统",
+      "id": "望板系统-01",
+      "location": "椽系之上/瓦面之下",
+      "count_status": "PARAMETRIC_COMPLETION",
+      "evidence": "V007：椽与望板、瓦面总体关系确认",
+      "record_role": "PARAMETRIC_COMPLETION",
+      "total_count": "UNKNOWN"
+    },
+    {
+      "system": "瓦作",
+      "component": "正吻",
+      "id": "正吻-01",
+      "location": "正脊一端",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量2",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "正吻",
+      "id": "正吻-02",
+      "location": "正脊另一端",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量2",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "垂兽",
+      "id": "垂兽-01",
+      "location": "垂脊01",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "垂兽",
+      "id": "垂兽-02",
+      "location": "垂脊02",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "垂兽",
+      "id": "垂兽-03",
+      "location": "垂脊03",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "垂兽",
+      "id": "垂兽-04",
+      "location": "垂脊04",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "戗兽",
+      "id": "戗兽-01",
+      "location": "戗脊01",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "戗兽",
+      "id": "戗兽-02",
+      "location": "戗脊02",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "戗兽",
+      "id": "戗兽-03",
+      "location": "戗脊03",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "戗兽",
+      "id": "戗兽-04",
+      "location": "戗脊04",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "仙人",
+      "id": "仙人-01",
+      "location": "四角戗脊端部-01",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "仙人",
+      "id": "仙人-02",
+      "location": "四角戗脊端部-02",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "仙人",
+      "id": "仙人-03",
+      "location": "四角戗脊端部-03",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "瓦作",
+      "component": "仙人",
+      "id": "仙人-04",
+      "location": "四角戗脊端部-04",
+      "count_status": "LOCKED_COUNT_SIMPLIFIED_GEOMETRY",
+      "evidence": "V007数量4",
+      "record_role": "SIMPLIFIED_PROXY"
+    },
+    {
+      "system": "围护",
+      "component": "门木作系统",
+      "id": "门木作-南",
+      "location": "南立面中央门洞",
+      "count_status": "VISUAL_MODEL_PARAMETRIC_SECTION",
+      "evidence": "V007南立面测绘图",
+      "record_role": "VISUAL_MODEL",
+      "note": "分格视觉可建；木料断面/榫卯/完整单件尺寸UNKNOWN"
+    },
+    {
+      "system": "围护",
+      "component": "门木作系统",
+      "id": "门木作-北",
+      "location": "北立面中央门洞",
+      "count_status": "VISUAL_MODEL_PARAMETRIC_SECTION",
+      "evidence": "V007北立面测绘图",
+      "record_role": "VISUAL_MODEL",
+      "note": "分格视觉可建；木料断面/榫卯/完整单件尺寸UNKNOWN"
+    },
+    {
+      "system": "围护",
+      "component": "窗木作系统",
+      "id": "窗木作-南东",
+      "location": "南立面东窗",
+      "count_status": "VISUAL_MODEL_PARAMETRIC_SECTION",
+      "evidence": "V007南立面测绘图",
+      "record_role": "VISUAL_MODEL",
+      "note": "分格视觉可建；木料断面/榫卯/完整单件尺寸UNKNOWN"
+    },
+    {
+      "system": "围护",
+      "component": "窗木作系统",
+      "id": "窗木作-南西",
+      "location": "南立面西窗",
+      "count_status": "VISUAL_MODEL_PARAMETRIC_SECTION",
+      "evidence": "V007南立面测绘图",
+      "record_role": "VISUAL_MODEL",
+      "note": "分格视觉可建；木料断面/榫卯/完整单件尺寸UNKNOWN"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "单向长开斗族",
+      "id": "单向长开斗族-UNKNOWN",
+      "location": "全殿斗栱体系",
+      "count_status": "FAMILY_UNKNOWN_COUNT",
+      "evidence": "V007确认存在但全殿数量未闭合",
+      "record_role": "FAMILY_UNKNOWN_COUNT",
+      "master_reference": "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+      "total_count": "UNKNOWN"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "交互斗族",
+      "id": "交互斗族-UNKNOWN",
+      "location": "全殿斗栱体系",
+      "count_status": "FAMILY_UNKNOWN_COUNT",
+      "evidence": "V007确认存在但全殿数量未闭合",
+      "record_role": "FAMILY_UNKNOWN_COUNT",
+      "master_reference": "CMP-DOU-INTERACTIVE-001_MASTER",
+      "total_count": "UNKNOWN"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "散斗族",
+      "id": "散斗族-UNKNOWN",
+      "location": "全殿斗栱体系",
+      "count_status": "FAMILY_UNKNOWN_COUNT",
+      "evidence": "V007确认存在但全殿数量未闭合",
+      "record_role": "FAMILY_UNKNOWN_COUNT",
+      "total_count": "UNKNOWN"
+    },
+    {
+      "system": "内槽",
+      "component": "替木实体族",
+      "id": "替木实体族-UNKNOWN",
+      "location": "全殿多处",
+      "count_status": "FAMILY_UNKNOWN_COUNT",
+      "evidence": "V007：23条测量记录不等于全殿总数",
+      "record_role": "FAMILY_UNKNOWN_COUNT",
+      "total_count": "UNKNOWN",
+      "note": "测量统计仍由替木测量边界记录承载"
     }
+  ],
+  "supersedes_registry_version": "V007",
+  "patch_basis": "P3_3_STAGE1_REGISTRY_V008_TARGETED_PATCH_PROPOSAL_V001 / Product Owner approved",
+  "pending_source_binding": [
+    "板瓦",
+    "勾头",
+    "滴水",
+    "博风板",
+    "悬鱼",
+    "惹草",
+    "生头木"
   ]
 }
