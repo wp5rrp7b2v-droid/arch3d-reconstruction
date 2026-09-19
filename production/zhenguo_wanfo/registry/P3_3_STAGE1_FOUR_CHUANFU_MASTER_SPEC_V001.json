@@ -1,0 +1,202 @@
+{
+  "schema_version": "V001",
+  "date": "2026-09-19",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED",
+  "decision_id": "D-069",
+  "gate": "P3.3 V002",
+  "stage": "Stage 1｜真实构件 Master 库",
+  "component": {
+    "component_id": "CMP-FRAME-FOUR-CHUANFU-001",
+    "canonical_name_zh": "四椽栿",
+    "canonical_name_en": "four_chuanfu",
+    "master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+    "master_version": "V001",
+    "real_historical_component": true,
+    "v008_instance_ids": [
+      "四椽栿-东缝",
+      "四椽栿-西缝"
+    ],
+    "physical_instance_count": 2
+  },
+  "evidence": {
+    "source_id": "SRC-ZG-WF-001",
+    "pdf_page": 82,
+    "printed_page": 67,
+    "section": "2.3.1.2 四椽栿",
+    "table": "表2-39 万佛殿四椽栿实测与分析表",
+    "figure": "图2-40 万佛殿四椽栿与斗栱交接关系",
+    "binding_path": "docs/evidence/zhenguo_wanfo/P3_3_FOUR_CHUANFU_DIRECT_SOURCE_BINDING_V001.md",
+    "measured_section_samples_mm": [
+      {
+        "sample": "A",
+        "width": 413,
+        "thickness": 295,
+        "instance_mapping": "UNKNOWN"
+      },
+      {
+        "sample": "B",
+        "width": 440,
+        "thickness": 309,
+        "instance_mapping": "UNKNOWN"
+      }
+    ],
+    "observed_mean_section_mm": {
+      "width": 426.5,
+      "thickness": 302
+    },
+    "report_design_analysis": {
+      "width_fen_observed": 27.9,
+      "width_fen_rounded": 28,
+      "width_fit_percent": 99.56,
+      "thickness_fen_observed": 19.7,
+      "thickness_fen_rounded": 20,
+      "thickness_fit_percent": 98.69,
+      "classification": "REPORT_INFERRED / DESIGN_ANALYSIS_METADATA",
+      "geometry_use_count": 0
+    },
+    "assembly_semantics": [
+      "东缝1根、西缝1根",
+      "四椽栿与其下上六椽栿之间垫隔架单栱一组",
+      "四椽栿下不用栌斗",
+      "仅由一散斗承托"
+    ]
+  },
+  "geometry": {
+    "mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+    "lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+    "unit": "mm",
+    "coordinate_convention": {
+      "+X": "member_longitudinal",
+      "+Y": "section_width",
+      "+Z": "vertical_thickness",
+      "handedness": "right_handed"
+    },
+    "origin_convention": "longitudinal_midpoint_transverse_center_lower_reference_plane",
+    "canonical_transform": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "parameters": {
+      "historical_full_length_mm": {
+        "value": null,
+        "classification": "UNKNOWN",
+        "production_use": "DO_NOT_LOCK",
+        "historical_claim": false
+      },
+      "canonical_reference_length_mm": {
+        "value": 1000,
+        "classification": "PROJECT_RULE",
+        "source_layer": "ENGINEERING_REFERENCE",
+        "time_layer": "NON_HISTORICAL_REFERENCE_REALIZATION",
+        "production_use": "CANONICAL_REFERENCE_ONLY",
+        "replaceable": true,
+        "historical_claim": false
+      },
+      "realization_length_mm": {
+        "value": 1000,
+        "classification": "PROJECT_RULE",
+        "role": "GEOMETRY_EXECUTION_VALUE",
+        "derives_from": "canonical_reference_length_mm",
+        "historical_claim": false
+      },
+      "width_mm": {
+        "value": 426.5,
+        "classification": "CONFIRMED",
+        "time_layer": "observed_as_measured_mean",
+        "source_layer": "DIRECT_PRIMARY",
+        "production_use": "OBSERVED_REFERENCE_OUTER_ENVELOPE"
+      },
+      "thickness_mm": {
+        "value": 302,
+        "classification": "CONFIRMED",
+        "time_layer": "observed_as_measured_mean",
+        "source_layer": "DIRECT_PRIMARY",
+        "production_use": "OBSERVED_REFERENCE_OUTER_ENVELOPE"
+      }
+    },
+    "canonical_body_rule": "rectangular bounded outer envelope: realization_length x width x thickness",
+    "unsupported_geometry": [
+      "mortise_tenon",
+      "san_dou_slot",
+      "spacer_gong_geometry",
+      "ludou",
+      "hidden_connections",
+      "unmeasured_local_reductions",
+      "unsupported_end_profile",
+      "unsupported_camber",
+      "historicalized_observed_deflection",
+      "weathering_damage"
+    ]
+  },
+  "instance_variant_policy": {
+    "sample_to_instance_mapping": "UNKNOWN",
+    "allowed_variant_axes": [
+      "length_mm",
+      "future_evidence_supported_section_set"
+    ],
+    "placement_only": [
+      "east_or_west_seam",
+      "world_position",
+      "world_rotation",
+      "instance_number"
+    ],
+    "prohibited_variant_claims": [
+      "sample_A_equals_east",
+      "sample_B_equals_west",
+      "sample_A_equals_west",
+      "sample_B_equals_east"
+    ]
+  },
+  "interface_contract": {
+    "geometric": [
+      {
+        "id": "END_NEG_X",
+        "position_rule": "(-L/2, 0, thickness/2)"
+      },
+      {
+        "id": "END_POS_X",
+        "position_rule": "(+L/2, 0, thickness/2)"
+      }
+    ],
+    "semantic_only": [
+      {
+        "id": "SUPPORT_FROM_SAN_DOU",
+        "coordinate_status": "ASSEMBLY_OWNED / UNKNOWN"
+      },
+      {
+        "id": "RELATION_TO_UPPER_SIX_CHUANFU",
+        "coordinate_status": "ASSEMBLY_OWNED / UNKNOWN"
+      },
+      {
+        "id": "SPACER_SINGLE_GONG_RELATION",
+        "coordinate_status": "ASSEMBLY_OWNED / UNKNOWN"
+      }
+    ]
+  },
+  "building_length_policy": {
+    "source": "future explicit assembly endpoints",
+    "classification": "EXPLICIT_DERIVED_GEOMETRY / PROJECT_RULE",
+    "historical_measured_claim": false,
+    "reference_length_leak_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
+  },
+  "execution_boundary": {
+    "codex_authorized": false,
+    "new_t_task_created": false,
+    "blender_authorized": false,
+    "t018_status": "HOLD",
+    "next_action": "Create and authorize a new Codex first-article engineering task for CMP-FRAME-FOUR-CHUANFU-001_MASTER."
+  }
+}
