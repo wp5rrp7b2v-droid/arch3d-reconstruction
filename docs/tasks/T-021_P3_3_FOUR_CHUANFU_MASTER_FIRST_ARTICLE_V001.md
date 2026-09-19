@@ -1,12 +1,12 @@
 # 【中国古建筑3D复原｜T-021｜P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001｜四椽栿 Master 首件生产】
 
-Status: **CONTRACT LOCKED / PRODUCT OWNER APPROVED / EXECUTION AUTHORIZED / CODEX CLOUD READY**  
+Status: **CONTRACT LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT YET AUTHORIZED / CODEX CLOUD READY**  
 Execution Mode: **CHAT_FIRST_CODEX_EXECUTOR_MODE / FIRST_ARTICLE_ONLY**  
 Codex Think Level: **MEDIUM DEFAULT / HIGH ONLY BY EXPLICIT CHATGPT ESCALATION**  
 Phase/Gate: P3 / P3.3 V002  
 Stage: Stage 1｜真实构件 Master 库  
 Date: 2026-09-19  
-Authorization: **PRODUCT OWNER APPROVED / D-070**  
+Contract approval: **PRODUCT OWNER APPROVED / D-070**  
 Cloud Mode Classification: **CLOUD_EXECUTABLE**  
 Primary Engineering Executor: **Codex Cloud**  
 Blender Executor: **GitHub Actions headless Blender / RC-017**  
@@ -169,8 +169,8 @@ Codex 最终只返回：STATUS、branch、commit SHA、PR number/URL、Actions r
 
 ## 15. Authorization Boundary
 
-**EXECUTION AUTHORIZED / D-070**
+**TASK CONTRACT CREATED / LOCKED / D-070 / EXECUTION NOT YET AUTHORIZED**
 
-Product Owner 已授权创建并开始 T-021 Codex 工程任务。
+Product Owner 已授权创建并锁定 T-021 Codex Task Contract；尚未授权 Codex 开始工程执行。
 
-本授权不包括：T-021 Master最终批准、PR merge、Stage 1 PASS、第二个新 Master、Stage 2、T-018、P3.3 PASS。
+本授权不包括：Codex 工程执行、T-021 Master最终批准、PR merge、Stage 1 PASS、第二个新 Master、Stage 2、T-018、P3.3 PASS。下一步需 Product Owner 明确授权“开始 T-021”后方可执行。
