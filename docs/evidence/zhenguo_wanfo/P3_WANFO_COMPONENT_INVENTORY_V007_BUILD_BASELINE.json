@@ -1,0 +1,124 @@
+{
+  "schema_version": "V007",
+  "date": "2026-09-19",
+  "project": "ARCH3D-001",
+  "subject": "平遥镇国寺万佛殿",
+  "source": "SRC-ZG-WF-001",
+  "status": "CURRENT_BUILD_BASELINE",
+  "audit_stop_rule": true,
+  "engineering_execution_authorized": false,
+  "p3_3_status": "ACTIVE / NOT PASS",
+  "t018_status": "V002 HOLD / NOT PASS",
+  "principles": {
+    "direct_fact": "LOCK",
+    "explicit_derivation": "LOCK_WITH_DERIVATION_NOTE",
+    "parametric_completion": "ALLOWED_REPLACEABLE_NOT_HISTORICAL",
+    "unknown": "KEEP_UNKNOWN_NO_SILENT_COMPLETION"
+  },
+  "structural_counts": {
+    "columns": 12,
+    "lower_six_chuanfu": 2,
+    "upper_six_chuanfu": 2,
+    "four_chuanfu": 2,
+    "pingliang": 4,
+    "dingfu": 8,
+    "rufu": 8,
+    "zhaqian": 14,
+    "purlins": 33,
+    "lane": 12,
+    "youe": 4,
+    "dajiaoliang": 4,
+    "zijiaoliang": 4,
+    "yinjiaoliang": 4,
+    "tuojiao": 12,
+    "chashou": 8,
+    "shuzhu": 4
+  },
+  "eaves_bracket_sets": {
+    "physical_sites": 24,
+    "corner_sites": 4,
+    "noncorner_columnhead_sites": 8,
+    "intercolumn_sites": 12,
+    "directional_units": 28,
+    "columnhead_ludou": 12,
+    "intercolumn_didou": 12,
+    "tou_ang": 16,
+    "er_ang": 16,
+    "large_guazi_gong": 16,
+    "small_guazi_gong": 28,
+    "large_man_gong": 16,
+    "small_man_gong": 28,
+    "ling_gong": 28,
+    "straight_direction_first_second_jump_huagong": 56,
+    "huagong_scope_note": "56 is a confirmed straight-direction subset, not whole-building Huagong total"
+  },
+  "interior_brackets": {
+    "internal_bracket_or_separator_positions": 24,
+    "panjianfang_positions": 12,
+    "panjianfang_section": "UNKNOWN",
+    "inner_gong_material_mean_mm": {
+      "width": 215,
+      "thickness": 153.6
+    },
+    "timu_measurement_records": 23,
+    "timu_total_count": "UNKNOWN",
+    "timu_mean_mm": {
+      "width": 150.4,
+      "thickness": 151.8,
+      "asymmetric_half_exposed_length": 680.1,
+      "symmetric_length": 1757
+    }
+  },
+  "roof": {
+    "rafters_status": "PARAMETRIC_COMPLETION",
+    "rafter_real_count": "UNKNOWN",
+    "tile_rows": {
+      "south": 62,
+      "north": 62,
+      "east": 91,
+      "west": 90
+    },
+    "ridges": {
+      "main": 1,
+      "vertical": 4,
+      "hip": 4
+    },
+    "ornaments": {
+      "zhengwen": 2,
+      "chuishou": 4,
+      "qiangshou": 4,
+      "xianren": 4
+    },
+    "main_ridge_chijiao_tongji": 17,
+    "vertical_ridge_tongji_per_ridge": 20,
+    "vertical_ridge_tongji_total_derived": 80,
+    "hip_ridge_tongji_per_ridge": "5-6 + zhaotou",
+    "hip_ridge_tongji_total_derived": "20-24 + zhaotou"
+  },
+  "enclosure": {
+    "platform": 1,
+    "platform_internal_structure": "UNKNOWN",
+    "wall_brick_mean_mm": {
+      "length": 277.4,
+      "width": 134,
+      "thickness": 63.1
+    },
+    "south_wall_local_thickness_mm": "820-880",
+    "central_door_openings": 2,
+    "south_window_openings": 2,
+    "south_east_window_outer_wall_cm": 84,
+    "south_west_window_outer_wall_cm": 101,
+    "vent_openings": 16,
+    "embedded_steles_south_wall": 2,
+    "door_window_woodwork": "VISUAL_MODEL + PARAMETRIC_SECTION"
+  },
+  "unresolved_final": [
+    "zhaqian 10 remaining exact positions",
+    "timu whole-building total count",
+    "turning-corner diagonal Huagong and some bracket-set per-piece totals",
+    "single-direction Chang-Kai Dou / Jiaohu Dou / San Dou whole-building totals",
+    "rafter count/section/spacing",
+    "door/window wood-section and joinery dimensions"
+  ],
+  "next_action": "Redesign real-component Master completion order and whole-building assembly architecture from V007 baseline; do not resume T-018 execution by default."
+}
