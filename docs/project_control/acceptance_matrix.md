@@ -399,3 +399,18 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Rule：**JSON 是唯一事实源；Excel 只读派生，禁止双维护。**
 - Failure mode：任何版本/记录数/重开/哈希验证失败必须 FAIL CLOSED。
 - 本规则不改变 T-018 工程边界：T-018 继续 HOLD。
+
+
+## 2026-09-19｜P3.3 V002 真实构件驱动整殿重建实施计划锁定
+
+- Decision：D-066 / Product Owner APPROVED。
+- Current plan：`docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md`。
+- V001：保留为历史版本，不再是当前 P3.3 实施路线。
+- P3.3 当前进度：**0 / 7 new implementation stages formally passed**。
+- 七阶段：①真实构件 Master 库；②构件变体与装配接口；③代表性组合验证；④整殿真实实例与拓扑；⑤整殿空间定位与标高规则；⑥确定性整殿生成；⑦整殿验收与 Gate Closure。
+- Legacy 11/40/365 与 T-017 365 accounting：历史工程基线 / comparison only。
+- T-020 / RZ D-063 / FV D-064：保留，Stage 5 重新审查。
+- T-018 V002：**HOLD / NOT CURRENT EXECUTION ROUTE**；Stage 6 前再决定 rebaseline 或 supersede。
+- 新增 Hard Fail：`LEGACY_PROXY_AS_REAL_COMPONENT`、`REGISTRY_LAYER_DOUBLE_COUNT`、`UNDECLARED_PARAMETRIC_COMPLETION`、`MASTER_WITHOUT_EVIDENCE_BINDING`、`EXCEL_AS_CANONICAL_SOURCE`。
+- Existing five P3.3 Hard Fails continue active。
+- 本次无工程执行授权；Stage 1 需另行授权。
