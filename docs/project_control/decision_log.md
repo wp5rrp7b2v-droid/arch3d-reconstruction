@@ -94,3 +94,6 @@
 
 
 | D-067 | 2026-09-19 | Product Owner 指示“进入下一步”，正式授权进入 P3.3 V002 Stage 1｜真实构件 Master 库。当前授权范围限定为：①将既有6个已批准 Master 按 V007 真实构件登记重新绑定并做覆盖/证据边界复核；②建立当前构件 Master / 参数化 / Proxy / UNKNOWN disposition；③在复核结果基础上设计首个缺失 Master 的正式规格。ChatGPT 设计/复核不占 T-###；只有实际交给 Codex 执行建模时才创建新的 T-###。本授权不包括 T-018 恢复、RZ/FV/T-020 发布或执行、CP-03、整殿生成、PR #3/#6 merge、P3.3 PASS。 | ACTIVE / P3.3 V002 STAGE 1 AUTHORIZED / CHAT REVIEW + MASTER PLANNING / T-018 HOLD |
+
+
+| D-068 | 2026-09-19 | Product Owner 正式批准执行 P3.3 Stage 1 的 V008 targeted registry patch。执行边界：保留 V007 全部472条 registry records，追加33条已在V007事实边界内但此前未序列化的 system/family/entity records；CURRENT registry 升级到 V008；RC-018 自动生成 CURRENT.xlsx 与 V008.xlsx 并通过校验。板瓦、勾头、滴水、博风板、悬鱼、惹草、生头木继续 PENDING_SOURCE_BINDING，不静默写入。V008 最终 505 records，明确不是505件实体构件。D-068 不授权 Codex 建模、T-018、RZ/FV/CP-03、PR merge 或 P3.3 PASS。 | COMPLETE / V008 CURRENT / RC-018 SYNC PASS / FOUR-CHUANFU SPEC NEXT |
