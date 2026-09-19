@@ -1,0 +1,764 @@
+{
+  "version": "V001",
+  "date": "2026-09-19",
+  "gate": "P3.3 V002",
+  "stage": "Stage 1｜真实构件 Master 库",
+  "authorization": "D-067",
+  "status": "COVERAGE_REVIEW_COMPLETE / REGISTRY_COMPLETENESS_GAP_FOUND",
+  "canonical_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
+  "registry_version": "V007",
+  "registry_record_count": 472,
+  "distinct_registered_component_types": 49,
+  "disposition_summary": {
+    "参数化补全": 14,
+    "非实体装配/拓扑": 5,
+    "需新建Master": 22,
+    "简化Proxy": 3,
+    "已有Master｜需长度桥": 2,
+    "UNKNOWN/参考边界": 1,
+    "已有Master｜可直接绑定": 2
+  },
+  "rows": [
+    {
+      "component": "北门洞",
+      "records": 1,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "围护"
+      ],
+      "disposition": "参数化补全",
+      "family": "围护开口",
+      "action": "北立面中央洞口；洞口拓扑锁定，门木作另做视觉/参数化"
+    },
+    {
+      "component": "北坡筒瓦",
+      "records": 1,
+      "statuses": [
+        "LOCKED_ARRAY"
+      ],
+      "systems": [
+        "瓦作"
+      ],
+      "disposition": "参数化补全",
+      "family": "瓦面阵列",
+      "action": "62陇；记录是阵列而非逐瓦实例；需瓦件Master+阵列生成器后再落地"
+    },
+    {
+      "component": "补间铺作",
+      "records": 12,
+      "statuses": [
+        "LOCKED_SITE"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "非实体装配/拓扑",
+      "family": "铺作位置",
+      "action": "12个物理铺作位置，是装配容器/位置单元，不建立单件Master"
+    },
+    {
+      "component": "补间铺作底斗",
+      "records": 12,
+      "statuses": [
+        "LOCKED_SITE"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "需新建Master",
+      "family": "斗",
+      "priority": 14,
+      "action": "12件；宽/高有实测，进深未直接测；Master必须保留进深UNKNOWN/可替换边界"
+    },
+    {
+      "component": "叉手",
+      "records": 8,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "斜撑构件",
+      "priority": 8,
+      "action": "8件；长度由平梁—脊部装配端点求长"
+    },
+    {
+      "component": "椽系",
+      "records": 1,
+      "statuses": [
+        "PARAMETRIC_COMPLETION"
+      ],
+      "systems": [
+        "屋面"
+      ],
+      "disposition": "参数化补全",
+      "family": "屋面木构阵列",
+      "action": "只锁坡向/层位/总体关系；真实总数、截面、标准间距UNKNOWN；必须由参数化生成器完成"
+    },
+    {
+      "component": "垂脊",
+      "records": 4,
+      "statuses": [
+        "LOCKED_DERIVED"
+      ],
+      "systems": [
+        "瓦作"
+      ],
+      "disposition": "参数化补全",
+      "family": "屋脊装配",
+      "action": "4条；每条垂通脊20块为明确推导；装饰几何仍需简化/参数化"
+    },
+    {
+      "component": "剳牵",
+      "records": 14,
+      "statuses": [
+        "LOCKED_ID_PARTIAL_LOCATION",
+        "LOCKED_ID_UNKNOWN_LOCATION"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "梁类长构件",
+      "priority": 5,
+      "action": "14件；截面统计可建Master；其中4件山面位置较明确，另10件精确位置未锁，不影响Master本体但阻止完整实例装配"
+    },
+    {
+      "component": "大角梁",
+      "records": 4,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "角梁",
+      "priority": 10,
+      "action": "4件；建立中等精度外包络Master"
+    },
+    {
+      "component": "大型瓜子栱",
+      "records": 16,
+      "statuses": [
+        "LOCKED_DERIVED"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "需新建Master",
+      "family": "栱",
+      "priority": 15,
+      "action": "16件；可与小型瓜子栱共享参数化栱Master"
+    },
+    {
+      "component": "大型慢栱",
+      "records": 16,
+      "statuses": [
+        "LOCKED_DERIVED"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "需新建Master",
+      "family": "栱",
+      "priority": 16,
+      "action": "16件；可与小型慢栱共享参数化栱Master"
+    },
+    {
+      "component": "丁栿",
+      "records": 8,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "斜/横向梁构件",
+      "priority": 3,
+      "action": "8件；截面统计已锁；长度由装配端点求长"
+    },
+    {
+      "component": "东坡筒瓦",
+      "records": 1,
+      "statuses": [
+        "LOCKED_ARRAY"
+      ],
+      "systems": [
+        "瓦作"
+      ],
+      "disposition": "参数化补全",
+      "family": "瓦面阵列",
+      "action": "91陇；记录是阵列而非逐瓦实例"
+    },
+    {
+      "component": "二昂",
+      "records": 16,
+      "statuses": [
+        "LOCKED_DERIVED"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "需新建Master",
+      "family": "昂",
+      "priority": 19,
+      "action": "16件；与头昂区分证据口径，可共享生成器但不能混同尺寸"
+    },
+    {
+      "component": "华栱",
+      "records": 56,
+      "statuses": [
+        "LOCKED_SUBSET"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "需新建Master",
+      "family": "华栱",
+      "priority": 18,
+      "action": "当前56件仅为正身方向一、二跳明确子集；Master可建，但不得据此宣称全殿华栱总数闭合"
+    },
+    {
+      "component": "角石",
+      "records": 4,
+      "statuses": [
+        "LOCKED_DERIVED"
+      ],
+      "systems": [
+        "台基"
+      ],
+      "disposition": "简化Proxy",
+      "family": "台基构件",
+      "action": "4处位置锁定；缺少精确单件尺寸，先用可替换简化石构Proxy"
+    },
+    {
+      "component": "阑额",
+      "records": 12,
+      "statuses": [
+        "LOCKED_LOCATION"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "额枋",
+      "priority": 12,
+      "action": "12件；长度按柱心距离；截面按已测/参数化边界分离"
+    },
+    {
+      "component": "令栱",
+      "records": 28,
+      "statuses": [
+        "LOCKED_DERIVED"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "需新建Master",
+      "family": "栱",
+      "priority": 17,
+      "action": "28件；尺寸已锁"
+    },
+    {
+      "component": "南立面窗洞",
+      "records": 2,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "围护"
+      ],
+      "disposition": "参数化补全",
+      "family": "围护开口",
+      "action": "2个洞口锁定；木作分格可按测绘立面做视觉模型，木料断面与榫卯UNKNOWN"
+    },
+    {
+      "component": "南门洞",
+      "records": 1,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "围护"
+      ],
+      "disposition": "参数化补全",
+      "family": "围护开口",
+      "action": "南立面中央洞口；洞口拓扑锁定，门木作另做视觉/参数化"
+    },
+    {
+      "component": "南坡筒瓦",
+      "records": 1,
+      "statuses": [
+        "LOCKED_ARRAY"
+      ],
+      "systems": [
+        "瓦作"
+      ],
+      "disposition": "参数化补全",
+      "family": "瓦面阵列",
+      "action": "62陇；记录是阵列而非逐瓦实例；需瓦件Master+阵列生成器后再落地"
+    },
+    {
+      "component": "内槽斗栱/隔架位置",
+      "records": 1,
+      "statuses": [
+        "LOCKED_SITE_COUNT"
+      ],
+      "systems": [
+        "内槽"
+      ],
+      "disposition": "非实体装配/拓扑",
+      "family": "内槽装配位置",
+      "action": "24个系统位置汇总，不是24件同类实体，不建立单件Master"
+    },
+    {
+      "component": "襻间枋",
+      "records": 12,
+      "statuses": [
+        "LOCKED_SITE"
+      ],
+      "systems": [
+        "内槽"
+      ],
+      "disposition": "参数化补全",
+      "family": "内槽枋",
+      "action": "12处位置锁定，但统一截面UNKNOWN；不得使用215.0×153.6mm作为襻间枋截面"
+    },
+    {
+      "component": "平梁",
+      "records": 4,
+      "statuses": [
+        "LOCKED_COUNT_LOCATION"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "主梁架长构件",
+      "priority": 2,
+      "action": "至少东西缝型与山面型两个证据状态；山面厚度未知，不得硬补为实测值"
+    },
+    {
+      "component": "铺作方向单元",
+      "records": 28,
+      "statuses": [
+        "COUNTING_UNIT_NOT_PHYSICAL"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "非实体装配/拓扑",
+      "family": "方向计数单元",
+      "action": "28个立面方向计数单元，明确不是物理构件，不得建Master/计入实体总数"
+    },
+    {
+      "component": "嵌墙石碑",
+      "records": 2,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "围护"
+      ],
+      "disposition": "简化Proxy",
+      "family": "附属构件",
+      "action": "2通位置/身份锁定；精确板尺寸未闭合，先用可替换简化Proxy"
+    },
+    {
+      "component": "戗脊",
+      "records": 4,
+      "statuses": [
+        "LOCKED_DERIVED"
+      ],
+      "systems": [
+        "瓦作"
+      ],
+      "disposition": "参数化补全",
+      "family": "屋脊装配",
+      "action": "4条；每条5–6块通脊砖+找头为明确推导；装饰几何仍需简化/参数化"
+    },
+    {
+      "component": "乳栿",
+      "records": 8,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "斜向梁构件",
+      "priority": 4,
+      "action": "8件；上/下斜乳栿角色先作为实例/变体语义"
+    },
+    {
+      "component": "上六椽栿",
+      "records": 2,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "已有Master｜需长度桥",
+      "master": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "action": "保留；2实例绑定；1000mm参考长度禁止进入整殿；Stage 2由装配端点推导building-specific geometry length"
+    },
+    {
+      "component": "蜀柱",
+      "records": 4,
+      "statuses": [
+        "LOCKED_DERIVED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "竖向短柱",
+      "priority": 9,
+      "action": "4件；东/西山厚度未测，不得伪造统一精确截面"
+    },
+    {
+      "component": "四椽栿",
+      "records": 2,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "主梁架长构件",
+      "priority": 1,
+      "action": "首个新Master候选；截面实测已锁，长度由后续装配端点确定"
+    },
+    {
+      "component": "台基整体",
+      "records": 1,
+      "statuses": [
+        "LOCKED_OUTER_UNKNOWN_INTERNAL"
+      ],
+      "systems": [
+        "台基"
+      ],
+      "disposition": "简化Proxy",
+      "family": "台基装配",
+      "action": "外部体量可建；内部构造UNKNOWN，禁止历史化补造"
+    },
+    {
+      "component": "替木测量边界",
+      "records": 1,
+      "statuses": [
+        "MEASUREMENT_SAMPLE_NOT_TOTAL"
+      ],
+      "systems": [
+        "内槽"
+      ],
+      "disposition": "UNKNOWN/参考边界",
+      "family": "替木",
+      "action": "23条为测量记录，不等于全殿总数；可保留尺寸统计参考，但当前禁止生成全殿物理实例"
+    },
+    {
+      "component": "头昂",
+      "records": 16,
+      "statuses": [
+        "LOCKED_DERIVED"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "需新建Master",
+      "family": "昂",
+      "priority": 19,
+      "action": "16件；按已锁截面建立外包络Master，47/21几何推导不得冒充单件直接实测"
+    },
+    {
+      "component": "透风孔",
+      "records": 16,
+      "statuses": [
+        "LOCKED_SITE_PATTERN"
+      ],
+      "systems": [
+        "围护"
+      ],
+      "disposition": "参数化补全",
+      "family": "围护开孔/纹样",
+      "action": "16处位置与纹样锁定，精确尺寸未闭合；作为墙体参数化开孔/纹样资产"
+    },
+    {
+      "component": "槫",
+      "records": 33,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "槫类长构件",
+      "priority": 6,
+      "action": "33件；可共享单一Master + 长度/位置变体；不得把旧7 PURLIN工程代理当真实总量"
+    },
+    {
+      "component": "托脚",
+      "records": 12,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "支撑构件",
+      "priority": 7,
+      "action": "12件；截面统计已锁；连接界面Stage 2确定"
+    },
+    {
+      "component": "西坡筒瓦",
+      "records": 1,
+      "statuses": [
+        "LOCKED_ARRAY"
+      ],
+      "systems": [
+        "瓦作"
+      ],
+      "disposition": "参数化补全",
+      "family": "瓦面阵列",
+      "action": "90陇；记录是阵列而非逐瓦实例"
+    },
+    {
+      "component": "下六椽栿",
+      "records": 2,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "已有Master｜需长度桥",
+      "master": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+      "action": "保留；2实例绑定；1000mm参考长度禁止进入整殿；Stage 2由装配端点推导building-specific geometry length"
+    },
+    {
+      "component": "小型瓜子栱",
+      "records": 28,
+      "statuses": [
+        "LOCKED_DERIVED"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "需新建Master",
+      "family": "栱",
+      "priority": 15,
+      "action": "28件；与大型瓜子栱同族，长度变体"
+    },
+    {
+      "component": "小型慢栱",
+      "records": 28,
+      "statuses": [
+        "LOCKED_DERIVED"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "需新建Master",
+      "family": "栱",
+      "priority": 16,
+      "action": "28件；与大型慢栱同族，长度变体"
+    },
+    {
+      "component": "隐角梁",
+      "records": 4,
+      "statuses": [
+        "LOCKED_COUNT_PARAMETRIC_GEOMETRY"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "参数化补全",
+      "family": "角梁",
+      "action": "4件数量锁定；几何证据不足，先建立可替换参数化Master/Proxy，不做精确历史榫接"
+    },
+    {
+      "component": "由额",
+      "records": 4,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "额枋",
+      "priority": 13,
+      "action": "4件；已有单件截面实测，宜独立Master或与阑额共享长构件生成器"
+    },
+    {
+      "component": "正脊",
+      "records": 1,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "瓦作"
+      ],
+      "disposition": "参数化补全",
+      "family": "屋脊装配",
+      "action": "1条；赤脚通脊17块直接记录，但其它层次/饰件未全闭合；按装配系统而非单一Master处理"
+    },
+    {
+      "component": "柱",
+      "records": 12,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "已有Master｜可直接绑定",
+      "master": "CMP-COLUMN-001_MASTER",
+      "action": "保留；12实例绑定同一Master；角柱/普通柱先作为实例角色，不新增无证据几何变体"
+    },
+    {
+      "component": "柱头栌斗",
+      "records": 12,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "已有Master｜可直接绑定",
+      "master": "CMP-LUDOU-COLUMN-001_MASTER",
+      "action": "保留；12实例绑定；Stage 2补方向与承托/连接接口"
+    },
+    {
+      "component": "柱头铺作",
+      "records": 8,
+      "statuses": [
+        "LOCKED_SITE"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "非实体装配/拓扑",
+      "family": "铺作位置",
+      "action": "8个非角柱头铺作物理位置，是装配容器，不建立单件Master"
+    },
+    {
+      "component": "转角铺作",
+      "records": 4,
+      "statuses": [
+        "LOCKED_SITE"
+      ],
+      "systems": [
+        "外檐斗栱"
+      ],
+      "disposition": "非实体装配/拓扑",
+      "family": "铺作位置",
+      "action": "4个转角铺作物理位置，是装配容器，不建立单件Master"
+    },
+    {
+      "component": "子角梁",
+      "records": 4,
+      "statuses": [
+        "LOCKED"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "角梁",
+      "priority": 11,
+      "action": "4件；建立中等精度外包络Master"
+    }
+  ],
+  "registry_completeness_audit": {
+    "status": "TARGETED_CANONICAL_REGISTRY_PATCH_REQUIRED_BEFORE_FIRST_NEW_MASTER_PRODUCTION",
+    "finding": "CURRENT registry has 49 registered component/object types, but V007 evidence baseline contains additional model-relevant systems/assets not represented as canonical registry records.",
+    "omitted_or_underrepresented": [
+      {
+        "item": "墙体/墙砖",
+        "source_status": "V007 evidence confirmed",
+        "reason": "V007记录墙砖均值与南墙局部厚度，但CURRENT registry未有墙体/墙砖生产对象",
+        "recommended_disposition": "参数化墙体系统 + 墙砖材质/阵列"
+      },
+      {
+        "item": "室内地面条砖/方砖",
+        "source_status": "V007 evidence confirmed",
+        "reason": "V007记录条砖与两类方砖尺寸，但CURRENT registry未登记",
+        "recommended_disposition": "参数化铺地系统"
+      },
+      {
+        "item": "神台",
+        "source_status": "V007 evidence confirmed",
+        "reason": "V007确认神台及铺砖构造关系，但CURRENT registry未登记",
+        "recommended_disposition": "简化/参数化装配"
+      },
+      {
+        "item": "望板",
+        "source_status": "V007 evidence confirmed existence/relationship",
+        "reason": "CURRENT registry未登记",
+        "recommended_disposition": "参数化屋面基层"
+      },
+      {
+        "item": "板瓦",
+        "source_status": "V007 predecessor audit measured widths",
+        "reason": "CURRENT registry仅有筒瓦坡面阵列，未登记板瓦",
+        "recommended_disposition": "瓦件Master + 阵列"
+      },
+      {
+        "item": "勾头/滴水",
+        "source_status": "V007 predecessor audit records motifs/width relation",
+        "reason": "CURRENT registry未登记",
+        "recommended_disposition": "简化Master/参数化装饰瓦"
+      },
+      {
+        "item": "博风板/悬鱼/惹草/生头木",
+        "source_status": "V007 predecessor audit confirmed existence; dimensions not locked",
+        "reason": "CURRENT registry未登记",
+        "recommended_disposition": "简化Proxy或参数化Master"
+      },
+      {
+        "item": "正吻/垂兽/戗兽/仙人",
+        "source_status": "V007 confirms counts 2/4/4/4",
+        "reason": "CURRENT registry只在证据文档摘要保存数量，未建立独立registry records",
+        "recommended_disposition": "简化Proxy / 独立装饰资产"
+      },
+      {
+        "item": "门窗木作",
+        "source_status": "V007 elevation drawings support visual subdivision",
+        "reason": "CURRENT registry仅登记洞口，不含木框/门扇/窗扇资产",
+        "recommended_disposition": "VISUAL_MODEL + PARAMETRIC_SECTION"
+      },
+      {
+        "item": "单向长开斗/交互斗/散斗",
+        "source_status": "V007明确存在但全殿总量未闭合",
+        "reason": "CURRENT registry未登记UNKNOWN边界记录；其中前两者已有approved Master",
+        "recommended_disposition": "REFERENCE_ONLY / UNKNOWN instance accounting"
+      },
+      {
+        "item": "替木实体族",
+        "source_status": "V007有23条测量记录但全殿总数UNKNOWN",
+        "reason": "CURRENT registry仅登记“替木测量边界”，没有实体族UNKNOWN记录",
+        "recommended_disposition": "REFERENCE_ONLY / UNKNOWN instance accounting"
+      }
+    ],
+    "consequence": "A Master Coverage Matrix based only on the 49 current types would falsely appear whole-building complete. Stage 1 must not declare full coverage until the canonical registry explicitly records these gaps/objects.",
+    "required_next_action": "Prepare targeted V008 registry-completeness patch; preserve V007 snapshot; do not silently edit V007."
+  },
+  "first_new_master_candidate": {
+    "component": "四椽栿",
+    "status": "CANDIDATE_ONLY / SPEC NOT YET LOCKED",
+    "condition": "Lock only after targeted registry-completeness disposition is resolved or formally bounded."
+  },
+  "t018_status": "HOLD",
+  "new_t_task_created": false
+}
