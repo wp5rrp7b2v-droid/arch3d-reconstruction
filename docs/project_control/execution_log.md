@@ -714,3 +714,12 @@ Do not restart T-018 by default.
   - `rules_change_log.md`：D-066 属实施决策/DoD重基线，不是新的 governance rule，因此不新增 RC 编号；
   - `phase_archive/`：历史关闭材料，不回写。
 - Current-control chain after correction：project_state / dashboard / decision_log / execution_log / acceptance_matrix / governance / Cloud Sync Ledger are mutually aligned.
+
+
+## P3.3 V002 Stage 1｜进入真实构件 Master 库｜2026-09-19
+
+- Product Owner authorization：D-067。
+- Stage 1 status：ACTIVE。
+- First work package：six existing approved Master rebind / coverage review against V007.
+- No new T-### yet；this first step is ChatGPT design/review.
+- No Blender run / no T-018 restart / no RZ/FV publication / no PR #3/#6 merge.
