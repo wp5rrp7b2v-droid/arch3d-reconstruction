@@ -1,0 +1,50 @@
+{
+  "assembly_length_rule": {
+    "default_to_canonical_reference_allowed": false,
+    "future_length_classification": "EXPLICIT_DERIVED_GEOMETRY / PROJECT_RULE",
+    "future_length_source": "explicit assembly endpoints",
+    "hard_fail_id": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "historical_full_length_remains_null": true
+  },
+  "blender_version": "4.5.13 LTS",
+  "body": {
+    "face_count": 6,
+    "geometry_faces": [[3,2,1,0],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7],[4,5,6,7]],
+    "geometry_vertices_mm": [[-500.0,-213.25,0.0],[500.0,-213.25,0.0],[500.0,213.25,0.0],[-500.0,213.25,0.0],[-500.0,-213.25,302.0],[500.0,-213.25,302.0],[500.0,213.25,302.0],[-500.0,213.25,302.0]],
+    "local_bbox_mm": {"dimensions":[1000.0,426.5,302.0],"max":[500.0,213.25,302.0],"min":[-500.0,-213.25,0.0]},
+    "local_transform": {"location":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0],"scale":[1.0,1.0,1.0]},
+    "name": "MASTER__CMP_FRAME_FOUR_CHUANFU_001__BODY",
+    "primitive": "closed_rectangular_bounded_outer_envelope_reference",
+    "unsupported_detail_count": 0,
+    "vertex_count": 8
+  },
+  "canonical_asset_path": "artifacts/t021/CMP-FRAME-FOUR-CHUANFU-001_MASTER_V001.blend",
+  "canonical_blend_sha256": "9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997",
+  "component_id": "CMP-FRAME-FOUR-CHUANFU-001",
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "geometry_semantics": "OBSERVED_MEAN_SECTION / NON_HISTORICAL_REFERENCE_LENGTH / REPLACEABLE",
+  "historical_state": {"historical_claim":false,"historical_full_length_mm":null,"model_layer":"observed_mean_section_plus_non_historical_reference_length","reconstructed_963_candidate":"not_inferred","report_ideal_model":"separate_metadata_only"},
+  "interface_contract": {
+    "geometric": [{"id":"END_NEG_X","position_rule":"(-L/2,0,thickness/2)"},{"id":"END_POS_X","position_rule":"(+L/2,0,thickness/2)"}],
+    "semantic_only": [{"coordinate_status":"ASSEMBLY_OWNED / UNKNOWN","id":"SUPPORT_FROM_SAN_DOU"},{"coordinate_status":"ASSEMBLY_OWNED / UNKNOWN","id":"RELATION_TO_UPPER_SIX_CHUANFU"},{"coordinate_status":"ASSEMBLY_OWNED / UNKNOWN","id":"SPACER_SINGLE_GONG_RELATION"}]
+  },
+  "known_unknowns": ["HIS-002: individual 963 component originality UNKNOWN","Historical full length UNKNOWN / null","Sample A/B to east/west seam mapping UNKNOWN","Full-length section uniformity UNKNOWN","End profile, camber, joinery, hidden connections and local reductions are not evidenced"],
+  "master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+  "master_version": "V001",
+  "measured_section_samples_mm": [{"instance_mapping":"UNKNOWN","sample":"A","thickness":295,"width":413},{"instance_mapping":"UNKNOWN","sample":"B","thickness":309,"width":440}],
+  "originality_status": "unknown",
+  "parameter_semantics": {
+    "canonical_reference_length_mm": {"classification":"PROJECT_RULE","historical_claim":false,"key":"canonical_reference_length_mm","production_use":"CANONICAL_REFERENCE_ONLY","replaceable":true,"source_layer":"ENGINEERING_REFERENCE","time_layer":"NON_HISTORICAL_REFERENCE_REALIZATION","unit":"mm","value":1000},
+    "historical_full_length_mm": {"classification":"UNKNOWN","historical_claim":false,"key":"historical_full_length_mm","production_use":"DO_NOT_LOCK","replaceable":true,"source_layer":"EVIDENCE_GAP","time_layer":"historical_full_length_unknown","unit":"mm","value":null},
+    "realization_length_mm": {"classification":"PROJECT_RULE","derives_from":"canonical_reference_length_mm","historical_claim":false,"key":"realization_length_mm","production_use":"GEOMETRY_EXECUTION_VALUE","replaceable":true,"role":"GEOMETRY_EXECUTION_VALUE","source_layer":"ENGINEERING_EXECUTION","time_layer":"NON_HISTORICAL_REFERENCE_REALIZATION","unit":"mm","value":1000},
+    "thickness_mm": {"classification":"CONFIRMED","historical_claim":false,"key":"thickness_mm","production_use":"OBSERVED_REFERENCE_OUTER_ENVELOPE","replaceable":false,"source_layer":"DIRECT_PRIMARY","time_layer":"observed_as_measured_mean","unit":"mm","value":302},
+    "width_mm": {"classification":"CONFIRMED","historical_claim":false,"key":"width_mm","production_use":"OBSERVED_REFERENCE_OUTER_ENVELOPE","replaceable":false,"source_layer":"DIRECT_PRIMARY","time_layer":"observed_as_measured_mean","unit":"mm","value":426.5}
+  },
+  "report_design_analysis": {"classification":"REPORT_INFERRED / DESIGN_ANALYSIS_METADATA","geometry_use_count":0,"thickness_fen_observed":19.7,"thickness_fen_rounded":20,"thickness_fit_percent":98.69,"width_fen_observed":27.9,"width_fen_rounded":28,"width_fit_percent":99.56},
+  "resolved_parameters": {"canonical_reference_length_mm":1000,"historical_full_length_mm":null,"realization_length_mm":1000,"thickness_mm":302,"width_mm":426.5},
+  "sample_to_instance_mapping": "UNKNOWN",
+  "semantic_geometry_signature": "45dce8ce4e58deabd3643c57d0f6caa7ebf50a6189e8d41cf57b68e978b63322",
+  "task": "T-021",
+  "unsupported_geometry": []
+}
