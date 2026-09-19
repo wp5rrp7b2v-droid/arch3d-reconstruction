@@ -751,3 +751,17 @@ Do not restart T-018 by default.
   - `production/zhenguo_wanfo/registry/P3_3_STAGE1_REGISTRY_V008_TARGETED_PATCH_PROPOSAL_V001.json`
 - No canonical registry update yet; Product Owner approval required.
 - No new T-### / no Blender / T-018 HOLD.
+
+
+## P3.3 Stage 1｜V008 Registry Patch + Coverage Matrix V002 Complete｜2026-09-19
+
+- Product Owner approval：D-068。
+- V007 472 records preserved exactly; 33 targeted records appended。
+- CURRENT registry advanced to V008 / 505 records。
+- RC-018 workflow run `35431569023` PASS。
+- CURRENT.xlsx + V008.xlsx generated and committed。
+- V008 Master Coverage / Disposition Matrix V002 finalized against 66 registered object types。
+- All 66 current object types have explicit disposition。
+- 7 items remain PENDING_SOURCE_BINDING: 板瓦 / 勾头 / 滴水 / 博风板 / 悬鱼 / 惹草 / 生头木。
+- Next design object：四椽栿 Master Spec。
+- No new T-### / no Blender / no T-018 restart。
