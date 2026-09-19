@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R123",
+  "state_revision": "R124",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 ACTIVE / T-018 V002 HOLD / REAL-COMPONENT INVENTORY V007 BUILD BASELINE LOCKED / AUDIT STOP RULE ACTIVE / IMPLEMENTATION FROZEN / CLOUD_MODE_DAY4_IN_PROGRESS",
+  "session_status": "P3.3 ACTIVE / T-018 V002 HOLD / V007 BUILD BASELINE + DETAILED INSTANCE REGISTRY SYNCED / AUDIT STOP RULE ACTIVE / IMPLEMENTATION FROZEN / CLOUD_MODE_DAY4_IN_PROGRESS",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -528,10 +528,10 @@
   "next_action": "Use V007 real-component build baseline to redesign Master completion order and whole-building assembly architecture. Do not resume T-018/RZ/FV/CP-03 execution by default.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v064",
+    "visualization_version": "v065",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R123 / V007 BUILD BASELINE LOCKED / T-018 HOLD"
+    "refresh_status": "CURRENT / R124 / V007 BUILD BASELINE + INSTANCE REGISTRY SYNCED / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -544,7 +544,7 @@
     }
   ],
   "component_inventory_recalibration_2026_09_19": {
-    "status": "V007 CURRENT BUILD BASELINE / FINAL HIGH-RISK AUDIT COMPLETE / AUDIT STOP RULE ACTIVE",
+    "status": "V007 CURRENT BUILD BASELINE / DETAILED INSTANCE REGISTRY SYNCED / FINAL HIGH-RISK AUDIT COMPLETE / AUDIT STOP RULE ACTIVE",
     "artifact": "docs/evidence/zhenguo_wanfo/P3_WANFO_WHOLE_BUILDING_COMPONENT_INSTANCE_INVENTORY_V007.md",
     "machine_readable_baseline": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INVENTORY_V007_BUILD_BASELINE.json",
     "source": "SRC-ZG-WF-001 + survey drawing atlas + appendices 1-7 through 1-10",
@@ -584,6 +584,7 @@
       "full_table_reaudit": "STOP unless a systemic source error or new external evidence appears"
     },
     "impact_on_t018": "T-018 stays HOLD. V007 is a modeling-evidence baseline, not execution authorization. RZ/FV publication, CP-03 restart, PR #6 patch, Actions rerun, Blender, Stage C and merge remain unauthorized.",
-    "engineering_execution_authorized": false
+    "engineering_execution_authorized": false,
+    "detailed_instance_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.json"
   }
 }
