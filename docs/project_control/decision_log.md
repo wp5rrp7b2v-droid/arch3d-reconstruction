@@ -91,3 +91,6 @@
 
 
 | D-066 | 2026-09-19 | Product Owner 正式批准并锁定 `P3.3｜真实构件驱动整殿重建｜Definition of Done / Implementation Plan V002`，以 V007 真实构件登记为当前事实基线，正式替代 D-047 / P3.3 DoD V001 作为当前 P3.3 实施路线。新路线固定为七阶段：①真实构件 Master 库；②构件变体与装配接口；③代表性组合验证；④整殿真实实例与拓扑；⑤整殿空间定位与标高规则；⑥确定性整殿生成；⑦整殿验收与 Gate Closure。旧 11/40/365 体系保留为历史工程基线/对照，不再作为真实构件生产真值；T-017 365 accounting 降为历史工程基线；T-020、RZ D-063、FV D-064 保留但推迟到 Stage 5 重新审查；T-018 V002 继续 HOLD，并在 Stage 6 前再决定 rebaseline 或 supersede。新增 Hard Fail：LEGACY_PROXY_AS_REAL_COMPONENT、REGISTRY_LAYER_DOUBLE_COUNT、UNDECLARED_PARAMETRIC_COMPLETION、MASTER_WITHOUT_EVIDENCE_BINDING、EXCEL_AS_CANONICAL_SOURCE。D-066 只锁定 P3.3 V002 实施计划，不授权 Codex 建模、新 T-###、Blender、T-018、RZ/FV 发布、CP-03、PR merge 或 P3.3 PASS。 | ACTIVE / P3.3 V002 LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT AUTHORIZED |
+
+
+| D-067 | 2026-09-19 | Product Owner 指示“进入下一步”，正式授权进入 P3.3 V002 Stage 1｜真实构件 Master 库。当前授权范围限定为：①将既有6个已批准 Master 按 V007 真实构件登记重新绑定并做覆盖/证据边界复核；②建立当前构件 Master / 参数化 / Proxy / UNKNOWN disposition；③在复核结果基础上设计首个缺失 Master 的正式规格。ChatGPT 设计/复核不占 T-###；只有实际交给 Codex 执行建模时才创建新的 T-###。本授权不包括 T-018 恢复、RZ/FV/T-020 发布或执行、CP-03、整殿生成、PR #3/#6 merge、P3.3 PASS。 | ACTIVE / P3.3 V002 STAGE 1 AUTHORIZED / CHAT REVIEW + MASTER PLANNING / T-018 HOLD |
