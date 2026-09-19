@@ -1,0 +1,157 @@
+name: T-021 Four Chuanfu Master First Article
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p3_3_t021_four_chuanfu_master.yml'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-FOUR-CHUANFU-001/**'
+      - 'production/zhenguo_wanfo/scripts/four_chuanfu_master_common_v001.py'
+      - 'production/zhenguo_wanfo/scripts/validate_four_chuanfu_master_v001.py'
+      - 'docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md'
+      - 'docs/production/zhenguo_wanfo/P3_3_STAGE1_FOUR_CHUANFU_MASTER_SPEC_V001.md'
+      - 'docs/evidence/zhenguo_wanfo/P3_3_FOUR_CHUANFU_DIRECT_SOURCE_BINDING_V001.md'
+      - 'docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  first-article:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      BLENDER_DIR: /tmp/blender-4.5.13-linux-x64
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      PARAMS: production/zhenguo_wanfo/component_library/masters/CMP-FRAME-FOUR-CHUANFU-001/CMP-FRAME-FOUR-CHUANFU-001_MASTER_PARAMS_V001.json
+      WRAPPER: production/zhenguo_wanfo/component_library/masters/CMP-FRAME-FOUR-CHUANFU-001/build_four_chuanfu_master_v001.py
+      COMMON: production/zhenguo_wanfo/scripts/four_chuanfu_master_common_v001.py
+      VALIDATOR: production/zhenguo_wanfo/scripts/validate_four_chuanfu_master_v001.py
+      REGISTRY: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json
+      SPEC: docs/production/zhenguo_wanfo/P3_3_STAGE1_FOUR_CHUANFU_MASTER_SPEC_V001.md
+      EVIDENCE: docs/evidence/zhenguo_wanfo/P3_3_FOUR_CHUANFU_DIRECT_SOURCE_BINDING_V001.md
+      ARTIFACT_DIR: artifacts/t021
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+      REVIEW_DIR: production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-FOUR-CHUANFU-001
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Verify protected inputs
+        run: |
+          set -euo pipefail
+          test -f "$PARAMS"
+          test -f "$SPEC"
+          test -f "$EVIDENCE"
+          test -f "$REGISTRY"
+          python - <<'PY'
+          import json
+          r=json.load(open("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",encoding="utf-8"))
+          assert r["schema_version"]=="V008"
+          assert r["item_count"]==505
+          items=[x for x in r["items"] if x.get("component")=="四椽栿"]
+          assert len(items)==2
+          assert {x["id"] for x in items}=={"四椽栿-东缝","四椽栿-西缝"}
+          print("PROTECTED_INPUTS_PASS")
+          PY
+
+      - name: Install and pin Blender 4.5.13
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          URL="https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions T-021" -o /tmp/blender.tar.xz "$URL"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | tee /tmp/blender-version.txt
+          python - <<'PY'
+          import re
+          line=open("/tmp/blender-version.txt",encoding="utf-8").readline().strip()
+          if re.fullmatch(r"Blender 4\.5\.13(?: LTS)?",line) is None:
+              raise SystemExit("Unexpected Blender version: "+repr(line))
+          print("BLENDER_VERSION_PASS",line)
+          PY
+
+      - name: Build canonical Master and review package
+        run: |
+          set -euo pipefail
+          mkdir -p "$ARTIFACT_DIR" "$REVIEW_DIR"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build             --params "$PARAMS"             --asset "$ARTIFACT_DIR/CMP-FRAME-FOUR-CHUANFU-001_MASTER_V001.blend"             --semantic "$ARTIFACT_DIR/canonical_semantic.json"             --review-dir "$REVIEW_DIR"
+
+      - name: Independent reopen
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$ARTIFACT_DIR/CMP-FRAME-FOUR-CHUANFU-001_MASTER_V001.blend"             --python-exit-code 10 --python "$WRAPPER" --             --mode inspect             --asset "$ARTIFACT_DIR/CMP-FRAME-FOUR-CHUANFU-001_MASTER_V001.blend"             --expected "$ARTIFACT_DIR/canonical_semantic.json"             --output "$ARTIFACT_DIR/reopen.json"
+
+      - name: Prepare mutation parameter sets
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import copy,json,pathlib
+          src=json.load(open("production/zhenguo_wanfo/component_library/masters/CMP-FRAME-FOUR-CHUANFU-001/CMP-FRAME-FOUR-CHUANFU-001_MASTER_PARAMS_V001.json",encoding="utf-8"))
+          out=pathlib.Path("artifacts/t021")
+          def save(name, mutate):
+              d=copy.deepcopy(src)
+              p={x["key"]:x for x in d["parameters"]}
+              mutate(p)
+              (out/name).write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          save("length_params.json", lambda p:(p["canonical_reference_length_mm"].__setitem__("value",1100.0),p["realization_length_mm"].__setitem__("value",1100.0)))
+          save("width_params.json", lambda p:p["width_mm"].__setitem__("value",450.0))
+          save("thickness_params.json", lambda p:p["thickness_mm"].__setitem__("value",320.0))
+          PY
+
+      - name: Length mutation
+        run: |
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$ARTIFACT_DIR/length_params.json"             --asset "$ARTIFACT_DIR/length_mutation.blend"             --semantic "$ARTIFACT_DIR/length_semantic.json"
+
+      - name: Width mutation
+        run: |
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$ARTIFACT_DIR/width_params.json"             --asset "$ARTIFACT_DIR/width_mutation.blend"             --semantic "$ARTIFACT_DIR/width_semantic.json"
+
+      - name: Thickness mutation
+        run: |
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$ARTIFACT_DIR/thickness_params.json"             --asset "$ARTIFACT_DIR/thickness_mutation.blend"             --semantic "$ARTIFACT_DIR/thickness_semantic.json"
+
+      - name: Canonical restore
+        run: |
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$PARAMS"             --asset "$ARTIFACT_DIR/restore.blend"             --semantic "$ARTIFACT_DIR/restore_semantic.json"
+
+      - name: Validate 42 locked checks
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR"             --params "$PARAMS"             --canonical "$ARTIFACT_DIR/canonical_semantic.json"             --reopen "$ARTIFACT_DIR/reopen.json"             --length "$ARTIFACT_DIR/length_semantic.json"             --width "$ARTIFACT_DIR/width_semantic.json"             --thickness "$ARTIFACT_DIR/thickness_semantic.json"             --restore "$ARTIFACT_DIR/restore_semantic.json"             --asset "$ARTIFACT_DIR/CMP-FRAME-FOUR-CHUANFU-001_MASTER_V001.blend"             --review-dir "$REVIEW_DIR"             --registry "$REGISTRY"             --evidence "$EVIDENCE"             --output "$ARTIFACT_DIR/CMP-FRAME-FOUR-CHUANFU-001_MASTER_VALIDATION_V001.json"             --catalog "$ARTIFACT_DIR/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json"             --report "$ARTIFACT_DIR/P3_3_T021_FOUR_CHUANFU_ENGINEERING_REVIEW_V001.md"
+
+      - name: Persistent hashes
+        run: |
+          set -euo pipefail
+          cp /tmp/blender-version.txt "$ARTIFACT_DIR/"
+          sha256sum             "$ARTIFACT_DIR/CMP-FRAME-FOUR-CHUANFU-001_MASTER_V001.blend"             "$ARTIFACT_DIR/restore.blend"             "$REVIEW_DIR"/*.png > "$ARTIFACT_DIR/SHA256SUMS.txt"
+          python - <<'PY'
+          import json,os,pathlib
+          out=pathlib.Path("artifacts/t021")
+          v=json.loads((out/"CMP-FRAME-FOUR-CHUANFU-001_MASTER_VALIDATION_V001.json").read_text())
+          m={
+            "task":"T-021",
+            "status":"ACTIONS_EVIDENCE",
+            "github_actions_run_id":os.getenv("GITHUB_RUN_ID"),
+            "github_sha":os.getenv("GITHUB_SHA"),
+            "pr_head_sha":os.getenv("PR_HEAD_SHA"),
+            "blender_version":v["blender_version"],
+            "validation_pass_count":v["check_count"],
+            "canonical_blend_sha256":v["canonical_blend_sha256"],
+            "artifact_name":"P3_3_T021_FOUR_CHUANFU_FIRST_ARTICLE_V001",
+            "approval_boundary":"PENDING_CHATGPT_PRODUCT_OWNER_REVIEW"
+          }
+          (out/"T021_ACTIONS_EVIDENCE_MANIFEST_V001.json").write_text(json.dumps(m,indent=2)+"\n")
+          PY
+
+      - name: Upload T-021 formal evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T021_FOUR_CHUANFU_FIRST_ARTICLE_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            artifacts/t021/**
+            production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-FOUR-CHUANFU-001/*.png

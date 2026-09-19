@@ -1,0 +1,25 @@
+{
+  "approval_boundary": "ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+  "blender_version": "4.5.13 LTS",
+  "canonical_blend_sha256": "9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997",
+  "check_count": 42,
+  "checks": {
+    "01_unique_component_id": "PASS","02_unique_master_id": "PASS","03_v008_instance_count_2": "PASS","04_source_binding": "PASS","05_sample_a": "PASS","06_sample_b": "PASS","07_sample_mapping_unknown": "PASS","08_mean_width": "PASS","09_mean_thickness": "PASS","10_report_metadata_only": "PASS","11_historical_length_null": "PASS","12_reference_classification": "PASS","13_realization_derivation": "PASS","14_reference_not_historical": "PASS","15_x_extent": "PASS","16_y_extent": "PASS","17_z_extent": "PASS","18_origin": "PASS","19_rotation_zero": "PASS","20_scale_one": "PASS","21_unsupported_zero": "PASS","22_p2_proxy_zero": "PASS","23_interfaces_semantic_only": "PASS","24_no_sample_assignment": "PASS","25_deterministic_restore": "PASS","26_independent_reopen": "PASS","27_length_mutation_x_only": "PASS","28_width_mutation_y_only": "PASS","29_thickness_mutation_z_only": "PASS","30_restore_parameters": "PASS","31_params_semantic_consistency": "PASS","32_review_six_complete": "PASS","33_binary_sha": "PASS","34_blend_artifact_only": "PASS","35_existing_masters_protected": "PASS","36_registry_protected": "PASS","37_legacy_controls_protected": "PASS","38_catalog_pending_only": "PASS","39_no_reference_leak": "PASS","40_no_silent_historicization": "PASS","41_evidence_binding": "PASS","42_no_legacy_proxy": "PASS"
+  },
+  "mutation_evidence": {"canonical_restored":true,"length":[1100.0,426.5,302.0],"thickness":[1000.0,426.5,320.0],"width":[1000.0,450.0,302.0]},
+  "reopen_evidence": {
+    "blend_sha256":"9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997",
+    "body":{
+      "face_count":6,
+      "geometry_faces":[[3,2,1,0],[0,1,5,4],[1,2,6,5],[2,3,7,6],[3,0,4,7],[4,5,6,7]],
+      "geometry_vertices_mm":[[-500.0,-213.25,0.0],[500.0,-213.25,0.0],[500.0,213.25,0.0],[-500.0,213.25,0.0],[-500.0,-213.25,302.0],[500.0,-213.25,302.0],[500.0,213.25,302.0],[-500.0,213.25,302.0]],
+      "local_bbox_mm":{"dimensions":[1000.0,426.5,302.0],"max":[500.0,213.25,302.0],"min":[-500.0,-213.25,0.0]},
+      "local_transform":{"location":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0],"scale":[1.0,1.0,1.0]},
+      "name":"MASTER__CMP_FRAME_FOUR_CHUANFU_001__BODY","primitive":"closed_rectangular_bounded_outer_envelope_reference","unsupported_detail_count":0,"vertex_count":8
+    },
+    "component_id":"CMP-FRAME-FOUR-CHUANFU-001","historical_full_length_mm":null,"master_id":"CMP-FRAME-FOUR-CHUANFU-001_MASTER","semantic_geometry_signature":"45dce8ce4e58deabd3643c57d0f6caa7ebf50a6189e8d41cf57b68e978b63322","status":"PASS"
+  },
+  "review_paths":["FRONT.png","SIDE.png","TOP.png","AXON.png","DIMENSION_PARAMETER_SUMMARY.png","EVIDENCE_UNCERTAINTY_SUMMARY.png"],
+  "status":"PASS",
+  "task":"T-021"
+}
