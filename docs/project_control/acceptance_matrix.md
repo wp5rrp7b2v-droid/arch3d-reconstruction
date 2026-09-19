@@ -530,3 +530,23 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Branch/PR rule：ONE TASK = ONE BRANCH = ONE PR / DO NOT MERGE without Product Owner approval。
 - T-018：HOLD。
 - T-022：NOT CREATED。
+
+
+## 2026-09-19｜T-021 四椽栿 Master 首件正式验收
+
+- Decision：**D-072 / Product Owner APPROVED**。
+- Task：T-021。
+- Master：`CMP-FRAME-FOUR-CHUANFU-001_MASTER`。
+- Actions Run：`35440785415` = **SUCCESS**。
+- Reviewed head：`f16ba22933bb48dbae8951343b76190d2c76c1cf`。
+- Machine validation：**42/42 PASS**。
+- Independent reopen：PASS。
+- Mutations：Length / Width / Thickness = PASS；Canonical restore = PASS。
+- Review：6/6 PNG = PASS。
+- Artifact ID：`10583607231`。
+- Artifact ZIP SHA-256：`2b5b270e43b98c2b265e487280244679661864414115bcbc2fd996237998e53e`。
+- Canonical `.blend` SHA-256：`9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997`。
+- Semantic geometry signature：`45dce8ce4e58deabd3643c57d0f6caa7ebf50a6189e8d41cf57b68e978b63322`。
+- Correction：此前聊天汇报误把 semantic geometry signature 标为 binary SHA；仅标签错误，不影响工程结果，无需重跑。
+- Final：**T-021 FIRST ARTICLE PRODUCT OWNER APPROVED**。
+- Boundary：Stage 1 未整体 PASS；PR #7 publication closure 尚未完成；T-018 HOLD。
