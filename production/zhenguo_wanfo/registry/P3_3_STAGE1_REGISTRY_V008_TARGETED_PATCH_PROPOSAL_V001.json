@@ -2,7 +2,7 @@
   "version": "V001",
   "target_registry_version": "V008",
   "date": "2026-09-19",
-  "status": "DESIGN_COMPLETE / PRODUCT_OWNER_APPROVAL_REQUIRED",
+  "status": "APPROVED / EXECUTED / V008 SYNC PASS",
   "base_version": "V007",
   "base_record_count": 472,
   "append_record_count": 33,
@@ -342,5 +342,14 @@
     "生头木"
   ],
   "rule": "Do not add pending-source-binding items until their canonical evidence binding is published.",
-  "t018_status": "HOLD"
+  "t018_status": "HOLD",
+  "product_owner_approval": "D-068",
+  "executed_snapshot": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json",
+  "current_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
+  "workflow_run_id": 35431569023,
+  "workflow_result": "SUCCESS",
+  "derived_commit": "5c9b67217cf9bb2100993ee322419481ca446ede",
+  "final_record_count": 505,
+  "source_json_sha256": "e6299d8306fd4f58dac29a43230d387c2f63ca4056d002fd03803df02bb072a7",
+  "excel_sha256": "0174049f8b6f2b0cb86f383011a6700401ea1969c47bd132f0c0c1528cfc3adb"
 }
