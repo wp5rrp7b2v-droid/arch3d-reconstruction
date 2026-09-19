@@ -439,3 +439,18 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - 单向长开斗 / 交互斗：Master 保留，但 V007 未闭合全殿真实总量和逐件位置，当前禁止物理实例绑定。
 - 本复核不改变 P3.1 历史 PASS；Stage 1 尚未整体 PASS。
 - 下一步：V007 全构件 Master Coverage / Disposition Matrix。
+
+
+## 2026-09-19｜P3.3 Stage 1 Master Coverage Review / V008 Patch Proposal
+
+- V007 current registry：472 records / 49 registered object types。
+- Master Coverage / Disposition Matrix：COMPLETE。
+- Finding：49类登记对象并不等于整殿建模对象已完全覆盖；V007 evidence 中还有墙体、地面、神台、望板、屋脊装饰、门窗木作和若干 UNKNOWN family boundary 未序列化到 canonical registry。
+- V008 targeted patch proposal：DESIGN COMPLETE / PRODUCT OWNER APPROVAL REQUIRED。
+- Proposal：
+  - preserve all 472 V007 records；
+  - append 33 system/family/entity records；
+  - expected V008 registry record count = 505；
+  - 505 is registry record count, **not physical component total**。
+- Pending source binding（暂不补入 V008）：板瓦、勾头、滴水、博风板、悬鱼、惹草、生头木。
+- No new T-### / no Blender / T-018 remains HOLD。
