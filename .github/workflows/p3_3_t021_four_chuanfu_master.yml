@@ -31,6 +31,7 @@ jobs:
       SPEC: docs/production/zhenguo_wanfo/P3_3_STAGE1_FOUR_CHUANFU_MASTER_SPEC_V001.md
       EVIDENCE: docs/evidence/zhenguo_wanfo/P3_3_FOUR_CHUANFU_DIRECT_SOURCE_BINDING_V001.md
       ARTIFACT_DIR: artifacts/t021
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
       REVIEW_DIR: production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-FOUR-CHUANFU-001
     steps:
       - uses: actions/checkout@v4
@@ -135,7 +136,7 @@ jobs:
             "status":"ACTIONS_EVIDENCE",
             "github_actions_run_id":os.getenv("GITHUB_RUN_ID"),
             "github_sha":os.getenv("GITHUB_SHA"),
-            "pr_head_sha":os.getenv("GITHUB_HEAD_SHA") or os.getenv("GITHUB_SHA"),
+            "pr_head_sha":os.getenv("PR_HEAD_SHA"),
             "blender_version":v["blender_version"],
             "validation_pass_count":v["check_count"],
             "canonical_blend_sha256":v["canonical_blend_sha256"],
