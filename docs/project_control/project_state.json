@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R131",
+  "state_revision": "R132",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / V008 CURRENT / RC-018 SYNC PASS / MASTER COVERAGE MATRIX V002 FINALIZED / FOUR-CHUANFU SPEC NEXT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / V008 CURRENT / FOUR-CHUANFU MASTER SPEC V001 LOCKED / FIRST ARTICLE ENGINEERING NOT YET AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -484,9 +484,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-068",
+    "id": "D-069",
     "date": "2026-09-19",
-    "decision": "Product Owner approved and completed the V008 targeted registry patch: V007 472 records preserved, 33 records added, V008=505 records, RC-018 Excel sync PASS. Master Coverage Matrix V002 is finalized; 四椽栿 Master Spec is next."
+    "decision": "Product Owner approved and locked 四椽栿 Master Spec V001. Direct source binding now supports two physical instances and measured mean section 426.5×302 mm. Historical full length remains UNKNOWN; Codex first-article engineering is not yet authorized."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -525,13 +525,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Design and lock 四椽栿 Master Spec under P3.3 V002 Stage 1. Do not create a Codex T-### until the Master Spec is approved. T-018/RZ/FV/CP-03 remain HOLD.",
+  "next_action": "Await Product Owner authorization to create the 四椽栿 Master First Article Codex engineering task. Do not start Codex/Blender before that authorization. T-018/RZ/FV/CP-03 remain HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v072",
+    "visualization_version": "v073",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R131 / V008 SYNC PASS / COVERAGE V002 FINAL / FOUR-CHUANFU SPEC NEXT / T-018 HOLD"
+    "refresh_status": "CURRENT / R132 / FOUR-CHUANFU SPEC LOCKED / FIRST ARTICLE NOT AUTHORIZED / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -644,7 +644,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / V008 CURRENT / COVERAGE MATRIX V002 FINALIZED",
+    "status": "ACTIVE / FOUR-CHUANFU MASTER SPEC LOCKED",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -700,6 +700,34 @@
         "惹草",
         "生头木"
       ]
+    },
+    "four_chuanfu_master_spec": {
+      "status": "LOCKED / PRODUCT OWNER APPROVED",
+      "decision_id": "D-069",
+      "component_id": "CMP-FRAME-FOUR-CHUANFU-001",
+      "master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "spec_doc": "docs/production/zhenguo_wanfo/P3_3_STAGE1_FOUR_CHUANFU_MASTER_SPEC_V001.md",
+      "spec_json": "production/zhenguo_wanfo/registry/P3_3_STAGE1_FOUR_CHUANFU_MASTER_SPEC_V001.json",
+      "evidence_binding": "docs/evidence/zhenguo_wanfo/P3_3_FOUR_CHUANFU_DIRECT_SOURCE_BINDING_V001.md",
+      "physical_instance_count": 2,
+      "observed_mean_section_mm": {
+        "width": 426.5,
+        "thickness": 302
+      },
+      "measured_samples_mm": [
+        {
+          "width": 413,
+          "thickness": 295
+        },
+        {
+          "width": 440,
+          "thickness": 309
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN",
+      "historical_full_length_mm": null,
+      "canonical_reference_length_mm": 1000,
+      "codex_first_article_authorized": false
     }
   }
 }
