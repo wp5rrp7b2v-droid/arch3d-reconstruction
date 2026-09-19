@@ -735,3 +735,19 @@ Do not restart T-018 by default.
 - Retain but no physical-instance binding：单向长开斗、交互斗。
 - No new T-### / no Blender / no Codex modeling / T-018 remains HOLD。
 - Next：build full V007 Master Coverage / Disposition Matrix。
+
+
+## P3.3 Stage 1｜Master Coverage Matrix + V008 Targeted Patch Proposal｜2026-09-19
+
+- Full current registry coverage classified across 49 registered component/object types.
+- During consistency review, found canonical-registry serialization gaps relative to already locked V007 evidence.
+- Designed targeted V008 patch:
+  - base V007 records preserved;
+  - +33 records proposed;
+  - expected total 505 registry records;
+  - 7 predecessor-only items held as PENDING_SOURCE_BINDING rather than silently imported.
+- Proposal docs:
+  - `docs/production/zhenguo_wanfo/P3_3_STAGE1_REGISTRY_V008_TARGETED_PATCH_PROPOSAL_V001.md`
+  - `production/zhenguo_wanfo/registry/P3_3_STAGE1_REGISTRY_V008_TARGETED_PATCH_PROPOSAL_V001.json`
+- No canonical registry update yet; Product Owner approval required.
+- No new T-### / no Blender / T-018 HOLD.
