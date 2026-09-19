@@ -449,3 +449,20 @@ Therefore separately check：
 - New T-###：NONE
 - Codex First Article：NOT AUTHORIZED
 - T-018：HOLD
+
+
+### T-021 four-chuanfu Master First Article task creation
+
+- Date：2026-09-19
+- Decision：D-070
+- Project State：R133
+- Dashboard：v074
+- Task：T-021
+- Contract：LOCKED
+- Target：CMP-FRAME-FOUR-CHUANFU-001_MASTER
+- Branch planned：codex/t021-p3-3-four-chuanfu-master-first-article-v001
+- Execution：NOT YET AUTHORIZED
+- New Codex run：NONE
+- Blender run：NONE
+- T-018：HOLD
+- Next：Product Owner explicit “开始 T-021”
