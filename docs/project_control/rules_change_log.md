@@ -61,3 +61,8 @@
 `RC-014 Cloud Mode = strictly 2026-09-16→20 only; auto-expires after Sep 20; normal pre-RC-014 operating mode resumes automatically on Sep 21; no auto-extension`
 
 `同步模式 = TRIAL；价值不足时可调整`
+
+| **RC-018** | **2026-09-19** | **建立万佛殿 Component Registry → Excel 自动派生规则：构件登记 JSON 为唯一正式事实源；版本化 Vxxx.json + CURRENT.json 单向驱动自动生成 CURRENT.xlsx、Vxxx.xlsx 与同步 Manifest；禁止人工双维护 Excel；同步失败必须 FAIL CLOSED；Excel 与 Dashboard 同属可重新生成派生视图。正式 generator=`scripts/generate_wanfo_component_registry_excel.py`，workflow=`.github/workflows/wanfo-component-registry-excel.yml`。** | **Product Owner 明确要求 Excel 与 Dashboard 采用同类派生架构，避免 GitHub 登记与本地/二进制 Excel 长期分叉。** | **ACTIVE / COMPONENT REGISTRY → EXCEL DERIVED VIEW RULE / D-065** |
+
+
+`Component Registry JSON = 构件事实源；Excel = 自动派生表格视图；禁止双维护`
