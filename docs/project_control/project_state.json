@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R137",
+  "state_revision": "R138",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-021 EXECUTOR OVERRIDDEN TO CHATGPT DIRECT GITHUB / IMPLEMENTATION READY / V008 CURRENT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-021 FIRST ARTICLE PRODUCT OWNER APPROVED D-072 / PR #7 PUBLICATION CLOSURE PENDING / V008 CURRENT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -63,26 +63,30 @@
     "id": "T-021",
     "engineering_id": "P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001",
     "name": "四椽栿 Master 首件生产",
-    "status": "ACTIVE / EXECUTOR OVERRIDE APPROVED / IMPLEMENTATION READY",
+    "status": "COMPLETE / PRODUCT OWNER APPROVED / D-072 / PUBLICATION CLOSURE PENDING",
     "task_contract": "docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md",
     "branch": "codex/t021-p3-3-four-chuanfu-master-first-article-v001",
-    "pr_status": "NOT CREATED",
+    "pr_status": "PR #7 OPEN / DRAFT / PUBLICATION CLOSURE PENDING",
     "execution_mode": "CHATGPT_DIRECT_GITHUB_EXECUTION / FIRST_ARTICLE_ONLY",
     "cloud_mode": "CLOUD_EXECUTABLE",
     "think_level": "MEDIUM DEFAULT",
     "blender_executor": "GitHub Actions headless / RC-017 / Blender 4.5.13",
     "target_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
     "execution_authorized": true,
-    "execution_result": "Previous STOP reclassified: shell git remote/gh auth absence is not sufficient evidence that Codex Cloud cannot publish a PR.",
+    "execution_result": "PASS / GitHub Actions Run 35440785415 / 42 of 42 checks PASS / 6 of 6 review PNG PASS / Product Owner approved D-072",
     "blockers": [
-      "Do not require shell git remote or gh auth inside Codex Cloud sandbox",
-      "Blender must execute only in GitHub Actions, not in Codex sandbox"
+      "PR #7 publication closure still pending; D-072 itself does not merge the PR."
     ],
-    "engineering_changes": "NONE",
-    "validation": "0/42",
-    "retry": "T-021 Retry 01 / same task ID",
-    "next_retry": "Continue T-021 in the repo-selected Codex Cloud environment; implement files first, then use Codex Cloud/Create PR platform flow. If platform PR creation itself fails, STOP with that platform-level failure.",
-    "primary_engineering_executor": "ChatGPT direct GitHub execution"
+    "engineering_changes": "COMPLETE ON PR #7 HEAD f16ba22933bb48dbae8951343b76190d2c76c1cf",
+    "validation": "42/42 PASS",
+    "primary_engineering_executor": "ChatGPT direct GitHub execution",
+    "actions_run_id": 35440785415,
+    "artifact_id": 10583607231,
+    "artifact_zip_sha256": "2b5b270e43b98c2b265e487280244679661864414115bcbc2fd996237998e53e",
+    "canonical_blend_sha256": "9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997",
+    "semantic_geometry_signature": "45dce8ce4e58deabd3643c57d0f6caa7ebf50a6189e8d41cf57b68e978b63322",
+    "sha_label_correction": "Earlier chat report mislabeled semantic geometry signature as binary SHA; artifact fields were correct; no rerun required.",
+    "product_owner_decision": "D-072 / APPROVED"
   },
   "proposed_next_task": {
     "id": "P3.3_FINAL",
@@ -203,9 +207,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-071",
+    "id": "D-072",
     "date": "2026-09-19",
-    "decision": "Product Owner approved switching T-021 engineering execution from Codex Cloud to ChatGPT direct GitHub execution. GitHub Actions remains the Blender 4.5.13 executor; all T-021 technical and acceptance boundaries remain unchanged."
+    "decision": "Product Owner approved T-021 Four-Chuanfu Master First Article after Actions Run 35440785415 PASS, 42/42 validation, 6/6 review images, independent reopen, three mutation probes and canonical restore. SHA label correction recorded: canonical .blend SHA-256 9f1c8531...0997; semantic geometry signature 45dce8ce...63322."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -244,13 +248,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Execute T-021 directly through GitHub: create the task branch, implement params/semantic/generator/validator/workflow/review package plumbing, open PR, then let GitHub Actions run Blender 4.5.13. Do not merge without Product Owner approval.",
+  "next_action": "Complete PR #7 publication closure for the approved T-021 first article; do not change geometry or rerun engineering unless a publication-integrity issue is found. Stage 1 remains active; T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v078",
+    "visualization_version": "v079",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R137 / T-021 CHATGPT DIRECT GITHUB EXECUTION READY / V008 CURRENT / T-018 HOLD"
+    "refresh_status": "CURRENT / R138 / T-021 PRODUCT OWNER APPROVED D-072 / PR #7 PUBLICATION CLOSURE PENDING / V008 CURRENT / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -449,7 +453,7 @@
       "codex_first_article_authorized": false
     },
     "t021": {
-      "status": "ACTIVE / CHATGPT DIRECT GITHUB EXECUTION",
+      "status": "COMPLETE / PRODUCT OWNER APPROVED / D-072",
       "decision_id": "D-070",
       "task_contract": "docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md",
       "target_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
@@ -458,7 +462,14 @@
       "branch": "codex/t021-p3-3-four-chuanfu-master-first-article-v001",
       "stop_review": "docs/production/zhenguo_wanfo/P3_3_T021_STOP_ENVIRONMENT_REVIEW_V001.md",
       "execution_interpretation_correction": "git remote -v / gh auth status are not mandatory Cloud capability gates; use Codex Cloud repo/environment + product PR flow.",
-      "executor_override_decision": "D-071"
+      "executor_override_decision": "D-071",
+      "actions_run_id": 35440785415,
+      "validation": "42/42 PASS",
+      "review_png": "6/6 PASS",
+      "artifact_id": 10583607231,
+      "canonical_blend_sha256": "9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997",
+      "semantic_geometry_signature": "45dce8ce4e58deabd3643c57d0f6caa7ebf50a6189e8d41cf57b68e978b63322",
+      "publication_status": "PR #7 OPEN / publication closure pending"
     }
   }
 }
