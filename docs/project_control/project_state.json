@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R121",
-  "last_updated": "2026-09-18",
-  "session_status": "DAILY_CLOSE_FINAL / POST_CLOSE_OMISSION_AUDIT_PASS / P3.3_ACTIVE / T-018_V002_HOLD / PRODUCTION_DIRECTION_NOT_YET_PROVEN / IMPLEMENTATION_FROZEN / CLOUD_MODE_DAY3_COMPLETE",
+  "state_revision": "R122",
+  "last_updated": "2026-09-19",
+  "session_status": "P3.3 ACTIVE / T-018 V002 HOLD / REAL-COMPONENT INSTANCE INVENTORY RECALIBRATION IN PROGRESS / IMPLEMENTATION FROZEN / CLOUD_MODE_DAY4_IN_PROGRESS",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "END-OF-DAY HOLD. RZ D-063 and FV D-064 are design/policy locked only. Correct production direction is not yet proven. No machine-readable authority publication, Stage-A closure regression, CP-03 restart, PR #6 patch, Blender/Actions, Stage C, or merge is authorized.",
+  "blocker": "T-018 execution remains frozen while the whole-building real-component instance inventory is recalibrated from SRC-ZG-WF-001. Existing 11/40/365 engineering accounting remains a historical engineering baseline but is not accepted as proof of real-component completeness. RZ/FV production publication, CP-03 restart, PR #6 patch, Actions rerun, Blender, Stage C and merge remain unauthorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -54,7 +54,8 @@
       "day_1_register": "COMPLETE / 2026-09-16",
       "day_2_register": "COMPLETE / 2026-09-17",
       "required_daily_update_through": "2026-09-20",
-      "day_3_register": "COMPLETE / 2026-09-18 / DAILY_CLOSE_2026-09-18 + post-close omission audit / R121 / v062 / latest formal decision D-064 / no new execution authorization / T-018 HOLD / production direction not yet proven"
+      "day_3_register": "COMPLETE / 2026-09-18 / DAILY_CLOSE_2026-09-18 + post-close omission audit / R121 / v062 / latest formal decision D-064 / no new execution authorization / T-018 HOLD / production direction not yet proven",
+      "day_4_register": "IN PROGRESS / 2026-09-19 / real-component instance inventory V001 archived / R122 / no new engineering execution authorization"
     },
     "active_window_note": "2026-09-18 DAILY CLOSE COMPLETE. T-018 V002 remains HOLD; RZ/FV design contracts locked but not production-proven; CP-03 STOP; PR #3 superseded/read-only; PR #6 HOLD; no post-review Blender/Actions/365 runtime."
   },
@@ -62,7 +63,7 @@
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 DAILY CLOSE FINAL / HOLD / NO EXECUTION AUTHORIZED",
+    "status": "V002 HOLD / REAL-COMPONENT INVENTORY RECALIBRATION IN PROGRESS / NO EXECUTION AUTHORIZED",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
     "execution_authorization_decision_id": "D-061",
@@ -94,7 +95,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "END-OF-DAY HOLD / PRE-PUBLICATION READINESS REVIEW REQUIRED NEXT SESSION",
+    "formal_review_status": "HOLD / WHOLE-BUILDING REAL-COMPONENT INSTANCE INVENTORY RECALIBRATION IN PROGRESS",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -115,7 +116,7 @@
         "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
       ],
       "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "DAILY_CLOSE_FINAL / PRE-PUBLICATION_READINESS_REVIEW_PENDING",
+      "current_stage": "HOLD / REAL-COMPONENT INSTANCE INVENTORY RECALIBRATION",
       "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
       "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
     },
@@ -430,10 +431,10 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 DAILY HOLD / RZ D-063 + FV D-064 DESIGN LOCKED / PRODUCTION DIRECTION NOT YET PROVEN / STAGE B STOP",
+      "status": "V002 HOLD / REAL-COMPONENT INSTANCE INVENTORY RECALIBRATION / RZ+FV DESIGN-LOCKED ONLY / NO EXECUTION",
       "github_pr_number": 6,
       "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-      "note": "Daily close 2026-09-18: do not interpret RZ/FV locks as production proof. Pre-publication readiness review is required before any new execution/publication authorization."
+      "note": "2026-09-19 recalibration: existing 11/40/365 engineering accounting is retained as an engineering baseline but no longer treated as proof of whole-building real-component completeness. T-018 remains frozen while the real-component instance inventory is expanded."
     },
     "t019": {
       "status": "PASS / PRODUCT OWNER APPROVED / CLOSED / D-055",
@@ -541,5 +542,42 @@
       "status": "SUPERSEDED / OPEN / DO NOT MERGE",
       "reason": "Codex UI could not update PR #3 after external/upstream evolution; replacement PR #6 starts from R102 canonical main."
     }
-  ]
+  ],
+  "component_inventory_recalibration_2026_09_19": {
+    "status": "V001 ARCHIVED / WHOLE-BUILDING INVENTORY NOT YET COMPLETE / INSTANCE-LEVEL EXPANSION IN PROGRESS",
+    "artifact": "docs/evidence/zhenguo_wanfo/P3_WANFO_WHOLE_BUILDING_COMPONENT_INSTANCE_INVENTORY_V001.md",
+    "source": "SRC-ZG-WF-001",
+    "purpose": "Rebuild the whole-building inventory around real architectural components: quantity, location, variant, orientation, support/connection, dimension source and modeling status.",
+    "core_finding": "11 families / 40 variants / 365 engineering instances are not equivalent to a complete real-component inventory. Multiple real beams, bracket-set components and roof components were previously compressed into proxies/control objects.",
+    "confirmed_instance_facts": {
+      "columns": 12,
+      "lower_six_chuanfu": 2,
+      "upper_six_chuanfu": 2,
+      "four_chuanfu": 2,
+      "pingliang": 4,
+      "dingfu": 8,
+      "rufu": 8,
+      "zhaqian": 14,
+      "purlins_total": 33,
+      "purlins_breakdown": "21 main-body + 12 gable-side; correction: 21 is not the total",
+      "dajiaoliang": 4,
+      "zijiaoliang": 4,
+      "yinjiaoliang": 4,
+      "tuojiao": 12,
+      "chashou": 8,
+      "shuzhu_explicit_positions": 4,
+      "roof_tile_rows": "south 62 / north 62 / east 91 / west 90",
+      "roof_ridges": "main 1 / vertical 4 / hip 4",
+      "ridge_ornaments": "zhengwen 2 / chuishou 4 / qiangshou 4 / xianren 4"
+    },
+    "unresolved": [
+      "Dingfu/Rufu/Zhaqian/Tuojiao/Chashou and 33 Purlins need per-instance IDs, exact locations and connection records",
+      "Timu and Panjian total instance counts remain unresolved",
+      "Bracket-set internal real-component counts and per-piece topology remain unresolved",
+      "Rafter cross-section/spacing/per-piece count and eave/wing-corner breakdown remain unresolved",
+      "Fourth system not yet incorporated: platform/floor/walls/enclosure/doors-windows/fixed interior architectural elements"
+    ],
+    "impact_on_t018": "T-018 stays HOLD. Do not interpret existing 365 engineering instances as the final whole-building production object set. Resume decision will be reconsidered only after the real-component inventory and key Master gaps are further closed.",
+    "engineering_execution_authorized": false
+  }
 }
