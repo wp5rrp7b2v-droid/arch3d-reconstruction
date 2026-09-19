@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R132",
+  "state_revision": "R133",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / V008 CURRENT / FOUR-CHUANFU MASTER SPEC V001 LOCKED / FIRST ARTICLE ENGINEERING NOT YET AUTHORIZED / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-021 FOUR-CHUANFU FIRST ARTICLE CONTRACT LOCKED / EXECUTION NOT YET AUTHORIZED / V008 CURRENT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -60,310 +60,19 @@
     "active_window_note": "2026-09-18 DAILY CLOSE COMPLETE. T-018 V002 remains HOLD; RZ/FV design contracts locked but not production-proven; CP-03 STOP; PR #3 superseded/read-only; PR #6 HOLD; no post-review Blender/Actions/365 runtime."
   },
   "current_task": {
-    "id": "T-018",
-    "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
-    "name": "整殿确定性生成与参数变更验证",
-    "status": "T-018 V002 HOLD / NOT CURRENT EXECUTION ROUTE / P3.3 V002 STAGE1 PRECEDES WHOLE-BUILDING GENERATION",
-    "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
-    "contract_decision_id": "D-059",
-    "execution_authorization_decision_id": "D-061",
-    "cloud_mode_classification": "CLOUD_EXECUTABLE / D-048 EQUIVALENT HEADLESS EXECUTION",
-    "think_level": "HIGH",
-    "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE",
-    "primary_executor": "Codex Cloud",
-    "blender_executor": "GitHub Actions Hosted Runner",
-    "blender_version": "4.5.13 linux-x64",
-    "execution_authorized": false,
-    "github_pr_number": 6,
-    "github_visible_head_branch": "codex/-t-018",
-    "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-    "pr_merge_authorized": false,
-    "latest_actions": {
-      "run_id": 35308171567,
-      "run_number": 30,
-      "head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
-      "conclusion": "FAILURE",
-      "failure_step": "Canonical build, independent reopen, and four review views",
-      "failure_reason": "ModuleNotFoundError: p3_3_whole_building_common_v001"
-    },
-    "round_2_result": "365/365 RULE_DERIVED; NOT_REALIZED_NO_APPROVED_PLACEMENT_RULE=0; 12 Formal / 178 Proxy / 66 Control / 6 Envelope / 96 UNKNOWN_BLOCKED / 7 DEFERRED; machine spatial/mutation/restore chain PASS; visual review failed because non-formal representation was largely generic point/octahedron markers.",
-    "round_3_result": "Differentiated engineering representation geometry and view-aware review evidence implemented; generic octahedron count=0; Actions PASS; visual review exposed roof-control topology crossing at the ridge.",
-    "active_upstream_stop_condition": null,
-    "root_cause": "UPSTREAM_ENGINEERING_RULE_MODELING_OMISSION + T018_FAILURE_TO_STOP",
-    "invalidated_assumption": "Round 2 roof placements are not frozen-correct. Roof-dependent placements must be re-derived after the upstream datum rule is approved.",
-    "required_next_correction": "Update existing codex/t-018 / PR #3 from latest main; remove unauthorized COLUMN_GRID_Y_MIRROR_RULE; consume canonical P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001; rederive 7 PURLIN controls, 36 RAFTER proxies, 6 ROOF_ENVELOPE records, 4 GABLE_CONTROL records and roof-dependent FRAME endpoints; rerun Actions and formal PLAN/FRONT/SIDE/AXON review.",
-    "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
-    "replacement_for_pr": 3,
-    "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "HOLD / DEFERRED UNTIL P3.3 V002 STAGE6 DECISION",
-    "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
-    "rebaseline": {
-      "management_stages": [
-        "A_RULE_BASELINE",
-        "B_CRITICAL_SKELETON_FIRST_ARTICLE",
-        "C_FULL_365_RUNTIME",
-        "D_FORMAL_EXECUTION_ACCEPTANCE"
-      ],
-      "technical_checkpoints": [
-        "CP-01_UPSTREAM_COMPATIBILITY_AUDIT",
-        "CP-02_AUTHORITY_RESOLVER",
-        "CP-03_BUILDING_CONTROL_MODEL",
-        "CP-04_INDEPENDENT_INVARIANT_VALIDATOR",
-        "CP-05_CRITICAL_SKELETON_FIRST_ARTICLE",
-        "CP-06_365_RUNTIME_EXPANSION",
-        "CP-07_REPRESENTATION_CAPABILITY_REGRESSION",
-        "CP-08_DEPENDENCY_DUAL_MUTATION",
-        "CP-09_BLENDER_REOPEN_RESTORE_EVIDENCE"
-      ],
-      "key_architecture": "CANONICAL INPUTS -> AUTHORITY RESOLVER -> BUILDING CONTROL MODEL -> RUNTIME PLACEMENT -> REPRESENTATION -> BLENDER EXECUTOR -> INDEPENDENT EVIDENCE",
-      "current_stage": "HOLD / MASTER + ASSEMBLY ARCHITECTURE REDESIGN AGAINST V007",
-      "pr3": "SUPERSEDED / READ-ONLY / DO NOT MERGE",
-      "pr6": "HOLD / NO PATCH / NO ACTIONS RERUN / DO NOT MERGE"
-    },
-    "v001_authority_history": {
-      "contract_decision_id": "D-051",
-      "execution_authorization_decision_id": "D-052",
-      "status": "SUPERSEDED FOR V002 / HISTORICAL ONLY",
-      "note": "D-052 authorized V001 execution only and does not authorize V002."
-    },
-    "execution_authorization_scope": "NONE / END-OF-DAY HOLD",
-    "stage_b_authorized": false,
-    "stage_a": {
-      "status": "REOPENED / AUTHORITY COVERAGE ISSUE",
-      "authorization_decision_id": "D-060",
-      "checkpoints": {
-        "CP-01_UPSTREAM_COMPATIBILITY_AUDIT": "PASS",
-        "CP-02_AUTHORITY_RESOLVER": "PASS"
-      },
-      "outputs": [
-        "docs/evidence/t018_v002/P3_3_T018_V002_UPSTREAM_COMPATIBILITY_AUDIT.json",
-        "docs/evidence/t018_v002/P3_3_T018_V002_AUTHORITY_RESOLUTION_REPORT.json"
-      ],
-      "protected_upstream_baseline_status": "PROTECTED_FOR_T018_V002",
-      "summary": {
-        "accounting": "365/365 / 11 families",
-        "authority_resolution": "42 GENERATIVE_AUTHORITY / 41 VALIDATION_ONLY / 4 PROHIBITED_FOR_PLACEMENT / 0 UNRESOLVED",
-        "relation_vocabulary": "5/5 exact",
-        "purlin": "7/7 DEFERRED",
-        "shared_ridge": "RIDGE_Y=0 / N03 sole shared ridge / ROOF_PURLIN_S_03 prohibited",
-        "p2_world_transform_authoritative_usage": 0,
-        "canonical_contradictions": 0,
-        "stage_b_critical_authority_gaps": 1
-      },
-      "non_blocking_guard": "ORG-COLUMN-GRID retains one PM-005 node-level traceability ref; graph parameter_refs are non-authoritative and PM-005 remains VALIDATION_ONLY.",
-      "stage_b_readiness": "NOT READY / FRAME_TIER_VERTICAL_AUTHORITY_GAP",
-      "retained_passes": [
-        "365/365 accounting",
-        "authority classification 42/41/4/0",
-        "observed/design isolation",
-        "T-020 X/Y + shared ridge",
-        "7/7 PURLIN DEFERRED",
-        "P2 numeric world transform prohibition"
-      ]
-    },
-    "stage_c_authorized": false,
-    "stage_b": {
-      "status": "STOP / HOLD",
-      "authorization_decision_id": "D-061",
-      "cp03": "STOP / FRAME_TIER_VERTICAL_AUTHORITY_GAP",
-      "cp04": "NOT STARTED",
-      "cp05": "NOT STARTED",
-      "diagnostic": "docs/evidence/t018_v002/P3_3_T018_V002_CP03_AUTHORITY_GAP_DIAGNOSTIC.json",
-      "stop_reason": "Exact vertical placement of FRAME_TIER_N/S_01..03 and related FRAME_POST controls would require cross-system use of parameters outside their canonical binding targets or reuse of legacy P2 local formulas.",
-      "prohibited_next_actions": [
-        "CP-04",
-        "CP-05",
-        "BLENDER",
-        "PR6_PATCH",
-        "ACTIONS_RERUN",
-        "STAGE_C"
-      ]
-    },
-    "architecture_closure_review": {
-      "status": "COMPLETE",
-      "outcome": "B_LIMITED_SAME_LAYER_GAPS",
-      "artifact": "docs/evidence/t018_v002/T018_V002_ARCHITECTURE_CLOSURE_REVIEW_V001.md",
-      "conclusion": "Identity/Master/evidence/accounting/P3.2 vocabulary/T-020 shared-ridge architecture remain usable. Gaps cluster at the seam between canonical parameters/semantics and explicit whole-building control placement/topology.",
-      "confirmed_gaps": [
-        "FRAME_VERTICAL_PLACEMENT_AUTHORITY",
-        "EXACT_ROOF_Z_CLOSURE",
-        "ROOF_RUNTIME_CONTROL_TOPOLOGY",
-        "DOWNSTREAM_PROXY_CONTROL_ANCHOR_CLOSURE"
-      ],
-      "protected_not_reopened": [
-        "P3.0",
-        "P3.1",
-        "P3.2",
-        "T-017 accounting/identity",
-        "T-019 PURLIN disposition",
-        "T-020 shared-ridge X/Y authority"
-      ],
-      "prohibited": [
-        "ADD_RULE_NOW",
-        "RESTART_CP03",
-        "CP04",
-        "CP05",
-        "BLENDER",
-        "PR6_PATCH",
-        "ACTIONS_RERUN",
-        "STAGE_C",
-        "V003_ESCALATION_WITHOUT_NEW_EVIDENCE"
-      ],
-      "bounded_next_design": [
-        "Placement Authority Closure Matrix",
-        "Cross-System Dependency Whitelist/DAG",
-        "Control Topology Map",
-        "Impact/Non-Impact Contract"
-      ],
-      "design_authorization_decision_id": "D-062",
-      "design_status": "COMPLETE",
-      "completion_package": {
-        "status": "DESIGN_COMPLETE",
-        "summary_artifact": "docs/evidence/t018_v002/P3_3_T018_V002_CONTROL_PLACEMENT_AUTHORITY_COMPLETION_PACKAGE_V001.md",
-        "artifacts": [
-          "docs/evidence/t018_v002/P3_3_T018_V002_PLACEMENT_AUTHORITY_CLOSURE_MATRIX_V001.md",
-          "docs/evidence/t018_v002/P3_3_T018_V002_CROSS_SYSTEM_DEPENDENCY_DAG_V001.md",
-          "docs/evidence/t018_v002/P3_3_T018_V002_CONTROL_TOPOLOGY_MAP_V001.md",
-          "docs/evidence/t018_v002/P3_3_T018_V002_IMPACT_NON_IMPACT_CONTRACT_V001.md"
-        ],
-        "outcome": "B_REMAINS_VALID",
-        "authority_completions_proposed": [
-          "RZ_ROOF_Z_CUMULATIVE_CLOSURE",
-          "FV_FRAME_VERTICAL_PLACEMENT_BRIDGE"
-        ],
-        "technical_specs_only": [
-          "RT_CONTROL_TOPOLOGY_MAP",
-          "BA_TECHNICAL_ANCHOR_CONTRACT",
-          "IMPACT_NON_IMPACT_CONTRACT"
-        ],
-        "no_new_historical_dimensions": true,
-        "v003_required": false,
-        "upstream_reopen_required": false
-      }
-    },
-    "rz": {
-      "status": "CONTRACT_LOCKED / PRODUCT_OWNER_APPROVED / EXECUTION_NOT_AUTHORIZED",
-      "decision_id": "D-063",
-      "contract": "docs/tasks/T-018_RZ_ROOF_Z_CUMULATIVE_CLOSURE_V001.md",
-      "formula": {
-        "Z_EAVE": "Z-007.datum + Z-006-RC-01",
-        "Z_LOWER": "Z_EAVE + ROOF-007 * MOD-002",
-        "Z_UPPER": "Z_LOWER + ROOF-008 * MOD-002",
-        "Z_RIDGE": "Z_UPPER + ROOF-009 * MOD-002"
-      },
-      "current_candidate_values_mm": {
-        "Z_EAVE": 3534.3,
-        "Z_LOWER": 4880.7,
-        "Z_UPPER": 5814,
-        "Z_RIDGE": 7068.6
-      },
-      "excluded": [
-        "DG-113",
-        "ROOF-004",
-        "ROOF-005",
-        "ROOF-006",
-        "ROOF-001",
-        "ROOF-002",
-        "ROOF-003",
-        "P2 world transforms",
-        "Blender-local re-derivation"
-      ],
-      "validation_only": [
-        "ROOF-010",
-        "ROOF-011"
-      ],
-      "protected": [
-        "T-020 Y coordinates",
-        "N03 sole shared ridge",
-        "7/7 PURLIN DEFERRED",
-        "365 identities/accounting",
-        "P3.2 vocabulary"
-      ],
-      "publication_authorized": false
-    },
-    "fv": {
-      "status": "CONTRACT_LOCKED / PRODUCT_OWNER_APPROVED / EXECUTION_NOT_AUTHORIZED",
-      "design_artifact": "docs/evidence/t018_v002/P3_3_T018_V002_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_DESIGN_V001.md",
-      "recommended_candidate": "FV-B_BOUNDed_ROOF_ELEVATION_BRIDGE_WITHOUT_DG-113",
-      "rejected_candidates": [
-        "FV-A_LEGACY_P2_WITH_DG-113",
-        "FV-C_ROOF_PROFILE_DROP_INTERPOLATION"
-      ],
-      "fallback": "FV-D_SEMANTIC_ONLY_DOWNGRADE",
-      "recommended_formula": {
-        "FRAME_BASE_Z": "Z-007.datum + Z-006-RC-01",
-        "FRAME_TIER_01_Z": "FRAME_BASE_Z + (ROOF-004 + ROOF-005 + ROOF-006) * MOD-002",
-        "FRAME_TIER_02_Z": "FRAME_BASE_Z + (ROOF-004 + ROOF-005) * MOD-002",
-        "FRAME_TIER_03_Z": "FRAME_BASE_Z + ROOF-004 * MOD-002"
-      },
-      "current_candidate_values_mm": {
-        "FRAME_BASE_Z": 3534.3,
-        "FRAME_TIER_01_Z": 5783.4,
-        "FRAME_TIER_02_Z": 4528.8,
-        "FRAME_TIER_03_Z": 3916.8
-      },
-      "key_boundary": "DG-113 generative-use for Frame = 0; ROOF-004/005/006 remain Roof-owned and are consumed only through an explicit project-level one-way engineering bridge.",
-      "locked": true,
-      "semantic_validity_check": {
-        "status": "COMPLETE",
-        "artifact": "docs/evidence/t018_v002/P3_3_T018_V002_FV_SEMANTIC_VALIDITY_CHECK_V001.md",
-        "verdict_source_derived": "FAIL_NOT_SUPPORTED",
-        "verdict_project_convention": "POSSIBLE_WITH_EXPLICIT_POLICY_DECISION",
-        "reason": "ROOF-004/005/006 are source-supported roof/purlin elevation design candidates. P3.1 listing them as CTL-FRAME known inputs is inherited P2 engineering provenance, not independent proof of the cumulative Frame Tier mapping. P3.2 tier datums are semantic only and explicitly do not create historical elevation.",
-        "paths": [
-          "FV_PROJECT_RULE_NON_HISTORICAL_CONVENTION",
-          "FV_SEMANTIC_ONLY_NO_EXACT_Z"
-        ]
-      },
-      "decision_id": "D-064",
-      "contract": "docs/tasks/T-018_FV_FRAME_VERTICAL_PLACEMENT_BRIDGE_V001.md",
-      "policy_classification": "NON_HISTORICAL_PROJECT_RECONSTRUCTION_CONVENTION",
-      "publication_authorized": false
-    },
-    "end_of_day_2026_09_18": {
-      "status": "CLOSED / PASS WITH CAUTION",
-      "daily_close": "docs/project_control/DAILY_CLOSE_2026-09-18.md",
-      "latest_formal_decision": "D-064",
-      "new_execution_authorization_at_close": false,
-      "core_caution": "RZ/FV design locks do not prove the final correct production architecture. They remain controlled, replaceable project-rule designs pending pre-publication readiness review, machine-readable publication authorization, closure regression, and later CP-03 validation.",
-      "stable_facts": [
-        "P3.0/P3.1/P3.2 remain CLOSED",
-        "P3.3 remains ACTIVE / NOT PASS",
-        "365/365 accounting remains foundation",
-        "7/7 PURLIN remain DEFERRED",
-        "T-020 X/Y datum + RIDGE_Y=0 + N03 sole ridge remain canonical",
-        "P2 world transforms remain prohibited",
-        "CP-03 STOP remains valid"
-      ],
-      "superseded_or_do_not_reuse": [
-        "Stage A stage_b_critical_authority_gaps=0",
-        "T-018 READY TO RESUME immediately after T-020",
-        "PR #3 as active implementation",
-        "PR #6 as V002-ready implementation",
-        "legacy P2 Frame Tier formula as authority",
-        "FV-B as source-derived Frame elevation",
-        "RZ/FV design lock as proof of final correctness",
-        "Outcome B as proof that no deeper gap exists",
-        "V003 definitely not required"
-      ],
-      "prohibited_until_new_authorization": [
-        "RZ_FV_PRODUCTION_PUBLICATION",
-        "PROTECTED_UPSTREAM_MUTATION_TO_FIT_RZ_FV",
-        "CP03_RESTART",
-        "CP04",
-        "CP05",
-        "PR6_PATCH",
-        "ACTIONS_RERUN",
-        "BLENDER",
-        "STAGE_C",
-        "365_RUNTIME_EXPANSION",
-        "MUTATION_EXECUTION",
-        "PR3_MERGE",
-        "PR6_MERGE",
-        "T018_PASS_DECLARATION",
-        "P3_3_PASS_DECLARATION"
-      ]
-    }
+    "id": "T-021",
+    "engineering_id": "P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001",
+    "name": "四椽栿 Master 首件生产",
+    "status": "CONTRACT LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT YET AUTHORIZED",
+    "task_contract": "docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md",
+    "branch": "codex/t021-p3-3-four-chuanfu-master-first-article-v001",
+    "pr_status": "NOT CREATED",
+    "execution_mode": "CHAT_FIRST_CODEX_EXECUTOR_MODE / FIRST_ARTICLE_ONLY",
+    "cloud_mode": "CLOUD_EXECUTABLE",
+    "think_level": "MEDIUM DEFAULT",
+    "blender_executor": "GitHub Actions headless / RC-017 / Blender 4.5.13",
+    "target_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+    "execution_authorized": false
   },
   "proposed_next_task": {
     "id": "P3.3_FINAL",
@@ -484,9 +193,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-069",
+    "id": "D-070",
     "date": "2026-09-19",
-    "decision": "Product Owner approved and locked 四椽栿 Master Spec V001. Direct source binding now supports two physical instances and measured mean section 426.5×302 mm. Historical full length remains UNKNOWN; Codex first-article engineering is not yet authorized."
+    "decision": "Product Owner instructed creation of the Codex task. T-021 four-chuanfu Master First Article contract is created and locked; engineering execution is not yet authorized."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -525,13 +234,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Await Product Owner authorization to create the 四椽栿 Master First Article Codex engineering task. Do not start Codex/Blender before that authorization. T-018/RZ/FV/CP-03 remain HOLD.",
+  "next_action": "Await Product Owner explicit authorization to start T-021 engineering execution. After authorization, Codex Cloud may create the branch and implement the four-chuanfu Master First Article. T-018/RZ/FV/CP-03 remain HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v073",
+    "visualization_version": "v074",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R132 / FOUR-CHUANFU SPEC LOCKED / FIRST ARTICLE NOT AUTHORIZED / T-018 HOLD"
+    "refresh_status": "CURRENT / R133 / T-021 CONTRACT LOCKED / EXECUTION NOT YET AUTHORIZED / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -728,6 +437,15 @@
       "historical_full_length_mm": null,
       "canonical_reference_length_mm": 1000,
       "codex_first_article_authorized": false
+    },
+    "t021": {
+      "status": "CONTRACT LOCKED / EXECUTION NOT YET AUTHORIZED",
+      "decision_id": "D-070",
+      "task_contract": "docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md",
+      "target_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "validation_count": 42,
+      "review_png_count": 6,
+      "branch": "codex/t021-p3-3-four-chuanfu-master-first-article-v001"
     }
   }
 }
