@@ -28,7 +28,8 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.worksheet.table import Table, TableStyleInfo
 
 
-GENERATOR_VERSION = "1.0.1"\nGENERATOR_REPO_PATH = "scripts/generate_wanfo_component_registry_excel.py"
+GENERATOR_VERSION = "1.0.1"
+GENERATOR_REPO_PATH = "scripts/generate_wanfo_component_registry_excel.py"
 DEFAULT_INPUT = Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json")
 DEFAULT_OUTPUT_DIR = Path("docs/evidence/zhenguo_wanfo/derived")
 MANIFEST_NAME = "P3_WANFO_COMPONENT_EXCEL_SYNC_MANIFEST.json"
