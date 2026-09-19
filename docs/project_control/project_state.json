@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R127",
+  "state_revision": "R128",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 V002 LOCKED / REAL-COMPONENT-DRIVEN ROUTE / STAGE 1 NOT YET AUTHORIZED / T-018 HOLD / V007 BUILD BASELINE / RC-018 EXCEL SYNC ACTIVE",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / REAL COMPONENT MASTER LIBRARY / SIX EXISTING MASTERS REBIND REVIEW IN PROGRESS / T-018 HOLD / V007 BUILD BASELINE / RC-018 ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -484,9 +484,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-066",
+    "id": "D-067",
     "date": "2026-09-19",
-    "decision": "Product Owner approved and locked P3.3 V002 real-component-driven whole-building reconstruction plan. Seven-stage route starts with real Component Master library and defers deterministic whole-building generation to Stage 6. Execution is not yet authorized."
+    "decision": "Product Owner authorized P3.3 V002 Stage 1 real-component Master library work. Start with V007 rebind/coverage review of the six existing approved Masters; no new T-### until actual Codex engineering execution."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -525,13 +525,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Await Product Owner authorization to enter P3.3 V002 Stage 1: rebind/review the six existing Masters against V007, establish Master coverage/disposition, then design the first missing Master. Do not resume T-018/RZ/FV/CP-03.",
+  "next_action": "Execute Stage 1 rebind/coverage review of the six existing approved Masters against V007, then lock first missing Master specification. Do not resume T-018/RZ/FV/CP-03.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v068",
+    "visualization_version": "v069",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R127 / P3.3 V002 LOCKED / STAGE1 NOT AUTHORIZED / T-018 HOLD"
+    "refresh_status": "CURRENT / R128 / P3.3 V002 STAGE 1 ACTIVE / SIX MASTER REBIND REVIEW / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -631,9 +631,9 @@
       "Stage 6｜确定性整殿生成",
       "Stage 7｜整殿验收与 P3.3 Gate Closure"
     ],
-    "progress": "0/7 formally passed",
+    "progress": "Stage 1 ACTIVE / 0 of 7 formally passed",
     "next_stage": "Stage 1｜真实构件 Master 库",
-    "next_stage_authorized": false,
+    "next_stage_authorized": true,
     "legacy_365": "HISTORICAL ENGINEERING BASELINE / COMPARISON ONLY",
     "t017_365": "HISTORICAL ENGINEERING BASELINE / COMPARISON ONLY",
     "t020": "HOLD FOR STAGE-5 RE-REVIEW",
@@ -642,5 +642,24 @@
     "t018_v002": "HOLD / NOT CURRENT EXECUTION ROUTE / STAGE6 REBASELINE-OR-SUPERSEDE DECISION DEFERRED",
     "existing_masters": "6 retained / rebind-review required",
     "engineering_execution_authorized": false
+  },
+  "p3_3_stage_1_2026_09_19": {
+    "status": "ACTIVE / PRODUCT OWNER AUTHORIZED",
+    "decision_id": "D-067",
+    "scope": [
+      "rebind/review six existing approved Masters against V007",
+      "establish Master/parametric/proxy/unknown disposition coverage",
+      "design first missing Master specification after review"
+    ],
+    "existing_masters": [
+      "柱",
+      "柱头栌斗",
+      "单向长开斗",
+      "交互斗",
+      "下六椽栿",
+      "上六椽栿"
+    ],
+    "engineering_task_created": false,
+    "t018_impact": "NONE / remains HOLD"
   }
 }
