@@ -1,0 +1,211 @@
+{
+  "schema_version": "V001",
+  "task": "T-021",
+  "decision_ids": [
+    "D-069",
+    "D-071"
+  ],
+  "component_id": "CMP-FRAME-FOUR-CHUANFU-001",
+  "master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+  "master_version": "V001",
+  "canonical_name_zh": "四椽栿",
+  "unit": "mm",
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "geometry_semantics": "OBSERVED_MEAN_SECTION / NON_HISTORICAL_REFERENCE_LENGTH / REPLACEABLE",
+  "coordinate_convention": {
+    "+X": "member_longitudinal",
+    "+Y": "section_width",
+    "+Z": "vertical_thickness",
+    "handedness": "right_handed"
+  },
+  "origin_convention": "longitudinal_midpoint_transverse_center_lower_reference_plane",
+  "canonical_transform": {
+    "location": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "physical_instance_ids": [
+    "四椽栿-东缝",
+    "四椽栿-西缝"
+  ],
+  "physical_instance_count": 2,
+  "evidence_binding": {
+    "source_id": "SRC-ZG-WF-001",
+    "pdf_page": 82,
+    "printed_page": 67,
+    "section": "2.3.1.2 四椽栿",
+    "table": "表2-39 万佛殿四椽栿实测与分析表",
+    "figure": "图2-40 万佛殿四椽栿与斗栱交接关系",
+    "path": "docs/evidence/zhenguo_wanfo/P3_3_FOUR_CHUANFU_DIRECT_SOURCE_BINDING_V001.md"
+  },
+  "measured_section_samples_mm": [
+    {
+      "sample": "A",
+      "width": 413,
+      "thickness": 295,
+      "instance_mapping": "UNKNOWN"
+    },
+    {
+      "sample": "B",
+      "width": 440,
+      "thickness": 309,
+      "instance_mapping": "UNKNOWN"
+    }
+  ],
+  "sample_to_instance_mapping": "UNKNOWN",
+  "report_design_analysis": {
+    "width_fen_observed": 27.9,
+    "width_fen_rounded": 28,
+    "width_fit_percent": 99.56,
+    "thickness_fen_observed": 19.7,
+    "thickness_fen_rounded": 20,
+    "thickness_fit_percent": 98.69,
+    "classification": "REPORT_INFERRED / DESIGN_ANALYSIS_METADATA",
+    "geometry_use_count": 0
+  },
+  "parameters": [
+    {
+      "key": "historical_full_length_mm",
+      "value": null,
+      "unit": "mm",
+      "classification": "UNKNOWN",
+      "source_layer": "EVIDENCE_GAP",
+      "time_layer": "historical_full_length_unknown",
+      "production_use": "DO_NOT_LOCK",
+      "replaceable": true,
+      "historical_claim": false
+    },
+    {
+      "key": "canonical_reference_length_mm",
+      "value": 1000,
+      "unit": "mm",
+      "classification": "PROJECT_RULE",
+      "source_layer": "ENGINEERING_REFERENCE",
+      "time_layer": "NON_HISTORICAL_REFERENCE_REALIZATION",
+      "production_use": "CANONICAL_REFERENCE_ONLY",
+      "replaceable": true,
+      "historical_claim": false
+    },
+    {
+      "key": "realization_length_mm",
+      "value": 1000,
+      "unit": "mm",
+      "classification": "PROJECT_RULE",
+      "source_layer": "ENGINEERING_EXECUTION",
+      "time_layer": "NON_HISTORICAL_REFERENCE_REALIZATION",
+      "production_use": "GEOMETRY_EXECUTION_VALUE",
+      "replaceable": true,
+      "historical_claim": false,
+      "derives_from": "canonical_reference_length_mm",
+      "role": "GEOMETRY_EXECUTION_VALUE"
+    },
+    {
+      "key": "width_mm",
+      "value": 426.5,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured_mean",
+      "production_use": "OBSERVED_REFERENCE_OUTER_ENVELOPE",
+      "replaceable": false,
+      "historical_claim": false
+    },
+    {
+      "key": "thickness_mm",
+      "value": 302,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "time_layer": "observed_as_measured_mean",
+      "production_use": "OBSERVED_REFERENCE_OUTER_ENVELOPE",
+      "replaceable": false,
+      "historical_claim": false
+    }
+  ],
+  "historical_state": {
+    "historical_claim": false,
+    "historical_full_length_mm": null,
+    "model_layer": "observed_mean_section_plus_non_historical_reference_length",
+    "report_ideal_model": "separate_metadata_only",
+    "reconstructed_963_candidate": "not_inferred"
+  },
+  "originality_status": "unknown",
+  "known_unknowns": [
+    "HIS-002: individual 963 component originality UNKNOWN",
+    "Historical full length UNKNOWN / null",
+    "Sample A/B to east/west seam mapping UNKNOWN",
+    "Full-length section uniformity UNKNOWN",
+    "End profile, camber, joinery, hidden connections and local reductions are not evidenced"
+  ],
+  "assembly_semantics": [
+    "东缝1根、西缝1根",
+    "四椽栿与其下上六椽栿之间垫隔架单栱一组",
+    "四椽栿下不用栌斗",
+    "仅由一散斗承托"
+  ],
+  "interface_contract": {
+    "geometric": [
+      {
+        "id": "END_NEG_X",
+        "position_rule": "(-L/2,0,thickness/2)"
+      },
+      {
+        "id": "END_POS_X",
+        "position_rule": "(+L/2,0,thickness/2)"
+      }
+    ],
+    "semantic_only": [
+      {
+        "id": "SUPPORT_FROM_SAN_DOU",
+        "coordinate_status": "ASSEMBLY_OWNED / UNKNOWN"
+      },
+      {
+        "id": "RELATION_TO_UPPER_SIX_CHUANFU",
+        "coordinate_status": "ASSEMBLY_OWNED / UNKNOWN"
+      },
+      {
+        "id": "SPACER_SINGLE_GONG_RELATION",
+        "coordinate_status": "ASSEMBLY_OWNED / UNKNOWN"
+      }
+    ]
+  },
+  "assembly_length_rule": {
+    "hard_fail_id": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "default_to_canonical_reference_allowed": false,
+    "historical_full_length_remains_null": true,
+    "future_length_source": "explicit assembly endpoints",
+    "future_length_classification": "EXPLICIT_DERIVED_GEOMETRY / PROJECT_RULE"
+  },
+  "unsupported_geometry": [],
+  "prohibited_geometry": [
+    "mortise_tenon",
+    "san_dou_slot",
+    "spacer_gong_geometry",
+    "ludou",
+    "hidden_connections",
+    "unmeasured_local_reductions",
+    "unsupported_end_profile",
+    "unsupported_camber",
+    "historicalized_observed_deflection",
+    "weathering_damage"
+  ],
+  "p2_primary_frame_proxy_geometry_use_count": 0,
+  "generator_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-FOUR-CHUANFU-001/build_four_chuanfu_master_v001.py",
+  "shared_generator_path": "production/zhenguo_wanfo/scripts/four_chuanfu_master_common_v001.py",
+  "semantic_snapshot_path": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-FOUR-CHUANFU-001/CMP-FRAME-FOUR-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+  "canonical_asset_path": "artifacts/t021/CMP-FRAME-FOUR-CHUANFU-001_MASTER_V001.blend",
+  "review_path": "production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-FOUR-CHUANFU-001"
+}
