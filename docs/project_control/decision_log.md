@@ -103,3 +103,6 @@
 
 
 | D-070 | 2026-09-19 | Product Owner 指示“开始创建 Codex 任务”，正式创建并锁定 `T-021｜P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001｜四椽栿 Master 首件生产` Task Contract。任务只覆盖一个 First Article：`CMP-FRAME-FOUR-CHUANFU-001_MASTER`；执行模式为 CHAT_FIRST_CODEX_EXECUTOR_MODE / FIRST_ARTICLE_ONLY，Think Level=MEDIUM DEFAULT，Cloud Mode=CLOUD_EXECUTABLE，脚本化 Blender 继续遵守 RC-017。任务继承 D-069 已锁四椽栿 Spec：2个真实实例、均值截面426.5×302mm、A/B样本与东西缝映射UNKNOWN、历史全长UNKNOWN、1000mm仅非历史 canonical reference。T-021 合同规定42项机器验收、3类 mutation、6张 review PNG、binary artifact/SHA、P3.3 Stage1 Master catalog pending record、protected asset checks、ONE TASK=ONE BRANCH=ONE PR。当前仅创建/锁定任务合同，**尚未授权 Codex 工程执行**；需下一条明确“开始 T-021”授权后方可启动。 | ACTIVE / T-021 CONTRACT LOCKED / EXECUTION NOT YET AUTHORIZED / T-018 HOLD |
+
+
+| D-071 | 2026-09-19 | Product Owner 批准将 T-021 的工程执行责任由 `Codex Cloud 编写工程文件` 改为 `ChatGPT direct GitHub execution`。仅修改 T-021 的执行路径：ChatGPT 直接在 GitHub 创建/更新工程文件、分支与 PR，GitHub Actions 继续作为 Blender 4.5.13 的正式 headless executor。D-069 四椽栿 Master Spec、42项验证、3类 mutation、6张 review PNG、binary artifact/SHA、ONE TASK=ONE BRANCH=ONE PR、Product Owner merge approval、T-018 HOLD 及全部 evidence/UNKNOWN 边界保持不变。不创建 T-022，不改变其他任务默认执行方式。 | ACTIVE / T-021 EXECUTOR OVERRIDE APPROVED / CHATGPT DIRECT GITHUB EXECUTION |
