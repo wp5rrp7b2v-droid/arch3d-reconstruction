@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R138",
+  "state_revision": "R139",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-021 FIRST ARTICLE PRODUCT OWNER APPROVED D-072 / PR #7 PUBLICATION CLOSURE PENDING / V008 CURRENT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-021 FIRST ARTICLE APPROVED AND PR #7 MERGED / V008 CURRENT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -63,10 +63,10 @@
     "id": "T-021",
     "engineering_id": "P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001",
     "name": "四椽栿 Master 首件生产",
-    "status": "COMPLETE / PRODUCT OWNER APPROVED / D-072 / PUBLICATION CLOSURE PENDING",
+    "status": "COMPLETE / PRODUCT OWNER APPROVED / PR #7 MERGED",
     "task_contract": "docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md",
     "branch": "codex/t021-p3-3-four-chuanfu-master-first-article-v001",
-    "pr_status": "PR #7 OPEN / DRAFT / PUBLICATION CLOSURE PENDING",
+    "pr_status": "PR #7 MERGED",
     "execution_mode": "CHATGPT_DIRECT_GITHUB_EXECUTION / FIRST_ARTICLE_ONLY",
     "cloud_mode": "CLOUD_EXECUTABLE",
     "think_level": "MEDIUM DEFAULT",
@@ -74,9 +74,7 @@
     "target_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
     "execution_authorized": true,
     "execution_result": "PASS / GitHub Actions Run 35440785415 / 42 of 42 checks PASS / 6 of 6 review PNG PASS / Product Owner approved D-072",
-    "blockers": [
-      "PR #7 publication closure still pending; D-072 itself does not merge the PR."
-    ],
+    "blockers": [],
     "engineering_changes": "COMPLETE ON PR #7 HEAD f16ba22933bb48dbae8951343b76190d2c76c1cf",
     "validation": "42/42 PASS",
     "primary_engineering_executor": "ChatGPT direct GitHub execution",
@@ -86,7 +84,9 @@
     "canonical_blend_sha256": "9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997",
     "semantic_geometry_signature": "45dce8ce4e58deabd3643c57d0f6caa7ebf50a6189e8d41cf57b68e978b63322",
     "sha_label_correction": "Earlier chat report mislabeled semantic geometry signature as binary SHA; artifact fields were correct; no rerun required.",
-    "product_owner_decision": "D-072 / APPROVED"
+    "product_owner_decision": "D-072 / APPROVED",
+    "merge_commit_sha": "2c2c3bc3dea63d7f8449271c47e58d468489c950",
+    "publication_status": "CLOSED / MERGED TO MAIN"
   },
   "proposed_next_task": {
     "id": "P3.3_FINAL",
@@ -248,13 +248,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Complete PR #7 publication closure for the approved T-021 first article; do not change geometry or rerun engineering unless a publication-integrity issue is found. Stage 1 remains active; T-018 remains HOLD.",
+  "next_action": "Continue P3.3 Stage 1 after T-021 closure; select/design the next missing Master. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v079",
+    "visualization_version": "v080",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R138 / T-021 PRODUCT OWNER APPROVED D-072 / PR #7 PUBLICATION CLOSURE PENDING / V008 CURRENT / T-018 HOLD"
+    "refresh_status": "CURRENT / R139 / T-021 APPROVED + PR #7 MERGED / STAGE 1 ACTIVE / V008 CURRENT / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -453,7 +453,7 @@
       "codex_first_article_authorized": false
     },
     "t021": {
-      "status": "COMPLETE / PRODUCT OWNER APPROVED / D-072",
+      "status": "COMPLETE / PRODUCT OWNER APPROVED / PR #7 MERGED",
       "decision_id": "D-070",
       "task_contract": "docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md",
       "target_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
@@ -469,7 +469,8 @@
       "artifact_id": 10583607231,
       "canonical_blend_sha256": "9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997",
       "semantic_geometry_signature": "45dce8ce4e58deabd3643c57d0f6caa7ebf50a6189e8d41cf57b68e978b63322",
-      "publication_status": "PR #7 OPEN / publication closure pending"
+      "publication_status": "CLOSED / MERGED TO MAIN",
+      "merge_commit_sha": "2c2c3bc3dea63d7f8449271c47e58d468489c950"
     }
   }
 }
