@@ -550,3 +550,15 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Correction：此前聊天汇报误把 semantic geometry signature 标为 binary SHA；仅标签错误，不影响工程结果，无需重跑。
 - Final：**T-021 FIRST ARTICLE PRODUCT OWNER APPROVED**。
 - Boundary：Stage 1 未整体 PASS；PR #7 publication closure 尚未完成；T-018 HOLD。
+
+
+## 2026-09-19｜T-021 Publication Closure
+
+- T-021 First Article：**PRODUCT OWNER APPROVED / D-072**。
+- PR #7：**MERGED**。
+- Merge commit：`2c2c3bc3dea63d7f8449271c47e58d468489c950`。
+- Final PR head validation：Run `35445039747` = SUCCESS。
+- Publication contents：4 formal text/JSON records + 6 review PNG + engineering workflow/scripts。
+- Binary Master：remains Actions artifact only; no `.blend` committed to Git。
+- Final：**T-021 ACCEPTANCE + PUBLICATION CLOSURE COMPLETE**。
+- Boundary：Stage 1 remains ACTIVE; this does not authorize Stage 2 or resume T-018。
