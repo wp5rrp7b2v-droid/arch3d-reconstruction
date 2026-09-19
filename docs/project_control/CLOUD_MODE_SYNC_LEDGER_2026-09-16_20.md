@@ -537,3 +537,18 @@ Therefore separately check：
 - PR #7：OPEN / publication closure pending / not merged by D-072 itself
 - Stage 1：ACTIVE / not yet passed
 - T-018：HOLD
+
+
+### T-021 PR #7 publication closure
+
+- Date：2026-09-19
+- Project State：R139
+- Dashboard：v080
+- PR #7：MERGED
+- Merge commit：2c2c3bc3dea63d7f8449271c47e58d468489c950
+- Final PR head：983d1505354e38e350b5db0038d90ddc7f41a3d5
+- Final head Actions Run：35445039747 / SUCCESS
+- Formal delivery records：materialized on main
+- T-021：COMPLETE / PRODUCT OWNER APPROVED / PUBLICATION CLOSED
+- Stage 1：ACTIVE
+- T-018：HOLD
