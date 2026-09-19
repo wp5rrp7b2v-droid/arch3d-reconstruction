@@ -656,3 +656,10 @@ Use V007 to redesign:
 4. replacement boundary for legacy 11/40/365 engineering proxies.
 
 Do not restart T-018 by default.
+
+
+## V007 Detailed Instance Registry Sync｜2026-09-19
+
+- Added canonical detailed instance registry: `docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.json`.
+- Purpose: preserve the V007 per-instance/per-position build baseline in GitHub.
+- This synchronization does not change the execution boundary: T-018 remains HOLD; no Blender/Actions/PR merge authorization.
