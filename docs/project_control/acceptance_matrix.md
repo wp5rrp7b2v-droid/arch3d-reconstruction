@@ -454,3 +454,22 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
   - 505 is registry record count, **not physical component total**。
 - Pending source binding（暂不补入 V008）：板瓦、勾头、滴水、博风板、悬鱼、惹草、生头木。
 - No new T-### / no Blender / T-018 remains HOLD。
+
+
+## 2026-09-19｜V008 Targeted Registry Patch / Coverage Matrix V002
+
+- Decision：D-068 / Product Owner APPROVED。
+- V008 snapshot：`docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json`。
+- CURRENT registry：V008 / 505 records。
+- Preserved V007 records：472 / 472。
+- Added targeted records：33。
+- RC-018 workflow run：`35431569023` = **SUCCESS**。
+- Derived Excel commit：`5c9b67217cf9bb2100993ee322419481ca446ede`。
+- JSON SHA-256：`e6299d8306fd4f58dac29a43230d387c2f63ca4056d002fd03803df02bb072a7`。
+- CURRENT/V008 Excel SHA-256：`0174049f8b6f2b0cb86f383011a6700401ea1969c47bd132f0c0c1528cfc3adb`。
+- Sync Manifest：SYNCED。
+- Master Coverage / Disposition Matrix V002：FINALIZED AGAINST V008。
+- V008 当前登记对象类型：66类，全部已有明确 disposition。
+- Pending source binding：板瓦、勾头、滴水、博风板、悬鱼、惹草、生头木。
+- 四椽栿：**READY FOR SPEC DESIGN**。
+- No new T-### / no Blender / T-018 remains HOLD。
