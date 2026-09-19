@@ -296,3 +296,23 @@ Therefore separately check：
 - No new Actions rerun.
 - No PR merge authorization.
 - Local Mac sync target remains 2026-09-21.
+
+
+### V007 final component baseline sync
+
+- Date：2026-09-19
+- Start main SHA：`26038fa130121e6a4dcc79a71f5dc41269646767`
+- Project State：R123
+- Dashboard：v064
+- New canonical evidence：
+  - `docs/evidence/zhenguo_wanfo/P3_WANFO_WHOLE_BUILDING_COMPONENT_INSTANCE_INVENTORY_V007.md`
+  - `docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INVENTORY_V007_BUILD_BASELINE.json`
+- V007：CURRENT BUILD BASELINE / FINAL HIGH-RISK AUDIT COMPLETE / AUDIT STOP RULE ACTIVE
+- T-018：HOLD / no engineering execution authorized
+- P3.3：ACTIVE / NOT PASS
+- RZ/FV：design locks only / not published
+- CP-03：STOP
+- Blender/Actions：none
+- PR merge authorization：none
+- Local Mac 2026-09-21 sync checklist remains required.
+- Day 4 status：IN PROGRESS; component-audit stream closed at V007.
