@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R130",
+  "state_revision": "R131",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / MASTER COVERAGE MATRIX COMPLETE / V008 TARGETED REGISTRY PATCH PROPOSED / PRODUCT OWNER APPROVAL REQUIRED / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / V008 CURRENT / RC-018 SYNC PASS / MASTER COVERAGE MATRIX V002 FINALIZED / FOUR-CHUANFU SPEC NEXT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -484,9 +484,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-067",
+    "id": "D-068",
     "date": "2026-09-19",
-    "decision": "Product Owner authorized P3.3 V002 Stage 1 real-component Master library work. Start with V007 rebind/coverage review of the six existing approved Masters; no new T-### until actual Codex engineering execution."
+    "decision": "Product Owner approved and completed the V008 targeted registry patch: V007 472 records preserved, 33 records added, V008=505 records, RC-018 Excel sync PASS. Master Coverage Matrix V002 is finalized; 四椽栿 Master Spec is next."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -525,13 +525,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Await Product Owner approval to execute the targeted V008 registry patch (append 33 system/family/entity records, preserve all V007 records, keep 7 predecessor-only items pending source binding). After V008 + RC-018 Excel sync PASS, rebuild final coverage matrix and lock 四椽栿 Master spec.",
+  "next_action": "Design and lock 四椽栿 Master Spec under P3.3 V002 Stage 1. Do not create a Codex T-### until the Master Spec is approved. T-018/RZ/FV/CP-03 remain HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v071",
+    "visualization_version": "v072",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R130 / STAGE1 COVERAGE COMPLETE / V008 PATCH APPROVAL REQUIRED / T-018 HOLD"
+    "refresh_status": "CURRENT / R131 / V008 SYNC PASS / COVERAGE V002 FINAL / FOUR-CHUANFU SPEC NEXT / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -644,7 +644,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / COVERAGE MATRIX COMPLETE / REGISTRY COMPLETENESS PATCH PROPOSED",
+    "status": "ACTIVE / V008 CURRENT / COVERAGE MATRIX V002 FINALIZED",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -673,20 +673,24 @@
       "retained_unbound_types": 2
     },
     "master_coverage_review": {
-      "status": "COMPLETE / REGISTRY COMPLETENESS GAP FOUND",
-      "matrix_doc": "docs/production/zhenguo_wanfo/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V001.md",
-      "matrix_json": "production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V001.json",
-      "registered_component_types": 49,
-      "finding": "Current V007 registry does not serialize all model-relevant systems/assets already present in V007 evidence."
+      "status": "FINALIZED AGAINST V008",
+      "matrix_doc": "docs/production/zhenguo_wanfo/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.md",
+      "matrix_json": "production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json",
+      "registry_version": "V008",
+      "registry_records": 505,
+      "registered_object_types": 66,
+      "first_new_master_candidate": "四椽栿 / READY FOR SPEC DESIGN"
     },
     "v008_targeted_patch": {
-      "status": "DESIGN COMPLETE / PRODUCT OWNER APPROVAL REQUIRED",
-      "proposal_doc": "docs/production/zhenguo_wanfo/P3_3_STAGE1_REGISTRY_V008_TARGETED_PATCH_PROPOSAL_V001.md",
-      "proposal_json": "production/zhenguo_wanfo/registry/P3_3_STAGE1_REGISTRY_V008_TARGETED_PATCH_PROPOSAL_V001.json",
-      "base_version": "V007",
-      "base_record_count": 472,
-      "append_record_count": 33,
-      "expected_v008_record_count": 505,
+      "status": "COMPLETE / PRODUCT OWNER APPROVED / RC-018 SYNC PASS",
+      "decision_id": "D-068",
+      "completion_doc": "docs/production/zhenguo_wanfo/P3_3_STAGE1_REGISTRY_V008_TARGETED_PATCH_COMPLETION_V001.md",
+      "snapshot": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json",
+      "current_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
+      "record_count": 505,
+      "workflow_run_id": 35431569023,
+      "workflow_result": "SUCCESS",
+      "derived_commit": "5c9b67217cf9bb2100993ee322419481ca446ede",
       "pending_source_binding": [
         "板瓦",
         "勾头",
@@ -695,8 +699,7 @@
         "悬鱼",
         "惹草",
         "生头木"
-      ],
-      "approved": false
+      ]
     }
   }
 }
