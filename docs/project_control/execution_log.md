@@ -778,3 +778,13 @@ Do not restart T-018 by default.
 - Historical full length remains UNKNOWN/null。
 - 1000mm remains non-historical canonical reference only。
 - No Codex modeling / no Blender / no new T-### / T-018 remains HOLD。
+
+
+## T-021｜四椽栿 Master First Article Task Created｜2026-09-19
+
+- Product Owner instruction：create Codex task。
+- Task Contract：created and locked under D-070。
+- Engineering execution：NOT YET AUTHORIZED。
+- Task scope：single four-chuanfu Master First Article only。
+- No branch execution / no Codex run / no Blender run yet。
+- Next required authorization：Product Owner explicitly says “开始 T-021”。
