@@ -516,3 +516,24 @@ Therefore separately check：
 - Spec / validation / mutation / review / binary / merge boundaries：UNCHANGED
 - T-022：NONE
 - T-018：HOLD
+
+
+### T-021 first article approval / D-072
+
+- Date：2026-09-19
+- Project State：R138
+- Dashboard：v079
+- Task：T-021
+- Product Owner decision：D-072 / APPROVED
+- Final Actions Run：35440785415 / SUCCESS
+- Reviewed head：f16ba22933bb48dbae8951343b76190d2c76c1cf
+- Validation：42/42 PASS
+- Review PNG：6/6 PASS
+- Artifact ID：10583607231
+- Artifact ZIP SHA-256：2b5b270e43b98c2b265e487280244679661864414115bcbc2fd996237998e53e
+- Canonical .blend SHA-256：9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997
+- Semantic geometry signature：45dce8ce4e58deabd3643c57d0f6caa7ebf50a6189e8d41cf57b68e978b63322
+- Correction：prior chat wording mislabeled the semantic signature as binary SHA; artifact itself was correct; no rerun required.
+- PR #7：OPEN / publication closure pending / not merged by D-072 itself
+- Stage 1：ACTIVE / not yet passed
+- T-018：HOLD
