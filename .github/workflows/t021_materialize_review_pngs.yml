@@ -6,6 +6,7 @@ on:
       - '.github/workflows/t021_materialize_review_pngs.yml'
 
 permissions:
+  actions: read
   contents: write
 
 jobs:
