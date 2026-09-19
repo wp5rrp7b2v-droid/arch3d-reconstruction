@@ -220,3 +220,18 @@ Checkpoint 不负责首次落档，只负责一致性核对、压缩、Phase Clo
 - Z-006 继续 UNKNOWN/null/DO_NOT_LOCK；Z-006-RC-01 保持 replaceable REASONABLE_COMPLETION；具体榫卯、隐藏连接、45°转角、隐角梁继续保持当前证据边界；
 - GitHub Actions 可替代脚本化 Blender 的执行环境，但不得替代 Task Contract 明确要求的交互式 `LOCAL_MAC_REQUIRED` 证据；
 - 不以视觉完整性替代历史证据，不因构件系统可组合而宣称“完全还原963原貌”。
+
+### 4.9 Component Registry → Excel Derived View｜构件登记到Excel派生规则
+
+万佛殿构件数据采用与 Dashboard 相同的“正式事实源 → 可重新生成派生视图”原则。
+
+1. **Canonical Source｜唯一事实源**：`docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json` 为当前构件登记唯一正式数据入口；每个正式版本同时保留不可覆盖的 `Vxxx.json` 快照。
+2. **Excel Role｜Excel职责**：Excel 仅作为构件登记的派生表格视图，不得作为独立事实源，不得通过人工编辑 Excel 直接改变项目正式构件数据。
+3. **Single-write Rule｜单写入规则**：任何新增、修正、删除、证据等级变化，必须先写入版本化 JSON 并同步 CURRENT JSON；随后由自动生成链更新 Excel。
+4. **Derived Outputs｜派生输出**：自动生成 `CURRENT.xlsx` 与对应 `Vxxx.xlsx`，并生成同步 Manifest，记录源 JSON、源 GitHub commit、JSON SHA-256、生成器 SHA-256、Excel SHA-256 与记录数。
+5. **Fail Closed｜失败关闭**：若 CURRENT 与同版本快照不一致、Excel 行数不匹配、工作簿无法重开或哈希验证失败，则自动流程必须 FAIL；旧 Excel 保留，新登记不得宣称“Excel 已同步”。
+6. **No Dual Maintenance｜禁止双维护**：禁止“GitHub JSON 改一份、Excel 再人工改一份”。Excel 中发现错误时，必须回到 canonical JSON 修正，再重新生成。
+7. **Version Retention｜版本保留**：版本化 JSON/Excel 保留历史；CURRENT 始终代表当前正式登记和当前派生视图。
+8. **Relation to Dashboard｜与Dashboard一致**：Dashboard 派生自 Project Control；构件 Excel 派生自 Component Registry JSON。两种派生物均可删除重建，项目事实不能依赖派生文件才能恢复。
+9. **Automation｜自动化**：正式 generator 为 `scripts/generate_wanfo_component_registry_excel.py`；GitHub Actions workflow 为 `.github/workflows/wanfo-component-registry-excel.yml`。
+10. **Authorization Boundary｜权限边界**：本规则只建立数据同步机制，不自动授权 T-018、Blender、Actions 生产建模、PR merge 或 Gate PASS；构件 Excel 自动生成 workflow 属于数据派生维护流程，不等于整殿工程执行。
