@@ -345,6 +345,7 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - 当前正式证据：
   - `docs/evidence/zhenguo_wanfo/P3_WANFO_WHOLE_BUILDING_COMPONENT_INSTANCE_INVENTORY_V007.md`
   - `docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INVENTORY_V007_BUILD_BASELINE.json`
+  - `docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.json`
 - V007 状态：**CURRENT BUILD BASELINE / FINAL HIGH-RISK AUDIT COMPLETE / AUDIT STOP RULE ACTIVE**。
 - 主体木构数量继续锁定：柱12、上下六椽栿各2、四椽栿2、平梁4、丁栿8、乳栿8、剳牵14、槫33、阑额12、由额4、大角梁4、子角梁4、隐角梁4、托脚12、叉手8。
 - 蜀柱：升级锁定为4根（东缝、东山、西缝、西山各1），证据等级为直接实测位置 + 测绘结构图闭合的明确推导。
