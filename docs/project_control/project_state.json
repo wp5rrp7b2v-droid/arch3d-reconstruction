@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R128",
+  "state_revision": "R129",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / REAL COMPONENT MASTER LIBRARY / SIX EXISTING MASTERS REBIND REVIEW IN PROGRESS / T-018 HOLD / V007 BUILD BASELINE / RC-018 ACTIVE",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / SIX EXISTING MASTERS REBIND REVIEW COMPLETE / COVERAGE MATRIX NEXT / T-018 HOLD / V007 BUILD BASELINE / RC-018 ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -525,13 +525,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Execute Stage 1 rebind/coverage review of the six existing approved Masters against V007, then lock first missing Master specification. Do not resume T-018/RZ/FV/CP-03.",
+  "next_action": "Build P3.3 Stage 1 V007 full Master Coverage / Disposition Matrix: classify all current registry component types into existing Master / new Master required / parametric completion / simplified proxy / UNKNOWN. Then lock first missing Master specification. Do not resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v069",
+    "visualization_version": "v070",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R128 / P3.3 V002 STAGE 1 ACTIVE / SIX MASTER REBIND REVIEW / T-018 HOLD"
+    "refresh_status": "CURRENT / R129 / STAGE1 SIX-MASTER REBIND REVIEW COMPLETE / COVERAGE MATRIX NEXT / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -644,7 +644,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / PRODUCT OWNER AUTHORIZED",
+    "status": "ACTIVE / EXISTING MASTER REBIND REVIEW COMPLETE",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -660,6 +660,17 @@
       "上六椽栿"
     ],
     "engineering_task_created": false,
-    "t018_impact": "NONE / remains HOLD"
+    "t018_impact": "NONE / remains HOLD",
+    "existing_master_rebind_review": {
+      "status": "COMPLETE",
+      "review_doc": "docs/production/zhenguo_wanfo/P3_3_STAGE1_EXISTING_MASTER_REBIND_REVIEW_V001.md",
+      "binding_map": "production/zhenguo_wanfo/registry/P3_3_STAGE1_EXISTING_MASTER_REBIND_MAP_V001.json",
+      "reviewed": 6,
+      "retained": 6,
+      "immediate_rebuild_required": 0,
+      "directly_rebindable_types": 2,
+      "rebindable_with_length_bridge_types": 2,
+      "retained_unbound_types": 2
+    }
   }
 }
