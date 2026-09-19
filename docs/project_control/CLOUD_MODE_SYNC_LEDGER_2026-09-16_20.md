@@ -483,3 +483,21 @@ Therefore separately check：
 - Retry：T-021 Retry 01 after GitHub-connected execution path recovery
 - New task：DO NOT CREATE T-022
 - T-018：HOLD
+
+
+### T-021 Cloud execution interpretation correction
+
+- Date：2026-09-19
+- Project State：R136
+- Dashboard：v077
+- Previous remote/auth STOP interpretation：SUPERSEDED
+- Shell `git remote -v` / `gh auth status`：not mandatory Codex Cloud capability gates
+- Correct path：Codex Cloud engineering diff → product Create PR flow → GitHub Actions Blender 4.5.13
+- Blender in Codex sandbox：PROHIBITED / NOT REQUIRED
+- Valid infra STOP only if：
+  - Codex Cloud product-level PR creation fails, or
+  - GitHub Actions cannot obtain/run Blender 4.5.13
+- Engineering changes so far：NONE
+- Validation：0/42
+- Task：continue T-021 / no T-022
+- T-018：HOLD
