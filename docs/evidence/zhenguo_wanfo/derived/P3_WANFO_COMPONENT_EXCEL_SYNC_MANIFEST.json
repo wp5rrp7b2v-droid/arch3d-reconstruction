@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "status": "SYNCED",
+  "registry_version": "V007",
+  "source_json": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
+  "versioned_json_snapshot": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.json",
+  "source_commit": "b8febcefcc84b4d27b6e46077180ea5a7f6b5f36",
+  "source_json_sha256": "34a33a493f8a1e14b033475f0d9ee4d5bf12c547d7d37d97ddf3539f0bf5c700",
+  "generator": "/home/runner/work/arch3d-reconstruction/arch3d-reconstruction/scripts/generate_wanfo_component_registry_excel.py",
+  "generator_version": "1.0.1",
+  "generator_sha256": "18d8f2802debcbc06cca471c291f6b513e298dfbff9ca8797a5c3be711cded88",
+  "record_count": 472,
+  "current_excel": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.xlsx",
+  "current_excel_sha256": "8a8b948f97bc14c777c8d9b35bec300a773f106bb4943b4f6290705ecb9e5521",
+  "versioned_excel": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.xlsx",
+  "versioned_excel_sha256": "8a8b948f97bc14c777c8d9b35bec300a773f106bb4943b4f6290705ecb9e5521",
+  "canonical_truth": "JSON",
+  "excel_role": "DERIVED_VIEW"
+}
