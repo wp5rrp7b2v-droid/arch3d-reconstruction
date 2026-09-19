@@ -494,3 +494,22 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Spec validation contract：28项。
 - Codex / Blender / new T-###：NOT AUTHORIZED。
 - Next：separate authorization for 四椽栿 Master First Article engineering task。
+
+
+## 2026-09-19｜T-021 四椽栿 Master First Article Task Contract
+
+- Decision：D-070。
+- Task：`docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md`。
+- Scope：1个首件 Master，`CMP-FRAME-FOUR-CHUANFU-001_MASTER`。
+- Contract：LOCKED / PRODUCT OWNER APPROVED。
+- Execution：**NOT YET AUTHORIZED**。
+- Think Level：MEDIUM DEFAULT / HIGH only by explicit ChatGPT escalation。
+- Cloud Mode：CLOUD_EXECUTABLE。
+- Blender：GitHub Actions headless / RC-017 / pinned 4.5.13。
+- Validation：42项 + length/width/thickness 3类 mutation + independent reopen + canonical restore。
+- Review：6张正式 PNG。
+- Binary：Git 不提交 .blend；Actions artifact + SHA-256。
+- Catalog：P3.3 Stage1 Master catalog record 只能 pending review。
+- Branch：`codex/t021-p3-3-four-chuanfu-master-first-article-v001`。
+- PR：required / do not merge。
+- T-018 / RZ / FV / CP-03：继续 HOLD / 不授权。
