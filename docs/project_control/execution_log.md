@@ -867,3 +867,23 @@ Do not restart T-018 by default.
 - Geometry/evidence boundary：UNCHANGED。
 - P3.3 Stage 1：ACTIVE / not yet passed。
 - T-018：HOLD。
+
+
+## 2026-09-19｜Daily Close / Cross-check
+
+- Daily close：**COMPLETE**。
+- Canonical state：P3.3 V002 / Stage 1 ACTIVE / 0 of 7 stages passed。
+- Registry：V008 / 505 registry records / JSON remains sole authority。
+- T-021：Product Owner APPROVED / D-072 / PR #7 MERGED / publication CLOSED。
+- PR #7 merge commit：`2c2c3bc3dea63d7f8449271c47e58d468489c950`。
+- Final PR head Actions：Run `35445039747` = SUCCESS。
+- Formal T-021 delivery on main：semantic JSON / validation JSON / engineering review / Stage 1 Master catalog / 6 review PNG / workflow + scripts。
+- No `.blend` committed to Git；approved binary remains Actions artifact evidence。
+- SHA correction is fully recorded：approved canonical binary=`9f1c8531...0997`；semantic geometry signature=`45dce8ce...63322`。
+- Stage 1 next Master priority：**平梁（priority 2）**。
+- 平梁 known boundary：4件；东西缝型与山面型须分证据状态；山面厚度 UNKNOWN，不得统一补写。
+- Next session start：先做平梁 direct source/evidence review + Master Spec design；不先建新 T-###，不先跑 Blender。
+- 7项继续 PENDING_SOURCE_BINDING：板瓦 / 勾头 / 滴水 / 博风板 / 悬鱼 / 惹草 / 生头木。
+- T-018：HOLD。
+- T-020 / RZ / FV：Stage 5 re-review。
+- Omission audit：no open T-021 publication action remains；no unrecorded merge identified；no new engineering authorization granted。
