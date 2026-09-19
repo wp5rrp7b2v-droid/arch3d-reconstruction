@@ -539,3 +539,45 @@ Current correct language:
 3. Perform bounded Pre-Publication Readiness Review only.
 4. Do not authorize publication by default.
 5. If wider ambiguity is exposed, STOP and reconsider Outcome B / V003 rather than forcing RZ/FV into production.
+
+
+## 2026-09-19｜整殿真实构件实例总表 V001 落档
+
+### 工作性质
+
+- ChatGPT / Product Owner 侧证据复核与项目校准；
+- 非 Codex 工程执行；
+- 非 Blender 生产；
+- 不占用新的 T-###；
+- 不产生新的工程执行授权。
+
+### 完成内容
+
+1. 重新核读 SRC-ZG-WF-001 的主体木构、斗栱与屋面相关章节；
+2. 将旧工程 family / proxy 与真实建筑构件重新分离；
+3. 建立《万佛殿整殿构件实例总表 V001》第一轮底账；
+4. 对能够确认的构件记录数量、位置、变体、支承/连接、尺寸来源和模型状态；
+5. 明确不能确认的项目继续标记为“待逐件展开 / 待确认”，不从一般古建知识补造；
+6. 建立正式证据文件：
+   - `docs/evidence/zhenguo_wanfo/P3_WANFO_WHOLE_BUILDING_COMPONENT_INSTANCE_INVENTORY_V001.md`
+
+### 关键发现
+
+- 11/40/365 是工程基线，不是真实构件完整性证明；
+- PRIMARY_FRAME / FRAME_SUPPORT / BRACKET_ARM / BRACKET_CONTACT 等代理压缩了大量报告已经能够区分的真实构件；
+- 槫总数修正为33根：正身21 + 两山12；
+- 当前大量主体梁架构件已具备“实测截面 + 明确装配节点 → 自动求长度”的建模条件；
+- 瓦作资料较强；椽系与木基层仍是屋面主要缺口。
+
+### 状态影响
+
+- T-018：继续 HOLD；
+- RZ / FV：仍为设计锁定，不发布；
+- CP-03 / CP-04 / CP-05：不恢复；
+- PR #3 / #6：不合并；
+- Blender / Actions / Stage C：不执行；
+- P3.3：ACTIVE / NOT PASS。
+
+### 下一步
+
+继续将实例组拆成逐件实例，并复核台基、墙体、围护、门窗等第四系统；在真实构件实例总表进一步闭合前，不恢复整殿工程生成。
