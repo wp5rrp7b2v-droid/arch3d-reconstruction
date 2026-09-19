@@ -831,3 +831,24 @@ Do not restart T-018 by default.
 - No T-022 created。
 - T-021 remains the active task。
 - Engineering implementation has not yet been committed under the new executor path at this checkpoint。
+
+
+## T-021｜Run #3 PASS + Product Owner Acceptance D-072｜2026-09-19
+
+- Final Actions Run：`35440785415` / SUCCESS。
+- Final engineering head：`f16ba22933bb48dbae8951343b76190d2c76c1cf`。
+- Validation：42/42 PASS。
+- Independent reopen：PASS。
+- Length / Width / Thickness mutation：PASS。
+- Canonical restore：PASS。
+- Review images：6/6 PASS。
+- Artifact ID：10583607231。
+- Artifact ZIP SHA-256：`2b5b270e43b98c2b265e487280244679661864414115bcbc2fd996237998e53e`。
+- Canonical Master binary SHA-256：`9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997`。
+- Semantic geometry signature：`45dce8ce4e58deabd3643c57d0f6caa7ebf50a6189e8d41cf57b68e978b63322`。
+- SHA correction：earlier chat report mislabeled semantic geometry signature as binary SHA; artifact itself was correct. No rerun required。
+- Product Owner：**APPROVED / D-072**。
+- T-021 first article：**CLOSED AS PRODUCT OWNER APPROVED**。
+- PR #7：publication closure pending / not merged by D-072 itself。
+- P3.3 Stage 1：ACTIVE / not yet passed。
+- T-018：HOLD。
