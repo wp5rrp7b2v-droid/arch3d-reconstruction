@@ -501,3 +501,18 @@ Therefore separately check：
 - Validation：0/42
 - Task：continue T-021 / no T-022
 - T-018：HOLD
+
+
+### T-021 executor override
+
+- Date：2026-09-19
+- Decision：D-071
+- Project State：R137
+- Dashboard：v078
+- Task：T-021
+- Engineering executor：ChatGPT direct GitHub execution
+- Blender executor：GitHub Actions / Blender 4.5.13
+- Codex dependency：removed for T-021 engineering file authoring
+- Spec / validation / mutation / review / binary / merge boundaries：UNCHANGED
+- T-022：NONE
+- T-018：HOLD
