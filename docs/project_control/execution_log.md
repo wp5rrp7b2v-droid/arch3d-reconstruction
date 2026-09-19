@@ -581,3 +581,78 @@ Current correct language:
 ### 下一步
 
 继续将实例组拆成逐件实例，并复核台基、墙体、围护、门窗等第四系统；在真实构件实例总表进一步闭合前，不恢复整殿工程生成。
+
+
+# V007 Final High-Risk Component Audit / Build Baseline｜2026-09-19
+
+## Work nature
+
+- Product Owner / ChatGPT evidence audit and project-control synchronization.
+- No new Codex engineering task number.
+- No Blender run.
+- No Actions rerun.
+- No PR patch or merge.
+- No T-018 execution authorization.
+
+## Audit scope
+
+Re-read `SRC-ZG-WF-001` with expanded scope:
+
+- report body;
+- survey drawing atlas, drawings 01–26;
+- appendices 1-7 through 1-10.
+
+Only six residual high-risk areas were audited:
+
+1. external bracket-set per-piece counts;
+2. interior panjian / timu;
+3. rafters;
+4. shuzhu;
+5. vertical/hip ridge tile counts;
+6. door/window woodwork.
+
+## Result
+
+- V007 becomes CURRENT BUILD BASELINE.
+- Blanket full-table re-audit stops.
+- Shuzhu upgraded to 4 total by explicit derivation from four measured positions + structural drawings.
+- External bracket quantities further closed:
+  - Tou Ang 16;
+  - Er Ang 16;
+  - large Guazi Gong 16;
+  - small Guazi Gong 28;
+  - large Man Gong 16;
+  - small Man Gong 28;
+  - Ling Gong 28.
+- 56 straight-direction first/second-jump Huagong remains a confirmed subset, not whole-building Huagong total.
+- Interior system: 24 bracket/separator positions; 12 Panjianfang positions.
+- Corrected prior semantic attribution: 215.0×153.6 mm belongs to interior Gong-member material statistics, not Panjianfang section.
+- Timu: 23 measured records only; whole-building total remains UNKNOWN.
+- Rafters: PARAMETRIC_COMPLETION; real total/section/spacing remain UNKNOWN.
+- Vertical ridge: 20 Tongji per ridge / 80 total derived.
+- Hip ridge: 5–6 Tongji + Zhaotou per ridge / approximately 20–24 + Zhaotou total derived.
+- Door/window: measured elevation drawings authorize medium-detail visual grid/layout; wood section and joinery remain parametric.
+- South-window correction retained: east-side wall 84 cm / west-side wall 101 cm.
+
+## Current execution boundary
+
+- T-018 V002: HOLD / NOT PASS.
+- P3.3: ACTIVE / NOT PASS.
+- RZ / FV: design locks only; no publication.
+- CP-03: STOP.
+- CP-04 / CP-05: not resumed.
+- Stage C: LOCKED.
+- PR #3: SUPERSEDED / DO NOT MERGE.
+- PR #6: HOLD / DO NOT PATCH / DO NOT MERGE.
+- No new Blender / Actions / whole-building expansion.
+
+## Next
+
+Use V007 to redesign:
+
+1. real-component Master completion order;
+2. component variants and reusable parameterization;
+3. whole-building assembly architecture;
+4. replacement boundary for legacy 11/40/365 engineering proxies.
+
+Do not restart T-018 by default.
