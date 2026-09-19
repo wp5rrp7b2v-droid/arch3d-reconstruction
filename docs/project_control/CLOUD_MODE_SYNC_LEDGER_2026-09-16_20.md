@@ -335,8 +335,8 @@ Therefore separately check：
 - Date：2026-09-19
 - Decision：D-065
 - Rule：RC-018 ACTIVE
-- Project State：R125
-- Dashboard：v066
+- Project State：R126
+- Dashboard：v067
 - Canonical source：`P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json`
 - Versioned snapshot：V007
 - Registry records：472
