@@ -820,3 +820,14 @@ Do not restart T-018 by default.
   6. only product-level PR creation failure or Actions-level Blender failure is a valid infrastructure STOP.
 - Engineering changes remain NONE so far; validation remains 0/42.
 - T-021 remains the same task; no T-022; T-018 remains HOLD.
+
+
+## T-021｜Executor Override to ChatGPT Direct GitHub｜2026-09-19
+
+- Product Owner approval：D-071。
+- Executor change：Codex Cloud → ChatGPT direct GitHub execution。
+- GitHub Actions remains the only formal Blender 4.5.13 executor。
+- No changes to D-069 spec, validation matrix, mutation contract, review package, binary policy, or merge boundary。
+- No T-022 created。
+- T-021 remains the active task。
+- Engineering implementation has not yet been committed under the new executor path at this checkpoint。
