@@ -788,3 +788,18 @@ Do not restart T-018 by default.
 - Task scope：single four-chuanfu Master First Article only。
 - No branch execution / no Codex run / no Blender run yet。
 - Next required authorization：Product Owner explicitly says “开始 T-021”。
+
+
+## T-021｜Execution Attempt STOP / Environment Infrastructure｜2026-09-19
+
+- Codex execution attempt observed.
+- STOP classification：ENVIRONMENT / EXECUTION INFRASTRUCTURE。
+- Blender 4.5.13 direct download from Codex sandbox：HTTP 403。
+- Git remote / GitHub auth：unavailable；cannot push / trigger Actions / create PR。
+- Engineering changes：NONE。
+- Validation：0/42。
+- Protected assets：PASS / unchanged。
+- Review artifact / blend / SHA / PR：NONE。
+- Contract/evidence conflict：NONE identified。
+- T-021 remains same task; next retry = Retry 01 after execution-infrastructure recovery。
+- Do not create T-022; do not change Blender pin; T-018 remains HOLD。
