@@ -663,3 +663,23 @@ Do not restart T-018 by default.
 - Added canonical detailed instance registry: `docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.json`.
 - Purpose: preserve the V007 per-instance/per-position build baseline in GitHub.
 - This synchronization does not change the execution boundary: T-018 remains HOLD; no Blender/Actions/PR merge authorization.
+
+
+## RC-018｜Component Registry → Excel Derived Sync｜2026-09-19
+
+- Product Owner approved D-065: component registry JSON becomes the single canonical data source; Excel becomes a regenerated derived view, analogous to Dashboard's derived role.
+- Added `P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json` and retained immutable versioned registry snapshot `V007.json`.
+- Added generator `scripts/generate_wanfo_component_registry_excel.py`.
+- Added workflow `.github/workflows/wanfo-component-registry-excel.yml`.
+- Generator validates CURRENT=versioned snapshot, workbook sheet set, instance-row count, and SHA-256 manifest.
+- During setup, intermediate workflow attempts exposed two implementation defects:
+  1. untracked derived files were not detected by `git diff`;
+  2. one generator patch accidentally inserted a literal `\n`, causing SyntaxError.
+- Both defects were corrected before acceptance.
+- Final end-to-end run `35429316513`: **SUCCESS**.
+- Final derived commit: `408be1829fd1b190e69eaf0e7543f4dd7f0b7f85`.
+- Registry records: 472.
+- CURRENT/V007 Excel SHA-256: `b9cd37fb940f7d91e14b11a8aeaadafbac3c6e15a6ef07ae968b6b7afa1f017d`.
+- Sync Manifest: `SYNCED`.
+- No T-### engineering task was created; this was Project Control/data-derivation infrastructure.
+- T-018 remains HOLD; no Blender/Actions modeling, CP-03 restart, PR merge, or P3.3 PASS authorization.
