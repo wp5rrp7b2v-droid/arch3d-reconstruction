@@ -97,3 +97,6 @@
 
 
 | D-068 | 2026-09-19 | Product Owner 正式批准执行 P3.3 Stage 1 的 V008 targeted registry patch。执行边界：保留 V007 全部472条 registry records，追加33条已在V007事实边界内但此前未序列化的 system/family/entity records；CURRENT registry 升级到 V008；RC-018 自动生成 CURRENT.xlsx 与 V008.xlsx 并通过校验。板瓦、勾头、滴水、博风板、悬鱼、惹草、生头木继续 PENDING_SOURCE_BINDING，不静默写入。V008 最终 505 records，明确不是505件实体构件。D-068 不授权 Codex 建模、T-018、RZ/FV/CP-03、PR merge 或 P3.3 PASS。 | COMPLETE / V008 CURRENT / RC-018 SYNC PASS / FOUR-CHUANFU SPEC NEXT |
+
+
+| D-069 | 2026-09-19 | Product Owner 指示“设计与锁定四椽栿 Master Spec”，正式锁定 `P3_3_STAGE1_FOUR_CHUANFU_MASTER_SPEC_V001`。新 canonical component id=`CMP-FRAME-FOUR-CHUANFU-001`，Master id=`CMP-FRAME-FOUR-CHUANFU-001_MASTER`。直接原页证据锁定到 SRC-ZG-WF-001 PDF p82 / 印刷 p67 / 2.3.1.2 / 表2-39 / 图2-40：东缝1根、西缝1根；两组实测截面413×295mm、440×309mm，均值426.5×302mm；A/B与东西缝逐一对应关系UNKNOWN。Master V001仅使用426.5×302mm现状实测均值作为 bounded outer envelope；历史全长保持UNKNOWN/null；1000mm仅为非历史 canonical reference realization；真实装配长度以后由显式端点推导。报告28分×20分仅为设计分析metadata，geometry_use_count=0。禁止无证据榫卯、槽口、端部、起拱、挠曲历史化及P2 proxy mesh。D-069只锁定规格，不授权Codex建模、新T-###、Blender、T-018、RZ/FV/T-020、CP-03或PR merge。 | LOCKED / PRODUCT OWNER APPROVED / FOUR-CHUANFU MASTER SPEC V001 / CODEX NOT YET AUTHORIZED |
