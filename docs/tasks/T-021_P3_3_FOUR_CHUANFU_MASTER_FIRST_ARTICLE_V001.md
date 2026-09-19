@@ -1,14 +1,14 @@
 # 【中国古建筑3D复原｜T-021｜P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001｜四椽栿 Master 首件生产】
 
 Status: **CONTRACT LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT YET AUTHORIZED / CODEX CLOUD READY**  
-Execution Mode: **CHAT_FIRST_CODEX_EXECUTOR_MODE / FIRST_ARTICLE_ONLY**  
-Codex Think Level: **MEDIUM DEFAULT / HIGH ONLY BY EXPLICIT CHATGPT ESCALATION**  
+Execution Mode: **CHATGPT_DIRECT_GITHUB_EXECUTION / FIRST_ARTICLE_ONLY**  
 Phase/Gate: P3 / P3.3 V002  
 Stage: Stage 1｜真实构件 Master 库  
 Date: 2026-09-19  
 Contract approval: **PRODUCT OWNER APPROVED / D-070**  
+Execution responsibility override: **D-071 / CHATGPT DIRECT GITHUB EXECUTION**  
 Cloud Mode Classification: **CLOUD_EXECUTABLE**  
-Primary Engineering Executor: **Codex Cloud**  
+Primary Engineering Executor: **ChatGPT direct GitHub execution**  
 Blender Executor: **GitHub Actions headless Blender / RC-017**  
 Branch: codex/t021-p3-3-four-chuanfu-master-first-article-v001  
 PR: **REQUIRED / DO NOT MERGE WITHOUT PRODUCT OWNER APPROVAL**
@@ -21,11 +21,11 @@ PR: **REQUIRED / DO NOT MERGE WITHOUT PRODUCT OWNER APPROVAL**
 
 本任务不得批量生产平梁、丁栿、乳栿、剳牵、槫或其他新 Master。
 
-T-021 工程完成后状态只能到 ENGINEERING COMPLETE / PENDING CHATGPT + PRODUCT OWNER REVIEW；Codex 不得宣告 Master APPROVED，也不得宣告 Stage 1 PASS。
+T-021 工程完成后状态只能到 ENGINEERING COMPLETE / PENDING CHATGPT + PRODUCT OWNER REVIEW；执行方不得宣告 Master APPROVED，也不得宣告 Stage 1 PASS。
 
 ## 2. Minimal Authoritative Read Set
 
-Codex 优先只读取：
+执行方优先只读取：
 
 1. 本 Task Contract；
 2. docs/production/zhenguo_wanfo/P3_3_STAGE1_FOUR_CHUANFU_MASTER_SPEC_V001.md；
@@ -101,9 +101,10 @@ unsupported_geometry_count 必须为 0。禁止榫头、卯口、散斗槽、隔
 
 ## 8. Blender / Binary Rule
 
-采用 RC-017：Codex Cloud 写 generator / validator / workflow，GitHub Actions headless Blender 执行。
+采用 D-071 task-specific execution override：ChatGPT 直接通过 GitHub 写入 generator / validator / workflow，GitHub Actions headless Blender 执行。RC-017 的 headless Blender executor、版本锁定、artifact 与验证要求全部继续有效；仅取消“必须由 Codex Cloud 编写工程文件”这一 T-021 执行前提。
 
 - Blender version 显式 pin = 4.5.13；不得静默切换。
+- ChatGPT 不在本地或沙箱中运行 Blender；正式 Blender 执行仍只能发生在 GitHub Actions。
 - .blend / .blend1 不提交 Git。
 - canonical .blend 由 Actions 生成并计算 SHA-256，作为 Actions artifact 保存。
 - review PNG / validation JSON / semantic JSON / params / scripts / engineering report 提交 GitHub。
@@ -137,7 +138,7 @@ Stage G｜Catalog pending record：建立 P3.3 Stage1 Master catalog record，�
 
 ## 11. Protected / Prohibited
 
-Codex 不得修改 docs/project_control/、V008 Component Registry、V007/V008 snapshots、P3.1 approved Master assets、P3.1 historical Master Library、P2 frozen baseline、T-018 / PR #3 / PR #6、RZ/FV/T-020、四椽栿锁定 Spec 和 source-binding evidence。
+工程执行不得修改 V008 Component Registry、V007/V008 snapshots、P3.1 approved Master assets、P3.1 historical Master Library、P2 frozen baseline、T-018 / PR #3 / PR #6、RZ/FV/T-020、四椽栿锁定 Spec 和 source-binding evidence。Project Control 仅允许由 ChatGPT 在任务状态变更时按治理规则同步更新，不得被工程脚本修改。
 
 不得恢复整殿生成、推导真实建筑长度、进入 Stage 2、创建其他新 Master、修改 Dashboard、merge PR。
 
@@ -159,18 +160,40 @@ PR title：T-021｜四椽栿 Master First Article V001
 
 PR body 至少包含 source main SHA、task path、changed files、Actions run ID、artifact ID/SHA-256、validation summary、mutation summary、review paths、protected asset check、known limitations，并明确写 PENDING_CHATGPT_PRODUCT_OWNER_REVIEW / DO NOT MERGE。
 
-Codex 不得 merge PR。
+执行方不得 merge PR；PR merge 仍需 Product Owner 单独批准。
 
 ## 14. Completion Criteria
 
 T-021 engineering COMPLETE 需要 params/semantic/generator、canonical reference Master、Actions Blender 4.5.13、independent reopen、3类mutation+restore、42项validation、6张review PNG、blend artifact+SHA、Stage1 catalog pending record、protected inputs unchanged、branch+PR创建且未merge、Project Control未修改。
 
-Codex 最终只返回：STATUS、branch、commit SHA、PR number/URL、Actions run ID、artifact ID、binary SHA-256、validation PASS count、review paths、protected-assets result、STOP/known issue。
+执行完成后只汇报：STATUS、branch、commit SHA、PR number/URL、Actions run ID、artifact ID、binary SHA-256、validation PASS count、review paths、protected-assets result、STOP/known issue。
 
 ## 15. Authorization Boundary
 
-**TASK CONTRACT CREATED / LOCKED / D-070 / EXECUTION NOT YET AUTHORIZED**
+**TASK CONTRACT ACTIVE / D-070 + D-071 / CHATGPT DIRECT GITHUB EXECUTION AUTHORIZED**
 
-Product Owner 已授权创建并锁定 T-021 Codex Task Contract；尚未授权 Codex 开始工程执行。
+Product Owner 已授权将 T-021 的工程执行责任改为 ChatGPT direct GitHub execution，并可继续执行同一 T-021。
 
-本授权不包括：Codex 工程执行、T-021 Master最终批准、PR merge、Stage 1 PASS、第二个新 Master、Stage 2、T-018、P3.3 PASS。下一步需 Product Owner 明确授权“开始 T-021”后方可执行。
+本授权包括：T-021 工程文件的 ChatGPT direct GitHub execution 与 GitHub Actions headless Blender 执行链。仍不包括：T-021 Master 最终批准、PR merge、Stage 1 PASS、第二个新 Master、Stage 2、T-018、P3.3 PASS。
+
+## 16. D-071｜Task-specific Executor Override
+
+D-071 仅修改 **T-021 的工程文件作者/提交路径**：
+
+- 原：Codex Cloud 编写工程文件 → GitHub Actions 执行 Blender；
+- 新：ChatGPT direct GitHub execution 编写并提交工程文件 → GitHub Actions 执行 Blender。
+
+以下全部不变：
+
+- D-069 四椽栿 Master Spec；
+- 42项验证；
+- 3类 mutation；
+- 6张 review PNG；
+- Blender 4.5.13 pin；
+- binary artifact / SHA-256；
+- ONE TASK = ONE BRANCH = ONE PR；
+- Product Owner merge approval；
+- T-018 HOLD；
+- evidence / historical / UNKNOWN 边界。
+
+本 override 不创建 T-022，也不改变其他任务默认执行方式。
