@@ -1,0 +1,4558 @@
+{
+  "schema_version": "V007",
+  "date": "2026-09-19",
+  "status": "CURRENT_BUILD_BASELINE_INSTANCE_REGISTRY",
+  "source": "SRC-ZG-WF-001",
+  "generation_note": "本登记表将V007已锁定的实体实例、位置单元、明确子集和参数化边界写入GitHub。COUNTING_UNIT_NOT_PHYSICAL与MEASUREMENT_SAMPLE_NOT_TOTAL不得计入实体总数。",
+  "item_count": 472,
+  "items": [
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-01",
+      "location": "西北角柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "角柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-02",
+      "location": "北侧西中柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "普通柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-03",
+      "location": "北侧东中柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "普通柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-04",
+      "location": "东北角柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "角柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-05",
+      "location": "东侧北中柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "普通柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-06",
+      "location": "东侧南中柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "普通柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-07",
+      "location": "东南角柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "角柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-08",
+      "location": "南侧东中柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "普通柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-09",
+      "location": "南侧西中柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "普通柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-10",
+      "location": "西南角柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "角柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-11",
+      "location": "西侧南中柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "普通柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "柱",
+      "id": "柱-12",
+      "location": "西侧北中柱",
+      "count_status": "LOCKED",
+      "evidence": "直接实测+平面拓扑",
+      "variant": "普通柱",
+      "section": "现状柱径约460mm；报告推定设计候选459mm；柱高仍按可替换规则"
+    },
+    {
+      "system": "主体木构",
+      "component": "下六椽栿",
+      "id": "下六椽栿-东缝",
+      "location": "东缝",
+      "count_status": "LOCKED",
+      "evidence": "直接实测",
+      "section_mm": "广493.5；榫厚375；最厚444"
+    },
+    {
+      "system": "主体木构",
+      "component": "上六椽栿",
+      "id": "上六椽栿-东缝",
+      "location": "东缝",
+      "count_status": "LOCKED",
+      "evidence": "直接实测",
+      "section_mm": "广334；榫厚209；最厚240.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "四椽栿",
+      "id": "四椽栿-东缝",
+      "location": "东缝",
+      "count_status": "LOCKED",
+      "evidence": "直接实测",
+      "section_mm": "平均广426.5；厚302"
+    },
+    {
+      "system": "主体木构",
+      "component": "下六椽栿",
+      "id": "下六椽栿-西缝",
+      "location": "西缝",
+      "count_status": "LOCKED",
+      "evidence": "直接实测",
+      "section_mm": "广493.5；榫厚375；最厚444"
+    },
+    {
+      "system": "主体木构",
+      "component": "上六椽栿",
+      "id": "上六椽栿-西缝",
+      "location": "西缝",
+      "count_status": "LOCKED",
+      "evidence": "直接实测",
+      "section_mm": "广334；榫厚209；最厚240.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "四椽栿",
+      "id": "四椽栿-西缝",
+      "location": "西缝",
+      "count_status": "LOCKED",
+      "evidence": "直接实测",
+      "section_mm": "平均广426.5；厚302"
+    },
+    {
+      "system": "主体木构",
+      "component": "平梁",
+      "id": "平梁-东缝",
+      "location": "东缝",
+      "count_status": "LOCKED_COUNT_LOCATION",
+      "evidence": "直接实测",
+      "variant": "东西缝型",
+      "section_mm": "平均广395.5；厚280.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "平梁",
+      "id": "平梁-西缝",
+      "location": "西缝",
+      "count_status": "LOCKED_COUNT_LOCATION",
+      "evidence": "直接实测",
+      "variant": "东西缝型",
+      "section_mm": "平均广395.5；厚280.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "平梁",
+      "id": "平梁-东山",
+      "location": "东山",
+      "count_status": "LOCKED_COUNT_LOCATION",
+      "evidence": "直接实测",
+      "variant": "山面型",
+      "section_mm": "广约346；厚未及"
+    },
+    {
+      "system": "主体木构",
+      "component": "平梁",
+      "id": "平梁-西山",
+      "location": "西山",
+      "count_status": "LOCKED_COUNT_LOCATION",
+      "evidence": "直接实测",
+      "variant": "山面型",
+      "section_mm": "广约346；厚未及"
+    },
+    {
+      "system": "主体木构",
+      "component": "丁栿",
+      "id": "丁栿-东山-上丁栿-南",
+      "location": "东山南侧 / 上丁栿",
+      "count_status": "LOCKED",
+      "evidence": "总数+南北丁栿构造关系明确",
+      "section_mm": "平均广331.6；厚200.9",
+      "length_rule": "由装配端点求长"
+    },
+    {
+      "system": "主体木构",
+      "component": "丁栿",
+      "id": "丁栿-东山-上丁栿-北",
+      "location": "东山北侧 / 上丁栿",
+      "count_status": "LOCKED",
+      "evidence": "总数+南北丁栿构造关系明确",
+      "section_mm": "平均广331.6；厚200.9",
+      "length_rule": "由装配端点求长"
+    },
+    {
+      "system": "主体木构",
+      "component": "丁栿",
+      "id": "丁栿-东山-下丁栿-南",
+      "location": "东山南侧 / 下丁栿",
+      "count_status": "LOCKED",
+      "evidence": "总数+南北丁栿构造关系明确",
+      "section_mm": "平均广331.6；厚200.9",
+      "length_rule": "由装配端点求长"
+    },
+    {
+      "system": "主体木构",
+      "component": "丁栿",
+      "id": "丁栿-东山-下丁栿-北",
+      "location": "东山北侧 / 下丁栿",
+      "count_status": "LOCKED",
+      "evidence": "总数+南北丁栿构造关系明确",
+      "section_mm": "平均广331.6；厚200.9",
+      "length_rule": "由装配端点求长"
+    },
+    {
+      "system": "主体木构",
+      "component": "丁栿",
+      "id": "丁栿-西山-上丁栿-南",
+      "location": "西山南侧 / 上丁栿",
+      "count_status": "LOCKED",
+      "evidence": "总数+南北丁栿构造关系明确",
+      "section_mm": "平均广331.6；厚200.9",
+      "length_rule": "由装配端点求长"
+    },
+    {
+      "system": "主体木构",
+      "component": "丁栿",
+      "id": "丁栿-西山-上丁栿-北",
+      "location": "西山北侧 / 上丁栿",
+      "count_status": "LOCKED",
+      "evidence": "总数+南北丁栿构造关系明确",
+      "section_mm": "平均广331.6；厚200.9",
+      "length_rule": "由装配端点求长"
+    },
+    {
+      "system": "主体木构",
+      "component": "丁栿",
+      "id": "丁栿-西山-下丁栿-南",
+      "location": "西山南侧 / 下丁栿",
+      "count_status": "LOCKED",
+      "evidence": "总数+南北丁栿构造关系明确",
+      "section_mm": "平均广331.6；厚200.9",
+      "length_rule": "由装配端点求长"
+    },
+    {
+      "system": "主体木构",
+      "component": "丁栿",
+      "id": "丁栿-西山-下丁栿-北",
+      "location": "西山北侧 / 下丁栿",
+      "count_status": "LOCKED",
+      "evidence": "总数+南北丁栿构造关系明确",
+      "section_mm": "平均广331.6；厚200.9",
+      "length_rule": "由装配端点求长"
+    },
+    {
+      "system": "主体木构",
+      "component": "乳栿",
+      "id": "乳栿-东北角-上斜乳栿",
+      "location": "东北角 / 上斜乳栿",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明四角上、下斜乳栿共8根",
+      "section_mm": "平均广330.5；厚187.2"
+    },
+    {
+      "system": "主体木构",
+      "component": "乳栿",
+      "id": "乳栿-东北角-下斜乳栿",
+      "location": "东北角 / 下斜乳栿",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明四角上、下斜乳栿共8根",
+      "section_mm": "平均广330.5；厚187.2"
+    },
+    {
+      "system": "主体木构",
+      "component": "乳栿",
+      "id": "乳栿-东南角-上斜乳栿",
+      "location": "东南角 / 上斜乳栿",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明四角上、下斜乳栿共8根",
+      "section_mm": "平均广330.5；厚187.2"
+    },
+    {
+      "system": "主体木构",
+      "component": "乳栿",
+      "id": "乳栿-东南角-下斜乳栿",
+      "location": "东南角 / 下斜乳栿",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明四角上、下斜乳栿共8根",
+      "section_mm": "平均广330.5；厚187.2"
+    },
+    {
+      "system": "主体木构",
+      "component": "乳栿",
+      "id": "乳栿-西南角-上斜乳栿",
+      "location": "西南角 / 上斜乳栿",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明四角上、下斜乳栿共8根",
+      "section_mm": "平均广330.5；厚187.2"
+    },
+    {
+      "system": "主体木构",
+      "component": "乳栿",
+      "id": "乳栿-西南角-下斜乳栿",
+      "location": "西南角 / 下斜乳栿",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明四角上、下斜乳栿共8根",
+      "section_mm": "平均广330.5；厚187.2"
+    },
+    {
+      "system": "主体木构",
+      "component": "乳栿",
+      "id": "乳栿-西北角-上斜乳栿",
+      "location": "西北角 / 上斜乳栿",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明四角上、下斜乳栿共8根",
+      "section_mm": "平均广330.5；厚187.2"
+    },
+    {
+      "system": "主体木构",
+      "component": "乳栿",
+      "id": "乳栿-西北角-下斜乳栿",
+      "location": "西北角 / 下斜乳栿",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明四角上、下斜乳栿共8根",
+      "section_mm": "平均广330.5；厚187.2"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-东山-01",
+      "location": "东山 / 具体端点待附图锁定",
+      "count_status": "LOCKED_ID_PARTIAL_LOCATION",
+      "evidence": "山面数量直接确认",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-东山-02",
+      "location": "东山 / 具体端点待附图锁定",
+      "count_status": "LOCKED_ID_PARTIAL_LOCATION",
+      "evidence": "山面数量直接确认",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-西山-01",
+      "location": "西山 / 具体端点待附图锁定",
+      "count_status": "LOCKED_ID_PARTIAL_LOCATION",
+      "evidence": "山面数量直接确认",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-西山-02",
+      "location": "西山 / 具体端点待附图锁定",
+      "count_status": "LOCKED_ID_PARTIAL_LOCATION",
+      "evidence": "山面数量直接确认",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-正身待定位-01",
+      "location": "正身体系 / 待定位",
+      "count_status": "LOCKED_ID_UNKNOWN_LOCATION",
+      "evidence": "剩余数量明确，位置未锁",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-正身待定位-02",
+      "location": "正身体系 / 待定位",
+      "count_status": "LOCKED_ID_UNKNOWN_LOCATION",
+      "evidence": "剩余数量明确，位置未锁",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-正身待定位-03",
+      "location": "正身体系 / 待定位",
+      "count_status": "LOCKED_ID_UNKNOWN_LOCATION",
+      "evidence": "剩余数量明确，位置未锁",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-正身待定位-04",
+      "location": "正身体系 / 待定位",
+      "count_status": "LOCKED_ID_UNKNOWN_LOCATION",
+      "evidence": "剩余数量明确，位置未锁",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-正身待定位-05",
+      "location": "正身体系 / 待定位",
+      "count_status": "LOCKED_ID_UNKNOWN_LOCATION",
+      "evidence": "剩余数量明确，位置未锁",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-正身待定位-06",
+      "location": "正身体系 / 待定位",
+      "count_status": "LOCKED_ID_UNKNOWN_LOCATION",
+      "evidence": "剩余数量明确，位置未锁",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-正身待定位-07",
+      "location": "正身体系 / 待定位",
+      "count_status": "LOCKED_ID_UNKNOWN_LOCATION",
+      "evidence": "剩余数量明确，位置未锁",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-正身待定位-08",
+      "location": "正身体系 / 待定位",
+      "count_status": "LOCKED_ID_UNKNOWN_LOCATION",
+      "evidence": "剩余数量明确，位置未锁",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-正身待定位-09",
+      "location": "正身体系 / 待定位",
+      "count_status": "LOCKED_ID_UNKNOWN_LOCATION",
+      "evidence": "剩余数量明确，位置未锁",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "剳牵",
+      "id": "剳牵-正身待定位-10",
+      "location": "正身体系 / 待定位",
+      "count_status": "LOCKED_ID_UNKNOWN_LOCATION",
+      "evidence": "剩余数量明确，位置未锁",
+      "section_mm": "平均广331.5；厚185"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-南撩风槫-西段",
+      "location": "正身南撩风槫 / 西段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-南撩风槫-中段",
+      "location": "正身南撩风槫 / 中段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-南撩风槫-东段",
+      "location": "正身南撩风槫 / 东段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-南下平槫-西段",
+      "location": "正身南下平槫 / 西段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-南下平槫-中段",
+      "location": "正身南下平槫 / 中段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-南下平槫-东段",
+      "location": "正身南下平槫 / 东段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-南上平槫-西段",
+      "location": "正身南上平槫 / 西段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-南上平槫-中段",
+      "location": "正身南上平槫 / 中段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-南上平槫-东段",
+      "location": "正身南上平槫 / 东段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-脊槫-西段",
+      "location": "正身脊槫 / 西段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-脊槫-中段",
+      "location": "正身脊槫 / 中段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-脊槫-东段",
+      "location": "正身脊槫 / 东段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-北上平槫-西段",
+      "location": "正身北上平槫 / 西段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-北上平槫-中段",
+      "location": "正身北上平槫 / 中段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-北上平槫-东段",
+      "location": "正身北上平槫 / 东段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-北下平槫-西段",
+      "location": "正身北下平槫 / 西段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-北下平槫-中段",
+      "location": "正身北下平槫 / 中段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-北下平槫-东段",
+      "location": "正身北下平槫 / 东段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-北撩风槫-西段",
+      "location": "正身北撩风槫 / 西段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-北撩风槫-中段",
+      "location": "正身北撩风槫 / 中段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-正身-北撩风槫-东段",
+      "location": "正身北撩风槫 / 东段",
+      "count_status": "LOCKED",
+      "evidence": "正身七道21根+三间拓扑",
+      "section_mm": "平均广220.1；厚270.8"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-东山-第1道-南段",
+      "location": "东山第1道 / 南段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-东山-第1道-中段",
+      "location": "东山第1道 / 中段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-东山-第1道-北段",
+      "location": "东山第1道 / 北段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-东山-第2道-南段",
+      "location": "东山第2道 / 南段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-东山-第2道-中段",
+      "location": "东山第2道 / 中段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-东山-第2道-北段",
+      "location": "东山第2道 / 北段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-西山-第1道-南段",
+      "location": "西山第1道 / 南段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-西山-第1道-中段",
+      "location": "西山第1道 / 中段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-西山-第1道-北段",
+      "location": "西山第1道 / 北段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-西山-第2道-南段",
+      "location": "西山第2道 / 南段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-西山-第2道-中段",
+      "location": "西山第2道 / 中段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "槫",
+      "id": "槫-西山-第2道-北段",
+      "location": "西山第2道 / 北段",
+      "count_status": "LOCKED",
+      "evidence": "每山两道6根+三间拓扑",
+      "section_mm": "沿用槫实测统计"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-南立面-西次间",
+      "location": "南立面西次间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-南立面-明间",
+      "location": "南立面明间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-南立面-东次间",
+      "location": "南立面东次间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-北立面-西次间",
+      "location": "北立面西次间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-北立面-明间",
+      "location": "北立面明间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-北立面-东次间",
+      "location": "北立面东次间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-东山-北次间",
+      "location": "东山北次间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-东山-明间",
+      "location": "东山明间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-东山-南次间",
+      "location": "东山南次间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-西山-北次间",
+      "location": "西山北次间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-西山-明间",
+      "location": "西山明间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "阑额",
+      "id": "阑额-西山-南次间",
+      "location": "西山南次间",
+      "count_status": "LOCKED_LOCATION",
+      "evidence": "分布规则直接说明+三间拓扑",
+      "length_rule": "柱心距离",
+      "section_rule": "有单件实测则用单件，否则参数化/未知"
+    },
+    {
+      "system": "主体木构",
+      "component": "由额",
+      "id": "由额-南立面-西次间",
+      "location": "南立面西次间",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明分布",
+      "section_mm": "255×105"
+    },
+    {
+      "system": "主体木构",
+      "component": "由额",
+      "id": "由额-南立面-明间",
+      "location": "南立面明间",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明分布",
+      "section_mm": "245×105"
+    },
+    {
+      "system": "主体木构",
+      "component": "由额",
+      "id": "由额-南立面-东次间",
+      "location": "南立面东次间",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明分布",
+      "section_mm": "250×105"
+    },
+    {
+      "system": "主体木构",
+      "component": "由额",
+      "id": "由额-北立面-明间",
+      "location": "北立面明间",
+      "count_status": "LOCKED",
+      "evidence": "报告直接说明分布",
+      "section_mm": "259×105"
+    },
+    {
+      "system": "主体木构",
+      "component": "大角梁",
+      "id": "大角梁-东北角",
+      "location": "东北角",
+      "count_status": "LOCKED",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "约225×200.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "大角梁",
+      "id": "大角梁-东南角",
+      "location": "东南角",
+      "count_status": "LOCKED",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "约225×200.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "大角梁",
+      "id": "大角梁-西南角",
+      "location": "西南角",
+      "count_status": "LOCKED",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "约225×200.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "大角梁",
+      "id": "大角梁-西北角",
+      "location": "西北角",
+      "count_status": "LOCKED",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "约225×200.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "子角梁",
+      "id": "子角梁-东北角",
+      "location": "东北角",
+      "count_status": "LOCKED",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "约216.5×152"
+    },
+    {
+      "system": "主体木构",
+      "component": "子角梁",
+      "id": "子角梁-东南角",
+      "location": "东南角",
+      "count_status": "LOCKED",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "约216.5×152"
+    },
+    {
+      "system": "主体木构",
+      "component": "子角梁",
+      "id": "子角梁-西南角",
+      "location": "西南角",
+      "count_status": "LOCKED",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "约216.5×152"
+    },
+    {
+      "system": "主体木构",
+      "component": "子角梁",
+      "id": "子角梁-西北角",
+      "location": "西北角",
+      "count_status": "LOCKED",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "约216.5×152"
+    },
+    {
+      "system": "主体木构",
+      "component": "隐角梁",
+      "id": "隐角梁-东北角",
+      "location": "东北角",
+      "count_status": "LOCKED_COUNT_PARAMETRIC_GEOMETRY",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "厚同大角梁；其余无法直接测量"
+    },
+    {
+      "system": "主体木构",
+      "component": "隐角梁",
+      "id": "隐角梁-东南角",
+      "location": "东南角",
+      "count_status": "LOCKED_COUNT_PARAMETRIC_GEOMETRY",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "厚同大角梁；其余无法直接测量"
+    },
+    {
+      "system": "主体木构",
+      "component": "隐角梁",
+      "id": "隐角梁-西南角",
+      "location": "西南角",
+      "count_status": "LOCKED_COUNT_PARAMETRIC_GEOMETRY",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "厚同大角梁；其余无法直接测量"
+    },
+    {
+      "system": "主体木构",
+      "component": "隐角梁",
+      "id": "隐角梁-西北角",
+      "location": "西北角",
+      "count_status": "LOCKED_COUNT_PARAMETRIC_GEOMETRY",
+      "evidence": "直接实测/报告明确缺口",
+      "section_mm": "厚同大角梁；其余无法直接测量"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-东缝-南上平槫",
+      "location": "东缝/南上平槫",
+      "count_status": "LOCKED",
+      "evidence": "8根正身托脚+拓扑",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-东缝-南下平槫",
+      "location": "东缝/南下平槫",
+      "count_status": "LOCKED",
+      "evidence": "8根正身托脚+拓扑",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-东缝-北上平槫",
+      "location": "东缝/北上平槫",
+      "count_status": "LOCKED",
+      "evidence": "8根正身托脚+拓扑",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-东缝-北下平槫",
+      "location": "东缝/北下平槫",
+      "count_status": "LOCKED",
+      "evidence": "8根正身托脚+拓扑",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-西缝-南上平槫",
+      "location": "西缝/南上平槫",
+      "count_status": "LOCKED",
+      "evidence": "8根正身托脚+拓扑",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-西缝-南下平槫",
+      "location": "西缝/南下平槫",
+      "count_status": "LOCKED",
+      "evidence": "8根正身托脚+拓扑",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-西缝-北上平槫",
+      "location": "西缝/北上平槫",
+      "count_status": "LOCKED",
+      "evidence": "8根正身托脚+拓扑",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-西缝-北下平槫",
+      "location": "西缝/北下平槫",
+      "count_status": "LOCKED",
+      "evidence": "8根正身托脚+拓扑",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-东山-南缝-下平槫",
+      "location": "东山南缝下平槫下",
+      "count_status": "LOCKED",
+      "evidence": "报告直接给出山面4根",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-东山-北缝-下平槫",
+      "location": "东山北缝下平槫下",
+      "count_status": "LOCKED",
+      "evidence": "报告直接给出山面4根",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-西山-南缝-下平槫",
+      "location": "西山南缝下平槫下",
+      "count_status": "LOCKED",
+      "evidence": "报告直接给出山面4根",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "托脚",
+      "id": "托脚-西山-北缝-下平槫",
+      "location": "西山北缝下平槫下",
+      "count_status": "LOCKED",
+      "evidence": "报告直接给出山面4根",
+      "section_mm": "平均广237.1；厚153.7"
+    },
+    {
+      "system": "主体木构",
+      "component": "叉手",
+      "id": "叉手-东缝-南侧",
+      "location": "东缝平梁至脊部/南侧",
+      "count_status": "LOCKED",
+      "evidence": "总数8+每榀一对构造关系",
+      "section_mm": "平均广230.5；厚90.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "叉手",
+      "id": "叉手-东缝-北侧",
+      "location": "东缝平梁至脊部/北侧",
+      "count_status": "LOCKED",
+      "evidence": "总数8+每榀一对构造关系",
+      "section_mm": "平均广230.5；厚90.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "叉手",
+      "id": "叉手-西缝-南侧",
+      "location": "西缝平梁至脊部/南侧",
+      "count_status": "LOCKED",
+      "evidence": "总数8+每榀一对构造关系",
+      "section_mm": "平均广230.5；厚90.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "叉手",
+      "id": "叉手-西缝-北侧",
+      "location": "西缝平梁至脊部/北侧",
+      "count_status": "LOCKED",
+      "evidence": "总数8+每榀一对构造关系",
+      "section_mm": "平均广230.5；厚90.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "叉手",
+      "id": "叉手-东山-南侧",
+      "location": "东山平梁至脊部/南侧",
+      "count_status": "LOCKED",
+      "evidence": "总数8+每榀一对构造关系",
+      "section_mm": "平均广230.5；厚90.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "叉手",
+      "id": "叉手-东山-北侧",
+      "location": "东山平梁至脊部/北侧",
+      "count_status": "LOCKED",
+      "evidence": "总数8+每榀一对构造关系",
+      "section_mm": "平均广230.5；厚90.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "叉手",
+      "id": "叉手-西山-南侧",
+      "location": "西山平梁至脊部/南侧",
+      "count_status": "LOCKED",
+      "evidence": "总数8+每榀一对构造关系",
+      "section_mm": "平均广230.5；厚90.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "叉手",
+      "id": "叉手-西山-北侧",
+      "location": "西山平梁至脊部/北侧",
+      "count_status": "LOCKED",
+      "evidence": "总数8+每榀一对构造关系",
+      "section_mm": "平均广230.5；厚90.5"
+    },
+    {
+      "system": "主体木构",
+      "component": "蜀柱",
+      "id": "蜀柱-东缝",
+      "location": "东缝平梁上",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "附件1-7实测位置+木结构测绘图闭合",
+      "section_mm": "广厚有直接实测"
+    },
+    {
+      "system": "主体木构",
+      "component": "蜀柱",
+      "id": "蜀柱-西缝",
+      "location": "西缝平梁上",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "附件1-7实测位置+木结构测绘图闭合",
+      "section_mm": "广厚有直接实测"
+    },
+    {
+      "system": "主体木构",
+      "component": "蜀柱",
+      "id": "蜀柱-东山",
+      "location": "东山平梁上",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "附件1-7实测位置+木结构测绘图闭合",
+      "section_mm": "广有实测；厚未及"
+    },
+    {
+      "system": "主体木构",
+      "component": "蜀柱",
+      "id": "蜀柱-西山",
+      "location": "西山平梁上",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "附件1-7实测位置+木结构测绘图闭合",
+      "section_mm": "广有实测；厚未及"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "转角铺作",
+      "id": "转角铺作-西南角",
+      "location": "西南角",
+      "count_status": "LOCKED_SITE",
+      "evidence": "四角柱拓扑+报告铺作",
+      "direction": "南/西双向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "转角铺作",
+      "id": "转角铺作-东南角",
+      "location": "东南角",
+      "count_status": "LOCKED_SITE",
+      "evidence": "四角柱拓扑+报告铺作",
+      "direction": "南/东双向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "转角铺作",
+      "id": "转角铺作-东北角",
+      "location": "东北角",
+      "count_status": "LOCKED_SITE",
+      "evidence": "四角柱拓扑+报告铺作",
+      "direction": "北/东双向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "转角铺作",
+      "id": "转角铺作-西北角",
+      "location": "西北角",
+      "count_status": "LOCKED_SITE",
+      "evidence": "四角柱拓扑+报告铺作",
+      "direction": "北/西双向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头铺作",
+      "id": "柱头铺作-南立面西中柱",
+      "location": "南立面西中柱",
+      "count_status": "LOCKED_SITE",
+      "evidence": "12柱扣除4角柱",
+      "direction": "南向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头铺作",
+      "id": "柱头铺作-南立面东中柱",
+      "location": "南立面东中柱",
+      "count_status": "LOCKED_SITE",
+      "evidence": "12柱扣除4角柱",
+      "direction": "南向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头铺作",
+      "id": "柱头铺作-北立面西中柱",
+      "location": "北立面西中柱",
+      "count_status": "LOCKED_SITE",
+      "evidence": "12柱扣除4角柱",
+      "direction": "北向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头铺作",
+      "id": "柱头铺作-北立面东中柱",
+      "location": "北立面东中柱",
+      "count_status": "LOCKED_SITE",
+      "evidence": "12柱扣除4角柱",
+      "direction": "北向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头铺作",
+      "id": "柱头铺作-东山北中柱",
+      "location": "东山北中柱",
+      "count_status": "LOCKED_SITE",
+      "evidence": "12柱扣除4角柱",
+      "direction": "东向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头铺作",
+      "id": "柱头铺作-东山南中柱",
+      "location": "东山南中柱",
+      "count_status": "LOCKED_SITE",
+      "evidence": "12柱扣除4角柱",
+      "direction": "东向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头铺作",
+      "id": "柱头铺作-西山北中柱",
+      "location": "西山北中柱",
+      "count_status": "LOCKED_SITE",
+      "evidence": "12柱扣除4角柱",
+      "direction": "西向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头铺作",
+      "id": "柱头铺作-西山南中柱",
+      "location": "西山南中柱",
+      "count_status": "LOCKED_SITE",
+      "evidence": "12柱扣除4角柱",
+      "direction": "西向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-南立面-西次间",
+      "location": "南立面西次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "南向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-南立面-明间",
+      "location": "南立面明间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "南向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-南立面-东次间",
+      "location": "南立面东次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "南向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-北立面-西次间",
+      "location": "北立面西次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "北向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-北立面-明间",
+      "location": "北立面明间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "北向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-北立面-东次间",
+      "location": "北立面东次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "北向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-东山-北次间",
+      "location": "东山北次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "东向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-东山-明间",
+      "location": "东山明间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "东向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-东山-南次间",
+      "location": "东山南次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "东向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-西山-北次间",
+      "location": "西山北次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "西向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-西山-明间",
+      "location": "西山明间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "西向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作",
+      "id": "补间铺作-西山-南次间",
+      "location": "西山南次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "补间底斗12组+四面三间",
+      "direction": "西向"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-南-01",
+      "location": "西南角转角铺作南向分支",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "转角"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-南-02",
+      "location": "南西次间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-南-03",
+      "location": "南立面西中柱柱头铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "柱头"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-南-04",
+      "location": "南明间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-南-05",
+      "location": "南立面东中柱柱头铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "柱头"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-南-06",
+      "location": "南东次间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-南-07",
+      "location": "东南角转角铺作南向分支",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "转角"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-北-01",
+      "location": "西北角转角铺作北向分支",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "转角"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-北-02",
+      "location": "北西次间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-北-03",
+      "location": "北立面西中柱柱头铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "柱头"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-北-04",
+      "location": "北明间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-北-05",
+      "location": "北立面东中柱柱头铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "柱头"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-北-06",
+      "location": "北东次间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-北-07",
+      "location": "东北角转角铺作北向分支",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "转角"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-东-01",
+      "location": "东北角转角铺作东向分支",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "转角"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-东-02",
+      "location": "东北次间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-东-03",
+      "location": "东山北中柱柱头铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "柱头"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-东-04",
+      "location": "东明间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-东-05",
+      "location": "东山南中柱柱头铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "柱头"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-东-06",
+      "location": "东南次间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-东-07",
+      "location": "东南角转角铺作东向分支",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "转角"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-西-01",
+      "location": "西北角转角铺作西向分支",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "转角"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-西-02",
+      "location": "西北次间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-西-03",
+      "location": "西山北中柱柱头铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "柱头"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-西-04",
+      "location": "西明间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-西-05",
+      "location": "西山南中柱柱头铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "柱头"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-西-06",
+      "location": "西南次间补间铺作",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "补间"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "铺作方向单元",
+      "id": "铺作方向单元-西-07",
+      "location": "西南角转角铺作西向分支",
+      "count_status": "COUNTING_UNIT_NOT_PHYSICAL",
+      "evidence": "四立面各显7朵",
+      "type": "转角"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-西北角柱",
+      "location": "西北角柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-北侧西中柱",
+      "location": "北侧西中柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-北侧东中柱",
+      "location": "北侧东中柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-东北角柱",
+      "location": "东北角柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-东侧北中柱",
+      "location": "东侧北中柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-东侧南中柱",
+      "location": "东侧南中柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-东南角柱",
+      "location": "东南角柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-南侧东中柱",
+      "location": "南侧东中柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-南侧西中柱",
+      "location": "南侧西中柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-西南角柱",
+      "location": "西南角柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-西侧南中柱",
+      "location": "西侧南中柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "柱头栌斗",
+      "id": "柱头栌斗-西侧北中柱",
+      "location": "西侧北中柱",
+      "count_status": "LOCKED",
+      "evidence": "报告直接确认12枚",
+      "dimensions_mm": "面阔总宽475.1/下宽327.1；进深总宽446.3/下宽305.5；总高293.8"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-南立面-西次间",
+      "location": "南立面西次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-南立面-明间",
+      "location": "南立面明间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-南立面-东次间",
+      "location": "南立面东次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-北立面-西次间",
+      "location": "北立面西次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-北立面-明间",
+      "location": "北立面明间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-北立面-东次间",
+      "location": "北立面东次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-东山-北次间",
+      "location": "东山北次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-东山-明间",
+      "location": "东山明间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-东山-南次间",
+      "location": "东山南次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-西山-北次间",
+      "location": "西山北次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-西山-明间",
+      "location": "西山明间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "补间铺作底斗",
+      "id": "底斗-西山-南次间",
+      "location": "西山南次间",
+      "count_status": "LOCKED_SITE",
+      "evidence": "报告直接称12组",
+      "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-01-一跳",
+      "location": "西南角转角铺作南向分支 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-01-二跳",
+      "location": "西南角转角铺作南向分支 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-02-一跳",
+      "location": "南西次间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-02-二跳",
+      "location": "南西次间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-03-一跳",
+      "location": "南立面西中柱柱头铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-03-二跳",
+      "location": "南立面西中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-04-一跳",
+      "location": "南明间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-04-二跳",
+      "location": "南明间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-05-一跳",
+      "location": "南立面东中柱柱头铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-05-二跳",
+      "location": "南立面东中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-06-一跳",
+      "location": "南东次间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-06-二跳",
+      "location": "南东次间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-07-一跳",
+      "location": "东南角转角铺作南向分支 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-南-07-二跳",
+      "location": "东南角转角铺作南向分支 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-01-一跳",
+      "location": "西北角转角铺作北向分支 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-01-二跳",
+      "location": "西北角转角铺作北向分支 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-02-一跳",
+      "location": "北西次间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-02-二跳",
+      "location": "北西次间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-03-一跳",
+      "location": "北立面西中柱柱头铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-03-二跳",
+      "location": "北立面西中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-04-一跳",
+      "location": "北明间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-04-二跳",
+      "location": "北明间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-05-一跳",
+      "location": "北立面东中柱柱头铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-05-二跳",
+      "location": "北立面东中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-06-一跳",
+      "location": "北东次间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-06-二跳",
+      "location": "北东次间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-07-一跳",
+      "location": "东北角转角铺作北向分支 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-北-07-二跳",
+      "location": "东北角转角铺作北向分支 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-01-一跳",
+      "location": "东北角转角铺作东向分支 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-01-二跳",
+      "location": "东北角转角铺作东向分支 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-02-一跳",
+      "location": "东北次间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-02-二跳",
+      "location": "东北次间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-03-一跳",
+      "location": "东山北中柱柱头铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-03-二跳",
+      "location": "东山北中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-04-一跳",
+      "location": "东明间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-04-二跳",
+      "location": "东明间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-05-一跳",
+      "location": "东山南中柱柱头铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-05-二跳",
+      "location": "东山南中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-06-一跳",
+      "location": "东南次间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-06-二跳",
+      "location": "东南次间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-07-一跳",
+      "location": "东南角转角铺作东向分支 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-东-07-二跳",
+      "location": "东南角转角铺作东向分支 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-01-一跳",
+      "location": "西北角转角铺作西向分支 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-01-二跳",
+      "location": "西北角转角铺作西向分支 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-02-一跳",
+      "location": "西北次间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-02-二跳",
+      "location": "西北次间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-03-一跳",
+      "location": "西山北中柱柱头铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-03-二跳",
+      "location": "西山北中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-04-一跳",
+      "location": "西明间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-04-二跳",
+      "location": "西明间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-05-一跳",
+      "location": "西山南中柱柱头铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-05-二跳",
+      "location": "西山南中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-06-一跳",
+      "location": "西南次间补间铺作 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-06-二跳",
+      "location": "西南次间补间铺作 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-07-一跳",
+      "location": "西南角转角铺作西向分支 / 一跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "华栱",
+      "id": "华栱-西-07-二跳",
+      "location": "西南角转角铺作西向分支 / 二跳",
+      "count_status": "LOCKED_SUBSET",
+      "evidence": "每方向单元一、二跳各1",
+      "scope": "正身方向明确子集，不是全殿华栱总数"
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-南-01",
+      "location": "西南角转角铺作南向分支 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-南-01-泥道",
+      "location": "西南角转角铺作南向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-南-01-泥道",
+      "location": "西南角转角铺作南向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-南-01-二跳",
+      "location": "西南角转角铺作南向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-南-01-二跳",
+      "location": "西南角转角铺作南向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-南-01",
+      "location": "西南角转角铺作南向分支 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-南-01",
+      "location": "西南角转角铺作南向分支 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-南-02",
+      "location": "南西次间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-南-02-泥道",
+      "location": "南西次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-南-02-泥道",
+      "location": "南西次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-南-03",
+      "location": "南立面西中柱柱头铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-南-03-泥道",
+      "location": "南立面西中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-南-03-泥道",
+      "location": "南立面西中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-南-03-二跳",
+      "location": "南立面西中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-南-03-二跳",
+      "location": "南立面西中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-南-03",
+      "location": "南立面西中柱柱头铺作 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-南-03",
+      "location": "南立面西中柱柱头铺作 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-南-04",
+      "location": "南明间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-南-04-泥道",
+      "location": "南明间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-南-04-泥道",
+      "location": "南明间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-南-05",
+      "location": "南立面东中柱柱头铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-南-05-泥道",
+      "location": "南立面东中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-南-05-泥道",
+      "location": "南立面东中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-南-05-二跳",
+      "location": "南立面东中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-南-05-二跳",
+      "location": "南立面东中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-南-05",
+      "location": "南立面东中柱柱头铺作 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-南-05",
+      "location": "南立面东中柱柱头铺作 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-南-06",
+      "location": "南东次间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-南-06-泥道",
+      "location": "南东次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-南-06-泥道",
+      "location": "南东次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-南-07",
+      "location": "东南角转角铺作南向分支 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-南-07-泥道",
+      "location": "东南角转角铺作南向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-南-07-泥道",
+      "location": "东南角转角铺作南向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-南-07-二跳",
+      "location": "东南角转角铺作南向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-南-07-二跳",
+      "location": "东南角转角铺作南向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-南-07",
+      "location": "东南角转角铺作南向分支 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-南-07",
+      "location": "东南角转角铺作南向分支 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-北-01",
+      "location": "西北角转角铺作北向分支 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-北-01-泥道",
+      "location": "西北角转角铺作北向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-北-01-泥道",
+      "location": "西北角转角铺作北向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-北-01-二跳",
+      "location": "西北角转角铺作北向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-北-01-二跳",
+      "location": "西北角转角铺作北向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-北-01",
+      "location": "西北角转角铺作北向分支 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-北-01",
+      "location": "西北角转角铺作北向分支 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-北-02",
+      "location": "北西次间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-北-02-泥道",
+      "location": "北西次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-北-02-泥道",
+      "location": "北西次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-北-03",
+      "location": "北立面西中柱柱头铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-北-03-泥道",
+      "location": "北立面西中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-北-03-泥道",
+      "location": "北立面西中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-北-03-二跳",
+      "location": "北立面西中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-北-03-二跳",
+      "location": "北立面西中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-北-03",
+      "location": "北立面西中柱柱头铺作 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-北-03",
+      "location": "北立面西中柱柱头铺作 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-北-04",
+      "location": "北明间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-北-04-泥道",
+      "location": "北明间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-北-04-泥道",
+      "location": "北明间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-北-05",
+      "location": "北立面东中柱柱头铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-北-05-泥道",
+      "location": "北立面东中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-北-05-泥道",
+      "location": "北立面东中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-北-05-二跳",
+      "location": "北立面东中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-北-05-二跳",
+      "location": "北立面东中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-北-05",
+      "location": "北立面东中柱柱头铺作 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-北-05",
+      "location": "北立面东中柱柱头铺作 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-北-06",
+      "location": "北东次间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-北-06-泥道",
+      "location": "北东次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-北-06-泥道",
+      "location": "北东次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-北-07",
+      "location": "东北角转角铺作北向分支 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-北-07-泥道",
+      "location": "东北角转角铺作北向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-北-07-泥道",
+      "location": "东北角转角铺作北向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-北-07-二跳",
+      "location": "东北角转角铺作北向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-北-07-二跳",
+      "location": "东北角转角铺作北向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-北-07",
+      "location": "东北角转角铺作北向分支 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-北-07",
+      "location": "东北角转角铺作北向分支 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-东-01",
+      "location": "东北角转角铺作东向分支 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-东-01-泥道",
+      "location": "东北角转角铺作东向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-东-01-泥道",
+      "location": "东北角转角铺作东向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-东-01-二跳",
+      "location": "东北角转角铺作东向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-东-01-二跳",
+      "location": "东北角转角铺作东向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-东-01",
+      "location": "东北角转角铺作东向分支 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-东-01",
+      "location": "东北角转角铺作东向分支 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-东-02",
+      "location": "东北次间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-东-02-泥道",
+      "location": "东北次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-东-02-泥道",
+      "location": "东北次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-东-03",
+      "location": "东山北中柱柱头铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-东-03-泥道",
+      "location": "东山北中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-东-03-泥道",
+      "location": "东山北中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-东-03-二跳",
+      "location": "东山北中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-东-03-二跳",
+      "location": "东山北中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-东-03",
+      "location": "东山北中柱柱头铺作 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-东-03",
+      "location": "东山北中柱柱头铺作 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-东-04",
+      "location": "东明间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-东-04-泥道",
+      "location": "东明间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-东-04-泥道",
+      "location": "东明间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-东-05",
+      "location": "东山南中柱柱头铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-东-05-泥道",
+      "location": "东山南中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-东-05-泥道",
+      "location": "东山南中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-东-05-二跳",
+      "location": "东山南中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-东-05-二跳",
+      "location": "东山南中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-东-05",
+      "location": "东山南中柱柱头铺作 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-东-05",
+      "location": "东山南中柱柱头铺作 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-东-06",
+      "location": "东南次间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-东-06-泥道",
+      "location": "东南次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-东-06-泥道",
+      "location": "东南次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-东-07",
+      "location": "东南角转角铺作东向分支 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-东-07-泥道",
+      "location": "东南角转角铺作东向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-东-07-泥道",
+      "location": "东南角转角铺作东向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-东-07-二跳",
+      "location": "东南角转角铺作东向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-东-07-二跳",
+      "location": "东南角转角铺作东向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-东-07",
+      "location": "东南角转角铺作东向分支 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-东-07",
+      "location": "东南角转角铺作东向分支 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-西-01",
+      "location": "西北角转角铺作西向分支 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-西-01-泥道",
+      "location": "西北角转角铺作西向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-西-01-泥道",
+      "location": "西北角转角铺作西向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-西-01-二跳",
+      "location": "西北角转角铺作西向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-西-01-二跳",
+      "location": "西北角转角铺作西向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-西-01",
+      "location": "西北角转角铺作西向分支 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-西-01",
+      "location": "西北角转角铺作西向分支 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-西-02",
+      "location": "西北次间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-西-02-泥道",
+      "location": "西北次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-西-02-泥道",
+      "location": "西北次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-西-03",
+      "location": "西山北中柱柱头铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-西-03-泥道",
+      "location": "西山北中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-西-03-泥道",
+      "location": "西山北中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-西-03-二跳",
+      "location": "西山北中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-西-03-二跳",
+      "location": "西山北中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-西-03",
+      "location": "西山北中柱柱头铺作 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-西-03",
+      "location": "西山北中柱柱头铺作 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-西-04",
+      "location": "西明间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-西-04-泥道",
+      "location": "西明间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-西-04-泥道",
+      "location": "西明间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-西-05",
+      "location": "西山南中柱柱头铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-西-05-泥道",
+      "location": "西山南中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-西-05-泥道",
+      "location": "西山南中柱柱头铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-西-05-二跳",
+      "location": "西山南中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-西-05-二跳",
+      "location": "西山南中柱柱头铺作 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-西-05",
+      "location": "西山南中柱柱头铺作 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-西-05",
+      "location": "西山南中柱柱头铺作 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-西-06",
+      "location": "西南次间补间铺作 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-西-06-泥道",
+      "location": "西南次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-西-06-泥道",
+      "location": "西南次间补间铺作 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的补间泥道12",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "令栱",
+      "id": "令栱-西-07",
+      "location": "西南角转角铺作西向分支 / 最外跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测28组+方向单元闭合",
+      "length_mm": 897,
+      "width_mm": 217.4,
+      "thickness_mm": 155.6
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型瓜子栱",
+      "id": "大型瓜子栱-西-07-泥道",
+      "location": "西南角转角铺作西向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "大型慢栱",
+      "id": "大型慢栱-西-07-泥道",
+      "location": "西南角转角铺作西向分支 / 泥道",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "大型实测16+柱头类16方向单元",
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型瓜子栱",
+      "id": "小型瓜子栱-西-07-二跳",
+      "location": "西南角转角铺作西向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "小型慢栱",
+      "id": "小型慢栱-西-07-二跳",
+      "location": "西南角转角铺作西向分支 / 二跳",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "小型总28中的柱头类二跳16",
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "头昂",
+      "id": "头昂-西-07",
+      "location": "西南角转角铺作西向分支 / 头昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 278.4,
+      "thickness_mm": 154
+    },
+    {
+      "system": "外檐斗栱",
+      "component": "二昂",
+      "id": "二昂-西-07",
+      "location": "西南角转角铺作西向分支 / 二昂",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "实测16+柱头类16方向单元",
+      "width_mm": 187,
+      "thickness_mm": 154
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-01",
+      "location": "东缝前下平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-02",
+      "location": "东缝后下平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-03",
+      "location": "西缝前下平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-04",
+      "location": "西缝后下平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-05",
+      "location": "东山南下平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-06",
+      "location": "东山北下平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-07",
+      "location": "西山南下平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-08",
+      "location": "西山北下平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-09",
+      "location": "东缝前上平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-10",
+      "location": "东缝后上平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-11",
+      "location": "西缝前上平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "襻间枋",
+      "id": "襻间枋-12",
+      "location": "西缝后上平槫下",
+      "count_status": "LOCKED_SITE",
+      "evidence": "附件1-9逐位记录",
+      "section": "UNKNOWN",
+      "note": "215.0×153.6mm不属于襻间枋统一截面"
+    },
+    {
+      "system": "内槽",
+      "component": "内槽斗栱/隔架位置",
+      "id": "内槽位置总表",
+      "location": "24处",
+      "count_status": "LOCKED_SITE_COUNT",
+      "evidence": "附件1-9",
+      "breakdown": "上下六椽栿间4；上六椽栿与四椽栿间4；下平槫下8；上平槫下4；脊槫下4"
+    },
+    {
+      "system": "内槽",
+      "component": "替木测量边界",
+      "id": "替木-测量边界",
+      "location": "全殿多处",
+      "count_status": "MEASUREMENT_SAMPLE_NOT_TOTAL",
+      "evidence": "附件1-8",
+      "measured_records": 23,
+      "total_count": "UNKNOWN",
+      "mean_mm": {
+        "width": 150.4,
+        "thickness": 151.8,
+        "asymmetric_half_exposed_length": 680.1,
+        "symmetric_length": 1757
+      }
+    },
+    {
+      "system": "屋面",
+      "component": "椽系",
+      "id": "椽系-参数化补全",
+      "location": "四坡及翼角",
+      "count_status": "PARAMETRIC_COMPLETION",
+      "evidence": "测绘立剖面+槫位",
+      "real_count": "UNKNOWN",
+      "section": "UNKNOWN",
+      "spacing": "UNKNOWN"
+    },
+    {
+      "system": "瓦作",
+      "component": "南坡筒瓦",
+      "id": "南坡筒瓦-阵列",
+      "location": "南坡",
+      "count_status": "LOCKED_ARRAY",
+      "evidence": "报告直接记录",
+      "rows": "62陇"
+    },
+    {
+      "system": "瓦作",
+      "component": "北坡筒瓦",
+      "id": "北坡筒瓦-阵列",
+      "location": "北坡",
+      "count_status": "LOCKED_ARRAY",
+      "evidence": "报告直接记录",
+      "rows": "62陇"
+    },
+    {
+      "system": "瓦作",
+      "component": "东坡筒瓦",
+      "id": "东坡筒瓦-阵列",
+      "location": "东坡",
+      "count_status": "LOCKED_ARRAY",
+      "evidence": "报告直接记录",
+      "rows": "91陇"
+    },
+    {
+      "system": "瓦作",
+      "component": "西坡筒瓦",
+      "id": "西坡筒瓦-阵列",
+      "location": "西坡",
+      "count_status": "LOCKED_ARRAY",
+      "evidence": "报告直接记录",
+      "rows": "90陇"
+    },
+    {
+      "system": "瓦作",
+      "component": "正脊",
+      "id": "正脊-01",
+      "location": "屋脊",
+      "count_status": "LOCKED",
+      "evidence": "报告直接记录",
+      "count": 1,
+      "chijiao_tongji": 17
+    },
+    {
+      "system": "瓦作",
+      "component": "垂脊",
+      "id": "垂脊-01",
+      "location": "垂脊01",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "四条脊+单条构造语境",
+      "tongji_per_ridge": 20
+    },
+    {
+      "system": "瓦作",
+      "component": "垂脊",
+      "id": "垂脊-02",
+      "location": "垂脊02",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "四条脊+单条构造语境",
+      "tongji_per_ridge": 20
+    },
+    {
+      "system": "瓦作",
+      "component": "垂脊",
+      "id": "垂脊-03",
+      "location": "垂脊03",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "四条脊+单条构造语境",
+      "tongji_per_ridge": 20
+    },
+    {
+      "system": "瓦作",
+      "component": "垂脊",
+      "id": "垂脊-04",
+      "location": "垂脊04",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "四条脊+单条构造语境",
+      "tongji_per_ridge": 20
+    },
+    {
+      "system": "瓦作",
+      "component": "戗脊",
+      "id": "戗脊-01",
+      "location": "戗脊01",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "四条脊+单条构造语境",
+      "tongji_per_ridge": "5-6 + 找头"
+    },
+    {
+      "system": "瓦作",
+      "component": "戗脊",
+      "id": "戗脊-02",
+      "location": "戗脊02",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "四条脊+单条构造语境",
+      "tongji_per_ridge": "5-6 + 找头"
+    },
+    {
+      "system": "瓦作",
+      "component": "戗脊",
+      "id": "戗脊-03",
+      "location": "戗脊03",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "四条脊+单条构造语境",
+      "tongji_per_ridge": "5-6 + 找头"
+    },
+    {
+      "system": "瓦作",
+      "component": "戗脊",
+      "id": "戗脊-04",
+      "location": "戗脊04",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "四条脊+单条构造语境",
+      "tongji_per_ridge": "5-6 + 找头"
+    },
+    {
+      "system": "台基",
+      "component": "台基整体",
+      "id": "台基-01",
+      "location": "万佛殿主体下方",
+      "count_status": "LOCKED_OUTER_UNKNOWN_INTERNAL",
+      "evidence": "报告直接记录",
+      "internal_structure": "UNKNOWN"
+    },
+    {
+      "system": "台基",
+      "component": "角石",
+      "id": "台基角石-西北",
+      "location": "西北转角",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "转角处施角石+矩形拓扑"
+    },
+    {
+      "system": "台基",
+      "component": "角石",
+      "id": "台基角石-东北",
+      "location": "东北转角",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "转角处施角石+矩形拓扑"
+    },
+    {
+      "system": "台基",
+      "component": "角石",
+      "id": "台基角石-东南",
+      "location": "东南转角",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "转角处施角石+矩形拓扑"
+    },
+    {
+      "system": "台基",
+      "component": "角石",
+      "id": "台基角石-西南",
+      "location": "西南转角",
+      "count_status": "LOCKED_DERIVED",
+      "evidence": "转角处施角石+矩形拓扑"
+    },
+    {
+      "system": "围护",
+      "component": "南门洞",
+      "id": "门洞-南-中央",
+      "location": "南立面中央",
+      "count_status": "LOCKED",
+      "evidence": "报告直接记录",
+      "woodwork": "VISUAL_MODEL + PARAMETRIC_SECTION"
+    },
+    {
+      "system": "围护",
+      "component": "北门洞",
+      "id": "门洞-北-中央",
+      "location": "北立面中央",
+      "count_status": "LOCKED",
+      "evidence": "报告直接记录",
+      "woodwork": "VISUAL_MODEL + PARAMETRIC_SECTION"
+    },
+    {
+      "system": "围护",
+      "component": "南立面窗洞",
+      "id": "窗洞-南-东窗",
+      "location": "南立面东窗",
+      "count_status": "LOCKED",
+      "evidence": "报告直接记录",
+      "outer_wall_cm": 84
+    },
+    {
+      "system": "围护",
+      "component": "南立面窗洞",
+      "id": "窗洞-南-西窗",
+      "location": "南立面西窗",
+      "count_status": "LOCKED",
+      "evidence": "报告直接记录",
+      "outer_wall_cm": 101
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-01",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-02",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-03",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-04",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-05",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-06",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-07",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-08",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-09",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-10",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-11",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-12",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-13",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-14",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-15",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "透风孔",
+      "id": "透风孔-16",
+      "location": "四立面柱位；具体纹样见V007证据文档",
+      "count_status": "LOCKED_SITE_PATTERN",
+      "evidence": "报告直接记录+柱网展开"
+    },
+    {
+      "system": "围护",
+      "component": "嵌墙石碑",
+      "id": "石碑-大门西侧",
+      "location": "南立面大门西侧",
+      "count_status": "LOCKED",
+      "evidence": "报告直接记录"
+    },
+    {
+      "system": "围护",
+      "component": "嵌墙石碑",
+      "id": "石碑-大门东侧",
+      "location": "南立面大门东侧",
+      "count_status": "LOCKED",
+      "evidence": "报告直接记录"
+    }
+  ]
+}
