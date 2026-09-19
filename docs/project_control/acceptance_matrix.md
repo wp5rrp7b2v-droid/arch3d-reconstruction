@@ -473,3 +473,24 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Pending source binding：板瓦、勾头、滴水、博风板、悬鱼、惹草、生头木。
 - 四椽栿：**READY FOR SPEC DESIGN**。
 - No new T-### / no Blender / T-018 remains HOLD。
+
+
+## 2026-09-19｜四椽栿 Master Spec V001
+
+- Decision：D-069 / Product Owner APPROVED / LOCKED。
+- Spec：
+  - `docs/production/zhenguo_wanfo/P3_3_STAGE1_FOUR_CHUANFU_MASTER_SPEC_V001.md`
+  - `production/zhenguo_wanfo/registry/P3_3_STAGE1_FOUR_CHUANFU_MASTER_SPEC_V001.json`
+- Direct source binding：
+  - `docs/evidence/zhenguo_wanfo/P3_3_FOUR_CHUANFU_DIRECT_SOURCE_BINDING_V001.md`
+- Source：SRC-ZG-WF-001 PDF p82 / 印刷 p67 / 表2-39 / 图2-40。
+- Physical instances：2（东缝1 / 西缝1）。
+- Measured sections：413×295mm、440×309mm；mean=426.5×302mm。
+- Sample→东/西缝映射：UNKNOWN / 不允许猜配。
+- Historical full length：UNKNOWN / null。
+- Canonical reference length：1000mm / PROJECT_RULE / NON-HISTORICAL / CANONICAL_REFERENCE_ONLY。
+- Report 28分×20分：REPORT_INFERRED metadata only / geometry_use_count=0。
+- Geometry：BOUNDED_LONG_MEMBER_OUTER_ENVELOPE / EVIDENCE_BOUNDED_MEDIUM_LOD。
+- Spec validation contract：28项。
+- Codex / Blender / new T-###：NOT AUTHORIZED。
+- Next：separate authorization for 四椽栿 Master First Article engineering task。
