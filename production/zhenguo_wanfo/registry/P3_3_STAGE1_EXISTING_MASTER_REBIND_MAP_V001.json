@@ -1,0 +1,138 @@
+{
+  "version": "V001",
+  "date": "2026-09-19",
+  "gate": "P3.3 V002",
+  "stage": "Stage 1｜真实构件 Master 库",
+  "authorization": "D-067",
+  "status": "REVIEW_COMPLETE",
+  "canonical_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
+  "master_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
+  "master_contract": "production/zhenguo_wanfo/registry/P3_1_MASTER_ASSET_CONTRACT_V002.json",
+  "bindings": [
+    {
+      "component_zh": "柱",
+      "master_id": "CMP-COLUMN-001_MASTER",
+      "disposition": "RETAIN_REBIND_PASS",
+      "physical_instance_count": 12,
+      "registry_ids": [
+        "柱-01",
+        "柱-02",
+        "柱-03",
+        "柱-04",
+        "柱-05",
+        "柱-06",
+        "柱-07",
+        "柱-08",
+        "柱-09",
+        "柱-10",
+        "柱-11",
+        "柱-12"
+      ],
+      "variant_rule": "角柱/普通柱 currently INSTANCE_ROLE_ONLY; no evidence-supported geometry split",
+      "evidence_boundary": "diameter observed ~460 mm; 459 mm report candidate separate; historical height UNKNOWN; 3534.3 mm replaceable project candidate",
+      "stage2_required": [
+        "instance-to-master binding",
+        "orientation/placement interface"
+      ],
+      "production_ready_for_instance_binding": true
+    },
+    {
+      "component_zh": "柱头栌斗",
+      "master_id": "CMP-LUDOU-COLUMN-001_MASTER",
+      "disposition": "RETAIN_REBIND_PASS",
+      "physical_instance_count": 12,
+      "registry_ids": [
+        "柱头栌斗-西北角柱",
+        "柱头栌斗-北侧西中柱",
+        "柱头栌斗-北侧东中柱",
+        "柱头栌斗-东北角柱",
+        "柱头栌斗-东侧北中柱",
+        "柱头栌斗-东侧南中柱",
+        "柱头栌斗-东南角柱",
+        "柱头栌斗-南侧东中柱",
+        "柱头栌斗-南侧西中柱",
+        "柱头栌斗-西南角柱",
+        "柱头栌斗-西侧南中柱",
+        "柱头栌斗-西侧北中柱"
+      ],
+      "evidence_boundary": "measured outer envelope retained; no unsupported ears/cavities/notches/joinery",
+      "stage2_required": [
+        "orientation_about_Z",
+        "support/connect interface"
+      ],
+      "production_ready_for_instance_binding": true
+    },
+    {
+      "component_zh": "单向长开斗",
+      "master_id": "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+      "disposition": "RETAIN_APPROVED_MASTER_INSTANCE_BINDING_BLOCKED",
+      "physical_instance_count": "UNKNOWN",
+      "registry_ids": [],
+      "evidence_boundary": "measured Master envelope valid; V007 whole-building total and per-piece positions unresolved",
+      "stage2_required": [],
+      "production_ready_for_instance_binding": false,
+      "blocker": "NO_SAFE_V007_PHYSICAL_INSTANCE_ACCOUNTING"
+    },
+    {
+      "component_zh": "交互斗",
+      "master_id": "CMP-DOU-INTERACTIVE-001_MASTER",
+      "disposition": "RETAIN_APPROVED_MASTER_INSTANCE_BINDING_BLOCKED",
+      "physical_instance_count": "UNKNOWN",
+      "registry_ids": [],
+      "evidence_boundary": "measured Master envelope valid; V007 whole-building total and per-piece positions unresolved; DG-114 remains UNKNOWN",
+      "stage2_required": [],
+      "production_ready_for_instance_binding": false,
+      "blocker": "NO_SAFE_V007_PHYSICAL_INSTANCE_ACCOUNTING"
+    },
+    {
+      "component_zh": "下六椽栿",
+      "master_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+      "disposition": "RETAIN_REBIND_PASS_LENGTH_BRIDGE_REQUIRED",
+      "physical_instance_count": 2,
+      "registry_ids": [
+        "下六椽栿-东缝",
+        "下六椽栿-西缝"
+      ],
+      "evidence_boundary": "section measured; historical full length UNKNOWN; 1000 mm canonical reference prohibited from building assembly",
+      "stage2_required": [
+        "explicit assembly endpoints",
+        "building-specific geometry length derivation",
+        "support/connect interfaces"
+      ],
+      "length_semantics": "PROJECT_RULE_OR_EXPLICIT_DERIVED_GEOMETRY_NOT_HISTORICAL_MEASUREMENT",
+      "production_ready_for_instance_binding": true,
+      "production_ready_for_final_length": false
+    },
+    {
+      "component_zh": "上六椽栿",
+      "master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "disposition": "RETAIN_REBIND_PASS_LENGTH_BRIDGE_REQUIRED",
+      "physical_instance_count": 2,
+      "registry_ids": [
+        "上六椽栿-东缝",
+        "上六椽栿-西缝"
+      ],
+      "evidence_boundary": "section measured; historical full length UNKNOWN; 1000 mm canonical reference prohibited from building assembly",
+      "stage2_required": [
+        "explicit assembly endpoints",
+        "building-specific geometry length derivation",
+        "support/connect interfaces"
+      ],
+      "length_semantics": "PROJECT_RULE_OR_EXPLICIT_DERIVED_GEOMETRY_NOT_HISTORICAL_MEASUREMENT",
+      "production_ready_for_instance_binding": true,
+      "production_ready_for_final_length": false
+    }
+  ],
+  "summary": {
+    "existing_masters_reviewed": 6,
+    "retained": 6,
+    "immediate_rebuild_required": 0,
+    "directly_rebindable_types": 2,
+    "rebindable_with_stage2_length_bridge_types": 2,
+    "retained_unbound_types": 2,
+    "new_t_task_created": false,
+    "blender_run": false,
+    "t018_status": "HOLD"
+  },
+  "next_action": "Build V007 full Master Coverage / Disposition Matrix V001 before locking first missing Master specification."
+}
