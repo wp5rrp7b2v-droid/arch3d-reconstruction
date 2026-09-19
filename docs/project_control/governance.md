@@ -211,14 +211,19 @@ Checkpoint 不负责首次落档，只负责一致性核对、压缩、Phase Clo
 
 当前边界：
 
-- P3.0、P3.1、P3.2 已关闭；P3.2 Gate Review 9/9 PASS、canonical Hard Fail=0，并由 D-046 正式批准关闭；P3 Gate Progress=3/4；
-- P3.3 `构件驱动整殿重建` 的 `Definition of Done V001` 已由 D-047 正式批准并锁定；当前已进入工程规划阶段，但尚无 active T-###，任何具体工程执行仍需 Product Owner 单独授权；
-- D-048 / RC-017 已批准 P3.3 的 Blender 执行链：Codex Cloud 编写 generator，GitHub Actions 执行脚本化 headless Blender，GitHub 保存证据，ChatGPT 审核，Local Mac 仅承担真正需要交互式/最终本地检查的项目；
-- P3.3 必须继承 P3.2 的五类基础关系、接口/定位、Assembly Unit、runtime instance、building-level parameter、Validator 与 Hard Fail，不重新发明基础组合机制；
-- P1/P2/P3.1/P3.2 的 evidence boundary 持续有效，UNKNOWN、Proxy、Control、Envelope、Deferred 不得因整殿重建而静默历史化；
-- 六椽栿 `canonical_reference_length_mm=1000` 仅为非历史 reference specimen；在独立 approved building-specific full length 出现前，实际全长几何继续 BLOCKED；
-- Z-006 继续 UNKNOWN/null/DO_NOT_LOCK；Z-006-RC-01 保持 replaceable REASONABLE_COMPLETION；具体榫卯、隐藏连接、45°转角、隐角梁继续保持当前证据边界；
-- GitHub Actions 可替代脚本化 Blender 的执行环境，但不得替代 Task Contract 明确要求的交互式 `LOCAL_MAC_REQUIRED` 证据；
+- P3.0、P3.1、P3.2 已关闭；其历史 PASS / CLOSED 状态不因 P3.3 重基线而撤销；P3 Gate Progress 仍为 3/4；
+- P3.3 当前正式实施路线为 `Definition of Done / Implementation Plan V002`，由 D-066 于 2026-09-19 批准并锁定；V001 / D-047 保留为历史版本，不再作为当前实施路线；
+- P3.3 V002 固定采用七阶段：①真实构件 Master 库；②构件变体与装配接口；③代表性组合验证；④整殿真实实例与拓扑；⑤整殿空间定位与标高规则；⑥确定性整殿生成；⑦整殿验收与 Gate Closure；
+- 当前事实基线为 V007 Component Registry；11类 / 40变体 / 365工程对象与 T-017 365 accounting 仅保留为历史工程基线 / comparison，不得作为真实构件完整性或真实构件数量的正式来源；
+- P3.1 已批准的 Master 机制和六个既有 Master 继续保留，但进入新生产路线前必须按 V007 重新绑定 / 覆盖复核；
+- P3.2 五类基础关系、接口 / 定位与组合机制继续保留并复用；不得重新发明基础关系语义，但旧 runtime accounting 不自动成为新整殿真实实例图；
+- D-048 / RC-017 的脚本化 Blender 执行链继续有效；它只规定执行环境，不意味着旧 T-018 路线继续有效；
+- T-020、RZ D-063、FV D-064 保留为已锁设计资产，但统一推迟到 Stage 5 按真实构件装配重新审查，不得在 Stage 1–4 直接作为生产 placement authority；
+- T-018 V002 保持 HOLD / NOT CURRENT EXECUTION ROUTE；在 Stage 6 前由 Product Owner 再决定 rebaseline 或 supersede；PR #3 / #6 均不得 merge；
+- P1/P2/P3.1/P3.2 的 evidence boundary 持续有效；UNKNOWN、Proxy、Control、Envelope、Deferred、PARAMETRIC_COMPLETION 不得因整殿重建而静默历史化；
+- 六椽栿 `canonical_reference_length_mm=1000` 继续仅为非历史 reference specimen，禁止泄漏到建筑实长；历史 full length 仍 UNKNOWN，但若 V007 装配端点可确定，允许将“由装配端点推导的几何长度”作为显式项目几何使用，必须与历史实测长度严格区分；
+- Z-006 继续 UNKNOWN/null/DO_NOT_LOCK；Z-006-RC-01 保持 replaceable REASONABLE_COMPLETION；具体榫卯、隐藏连接及其他无证据细节继续保持当前 evidence boundary；
+- GitHub Actions 可承担脚本化、可确定性重放的 Blender 执行，但不得替代必须交互式完成的 `LOCAL_MAC_REQUIRED` 证据；
 - 不以视觉完整性替代历史证据，不因构件系统可组合而宣称“完全还原963原貌”。
 
 ### 4.9 Component Registry → Excel Derived View｜构件登记到Excel派生规则
