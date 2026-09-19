@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R133",
+  "state_revision": "R134",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-021 FOUR-CHUANFU FIRST ARTICLE CONTRACT LOCKED / EXECUTION NOT YET AUTHORIZED / V008 CURRENT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-021 STOP ENVIRONMENT-INFRASTRUCTURE / NO ENGINEERING CHANGES / V008 CURRENT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -63,7 +63,7 @@
     "id": "T-021",
     "engineering_id": "P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001",
     "name": "四椽栿 Master 首件生产",
-    "status": "CONTRACT LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT YET AUTHORIZED",
+    "status": "STOP / ENVIRONMENT-INFRASTRUCTURE / RETRY REQUIRED",
     "task_contract": "docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md",
     "branch": "codex/t021-p3-3-four-chuanfu-master-first-article-v001",
     "pr_status": "NOT CREATED",
@@ -72,7 +72,15 @@
     "think_level": "MEDIUM DEFAULT",
     "blender_executor": "GitHub Actions headless / RC-017 / Blender 4.5.13",
     "target_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
-    "execution_authorized": false
+    "execution_authorized": true,
+    "execution_result": "STOP before implementation",
+    "blockers": [
+      "Codex sandbox direct Blender 4.5.13 download returned HTTP 403",
+      "checkout has no push-capable Git remote / GitHub auth, so Actions/PR publication cannot occur"
+    ],
+    "engineering_changes": "NONE",
+    "validation": "0/42",
+    "retry": "T-021 Retry 01 / same task ID"
   },
   "proposed_next_task": {
     "id": "P3.3_FINAL",
@@ -234,13 +242,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Await Product Owner explicit authorization to start T-021 engineering execution. After authorization, Codex Cloud may create the branch and implement the four-chuanfu Master First Article. T-018/RZ/FV/CP-03 remain HOLD.",
+  "next_action": "Recover T-021 execution infrastructure without changing the Master Spec: use a GitHub-connected Codex workspace/publication path, keep Blender 4.5.13 pinned, execute Blender only in GitHub Actions, then retry T-021 as Retry 01. Do not create T-022.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v074",
+    "visualization_version": "v075",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R133 / T-021 CONTRACT LOCKED / EXECUTION NOT YET AUTHORIZED / T-018 HOLD"
+    "refresh_status": "CURRENT / R134 / T-021 STOP INFRA / RETRY 01 REQUIRED / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -439,13 +447,14 @@
       "codex_first_article_authorized": false
     },
     "t021": {
-      "status": "CONTRACT LOCKED / EXECUTION NOT YET AUTHORIZED",
+      "status": "STOP / ENVIRONMENT-INFRASTRUCTURE",
       "decision_id": "D-070",
       "task_contract": "docs/tasks/T-021_P3_3_FOUR_CHUANFU_MASTER_FIRST_ARTICLE_V001.md",
       "target_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
       "validation_count": 42,
       "review_png_count": 6,
-      "branch": "codex/t021-p3-3-four-chuanfu-master-first-article-v001"
+      "branch": "codex/t021-p3-3-four-chuanfu-master-first-article-v001",
+      "stop_review": "docs/production/zhenguo_wanfo/P3_3_T021_STOP_ENVIRONMENT_REVIEW_V001.md"
     }
   }
 }
