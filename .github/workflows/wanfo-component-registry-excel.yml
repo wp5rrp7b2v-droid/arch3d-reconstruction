@@ -1,0 +1,83 @@
+name: Wanfo Component Registry Excel Sync
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json"
+      - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V*.json"
+      - "scripts/generate_wanfo_component_registry_excel.py"
+      - ".github/workflows/wanfo-component-registry-excel.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: wanfo-component-registry-excel-main
+  cancel-in-progress: false
+
+jobs:
+  generate-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout triggering revision
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install generator dependency
+        run: python -m pip install --disable-pip-version-check "openpyxl==3.1.5"
+
+      - name: Generate Excel from canonical registry
+        run: |
+          python scripts/generate_wanfo_component_registry_excel.py \
+            --input docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json \
+            --output-dir docs/evidence/zhenguo_wanfo/derived \
+            --source-commit "${GITHUB_SHA}"
+
+      - name: Validate generated artifacts
+        run: |
+          python - <<'PY'
+          import hashlib
+          import json
+          from pathlib import Path
+          from openpyxl import load_workbook
+
+          root = Path("docs/evidence/zhenguo_wanfo/derived")
+          manifest_path = root / "P3_WANFO_COMPONENT_EXCEL_SYNC_MANIFEST.json"
+          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+
+          assert manifest["status"] == "SYNCED"
+          current = Path(manifest["current_excel"])
+          versioned = Path(manifest["versioned_excel"])
+          assert current.exists()
+          assert versioned.exists()
+          assert hashlib.sha256(current.read_bytes()).hexdigest() == manifest["current_excel_sha256"]
+          assert hashlib.sha256(versioned.read_bytes()).hexdigest() == manifest["versioned_excel_sha256"]
+
+          wb = load_workbook(current, read_only=True, data_only=False)
+          assert set(wb.sheetnames) == {"实例登记", "统计摘要", "版本与来源", "使用规则"}
+          assert wb["实例登记"].max_row - 1 == manifest["record_count"]
+          wb.close()
+          print("VALIDATION_PASS", manifest["registry_version"], manifest["record_count"])
+          PY
+
+      - name: Commit derived Excel only when changed
+        run: |
+          if git diff --quiet -- docs/evidence/zhenguo_wanfo/derived; then
+            echo "No derived Excel change."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/evidence/zhenguo_wanfo/derived
+          git commit -m "derived: sync Wanfo component registry Excel"
+          git push origin HEAD:main
