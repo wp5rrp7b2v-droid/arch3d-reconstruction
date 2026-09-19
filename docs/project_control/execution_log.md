@@ -683,3 +683,19 @@ Do not restart T-018 by default.
 - Sync Manifest: `SYNCED`.
 - No T-### engineering task was created; this was Project Control/data-derivation infrastructure.
 - T-018 remains HOLD; no Blender/Actions modeling, CP-03 restart, PR merge, or P3.3 PASS authorization.
+
+
+## P3.3 V002｜真实构件驱动整殿重建实施计划锁定｜2026-09-19
+
+- Work nature：Project Control / implementation architecture rebaseline；非 Codex 工程执行。
+- Product Owner approval：D-066。
+- Current plan：`docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md`。
+- 新生产顺序：Master → 变体/接口 → 代表性组合 → 整殿实例/拓扑 → 空间定位 → 确定性整殿生成 → 最终验收。
+- P3.0/P3.1/P3.2 历史 PASS/CLOSED 不变。
+- 已有6个 Master 保留，但进入新生产前需按 V007 重新绑定/覆盖复核。
+- T-018 V002：HOLD / NOT CURRENT EXECUTION ROUTE。
+- T-020 / RZ / FV：保留，Stage 5 再审。
+- PR #3：SUPERSEDED / DO NOT MERGE。
+- PR #6：HOLD / DO NOT PATCH / DO NOT MERGE。
+- No Blender run / no Actions modeling run / no new T-### / no Codex modeling authorization。
+- Next executable work：需 Product Owner 单独授权 Stage 1。
