@@ -133,7 +133,7 @@ def setup_scene():
     bg = next(node for node in scene.world.node_tree.nodes if node.type == "BACKGROUND")
     bg.inputs["Color"].default_value = (0.88,0.88,0.88,1)
     bg.inputs["Strength"].default_value = 1
-    scene.view_settings.look = "Medium High Contrast"
+    scene.view_settings.look = "AgX - Medium High Contrast"
     return scene
 
 
