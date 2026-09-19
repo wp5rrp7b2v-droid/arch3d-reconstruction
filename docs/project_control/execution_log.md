@@ -723,3 +723,15 @@ Do not restart T-018 by default.
 - First work package：six existing approved Master rebind / coverage review against V007.
 - No new T-### yet；this first step is ChatGPT design/review.
 - No Blender run / no T-018 restart / no RZ/FV publication / no PR #3/#6 merge.
+
+
+## P3.3 Stage 1｜既有6个 Master Rebind Review Complete｜2026-09-19
+
+- Authorization：D-067。
+- Reviewed：6 existing approved P3.1 Masters against V007 canonical registry。
+- Result：6 retained / 0 immediate rebuild。
+- Direct rebind：柱、柱头栌斗。
+- Rebind + Stage 2 length bridge：下六椽栿、上六椽栿。
+- Retain but no physical-instance binding：单向长开斗、交互斗。
+- No new T-### / no Blender / no Codex modeling / T-018 remains HOLD。
+- Next：build full V007 Master Coverage / Disposition Matrix。
