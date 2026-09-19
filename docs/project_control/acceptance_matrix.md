@@ -425,3 +425,17 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Stage 1 尚未 PASS；当前仍为工作开始状态。
 - ChatGPT 设计/复核不占 T-###；实际 Codex 建模任务才创建新 T-###。
 - T-018 / RZ / FV / CP-03：继续 HOLD / 不授权。
+
+
+## 2026-09-19｜P3.3 Stage 1 既有6个 Master 重新绑定复核
+
+- Review：COMPLETE。
+- Evidence：
+  - `docs/production/zhenguo_wanfo/P3_3_STAGE1_EXISTING_MASTER_REBIND_REVIEW_V001.md`
+  - `production/zhenguo_wanfo/registry/P3_3_STAGE1_EXISTING_MASTER_REBIND_MAP_V001.json`
+- 6/6 existing Masters retained；0 immediate rebuild required。
+- 柱 / 柱头栌斗：可直接绑定 V007 真实实例。
+- 下六椽栿 / 上六椽栿：可绑定真实实例，但 Stage 2 必须增加实例装配端点→building-specific geometry length 桥；1000mm reference specimen 继续严禁进入整殿。
+- 单向长开斗 / 交互斗：Master 保留，但 V007 未闭合全殿真实总量和逐件位置，当前禁止物理实例绑定。
+- 本复核不改变 P3.1 历史 PASS；Stage 1 尚未整体 PASS。
+- 下一步：V007 全构件 Master Coverage / Disposition Matrix。
