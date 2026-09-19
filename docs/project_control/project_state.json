@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R124",
+  "state_revision": "R125",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 ACTIVE / T-018 V002 HOLD / V007 BUILD BASELINE + DETAILED INSTANCE REGISTRY SYNCED / AUDIT STOP RULE ACTIVE / IMPLEMENTATION FROZEN / CLOUD_MODE_DAY4_IN_PROGRESS",
+  "session_status": "P3.3 ACTIVE / T-018 V002 HOLD / V007 BUILD BASELINE + INSTANCE REGISTRY + EXCEL DERIVED SYNC ACTIVE / AUDIT STOP RULE ACTIVE / IMPLEMENTATION FROZEN / CLOUD_MODE_DAY4_IN_PROGRESS",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -525,13 +525,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Use V007 real-component build baseline to redesign Master completion order and whole-building assembly architecture. Do not resume T-018/RZ/FV/CP-03 execution by default.",
+  "next_action": "Use V007 real-component build baseline to redesign Master completion order and whole-building assembly architecture. Component Excel now auto-derives from canonical registry JSON under RC-018. Do not resume T-018/RZ/FV/CP-03 execution by default.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v065",
+    "visualization_version": "v066",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R124 / V007 BUILD BASELINE + INSTANCE REGISTRY SYNCED / T-018 HOLD"
+    "refresh_status": "CURRENT / R125 / V007 + RC-018 EXCEL SYNC PASS / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -586,5 +586,32 @@
     "impact_on_t018": "T-018 stays HOLD. V007 is a modeling-evidence baseline, not execution authorization. RZ/FV publication, CP-03 restart, PR #6 patch, Actions rerun, Blender, Stage C and merge remain unauthorized.",
     "engineering_execution_authorized": false,
     "detailed_instance_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.json"
+  },
+  "component_registry_excel_sync_2026_09_19": {
+    "rule_id": "RC-018",
+    "decision_id": "D-065",
+    "status": "ACTIVE / SYNCED / INITIAL END-TO-END RUN PASS",
+    "canonical_current_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
+    "versioned_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.json",
+    "generator": "scripts/generate_wanfo_component_registry_excel.py",
+    "generator_version": "1.0.1",
+    "workflow": ".github/workflows/wanfo-component-registry-excel.yml",
+    "workflow_run_id": 35429316513,
+    "workflow_result": "SUCCESS",
+    "derived_current_excel": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.xlsx",
+    "derived_versioned_excel": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.xlsx",
+    "sync_manifest": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_EXCEL_SYNC_MANIFEST.json",
+    "registry_version": "V007",
+    "registry_record_count": 472,
+    "source_registry_commit": "b8febcefcc84b4d27b6e46077180ea5a7f6b5f36",
+    "source_json_sha256": "34a33a493f8a1e14b033475f0d9ee4d5bf12c547d7d37d97ddf3539f0bf5c700",
+    "current_excel_sha256": "b9cd37fb940f7d91e14b11a8aeaadafbac3c6e15a6ef07ae968b6b7afa1f017d",
+    "versioned_excel_sha256": "b9cd37fb940f7d91e14b11a8aeaadafbac3c6e15a6ef07ae968b6b7afa1f017d",
+    "derived_commit": "408be1829fd1b190e69eaf0e7543f4dd7f0b7f85",
+    "canonical_truth": "JSON",
+    "excel_role": "DERIVED_VIEW",
+    "manual_excel_fact_edits": "PROHIBITED",
+    "fail_closed": true,
+    "t018_execution_impact": "NONE / T-018 remains HOLD"
   }
 }
