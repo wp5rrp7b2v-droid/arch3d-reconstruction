@@ -325,3 +325,15 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Daily close evidence：`docs/project_control/DAILY_CLOSE_2026-09-18.md`。
 
 **Hard carry-forward condition:** next session must perform Pre-Publication Readiness Review before any RZ/FV production publication authorization or CP-03 restart。
+
+
+## 2026-09-19｜整殿真实构件实例校准
+
+- 本轮直接回到 `SRC-ZG-WF-001` 精细测绘报告，按“构件名称 / 数量 / 位置 / 样式 / 连接 / 尺寸来源 / 模型状态”重新审视整殿。
+- 结论：既有 `11 families / 40 variants / 365 instances` 继续作为工程基线保留，但**不得解释为万佛殿真实建筑构件完整性已经闭合**。
+- 新增正式证据：`docs/evidence/zhenguo_wanfo/P3_WANFO_WHOLE_BUILDING_COMPONENT_INSTANCE_INVENTORY_V001.md`。
+- 重要数量修正：槫当前确认总数为 **33根 = 正身七道21根 + 两山12根**；旧“21根”只能指正身槫，不是整殿总数。
+- 主体木构、斗栱、屋面三大系统已完成第一轮真实构件复核；若干旧 Proxy / Control 对象被确认覆盖了多个可独立管理的真实构件。
+- 当前仍未闭合：丁栿/乳栿/剳牵/托脚等逐件位置；斗栱组内逐件实例；替木/襻间总数；椽系；台基/墙体/门窗等第四系统。
+- 本轮不修改 P3.0 / P3.1 / P3.2 历史验收结论，也不授权 T-018 工程执行。
+- **T-018 继续 HOLD；P3.3 继续 ACTIVE / NOT PASS。**
