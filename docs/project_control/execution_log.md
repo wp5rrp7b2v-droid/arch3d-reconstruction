@@ -803,3 +803,20 @@ Do not restart T-018 by default.
 - Contract/evidence conflict：NONE identified。
 - T-021 remains same task; next retry = Retry 01 after execution-infrastructure recovery。
 - Do not create T-022; do not change Blender pin; T-018 remains HOLD。
+
+
+## T-021｜Codex Cloud Execution Interpretation Correction｜2026-09-19
+
+- Correction trigger：Product Owner notes the same Codex Cloud/GitHub workflow worked the previous day.
+- Previous assumption corrected：`git remote -v` output and `gh auth status` inside the Codex sandbox are **not valid mandatory gates** for Codex Cloud repo/PR capability.
+- Codex Cloud officially operates from a repository-bound cloud environment and can surface a task diff/result for Pull Request creation through the product flow; shell Git credentials do not need to be exposed to the agent.
+- Therefore the prior “GitHub publish capability unavailable solely because remote/gh auth are absent” conclusion is superseded.
+- Correct T-021 flow:
+  1. run task in the selected `arch3d-reconstruction` Codex Cloud environment;
+  2. Codex writes params/generator/validator/workflow;
+  3. Codex sandbox does **not** download/run Blender;
+  4. task result/diff is published through Codex Cloud/Create PR flow;
+  5. GitHub Actions then executes pinned Blender 4.5.13;
+  6. only product-level PR creation failure or Actions-level Blender failure is a valid infrastructure STOP.
+- Engineering changes remain NONE so far; validation remains 0/42.
+- T-021 remains the same task; no T-022; T-018 remains HOLD.
