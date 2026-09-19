@@ -370,3 +370,32 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - 审计停止规则生效：①直接事实锁定；②明确推导锁定并保留说明；③参数化补全必须可替换且非历史事实；④未知保持未知。
 - **本轮不产生工程执行授权。**
 - **T-018 V002继续HOLD；P3.3继续ACTIVE / NOT PASS。**
+
+
+## 2026-09-19｜RC-018 构件登记 JSON → Excel 自动派生
+
+- Decision：D-065 / Product Owner APPROVED。
+- Governance：RC-018 ACTIVE。
+- Canonical current registry：
+  - `docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json`
+- Versioned snapshot：
+  - `docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.json`
+- Generator：
+  - `scripts/generate_wanfo_component_registry_excel.py`
+- Workflow：
+  - `.github/workflows/wanfo-component-registry-excel.yml`
+- Derived outputs：
+  - `docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.xlsx`
+  - `docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.xlsx`
+  - `docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_EXCEL_SYNC_MANIFEST.json`
+- Initial end-to-end workflow：run `35429316513` = **SUCCESS**。
+- Validation：
+  - CURRENT 与 V007 JSON 快照一致；
+  - Registry records = 472；
+  - Excel 可重开；
+  - Excel instance rows = 472；
+  - CURRENT.xlsx 与 V007.xlsx SHA-256 均为 `b9cd37fb940f7d91e14b11a8aeaadafbac3c6e15a6ef07ae968b6b7afa1f017d`；
+  - Sync Manifest status = `SYNCED`。
+- Rule：**JSON 是唯一事实源；Excel 只读派生，禁止双维护。**
+- Failure mode：任何版本/记录数/重开/哈希验证失败必须 FAIL CLOSED。
+- 本规则不改变 T-018 工程边界：T-018 继续 HOLD。
