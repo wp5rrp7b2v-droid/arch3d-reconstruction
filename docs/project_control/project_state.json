@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R126",
+  "state_revision": "R127",
   "last_updated": "2026-09-19",
-  "session_status": "P3.3 ACTIVE / T-018 V002 HOLD / V007 BUILD BASELINE + INSTANCE REGISTRY + EXCEL DERIVED SYNC ACTIVE / AUDIT STOP RULE ACTIVE / IMPLEMENTATION FROZEN / CLOUD_MODE_DAY4_IN_PROGRESS",
+  "session_status": "P3.3 V002 LOCKED / REAL-COMPONENT-DRIVEN ROUTE / STAGE 1 NOT YET AUTHORIZED / T-018 HOLD / V007 BUILD BASELINE / RC-018 EXCEL SYNC ACTIVE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,12 +17,12 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / NOT PASS / T-018 V002 DAILY HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / 0 OF 7 NEW IMPLEMENTATION STAGES PASSED / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "DOD LOCKED / D-047 / T-017 CLOSED D-050 / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 LOCKED D-059 / OUTCOME B CURRENT WORKING CLASSIFICATION / RZ DESIGN LOCKED D-063 / FV PROJECT-RULE DESIGN LOCKED D-064 / PRODUCTION DIRECTION NOT YET PROVEN / IMPLEMENTATION FROZEN"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / STAGE1 MASTER LIBRARY NEXT / T-018 HOLD / T-020+RZ+FV STAGE5 RE-REVIEW / NO EXECUTION AUTHORIZED"
     }
   },
   "decision_required": false,
@@ -63,7 +63,7 @@
     "id": "T-018",
     "engineering_id": "P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002",
     "name": "整殿确定性生成与参数变更验证",
-    "status": "V002 HOLD / V007 REAL-COMPONENT BUILD BASELINE LOCKED / NO EXECUTION AUTHORIZED",
+    "status": "T-018 V002 HOLD / NOT CURRENT EXECUTION ROUTE / P3.3 V002 STAGE1 PRECEDES WHOLE-BUILDING GENERATION",
     "task_contract": "docs/tasks/T-018_P3_3_DETERMINISTIC_WHOLE_BUILDING_GENERATION_V002.md",
     "contract_decision_id": "D-059",
     "execution_authorization_decision_id": "D-061",
@@ -95,7 +95,7 @@
     "upstream_resolution": "T-020 PASS / CLOSED / D-058 / PR #5 MERGED / merge commit 6d83ed2f9b3b9281de364ab973edce73ac6dae02",
     "replacement_for_pr": 3,
     "source_main_sha": "09d3ca4fab5ca0efb867c5e9c98bf9d2221f9ba9",
-    "formal_review_status": "HOLD / REPLAN AGAINST V007 REAL-COMPONENT BUILD BASELINE",
+    "formal_review_status": "HOLD / DEFERRED UNTIL P3.3 V002 STAGE6 DECISION",
     "mutation_contract_issue": "Deferred to CP-08. PM-005 remains fixed observed-isolation test; generative mutation parameter will be selected only after dependency map and requires Product Owner approval before Stage D.",
     "rebaseline": {
       "management_stages": [
@@ -431,7 +431,7 @@
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
     "t018": {
-      "status": "V002 HOLD / V007 REAL-COMPONENT BUILD BASELINE LOCKED / RZ+FV DESIGN-LOCKED ONLY / NO EXECUTION",
+      "status": "HOLD / NOT CURRENT EXECUTION ROUTE / STAGE6 REBASELINE-OR-SUPERSEDE DECISION DEFERRED",
       "github_pr_number": 6,
       "github_visible_head_sha": "65a63b011794dfe2af6a1f0be5ba497a52f23d5f",
       "note": "2026-09-19 V007 closes the blanket component audit and becomes the current modeling-evidence baseline. It does not authorize production execution. Replan Master/assembly architecture before any restart."
@@ -484,9 +484,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-065",
+    "id": "D-066",
     "date": "2026-09-19",
-    "decision": "Product Owner approved RC-018: Component Registry JSON is canonical; Excel is an automatically regenerated derived view with fail-closed synchronization. This does not authorize T-018 execution."
+    "decision": "Product Owner approved and locked P3.3 V002 real-component-driven whole-building reconstruction plan. Seven-stage route starts with real Component Master library and defers deterministic whole-building generation to Stage 6. Execution is not yet authorized."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -525,13 +525,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Use V007 real-component build baseline to redesign Master completion order and whole-building assembly architecture. Component Excel now auto-derives from canonical registry JSON under RC-018. Do not resume T-018/RZ/FV/CP-03 execution by default.",
+  "next_action": "Await Product Owner authorization to enter P3.3 V002 Stage 1: rebind/review the six existing Masters against V007, establish Master coverage/disposition, then design the first missing Master. Do not resume T-018/RZ/FV/CP-03.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v067",
+    "visualization_version": "v068",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R126 / V007 + RC-018 EXCEL SYNC PASS / T-018 HOLD"
+    "refresh_status": "CURRENT / R127 / P3.3 V002 LOCKED / STAGE1 NOT AUTHORIZED / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -615,5 +615,32 @@
     "t018_execution_impact": "NONE / T-018 remains HOLD",
     "project_state_revision": "R126",
     "dashboard_version": "v067"
+  },
+  "p3_3_rebaseline_2026_09_19": {
+    "status": "V002 LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT AUTHORIZED",
+    "decision_id": "D-066",
+    "current_plan": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md",
+    "superseded_current_plan": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md",
+    "fact_baseline": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
+    "stages": [
+      "Stage 1｜真实构件 Master 库",
+      "Stage 2｜构件变体与装配接口",
+      "Stage 3｜代表性组合验证",
+      "Stage 4｜整殿真实实例与拓扑",
+      "Stage 5｜整殿空间定位与标高规则",
+      "Stage 6｜确定性整殿生成",
+      "Stage 7｜整殿验收与 P3.3 Gate Closure"
+    ],
+    "progress": "0/7 formally passed",
+    "next_stage": "Stage 1｜真实构件 Master 库",
+    "next_stage_authorized": false,
+    "legacy_365": "HISTORICAL ENGINEERING BASELINE / COMPARISON ONLY",
+    "t017_365": "HISTORICAL ENGINEERING BASELINE / COMPARISON ONLY",
+    "t020": "HOLD FOR STAGE-5 RE-REVIEW",
+    "rz_d063": "DESIGN-LOCKED / HOLD FOR STAGE-5 RE-REVIEW",
+    "fv_d064": "DESIGN-LOCKED / HOLD FOR STAGE-5 RE-REVIEW",
+    "t018_v002": "HOLD / NOT CURRENT EXECUTION ROUTE / STAGE6 REBASELINE-OR-SUPERSEDE DECISION DEFERRED",
+    "existing_masters": "6 retained / rebind-review required",
+    "engineering_execution_authorized": false
   }
 }
