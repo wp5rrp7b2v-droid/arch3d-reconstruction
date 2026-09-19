@@ -348,3 +348,20 @@ Therefore separately check：
 - Sync Manifest：SYNCED
 - Governance：JSON canonical / Excel derived / no dual maintenance / fail closed
 - T-018：remains HOLD / no engineering execution authorization
+
+
+### P3.3 V002 real-component-driven route lock
+
+- Date：2026-09-19
+- Decision：D-066
+- Project State：R127
+- Dashboard：v068
+- Current P3.3 plan：`docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md`
+- P3.3 progress：0/7 new implementation stages formally passed
+- Stage 1：real Component Master library / NOT YET AUTHORIZED
+- V007：current real-component fact baseline
+- RC-018：JSON canonical / Excel derived / ACTIVE
+- Legacy 11/40/365 + T-017 accounting：historical engineering baseline / comparison only
+- T-020 / RZ / FV：retained / Stage-5 re-review
+- T-018 V002：HOLD / not current execution route
+- New engineering execution authorization：NONE
