@@ -852,3 +852,18 @@ Do not restart T-018 by default.
 - PR #7：publication closure pending / not merged by D-072 itself。
 - P3.3 Stage 1：ACTIVE / not yet passed。
 - T-018：HOLD。
+
+
+## 2026-09-19｜T-021 PR #7 Publication Closure
+
+- Product Owner：D-072 APPROVED。
+- Pre-merge check：PASS。
+- PR #7：Draft → Ready for Review → MERGED。
+- Merged PR head：`983d1505354e38e350b5db0038d90ddc7f41a3d5`。
+- Merge commit on main：`2c2c3bc3dea63d7f8449271c47e58d468489c950`。
+- Final head Actions Run：`35445039747` = SUCCESS。
+- Formal delivery records on main：semantic JSON / validation JSON / engineering review / Stage 1 Master catalog / 6 review PNG / T-021 workflow。
+- T-021 publication status：**CLOSED / MERGED TO MAIN**。
+- Geometry/evidence boundary：UNCHANGED。
+- P3.3 Stage 1：ACTIVE / not yet passed。
+- T-018：HOLD。
