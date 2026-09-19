@@ -281,3 +281,18 @@ Therefore separately check：
 - 2026-09-21 sync must check `main + open PR + Actions artifacts + local-only assets + Project Control` together。
 
 - 2026-09-18：T-018 V002 Rebaseline contract approved/locked under D-059；execution not authorized；PR #3 superseded/read-only；PR #6 HOLD。
+
+
+## Day 4｜2026-09-19｜IN PROGRESS
+
+- Project State：R122
+- Dashboard：v063
+- T-018：HOLD / no engineering execution authorized
+- New canonical evidence：
+  - `docs/evidence/zhenguo_wanfo/P3_WANFO_WHOLE_BUILDING_COMPONENT_INSTANCE_INVENTORY_V001.md`
+- Main finding：existing 11/40/365 engineering baseline is retained but no longer treated as proof of whole-building real-component completeness.
+- Important correction：Purlins currently confirmed as 33 total = 21 main-body + 12 gable-side.
+- No new Blender run.
+- No new Actions rerun.
+- No PR merge authorization.
+- Local Mac sync target remains 2026-09-21.
