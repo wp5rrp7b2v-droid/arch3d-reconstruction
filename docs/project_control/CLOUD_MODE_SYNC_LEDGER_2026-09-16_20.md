@@ -428,3 +428,24 @@ Therefore separately check：
 - Next：四椽栿 Master Spec
 - New T-###：NONE
 - T-018：HOLD
+
+
+### P3.3 Stage 1 四椽栿 Master Spec lock
+
+- Date：2026-09-19
+- Decision：D-069
+- Project State：R132
+- Dashboard：v073
+- Component：CMP-FRAME-FOUR-CHUANFU-001
+- Master：CMP-FRAME-FOUR-CHUANFU-001_MASTER
+- Spec：V001 LOCKED
+- Direct source：PDF p82 / printed p67 / table 2-39
+- Instances：2
+- Mean section：426.5×302mm
+- Raw samples：413×295 / 440×309
+- Sample-to-instance mapping：UNKNOWN
+- Historical full length：UNKNOWN
+- Canonical reference：1000mm non-historical only
+- New T-###：NONE
+- Codex First Article：NOT AUTHORIZED
+- T-018：HOLD
