@@ -106,3 +106,6 @@
 
 
 | D-071 | 2026-09-19 | Product Owner 批准将 T-021 的工程执行责任由 `Codex Cloud 编写工程文件` 改为 `ChatGPT direct GitHub execution`。仅修改 T-021 的执行路径：ChatGPT 直接在 GitHub 创建/更新工程文件、分支与 PR，GitHub Actions 继续作为 Blender 4.5.13 的正式 headless executor。D-069 四椽栿 Master Spec、42项验证、3类 mutation、6张 review PNG、binary artifact/SHA、ONE TASK=ONE BRANCH=ONE PR、Product Owner merge approval、T-018 HOLD 及全部 evidence/UNKNOWN 边界保持不变。不创建 T-022，不改变其他任务默认执行方式。 | ACTIVE / T-021 EXECUTOR OVERRIDE APPROVED / CHATGPT DIRECT GITHUB EXECUTION |
+
+
+| D-072 | 2026-09-19 | Product Owner 正式批准 T-021 四椽栿 Master 首件。批准依据：GitHub Actions Run 35440785415 / Run #3 SUCCESS；reviewed head `f16ba22933bb48dbae8951343b76190d2c76c1cf`；42/42 locked checks PASS；independent reopen、Length/Width/Thickness mutation、canonical restore 全部 PASS；6/6 review PNG 视觉与证据边界审核 PASS；Artifact ID 10583607231。正式更正 SHA 标签：Canonical `.blend` SHA-256=`9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997`；`45dce8ce4e58deabd3643c57d0f6caa7ebf50a6189e8d41cf57b68e978b63322` 为 semantic geometry signature。此前混淆仅为汇报标签错误，artifact 正式字段正确，不重跑工程。D-072 只批准 T-021 首件，不等于 Stage 1 PASS、PR #7 merge、Stage 2 授权或 T-018 恢复。 | COMPLETE / T-021 FIRST ARTICLE PRODUCT OWNER APPROVED / SHA LABEL CORRECTED / PR PUBLICATION CLOSURE PENDING |
