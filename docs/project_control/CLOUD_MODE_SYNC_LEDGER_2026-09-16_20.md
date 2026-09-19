@@ -328,3 +328,23 @@ Therefore separately check：
 - Purpose：preserve V007 per-instance / per-position baseline in GitHub so future sessions do not depend on the chat-generated spreadsheet binary.
 - The `.xlsx` workbook remains a review artifact; GitHub canonical truth is the V007 Markdown + baseline JSON + detailed instance registry JSON + Project Control.
 - T-018 remains HOLD; no engineering execution authorization.
+
+
+### RC-018 Component Registry → Excel sync
+
+- Date：2026-09-19
+- Decision：D-065
+- Rule：RC-018 ACTIVE
+- Project State：R125
+- Dashboard：v066
+- Canonical source：`P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json`
+- Versioned snapshot：V007
+- Registry records：472
+- Auto-generator + GitHub Actions workflow：established
+- Final workflow run：`35429316513` = SUCCESS
+- Derived commit：`408be1829fd1b190e69eaf0e7543f4dd7f0b7f85`
+- CURRENT.xlsx + V007.xlsx：generated and committed
+- Excel SHA-256：`b9cd37fb940f7d91e14b11a8aeaadafbac3c6e15a6ef07ae968b6b7afa1f017d`
+- Sync Manifest：SYNCED
+- Governance：JSON canonical / Excel derived / no dual maintenance / fail closed
+- T-018：remains HOLD / no engineering execution authorization
