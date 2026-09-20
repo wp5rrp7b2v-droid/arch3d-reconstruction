@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R159",
+  "state_revision": "R160",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 2026-09-20 DAILY CLOSE COMPLETE / CLOUD MODE PRODUCTION CLOSED / LOCAL SYNC VERIFICATION PENDING / T-024 CLOSED / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / DAILY CLOSE COMPLETE + D-087 V008 MASTER PROGRESS VISIBILITY ADDED / LOCAL SYNC VERIFICATION PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -62,7 +62,7 @@
   },
   "current_task": {
     "id": "NONE",
-    "status": "DAILY CLOSE COMPLETE / LOCAL SYNC VERIFICATION PENDING / NO ENGINEERING T-TASK ACTIVE"
+    "status": "POST-CLOSE VISIBILITY PATCH COMPLETE / LOCAL SYNC VERIFICATION PENDING / NO ENGINEERING T-TASK ACTIVE"
   },
   "proposed_next_task": {
     "id": "LOCAL_SYNC_VERIFICATION_2026_09_20",
@@ -199,9 +199,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-086",
+    "id": "D-087",
     "date": "2026-09-20",
-    "decision": "Product Owner authorized merge of PR #11 after final pre-merge cross-check PASS. PR #11 merged to main at 56ea76ed2bfa766991d4e3f19999dc0c704a48ea. T-024 publication is closed. P3.3 Stage 1 remains active; D-076 visual-reference review applies before modeling the next new component. T-018 remains HOLD."
+    "decision": "V008/CURRENT must directly expose Stage1 Master coverage progress and approved Master bindings. Master Catalog remains approval authority. Current snapshot: 505 records / 66 object types / 28 Master-scope types / 10 approved / 18 pending / 35.7%."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -222,8 +222,8 @@
     "latest_formal_decision": "D-086",
     "new_decision_at_close": false,
     "new_execution_authorization_at_close": false,
-    "project_state_revision": "R159",
-    "dashboard_version": "v099",
+    "project_state_revision": "R160",
+    "dashboard_version": "v100",
     "post_close_omission_audit": "PASS / NO KNOWN MISSING CURRENT-STATE REGISTRATIONS",
     "omission_audit_checked": [
       "D-073..D-086 decisions",
@@ -239,15 +239,16 @@
       "Local Sync Prep"
     ],
     "omission_audit_missing_items": [],
-    "caution": "Local Mac has not yet been synchronized or artifact-reconciled. No next Master execution until local verification is complete."
+    "caution": "Local Mac has not yet been synchronized or artifact-reconciled. No next Master execution until local verification is complete.",
+    "post_close_visibility_patch": "D-087 / V008 Master progress visibility implemented / Excel sync PASS 35508113993"
   },
-  "next_action": "When the Mac is available, execute LOCAL_SYNC_PREP_2026-09-20 Phase A+B read-only checks first. Do not pull/reset before inspection. After local sync verification PASS, re-read main and select the next missing Stage1 Master under D-076. T-018 remains HOLD.",
+  "next_action": "When Mac is available, execute LOCAL_SYNC_PREP_2026-09-20 Phase A+B read-only checks. After sync, verify V008 Excel progress overview = 505 records / 66 object types / 28 Master-scope / 10 approved / 18 pending / 35.7%. Do not start next Master before local sync verification PASS. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v099",
+    "visualization_version": "v100",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R159 / DAILY CLOSE COMPLETE / CLOUD PRODUCTION CLOSED / LOCAL SYNC PENDING / T-024 CLOSED / T-018 HOLD"
+    "refresh_status": "CURRENT / R160 / D-087 V008 MASTER PROGRESS VISIBILITY ACTIVE / LOCAL SYNC PENDING / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -310,25 +311,25 @@
     "canonical_current_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
     "versioned_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json",
     "generator": "scripts/generate_wanfo_component_registry_excel.py",
-    "generator_version": "1.0.1",
+    "generator_version": "1.0.2",
     "workflow": ".github/workflows/wanfo-component-registry-excel.yml",
-    "workflow_run_id": 35495608194,
+    "workflow_run_id": 35508113993,
     "workflow_result": "SUCCESS",
     "derived_current_excel": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.xlsx",
     "derived_versioned_excel": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.xlsx",
     "sync_manifest": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_EXCEL_SYNC_MANIFEST.json",
     "registry_version": "V008",
     "registry_record_count": 505,
-    "source_registry_commit": "411778c2f80a0fd506e15381c06aac21433c394d",
-    "source_json_sha256": "32ca8de69b9f6b2878f591dccceb9beac76c7e712462f216a69d61949490233a",
-    "current_excel_sha256": "3c8832b13ba0348a5d561e64e50bc26978c3cfdeb014955322a3066e8222ddd5",
-    "versioned_excel_sha256": "3c8832b13ba0348a5d561e64e50bc26978c3cfdeb014955322a3066e8222ddd5",
+    "source_registry_commit": "9dd11724ba3a3f90ac22eed9849ee6a777ac5ee2",
+    "source_json_sha256": "64cebc163690e047e51d40f646a73c07e287d641db1d6a36751557dad3721fc8",
+    "current_excel_sha256": "dd0364c03f9c44c4d15f3b2aa192a1117af5261aa1705402562570a36019342c",
+    "versioned_excel_sha256": "dd0364c03f9c44c4d15f3b2aa192a1117af5261aa1705402562570a36019342c",
     "canonical_truth": "JSON",
     "excel_role": "DERIVED_VIEW",
     "manual_excel_fact_edits": "PROHIBITED",
     "fail_closed": true,
     "t018_execution_impact": "NONE / T-018 remains HOLD",
-    "close_note": "2026-09-20 close corrected stale V007/472 project-state subrecord to current V008/505 manifest truth."
+    "close_note": "D-087 visibility patch complete: V008/CURRENT and derived Excel expose Master progress and row-level Master bindings."
   },
   "p3_3_rebaseline_2026_09_19": {
     "status": "V002 LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT AUTHORIZED",
@@ -629,5 +630,28 @@
     "next_start_point": "平梁 Master evidence review + specification design",
     "no_new_t_task": true,
     "no_unrecorded_merge": true
+  },
+  "v008_master_progress_visibility": {
+    "rule_id": "D-087",
+    "status": "ACTIVE / IMPLEMENTED",
+    "registry_version": "V008",
+    "registry_record_count": 505,
+    "registered_object_type_count": 66,
+    "master_scope_object_type_count": 28,
+    "approved_master_count": 10,
+    "pending_master_object_type_count": 18,
+    "master_completion_percent": 35.7,
+    "master_covered_registry_record_count": 52,
+    "pending_source_binding_count": 7,
+    "row_fields": [
+      "stage1_disposition",
+      "master_coverage_status",
+      "master_reference when approved"
+    ],
+    "approval_authority": "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json",
+    "excel_generator_version": "1.0.2",
+    "excel_sync_run": 35508113993,
+    "excel_sync_result": "SUCCESS",
+    "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure."
   }
 }
