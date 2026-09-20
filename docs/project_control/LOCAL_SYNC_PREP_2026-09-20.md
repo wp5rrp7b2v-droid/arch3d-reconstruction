@@ -98,8 +98,8 @@ test -f docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT
 ```
 
 Required logical markers after sync:
-- Project State revision：R159 or later
-- Dashboard：v099 or later
+- Project State revision：R161 or later
+- Dashboard：v101 or later
 - Registry：V008 / 505
 - Stage1 approved Master count：10
 - T-024：CLOSED / PR #11 MERGED
@@ -213,6 +213,7 @@ Expected values:
 - 待完成 Master：18
 - Master完成度：35.7%
 - 已绑定Master的登记记录：52
+- binding errors：0
 - PENDING_SOURCE_BINDING：7
 
 Expected instance-table columns:
