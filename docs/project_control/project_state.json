@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R158",
+  "state_revision": "R159",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-024 CLOSED + PR #11 MERGED / NEXT STAGE1 MASTER SELECTION / D-076 VISUAL GATE / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 2026-09-20 DAILY CLOSE COMPLETE / CLOUD MODE PRODUCTION CLOSED / LOCAL SYNC VERIFICATION PENDING / T-024 CLOSED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,11 +26,11 @@
     }
   },
   "decision_required": false,
-  "blocker": "No immediate Stage 1 blocker. T-024 is closed and merged. D-076 pre-model visual-reference rule remains active for the next new component. T-018 remains HOLD.",
+  "blocker": "No engineering blocker. Immediate operational gate is local sync verification. Do not start the next Master until local Git state and approved Actions artifacts are reconciled. T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
-    "status": "ACTIVE / APPROVED / PREFLIGHT VERIFIED",
+    "status": "PRODUCTION WINDOW COMPLETE / LOCAL_SYNC_VERIFICATION PENDING",
     "expected_start": "2026-09-16",
     "expected_end": "2026-09-20",
     "tools": [
@@ -38,7 +38,7 @@
       "Codex Cloud",
       "GitHub Web/App"
     ],
-    "local_mac": "TEMPORARILY UNAVAILABLE DURING ACTIVE WINDOW",
+    "local_mac": "EXPECTED AVAILABLE LATER 2026-09-20 / SYNC NOT YET VERIFIED",
     "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
     "approved_equivalent_execution": {
       "decision_id": "D-048",
@@ -49,27 +49,29 @@
     },
     "sync_ledger": {
       "path": "docs/project_control/CLOUD_MODE_SYNC_LEDGER_2026-09-16_20.md",
-      "status": "ACTIVE / LOCAL_SYNC_VERIFICATION PENDING / DAY 4 COMPLETE",
-      "target_local_sync_date": "2026-09-21",
+      "status": "DAY 5 COMPLETE / CLOUD PRODUCTION CLOSED / LOCAL_SYNC_VERIFICATION PENDING",
+      "target_local_sync_date": "2026-09-20 evening",
       "day_1_register": "COMPLETE / 2026-09-16",
       "day_2_register": "COMPLETE / 2026-09-17",
       "required_daily_update_through": "2026-09-20",
       "day_3_register": "COMPLETE / 2026-09-18 / DAILY_CLOSE_2026-09-18 + post-close omission audit / R121 / v062 / latest formal decision D-064 / no new execution authorization / T-018 HOLD / production direction not yet proven",
-      "day_4_register": "COMPLETE / 2026-09-19 / V008 CURRENT / P3.3 V002 Stage 1 ACTIVE / T-021 first article approved D-072 / PR #7 merged / formal delivery records on main / next target 平梁 / T-018 HOLD"
+      "day_4_register": "COMPLETE / 2026-09-19 / V008 CURRENT / P3.3 V002 Stage 1 ACTIVE / T-021 first article approved D-072 / PR #7 merged / formal delivery records on main / next target 平梁 / T-018 HOLD",
+      "day_5_register": "COMPLETE / 2026-09-20 / T-022+T-023+T-024 CLOSED + MERGED / V008 505 / Catalog 10 approved / D-076 ACTIVE / no active engineering T-task / local sync verification pending"
     },
-    "active_window_note": "2026-09-19 DAILY CLOSE COMPLETE. T-021 is approved and merged to main; Stage 1 remains ACTIVE and not passed; next work item is 平梁 Master evidence review/spec design; T-018 remains HOLD; T-020/RZ/FV remain deferred to Stage 5 re-review."
+    "active_window_note": "2026-09-20 DAILY CLOSE COMPLETE. Cloud production window is closed. T-022/T-023/T-024 are approved, published and merged; Stage 1 remains ACTIVE / not passed; no active engineering T-task; next modeling work is intentionally deferred until local sync verification completes; T-018 remains HOLD."
   },
   "current_task": {
     "id": "NONE",
-    "status": "T-024 CLOSED / PR #11 MERGED / STAGE1 READY FOR NEXT MASTER"
+    "status": "DAILY CLOSE COMPLETE / LOCAL SYNC VERIFICATION PENDING / NO ENGINEERING T-TASK ACTIVE"
   },
   "proposed_next_task": {
-    "id": "STAGE1_NEXT_MASTER",
-    "name": "Select next missing Master from Stage1 coverage, then visual reference review + evidence review + specification design",
-    "status": "NEXT / PLANNING AUTHORIZED / ENGINEERING EXECUTION NOT YET AUTHORIZED",
+    "id": "LOCAL_SYNC_VERIFICATION_2026_09_20",
+    "name": "Local Mac Git + approved Actions artifact reconciliation",
+    "status": "NEXT / PREPARED / EXECUTION PENDING LOCAL MAC",
     "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "authorization_basis": "P3.3 V002 Stage 1 + D-076 visual gate"
+    "checklist": "docs/project_control/LOCAL_SYNC_PREP_2026-09-20.md",
+    "after_completion": "Return to Stage1 coverage matrix and select next missing Master under D-076"
   },
   "last_completed_task": {
     "id": "T-024",
@@ -208,43 +210,44 @@
     "decision_required": "NONE AT CLOSE. Next substantive decision only after Pre-Publication Readiness Review."
   },
   "daily_closing_audit": {
-    "date": "2026-09-18",
-    "status": "PASS WITH CAUTION / FINAL",
+    "date": "2026-09-20",
+    "status": "PASS / COMPLETE / LOCAL SYNC PREP COMPLETE",
     "execution_log_recorded": true,
     "acceptance_matrix_recorded": true,
     "dashboard_aligned": true,
-    "sync_ledger_day3_complete": true,
-    "detailed_close": "docs/project_control/DAILY_CLOSE_2026-09-18.md",
+    "sync_ledger_day5_complete": true,
+    "detailed_close": "docs/project_control/DAILY_CLOSE_2026-09-20.md",
+    "local_sync_prep": "docs/project_control/LOCAL_SYNC_PREP_2026-09-20.md",
     "phase_archive_action": "NONE / P3 ACTIVE",
-    "caution": "Do not carry forward a 'solution found' narrative. Carry forward a bounded HOLD and re-review before publication.",
-    "latest_formal_decision": "D-064",
+    "latest_formal_decision": "D-086",
     "new_decision_at_close": false,
     "new_execution_authorization_at_close": false,
-    "pr3_merge_authorized": false,
-    "pr6_merge_authorized": false,
-    "project_state_revision": "R121",
-    "dashboard_version": "v062",
-    "post_close_omission_audit": "PASS / FINAL / NO KNOWN MISSING REGISTRATIONS",
+    "project_state_revision": "R159",
+    "dashboard_version": "v099",
+    "post_close_omission_audit": "PASS / NO KNOWN MISSING CURRENT-STATE REGISTRATIONS",
     "omission_audit_checked": [
-      "D-059..D-064 decisions",
-      "T-018 V002/RZ/FV contracts",
-      "11 t018_v002 evidence artifacts",
+      "D-073..D-086 decisions",
+      "T-022/T-023/T-024 approvals + formal delivery + merges",
+      "Stage1 Catalog 10 approved Masters",
+      "V008 / 505 Registry",
+      "RC-018 V008 / 505 derived Excel manifest",
       "Execution Log",
       "Acceptance Matrix",
-      "Cloud Mode Day 3",
+      "Cloud Mode Day 5",
       "Dashboard",
-      "PR #3/#6 open-unmerged state"
+      "Open PR #3/#6 HOLD state",
+      "Local Sync Prep"
     ],
     "omission_audit_missing_items": [],
-    "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
+    "caution": "Local Mac has not yet been synchronized or artifact-reconciled. No next Master execution until local verification is complete."
   },
-  "next_action": "Select the next missing Stage 1 Master from the coverage matrix. Apply D-076: first present same-building real-object/site photo and/or measured/form drawing for Product Owner review; only after visual review and Spec lock may a new engineering T-task be created and Blender run. T-018 remains HOLD.",
+  "next_action": "When the Mac is available, execute LOCAL_SYNC_PREP_2026-09-20 Phase A+B read-only checks first. Do not pull/reset before inspection. After local sync verification PASS, re-read main and select the next missing Stage1 Master under D-076. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v098",
+    "visualization_version": "v099",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R158 / T-024 CLOSED / PR #11 MERGED / NEXT STAGE1 MASTER SELECTION / D-076 VISUAL GATE / T-018 HOLD"
+    "refresh_status": "CURRENT / R159 / DAILY CLOSE COMPLETE / CLOUD PRODUCTION CLOSED / LOCAL SYNC PENDING / T-024 CLOSED / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -303,31 +306,29 @@
   "component_registry_excel_sync_2026_09_19": {
     "rule_id": "RC-018",
     "decision_id": "D-065",
-    "status": "ACTIVE / SYNCED / INITIAL END-TO-END RUN PASS",
+    "status": "ACTIVE / SYNCED / V008 CURRENT",
     "canonical_current_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
-    "versioned_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.json",
+    "versioned_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json",
     "generator": "scripts/generate_wanfo_component_registry_excel.py",
     "generator_version": "1.0.1",
     "workflow": ".github/workflows/wanfo-component-registry-excel.yml",
-    "workflow_run_id": 35429316513,
+    "workflow_run_id": 35495608194,
     "workflow_result": "SUCCESS",
     "derived_current_excel": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.xlsx",
-    "derived_versioned_excel": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V007.xlsx",
+    "derived_versioned_excel": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.xlsx",
     "sync_manifest": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_EXCEL_SYNC_MANIFEST.json",
-    "registry_version": "V007",
-    "registry_record_count": 472,
-    "source_registry_commit": "b8febcefcc84b4d27b6e46077180ea5a7f6b5f36",
-    "source_json_sha256": "34a33a493f8a1e14b033475f0d9ee4d5bf12c547d7d37d97ddf3539f0bf5c700",
-    "current_excel_sha256": "b9cd37fb940f7d91e14b11a8aeaadafbac3c6e15a6ef07ae968b6b7afa1f017d",
-    "versioned_excel_sha256": "b9cd37fb940f7d91e14b11a8aeaadafbac3c6e15a6ef07ae968b6b7afa1f017d",
-    "derived_commit": "408be1829fd1b190e69eaf0e7543f4dd7f0b7f85",
+    "registry_version": "V008",
+    "registry_record_count": 505,
+    "source_registry_commit": "411778c2f80a0fd506e15381c06aac21433c394d",
+    "source_json_sha256": "32ca8de69b9f6b2878f591dccceb9beac76c7e712462f216a69d61949490233a",
+    "current_excel_sha256": "3c8832b13ba0348a5d561e64e50bc26978c3cfdeb014955322a3066e8222ddd5",
+    "versioned_excel_sha256": "3c8832b13ba0348a5d561e64e50bc26978c3cfdeb014955322a3066e8222ddd5",
     "canonical_truth": "JSON",
     "excel_role": "DERIVED_VIEW",
     "manual_excel_fact_edits": "PROHIBITED",
     "fail_closed": true,
     "t018_execution_impact": "NONE / T-018 remains HOLD",
-    "project_state_revision": "R126",
-    "dashboard_version": "v067"
+    "close_note": "2026-09-20 close corrected stale V007/472 project-state subrecord to current V008/505 manifest truth."
   },
   "p3_3_rebaseline_2026_09_19": {
     "status": "V002 LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT AUTHORIZED",
