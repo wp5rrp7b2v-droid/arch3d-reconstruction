@@ -1,0 +1,102 @@
+{
+  "version": "V001",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED",
+  "decision_id": "D-078",
+  "date": "2026-09-20",
+  "component_id": "CMP-FRAME-DINGFU-001",
+  "master_id": "CMP-FRAME-DINGFU-001_MASTER",
+  "master_version": "V001",
+  "source_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
+  "physical_instance_count": 8,
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "unit": "mm",
+  "canonical_section_mm": {
+    "width": 331.6,
+    "thickness": 200.9,
+    "classification": "DIRECT_MEASURED_FAMILY_MEAN"
+  },
+  "measured_section_samples_mm": [
+    {
+      "width": 346,
+      "thickness": 208
+    },
+    {
+      "width": 324,
+      "thickness": 199
+    },
+    {
+      "width": 335,
+      "thickness": 205
+    },
+    {
+      "width": 324,
+      "thickness": 174,
+      "note": "source table marks thickness with （含）"
+    },
+    {
+      "width": 330,
+      "thickness": 203
+    },
+    {
+      "width": 330,
+      "thickness": 195
+    },
+    {
+      "width": 336,
+      "thickness": 203
+    },
+    {
+      "width": 328,
+      "thickness": 193
+    }
+  ],
+  "sample_to_instance_mapping": "UNKNOWN",
+  "report_analysis": {
+    "converted_fen": {
+      "width": 21.7,
+      "thickness": 13.1
+    },
+    "rounded_fen": {
+      "width": 22,
+      "thickness": 13
+    },
+    "classification": "REPORT_INFERRED / METADATA_ONLY",
+    "geometry_use_count": 0
+  },
+  "historical_full_length_mm": null,
+  "canonical_reference_length_mm": 1000,
+  "reference_length_classification": "PROJECT_RULE / ENGINEERING_REFERENCE / NON_HISTORICAL_REFERENCE / CANONICAL_REFERENCE_ONLY",
+  "role_variants": [
+    "UPPER",
+    "LOWER"
+  ],
+  "role_geometry_policy": "SHARED_CANONICAL_BODY",
+  "interfaces": {
+    "OUTBOARD_END": {
+      "semantic": "进入山面柱头铺作",
+      "geometry": "DEFERRED_TO_STAGE2"
+    },
+    "INBOARD_END": {
+      "semantic": "骑栿栱 / 与榑交构区域",
+      "geometry": "DEFERRED_TO_STAGE2"
+    }
+  },
+  "groove_boundary": {
+    "status": "DIRECT_EXISTENCE / GEOMETRY_DEFERRED",
+    "exact_dimensions": null,
+    "exact_position": null,
+    "stage1_cut_geometry": false
+  },
+  "visual_reference_gate": {
+    "general_rule": "D-076",
+    "dingfu_waiver": "D-077",
+    "waiver_scope": "DINGFU_ONLY"
+  },
+  "hard_fails": [
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "SILENT_HISTORICIZATION",
+    "UNDECLARED_PARAMETRIC_COMPLETION",
+    "MASTER_WITHOUT_EVIDENCE_BINDING",
+    "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
+  ]
+}
