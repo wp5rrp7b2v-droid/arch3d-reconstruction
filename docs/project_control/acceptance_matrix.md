@@ -674,3 +674,16 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Next modeling Master：NOT YET SELECTED。
 - Local sync verification：PENDING / prepared。
 - T-018：HOLD。
+
+## 2026-09-20｜D-087 Registry Visibility
+
+- Status：**IMPLEMENTED / SYNC PASS**。
+- V008：505 records / 66 registered object types。
+- Stage1 Master scope：28 object types。
+- Approved Masters：10。
+- Pending Masters：18。
+- Completion：35.7%。
+- Approved-Master-bound rows：52。
+- Derived Excel Run：35508113993 = SUCCESS。
+- Authority boundary：Master Catalog controls approval/version/SHA/publication; V008 exposes linkage/progress only。
+- Next Master：NOT STARTED。
