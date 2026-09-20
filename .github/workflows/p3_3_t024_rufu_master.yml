@@ -64,7 +64,7 @@ jobs:
           "$BLENDER" --version | tee /tmp/blender-version.txt
           grep -Eq '^Blender 4\.5\.13( LTS)?$' /tmp/blender-version.txt
 
-      - name: Build canonical Master and review PNG
+      - name: Build canonical Master
         run: |
           mkdir -p "$ARTIFACT_DIR" "$REVIEW_DIR"
           "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --params "$PARAMS" --role UNASSIGNED --asset "$ARTIFACT_DIR/CMP-FRAME-RUFU-001_MASTER_V001.blend" --semantic "$ARTIFACT_DIR/canonical_semantic.json"
