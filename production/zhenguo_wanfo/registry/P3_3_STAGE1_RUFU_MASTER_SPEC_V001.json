@@ -1,0 +1,118 @@
+{
+  "version": "V001",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED",
+  "date": "2026-09-20",
+  "visual_gate": {
+    "rule": "D-076",
+    "status": "PASS / PRODUCT_OWNER DIRECTED PROCEED TO EVIDENCE REVIEW + SPEC",
+    "decision_id": "D-082"
+  },
+  "component_id": "CMP-FRAME-RUFU-001",
+  "master_id": "CMP-FRAME-RUFU-001_MASTER",
+  "physical_instance_count": 8,
+  "family": "DIAGONAL_FRAME_MEMBER",
+  "measurement": {
+    "table_row_count": 8,
+    "complete_sample_count": 6,
+    "unmeasured_row_count": 2,
+    "observed_samples_mm": [
+      {
+        "width": 331,
+        "thickness": 185
+      },
+      {
+        "width": 337,
+        "thickness": 186
+      },
+      {
+        "width": 323,
+        "thickness": 193
+      },
+      {
+        "width": 342,
+        "thickness": 185
+      },
+      {
+        "width": 325,
+        "thickness": 188
+      },
+      {
+        "width": 325,
+        "thickness": 186
+      }
+    ],
+    "family_mean_mm": {
+      "width": 330.5,
+      "thickness": 187.2
+    },
+    "classification": "DIRECT_MEASURED_FAMILY_MEAN",
+    "sample_to_instance_mapping": "UNKNOWN"
+  },
+  "report_analysis": {
+    "converted_fen": {
+      "width": 21.6,
+      "thickness": 12.2
+    },
+    "rounded_fen": {
+      "width": 22,
+      "thickness": 12
+    },
+    "classification": "REPORT_INFERRED / METADATA_ONLY",
+    "geometry_use_count": 0
+  },
+  "historical_full_length_mm": null,
+  "canonical_reference_length_mm": 1000,
+  "exact_plan_angle_deg": null,
+  "canonical_reference_policy": "PROJECT_RULE / ENGINEERING_REFERENCE / NON_HISTORICAL_REFERENCE / CANONICAL_REFERENCE_ONLY",
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "proposed_body_mm": {
+    "length": 1000,
+    "width": 330.5,
+    "thickness": 187.2
+  },
+  "role_variants": {
+    "vertical": [
+      "UPPER",
+      "LOWER"
+    ],
+    "corner": [
+      "NE",
+      "SE",
+      "SW",
+      "NW"
+    ],
+    "geometry_policy": "ASSEMBLY_OR_PLACEMENT_ROLE_ONLY / SHARED_CANONICAL_BODY"
+  },
+  "assembly_semantics": {
+    "bracket_end": "与斗栱交接",
+    "opposite_end": "UNKNOWN / ASSEMBLY_ENDPOINT_TO_BE_RESOLVED",
+    "dingfu_rufu_spacing": "一材一栔",
+    "pad_member": "垫单材栿一层",
+    "placement_policy": "derive orientation and length from explicit assembly endpoints; no baked 45 degrees"
+  },
+  "groove_boundary": {
+    "status": "DIRECT_EXISTENCE / GEOMETRY_DEFERRED",
+    "exact_dimensions": null,
+    "exact_position": null,
+    "stage1_cut_geometry": false
+  },
+  "visual_reference": {
+    "source_id": "SRC-ZG-WF-001",
+    "locator": "PDF p84 / printed p69 / Fig.2-42",
+    "caption": "万佛殿斜乳栿与斗栱交接关系",
+    "classification": "SAME_BUILDING_DIRECT_PHOTO"
+  },
+  "hard_fails": [
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "SILENT_HISTORICIZATION",
+    "SILENT_45_DEGREE_ASSUMPTION",
+    "UNDECLARED_PARAMETRIC_COMPLETION",
+    "MASTER_WITHOUT_EVIDENCE_BINDING",
+    "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
+  ],
+  "engineering_execution_authorized": false,
+  "decision_id": "D-083",
+  "master_version": "V001",
+  "task_contract_authorized": true,
+  "next_task_id": "T-024"
+}
