@@ -583,3 +583,19 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Publication boundary：formal materialization + Stage1 Catalog correction/registration + final cross-check pending；PR #9 merge not yet authorized。
 - Boundary：P3.3 Stage 1 remains ACTIVE / not passed；Stage 2 not authorized；T-018 HOLD。
 
+
+## 2026-09-20｜T-022 Formal Delivery / Pre-Merge Boundary
+
+- T-022 first article：**PRODUCT OWNER APPROVED / D-074**。
+- Formal delivery materialization：**PASS**。
+- Publication workflow Run：`35486003264` = SUCCESS。
+- Formal delivery commit：`1f2c22f7dcc1034fca4ddb7f28bc6d23af31ed7e`。
+- Stage1 Catalog：
+  - T-021 = PRODUCT_OWNER_APPROVED / D-072 / publication CLOSED；
+  - T-022 = PRODUCT_OWNER_APPROVED / D-074 / formal delivery materialized / PR merge pending。
+- Formal T-022 delivery includes 2 semantic JSON + 1 validation JSON + engineering review + 10 review PNG + approval records。
+- Binary Masters remain Actions artifact only；no T-022 .blend in Git delivery。
+- Pre-merge requirement：final branch cross-check + latest applicable T-022 validation status review。
+- PR #9：**DO NOT MERGE until separate Product Owner authorization**。
+- P3.3 Stage 1：ACTIVE / NOT PASSED。
+- T-018：HOLD。
