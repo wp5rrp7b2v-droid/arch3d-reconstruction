@@ -191,7 +191,9 @@
       "section_mm": "实测组A 390×280；实测组B 401×281；均值广395.5；厚280.5",
       "width_mm": 395.5,
       "thickness_mm": 280.5,
-      "note": "表2-40未将390×280与401×281逐一对应到东缝/西缝，禁止静默映射；报告归整为广26分、厚18分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。"
+      "note": "表2-40未将390×280与401×281逐一对应到东缝/西缝，禁止静默映射；报告归整为广26分、厚18分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。",
+      "length_rule": "整殿实例长度由后续装配端点显式推导；Master reference length不得进入整殿实例",
+      "modeling_disposition": "DIRECT_MEASURED_SECTION / BUILDABLE"
     },
     {
       "system": "主体木构",
@@ -204,7 +206,9 @@
       "section_mm": "实测组A 390×280；实测组B 401×281；均值广395.5；厚280.5",
       "width_mm": 395.5,
       "thickness_mm": 280.5,
-      "note": "表2-40未将390×280与401×281逐一对应到东缝/西缝，禁止静默映射；报告归整为广26分、厚18分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。"
+      "note": "表2-40未将390×280与401×281逐一对应到东缝/西缝，禁止静默映射；报告归整为广26分、厚18分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。",
+      "length_rule": "整殿实例长度由后续装配端点显式推导；Master reference length不得进入整殿实例",
+      "modeling_disposition": "DIRECT_MEASURED_SECTION / BUILDABLE"
     },
     {
       "system": "主体木构",
@@ -217,7 +221,24 @@
       "section_mm": "广346；厚未及（UNKNOWN）",
       "width_mm": 346,
       "thickness_mm": null,
-      "note": "表2-40仅记录山面平梁广346mm，厚度未及/UNKNOWN；不得借用东西缝型280.5mm厚度。报告将广归整为23分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。"
+      "note": "表2-40仅记录山面平梁广346mm，实测厚度未及/UNKNOWN；历史事实字段不得借用东西缝型280.5mm。为完整建模，另以同构件族东西缝实测均值截面比例显式补全 thickness=245.4mm，分类为PARAMETRIC_COMPLETION、可替换、非历史声明。报告将广归整为23分，仅作REPORT_INFERRED尺度分析。图2-41示平梁与斗栱交接关系。",
+      "length_rule": "整殿实例长度由后续装配端点显式推导；Master reference length不得进入整殿实例",
+      "modeling_disposition": "PARAMETRIC_COMPLETION / BUILDABLE / REPLACEABLE",
+      "parametric_completion": {
+        "field": "thickness_mm",
+        "classification": "PARAMETRIC_COMPLETION",
+        "method": "preserve_east_west_seam_mean_section_aspect_ratio",
+        "formula": "346 * 280.5 / 395.5",
+        "production_value_mm": 245.4,
+        "source_inputs_mm": {
+          "gable_width_observed": 346,
+          "east_west_mean_width_observed": 395.5,
+          "east_west_mean_thickness_observed": 280.5
+        },
+        "replaceable": true,
+        "historical_claim": false,
+        "note": "仅用于完整建模；不是报告实测厚度，也不是963年历史设计值。若后续取得山面平梁厚度直接证据，替换本值。"
+      }
     },
     {
       "system": "主体木构",
@@ -230,7 +251,24 @@
       "section_mm": "广346；厚未及（UNKNOWN）",
       "width_mm": 346,
       "thickness_mm": null,
-      "note": "表2-40仅记录山面平梁广346mm，厚度未及/UNKNOWN；不得借用东西缝型280.5mm厚度。报告将广归整为23分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。"
+      "note": "表2-40仅记录山面平梁广346mm，实测厚度未及/UNKNOWN；历史事实字段不得借用东西缝型280.5mm。为完整建模，另以同构件族东西缝实测均值截面比例显式补全 thickness=245.4mm，分类为PARAMETRIC_COMPLETION、可替换、非历史声明。报告将广归整为23分，仅作REPORT_INFERRED尺度分析。图2-41示平梁与斗栱交接关系。",
+      "length_rule": "整殿实例长度由后续装配端点显式推导；Master reference length不得进入整殿实例",
+      "modeling_disposition": "PARAMETRIC_COMPLETION / BUILDABLE / REPLACEABLE",
+      "parametric_completion": {
+        "field": "thickness_mm",
+        "classification": "PARAMETRIC_COMPLETION",
+        "method": "preserve_east_west_seam_mean_section_aspect_ratio",
+        "formula": "346 * 280.5 / 395.5",
+        "production_value_mm": 245.4,
+        "source_inputs_mm": {
+          "gable_width_observed": 346,
+          "east_west_mean_width_observed": 395.5,
+          "east_west_mean_thickness_observed": 280.5
+        },
+        "replaceable": true,
+        "historical_claim": false,
+        "note": "仅用于完整建模；不是报告实测厚度，也不是963年历史设计值。若后续取得山面平梁厚度直接证据，替换本值。"
+      }
     },
     {
       "system": "主体木构",
