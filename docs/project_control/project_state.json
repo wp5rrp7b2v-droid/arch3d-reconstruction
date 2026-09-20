@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R149",
+  "state_revision": "R150",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-023 CLOSED + PR #10 MERGED / NEXT 乳栿 / V008 CURRENT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 乳栿 PRE-MODEL VISUAL REFERENCE REVIEW ACTIVE / D-076 VISUAL GATE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -60,17 +60,22 @@
     "active_window_note": "2026-09-19 DAILY CLOSE COMPLETE. T-021 is approved and merged to main; Stage 1 remains ACTIVE and not passed; next work item is 平梁 Master evidence review/spec design; T-018 remains HOLD; T-020/RZ/FV remain deferred to Stage 5 re-review."
   },
   "current_task": {
-    "id": "NONE",
-    "status": "T-023 CLOSED / PR #10 MERGED / STAGE1 READY FOR NEXT MASTER"
+    "id": "STAGE1_RUFU_PREMODEL_REVIEW",
+    "status": "PLANNING / VISUAL REFERENCE GATE ACTIVE / NO T-TASK YET",
+    "component": "乳栿",
+    "engineering_execution_authorized": false,
+    "visual_reference_rule": "D-076 ACTIVE",
+    "blocker": "BLOCKED_ON_VISUAL_REFERENCE_REVIEW until Product Owner approves the 乳栿 visual/form reference set",
+    "t018_impact": "NONE / remains HOLD"
   },
   "proposed_next_task": {
-    "id": "STAGE1_NEXT_MASTER",
-    "name": "乳栿 Master visual reference review + evidence review + specification design",
-    "status": "NEXT / PLANNING AUTHORIZED / ENGINEERING EXECUTION NOT YET AUTHORIZED",
+    "id": "STAGE1_RUFU_MASTER",
+    "name": "乳栿 Master evidence review + specification design",
+    "status": "WAITING FOR PRODUCT OWNER VISUAL/FORM REVIEW",
     "component": "乳栿",
     "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "authorization_basis": "P3.3 V002 Stage 1 priority order / D-066 / D-076 visual gate"
+    "authorization_basis": "P3.3 V002 + D-076"
   },
   "last_completed_task": {
     "id": "T-023",
@@ -237,13 +242,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Continue P3.3 Stage 1 with 乳栿. Apply D-076: first present same-building real-object/site photo and/or measured/form drawing for Product Owner review; then perform evidence review and Master Spec design. Do not create a new engineering T-task or run Blender before visual/form review and Spec lock. T-018 remains HOLD.",
+  "next_action": "Review same-building 乳栿 visual/form reference first. Current direct source available: SRC-ZG-WF-001 PDF p84 / printed p69 / Fig.2-42 万佛殿斜乳栿与斗栱交接关系; p83 / printed p68 / Table2-40 provides section measurements. If Product Owner approves the visual reference, proceed to evidence review and Master Spec design. No new T-task or Blender before approval/spec lock. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v089",
+    "visualization_version": "v090",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R149 / T-023 CLOSED / PR #10 MERGED / NEXT 乳栿 / D-076 VISUAL GATE / T-018 HOLD"
+    "refresh_status": "CURRENT / R150 / 乳栿 VISUAL REFERENCE REVIEW ACTIVE / D-076 GATE / V008 CURRENT / T-018 HOLD"
   },
   "superseded_prs": [
     {
