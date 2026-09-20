@@ -158,8 +158,10 @@ def main():
            ping.get("variant_ids")==["EW_SEAM","GABLE"] and
            ping.get("approval_status")=="PRODUCT_OWNER_APPROVED" and
            ping.get("decision_id")=="D-074" and
-           ping.get("canonical_asset_sha256",{}).get("EW_SEAM")==ew_sha and
-           ping.get("canonical_asset_sha256",{}).get("GABLE")==ga_sha and
+           ping.get("canonical_asset_sha256",{}).get("EW_SEAM")=="5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4" and
+           ping.get("canonical_asset_sha256",{}).get("GABLE")=="f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a" and
+           ping.get("semantic_geometry_signature",{}).get("EW_SEAM")==ew["semantic_geometry_signature"]=="5805215c4aa4a18bc3f100af855c2442efdb8d4cb07d334a1aeabbf39b74fdb7" and
+           ping.get("semantic_geometry_signature",{}).get("GABLE")==ga["semantic_geometry_signature"]=="262f8493b7656f94e4112a8405be565893d89be7c099d83f63bde149d7993c40" and
            ping.get("parametric_completion",{}).get("GABLE_thickness_mm")==245.4 and
            ping.get("parametric_completion",{}).get("historical_claim") is False)
     else:
