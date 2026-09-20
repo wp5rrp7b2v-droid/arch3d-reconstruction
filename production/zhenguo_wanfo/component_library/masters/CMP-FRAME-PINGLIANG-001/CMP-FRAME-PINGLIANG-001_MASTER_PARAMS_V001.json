@@ -1,0 +1,209 @@
+{
+  "task": "T-022",
+  "component_id": "CMP-FRAME-PINGLIANG-001",
+  "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+  "master_version": "V001",
+  "canonical_name_zh": "平梁",
+  "unit": "mm",
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "geometry_semantics": "EVIDENCE_BOUNDED / PARAMETRIC_COMPLETION_EXPLICIT / REPLACEABLE",
+  "origin_convention": "longitudinal_midpoint_transverse_center_lower_reference_plane",
+  "coordinate_convention": {
+    "+X": "member_longitudinal",
+    "+Y": "section_width",
+    "+Z": "vertical_thickness",
+    "handedness": "right_handed"
+  },
+  "canonical_transform": {
+    "location": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "source_binding": {
+    "source_id": "SRC-ZG-WF-001",
+    "pdf_page": 83,
+    "printed_page": 68,
+    "section": "2.3.1.3",
+    "table": "2-40",
+    "figure": "2-41"
+  },
+  "physical_instances": [
+    "平梁-东缝",
+    "平梁-西缝",
+    "平梁-东山",
+    "平梁-西山"
+  ],
+  "historical_state": {
+    "historical_claim": false,
+    "historical_full_length_mm": null,
+    "reconstructed_963_candidate": "not_inferred",
+    "report_ideal_model": "separate_not_inferred"
+  },
+  "parameters": [
+    {
+      "key": "historical_full_length_mm",
+      "value": null,
+      "unit": "mm",
+      "classification": "UNKNOWN",
+      "source_layer": "EVIDENCE_GAP",
+      "production_use": "DO_NOT_LOCK",
+      "replaceable": true,
+      "historical_claim": false
+    },
+    {
+      "key": "canonical_reference_length_mm",
+      "value": 1000,
+      "unit": "mm",
+      "classification": "PROJECT_RULE",
+      "source_layer": "ENGINEERING_REFERENCE",
+      "production_use": "CANONICAL_REFERENCE_ONLY",
+      "replaceable": true,
+      "historical_claim": false
+    },
+    {
+      "key": "realization_length_mm",
+      "value": 1000,
+      "unit": "mm",
+      "classification": "PROJECT_RULE",
+      "source_layer": "ENGINEERING_EXECUTION",
+      "production_use": "GEOMETRY_EXECUTION_VALUE",
+      "replaceable": true,
+      "historical_claim": false,
+      "derives_from": "canonical_reference_length_mm"
+    }
+  ],
+  "default_variant_id": "EW_SEAM",
+  "variants": [
+    {
+      "variant_id": "EW_SEAM",
+      "stable_variant_id": "CMP-FRAME-PINGLIANG-001__EW_SEAM",
+      "instance_ids": [
+        "平梁-东缝",
+        "平梁-西缝"
+      ],
+      "sample_to_instance_mapping": "UNKNOWN",
+      "observed_section_samples_mm": [
+        {
+          "width": 390,
+          "thickness": 280
+        },
+        {
+          "width": 401,
+          "thickness": 281
+        }
+      ],
+      "production_section_mm": {
+        "width": 395.5,
+        "thickness": 280.5
+      },
+      "width_semantics": {
+        "classification": "CONFIRMED_FAMILY_MEAN",
+        "source_layer": "DIRECT_PRIMARY",
+        "historical_claim": false,
+        "replaceable": false
+      },
+      "thickness_semantics": {
+        "classification": "CONFIRMED_FAMILY_MEAN",
+        "source_layer": "DIRECT_PRIMARY",
+        "historical_claim": false,
+        "replaceable": false
+      },
+      "report_design_analysis": {
+        "width_fen_rounded": 26,
+        "thickness_fen_rounded": 18,
+        "classification": "REPORT_INFERRED",
+        "geometry_use_count": 0
+      }
+    },
+    {
+      "variant_id": "GABLE",
+      "stable_variant_id": "CMP-FRAME-PINGLIANG-001__GABLE",
+      "instance_ids": [
+        "平梁-东山",
+        "平梁-西山"
+      ],
+      "sample_to_instance_mapping": "UNKNOWN",
+      "observed_section_samples_mm": [
+        {
+          "width": 346,
+          "thickness": null
+        }
+      ],
+      "observed_section_mm": {
+        "width": 346,
+        "thickness": null
+      },
+      "production_section_mm": {
+        "width": 346,
+        "thickness": 245.4
+      },
+      "width_semantics": {
+        "classification": "PARAMETRIC_COMPLETION",
+        "method": "generalize_single_observed_gable_sample_to_both_gable_instances",
+        "source_observed_sample_mm": 346,
+        "replaceable": true,
+        "historical_claim": false
+      },
+      "thickness_semantics": {
+        "classification": "PARAMETRIC_COMPLETION",
+        "method": "preserve_east_west_seam_mean_section_aspect_ratio",
+        "formula": "346 * 280.5 / 395.5",
+        "source_inputs_mm": {
+          "gable_width_observed": 346,
+          "east_west_mean_width_observed": 395.5,
+          "east_west_mean_thickness_observed": 280.5
+        },
+        "replaceable": true,
+        "historical_claim": false
+      },
+      "report_design_analysis": {
+        "width_fen_rounded": 23,
+        "thickness_fen_rounded": null,
+        "classification": "REPORT_INFERRED",
+        "geometry_use_count": 0
+      }
+    }
+  ],
+  "assembly_length_rule": {
+    "default_to_canonical_reference_allowed": false,
+    "hard_fail_id": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "historical_full_length_remains_null": true,
+    "requires_explicit_building_specific_derived_length": true
+  },
+  "variant_contract": {
+    "stable_variant_id_required": true,
+    "parent_component_id": "CMP-FRAME-PINGLIANG-001",
+    "manual_object_scale_for_variant": false,
+    "placement_only_does_not_create_variant": true,
+    "parametric_completion_must_remain_explicit": true
+  },
+  "interface_contract": {
+    "geometry_endpoints": [
+      "END_NEG_X",
+      "END_POS_X"
+    ],
+    "semantic_only": []
+  },
+  "unsupported_geometry": [],
+  "p2_primary_frame_proxy_geometry_use_count": 0,
+  "known_unknowns": [
+    "Historical full length UNKNOWN / null",
+    "EW raw samples are not mapped to east/west seam instances",
+    "Gable observed sample is not mapped to east/west gable instance",
+    "Gable observed thickness UNKNOWN / null",
+    "End profiles, joinery, grooves, camber, local section changes and hidden connections not evidenced"
+  ]
+}
