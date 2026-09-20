@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R150",
+  "state_revision": "R151",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 乳栿 PRE-MODEL VISUAL REFERENCE REVIEW ACTIVE / D-076 VISUAL GATE / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 乳栿 EVIDENCE REVIEW COMPLETE ENOUGH FOR SPEC V0.1 / PRODUCT OWNER REVIEW REQUIRED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -60,22 +60,24 @@
     "active_window_note": "2026-09-19 DAILY CLOSE COMPLETE. T-021 is approved and merged to main; Stage 1 remains ACTIVE and not passed; next work item is 平梁 Master evidence review/spec design; T-018 remains HOLD; T-020/RZ/FV remain deferred to Stage 5 re-review."
   },
   "current_task": {
-    "id": "STAGE1_RUFU_PREMODEL_REVIEW",
-    "status": "PLANNING / VISUAL REFERENCE GATE ACTIVE / NO T-TASK YET",
+    "id": "STAGE1_RUFU_MASTER_SPEC",
+    "status": "PLANNING / SPEC V0.1 DRAFT / PRODUCT OWNER REVIEW REQUIRED / NO T-TASK YET",
     "component": "乳栿",
+    "proposed_master": "CMP-FRAME-RUFU-001_MASTER",
     "engineering_execution_authorized": false,
-    "visual_reference_rule": "D-076 ACTIVE",
-    "blocker": "BLOCKED_ON_VISUAL_REFERENCE_REVIEW until Product Owner approves the 乳栿 visual/form reference set",
+    "visual_reference_rule": "D-076 PASS FOR RUFU / D-082",
+    "spec_doc": "docs/production/zhenguo_wanfo/P3_3_STAGE1_RUFU_MASTER_SPEC_V0_1.md",
+    "spec_json": "production/zhenguo_wanfo/registry/P3_3_STAGE1_RUFU_MASTER_SPEC_V0_1.json",
     "t018_impact": "NONE / remains HOLD"
   },
   "proposed_next_task": {
-    "id": "STAGE1_RUFU_MASTER",
-    "name": "乳栿 Master evidence review + specification design",
-    "status": "WAITING FOR PRODUCT OWNER VISUAL/FORM REVIEW",
+    "id": "STAGE1_RUFU_MASTER_SPEC_LOCK",
+    "name": "乳栿 Master Spec V0.1 review + lock",
+    "status": "WAITING FOR PRODUCT OWNER APPROVAL",
     "component": "乳栿",
     "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "authorization_basis": "P3.3 V002 + D-076"
+    "authorization_basis": "D-082"
   },
   "last_completed_task": {
     "id": "T-023",
@@ -201,9 +203,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-081",
+    "id": "D-082",
     "date": "2026-09-20",
-    "decision": "Product Owner authorized merge of PR #10 after final pre-merge cross-check PASS. PR #10 merged to main at d6f85cd2dc9adf8080ef2a0347449b12ef94c646. T-023 publication is closed. Stage 1 remains active; next target is 乳栿 and D-076 visual-reference review applies before modeling. T-018 remains HOLD."
+    "decision": "Product Owner passed the D-076 visual-reference gate for 乳栿 by directing continuation into evidence review + Master Spec V0.1. Evidence review and V008 enrichment are complete enough for draft Spec review. No engineering T-task or Blender execution is authorized until Product Owner locks the Spec."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -242,13 +244,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Review same-building 乳栿 visual/form reference first. Current direct source available: SRC-ZG-WF-001 PDF p84 / printed p69 / Fig.2-42 万佛殿斜乳栿与斗栱交接关系; p83 / printed p68 / Table2-40 provides section measurements. If Product Owner approves the visual reference, proceed to evidence review and Master Spec design. No new T-task or Blender before approval/spec lock. T-018 remains HOLD.",
+  "next_action": "Product Owner review 乳栿 Master Spec V0.1. If approved, lock as V001 and only then create the next engineering T-task for 乳栿 first article. No Blender before Spec lock. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v090",
+    "visualization_version": "v091",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R150 / 乳栿 VISUAL REFERENCE REVIEW ACTIVE / D-076 GATE / V008 CURRENT / T-018 HOLD"
+    "refresh_status": "CURRENT / R151 / 乳栿 SPEC V0.1 REVIEW / D-082 VISUAL GATE PASS / V008 CURRENT / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -551,6 +553,39 @@
         "merge_commit_sha": "d6f85cd2dc9adf8080ef2a0347449b12ef94c646",
         "final_head_actions_run": 35494632342
       }
+    },
+    "rufu_master_spec": {
+      "status": "DRAFT V0.1 / PRODUCT OWNER REVIEW REQUIRED",
+      "visual_gate": "PASS / D-082",
+      "component_id": "CMP-FRAME-RUFU-001",
+      "master_id": "CMP-FRAME-RUFU-001_MASTER",
+      "spec_doc": "docs/production/zhenguo_wanfo/P3_3_STAGE1_RUFU_MASTER_SPEC_V0_1.md",
+      "spec_json": "production/zhenguo_wanfo/registry/P3_3_STAGE1_RUFU_MASTER_SPEC_V0_1.json",
+      "physical_instance_count": 8,
+      "complete_measured_sample_count": 6,
+      "unmeasured_table_row_count": 2,
+      "canonical_section_mm": {
+        "width": 330.5,
+        "thickness": 187.2
+      },
+      "sample_to_instance_mapping": "UNKNOWN",
+      "historical_full_length_mm": null,
+      "exact_plan_angle_deg": null,
+      "proposed_canonical_reference_length_mm": 1000,
+      "groove": "DIRECT_EXISTENCE / GEOMETRY_DEFERRED",
+      "role_variants": {
+        "vertical": [
+          "UPPER",
+          "LOWER"
+        ],
+        "corner": [
+          "NE",
+          "SE",
+          "SW",
+          "NW"
+        ]
+      },
+      "engineering_execution_authorized": false
     }
   },
   "end_of_day_2026_09_19": {
