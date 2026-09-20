@@ -79,8 +79,10 @@ jobs:
           assert hashlib.sha256(versioned.read_bytes()).hexdigest() == manifest["versioned_excel_sha256"]
 
           wb = load_workbook(current, read_only=True, data_only=False)
-          assert set(wb.sheetnames) == {"实例登记", "统计摘要", "版本与来源", "使用规则"}
+          assert set(wb.sheetnames) == {"进度总览", "实例登记", "统计摘要", "版本与来源", "使用规则"}
           assert wb["实例登记"].max_row - 1 == manifest["record_count"]
+          assert wb["进度总览"]["B4"].value == manifest["record_count"]
+          assert wb["进度总览"]["B7"].value == 10
           wb.close()
           print("VALIDATION_PASS", manifest["registry_version"], manifest["record_count"])
           PY
