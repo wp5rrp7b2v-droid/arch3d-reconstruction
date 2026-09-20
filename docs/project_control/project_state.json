@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R154",
+  "state_revision": "R155",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-024 RUFU ENGINEERING EXECUTION ACTIVE / PR #11 OPEN / ACTIONS RUN 35496581278 / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-024 ENGINEERING COMPLETE / CHATGPT FIRST-ARTICLE REVIEW PASS / PRODUCT OWNER APPROVAL REQUIRED / PR #11 OPEN / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -62,25 +62,34 @@
   "current_task": {
     "id": "T-024",
     "engineering_id": "P3_3_RUFU_MASTER_FIRST_ARTICLE_V001",
-    "status": "ACTIVE / ENGINEERING EXECUTION IN PROGRESS / PR #11 OPEN / ACTIONS RUN 35496581278",
+    "status": "ENGINEERING COMPLETE / CHATGPT REVIEW PASS / PRODUCT OWNER APPROVAL REQUIRED",
     "component": "乳栿",
     "target_master": "CMP-FRAME-RUFU-001_MASTER",
     "branch": "codex/t024-p3-3-rufu-master-first-article-v001",
-    "task_contract": "docs/tasks/T-024_P3_3_RUFU_MASTER_FIRST_ARTICLE_V001.md",
-    "engineering_execution_authorized": true,
-    "visual_reference_rule": "D-076 PASSED FOR RUFU / D-082",
-    "t018_impact": "NONE / remains HOLD",
-    "authorization_decision": "D-084",
     "github_pr_number": 11,
-    "github_actions_run_id": 35496581278
+    "reviewed_head_sha": "b96cc4ce6d3995684d20c46bd0a8f9c71329481d",
+    "actions_run_id": 35496581278,
+    "actions_result": "SUCCESS",
+    "validation": "43/43 PASS",
+    "validation_note": "The monitoring summary stated 44/44; the canonical validation JSON and engineering review record 43/43 executed checks. Check 44 is conditional on a pre-existing Rufu catalog entry and was not executed on this first article.",
+    "review_png": "6/6 PASS / visually reviewed",
+    "artifact_id": 10601690312,
+    "artifact_size_bytes": 4370046,
+    "artifact_zip_sha256": "d686825b86c3e1186682ba7b62861e18cea772242f5069f1ad6f0136f0e6f2a6",
+    "canonical_blend_sha256": "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208",
+    "semantic_geometry_signature": "8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571",
+    "engineering_review": "PASS / NO REVIEW PATCH REQUIRED",
+    "merge_authorized": false,
+    "branch_sync_status": "PR branch currently behind main by 2 commits; reconcile main before final pre-merge cross-check after Product Owner approval",
+    "t018_impact": "NONE / remains HOLD"
   },
   "proposed_next_task": {
-    "id": "T-024_EXECUTION",
-    "name": "乳栿 Master First Article engineering execution",
-    "status": "AUTHORIZED / IN PROGRESS",
+    "id": "T-024_PRODUCT_OWNER_REVIEW",
+    "name": "乳栿 Master First Article Product Owner approval",
+    "status": "DECISION REQUIRED",
     "component": "乳栿",
     "engineering_execution_authorized": true,
-    "authorization_basis": "D-084"
+    "merge_authorized": false
   },
   "last_completed_task": {
     "id": "T-023",
@@ -247,13 +256,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Wait for T-024 Actions Run 35496581278 to complete. If PASS, perform ChatGPT engineering/review-image audit and stop for Product Owner first-article approval. Do not merge PR #11. T-018 remains HOLD.",
+  "next_action": "Product Owner decides whether to approve T-024 first article. If approved, materialize formal delivery + Stage1 Catalog registration, reconcile latest main into PR #11 branch, run final regression/cross-check, then request separate merge authorization. Do not merge PR #11 yet. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v094",
+    "visualization_version": "v095",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R154 / T-024 ACTIVE / PR #11 OPEN / ACTIONS RUN 35496581278 / T-018 HOLD"
+    "refresh_status": "CURRENT / R155 / T-024 CHATGPT REVIEW PASS / PRODUCT OWNER APPROVAL REQUIRED / PR #11 OPEN / T-018 HOLD"
   },
   "superseded_prs": [
     {
