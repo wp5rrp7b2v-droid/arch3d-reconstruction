@@ -74,7 +74,15 @@ def main():
     ck("43_catalog_rufu_unique_or_absent",len(existing)<=1)
     if existing:
         ru=existing[0]
-        ck("44_catalog_rufu_existing_identity",ru.get("master_id")==p["master_id"])
+        ck("44_catalog_rufu_approved_state_valid",
+           ru.get("master_id")==p["master_id"] and
+           ru.get("role_variants")==["UPPER","LOWER","NE","SE","SW","NW"] and
+           ru.get("approval_status")=="PRODUCT_OWNER_APPROVED" and
+           ru.get("decision_id")=="D-085" and
+           ru.get("canonical_asset_sha256")=="0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208" and
+           ru.get("semantic_geometry_signature")==c["semantic_geometry_signature"]=="8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571" and
+           ru.get("exact_plan_angle_deg") is None and
+           ru.get("groove_boundary")=="DIRECT_EXISTENCE / GEOMETRY_DEFERRED")
     else:
         records.append({"component_id":p["component_id"],"master_id":p["master_id"],"master_version":"V001",
                         "role_variants":["UPPER","LOWER","NE","SE","SW","NW"],
