@@ -1,0 +1,146 @@
+name: T-024 Approved Formal Delivery Publication
+
+on:
+  push:
+    branches:
+      - codex/t024-p3-3-rufu-master-first-article-v001
+    paths:
+      - '.github/workflows/p3_3_t024_publication.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  publish-approved-delivery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SOURCE_RUN_ID: '35496581278'
+      SOURCE_ARTIFACT: P3_3_T024_RUFU_FIRST_ARTICLE_V001
+      MASTER_ROOT: production/zhenguo_wanfo/component_library/masters/CMP-FRAME-RUFU-001
+      REVIEW_ROOT: production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-RUFU-001
+      VALIDATION_ROOT: production/zhenguo_wanfo/validation
+      CATALOG: production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/t024-p3-3-rufu-master-first-article-v001
+          fetch-depth: 0
+
+      - name: Download approved T-024 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.SOURCE_ARTIFACT }}
+          path: /tmp/t024-approved
+          repository: ${{ github.repository }}
+          run-id: ${{ env.SOURCE_RUN_ID }}
+          github-token: ${{ github.token }}
+
+      - name: Verify approved artifact identity
+        run: |
+          set -euo pipefail
+          cd /tmp/t024-approved
+          sha256sum -c artifacts/t024/SHA256SUMS.txt
+          test "$(sha256sum artifacts/t024/CMP-FRAME-RUFU-001_MASTER_V001.blend | awk '{print $1}')" = "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208"
+          python - <<'PY'
+          import json
+          p="/tmp/t024-approved/artifacts/t024/CMP-FRAME-RUFU-001_MASTER_VALIDATION_V001.json"
+          d=json.load(open(p,encoding="utf-8"))
+          assert d["status"]=="PASS"
+          assert d["check_count"]==43
+          assert all(v=="PASS" for v in d["checks"].values())
+          assert d["canonical_blend_sha256"]=="0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208"
+          assert d["semantic_geometry_signature"]=="8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571"
+          assert d["exact_plan_angle_deg"] is None
+          print("T024_APPROVED_ARTIFACT_IDENTITY_PASS")
+          PY
+
+      - name: Materialize approved formal delivery
+        run: |
+          set -euo pipefail
+          mkdir -p "$MASTER_ROOT" "$REVIEW_ROOT" "$VALIDATION_ROOT"
+          cp /tmp/t024-approved/artifacts/t024/canonical_semantic.json             "$MASTER_ROOT/CMP-FRAME-RUFU-001_MASTER_SEMANTIC_V001.json"
+          cp /tmp/t024-approved/artifacts/t024/CMP-FRAME-RUFU-001_MASTER_VALIDATION_V001.json             "$VALIDATION_ROOT/CMP-FRAME-RUFU-001_MASTER_VALIDATION_V001.json"
+          cp /tmp/t024-approved/artifacts/t024/P3_3_T024_RUFU_ENGINEERING_REVIEW_V001.md             docs/production/zhenguo_wanfo/P3_3_T024_RUFU_ENGINEERING_REVIEW_V001.md
+          cp /tmp/t024-approved/production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-RUFU-001/*.png             "$REVIEW_ROOT/"
+
+      - name: Register approved Rufu in Stage1 Catalog
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json")
+          d=json.loads(p.read_text(encoding="utf-8"))
+          d["task"]="T-024"
+          d["status"]="TEN_APPROVED / T021+T022+T023+T024 PRODUCT_OWNER_APPROVED"
+          d["approved_master_count"]=10
+          records=d.setdefault("new_masters",[])
+          ru=next((x for x in records if x.get("component_id")=="CMP-FRAME-RUFU-001"),None)
+          if ru is None:
+              ru={}
+              records.append(ru)
+          ru.clear()
+          ru.update({
+              "component_id":"CMP-FRAME-RUFU-001",
+              "master_id":"CMP-FRAME-RUFU-001_MASTER",
+              "master_version":"V001",
+              "role_variants":["UPPER","LOWER","NE","SE","SW","NW"],
+              "approval_status":"PRODUCT_OWNER_APPROVED",
+              "decision_id":"D-085",
+              "publication_status":"FORMAL_DELIVERY_MATERIALIZED / PR_MERGE_PENDING",
+              "canonical_asset_status":"ACTIONS_ARTIFACT / APPROVED",
+              "canonical_asset_sha256":"0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208",
+              "semantic_geometry_signature":"8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571",
+              "canonical_section_mm":{"width":330.5,"thickness":187.2},
+              "historical_full_length_mm":None,
+              "canonical_reference_length_mm":1000.0,
+              "exact_plan_angle_deg":None,
+              "groove_boundary":"DIRECT_EXISTENCE / GEOMETRY_DEFERRED",
+              "formal_delivery":{
+                  "validation":"production/zhenguo_wanfo/validation/CMP-FRAME-RUFU-001_MASTER_VALIDATION_V001.json",
+                  "engineering_review":"docs/production/zhenguo_wanfo/P3_3_T024_RUFU_ENGINEERING_REVIEW_V001.md",
+                  "product_owner_acceptance":"docs/production/zhenguo_wanfo/P3_3_T024_RUFU_PRODUCT_OWNER_ACCEPTANCE_V001.md",
+                  "review_png_count":6
+              }
+          })
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          print("T024_CATALOG_REGISTRATION_PASS")
+          PY
+
+      - name: Formal delivery self-check
+        run: |
+          set -euo pipefail
+          test "$(find "$REVIEW_ROOT" -maxdepth 1 -name '*.png' | wc -l)" -eq 6
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          cat=json.loads(Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json").read_text())
+          x=next(v for v in cat["new_masters"] if v["component_id"]=="CMP-FRAME-RUFU-001")
+          assert x["approval_status"]=="PRODUCT_OWNER_APPROVED"
+          assert x["decision_id"]=="D-085"
+          assert x["canonical_asset_sha256"]=="0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208"
+          assert x["semantic_geometry_signature"]=="8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571"
+          assert x["exact_plan_angle_deg"] is None
+          assert x["groove_boundary"]=="DIRECT_EXISTENCE / GEOMETRY_DEFERRED"
+          v=json.loads(Path("production/zhenguo_wanfo/validation/CMP-FRAME-RUFU-001_MASTER_VALIDATION_V001.json").read_text())
+          assert v["check_count"]==43 and all(y=="PASS" for y in v["checks"].values())
+          print("T024_FORMAL_DELIVERY_SELF_CHECK_PASS")
+          PY
+
+      - name: Commit approved formal delivery
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             "$MASTER_ROOT/CMP-FRAME-RUFU-001_MASTER_SEMANTIC_V001.json"             "$REVIEW_ROOT"             "$VALIDATION_ROOT/CMP-FRAME-RUFU-001_MASTER_VALIDATION_V001.json"             docs/production/zhenguo_wanfo/P3_3_T024_RUFU_ENGINEERING_REVIEW_V001.md             "$CATALOG"
+          git diff --cached --check
+          if git diff --cached --name-only | grep -E '\.blend$'; then
+            echo "T-024 staged delivery must not include .blend files"
+            exit 1
+          fi
+          git commit -m "T-024: materialize approved formal delivery"
+          git push origin HEAD:codex/t024-p3-3-rufu-master-first-article-v001
