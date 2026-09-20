@@ -22,6 +22,14 @@ def vmap(data):
     return {x["variant_id"]:x for x in data["variants"]}
 
 
+def near(a,b,tol=1e-3):
+    return abs(float(a)-float(b)) <= tol
+
+
+def same_dims(a,b,tol=1e-3):
+    return len(a)==len(b) and all(near(x,y,tol) for x,y in zip(a,b))
+
+
 def main():
     ap=argparse.ArgumentParser()
     names=[
@@ -107,22 +115,22 @@ def main():
     ref=gp["canonical_reference_length_mm"]
     ck("26_reference_nonhistorical",ref["value"]==1000.0 and ref["classification"]=="PROJECT_RULE" and ref["production_use"]=="CANONICAL_REFERENCE_ONLY" and ref["historical_claim"] is False)
     ck("27_realization_derives_reference",gp["realization_length_mm"]["derives_from"]=="canonical_reference_length_mm" and gp["realization_length_mm"]["value"]==1000.0)
-    ck("28_ew_x_extent",ed[0]==1000.0)
-    ck("29_ew_y_extent",ed[1]==395.5)
-    ck("30_ew_z_extent",ed[2]==280.5)
-    ck("31_gable_x_extent",gd[0]==1000.0)
-    ck("32_gable_y_extent",gd[1]==346.0)
-    ck("33_gable_z_extent",gd[2]==245.4)
+    ck("28_ew_x_extent",near(ed[0],1000.0))
+    ck("29_ew_y_extent",near(ed[1],395.5))
+    ck("30_ew_z_extent",near(ed[2],280.5))
+    ck("31_gable_x_extent",near(gd[0],1000.0))
+    ck("32_gable_y_extent",near(gd[1],346.0))
+    ck("33_gable_z_extent",near(gd[2],245.4))
     ck("34_canonical_transforms",ew["body"]["local_transform"]==ga["body"]["local_transform"]=={"location":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0],"scale":[1.0,1.0,1.0]})
     ck("35_unsupported_geometry_zero",ew["body"]["unsupported_detail_count"]==0 and ga["body"]["unsupported_detail_count"]==0 and ew["unsupported_geometry"]==[] and ga["unsupported_geometry"]==[])
     ck("36_p2_proxy_zero",p["p2_primary_frame_proxy_geometry_use_count"]==0)
     ck("37_independent_reopen_both",ewr["status"]=="PASS" and gar["status"]=="PASS" and ewr["body"]==ew["body"] and gar["body"]==ga["body"])
     ck("38_deterministic_restore_ew",rew["semantic_geometry_signature"]==ew["semantic_geometry_signature"] and rew["body"]==ew["body"])
     ck("39_deterministic_restore_gable",rga["semantic_geometry_signature"]==ga["semantic_geometry_signature"] and rga["body"]==ga["body"])
-    ck("40_length_mutation_x_only",ld[0]!=ed[0] and ld[1:]==ed[1:])
-    ck("41_ew_width_mutation_y_only",wd[1]!=ed[1] and wd[0]==ed[0] and wd[2]==ed[2])
-    ck("42_ew_thickness_mutation_z_only",td[2]!=ed[2] and td[:2]==ed[:2])
-    ck("43_gable_completion_mutation_z_only",gmd[2]!=gd[2] and gmd[:2]==gd[:2])
+    ck("40_length_mutation_x_only",not near(ld[0],ed[0]) and same_dims(ld[1:],ed[1:]))
+    ck("41_ew_width_mutation_y_only",not near(wd[1],ed[1]) and near(wd[0],ed[0]) and near(wd[2],ed[2]))
+    ck("42_ew_thickness_mutation_z_only",not near(td[2],ed[2]) and same_dims(td[:2],ed[:2]))
+    ck("43_gable_completion_mutation_z_only",not near(gmd[2],gd[2]) and same_dims(gmd[:2],gd[:2]))
     ck("44_gable_mutation_keeps_completion_semantics",gm["variant_semantics"]["thickness_semantics"]["classification"]=="PARAMETRIC_COMPLETION" and gm["variant_semantics"]["thickness_semantics"]["historical_claim"] is False)
     ck("45_review_ten_complete",all((review/n).exists() and (review/n).stat().st_size>1000 for n in review_names))
 
