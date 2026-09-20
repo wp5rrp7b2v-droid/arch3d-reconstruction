@@ -56,12 +56,23 @@ def main():
     ck("35_blender_4_5_13",str(c["blender_version"]).startswith("4.5.13"))
     catalog=copy.deepcopy(source_catalog); records=list(catalog.get("new_masters",[]))
     existing=[x for x in records if x.get("component_id")==p["component_id"]]
-    ck("36_catalog_no_duplicate",len(existing)==0)
-    records.append({"component_id":p["component_id"],"master_id":p["master_id"],"master_version":"V001",
-                    "role_variants":["UPPER","LOWER"],"approval_status":"ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
-                    "canonical_asset_status":"ACTIONS_ARTIFACT","canonical_asset_sha256":sha,
-                    "semantic_geometry_signature":c["semantic_geometry_signature"],
-                    "groove_boundary":"DIRECT_EXISTENCE / GEOMETRY_DEFERRED"})
+    ck("36_catalog_dingfu_unique_or_absent",len(existing)<=1)
+    if existing:
+        ding=existing[0]
+        ck("37_catalog_dingfu_approved_state_valid",
+           ding.get("master_id")==p["master_id"] and
+           ding.get("role_variants")==["UPPER","LOWER"] and
+           ding.get("approval_status")=="PRODUCT_OWNER_APPROVED" and
+           ding.get("decision_id")=="D-080" and
+           ding.get("canonical_asset_sha256")=="81fa6c593b90c40766c6cc2098b4759c7747cf9bbc77c9c409f5320f88c7c737" and
+           ding.get("semantic_geometry_signature")==c["semantic_geometry_signature"]=="2cb4b6bcae382f9a35dbca3063439aa025e0b6bba18c4175f63c1f13d089f982" and
+           ding.get("groove_boundary")=="DIRECT_EXISTENCE / GEOMETRY_DEFERRED")
+    else:
+        records.append({"component_id":p["component_id"],"master_id":p["master_id"],"master_version":"V001",
+                        "role_variants":["UPPER","LOWER"],"approval_status":"ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+                        "canonical_asset_status":"ACTIONS_ARTIFACT","canonical_asset_sha256":sha,
+                        "semantic_geometry_signature":c["semantic_geometry_signature"],
+                        "groove_boundary":"DIRECT_EXISTENCE / GEOMETRY_DEFERRED"})
     catalog["task"]="T-023"; catalog["status"]="SOURCE_CATALOG_PLUS_DINGFU_ENGINEERING_COMPLETE_PENDING_REVIEW"; catalog["new_masters"]=records
     Path(a.catalog).write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     result={"task":"T-023","status":"PASS","approval_boundary":"ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
