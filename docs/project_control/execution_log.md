@@ -966,3 +966,22 @@ Do not restart T-018 by default.
 - P3.3 Stage 1：ACTIVE / NOT PASSED。
 - Next：乳栿 Master；D-076 visual-reference review applies before modeling。
 - T-018：HOLD。
+
+## 2026-09-20｜T-024 Formal Delivery + Final Cross-check
+
+- Product Owner first-article approval：**D-085**。
+- Approved first-article Run：`35496581278` = SUCCESS / 43 of 43 executed checks PASS。
+- Approved canonical .blend SHA-256：`0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208`。
+- Semantic geometry signature：`8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571`。
+- Formal delivery publication Run：`35497971045` = SUCCESS。
+- Formal delivery materialization commit：`fa404ffca1fd3a49cfd70efe0a460048ef6e2f05`。
+- Stage1 Catalog：乳栿 = PRODUCT_OWNER_APPROVED / D-085 / FORMAL_DELIVERY_MATERIALIZED。
+- Temporary publication workflow：REMOVED。
+- Latest branch sync：ahead 14 / behind 0 against main。
+- Final head：`232e9f600ec391c46e2a8240281ed3c301c09bd4`。
+- Final regression Run：`35498078597` = SUCCESS / **44/44 PASS**。
+- Final regression .blend SHA-256：`7d09a7fec162a6d01f95eb914eb34324f0e17350f22377a3547caf9b22c7e208`；该字节哈希为重建产物，不替换 D-085 已批准 canonical binary SHA。
+- Final regression artifact：ID `10600838637` / ZIP SHA-256 `2de17b1077473f6a66acbdcf278505e26cc19e5d1f50fedb0256d6afb33a0beb`。
+- 6 review PNG：与批准首件逐字节一致。
+- Git：无 .blend 提交；PR #11 OPEN / mergeable / MERGE NOT AUTHORIZED。
+- T-018：HOLD。
