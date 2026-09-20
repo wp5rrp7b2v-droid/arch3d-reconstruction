@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R143",
+  "state_revision": "R144",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-022 CLOSED + PR #9 MERGED / NEXT 丁栿 / V008 CURRENT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 丁栿 PRE-MODEL VISUAL REFERENCE REVIEW ACTIVE / D-076 VISUAL GATE ACTIVE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -60,17 +60,21 @@
     "active_window_note": "2026-09-19 DAILY CLOSE COMPLETE. T-021 is approved and merged to main; Stage 1 remains ACTIVE and not passed; next work item is 平梁 Master evidence review/spec design; T-018 remains HOLD; T-020/RZ/FV remain deferred to Stage 5 re-review."
   },
   "current_task": {
-    "id": "NONE",
-    "status": "T-022 CLOSED / PR #9 MERGED / STAGE1 READY FOR NEXT MASTER"
+    "id": "STAGE1_DINGFU_PREMODEL_REVIEW",
+    "status": "PLANNING / VISUAL REFERENCE GATE ACTIVE / NO T-TASK YET",
+    "component": "丁栿",
+    "engineering_execution_authorized": false,
+    "blocker": "BLOCKED_ON_VISUAL_REFERENCE_REVIEW until Product Owner approves physical/form reference set",
+    "t018_impact": "NONE / remains HOLD"
   },
   "proposed_next_task": {
-    "id": "STAGE1_NEXT_MASTER",
+    "id": "STAGE1_DINGFU_MASTER",
     "name": "丁栿 Master evidence review + specification design",
-    "status": "NEXT / PLANNING AUTHORIZED / ENGINEERING EXECUTION NOT YET AUTHORIZED",
+    "status": "ACTIVE / PRE-MODEL VISUAL REVIEW FIRST",
     "component": "丁栿",
     "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "authorization_basis": "P3.3 V002 Stage 1 priority order / D-066"
+    "authorization_basis": "P3.3 V002 + D-076"
   },
   "last_completed_task": {
     "id": "T-022",
@@ -189,9 +193,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-075",
+    "id": "D-076",
     "date": "2026-09-20",
-    "decision": "Product Owner authorized merge of PR #9 after final pre-merge cross-check PASS. PR #9 merged to main at 9e32324baf8257a2b1ddae0033f4797f9e9d9fd4. T-022 publication is closed. Stage 1 remains active; next target is 丁栿 evidence review/spec design. T-018 remains HOLD."
+    "decision": "Before any new component Master is sent to engineering modeling, ChatGPT must present same-building real-object/site photos and/or same-building measured/form drawings for Product Owner review; comparative references must be labeled comparative, and source-derived schematics cannot replace direct evidence. Engineering is blocked until Product Owner approves the visual/form reference set."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -230,13 +234,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Continue P3.3 Stage 1 with 丁栿 Master evidence review and specification design. Do not create a new engineering T-task or run Blender until the 丁栿 spec is reviewed/locked. T-018 remains HOLD.",
+  "next_action": "丁栿: present and review physical/site photographs and form/survey references first; then complete evidence review and Master Spec. Do not create a new T-task or run Blender before Product Owner approves the visual reference set. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v083",
+    "visualization_version": "v084",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R143 / T-022 CLOSED / PR #9 MERGED / NEXT 丁栿 / V008 CURRENT / T-018 HOLD"
+    "refresh_status": "CURRENT / R144 / 丁栿 VISUAL REFERENCE REVIEW ACTIVE / D-076 GATE / V008 CURRENT / T-018 HOLD"
   },
   "superseded_prs": [
     {
