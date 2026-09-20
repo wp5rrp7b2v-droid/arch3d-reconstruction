@@ -985,3 +985,19 @@ Do not restart T-018 by default.
 - 6 review PNG：与批准首件逐字节一致。
 - Git：无 .blend 提交；PR #11 OPEN / mergeable / MERGE NOT AUTHORIZED。
 - T-018：HOLD。
+
+## 2026-09-20｜T-024 PR #11 Merge Closure
+
+- Product Owner merge authorization：**D-086**。
+- PR：#11 = **MERGED**。
+- Final engineering head：`d857558a1fab765fa269f76ba9217b8456c353aa`。
+- Final regression Actions Run：`35498221932` = **SUCCESS / 44/44 PASS**。
+- Merge commit：`56ea76ed2bfa766991d4e3f19999dc0c704a48ea`。
+- T-024 Catalog publication：`CLOSED / MERGED_TO_MAIN`。
+- Approved canonical .blend SHA-256 remains `0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208`。
+- Semantic geometry signature remains `8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571`。
+- Project State：R158。
+- Dashboard：v098。
+- P3.3 Stage 1：ACTIVE / NOT PASSED。
+- Next：select next missing Master; D-076 visual-reference review applies before modeling。
+- T-018：HOLD。
