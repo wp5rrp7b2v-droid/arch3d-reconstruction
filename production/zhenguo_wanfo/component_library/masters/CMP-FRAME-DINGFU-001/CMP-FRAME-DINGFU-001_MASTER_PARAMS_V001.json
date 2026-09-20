@@ -1,0 +1,158 @@
+{
+  "task": "T-023",
+  "component_id": "CMP-FRAME-DINGFU-001",
+  "master_id": "CMP-FRAME-DINGFU-001_MASTER",
+  "master_version": "V001",
+  "unit": "mm",
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "canonical_transform": {
+    "location": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "parameters": [
+    {
+      "key": "historical_full_length_mm",
+      "value": null,
+      "classification": "UNKNOWN",
+      "historical_claim": false
+    },
+    {
+      "key": "canonical_reference_length_mm",
+      "value": 1000,
+      "classification": "PROJECT_RULE",
+      "historical_claim": false,
+      "replaceable": true
+    },
+    {
+      "key": "realization_length_mm",
+      "value": 1000,
+      "derives_from": "canonical_reference_length_mm"
+    },
+    {
+      "key": "width_mm",
+      "value": 331.6,
+      "classification": "DIRECT_MEASURED_FAMILY_MEAN"
+    },
+    {
+      "key": "thickness_mm",
+      "value": 200.9,
+      "classification": "DIRECT_MEASURED_FAMILY_MEAN"
+    }
+  ],
+  "physical_instance_count": 8,
+  "measured_section_samples_mm": [
+    {
+      "width": 346,
+      "thickness": 208
+    },
+    {
+      "width": 324,
+      "thickness": 199
+    },
+    {
+      "width": 335,
+      "thickness": 205
+    },
+    {
+      "width": 324,
+      "thickness": 174,
+      "note": "source table marks thickness with （含）"
+    },
+    {
+      "width": 330,
+      "thickness": 203
+    },
+    {
+      "width": 330,
+      "thickness": 195
+    },
+    {
+      "width": 336,
+      "thickness": 203
+    },
+    {
+      "width": 328,
+      "thickness": 193
+    }
+  ],
+  "sample_to_instance_mapping": "UNKNOWN",
+  "report_analysis": {
+    "converted_fen": {
+      "width": 21.7,
+      "thickness": 13.1
+    },
+    "rounded_fen": {
+      "width": 22,
+      "thickness": 13
+    },
+    "classification": "REPORT_INFERRED / METADATA_ONLY",
+    "geometry_use_count": 0
+  },
+  "role_variants": [
+    "UPPER",
+    "LOWER"
+  ],
+  "role_geometry_policy": "SHARED_CANONICAL_BODY",
+  "interface_contract": {
+    "OUTBOARD_END": {
+      "semantic": "进入山面柱头铺作",
+      "geometry": "DEFERRED_TO_STAGE2"
+    },
+    "INBOARD_END": {
+      "semantic": "骑栿栱 / 与榑交构区域",
+      "geometry": "DEFERRED_TO_STAGE2"
+    }
+  },
+  "groove_boundary": {
+    "status": "DIRECT_EXISTENCE / GEOMETRY_DEFERRED",
+    "exact_dimensions": null,
+    "exact_position": null,
+    "stage1_cut_geometry": false
+  },
+  "source_binding": {
+    "source_id": "SRC-ZG-WF-001",
+    "pdf_pages": [
+      81,
+      83
+    ],
+    "printed_pages": [
+      66,
+      68
+    ],
+    "sections": [
+      "2.3.1",
+      "2.3.1.3"
+    ],
+    "table": "2-40"
+  },
+  "visual_reference_gate": {
+    "general_rule": "D-076",
+    "dingfu_waiver": "D-077",
+    "waiver_scope": "DINGFU_ONLY"
+  },
+  "assembly_length_rule": {
+    "building_length_authority": "EXPLICIT_ASSEMBLY_ENDPOINTS_LATER",
+    "default_to_canonical_reference_allowed": false,
+    "hard_fail_id": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
+  },
+  "historical_state": {
+    "historical_claim": false,
+    "reconstructed_963_candidate": "not_inferred"
+  },
+  "unsupported_geometry": [],
+  "p2_primary_frame_proxy_geometry_use_count": 0
+}

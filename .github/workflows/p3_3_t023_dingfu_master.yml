@@ -1,0 +1,121 @@
+name: T-023 Dingfu Master First Article
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p3_3_t023_dingfu_master.yml'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-DINGFU-001/**'
+      - 'production/zhenguo_wanfo/scripts/dingfu_master_common_v001.py'
+      - 'production/zhenguo_wanfo/scripts/validate_dingfu_master_v001.py'
+      - 'docs/tasks/T-023_P3_3_DINGFU_MASTER_FIRST_ARTICLE_V001.md'
+      - 'docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  first-article:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      BLENDER_DIR: /tmp/blender-4.5.13-linux-x64
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      PARAMS: production/zhenguo_wanfo/component_library/masters/CMP-FRAME-DINGFU-001/CMP-FRAME-DINGFU-001_MASTER_PARAMS_V001.json
+      WRAPPER: production/zhenguo_wanfo/component_library/masters/CMP-FRAME-DINGFU-001/build_dingfu_master_v001.py
+      VALIDATOR: production/zhenguo_wanfo/scripts/validate_dingfu_master_v001.py
+      REGISTRY: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json
+      SOURCE_CATALOG: production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json
+      ARTIFACT_DIR: artifacts/t023
+      REVIEW_DIR: production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-DINGFU-001
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Verify T-023 protected inputs
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          r=json.load(open("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",encoding="utf-8"))
+          assert r["schema_version"]=="V008" and r["item_count"]==505
+          x=[i for i in r["items"] if i.get("component")=="丁栿"]
+          assert len(x)==8 and all(i["sample_to_instance_mapping"]=="UNKNOWN" for i in x)
+          assert all(i["width_mm"]==331.6 and i["thickness_mm"]==200.9 for i in x)
+          assert all(i["joinery_note"].startswith("报告明确提到丁栿入斗栱处刻出槽口") for i in x)
+          print("T023_PROTECTED_INPUTS_PASS")
+          PY
+
+      - name: Install and pin Blender 4.5.13
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions T-023" -o /tmp/blender.tar.xz "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | tee /tmp/blender-version.txt
+          grep -Eq '^Blender 4\.5\.13( LTS)?$' /tmp/blender-version.txt
+
+      - name: Build canonical Master
+        run: |
+          mkdir -p "$ARTIFACT_DIR" "$REVIEW_DIR"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --params "$PARAMS" --role UNASSIGNED --asset "$ARTIFACT_DIR/CMP-FRAME-DINGFU-001_MASTER_V001.blend" --semantic "$ARTIFACT_DIR/canonical_semantic.json"
+
+      - name: Independent reopen
+        run: |
+          "$BLENDER" --background "$ARTIFACT_DIR/CMP-FRAME-DINGFU-001_MASTER_V001.blend" --python-exit-code 10 --python "$WRAPPER" -- --mode inspect --asset "$ARTIFACT_DIR/CMP-FRAME-DINGFU-001_MASTER_V001.blend" --expected "$ARTIFACT_DIR/canonical_semantic.json" --output "$ARTIFACT_DIR/reopen.json"
+
+      - name: Prepare mutation params
+        run: |
+          python - <<'PY'
+          import copy,json,pathlib
+          src=json.load(open("production/zhenguo_wanfo/component_library/masters/CMP-FRAME-DINGFU-001/CMP-FRAME-DINGFU-001_MASTER_PARAMS_V001.json",encoding="utf-8")); out=pathlib.Path("artifacts/t023")
+          def save(name,key,val):
+              d=copy.deepcopy(src); p={x["key"]:x for x in d["parameters"]}; p[key]["value"]=val
+              (out/name).write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n")
+          save("length_params.json","realization_length_mm",1100.0)
+          d=json.loads(json.dumps(src)); p={x["key"]:x for x in d["parameters"]}; p["canonical_reference_length_mm"]["value"]=1100.0; p["realization_length_mm"]["value"]=1100.0
+          (out/"length_params.json").write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n")
+          save("width_params.json","width_mm",350.0)
+          save("thickness_params.json","thickness_mm",220.0)
+          PY
+
+      - name: Mutations and role builds
+        run: |
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --params "$ARTIFACT_DIR/length_params.json" --role UNASSIGNED --asset "$ARTIFACT_DIR/length.blend" --semantic "$ARTIFACT_DIR/length_semantic.json"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --params "$ARTIFACT_DIR/width_params.json" --role UNASSIGNED --asset "$ARTIFACT_DIR/width.blend" --semantic "$ARTIFACT_DIR/width_semantic.json"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --params "$ARTIFACT_DIR/thickness_params.json" --role UNASSIGNED --asset "$ARTIFACT_DIR/thickness.blend" --semantic "$ARTIFACT_DIR/thickness_semantic.json"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --params "$PARAMS" --role UPPER --asset "$ARTIFACT_DIR/upper.blend" --semantic "$ARTIFACT_DIR/upper_semantic.json"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --params "$PARAMS" --role LOWER --asset "$ARTIFACT_DIR/lower.blend" --semantic "$ARTIFACT_DIR/lower_semantic.json"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --params "$PARAMS" --role UNASSIGNED --asset "$ARTIFACT_DIR/restore.blend" --semantic "$ARTIFACT_DIR/restore_semantic.json"
+
+      - name: Validate locked checks
+        run: |
+          python "$VALIDATOR" --params "$PARAMS" --canonical "$ARTIFACT_DIR/canonical_semantic.json" --reopen "$ARTIFACT_DIR/reopen.json" --length "$ARTIFACT_DIR/length_semantic.json" --width "$ARTIFACT_DIR/width_semantic.json" --thickness "$ARTIFACT_DIR/thickness_semantic.json" --upper "$ARTIFACT_DIR/upper_semantic.json" --lower "$ARTIFACT_DIR/lower_semantic.json" --restore "$ARTIFACT_DIR/restore_semantic.json" --asset "$ARTIFACT_DIR/CMP-FRAME-DINGFU-001_MASTER_V001.blend" --review-dir "$REVIEW_DIR" --registry "$REGISTRY" --source-catalog "$SOURCE_CATALOG" --output "$ARTIFACT_DIR/CMP-FRAME-DINGFU-001_MASTER_VALIDATION_V001.json" --catalog "$ARTIFACT_DIR/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json" --report "$ARTIFACT_DIR/P3_3_T023_DINGFU_ENGINEERING_REVIEW_V001.md"
+
+      - name: Hashes and manifest
+        run: |
+          cp /tmp/blender-version.txt "$ARTIFACT_DIR/"
+          sha256sum "$ARTIFACT_DIR/CMP-FRAME-DINGFU-001_MASTER_V001.blend" "$ARTIFACT_DIR/restore.blend" "$REVIEW_DIR"/*.png > "$ARTIFACT_DIR/SHA256SUMS.txt"
+          python - <<'PY'
+          import json,os,pathlib
+          out=pathlib.Path("artifacts/t023"); v=json.loads((out/"CMP-FRAME-DINGFU-001_MASTER_VALIDATION_V001.json").read_text())
+          m={"task":"T-023","status":"ACTIONS_EVIDENCE","github_actions_run_id":os.getenv("GITHUB_RUN_ID"),"github_sha":os.getenv("GITHUB_SHA"),
+             "pr_head_sha":os.getenv("PR_HEAD_SHA"),"blender_version":v["blender_version"],"validation_pass_count":v["check_count"],
+             "canonical_blend_sha256":v["canonical_blend_sha256"],"semantic_geometry_signature":v["semantic_geometry_signature"],
+             "artifact_name":"P3_3_T023_DINGFU_FIRST_ARTICLE_V001","approval_boundary":"PENDING_CHATGPT_PRODUCT_OWNER_REVIEW"}
+          (out/"T023_ACTIONS_EVIDENCE_MANIFEST_V001.json").write_text(json.dumps(m,indent=2)+"\n")
+          PY
+
+      - name: Upload T-023 formal evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T023_DINGFU_FIRST_ARTICLE_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            artifacts/t023/**
+            production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-DINGFU-001/*.png
