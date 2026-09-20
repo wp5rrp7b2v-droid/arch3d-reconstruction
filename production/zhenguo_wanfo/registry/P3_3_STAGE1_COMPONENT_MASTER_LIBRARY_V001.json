@@ -34,7 +34,7 @@
       ],
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-074",
-      "publication_status": "FORMAL_DELIVERY_MATERIALIZED / PR_MERGE_PENDING",
+      "publication_status": "CLOSED / MERGED_TO_MAIN",
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED",
       "canonical_asset_sha256": {
         "EW_SEAM": "5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4",
@@ -45,7 +45,7 @@
         "GABLE": "262f8493b7656f94e4112a8405be565893d89be7c099d83f63bde149d7993c40"
       },
       "parametric_completion": {
-        "GABLE_width_mm": 346.0,
+        "GABLE_width_mm": 346,
         "GABLE_thickness_mm": 245.4,
         "replaceable": true,
         "historical_claim": false
@@ -55,7 +55,10 @@
         "engineering_review": "docs/production/zhenguo_wanfo/P3_3_T022_PINGLIANG_ENGINEERING_REVIEW_V001.md",
         "product_owner_acceptance": "docs/production/zhenguo_wanfo/P3_3_T022_PINGLIANG_PRODUCT_OWNER_ACCEPTANCE_V001.md",
         "review_png_count": 10
-      }
+      },
+      "merge_commit_sha": "9e32324baf8257a2b1ddae0033f4797f9e9d9fd4",
+      "final_head_sha": "eaee40b8fd4d50b877956e0b2292538e248b9449",
+      "final_head_actions_run": 35486533628
     }
   ],
   "approved_master_count": 8
