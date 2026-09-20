@@ -28,7 +28,7 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.worksheet.table import Table, TableStyleInfo
 
 
-GENERATOR_VERSION = "1.0.1"
+GENERATOR_VERSION = "1.0.2"
 GENERATOR_REPO_PATH = "scripts/generate_wanfo_component_registry_excel.py"
 DEFAULT_INPUT = Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json")
 DEFAULT_OUTPUT_DIR = Path("docs/evidence/zhenguo_wanfo/derived")
@@ -41,6 +41,9 @@ BASE_COLUMNS = [
     ("id", "实例/记录ID"),
     ("location", "具体位置"),
     ("count_status", "数量/状态口径"),
+    ("stage1_disposition", "Stage1处置"),
+    ("master_coverage_status", "Master状态"),
+    ("master_reference", "Master引用"),
     ("evidence", "证据依据"),
     ("variant", "变体"),
     ("direction", "方向"),
@@ -106,8 +109,87 @@ def set_widths(ws, widths: dict[str, float]) -> None:
 
 def build_workbook(registry: dict[str, Any], source_path: Path, source_commit: str, source_sha: str, generator_sha: str) -> Workbook:
     wb = Workbook()
-    ws = wb.active
-    ws.title = "实例登记"
+    overview = wb.active
+    overview.title = "进度总览"
+
+    progress = registry.get("stage1_master_progress_summary", {})
+    overview.merge_cells("A1:D1")
+    overview["A1"] = "万佛殿 V008｜Stage 1 Master 进度总览"
+    overview["A1"].font = Font(size=16, bold=True, color="FFFFFF")
+    overview["A1"].fill = PatternFill("solid", fgColor="3E342C")
+    overview["A1"].alignment = Alignment(horizontal="center", vertical="center")
+    overview.row_dimensions[1].height = 28
+
+    overview.append([])
+    overview.append(["指标", "当前值", "口径/说明", "状态"])
+    kpi_rows = [
+        ["登记记录数", progress.get("registry_record_count", len(registry.get("items", []))), "V008登记行数；包含实体、系统、拓扑、族边界等记录，不等于整殿物理构件总件数", "INFO"],
+        ["登记对象类型", progress.get("registered_object_type_count", ""), "V008当前登记的不同构件/对象类型", "INFO"],
+        ["Stage1 Master范围", progress.get("master_scope_object_type_count", ""), "需要或已经具有Master的对象类型数；作为Master完成度分母", "TRACKED"],
+        ["已批准 Master", progress.get("approved_master_count", ""), "PRODUCT_OWNER_APPROVED Master available", "COMPLETE"],
+        ["待完成 Master", progress.get("pending_master_object_type_count", ""), "Master范围 - 已批准Master", "PENDING"],
+        ["Master完成度", progress.get("master_completion_percent", ""), "已批准Master / Stage1 Master范围", "PROGRESS"],
+        ["已绑定Master的登记记录", progress.get("master_covered_registry_record_count", ""), "仅表示V008登记行覆盖数，不等于物理构件总件数", "INFO"],
+        ["PENDING_SOURCE_BINDING", progress.get("pending_source_binding_count", len(registry.get("pending_source_binding", []))), "仍在V008之外、不得静默视为已覆盖的对象", "PENDING"],
+    ]
+    for row in kpi_rows:
+        overview.append(row)
+
+    style_header(overview, 3, 1, 4, fill="6B4F3A")
+    overview["B9"].number_format = '0.0"%"'
+    if isinstance(overview["B9"].value, (int, float)):
+        overview["B9"] = float(overview["B9"].value) / 100.0
+    set_widths(overview, {"A": 26, "B": 18, "C": 72, "D": 18})
+    for row in overview.iter_rows(min_row=4, max_row=11):
+        for c in row:
+            c.alignment = Alignment(vertical="top", wrap_text=True)
+    complete_fill = PatternFill("solid", fgColor="D9EAD3")
+    pending_fill = PatternFill("solid", fgColor="FFF2CC")
+    for row in range(4, 12):
+        if overview.cell(row, 4).value == "COMPLETE":
+            overview.cell(row, 2).fill = complete_fill
+        elif overview.cell(row, 4).value == "PENDING":
+            overview.cell(row, 2).fill = pending_fill
+
+    overview["A13"] = "构件 / 对象 Master 覆盖状态"
+    overview["A13"].font = Font(bold=True, size=12)
+    overview.append(["构件/对象", "Stage1处置", "Master状态", "Master引用", "登记记录数"])
+    style_header(overview, 14, 1, 5, fill="4A3A30")
+    grouped: dict[str, dict[str, Any]] = {}
+    for item in registry.get("items", []):
+        comp = str(item.get("component", ""))
+        if not comp:
+            continue
+        g = grouped.setdefault(comp, {"records": 0, "dispositions": set(), "statuses": set(), "masters": set()})
+        g["records"] += 1
+        if item.get("stage1_disposition"):
+            g["dispositions"].add(str(item["stage1_disposition"]))
+        if item.get("master_coverage_status"):
+            g["statuses"].add(str(item["master_coverage_status"]))
+        if item.get("master_reference"):
+            g["masters"].add(str(item["master_reference"]))
+    for comp in sorted(grouped):
+        g = grouped[comp]
+        overview.append([
+            comp,
+            " / ".join(sorted(g["dispositions"])),
+            " / ".join(sorted(g["statuses"])),
+            " / ".join(sorted(g["masters"])),
+            g["records"],
+        ])
+    for row in overview.iter_rows(min_row=15):
+        for c in row:
+            c.alignment = Alignment(vertical="top", wrap_text=True)
+        status = str(row[2].value or "")
+        if "APPROVED_MASTER_AVAILABLE" in status:
+            row[2].fill = complete_fill
+        elif "MASTER_REQUIRED_PENDING" in status:
+            row[2].fill = pending_fill
+    overview.freeze_panes = "A4"
+    set_widths(overview, {"A": 26, "B": 30, "C": 38, "D": 42, "E": 14})
+    overview.auto_filter.ref = "A14:E{}".format(overview.max_row)
+
+    ws = wb.create_sheet("实例登记")
 
     headers = [label for _, label in BASE_COLUMNS]
     ws.append(headers)
@@ -118,16 +200,17 @@ def build_workbook(registry: dict[str, Any], source_path: Path, source_commit: s
     ws.auto_filter.ref = ws.dimensions
     style_header(ws, 1, 1, len(headers))
     set_widths(ws, {
-        "A": 16, "B": 18, "C": 34, "D": 38, "E": 26, "F": 32, "G": 20, "H": 16,
-        "I": 16, "J": 24, "K": 26, "L": 34, "M": 28, "N": 14, "O": 14, "P": 14,
-        "Q": 28, "R": 18, "S": 40, "T": 52,
+        "A": 16, "B": 18, "C": 34, "D": 38, "E": 26, "F": 24, "G": 34, "H": 40,
+        "I": 32, "J": 20, "K": 16, "L": 16, "M": 24, "N": 26, "O": 34, "P": 28,
+        "Q": 14, "R": 14, "S": 14, "T": 28, "U": 18, "V": 40, "W": 52,
     })
     for row in ws.iter_rows(min_row=2):
         for c in row:
             c.alignment = Alignment(vertical="top", wrap_text=True)
 
     if ws.max_row >= 2:
-        table = Table(displayName="WanfoComponentRegistry", ref="A1:T{}".format(ws.max_row))
+        end_col = ws.cell(row=1, column=len(headers)).column_letter
+        table = Table(displayName="WanfoComponentRegistry", ref="A1:{}{}".format(end_col, ws.max_row))
         table.tableStyleInfo = TableStyleInfo(
             name="TableStyleMedium2",
             showFirstColumn=False,
@@ -161,6 +244,11 @@ def build_workbook(registry: dict[str, Any], source_path: Path, source_commit: s
         ["登记日期", registry.get("date", "")],
         ["登记状态", registry.get("status", "")],
         ["记录数", len(registry.get("items", []))],
+        ["登记对象类型", registry.get("stage1_master_progress_summary", {}).get("registered_object_type_count", "")],
+        ["Stage1 Master范围", registry.get("stage1_master_progress_summary", {}).get("master_scope_object_type_count", "")],
+        ["已批准Master", registry.get("stage1_master_progress_summary", {}).get("approved_master_count", "")],
+        ["待完成Master", registry.get("stage1_master_progress_summary", {}).get("pending_master_object_type_count", "")],
+        ["Master完成度", str(registry.get("stage1_master_progress_summary", {}).get("master_completion_percent", "")) + "%"],
         ["源 GitHub 提交", source_commit or "UNKNOWN"],
         ["源 JSON SHA-256", source_sha],
         ["生成器版本", GENERATOR_VERSION],
@@ -198,7 +286,7 @@ def build_workbook(registry: dict[str, Any], source_path: Path, source_commit: s
     wb.properties.title = "万佛殿整殿构件实例总表 {}".format(registry.get("schema_version", ""))
     wb.properties.subject = "Derived from canonical component registry JSON"
     wb.properties.creator = "ARCH3D-001 automated generator"
-    wb.properties.description = "Derived artifact. Canonical truth remains the GitHub component registry JSON."
+    wb.properties.description = "Derived artifact with Stage1 Master progress overview. Canonical truth remains the GitHub component registry JSON; Master approval authority remains the Stage1 Component Master Catalog."
     date_text = str(registry.get("date", "2026-01-01"))
     try:
         fixed_date = datetime.strptime(date_text, "%Y-%m-%d")
@@ -259,10 +347,15 @@ def main() -> int:
 
     # Fail-closed validation of the generated workbook.
     check = load_workbook(versioned_xlsx, read_only=True, data_only=False)
-    expected = {"实例登记", "统计摘要", "版本与来源", "使用规则"}
+    expected = {"进度总览", "实例登记", "统计摘要", "版本与来源", "使用规则"}
     if set(check.sheetnames) != expected:
         raise SystemExit("FAIL_CLOSED: generated workbook sheets mismatch")
     rows = check["实例登记"].max_row - 1
+    progress = registry.get("stage1_master_progress_summary", {})
+    if check["进度总览"]["B4"].value != progress.get("registry_record_count"):
+        raise SystemExit("FAIL_CLOSED: overview registry count mismatch")
+    if check["进度总览"]["B7"].value != progress.get("approved_master_count"):
+        raise SystemExit("FAIL_CLOSED: overview approved Master count mismatch")
     check.close()
     if rows != len(registry.get("items", [])):
         raise SystemExit("FAIL_CLOSED: generated row count mismatch")
