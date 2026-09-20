@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R160",
+  "state_revision": "R161",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / DAILY CLOSE COMPLETE + D-087 V008 MASTER PROGRESS VISIBILITY ADDED / LOCAL SYNC VERIFICATION PENDING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / FINAL PRE-LOCAL-SYNC AUDIT COMPLETE / D-087 V008 MASTER PROGRESS VISIBILITY ACTIVE / LOCAL SYNC VERIFICATION PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -219,14 +219,14 @@
     "detailed_close": "docs/project_control/DAILY_CLOSE_2026-09-20.md",
     "local_sync_prep": "docs/project_control/LOCAL_SYNC_PREP_2026-09-20.md",
     "phase_archive_action": "NONE / P3 ACTIVE",
-    "latest_formal_decision": "D-086",
+    "latest_formal_decision": "D-087",
     "new_decision_at_close": false,
     "new_execution_authorization_at_close": false,
-    "project_state_revision": "R160",
-    "dashboard_version": "v100",
-    "post_close_omission_audit": "PASS / NO KNOWN MISSING CURRENT-STATE REGISTRATIONS",
+    "project_state_revision": "R161",
+    "dashboard_version": "v101",
+    "post_close_omission_audit": "PASS / FINAL PRE-LOCAL-SYNC RECHECK / NO KNOWN MISSING CURRENT-STATE REGISTRATIONS",
     "omission_audit_checked": [
-      "D-073..D-086 decisions",
+      "D-073..D-087 decisions",
       "T-022/T-023/T-024 approvals + formal delivery + merges",
       "Stage1 Catalog 10 approved Masters",
       "V008 / 505 Registry",
@@ -240,15 +240,37 @@
     ],
     "omission_audit_missing_items": [],
     "caution": "Local Mac has not yet been synchronized or artifact-reconciled. No next Master execution until local verification is complete.",
-    "post_close_visibility_patch": "D-087 / V008 Master progress visibility implemented / Excel sync PASS 35508113993"
+    "post_close_visibility_patch": "D-087 / V008 Master progress visibility implemented / Excel sync PASS 35508113993",
+    "post_close_decision": "D-087 / V008 MASTER PROGRESS VISIBILITY",
+    "final_pre_local_sync_audit": {
+      "date": "2026-09-20",
+      "status": "PASS",
+      "v008_equals_current": true,
+      "registry_records": 505,
+      "registered_object_types": 66,
+      "master_scope_types": 28,
+      "approved_masters": 10,
+      "pending_masters": 18,
+      "master_completion_percent": 35.7,
+      "approved_master_bound_rows": 52,
+      "binding_errors": 0,
+      "excel_sync_run": 35508113993,
+      "excel_sync_result": "SUCCESS",
+      "open_prs": [
+        3,
+        6
+      ],
+      "active_actions_runs": 0,
+      "note": "Historical failed intermediate Actions runs are superseded by later successful accepted runs and are not active blockers."
+    }
   },
-  "next_action": "When Mac is available, execute LOCAL_SYNC_PREP_2026-09-20 Phase A+B read-only checks. After sync, verify V008 Excel progress overview = 505 records / 66 object types / 28 Master-scope / 10 approved / 18 pending / 35.7%. Do not start next Master before local sync verification PASS. T-018 remains HOLD.",
+  "next_action": "Mac local sync only. Execute LOCAL_SYNC_PREP_2026-09-20 Phase A+B read-only checks first. After sync verify Project State R161 or later, Dashboard v101 or later, V008/CURRENT equality, Excel progress overview 505/66/28/10/18/35.7%, and no new active engineering task. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v100",
+    "visualization_version": "v101",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R160 / D-087 V008 MASTER PROGRESS VISIBILITY ACTIVE / LOCAL SYNC PENDING / T-018 HOLD"
+    "refresh_status": "CURRENT / R161 / FINAL PRE-LOCAL-SYNC AUDIT PASS / D-087 ACTIVE / LOCAL SYNC PENDING / T-018 HOLD"
   },
   "superseded_prs": [
     {
