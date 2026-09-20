@@ -599,3 +599,16 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - PR #9：**DO NOT MERGE until separate Product Owner authorization**。
 - P3.3 Stage 1：ACTIVE / NOT PASSED。
 - T-018：HOLD。
+
+## 2026-09-20｜T-022 Merge Closure
+
+- Product Owner merge authorization：**D-075**。
+- PR #9：**MERGED**。
+- Merge commit：`9e32324baf8257a2b1ddae0033f4797f9e9d9fd4`。
+- Final head：`eaee40b8fd4d50b877956e0b2292538e248b9449`。
+- Final head Actions Run：`35486533628` = SUCCESS。
+- T-022 publication：**CLOSED / MERGED_TO_MAIN**。
+- Stage1 Master Catalog approved count：8。
+- P3.3 Stage 1：ACTIVE / NOT PASSED。
+- Next formal work item：丁栿 Master evidence review / Spec design。
+- T-018：HOLD。
