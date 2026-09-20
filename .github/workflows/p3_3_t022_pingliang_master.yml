@@ -1,0 +1,185 @@
+name: T-022 Pingliang Master First Article
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p3_3_t022_pingliang_master.yml'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PINGLIANG-001/**'
+      - 'production/zhenguo_wanfo/scripts/pingliang_master_common_v001.py'
+      - 'production/zhenguo_wanfo/scripts/validate_pingliang_master_v001.py'
+      - 'docs/tasks/T-022_P3_3_PINGLIANG_MASTER_FIRST_ARTICLE_V001.md'
+      - 'docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  first-article:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      BLENDER_DIR: /tmp/blender-4.5.13-linux-x64
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      PARAMS: production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PINGLIANG-001/CMP-FRAME-PINGLIANG-001_MASTER_PARAMS_V001.json
+      WRAPPER: production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PINGLIANG-001/build_pingliang_master_v001.py
+      VALIDATOR: production/zhenguo_wanfo/scripts/validate_pingliang_master_v001.py
+      REGISTRY: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json
+      SOURCE_CATALOG: production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json
+      ARTIFACT_DIR: artifacts/t022
+      REVIEW_DIR: production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-PINGLIANG-001
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Verify T-022 protected inputs
+        run: |
+          set -euo pipefail
+          test -f "$PARAMS"
+          test -f "$WRAPPER"
+          test -f "$VALIDATOR"
+          test -f "$REGISTRY"
+          test -f "$SOURCE_CATALOG"
+          python - <<'PY'
+          import json
+          r=json.load(open("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",encoding="utf-8"))
+          assert r["schema_version"]=="V008"
+          assert r["item_count"]==505
+          items=[x for x in r["items"] if x.get("component")=="平梁"]
+          assert len(items)==4
+          assert {x["id"] for x in items}=={"平梁-东缝","平梁-西缝","平梁-东山","平梁-西山"}
+          for x in items:
+              assert x["sample_to_instance_mapping"]=="UNKNOWN"
+          for x in items:
+              if x["id"] in {"平梁-东山","平梁-西山"}:
+                  assert x["thickness_mm"] is None
+                  assert x["parametric_completion"]["production_value_mm"]==245.4
+                  assert x["parametric_completion"]["historical_claim"] is False
+          print("T022_PROTECTED_INPUTS_PASS")
+          PY
+
+      - name: Install and pin Blender 4.5.13
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          URL="https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions T-022" -o /tmp/blender.tar.xz "$URL"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | tee /tmp/blender-version.txt
+          python - <<'PY'
+          import re
+          line=open("/tmp/blender-version.txt",encoding="utf-8").readline().strip()
+          if re.fullmatch(r"Blender 4\.5\.13(?: LTS)?",line) is None:
+              raise SystemExit("Unexpected Blender version: "+repr(line))
+          print("BLENDER_VERSION_PASS",line)
+          PY
+
+      - name: Build EW_SEAM canonical variant
+        run: |
+          set -euo pipefail
+          mkdir -p "$ARTIFACT_DIR" "$REVIEW_DIR"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build             --params "$PARAMS"             --variant EW_SEAM             --asset "$ARTIFACT_DIR/CMP-FRAME-PINGLIANG-001_EW_SEAM_MASTER_V001.blend"             --semantic "$ARTIFACT_DIR/ew_semantic.json"             --review-dir "$REVIEW_DIR"
+
+      - name: Independent reopen EW_SEAM
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$ARTIFACT_DIR/CMP-FRAME-PINGLIANG-001_EW_SEAM_MASTER_V001.blend"             --python-exit-code 10 --python "$WRAPPER" --             --mode inspect             --asset "$ARTIFACT_DIR/CMP-FRAME-PINGLIANG-001_EW_SEAM_MASTER_V001.blend"             --expected "$ARTIFACT_DIR/ew_semantic.json"             --output "$ARTIFACT_DIR/ew_reopen.json"
+
+      - name: Build GABLE canonical variant
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build             --params "$PARAMS"             --variant GABLE             --asset "$ARTIFACT_DIR/CMP-FRAME-PINGLIANG-001_GABLE_MASTER_V001.blend"             --semantic "$ARTIFACT_DIR/gable_semantic.json"             --review-dir "$REVIEW_DIR"
+
+      - name: Independent reopen GABLE
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$ARTIFACT_DIR/CMP-FRAME-PINGLIANG-001_GABLE_MASTER_V001.blend"             --python-exit-code 10 --python "$WRAPPER" --             --mode inspect             --asset "$ARTIFACT_DIR/CMP-FRAME-PINGLIANG-001_GABLE_MASTER_V001.blend"             --expected "$ARTIFACT_DIR/gable_semantic.json"             --output "$ARTIFACT_DIR/gable_reopen.json"
+
+      - name: Prepare mutation parameter sets
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import copy,json,pathlib
+          src=json.load(open("production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PINGLIANG-001/CMP-FRAME-PINGLIANG-001_MASTER_PARAMS_V001.json",encoding="utf-8"))
+          out=pathlib.Path("artifacts/t022")
+          def save(name,fn):
+              d=copy.deepcopy(src)
+              fn(d)
+              (out/name).write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          def globals(d):
+              return {x["key"]:x for x in d["parameters"]}
+          def variants(d):
+              return {x["variant_id"]:x for x in d["variants"]}
+          def length(d):
+              p=globals(d)
+              p["canonical_reference_length_mm"]["value"]=1100.0
+              p["realization_length_mm"]["value"]=1100.0
+          save("length_params.json",length)
+          save("ew_width_params.json",lambda d: variants(d)["EW_SEAM"]["production_section_mm"].__setitem__("width",420.0))
+          save("ew_thickness_params.json",lambda d: variants(d)["EW_SEAM"]["production_section_mm"].__setitem__("thickness",300.0))
+          save("gable_completion_params.json",lambda d: variants(d)["GABLE"]["production_section_mm"].__setitem__("thickness",260.0))
+          PY
+
+      - name: Length mutation on EW_SEAM
+        run: |
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$ARTIFACT_DIR/length_params.json" --variant EW_SEAM             --asset "$ARTIFACT_DIR/length_mutation.blend" --semantic "$ARTIFACT_DIR/length_semantic.json"
+
+      - name: EW_SEAM width mutation
+        run: |
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$ARTIFACT_DIR/ew_width_params.json" --variant EW_SEAM             --asset "$ARTIFACT_DIR/ew_width_mutation.blend" --semantic "$ARTIFACT_DIR/ew_width_semantic.json"
+
+      - name: EW_SEAM thickness mutation
+        run: |
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$ARTIFACT_DIR/ew_thickness_params.json" --variant EW_SEAM             --asset "$ARTIFACT_DIR/ew_thickness_mutation.blend" --semantic "$ARTIFACT_DIR/ew_thickness_semantic.json"
+
+      - name: GABLE completion thickness mutation
+        run: |
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$ARTIFACT_DIR/gable_completion_params.json" --variant GABLE             --asset "$ARTIFACT_DIR/gable_completion_mutation.blend" --semantic "$ARTIFACT_DIR/gable_completion_semantic.json"
+
+      - name: Canonical restore both variants
+        run: |
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$PARAMS" --variant EW_SEAM             --asset "$ARTIFACT_DIR/restore_ew.blend" --semantic "$ARTIFACT_DIR/restore_ew_semantic.json"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$PARAMS" --variant GABLE             --asset "$ARTIFACT_DIR/restore_gable.blend" --semantic "$ARTIFACT_DIR/restore_gable_semantic.json"
+
+      - name: Validate locked checks
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR"             --params "$PARAMS"             --ew "$ARTIFACT_DIR/ew_semantic.json"             --ew-reopen "$ARTIFACT_DIR/ew_reopen.json"             --gable "$ARTIFACT_DIR/gable_semantic.json"             --gable-reopen "$ARTIFACT_DIR/gable_reopen.json"             --length "$ARTIFACT_DIR/length_semantic.json"             --width "$ARTIFACT_DIR/ew_width_semantic.json"             --thickness "$ARTIFACT_DIR/ew_thickness_semantic.json"             --gable-completion "$ARTIFACT_DIR/gable_completion_semantic.json"             --restore-ew "$ARTIFACT_DIR/restore_ew_semantic.json"             --restore-gable "$ARTIFACT_DIR/restore_gable_semantic.json"             --ew-asset "$ARTIFACT_DIR/CMP-FRAME-PINGLIANG-001_EW_SEAM_MASTER_V001.blend"             --gable-asset "$ARTIFACT_DIR/CMP-FRAME-PINGLIANG-001_GABLE_MASTER_V001.blend"             --review-dir "$REVIEW_DIR"             --registry "$REGISTRY"             --source-catalog "$SOURCE_CATALOG"             --output "$ARTIFACT_DIR/CMP-FRAME-PINGLIANG-001_MASTER_VALIDATION_V001.json"             --catalog "$ARTIFACT_DIR/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json"             --report "$ARTIFACT_DIR/P3_3_T022_PINGLIANG_ENGINEERING_REVIEW_V001.md"
+
+      - name: Persistent hashes and evidence manifest
+        run: |
+          set -euo pipefail
+          cp /tmp/blender-version.txt "$ARTIFACT_DIR/"
+          sha256sum             "$ARTIFACT_DIR/CMP-FRAME-PINGLIANG-001_EW_SEAM_MASTER_V001.blend"             "$ARTIFACT_DIR/CMP-FRAME-PINGLIANG-001_GABLE_MASTER_V001.blend"             "$ARTIFACT_DIR/restore_ew.blend"             "$ARTIFACT_DIR/restore_gable.blend"             "$REVIEW_DIR"/*.png > "$ARTIFACT_DIR/SHA256SUMS.txt"
+          python - <<'PY'
+          import json,os,pathlib
+          out=pathlib.Path("artifacts/t022")
+          v=json.loads((out/"CMP-FRAME-PINGLIANG-001_MASTER_VALIDATION_V001.json").read_text())
+          m={
+            "task":"T-022",
+            "status":"ACTIONS_EVIDENCE",
+            "github_actions_run_id":os.getenv("GITHUB_RUN_ID"),
+            "github_sha":os.getenv("GITHUB_SHA"),
+            "pr_head_sha":os.getenv("PR_HEAD_SHA"),
+            "blender_version":v["blender_version"],
+            "validation_pass_count":v["check_count"],
+            "canonical_blend_sha256":v["canonical_blend_sha256"],
+            "artifact_name":"P3_3_T022_PINGLIANG_FIRST_ARTICLE_V001",
+            "approval_boundary":"PENDING_CHATGPT_PRODUCT_OWNER_REVIEW"
+          }
+          (out/"T022_ACTIONS_EVIDENCE_MANIFEST_V001.json").write_text(json.dumps(m,indent=2)+"\n")
+          PY
+
+      - name: Upload T-022 formal evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T022_PINGLIANG_FIRST_ARTICLE_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            artifacts/t022/**
+            production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-PINGLIANG-001/*.png
