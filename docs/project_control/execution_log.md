@@ -1018,3 +1018,18 @@ Do not restart T-018 by default.
 - Local sync preparation：`docs/project_control/LOCAL_SYNC_PREP_2026-09-20.md`。
 - Next immediate operation：local Mac read-only preflight + fetch; do not start next Master before local sync verification PASS。
 - T-018：HOLD。
+
+## 2026-09-20｜D-087 V008 Master Progress Visibility
+
+- Product Owner requirement：打开 V008 即可看到整体登记规模与 Master 完成进度。
+- V008 / CURRENT：已增加 `stage1_master_progress_summary`。
+- Row-level：已增加 `stage1_disposition` / `master_coverage_status` / approved `master_reference`。
+- Current snapshot：505 records / 66 object types / 28 Master-scope / 10 approved / 18 pending / 35.7%。
+- Approved-Master-bound registry rows：52。
+- PENDING_SOURCE_BINDING：7。
+- Master approval authority：Stage1 Component Master Catalog remains canonical。
+- Excel generator：v1.0.2。
+- RC-018 Run：35508113993 = SUCCESS。
+- V008 derived Excel：新增“进度总览”首页及 Master 状态列。
+- Future closure rule：每个新 Master 正式闭环必须同步 V008/CURRENT + derived Excel。
+- Engineering impact：NONE；no new T-task / no Blender / T-018 HOLD。
