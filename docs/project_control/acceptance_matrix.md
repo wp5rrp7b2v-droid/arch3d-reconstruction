@@ -626,3 +626,22 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Next formal work item：乳栿 Master visual-reference review + evidence review + Spec design。
 - D-076：ACTIVE for 乳栿 and later new components。
 - T-018：HOLD。
+
+## 2026-09-20｜T-024 Final Pre-Merge Acceptance State
+
+- Product Owner first-article approval：**D-085**。
+- Formal delivery：**MATERIALIZED**。
+- Stage1 Catalog：乳栿 **PRODUCT_OWNER_APPROVED**。
+- Approved canonical binary SHA-256：`0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208`。
+- Semantic geometry signature：`8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571`。
+- Final head：`232e9f600ec391c46e2a8240281ed3c301c09bd4`。
+- Final Actions Run：`35498078597` = **SUCCESS / 44/44 PASS**。
+- UPPER / LOWER / NE / SE / SW / NW：shared geometry。
+- Historical full length：UNKNOWN / null。
+- Exact plan angle：UNKNOWN / null / no 45-degree default。
+- Groove：DIRECT_EXISTENCE / GEOMETRY_DEFERRED。
+- Review PNG：6/6 retained byte-identical。
+- Branch sync：ahead 14 / behind 0。
+- PR #11：OPEN / mergeable / **WAITING FOR PRODUCT OWNER MERGE AUTHORIZATION**。
+- P3.3 Stage 1：ACTIVE / NOT PASSED。
+- T-018：HOLD。
