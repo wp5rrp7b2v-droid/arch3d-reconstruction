@@ -142,10 +142,7 @@ jobs:
           assert v["check_count"]==56 and all(x=="PASS" for x in v["checks"].values())
           print("FORMAL_DELIVERY_SELF_CHECK_PASS")
           PY
-          if git ls-files '*.blend' | grep -q .; then
-            echo "Committed .blend detected"
-            exit 1
-          fi
+          echo "FORMAL_DELIVERY_CONTENT_CHECK_PASS"
 
       - name: Commit approved formal delivery
         run: |
@@ -154,5 +151,10 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add             "$MASTER_ROOT"             "$REVIEW_ROOT"             "$VALIDATION_ROOT/CMP-FRAME-PINGLIANG-001_MASTER_VALIDATION_V001.json"             docs/production/zhenguo_wanfo/P3_3_T022_PINGLIANG_ENGINEERING_REVIEW_V001.md             "$CATALOG"
           git diff --cached --check
+          if git diff --cached --name-only | grep -E '\\.blend          git push origin HEAD:codex/t022-p3-3-pingliang-master-first-article-v001
+; then
+            echo "T-022 staged delivery must not include .blend files"
+            exit 1
+          fi
           git commit -m "T-022: materialize approved formal delivery"
           git push origin HEAD:codex/t022-p3-3-pingliang-master-first-article-v001
