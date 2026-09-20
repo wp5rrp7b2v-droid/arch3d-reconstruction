@@ -911,3 +911,25 @@ Do not restart T-018 by default.
 - Formal delivery next：materialize approved semantic / validation / engineering review / 10 review PNG；修正 T-021 Catalog 状态；登记 T-022；final cross-check；PR #9 remains unmerged until separate merge authorization。
 - T-018：HOLD。
 
+
+## 2026-09-20｜T-022 Formal Delivery Materialization
+
+- Approval authority：D-074 / Product Owner APPROVED。
+- Approved source Actions Run：`35483530705` / Artifact `10597296654`。
+- Publication workflow Run：`35486003264` = **SUCCESS**。
+- Formal delivery commit：`1f2c22f7dcc1034fca4ddb7f28bc6d23af31ed7e`。
+- Approved artifact identity verification：PASS。
+- Materialized delivery：
+  - EW_SEAM semantic JSON；
+  - GABLE semantic JSON；
+  - 56/56 validation JSON；
+  - engineering review；
+  - 10 review PNG；
+  - Product Owner acceptance / final acceptance records。
+- Stage1 Catalog correction：T-021 corrected to `PRODUCT_OWNER_APPROVED / D-072 / CLOSED / MERGED_TO_MAIN`。
+- Stage1 Catalog registration：T-022 registered as `PRODUCT_OWNER_APPROVED / D-074 / FORMAL_DELIVERY_MATERIALIZED / PR_MERGE_PENDING`。
+- No T-022 `.blend` added to Git；approved binaries remain Actions artifact evidence。
+- Publication Run #1 false-fail was an over-broad repository-wide committed-.blend guard；materialization and catalog self-check had already passed. Guard was narrowed to the T-022 staged delivery and Run #3 passed. No model/parameter/evidence change resulted。
+- PR #9：OPEN / merge not authorized。
+- Next：final pre-merge cross-check, then request separate Product Owner merge authorization。
+- T-018：HOLD。
