@@ -933,3 +933,20 @@ Do not restart T-018 by default.
 - PR #9：OPEN / merge not authorized。
 - Next：final pre-merge cross-check, then request separate Product Owner merge authorization。
 - T-018：HOLD。
+
+## 2026-09-20｜T-022 PR #9 Merge Closure
+
+- Product Owner merge authorization：**D-075**。
+- PR：#9。
+- Final validated head：`eaee40b8fd4d50b877956e0b2292538e248b9449`。
+- Final head Actions Run：`35486533628` = **SUCCESS**。
+- Final cross-check：PASS。
+- Merge result：**MERGED**。
+- Merge commit：`9e32324baf8257a2b1ddae0033f4797f9e9d9fd4`。
+- Stage1 Catalog：T-022 publication status = `CLOSED / MERGED_TO_MAIN`。
+- Project State：R143。
+- Dashboard：v083。
+- T-022：**CLOSED / PRODUCT OWNER APPROVED / PUBLICATION CLOSED**。
+- P3.3 Stage 1：ACTIVE / NOT PASSED。
+- Next：丁栿 Master evidence review + specification design。
+- T-018：HOLD。
