@@ -569,3 +569,27 @@ Therefore separately check：
 - T-018：HOLD
 - T-020 / RZ / FV：Stage 5 re-review
 - Pending source binding：板瓦 / 勾头 / 滴水 / 博风板 / 悬鱼 / 惹草 / 生头木
+
+### 2026-09-20 Day 5 / Cloud production close
+
+- Date：2026-09-20
+- Status：**COMPLETE / CLOUD PRODUCTION WINDOW CLOSED / LOCAL_SYNC_VERIFICATION PENDING**
+- Project State：R159
+- Dashboard：v099
+- P3.3 V002：Stage 1 ACTIVE / not passed
+- V008：CURRENT / 505 registry records / JSON authority
+- RC-018：V008 / 505 / SYNCED / latest relevant successful Run 35495608194
+- Stage1 approved Master count：10
+- T-022：APPROVED D-074 / PR #9 MERGED / CLOSED
+- T-023：APPROVED D-080 / PR #10 MERGED / CLOSED
+- T-024：APPROVED D-085 / PR #11 MERGED / CLOSED
+- Latest merge decision：D-086
+- Open PRs：#3 and #6 only / both T-018 / DO NOT MERGE
+- Active engineering T-task：NONE
+- D-076 visual-reference gate：ACTIVE for next new Master
+- T-018：HOLD
+- T-020 / RZ / FV：retain current boundary / Stage5 re-review
+- Daily Close：`docs/project_control/DAILY_CLOSE_2026-09-20.md`
+- Local sync checklist：`docs/project_control/LOCAL_SYNC_PREP_2026-09-20.md`
+- Local Mac sync：NOT YET VERIFIED
+- Immediate next operation：local read-only preflight + fetch; no next Master execution before local sync verification PASS
