@@ -164,6 +164,8 @@ Preferred source hierarchy:
 
 A visual reference may support form understanding, but it must not silently create geometric dimensions or joinery that the evidence does not support.
 
+**One-off waiver:** D-077 explicitly waives this visual-reference review for **丁栿 only** and authorizes direct evidence review + Master Spec design. D-077 does not repeal D-076 for later new components.
+
 If no adequate visual/form reference can be produced, engineering modeling is **BLOCKED_ON_VISUAL_REFERENCE_REVIEW** until Product Owner explicitly accepts a bounded proxy/completion approach.
 
 
