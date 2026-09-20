@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R147",
+  "state_revision": "R148",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-023 DINGFU ENGINEERING EXECUTION AUTHORIZED / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-023 PRODUCT OWNER APPROVED / FORMAL DELIVERY AUTHORIZED / PR #10 MERGE PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -62,17 +62,22 @@
   "current_task": {
     "id": "T-023",
     "engineering_id": "P3_3_DINGFU_MASTER_FIRST_ARTICLE_V001",
-    "status": "ACTIVE / ENGINEERING EXECUTION IN PROGRESS / PR #10 OPEN / ACTIONS RUN 35490552809",
+    "status": "PASS / PRODUCT OWNER APPROVED / D-080 / FORMAL DELIVERY IN PROGRESS / PR #10 MERGE PENDING",
     "component": "丁栿",
     "target_master": "CMP-FRAME-DINGFU-001_MASTER",
     "branch": "codex/t023-p3-3-dingfu-master-first-article-v001",
-    "task_contract": "docs/tasks/T-023_P3_3_DINGFU_MASTER_FIRST_ARTICLE_V001.md",
-    "engineering_execution_authorized": true,
-    "visual_reference_rule": "D-077 Dingfu-only waiver; D-076 remains active for later components",
-    "t018_impact": "NONE / remains HOLD",
-    "authorization_decision": "D-079",
     "github_pr_number": 10,
-    "github_actions_run_id": 35490552809
+    "reviewed_head_sha": "62a159874f8b6601bce3de68b5597245aa48119b",
+    "approved_actions_run": 35490552809,
+    "validation": "36/36 PASS",
+    "review_png": "6/6 PASS",
+    "artifact_id": 10599280924,
+    "artifact_zip_sha256": "a03ce1e3fdb4510f5cffeeec7b97fdfb215763153fab9c7c2a28690859847fe7",
+    "canonical_blend_sha256": "81fa6c593b90c40766c6cc2098b4759c7747cf9bbc77c9c409f5320f88c7c737",
+    "semantic_geometry_signature": "2cb4b6bcae382f9a35dbca3063439aa025e0b6bba18c4175f63c1f13d089f982",
+    "acceptance_decision": "D-080",
+    "merge_authorized": false,
+    "t018_impact": "NONE / remains HOLD"
   },
   "proposed_next_task": {
     "id": "T-023_EXECUTION",
@@ -205,9 +210,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-079",
+    "id": "D-080",
     "date": "2026-09-20",
-    "decision": "Product Owner authorized T-023 Dingfu Master First Article engineering execution using ChatGPT direct GitHub execution and GitHub Actions Blender 4.5.13. Final first-article approval and PR merge remain separately unauthorized. T-018 remains HOLD."
+    "decision": "Product Owner approved T-023 Dingfu first article after Run 35490552809 36/36 PASS and 6/6 review PASS; authorized formal-delivery materialization and Stage1 Catalog registration. PR #10 merge remains separately unauthorized. T-018 remains HOLD."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -246,13 +251,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Wait for T-023 Actions Run 35490552809 to complete. If PASS, perform ChatGPT engineering/review-image audit and stop for Product Owner first-article approval. Do not merge PR #10. T-018 remains HOLD.",
+  "next_action": "Materialize T-023 approved formal delivery, register Dingfu in Stage1 Catalog, run final pre-merge cross-check, then request separate Product Owner authorization to merge PR #10. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v087",
+    "visualization_version": "v088",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R147 / T-023 ENGINEERING EXECUTION AUTHORIZED / T-018 HOLD"
+    "refresh_status": "CURRENT / R148 / T-023 APPROVED / FORMAL DELIVERY IN PROGRESS / PR #10 MERGE PENDING / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -520,7 +525,7 @@
       "final_head_actions_run": 35486533628
     },
     "dingfu_master_spec": {
-      "status": "LOCKED / PRODUCT OWNER APPROVED",
+      "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-080 / FORMAL DELIVERY PENDING",
       "decision_id": "D-078",
       "component_id": "CMP-FRAME-DINGFU-001",
       "master_id": "CMP-FRAME-DINGFU-001_MASTER",
@@ -541,7 +546,18 @@
       ],
       "visual_waiver": "D-077 / DINGFU_ONLY",
       "t023_contract": "docs/tasks/T-023_P3_3_DINGFU_MASTER_FIRST_ARTICLE_V001.md",
-      "t023_execution_authorized": true
+      "t023_execution_authorized": true,
+      "t023_first_article": {
+        "status": "PRODUCT_OWNER_APPROVED / D-080",
+        "actions_run_id": 35490552809,
+        "validation": "36/36 PASS",
+        "review_png": "6/6 PASS",
+        "canonical_blend_sha256": "81fa6c593b90c40766c6cc2098b4759c7747cf9bbc77c9c409f5320f88c7c737",
+        "semantic_geometry_signature": "2cb4b6bcae382f9a35dbca3063439aa025e0b6bba18c4175f63c1f13d089f982",
+        "artifact_id": 10599280924,
+        "artifact_zip_sha256": "a03ce1e3fdb4510f5cffeeec7b97fdfb215763153fab9c7c2a28690859847fe7",
+        "merge_authorized": false
+      }
     }
   },
   "end_of_day_2026_09_19": {
