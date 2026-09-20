@@ -1033,3 +1033,22 @@ Do not restart T-018 by default.
 - V008 derived Excel：新增“进度总览”首页及 Master 状态列。
 - Future closure rule：每个新 Master 正式闭环必须同步 V008/CURRENT + derived Excel。
 - Engineering impact：NONE；no new T-task / no Blender / T-018 HOLD。
+
+
+## Local Sync + Approved Artifact Reconciliation｜2026-09-20
+
+- Operation type：local environment reconciliation; not a new engineering T-task.
+- Local Git：main fast-forward PASS; working tree clean.
+- Sync checkpoint：995a8f42be21e9f1f8c8b013424ea56d5c1b554a.
+- Canonical checks：R161 / D-087 / V008 505 / Excel SHA matched.
+- Approved artifact binaries restored and SHA-verified:
+  - T-021 四椽栿：9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997
+  - T-022 平梁 EW_SEAM：5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4
+  - T-022 平梁 GABLE：f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a
+  - T-023 丁栿：81fa6c593b90c40766c6cc2098b4759c7747cf9bbc77c9c409f5320f88c7c737
+  - T-024 乳栿：0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208
+- Result：PASS / local sync gate CLOSED.
+- No Blender binaries committed to Git.
+- No new Product Owner decision required; D-087 remains latest formal decision.
+- No new T-task created.
+- T-018 remains HOLD.
