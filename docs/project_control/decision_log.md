@@ -118,3 +118,5 @@
 | D-075 | 2026-09-20 | Product Owner 授权 merge PR #9。最终 pre-merge cross-check 已 PASS：latest head `eaee40b8fd4d50b877956e0b2292538e248b9449`，Actions Run `35486533628` SUCCESS；PR #9 已于 main 合并，merge commit=`9e32324baf8257a2b1ddae0033f4797f9e9d9fd4`。T-022 publication 正式 CLOSED；P3.3 Stage 1 继续 ACTIVE，下一目标为丁栿 Master 证据复核与 Spec 设计；T-018 继续 HOLD。 | COMPLETE / PR #9 MERGED / T-022 CLOSED |
 
 | D-076 | 2026-09-20 | Product Owner 新增 Stage 1 建模前视觉审核要求：任何新构件 Master 在创建工程 T-task / 启动 Blender 之前，ChatGPT 必须先提供该构件的实物现场图和/或同建筑测绘/式样图供 Product Owner 审核；若同建筑直接图像不足，可补充权威对比例，但必须显式标注 comparative；自制示意仅可作为 SOURCE_DERIVED_SCHEMATIC，不能替代直接证据。Product Owner 未通过视觉/式样审核时，状态为 BLOCKED_ON_VISUAL_REFERENCE_REVIEW。该要求自丁栿起立即生效，并加入 P3.3 V002 DoD hard-fail：MODEL_BEFORE_VISUAL_REFERENCE_REVIEW。 | ACTIVE / GOVERNANCE RULE |
+
+| D-077 | 2026-09-20 | Product Owner 明确取消本轮丁栿的建模前视觉参考审核要求，授权丁栿直接进入 Master 证据复核 + Spec 设计。该决定仅豁免丁栿当前 Pre-Model Visual Reference Gate，不撤销 D-076 对后续新构件的通用要求。丁栿当前仍仅限 ChatGPT 证据复核与 Spec 设计；未锁定 Spec 前，不创建新 T-task、不运行 Blender。 | ACTIVE / DINGFU-ONLY WAIVER / SPEC DESIGN AUTHORIZED |
