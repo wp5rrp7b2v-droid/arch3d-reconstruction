@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R152",
+  "state_revision": "R153",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 乳栿 SPEC V001 LOCKED / T-024 CONTRACT LOCKED / EXECUTION NOT YET AUTHORIZED / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-024 RUFU ENGINEERING EXECUTION AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -62,22 +62,23 @@
   "current_task": {
     "id": "T-024",
     "engineering_id": "P3_3_RUFU_MASTER_FIRST_ARTICLE_V001",
-    "status": "CONTRACT LOCKED / EXECUTION NOT YET AUTHORIZED / D-083",
+    "status": "ACTIVE / ENGINEERING EXECUTION AUTHORIZED / D-084",
     "component": "乳栿",
     "target_master": "CMP-FRAME-RUFU-001_MASTER",
     "branch": "codex/t024-p3-3-rufu-master-first-article-v001",
     "task_contract": "docs/tasks/T-024_P3_3_RUFU_MASTER_FIRST_ARTICLE_V001.md",
-    "engineering_execution_authorized": false,
+    "engineering_execution_authorized": true,
     "visual_reference_rule": "D-076 PASSED FOR RUFU / D-082",
-    "t018_impact": "NONE / remains HOLD"
+    "t018_impact": "NONE / remains HOLD",
+    "authorization_decision": "D-084"
   },
   "proposed_next_task": {
     "id": "T-024_EXECUTION",
     "name": "乳栿 Master First Article engineering execution",
-    "status": "WAITING FOR EXPLICIT PRODUCT OWNER START AUTHORIZATION",
+    "status": "AUTHORIZED / IN PROGRESS",
     "component": "乳栿",
-    "engineering_execution_authorized": false,
-    "authorization_basis": "D-083 contract locked; explicit start still required"
+    "engineering_execution_authorized": true,
+    "authorization_basis": "D-084"
   },
   "last_completed_task": {
     "id": "T-023",
@@ -203,9 +204,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-083",
+    "id": "D-084",
     "date": "2026-09-20",
-    "decision": "Product Owner approved and locked 乳栿 Master Spec V001. T-024 First Article task contract is created and locked, but engineering execution/Blender has not started. D-076 visual-reference gate is satisfied for 乳栿 by D-082."
+    "decision": "Product Owner authorized T-024 乳栿 Master First Article engineering execution using ChatGPT direct GitHub execution and GitHub Actions Blender 4.5.13. Final first-article approval and PR merge remain separately unauthorized. T-018 remains HOLD."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -244,13 +245,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Await explicit Product Owner authorization to start T-024. Until authorized, do not create the T-024 execution branch/PR and do not run Blender. T-018 remains HOLD.",
+  "next_action": "Execute T-024 on dedicated branch/PR, run Blender 4.5.13 first-article validation and produce review package. Stop at ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v092",
+    "visualization_version": "v093",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R152 / RUFU SPEC V001 LOCKED / T-024 CONTRACT LOCKED / EXECUTION NOT YET AUTHORIZED / T-018 HOLD"
+    "refresh_status": "CURRENT / R153 / T-024 ENGINEERING EXECUTION AUTHORIZED / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -588,7 +589,7 @@
       "engineering_execution_authorized": false,
       "decision_id": "D-083",
       "t024_contract": "docs/tasks/T-024_P3_3_RUFU_MASTER_FIRST_ARTICLE_V001.md",
-      "t024_execution_authorized": false
+      "t024_execution_authorized": true
     }
   },
   "end_of_day_2026_09_19": {
