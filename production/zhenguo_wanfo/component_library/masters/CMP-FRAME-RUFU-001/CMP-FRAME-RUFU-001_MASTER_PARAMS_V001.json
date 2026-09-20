@@ -1,0 +1,172 @@
+{
+  "task": "T-024",
+  "component_id": "CMP-FRAME-RUFU-001",
+  "master_id": "CMP-FRAME-RUFU-001_MASTER",
+  "master_version": "V001",
+  "unit": "mm",
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "canonical_transform": {
+    "location": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "parameters": [
+    {
+      "key": "historical_full_length_mm",
+      "value": null,
+      "classification": "UNKNOWN",
+      "historical_claim": false
+    },
+    {
+      "key": "canonical_reference_length_mm",
+      "value": 1000,
+      "classification": "PROJECT_RULE",
+      "historical_claim": false,
+      "replaceable": true
+    },
+    {
+      "key": "realization_length_mm",
+      "value": 1000,
+      "derives_from": "canonical_reference_length_mm"
+    },
+    {
+      "key": "width_mm",
+      "value": 330.5,
+      "classification": "DIRECT_MEASURED_FAMILY_MEAN"
+    },
+    {
+      "key": "thickness_mm",
+      "value": 187.2,
+      "classification": "DIRECT_MEASURED_FAMILY_MEAN"
+    },
+    {
+      "key": "exact_plan_angle_deg",
+      "value": null,
+      "classification": "UNKNOWN",
+      "historical_claim": false
+    }
+  ],
+  "physical_instance_count": 8,
+  "measurement_table_row_count": 8,
+  "complete_measured_sample_count": 6,
+  "unmeasured_table_row_count": 2,
+  "measured_section_samples_mm": [
+    {
+      "width": 331,
+      "thickness": 185
+    },
+    {
+      "width": 337,
+      "thickness": 186
+    },
+    {
+      "width": 323,
+      "thickness": 193
+    },
+    {
+      "width": 342,
+      "thickness": 185
+    },
+    {
+      "width": 325,
+      "thickness": 188
+    },
+    {
+      "width": 325,
+      "thickness": 186
+    }
+  ],
+  "sample_to_instance_mapping": "UNKNOWN",
+  "report_analysis": {
+    "converted_fen": {
+      "width": 21.6,
+      "thickness": 12.2
+    },
+    "rounded_fen": {
+      "width": 22,
+      "thickness": 12
+    },
+    "classification": "REPORT_INFERRED / METADATA_ONLY",
+    "geometry_use_count": 0
+  },
+  "role_variants": [
+    "UPPER",
+    "LOWER",
+    "NE",
+    "SE",
+    "SW",
+    "NW"
+  ],
+  "role_geometry_policy": "ASSEMBLY_OR_PLACEMENT_ROLE_ONLY / SHARED_CANONICAL_BODY",
+  "interface_contract": {
+    "BRACKET_END": {
+      "semantic": "与斗栱交接",
+      "geometry": "DEFERRED_TO_STAGE2"
+    },
+    "OPPOSITE_END": {
+      "semantic": "UNKNOWN / ASSEMBLY_ENDPOINT_TO_BE_RESOLVED",
+      "geometry": "DEFERRED_TO_STAGE2"
+    }
+  },
+  "assembly_semantics": {
+    "dingfu_rufu_spacing": "一材一栔",
+    "pad_member": "垫单材栿一层",
+    "placement_policy": "derive orientation and length from explicit assembly endpoints; no baked 45 degrees"
+  },
+  "groove_boundary": {
+    "status": "DIRECT_EXISTENCE / GEOMETRY_DEFERRED",
+    "exact_dimensions": null,
+    "exact_position": null,
+    "stage1_cut_geometry": false
+  },
+  "source_binding": {
+    "source_id": "SRC-ZG-WF-001",
+    "pdf_pages": [
+      83,
+      84
+    ],
+    "printed_pages": [
+      68,
+      69
+    ],
+    "sections": [
+      "2.3.1.3"
+    ],
+    "table": "2-40",
+    "figure": "2-42"
+  },
+  "visual_reference_gate": {
+    "general_rule": "D-076",
+    "rufu_pass_decision": "D-082",
+    "status": "PASS"
+  },
+  "assembly_length_rule": {
+    "building_length_authority": "EXPLICIT_ASSEMBLY_ENDPOINTS_LATER",
+    "default_to_canonical_reference_allowed": false,
+    "hard_fail_id": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
+  },
+  "angle_rule": {
+    "building_angle_authority": "EXPLICIT_ASSEMBLY_ENDPOINTS_LATER",
+    "default_to_45_deg_allowed": false,
+    "hard_fail_id": "SILENT_45_DEGREE_ASSUMPTION"
+  },
+  "historical_state": {
+    "historical_claim": false,
+    "reconstructed_963_candidate": "not_inferred"
+  },
+  "unsupported_geometry": [],
+  "p2_primary_frame_proxy_geometry_use_count": 0
+}
