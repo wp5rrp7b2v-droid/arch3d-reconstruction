@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-023",
-  "status": "NINE_APPROVED / T021+T022+T023 PRODUCT_OWNER_APPROVED",
+  "task": "T-024",
+  "status": "TEN_APPROVED / T021+T022+T023+T024 PRODUCT_OWNER_APPROVED",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -90,7 +90,40 @@
       "merge_commit_sha": "d6f85cd2dc9adf8080ef2a0347449b12ef94c646",
       "final_head_sha": "c07ec0819ceabd9a6d18c6b787196881849e76a6",
       "final_head_actions_run": 35494632342
+    },
+    {
+      "component_id": "CMP-FRAME-RUFU-001",
+      "master_id": "CMP-FRAME-RUFU-001_MASTER",
+      "master_version": "V001",
+      "role_variants": [
+        "UPPER",
+        "LOWER",
+        "NE",
+        "SE",
+        "SW",
+        "NW"
+      ],
+      "approval_status": "PRODUCT_OWNER_APPROVED",
+      "decision_id": "D-085",
+      "publication_status": "FORMAL_DELIVERY_MATERIALIZED / PR_MERGE_PENDING",
+      "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED",
+      "canonical_asset_sha256": "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208",
+      "semantic_geometry_signature": "8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571",
+      "canonical_section_mm": {
+        "width": 330.5,
+        "thickness": 187.2
+      },
+      "historical_full_length_mm": null,
+      "canonical_reference_length_mm": 1000.0,
+      "exact_plan_angle_deg": null,
+      "groove_boundary": "DIRECT_EXISTENCE / GEOMETRY_DEFERRED",
+      "formal_delivery": {
+        "validation": "production/zhenguo_wanfo/validation/CMP-FRAME-RUFU-001_MASTER_VALIDATION_V001.json",
+        "engineering_review": "docs/production/zhenguo_wanfo/P3_3_T024_RUFU_ENGINEERING_REVIEW_V001.md",
+        "product_owner_acceptance": "docs/production/zhenguo_wanfo/P3_3_T024_RUFU_PRODUCT_OWNER_ACCEPTANCE_V001.md",
+        "review_png_count": 6
+      }
     }
   ],
-  "approved_master_count": 9
+  "approved_master_count": 10
 }
