@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R157",
+  "state_revision": "R158",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-024 PRODUCT OWNER APPROVED / FORMAL DELIVERY MATERIALIZED / FINAL CROSS-CHECK PASS / PR #11 MERGE AUTHORIZATION REQUIRED / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-024 CLOSED + PR #11 MERGED / NEXT STAGE1 MASTER SELECTION / D-076 VISUAL GATE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / T-023 CLOSED / NEXT 乳栿 / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / T-024 CLOSED / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / STAGE1 ACTIVE / T-021+D-072 CLOSED / T-022+D-074 CLOSED / T-023+D-080 CLOSED / PR #10 MERGED / T-020+RZ+FV STAGE5 RE-REVIEW / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / STAGE1 ACTIVE / T-021+D-072 CLOSED / T-022+D-074 CLOSED / T-023+D-080 CLOSED / T-024+D-085 CLOSED / PR #11 MERGED / T-020+RZ+FV STAGE5 RE-REVIEW / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "No immediate Stage 1 blocker. T-023 is closed and merged. D-076 pre-model visual-reference rule remains active for later new components. T-018 remains HOLD.",
+  "blocker": "No immediate Stage 1 blocker. T-024 is closed and merged. D-076 pre-model visual-reference rule remains active for the next new component. T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -60,56 +60,35 @@
     "active_window_note": "2026-09-19 DAILY CLOSE COMPLETE. T-021 is approved and merged to main; Stage 1 remains ACTIVE and not passed; next work item is 平梁 Master evidence review/spec design; T-018 remains HOLD; T-020/RZ/FV remain deferred to Stage 5 re-review."
   },
   "current_task": {
-    "id": "T-024",
-    "engineering_id": "P3_3_RUFU_MASTER_FIRST_ARTICLE_V001",
-    "status": "PASS / PRODUCT OWNER APPROVED / D-085 / FORMAL DELIVERY MATERIALIZED / FINAL CROSS-CHECK PASS / PR #11 MERGE AUTHORIZATION REQUIRED",
-    "component": "乳栿",
-    "target_master": "CMP-FRAME-RUFU-001_MASTER",
-    "branch": "codex/t024-p3-3-rufu-master-first-article-v001",
-    "github_pr_number": 11,
-    "approved_first_article_head_sha": "b96cc4ce6d3995684d20c46bd0a8f9c71329481d",
-    "approved_actions_run": 35496581278,
-    "approved_validation": "43/43 EXECUTED CHECKS PASS",
-    "approved_canonical_blend_sha256": "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208",
-    "semantic_geometry_signature": "8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571",
-    "product_owner_decision": "D-085",
-    "formal_delivery_commit": "fa404ffca1fd3a49cfd70efe0a460048ef6e2f05",
-    "publication_run": 35497971045,
-    "final_head_sha": "232e9f600ec391c46e2a8240281ed3c301c09bd4",
-    "final_regression_run": 35498078597,
-    "final_regression_validation": "44/44 PASS",
-    "final_regression_blend_sha256": "7d09a7fec162a6d01f95eb914eb34324f0e17350f22377a3547caf9b22c7e208",
-    "final_regression_artifact_id": 10600838637,
-    "final_regression_artifact_zip_sha256": "2de17b1077473f6a66acbdcf278505e26cc19e5d1f50fedb0256d6afb33a0beb",
-    "review_png": "6/6 PASS / byte-identical between approved first article and final regression",
-    "branch_sync_status": "ahead 14 / behind 0 against main",
-    "merge_authorized": false,
-    "t018_impact": "NONE / remains HOLD"
+    "id": "NONE",
+    "status": "T-024 CLOSED / PR #11 MERGED / STAGE1 READY FOR NEXT MASTER"
   },
   "proposed_next_task": {
-    "id": "T-024_PR11_MERGE",
-    "name": "Merge PR #11 after Product Owner authorization",
-    "status": "READY / WAITING FOR EXPLICIT PRODUCT OWNER MERGE AUTHORIZATION",
-    "component": "乳栿",
-    "github_pr_number": 11,
-    "merge_authorized": false
+    "id": "STAGE1_NEXT_MASTER",
+    "name": "Select next missing Master from Stage1 coverage, then visual reference review + evidence review + specification design",
+    "status": "NEXT / PLANNING AUTHORIZED / ENGINEERING EXECUTION NOT YET AUTHORIZED",
+    "new_t_task_created": false,
+    "engineering_execution_authorized": false,
+    "authorization_basis": "P3.3 V002 Stage 1 + D-076 visual gate"
   },
   "last_completed_task": {
-    "id": "T-023",
-    "engineering_id": "P3_3_DINGFU_MASTER_FIRST_ARTICLE_V001",
-    "status": "PASS / PRODUCT OWNER APPROVED / PUBLICATION CLOSED / PR #10 MERGED / D-080",
-    "github_pr_number": 10,
-    "reviewed_head_sha": "62a159874f8b6601bce3de68b5597245aa48119b",
-    "final_engineering_head_sha": "c07ec0819ceabd9a6d18c6b787196881849e76a6",
-    "merge_commit": "d6f85cd2dc9adf8080ef2a0347449b12ef94c646",
-    "final_head_actions_run": 35494632342,
-    "validation": "36/36 PASS",
+    "id": "T-024",
+    "engineering_id": "P3_3_RUFU_MASTER_FIRST_ARTICLE_V001",
+    "status": "PASS / PRODUCT OWNER APPROVED / PUBLICATION CLOSED / PR #11 MERGED / D-085",
+    "github_pr_number": 11,
+    "approved_first_article_head_sha": "b96cc4ce6d3995684d20c46bd0a8f9c71329481d",
+    "final_engineering_head_sha": "d857558a1fab765fa269f76ba9217b8456c353aa",
+    "merge_commit": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea",
+    "approved_actions_run": 35496581278,
+    "approved_validation": "43/43 EXECUTED CHECKS PASS",
+    "final_head_actions_run": 35498221932,
+    "final_validation": "44/44 PASS",
     "review_png": "6/6 PASS",
-    "artifact_id": 10599280924,
-    "artifact_zip_sha256": "a03ce1e3fdb4510f5cffeeec7b97fdfb215763153fab9c7c2a28690859847fe7",
+    "artifact_id": 10601690312,
+    "artifact_zip_sha256": "d686825b86c3e1186682ba7b62861e18cea772242f5069f1ad6f0136f0e6f2a6",
     "formal_delivery": "semantic + validation + engineering review + acceptance + Stage1 Catalog + 6 review PNG on main",
-    "canonical_blend_sha256": "81fa6c593b90c40766c6cc2098b4759c7747cf9bbc77c9c409f5320f88c7c737",
-    "semantic_geometry_signature": "2cb4b6bcae382f9a35dbca3063439aa025e0b6bba18c4175f63c1f13d089f982"
+    "canonical_blend_sha256": "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208",
+    "semantic_geometry_signature": "8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571"
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -147,7 +126,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / T-021+CLOSED / T-022+CLOSED / T-023+CLOSED / NEXT 乳栿 / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / T-021+CLOSED / T-022+CLOSED / T-023+CLOSED / T-024+CLOSED / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -218,9 +197,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-085",
+    "id": "D-086",
     "date": "2026-09-20",
-    "decision": "Product Owner approved T-024 乳栿 first article after Run 35496581278 and 6/6 visual review; authorized formal-delivery materialization and Stage1 Catalog registration. Initial canonical validation is 43/43 executed checks PASS; conditional catalog check #44 was not applicable before first publication. PR #11 merge remains separately unauthorized. T-018 remains HOLD."
+    "decision": "Product Owner authorized merge of PR #11 after final pre-merge cross-check PASS. PR #11 merged to main at 56ea76ed2bfa766991d4e3f19999dc0c704a48ea. T-024 publication is closed. P3.3 Stage 1 remains active; D-076 visual-reference review applies before modeling the next new component. T-018 remains HOLD."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -259,13 +238,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Request explicit Product Owner authorization to merge PR #11. Final pre-merge cross-check is PASS: branch ahead 14 / behind 0, PR mergeable, 44/44 final regression PASS, no .blend committed, approved Catalog entry present, 6 review PNG retained byte-identical. Do not merge until authorized. T-018 remains HOLD.",
+  "next_action": "Select the next missing Stage 1 Master from the coverage matrix. Apply D-076: first present same-building real-object/site photo and/or measured/form drawing for Product Owner review; only after visual review and Spec lock may a new engineering T-task be created and Blender run. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v097",
+    "visualization_version": "v098",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R157 / T-024 FINAL CROSS-CHECK PASS / PR #11 MERGE AUTHORIZATION REQUIRED / T-018 HOLD"
+    "refresh_status": "CURRENT / R158 / T-024 CLOSED / PR #11 MERGED / NEXT STAGE1 MASTER SELECTION / D-076 VISUAL GATE / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -378,7 +357,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / T-021 + T-022 + T-023 PRODUCT OWNER APPROVED + CLOSED / NEXT 乳栿",
+    "status": "ACTIVE / T-021 + T-022 + T-023 + T-024 PRODUCT OWNER APPROVED + CLOSED / NEXT MASTER SELECTION",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -570,7 +549,7 @@
       }
     },
     "rufu_master_spec": {
-      "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-085 / FORMAL DELIVERY MATERIALIZED / FINAL CROSS-CHECK PASS / PR #11 MERGE PENDING",
+      "status": "COMPLETE / PRODUCT OWNER APPROVED / D-085 / PUBLICATION CLOSED / PR #11 MERGED",
       "visual_gate": "PASS / D-082",
       "component_id": "CMP-FRAME-RUFU-001",
       "master_id": "CMP-FRAME-RUFU-001_MASTER",
@@ -605,7 +584,7 @@
       "t024_contract": "docs/tasks/T-024_P3_3_RUFU_MASTER_FIRST_ARTICLE_V001.md",
       "t024_execution_authorized": true,
       "t024_first_article": {
-        "status": "PRODUCT_OWNER_APPROVED / FORMAL_DELIVERY_MATERIALIZED / FINAL_CROSS_CHECK_PASS / MERGE_PENDING",
+        "status": "PRODUCT_OWNER_APPROVED / FORMAL_DELIVERY_MATERIALIZED / FINAL_CROSS_CHECK_PASS / MERGED_TO_MAIN",
         "actions_run_id": 35496581278,
         "validation": "43/43 EXECUTED CHECKS PASS",
         "review_png": "6/6 PASS",
@@ -613,15 +592,16 @@
         "semantic_geometry_signature": "8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571",
         "artifact_id": 10601690312,
         "artifact_zip_sha256": "d686825b86c3e1186682ba7b62861e18cea772242f5069f1ad6f0136f0e6f2a6",
-        "merge_authorized": false,
+        "merge_authorized": true,
         "formal_delivery_commit": "fa404ffca1fd3a49cfd70efe0a460048ef6e2f05",
         "publication_run": 35497971045,
-        "final_head_sha": "232e9f600ec391c46e2a8240281ed3c301c09bd4",
-        "final_regression_run": 35498078597,
+        "final_head_sha": "d857558a1fab765fa269f76ba9217b8456c353aa",
+        "final_regression_run": 35498221932,
         "final_regression_validation": "44/44 PASS",
         "final_regression_blend_sha256": "7d09a7fec162a6d01f95eb914eb34324f0e17350f22377a3547caf9b22c7e208",
         "final_regression_artifact_id": 10600838637,
-        "final_regression_artifact_zip_sha256": "2de17b1077473f6a66acbdcf278505e26cc19e5d1f50fedb0256d6afb33a0beb"
+        "final_regression_artifact_zip_sha256": "2de17b1077473f6a66acbdcf278505e26cc19e5d1f50fedb0256d6afb33a0beb",
+        "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     }
   },
