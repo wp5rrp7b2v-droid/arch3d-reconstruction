@@ -186,9 +186,12 @@
       "id": "平梁-东缝",
       "location": "东缝",
       "count_status": "LOCKED_COUNT_LOCATION",
-      "evidence": "直接实测",
+      "evidence": "直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40",
       "variant": "东西缝型",
-      "section_mm": "平均广395.5；厚280.5"
+      "section_mm": "实测组A 390×280；实测组B 401×281；均值广395.5；厚280.5",
+      "width_mm": 395.5,
+      "thickness_mm": 280.5,
+      "note": "表2-40未将390×280与401×281逐一对应到东缝/西缝，禁止静默映射；报告归整为广26分、厚18分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。"
     },
     {
       "system": "主体木构",
@@ -196,9 +199,12 @@
       "id": "平梁-西缝",
       "location": "西缝",
       "count_status": "LOCKED_COUNT_LOCATION",
-      "evidence": "直接实测",
+      "evidence": "直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40",
       "variant": "东西缝型",
-      "section_mm": "平均广395.5；厚280.5"
+      "section_mm": "实测组A 390×280；实测组B 401×281；均值广395.5；厚280.5",
+      "width_mm": 395.5,
+      "thickness_mm": 280.5,
+      "note": "表2-40未将390×280与401×281逐一对应到东缝/西缝，禁止静默映射；报告归整为广26分、厚18分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。"
     },
     {
       "system": "主体木构",
@@ -206,9 +212,12 @@
       "id": "平梁-东山",
       "location": "东山",
       "count_status": "LOCKED_COUNT_LOCATION",
-      "evidence": "直接实测",
+      "evidence": "直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40",
       "variant": "山面型",
-      "section_mm": "广约346；厚未及"
+      "section_mm": "广346；厚未及（UNKNOWN）",
+      "width_mm": 346,
+      "thickness_mm": null,
+      "note": "表2-40仅记录山面平梁广346mm，厚度未及/UNKNOWN；不得借用东西缝型280.5mm厚度。报告将广归整为23分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。"
     },
     {
       "system": "主体木构",
@@ -216,9 +225,12 @@
       "id": "平梁-西山",
       "location": "西山",
       "count_status": "LOCKED_COUNT_LOCATION",
-      "evidence": "直接实测",
+      "evidence": "直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40",
       "variant": "山面型",
-      "section_mm": "广约346；厚未及"
+      "section_mm": "广346；厚未及（UNKNOWN）",
+      "width_mm": 346,
+      "thickness_mm": null,
+      "note": "表2-40仅记录山面平梁广346mm，厚度未及/UNKNOWN；不得借用东西缝型280.5mm厚度。报告将广归整为23分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。"
     },
     {
       "system": "主体木构",
