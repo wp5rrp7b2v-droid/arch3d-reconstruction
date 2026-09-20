@@ -105,7 +105,7 @@
       ],
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-085",
-      "publication_status": "FORMAL_DELIVERY_MATERIALIZED / PR_MERGE_PENDING",
+      "publication_status": "CLOSED / MERGED_TO_MAIN",
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED",
       "canonical_asset_sha256": "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208",
       "semantic_geometry_signature": "8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571",
@@ -114,7 +114,7 @@
         "thickness": 187.2
       },
       "historical_full_length_mm": null,
-      "canonical_reference_length_mm": 1000.0,
+      "canonical_reference_length_mm": 1000,
       "exact_plan_angle_deg": null,
       "groove_boundary": "DIRECT_EXISTENCE / GEOMETRY_DEFERRED",
       "formal_delivery": {
@@ -122,7 +122,10 @@
         "engineering_review": "docs/production/zhenguo_wanfo/P3_3_T024_RUFU_ENGINEERING_REVIEW_V001.md",
         "product_owner_acceptance": "docs/production/zhenguo_wanfo/P3_3_T024_RUFU_PRODUCT_OWNER_ACCEPTANCE_V001.md",
         "review_png_count": 6
-      }
+      },
+      "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea",
+      "final_head_sha": "d857558a1fab765fa269f76ba9217b8456c353aa",
+      "final_head_actions_run": 35498221932
     }
   ],
   "approved_master_count": 10
