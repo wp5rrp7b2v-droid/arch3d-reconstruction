@@ -1,0 +1,158 @@
+name: T-022 Approved Formal Delivery Publication
+
+on:
+  push:
+    branches:
+      - codex/t022-p3-3-pingliang-master-first-article-v001
+    paths:
+      - '.github/workflows/p3_3_t022_publication.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  publish-approved-delivery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      SOURCE_RUN_ID: '35483530705'
+      SOURCE_ARTIFACT: P3_3_T022_PINGLIANG_FIRST_ARTICLE_V001
+      MASTER_ROOT: production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PINGLIANG-001
+      REVIEW_ROOT: production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-PINGLIANG-001
+      VALIDATION_ROOT: production/zhenguo_wanfo/validation
+      CATALOG: production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/t022-p3-3-pingliang-master-first-article-v001
+          fetch-depth: 0
+
+      - name: Download approved Run #2 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.SOURCE_ARTIFACT }}
+          path: /tmp/t022-approved
+          repository: ${{ github.repository }}
+          run-id: ${{ env.SOURCE_RUN_ID }}
+          github-token: ${{ github.token }}
+
+      - name: Verify approved artifact identity
+        run: |
+          set -euo pipefail
+          cd /tmp/t022-approved
+          sha256sum -c artifacts/t022/SHA256SUMS.txt
+          test "$(sha256sum artifacts/t022/CMP-FRAME-PINGLIANG-001_EW_SEAM_MASTER_V001.blend | awk '{print $1}')" = "5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4"
+          test "$(sha256sum artifacts/t022/CMP-FRAME-PINGLIANG-001_GABLE_MASTER_V001.blend | awk '{print $1}')" = "f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a"
+          python - <<'PY'
+          import json
+          p="/tmp/t022-approved/artifacts/t022/CMP-FRAME-PINGLIANG-001_MASTER_VALIDATION_V001.json"
+          d=json.load(open(p,encoding="utf-8"))
+          assert d["status"]=="PASS"
+          assert d["check_count"]==56
+          assert all(v=="PASS" for v in d["checks"].values())
+          assert d["canonical_blend_sha256"]["EW_SEAM"]=="5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4"
+          assert d["canonical_blend_sha256"]["GABLE"]=="f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a"
+          print("APPROVED_ARTIFACT_IDENTITY_PASS")
+          PY
+
+      - name: Materialize approved formal delivery
+        run: |
+          set -euo pipefail
+          mkdir -p "$MASTER_ROOT" "$REVIEW_ROOT" "$VALIDATION_ROOT"
+          cp /tmp/t022-approved/artifacts/t022/ew_semantic.json             "$MASTER_ROOT/CMP-FRAME-PINGLIANG-001_EW_SEAM_MASTER_SEMANTIC_V001.json"
+          cp /tmp/t022-approved/artifacts/t022/gable_semantic.json             "$MASTER_ROOT/CMP-FRAME-PINGLIANG-001_GABLE_MASTER_SEMANTIC_V001.json"
+          cp /tmp/t022-approved/artifacts/t022/CMP-FRAME-PINGLIANG-001_MASTER_VALIDATION_V001.json             "$VALIDATION_ROOT/CMP-FRAME-PINGLIANG-001_MASTER_VALIDATION_V001.json"
+          cp /tmp/t022-approved/artifacts/t022/P3_3_T022_PINGLIANG_ENGINEERING_REVIEW_V001.md             docs/production/zhenguo_wanfo/P3_3_T022_PINGLIANG_ENGINEERING_REVIEW_V001.md
+          cp /tmp/t022-approved/production/zhenguo_wanfo/review/P3_3/masters/CMP-FRAME-PINGLIANG-001/*.png             "$REVIEW_ROOT/"
+
+      - name: Correct T-021 catalog and register approved Pingliang
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json")
+          d=json.loads(p.read_text(encoding="utf-8"))
+          d["task"]="T-022"
+          d["status"]="EIGHT_APPROVED / T021+T022 PRODUCT_OWNER_APPROVED"
+          d["approved_master_count"]=8
+          records=d.setdefault("new_masters",[])
+          four=next(x for x in records if x.get("component_id")=="CMP-FRAME-FOUR-CHUANFU-001")
+          four["approval_status"]="PRODUCT_OWNER_APPROVED"
+          four["decision_id"]="D-072"
+          four["publication_status"]="CLOSED / MERGED_TO_MAIN"
+          four["canonical_asset_status"]="ACTIONS_ARTIFACT / APPROVED"
+          ping=next((x for x in records if x.get("component_id")=="CMP-FRAME-PINGLIANG-001"),None)
+          if ping is None:
+              ping={}
+              records.append(ping)
+          ping.clear()
+          ping.update({
+              "component_id":"CMP-FRAME-PINGLIANG-001",
+              "master_id":"CMP-FRAME-PINGLIANG-001_MASTER",
+              "master_version":"V001",
+              "variant_ids":["EW_SEAM","GABLE"],
+              "approval_status":"PRODUCT_OWNER_APPROVED",
+              "decision_id":"D-074",
+              "publication_status":"FORMAL_DELIVERY_MATERIALIZED / PR_MERGE_PENDING",
+              "canonical_asset_status":"ACTIONS_ARTIFACT / APPROVED",
+              "canonical_asset_sha256":{
+                  "EW_SEAM":"5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4",
+                  "GABLE":"f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a"
+              },
+              "semantic_geometry_signature":{
+                  "EW_SEAM":"5805215c4aa4a18bc3f100af855c2442efdb8d4cb07d334a1aeabbf39b74fdb7",
+                  "GABLE":"262f8493b7656f94e4112a8405be565893d89be7c099d83f63bde149d7993c40"
+              },
+              "parametric_completion":{
+                  "GABLE_width_mm":346.0,
+                  "GABLE_thickness_mm":245.4,
+                  "replaceable":True,
+                  "historical_claim":False
+              },
+              "formal_delivery":{
+                  "validation":"production/zhenguo_wanfo/validation/CMP-FRAME-PINGLIANG-001_MASTER_VALIDATION_V001.json",
+                  "engineering_review":"docs/production/zhenguo_wanfo/P3_3_T022_PINGLIANG_ENGINEERING_REVIEW_V001.md",
+                  "product_owner_acceptance":"docs/production/zhenguo_wanfo/P3_3_T022_PINGLIANG_PRODUCT_OWNER_ACCEPTANCE_V001.md",
+                  "review_png_count":10
+              }
+          })
+          p.write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          print("CATALOG_CORRECTION_AND_REGISTRATION_PASS")
+          PY
+
+      - name: Formal delivery self-check
+        run: |
+          set -euo pipefail
+          test "$(find "$REVIEW_ROOT" -maxdepth 1 -name '*.png' | wc -l)" -eq 10
+          test ! -e "$MASTER_ROOT/asset"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          cat=json.loads(Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json").read_text())
+          four=next(x for x in cat["new_masters"] if x["component_id"]=="CMP-FRAME-FOUR-CHUANFU-001")
+          ping=next(x for x in cat["new_masters"] if x["component_id"]=="CMP-FRAME-PINGLIANG-001")
+          assert four["approval_status"]=="PRODUCT_OWNER_APPROVED" and four["decision_id"]=="D-072"
+          assert ping["approval_status"]=="PRODUCT_OWNER_APPROVED" and ping["decision_id"]=="D-074"
+          assert ping["parametric_completion"]["GABLE_thickness_mm"]==245.4
+          assert ping["parametric_completion"]["historical_claim"] is False
+          v=json.loads(Path("production/zhenguo_wanfo/validation/CMP-FRAME-PINGLIANG-001_MASTER_VALIDATION_V001.json").read_text())
+          assert v["check_count"]==56 and all(x=="PASS" for x in v["checks"].values())
+          print("FORMAL_DELIVERY_SELF_CHECK_PASS")
+          PY
+          if git ls-files '*.blend' | grep -q .; then
+            echo "Committed .blend detected"
+            exit 1
+          fi
+
+      - name: Commit approved formal delivery
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             "$MASTER_ROOT"             "$REVIEW_ROOT"             "$VALIDATION_ROOT/CMP-FRAME-PINGLIANG-001_MASTER_VALIDATION_V001.json"             docs/production/zhenguo_wanfo/P3_3_T022_PINGLIANG_ENGINEERING_REVIEW_V001.md             "$CATALOG"
+          git diff --cached --check
+          git commit -m "T-022: materialize approved formal delivery"
+          git push origin HEAD:codex/t022-p3-3-pingliang-master-first-article-v001
