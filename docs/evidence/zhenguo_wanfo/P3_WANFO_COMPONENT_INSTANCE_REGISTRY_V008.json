@@ -186,14 +186,25 @@
       "id": "平梁-东缝",
       "location": "东缝",
       "count_status": "LOCKED_COUNT_LOCATION",
-      "evidence": "直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40",
+      "evidence": "构件族直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40；样本与东/西缝逐件对应UNKNOWN",
       "variant": "东西缝型",
       "section_mm": "实测组A 390×280；实测组B 401×281；均值广395.5；厚280.5",
       "width_mm": 395.5,
       "thickness_mm": 280.5,
       "note": "表2-40未将390×280与401×281逐一对应到东缝/西缝，禁止静默映射；报告归整为广26分、厚18分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。",
       "length_rule": "整殿实例长度由后续装配端点显式推导；Master reference length不得进入整殿实例",
-      "modeling_disposition": "DIRECT_MEASURED_SECTION / BUILDABLE"
+      "modeling_disposition": "DIRECT_MEASURED_SECTION / BUILDABLE",
+      "observed_section_samples_mm": [
+        {
+          "width": 390,
+          "thickness": 280
+        },
+        {
+          "width": 401,
+          "thickness": 281
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN"
     },
     {
       "system": "主体木构",
@@ -201,14 +212,25 @@
       "id": "平梁-西缝",
       "location": "西缝",
       "count_status": "LOCKED_COUNT_LOCATION",
-      "evidence": "直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40",
+      "evidence": "构件族直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40；样本与东/西缝逐件对应UNKNOWN",
       "variant": "东西缝型",
       "section_mm": "实测组A 390×280；实测组B 401×281；均值广395.5；厚280.5",
       "width_mm": 395.5,
       "thickness_mm": 280.5,
       "note": "表2-40未将390×280与401×281逐一对应到东缝/西缝，禁止静默映射；报告归整为广26分、厚18分，仅作REPORT_INFERRED尺度分析，不作963历史设计值。图2-41示平梁与斗栱交接关系。",
       "length_rule": "整殿实例长度由后续装配端点显式推导；Master reference length不得进入整殿实例",
-      "modeling_disposition": "DIRECT_MEASURED_SECTION / BUILDABLE"
+      "modeling_disposition": "DIRECT_MEASURED_SECTION / BUILDABLE",
+      "observed_section_samples_mm": [
+        {
+          "width": 390,
+          "thickness": 280
+        },
+        {
+          "width": 401,
+          "thickness": 281
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN"
     },
     {
       "system": "主体木构",
@@ -216,7 +238,7 @@
       "id": "平梁-东山",
       "location": "东山",
       "count_status": "LOCKED_COUNT_LOCATION",
-      "evidence": "直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40",
+      "evidence": "数量/位置直接确认 + 山面型单一样本实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40；样本与东/西山逐件对应UNKNOWN",
       "variant": "山面型",
       "section_mm": "广346；厚未及（UNKNOWN）",
       "width_mm": 346,
@@ -237,8 +259,22 @@
         },
         "replaceable": true,
         "historical_claim": false,
-        "note": "仅用于完整建模；不是报告实测厚度，也不是963年历史设计值。若后续取得山面平梁厚度直接证据，替换本值。"
-      }
+        "note": "仅用于完整建模；不是报告实测厚度，也不是963年历史设计值。若后续取得山面平梁厚度直接证据，替换本值。",
+        "width_mm": {
+          "classification": "PARAMETRIC_COMPLETION",
+          "production_value_mm": 346,
+          "method": "generalize_single_observed_gable_sample_to_both_gable_instances",
+          "replaceable": true,
+          "historical_claim": false
+        }
+      },
+      "observed_section_samples_mm": [
+        {
+          "width": 346,
+          "thickness": null
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN"
     },
     {
       "system": "主体木构",
@@ -246,7 +282,7 @@
       "id": "平梁-西山",
       "location": "西山",
       "count_status": "LOCKED_COUNT_LOCATION",
-      "evidence": "直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40",
+      "evidence": "数量/位置直接确认 + 山面型单一样本实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40；样本与东/西山逐件对应UNKNOWN",
       "variant": "山面型",
       "section_mm": "广346；厚未及（UNKNOWN）",
       "width_mm": 346,
@@ -267,8 +303,22 @@
         },
         "replaceable": true,
         "historical_claim": false,
-        "note": "仅用于完整建模；不是报告实测厚度，也不是963年历史设计值。若后续取得山面平梁厚度直接证据，替换本值。"
-      }
+        "note": "仅用于完整建模；不是报告实测厚度，也不是963年历史设计值。若后续取得山面平梁厚度直接证据，替换本值。",
+        "width_mm": {
+          "classification": "PARAMETRIC_COMPLETION",
+          "production_value_mm": 346,
+          "method": "generalize_single_observed_gable_sample_to_both_gable_instances",
+          "replaceable": true,
+          "historical_claim": false
+        }
+      },
+      "observed_section_samples_mm": [
+        {
+          "width": 346,
+          "thickness": null
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN"
     },
     {
       "system": "主体木构",
