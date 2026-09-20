@@ -195,3 +195,33 @@ git log -1 --oneline --decorate
 ```
 
 Do not begin the next Stage1 Master until local sync verification is closed.
+
+## 11. V008 Master-progress verification after sync
+
+After Git fast-forward sync, verify the derived V008 Excel:
+
+`docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.xlsx`
+
+Expected first sheet:
+- `进度总览`
+
+Expected values:
+- 登记记录数：505
+- 登记对象类型：66
+- Stage1 Master范围：28
+- 已批准 Master：10
+- 待完成 Master：18
+- Master完成度：35.7%
+- 已绑定Master的登记记录：52
+- PENDING_SOURCE_BINDING：7
+
+Expected instance-table columns:
+- Stage1处置
+- Master状态
+- Master引用
+
+Generator version：1.0.2  
+Current Excel SHA-256：
+`dd0364c03f9c44c4d15f3b2aa192a1117af5261aa1705402562570a36019342c`
+
+If these values are missing after local sync, STOP before starting the next Master and reconcile the local derived Excel.
