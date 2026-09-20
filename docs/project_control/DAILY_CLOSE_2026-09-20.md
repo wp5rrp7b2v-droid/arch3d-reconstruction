@@ -471,3 +471,46 @@ The only intentionally unresolved items are bounded and explicit:
 Final statement:
 
 > **2026-09-20 closes with T-022, T-023 and T-024 fully approved, published and merged; Stage1 remains active with 10 approved Masters. The next engineering step is intentionally not started. Local synchronization is the only immediate operational task before the next modeling session.**
+
+## 17. Post-close visibility patch｜D-087
+
+After the initial Daily Close, Product Owner added one usability requirement:
+
+> Opening V008 should immediately show how many objects/components are registered, how many are within Stage1 Master scope, how many Masters are complete, and how many remain.
+
+This is now implemented without changing V008's evidence facts.
+
+Current visibility snapshot:
+- V008 registry records：505
+- registered object types：66
+- Stage1 Master-scope object types：28
+- Product Owner approved Masters：10
+- pending Master types：18
+- Master completion：35.7%
+- registry rows currently bound to approved Masters：52
+- PENDING_SOURCE_BINDING：7
+
+Important denominator rule:
+- 505 is the **registry-record count**, not a whole-building physical-piece total;
+- 66 includes physical components plus systems/topology/family-boundary objects;
+- Master completion uses **28 Master-scope object types** as denominator.
+
+V008 / CURRENT row-level additions:
+- `stage1_disposition`
+- `master_coverage_status`
+- `master_reference` when an approved Master exists
+
+Approval/version/SHA/publication truth remains in:
+`production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json`
+
+Derived Excel:
+- generator version：1.0.2
+- added first sheet：`进度总览`
+- added instance columns：Stage1处置 / Master状态 / Master引用
+- RC-018 Run：35508113993 = SUCCESS
+- Excel SHA-256：`dd0364c03f9c44c4d15f3b2aa192a1117af5261aa1705402562570a36019342c`
+
+Governance:
+Every future approved Master must update V008/CURRENT + derived Excel during formal closure; otherwise the record closure is incomplete.
+
+This patch does not reopen T-022/T-023/T-024 engineering and does not authorize a new Master task.
