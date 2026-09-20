@@ -1,0 +1,202 @@
+{
+  "assembly_length_rule": {
+    "default_to_canonical_reference_allowed": false,
+    "hard_fail_id": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "historical_full_length_remains_null": true,
+    "requires_explicit_building_specific_derived_length": true
+  },
+  "blender_version": "4.5.13 LTS",
+  "body": {
+    "face_count": 6,
+    "geometry_faces": [
+      [
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        4
+      ],
+      [
+        1,
+        2,
+        6,
+        5
+      ],
+      [
+        2,
+        3,
+        7,
+        6
+      ],
+      [
+        3,
+        0,
+        4,
+        7
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "geometry_vertices_mm": [
+      [
+        -500.0,
+        -197.75,
+        0.0
+      ],
+      [
+        500.0,
+        -197.75,
+        0.0
+      ],
+      [
+        500.0,
+        197.75,
+        0.0
+      ],
+      [
+        -500.0,
+        197.75,
+        0.0
+      ],
+      [
+        -500.0,
+        -197.75,
+        280.5
+      ],
+      [
+        500.0,
+        -197.75,
+        280.5
+      ],
+      [
+        500.0,
+        197.75,
+        280.5
+      ],
+      [
+        -500.0,
+        197.75,
+        280.5
+      ]
+    ],
+    "local_bbox_mm": {
+      "dimensions": [
+        1000.0,
+        395.5,
+        280.5
+      ],
+      "max": [
+        500.0,
+        197.75,
+        280.5
+      ],
+      "min": [
+        -500.0,
+        -197.75,
+        0.0
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "name": "MASTER__CMP_FRAME_PINGLIANG_001__EW_SEAM__BODY",
+    "primitive": "closed_rectangular_bounded_outer_envelope_reference",
+    "unsupported_detail_count": 0,
+    "vertex_count": 8
+  },
+  "canonical_asset_path": "artifacts/t022/CMP-FRAME-PINGLIANG-001_EW_SEAM_MASTER_V001.blend",
+  "canonical_blend_sha256": "5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4",
+  "component_id": "CMP-FRAME-PINGLIANG-001",
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "geometry_semantics": "EVIDENCE_BOUNDED / PARAMETRIC_COMPLETION_EXPLICIT / REPLACEABLE",
+  "historical_state": {
+    "historical_claim": false,
+    "historical_full_length_mm": null,
+    "reconstructed_963_candidate": "not_inferred",
+    "report_ideal_model": "separate_not_inferred"
+  },
+  "known_unknowns": [
+    "Historical full length UNKNOWN / null",
+    "EW raw samples are not mapped to east/west seam instances",
+    "Gable observed sample is not mapped to east/west gable instance",
+    "Gable observed thickness UNKNOWN / null",
+    "End profiles, joinery, grooves, camber, local section changes and hidden connections not evidenced"
+  ],
+  "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+  "master_version": "V001",
+  "resolved_global_parameters": {
+    "canonical_reference_length_mm": 1000,
+    "historical_full_length_mm": null,
+    "realization_length_mm": 1000
+  },
+  "semantic_geometry_signature": "5805215c4aa4a18bc3f100af855c2442efdb8d4cb07d334a1aeabbf39b74fdb7",
+  "stable_variant_id": "CMP-FRAME-PINGLIANG-001__EW_SEAM",
+  "task": "T-022",
+  "unsupported_geometry": [],
+  "variant_id": "EW_SEAM",
+  "variant_semantics": {
+    "instance_ids": [
+      "平梁-东缝",
+      "平梁-西缝"
+    ],
+    "observed_section_samples_mm": [
+      {
+        "thickness": 280,
+        "width": 390
+      },
+      {
+        "thickness": 281,
+        "width": 401
+      }
+    ],
+    "production_section_mm": {
+      "thickness": 280.5,
+      "width": 395.5
+    },
+    "report_design_analysis": {
+      "classification": "REPORT_INFERRED",
+      "geometry_use_count": 0,
+      "thickness_fen_rounded": 18,
+      "width_fen_rounded": 26
+    },
+    "sample_to_instance_mapping": "UNKNOWN",
+    "stable_variant_id": "CMP-FRAME-PINGLIANG-001__EW_SEAM",
+    "thickness_semantics": {
+      "classification": "CONFIRMED_FAMILY_MEAN",
+      "historical_claim": false,
+      "replaceable": false,
+      "source_layer": "DIRECT_PRIMARY"
+    },
+    "variant_id": "EW_SEAM",
+    "width_semantics": {
+      "classification": "CONFIRMED_FAMILY_MEAN",
+      "historical_claim": false,
+      "replaceable": false,
+      "source_layer": "DIRECT_PRIMARY"
+    }
+  }
+}
