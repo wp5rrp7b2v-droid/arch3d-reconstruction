@@ -562,3 +562,24 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Binary Master：remains Actions artifact only; no `.blend` committed to Git。
 - Final：**T-021 ACCEPTANCE + PUBLICATION CLOSURE COMPLETE**。
 - Boundary：Stage 1 remains ACTIVE; this does not authorize Stage 2 or resume T-018。
+
+## 2026-09-20｜T-022 平梁 Master 首件正式验收
+
+- Decision：**D-074 / Product Owner APPROVED**。
+- Task：T-022。
+- Master：`CMP-FRAME-PINGLIANG-001_MASTER`。
+- Variants：`EW_SEAM` / `GABLE`。
+- Actions Run：`35483530705` = **SUCCESS**。
+- Reviewed head：`0ddf8290345e4087b7173e89993d3022e2ba730c`。
+- Machine validation：**56/56 PASS**。
+- Independent reopen：both PASS。
+- Mutation / restore：PASS。
+- Review：10/10 PNG = PASS。
+- Artifact ID：`10597296654`；ZIP SHA-256=`31670f3654fa2f088900b06c0d7d5d7c1b8a1dbeb221dce692bb85cce4f40839`。
+- EW_SEAM：395.5 × 280.5 mm / measured-family mean。
+- GABLE：346 × 245.4 mm；245.4 = explicit PARAMETRIC_COMPLETION / replaceable / historical_claim=false；observed thickness remains UNKNOWN/null。
+- Historical full length：UNKNOWN/null；1000 mm remains non-historical Master reference only。
+- Final：**T-022 FIRST ARTICLE PRODUCT OWNER APPROVED**。
+- Publication boundary：formal materialization + Stage1 Catalog correction/registration + final cross-check pending；PR #9 merge not yet authorized。
+- Boundary：P3.3 Stage 1 remains ACTIVE / not passed；Stage 2 not authorized；T-018 HOLD。
+
