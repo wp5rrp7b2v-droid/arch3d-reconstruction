@@ -612,3 +612,22 @@ Therefore separately check：
 - Local sync prep updated：must verify “进度总览” after sync
 - New engineering task：NONE
 - T-018：HOLD
+
+
+## Local Mac reconciliation closure｜2026-09-20
+
+- Cloud production window：CLOSED.
+- Local Git synchronization：PASS.
+- Local sync checkpoint HEAD：`995a8f42be21e9f1f8c8b013424ea56d5c1b554a`.
+- V008 / Excel post-sync verification：PASS.
+- Approved Actions artifact reconciliation：PASS.
+- T-021 四椽栿 canonical blend：SHA_MATCH.
+- T-022 平梁 EW_SEAM + GABLE canonical blends：SHA_MATCH.
+- T-023 丁栿 canonical blend：SHA_MATCH.
+- T-024 乳栿 canonical blend：SHA_MATCH.
+- Local approved Master library：10 approved Masters / 11 `.blend` files.
+- Git safety：working tree clean; `.blend` ignored.
+- Local-sync gate：CLOSED.
+- Current engineering T-task：NONE.
+- Next：return to Stage1 next-Master selection under D-076.
+- T-018：HOLD.
