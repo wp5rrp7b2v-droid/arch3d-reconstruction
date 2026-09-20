@@ -612,3 +612,17 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - P3.3 Stage 1：ACTIVE / NOT PASSED。
 - Next formal work item：丁栿 Master evidence review / Spec design。
 - T-018：HOLD。
+
+## 2026-09-20｜T-023 Merge Closure
+
+- Product Owner merge authorization：**D-081**。
+- PR #10：**MERGED**。
+- Merge commit：`d6f85cd2dc9adf8080ef2a0347449b12ef94c646`。
+- Final head：`c07ec0819ceabd9a6d18c6b787196881849e76a6`。
+- Final Actions Run：`35494632342` = SUCCESS。
+- T-023 publication：**CLOSED / MERGED_TO_MAIN**。
+- Stage1 Master Catalog approved count：9。
+- P3.3 Stage 1：ACTIVE / NOT PASSED。
+- Next formal work item：乳栿 Master visual-reference review + evidence review + Spec design。
+- D-076：ACTIVE for 乳栿 and later new components。
+- T-018：HOLD。
