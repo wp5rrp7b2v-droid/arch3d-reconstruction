@@ -149,20 +149,34 @@ def main():
     catalog["task"]="T-022"
     catalog["status"]="SOURCE_CATALOG_PLUS_PINGLIANG_ENGINEERING_COMPLETE_PENDING_REVIEW"
     records=list(catalog.get("new_masters",[]))
-    ck("55_no_duplicate_pingliang_in_source_catalog",not any(x.get("component_id")==p["component_id"] for x in records))
-    records.append({
-        "component_id":p["component_id"],
-        "master_id":p["master_id"],
-        "master_version":"V001",
-        "variant_ids":["EW_SEAM","GABLE"],
-        "approval_status":"ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
-        "canonical_asset_status":"ACTIONS_ARTIFACT",
-        "canonical_asset_sha256":{"EW_SEAM":ew_sha,"GABLE":ga_sha},
-        "parametric_completion":{"GABLE_thickness_mm":245.4,"replaceable":True,"historical_claim":False}
-    })
+    existing=[x for x in records if x.get("component_id")==p["component_id"]]
+    ck("55_catalog_pingliang_unique_or_absent",len(existing)<=1)
+    if existing:
+        ping=existing[0]
+        ck("56_catalog_pingliang_state_valid",
+           ping.get("master_id")==p["master_id"] and
+           ping.get("variant_ids")==["EW_SEAM","GABLE"] and
+           ping.get("approval_status")=="PRODUCT_OWNER_APPROVED" and
+           ping.get("decision_id")=="D-074" and
+           ping.get("canonical_asset_sha256",{}).get("EW_SEAM")==ew_sha and
+           ping.get("canonical_asset_sha256",{}).get("GABLE")==ga_sha and
+           ping.get("parametric_completion",{}).get("GABLE_thickness_mm")==245.4 and
+           ping.get("parametric_completion",{}).get("historical_claim") is False)
+    else:
+        ping={
+            "component_id":p["component_id"],
+            "master_id":p["master_id"],
+            "master_version":"V001",
+            "variant_ids":["EW_SEAM","GABLE"],
+            "approval_status":"ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+            "canonical_asset_status":"ACTIONS_ARTIFACT",
+            "canonical_asset_sha256":{"EW_SEAM":ew_sha,"GABLE":ga_sha},
+            "parametric_completion":{"GABLE_thickness_mm":245.4,"replaceable":True,"historical_claim":False}
+        }
+        records.append(ping)
+        ck("56_catalog_pingliang_state_valid",ping["approval_status"]=="ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW")
     catalog["new_masters"]=records
     Path(a.catalog).write_text(json.dumps(catalog,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    ck("56_catalog_pingliang_pending_only",records[-1]["approval_status"]=="ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW")
 
     result={
         "task":"T-022",
