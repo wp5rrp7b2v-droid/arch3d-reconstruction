@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R161",
+  "state_revision": "R162",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / FINAL PRE-LOCAL-SYNC AUDIT COMPLETE / D-087 V008 MASTER PROGRESS VISIBILITY ACTIVE / LOCAL SYNC VERIFICATION PENDING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / LOCAL SYNC + APPROVED ARTIFACT RECONCILIATION PASS / D-087 ACTIVE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,11 +26,11 @@
     }
   },
   "decision_required": false,
-  "blocker": "No engineering blocker. Immediate operational gate is local sync verification. Do not start the next Master until local Git state and approved Actions artifacts are reconciled. T-018 remains HOLD.",
+  "blocker": "No engineering blocker. Local Git sync and approved T-021—T-024 artifact reconciliation are complete. Next work may return to Stage1 missing-Master selection under D-076 visual-reference gate. T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
-    "status": "PRODUCTION WINDOW COMPLETE / LOCAL_SYNC_VERIFICATION PENDING",
+    "status": "CLOSED / LOCAL_SYNC_VERIFICATION PASS",
     "expected_start": "2026-09-16",
     "expected_end": "2026-09-20",
     "tools": [
@@ -38,7 +38,7 @@
       "Codex Cloud",
       "GitHub Web/App"
     ],
-    "local_mac": "EXPECTED AVAILABLE LATER 2026-09-20 / SYNC NOT YET VERIFIED",
+    "local_mac": "AVAILABLE / GIT SYNC VERIFIED / APPROVED ACTIONS ARTIFACTS RECONCILED",
     "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
     "approved_equivalent_execution": {
       "decision_id": "D-048",
@@ -49,29 +49,28 @@
     },
     "sync_ledger": {
       "path": "docs/project_control/CLOUD_MODE_SYNC_LEDGER_2026-09-16_20.md",
-      "status": "DAY 5 COMPLETE / CLOUD PRODUCTION CLOSED / LOCAL_SYNC_VERIFICATION PENDING",
+      "status": "DAY 5 COMPLETE / CLOUD PRODUCTION CLOSED / LOCAL_SYNC_VERIFICATION PASS",
       "target_local_sync_date": "2026-09-20 evening",
       "day_1_register": "COMPLETE / 2026-09-16",
       "day_2_register": "COMPLETE / 2026-09-17",
       "required_daily_update_through": "2026-09-20",
       "day_3_register": "COMPLETE / 2026-09-18 / DAILY_CLOSE_2026-09-18 + post-close omission audit / R121 / v062 / latest formal decision D-064 / no new execution authorization / T-018 HOLD / production direction not yet proven",
       "day_4_register": "COMPLETE / 2026-09-19 / V008 CURRENT / P3.3 V002 Stage 1 ACTIVE / T-021 first article approved D-072 / PR #7 merged / formal delivery records on main / next target 平梁 / T-018 HOLD",
-      "day_5_register": "COMPLETE / 2026-09-20 / T-022+T-023+T-024 CLOSED + MERGED / V008 505 / Catalog 10 approved / D-076 ACTIVE / no active engineering T-task / local sync verification pending"
+      "day_5_register": "COMPLETE / 2026-09-20 / T-022+T-023+T-024 CLOSED + MERGED / V008 505 / Catalog 10 approved / D-076 ACTIVE / local Git sync PASS / approved T-021—T-024 artifact reconciliation PASS"
     },
-    "active_window_note": "2026-09-20 DAILY CLOSE COMPLETE. Cloud production window is closed. T-022/T-023/T-024 are approved, published and merged; Stage 1 remains ACTIVE / not passed; no active engineering T-task; next modeling work is intentionally deferred until local sync verification completes; T-018 remains HOLD."
+    "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
     "id": "NONE",
-    "status": "POST-CLOSE VISIBILITY PATCH COMPLETE / LOCAL SYNC VERIFICATION PENDING / NO ENGINEERING T-TASK ACTIVE"
+    "status": "LOCAL SYNC + ARTIFACT RECONCILIATION COMPLETE / NO ENGINEERING T-TASK ACTIVE"
   },
   "proposed_next_task": {
-    "id": "LOCAL_SYNC_VERIFICATION_2026_09_20",
-    "name": "Local Mac Git + approved Actions artifact reconciliation",
-    "status": "NEXT / PREPARED / EXECUTION PENDING LOCAL MAC",
+    "id": "STAGE1_NEXT_MASTER_SELECTION",
+    "name": "Select next missing Stage1 Master from V008 coverage matrix under D-076 visual-reference gate",
+    "status": "READY FOR CHAT DESIGN / ENGINEERING EXECUTION NOT YET AUTHORIZED",
     "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "checklist": "docs/project_control/LOCAL_SYNC_PREP_2026-09-20.md",
-    "after_completion": "Return to Stage1 coverage matrix and select next missing Master under D-076"
+    "prerequisite": "D-076 visual-reference review before any new Master modeling"
   },
   "last_completed_task": {
     "id": "T-024",
@@ -211,7 +210,7 @@
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
-    "status": "PASS / COMPLETE / LOCAL SYNC PREP COMPLETE",
+    "status": "PASS / COMPLETE / LOCAL SYNC + ARTIFACT RECONCILIATION COMPLETE",
     "execution_log_recorded": true,
     "acceptance_matrix_recorded": true,
     "dashboard_aligned": true,
@@ -222,8 +221,8 @@
     "latest_formal_decision": "D-087",
     "new_decision_at_close": false,
     "new_execution_authorization_at_close": false,
-    "project_state_revision": "R161",
-    "dashboard_version": "v101",
+    "project_state_revision": "R162",
+    "dashboard_version": "v102",
     "post_close_omission_audit": "PASS / FINAL PRE-LOCAL-SYNC RECHECK / NO KNOWN MISSING CURRENT-STATE REGISTRATIONS",
     "omission_audit_checked": [
       "D-073..D-087 decisions",
@@ -239,7 +238,7 @@
       "Local Sync Prep"
     ],
     "omission_audit_missing_items": [],
-    "caution": "Local Mac has not yet been synchronized or artifact-reconciled. No next Master execution until local verification is complete.",
+    "caution": "Local synchronization is complete. T-018 remains HOLD. No next Master engineering execution is authorized until D-076 visual-reference review and a new task authorization.",
     "post_close_visibility_patch": "D-087 / V008 Master progress visibility implemented / Excel sync PASS 35508113993",
     "post_close_decision": "D-087 / V008 MASTER PROGRESS VISIBILITY",
     "final_pre_local_sync_audit": {
@@ -262,15 +261,16 @@
       ],
       "active_actions_runs": 0,
       "note": "Historical failed intermediate Actions runs are superseded by later successful accepted runs and are not active blockers."
-    }
+    },
+    "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Mac local sync only. Execute LOCAL_SYNC_PREP_2026-09-20 Phase A+B read-only checks first. After sync verify Project State R161 or later, Dashboard v101 or later, V008/CURRENT equality, Excel progress overview 505/66/28/10/18/35.7%, and no new active engineering task. T-018 remains HOLD.",
+  "next_action": "Return to Stage1 coverage matrix and select the next missing Master in Chat. Apply D-076 visual-reference review before any modeling. Do not create/execute a new T-task until the specification and visual-reference gate are approved. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v101",
+    "visualization_version": "v102",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R161 / FINAL PRE-LOCAL-SYNC AUDIT PASS / D-087 ACTIVE / LOCAL SYNC PENDING / T-018 HOLD"
+    "refresh_status": "CURRENT / R162 / LOCAL SYNC + APPROVED ARTIFACT RECONCILIATION PASS / D-087 ACTIVE / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -675,5 +675,63 @@
     "excel_sync_run": 35508113993,
     "excel_sync_result": "SUCCESS",
     "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure."
+  },
+  "local_sync_verification_2026_09_20": {
+    "status": "PASS / COMPLETE",
+    "local_repo_path": "/Users/caroline/中国古建筑3D复原",
+    "local_branch": "main",
+    "synchronized_head": "995a8f42be21e9f1f8c8b013424ea56d5c1b554a",
+    "remote_head_at_sync": "995a8f42be21e9f1f8c8b013424ea56d5c1b554a",
+    "git_fast_forward": true,
+    "working_tree_clean_after_sync": true,
+    "project_state_verified": "R161 at sync checkpoint",
+    "v008_progress_verified": {
+      "registry_records": 505,
+      "registered_object_types": 66,
+      "master_scope_object_types": 28,
+      "approved_masters": 10,
+      "pending_masters": 18,
+      "completion_percent": 35.7,
+      "master_bound_rows": 52,
+      "pending_source_binding": 7
+    },
+    "v008_excel_sha256": "dd0364c03f9c44c4d15f3b2aa192a1117af5261aa1705402562570a36019342c",
+    "approved_artifact_reconciliation": {
+      "status": "PASS / 5 OF 5 CANONICAL BLENDS SHA-MATCHED",
+      "local_master_blend_file_count": 11,
+      "files": [
+        {
+          "task": "T-021",
+          "component": "四椽栿",
+          "file": "CMP-FRAME-FOUR-CHUANFU-001_MASTER_V001.blend",
+          "sha256": "9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997"
+        },
+        {
+          "task": "T-022",
+          "component": "平梁 / EW_SEAM",
+          "file": "CMP-FRAME-PINGLIANG-001_EW_SEAM_MASTER_V001.blend",
+          "sha256": "5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4"
+        },
+        {
+          "task": "T-022",
+          "component": "平梁 / GABLE",
+          "file": "CMP-FRAME-PINGLIANG-001_GABLE_MASTER_V001.blend",
+          "sha256": "f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a"
+        },
+        {
+          "task": "T-023",
+          "component": "丁栿",
+          "file": "CMP-FRAME-DINGFU-001_MASTER_V001.blend",
+          "sha256": "81fa6c593b90c40766c6cc2098b4759c7747cf9bbc77c9c409f5320f88c7c737"
+        },
+        {
+          "task": "T-024",
+          "component": "乳栿",
+          "file": "CMP-FRAME-RUFU-001_MASTER_V001.blend",
+          "sha256": "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208"
+        }
+      ],
+      "git_safety": "PASS / *.blend ignored / working tree clean"
+    }
   }
 }
