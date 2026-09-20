@@ -70,7 +70,7 @@
       ],
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-080",
-      "publication_status": "FORMAL_DELIVERY_MATERIALIZED / PR_MERGE_PENDING",
+      "publication_status": "CLOSED / MERGED_TO_MAIN",
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED",
       "canonical_asset_sha256": "81fa6c593b90c40766c6cc2098b4759c7747cf9bbc77c9c409f5320f88c7c737",
       "semantic_geometry_signature": "2cb4b6bcae382f9a35dbca3063439aa025e0b6bba18c4175f63c1f13d089f982",
@@ -79,14 +79,17 @@
         "thickness": 200.9
       },
       "historical_full_length_mm": null,
-      "canonical_reference_length_mm": 1000.0,
+      "canonical_reference_length_mm": 1000,
       "groove_boundary": "DIRECT_EXISTENCE / GEOMETRY_DEFERRED",
       "formal_delivery": {
         "validation": "production/zhenguo_wanfo/validation/CMP-FRAME-DINGFU-001_MASTER_VALIDATION_V001.json",
         "engineering_review": "docs/production/zhenguo_wanfo/P3_3_T023_DINGFU_ENGINEERING_REVIEW_V001.md",
         "product_owner_acceptance": "docs/production/zhenguo_wanfo/P3_3_T023_DINGFU_PRODUCT_OWNER_ACCEPTANCE_V001.md",
         "review_png_count": 6
-      }
+      },
+      "merge_commit_sha": "d6f85cd2dc9adf8080ef2a0347449b12ef94c646",
+      "final_head_sha": "c07ec0819ceabd9a6d18c6b787196881849e76a6",
+      "final_head_actions_run": 35494632342
     }
   ],
   "approved_master_count": 9
