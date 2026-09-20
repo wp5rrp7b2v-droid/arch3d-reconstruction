@@ -151,8 +151,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add             "$MASTER_ROOT"             "$REVIEW_ROOT"             "$VALIDATION_ROOT/CMP-FRAME-PINGLIANG-001_MASTER_VALIDATION_V001.json"             docs/production/zhenguo_wanfo/P3_3_T022_PINGLIANG_ENGINEERING_REVIEW_V001.md             "$CATALOG"
           git diff --cached --check
-          if git diff --cached --name-only | grep -E '\\.blend          git push origin HEAD:codex/t022-p3-3-pingliang-master-first-article-v001
-; then
+          if git diff --cached --name-only | grep -E '\.blend$'; then
             echo "T-022 staged delivery must not include .blend files"
             exit 1
           fi
