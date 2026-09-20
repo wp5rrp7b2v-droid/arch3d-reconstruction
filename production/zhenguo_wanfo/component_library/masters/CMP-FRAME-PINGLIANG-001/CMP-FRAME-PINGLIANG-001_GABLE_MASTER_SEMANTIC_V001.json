@@ -1,0 +1,209 @@
+{
+  "assembly_length_rule": {
+    "default_to_canonical_reference_allowed": false,
+    "hard_fail_id": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "historical_full_length_remains_null": true,
+    "requires_explicit_building_specific_derived_length": true
+  },
+  "blender_version": "4.5.13 LTS",
+  "body": {
+    "face_count": 6,
+    "geometry_faces": [
+      [
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        4
+      ],
+      [
+        1,
+        2,
+        6,
+        5
+      ],
+      [
+        2,
+        3,
+        7,
+        6
+      ],
+      [
+        3,
+        0,
+        4,
+        7
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "geometry_vertices_mm": [
+      [
+        -500.0,
+        -173.0,
+        0.0
+      ],
+      [
+        500.0,
+        -173.0,
+        0.0
+      ],
+      [
+        500.0,
+        173.0,
+        0.0
+      ],
+      [
+        -500.0,
+        173.0,
+        0.0
+      ],
+      [
+        -500.0,
+        -173.0,
+        245.399994
+      ],
+      [
+        500.0,
+        -173.0,
+        245.399994
+      ],
+      [
+        500.0,
+        173.0,
+        245.399994
+      ],
+      [
+        -500.0,
+        173.0,
+        245.399994
+      ]
+    ],
+    "local_bbox_mm": {
+      "dimensions": [
+        1000.0,
+        346.0,
+        245.399994
+      ],
+      "max": [
+        500.0,
+        173.0,
+        245.399994
+      ],
+      "min": [
+        -500.0,
+        -173.0,
+        0.0
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "name": "MASTER__CMP_FRAME_PINGLIANG_001__GABLE__BODY",
+    "primitive": "closed_rectangular_bounded_outer_envelope_reference",
+    "unsupported_detail_count": 0,
+    "vertex_count": 8
+  },
+  "canonical_asset_path": "artifacts/t022/CMP-FRAME-PINGLIANG-001_GABLE_MASTER_V001.blend",
+  "canonical_blend_sha256": "f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a",
+  "component_id": "CMP-FRAME-PINGLIANG-001",
+  "geometry_lod": "EVIDENCE_BOUNDED_MEDIUM_LOD",
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "geometry_semantics": "EVIDENCE_BOUNDED / PARAMETRIC_COMPLETION_EXPLICIT / REPLACEABLE",
+  "historical_state": {
+    "historical_claim": false,
+    "historical_full_length_mm": null,
+    "reconstructed_963_candidate": "not_inferred",
+    "report_ideal_model": "separate_not_inferred"
+  },
+  "known_unknowns": [
+    "Historical full length UNKNOWN / null",
+    "EW raw samples are not mapped to east/west seam instances",
+    "Gable observed sample is not mapped to east/west gable instance",
+    "Gable observed thickness UNKNOWN / null",
+    "End profiles, joinery, grooves, camber, local section changes and hidden connections not evidenced"
+  ],
+  "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+  "master_version": "V001",
+  "resolved_global_parameters": {
+    "canonical_reference_length_mm": 1000,
+    "historical_full_length_mm": null,
+    "realization_length_mm": 1000
+  },
+  "semantic_geometry_signature": "262f8493b7656f94e4112a8405be565893d89be7c099d83f63bde149d7993c40",
+  "stable_variant_id": "CMP-FRAME-PINGLIANG-001__GABLE",
+  "task": "T-022",
+  "unsupported_geometry": [],
+  "variant_id": "GABLE",
+  "variant_semantics": {
+    "instance_ids": [
+      "平梁-东山",
+      "平梁-西山"
+    ],
+    "observed_section_mm": {
+      "thickness": null,
+      "width": 346
+    },
+    "observed_section_samples_mm": [
+      {
+        "thickness": null,
+        "width": 346
+      }
+    ],
+    "production_section_mm": {
+      "thickness": 245.4,
+      "width": 346
+    },
+    "report_design_analysis": {
+      "classification": "REPORT_INFERRED",
+      "geometry_use_count": 0,
+      "thickness_fen_rounded": null,
+      "width_fen_rounded": 23
+    },
+    "sample_to_instance_mapping": "UNKNOWN",
+    "stable_variant_id": "CMP-FRAME-PINGLIANG-001__GABLE",
+    "thickness_semantics": {
+      "classification": "PARAMETRIC_COMPLETION",
+      "formula": "346 * 280.5 / 395.5",
+      "historical_claim": false,
+      "method": "preserve_east_west_seam_mean_section_aspect_ratio",
+      "replaceable": true,
+      "source_inputs_mm": {
+        "east_west_mean_thickness_observed": 280.5,
+        "east_west_mean_width_observed": 395.5,
+        "gable_width_observed": 346
+      }
+    },
+    "variant_id": "GABLE",
+    "width_semantics": {
+      "classification": "PARAMETRIC_COMPLETION",
+      "historical_claim": false,
+      "method": "generalize_single_observed_gable_sample_to_both_gable_instances",
+      "replaceable": true,
+      "source_observed_sample_mm": 346
+    }
+  }
+}

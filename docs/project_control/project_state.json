@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R141",
+  "state_revision": "R142",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-022 PINGLIANG FIRST ARTICLE AUTHORIZED / V008 UPDATED + PR #8 MERGED / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-022 PRODUCT OWNER APPROVED + FORMAL DELIVERY MATERIALIZED / PR #9 MERGE AUTHORIZATION REQUIRED / NEXT 丁栿 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / T-022 ACTIVE / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / T-022 APPROVED / PR #9 MERGE PENDING / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / STAGE1 ACTIVE / T-022 PINGLIANG FIRST ARTICLE AUTHORIZED / T-020+RZ+FV STAGE5 RE-REVIEW / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / STAGE1 ACTIVE / T-021+D-072 APPROVED / T-022+D-074 APPROVED / PR #9 MERGE PENDING / T-020+RZ+FV STAGE5 RE-REVIEW / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No immediate T-022 blocker. Gable Pingliang observed thickness remains UNKNOWN; production completion 245.4 mm is explicitly replaceable PARAMETRIC_COMPLETION, not historical fact. T-018 remains HOLD by design.",
+  "decision_required": true,
+  "blocker": "No engineering blocker for T-022. PR #9 merge still requires separate Product Owner authorization. Gable Pingliang observed thickness remains UNKNOWN/null; 245.4 mm remains explicit replaceable PARAMETRIC_COMPLETION and non-historical. T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,23 +62,31 @@
   "current_task": {
     "id": "T-022",
     "engineering_id": "P3_3_PINGLIANG_MASTER_FIRST_ARTICLE_V001",
-    "status": "AUTHORIZED / ENGINEERING EXECUTION MAY START",
+    "status": "PASS / PRODUCT OWNER APPROVED / D-074 / FORMAL DELIVERY MATERIALIZED / PR #9 MERGE PENDING",
     "component": "平梁",
     "target_master": "CMP-FRAME-PINGLIANG-001_MASTER",
     "authorization_decision": "D-073",
+    "acceptance_decision": "D-074",
     "branch": "codex/t022-p3-3-pingliang-master-first-article-v001",
-    "execution_mode": "CHATGPT_DIRECT_GITHUB_EXECUTION + GITHUB_ACTIONS_BLENDER_4_5_13",
+    "github_pr_number": 9,
+    "reviewed_head_sha": "0ddf8290345e4087b7173e89993d3022e2ba730c",
+    "approved_actions_run": 35483530705,
+    "publication_run": 35486003264,
+    "validation": "56/56 PASS",
+    "review_png": "10/10 PASS",
+    "artifact_id": 10597296654,
+    "formal_delivery_commit": "1f2c22f7dcc1034fca4ddb7f28bc6d23af31ed7e",
     "merge_authorized": false,
     "t018_impact": "NONE / remains HOLD"
   },
   "proposed_next_task": {
-    "id": "T-022",
-    "name": "平梁 Master First Article V001",
-    "status": "AUTHORIZED / NOW CURRENT TASK",
-    "component": "平梁",
-    "new_t_task_created": true,
-    "engineering_execution_authorized": true,
-    "authorization_basis": "D-073"
+    "id": "STAGE1_NEXT_MASTER",
+    "name": "丁栿 Master evidence review + specification design",
+    "status": "PLANNED / AFTER T-022 PR #9 PUBLICATION CLOSURE",
+    "component": "丁栿",
+    "new_t_task_created": false,
+    "engineering_execution_authorized": false,
+    "authorization_basis": "P3.3 V002 Stage 1 priority order / D-066"
   },
   "last_completed_task": {
     "id": "T-021",
@@ -130,12 +138,12 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "DOD LOCKED / D-047 / D-048 PIPELINE APPROVED / T-019 CLOSED D-055 / T-020 CLOSED D-058 / T-018 V002 CONTRACT LOCKED D-059",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / T-021 APPROVED+CLOSED / T-022 APPROVED+MERGE PENDING / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
-    "dod_version": "V001",
-    "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-047",
-    "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V001.md",
+    "dod_version": "V002",
+    "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-066",
+    "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md",
     "engineering_planning_authorized": true,
     "engineering_execution_authorized": false,
     "t017": {
@@ -195,9 +203,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-073",
+    "id": "D-074",
     "date": "2026-09-20",
-    "decision": "Approved gable Pingliang production thickness 245.4 mm as replaceable PARAMETRIC_COMPLETION (historical_claim=false), approved one Pingliang Master with EW_SEAM/GABLE variants, and authorized T-022 engineering execution via ChatGPT direct GitHub + GitHub Actions Blender 4.5.13. T-018 remains HOLD."
+    "decision": "Product Owner approved T-022 Pingliang first article after Run 35483530705 56/56 PASS and 10/10 review PASS; authorized formal delivery, T-021 catalog correction, Pingliang catalog registration and final cross-check. PR #9 merge remains separately unauthorized. GABLE 245.4 mm remains replaceable PARAMETRIC_COMPLETION with historical_claim=false and observed thickness UNKNOWN/null."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -236,13 +244,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Execute T-022 Pingliang Master First Article on dedicated branch; validate EW_SEAM and GABLE variants, explicit parametric-completion metadata, independent reopen, mutation/restore, review package, and protected-input checks. Do not merge without Product Owner approval. T-018 remains HOLD.",
+  "next_action": "Complete final PR #9 pre-merge cross-check on the fully materialized T-022 branch; if PASS, request separate Product Owner authorization to merge PR #9. After publication closure, continue Stage 1 with 丁栿 evidence review/spec design. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v081",
+    "visualization_version": "v082",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R140 / DAILY CLOSE COMPLETE / T-021 CLOSED / NEXT 平梁 MASTER / V008 CURRENT / T-018 HOLD"
+    "refresh_status": "CURRENT / R142 / T-022 APPROVED + FORMAL DELIVERY MATERIALIZED / PR #9 MERGE PENDING / NEXT 丁栿 / V008 CURRENT / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -355,7 +363,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / T-022 PINGLIANG FIRST ARTICLE AUTHORIZED",
+    "status": "ACTIVE / T-021 + T-022 PRODUCT OWNER APPROVED / T-022 PR #9 MERGE PENDING",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -461,8 +469,9 @@
       "merge_commit_sha": "2c2c3bc3dea63d7f8449271c47e58d468489c950"
     },
     "pingliang": {
-      "status": "T-022 AUTHORIZED / ENGINEERING EXECUTION MAY START",
-      "decision_id": "D-073",
+      "status": "PASS / PRODUCT OWNER APPROVED / D-074 / FORMAL DELIVERY MATERIALIZED / PR #9 MERGE PENDING",
+      "decision_id": "D-074",
+      "authorization_decision_id": "D-073",
       "component_id": "CMP-FRAME-PINGLIANG-001",
       "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
       "physical_instance_count": 4,
@@ -476,22 +485,34 @@
             "width": 395.5,
             "thickness": 280.5
           },
-          "classification": "DIRECT_MEASURED_FAMILY_MEAN"
+          "classification": "DIRECT_MEASURED_FAMILY_MEAN",
+          "canonical_blend_sha256": "5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4",
+          "semantic_geometry_signature": "5805215c4aa4a18bc3f100af855c2442efdb8d4cb07d334a1aeabbf39b74fdb7"
         },
         "GABLE": {
           "instances": [
             "平梁-东山",
             "平梁-西山"
           ],
+          "observed_thickness_mm": null,
           "production_section_mm": {
             "width": 346,
             "thickness": 245.4
           },
-          "classification": "PARAMETRIC_COMPLETION / REPLACEABLE / NON_HISTORICAL"
+          "classification": "PARAMETRIC_COMPLETION / REPLACEABLE / NON_HISTORICAL",
+          "canonical_blend_sha256": "f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a",
+          "semantic_geometry_signature": "262f8493b7656f94e4112a8405be565893d89be7c099d83f63bde149d7993c40"
         }
       },
       "historical_full_length_mm": null,
       "canonical_reference_length_mm": 1000,
+      "actions_run_id": 35483530705,
+      "validation": "56/56 PASS",
+      "review_png": "10/10 PASS",
+      "artifact_id": 10597296654,
+      "artifact_zip_sha256": "31670f3654fa2f088900b06c0d7d5d7c1b8a1dbeb221dce692bb85cce4f40839",
+      "formal_delivery_commit": "1f2c22f7dcc1034fca4ddb7f28bc6d23af31ed7e",
+      "catalog_status": "T-021 corrected to D-072 approved; T-022 registered D-074 approved",
       "merge_authorized": false
     }
   },

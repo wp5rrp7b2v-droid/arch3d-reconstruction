@@ -1,0 +1,384 @@
+{
+  "approval_boundary": "ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW",
+  "blender_version": "4.5.13 LTS",
+  "canonical_blend_sha256": {
+    "EW_SEAM": "5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4",
+    "GABLE": "f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a"
+  },
+  "check_count": 56,
+  "checks": {
+    "01_component_id": "PASS",
+    "02_master_id": "PASS",
+    "03_registry_v008_505": "PASS",
+    "04_pingliang_instance_count_4": "PASS",
+    "05_exact_instance_ids": "PASS",
+    "06_source_binding": "PASS",
+    "07_two_stable_variants": "PASS",
+    "08_ew_sample_a": "PASS",
+    "09_ew_sample_b": "PASS",
+    "10_ew_mapping_unknown": "PASS",
+    "11_ew_mean_width": "PASS",
+    "12_ew_mean_thickness": "PASS",
+    "13_ew_report_metadata_only": "PASS",
+    "14_gable_one_observed_sample": "PASS",
+    "15_gable_observed_thickness_null": "PASS",
+    "16_gable_mapping_unknown": "PASS",
+    "17_gable_production_width": "PASS",
+    "18_gable_production_thickness": "PASS",
+    "19_gable_formula_rounds_245_4": "PASS",
+    "20_gable_width_completion_class": "PASS",
+    "21_gable_width_replaceable_nonhistorical": "PASS",
+    "22_gable_thickness_completion_class": "PASS",
+    "23_gable_thickness_replaceable_nonhistorical": "PASS",
+    "24_gable_report_metadata_only": "PASS",
+    "25_historical_length_null": "PASS",
+    "26_reference_nonhistorical": "PASS",
+    "27_realization_derives_reference": "PASS",
+    "28_ew_x_extent": "PASS",
+    "29_ew_y_extent": "PASS",
+    "30_ew_z_extent": "PASS",
+    "31_gable_x_extent": "PASS",
+    "32_gable_y_extent": "PASS",
+    "33_gable_z_extent": "PASS",
+    "34_canonical_transforms": "PASS",
+    "35_unsupported_geometry_zero": "PASS",
+    "36_p2_proxy_zero": "PASS",
+    "37_independent_reopen_both": "PASS",
+    "38_deterministic_restore_ew": "PASS",
+    "39_deterministic_restore_gable": "PASS",
+    "40_length_mutation_x_only": "PASS",
+    "41_ew_width_mutation_y_only": "PASS",
+    "42_ew_thickness_mutation_z_only": "PASS",
+    "43_gable_completion_mutation_z_only": "PASS",
+    "44_gable_mutation_keeps_completion_semantics": "PASS",
+    "45_review_ten_complete": "PASS",
+    "46_binary_sha_both": "PASS",
+    "47_blend_artifact_only": "PASS",
+    "48_registry_completion_declared": "PASS",
+    "49_no_reference_length_leak": "PASS",
+    "50_no_silent_historicization": "PASS",
+    "51_no_undeclared_parametric_completion": "PASS",
+    "52_no_legacy_proxy_as_real_component": "PASS",
+    "53_variant_ids_match_semantics": "PASS",
+    "54_blender_4_5_13": "PASS",
+    "55_no_duplicate_pingliang_in_source_catalog": "PASS",
+    "56_catalog_pingliang_pending_only": "PASS"
+  },
+  "mutation_evidence": {
+    "canonical_restored": true,
+    "ew_thickness": [
+      1000.0,
+      395.5,
+      300.0
+    ],
+    "ew_width": [
+      1000.0,
+      420.0,
+      280.5
+    ],
+    "gable_completion_thickness": [
+      1000.0,
+      346.0,
+      260.0
+    ],
+    "length": [
+      1100.0,
+      395.5,
+      280.5
+    ]
+  },
+  "reopen_evidence": {
+    "EW_SEAM": {
+      "blend_sha256": "5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4",
+      "body": {
+        "face_count": 6,
+        "geometry_faces": [
+          [
+            3,
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            5,
+            4
+          ],
+          [
+            1,
+            2,
+            6,
+            5
+          ],
+          [
+            2,
+            3,
+            7,
+            6
+          ],
+          [
+            3,
+            0,
+            4,
+            7
+          ],
+          [
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "geometry_vertices_mm": [
+          [
+            -500.0,
+            -197.75,
+            0.0
+          ],
+          [
+            500.0,
+            -197.75,
+            0.0
+          ],
+          [
+            500.0,
+            197.75,
+            0.0
+          ],
+          [
+            -500.0,
+            197.75,
+            0.0
+          ],
+          [
+            -500.0,
+            -197.75,
+            280.5
+          ],
+          [
+            500.0,
+            -197.75,
+            280.5
+          ],
+          [
+            500.0,
+            197.75,
+            280.5
+          ],
+          [
+            -500.0,
+            197.75,
+            280.5
+          ]
+        ],
+        "local_bbox_mm": {
+          "dimensions": [
+            1000.0,
+            395.5,
+            280.5
+          ],
+          "max": [
+            500.0,
+            197.75,
+            280.5
+          ],
+          "min": [
+            -500.0,
+            -197.75,
+            0.0
+          ]
+        },
+        "local_transform": {
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "name": "MASTER__CMP_FRAME_PINGLIANG_001__EW_SEAM__BODY",
+        "primitive": "closed_rectangular_bounded_outer_envelope_reference",
+        "unsupported_detail_count": 0,
+        "vertex_count": 8
+      },
+      "component_id": "CMP-FRAME-PINGLIANG-001",
+      "historical_full_length_mm": null,
+      "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "semantic_geometry_signature": "5805215c4aa4a18bc3f100af855c2442efdb8d4cb07d334a1aeabbf39b74fdb7",
+      "stable_variant_id": "CMP-FRAME-PINGLIANG-001__EW_SEAM",
+      "status": "PASS",
+      "variant_id": "EW_SEAM"
+    },
+    "GABLE": {
+      "blend_sha256": "f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a",
+      "body": {
+        "face_count": 6,
+        "geometry_faces": [
+          [
+            3,
+            2,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            5,
+            4
+          ],
+          [
+            1,
+            2,
+            6,
+            5
+          ],
+          [
+            2,
+            3,
+            7,
+            6
+          ],
+          [
+            3,
+            0,
+            4,
+            7
+          ],
+          [
+            4,
+            5,
+            6,
+            7
+          ]
+        ],
+        "geometry_vertices_mm": [
+          [
+            -500.0,
+            -173.0,
+            0.0
+          ],
+          [
+            500.0,
+            -173.0,
+            0.0
+          ],
+          [
+            500.0,
+            173.0,
+            0.0
+          ],
+          [
+            -500.0,
+            173.0,
+            0.0
+          ],
+          [
+            -500.0,
+            -173.0,
+            245.399994
+          ],
+          [
+            500.0,
+            -173.0,
+            245.399994
+          ],
+          [
+            500.0,
+            173.0,
+            245.399994
+          ],
+          [
+            -500.0,
+            173.0,
+            245.399994
+          ]
+        ],
+        "local_bbox_mm": {
+          "dimensions": [
+            1000.0,
+            346.0,
+            245.399994
+          ],
+          "max": [
+            500.0,
+            173.0,
+            245.399994
+          ],
+          "min": [
+            -500.0,
+            -173.0,
+            0.0
+          ]
+        },
+        "local_transform": {
+          "location": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rotation": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        "name": "MASTER__CMP_FRAME_PINGLIANG_001__GABLE__BODY",
+        "primitive": "closed_rectangular_bounded_outer_envelope_reference",
+        "unsupported_detail_count": 0,
+        "vertex_count": 8
+      },
+      "component_id": "CMP-FRAME-PINGLIANG-001",
+      "historical_full_length_mm": null,
+      "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "semantic_geometry_signature": "262f8493b7656f94e4112a8405be565893d89be7c099d83f63bde149d7993c40",
+      "stable_variant_id": "CMP-FRAME-PINGLIANG-001__GABLE",
+      "status": "PASS",
+      "variant_id": "GABLE"
+    }
+  },
+  "review_paths": [
+    "EW_SEAM_FRONT.png",
+    "EW_SEAM_SIDE.png",
+    "EW_SEAM_TOP.png",
+    "EW_SEAM_AXON.png",
+    "GABLE_FRONT.png",
+    "GABLE_SIDE.png",
+    "GABLE_TOP.png",
+    "GABLE_AXON.png",
+    "DIMENSION_PARAMETER_SUMMARY.png",
+    "EVIDENCE_UNCERTAINTY_SUMMARY.png"
+  ],
+  "status": "PASS",
+  "task": "T-022",
+  "variants": {
+    "EW_SEAM": {
+      "classification": "DIRECT_MEASURED_FAMILY_MEAN",
+      "section_mm": [
+        395.5,
+        280.5
+      ]
+    },
+    "GABLE": {
+      "classification": "PARAMETRIC_COMPLETION / REPLACEABLE / NON_HISTORICAL",
+      "section_mm": [
+        346.0,
+        245.4
+      ]
+    }
+  }
+}
