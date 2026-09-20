@@ -9,6 +9,7 @@
 - Version：V002
 - Status：LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT YET AUTHORIZED
 - Decision：D-066
+- Visual-reference amendment：D-076 / 2026-09-20
 - Approval date：2026-09-19
 - Supersedes：P3.3 Definition of Done V001 / D-047 as the current P3.3 implementation plan
 - Historical preservation：V001 remains retained for audit history; its five Gate Hard Fails remain inherited unless explicitly replaced below
@@ -98,8 +99,9 @@ Establish the reusable real-component Master library required by V007.
 ### Work
 
 1. rebind and review the six existing approved Masters against V007 identity, dimensions and evidence boundaries;
-2. build missing Masters one component family at a time;
-3. for every component family in the current building scope, assign one of:
+2. before any new component Master is authorized for engineering modeling, pass the **Stage 1 Pre-Model Visual Reference Gate** defined below;
+3. build missing Masters one component family at a time;
+4. for every component family in the current building scope, assign one of:
    - approved Master;
    - approved parametric Master/variant;
    - explicit simplified proxy;
@@ -140,6 +142,30 @@ This order may be changed only for a documented dependency reason; it is not a h
 **No whole-building generation is allowed in Stage 1.**
 
 ---
+
+## Stage 1 Pre-Model Visual Reference Gate
+
+Effective decision: **D-076 / 2026-09-20**
+
+Before Product Owner can approve any new component Master for Blender/Codex engineering execution, ChatGPT must first present a visual reference set for that component.
+
+Minimum requirement:
+
+1. provide at least one same-building **real-object/site photograph** when available;
+2. provide at least one same-building **survey drawing / measured drawing / structural form drawing** when available;
+3. if one of the above is unavailable, provide the closest authoritative comparative reference and explicitly label it as comparative, not Wanfo direct evidence;
+4. source-derived explanatory schematics are allowed only as review aids and must be labeled **SOURCE_DERIVED_SCHEMATIC / NOT DIRECT EVIDENCE**;
+5. clearly distinguish what is directly visible from what remains inferred, parametric, simplified, or UNKNOWN;
+6. Product Owner must explicitly review/approve the component's visual/form reference before the engineering T-task is created and before Blender generation starts.
+
+Preferred source hierarchy:
+
+**same-building direct photograph > same-building measured/survey drawing > authoritative comparative historic example > source-derived schematic**
+
+A visual reference may support form understanding, but it must not silently create geometric dimensions or joinery that the evidence does not support.
+
+If no adequate visual/form reference can be produced, engineering modeling is **BLOCKED_ON_VISUAL_REFERENCE_REVIEW** until Product Owner explicitly accepts a bounded proxy/completion approach.
+
 
 ## Stage 2｜构件变体与装配接口
 
@@ -370,6 +396,9 @@ V002 adds:
 
 10. `EXCEL_AS_CANONICAL_SOURCE`  
     derived Excel is used to override or diverge from the canonical Component Registry JSON.
+
+11. `MODEL_BEFORE_VISUAL_REFERENCE_REVIEW`  
+    a new component Master is sent to engineering/Blender before the Product Owner has reviewed the required real-object / form-drawing reference set.
 
 Any occurrence is a Gate FAIL until corrected at its owning layer.
 
