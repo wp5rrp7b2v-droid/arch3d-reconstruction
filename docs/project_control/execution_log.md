@@ -1001,3 +1001,20 @@ Do not restart T-018 by default.
 - P3.3 Stage 1：ACTIVE / NOT PASSED。
 - Next：select next missing Master; D-076 visual-reference review applies before modeling。
 - T-018：HOLD。
+
+## 2026-09-20｜Daily Close / Local Sync Prep
+
+- Daily Close：**PASS / COMPLETE**。
+- Project State：R159。
+- Dashboard：v099。
+- Cloud Mode 2026-09-16—20：production window **CLOSED**；local sync verification pending。
+- T-022 / T-023 / T-024：all approved, published and merged。
+- Stage1 approved Master count：10。
+- V008：505 records / JSON canonical truth。
+- RC-018：V008 / 505 / SYNCED；latest relevant successful Run 35495608194。
+- Current engineering T-task：NONE。
+- Open PRs：#3 / #6 only；both T-018 HOLD / DO NOT MERGE。
+- D-076：ACTIVE for next new Master。
+- Local sync preparation：`docs/project_control/LOCAL_SYNC_PREP_2026-09-20.md`。
+- Next immediate operation：local Mac read-only preflight + fetch; do not start next Master before local sync verification PASS。
+- T-018：HOLD。
