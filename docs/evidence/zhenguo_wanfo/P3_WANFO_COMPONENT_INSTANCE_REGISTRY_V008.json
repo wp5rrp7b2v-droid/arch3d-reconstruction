@@ -7169,6 +7169,20 @@
     "authority": {
       "coverage_matrix": "production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json",
       "master_catalog": "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json"
-    }
+    },
+    "approved_master_components": [
+      "丁栿",
+      "上六椽栿",
+      "下六椽栿",
+      "乳栿",
+      "交互斗族",
+      "单向长开斗族",
+      "四椽栿",
+      "平梁",
+      "柱",
+      "柱头栌斗"
+    ],
+    "master_covered_registry_record_count": 52,
+    "progress_display_note": "505 is registry-record count, not a whole-building physical-piece total. Stage1 Master completion uses 28 Master-scope object types as denominator: 10 approved / 18 pending = 35.7%."
   }
 }
