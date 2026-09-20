@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R156",
+  "state_revision": "R157",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-024 PRODUCT OWNER APPROVED / FORMAL DELIVERY AUTHORIZED / PR #11 MERGE PENDING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-024 PRODUCT OWNER APPROVED / FORMAL DELIVERY MATERIALIZED / FINAL CROSS-CHECK PASS / PR #11 MERGE AUTHORIZATION REQUIRED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -62,31 +62,36 @@
   "current_task": {
     "id": "T-024",
     "engineering_id": "P3_3_RUFU_MASTER_FIRST_ARTICLE_V001",
-    "status": "PASS / PRODUCT OWNER APPROVED / D-085 / FORMAL DELIVERY IN PROGRESS / PR #11 MERGE PENDING",
+    "status": "PASS / PRODUCT OWNER APPROVED / D-085 / FORMAL DELIVERY MATERIALIZED / FINAL CROSS-CHECK PASS / PR #11 MERGE AUTHORIZATION REQUIRED",
     "component": "乳栿",
     "target_master": "CMP-FRAME-RUFU-001_MASTER",
     "branch": "codex/t024-p3-3-rufu-master-first-article-v001",
     "github_pr_number": 11,
-    "reviewed_head_sha": "b96cc4ce6d3995684d20c46bd0a8f9c71329481d",
+    "approved_first_article_head_sha": "b96cc4ce6d3995684d20c46bd0a8f9c71329481d",
     "approved_actions_run": 35496581278,
-    "validation": "43/43 EXECUTED CHECKS PASS",
-    "validation_note": "Conditional check #44 was not executed on the initial first-article run because no Rufu Catalog entry existed yet; final regression after formal publication is expected to execute it.",
-    "review_png": "6/6 PASS",
-    "artifact_id": 10601690312,
-    "artifact_zip_sha256": "d686825b86c3e1186682ba7b62861e18cea772242f5069f1ad6f0136f0e6f2a6",
-    "canonical_blend_sha256": "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208",
+    "approved_validation": "43/43 EXECUTED CHECKS PASS",
+    "approved_canonical_blend_sha256": "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208",
     "semantic_geometry_signature": "8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571",
-    "acceptance_decision": "D-085",
+    "product_owner_decision": "D-085",
+    "formal_delivery_commit": "fa404ffca1fd3a49cfd70efe0a460048ef6e2f05",
+    "publication_run": 35497971045,
+    "final_head_sha": "232e9f600ec391c46e2a8240281ed3c301c09bd4",
+    "final_regression_run": 35498078597,
+    "final_regression_validation": "44/44 PASS",
+    "final_regression_blend_sha256": "7d09a7fec162a6d01f95eb914eb34324f0e17350f22377a3547caf9b22c7e208",
+    "final_regression_artifact_id": 10600838637,
+    "final_regression_artifact_zip_sha256": "2de17b1077473f6a66acbdcf278505e26cc19e5d1f50fedb0256d6afb33a0beb",
+    "review_png": "6/6 PASS / byte-identical between approved first article and final regression",
+    "branch_sync_status": "ahead 14 / behind 0 against main",
     "merge_authorized": false,
-    "branch_sync_status": "formal delivery first, then reconcile latest main before final regression",
     "t018_impact": "NONE / remains HOLD"
   },
   "proposed_next_task": {
-    "id": "T-024_PRODUCT_OWNER_REVIEW",
-    "name": "乳栿 Master First Article Product Owner approval",
-    "status": "DECISION REQUIRED",
+    "id": "T-024_PR11_MERGE",
+    "name": "Merge PR #11 after Product Owner authorization",
+    "status": "READY / WAITING FOR EXPLICIT PRODUCT OWNER MERGE AUTHORIZATION",
     "component": "乳栿",
-    "engineering_execution_authorized": true,
+    "github_pr_number": 11,
     "merge_authorized": false
   },
   "last_completed_task": {
@@ -254,13 +259,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Materialize T-024 approved formal delivery, register 乳栿 in Stage1 Catalog, reconcile latest main into PR #11 branch, run final regression/cross-check, then request separate Product Owner authorization to merge PR #11. T-018 remains HOLD.",
+  "next_action": "Request explicit Product Owner authorization to merge PR #11. Final pre-merge cross-check is PASS: branch ahead 14 / behind 0, PR mergeable, 44/44 final regression PASS, no .blend committed, approved Catalog entry present, 6 review PNG retained byte-identical. Do not merge until authorized. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v096",
+    "visualization_version": "v097",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R156 / T-024 APPROVED / FORMAL DELIVERY IN PROGRESS / PR #11 MERGE PENDING / T-018 HOLD"
+    "refresh_status": "CURRENT / R157 / T-024 FINAL CROSS-CHECK PASS / PR #11 MERGE AUTHORIZATION REQUIRED / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -565,7 +570,7 @@
       }
     },
     "rufu_master_spec": {
-      "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-085 / FORMAL DELIVERY PENDING",
+      "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-085 / FORMAL DELIVERY MATERIALIZED / FINAL CROSS-CHECK PASS / PR #11 MERGE PENDING",
       "visual_gate": "PASS / D-082",
       "component_id": "CMP-FRAME-RUFU-001",
       "master_id": "CMP-FRAME-RUFU-001_MASTER",
@@ -600,7 +605,7 @@
       "t024_contract": "docs/tasks/T-024_P3_3_RUFU_MASTER_FIRST_ARTICLE_V001.md",
       "t024_execution_authorized": true,
       "t024_first_article": {
-        "status": "PRODUCT_OWNER_APPROVED / D-085",
+        "status": "PRODUCT_OWNER_APPROVED / FORMAL_DELIVERY_MATERIALIZED / FINAL_CROSS_CHECK_PASS / MERGE_PENDING",
         "actions_run_id": 35496581278,
         "validation": "43/43 EXECUTED CHECKS PASS",
         "review_png": "6/6 PASS",
@@ -608,7 +613,15 @@
         "semantic_geometry_signature": "8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571",
         "artifact_id": 10601690312,
         "artifact_zip_sha256": "d686825b86c3e1186682ba7b62861e18cea772242f5069f1ad6f0136f0e6f2a6",
-        "merge_authorized": false
+        "merge_authorized": false,
+        "formal_delivery_commit": "fa404ffca1fd3a49cfd70efe0a460048ef6e2f05",
+        "publication_run": 35497971045,
+        "final_head_sha": "232e9f600ec391c46e2a8240281ed3c301c09bd4",
+        "final_regression_run": 35498078597,
+        "final_regression_validation": "44/44 PASS",
+        "final_regression_blend_sha256": "7d09a7fec162a6d01f95eb914eb34324f0e17350f22377a3547caf9b22c7e208",
+        "final_regression_artifact_id": 10600838637,
+        "final_regression_artifact_zip_sha256": "2de17b1077473f6a66acbdcf278505e26cc19e5d1f50fedb0256d6afb33a0beb"
       }
     }
   },
