@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R153",
+  "state_revision": "R156",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-024 RUFU ENGINEERING EXECUTION AUTHORIZED / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-024 PRODUCT OWNER APPROVED / FORMAL DELIVERY AUTHORIZED / PR #11 MERGE PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -62,23 +62,32 @@
   "current_task": {
     "id": "T-024",
     "engineering_id": "P3_3_RUFU_MASTER_FIRST_ARTICLE_V001",
-    "status": "ACTIVE / ENGINEERING EXECUTION AUTHORIZED / D-084",
+    "status": "PASS / PRODUCT OWNER APPROVED / D-085 / FORMAL DELIVERY IN PROGRESS / PR #11 MERGE PENDING",
     "component": "乳栿",
     "target_master": "CMP-FRAME-RUFU-001_MASTER",
     "branch": "codex/t024-p3-3-rufu-master-first-article-v001",
-    "task_contract": "docs/tasks/T-024_P3_3_RUFU_MASTER_FIRST_ARTICLE_V001.md",
-    "engineering_execution_authorized": true,
-    "visual_reference_rule": "D-076 PASSED FOR RUFU / D-082",
-    "t018_impact": "NONE / remains HOLD",
-    "authorization_decision": "D-084"
+    "github_pr_number": 11,
+    "reviewed_head_sha": "b96cc4ce6d3995684d20c46bd0a8f9c71329481d",
+    "approved_actions_run": 35496581278,
+    "validation": "43/43 EXECUTED CHECKS PASS",
+    "validation_note": "Conditional check #44 was not executed on the initial first-article run because no Rufu Catalog entry existed yet; final regression after formal publication is expected to execute it.",
+    "review_png": "6/6 PASS",
+    "artifact_id": 10601690312,
+    "artifact_zip_sha256": "d686825b86c3e1186682ba7b62861e18cea772242f5069f1ad6f0136f0e6f2a6",
+    "canonical_blend_sha256": "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208",
+    "semantic_geometry_signature": "8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571",
+    "acceptance_decision": "D-085",
+    "merge_authorized": false,
+    "branch_sync_status": "formal delivery first, then reconcile latest main before final regression",
+    "t018_impact": "NONE / remains HOLD"
   },
   "proposed_next_task": {
-    "id": "T-024_EXECUTION",
-    "name": "乳栿 Master First Article engineering execution",
-    "status": "AUTHORIZED / IN PROGRESS",
+    "id": "T-024_PRODUCT_OWNER_REVIEW",
+    "name": "乳栿 Master First Article Product Owner approval",
+    "status": "DECISION REQUIRED",
     "component": "乳栿",
     "engineering_execution_authorized": true,
-    "authorization_basis": "D-084"
+    "merge_authorized": false
   },
   "last_completed_task": {
     "id": "T-023",
@@ -204,9 +213,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-084",
+    "id": "D-085",
     "date": "2026-09-20",
-    "decision": "Product Owner authorized T-024 乳栿 Master First Article engineering execution using ChatGPT direct GitHub execution and GitHub Actions Blender 4.5.13. Final first-article approval and PR merge remain separately unauthorized. T-018 remains HOLD."
+    "decision": "Product Owner approved T-024 乳栿 first article after Run 35496581278 and 6/6 visual review; authorized formal-delivery materialization and Stage1 Catalog registration. Initial canonical validation is 43/43 executed checks PASS; conditional catalog check #44 was not applicable before first publication. PR #11 merge remains separately unauthorized. T-018 remains HOLD."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -245,13 +254,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Execute T-024 on dedicated branch/PR, run Blender 4.5.13 first-article validation and produce review package. Stop at ENGINEERING_COMPLETE_PENDING_CHATGPT_PRODUCT_OWNER_REVIEW. T-018 remains HOLD.",
+  "next_action": "Materialize T-024 approved formal delivery, register 乳栿 in Stage1 Catalog, reconcile latest main into PR #11 branch, run final regression/cross-check, then request separate Product Owner authorization to merge PR #11. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v093",
+    "visualization_version": "v096",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R153 / T-024 ENGINEERING EXECUTION AUTHORIZED / T-018 HOLD"
+    "refresh_status": "CURRENT / R156 / T-024 APPROVED / FORMAL DELIVERY IN PROGRESS / PR #11 MERGE PENDING / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -556,7 +565,7 @@
       }
     },
     "rufu_master_spec": {
-      "status": "LOCKED / PRODUCT OWNER APPROVED / D-083",
+      "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-085 / FORMAL DELIVERY PENDING",
       "visual_gate": "PASS / D-082",
       "component_id": "CMP-FRAME-RUFU-001",
       "master_id": "CMP-FRAME-RUFU-001_MASTER",
@@ -589,7 +598,18 @@
       "engineering_execution_authorized": false,
       "decision_id": "D-083",
       "t024_contract": "docs/tasks/T-024_P3_3_RUFU_MASTER_FIRST_ARTICLE_V001.md",
-      "t024_execution_authorized": true
+      "t024_execution_authorized": true,
+      "t024_first_article": {
+        "status": "PRODUCT_OWNER_APPROVED / D-085",
+        "actions_run_id": 35496581278,
+        "validation": "43/43 EXECUTED CHECKS PASS",
+        "review_png": "6/6 PASS",
+        "canonical_blend_sha256": "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208",
+        "semantic_geometry_signature": "8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571",
+        "artifact_id": 10601690312,
+        "artifact_zip_sha256": "d686825b86c3e1186682ba7b62861e18cea772242f5069f1ad6f0136f0e6f2a6",
+        "merge_authorized": false
+      }
     }
   },
   "end_of_day_2026_09_19": {
