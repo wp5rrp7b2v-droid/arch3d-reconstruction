@@ -887,3 +887,27 @@ Do not restart T-018 by default.
 - T-018：HOLD。
 - T-020 / RZ / FV：Stage 5 re-review。
 - Omission audit：no open T-021 publication action remains；no unrecorded merge identified；no new engineering authorization granted。
+
+## 2026-09-20｜T-022 平梁 Master 首件正式验收
+
+- Product Owner：**APPROVED / D-074**。
+- PR：#9 / branch `codex/t022-p3-3-pingliang-master-first-article-v001`。
+- Reviewed head：`0ddf8290345e4087b7173e89993d3022e2ba730c`。
+- Actions Run #2：`35483530705` = **SUCCESS**。
+- Machine validation：**56/56 PASS**。
+- Blender：4.5.13 LTS。
+- EW_SEAM：395.5 × 280.5 mm / DIRECT_MEASURED_FAMILY_MEAN。
+- GABLE：346 × 245.4 mm / PARAMETRIC_COMPLETION / replaceable / non-historical；observed thickness remains UNKNOWN/null。
+- Independent reopen：EW_SEAM + GABLE = PASS。
+- Mutations：Length / EW Width / EW Thickness / GABLE Completion Thickness = PASS；Canonical restore = PASS。
+- Review：10/10 PNG = PASS。
+- Artifact ID：`10597296654`。
+- Artifact ZIP SHA-256：`31670f3654fa2f088900b06c0d7d5d7c1b8a1dbeb221dce692bb85cce4f40839`。
+- EW_SEAM canonical binary SHA-256：`5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4`。
+- EW_SEAM semantic geometry signature：`5805215c4aa4a18bc3f100af855c2442efdb8d4cb07d334a1aeabbf39b74fdb7`。
+- GABLE canonical binary SHA-256：`f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a`。
+- GABLE semantic geometry signature：`262f8493b7656f94e4112a8405be565893d89be7c099d83f63bde149d7993c40`。
+- Run #1 failure was validator-only strict float equality at 245.4; no geometry/parameter decision changed. Run #2 uses millimetre tolerance and passed all checks.
+- Formal delivery next：materialize approved semantic / validation / engineering review / 10 review PNG；修正 T-021 Catalog 状态；登记 T-022；final cross-check；PR #9 remains unmerged until separate merge authorization。
+- T-018：HOLD。
+
