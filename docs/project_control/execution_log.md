@@ -950,3 +950,19 @@ Do not restart T-018 by default.
 - P3.3 Stage 1：ACTIVE / NOT PASSED。
 - Next：丁栿 Master evidence review + specification design。
 - T-018：HOLD。
+
+## 2026-09-20｜T-023 PR #10 Merge Closure
+
+- Product Owner merge authorization：**D-081**。
+- PR：#10 = **MERGED**。
+- Final engineering head：`c07ec0819ceabd9a6d18c6b787196881849e76a6`。
+- Final regression Actions Run：`35494632342` = **SUCCESS**。
+- Merge commit：`d6f85cd2dc9adf8080ef2a0347449b12ef94c646`。
+- T-023 Catalog publication：`CLOSED / MERGED_TO_MAIN`。
+- Approved canonical .blend SHA-256 remains `81fa6c593b90c40766c6cc2098b4759c7747cf9bbc77c9c409f5320f88c7c737`。
+- Semantic geometry signature remains `2cb4b6bcae382f9a35dbca3063439aa025e0b6bba18c4175f63c1f13d089f982`。
+- Project State：R149。
+- Dashboard：v089。
+- P3.3 Stage 1：ACTIVE / NOT PASSED。
+- Next：乳栿 Master；D-076 visual-reference review applies before modeling。
+- T-018：HOLD。
