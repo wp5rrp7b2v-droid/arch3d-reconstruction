@@ -1,10 +1,10 @@
 # Cloud Mode Sync Ledger｜2026-09-16 → 2026-09-20
 
 **Project:** ARCH3D-001｜中国古建筑3D复原  
-**性质:** 临时云端变更登记 / 2026-09-21 本地同步防遗漏清单  
+**性质:** 临时云端变更登记 / 2026-09-20 晚间本地同步防遗漏清单  
 **适用期:** 2026-09-16 ～ 2026-09-20（含）  
-**目标同步日:** 2026-09-21  
-**状态:** ACTIVE / TEMPORARY / LOCAL_SYNC_VERIFICATION_PENDING  
+**目标同步日:** 2026-09-20 晚间（Product Owner 当前计划）  
+**状态:** CLOUD PRODUCTION WINDOW COMPLETE / LOCAL_SYNC_VERIFICATION_PENDING  
 **关联规则:** RC-014｜CLOUD_MODE_2026-09-16_20  
 **事实优先级:** 如与 `project_state.json`、Decision Log、Execution Log、Acceptance Matrix 或 GitHub `main` 冲突，以正式 Project Control + GitHub `main` 为准。
 
@@ -17,7 +17,7 @@
 - P3.0～P3.2：PASS / CLOSED
 - P3.3：ENTERED
 - Cloud workflow preflight：`CLOUD-DRILL-002 PASS / VERIFIED`
-- RC-014：2026-09-16～20 临时生效；2026-09-21 自动失效
+- RC-014：2026-09-16～20 临时云端生产窗口已完成；当前只保留本地同步核验义务
 - Local Mac：Cloud Mode 有效期内视为 TEMPORARILY UNAVAILABLE
 
 ---
@@ -30,7 +30,7 @@
 - T-018 / PR #3：OPEN / NOT MERGED；D-051 contract locked；D-052 execution authorized；9/16 close status = RESUME READY / CORRECTIONS REQUIRED。
 - T-019 / PR #4：PASS / D-055 / MERGED；7/7 PURLIN corrected to DEFERRED；merge commit `b9803fb416e375fd2f94f5d83df5fab73fe00063`。
 - Latest formal decision：D-055。
-- Local sync：PENDING until 2026-09-21。
+- Local sync：PENDING；当前计划于 2026-09-20 晚间执行。
 
 ---
 
