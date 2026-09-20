@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R148",
+  "state_revision": "R149",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-023 PRODUCT OWNER APPROVED / FORMAL DELIVERY AUTHORIZED / PR #10 MERGE PENDING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-023 CLOSED + PR #10 MERGED / NEXT 乳栿 / V008 CURRENT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / T-022 CLOSED / NEXT 丁栿 / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / T-023 CLOSED / NEXT 乳栿 / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / STAGE1 ACTIVE / T-021+D-072 CLOSED / T-022+D-074 CLOSED / PR #9 MERGED / T-020+RZ+FV STAGE5 RE-REVIEW / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / STAGE1 ACTIVE / T-021+D-072 CLOSED / T-022+D-074 CLOSED / T-023+D-080 CLOSED / PR #10 MERGED / T-020+RZ+FV STAGE5 RE-REVIEW / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "No immediate Stage 1 blocker. T-022 is closed and merged. Gable Pingliang observed thickness remains UNKNOWN/null; 245.4 mm remains explicit replaceable PARAMETRIC_COMPLETION and non-historical. T-018 remains HOLD.",
+  "blocker": "No immediate Stage 1 blocker. T-023 is closed and merged. D-076 pre-model visual-reference rule remains active for later new components. T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -60,48 +60,34 @@
     "active_window_note": "2026-09-19 DAILY CLOSE COMPLETE. T-021 is approved and merged to main; Stage 1 remains ACTIVE and not passed; next work item is 平梁 Master evidence review/spec design; T-018 remains HOLD; T-020/RZ/FV remain deferred to Stage 5 re-review."
   },
   "current_task": {
+    "id": "NONE",
+    "status": "T-023 CLOSED / PR #10 MERGED / STAGE1 READY FOR NEXT MASTER"
+  },
+  "proposed_next_task": {
+    "id": "STAGE1_NEXT_MASTER",
+    "name": "乳栿 Master visual reference review + evidence review + specification design",
+    "status": "NEXT / PLANNING AUTHORIZED / ENGINEERING EXECUTION NOT YET AUTHORIZED",
+    "component": "乳栿",
+    "new_t_task_created": false,
+    "engineering_execution_authorized": false,
+    "authorization_basis": "P3.3 V002 Stage 1 priority order / D-066 / D-076 visual gate"
+  },
+  "last_completed_task": {
     "id": "T-023",
     "engineering_id": "P3_3_DINGFU_MASTER_FIRST_ARTICLE_V001",
-    "status": "PASS / PRODUCT OWNER APPROVED / D-080 / FORMAL DELIVERY IN PROGRESS / PR #10 MERGE PENDING",
-    "component": "丁栿",
-    "target_master": "CMP-FRAME-DINGFU-001_MASTER",
-    "branch": "codex/t023-p3-3-dingfu-master-first-article-v001",
+    "status": "PASS / PRODUCT OWNER APPROVED / PUBLICATION CLOSED / PR #10 MERGED / D-080",
     "github_pr_number": 10,
     "reviewed_head_sha": "62a159874f8b6601bce3de68b5597245aa48119b",
-    "approved_actions_run": 35490552809,
+    "final_engineering_head_sha": "c07ec0819ceabd9a6d18c6b787196881849e76a6",
+    "merge_commit": "d6f85cd2dc9adf8080ef2a0347449b12ef94c646",
+    "final_head_actions_run": 35494632342,
     "validation": "36/36 PASS",
     "review_png": "6/6 PASS",
     "artifact_id": 10599280924,
     "artifact_zip_sha256": "a03ce1e3fdb4510f5cffeeec7b97fdfb215763153fab9c7c2a28690859847fe7",
+    "formal_delivery": "semantic + validation + engineering review + acceptance + Stage1 Catalog + 6 review PNG on main",
     "canonical_blend_sha256": "81fa6c593b90c40766c6cc2098b4759c7747cf9bbc77c9c409f5320f88c7c737",
-    "semantic_geometry_signature": "2cb4b6bcae382f9a35dbca3063439aa025e0b6bba18c4175f63c1f13d089f982",
-    "acceptance_decision": "D-080",
-    "merge_authorized": false,
-    "t018_impact": "NONE / remains HOLD"
-  },
-  "proposed_next_task": {
-    "id": "T-023_EXECUTION",
-    "name": "丁栿 Master First Article engineering execution",
-    "status": "AUTHORIZED / IN PROGRESS",
-    "component": "丁栿",
-    "engineering_execution_authorized": true,
-    "authorization_basis": "D-079"
-  },
-  "last_completed_task": {
-    "id": "T-022",
-    "engineering_id": "P3_3_PINGLIANG_MASTER_FIRST_ARTICLE_V001",
-    "status": "PASS / PRODUCT OWNER APPROVED / PUBLICATION CLOSED / PR #9 MERGED / D-074",
-    "github_pr_number": 9,
-    "reviewed_head_sha": "eaee40b8fd4d50b877956e0b2292538e248b9449",
-    "merge_commit": "9e32324baf8257a2b1ddae0033f4797f9e9d9fd4",
-    "final_head_actions_run": 35486533628,
-    "validation": "56/56 PASS",
-    "review_png": "10/10 PASS",
-    "artifact_id": 10597296654,
-    "artifact_zip_sha256": "31670f3654fa2f088900b06c0d7d5d7c1b8a1dbeb221dce692bb85cce4f40839",
-    "formal_delivery": "semantic + validation + engineering review + acceptance + Stage1 Catalog + 10 review PNG on main",
-    "ew_seam_canonical_blend_sha256": "5c077efe8d39299c8f0a0da39b02b460d3116a204888a17a203dccd189e5d8f4",
-    "gable_canonical_blend_sha256": "f2ecff85c6179481ba156f5f2a249cc7e060be623e3e99a6ee03d8d2ad22f59a"
+    "semantic_geometry_signature": "2cb4b6bcae382f9a35dbca3063439aa025e0b6bba18c4175f63c1f13d089f982"
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -139,7 +125,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / T-021 APPROVED+CLOSED / T-022 APPROVED+CLOSED / NEXT 丁栿 / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / T-021+CLOSED / T-022+CLOSED / T-023+CLOSED / NEXT 乳栿 / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -210,9 +196,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-080",
+    "id": "D-081",
     "date": "2026-09-20",
-    "decision": "Product Owner approved T-023 Dingfu first article after Run 35490552809 36/36 PASS and 6/6 review PASS; authorized formal-delivery materialization and Stage1 Catalog registration. PR #10 merge remains separately unauthorized. T-018 remains HOLD."
+    "decision": "Product Owner authorized merge of PR #10 after final pre-merge cross-check PASS. PR #10 merged to main at d6f85cd2dc9adf8080ef2a0347449b12ef94c646. T-023 publication is closed. Stage 1 remains active; next target is 乳栿 and D-076 visual-reference review applies before modeling. T-018 remains HOLD."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -251,13 +237,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "Materialize T-023 approved formal delivery, register Dingfu in Stage1 Catalog, run final pre-merge cross-check, then request separate Product Owner authorization to merge PR #10. T-018 remains HOLD.",
+  "next_action": "Continue P3.3 Stage 1 with 乳栿. Apply D-076: first present same-building real-object/site photo and/or measured/form drawing for Product Owner review; then perform evidence review and Master Spec design. Do not create a new engineering T-task or run Blender before visual/form review and Spec lock. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v088",
+    "visualization_version": "v089",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R148 / T-023 APPROVED / FORMAL DELIVERY IN PROGRESS / PR #10 MERGE PENDING / T-018 HOLD"
+    "refresh_status": "CURRENT / R149 / T-023 CLOSED / PR #10 MERGED / NEXT 乳栿 / D-076 VISUAL GATE / T-018 HOLD"
   },
   "superseded_prs": [
     {
@@ -370,7 +356,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / T-021 + T-022 PRODUCT OWNER APPROVED + CLOSED / NEXT 丁栿",
+    "status": "ACTIVE / T-021 + T-022 + T-023 PRODUCT OWNER APPROVED + CLOSED / NEXT 乳栿",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -525,7 +511,7 @@
       "final_head_actions_run": 35486533628
     },
     "dingfu_master_spec": {
-      "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-080 / FORMAL DELIVERY PENDING",
+      "status": "COMPLETE / PRODUCT OWNER APPROVED / D-080 / PUBLICATION CLOSED / PR #10 MERGED",
       "decision_id": "D-078",
       "component_id": "CMP-FRAME-DINGFU-001",
       "master_id": "CMP-FRAME-DINGFU-001_MASTER",
@@ -556,7 +542,9 @@
         "semantic_geometry_signature": "2cb4b6bcae382f9a35dbca3063439aa025e0b6bba18c4175f63c1f13d089f982",
         "artifact_id": 10599280924,
         "artifact_zip_sha256": "a03ce1e3fdb4510f5cffeeec7b97fdfb215763153fab9c7c2a28690859847fe7",
-        "merge_authorized": false
+        "merge_authorized": true,
+        "merge_commit_sha": "d6f85cd2dc9adf8080ef2a0347449b12ef94c646",
+        "final_head_actions_run": 35494632342
       }
     }
   },
