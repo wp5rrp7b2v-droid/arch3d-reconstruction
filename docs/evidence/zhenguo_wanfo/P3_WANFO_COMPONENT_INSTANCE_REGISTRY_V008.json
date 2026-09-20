@@ -326,9 +326,70 @@
       "id": "丁栿-东山-上丁栿-南",
       "location": "东山南侧 / 上丁栿",
       "count_status": "LOCKED",
-      "evidence": "总数+南北丁栿构造关系明确",
-      "section_mm": "平均广331.6；厚200.9",
-      "length_rule": "由装配端点求长"
+      "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN",
+      "section_mm": "构件族8组实测均值：广331.6；厚200.9",
+      "length_rule": "由装配端点求长；historical full length remains UNKNOWN",
+      "width_mm": 331.6,
+      "thickness_mm": 200.9,
+      "observed_section_samples_mm": [
+        {
+          "width": 346,
+          "thickness": 208
+        },
+        {
+          "width": 324,
+          "thickness": 199
+        },
+        {
+          "width": 335,
+          "thickness": 205
+        },
+        {
+          "width": 324,
+          "thickness": 174,
+          "note": "source table marks this thickness with （含）"
+        },
+        {
+          "width": 330,
+          "thickness": 203
+        },
+        {
+          "width": 330,
+          "thickness": 195
+        },
+        {
+          "width": 336,
+          "thickness": 203
+        },
+        {
+          "width": 328,
+          "thickness": 193
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN",
+      "modeling_disposition": "DIRECT_MEASURED_FAMILY_MEAN / BUILDABLE",
+      "end_semantics": {
+        "outboard": "外端入山面柱头铺作",
+        "inboard": "内端削成骑栿栱与榑交构",
+        "classification": "DIRECT_SOURCE_SEMANTIC / EXACT_JOINERY_GEOMETRY_UNRESOLVED"
+      },
+      "assembly_semantics": {
+        "role": "山面梁架联系构件；前后各一道；上承两山承椽枋和太平梁",
+        "paired_spacing_note": "组合构造中两根丁栿、斜乳栿间距一材一栔，垫单材栿一层",
+        "classification": "DIRECT_SOURCE_SEMANTIC"
+      },
+      "joinery_note": "报告明确提到丁栿入斗栱处刻出槽口；槽口存在性有直接文字依据，但精确位置/尺寸/轮廓未闭合，Stage1不得静默精细化。",
+      "report_analysis": {
+        "converted_fen": {
+          "width": 21.7,
+          "thickness": 13.1
+        },
+        "rounded_fen": {
+          "width": 22,
+          "thickness": 13
+        },
+        "classification": "REPORT_INFERRED / METADATA_ONLY / NOT_963_DESIGN_FACT"
+      }
     },
     {
       "system": "主体木构",
@@ -336,9 +397,70 @@
       "id": "丁栿-东山-上丁栿-北",
       "location": "东山北侧 / 上丁栿",
       "count_status": "LOCKED",
-      "evidence": "总数+南北丁栿构造关系明确",
-      "section_mm": "平均广331.6；厚200.9",
-      "length_rule": "由装配端点求长"
+      "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN",
+      "section_mm": "构件族8组实测均值：广331.6；厚200.9",
+      "length_rule": "由装配端点求长；historical full length remains UNKNOWN",
+      "width_mm": 331.6,
+      "thickness_mm": 200.9,
+      "observed_section_samples_mm": [
+        {
+          "width": 346,
+          "thickness": 208
+        },
+        {
+          "width": 324,
+          "thickness": 199
+        },
+        {
+          "width": 335,
+          "thickness": 205
+        },
+        {
+          "width": 324,
+          "thickness": 174,
+          "note": "source table marks this thickness with （含）"
+        },
+        {
+          "width": 330,
+          "thickness": 203
+        },
+        {
+          "width": 330,
+          "thickness": 195
+        },
+        {
+          "width": 336,
+          "thickness": 203
+        },
+        {
+          "width": 328,
+          "thickness": 193
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN",
+      "modeling_disposition": "DIRECT_MEASURED_FAMILY_MEAN / BUILDABLE",
+      "end_semantics": {
+        "outboard": "外端入山面柱头铺作",
+        "inboard": "内端削成骑栿栱与榑交构",
+        "classification": "DIRECT_SOURCE_SEMANTIC / EXACT_JOINERY_GEOMETRY_UNRESOLVED"
+      },
+      "assembly_semantics": {
+        "role": "山面梁架联系构件；前后各一道；上承两山承椽枋和太平梁",
+        "paired_spacing_note": "组合构造中两根丁栿、斜乳栿间距一材一栔，垫单材栿一层",
+        "classification": "DIRECT_SOURCE_SEMANTIC"
+      },
+      "joinery_note": "报告明确提到丁栿入斗栱处刻出槽口；槽口存在性有直接文字依据，但精确位置/尺寸/轮廓未闭合，Stage1不得静默精细化。",
+      "report_analysis": {
+        "converted_fen": {
+          "width": 21.7,
+          "thickness": 13.1
+        },
+        "rounded_fen": {
+          "width": 22,
+          "thickness": 13
+        },
+        "classification": "REPORT_INFERRED / METADATA_ONLY / NOT_963_DESIGN_FACT"
+      }
     },
     {
       "system": "主体木构",
@@ -346,9 +468,70 @@
       "id": "丁栿-东山-下丁栿-南",
       "location": "东山南侧 / 下丁栿",
       "count_status": "LOCKED",
-      "evidence": "总数+南北丁栿构造关系明确",
-      "section_mm": "平均广331.6；厚200.9",
-      "length_rule": "由装配端点求长"
+      "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN",
+      "section_mm": "构件族8组实测均值：广331.6；厚200.9",
+      "length_rule": "由装配端点求长；historical full length remains UNKNOWN",
+      "width_mm": 331.6,
+      "thickness_mm": 200.9,
+      "observed_section_samples_mm": [
+        {
+          "width": 346,
+          "thickness": 208
+        },
+        {
+          "width": 324,
+          "thickness": 199
+        },
+        {
+          "width": 335,
+          "thickness": 205
+        },
+        {
+          "width": 324,
+          "thickness": 174,
+          "note": "source table marks this thickness with （含）"
+        },
+        {
+          "width": 330,
+          "thickness": 203
+        },
+        {
+          "width": 330,
+          "thickness": 195
+        },
+        {
+          "width": 336,
+          "thickness": 203
+        },
+        {
+          "width": 328,
+          "thickness": 193
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN",
+      "modeling_disposition": "DIRECT_MEASURED_FAMILY_MEAN / BUILDABLE",
+      "end_semantics": {
+        "outboard": "外端入山面柱头铺作",
+        "inboard": "内端削成骑栿栱与榑交构",
+        "classification": "DIRECT_SOURCE_SEMANTIC / EXACT_JOINERY_GEOMETRY_UNRESOLVED"
+      },
+      "assembly_semantics": {
+        "role": "山面梁架联系构件；前后各一道；上承两山承椽枋和太平梁",
+        "paired_spacing_note": "组合构造中两根丁栿、斜乳栿间距一材一栔，垫单材栿一层",
+        "classification": "DIRECT_SOURCE_SEMANTIC"
+      },
+      "joinery_note": "报告明确提到丁栿入斗栱处刻出槽口；槽口存在性有直接文字依据，但精确位置/尺寸/轮廓未闭合，Stage1不得静默精细化。",
+      "report_analysis": {
+        "converted_fen": {
+          "width": 21.7,
+          "thickness": 13.1
+        },
+        "rounded_fen": {
+          "width": 22,
+          "thickness": 13
+        },
+        "classification": "REPORT_INFERRED / METADATA_ONLY / NOT_963_DESIGN_FACT"
+      }
     },
     {
       "system": "主体木构",
@@ -356,9 +539,70 @@
       "id": "丁栿-东山-下丁栿-北",
       "location": "东山北侧 / 下丁栿",
       "count_status": "LOCKED",
-      "evidence": "总数+南北丁栿构造关系明确",
-      "section_mm": "平均广331.6；厚200.9",
-      "length_rule": "由装配端点求长"
+      "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN",
+      "section_mm": "构件族8组实测均值：广331.6；厚200.9",
+      "length_rule": "由装配端点求长；historical full length remains UNKNOWN",
+      "width_mm": 331.6,
+      "thickness_mm": 200.9,
+      "observed_section_samples_mm": [
+        {
+          "width": 346,
+          "thickness": 208
+        },
+        {
+          "width": 324,
+          "thickness": 199
+        },
+        {
+          "width": 335,
+          "thickness": 205
+        },
+        {
+          "width": 324,
+          "thickness": 174,
+          "note": "source table marks this thickness with （含）"
+        },
+        {
+          "width": 330,
+          "thickness": 203
+        },
+        {
+          "width": 330,
+          "thickness": 195
+        },
+        {
+          "width": 336,
+          "thickness": 203
+        },
+        {
+          "width": 328,
+          "thickness": 193
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN",
+      "modeling_disposition": "DIRECT_MEASURED_FAMILY_MEAN / BUILDABLE",
+      "end_semantics": {
+        "outboard": "外端入山面柱头铺作",
+        "inboard": "内端削成骑栿栱与榑交构",
+        "classification": "DIRECT_SOURCE_SEMANTIC / EXACT_JOINERY_GEOMETRY_UNRESOLVED"
+      },
+      "assembly_semantics": {
+        "role": "山面梁架联系构件；前后各一道；上承两山承椽枋和太平梁",
+        "paired_spacing_note": "组合构造中两根丁栿、斜乳栿间距一材一栔，垫单材栿一层",
+        "classification": "DIRECT_SOURCE_SEMANTIC"
+      },
+      "joinery_note": "报告明确提到丁栿入斗栱处刻出槽口；槽口存在性有直接文字依据，但精确位置/尺寸/轮廓未闭合，Stage1不得静默精细化。",
+      "report_analysis": {
+        "converted_fen": {
+          "width": 21.7,
+          "thickness": 13.1
+        },
+        "rounded_fen": {
+          "width": 22,
+          "thickness": 13
+        },
+        "classification": "REPORT_INFERRED / METADATA_ONLY / NOT_963_DESIGN_FACT"
+      }
     },
     {
       "system": "主体木构",
@@ -366,9 +610,70 @@
       "id": "丁栿-西山-上丁栿-南",
       "location": "西山南侧 / 上丁栿",
       "count_status": "LOCKED",
-      "evidence": "总数+南北丁栿构造关系明确",
-      "section_mm": "平均广331.6；厚200.9",
-      "length_rule": "由装配端点求长"
+      "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN",
+      "section_mm": "构件族8组实测均值：广331.6；厚200.9",
+      "length_rule": "由装配端点求长；historical full length remains UNKNOWN",
+      "width_mm": 331.6,
+      "thickness_mm": 200.9,
+      "observed_section_samples_mm": [
+        {
+          "width": 346,
+          "thickness": 208
+        },
+        {
+          "width": 324,
+          "thickness": 199
+        },
+        {
+          "width": 335,
+          "thickness": 205
+        },
+        {
+          "width": 324,
+          "thickness": 174,
+          "note": "source table marks this thickness with （含）"
+        },
+        {
+          "width": 330,
+          "thickness": 203
+        },
+        {
+          "width": 330,
+          "thickness": 195
+        },
+        {
+          "width": 336,
+          "thickness": 203
+        },
+        {
+          "width": 328,
+          "thickness": 193
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN",
+      "modeling_disposition": "DIRECT_MEASURED_FAMILY_MEAN / BUILDABLE",
+      "end_semantics": {
+        "outboard": "外端入山面柱头铺作",
+        "inboard": "内端削成骑栿栱与榑交构",
+        "classification": "DIRECT_SOURCE_SEMANTIC / EXACT_JOINERY_GEOMETRY_UNRESOLVED"
+      },
+      "assembly_semantics": {
+        "role": "山面梁架联系构件；前后各一道；上承两山承椽枋和太平梁",
+        "paired_spacing_note": "组合构造中两根丁栿、斜乳栿间距一材一栔，垫单材栿一层",
+        "classification": "DIRECT_SOURCE_SEMANTIC"
+      },
+      "joinery_note": "报告明确提到丁栿入斗栱处刻出槽口；槽口存在性有直接文字依据，但精确位置/尺寸/轮廓未闭合，Stage1不得静默精细化。",
+      "report_analysis": {
+        "converted_fen": {
+          "width": 21.7,
+          "thickness": 13.1
+        },
+        "rounded_fen": {
+          "width": 22,
+          "thickness": 13
+        },
+        "classification": "REPORT_INFERRED / METADATA_ONLY / NOT_963_DESIGN_FACT"
+      }
     },
     {
       "system": "主体木构",
@@ -376,9 +681,70 @@
       "id": "丁栿-西山-上丁栿-北",
       "location": "西山北侧 / 上丁栿",
       "count_status": "LOCKED",
-      "evidence": "总数+南北丁栿构造关系明确",
-      "section_mm": "平均广331.6；厚200.9",
-      "length_rule": "由装配端点求长"
+      "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN",
+      "section_mm": "构件族8组实测均值：广331.6；厚200.9",
+      "length_rule": "由装配端点求长；historical full length remains UNKNOWN",
+      "width_mm": 331.6,
+      "thickness_mm": 200.9,
+      "observed_section_samples_mm": [
+        {
+          "width": 346,
+          "thickness": 208
+        },
+        {
+          "width": 324,
+          "thickness": 199
+        },
+        {
+          "width": 335,
+          "thickness": 205
+        },
+        {
+          "width": 324,
+          "thickness": 174,
+          "note": "source table marks this thickness with （含）"
+        },
+        {
+          "width": 330,
+          "thickness": 203
+        },
+        {
+          "width": 330,
+          "thickness": 195
+        },
+        {
+          "width": 336,
+          "thickness": 203
+        },
+        {
+          "width": 328,
+          "thickness": 193
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN",
+      "modeling_disposition": "DIRECT_MEASURED_FAMILY_MEAN / BUILDABLE",
+      "end_semantics": {
+        "outboard": "外端入山面柱头铺作",
+        "inboard": "内端削成骑栿栱与榑交构",
+        "classification": "DIRECT_SOURCE_SEMANTIC / EXACT_JOINERY_GEOMETRY_UNRESOLVED"
+      },
+      "assembly_semantics": {
+        "role": "山面梁架联系构件；前后各一道；上承两山承椽枋和太平梁",
+        "paired_spacing_note": "组合构造中两根丁栿、斜乳栿间距一材一栔，垫单材栿一层",
+        "classification": "DIRECT_SOURCE_SEMANTIC"
+      },
+      "joinery_note": "报告明确提到丁栿入斗栱处刻出槽口；槽口存在性有直接文字依据，但精确位置/尺寸/轮廓未闭合，Stage1不得静默精细化。",
+      "report_analysis": {
+        "converted_fen": {
+          "width": 21.7,
+          "thickness": 13.1
+        },
+        "rounded_fen": {
+          "width": 22,
+          "thickness": 13
+        },
+        "classification": "REPORT_INFERRED / METADATA_ONLY / NOT_963_DESIGN_FACT"
+      }
     },
     {
       "system": "主体木构",
@@ -386,9 +752,70 @@
       "id": "丁栿-西山-下丁栿-南",
       "location": "西山南侧 / 下丁栿",
       "count_status": "LOCKED",
-      "evidence": "总数+南北丁栿构造关系明确",
-      "section_mm": "平均广331.6；厚200.9",
-      "length_rule": "由装配端点求长"
+      "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN",
+      "section_mm": "构件族8组实测均值：广331.6；厚200.9",
+      "length_rule": "由装配端点求长；historical full length remains UNKNOWN",
+      "width_mm": 331.6,
+      "thickness_mm": 200.9,
+      "observed_section_samples_mm": [
+        {
+          "width": 346,
+          "thickness": 208
+        },
+        {
+          "width": 324,
+          "thickness": 199
+        },
+        {
+          "width": 335,
+          "thickness": 205
+        },
+        {
+          "width": 324,
+          "thickness": 174,
+          "note": "source table marks this thickness with （含）"
+        },
+        {
+          "width": 330,
+          "thickness": 203
+        },
+        {
+          "width": 330,
+          "thickness": 195
+        },
+        {
+          "width": 336,
+          "thickness": 203
+        },
+        {
+          "width": 328,
+          "thickness": 193
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN",
+      "modeling_disposition": "DIRECT_MEASURED_FAMILY_MEAN / BUILDABLE",
+      "end_semantics": {
+        "outboard": "外端入山面柱头铺作",
+        "inboard": "内端削成骑栿栱与榑交构",
+        "classification": "DIRECT_SOURCE_SEMANTIC / EXACT_JOINERY_GEOMETRY_UNRESOLVED"
+      },
+      "assembly_semantics": {
+        "role": "山面梁架联系构件；前后各一道；上承两山承椽枋和太平梁",
+        "paired_spacing_note": "组合构造中两根丁栿、斜乳栿间距一材一栔，垫单材栿一层",
+        "classification": "DIRECT_SOURCE_SEMANTIC"
+      },
+      "joinery_note": "报告明确提到丁栿入斗栱处刻出槽口；槽口存在性有直接文字依据，但精确位置/尺寸/轮廓未闭合，Stage1不得静默精细化。",
+      "report_analysis": {
+        "converted_fen": {
+          "width": 21.7,
+          "thickness": 13.1
+        },
+        "rounded_fen": {
+          "width": 22,
+          "thickness": 13
+        },
+        "classification": "REPORT_INFERRED / METADATA_ONLY / NOT_963_DESIGN_FACT"
+      }
     },
     {
       "system": "主体木构",
@@ -396,9 +823,70 @@
       "id": "丁栿-西山-下丁栿-北",
       "location": "西山北侧 / 下丁栿",
       "count_status": "LOCKED",
-      "evidence": "总数+南北丁栿构造关系明确",
-      "section_mm": "平均广331.6；厚200.9",
-      "length_rule": "由装配端点求长"
+      "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN",
+      "section_mm": "构件族8组实测均值：广331.6；厚200.9",
+      "length_rule": "由装配端点求长；historical full length remains UNKNOWN",
+      "width_mm": 331.6,
+      "thickness_mm": 200.9,
+      "observed_section_samples_mm": [
+        {
+          "width": 346,
+          "thickness": 208
+        },
+        {
+          "width": 324,
+          "thickness": 199
+        },
+        {
+          "width": 335,
+          "thickness": 205
+        },
+        {
+          "width": 324,
+          "thickness": 174,
+          "note": "source table marks this thickness with （含）"
+        },
+        {
+          "width": 330,
+          "thickness": 203
+        },
+        {
+          "width": 330,
+          "thickness": 195
+        },
+        {
+          "width": 336,
+          "thickness": 203
+        },
+        {
+          "width": 328,
+          "thickness": 193
+        }
+      ],
+      "sample_to_instance_mapping": "UNKNOWN",
+      "modeling_disposition": "DIRECT_MEASURED_FAMILY_MEAN / BUILDABLE",
+      "end_semantics": {
+        "outboard": "外端入山面柱头铺作",
+        "inboard": "内端削成骑栿栱与榑交构",
+        "classification": "DIRECT_SOURCE_SEMANTIC / EXACT_JOINERY_GEOMETRY_UNRESOLVED"
+      },
+      "assembly_semantics": {
+        "role": "山面梁架联系构件；前后各一道；上承两山承椽枋和太平梁",
+        "paired_spacing_note": "组合构造中两根丁栿、斜乳栿间距一材一栔，垫单材栿一层",
+        "classification": "DIRECT_SOURCE_SEMANTIC"
+      },
+      "joinery_note": "报告明确提到丁栿入斗栱处刻出槽口；槽口存在性有直接文字依据，但精确位置/尺寸/轮廓未闭合，Stage1不得静默精细化。",
+      "report_analysis": {
+        "converted_fen": {
+          "width": 21.7,
+          "thickness": 13.1
+        },
+        "rounded_fen": {
+          "width": 22,
+          "thickness": 13
+        },
+        "classification": "REPORT_INFERRED / METADATA_ONLY / NOT_963_DESIGN_FACT"
+      }
     },
     {
       "system": "主体木构",
