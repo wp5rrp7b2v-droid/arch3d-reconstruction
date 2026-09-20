@@ -514,3 +514,43 @@ Governance:
 Every future approved Master must update V008/CURRENT + derived Excel during formal closure; otherwise the record closure is incomplete.
 
 This patch does not reopen T-022/T-023/T-024 engineering and does not authorize a new Master task.
+
+## 18. Final pre-local-sync recheck
+
+A second full consistency audit was run after D-087.
+
+Result：**PASS**
+
+Cross-check results:
+- V008 and CURRENT JSON：equivalent at audit time
+- V008 records：505
+- registered object types：66
+- Stage1 Master scope：28
+- approved Masters：10
+- pending Masters：18
+- completion：35.7%
+- approved-Master-bound registry rows：52
+- row-level Master binding errors：0
+- every V008 record has `stage1_disposition`
+- every V008 record has `master_coverage_status`
+- approved components have expected `master_reference`
+- no unapproved component has a false approved binding
+- Stage1 Catalog：10 approved / T-021—T-024 publication CLOSED
+- derived Excel：SYNCED / generator 1.0.2 / Run 35508113993 SUCCESS
+- open PRs：#3 / #6 only, both T-018 HOLD
+- active Actions runs：0
+- current engineering T-task：NONE
+
+One stale close-metadata field was found and corrected:
+- `daily_closing_audit.latest_formal_decision` was D-086;
+- corrected to **D-087**;
+- omission-audit range updated from D-073..D-086 to **D-073..D-087**.
+
+Historical failed intermediate Actions runs remain visible in GitHub history. They are superseded by later successful runs and are not current blockers.
+
+Final local-sync baseline:
+- Project State：R161
+- Dashboard：v101
+- immediate operation：local sync verification only
+- next Master：not started
+- T-018：HOLD
