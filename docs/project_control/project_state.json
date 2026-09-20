@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R144",
+  "state_revision": "R145",
   "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 丁栿 PRE-MODEL VISUAL REFERENCE REVIEW ACTIVE / D-076 VISUAL GATE ACTIVE / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 丁栿 EVIDENCE REVIEW + SPEC DESIGN ACTIVE / D-077 DINGFU VISUAL WAIVER / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -60,21 +60,21 @@
     "active_window_note": "2026-09-19 DAILY CLOSE COMPLETE. T-021 is approved and merged to main; Stage 1 remains ACTIVE and not passed; next work item is 平梁 Master evidence review/spec design; T-018 remains HOLD; T-020/RZ/FV remain deferred to Stage 5 re-review."
   },
   "current_task": {
-    "id": "STAGE1_DINGFU_PREMODEL_REVIEW",
-    "status": "PLANNING / VISUAL REFERENCE GATE ACTIVE / NO T-TASK YET",
+    "id": "STAGE1_DINGFU_MASTER_SPEC",
+    "status": "PLANNING / EVIDENCE REVIEW COMPLETE ENOUGH FOR SPEC V0.1 / NO T-TASK YET",
     "component": "丁栿",
     "engineering_execution_authorized": false,
-    "blocker": "BLOCKED_ON_VISUAL_REFERENCE_REVIEW until Product Owner approves physical/form reference set",
+    "visual_reference_rule": "D-077 Dingfu-only waiver; D-076 remains active for later components",
     "t018_impact": "NONE / remains HOLD"
   },
   "proposed_next_task": {
     "id": "STAGE1_DINGFU_MASTER",
-    "name": "丁栿 Master evidence review + specification design",
-    "status": "ACTIVE / PRE-MODEL VISUAL REVIEW FIRST",
+    "name": "丁栿 Master Spec review + lock",
+    "status": "ACTIVE / PRODUCT OWNER REVIEW REQUIRED",
     "component": "丁栿",
     "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "authorization_basis": "P3.3 V002 + D-076"
+    "authorization_basis": "P3.3 V002 + D-077"
   },
   "last_completed_task": {
     "id": "T-022",
@@ -193,9 +193,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-076",
+    "id": "D-077",
     "date": "2026-09-20",
-    "decision": "Before any new component Master is sent to engineering modeling, ChatGPT must present same-building real-object/site photos and/or same-building measured/form drawings for Product Owner review; comparative references must be labeled comparative, and source-derived schematics cannot replace direct evidence. Engineering is blocked until Product Owner approves the visual/form reference set."
+    "decision": "Product Owner waived the pre-model visual reference review for Dingfu only and authorized direct evidence review + Master Spec design. D-076 remains active for later new components. No new T-task or Blender execution is authorized until Dingfu Spec is reviewed and locked."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -234,13 +234,13 @@
     "omission_audit_missing_items": [],
     "mergeable_note": "GitHub mergeable is volatile/non-governance; explicit DO NOT MERGE controls remain authoritative."
   },
-  "next_action": "丁栿: present and review physical/site photographs and form/survey references first; then complete evidence review and Master Spec. Do not create a new T-task or run Blender before Product Owner approves the visual reference set. T-018 remains HOLD.",
+  "next_action": "Review Dingfu Master Spec V0.1. If Product Owner approves/locks it, then create the engineering T-task for Dingfu first article. Until then, no Blender. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v084",
+    "visualization_version": "v085",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R144 / 丁栿 VISUAL REFERENCE REVIEW ACTIVE / D-076 GATE / V008 CURRENT / T-018 HOLD"
+    "refresh_status": "CURRENT / R145 / 丁栿 SPEC V0.1 REVIEW / D-077 WAIVER / V008 CURRENT / T-018 HOLD"
   },
   "superseded_prs": [
     {
