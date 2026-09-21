@@ -1,12 +1,12 @@
 {
-  "schema_version": "V2_PILOT_1.3",
+  "schema_version": "V2_PILOT_1.2",
   "task_id": "T-025",
   "component_id": "CMP-FRAME-ZHAQIAN-001",
   "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
   "master_version": "V001",
   "component_name_zh": "剳牵",
   "stage": "P3.3 V002 / Stage 1",
-  "status": "PRODUCT_OWNER_APPROVED / D-091 / FORMAL_PUBLICATION_AUTHORIZED / PR_MERGE_NOT_AUTHORIZED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-090 / ENGINEERING_EXECUTION_AUTHORIZED",
   "authority": {
     "geometry_and_count": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json / V008",
     "visual_reference_gate": {
@@ -131,11 +131,11 @@
     "shared_infrastructure_policy": "builder / validator / workflow are reusable V2 infrastructure and must not be duplicated per component unless a genuine non-shareable requirement is discovered and recorded"
   },
   "execution_boundary": {
-    "engineering_execution_authorized": false,
-    "blender_execution_authorized": false,
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
     "executor": "GitHub Actions / Blender 4.5.13",
     "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
-    "final_master_approval_requires_separate_product_owner_decision": false,
+    "final_master_approval_requires_separate_product_owner_decision": true,
     "pr_merge_requires_separate_product_owner_authorization": true
   },
   "approval": {
@@ -144,32 +144,5 @@
     "definition_locked": true,
     "minimal_sufficient_rule": "D-089",
     "engineering_execution_authorized": true
-  },
-  "product_owner_acceptance": {
-    "decision_id": "D-091",
-    "date": "2026-09-21",
-    "status": "APPROVED",
-    "accepted_run_id": 35572874173,
-    "accepted_head_sha": "834765fede99325b3e53cc8b298e00613c810c96",
-    "validation": "35/35 PASS",
-    "review_board": "PASS / 6 DEFINITION-REQUIRED PANELS",
-    "canonical_blend_sha256": "d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6",
-    "semantic_geometry_signature": "bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e",
-    "approval_scope": "FIRST_ARTICLE + FORMAL_DELIVERY_AUTHORIZED",
-    "pr_merge_authorized": false
-  },
-  "formal_publication": {
-    "authorized": true,
-    "source_artifact_id": 10626941998,
-    "source_artifact_zip_sha256": "86d7defe94d64deddc2eb4020f69dffbec352e56bf2f49ec66d222cf853a325a",
-    "semantic_filename": "CMP-FRAME-ZHAQIAN-001_MASTER_SEMANTIC_V001.json",
-    "semantic_geometry_signature": "bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e",
-    "expected_semantic_sha256": "b44e6f25d87260a3525f42e94e5e0e54e676b2d9e22a939cfcc0f3a1bd969eb1",
-    "validation_filename": "CMP-FRAME-ZHAQIAN-001_MASTER_VALIDATION_V001.json",
-    "expected_validation_sha256": "36ddab86ceeeca85b771fb6fada0307a776728aa864f37dfe97a1d8fd91ccb96",
-    "review_board_filename": "CMP-FRAME-ZHAQIAN-001_MASTER_REVIEW_BOARD_V001.png",
-    "expected_review_board_sha256": "b53f38d58dd697c293b65a59862a780690bd12b963340c213e5d51ec30e2a7fd",
-    "canonical_blend_storage": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
-    "publication_status": "PENDING_MATERIALIZATION"
   }
 }
