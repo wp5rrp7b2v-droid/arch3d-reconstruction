@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R177",
+  "state_revision": "R178",
   "last_updated": "2026-09-21",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / T-026 CLOSED + PR #13 MERGED / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
+  "session_status": "DAY CLOSED / P3.3 V002 STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / T-025+T-026 CLOSED / CLOUD WORK CLOSED / LOCAL SYNC PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active T-026 blocker. T-026 is CLOSED / PR #13 MERGED. Local Git sync remains deferred to the evening batch by Product Owner instruction; next Master engineering is not yet authorized.",
+  "blocker": "No cloud engineering blocker. Daily Close File PASS. Only intentional pending work is evening Mac local Git sync plus exact local restoration/SHA verification of the approved T-025 and T-026 canonical .blend binaries.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,15 +63,15 @@
   "current_task": {
     "id": "NONE",
     "name": "No active engineering T-task",
-    "status": "T-026 CLOSED / STAGE1 NEXT MASTER SELECTION PENDING"
+    "status": "DAY CLOSED / LOCAL SYNC PENDING"
   },
   "proposed_next_task": {
-    "id": "STAGE1_NEXT_MASTER_SELECTION",
-    "name": "Select next missing Stage1 Master and complete pre-model visual-reference gate before creating the next T-task",
-    "status": "READY FOR PLANNING / ENGINEERING NOT AUTHORIZED",
+    "id": "LOCAL_SYNC_2026_09_21",
+    "name": "Evening local Git synchronization + restore approved T-025/T-026 canonical blend binaries",
+    "status": "PENDING PRODUCT OWNER MAC AVAILABILITY",
     "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "prerequisite": "Read current main; complete visual-reference review for selected component"
+    "prerequisite": "Mac opened by Product Owner"
   },
   "last_completed_task": {
     "id": "T-026",
@@ -302,15 +302,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-096",
+    "id": "D-097",
     "date": "2026-09-21",
-    "decision": "Product Owner authorized and completed PR #13 merge. T-026 Purlin V2 is CLOSED / MERGED_TO_MAIN at a588895004d61b0c5bc3615db4a74f1c2f4a91bc."
+    "decision": "Daily cross-check and Close File PASS. Cloud work closed; only evening local Git sync and exact T-025/T-026 canonical blend restoration remain."
   },
   "latest_material_review": {
     "date": "2026-09-21",
-    "result": "T-026 CLOSED / MAIN VERIFIED / 12 OF 28 MASTERS APPROVED",
-    "evidence": "PR #13 merge commit a588895004d61b0c5bc3615db4a74f1c2f4a91bc + Run 35589254034 47/47 PASS + Excel Run 35589254110 SUCCESS",
-    "decision_required": "NONE / NEXT MASTER PLANNING ONLY"
+    "result": "DAILY CLOSE FILE PASS / T-025+T-026 CLOSED / MAIN+CATALOG+V008+EXCEL VERIFIED",
+    "evidence": "PR #12/#13 merged; T-025 final 42/42; T-026 final 47/47; Stage1 12/28; Excel synced; no tracked canonical blend leakage.",
+    "decision_required": "NONE UNTIL MAC LOCAL SYNC"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -368,7 +368,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Continue cloud planning with the next missing Stage1 Master and its pre-model visual-reference gate if desired. Do not start new engineering execution without authorization. Local Git synchronization remains deferred to the evening batch. T-018 remains HOLD.",
+  "next_action": "Wait for Product Owner to open the Mac. Then synchronize local main to GitHub final main, restore T-025 and T-026 approved canonical .blend binaries from their approved Artifacts with exact SHA-256 verification, confirm they remain untracked, and write local-sync closure. Do not start the next engineering T-task before that sync is reconciled. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
@@ -837,5 +837,41 @@
       ],
       "git_safety": "PASS / *.blend ignored / working tree clean"
     }
+  },
+  "daily_close_2026_09_21": {
+    "status": "PASS / CLOUD WORK CLOSED / LOCAL SYNC PENDING",
+    "decision_id": "D-097",
+    "close_file": "docs/project_control/CLOSE_FILE_2026-09-21.md",
+    "pre_close_main_sha": "ac1c7c23c2e895f5617aaf98ba06b08935b418de",
+    "completed_tasks": [
+      "T-025",
+      "T-026"
+    ],
+    "merged_prs": [
+      12,
+      13
+    ],
+    "stage1_master_progress": "12/28 / 42.9%",
+    "approved_master_covered_registry_rows": 99,
+    "open_prs_expected_hold": [
+      3,
+      6
+    ],
+    "local_sync_required": true,
+    "local_binary_restore_required": [
+      {
+        "task_id": "T-025",
+        "artifact_id": 10626941998,
+        "filename": "CMP-FRAME-ZHAQIAN-001_MASTER_V001.blend",
+        "sha256": "d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6"
+      },
+      {
+        "task_id": "T-026",
+        "artifact_id": 10632275014,
+        "filename": "CMP-FRAME-PURLIN-001_MASTER_V001.blend",
+        "sha256": "5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4"
+      }
+    ],
+    "next_engineering_task_authorized": false
   }
 }
