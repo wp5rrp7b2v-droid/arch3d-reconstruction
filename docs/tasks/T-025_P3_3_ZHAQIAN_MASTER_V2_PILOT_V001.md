@@ -2,7 +2,7 @@
 
 Status: **PRODUCT OWNER APPROVED / D-091 / FORMAL DELIVERY AUTHORIZED / PR MERGE PENDING**  
 Date: 2026-09-21  
-Decisions: **D-088 / D-089 / D-090**  
+Decisions: **D-088 / D-089 / D-090 / D-091**  
 Branch: `codex/t025-p3-3-zhaqian-master-v2-pilot-v001`  
 Master: `CMP-FRAME-ZHAQIAN-001_MASTER`
 
@@ -96,23 +96,15 @@ The slim architecture must still machine-check at minimum:
 - Review Board(s) cover every panel required by this Master Definition;
 - no canonical .blend committed to Git.
 
-## 7. Current authorization boundary
+## 7. Authorization boundary
 
-D-090 now authorizes:
-- locked Zhaqian V2 Master Definition;
-- shared V2 infrastructure implementation;
-- GitHub Actions + Blender 4.5.13 first-article execution.
+D-090 authorized first-article engineering execution. D-091 subsequently approved the first article and formal-delivery closure.
 
-Still **not authorized / not yet approved**:
-- final Master acceptance;
-- Catalog/V008 approved binding;
-- PR merge;
+Still not authorized:
+- PR #12 merge;
 - Stage1 PASS;
+- Stage2;
 - T-018 resume.
-
-Current next decision:
-
-> **Review the first-article machine evidence + Review Board and decide Product Owner acceptance.**
 
 
 ## 8. First-article engineering result
@@ -153,18 +145,11 @@ the Zhaqian Pilot currently resolves to **6 component-specific formal files**. T
 - Correction: the guard now checks only that the **current V2 Master directory** contains no tracked canonical `.blend`.
 - No geometry, Definition, Semantic, mutation, reopen, Review Board, or evidence rule was weakened to obtain Run #3 PASS.
 
-## 9. Product Owner review boundary
+## 9. Product Owner review result
 
-Engineering result is PASS, but T-025 is **not yet Product Owner approved**.
+**PASS / superseded by D-091 acceptance.**
 
-Product Owner should review:
-- Review Board geometry/views;
-- section 331.5 × 185.0 mm;
-- 1000 mm clearly marked NON-HISTORICAL;
-- historical full length / exact endpoints / hidden joinery remain UNKNOWN;
-- whether the V2 minimal-sufficient package preserves enough information for future work.
-
-No Catalog/V008 approved binding, formal publication, PR merge, Stage1 PASS, or T-018 resume is authorized before Product Owner acceptance.
+The reviewed Board, geometry boundary, evidence/UNKNOWN boundary and minimal-sufficient package were accepted without requesting geometry changes.
 
 
 ## 10. Product Owner acceptance / D-091
@@ -176,7 +161,6 @@ Product Owner approved the T-025 Zhaqian V2 first article on 2026-09-21.
 Accepted evidence:
 - Run: `35572874173` / SUCCESS
 - validation: **35/35 PASS**
-- reviewed head: `834765fede99325b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6` is **not** used as a commit identity; canonical binary SHA is listed separately below.
 - accepted engineering head: `834765fede99325b3e53cc8b298e00613c810c96`
 - canonical .blend SHA-256: `d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6`
 - semantic geometry signature: `bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e`
@@ -187,3 +171,32 @@ Accepted evidence:
 D-091 authorizes materialization of the exact approved Artifact's Semantic / Validation / Review Board, Stage1 Catalog registration, V008/CURRENT + derived Excel synchronization, and final regression / pre-merge cross-check.
 
 D-091 does **not** authorize PR #12 merge, Stage1 PASS, Stage2 authorization, or T-018 resume.
+
+
+## 11. Formal materialization
+
+**PASS / EXACT APPROVED ARTIFACT MATERIALIZED**
+
+- publication workflow run: `35574922533`
+- job: `publish-approved-artifact` = SUCCESS
+- materialization commit: `b4ccd8c37eb7166e3a4ed340ce83c242a541d187`
+- source Artifact ID: `10626941998`
+- source Artifact ZIP SHA-256: `86d7defe94d64deddc2eb4020f69dffbec352e56bf2f49ec66d222cf853a325a`
+- exact-source verification: PASS before copy
+- materialized files: Semantic / Validation / single adaptive Review Board
+- canonical .blend remains Actions Artifact + local-only and is not tracked in the Master directory.
+
+The locked Master Definition was restored to the exact bytes used by accepted Run 35572874173. Acceptance/publication metadata stays in this Lifecycle Record and Decision Log so the generated Semantic's `definition_sha256` remains valid.
+
+## 12. Registry / Catalog closure
+
+**PASS / JSON AUTHORITIES UPDATED**
+
+- Stage1 Catalog: **11 approved Masters**
+- V008/CURRENT Zhaqian rows: **14/14 bound** to `CMP-FRAME-ZHAQIAN-001_MASTER`
+- Stage1 Master progress: **11 / 28 = 39.3%**
+- approved-Master-covered registry rows: **66**
+- pending Masters: **17**
+- derived Excel remains a derived view and must sync from these JSON authorities before final record closure.
+
+Final regression and PR #12 pre-merge cross-check are still required before requesting merge authorization.
