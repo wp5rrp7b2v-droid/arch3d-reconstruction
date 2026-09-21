@@ -17,12 +17,13 @@ def dims(s):
 
 def main():
     ap=argparse.ArgumentParser()
-    for n in ("definition","canonical","reopen","length","width","thickness","restore","asset","review_dir","board","registry","output"):
+    for n in ("definition","canonical","reopen","length","width","thickness","restore","asset","review_dir","board","registry","catalog","output"):
         ap.add_argument("--"+n.replace("_","-"),dest=n,required=True)
     a=ap.parse_args()
     d=load(a.definition); c=load(a.canonical); r=load(a.reopen)
     lm=load(a.length); wm=load(a.width); tm=load(a.thickness); rs=load(a.restore)
     reg=load(a.registry)
+    catalog=load(a.catalog)
     checks={}
     def ck(name,value):
         if not value:
@@ -92,6 +93,18 @@ def main():
     ck("34_reference_length_assembly_guard",
        "ASSEMBLY_OWNED" in gc["placement_policy"] and gc["canonical_reference_length_historical_claim"] is False)
     ck("35_visual_source_not_dimension_authority",auth["visual_reference_gate"]["dimension_authority"] is False)
+
+    catalog_entries=[x for x in catalog.get("new_masters",[]) if x.get("master_id")==d["master_id"]]
+    if catalog_entries:
+        ce=catalog_entries[0]
+        ck("36_catalog_approved",ce.get("approval_status")=="PRODUCT_OWNER_APPROVED")
+        ck("37_catalog_binary_identity",ce.get("canonical_asset_sha256")==c["canonical_blend_sha256"])
+        ck("38_registry_master_binding",all(x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE" and x.get("master_reference")==d["master_id"] for x in items))
+        progress=reg["stage1_master_progress_summary"]
+        ck("39_registry_progress_consistent",progress["approved_master_count"]==catalog["approved_master_count"] and progress["pending_master_object_type_count"]==progress["master_scope_object_type_count"]-progress["approved_master_count"])
+        ck("40_registry_covered_rows_consistent",progress["master_covered_registry_record_count"]==sum(1 for x in reg["items"] if x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE"))
+    else:
+        ck("36_preapproval_catalog_absent",all(x.get("master_reference")!=d["master_id"] for x in items))
 
     result={
       "schema_version":"MASTER_V2_VALIDATION_1.0",
