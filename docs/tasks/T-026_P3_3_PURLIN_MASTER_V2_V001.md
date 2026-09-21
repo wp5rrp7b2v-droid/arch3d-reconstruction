@@ -2,7 +2,7 @@
 
 Status: **PRODUCT OWNER APPROVED / D-095 / FORMAL DELIVERY AUTHORIZED / PR MERGE PENDING**  
 Date: 2026-09-21  
-Decisions: **D-093 / D-094**  
+Decisions: **D-093 / D-094 / D-095**  
 Branch: `codex/t026-p3-3-purlin-master-v2-v001`  
 Master: `CMP-FRAME-PURLIN-001_MASTER`
 
@@ -211,21 +211,11 @@ Machine checks explicitly PASS:
 - deterministic restore;
 - all 7 required Review Board panels complete.
 
-## 12. Product Owner review boundary
+## 12. Product Owner review result
 
-Engineering result is PASS, but T-026 is **not yet Product Owner approved**.
+**PASS / superseded by D-095 acceptance.**
 
-Product Owner should review:
-
-- AXON / LONG_SIDE / END_SECTION_ENVELOPE;
-- whether the rectangular envelope is visually clear as a **proxy**, not a historical profile;
-- 220.1 × 270.8 mm section-statistics boundary;
-- 33-instance topology;
-- main/east-gable/west-gable role-layer logic;
-- 1000mm NON-HISTORICAL reference;
-- profile / real lengths / ends / joinery / connection geometry remain UNKNOWN.
-
-No formal materialization, Catalog/V008 approved binding, PR #13 merge, Stage1 PASS, or T-018 resume is authorized before Product Owner acceptance.
+The 7-panel Review Board, bounding-envelope proxy labeling, 33-instance topology, section-statistics boundary and UNKNOWN evidence boundary were accepted without requesting geometry changes.
 
 
 ## 13. Product Owner acceptance / D-095
@@ -258,3 +248,36 @@ Accepted evidence boundary:
 D-095 authorizes exact materialization of the accepted Artifact's Semantic / Validation / Review Board, Stage1 Catalog registration, V008/CURRENT + derived Excel synchronization, and final regression / pre-merge cross-check.
 
 D-095 does **not** authorize PR #13 merge, Stage1 PASS, Stage2, or T-018 resume.
+
+
+## 14. Formal materialization
+
+**PASS / EXACT D-095 APPROVED ARTIFACT MATERIALIZED**
+
+- publication workflow run: `35589033394`
+- publication job: `publish-approved-t026` = SUCCESS
+- materialization commit: `3f0fb4f892b05d48ffd3afc9b285973f9edd77ef`
+- source Artifact ID: `10632275014`
+- source Artifact ZIP SHA-256: `62a4282003644745827a1cad2697d24bf36cb3847ac98a44c7ecac8fe41b83eb`
+- exact-source verification before copy:
+  - canonical .blend = `5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4`
+  - Semantic = `ff06bec0c956a3cb5cc288c0010e58dcb6fa9e199de336a94a527666140e6448`
+  - Validation = `fbd282fe7abde8128a6f5c73f061c6dcbaf1ec196bc1abf137d77fa9b6dd67b3`
+  - Review Board = `073d13c7f426e2a80808e22c982df126ab64130b1c935cc88f14fc2ba28f4f4b`
+- repository materialized files: Semantic / Validation / single adaptive Review Board
+- canonical .blend remains Actions Artifact + local-only and is not tracked in the Master directory
+- locked Definition remains unchanged after first-article approval
+
+## 15. Registry / Catalog closure
+
+**PASS / FINAL REGRESSION PENDING**
+
+- Stage1 Catalog approved Master count: `12`
+- V008/CURRENT 槫 binding: `33/33`
+- Stage1 Master progress: `12/28 = 42.9%`
+- approved-Master-covered Registry records: `99`
+- pending Master object types: `16`
+- derived Excel remains a derived view of the JSON authority and is being synchronized before merge
+- temporary D-095 publication job has been removed from the shared V2 workflow
+
+Final regression and PR #13 pre-merge cross-check are required before requesting merge authorization.
