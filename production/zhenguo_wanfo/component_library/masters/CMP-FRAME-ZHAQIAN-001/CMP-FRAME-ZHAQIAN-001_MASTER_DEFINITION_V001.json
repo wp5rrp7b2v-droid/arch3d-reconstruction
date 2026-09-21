@@ -1,12 +1,12 @@
 {
-  "schema_version": "V2_PILOT_1.0",
+  "schema_version": "V2_PILOT_1.1",
   "task_id": "T-025",
   "component_id": "CMP-FRAME-ZHAQIAN-001",
   "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
   "master_version": "V001",
   "component_name_zh": "剳牵",
   "stage": "P3.3 V002 / Stage 1",
-  "status": "DEFINITION_DRAFT / VISUAL_GATE_PASS / EXECUTION_NOT_AUTHORIZED",
+  "status": "DEFINITION_DRAFT / VISUAL_GATE_PASS / MINIMAL_SUFFICIENT_PACKAGE RULE ACTIVE / EXECUTION_NOT_AUTHORIZED",
   "authority": {
     "geometry_and_count": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json / V008",
     "visual_reference_gate": {
@@ -80,8 +80,31 @@
     "UNSUPPORTED_JOINERY_GEOMETRY"
   ],
   "v2_slim_file_contract": {
-    "component_specific_formal_files_target": 6,
-    "files": [
+    "principle": "MINIMAL_SUFFICIENT_COMPONENT_PACKAGE",
+    "objective": "Merge duplicate/redundant responsibilities, but never remove information required for modeling, evidence traceability, validation, review, reproducibility, or acceptance.",
+    "fixed_file_count_required": false,
+    "fixed_review_panel_count_required": false,
+    "baseline_for_simple_member": "approximately 6 formal outputs, subject to component complexity",
+    "mandatory_information_domains": [
+      "authoritative input definition and evidence boundary",
+      "generated semantic result / geometry identity",
+      "canonical model binary",
+      "human visual review evidence appropriate to geometry complexity",
+      "machine validation evidence",
+      "lifecycle / approval / delivery record"
+    ],
+    "merge_rule": "Two outputs SHOULD be merged when they repeat the same responsibility and can be merged without destroying independent cross-checks, auditability, machine readability, or human review clarity.",
+    "separation_rule": "Keep outputs separate when independence is itself a control: Definition vs generated Semantic vs Validation must remain independently comparable.",
+    "optional_outputs_rule": "Additional formal files/panels are allowed only when component geometry, variants, interfaces, evidence, or review needs genuinely require them.",
+    "forbidden_slimming": [
+      "dropping UNKNOWN or uncertainty information",
+      "removing evidence/source binding",
+      "combining Definition and generated Semantic so self-validation becomes impossible",
+      "combining Semantic and Validation so validation is no longer independent",
+      "omitting required views/details for complex geometry",
+      "forcing all components into the same file or review-panel count"
+    ],
+    "zhaqian_current_package": [
       "MASTER_DEFINITION_V001.json",
       "MASTER_SEMANTIC_V001.json",
       "MASTER.blend (Actions artifact + local only; not Git)",
@@ -89,20 +112,25 @@
       "MASTER_VALIDATION_V001.json",
       "T025_MASTER_RECORD_V001.md"
     ],
-    "review_board_layout": [
-      "FRONT",
-      "SIDE",
-      "TOP",
-      "AXON",
-      "DIMENSION_PARAMETER_SUMMARY",
-      "EVIDENCE_UNCERTAINTY_SUMMARY"
-    ],
-    "temporary_render_policy": "individual render tiles may exist during Actions runtime but are not formal repository outputs",
-    "shared_infrastructure_policy": "builder / validator / workflow are reusable V2 infrastructure and must not be duplicated per component unless geometry class genuinely requires it"
+    "review_contract": {
+      "board_count_default": 1,
+      "panel_selection": "DEFINITION_DRIVEN / ADAPTIVE",
+      "zhaqian_required_panels": [
+        "FRONT",
+        "SIDE",
+        "TOP",
+        "AXON",
+        "DIMENSION_PARAMETER_SUMMARY",
+        "EVIDENCE_UNCERTAINTY_SUMMARY"
+      ],
+      "note": "Zhaqian currently needs 6 panels; other Masters may need fewer or more. Validator checks required panel coverage declared by each Definition, not a universal six-panel rule."
+    },
+    "temporary_render_policy": "individual render tiles may exist during Actions runtime but are not formal repository outputs unless the Definition explicitly requires them",
+    "shared_infrastructure_policy": "builder / validator / workflow are reusable V2 infrastructure and must not be duplicated per component unless a genuine non-shareable requirement is discovered and recorded"
   },
   "execution_boundary": {
     "engineering_execution_authorized": false,
     "blender_execution_authorized": false,
-    "next_required_decision": "PRODUCT_OWNER LOCK MASTER DEFINITION + EXPLICITLY AUTHORIZE T-025 EXECUTION"
+    "next_required_decision": "PRODUCT_OWNER LOCK MINIMAL-SUFFICIENT V2 MASTER DEFINITION + EXPLICITLY AUTHORIZE T-025 EXECUTION"
   }
 }
