@@ -82,7 +82,9 @@ jobs:
           assert set(wb.sheetnames) == {"进度总览", "实例登记", "统计摘要", "版本与来源", "使用规则"}
           assert wb["实例登记"].max_row - 1 == manifest["record_count"]
           assert wb["进度总览"]["B4"].value == manifest["record_count"]
-          assert wb["进度总览"]["B7"].value == 10
+          registry = json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
+          expected_approved = registry["stage1_master_progress_summary"]["approved_master_count"]
+          assert wb["进度总览"]["B7"].value == expected_approved
           wb.close()
           print("VALIDATION_PASS", manifest["registry_version"], manifest["record_count"])
           PY
