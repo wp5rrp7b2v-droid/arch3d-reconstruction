@@ -1,6 +1,6 @@
 # T-026｜P3.3 槫 Master V2｜Lifecycle Record V001
 
-Status: **PRODUCT OWNER APPROVED / D-095 / FORMAL DELIVERY CLOSED / FINAL REGRESSION PASS / PR #13 READY FOR MERGE**  
+Status: **CLOSED / PRODUCT OWNER APPROVED / D-095 / PR #13 MERGED / D-096**  
 Date: 2026-09-21  
 Decisions: **D-093 / D-094 / D-095**  
 Branch: `codex/t026-p3-3-purlin-master-v2-v001`  
@@ -331,3 +331,24 @@ Static pre-merge cross-check:
 No further engineering change is required before merge.
 
 **PR #13 merge remains a separate Product Owner authorization boundary.**
+
+
+## 17. Merge closure / D-096
+
+**CLOSED / MERGED TO MAIN**
+
+- Product Owner merge authorization: APPROVED
+- PR: `#13`
+- PR state: `MERGED / CLOSED`
+- merge commit: `a588895004d61b0c5bc3615db4a74f1c2f4a91bc`
+- main verification: PASS
+- Stage1 Catalog: `12 approved Masters`
+- 槫 V008/CURRENT binding: `33/33`
+- Stage1 Master completion: `12/28 = 42.9%`
+- approved first article: Run `35584601233` / `41/41 PASS`
+- final regression: Run `35589254034` / `47/47 PASS`
+- derived Excel sync: Run `35589254110` / SUCCESS
+- canonical approved .blend remains Artifact/local-only with SHA-256 `5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4`
+- section profile remains `UNKNOWN / BOUNDING_ENVELOPE_PROXY / NOT HISTORICAL`
+
+T-026 is fully closed. Stage1 remains ACTIVE and does not pass as a whole. T-018 remains HOLD. Local Git synchronization is deferred to the evening batch.

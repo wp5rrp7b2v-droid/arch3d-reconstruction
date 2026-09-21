@@ -3,7 +3,7 @@
   "phase": "P3.3",
   "stage": "Stage 1",
   "task": "T-026",
-  "status": "TWELVE_APPROVED / T021+T022+T023+T024+T025+T026 PRODUCT_OWNER_APPROVED / T026 PR #13 MERGE PENDING",
+  "status": "TWELVE_APPROVED / T021+T022+T023+T024+T025+T026 PRODUCT_OWNER_APPROVED / T026 MERGED",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -174,7 +174,7 @@
       "master_version": "V001",
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-095",
-      "publication_status": "FORMAL_OUTPUTS_MATERIALIZED / PR #13 MERGE PENDING",
+      "publication_status": "CLOSED / MERGED_TO_MAIN",
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL_RESTORE_PENDING",
       "canonical_asset_sha256": "5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4",
       "semantic_geometry_signature": "6ab5ea18d771d70377a693706ef669b208546d6453c7762ef4f72b8087224cd5",
@@ -208,7 +208,10 @@
         "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
         "review_board_count": 1,
         "required_review_panel_count": 7
-      }
+      },
+      "merge_commit_sha": "a588895004d61b0c5bc3615db4a74f1c2f4a91bc",
+      "final_regression_run": 35589254034,
+      "final_regression_validation": "47/47 PASS"
     }
   ],
   "approved_master_count": 12
