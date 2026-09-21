@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-024",
-  "status": "TEN_APPROVED / T021+T022+T023+T024 PRODUCT_OWNER_APPROVED",
+  "task": "T-025",
+  "status": "ELEVEN_APPROVED / T021+T022+T023+T024+T025 PRODUCT_OWNER_APPROVED",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -126,7 +126,45 @@
       "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea",
       "final_head_sha": "d857558a1fab765fa269f76ba9217b8456c353aa",
       "final_head_actions_run": 35498221932
+    },
+    {
+      "component_id": "CMP-FRAME-ZHAQIAN-001",
+      "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
+      "master_version": "V001",
+      "approval_status": "PRODUCT_OWNER_APPROVED",
+      "decision_id": "D-091",
+      "publication_status": "FORMAL_OUTPUTS_MATERIALIZED / PR #12 MERGE PENDING",
+      "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL_RESTORE_PENDING",
+      "canonical_asset_sha256": "d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6",
+      "semantic_geometry_signature": "bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e",
+      "canonical_section_mm": {
+        "width": 331.5,
+        "thickness": 185
+      },
+      "historical_full_length_mm": null,
+      "canonical_reference_length_mm": 1000,
+      "exact_location_unresolved_count": 10,
+      "hidden_joinery": "UNKNOWN / GEOMETRY_DEFERRED",
+      "source_artifact": {
+        "actions_run_id": 35572874173,
+        "artifact_id": 10626941998,
+        "artifact_zip_sha256": "86d7defe94d64deddc2eb4020f69dffbec352e56bf2f49ec66d222cf853a325a"
+      },
+      "minimal_sufficient_package": {
+        "policy": "ADAPTIVE / NO UNIVERSAL FILE COUNT",
+        "component_specific_formal_file_count": 6,
+        "formal_repo_files": [
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZHAQIAN-001/CMP-FRAME-ZHAQIAN-001_MASTER_DEFINITION_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZHAQIAN-001/CMP-FRAME-ZHAQIAN-001_MASTER_SEMANTIC_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZHAQIAN-001/CMP-FRAME-ZHAQIAN-001_MASTER_REVIEW_BOARD_V001.png",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZHAQIAN-001/CMP-FRAME-ZHAQIAN-001_MASTER_VALIDATION_V001.json",
+          "docs/tasks/T-025_P3_3_ZHAQIAN_MASTER_V2_PILOT_V001.md"
+        ],
+        "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+        "review_board_count": 1,
+        "required_review_panel_count": 6
+      }
     }
   ],
-  "approved_master_count": 10
+  "approved_master_count": 11
 }
