@@ -1,6 +1,6 @@
 # T-026｜P3.3 槫 Master V2｜Lifecycle Record V001
 
-Status: **PRODUCT OWNER APPROVED / D-095 / FORMAL DELIVERY AUTHORIZED / PR MERGE PENDING**  
+Status: **PRODUCT OWNER APPROVED / D-095 / FORMAL DELIVERY CLOSED / FINAL REGRESSION PASS / PR #13 READY FOR MERGE**  
 Date: 2026-09-21  
 Decisions: **D-093 / D-094 / D-095**  
 Branch: `codex/t026-p3-3-purlin-master-v2-v001`  
@@ -281,3 +281,53 @@ D-095 does **not** authorize PR #13 merge, Stage1 PASS, Stage2, or T-018 resume.
 - temporary D-095 publication job has been removed from the shared V2 workflow
 
 Final regression and PR #13 pre-merge cross-check are required before requesting merge authorization.
+
+
+## 16. Final regression / pre-merge cross-check
+
+**PASS / PR #13 READY FOR MERGE**
+
+Final V2 closure regression:
+- GitHub Actions Run: `35589254034` = **SUCCESS**
+- regression head: `817e8dd842d765bf7a0a8cc28d2c509b64910da9`
+- validation: **47 / 47 PASS**
+- regenerated semantic geometry signature: `6ab5ea18d771d70377a693706ef669b208546d6453c7762ef4f72b8087224cd5`
+- approved semantic geometry signature: same / MATCH
+- regenerated .blend SHA-256: `ce31f75dbe0de1079fe329a66e66f2a1cad3c173134ed8bb566aefcce3686521`
+- approved canonical .blend SHA-256 remains: `5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4`
+- binary identity policy: Catalog remains bound to the Product Owner-approved binary; closure regression proves regenerated geometry identity rather than requiring byte-identical Blender serialization.
+- regenerated Review Board SHA-256: `073d13c7f426e2a80808e22c982df126ab64130b1c935cc88f14fc2ba28f4f4b` = approved Review Board / MATCH
+- regenerated Semantic SHA-256: `6e0c07709c83a1833c0059afc9023825d27ca47f077f2bf991612c251a1abaed`
+- regenerated Validation SHA-256: `a6d780aff36afd6d22c45861aa2aa1517e0ce757b66e112145936d5ec1262df3`
+- regression Artifact ID: `10634445266`
+- regression Artifact ZIP SHA-256: `fb377ed8bc7034005a5872903620580858cda4f258921487ecea08a4b20413ec`
+- section profile state: `UNKNOWN`
+- section envelope historical claim: `false`
+- adaptive Review Board: 7 required panels / PASS
+- minimal-sufficient formal surface: PASS
+
+Derived Registry Excel pre-merge sync:
+- Run `35589254110` = **SUCCESS**
+- source Registry commit: `9647e028f168c449fa86a2929181a577161faf4e`
+- V008/CURRENT: 505 records
+- Stage1 Catalog: 12 approved Masters
+- 槫 binding: **33 / 33**
+- Master progress: **12 / 28 = 42.9%**
+- approved-Master-covered Registry rows: **99**
+- current/versioned Excel SHA-256: `1fabd30cf851700ef9518f23d7a4ea65f8b489621636fe1a0506c32ec6669fb5`
+- JSON remains canonical truth; Excel remains DERIVED_VIEW.
+
+Static pre-merge cross-check:
+- branch behind main: **0**
+- PR mergeable: **true**
+- changed-file scope: T-026 / shared V2 infrastructure / Catalog+V008 / derived Excel only
+- D-094 locked Definition remained immutable after first-article acceptance
+- approved Semantic / Validation / Review Board were exact D-095 Artifact bytes
+- no canonical Purlin `.blend` is tracked in Git
+- legacy `CMP-PURLIN-001` identity remains separated from the 33-instance Master
+- T-018 remains HOLD
+- Stage1 remains ACTIVE / not passed
+
+No further engineering change is required before merge.
+
+**PR #13 merge remains a separate Product Owner authorization boundary.**
