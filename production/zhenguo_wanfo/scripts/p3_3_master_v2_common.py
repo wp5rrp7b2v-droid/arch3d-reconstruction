@@ -1,0 +1,305 @@
+"""P3.3 Master V2 shared builder / inspector / adaptive review-board composer.
+
+Shared infrastructure. Component-specific facts must come from a locked Master Definition.
+"""
+import argparse, hashlib, json, math, re, sys
+from pathlib import Path
+
+def sha256(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+def stable_signature(value):
+    return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(",",":")).encode()).hexdigest()
+
+def load_definition(path):
+    d=json.loads(Path(path).read_text(encoding="utf-8"))
+    assert d["status"].startswith("LOCKED / PRODUCT_OWNER_APPROVED")
+    assert d["approval"]["definition_locked"] is True
+    assert d["execution_boundary"]["engineering_execution_authorized"] is True
+    assert d["geometry_contract"]["canonical_reference_length_historical_claim"] is False
+    assert d["registry_boundary"]["historical_full_length_mm"] is None
+    assert d["geometry_contract"]["unsupported_geometry"]==[]
+    return d
+
+def safe_name(s):
+    return re.sub(r"[^A-Za-z0-9_]+","_",s.replace("-","_"))
+
+def clear_scene():
+    import bpy
+    for obj in list(bpy.data.objects):
+        bpy.data.objects.remove(obj,do_unlink=True)
+    for c in list(bpy.data.collections):
+        if c != bpy.context.scene.collection:
+            bpy.data.collections.remove(c)
+
+def setup_scene():
+    import bpy
+    s=bpy.context.scene
+    s.unit_settings.system="METRIC"
+    s.unit_settings.scale_length=0.001
+    s.unit_settings.length_unit="MILLIMETERS"
+    s.render.engine="BLENDER_EEVEE_NEXT"
+    s.render.image_settings.file_format="PNG"
+    s.render.resolution_percentage=100
+    s.world.use_nodes=True
+    bg=next(n for n in s.world.node_tree.nodes if n.type=="BACKGROUND")
+    bg.inputs["Color"].default_value=(0.88,0.88,0.88,1)
+    bg.inputs["Strength"].default_value=1
+    return s
+
+def emissive(name,shade):
+    import bpy
+    m=bpy.data.materials.new(name)
+    m.use_nodes=True
+    n=m.node_tree.nodes
+    n.clear()
+    e=n.new("ShaderNodeEmission")
+    e.inputs["Color"].default_value=(shade,shade,shade,1)
+    o=n.new("ShaderNodeOutputMaterial")
+    m.node_tree.links.new(e.outputs[0],o.inputs["Surface"])
+    return m
+
+def camera(target,pos,scale,name="V2_CAMERA"):
+    import bpy
+    from mathutils import Vector
+    data=bpy.data.cameras.new(name)
+    c=bpy.data.objects.new(name,data)
+    bpy.context.scene.collection.objects.link(c)
+    bpy.context.scene.camera=c
+    data.type="ORTHO"
+    data.clip_end=100000
+    data.ortho_scale=scale
+    c.location=pos
+    c.rotation_euler=(Vector(target)-c.location).to_track_quat("-Z","Y").to_euler()
+    return c
+
+def make_body(d,length_mm,width_mm,thickness_mm):
+    import bpy
+    L=float(length_mm); W=float(width_mm); H=float(thickness_mm)
+    verts=[(-L/2,-W/2,0),(L/2,-W/2,0),(L/2,W/2,0),(-L/2,W/2,0),
+           (-L/2,-W/2,H),(L/2,-W/2,H),(L/2,W/2,H),(-L/2,W/2,H)]
+    faces=[(3,2,1,0),(0,1,5,4),(1,2,6,5),(2,3,7,6),(3,0,4,7),(4,5,6,7)]
+    base=safe_name(d["component_id"])
+    mesh=bpy.data.meshes.new(base+"_BODY_MESH")
+    mesh.from_pydata(verts,[],faces)
+    mesh.update()
+    col=bpy.data.collections.new("MASTER__"+base)
+    bpy.context.scene.collection.children.link(col)
+    obj=bpy.data.objects.new("MASTER__"+base+"__BODY",mesh)
+    col.objects.link(obj)
+    obj["component_id"]=d["component_id"]
+    obj["master_id"]=d["master_id"]
+    obj["master_version"]=d["master_version"]
+    obj["historical_full_length_state"]="UNKNOWN_NULL_DO_NOT_LOCK"
+    obj["canonical_reference_length_historical_claim"]=False
+    obj["joinery_geometry"]="DEFERRED"
+    obj["unsupported_geometry_count"]=0
+    return obj
+
+def body_payload(obj):
+    verts=[[round(float(v.co[i]),6) for i in range(3)] for v in obj.data.vertices]
+    faces=[list(p.vertices) for p in obj.data.polygons]
+    mins=[min(v[i] for v in verts) for i in range(3)]
+    maxs=[max(v[i] for v in verts) for i in range(3)]
+    return {
+      "name":obj.name,
+      "vertex_count":len(verts),
+      "face_count":len(faces),
+      "local_transform":{
+        "location":[float(x) for x in obj.location],
+        "rotation":[float(x) for x in obj.rotation_euler],
+        "scale":[float(x) for x in obj.scale]
+      },
+      "local_bbox_mm":{
+        "min":mins,"max":maxs,
+        "dimensions":[round(maxs[i]-mins[i],6) for i in range(3)]
+      },
+      "primitive":"closed_rectangular_bounded_outer_envelope_reference",
+      "unsupported_detail_count":0,
+      "joinery_cut_count":0,
+      "geometry_vertices_mm":verts,
+      "geometry_faces":faces
+    }
+
+def render_views(obj,d,review_dir):
+    import bpy
+    from mathutils import Vector
+    review=Path(review_dir)
+    review.mkdir(parents=True,exist_ok=True)
+    s=setup_scene()
+    obj.data.materials.append(emissive("V2_BODY",0.58))
+    dims=obj.dimensions
+    L=float(dims.x); W=float(dims.y); H=float(dims.z); ext=max(L,W,H)
+    target=(0,0,H/2)
+    cam=camera(target,(0,-ext*3,H/2),ext*1.5)
+    views={
+      "FRONT":((0,-ext*3,H/2),max(L,H)*1.4),
+      "SIDE":((ext*3,0,H/2),max(W,H)*1.5),
+      "TOP":((0,0,ext*3),max(L,W)*1.4),
+      "AXON":((ext*2,-ext*2.4,ext*1.9),ext*1.8)
+    }
+    for name,(pos,scale) in views.items():
+        cam.location=pos
+        cam.rotation_euler=(Vector(target)-cam.location).to_track_quat("-Z","Y").to_euler()
+        cam.data.ortho_scale=scale
+        s.render.resolution_x=1200
+        s.render.resolution_y=900
+        s.render.filepath=str(review/(name+".png"))
+        bpy.ops.render.render(write_still=True)
+
+def text_page(path,title,lines):
+    import bpy
+    clear_scene()
+    s=setup_scene()
+    s.render.resolution_x=1200
+    s.render.resolution_y=900
+    dark=emissive("V2_TEXT",0.08)
+    content=[title]+lines
+    for i,line in enumerate(content):
+        curve=bpy.data.curves.new("TXT_"+str(i),type="FONT")
+        curve.body=str(line)
+        curve.align_x="LEFT"
+        curve.align_y="CENTER"
+        curve.size=0.40 if i==0 else 0.26
+        o=bpy.data.objects.new("TXT_"+str(i),curve)
+        bpy.context.scene.collection.objects.link(o)
+        o.data.materials.append(dark)
+        o.location=(-7.5,5.5-i*0.95,0)
+    camera((0,0,0),(0,0,20),17.5,name="V2_TEXT_CAMERA")
+    s.render.filepath=str(path)
+    bpy.ops.render.render(write_still=True)
+
+def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
+    review=Path(review_dir)
+    rb=d["registry_boundary"]
+    text_page(review/"DIMENSION_PARAMETER_SUMMARY.png","MASTER V2 / DIMENSION + PARAMETER",[
+      f'Component: {d["component_id"]}',
+      f'Canonical section: {width_mm:.1f} x {thickness_mm:.1f} mm',
+      f'Reference length: {length_mm:.1f} mm / NON-HISTORICAL',
+      f'Physical instances: {rb["physical_instance_count"]}',
+      f'Exact-location unresolved: {rb["exact_location_unresolved_count"]}',
+      'Placement length/endpoints: ASSEMBLY-OWNED / DEFERRED'
+    ])
+    vg=d["authority"]["visual_reference_gate"]
+    text_page(review/"EVIDENCE_UNCERTAINTY_SUMMARY.png","MASTER V2 / EVIDENCE + UNCERTAINTY",[
+      f'Registry authority: {d["authority"]["registry_schema_version_expected"]}',
+      f'Visual gate: {vg["decision_id"]} / {vg["result"]}',
+      'Historical full length: UNKNOWN / null',
+      'Sample-to-instance mapping: UNKNOWN',
+      'Hidden joinery/end profile: UNKNOWN / NOT MODELED',
+      'Unsupported geometry: NONE'
+    ])
+
+def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None,thickness_mm=None):
+    import bpy
+    d=load_definition(definition)
+    rb=d["registry_boundary"]
+    L=float(length_mm if length_mm is not None else d["geometry_contract"]["canonical_reference_length_mm"])
+    W=float(width_mm if width_mm is not None else rb["section_mm"]["width"])
+    H=float(thickness_mm if thickness_mm is not None else rb["section_mm"]["thickness"])
+    clear_scene(); setup_scene()
+    obj=make_body(d,L,W,H)
+    asset=Path(asset); asset.parent.mkdir(parents=True,exist_ok=True)
+    bpy.context.preferences.filepaths.save_version=0
+    bpy.ops.wm.save_as_mainfile(filepath=str(asset),check_existing=False)
+    body=body_payload(obj)
+    sig=stable_signature({"vertices":body["geometry_vertices_mm"],"faces":body["geometry_faces"]})
+    sem={
+      "schema_version":"MASTER_V2_SEMANTIC_1.0",
+      "task_id":d["task_id"],
+      "component_id":d["component_id"],
+      "master_id":d["master_id"],
+      "master_version":d["master_version"],
+      "definition_sha256":sha256(definition),
+      "blender_version":bpy.app.version_string,
+      "geometry_mode":d["geometry_contract"]["geometry_mode"],
+      "resolved_dimensions_mm":{"length":L,"width":W,"thickness":H},
+      "historical_full_length_mm":None,
+      "canonical_reference_length_historical_claim":False,
+      "placement_policy":d["geometry_contract"]["placement_policy"],
+      "joinery_geometry":d["geometry_contract"]["joinery_geometry"],
+      "unknowns":d["unknowns"],
+      "body":body,
+      "semantic_geometry_signature":sig,
+      "canonical_blend_sha256":sha256(asset)
+    }
+    Path(semantic).write_text(json.dumps(sem,ensure_ascii=False,indent=2,sort_keys=True)+"\n",encoding="utf-8")
+    if review_dir:
+        render_views(obj,d,review_dir)
+        render_summaries(d,review_dir,L,W,H)
+    print("MASTER_V2_BUILD_OK",d["component_id"],sig)
+
+def inspect(asset,expected,output):
+    import bpy
+    e=json.loads(Path(expected).read_text(encoding="utf-8"))
+    obj=bpy.data.objects.get(e["body"]["name"])
+    assert obj is not None
+    body=body_payload(obj)
+    assert body==e["body"]
+    assert obj.get("component_id")==e["component_id"]
+    assert obj.get("master_id")==e["master_id"]
+    assert obj.get("historical_full_length_state")=="UNKNOWN_NULL_DO_NOT_LOCK"
+    assert obj.get("canonical_reference_length_historical_claim") is False
+    out={
+      "status":"PASS",
+      "body":body,
+      "semantic_geometry_signature":stable_signature({"vertices":body["geometry_vertices_mm"],"faces":body["geometry_faces"]}),
+      "blend_sha256":sha256(asset)
+    }
+    Path(output).write_text(json.dumps(out,indent=2,sort_keys=True)+"\n",encoding="utf-8")
+    print("MASTER_V2_REOPEN_OK")
+
+def compose_board(definition,review_dir,board):
+    from PIL import Image,ImageDraw,ImageFont
+    d=load_definition(definition)
+    rc=d["v2_slim_file_contract"]["review_contract"]
+    panels=rc["required_panels"]
+    review=Path(review_dir)
+    cols=min(3,max(1,len(panels)))
+    rows=math.ceil(len(panels)/cols)
+    iw,ih=1200,900
+    label_h=40
+    canvas=Image.new("RGB",(cols*iw,rows*(ih+label_h)),"white")
+    draw=ImageDraw.Draw(canvas)
+    font=ImageFont.load_default()
+    for idx,panel in enumerate(panels):
+        src=review/(panel+".png")
+        if not src.exists():
+            raise FileNotFoundError(src)
+        im=Image.open(src).convert("RGB")
+        if im.size!=(iw,ih):
+            im=im.resize((iw,ih))
+        x=(idx%cols)*iw; y=(idx//cols)*(ih+label_h)
+        draw.text((x+12,y+12),panel,fill="black",font=font)
+        canvas.paste(im,(x,y+label_h))
+    out=Path(board); out.parent.mkdir(parents=True,exist_ok=True)
+    canvas.save(out)
+    print("MASTER_V2_REVIEW_BOARD_OK",len(panels),out)
+
+def parse_args():
+    ap=argparse.ArgumentParser()
+    ap.add_argument("--mode",choices=("build","inspect","compose-board"),required=True)
+    ap.add_argument("--definition")
+    ap.add_argument("--asset")
+    ap.add_argument("--semantic")
+    ap.add_argument("--review-dir")
+    ap.add_argument("--expected")
+    ap.add_argument("--output")
+    ap.add_argument("--board")
+    ap.add_argument("--length-mm",type=float)
+    ap.add_argument("--width-mm",type=float)
+    ap.add_argument("--thickness-mm",type=float)
+    argv=sys.argv[sys.argv.index("--")+1:] if "--" in sys.argv else sys.argv[1:]
+    return ap.parse_args(argv)
+
+def main():
+    a=parse_args()
+    if a.mode=="build":
+        build(a.definition,a.asset,a.semantic,a.review_dir,a.length_mm,a.width_mm,a.thickness_mm)
+    elif a.mode=="inspect":
+        inspect(a.asset,a.expected,a.output)
+    else:
+        compose_board(a.definition,a.review_dir,a.board)
+
+if __name__=="__main__":
+    main()

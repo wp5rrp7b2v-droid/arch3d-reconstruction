@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R162",
-  "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / LOCAL SYNC + APPROVED ARTIFACT RECONCILIATION PASS / D-087 ACTIVE / T-018 HOLD",
+  "state_revision": "R169",
+  "last_updated": "2026-09-21",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-025 FORMAL DELIVERY CLOSED / FINAL REGRESSION 42 OF 42 PASS / PR #12 READY FOR MERGE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / T-024 CLOSED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 11 OF 28 MASTERS APPROVED / T-025 FORMAL DELIVERY / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / STAGE1 ACTIVE / T-021+D-072 CLOSED / T-022+D-074 CLOSED / T-023+D-080 CLOSED / T-024+D-085 CLOSED / PR #11 MERGED / T-020+RZ+FV STAGE5 RE-REVIEW / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-024 CLOSED / T-025 PRODUCT OWNER APPROVED D-091 / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 BOUND / 11 OF 28 MASTERS APPROVED / EXCEL+FINAL REGRESSION PENDING / PR #12 MERGE PENDING / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No engineering blocker. Local Git sync and approved T-021—T-024 artifact reconciliation are complete. Next work may return to Stage1 missing-Master selection under D-076 visual-reference gate. T-018 remains HOLD.",
+  "decision_required": true,
+  "blocker": "No engineering blocker. T-025 formal delivery, Catalog/V008 binding, derived Excel sync, 42/42 final regression, and pre-merge cross-check are complete. Only Product Owner authorization to merge PR #12 remains.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -61,16 +61,17 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "NONE",
-    "status": "LOCAL SYNC + ARTIFACT RECONCILIATION COMPLETE / NO ENGINEERING T-TASK ACTIVE"
+    "id": "T-025",
+    "name": "P3.3 Zhaqian Master V2 Slim Pilot",
+    "status": "PRODUCT OWNER APPROVED / FORMAL DELIVERY CLOSED / FINAL REGRESSION 42/42 PASS / PR #12 READY FOR MERGE"
   },
   "proposed_next_task": {
-    "id": "STAGE1_NEXT_MASTER_SELECTION",
-    "name": "Select next missing Stage1 Master from V008 coverage matrix under D-076 visual-reference gate",
-    "status": "READY FOR CHAT DESIGN / ENGINEERING EXECUTION NOT YET AUTHORIZED",
-    "new_t_task_created": false,
+    "id": "T-025_PR12_MERGE",
+    "name": "Merge PR #12 after explicit Product Owner authorization",
+    "status": "READY / WAITING PRODUCT OWNER MERGE AUTHORIZATION",
+    "new_t_task_created": true,
     "engineering_execution_authorized": false,
-    "prerequisite": "D-076 visual-reference review before any new Master modeling"
+    "prerequisite": "Final regression Run 35577054218 SUCCESS / pre-merge cross-check PASS"
   },
   "last_completed_task": {
     "id": "T-024",
@@ -127,7 +128,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / T-021+CLOSED / T-022+CLOSED / T-023+CLOSED / T-024+CLOSED / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-025 D-091 FORMAL DELIVERY / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -174,7 +175,52 @@
       "MASTER_WITHOUT_EVIDENCE_BINDING",
       "EXCEL_AS_CANONICAL_SOURCE",
       "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
-    ]
+    ],
+    "t025": {
+      "status": "PRODUCT OWNER APPROVED / FORMAL DELIVERY CLOSED / FINAL REGRESSION 42/42 PASS / PR #12 READY FOR MERGE",
+      "component": "剳牵",
+      "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
+      "branch": "codex/t025-p3-3-zhaqian-master-v2-pilot-v001",
+      "pilot_goal": "Minimize duplicated/redundant component-specific outputs while preserving every required information domain and independent cross-check.",
+      "visual_gate": "PASS / D-088",
+      "engineering_execution_authorized": true,
+      "file_count_policy": "ADAPTIVE / MINIMAL SUFFICIENT / NO UNIVERSAL COUNT",
+      "review_policy": "ADAPTIVE / Definition-declared required panels / no universal six-panel rule",
+      "actions_run_id": 35572874173,
+      "validation": "35/35 PASS",
+      "reviewed_head_sha": "834765fede99325b3e53cc8b298e00613c810c96",
+      "canonical_blend_sha256": "d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6",
+      "semantic_geometry_signature": "bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e",
+      "review_board_sha256": "b53f38d58dd697c293b65a59862a780690bd12b963340c213e5d51ec30e2a7fd",
+      "artifact_id": 10626941998,
+      "artifact_zip_sha256": "86d7defe94d64deddc2eb4020f69dffbec352e56bf2f49ec66d222cf853a325a",
+      "generated_formal_artifact_file_count": 4,
+      "component_specific_package_current_count": 6,
+      "superseded_failed_runs": [
+        35572328310,
+        35572381543
+      ],
+      "failed_run_root_cause": "OVERBROAD REPOSITORY-WIDE TRACKED-BLEND VALIDATOR; CORRECTED TO CURRENT MASTER DIRECTORY ONLY",
+      "product_owner_approved": true,
+      "decision_id": "D-091",
+      "formal_delivery_status": "CLOSED / EXACT APPROVED OUTPUTS MATERIALIZED / CATALOG+V008+EXCEL SYNCED / FINAL REGRESSION PASS",
+      "pr_merge_authorized": false,
+      "materialization_workflow_run": 35574922533,
+      "materialization_commit": "b4ccd8c37eb7166e3a4ed340ce83c242a541d187",
+      "stage1_catalog_approved_count": 11,
+      "v008_bound_rows": 14,
+      "stage1_master_completion": "11/28 / 39.3%",
+      "final_regression_run": 35577054218,
+      "final_regression_validation": "42/42 PASS",
+      "final_regression_head_sha": "811a69b710a1990429edf9a86e4ef37770dba79b",
+      "final_regenerated_blend_sha256": "099041ba3a44e646a69d7083e39b0a6d900c99cb36af1823b97ff27146554641",
+      "final_regenerated_semantic_geometry_signature": "bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e",
+      "approved_canonical_blend_sha256": "d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6",
+      "final_regression_artifact_id": 10627743661,
+      "final_regression_artifact_zip_sha256": "4781e139e6489a8158a2ac73c859e0f8cac9a7961b11849b832e5d1a75fef1db",
+      "excel_sync_run": 35577054244,
+      "pre_merge_cross_check": "PASS / behind main 0 / mergeable true / scope clean"
+    }
   },
   "roof_control_audit_2026_09_17": {
     "status": "READ_ONLY / COMPLETE / B-STOP",
@@ -198,15 +244,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-087",
-    "date": "2026-09-20",
-    "decision": "V008/CURRENT must directly expose Stage1 Master coverage progress and approved Master bindings. Master Catalog remains approval authority. Current snapshot: 505 records / 66 object types / 28 Master-scope types / 10 approved / 18 pending / 35.7%."
+    "id": "D-091",
+    "date": "2026-09-21",
+    "decision": "Approve T-025 Zhaqian V2 first article and authorize exact accepted-Artifact formal materialization, Catalog/V008/Excel closure, and final regression. PR #12 merge remains separate."
   },
   "latest_material_review": {
-    "date": "2026-09-18",
-    "result": "DAILY CLOSE FINAL / PASS WITH CAUTION / FINAL PRODUCTION DIRECTION NOT YET PROVEN",
-    "evidence": "docs/project_control/DAILY_CLOSE_2026-09-18.md",
-    "decision_required": "NONE AT CLOSE. Next substantive decision only after Pre-Publication Readiness Review."
+    "date": "2026-09-21",
+    "result": "T-025 FORMAL DELIVERY CLOSED / FINAL REGRESSION 42/42 PASS / PRE-MERGE PASS",
+    "evidence": "Run 35577054218 + Artifact 10627743661 + Excel Run 35577054244 + static compare",
+    "decision_required": "PRODUCT OWNER PR #12 MERGE AUTHORIZATION"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -264,7 +310,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Return to Stage1 coverage matrix and select the next missing Master in Chat. Apply D-076 visual-reference review before any modeling. Do not create/execute a new T-task until the specification and visual-reference gate are approved. T-018 remains HOLD.",
+  "next_action": "Product Owner authorize PR #12 merge. After merge, verify main + record merge commit + local sync requirement. Stage1 remains ACTIVE at 11/28 Masters; T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
@@ -655,15 +701,15 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / IMPLEMENTED",
+    "status": "ACTIVE / T-025 D-091 BINDING UPDATED",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 10,
-    "pending_master_object_type_count": 18,
-    "master_completion_percent": 35.7,
-    "master_covered_registry_record_count": 52,
+    "approved_master_count": 11,
+    "pending_master_object_type_count": 17,
+    "master_completion_percent": 39.3,
+    "master_covered_registry_record_count": 66,
     "pending_source_binding_count": 7,
     "row_fields": [
       "stage1_disposition",

@@ -1,0 +1,154 @@
+name: P3.3 Master V2 First Article
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p3_3_master_v2.yml'
+      - 'production/zhenguo_wanfo/component_library/masters/**/**_MASTER_DEFINITION_V*.json'
+      - 'production/zhenguo_wanfo/scripts/p3_3_master_v2_common.py'
+      - 'production/zhenguo_wanfo/scripts/validate_p3_3_master_v2.py'
+      - 'docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json'
+  workflow_dispatch:
+    inputs:
+      definition_path:
+        description: 'Locked Master Definition path'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  first-article:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      BLENDER_DIR: /tmp/blender-4.5.13-linux-x64
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      COMMON: production/zhenguo_wanfo/scripts/p3_3_master_v2_common.py
+      VALIDATOR: production/zhenguo_wanfo/scripts/validate_p3_3_master_v2.py
+      REGISTRY: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json
+      CATALOG: production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json
+      ARTIFACT_DIR: artifacts/master_v2
+      REVIEW_DIR: artifacts/master_v2/review_tmp
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Resolve locked Master Definition
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            DEF="${{ inputs.definition_path }}"
+          else
+            git fetch origin "${{ github.base_ref }}" --depth=1
+            mapfile -t defs < <(git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -E '^production/zhenguo_wanfo/component_library/masters/.+_MASTER_DEFINITION_V[0-9]+\.json$' || true)
+            if [[ "${#defs[@]}" -ne 1 ]]; then
+              printf 'Expected exactly one changed Master Definition, got %s\n' "${#defs[@]}"
+              printf '%s\n' "${defs[@]}"
+              exit 2
+            fi
+            DEF="${defs[0]}"
+          fi
+          test -f "$DEF"
+          echo "DEFINITION=$DEF" >> "$GITHUB_ENV"
+          python - "$DEF" <<'PY'
+          import json,os,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert d["status"].startswith("LOCKED / PRODUCT_OWNER_APPROVED")
+          assert d["execution_boundary"]["engineering_execution_authorized"] is True
+          mid=d["master_id"]; ver=d["master_version"]
+          vals={
+            "TASK_ID":d["task_id"],
+            "MASTER_ID":mid,
+            "MASTER_VERSION":ver,
+            "ASSET":f"artifacts/master_v2/{mid}_{ver}.blend",
+            "SEMANTIC":f"artifacts/master_v2/{mid}_SEMANTIC_{ver}.json",
+            "BOARD":f"artifacts/master_v2/{mid}_REVIEW_BOARD_{ver}.png",
+            "VALIDATION":f"artifacts/master_v2/{mid}_VALIDATION_{ver}.json",
+            "ARTIFACT_NAME":f"P3_3_{d['task_id']}_MASTER_V2_FIRST_ARTICLE_{ver}"
+          }
+          with open(os.environ["GITHUB_ENV"],"a") as f:
+              for k,v in vals.items(): f.write(f"{k}={v}\n")
+          print("MASTER_V2_DEFINITION_RESOLVED",d["component_id"],d["task_id"])
+          PY
+
+      - name: Install Blender 4.5.13 and Pillow
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions MasterV2" -o /tmp/blender.tar.xz "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+          python -m pip install --disable-pip-version-check pillow
+
+      - name: Build canonical Master and review tiles
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$ARTIFACT_DIR" "$REVIEW_DIR"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" --             --mode build --definition "$DEFINITION" --asset "$ASSET" --semantic "$SEMANTIC" --review-dir "$REVIEW_DIR"
+
+      - name: Independent reopen
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$ASSET" --python-exit-code 10 --python "$COMMON" --             --mode inspect --asset "$ASSET" --expected "$SEMANTIC" --output "$ARTIFACT_DIR/reopen.json"
+
+      - name: Mutation and deterministic restore builds
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" --             --mode build --definition "$DEFINITION" --asset "$ARTIFACT_DIR/length.blend" --semantic "$ARTIFACT_DIR/length.json" --length-mm 1100
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" --             --mode build --definition "$DEFINITION" --asset "$ARTIFACT_DIR/width.blend" --semantic "$ARTIFACT_DIR/width.json" --width-mm 350
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" --             --mode build --definition "$DEFINITION" --asset "$ARTIFACT_DIR/thickness.blend" --semantic "$ARTIFACT_DIR/thickness.json" --thickness-mm 200
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" --             --mode build --definition "$DEFINITION" --asset "$ARTIFACT_DIR/restore.blend" --semantic "$ARTIFACT_DIR/restore.json"
+
+      - name: Compose adaptive Review Board
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$COMMON" --mode compose-board --definition "$DEFINITION" --review-dir "$REVIEW_DIR" --board "$BOARD"
+
+      - name: Validate locked Definition against generated Master
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR"             --definition "$DEFINITION"             --canonical "$SEMANTIC"             --reopen "$ARTIFACT_DIR/reopen.json"             --length "$ARTIFACT_DIR/length.json"             --width "$ARTIFACT_DIR/width.json"             --thickness "$ARTIFACT_DIR/thickness.json"             --restore "$ARTIFACT_DIR/restore.json"             --asset "$ASSET"             --review-dir "$REVIEW_DIR"             --board "$BOARD"             --registry "$REGISTRY"             --catalog "$CATALOG"             --output "$VALIDATION"
+
+      - name: Assert minimal formal artifact surface
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "$ASSET"
+          test -f "$SEMANTIC"
+          test -f "$BOARD"
+          test -f "$VALIDATION"
+          MASTER_DIR="$(dirname "$DEFINITION")"
+          test -z "$(git ls-files -- "$MASTER_DIR/*.blend")"
+          python - "$VALIDATION" <<'PY'
+          import json,sys
+          v=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert v["status"]=="PASS"
+          assert v["formal_file_count_policy"]=="ADAPTIVE / MINIMAL SUFFICIENT / NO FIXED COUNT"
+          print("MASTER_V2_MINIMAL_SUFFICIENT_SURFACE_PASS")
+          PY
+
+      - name: Upload formal V2 first-article evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            ${{ env.ASSET }}
+            ${{ env.SEMANTIC }}
+            ${{ env.BOARD }}
+            ${{ env.VALIDATION }}

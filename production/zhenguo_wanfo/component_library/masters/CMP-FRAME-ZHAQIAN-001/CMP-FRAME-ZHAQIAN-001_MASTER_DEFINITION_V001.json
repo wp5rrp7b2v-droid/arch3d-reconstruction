@@ -1,0 +1,148 @@
+{
+  "schema_version": "V2_PILOT_1.2",
+  "task_id": "T-025",
+  "component_id": "CMP-FRAME-ZHAQIAN-001",
+  "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
+  "master_version": "V001",
+  "component_name_zh": "剳牵",
+  "stage": "P3.3 V002 / Stage 1",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-090 / ENGINEERING_EXECUTION_AUTHORIZED",
+  "authority": {
+    "geometry_and_count": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json / V008",
+    "visual_reference_gate": {
+      "decision_id": "D-088",
+      "result": "PASS",
+      "source_url": "https://www.thepaper.cn/newsDetail_forward_27389245",
+      "source_scope": "SAME_BUILDING_SECONDARY_VISUAL / STRUCTURAL_LAYER_CONFIRMATION_ONLY",
+      "supported_claim": "万佛殿两侧山面铺作经丁栿联系心间梁架，其上再设剳牵、托脚",
+      "dimension_authority": false
+    },
+    "registry_schema_version_expected": "V008",
+    "registry_record_count_expected": 505
+  },
+  "registry_boundary": {
+    "physical_instance_count": 14,
+    "east_gable_known_count": 2,
+    "west_gable_known_count": 2,
+    "exact_location_unresolved_count": 10,
+    "exact_instance_endpoints": "UNKNOWN",
+    "historical_full_length_mm": null,
+    "section_mm": {
+      "width": 331.5,
+      "thickness": 185,
+      "classification": "V008 LOCKED FAMILY MEAN"
+    },
+    "sample_to_instance_mapping": "UNKNOWN"
+  },
+  "geometry_contract": {
+    "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+    "canonical_reference_length_mm": 1000,
+    "canonical_reference_length_historical_claim": false,
+    "axes": {
+      "x": "+X longitudinal",
+      "y": "+Y width",
+      "z": "+Z thickness"
+    },
+    "origin": "longitudinal midpoint / transverse center / lower reference plane",
+    "transform": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "placement_policy": "ASSEMBLY_OWNED / real length and endpoints resolved later",
+    "role_policy": "GABLE/BODY location semantics must not create unsupported body-geometry variants",
+    "joinery_geometry": "DEFERRED / NO UNSUPPORTED CUTS",
+    "unsupported_geometry": []
+  },
+  "unknowns": [
+    "10 of 14 exact physical locations",
+    "all historical full lengths",
+    "exact member endpoints",
+    "hidden joinery and end-profile geometry",
+    "sample-to-instance mapping"
+  ],
+  "hard_fails": [
+    "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW",
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "SILENT_HISTORICIZATION",
+    "UNDECLARED_PARAMETRIC_COMPLETION",
+    "MASTER_WITHOUT_EVIDENCE_BINDING",
+    "UNSUPPORTED_JOINERY_GEOMETRY"
+  ],
+  "v2_slim_file_contract": {
+    "principle": "MINIMAL_SUFFICIENT_COMPONENT_PACKAGE",
+    "objective": "Merge duplicate/redundant responsibilities, but never remove information required for modeling, evidence traceability, validation, review, reproducibility, or acceptance.",
+    "fixed_file_count_required": false,
+    "fixed_review_panel_count_required": false,
+    "baseline_for_simple_member": "approximately 6 formal outputs, subject to component complexity",
+    "mandatory_information_domains": [
+      "authoritative input definition and evidence boundary",
+      "generated semantic result / geometry identity",
+      "canonical model binary",
+      "human visual review evidence appropriate to geometry complexity",
+      "machine validation evidence",
+      "lifecycle / approval / delivery record"
+    ],
+    "merge_rule": "Two outputs SHOULD be merged when they repeat the same responsibility and can be merged without destroying independent cross-checks, auditability, machine readability, or human review clarity.",
+    "separation_rule": "Keep outputs separate when independence is itself a control: Definition vs generated Semantic vs Validation must remain independently comparable.",
+    "optional_outputs_rule": "Additional formal files/panels are allowed only when component geometry, variants, interfaces, evidence, or review needs genuinely require them.",
+    "forbidden_slimming": [
+      "dropping UNKNOWN or uncertainty information",
+      "removing evidence/source binding",
+      "combining Definition and generated Semantic so self-validation becomes impossible",
+      "combining Semantic and Validation so validation is no longer independent",
+      "omitting required views/details for complex geometry",
+      "forcing all components into the same file or review-panel count"
+    ],
+    "zhaqian_current_package": [
+      "CMP-FRAME-ZHAQIAN-001_MASTER_DEFINITION_V001.json",
+      "CMP-FRAME-ZHAQIAN-001_MASTER_SEMANTIC_V001.json",
+      "CMP-FRAME-ZHAQIAN-001_MASTER_V001.blend (Actions artifact + local only; not Git)",
+      "CMP-FRAME-ZHAQIAN-001_MASTER_REVIEW_BOARD_V001.png",
+      "CMP-FRAME-ZHAQIAN-001_MASTER_VALIDATION_V001.json",
+      "T-025_P3_3_ZHAQIAN_MASTER_V2_PILOT_V001.md"
+    ],
+    "review_contract": {
+      "board_count_default": 1,
+      "panel_selection": "DEFINITION_DRIVEN / ADAPTIVE",
+      "note": "Zhaqian currently needs 6 panels; other Masters may need fewer or more. Validator checks required panel coverage declared by each Definition, not a universal six-panel rule.",
+      "required_panels": [
+        "FRONT",
+        "SIDE",
+        "TOP",
+        "AXON",
+        "DIMENSION_PARAMETER_SUMMARY",
+        "EVIDENCE_UNCERTAINTY_SUMMARY"
+      ]
+    },
+    "temporary_render_policy": "individual render tiles may exist during Actions runtime but are not formal repository outputs unless the Definition explicitly requires them",
+    "shared_infrastructure_policy": "builder / validator / workflow are reusable V2 infrastructure and must not be duplicated per component unless a genuine non-shareable requirement is discovered and recorded"
+  },
+  "execution_boundary": {
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "executor": "GitHub Actions / Blender 4.5.13",
+    "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
+    "final_master_approval_requires_separate_product_owner_decision": true,
+    "pr_merge_requires_separate_product_owner_authorization": true
+  },
+  "approval": {
+    "decision_id": "D-090",
+    "date": "2026-09-21",
+    "definition_locked": true,
+    "minimal_sufficient_rule": "D-089",
+    "engineering_execution_authorized": true
+  }
+}
