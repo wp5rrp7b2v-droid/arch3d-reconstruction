@@ -98,11 +98,15 @@ def main():
     if catalog_entries:
         ce=catalog_entries[0]
         ck("36_catalog_approved",ce.get("approval_status")=="PRODUCT_OWNER_APPROVED")
-        ck("37_catalog_binary_identity",ce.get("canonical_asset_sha256")==c["canonical_blend_sha256"])
-        ck("38_registry_master_binding",all(x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE" and x.get("master_reference")==d["master_id"] for x in items))
+        published_semantic_path=Path(a.definition).parent / f'{d["master_id"]}_SEMANTIC_{d["master_version"]}.json'
+        ck("37_published_semantic_exists",published_semantic_path.exists())
+        published=load(published_semantic_path)
+        ck("38_catalog_approved_binary_identity",ce.get("canonical_asset_sha256")==published.get("canonical_blend_sha256"))
+        ck("39_regenerated_geometry_matches_approved",ce.get("semantic_geometry_signature")==c["semantic_geometry_signature"]==published.get("semantic_geometry_signature"))
+        ck("40_registry_master_binding",all(x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE" and x.get("master_reference")==d["master_id"] for x in items))
         progress=reg["stage1_master_progress_summary"]
-        ck("39_registry_progress_consistent",progress["approved_master_count"]==catalog["approved_master_count"] and progress["pending_master_object_type_count"]==progress["master_scope_object_type_count"]-progress["approved_master_count"])
-        ck("40_registry_covered_rows_consistent",progress["master_covered_registry_record_count"]==sum(1 for x in reg["items"] if x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE"))
+        ck("41_registry_progress_consistent",progress["approved_master_count"]==catalog["approved_master_count"] and progress["pending_master_object_type_count"]==progress["master_scope_object_type_count"]-progress["approved_master_count"])
+        ck("42_registry_covered_rows_consistent",progress["master_covered_registry_record_count"]==sum(1 for x in reg["items"] if x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE"))
     else:
         ck("36_preapproval_catalog_absent",all(x.get("master_reference")!=d["master_id"] for x in items))
 
