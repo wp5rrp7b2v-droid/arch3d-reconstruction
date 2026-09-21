@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R173",
+  "state_revision": "R174",
   "last_updated": "2026-09-21",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-026 PURLIN V2 FIRST ARTICLE ENGINEERING PASS / PRODUCT OWNER REVIEW REQUIRED / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-026 PRODUCT OWNER APPROVED D-095 / FORMAL DELIVERY IN PROGRESS / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -25,8 +25,8 @@
       "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-025 CLOSED / 11 OF 28 MASTERS APPROVED / NEXT MASTER SELECTION REQUIRES VISUAL GATE / T-018 HOLD"
     }
   },
-  "decision_required": true,
-  "blocker": "No T-026 engineering blocker. Run 35584601233 SUCCESS with 41/41 validation PASS. Product Owner first-article review/acceptance is required before formal materialization, Catalog/V008 approved binding, or PR #13 merge.",
+  "decision_required": false,
+  "blocker": "No T-026 engineering blocker. D-095 approves the first article and formal delivery. Exact accepted Artifact materialization + Catalog/V008/Excel sync + final regression remain to close before PR #13 merge authorization request.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,15 +63,15 @@
   "current_task": {
     "id": "T-026",
     "name": "P3.3 Purlin Master V2",
-    "status": "ENGINEERING PASS / FIRST ARTICLE COMPLETE / PRODUCT OWNER REVIEW REQUIRED"
+    "status": "PRODUCT OWNER APPROVED / D-095 / FORMAL DELIVERY IN PROGRESS / PR MERGE NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-026_PRODUCT_OWNER_REVIEW",
-    "name": "Review Purlin V2 7-panel Review Board + machine evidence and decide first-article acceptance",
-    "status": "WAITING PRODUCT OWNER REVIEW",
+    "id": "T-026_FORMAL_DELIVERY",
+    "name": "Materialize exact approved Purlin outputs, update Catalog + V008/CURRENT + derived Excel, then final regression/pre-merge cross-check",
+    "status": "AUTHORIZED / IN PROGRESS",
     "new_t_task_created": true,
     "engineering_execution_authorized": false,
-    "prerequisite": "Run 35584601233 SUCCESS / 41 of 41 PASS"
+    "prerequisite": "D-095 complete"
   },
   "last_completed_task": {
     "id": "T-025",
@@ -226,7 +226,7 @@
       "local_sync_status": "REQUIRED"
     },
     "t026": {
-      "status": "ENGINEERING PASS / PRODUCT OWNER REVIEW REQUIRED",
+      "status": "PRODUCT OWNER APPROVED / D-095 / FORMAL DELIVERY AUTHORIZED / PR #13 MERGE PENDING",
       "component": "槫",
       "component_id": "CMP-FRAME-PURLIN-001",
       "master_id": "CMP-FRAME-PURLIN-001_MASTER",
@@ -252,8 +252,10 @@
       "artifact_id": 10632275014,
       "artifact_zip_sha256": "62a4282003644745827a1cad2697d24bf36cb3847ac98a44c7ecac8fe41b83eb",
       "review_panel_count": 7,
-      "product_owner_approved": false,
-      "pr_merge_authorized": false
+      "product_owner_approved": true,
+      "pr_merge_authorized": false,
+      "decision_id": "D-095",
+      "formal_delivery_status": "IN PROGRESS / EXACT ARTIFACT MATERIALIZATION PENDING"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -278,9 +280,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-094",
+    "id": "D-095",
     "date": "2026-09-21",
-    "decision": "Lock T-026 Purlin V2 Definition and authorize first-article engineering using a non-historical rectangular section-envelope proxy with explicit PROFILE_UNKNOWN semantics."
+    "decision": "Approve T-026 Purlin V2 first article and authorize exact accepted-Artifact formal materialization, Catalog/V008/Excel closure, and final regression. PR #13 merge remains separate."
   },
   "latest_material_review": {
     "date": "2026-09-21",
@@ -344,7 +346,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Product Owner review T-026 Purlin V2 adaptive 7-panel Review Board and evidence boundary. If approved, materialize exact accepted Semantic/Validation/Review Board, update Stage1 Catalog + V008/CURRENT + derived Excel, run final regression, then request PR #13 merge authorization. Local sync remains deferred to evening; T-018 remains HOLD.",
+  "next_action": "Materialize exact Run 35584601233 Artifact outputs into the Purlin Master directory; register Master in Stage1 Catalog; update V008/CURRENT + derived Excel; run final regression and pre-merge cross-check; then request PR #13 merge authorization. Local sync remains deferred to evening; T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
