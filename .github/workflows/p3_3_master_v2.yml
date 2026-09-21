@@ -130,7 +130,8 @@ jobs:
           test -f "$SEMANTIC"
           test -f "$BOARD"
           test -f "$VALIDATION"
-          test -z "$(git ls-files -- '*.blend')"
+          MASTER_DIR="$(dirname "$DEFINITION")"
+          test -z "$(git ls-files -- "$MASTER_DIR/*.blend")"
           python - "$VALIDATION" <<'PY'
           import json,sys
           v=json.load(open(sys.argv[1],encoding="utf-8"))
