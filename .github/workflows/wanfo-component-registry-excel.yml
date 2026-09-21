@@ -10,6 +10,12 @@ on:
       - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V*.json"
       - "scripts/generate_wanfo_component_registry_excel.py"
       - ".github/workflows/wanfo-component-registry-excel.yml"
+  pull_request:
+    paths:
+      - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json"
+      - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V*.json"
+      - "scripts/generate_wanfo_component_registry_excel.py"
+      - ".github/workflows/wanfo-component-registry-excel.yml"
   workflow_dispatch:
 
 permissions:
@@ -26,6 +32,7 @@ jobs:
       - name: Checkout triggering revision
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
           fetch-depth: 0
 
       - name: Set up Python
@@ -89,9 +96,10 @@ jobs:
           print("VALIDATION_PASS", manifest["registry_version"], manifest["record_count"])
           PY
 
-      - name: Commit derived Excel only when changed
+      - name: Commit derived Excel to PR branch or main
         shell: bash
         run: |
+          set -euo pipefail
           DERIVED="docs/evidence/zhenguo_wanfo/derived"
           REGISTRY="docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json"
 
@@ -104,6 +112,12 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$DERIVED"
           git commit -m "derived: sync Wanfo component registry Excel"
+
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
+            echo "PR_BRANCH_DERIVED_EXCEL_SYNC_PASS"
+            exit 0
+          fi
 
           git fetch origin main
 
