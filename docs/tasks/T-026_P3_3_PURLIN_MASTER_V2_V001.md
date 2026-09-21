@@ -1,8 +1,8 @@
 # T-026｜P3.3 槫 Master V2｜Lifecycle Record V001
 
-Status: **VISUAL GATE PASS WITH GEOMETRY BOUNDARY / DEFINITION DRAFTED / ENGINEERING EXECUTION NOT AUTHORIZED**  
+Status: **DEFINITION LOCKED / D-094 / ENGINEERING EXECUTION AUTHORIZED / FIRST ARTICLE PENDING**  
 Date: 2026-09-21  
-Decision: **D-093**  
+Decisions: **D-093 / D-094**  
 Branch: `codex/t026-p3-3-purlin-master-v2-v001`  
 Master: `CMP-FRAME-PURLIN-001_MASTER`
 
@@ -141,23 +141,23 @@ The panel count is Definition-driven and may be changed before Definition lock i
 
 ## 10. Current authorization boundary
 
-D-093 authorizes:
+D-094 now locks the T-026 Definition and explicitly authorizes first-article engineering execution.
 
-- purlin visual-reference Gate PASS WITH GEOMETRY BOUNDARY;
-- T-026 creation;
-- V2 Master Definition drafting;
-- Draft PR / governance setup.
+Approved engineering representation:
 
-D-093 does **not** authorize:
+- rectangular 220.1 × 270.8 mm **bounding-envelope proxy**;
+- the proxy is for machine validation / assembly-interface preparation only;
+- it is **not** a claim about the historical section profile;
+- every Semantic / Review / Validation output must preserve `PROFILE_UNKNOWN / ENVELOPE_NOT_HISTORICAL`.
 
-- Blender execution;
-- first-article production;
-- treating the 220.1×270.8 envelope as an exact historical profile;
+Still not authorized:
+
+- Product Owner final Master acceptance;
 - Catalog/V008 approved binding;
-- PR merge;
+- PR #13 merge;
 - Stage1 PASS;
 - T-018 resume.
 
 Next decision:
 
-> **Product Owner reviews/locks the T-026 Definition and approves the proposed non-historical section-envelope representation before engineering execution.**
+> **Review T-026 first-article Review Board + machine evidence and decide Product Owner acceptance.**
