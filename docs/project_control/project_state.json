@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R167",
+  "state_revision": "R168",
   "last_updated": "2026-09-21",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-025 PRODUCT OWNER APPROVED D-091 / FORMAL DELIVERY IN PROGRESS / PR #12 MERGE PENDING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-025 D-091 FORMAL OUTPUTS MATERIALIZED + CATALOG/V008 BOUND / EXCEL + FINAL REGRESSION PENDING / PR #12 MERGE PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / T-025 V2 PILOT DESIGN / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 11 OF 28 MASTERS APPROVED / T-025 FORMAL DELIVERY / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-024 CLOSED / T-025 ZHAQIAN V2 SLIM PILOT DESIGN / D-088 VISUAL GATE PASS / ENGINEERING EXECUTION NOT AUTHORIZED / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-024 CLOSED / T-025 PRODUCT OWNER APPROVED D-091 / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 BOUND / 11 OF 28 MASTERS APPROVED / EXCEL+FINAL REGRESSION PENDING / PR #12 MERGE PENDING / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "No engineering blocker. D-091 approves T-025 first article and formal delivery. Exact accepted Artifact materialization + Catalog/V008/Excel sync + final regression remain to close before PR #12 merge authorization request.",
+  "blocker": "No T-025 engineering blocker. Exact accepted outputs are materialized and Catalog/V008 registration is complete. Derived Excel sync and final regression/pre-merge cross-check remain before PR #12 merge authorization request.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,15 +63,15 @@
   "current_task": {
     "id": "T-025",
     "name": "P3.3 Zhaqian Master V2 Slim Pilot",
-    "status": "PRODUCT OWNER APPROVED / D-091 / FORMAL DELIVERY IN PROGRESS / PR MERGE NOT AUTHORIZED"
+    "status": "PRODUCT OWNER APPROVED / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 BOUND / EXCEL+FINAL REGRESSION PENDING / PR MERGE NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-025_FORMAL_DELIVERY",
-    "name": "Materialize exact approved Artifact outputs, update Catalog + V008/CURRENT + derived Excel, then final regression/pre-merge cross-check",
-    "status": "AUTHORIZED / IN PROGRESS",
+    "id": "T-025_FINAL_REGRESSION",
+    "name": "Sync derived V008 Excel view, then run post-registration V2 regression and pre-merge cross-check",
+    "status": "READY / IN PROGRESS",
     "new_t_task_created": true,
-    "engineering_execution_authorized": false,
-    "prerequisite": "D-091 complete"
+    "engineering_execution_authorized": true,
+    "prerequisite": "Catalog 11 approved + V008/CURRENT Zhaqian 14/14 bound"
   },
   "last_completed_task": {
     "id": "T-024",
@@ -128,7 +128,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / T-021..T-024 CLOSED / T-025 V2 PILOT DESIGN ACTIVE / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-025 D-091 FORMAL DELIVERY / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -177,7 +177,7 @@
       "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
     ],
     "t025": {
-      "status": "PRODUCT OWNER APPROVED / D-091 / FORMAL DELIVERY AUTHORIZED / PR #12 MERGE PENDING",
+      "status": "PRODUCT OWNER APPROVED / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 BOUND / EXCEL+FINAL REGRESSION PENDING / PR #12 MERGE PENDING",
       "component": "剳牵",
       "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
       "branch": "codex/t025-p3-3-zhaqian-master-v2-pilot-v001",
@@ -203,8 +203,13 @@
       "failed_run_root_cause": "OVERBROAD REPOSITORY-WIDE TRACKED-BLEND VALIDATOR; CORRECTED TO CURRENT MASTER DIRECTORY ONLY",
       "product_owner_approved": true,
       "decision_id": "D-091",
-      "formal_delivery_status": "IN PROGRESS / EXACT ARTIFACT MATERIALIZATION PENDING",
-      "pr_merge_authorized": false
+      "formal_delivery_status": "EXACT APPROVED OUTPUTS MATERIALIZED / CATALOG+V008 REGISTERED / EXCEL+FINAL REGRESSION PENDING",
+      "pr_merge_authorized": false,
+      "materialization_workflow_run": 35574922533,
+      "materialization_commit": "b4ccd8c37eb7166e3a4ed340ce83c242a541d187",
+      "stage1_catalog_approved_count": 11,
+      "v008_bound_rows": 14,
+      "stage1_master_completion": "11/28 / 39.3%"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -235,9 +240,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-21",
-    "result": "T-025 FIRST ARTICLE ENGINEERING PASS / 35 OF 35 / PRODUCT OWNER REVIEW REQUIRED",
-    "evidence": "GitHub Actions Run 35572874173 + Artifact 10626941998",
-    "decision_required": "PRODUCT OWNER FIRST-ARTICLE ACCEPTANCE"
+    "result": "T-025 PRODUCT OWNER APPROVED / D-091 / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 REGISTERED",
+    "evidence": "Run 35572874173 + Artifact 10626941998 + materialization commit b4ccd8c37eb7166e3a4ed340ce83c242a541d187",
+    "decision_required": "NONE UNTIL FINAL PRE-MERGE CROSS-CHECK"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -295,7 +300,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Materialize exact Run 35572874173 Artifact outputs into the Zhaqian Master directory; register Master in Stage1 Catalog; update V008/CURRENT + derived Excel; run final regression and pre-merge cross-check; then request PR #12 merge authorization. T-018 remains HOLD.",
+  "next_action": "Sync derived V008 Excel view from updated JSON authority, run post-registration T-025 final regression and pre-merge cross-check, then request PR #12 merge authorization. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
@@ -686,15 +691,15 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / IMPLEMENTED",
+    "status": "ACTIVE / T-025 D-091 BINDING UPDATED",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 10,
-    "pending_master_object_type_count": 18,
-    "master_completion_percent": 35.7,
-    "master_covered_registry_record_count": 52,
+    "approved_master_count": 11,
+    "pending_master_object_type_count": 17,
+    "master_completion_percent": 39.3,
+    "master_covered_registry_record_count": 66,
     "pending_source_binding_count": 7,
     "row_fields": [
       "stage1_disposition",
