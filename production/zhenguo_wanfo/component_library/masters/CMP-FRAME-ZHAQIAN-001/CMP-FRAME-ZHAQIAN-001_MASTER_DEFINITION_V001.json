@@ -16,7 +16,9 @@
       "source_scope": "SAME_BUILDING_SECONDARY_VISUAL / STRUCTURAL_LAYER_CONFIRMATION_ONLY",
       "supported_claim": "万佛殿两侧山面铺作经丁栿联系心间梁架，其上再设剳牵、托脚",
       "dimension_authority": false
-    }
+    },
+    "registry_schema_version_expected": "V008",
+    "registry_record_count_expected": 505
   },
   "registry_boundary": {
     "physical_instance_count": 14,
@@ -105,25 +107,25 @@
       "forcing all components into the same file or review-panel count"
     ],
     "zhaqian_current_package": [
-      "MASTER_DEFINITION_V001.json",
-      "MASTER_SEMANTIC_V001.json",
-      "MASTER.blend (Actions artifact + local only; not Git)",
-      "MASTER_REVIEW_BOARD_V001.png",
-      "MASTER_VALIDATION_V001.json",
-      "T025_MASTER_RECORD_V001.md"
+      "CMP-FRAME-ZHAQIAN-001_MASTER_DEFINITION_V001.json",
+      "CMP-FRAME-ZHAQIAN-001_MASTER_SEMANTIC_V001.json",
+      "CMP-FRAME-ZHAQIAN-001_MASTER_V001.blend (Actions artifact + local only; not Git)",
+      "CMP-FRAME-ZHAQIAN-001_MASTER_REVIEW_BOARD_V001.png",
+      "CMP-FRAME-ZHAQIAN-001_MASTER_VALIDATION_V001.json",
+      "T-025_P3_3_ZHAQIAN_MASTER_V2_PILOT_V001.md"
     ],
     "review_contract": {
       "board_count_default": 1,
       "panel_selection": "DEFINITION_DRIVEN / ADAPTIVE",
-      "zhaqian_required_panels": [
+      "note": "Zhaqian currently needs 6 panels; other Masters may need fewer or more. Validator checks required panel coverage declared by each Definition, not a universal six-panel rule.",
+      "required_panels": [
         "FRONT",
         "SIDE",
         "TOP",
         "AXON",
         "DIMENSION_PARAMETER_SUMMARY",
         "EVIDENCE_UNCERTAINTY_SUMMARY"
-      ],
-      "note": "Zhaqian currently needs 6 panels; other Masters may need fewer or more. Validator checks required panel coverage declared by each Definition, not a universal six-panel rule."
+      ]
     },
     "temporary_render_policy": "individual render tiles may exist during Actions runtime but are not formal repository outputs unless the Definition explicitly requires them",
     "shared_infrastructure_policy": "builder / validator / workflow are reusable V2 infrastructure and must not be duplicated per component unless a genuine non-shareable requirement is discovered and recorded"
