@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R178",
+  "state_revision": "R179",
   "last_updated": "2026-09-21",
-  "session_status": "DAY CLOSED / P3.3 V002 STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / T-025+T-026 CLOSED / CLOUD WORK CLOSED / LOCAL SYNC PENDING / T-018 HOLD",
+  "session_status": "DAY CLOSED / P3.3 V002 STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / T-025+T-026 CLOSED / LOCAL SYNC VERIFIED / FINAL CLOSURE FAST-FORWARD REQUIRED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No cloud engineering blocker. Daily Close File PASS. Only intentional pending work is evening Mac local Git sync plus exact local restoration/SHA verification of the approved T-025 and T-026 canonical .blend binaries.",
+  "blocker": "No engineering or local-asset blocker. Local Git sync to the day-close SHA and both approved canonical blend restorations are verified. Only one final fast-forward is required to pull the D-098/R179 closure commit itself.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -61,17 +61,17 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "NONE",
-    "name": "No active engineering T-task",
-    "status": "DAY CLOSED / LOCAL SYNC PENDING"
+    "id": "LOCAL_SYNC_2026_09_21",
+    "name": "Final fast-forward of local-sync closure commit",
+    "status": "LOCAL CONTENT VERIFIED / ONE FINAL GIT PULL REQUIRED"
   },
   "proposed_next_task": {
-    "id": "LOCAL_SYNC_2026_09_21",
-    "name": "Evening local Git synchronization + restore approved T-025/T-026 canonical blend binaries",
-    "status": "PENDING PRODUCT OWNER MAC AVAILABILITY",
+    "id": "LOCAL_SYNC_FINAL_FAST_FORWARD",
+    "name": "Fast-forward local main to the D-098 / R179 closure commit",
+    "status": "READY",
     "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "prerequisite": "Mac opened by Product Owner"
+    "prerequisite": "Run git pull --ff-only origin main; do not alter restored blend files"
   },
   "last_completed_task": {
     "id": "T-026",
@@ -302,15 +302,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-097",
+    "id": "D-098",
     "date": "2026-09-21",
-    "decision": "Daily cross-check and Close File PASS. Cloud work closed; only evening local Git sync and exact T-025/T-026 canonical blend restoration remain."
+    "decision": "Local Mac sync and exact restoration of T-025/T-026 approved canonical blend binaries verified; both remain local-only/untracked. One final fast-forward is required only to pull this closure commit."
   },
   "latest_material_review": {
     "date": "2026-09-21",
-    "result": "DAILY CLOSE FILE PASS / T-025+T-026 CLOSED / MAIN+CATALOG+V008+EXCEL VERIFIED",
-    "evidence": "PR #12/#13 merged; T-025 final 42/42; T-026 final 47/47; Stage1 12/28; Excel synced; no tracked canonical blend leakage.",
-    "decision_required": "NONE UNTIL MAC LOCAL SYNC"
+    "result": "LOCAL SYNC CONTENT VERIFIED / BOTH CANONICAL BINARIES SHA MATCH / GIT CLEAN / FINAL CLOSURE FAST-FORWARD REQUIRED",
+    "evidence": "Local HEAD 6374cca86846f44dca3eee456e9f806764f88ad3; T-025 SHA d8636a... MATCH; T-026 SHA 5b1462... MATCH; git status + git ls-files no output.",
+    "decision_required": "NONE"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -368,7 +368,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Wait for Product Owner to open the Mac. Then synchronize local main to GitHub final main, restore T-025 and T-026 approved canonical .blend binaries from their approved Artifacts with exact SHA-256 verification, confirm they remain untracked, and write local-sync closure. Do not start the next engineering T-task before that sync is reconciled. T-018 remains HOLD.",
+  "next_action": "On the Mac, run one final git pull --ff-only origin main to receive the D-098/R179 closure commit. Then verify local HEAD equals GitHub main and git status --short remains empty. Do not redownload or alter the restored T-025/T-026 blend files. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
@@ -839,7 +839,7 @@
     }
   },
   "daily_close_2026_09_21": {
-    "status": "PASS / CLOUD WORK CLOSED / LOCAL SYNC PENDING",
+    "status": "PASS / CLOUD WORK CLOSED / LOCAL SYNC VERIFIED / FINAL CLOSURE FAST-FORWARD REQUIRED",
     "decision_id": "D-097",
     "close_file": "docs/project_control/CLOSE_FILE_2026-09-21.md",
     "pre_close_main_sha": "ac1c7c23c2e895f5617aaf98ba06b08935b418de",
@@ -872,6 +872,25 @@
         "sha256": "5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4"
       }
     ],
-    "next_engineering_task_authorized": false
+    "next_engineering_task_authorized": false,
+    "local_git_sync_verified_to_sha": "6374cca86846f44dca3eee456e9f806764f88ad3",
+    "local_binary_restore_verified": true,
+    "local_binary_restore_results": [
+      {
+        "task_id": "T-025",
+        "filename": "CMP-FRAME-ZHAQIAN-001_MASTER_V001.blend",
+        "sha256": "d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6",
+        "sha_match": true,
+        "git_tracked": false
+      },
+      {
+        "task_id": "T-026",
+        "filename": "CMP-FRAME-PURLIN-001_MASTER_V001.blend",
+        "sha256": "5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4",
+        "sha_match": true,
+        "git_tracked": false
+      }
+    ],
+    "final_closure_fast_forward_required": true
   }
 }

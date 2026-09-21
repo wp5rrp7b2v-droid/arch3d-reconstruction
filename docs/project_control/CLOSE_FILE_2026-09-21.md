@@ -1,6 +1,6 @@
 # CLOSE FILE｜2026-09-21｜P3.3 Stage1 Master V2
 
-Status: **CLOSED FOR DAY / CLOUD WORK COMPLETE / LOCAL SYNC PENDING**
+Status: **CLOSED FOR DAY / CLOUD WORK COMPLETE / LOCAL SYNC VERIFIED / FINAL CLOSURE FAST-FORWARD REQUIRED**
 
 Canonical repository: `wp5rrp7b2v-droid/arch3d-reconstruction`  
 Cross-check source: GitHub `main`  
@@ -252,3 +252,37 @@ T-018 remains HOLD.
 Day status:
 
 > **CLOUD WORK CLOSED / LOCAL SYNC PENDING / SAFE TO STOP**
+
+
+## 12. Evening local sync closure / D-098
+
+**LOCAL RESTORE VERIFIED**
+
+Mac local Git synchronization:
+- previous local main: `2227da8d36b368ba82c1864659a68b5545b34f0a`
+- synchronized to day-close main: `6374cca86846f44dca3eee456e9f806764f88ad3`
+- fast-forward: PASS
+- local worktree before binary restore: clean
+
+Approved canonical binary restoration:
+
+T-025 / Zhaqian:
+- file: `CMP-FRAME-ZHAQIAN-001_MASTER_V001.blend`
+- local SHA-256: `d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6`
+- approved SHA-256: same / **MATCH**
+
+T-026 / Purlin:
+- file: `CMP-FRAME-PURLIN-001_MASTER_V001.blend`
+- local SHA-256: `5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4`
+- approved SHA-256: same / **MATCH**
+
+Git containment:
+- `git status --short`: no output
+- `git ls-files` for both canonical .blend files: no output
+- result: both binaries are correctly restored locally and remain **local-only / untracked**
+
+Because this D-098 record itself creates one final GitHub closure commit, the Mac must perform one last `git pull --ff-only origin main` after D-098 is written. That final fast-forward must not modify or remove the local-only .blend files.
+
+After that one fast-forward:
+
+> **LOCAL SYNC CLOSED / 2026-09-21 FULL DAY CLOSED**
