@@ -2,7 +2,7 @@
 
 Shared infrastructure. Component-specific facts must come from a locked Master Definition.
 """
-import argparse, hashlib, json, math, re, sys
+import argparse, hashlib, json, math, re, shutil, sys
 from pathlib import Path
 
 def sha256(path):
@@ -20,6 +20,25 @@ def load_definition(path):
     assert d["registry_boundary"]["historical_full_length_mm"] is None
     assert d["geometry_contract"]["unsupported_geometry"]==[]
     return d
+
+def get_review_contract(d):
+    if "review_contract" in d:
+        return d["review_contract"]
+    return d["v2_slim_file_contract"]["review_contract"]
+
+def get_section(d):
+    rb=d["registry_boundary"]
+    if "section_mm" in rb:
+        return float(rb["section_mm"]["width"]),float(rb["section_mm"]["thickness"])
+    if "section_statistics_mm" in rb:
+        s=rb["section_statistics_mm"]
+        return float(s["mean_width"]),float(s["mean_thickness"])
+    s=d["geometry_contract"]["section_envelope_mm"]
+    return float(s["width"]),float(s["thickness"])
+
+def is_profile_unknown(d):
+    gc=d["geometry_contract"]
+    return gc.get("exact_section_profile")=="UNKNOWN" or gc.get("section_envelope_is_historical_profile") is False
 
 def safe_name(s):
     return re.sub(r"[^A-Za-z0-9_]+","_",s.replace("-","_"))
@@ -94,6 +113,9 @@ def make_body(d,length_mm,width_mm,thickness_mm):
     obj["canonical_reference_length_historical_claim"]=False
     obj["joinery_geometry"]="DEFERRED"
     obj["unsupported_geometry_count"]=0
+    obj["section_profile_state"]="UNKNOWN" if is_profile_unknown(d) else "DEFINED_BY_DEFINITION"
+    obj["section_envelope_historical_claim"]=False if is_profile_unknown(d) else True
+    obj["shengtou_wood_baked_in"]=False
     return obj
 
 def body_payload(obj):
@@ -101,6 +123,7 @@ def body_payload(obj):
     faces=[list(p.vertices) for p in obj.data.polygons]
     mins=[min(v[i] for v in verts) for i in range(3)]
     maxs=[max(v[i] for v in verts) for i in range(3)]
+    primitive="rectangular_bounding_envelope_proxy_profile_unknown" if obj.get("section_profile_state")=="UNKNOWN" else "closed_rectangular_bounded_outer_envelope_reference"
     return {
       "name":obj.name,
       "vertex_count":len(verts),
@@ -114,7 +137,10 @@ def body_payload(obj):
         "min":mins,"max":maxs,
         "dimensions":[round(maxs[i]-mins[i],6) for i in range(3)]
       },
-      "primitive":"closed_rectangular_bounded_outer_envelope_reference",
+      "primitive":primitive,
+      "section_profile_state":obj.get("section_profile_state"),
+      "section_envelope_historical_claim":bool(obj.get("section_envelope_historical_claim")),
+      "shengtou_wood_baked_in":bool(obj.get("shengtou_wood_baked_in")),
       "unsupported_detail_count":0,
       "joinery_cut_count":0,
       "geometry_vertices_mm":verts,
@@ -146,6 +172,9 @@ def render_views(obj,d,review_dir):
         s.render.resolution_y=900
         s.render.filepath=str(review/(name+".png"))
         bpy.ops.render.render(write_still=True)
+    # Semantic aliases: no duplicate Blender render cost.
+    shutil.copyfile(review/"FRONT.png",review/"LONG_SIDE.png")
+    shutil.copyfile(review/"SIDE.png",review/"END_SECTION_ENVELOPE.png")
 
 def text_page(path,title,lines):
     import bpy
@@ -160,11 +189,11 @@ def text_page(path,title,lines):
         curve.body=str(line)
         curve.align_x="LEFT"
         curve.align_y="CENTER"
-        curve.size=0.40 if i==0 else 0.26
+        curve.size=0.40 if i==0 else 0.25
         o=bpy.data.objects.new("TXT_"+str(i),curve)
         bpy.context.scene.collection.objects.link(o)
         o.data.materials.append(dark)
-        o.location=(-7.5,5.5-i*0.95,0)
+        o.location=(-7.5,5.5-i*0.90,0)
     camera((0,0,0),(0,0,20),17.5,name="V2_TEXT_CAMERA")
     s.render.filepath=str(path)
     bpy.ops.render.render(write_still=True)
@@ -172,31 +201,60 @@ def text_page(path,title,lines):
 def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
     review=Path(review_dir)
     rb=d["registry_boundary"]
+    vg=d["authority"]["visual_reference_gate"]
+    profile_unknown=is_profile_unknown(d)
+    location_line=(f'Exact-location unresolved: {rb["exact_location_unresolved_count"]}'
+                   if "exact_location_unresolved_count" in rb
+                   else f'Instance distribution: {rb.get("main_body_count",0)} main / {rb.get("east_gable_count",0)} E gable / {rb.get("west_gable_count",0)} W gable')
+    section_label="BOUNDING ENVELOPE / PROFILE UNKNOWN" if profile_unknown else "CANONICAL SECTION"
     text_page(review/"DIMENSION_PARAMETER_SUMMARY.png","MASTER V2 / DIMENSION + PARAMETER",[
       f'Component: {d["component_id"]}',
-      f'Canonical section: {width_mm:.1f} x {thickness_mm:.1f} mm',
+      f'Section envelope: {width_mm:.1f} x {thickness_mm:.1f} mm',
+      f'Section meaning: {section_label}',
       f'Reference length: {length_mm:.1f} mm / NON-HISTORICAL',
       f'Physical instances: {rb["physical_instance_count"]}',
-      f'Exact-location unresolved: {rb["exact_location_unresolved_count"]}',
-      'Placement length/endpoints: ASSEMBLY-OWNED / DEFERRED'
+      location_line,
+      'Placement length/orientation: ASSEMBLY-OWNED'
     ])
-    vg=d["authority"]["visual_reference_gate"]
+    dimension_authority=(vg.get("dimension_authority") is True)
     text_page(review/"EVIDENCE_UNCERTAINTY_SUMMARY.png","MASTER V2 / EVIDENCE + UNCERTAINTY",[
       f'Registry authority: {d["authority"]["registry_schema_version_expected"]}',
       f'Visual gate: {vg["decision_id"]} / {vg["result"]}',
+      f'Visual source dimension authority: {dimension_authority}',
       'Historical full length: UNKNOWN / null',
+      f'Section profile: {"UNKNOWN / ENVELOPE NOT HISTORICAL" if profile_unknown else "DEFINED"}',
       'Sample-to-instance mapping: UNKNOWN',
-      'Hidden joinery/end profile: UNKNOWN / NOT MODELED',
-      'Unsupported geometry: NONE'
+      'Hidden joinery/end geometry: UNKNOWN / DEFERRED'
     ])
+    required=set(get_review_contract(d)["required_panels"])
+    if "INSTANCE_TOPOLOGY_33" in required:
+        text_page(review/"INSTANCE_TOPOLOGY_33.png","PURLIN / 33-INSTANCE TOPOLOGY",[
+          f'Total physical instances: {rb["physical_instance_count"]}',
+          f'Main body: {rb["main_body_count"]} = 7 lines x 3 segments',
+          f'East gable: {rb["east_gable_count"]} = 2 lines x 3 segments',
+          f'West gable: {rb["west_gable_count"]} = 2 lines x 3 segments',
+          'One shared Master; role/length/orientation are assembly-owned',
+          'Legacy 7 engineering PURLIN objects are NOT the real count'
+        ])
+    if "ROLE_LAYER_DIAGRAM" in required:
+        roles=d.get("assembly_roles",{})
+        text_page(review/"ROLE_LAYER_DIAGRAM.png","PURLIN / ROLE + LAYER CONTRACT",[
+          'Main: EAVE / LOWER / UPPER / RIDGE / UPPER / LOWER / EAVE',
+          'Gables: 2 purlin lines per east/west gable',
+          'Role difference alone does NOT create geometry variants',
+          'Shengtou wood: separate roof-curvature/assembly control',
+          'Corner-beam connection: existence known / geometry deferred',
+          'All real segment lengths and orientations: assembly-owned'
+        ])
 
 def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None,thickness_mm=None):
     import bpy
     d=load_definition(definition)
     rb=d["registry_boundary"]
+    base_w,base_h=get_section(d)
     L=float(length_mm if length_mm is not None else d["geometry_contract"]["canonical_reference_length_mm"])
-    W=float(width_mm if width_mm is not None else rb["section_mm"]["width"])
-    H=float(thickness_mm if thickness_mm is not None else rb["section_mm"]["thickness"])
+    W=float(width_mm if width_mm is not None else base_w)
+    H=float(thickness_mm if thickness_mm is not None else base_h)
     clear_scene(); setup_scene()
     obj=make_body(d,L,W,H)
     asset=Path(asset); asset.parent.mkdir(parents=True,exist_ok=True)
@@ -204,8 +262,9 @@ def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None
     bpy.ops.wm.save_as_mainfile(filepath=str(asset),check_existing=False)
     body=body_payload(obj)
     sig=stable_signature({"vertices":body["geometry_vertices_mm"],"faces":body["geometry_faces"]})
+    profile_unknown=is_profile_unknown(d)
     sem={
-      "schema_version":"MASTER_V2_SEMANTIC_1.0",
+      "schema_version":"MASTER_V2_SEMANTIC_1.1",
       "task_id":d["task_id"],
       "component_id":d["component_id"],
       "master_id":d["master_id"],
@@ -218,6 +277,10 @@ def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None
       "canonical_reference_length_historical_claim":False,
       "placement_policy":d["geometry_contract"]["placement_policy"],
       "joinery_geometry":d["geometry_contract"]["joinery_geometry"],
+      "section_profile_state":"UNKNOWN" if profile_unknown else "DEFINED_BY_DEFINITION",
+      "section_envelope_historical_claim":False if profile_unknown else True,
+      "engineering_representation":d["geometry_contract"].get("engineering_representation"),
+      "shengtou_wood_baked_in":False,
       "unknowns":d["unknowns"],
       "body":body,
       "semantic_geometry_signature":sig,
@@ -240,6 +303,7 @@ def inspect(asset,expected,output):
     assert obj.get("master_id")==e["master_id"]
     assert obj.get("historical_full_length_state")=="UNKNOWN_NULL_DO_NOT_LOCK"
     assert obj.get("canonical_reference_length_historical_claim") is False
+    assert bool(obj.get("shengtou_wood_baked_in")) is False
     out={
       "status":"PASS",
       "body":body,
@@ -252,8 +316,7 @@ def inspect(asset,expected,output):
 def compose_board(definition,review_dir,board):
     from PIL import Image,ImageDraw,ImageFont
     d=load_definition(definition)
-    rc=d["v2_slim_file_contract"]["review_contract"]
-    panels=rc["required_panels"]
+    panels=get_review_contract(d)["required_panels"]
     review=Path(review_dir)
     cols=min(3,max(1,len(panels)))
     rows=math.ceil(len(panels)/cols)

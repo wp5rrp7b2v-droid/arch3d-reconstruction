@@ -3,7 +3,7 @@
   "date": "2026-09-21",
   "status": "CURRENT_BUILD_BASELINE_INSTANCE_REGISTRY",
   "source": "SRC-ZG-WF-001",
-  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility.",
+  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility.",
   "item_count": 505,
   "items": [
     {
@@ -1859,7 +1859,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1870,7 +1871,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1881,7 +1883,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1892,7 +1895,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1903,7 +1907,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1914,7 +1919,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1925,7 +1931,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1936,7 +1943,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1947,7 +1955,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1958,7 +1967,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1969,7 +1979,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1980,7 +1991,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1991,7 +2003,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2002,7 +2015,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2013,7 +2027,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2024,7 +2039,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2035,7 +2051,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2046,7 +2063,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2057,7 +2075,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2068,7 +2087,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2079,7 +2099,8 @@
       "evidence": "正身七道21根+三间拓扑",
       "section_mm": "平均广220.1；厚270.8",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2090,7 +2111,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2101,7 +2123,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2112,7 +2135,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2123,7 +2147,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2134,7 +2159,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2145,7 +2171,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2156,7 +2183,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2167,7 +2195,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2178,7 +2207,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2189,7 +2219,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2200,7 +2231,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2211,7 +2243,8 @@
       "evidence": "每山两道6根+三间拓扑",
       "section_mm": "沿用槫实测统计",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-PURLIN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -7160,13 +7193,13 @@
   ],
   "stage1_master_progress_summary": {
     "snapshot_date": "2026-09-21",
-    "status": "CURRENT / D-087 VISIBILITY RULE / D-091 ZHAQIAN MASTER BINDING",
+    "status": "CURRENT / D-087 VISIBILITY RULE / D-095 PURLIN MASTER BINDING",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 11,
-    "pending_master_object_type_count": 17,
-    "master_completion_percent": 39.3,
+    "approved_master_count": 12,
+    "pending_master_object_type_count": 16,
+    "master_completion_percent": 42.9,
     "pending_source_binding_count": 7,
     "completed_definition": "PRODUCT_OWNER_APPROVED Master available in Stage1 Component Master Catalog",
     "total_definition": "Master scope includes 需新建Master plus all 已有Master categories; not all registered object types require a Master",
@@ -7193,11 +7226,12 @@
       "乳栿",
       "上六椽栿",
       "四椽栿",
+      "槫",
       "下六椽栿",
       "柱",
       "柱头栌斗"
     ],
-    "master_covered_registry_record_count": 66,
-    "progress_display_note": "505 is registry-record count, not a whole-building physical-piece total. Stage1 Master completion uses 28 Master-scope object types as denominator: 11 approved / 17 pending = 39.3%."
+    "master_covered_registry_record_count": 99,
+    "progress_display_note": "505 is registry-record count, not a whole-building physical-piece total. Stage1 Master completion uses 28 Master-scope object types as denominator: 12 approved / 16 pending = 42.9%."
   }
 }

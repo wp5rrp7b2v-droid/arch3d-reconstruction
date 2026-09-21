@@ -1,0 +1,173 @@
+{
+  "schema_version": "MASTER_V2_DEFINITION_1.1",
+  "task_id": "T-026",
+  "component_id": "CMP-FRAME-PURLIN-001",
+  "master_id": "CMP-FRAME-PURLIN-001_MASTER",
+  "master_version": "V001",
+  "component_name_zh": "槫",
+  "component_name_en": "Purlin",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-094 / ENGINEERING_EXECUTION_AUTHORIZED",
+  "architecture_rule": "D-089 / MINIMAL_SUFFICIENT_COMPONENT_PACKAGE",
+  "identity_boundary": {
+    "legacy_identity": "CMP-PURLIN-001",
+    "legacy_status": "HISTORICAL ENGINEERING IDENTITY / 7 PURLIN OBJECTS / MUST NOT BE REUSED AS 33-INSTANCE REAL-COMPONENT MASTER ID",
+    "new_identity": "CMP-FRAME-PURLIN-001",
+    "physical_instance_count": 33
+  },
+  "terminology": {
+    "canonical_component_name": "槫",
+    "registry_term": "撩风槫",
+    "high_confidence_display_term": "撩檐槫",
+    "handling": "KEEP CURRENT REGISTRY IDS; RECORD ALIAS ONLY; DO NOT SILENTLY RENAME HISTORICAL REGISTRY IDS"
+  },
+  "authority": {
+    "geometry_count_and_section": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json / V008",
+    "coverage_matrix": "production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json",
+    "primary_source_register": "docs/evidence/zhenguo_wanfo/SOURCE_REGISTER.md / SRC-ZG-WF-001",
+    "visual_reference_gate": {
+      "decision_id": "D-093",
+      "result": "PASS_WITH_GEOMETRY_BOUNDARY",
+      "source_url": "https://szbwgvue.chwhyun.cn/wanfodian/",
+      "source_class": "SECONDARY_HIGH_CONFIDENCE / SHANXI CULTURAL-HERITAGE DIGITAL DISPLAY",
+      "supported_claims": [
+        "corner/column-head bracket-set upper structure supports the eave purlin (撩檐槫)",
+        "ridge purlin (脊槫) and other purlins participate in roof curvature through shengtou wood",
+        "roof-rise description explicitly spans from eave purlin to ridge purlin",
+        "old corner-beam tail has a documented relationship with purlin"
+      ],
+      "unsupported_as_dimension_authority": true,
+      "section_profile_authority": false
+    },
+    "registry_schema_version_expected": "V008",
+    "registry_record_count_expected": 505
+  },
+  "registry_boundary": {
+    "physical_instance_count": 33,
+    "main_body_count": 21,
+    "main_body_rule": "7 purlin lines × 3 bay segments",
+    "east_gable_count": 6,
+    "east_gable_rule": "2 lines × 3 depth segments",
+    "west_gable_count": 6,
+    "west_gable_rule": "2 lines × 3 depth segments",
+    "section_statistics_mm": {
+      "mean_width": 220.1,
+      "mean_thickness": 270.8,
+      "classification": "V008 LOCKED FAMILY STATISTICS / NOT A SECTION-PROFILE DEFINITION"
+    },
+    "historical_full_length_mm": null,
+    "individual_segment_lengths_mm": null,
+    "exact_section_profile": "UNKNOWN",
+    "end_profile_and_joinery": "UNKNOWN",
+    "sample_to_instance_mapping": "UNKNOWN"
+  },
+  "assembly_roles": {
+    "geometry_variant_policy": "ALL ROLES SHARE ONE MASTER UNTIL DIRECT EVIDENCE PROVES A GEOMETRIC FAMILY SPLIT",
+    "main_body": [
+      "SOUTH_EAVE_PURLIN",
+      "SOUTH_LOWER_PURLIN",
+      "SOUTH_UPPER_PURLIN",
+      "RIDGE_PURLIN",
+      "NORTH_UPPER_PURLIN",
+      "NORTH_LOWER_PURLIN",
+      "NORTH_EAVE_PURLIN"
+    ],
+    "east_gable": [
+      "EAST_GABLE_LINE_1",
+      "EAST_GABLE_LINE_2"
+    ],
+    "west_gable": [
+      "WEST_GABLE_LINE_1",
+      "WEST_GABLE_LINE_2"
+    ],
+    "segment_roles": [
+      "WEST_OR_SOUTH_SEGMENT",
+      "CENTER_SEGMENT",
+      "EAST_OR_NORTH_SEGMENT"
+    ],
+    "orientation": "ASSEMBLY_OWNED"
+  },
+  "geometry_contract": {
+    "geometry_mode": "BOUNDED_SECTION_ENVELOPE / PROFILE_UNKNOWN",
+    "canonical_reference_length_mm": 1000,
+    "canonical_reference_length_historical_claim": false,
+    "canonical_axis": "+X LONGITUDINAL REFERENCE ONLY / ASSEMBLY MAY ROTATE",
+    "placement_policy": "ASSEMBLY_OWNED / REAL SEGMENT LENGTHS AND ORIENTATIONS RESOLVED LATER",
+    "section_envelope_mm": {
+      "width": 220.1,
+      "thickness": 270.8
+    },
+    "section_envelope_is_historical_profile": false,
+    "exact_section_profile": "UNKNOWN",
+    "shengtou_wood": "SEPARATE ASSEMBLY/ROOF-CURVATURE CONTROL / NOT BAKED INTO PURLIN MASTER",
+    "corner_beam_connection": "DIRECT_EXISTENCE_RELATION / GEOMETRY_DEFERRED",
+    "joinery_geometry": "DEFERRED / NO UNSUPPORTED CUTS",
+    "end_geometry": "DEFERRED",
+    "unsupported_geometry": [],
+    "engineering_representation": {
+      "primitive": "RECTANGULAR_BOUNDING_ENVELOPE_PROXY",
+      "historical_profile_claim": false,
+      "purpose": "MACHINE VALIDATION + ASSEMBLY INTERFACE PREPARATION ONLY",
+      "label_requirement": "EVERY SEMANTIC/REVIEW/VALIDATION OUTPUT MUST STATE PROFILE_UNKNOWN / ENVELOPE_NOT_HISTORICAL"
+    }
+  },
+  "unknowns": [
+    "exact historical cross-section profile",
+    "all individual historical segment lengths",
+    "individual segment end profiles",
+    "hidden joinery and corner-beam/purlin connection geometry",
+    "sample-to-instance dimensional mapping",
+    "whether any position-specific historical profile family split exists"
+  ],
+  "hard_fails": [
+    "LEGACY_7_PURLIN_IDENTITY_REUSED_AS_REAL_33_INSTANCE_MASTER",
+    "SECTION_ENVELOPE_SILENTLY_CLAIMED_AS_HISTORICAL_PROFILE",
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "SILENT_HISTORICIZATION",
+    "SHENGTOU_WOOD_BAKED_INTO_PURLIN_MASTER",
+    "UNSUPPORTED_JOINERY_GEOMETRY",
+    "MASTER_WITHOUT_EVIDENCE_BINDING"
+  ],
+  "review_contract": {
+    "board_policy": "ADAPTIVE / DEFINITION_DRIVEN",
+    "fixed_panel_count_required": false,
+    "required_panels": [
+      "AXON",
+      "LONG_SIDE",
+      "END_SECTION_ENVELOPE",
+      "DIMENSION_PARAMETER_SUMMARY",
+      "INSTANCE_TOPOLOGY_33",
+      "ROLE_LAYER_DIAGRAM",
+      "EVIDENCE_UNCERTAINTY_SUMMARY"
+    ],
+    "rationale": "Purlin requires topology/layer review and explicit section-envelope warning; conventional six-view board is insufficient and partly redundant."
+  },
+  "minimal_sufficient_package": {
+    "fixed_file_count_required": false,
+    "component_specific_expected_formal_outputs": [
+      "CMP-FRAME-PURLIN-001_MASTER_DEFINITION_V001.json",
+      "CMP-FRAME-PURLIN-001_MASTER_SEMANTIC_V001.json",
+      "CMP-FRAME-PURLIN-001_MASTER_V001.blend (Actions artifact + local only; not Git)",
+      "CMP-FRAME-PURLIN-001_MASTER_REVIEW_BOARD_V001.png",
+      "CMP-FRAME-PURLIN-001_MASTER_VALIDATION_V001.json",
+      "T-026_P3_3_PURLIN_MASTER_V2_V001.md"
+    ],
+    "rule": "Expected six-file simple package remains provisional; additional formal output allowed only if geometry/evidence review proves necessary."
+  },
+  "execution_boundary": {
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "executor": "GitHub Actions / Blender 4.5.13",
+    "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
+    "final_master_approval_requires_separate_product_owner_decision": true,
+    "pr_merge_requires_separate_product_owner_authorization": true
+  },
+  "approval": {
+    "decision_id": "D-094",
+    "date": "2026-09-21",
+    "definition_locked": true,
+    "section_envelope_representation_approved": true,
+    "engineering_execution_authorized": true,
+    "final_master_acceptance_requires_separate_product_owner_decision": true,
+    "pr_merge_requires_separate_product_owner_authorization": true
+  }
+}
