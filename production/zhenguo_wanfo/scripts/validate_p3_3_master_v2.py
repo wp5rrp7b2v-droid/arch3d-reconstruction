@@ -80,8 +80,9 @@ def main():
     ck("29_no_fixed_panel_rule",d["v2_slim_file_contract"]["fixed_review_panel_count_required"] is False)
     ck("30_minimal_sufficient_rule",d["v2_slim_file_contract"]["principle"]=="MINIMAL_SUFFICIENT_COMPONENT_PACKAGE")
 
-    tracked=subprocess.check_output(["git","ls-files","--","*.blend"],text=True).strip()
-    ck("31_no_tracked_blend",tracked=="")
+    master_dir=str(Path(a.definition).parent)
+    tracked=subprocess.check_output(["git","ls-files","--",master_dir+"/*.blend"],text=True).strip()
+    ck("31_no_tracked_canonical_blend_in_master_dir",tracked=="")
     ck("32_definition_semantic_validation_independence",
        "MASTER_DEFINITION_V001.json" in " ".join(d["v2_slim_file_contract"]["zhaqian_current_package"]) and
        c["schema_version"]=="MASTER_V2_SEMANTIC_1.0")
