@@ -16,8 +16,7 @@ on:
         type: string
 
 permissions:
-  contents: write
-  actions: read
+  contents: read
 
 jobs:
   first-article:
@@ -153,56 +152,3 @@ jobs:
             ${{ env.SEMANTIC }}
             ${{ env.BOARD }}
             ${{ env.VALIDATION }}
-
-
-  publish-approved-t026:
-    if: ${{ github.event_name == 'pull_request' }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          fetch-depth: 0
-
-      - name: Download and verify exact D-095 approved Artifact
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          MASTER_DIR="production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PURLIN-001"
-          ARTIFACT_ID="10632275014"
-          ZIP_SHA="62a4282003644745827a1cad2697d24bf36cb3847ac98a44c7ecac8fe41b83eb"
-          SEM="CMP-FRAME-PURLIN-001_MASTER_SEMANTIC_V001.json"
-          VAL="CMP-FRAME-PURLIN-001_MASTER_VALIDATION_V001.json"
-          BOARD="CMP-FRAME-PURLIN-001_MASTER_REVIEW_BOARD_V001.png"
-          mkdir -p /tmp/t026_approved
-          curl --fail --location --show-error --retry 3             -H "Authorization: Bearer $GH_TOKEN"             -H "Accept: application/vnd.github+json"             "https://api.github.com/repos/${{ github.repository }}/actions/artifacts/$ARTIFACT_ID/zip"             -o /tmp/t026_approved.zip
-          echo "$ZIP_SHA  /tmp/t026_approved.zip" | sha256sum -c -
-          unzip -q /tmp/t026_approved.zip -d /tmp/t026_approved
-          echo "ff06bec0c956a3cb5cc288c0010e58dcb6fa9e199de336a94a527666140e6448  /tmp/t026_approved/$SEM" | sha256sum -c -
-          echo "fbd282fe7abde8128a6f5c73f061c6dcbaf1ec196bc1abf137d77fa9b6dd67b3  /tmp/t026_approved/$VAL" | sha256sum -c -
-          echo "073d13c7f426e2a80808e22c982df126ab64130b1c935cc88f14fc2ba28f4f4b  /tmp/t026_approved/$BOARD" | sha256sum -c -
-          test -f "/tmp/t026_approved/CMP-FRAME-PURLIN-001_MASTER_V001.blend"
-          echo "5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4  /tmp/t026_approved/CMP-FRAME-PURLIN-001_MASTER_V001.blend" | sha256sum -c -
-          cp "/tmp/t026_approved/$SEM" "$MASTER_DIR/$SEM"
-          cp "/tmp/t026_approved/$VAL" "$MASTER_DIR/$VAL"
-          cp "/tmp/t026_approved/$BOARD" "$MASTER_DIR/$BOARD"
-          test -z "$(git ls-files -- "$MASTER_DIR/*.blend")"
-
-      - name: Commit exact approved formal outputs
-        shell: bash
-        run: |
-          set -euo pipefail
-          MASTER_DIR="production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PURLIN-001"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add             "$MASTER_DIR/CMP-FRAME-PURLIN-001_MASTER_SEMANTIC_V001.json"             "$MASTER_DIR/CMP-FRAME-PURLIN-001_MASTER_VALIDATION_V001.json"             "$MASTER_DIR/CMP-FRAME-PURLIN-001_MASTER_REVIEW_BOARD_V001.png"
-          if git diff --cached --quiet; then
-            echo "T026_APPROVED_OUTPUTS_ALREADY_MATERIALIZED"
-          else
-            git commit -m "T-026: materialize D-095 approved V2 Master outputs"
-            git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
-            echo "T026_APPROVED_OUTPUTS_MATERIALIZED"
-          fi
