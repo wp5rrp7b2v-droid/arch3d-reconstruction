@@ -1,0 +1,163 @@
+{
+  "blender_version": "4.5.13 LTS",
+  "body": {
+    "face_count": 6,
+    "geometry_faces": [
+      [
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        4
+      ],
+      [
+        1,
+        2,
+        6,
+        5
+      ],
+      [
+        2,
+        3,
+        7,
+        6
+      ],
+      [
+        3,
+        0,
+        4,
+        7
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "geometry_vertices_mm": [
+      [
+        -500.0,
+        -110.050003,
+        0.0
+      ],
+      [
+        500.0,
+        -110.050003,
+        0.0
+      ],
+      [
+        500.0,
+        110.050003,
+        0.0
+      ],
+      [
+        -500.0,
+        110.050003,
+        0.0
+      ],
+      [
+        -500.0,
+        -110.050003,
+        270.799988
+      ],
+      [
+        500.0,
+        -110.050003,
+        270.799988
+      ],
+      [
+        500.0,
+        110.050003,
+        270.799988
+      ],
+      [
+        -500.0,
+        110.050003,
+        270.799988
+      ]
+    ],
+    "joinery_cut_count": 0,
+    "local_bbox_mm": {
+      "dimensions": [
+        1000.0,
+        220.100006,
+        270.799988
+      ],
+      "max": [
+        500.0,
+        110.050003,
+        270.799988
+      ],
+      "min": [
+        -500.0,
+        -110.050003,
+        0.0
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "name": "MASTER__CMP_FRAME_PURLIN_001__BODY",
+    "primitive": "rectangular_bounding_envelope_proxy_profile_unknown",
+    "section_envelope_historical_claim": false,
+    "section_profile_state": "UNKNOWN",
+    "shengtou_wood_baked_in": false,
+    "unsupported_detail_count": 0,
+    "vertex_count": 8
+  },
+  "canonical_blend_sha256": "5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4",
+  "canonical_reference_length_historical_claim": false,
+  "component_id": "CMP-FRAME-PURLIN-001",
+  "definition_sha256": "622f9712f33769be8471ddc4737f511de8a379f331919ac5a4ee353f52a6333b",
+  "engineering_representation": {
+    "historical_profile_claim": false,
+    "label_requirement": "EVERY SEMANTIC/REVIEW/VALIDATION OUTPUT MUST STATE PROFILE_UNKNOWN / ENVELOPE_NOT_HISTORICAL",
+    "primitive": "RECTANGULAR_BOUNDING_ENVELOPE_PROXY",
+    "purpose": "MACHINE VALIDATION + ASSEMBLY INTERFACE PREPARATION ONLY"
+  },
+  "geometry_mode": "BOUNDED_SECTION_ENVELOPE / PROFILE_UNKNOWN",
+  "historical_full_length_mm": null,
+  "joinery_geometry": "DEFERRED / NO UNSUPPORTED CUTS",
+  "master_id": "CMP-FRAME-PURLIN-001_MASTER",
+  "master_version": "V001",
+  "placement_policy": "ASSEMBLY_OWNED / REAL SEGMENT LENGTHS AND ORIENTATIONS RESOLVED LATER",
+  "resolved_dimensions_mm": {
+    "length": 1000.0,
+    "thickness": 270.8,
+    "width": 220.1
+  },
+  "schema_version": "MASTER_V2_SEMANTIC_1.1",
+  "section_envelope_historical_claim": false,
+  "section_profile_state": "UNKNOWN",
+  "semantic_geometry_signature": "6ab5ea18d771d70377a693706ef669b208546d6453c7762ef4f72b8087224cd5",
+  "shengtou_wood_baked_in": false,
+  "task_id": "T-026",
+  "unknowns": [
+    "exact historical cross-section profile",
+    "all individual historical segment lengths",
+    "individual segment end profiles",
+    "hidden joinery and corner-beam/purlin connection geometry",
+    "sample-to-instance dimensional mapping",
+    "whether any position-specific historical profile family split exists"
+  ]
+}
