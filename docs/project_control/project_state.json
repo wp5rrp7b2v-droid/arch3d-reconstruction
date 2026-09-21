@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R170",
+  "state_revision": "R171",
   "last_updated": "2026-09-21",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-025 CLOSED + PR #12 MERGED / LOCAL SYNC REQUIRED / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-026 PURLIN V2 DESIGN ACTIVE / D-093 VISUAL GATE PASS WITH GEOMETRY BOUNDARY / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -25,8 +25,8 @@
       "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-025 CLOSED / 11 OF 28 MASTERS APPROVED / NEXT MASTER SELECTION REQUIRES VISUAL GATE / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No active T-025 blocker. T-025 is CLOSED / PR #12 MERGED. Local main must be synchronized to GitHub main before further local work; next Master engineering is not yet authorized.",
+  "decision_required": true,
+  "blocker": "T-026 design has no evidence blocker at component-identity level. Exact historical purlin section profile remains UNKNOWN; Product Owner must review/lock the bounded-section-envelope representation before engineering execution.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -61,17 +61,17 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "NONE",
-    "name": "No active engineering T-task",
-    "status": "T-025 CLOSED / STAGE1 NEXT MASTER SELECTION PENDING"
+    "id": "T-026",
+    "name": "P3.3 Purlin Master V2",
+    "status": "DESIGN ACTIVE / D-093 VISUAL GATE PASS WITH GEOMETRY BOUNDARY / DEFINITION DRAFTED / ENGINEERING EXECUTION NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "STAGE1_NEXT_MASTER_SELECTION",
-    "name": "Select next missing Stage1 Master and complete pre-model visual-reference gate before creating the next T-task",
-    "status": "READY FOR PLANNING / ENGINEERING NOT AUTHORIZED",
-    "new_t_task_created": false,
+    "id": "T-026_DEFINITION_LOCK",
+    "name": "Review and lock Purlin V2 Definition including non-historical section-envelope representation",
+    "status": "WAITING PRODUCT OWNER REVIEW",
+    "new_t_task_created": true,
     "engineering_execution_authorized": false,
-    "prerequisite": "Read current main after local sync; complete visual-reference review for the selected component"
+    "prerequisite": "Approve T-026 evidence/geometry boundary and adaptive Review Board contract"
   },
   "last_completed_task": {
     "id": "T-025",
@@ -128,7 +128,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-021..T-025 CLOSED / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-021..T-025 CLOSED / T-026 DESIGN ACTIVE / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -224,6 +224,25 @@
       "merge_commit": "87cc54b0b0a9b0eba71ba3b8965dcd617c5aff61",
       "main_verified": true,
       "local_sync_status": "REQUIRED"
+    },
+    "t026": {
+      "status": "DESIGN ACTIVE / D-093 / VISUAL GATE PASS WITH GEOMETRY BOUNDARY / EXECUTION NOT AUTHORIZED",
+      "component": "槫",
+      "component_id": "CMP-FRAME-PURLIN-001",
+      "master_id": "CMP-FRAME-PURLIN-001_MASTER",
+      "branch": "codex/t026-p3-3-purlin-master-v2-v001",
+      "physical_instance_count": 33,
+      "distribution": "MAIN 21 / EAST GABLE 6 / WEST GABLE 6",
+      "section_statistics_mm": {
+        "mean_width": 220.1,
+        "mean_thickness": 270.8
+      },
+      "section_profile": "UNKNOWN / BOUNDED SECTION ENVELOPE ONLY",
+      "historical_full_length_mm": null,
+      "identity_guard": "LEGACY CMP-PURLIN-001 / 7 engineering objects MUST NOT be reused as 33-instance real-component Master identity",
+      "file_count_policy": "ADAPTIVE / MINIMAL SUFFICIENT / NO UNIVERSAL COUNT",
+      "review_policy": "ADAPTIVE / currently 7 Definition-required panels",
+      "engineering_execution_authorized": false
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -248,9 +267,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-092",
+    "id": "D-093",
     "date": "2026-09-21",
-    "decision": "Product Owner authorized and completed PR #12 merge. T-025 Zhaqian V2 Pilot is CLOSED / MERGED_TO_MAIN at 87cc54b0b0a9b0eba71ba3b8965dcd617c5aff61."
+    "decision": "Start T-026 Purlin Master V2 design; visual gate PASS WITH GEOMETRY BOUNDARY; 33 real instances; section statistics known but exact historical section profile remains UNKNOWN; execution not authorized."
   },
   "latest_material_review": {
     "date": "2026-09-21",
@@ -314,7 +333,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Synchronize local main to GitHub main before local work. Then select the next missing Stage1 Master and run its pre-model visual-reference gate; do not create/execute a new engineering T-task until that gate and authorization are complete. T-018 remains HOLD.",
+  "next_action": "Product Owner review/lock T-026 Purlin V2 Definition, especially the bounded-section-envelope representation and 7-panel adaptive Review Board. Local Git synchronization remains deferred to evening by Product Owner instruction. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
