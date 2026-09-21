@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R168",
+  "state_revision": "R169",
   "last_updated": "2026-09-21",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-025 D-091 FORMAL OUTPUTS MATERIALIZED + CATALOG/V008 BOUND / EXCEL + FINAL REGRESSION PENDING / PR #12 MERGE PENDING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-025 FORMAL DELIVERY CLOSED / FINAL REGRESSION 42 OF 42 PASS / PR #12 READY FOR MERGE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -25,8 +25,8 @@
       "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-024 CLOSED / T-025 PRODUCT OWNER APPROVED D-091 / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 BOUND / 11 OF 28 MASTERS APPROVED / EXCEL+FINAL REGRESSION PENDING / PR #12 MERGE PENDING / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No T-025 engineering blocker. Exact accepted outputs are materialized and Catalog/V008 registration is complete. Derived Excel sync and final regression/pre-merge cross-check remain before PR #12 merge authorization request.",
+  "decision_required": true,
+  "blocker": "No engineering blocker. T-025 formal delivery, Catalog/V008 binding, derived Excel sync, 42/42 final regression, and pre-merge cross-check are complete. Only Product Owner authorization to merge PR #12 remains.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,15 +63,15 @@
   "current_task": {
     "id": "T-025",
     "name": "P3.3 Zhaqian Master V2 Slim Pilot",
-    "status": "PRODUCT OWNER APPROVED / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 BOUND / EXCEL+FINAL REGRESSION PENDING / PR MERGE NOT AUTHORIZED"
+    "status": "PRODUCT OWNER APPROVED / FORMAL DELIVERY CLOSED / FINAL REGRESSION 42/42 PASS / PR #12 READY FOR MERGE"
   },
   "proposed_next_task": {
-    "id": "T-025_FINAL_REGRESSION",
-    "name": "Sync derived V008 Excel view, then run post-registration V2 regression and pre-merge cross-check",
-    "status": "READY / IN PROGRESS",
+    "id": "T-025_PR12_MERGE",
+    "name": "Merge PR #12 after explicit Product Owner authorization",
+    "status": "READY / WAITING PRODUCT OWNER MERGE AUTHORIZATION",
     "new_t_task_created": true,
-    "engineering_execution_authorized": true,
-    "prerequisite": "Catalog 11 approved + V008/CURRENT Zhaqian 14/14 bound"
+    "engineering_execution_authorized": false,
+    "prerequisite": "Final regression Run 35577054218 SUCCESS / pre-merge cross-check PASS"
   },
   "last_completed_task": {
     "id": "T-024",
@@ -177,7 +177,7 @@
       "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
     ],
     "t025": {
-      "status": "PRODUCT OWNER APPROVED / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 BOUND / EXCEL+FINAL REGRESSION PENDING / PR #12 MERGE PENDING",
+      "status": "PRODUCT OWNER APPROVED / FORMAL DELIVERY CLOSED / FINAL REGRESSION 42/42 PASS / PR #12 READY FOR MERGE",
       "component": "剳牵",
       "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
       "branch": "codex/t025-p3-3-zhaqian-master-v2-pilot-v001",
@@ -203,13 +203,23 @@
       "failed_run_root_cause": "OVERBROAD REPOSITORY-WIDE TRACKED-BLEND VALIDATOR; CORRECTED TO CURRENT MASTER DIRECTORY ONLY",
       "product_owner_approved": true,
       "decision_id": "D-091",
-      "formal_delivery_status": "EXACT APPROVED OUTPUTS MATERIALIZED / CATALOG+V008 REGISTERED / EXCEL+FINAL REGRESSION PENDING",
+      "formal_delivery_status": "CLOSED / EXACT APPROVED OUTPUTS MATERIALIZED / CATALOG+V008+EXCEL SYNCED / FINAL REGRESSION PASS",
       "pr_merge_authorized": false,
       "materialization_workflow_run": 35574922533,
       "materialization_commit": "b4ccd8c37eb7166e3a4ed340ce83c242a541d187",
       "stage1_catalog_approved_count": 11,
       "v008_bound_rows": 14,
-      "stage1_master_completion": "11/28 / 39.3%"
+      "stage1_master_completion": "11/28 / 39.3%",
+      "final_regression_run": 35577054218,
+      "final_regression_validation": "42/42 PASS",
+      "final_regression_head_sha": "811a69b710a1990429edf9a86e4ef37770dba79b",
+      "final_regenerated_blend_sha256": "099041ba3a44e646a69d7083e39b0a6d900c99cb36af1823b97ff27146554641",
+      "final_regenerated_semantic_geometry_signature": "bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e",
+      "approved_canonical_blend_sha256": "d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6",
+      "final_regression_artifact_id": 10627743661,
+      "final_regression_artifact_zip_sha256": "4781e139e6489a8158a2ac73c859e0f8cac9a7961b11849b832e5d1a75fef1db",
+      "excel_sync_run": 35577054244,
+      "pre_merge_cross_check": "PASS / behind main 0 / mergeable true / scope clean"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -240,9 +250,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-21",
-    "result": "T-025 PRODUCT OWNER APPROVED / D-091 / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 REGISTERED",
-    "evidence": "Run 35572874173 + Artifact 10626941998 + materialization commit b4ccd8c37eb7166e3a4ed340ce83c242a541d187",
-    "decision_required": "NONE UNTIL FINAL PRE-MERGE CROSS-CHECK"
+    "result": "T-025 FORMAL DELIVERY CLOSED / FINAL REGRESSION 42/42 PASS / PRE-MERGE PASS",
+    "evidence": "Run 35577054218 + Artifact 10627743661 + Excel Run 35577054244 + static compare",
+    "decision_required": "PRODUCT OWNER PR #12 MERGE AUTHORIZATION"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -300,7 +310,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Sync derived V008 Excel view from updated JSON authority, run post-registration T-025 final regression and pre-merge cross-check, then request PR #12 merge authorization. T-018 remains HOLD.",
+  "next_action": "Product Owner authorize PR #12 merge. After merge, verify main + record merge commit + local sync requirement. Stage1 remains ACTIVE at 11/28 Masters; T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
