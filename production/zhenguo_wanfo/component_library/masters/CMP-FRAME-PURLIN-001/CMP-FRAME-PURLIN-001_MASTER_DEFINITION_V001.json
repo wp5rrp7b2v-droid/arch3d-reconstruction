@@ -1,12 +1,12 @@
 {
-  "schema_version": "MASTER_V2_DEFINITION_1.0_DRAFT",
+  "schema_version": "MASTER_V2_DEFINITION_1.1",
   "task_id": "T-026",
   "component_id": "CMP-FRAME-PURLIN-001",
   "master_id": "CMP-FRAME-PURLIN-001_MASTER",
   "master_version": "V001",
   "component_name_zh": "槫",
   "component_name_en": "Purlin",
-  "status": "DRAFT / VISUAL_GATE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED / ENGINEERING_EXECUTION_NOT_AUTHORIZED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-094 / ENGINEERING_EXECUTION_AUTHORIZED",
   "architecture_rule": "D-089 / MINIMAL_SUFFICIENT_COMPONENT_PACKAGE",
   "identity_boundary": {
     "legacy_identity": "CMP-PURLIN-001",
@@ -37,7 +37,9 @@
       ],
       "unsupported_as_dimension_authority": true,
       "section_profile_authority": false
-    }
+    },
+    "registry_schema_version_expected": "V008",
+    "registry_record_count_expected": 505
   },
   "registry_boundary": {
     "physical_instance_count": 33,
@@ -100,7 +102,13 @@
     "corner_beam_connection": "DIRECT_EXISTENCE_RELATION / GEOMETRY_DEFERRED",
     "joinery_geometry": "DEFERRED / NO UNSUPPORTED CUTS",
     "end_geometry": "DEFERRED",
-    "unsupported_geometry": []
+    "unsupported_geometry": [],
+    "engineering_representation": {
+      "primitive": "RECTANGULAR_BOUNDING_ENVELOPE_PROXY",
+      "historical_profile_claim": false,
+      "purpose": "MACHINE VALIDATION + ASSEMBLY INTERFACE PREPARATION ONLY",
+      "label_requirement": "EVERY SEMANTIC/REVIEW/VALIDATION OUTPUT MUST STATE PROFILE_UNKNOWN / ENVELOPE_NOT_HISTORICAL"
+    }
   },
   "unknowns": [
     "exact historical cross-section profile",
@@ -146,8 +154,20 @@
     "rule": "Expected six-file simple package remains provisional; additional formal output allowed only if geometry/evidence review proves necessary."
   },
   "execution_boundary": {
-    "engineering_execution_authorized": false,
-    "blender_execution_authorized": false,
-    "next_required_decision": "PRODUCT_OWNER REVIEW/LOCK T-026 DEFINITION AND CHOOSE/APPROVE THE NON-HISTORICAL SECTION-ENVELOPE REPRESENTATION BEFORE ENGINEERING EXECUTION"
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "executor": "GitHub Actions / Blender 4.5.13",
+    "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
+    "final_master_approval_requires_separate_product_owner_decision": true,
+    "pr_merge_requires_separate_product_owner_authorization": true
+  },
+  "approval": {
+    "decision_id": "D-094",
+    "date": "2026-09-21",
+    "definition_locked": true,
+    "section_envelope_representation_approved": true,
+    "engineering_execution_authorized": true,
+    "final_master_acceptance_requires_separate_product_owner_decision": true,
+    "pr_merge_requires_separate_product_owner_authorization": true
   }
 }
