@@ -1,6 +1,6 @@
 # T-025｜P3.3 剳牵 Master V2 Slim Pilot｜Lifecycle Record V001
 
-Status: **PRODUCT OWNER APPROVED / D-091 / FORMAL DELIVERY AUTHORIZED / PR MERGE PENDING**  
+Status: **PRODUCT OWNER APPROVED / D-091 / FORMAL DELIVERY CLOSED / FINAL REGRESSION PASS / PR #12 READY FOR MERGE**  
 Date: 2026-09-21  
 Decisions: **D-088 / D-089 / D-090 / D-091**  
 Branch: `codex/t025-p3-3-zhaqian-master-v2-pilot-v001`  
@@ -200,3 +200,43 @@ The locked Master Definition was restored to the exact bytes used by accepted Ru
 - derived Excel remains a derived view and must sync from these JSON authorities before final record closure.
 
 Final regression and PR #12 pre-merge cross-check are still required before requesting merge authorization.
+
+
+## 13. Final regression / pre-merge cross-check
+
+**PASS / PR #12 READY FOR MERGE**
+
+Final V2 closure regression:
+- GitHub Actions Run: `35577054218` = **SUCCESS**
+- regression head: `811a69b710a1990429edf9a86e4ef37770dba79b`
+- validation: **42 / 42 PASS**
+- regenerated semantic geometry signature: `bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e`
+- approved semantic geometry signature: same / MATCH
+- regenerated .blend SHA-256: `099041ba3a44e646a69d7083e39b0a6d900c99cb36af1823b97ff27146554641`
+- approved canonical .blend SHA-256 remains: `d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6`
+- binary identity policy: Catalog remains bound to the Product Owner-approved binary; closure regression proves regenerated geometry identity rather than requiring byte-identical Blender serialization.
+- regression Artifact ID: `10627743661`
+- regression Artifact ZIP SHA-256: `4781e139e6489a8158a2ac73c859e0f8cac9a7961b11849b832e5d1a75fef1db`
+- adaptive Review Board regenerated: 6 required panels / PASS
+- minimal-sufficient formal surface: PASS
+
+Derived Registry Excel pre-merge sync:
+- Run `35577054244` = **SUCCESS**
+- V008/CURRENT: 505 records
+- Stage1 Catalog: 11 approved Masters
+- Zhaqian binding: 14 / 14
+- Master progress: 11 / 28 = 39.3%
+- derived Excel role remains DERIVED_VIEW / JSON remains canonical truth.
+
+Static pre-merge cross-check:
+- branch behind main: **0**
+- PR mergeable: **true**
+- changed-file scope: T-025 / shared V2 infrastructure / Registry+Catalog / derived Excel only
+- approved Definition remains immutable and matches the accepted engineering Definition
+- no canonical Zhaqian `.blend` is tracked in Git
+- T-018 remains HOLD
+- Stage1 remains ACTIVE / not passed
+
+No further engineering change is required before merge.
+
+**PR #12 merge remains a separate Product Owner authorization boundary.**
