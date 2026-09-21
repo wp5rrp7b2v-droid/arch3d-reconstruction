@@ -1,8 +1,8 @@
 # T-025｜P3.3 剳牵 Master V2 Slim Pilot｜Lifecycle Record V001
 
-Status: **VISUAL GATE PASS / V2 DEFINITION DRAFTED / ENGINEERING EXECUTION NOT AUTHORIZED**  
+Status: **VISUAL GATE PASS / V2 DEFINITION LOCKED / D-089 MINIMAL-SUFFICIENT RULE / D-090 ENGINEERING EXECUTION AUTHORIZED / FIRST ARTICLE RUNNING**  
 Date: 2026-09-21  
-Decision: **D-088**  
+Decisions: **D-088 / D-089 / D-090**  
 Branch: `codex/t025-p3-3-zhaqian-master-v2-pilot-v001`  
 Master: `CMP-FRAME-ZHAQIAN-001_MASTER`
 
@@ -98,20 +98,18 @@ The slim architecture must still machine-check at minimum:
 
 ## 7. Current authorization boundary
 
-D-088 approves only:
-- D-076 visual gate;
-- selection of 剳牵 as V2 Pilot;
-- V2 Definition drafting and T-025 lifecycle-contract creation.
+D-090 now authorizes:
+- locked Zhaqian V2 Master Definition;
+- shared V2 infrastructure implementation;
+- GitHub Actions + Blender 4.5.13 first-article execution.
 
-D-088 does **not** authorize:
-- Blender execution;
-- GitHub Actions production run;
-- final Master approval;
+Still **not authorized / not yet approved**:
+- final Master acceptance;
 - Catalog/V008 approved binding;
 - PR merge;
 - Stage1 PASS;
 - T-018 resume.
 
-Next decision required:
+Current next decision:
 
-> **Product Owner approves/locks the minimal-sufficient V2 Master Definition and explicitly authorizes T-025 engineering execution.**
+> **Review the first-article machine evidence + Review Board and decide Product Owner acceptance.**
