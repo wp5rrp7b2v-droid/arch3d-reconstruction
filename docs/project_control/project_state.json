@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R162",
-  "last_updated": "2026-09-20",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / LOCAL SYNC + APPROVED ARTIFACT RECONCILIATION PASS / D-087 ACTIVE / T-018 HOLD",
+  "state_revision": "R163",
+  "last_updated": "2026-09-21",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-025 ZHAQIAN V2 SLIM PILOT DESIGN / D-088 VISUAL GATE PASS / ENGINEERING EXECUTION NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / T-024 CLOSED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / T-025 V2 PILOT DESIGN / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / STAGE1 ACTIVE / T-021+D-072 CLOSED / T-022+D-074 CLOSED / T-023+D-080 CLOSED / T-024+D-085 CLOSED / PR #11 MERGED / T-020+RZ+FV STAGE5 RE-REVIEW / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-024 CLOSED / T-025 ZHAQIAN V2 SLIM PILOT DESIGN / D-088 VISUAL GATE PASS / ENGINEERING EXECUTION NOT AUTHORIZED / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No engineering blocker. Local Git sync and approved T-021—T-024 artifact reconciliation are complete. Next work may return to Stage1 missing-Master selection under D-076 visual-reference gate. T-018 remains HOLD.",
+  "decision_required": true,
+  "blocker": "T-025 has no engineering blocker at design level. D-076 visual-reference gate is PASS under D-088. Product Owner must review/lock the V2 Master Definition and explicitly authorize engineering execution before Blender/Actions.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -61,16 +61,17 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "NONE",
-    "status": "LOCAL SYNC + ARTIFACT RECONCILIATION COMPLETE / NO ENGINEERING T-TASK ACTIVE"
+    "id": "T-025",
+    "name": "P3.3 Zhaqian Master V2 Slim Pilot",
+    "status": "DESIGN ACTIVE / VISUAL GATE PASS / MASTER DEFINITION DRAFTED / ENGINEERING EXECUTION NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "STAGE1_NEXT_MASTER_SELECTION",
-    "name": "Select next missing Stage1 Master from V008 coverage matrix under D-076 visual-reference gate",
-    "status": "READY FOR CHAT DESIGN / ENGINEERING EXECUTION NOT YET AUTHORIZED",
-    "new_t_task_created": false,
+    "id": "T-025_EXECUTION_AUTHORIZATION",
+    "name": "Review and lock Zhaqian V2 Master Definition, then explicitly authorize shared-infrastructure engineering execution",
+    "status": "WAITING PRODUCT OWNER REVIEW",
+    "new_t_task_created": true,
     "engineering_execution_authorized": false,
-    "prerequisite": "D-076 visual-reference review before any new Master modeling"
+    "prerequisite": "Approve/lock CMP-FRAME-ZHAQIAN-001_MASTER_DEFINITION_V001 and T-025 V2 slim file contract"
   },
   "last_completed_task": {
     "id": "T-024",
@@ -127,7 +128,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / T-021+CLOSED / T-022+CLOSED / T-023+CLOSED / T-024+CLOSED / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / T-021..T-024 CLOSED / T-025 V2 PILOT DESIGN ACTIVE / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -174,7 +175,17 @@
       "MASTER_WITHOUT_EVIDENCE_BINDING",
       "EXCEL_AS_CANONICAL_SOURCE",
       "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
-    ]
+    ],
+    "t025": {
+      "status": "DESIGN ACTIVE / D-088 VISUAL GATE PASS / V2 DEFINITION DRAFTED / EXECUTION NOT AUTHORIZED",
+      "component": "剳牵",
+      "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
+      "branch": "codex/t025-p3-3-zhaqian-master-v2-pilot-v001",
+      "pilot_goal": "Reduce ordinary Master component-specific formal outputs from ~20 to target 6 without reducing validation strength",
+      "formal_file_target": 6,
+      "visual_gate": "PASS / D-088",
+      "engineering_execution_authorized": false
+    }
   },
   "roof_control_audit_2026_09_17": {
     "status": "READ_ONLY / COMPLETE / B-STOP",
@@ -198,9 +209,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-087",
-    "date": "2026-09-20",
-    "decision": "V008/CURRENT must directly expose Stage1 Master coverage progress and approved Master bindings. Master Catalog remains approval authority. Current snapshot: 505 records / 66 object types / 28 Master-scope types / 10 approved / 18 pending / 35.7%."
+    "id": "D-088",
+    "date": "2026-09-21",
+    "decision": "Approve Zhaqian D-076 visual gate and authorize T-025 V2 slim-pilot design. Target 6 component-specific formal files; engineering execution remains unauthorized."
   },
   "latest_material_review": {
     "date": "2026-09-18",
@@ -264,7 +275,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Return to Stage1 coverage matrix and select the next missing Master in Chat. Apply D-076 visual-reference review before any modeling. Do not create/execute a new T-task until the specification and visual-reference gate are approved. T-018 remains HOLD.",
+  "next_action": "Review/lock T-025 Zhaqian V2 Master Definition and six-file slim contract. After explicit Product Owner execution authorization, implement reusable V2 builder/validator/workflow and run first article. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
