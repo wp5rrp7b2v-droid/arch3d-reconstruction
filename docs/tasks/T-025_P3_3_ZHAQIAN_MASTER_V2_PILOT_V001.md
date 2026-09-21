@@ -1,6 +1,6 @@
 # T-025｜P3.3 剳牵 Master V2 Slim Pilot｜Lifecycle Record V001
 
-Status: **ENGINEERING PASS / FIRST ARTICLE COMPLETE / PRODUCT OWNER REVIEW REQUIRED**  
+Status: **PRODUCT OWNER APPROVED / D-091 / FORMAL DELIVERY AUTHORIZED / PR MERGE PENDING**  
 Date: 2026-09-21  
 Decisions: **D-088 / D-089 / D-090**  
 Branch: `codex/t025-p3-3-zhaqian-master-v2-pilot-v001`  
@@ -165,3 +165,25 @@ Product Owner should review:
 - whether the V2 minimal-sufficient package preserves enough information for future work.
 
 No Catalog/V008 approved binding, formal publication, PR merge, Stage1 PASS, or T-018 resume is authorized before Product Owner acceptance.
+
+
+## 10. Product Owner acceptance / D-091
+
+**PRODUCT OWNER APPROVED / FIRST ARTICLE ACCEPTED / FORMAL DELIVERY AUTHORIZED**
+
+Product Owner approved the T-025 Zhaqian V2 first article on 2026-09-21.
+
+Accepted evidence:
+- Run: `35572874173` / SUCCESS
+- validation: **35/35 PASS**
+- reviewed head: `834765fede99325b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6` is **not** used as a commit identity; canonical binary SHA is listed separately below.
+- accepted engineering head: `834765fede99325b3e53cc8b298e00613c810c96`
+- canonical .blend SHA-256: `d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6`
+- semantic geometry signature: `bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e`
+- Review Board SHA-256: `b53f38d58dd697c293b65a59862a780690bd12b963340c213e5d51ec30e2a7fd`
+- Artifact ID: `10626941998`
+- Artifact ZIP SHA-256: `86d7defe94d64deddc2eb4020f69dffbec352e56bf2f49ec66d222cf853a325a`
+
+D-091 authorizes materialization of the exact approved Artifact's Semantic / Validation / Review Board, Stage1 Catalog registration, V008/CURRENT + derived Excel synchronization, and final regression / pre-merge cross-check.
+
+D-091 does **not** authorize PR #12 merge, Stage1 PASS, Stage2 authorization, or T-018 resume.

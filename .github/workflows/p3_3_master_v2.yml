@@ -16,7 +16,8 @@ on:
         type: string
 
 permissions:
-  contents: read
+  contents: write
+  actions: read
 
 jobs:
   first-article:
@@ -151,3 +152,83 @@ jobs:
             ${{ env.SEMANTIC }}
             ${{ env.BOARD }}
             ${{ env.VALIDATION }}
+
+
+  publish-approved-artifact:
+    if: ${{ github.event_name == 'pull_request' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Resolve approved publication source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          mapfile -t defs < <(git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -E '^production/zhenguo_wanfo/component_library/masters/.+_MASTER_DEFINITION_V[0-9]+\.json$' || true)
+          if [[ "${#defs[@]}" -ne 1 ]]; then
+            echo "Publication requires exactly one changed Master Definition."
+            exit 2
+          fi
+          DEF="${defs[0]}"
+          echo "DEFINITION=$DEF" >> "$GITHUB_ENV"
+          python - "$DEF" <<'PY'
+          import json,os,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          acc=d.get("product_owner_acceptance",{})
+          pub=d.get("formal_publication",{})
+          assert acc.get("status")=="APPROVED"
+          assert pub.get("authorized") is True
+          vals={
+            "MASTER_DIR":os.path.dirname(sys.argv[1]),
+            "SOURCE_ARTIFACT_ID":str(pub["source_artifact_id"]),
+            "SOURCE_ARTIFACT_ZIP_SHA256":pub["source_artifact_zip_sha256"],
+            "EXPECTED_SEMANTIC_SHA256":pub["expected_semantic_sha256"],
+            "EXPECTED_VALIDATION_SHA256":pub["expected_validation_sha256"],
+            "EXPECTED_BOARD_SHA256":pub["expected_review_board_sha256"],
+            "SEMANTIC_NAME":pub["semantic_filename"],
+            "VALIDATION_NAME":pub["validation_filename"],
+            "BOARD_NAME":pub["review_board_filename"],
+          }
+          with open(os.environ["GITHUB_ENV"],"a") as f:
+              for k,v in vals.items(): f.write(f"{k}={v}\n")
+          print("MASTER_V2_PUBLICATION_SOURCE_RESOLVED",pub["source_artifact_id"])
+          PY
+
+      - name: Download and verify exact approved Artifact
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/approved
+          curl --fail --location --show-error --retry 3             -H "Authorization: Bearer $GH_TOKEN"             -H "Accept: application/vnd.github+json"             "https://api.github.com/repos/${{ github.repository }}/actions/artifacts/$SOURCE_ARTIFACT_ID/zip"             -o /tmp/approved.zip
+          echo "$SOURCE_ARTIFACT_ZIP_SHA256  /tmp/approved.zip" | sha256sum -c -
+          unzip -q /tmp/approved.zip -d /tmp/approved
+          echo "$EXPECTED_SEMANTIC_SHA256  /tmp/approved/$SEMANTIC_NAME" | sha256sum -c -
+          echo "$EXPECTED_VALIDATION_SHA256  /tmp/approved/$VALIDATION_NAME" | sha256sum -c -
+          echo "$EXPECTED_BOARD_SHA256  /tmp/approved/$BOARD_NAME" | sha256sum -c -
+
+      - name: Materialize minimal-sufficient approved outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp "/tmp/approved/$SEMANTIC_NAME" "$MASTER_DIR/$SEMANTIC_NAME"
+          cp "/tmp/approved/$VALIDATION_NAME" "$MASTER_DIR/$VALIDATION_NAME"
+          cp "/tmp/approved/$BOARD_NAME" "$MASTER_DIR/$BOARD_NAME"
+          test -z "$(git ls-files -- "$MASTER_DIR/*.blend")"
+          git status --short
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$MASTER_DIR/$SEMANTIC_NAME" "$MASTER_DIR/$VALIDATION_NAME" "$MASTER_DIR/$BOARD_NAME"
+          if git diff --cached --quiet; then
+            echo "MASTER_V2_APPROVED_OUTPUTS_ALREADY_MATERIALIZED"
+          else
+            git commit -m "T-025: materialize approved V2 Master outputs"
+            git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
+            echo "MASTER_V2_APPROVED_OUTPUTS_MATERIALIZED"
+          fi
