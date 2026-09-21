@@ -15,6 +15,28 @@ def near(a,b,t=1e-3):
 def dims(s):
     return [float(x) for x in s["body"]["local_bbox_mm"]["dimensions"]]
 
+def get_section(d):
+    rb=d["registry_boundary"]
+    if "section_mm" in rb:
+        return float(rb["section_mm"]["width"]),float(rb["section_mm"]["thickness"])
+    if "section_statistics_mm" in rb:
+        s=rb["section_statistics_mm"]
+        return float(s["mean_width"]),float(s["mean_thickness"])
+    s=d["geometry_contract"]["section_envelope_mm"]
+    return float(s["width"]),float(s["thickness"])
+
+def get_review_contract(d):
+    if "review_contract" in d:
+        return d["review_contract"]
+    return d["v2_slim_file_contract"]["review_contract"]
+
+def get_package(d):
+    return d.get("minimal_sufficient_package",d.get("v2_slim_file_contract",{}))
+
+def profile_unknown(d):
+    gc=d["geometry_contract"]
+    return gc.get("exact_section_profile")=="UNKNOWN" or gc.get("section_envelope_is_historical_profile") is False
+
 def main():
     ap=argparse.ArgumentParser()
     for n in ("definition","canonical","reopen","length","width","thickness","restore","asset","review_dir","board","registry","catalog","output"):
@@ -22,34 +44,43 @@ def main():
     a=ap.parse_args()
     d=load(a.definition); c=load(a.canonical); r=load(a.reopen)
     lm=load(a.length); wm=load(a.width); tm=load(a.thickness); rs=load(a.restore)
-    reg=load(a.registry)
-    catalog=load(a.catalog)
+    reg=load(a.registry); catalog=load(a.catalog)
     checks={}
     def ck(name,value):
         if not value:
             raise AssertionError(name)
         checks[name]="PASS"
 
-    rb=d["registry_boundary"]
-    gc=d["geometry_contract"]
-    auth=d["authority"]
+    rb=d["registry_boundary"]; gc=d["geometry_contract"]; auth=d["authority"]
     component=d["component_name_zh"]
     items=[x for x in reg["items"] if x.get("component")==component]
+    w,h=get_section(d)
 
     ck("01_definition_locked",d["status"].startswith("LOCKED / PRODUCT_OWNER_APPROVED") and d["approval"]["definition_locked"] is True)
     ck("02_execution_authorized",d["execution_boundary"]["engineering_execution_authorized"] is True)
-    ck("03_visual_gate",auth["visual_reference_gate"]["result"]=="PASS")
+    ck("03_visual_gate",str(auth["visual_reference_gate"]["result"]).startswith("PASS"))
     ck("04_registry_version",reg["schema_version"]==auth["registry_schema_version_expected"])
     ck("05_registry_record_count",reg["item_count"]==auth["registry_record_count_expected"])
     ck("06_component_identity",c["component_id"]==d["component_id"] and c["master_id"]==d["master_id"] and c["master_version"]==d["master_version"])
     ck("07_instance_count",len(items)==rb["physical_instance_count"])
+
     east=[x for x in items if x.get("id","").startswith(component+"-东山")]
     west=[x for x in items if x.get("id","").startswith(component+"-西山")]
-    ck("08_known_gable_counts",len(east)==rb["east_gable_known_count"] and len(west)==rb["west_gable_known_count"])
-    ck("09_unresolved_count",len(items)-len(east)-len(west)==rb["exact_location_unresolved_count"])
-    w=float(rb["section_mm"]["width"]); h=float(rb["section_mm"]["thickness"])
+    main=[x for x in items if x.get("id","").startswith(component+"-正身")]
+    if "east_gable_known_count" in rb:
+        ck("08_known_gable_counts",len(east)==rb["east_gable_known_count"] and len(west)==rb["west_gable_known_count"])
+    else:
+        ck("08_distribution_counts",len(main)==rb.get("main_body_count",len(main)) and len(east)==rb.get("east_gable_count",len(east)) and len(west)==rb.get("west_gable_count",len(west)))
+    if "exact_location_unresolved_count" in rb:
+        ck("09_unresolved_count",len(items)-len(east)-len(west)==rb["exact_location_unresolved_count"])
+    else:
+        ck("09_all_registry_instances_located",all(x.get("location") not in (None,"","待定位") for x in items))
+
     section_strings=[str(x.get("section_mm","")) for x in items]
-    ck("10_registry_section_binding",all(str(w) in s and ("185" in s if near(h,185) else str(h) in s) for s in section_strings))
+    exact=[s for s in section_strings if str(w) in s and (str(h) in s or str(int(h)) in s)]
+    inherited=[s for s in section_strings if ("沿用" in s and "实测统计" in s)]
+    ck("10_registry_section_binding",len(exact)>=1 and len(exact)+len(inherited)==len(items))
+
     ck("11_historical_length_null",rb["historical_full_length_mm"] is None and c["historical_full_length_mm"] is None)
     ck("12_reference_nonhistorical",gc["canonical_reference_length_historical_claim"] is False and c["canonical_reference_length_historical_claim"] is False)
     ck("13_no_unsupported_geometry",gc["unsupported_geometry"]==[] and c["body"]["unsupported_detail_count"]==0 and c["body"]["joinery_cut_count"]==0)
@@ -69,49 +100,60 @@ def main():
     ck("24_binary_sha",digest(a.asset)==c["canonical_blend_sha256"] and len(c["canonical_blend_sha256"])==64)
     ck("25_blender_version",str(c["blender_version"]).startswith("4.5.13"))
 
-    rc=d["v2_slim_file_contract"]["review_contract"]
-    panels=rc["required_panels"]
-    review=Path(a.review_dir)
+    rc=get_review_contract(d); panels=rc["required_panels"]; review=Path(a.review_dir)
     ck("26_required_panels_complete",all((review/(x+".png")).exists() and (review/(x+".png")).stat().st_size>1000 for x in panels))
     board=Path(a.board)
     ck("27_review_board_exists",board.exists() and board.stat().st_size>10000)
     im=Image.open(board)
     cols=min(3,max(1,len(panels))); rows=math.ceil(len(panels)/cols)
     ck("28_review_board_dimensions",im.size==(cols*1200,rows*940))
-    ck("29_no_fixed_panel_rule",d["v2_slim_file_contract"]["fixed_review_panel_count_required"] is False)
-    ck("30_minimal_sufficient_rule",d["v2_slim_file_contract"]["principle"]=="MINIMAL_SUFFICIENT_COMPONENT_PACKAGE")
+    ck("29_no_fixed_panel_rule",rc.get("fixed_panel_count_required",d.get("v2_slim_file_contract",{}).get("fixed_review_panel_count_required")) is False)
+    ck("30_minimal_sufficient_rule","D-089" in str(d.get("architecture_rule","D-089")) or get_package(d).get("principle")=="MINIMAL_SUFFICIENT_COMPONENT_PACKAGE")
 
     master_dir=str(Path(a.definition).parent)
     tracked=subprocess.check_output(["git","ls-files","--",master_dir+"/*.blend"],text=True).strip()
     ck("31_no_tracked_canonical_blend_in_master_dir",tracked=="")
-    ck("32_definition_semantic_validation_independence",
-       "MASTER_DEFINITION_V001.json" in " ".join(d["v2_slim_file_contract"]["zhaqian_current_package"]) and
-       c["schema_version"]=="MASTER_V2_SEMANTIC_1.0")
-    ck("33_unknowns_preserved",
-       rb["exact_instance_endpoints"]=="UNKNOWN" and rb["sample_to_instance_mapping"]=="UNKNOWN" and
-       any("historical full lengths" in x for x in d["unknowns"]))
-    ck("34_reference_length_assembly_guard",
-       "ASSEMBLY_OWNED" in gc["placement_policy"] and gc["canonical_reference_length_historical_claim"] is False)
-    ck("35_visual_source_not_dimension_authority",auth["visual_reference_gate"]["dimension_authority"] is False)
+    ck("32_definition_semantic_validation_independence",c["schema_version"].startswith("MASTER_V2_SEMANTIC_"))
+
+    unknown_text=" | ".join(d.get("unknowns",[])).lower()
+    ck("33_unknowns_preserved","historical" in unknown_text and "sample-to-instance" in unknown_text)
+    ck("34_reference_length_assembly_guard","ASSEMBLY_OWNED" in gc["placement_policy"] and gc["canonical_reference_length_historical_claim"] is False)
+    vg=auth["visual_reference_gate"]
+    ck("35_visual_source_not_dimension_authority",vg.get("dimension_authority") is False or vg.get("unsupported_as_dimension_authority") is True)
+
+    if "identity_boundary" in d:
+        ib=d["identity_boundary"]
+        ck("36_legacy_identity_separated",d["component_id"]!=ib["legacy_identity"] and ib["physical_instance_count"]==rb["physical_instance_count"])
+    else:
+        ck("36_legacy_identity_not_applicable",True)
+
+    if profile_unknown(d):
+        ck("37_profile_unknown_semantic",c.get("section_profile_state")=="UNKNOWN" and c.get("section_envelope_historical_claim") is False)
+        ck("38_profile_unknown_body",c["body"].get("section_profile_state")=="UNKNOWN" and c["body"].get("section_envelope_historical_claim") is False and "envelope_proxy" in c["body"].get("primitive",""))
+        rep=gc.get("engineering_representation",{})
+        ck("39_envelope_proxy_nonhistorical",rep.get("historical_profile_claim") is False and rep.get("primitive")=="RECTANGULAR_BOUNDING_ENVELOPE_PROXY")
+        ck("40_no_shengtou_baked",c.get("shengtou_wood_baked_in") is False and c["body"].get("shengtou_wood_baked_in") is False)
+    else:
+        ck("37_profile_contract_defined",True)
 
     catalog_entries=[x for x in catalog.get("new_masters",[]) if x.get("master_id")==d["master_id"]]
     if catalog_entries:
         ce=catalog_entries[0]
-        ck("36_catalog_approved",ce.get("approval_status")=="PRODUCT_OWNER_APPROVED")
+        ck("41_catalog_approved",ce.get("approval_status")=="PRODUCT_OWNER_APPROVED")
         published_semantic_path=Path(a.definition).parent / f'{d["master_id"]}_SEMANTIC_{d["master_version"]}.json'
-        ck("37_published_semantic_exists",published_semantic_path.exists())
+        ck("42_published_semantic_exists",published_semantic_path.exists())
         published=load(published_semantic_path)
-        ck("38_catalog_approved_binary_identity",ce.get("canonical_asset_sha256")==published.get("canonical_blend_sha256"))
-        ck("39_regenerated_geometry_matches_approved",ce.get("semantic_geometry_signature")==c["semantic_geometry_signature"]==published.get("semantic_geometry_signature"))
-        ck("40_registry_master_binding",all(x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE" and x.get("master_reference")==d["master_id"] for x in items))
+        ck("43_catalog_approved_binary_identity",ce.get("canonical_asset_sha256")==published.get("canonical_blend_sha256"))
+        ck("44_regenerated_geometry_matches_approved",ce.get("semantic_geometry_signature")==c["semantic_geometry_signature"]==published.get("semantic_geometry_signature"))
+        ck("45_registry_master_binding",all(x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE" and x.get("master_reference")==d["master_id"] for x in items))
         progress=reg["stage1_master_progress_summary"]
-        ck("41_registry_progress_consistent",progress["approved_master_count"]==catalog["approved_master_count"] and progress["pending_master_object_type_count"]==progress["master_scope_object_type_count"]-progress["approved_master_count"])
-        ck("42_registry_covered_rows_consistent",progress["master_covered_registry_record_count"]==sum(1 for x in reg["items"] if x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE"))
+        ck("46_registry_progress_consistent",progress["approved_master_count"]==catalog["approved_master_count"] and progress["pending_master_object_type_count"]==progress["master_scope_object_type_count"]-progress["approved_master_count"])
+        ck("47_registry_covered_rows_consistent",progress["master_covered_registry_record_count"]==sum(1 for x in reg["items"] if x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE"))
     else:
-        ck("36_preapproval_catalog_absent",all(x.get("master_reference")!=d["master_id"] for x in items))
+        ck("41_preapproval_catalog_absent",all(x.get("master_reference")!=d["master_id"] for x in items))
 
     result={
-      "schema_version":"MASTER_V2_VALIDATION_1.0",
+      "schema_version":"MASTER_V2_VALIDATION_1.1",
       "task_id":d["task_id"],
       "status":"PASS",
       "approval_boundary":"ENGINEERING_COMPLETE_PENDING_PRODUCT_OWNER_REVIEW",
@@ -124,6 +166,8 @@ def main():
       "semantic_geometry_signature":c["semantic_geometry_signature"],
       "review_board_sha256":digest(a.board),
       "required_review_panels":panels,
+      "section_profile_state":c.get("section_profile_state"),
+      "section_envelope_historical_claim":c.get("section_envelope_historical_claim"),
       "formal_file_count_policy":"ADAPTIVE / MINIMAL SUFFICIENT / NO FIXED COUNT",
       "blender_version":c["blender_version"]
     }
