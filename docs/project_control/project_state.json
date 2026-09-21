@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R171",
+  "state_revision": "R172",
   "last_updated": "2026-09-21",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-026 PURLIN V2 DESIGN ACTIVE / D-093 VISUAL GATE PASS WITH GEOMETRY BOUNDARY / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-026 PURLIN V2 ENGINEERING ACTIVE / D-094 AUTHORIZED / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -25,8 +25,8 @@
       "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-025 CLOSED / 11 OF 28 MASTERS APPROVED / NEXT MASTER SELECTION REQUIRES VISUAL GATE / T-018 HOLD"
     }
   },
-  "decision_required": true,
-  "blocker": "T-026 design has no evidence blocker at component-identity level. Exact historical purlin section profile remains UNKNOWN; Product Owner must review/lock the bounded-section-envelope representation before engineering execution.",
+  "decision_required": false,
+  "blocker": "No T-026 engineering blocker. Definition and non-historical section-envelope representation are locked under D-094; first-article execution authorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,15 +63,15 @@
   "current_task": {
     "id": "T-026",
     "name": "P3.3 Purlin Master V2",
-    "status": "DESIGN ACTIVE / D-093 VISUAL GATE PASS WITH GEOMETRY BOUNDARY / DEFINITION DRAFTED / ENGINEERING EXECUTION NOT AUTHORIZED"
+    "status": "ENGINEERING ACTIVE / D-094 DEFINITION LOCKED / FIRST ARTICLE AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-026_DEFINITION_LOCK",
-    "name": "Review and lock Purlin V2 Definition including non-historical section-envelope representation",
-    "status": "WAITING PRODUCT OWNER REVIEW",
+    "id": "T-026_FIRST_ARTICLE_REVIEW",
+    "name": "Build/validate Purlin V2 first article and present adaptive Review Board + machine evidence",
+    "status": "ENGINEERING EXECUTION AUTHORIZED",
     "new_t_task_created": true,
-    "engineering_execution_authorized": false,
-    "prerequisite": "Approve T-026 evidence/geometry boundary and adaptive Review Board contract"
+    "engineering_execution_authorized": true,
+    "prerequisite": "D-094 complete"
   },
   "last_completed_task": {
     "id": "T-025",
@@ -135,7 +135,7 @@
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-066",
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md",
     "engineering_planning_authorized": true,
-    "engineering_execution_authorized": false,
+    "engineering_execution_authorized": true,
     "t017": {
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
@@ -226,7 +226,7 @@
       "local_sync_status": "REQUIRED"
     },
     "t026": {
-      "status": "DESIGN ACTIVE / D-093 / VISUAL GATE PASS WITH GEOMETRY BOUNDARY / EXECUTION NOT AUTHORIZED",
+      "status": "ENGINEERING ACTIVE / D-094 AUTHORIZED / FIRST ARTICLE PENDING",
       "component": "槫",
       "component_id": "CMP-FRAME-PURLIN-001",
       "master_id": "CMP-FRAME-PURLIN-001_MASTER",
@@ -237,12 +237,12 @@
         "mean_width": 220.1,
         "mean_thickness": 270.8
       },
-      "section_profile": "UNKNOWN / BOUNDED SECTION ENVELOPE ONLY",
+      "section_profile": "UNKNOWN / RECTANGULAR BOUNDING-ENVELOPE PROXY APPROVED / NOT HISTORICAL",
       "historical_full_length_mm": null,
       "identity_guard": "LEGACY CMP-PURLIN-001 / 7 engineering objects MUST NOT be reused as 33-instance real-component Master identity",
       "file_count_policy": "ADAPTIVE / MINIMAL SUFFICIENT / NO UNIVERSAL COUNT",
       "review_policy": "ADAPTIVE / currently 7 Definition-required panels",
-      "engineering_execution_authorized": false
+      "engineering_execution_authorized": true
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -267,9 +267,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-093",
+    "id": "D-094",
     "date": "2026-09-21",
-    "decision": "Start T-026 Purlin Master V2 design; visual gate PASS WITH GEOMETRY BOUNDARY; 33 real instances; section statistics known but exact historical section profile remains UNKNOWN; execution not authorized."
+    "decision": "Lock T-026 Purlin V2 Definition and authorize first-article engineering using a non-historical rectangular section-envelope proxy with explicit PROFILE_UNKNOWN semantics."
   },
   "latest_material_review": {
     "date": "2026-09-21",
@@ -333,7 +333,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Product Owner review/lock T-026 Purlin V2 Definition, especially the bounded-section-envelope representation and 7-panel adaptive Review Board. Local Git synchronization remains deferred to evening by Product Owner instruction. T-018 remains HOLD.",
+  "next_action": "Extend shared V2 infrastructure for profile-unknown bounded-envelope Masters and adaptive 7-panel Purlin review, then run T-026 first article. Local sync remains deferred to evening. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
