@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R169",
+  "state_revision": "R170",
   "last_updated": "2026-09-21",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-025 FORMAL DELIVERY CLOSED / FINAL REGRESSION 42 OF 42 PASS / PR #12 READY FOR MERGE / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-025 CLOSED + PR #12 MERGED / LOCAL SYNC REQUIRED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 11 OF 28 MASTERS APPROVED / T-025 FORMAL DELIVERY / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 11 OF 28 MASTERS APPROVED / T-025 CLOSED / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-024 CLOSED / T-025 PRODUCT OWNER APPROVED D-091 / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 BOUND / 11 OF 28 MASTERS APPROVED / EXCEL+FINAL REGRESSION PENDING / PR #12 MERGE PENDING / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-025 CLOSED / 11 OF 28 MASTERS APPROVED / NEXT MASTER SELECTION REQUIRES VISUAL GATE / T-018 HOLD"
     }
   },
-  "decision_required": true,
-  "blocker": "No engineering blocker. T-025 formal delivery, Catalog/V008 binding, derived Excel sync, 42/42 final regression, and pre-merge cross-check are complete. Only Product Owner authorization to merge PR #12 remains.",
+  "decision_required": false,
+  "blocker": "No active T-025 blocker. T-025 is CLOSED / PR #12 MERGED. Local main must be synchronized to GitHub main before further local work; next Master engineering is not yet authorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -61,36 +61,36 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "T-025",
-    "name": "P3.3 Zhaqian Master V2 Slim Pilot",
-    "status": "PRODUCT OWNER APPROVED / FORMAL DELIVERY CLOSED / FINAL REGRESSION 42/42 PASS / PR #12 READY FOR MERGE"
+    "id": "NONE",
+    "name": "No active engineering T-task",
+    "status": "T-025 CLOSED / STAGE1 NEXT MASTER SELECTION PENDING"
   },
   "proposed_next_task": {
-    "id": "T-025_PR12_MERGE",
-    "name": "Merge PR #12 after explicit Product Owner authorization",
-    "status": "READY / WAITING PRODUCT OWNER MERGE AUTHORIZATION",
-    "new_t_task_created": true,
+    "id": "STAGE1_NEXT_MASTER_SELECTION",
+    "name": "Select next missing Stage1 Master and complete pre-model visual-reference gate before creating the next T-task",
+    "status": "READY FOR PLANNING / ENGINEERING NOT AUTHORIZED",
+    "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "prerequisite": "Final regression Run 35577054218 SUCCESS / pre-merge cross-check PASS"
+    "prerequisite": "Read current main after local sync; complete visual-reference review for the selected component"
   },
   "last_completed_task": {
-    "id": "T-024",
-    "engineering_id": "P3_3_RUFU_MASTER_FIRST_ARTICLE_V001",
-    "status": "PASS / PRODUCT OWNER APPROVED / PUBLICATION CLOSED / PR #11 MERGED / D-085",
-    "github_pr_number": 11,
-    "approved_first_article_head_sha": "b96cc4ce6d3995684d20c46bd0a8f9c71329481d",
-    "final_engineering_head_sha": "d857558a1fab765fa269f76ba9217b8456c353aa",
-    "merge_commit": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea",
-    "approved_actions_run": 35496581278,
-    "approved_validation": "43/43 EXECUTED CHECKS PASS",
-    "final_head_actions_run": 35498221932,
-    "final_validation": "44/44 PASS",
-    "review_png": "6/6 PASS",
-    "artifact_id": 10601690312,
-    "artifact_zip_sha256": "d686825b86c3e1186682ba7b62861e18cea772242f5069f1ad6f0136f0e6f2a6",
-    "formal_delivery": "semantic + validation + engineering review + acceptance + Stage1 Catalog + 6 review PNG on main",
-    "canonical_blend_sha256": "0e8095a57741d5fc28854da18670576b160b2516963789fa7d1ce1f686aa8208",
-    "semantic_geometry_signature": "8ae9fea45971f10c14573b8329f7ceff45f7d06dd7d6f99b8bac3ee8273d0571"
+    "id": "T-025",
+    "engineering_id": "P3_3_ZHAQIAN_MASTER_V2_SLIM_PILOT_V001",
+    "status": "PASS / PRODUCT OWNER APPROVED / FORMAL DELIVERY CLOSED / PR #12 MERGED / D-092",
+    "github_pr_number": 12,
+    "approved_first_article_head_sha": "834765fede99325b3e53cc8b298e00613c810c96",
+    "final_engineering_head_sha": "811a69b710a1990429edf9a86e4ef37770dba79b",
+    "merge_commit": "87cc54b0b0a9b0eba71ba3b8965dcd617c5aff61",
+    "approved_actions_run": 35572874173,
+    "approved_validation": "35/35 PASS",
+    "final_head_actions_run": 35577054218,
+    "final_validation": "42/42 PASS",
+    "review_board": "1 adaptive board / 6 required panels / PASS",
+    "approved_artifact_id": 10626941998,
+    "final_regression_artifact_id": 10627743661,
+    "canonical_blend_sha256": "d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6",
+    "semantic_geometry_signature": "bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e",
+    "formal_delivery": "Definition + Semantic + Review Board + Validation + Lifecycle Record + canonical blend Artifact/local-only; Catalog/V008/Excel closed"
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -128,7 +128,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-025 D-091 FORMAL DELIVERY / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-021..T-025 CLOSED / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -177,7 +177,7 @@
       "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
     ],
     "t025": {
-      "status": "PRODUCT OWNER APPROVED / FORMAL DELIVERY CLOSED / FINAL REGRESSION 42/42 PASS / PR #12 READY FOR MERGE",
+      "status": "CLOSED / PRODUCT OWNER APPROVED / PR #12 MERGED / D-092",
       "component": "剳牵",
       "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
       "branch": "codex/t025-p3-3-zhaqian-master-v2-pilot-v001",
@@ -204,7 +204,7 @@
       "product_owner_approved": true,
       "decision_id": "D-091",
       "formal_delivery_status": "CLOSED / EXACT APPROVED OUTPUTS MATERIALIZED / CATALOG+V008+EXCEL SYNCED / FINAL REGRESSION PASS",
-      "pr_merge_authorized": false,
+      "pr_merge_authorized": true,
       "materialization_workflow_run": 35574922533,
       "materialization_commit": "b4ccd8c37eb7166e3a4ed340ce83c242a541d187",
       "stage1_catalog_approved_count": 11,
@@ -219,7 +219,11 @@
       "final_regression_artifact_id": 10627743661,
       "final_regression_artifact_zip_sha256": "4781e139e6489a8158a2ac73c859e0f8cac9a7961b11849b832e5d1a75fef1db",
       "excel_sync_run": 35577054244,
-      "pre_merge_cross_check": "PASS / behind main 0 / mergeable true / scope clean"
+      "pre_merge_cross_check": "PASS / behind main 0 / mergeable true / scope clean",
+      "merged": true,
+      "merge_commit": "87cc54b0b0a9b0eba71ba3b8965dcd617c5aff61",
+      "main_verified": true,
+      "local_sync_status": "REQUIRED"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -244,15 +248,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-091",
+    "id": "D-092",
     "date": "2026-09-21",
-    "decision": "Approve T-025 Zhaqian V2 first article and authorize exact accepted-Artifact formal materialization, Catalog/V008/Excel closure, and final regression. PR #12 merge remains separate."
+    "decision": "Product Owner authorized and completed PR #12 merge. T-025 Zhaqian V2 Pilot is CLOSED / MERGED_TO_MAIN at 87cc54b0b0a9b0eba71ba3b8965dcd617c5aff61."
   },
   "latest_material_review": {
     "date": "2026-09-21",
-    "result": "T-025 FORMAL DELIVERY CLOSED / FINAL REGRESSION 42/42 PASS / PRE-MERGE PASS",
-    "evidence": "Run 35577054218 + Artifact 10627743661 + Excel Run 35577054244 + static compare",
-    "decision_required": "PRODUCT OWNER PR #12 MERGE AUTHORIZATION"
+    "result": "T-025 CLOSED / MAIN VERIFIED / 11 OF 28 MASTERS APPROVED",
+    "evidence": "PR #12 merge commit 87cc54b0b0a9b0eba71ba3b8965dcd617c5aff61 + Run 35577054218 42/42 PASS + Excel Run 35577054244 SUCCESS",
+    "decision_required": "NONE / NEXT MASTER PLANNING ONLY"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -310,7 +314,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Product Owner authorize PR #12 merge. After merge, verify main + record merge commit + local sync requirement. Stage1 remains ACTIVE at 11/28 Masters; T-018 remains HOLD.",
+  "next_action": "Synchronize local main to GitHub main before local work. Then select the next missing Stage1 Master and run its pre-model visual-reference gate; do not create/execute a new engineering T-task until that gate and authorization are complete. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
@@ -381,23 +385,23 @@
     "generator": "scripts/generate_wanfo_component_registry_excel.py",
     "generator_version": "1.0.2",
     "workflow": ".github/workflows/wanfo-component-registry-excel.yml",
-    "workflow_run_id": 35508113993,
+    "workflow_run_id": 35577054244,
     "workflow_result": "SUCCESS",
     "derived_current_excel": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.xlsx",
     "derived_versioned_excel": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.xlsx",
     "sync_manifest": "docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_EXCEL_SYNC_MANIFEST.json",
     "registry_version": "V008",
     "registry_record_count": 505,
-    "source_registry_commit": "9dd11724ba3a3f90ac22eed9849ee6a777ac5ee2",
-    "source_json_sha256": "64cebc163690e047e51d40f646a73c07e287d641db1d6a36751557dad3721fc8",
-    "current_excel_sha256": "dd0364c03f9c44c4d15f3b2aa192a1117af5261aa1705402562570a36019342c",
-    "versioned_excel_sha256": "dd0364c03f9c44c4d15f3b2aa192a1117af5261aa1705402562570a36019342c",
+    "source_registry_commit": "8e92dc0c21f7582b356be53ffe444813d4de7acb",
+    "source_json_sha256": "53953cf2293dd77c1d597841eeca1afc55fcaadc8adaa6981bf7b627968f2f75",
+    "current_excel_sha256": "7494137e90439e59f3b126190c0e235fa7886cd2a653dc761ea56f2e504d2498",
+    "versioned_excel_sha256": "7494137e90439e59f3b126190c0e235fa7886cd2a653dc761ea56f2e504d2498",
     "canonical_truth": "JSON",
     "excel_role": "DERIVED_VIEW",
     "manual_excel_fact_edits": "PROHIBITED",
     "fail_closed": true,
     "t018_execution_impact": "NONE / T-018 remains HOLD",
-    "close_note": "D-087 visibility patch complete: V008/CURRENT and derived Excel expose Master progress and row-level Master bindings."
+    "close_note": "T-025 / D-092: V008/CURRENT exposes 11 approved Masters / 17 pending / 39.3%, Zhaqian 14/14 bound; derived Excel pre-merge sync PASS."
   },
   "p3_3_rebaseline_2026_09_19": {
     "status": "V002 LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT AUTHORIZED",
@@ -427,7 +431,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / T-021 + T-022 + T-023 + T-024 PRODUCT OWNER APPROVED + CLOSED / NEXT MASTER SELECTION",
+    "status": "ACTIVE / T-021 + T-022 + T-023 + T-024 + T-025 PRODUCT OWNER APPROVED + CLOSED / NEXT MASTER SELECTION",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",

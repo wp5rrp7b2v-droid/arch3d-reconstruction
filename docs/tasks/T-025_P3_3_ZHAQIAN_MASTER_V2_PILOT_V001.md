@@ -1,6 +1,6 @@
 # T-025｜P3.3 剳牵 Master V2 Slim Pilot｜Lifecycle Record V001
 
-Status: **PRODUCT OWNER APPROVED / D-091 / FORMAL DELIVERY CLOSED / FINAL REGRESSION PASS / PR #12 READY FOR MERGE**  
+Status: **CLOSED / PRODUCT OWNER APPROVED / D-091 / PR #12 MERGED / D-092**  
 Date: 2026-09-21  
 Decisions: **D-088 / D-089 / D-090 / D-091**  
 Branch: `codex/t025-p3-3-zhaqian-master-v2-pilot-v001`  
@@ -240,3 +240,23 @@ Static pre-merge cross-check:
 No further engineering change is required before merge.
 
 **PR #12 merge remains a separate Product Owner authorization boundary.**
+
+
+## 14. Merge closure / D-092
+
+**CLOSED / MERGED TO MAIN**
+
+- Product Owner merge authorization: APPROVED
+- PR: `#12`
+- PR state: `MERGED / CLOSED`
+- merge commit: `87cc54b0b0a9b0eba71ba3b8965dcd617c5aff61`
+- main verification: PASS
+- Stage1 Catalog: `11 approved Masters`
+- Zhaqian V008/CURRENT binding: `14/14`
+- Stage1 Master completion: `11/28 = 39.3%`
+- approved first article: Run `35572874173` / `35/35 PASS`
+- final regression: Run `35577054218` / `42/42 PASS`
+- derived Excel sync: Run `35577054244` / SUCCESS
+- canonical approved .blend remains Artifact/local-only with SHA-256 `d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6`
+
+T-025 is fully closed. Stage1 remains ACTIVE and does not pass as a whole. T-018 remains HOLD.
