@@ -1,9 +1,9 @@
 {
   "schema_version": "V008",
-  "date": "2026-09-19",
+  "date": "2026-09-21",
   "status": "CURRENT_BUILD_BASELINE_INSTANCE_REGISTRY",
   "source": "SRC-ZG-WF-001",
-  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded.",
+  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility.",
   "item_count": 505,
   "items": [
     {
@@ -1691,7 +1691,8 @@
       "evidence": "山面数量直接确认",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1702,7 +1703,8 @@
       "evidence": "山面数量直接确认",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1713,7 +1715,8 @@
       "evidence": "山面数量直接确认",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1724,7 +1727,8 @@
       "evidence": "山面数量直接确认",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1735,7 +1739,8 @@
       "evidence": "剩余数量明确，位置未锁",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1746,7 +1751,8 @@
       "evidence": "剩余数量明确，位置未锁",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1757,7 +1763,8 @@
       "evidence": "剩余数量明确，位置未锁",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1768,7 +1775,8 @@
       "evidence": "剩余数量明确，位置未锁",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1779,7 +1787,8 @@
       "evidence": "剩余数量明确，位置未锁",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1790,7 +1799,8 @@
       "evidence": "剩余数量明确，位置未锁",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1801,7 +1811,8 @@
       "evidence": "剩余数量明确，位置未锁",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1812,7 +1823,8 @@
       "evidence": "剩余数量明确，位置未锁",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1823,7 +1835,8 @@
       "evidence": "剩余数量明确，位置未锁",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -1834,7 +1847,8 @@
       "evidence": "剩余数量明确，位置未锁",
       "section_mm": "平均广331.5；厚185",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-ZHAQIAN-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -7145,14 +7159,14 @@
     "生头木"
   ],
   "stage1_master_progress_summary": {
-    "snapshot_date": "2026-09-20",
-    "status": "CURRENT / D-087 VISIBILITY RULE",
+    "snapshot_date": "2026-09-21",
+    "status": "CURRENT / D-087 VISIBILITY RULE / D-091 ZHAQIAN MASTER BINDING",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 10,
-    "pending_master_object_type_count": 18,
-    "master_completion_percent": 35.7,
+    "approved_master_count": 11,
+    "pending_master_object_type_count": 17,
+    "master_completion_percent": 39.3,
     "pending_source_binding_count": 7,
     "completed_definition": "PRODUCT_OWNER_APPROVED Master available in Stage1 Component Master Catalog",
     "total_definition": "Master scope includes 需新建Master plus all 已有Master categories; not all registered object types require a Master",
@@ -7171,18 +7185,19 @@
       "master_catalog": "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json"
     },
     "approved_master_components": [
-      "丁栿",
-      "上六椽栿",
-      "下六椽栿",
-      "乳栿",
-      "交互斗族",
+      "剳牵",
       "单向长开斗族",
-      "四椽栿",
+      "丁栿",
+      "交互斗族",
       "平梁",
+      "乳栿",
+      "上六椽栿",
+      "四椽栿",
+      "下六椽栿",
       "柱",
       "柱头栌斗"
     ],
-    "master_covered_registry_record_count": 52,
-    "progress_display_note": "505 is registry-record count, not a whole-building physical-piece total. Stage1 Master completion uses 28 Master-scope object types as denominator: 10 approved / 18 pending = 35.7%."
+    "master_covered_registry_record_count": 66,
+    "progress_display_note": "505 is registry-record count, not a whole-building physical-piece total. Stage1 Master completion uses 28 Master-scope object types as denominator: 11 approved / 17 pending = 39.3%."
   }
 }
