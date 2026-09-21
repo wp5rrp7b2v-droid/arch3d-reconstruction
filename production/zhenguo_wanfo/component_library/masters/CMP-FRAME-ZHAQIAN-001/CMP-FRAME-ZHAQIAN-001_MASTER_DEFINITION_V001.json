@@ -1,0 +1,108 @@
+{
+  "schema_version": "V2_PILOT_1.0",
+  "task_id": "T-025",
+  "component_id": "CMP-FRAME-ZHAQIAN-001",
+  "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
+  "master_version": "V001",
+  "component_name_zh": "剳牵",
+  "stage": "P3.3 V002 / Stage 1",
+  "status": "DEFINITION_DRAFT / VISUAL_GATE_PASS / EXECUTION_NOT_AUTHORIZED",
+  "authority": {
+    "geometry_and_count": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json / V008",
+    "visual_reference_gate": {
+      "decision_id": "D-088",
+      "result": "PASS",
+      "source_url": "https://www.thepaper.cn/newsDetail_forward_27389245",
+      "source_scope": "SAME_BUILDING_SECONDARY_VISUAL / STRUCTURAL_LAYER_CONFIRMATION_ONLY",
+      "supported_claim": "万佛殿两侧山面铺作经丁栿联系心间梁架，其上再设剳牵、托脚",
+      "dimension_authority": false
+    }
+  },
+  "registry_boundary": {
+    "physical_instance_count": 14,
+    "east_gable_known_count": 2,
+    "west_gable_known_count": 2,
+    "exact_location_unresolved_count": 10,
+    "exact_instance_endpoints": "UNKNOWN",
+    "historical_full_length_mm": null,
+    "section_mm": {
+      "width": 331.5,
+      "thickness": 185,
+      "classification": "V008 LOCKED FAMILY MEAN"
+    },
+    "sample_to_instance_mapping": "UNKNOWN"
+  },
+  "geometry_contract": {
+    "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+    "canonical_reference_length_mm": 1000,
+    "canonical_reference_length_historical_claim": false,
+    "axes": {
+      "x": "+X longitudinal",
+      "y": "+Y width",
+      "z": "+Z thickness"
+    },
+    "origin": "longitudinal midpoint / transverse center / lower reference plane",
+    "transform": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "placement_policy": "ASSEMBLY_OWNED / real length and endpoints resolved later",
+    "role_policy": "GABLE/BODY location semantics must not create unsupported body-geometry variants",
+    "joinery_geometry": "DEFERRED / NO UNSUPPORTED CUTS",
+    "unsupported_geometry": []
+  },
+  "unknowns": [
+    "10 of 14 exact physical locations",
+    "all historical full lengths",
+    "exact member endpoints",
+    "hidden joinery and end-profile geometry",
+    "sample-to-instance mapping"
+  ],
+  "hard_fails": [
+    "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW",
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "SILENT_HISTORICIZATION",
+    "UNDECLARED_PARAMETRIC_COMPLETION",
+    "MASTER_WITHOUT_EVIDENCE_BINDING",
+    "UNSUPPORTED_JOINERY_GEOMETRY"
+  ],
+  "v2_slim_file_contract": {
+    "component_specific_formal_files_target": 6,
+    "files": [
+      "MASTER_DEFINITION_V001.json",
+      "MASTER_SEMANTIC_V001.json",
+      "MASTER.blend (Actions artifact + local only; not Git)",
+      "MASTER_REVIEW_BOARD_V001.png",
+      "MASTER_VALIDATION_V001.json",
+      "T025_MASTER_RECORD_V001.md"
+    ],
+    "review_board_layout": [
+      "FRONT",
+      "SIDE",
+      "TOP",
+      "AXON",
+      "DIMENSION_PARAMETER_SUMMARY",
+      "EVIDENCE_UNCERTAINTY_SUMMARY"
+    ],
+    "temporary_render_policy": "individual render tiles may exist during Actions runtime but are not formal repository outputs",
+    "shared_infrastructure_policy": "builder / validator / workflow are reusable V2 infrastructure and must not be duplicated per component unless geometry class genuinely requires it"
+  },
+  "execution_boundary": {
+    "engineering_execution_authorized": false,
+    "blender_execution_authorized": false,
+    "next_required_decision": "PRODUCT_OWNER LOCK MASTER DEFINITION + EXPLICITLY AUTHORIZE T-025 EXECUTION"
+  }
+}
