@@ -1,6 +1,6 @@
 # T-025｜P3.3 剳牵 Master V2 Slim Pilot｜Lifecycle Record V001
 
-Status: **VISUAL GATE PASS / V2 DEFINITION LOCKED / D-089 MINIMAL-SUFFICIENT RULE / D-090 ENGINEERING EXECUTION AUTHORIZED / FIRST ARTICLE RUNNING**  
+Status: **ENGINEERING PASS / FIRST ARTICLE COMPLETE / PRODUCT OWNER REVIEW REQUIRED**  
 Date: 2026-09-21  
 Decisions: **D-088 / D-089 / D-090**  
 Branch: `codex/t025-p3-3-zhaqian-master-v2-pilot-v001`  
@@ -113,3 +113,55 @@ Still **not authorized / not yet approved**:
 Current next decision:
 
 > **Review the first-article machine evidence + Review Board and decide Product Owner acceptance.**
+
+
+## 8. First-article engineering result
+
+**Run #3 PASS / ENGINEERING COMPLETE / PRODUCT OWNER REVIEW REQUIRED**
+
+- GitHub Actions Run: `35572874173`
+- reviewed head: `834765fede99325b3e53cc8b298e00613c810c96`
+- Blender: `4.5.13 LTS`
+- machine validation: **35/35 PASS**
+- canonical .blend SHA-256: `d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6`
+- semantic geometry signature: `bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e`
+- Review Board SHA-256: `b53f38d58dd697c293b65a59862a780690bd12b963340c213e5d51ec30e2a7fd`
+- Artifact ID: `10626941998`
+- Artifact ZIP SHA-256: `86d7defe94d64deddc2eb4020f69dffbec352e56bf2f49ec66d222cf853a325a`
+- Artifact size: 1,321,991 bytes
+- Review Board: 3600 × 1880 px / 6 Definition-required panels
+
+Formal generated artifact contains exactly four files:
+
+1. `CMP-FRAME-ZHAQIAN-001_MASTER_V001.blend`
+2. `CMP-FRAME-ZHAQIAN-001_MASTER_SEMANTIC_V001.json`
+3. `CMP-FRAME-ZHAQIAN-001_MASTER_REVIEW_BOARD_V001.png`
+4. `CMP-FRAME-ZHAQIAN-001_MASTER_VALIDATION_V001.json`
+
+Together with the two component-specific repository files:
+
+5. `CMP-FRAME-ZHAQIAN-001_MASTER_DEFINITION_V001.json`
+6. `T-025_P3_3_ZHAQIAN_MASTER_V2_PILOT_V001.md`
+
+the Zhaqian Pilot currently resolves to **6 component-specific formal files**. This is a result of the minimal-sufficient analysis, **not a universal file-count rule**.
+
+### Superseded failed runs
+
+- Run `35572328310`: FAILED only at validator check `31_no_tracked_blend`.
+- Run `35572381543`: same superseded validator boundary / FAILED.
+- Root cause: validator incorrectly prohibited any tracked `.blend` anywhere in the repository, while main legitimately retains historical P0.2 roundtrip asset `poc/P0_2_cloud_roundtrip/input/P0_2_CLOUD_INPUT_V001.blend`.
+- Correction: the guard now checks only that the **current V2 Master directory** contains no tracked canonical `.blend`.
+- No geometry, Definition, Semantic, mutation, reopen, Review Board, or evidence rule was weakened to obtain Run #3 PASS.
+
+## 9. Product Owner review boundary
+
+Engineering result is PASS, but T-025 is **not yet Product Owner approved**.
+
+Product Owner should review:
+- Review Board geometry/views;
+- section 331.5 × 185.0 mm;
+- 1000 mm clearly marked NON-HISTORICAL;
+- historical full length / exact endpoints / hidden joinery remain UNKNOWN;
+- whether the V2 minimal-sufficient package preserves enough information for future work.
+
+No Catalog/V008 approved binding, formal publication, PR merge, Stage1 PASS, or T-018 resume is authorized before Product Owner acceptance.
