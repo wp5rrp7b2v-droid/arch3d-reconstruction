@@ -1,12 +1,12 @@
 {
-  "schema_version": "V2_PILOT_1.1",
+  "schema_version": "V2_PILOT_1.2",
   "task_id": "T-025",
   "component_id": "CMP-FRAME-ZHAQIAN-001",
   "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
   "master_version": "V001",
   "component_name_zh": "剳牵",
   "stage": "P3.3 V002 / Stage 1",
-  "status": "DEFINITION_DRAFT / VISUAL_GATE_PASS / MINIMAL_SUFFICIENT_PACKAGE RULE ACTIVE / EXECUTION_NOT_AUTHORIZED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-090 / ENGINEERING_EXECUTION_AUTHORIZED",
   "authority": {
     "geometry_and_count": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json / V008",
     "visual_reference_gate": {
@@ -129,8 +129,18 @@
     "shared_infrastructure_policy": "builder / validator / workflow are reusable V2 infrastructure and must not be duplicated per component unless a genuine non-shareable requirement is discovered and recorded"
   },
   "execution_boundary": {
-    "engineering_execution_authorized": false,
-    "blender_execution_authorized": false,
-    "next_required_decision": "PRODUCT_OWNER LOCK MINIMAL-SUFFICIENT V2 MASTER DEFINITION + EXPLICITLY AUTHORIZE T-025 EXECUTION"
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "executor": "GitHub Actions / Blender 4.5.13",
+    "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
+    "final_master_approval_requires_separate_product_owner_decision": true,
+    "pr_merge_requires_separate_product_owner_authorization": true
+  },
+  "approval": {
+    "decision_id": "D-090",
+    "date": "2026-09-21",
+    "definition_locked": true,
+    "minimal_sufficient_rule": "D-089",
+    "engineering_execution_authorized": true
   }
 }
