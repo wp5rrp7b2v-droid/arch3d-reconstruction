@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R165",
+  "state_revision": "R166",
   "last_updated": "2026-09-21",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-025 ZHAQIAN V2 ENGINEERING EXECUTION AUTHORIZED / D-090 ACTIVE / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-025 ZHAQIAN V2 FIRST ARTICLE ENGINEERING PASS / PRODUCT OWNER REVIEW REQUIRED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -25,8 +25,8 @@
       "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-024 CLOSED / T-025 ZHAQIAN V2 SLIM PILOT DESIGN / D-088 VISUAL GATE PASS / ENGINEERING EXECUTION NOT AUTHORIZED / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No current T-025 engineering blocker. D-088 visual gate PASS, D-089 minimal-sufficient architecture locked, D-090 Definition locked and engineering execution authorized.",
+  "decision_required": true,
+  "blocker": "No engineering blocker. T-025 Run 35572874173 is SUCCESS with 35/35 validation PASS. Product Owner first-article review/acceptance is required before formal publication, Catalog/V008 binding, or PR merge.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,15 +63,15 @@
   "current_task": {
     "id": "T-025",
     "name": "P3.3 Zhaqian Master V2 Slim Pilot",
-    "status": "ENGINEERING ACTIVE / D-090 EXECUTION AUTHORIZED / SHARED V2 INFRASTRUCTURE + FIRST ARTICLE"
+    "status": "ENGINEERING PASS / FIRST ARTICLE COMPLETE / PRODUCT OWNER REVIEW REQUIRED"
   },
   "proposed_next_task": {
-    "id": "T-025_FIRST_ARTICLE_REVIEW",
-    "name": "Build and validate Zhaqian V2 first article, then present Review Board and machine evidence to Product Owner",
-    "status": "ENGINEERING EXECUTION AUTHORIZED",
+    "id": "T-025_PRODUCT_OWNER_REVIEW",
+    "name": "Review Zhaqian V2 Review Board + machine evidence and decide first-article acceptance",
+    "status": "WAITING PRODUCT OWNER REVIEW",
     "new_t_task_created": true,
     "engineering_execution_authorized": true,
-    "prerequisite": "None beyond locked D-090 Definition"
+    "prerequisite": "None; engineering evidence complete"
   },
   "last_completed_task": {
     "id": "T-024",
@@ -135,7 +135,7 @@
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-066",
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md",
     "engineering_planning_authorized": true,
-    "engineering_execution_authorized": true,
+    "engineering_execution_authorized": false,
     "t017": {
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
@@ -177,15 +177,30 @@
       "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
     ],
     "t025": {
-      "status": "ENGINEERING ACTIVE / D-090 AUTHORIZED / FIRST ARTICLE PENDING",
+      "status": "ENGINEERING PASS / PRODUCT OWNER REVIEW REQUIRED",
       "component": "剳牵",
       "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
       "branch": "codex/t025-p3-3-zhaqian-master-v2-pilot-v001",
       "pilot_goal": "Minimize duplicated/redundant component-specific outputs while preserving every required information domain and independent cross-check.",
       "visual_gate": "PASS / D-088",
       "engineering_execution_authorized": true,
-      "file_count_policy": "ADAPTIVE / NO FIXED TARGET / MINIMAL SUFFICIENT",
-      "review_policy": "ADAPTIVE / Definition-declared required panels / no universal six-panel rule"
+      "file_count_policy": "ADAPTIVE / MINIMAL SUFFICIENT / NO UNIVERSAL COUNT",
+      "review_policy": "ADAPTIVE / Definition-declared required panels / no universal six-panel rule",
+      "actions_run_id": 35572874173,
+      "validation": "35/35 PASS",
+      "reviewed_head_sha": "834765fede99325b3e53cc8b298e00613c810c96",
+      "canonical_blend_sha256": "d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6",
+      "semantic_geometry_signature": "bab035240ac2fe82117dc66b8da388d5cf1484081e608ef872e9da53890ecf1e",
+      "review_board_sha256": "b53f38d58dd697c293b65a59862a780690bd12b963340c213e5d51ec30e2a7fd",
+      "artifact_id": 10626941998,
+      "artifact_zip_sha256": "86d7defe94d64deddc2eb4020f69dffbec352e56bf2f49ec66d222cf853a325a",
+      "generated_formal_artifact_file_count": 4,
+      "component_specific_package_current_count": 6,
+      "superseded_failed_runs": [
+        35572328310,
+        35572381543
+      ],
+      "failed_run_root_cause": "OVERBROAD REPOSITORY-WIDE TRACKED-BLEND VALIDATOR; CORRECTED TO CURRENT MASTER DIRECTORY ONLY"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -215,10 +230,10 @@
     "decision": "Lock Zhaqian V2 Master Definition and authorize T-025 engineering execution under D-089 minimal-sufficient architecture."
   },
   "latest_material_review": {
-    "date": "2026-09-18",
-    "result": "DAILY CLOSE FINAL / PASS WITH CAUTION / FINAL PRODUCTION DIRECTION NOT YET PROVEN",
-    "evidence": "docs/project_control/DAILY_CLOSE_2026-09-18.md",
-    "decision_required": "NONE AT CLOSE. Next substantive decision only after Pre-Publication Readiness Review."
+    "date": "2026-09-21",
+    "result": "T-025 FIRST ARTICLE ENGINEERING PASS / 35 OF 35 / PRODUCT OWNER REVIEW REQUIRED",
+    "evidence": "GitHub Actions Run 35572874173 + Artifact 10626941998",
+    "decision_required": "PRODUCT OWNER FIRST-ARTICLE ACCEPTANCE"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -276,7 +291,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Implement reusable V2 bounded-long-member builder, adaptive Review Board composer, generic validator and shared Actions workflow; run T-025 first article. Final Master approval and PR merge remain separate Product Owner decisions. T-018 remains HOLD.",
+  "next_action": "Product Owner review T-025 Zhaqian V2 Review Board and engineering evidence. If approved, materialize formal Semantic/Validation/Review Board, update Stage1 Catalog + V008/CURRENT + derived Excel, run final regression, then request PR #12 merge. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
