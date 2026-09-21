@@ -1,6 +1,6 @@
 # T-026｜P3.3 槫 Master V2｜Lifecycle Record V001
 
-Status: **ENGINEERING PASS / FIRST ARTICLE COMPLETE / PRODUCT OWNER REVIEW REQUIRED**  
+Status: **PRODUCT OWNER APPROVED / D-095 / FORMAL DELIVERY AUTHORIZED / PR MERGE PENDING**  
 Date: 2026-09-21  
 Decisions: **D-093 / D-094**  
 Branch: `codex/t026-p3-3-purlin-master-v2-v001`  
@@ -226,3 +226,35 @@ Product Owner should review:
 - profile / real lengths / ends / joinery / connection geometry remain UNKNOWN.
 
 No formal materialization, Catalog/V008 approved binding, PR #13 merge, Stage1 PASS, or T-018 resume is authorized before Product Owner acceptance.
+
+
+## 13. Product Owner acceptance / D-095
+
+**PRODUCT OWNER APPROVED / FIRST ARTICLE ACCEPTED / FORMAL DELIVERY AUTHORIZED**
+
+Product Owner approved the T-026 Purlin V2 first article on 2026-09-21.
+
+Accepted evidence:
+- Run: `35584601233` / SUCCESS
+- validation: **41/41 PASS**
+- accepted engineering head: `abbcfa05a2817cb04da9d917cf61377e8a379215`
+- canonical .blend SHA-256: `5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4`
+- semantic geometry signature: `6ab5ea18d771d70377a693706ef669b208546d6453c7762ef4f72b8087224cd5`
+- Review Board SHA-256: `073d13c7f426e2a80808e22c982df126ab64130b1c935cc88f14fc2ba28f4f4b`
+- Semantic SHA-256: `ff06bec0c956a3cb5cc288c0010e58dcb6fa9e199de336a94a527666140e6448`
+- Validation SHA-256: `fbd282fe7abde8128a6f5c73f061c6dcbaf1ec196bc1abf137d77fa9b6dd67b3`
+- Artifact ID: `10632275014`
+- Artifact ZIP SHA-256: `62a4282003644745827a1cad2697d24bf36cb3847ac98a44c7ecac8fe41b83eb`
+
+Accepted evidence boundary:
+- 33 real purlin instances;
+- 220.1 × 270.8 mm remains a section-statistics bounding envelope;
+- exact historical section profile remains UNKNOWN;
+- rectangular first-article body is an engineering envelope proxy only;
+- historical full lengths / end profiles / hidden joinery / exact corner-beam connection geometry remain UNKNOWN;
+- shengtou wood is not part of the Master body;
+- legacy 7-PURLIN engineering identity remains separated.
+
+D-095 authorizes exact materialization of the accepted Artifact's Semantic / Validation / Review Board, Stage1 Catalog registration, V008/CURRENT + derived Excel synchronization, and final regression / pre-merge cross-check.
+
+D-095 does **not** authorize PR #13 merge, Stage1 PASS, Stage2, or T-018 resume.
