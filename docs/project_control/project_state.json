@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R175",
+  "state_revision": "R176",
   "last_updated": "2026-09-21",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / T-026 FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 BOUND / EXCEL+FINAL REGRESSION PENDING / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / T-026 FORMAL DELIVERY CLOSED / FINAL REGRESSION 47 OF 47 PASS / PR #13 READY FOR MERGE / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -25,8 +25,8 @@
       "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-025 CLOSED / T-026 PRODUCT OWNER APPROVED D-095 / FORMAL OUTPUTS MATERIALIZED / 12 OF 28 MASTERS APPROVED / FINAL REGRESSION PENDING / PR #13 MERGE PENDING / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No T-026 engineering blocker. Exact D-095 outputs are materialized and Catalog/V008/CURRENT are closed at 12 approved Masters / 33 of 33 Purlin rows bound. Derived Excel sync + final regression/pre-merge cross-check remain.",
+  "decision_required": true,
+  "blocker": "No engineering blocker. T-026 formal delivery, Catalog/V008 binding, derived Excel sync, 47/47 final regression, and pre-merge cross-check are complete. Only Product Owner authorization to merge PR #13 remains.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,15 +63,15 @@
   "current_task": {
     "id": "T-026",
     "name": "P3.3 Purlin Master V2",
-    "status": "PRODUCT OWNER APPROVED / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 BOUND / EXCEL+FINAL REGRESSION PENDING / PR MERGE NOT AUTHORIZED"
+    "status": "PRODUCT OWNER APPROVED / FORMAL DELIVERY CLOSED / FINAL REGRESSION 47/47 PASS / PR #13 READY FOR MERGE"
   },
   "proposed_next_task": {
-    "id": "T-026_FINAL_REGRESSION",
-    "name": "Complete derived Excel sync, run post-registration V2 regression and pre-merge cross-check",
-    "status": "IN PROGRESS",
+    "id": "T-026_PR13_MERGE",
+    "name": "Merge PR #13 after explicit Product Owner authorization",
+    "status": "READY / WAITING PRODUCT OWNER MERGE AUTHORIZATION",
     "new_t_task_created": true,
-    "engineering_execution_authorized": true,
-    "prerequisite": "Catalog=12 approved and V008/CURRENT Purlin 33/33 bound"
+    "engineering_execution_authorized": false,
+    "prerequisite": "Final regression Run 35589254034 SUCCESS / Excel Run 35589254110 SUCCESS / pre-merge cross-check PASS"
   },
   "last_completed_task": {
     "id": "T-025",
@@ -135,7 +135,7 @@
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-066",
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md",
     "engineering_planning_authorized": true,
-    "engineering_execution_authorized": true,
+    "engineering_execution_authorized": false,
     "t017": {
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
@@ -226,7 +226,7 @@
       "local_sync_status": "REQUIRED"
     },
     "t026": {
-      "status": "PRODUCT OWNER APPROVED / FORMAL OUTPUTS MATERIALIZED / CATALOG+V008 BOUND / EXCEL+FINAL REGRESSION PENDING / PR #13 MERGE PENDING",
+      "status": "PRODUCT OWNER APPROVED / FORMAL DELIVERY CLOSED / FINAL REGRESSION 47/47 PASS / PR #13 READY FOR MERGE",
       "component": "槫",
       "component_id": "CMP-FRAME-PURLIN-001",
       "master_id": "CMP-FRAME-PURLIN-001_MASTER",
@@ -255,13 +255,24 @@
       "product_owner_approved": true,
       "pr_merge_authorized": false,
       "decision_id": "D-095",
-      "formal_delivery_status": "EXACT APPROVED OUTPUTS MATERIALIZED / CATALOG+V008 REGISTERED / EXCEL+FINAL REGRESSION PENDING",
+      "formal_delivery_status": "CLOSED / EXACT APPROVED OUTPUTS MATERIALIZED / CATALOG+V008+EXCEL SYNCED / FINAL REGRESSION PASS",
       "materialization_workflow_run": 35589033394,
       "materialization_commit": "3f0fb4f892b05d48ffd3afc9b285973f9edd77ef",
       "stage1_catalog_approved_count": 12,
       "v008_bound_rows": 33,
       "stage1_master_completion": "12/28 / 42.9%",
-      "master_covered_registry_record_count": 99
+      "master_covered_registry_record_count": 99,
+      "final_regression_run": 35589254034,
+      "final_regression_validation": "47/47 PASS",
+      "final_regression_head_sha": "817e8dd842d765bf7a0a8cc28d2c509b64910da9",
+      "final_regenerated_blend_sha256": "ce31f75dbe0de1079fe329a66e66f2a1cad3c173134ed8bb566aefcce3686521",
+      "final_regenerated_semantic_geometry_signature": "6ab5ea18d771d70377a693706ef669b208546d6453c7762ef4f72b8087224cd5",
+      "approved_canonical_blend_sha256": "5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4",
+      "final_review_board_sha256": "073d13c7f426e2a80808e22c982df126ab64130b1c935cc88f14fc2ba28f4f4b",
+      "final_regression_artifact_id": 10634445266,
+      "final_regression_artifact_zip_sha256": "fb377ed8bc7034005a5872903620580858cda4f258921487ecea08a4b20413ec",
+      "excel_sync_run": 35589254110,
+      "pre_merge_cross_check": "PASS / behind main 0 / mergeable true / scope clean"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -292,9 +303,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-21",
-    "result": "T-026 PRODUCT OWNER APPROVED / EXACT OUTPUTS MATERIALIZED / CATALOG+V008 CLOSED / EXCEL+FINAL REGRESSION PENDING",
-    "evidence": "Run 35584601233 + Artifact 10632275014 + materialization run 35589033394",
-    "decision_required": "NONE UNTIL FINAL PRE-MERGE CROSS-CHECK"
+    "result": "T-026 FORMAL DELIVERY CLOSED / FINAL REGRESSION 47/47 PASS / PRE-MERGE PASS",
+    "evidence": "Run 35589254034 + Artifact 10634445266 + Excel Run 35589254110 + static compare",
+    "decision_required": "PRODUCT OWNER PR #13 MERGE AUTHORIZATION"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -352,7 +363,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Complete derived V008 Excel sync, finish T-026 post-registration final regression and pre-merge cross-check, then request PR #13 merge authorization. Local sync remains deferred to evening; T-018 remains HOLD.",
+  "next_action": "Product Owner authorize PR #13 merge. After merge, verify main + record merge commit; local Git sync remains deferred to the evening batch. Stage1 remains ACTIVE at 12/28 Masters; T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
