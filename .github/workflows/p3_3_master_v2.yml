@@ -121,7 +121,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python "$VALIDATOR"             --definition "$DEFINITION"             --canonical "$SEMANTIC"             --reopen "$ARTIFACT_DIR/reopen.json"             --length "$ARTIFACT_DIR/length.json"             --width "$ARTIFACT_DIR/width.json"             --thickness "$ARTIFACT_DIR/thickness.json"             --restore "$ARTIFACT_DIR/restore.json"             --asset "$ASSET"             --review-dir "$REVIEW_DIR"             --board "$BOARD"             --registry "$REGISTRY"             --output "$VALIDATION"
+          python "$VALIDATOR"             --definition "$DEFINITION"             --canonical "$SEMANTIC"             --reopen "$ARTIFACT_DIR/reopen.json"             --length "$ARTIFACT_DIR/length.json"             --width "$ARTIFACT_DIR/width.json"             --thickness "$ARTIFACT_DIR/thickness.json"             --restore "$ARTIFACT_DIR/restore.json"             --asset "$ASSET"             --review-dir "$REVIEW_DIR"             --board "$BOARD"             --registry "$REGISTRY"             --catalog "$CATALOG"             --output "$VALIDATION"
 
       - name: Assert minimal formal artifact surface
         shell: bash
