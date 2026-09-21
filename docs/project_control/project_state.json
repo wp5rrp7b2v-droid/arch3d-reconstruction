@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R172",
+  "state_revision": "R173",
   "last_updated": "2026-09-21",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-026 PURLIN V2 ENGINEERING ACTIVE / D-094 AUTHORIZED / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 11 OF 28 MASTERS APPROVED / T-026 PURLIN V2 FIRST ARTICLE ENGINEERING PASS / PRODUCT OWNER REVIEW REQUIRED / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -25,8 +25,8 @@
       "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-025 CLOSED / 11 OF 28 MASTERS APPROVED / NEXT MASTER SELECTION REQUIRES VISUAL GATE / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No T-026 engineering blocker. Definition and non-historical section-envelope representation are locked under D-094; first-article execution authorized.",
+  "decision_required": true,
+  "blocker": "No T-026 engineering blocker. Run 35584601233 SUCCESS with 41/41 validation PASS. Product Owner first-article review/acceptance is required before formal materialization, Catalog/V008 approved binding, or PR #13 merge.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,15 +63,15 @@
   "current_task": {
     "id": "T-026",
     "name": "P3.3 Purlin Master V2",
-    "status": "ENGINEERING ACTIVE / D-094 DEFINITION LOCKED / FIRST ARTICLE AUTHORIZED"
+    "status": "ENGINEERING PASS / FIRST ARTICLE COMPLETE / PRODUCT OWNER REVIEW REQUIRED"
   },
   "proposed_next_task": {
-    "id": "T-026_FIRST_ARTICLE_REVIEW",
-    "name": "Build/validate Purlin V2 first article and present adaptive Review Board + machine evidence",
-    "status": "ENGINEERING EXECUTION AUTHORIZED",
+    "id": "T-026_PRODUCT_OWNER_REVIEW",
+    "name": "Review Purlin V2 7-panel Review Board + machine evidence and decide first-article acceptance",
+    "status": "WAITING PRODUCT OWNER REVIEW",
     "new_t_task_created": true,
-    "engineering_execution_authorized": true,
-    "prerequisite": "D-094 complete"
+    "engineering_execution_authorized": false,
+    "prerequisite": "Run 35584601233 SUCCESS / 41 of 41 PASS"
   },
   "last_completed_task": {
     "id": "T-025",
@@ -135,7 +135,7 @@
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-066",
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md",
     "engineering_planning_authorized": true,
-    "engineering_execution_authorized": true,
+    "engineering_execution_authorized": false,
     "t017": {
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
@@ -226,7 +226,7 @@
       "local_sync_status": "REQUIRED"
     },
     "t026": {
-      "status": "ENGINEERING ACTIVE / D-094 AUTHORIZED / FIRST ARTICLE PENDING",
+      "status": "ENGINEERING PASS / PRODUCT OWNER REVIEW REQUIRED",
       "component": "槫",
       "component_id": "CMP-FRAME-PURLIN-001",
       "master_id": "CMP-FRAME-PURLIN-001_MASTER",
@@ -237,12 +237,23 @@
         "mean_width": 220.1,
         "mean_thickness": 270.8
       },
-      "section_profile": "UNKNOWN / RECTANGULAR BOUNDING-ENVELOPE PROXY APPROVED / NOT HISTORICAL",
+      "section_profile": "UNKNOWN / RECTANGULAR BOUNDING-ENVELOPE PROXY / NOT HISTORICAL",
       "historical_full_length_mm": null,
       "identity_guard": "LEGACY CMP-PURLIN-001 / 7 engineering objects MUST NOT be reused as 33-instance real-component Master identity",
       "file_count_policy": "ADAPTIVE / MINIMAL SUFFICIENT / NO UNIVERSAL COUNT",
       "review_policy": "ADAPTIVE / currently 7 Definition-required panels",
-      "engineering_execution_authorized": true
+      "engineering_execution_authorized": true,
+      "actions_run_id": 35584601233,
+      "validation": "41/41 PASS",
+      "reviewed_head_sha": "abbcfa05a2817cb04da9d917cf61377e8a379215",
+      "canonical_blend_sha256": "5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4",
+      "semantic_geometry_signature": "6ab5ea18d771d70377a693706ef669b208546d6453c7762ef4f72b8087224cd5",
+      "review_board_sha256": "073d13c7f426e2a80808e22c982df126ab64130b1c935cc88f14fc2ba28f4f4b",
+      "artifact_id": 10632275014,
+      "artifact_zip_sha256": "62a4282003644745827a1cad2697d24bf36cb3847ac98a44c7ecac8fe41b83eb",
+      "review_panel_count": 7,
+      "product_owner_approved": false,
+      "pr_merge_authorized": false
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -273,9 +284,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-21",
-    "result": "T-025 CLOSED / MAIN VERIFIED / 11 OF 28 MASTERS APPROVED",
-    "evidence": "PR #12 merge commit 87cc54b0b0a9b0eba71ba3b8965dcd617c5aff61 + Run 35577054218 42/42 PASS + Excel Run 35577054244 SUCCESS",
-    "decision_required": "NONE / NEXT MASTER PLANNING ONLY"
+    "result": "T-026 PURLIN V2 FIRST ARTICLE ENGINEERING PASS / 41 OF 41 / PRODUCT OWNER REVIEW REQUIRED",
+    "evidence": "GitHub Actions Run 35584601233 + Artifact 10632275014",
+    "decision_required": "PRODUCT OWNER FIRST-ARTICLE ACCEPTANCE"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -333,7 +344,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Extend shared V2 infrastructure for profile-unknown bounded-envelope Masters and adaptive 7-panel Purlin review, then run T-026 first article. Local sync remains deferred to evening. T-018 remains HOLD.",
+  "next_action": "Product Owner review T-026 Purlin V2 adaptive 7-panel Review Board and evidence boundary. If approved, materialize exact accepted Semantic/Validation/Review Board, update Stage1 Catalog + V008/CURRENT + derived Excel, run final regression, then request PR #13 merge authorization. Local sync remains deferred to evening; T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
