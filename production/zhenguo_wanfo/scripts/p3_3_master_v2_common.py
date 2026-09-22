@@ -203,9 +203,15 @@ def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
     rb=d["registry_boundary"]
     vg=d["authority"]["visual_reference_gate"]
     profile_unknown=is_profile_unknown(d)
-    location_line=(f'Exact-location unresolved: {rb["exact_location_unresolved_count"]}'
-                   if "exact_location_unresolved_count" in rb
-                   else f'Instance distribution: {rb.get("main_body_count",0)} main / {rb.get("east_gable_count",0)} E gable / {rb.get("west_gable_count",0)} W gable')
+    role_cfg=d.get("registry_role_counts")
+    if role_cfg:
+        location_line="Role distribution: " + " / ".join(
+            f'{name} {cfg.get("count")}' for name,cfg in role_cfg.items()
+        )
+    elif "exact_location_unresolved_count" in rb:
+        location_line=f'Exact-location unresolved: {rb["exact_location_unresolved_count"]}'
+    else:
+        location_line=f'Instance distribution: {rb.get("main_body_count",0)} main / {rb.get("east_gable_count",0)} E gable / {rb.get("west_gable_count",0)} W gable'
     section_label="BOUNDING ENVELOPE / PROFILE UNKNOWN" if profile_unknown else "CANONICAL SECTION"
     text_page(review/"DIMENSION_PARAMETER_SUMMARY.png","MASTER V2 / DIMENSION + PARAMETER",[
       f'Component: {d["component_id"]}',
