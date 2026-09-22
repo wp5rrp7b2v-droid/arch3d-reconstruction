@@ -1,0 +1,52 @@
+name: Project Dashboard V2 Sync
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/project_control/project_state.json"
+      - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json"
+      - "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json"
+      - "production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json"
+      - "scripts/generate_project_dashboard.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Generate Dashboard V2 from canonical sources
+        run: python scripts/generate_project_dashboard.py
+
+      - name: Validate current-state markers
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q "Dashboard V2" docs/project_control/dashboard.html
+          grep -q "13 / 28" docs/project_control/dashboard.html
+          grep -q "46.4%" docs/project_control/dashboard.html
+          grep -q "下一目标：叉手" docs/project_control/dashboard.html
+          grep -q "T-018 HOLD" docs/project_control/dashboard.html
+
+      - name: Commit derived Dashboard only when changed
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- docs/project_control/dashboard.html; then
+            echo "Dashboard already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/project_control/dashboard.html
+          git commit -m "derived: sync Project Dashboard V2"
+          git push origin main
