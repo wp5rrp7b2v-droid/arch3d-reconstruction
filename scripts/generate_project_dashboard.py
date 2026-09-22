@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# AUTO-SYNC CONTRACT: derived Dashboard V2 from canonical project sources.
 from pathlib import Path
 from html import escape
 import json
