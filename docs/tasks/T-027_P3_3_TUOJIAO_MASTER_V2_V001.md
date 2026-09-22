@@ -487,3 +487,31 @@ D-103 does **not** authorize PR #14 merge, Stage1 PASS, Stage2, or T-018 resume.
 - derived Excel remains DERIVED_VIEW and must synchronize from JSON before merge.
 
 Final regression and PR #14 pre-merge cross-check are required before requesting merge authorization.
+
+
+## 19. Merge closure / D-104
+
+**CLOSED / MERGED TO MAIN**
+
+- Product Owner merge authorization: APPROVED
+- PR: `#14`
+- PR state: `MERGED / CLOSED`
+- merge commit: `9cbcd9638a98db7db2723ae15d7dc8e9971f8e1a`
+- main verification: PASS
+- Stage1 Catalog: **13 approved Masters**
+- 托脚 V008/CURRENT binding: **12 / 12**
+- Stage1 Master completion: **13 / 28 = 46.4%**
+- approved first article: Run `35712113350` / **56 / 56 PASS**
+- final regression: Run `35716932997` / **62 / 62 PASS**
+- T-025 shared regression: **44 / 44 PASS**
+- T-026 shared regression: **47 / 47 PASS**
+- derived Excel sync: SUCCESS
+- approved canonical .blend remains Artifact/local-only with SHA-256 `23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f`
+- regenerated final-regression .blend SHA-256 `702feb0fad1b6e4c62930e261dc5f07b3c3f3e1957f60d1bb2f098712113b9a2`; semantic geometry signature matches approved first article
+- report-published section remains **237.1 × 153.7 mm**
+- visible-row recompute remains **234.1 × 154.1 mm / AUDIT_ONLY**
+- `SOURCE_INTERNAL_NUMERIC_CONFLICT` remains explicit
+- historical full length / exact angle / endpoints / hidden joinery remain UNKNOWN / DEFERRED
+- T-018 remains HOLD
+
+T-027 is fully closed. Stage1 remains ACTIVE and does not pass as a whole.

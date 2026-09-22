@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R183",
+  "state_revision": "R184",
   "last_updated": "2026-09-22",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS PRODUCT OWNER APPROVED ON T-027 BRANCH / T-027 FORMAL MATERIALIZED / FINAL REGRESSION PENDING / PR #14 OPEN DRAFT / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-027 CLOSED / PR #14 MERGED / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No engineering blocker. T-027 first article is Product Owner approved and exactly materialized. Final V2 regression, derived Excel sync and pre-merge cross-check remain before requesting PR #14 merge authorization.",
+  "blocker": "No T-027 blocker. T-027 is closed and merged to main. Stage1 remains active at 13/28; T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -61,17 +61,17 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "T-027",
-    "name": "P3_3_TUOJIAO_MASTER_V2_V001 / 托脚 Master 首件生产",
-    "status": "PRODUCT OWNER APPROVED / FORMAL MATERIALIZED / CATALOG+REGISTRY BOUND / FINAL REGRESSION PENDING"
+    "id": "NONE",
+    "name": "No active engineering T-task",
+    "status": "T-027 CLOSED / MERGED_TO_MAIN"
   },
   "proposed_next_task": {
-    "id": "T-027_FINAL_REGRESSION",
-    "name": "T-027 final regression + derived Excel sync + PR #14 pre-merge cross-check",
-    "status": "AUTHORIZED BY D-103 / IN PROGRESS",
+    "id": "NEXT_STAGE1_COMPONENT",
+    "name": "Next Stage1 missing Master after Tuojiao",
+    "status": "NOT STARTED / REQUIRES D-076 VISUAL GATE",
     "new_t_task_created": false,
-    "engineering_execution_authorized": true,
-    "prerequisite": "All closure regression and Excel sync checks PASS"
+    "engineering_execution_authorized": false,
+    "prerequisite": "Run next component source/visual gate before any new T-task"
   },
   "last_completed_task": {
     "id": "T-026",
@@ -302,15 +302,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-103",
+    "id": "D-104",
     "date": "2026-09-22",
-    "decision": "Product Owner approved T-027 Final Run 35712113350; exact materialization, Catalog registration, 12/12 V008 binding, Excel sync and final regression authorized; PR #14 merge not authorized."
+    "decision": "Product Owner authorized and completed merge of PR #14. T-027 is closed on main; Stage1 is 13/28 = 46.4%; T-018 remains HOLD."
   },
   "latest_material_review": {
     "date": "2026-09-22",
-    "result": "T-027 FIRST ARTICLE PRODUCT OWNER APPROVED / FORMAL MATERIALIZATION PASS / 13 OF 28 MASTER STATUS ON BRANCH",
-    "evidence": "Run 35712113350 56/56 PASS; exact approved Artifact 10689220649; materialization Run 35716617847 PASS.",
-    "decision_required": "PR #14 MERGE AUTHORIZATION AFTER FINAL REGRESSION"
+    "result": "T-027 CLOSED / PR #14 MERGED / MAIN VERIFIED",
+    "evidence": "Approved Run 35712113350 56/56 PASS; final Run 35716932997 62/62 PASS; T-025 44/44 and T-026 47/47 shared regressions PASS; Excel sync SUCCESS.",
+    "decision_required": "NONE FOR T-027"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -368,7 +368,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Run final T-027 V2 regression against approved published outputs, complete derived Excel synchronization, cross-check PR #14 scope and mergeability, then request separate Product Owner merge authorization. T-018 remains HOLD.",
+  "next_action": "Do not start another T-task until the next missing Stage1 component passes D-076 visual/source review. Local Git synchronization remains deferred to the evening batch unless otherwise directed. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
@@ -920,8 +920,8 @@
   "t027": {
     "task_id": "T-027",
     "task_key": "P3_3_TUOJIAO_MASTER_V2_V001",
-    "status": "PRODUCT_OWNER_APPROVED / FORMAL_MATERIALIZED / FINAL_REGRESSION_PENDING",
-    "decision_id": "D-103",
+    "status": "CLOSED / MERGED_TO_MAIN",
+    "decision_id": "D-104",
     "component_id": "CMP-FRAME-TUOJIAO-001",
     "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
     "proposed_branch": "codex/t027-p3-3-tuojiao-master-v2-v001",
@@ -937,6 +937,10 @@
     "first_article_approved": true,
     "approved_run_id": 35712113350,
     "approved_artifact_id": 10689220649,
-    "pr_number": 14
+    "pr_number": 14,
+    "merge_authorized": true,
+    "merge_commit_sha": "9cbcd9638a98db7db2723ae15d7dc8e9971f8e1a",
+    "final_regression_run": 35716932997,
+    "final_regression_validation": "62/62 PASS"
   }
 }
