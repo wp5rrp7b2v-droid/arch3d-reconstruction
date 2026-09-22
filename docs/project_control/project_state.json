@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R179",
-  "last_updated": "2026-09-21",
-  "session_status": "DAY CLOSED / P3.3 V002 STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / T-025+T-026 CLOSED / LOCAL SYNC VERIFIED / FINAL CLOSURE FAST-FORWARD REQUIRED / T-018 HOLD",
+  "state_revision": "R180",
+  "last_updated": "2026-09-22",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / TUOJIAO SPEC V001 LOCKED / NO ACTIVE ENGINEERING T-TASK / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No engineering or local-asset blocker. Local Git sync to the day-close SHA and both approved canonical blend restorations are verified. Only one final fast-forward is required to pull the D-098/R179 closure commit itself.",
+  "blocker": "No engineering blocker. Tuojiao Master Spec V001 is locked with a recorded source-internal numeric conflict. T-027 engineering execution is not authorized. SRC-ZG-WF-001 PDF canonical binary publication to GitHub LFS is deferred to evening local work.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -61,17 +61,17 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "LOCAL_SYNC_2026_09_21",
-    "name": "Final fast-forward of local-sync closure commit",
-    "status": "LOCAL CONTENT VERIFIED / ONE FINAL GIT PULL REQUIRED"
+    "id": "NONE",
+    "name": "No active engineering T-task",
+    "status": "TUOJIAO SPEC V001 LOCKED / T-027 NOT STARTED"
   },
   "proposed_next_task": {
-    "id": "LOCAL_SYNC_FINAL_FAST_FORWARD",
-    "name": "Fast-forward local main to the D-098 / R179 closure commit",
-    "status": "READY",
+    "id": "T-027",
+    "name": "P3_3_TUOJIAO_MASTER_FIRST_ARTICLE_V001 / 托脚 Master 首件生产",
+    "status": "TASK CONTRACT DESIGN READY / ENGINEERING EXECUTION NOT AUTHORIZED",
     "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "prerequisite": "Run git pull --ff-only origin main; do not alter restored blend files"
+    "prerequisite": "Prepare and review T-027 Task Contract; explicit Product Owner authorization required before engineering execution"
   },
   "last_completed_task": {
     "id": "T-026",
@@ -302,15 +302,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-098",
-    "date": "2026-09-21",
-    "decision": "Local Mac sync and exact restoration of T-025/T-026 approved canonical blend binaries verified; both remain local-only/untracked. One final fast-forward is required only to pull this closure commit."
+    "id": "D-100",
+    "date": "2026-09-22",
+    "decision": "Product Owner approved Tuojiao Master Spec V0.1 and locked V001; report-published 237.1×153.7 mm retained as canonical section with SOURCE_INTERNAL_NUMERIC_CONFLICT against visible-row recompute 234.1×154.1 mm; T-027 execution not authorized."
   },
   "latest_material_review": {
-    "date": "2026-09-21",
-    "result": "LOCAL SYNC CONTENT VERIFIED / BOTH CANONICAL BINARIES SHA MATCH / GIT CLEAN / FINAL CLOSURE FAST-FORWARD REQUIRED",
-    "evidence": "Local HEAD 6374cca86846f44dca3eee456e9f806764f88ad3; T-025 SHA d8636a... MATCH; T-026 SHA 5b1462... MATCH; git status + git ls-files no output.",
-    "decision_required": "NONE"
+    "date": "2026-09-22",
+    "result": "TUOJIAO A1 ORIGINAL-PAGE REVIEW PASS WITH SOURCE-INTERNAL NUMERIC CONFLICT / VISUAL GATE PASS WITH GEOMETRY BOUNDARY / SPEC V001 LOCKED",
+    "evidence": "SRC-ZG-WF-001 PDF p89-90 / printed p74-75 / §2.3.1.8 / Table 2-45; cross-check p102 / printed p87 / Table 2-50; A2 official same-building Wanfodian topic.",
+    "decision_required": "NONE FOR SPEC; EXPLICIT APPROVAL REQUIRED BEFORE T-027 ENGINEERING EXECUTION"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -368,7 +368,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "On the Mac, run one final git pull --ff-only origin main to receive the D-098/R179 closure commit. Then verify local HEAD equals GitHub main and git status --short remains empty. Do not redownload or alter the restored T-025/T-026 blend files. T-018 remains HOLD.",
+  "next_action": "Prepare T-027 Task Contract only; do not start Blender or production execution until explicit Product Owner authorization. Defer local Git sync and SRC-ZG-WF-001 PDF Git LFS publication to the evening batch. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
@@ -892,5 +892,29 @@
       }
     ],
     "final_closure_fast_forward_required": true
+  },
+  "tuojiao_stage1": {
+    "status": "SPEC_V001_LOCKED",
+    "decision_id": "D-100",
+    "component_id": "CMP-FRAME-TUOJIAO-001",
+    "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+    "physical_instance_count": 12,
+    "roles": {
+      "main_frame": 8,
+      "gable": 4
+    },
+    "report_published_mean_mm": {
+      "width": 237.1,
+      "thickness": 153.7
+    },
+    "visible_rows_recomputed_mean_mm": {
+      "width": 234.1,
+      "thickness": 154.1
+    },
+    "source_internal_numeric_conflict": true,
+    "historical_full_length_mm": null,
+    "exact_placement_angle_deg": null,
+    "canonical_reference_length_mm": 1000,
+    "engineering_execution_authorized": false
   }
 }

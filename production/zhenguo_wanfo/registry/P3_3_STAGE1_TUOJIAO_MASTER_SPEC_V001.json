@@ -1,0 +1,143 @@
+{
+  "version": "V001",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED",
+  "date": "2026-09-22",
+  "decision_id": "D-100",
+  "source_authority": {
+    "decision_id": "D-099",
+    "rule_id": "RC-019",
+    "a1": "SRC-ZG-WF-001",
+    "a2": "山西文物数字博物馆·万佛殿专题"
+  },
+  "visual_gate": {
+    "rule": "D-076",
+    "status": "PASS_WITH_GEOMETRY_BOUNDARY"
+  },
+  "a1_original_page_review": {
+    "status": "PASS_WITH_SOURCE_INTERNAL_NUMERIC_CONFLICT",
+    "locator": "PDF p89-90 / printed p74-75 / §2.3.1.8 / Table 2-45",
+    "cross_check": "PDF p102 / printed p87 / Table 2-50"
+  },
+  "component_id": "CMP-FRAME-TUOJIAO-001",
+  "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+  "master_version": "V001",
+  "physical_instance_count": 12,
+  "roles": {
+    "MAIN_FRAME": 8,
+    "GABLE": 4,
+    "geometry_policy": "ASSEMBLY_OR_PLACEMENT_ROLE_ONLY / SHARED_CANONICAL_BODY"
+  },
+  "measurement": {
+    "table_row_count": 11,
+    "complete_visible_sample_count": 10,
+    "unmeasured_visible_row_count": 1,
+    "observed_visible_samples_mm": [
+      {
+        "width": 249,
+        "thickness": 152
+      },
+      {
+        "width": null,
+        "thickness": null,
+        "note": "source table: 未及"
+      },
+      {
+        "width": 245,
+        "thickness": 151
+      },
+      {
+        "width": 245,
+        "thickness": 152
+      },
+      {
+        "width": 244,
+        "thickness": 149
+      },
+      {
+        "width": 250,
+        "thickness": 151
+      },
+      {
+        "width": 250,
+        "thickness": 154
+      },
+      {
+        "width": 214,
+        "thickness": 151
+      },
+      {
+        "width": 213,
+        "thickness": 158
+      },
+      {
+        "width": 212,
+        "thickness": 150
+      },
+      {
+        "width": 219,
+        "thickness": 173
+      }
+    ],
+    "report_published_mean_mm": {
+      "width": 237.1,
+      "thickness": 153.7
+    },
+    "visible_rows_recomputed_mean_mm": {
+      "width": 234.1,
+      "thickness": 154.1,
+      "classification": "AUDIT_ONLY"
+    },
+    "source_internal_numeric_conflict": true,
+    "canonical_section_basis": "REPORT_PUBLISHED_MEAN_WITH_INTERNAL_ARITHMETIC_CONFLICT",
+    "sample_to_instance_mapping": "UNKNOWN",
+    "silent_arithmetic_correction": "PROHIBITED"
+  },
+  "report_analysis": {
+    "converted_fen": {
+      "width": 15.5,
+      "thickness": 10.05
+    },
+    "rounded_fen": {
+      "width": 15,
+      "thickness": 10
+    },
+    "classification": "REPORT_INFERRED / METADATA_ONLY",
+    "geometry_use_count": 0
+  },
+  "historical_full_length_mm": null,
+  "exact_placement_angle_deg": null,
+  "canonical_reference_length_mm": 1000,
+  "canonical_reference_policy": "PROJECT_RULE / ENGINEERING_REFERENCE / NON_HISTORICAL_REFERENCE / CANONICAL_REFERENCE_ONLY",
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "canonical_body_mm": {
+    "length": 1000,
+    "width": 237.1,
+    "thickness": 153.7
+  },
+  "assembly_semantics": {
+    "member_type": "DIAGONAL_FRAME_SUPPORT",
+    "official_same_building_semantic": "SUPPORTS_ENDS_OF_FOUR_CHUANFU",
+    "exact_endpoint_contact_geometry": "UNKNOWN / ASSEMBLY_ENDPOINT_TO_BE_RESOLVED"
+  },
+  "joinery_boundary": {
+    "end_profile": null,
+    "mortise_tenon": null,
+    "notch_groove": null,
+    "hidden_connection": null,
+    "stage1_detailed_cut_geometry": false
+  },
+  "source_binary_publication_status": "PENDING_GITHUB_LFS_PUBLICATION",
+  "hard_fails": [
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "FIXED_MASTER_ANGLE",
+    "FIXED_HISTORICAL_LENGTH_WITHOUT_A1_EVIDENCE",
+    "SILENT_HISTORICIZATION",
+    "SILENT_ARITHMETIC_CORRECTION",
+    "UNDECLARED_PARAMETRIC_COMPLETION",
+    "MASTER_WITHOUT_EVIDENCE_BINDING",
+    "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
+  ],
+  "task_contract_creation_authorized": true,
+  "next_task_id": "T-027",
+  "engineering_execution_authorized": false
+}
