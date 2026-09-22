@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R182",
+  "state_revision": "R183",
   "last_updated": "2026-09-22",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / T-027 ENGINEERING EXECUTION AUTHORIZED / FIRST ARTICLE IN PROGRESS / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS PRODUCT OWNER APPROVED ON T-027 BRANCH / T-027 FORMAL MATERIALIZED / FINAL REGRESSION PENDING / PR #14 OPEN DRAFT / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No authorization blocker. T-027 engineering execution is authorized under D-102. Shared V2 infrastructure changes, if any, require T-025/T-026 regression before engineering completion.",
+  "blocker": "No engineering blocker. T-027 first article is Product Owner approved and exactly materialized. Final V2 regression, derived Excel sync and pre-merge cross-check remain before requesting PR #14 merge authorization.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,15 +63,15 @@
   "current_task": {
     "id": "T-027",
     "name": "P3_3_TUOJIAO_MASTER_V2_V001 / 托脚 Master 首件生产",
-    "status": "ENGINEERING EXECUTION AUTHORIZED / FIRST ARTICLE IN PROGRESS"
+    "status": "PRODUCT OWNER APPROVED / FORMAL MATERIALIZED / CATALOG+REGISTRY BOUND / FINAL REGRESSION PENDING"
   },
   "proposed_next_task": {
-    "id": "T-027_FIRST_ARTICLE_REVIEW",
-    "name": "T-027 first-article machine + Product Owner review",
-    "status": "PENDING ENGINEERING RESULT",
-    "new_t_task_created": true,
+    "id": "T-027_FINAL_REGRESSION",
+    "name": "T-027 final regression + derived Excel sync + PR #14 pre-merge cross-check",
+    "status": "AUTHORIZED BY D-103 / IN PROGRESS",
+    "new_t_task_created": false,
     "engineering_execution_authorized": true,
-    "prerequisite": "T-027 branch/PR + GitHub Actions PASS including T-025/T-026 regressions if shared infrastructure changes"
+    "prerequisite": "All closure regression and Excel sync checks PASS"
   },
   "last_completed_task": {
     "id": "T-026",
@@ -302,15 +302,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-102",
+    "id": "D-103",
     "date": "2026-09-22",
-    "decision": "Product Owner explicitly authorized start of T-027 engineering execution; branch/PR/Actions/Blender allowed under D-101 contract, with T-025/T-026 regression mandatory if shared V2 infrastructure changes."
+    "decision": "Product Owner approved T-027 Final Run 35712113350; exact materialization, Catalog registration, 12/12 V008 binding, Excel sync and final regression authorized; PR #14 merge not authorized."
   },
   "latest_material_review": {
     "date": "2026-09-22",
-    "result": "T-027 EXECUTION AUTHORIZED / FIRST ARTICLE ENGINEERING STARTED",
-    "evidence": "D-102 explicit Product Owner authorization; D-101 locked contract; D-100 locked Tuojiao Master Spec.",
-    "decision_required": "NONE UNTIL FIRST-ARTICLE REVIEW"
+    "result": "T-027 FIRST ARTICLE PRODUCT OWNER APPROVED / FORMAL MATERIALIZATION PASS / 13 OF 28 MASTER STATUS ON BRANCH",
+    "evidence": "Run 35712113350 56/56 PASS; exact approved Artifact 10689220649; materialization Run 35716617847 PASS.",
+    "decision_required": "PR #14 MERGE AUTHORIZATION AFTER FINAL REGRESSION"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -368,7 +368,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Create T-027 branch from D-102 main, finalize execution-enabled locked Definition, implement only generic Definition-driven numeric-conflict support required by T-027, open PR, and run GitHub Actions/Blender. If shared V2 infrastructure changes, regress T-025 and T-026 before declaring engineering complete. Do not merge without Product Owner authorization. T-018 remains HOLD.",
+  "next_action": "Run final T-027 V2 regression against approved published outputs, complete derived Excel synchronization, cross-check PR #14 scope and mergeability, then request separate Product Owner merge authorization. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
@@ -920,8 +920,8 @@
   "t027": {
     "task_id": "T-027",
     "task_key": "P3_3_TUOJIAO_MASTER_V2_V001",
-    "status": "ENGINEERING_EXECUTION_AUTHORIZED / FIRST_ARTICLE_IN_PROGRESS",
-    "decision_id": "D-102",
+    "status": "PRODUCT_OWNER_APPROVED / FORMAL_MATERIALIZED / FINAL_REGRESSION_PENDING",
+    "decision_id": "D-103",
     "component_id": "CMP-FRAME-TUOJIAO-001",
     "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
     "proposed_branch": "codex/t027-p3-3-tuojiao-master-v2-v001",
@@ -933,6 +933,10 @@
     "engineering_execution_authorized": true,
     "blender_execution_authorized": true,
     "production_branch_creation_authorized": true,
-    "pr_creation_authorized": true
+    "pr_creation_authorized": true,
+    "first_article_approved": true,
+    "approved_run_id": 35712113350,
+    "approved_artifact_id": 10689220649,
+    "pr_number": 14
   }
 }

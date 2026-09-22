@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-026",
-  "status": "TWELVE_APPROVED / T021+T022+T023+T024+T025+T026 PRODUCT_OWNER_APPROVED / T026 MERGED",
+  "task": "T-027",
+  "status": "THIRTEEN_APPROVED / T027 PRODUCT_OWNER_APPROVED / FORMAL MATERIALIZATION COMPLETE / PR #14 OPEN / FINAL REGRESSION PENDING",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -212,7 +212,58 @@
       "merge_commit_sha": "a588895004d61b0c5bc3615db4a74f1c2f4a91bc",
       "final_regression_run": 35589254034,
       "final_regression_validation": "47/47 PASS"
+    },
+    {
+      "component_id": "CMP-FRAME-TUOJIAO-001",
+      "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "master_version": "V001",
+      "approval_status": "PRODUCT_OWNER_APPROVED",
+      "decision_id": "D-103",
+      "publication_status": "FORMAL MATERIALIZED / PR #14 OPEN / FINAL REGRESSION PENDING",
+      "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL_RESTORE_PENDING",
+      "canonical_asset_sha256": "23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f",
+      "semantic_geometry_signature": "3c8f39d3b6eab08ad8d09651dce70dc07c1cb5c2a7a9387369416c1611911a2c",
+      "canonical_section_mm": {
+        "width": 237.1,
+        "thickness": 153.7
+      },
+      "source_internal_numeric_conflict": true,
+      "visible_rows_recomputed_mean_mm": {
+        "width": 234.1,
+        "thickness": 154.1,
+        "classification": "AUDIT_ONLY"
+      },
+      "historical_full_length_mm": null,
+      "canonical_reference_length_mm": 1000,
+      "exact_placement_angle_deg": null,
+      "physical_instance_count": 12,
+      "distribution": "MAIN_FRAME 8 / GABLE 4",
+      "hidden_joinery": "UNKNOWN / GEOMETRY_DEFERRED",
+      "source_artifact": {
+        "actions_run_id": 35712113350,
+        "artifact_id": 10689220649,
+        "artifact_zip_sha256": "f255355b915c6c842b8d7e2d9a3090fce1787670d545f3d432ed8aa46f875749"
+      },
+      "minimal_sufficient_package": {
+        "policy": "ADAPTIVE / NO UNIVERSAL FILE COUNT",
+        "component_specific_formal_file_count": 6,
+        "formal_repo_files": [
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_DEFINITION_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_SEMANTIC_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_REVIEW_BOARD_V001.png",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_VALIDATION_V001.json",
+          "docs/tasks/T-027_P3_3_TUOJIAO_MASTER_V2_V001.md"
+        ],
+        "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+        "review_board_count": 1,
+        "required_review_panel_count": 6
+      },
+      "accepted_engineering_head": "86892ce6904075f0abc4813ee50bf6fd3c294f73",
+      "materialization_commit_sha": "4d588623fffa5e554d9b2c616ffb13bd34bd8ef1",
+      "materialization_run": 35716617847,
+      "final_regression_run": null,
+      "final_regression_validation": "PENDING"
     }
   ],
-  "approved_master_count": 12
+  "approved_master_count": 13
 }

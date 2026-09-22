@@ -429,3 +429,61 @@ Not yet authorized:
 - Stage1 PASS;
 - Stage2;
 - T-018 resume.
+
+
+## 16. Product Owner acceptance / D-103
+
+**PRODUCT OWNER APPROVED / FIRST ARTICLE ACCEPTED / FORMAL DELIVERY AUTHORIZED**
+
+Product Owner approved the final T-027 Tuojiao V2 first article after Review Patch 01.
+
+Accepted evidence:
+- final approved Run: `35712113350` / SUCCESS
+- validation: **56 / 56 PASS**
+- accepted engineering head: `86892ce6904075f0abc4813ee50bf6fd3c294f73`
+- canonical .blend SHA-256: `23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f`
+- semantic geometry signature: `3c8f39d3b6eab08ad8d09651dce70dc07c1cb5c2a7a9387369416c1611911a2c`
+- Semantic SHA-256: `cd28dc19cdfbeefa391298c9ae060341e4fe6e40341333bea539fe0e671084a6`
+- Validation SHA-256: `69a289a2f449f68bad18d317ab65370359751accb1765e5f6d71fb38fe448655`
+- Review Board SHA-256: `6bc5f05c212d07d08a0e9e1b48415718c17734dad5d8239a75b29198880b7c0f`
+- Artifact ID: `10689220649`
+- Artifact ZIP SHA-256: `f255355b915c6c842b8d7e2d9a3090fce1787670d545f3d432ed8aa46f875749`
+
+Accepted boundary:
+- one shared canonical Master;
+- 12 instances = MAIN_FRAME 8 + GABLE 4;
+- canonical reference body = 1000 × 237.1 × 153.7 mm;
+- 1000 mm remains non-historical;
+- report-published 237.1 × 153.7 remains canonical;
+- visible-row recompute 234.1 × 154.1 remains AUDIT_ONLY;
+- SOURCE_INTERNAL_NUMERIC_CONFLICT remains explicit;
+- historical full length / exact angle / endpoints / hidden joinery remain UNKNOWN / DEFERRED.
+
+D-103 authorizes exact materialization, Catalog registration, V008/CURRENT binding, derived Excel synchronization, and final regression / pre-merge cross-check.
+
+D-103 does **not** authorize PR #14 merge, Stage1 PASS, Stage2, or T-018 resume.
+
+## 17. Formal materialization
+
+**PASS / EXACT D-103 APPROVED ARTIFACT MATERIALIZED**
+
+- publication workflow Run: `35716617847` = SUCCESS
+- materialization commit: `4d588623fffa5e554d9b2c616ffb13bd34bd8ef1`
+- source Artifact ID: `10689220649`
+- exact-source SHA verification: PASS for .blend / Semantic / Validation / Review Board
+- repository materialized files: Semantic / Validation / Review Board
+- canonical .blend remains Actions Artifact + local-only / not tracked in Git
+- approved Definition remained unchanged.
+
+## 18. Catalog / Registry binding
+
+**PASS / FINAL REGRESSION PENDING**
+
+- Stage1 Catalog approved Master count: **13**
+- V008/CURRENT Tuojiao binding: **12 / 12**
+- Stage1 Master progress: **13 / 28 = 46.4%**
+- approved-Master-covered Registry records: **111**
+- pending Master object types: **15**
+- derived Excel remains DERIVED_VIEW and must synchronize from JSON before merge.
+
+Final regression and PR #14 pre-merge cross-check are required before requesting merge authorization.
