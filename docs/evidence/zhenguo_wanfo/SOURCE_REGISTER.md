@@ -14,13 +14,14 @@ Case: 山西平遥镇国寺万佛殿
 - PDF 页数：434 页
 - 文件大小：84,117,628 bytes
 - SHA256：`94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472`
-- 当前研究角色：P1.2 / P1.3 的一级控制来源；后续正式参数、构造节点、屋架、斗栱、修缮与形变判断优先回到本报告原页。
+- 当前研究角色：A1 / Primary Engineering Authority；依据 D-099 / RC-019，万佛殿正式构件 Master、Variant、Interface、组合与整殿复原涉及的测绘尺寸、构造关系与工程证据，必须优先回到本报告原页核对。
 
 ## Storage
 
-- ChatGPT：用户已于 2026-09-11 上传完整 PDF；作为后续对话和项目研究的长期参考源使用。
-- GitHub：只保存本登记信息、校验值、证据提取与参数矩阵，不提交 84MB 二进制 PDF 本体，符合当前“GitHub 保留轻量可追溯证据 / 大型二进制不直接入库”的阶段策略。
-- Local Mac：如需本地长期双份归档，建议项目收尾时复制到 `sources/primary/zhenguo_wanfo/`；本动作不影响 ChatGPT 侧后续直接核读。
+- ChatGPT：用户已于 2026-09-11 上传完整 PDF；作为后续对话和项目研究的参考源使用。
+- GitHub canonical binary：通过 Git LFS 保存原始 PDF，不重编码、不拆分、不压缩；canonical path 为 `docs/evidence/zhenguo_wanfo/source_primary/SRC-ZG-WF-001_山西平遥镇国寺万佛殿与天王殿精细测绘报告.pdf`。
+- Git LFS object identity：SHA-256 `94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472`；size `84,117,628 bytes`；PDF 434 页。
+- Local Mac：项目 working copy 同步保存 canonical PDF；原始旧文件副本可继续作为本地安全副本，不改变 canonical source identity。
 
 ## Evidence rule
 
