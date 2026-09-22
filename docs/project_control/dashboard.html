@@ -1,9 +1,170 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>中国古建筑3D复原｜Dashboard</title><style>body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif;background:#f4efe6;color:#2f241c;margin:0}main{max-width:980px;margin:auto;padding:20px}.card{background:#fbf8f2;border:1px solid #ddd0bf;border-radius:16px;padding:18px;margin:12px 0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tag{color:#8e2f23;font-weight:700}.hold{color:#9b2c2c;font-weight:750}.ok{color:#406b43;font-weight:750}.warn{color:#8b6518;font-weight:750}.muted{color:#78695d;font-size:13px}h1,h2{margin:6px 0 10px}@media(max-width:720px){.grid{grid-template-columns:1fr}}</style></head><body><main>
-<div class="card"><div class="tag">ARCH3D-001 · Visualization v102 · State R162 · 2026-09-20</div><h1>中国古建筑3D复原</h1><p class="ok"><strong>P3.3 V002：Stage 1 ACTIVE</strong></p><p>真实构件驱动整殿重建；0 / 7 stages formally passed。</p><p class="hold"><strong>T-018 V002：HOLD / 非当前执行路线</strong></p></div>
-<div class="card"><h2>当前事实源</h2><p><strong>V008 = 当前构件建模事实基线，505 registry records。</strong></p><p>JSON 是唯一 canonical truth；Excel 仅为 RC-018 派生视图。505 不等于实体构件总数。</p></div>
-<div class="grid"><div class="card"><h2>Stage 1｜已批准 Master</h2><p class="ok"><strong>当前共 10 个批准 Master</strong></p><p>既有6个：柱、柱头栌斗、单向长开斗、交互斗、下六椽栿、上六椽栿。</p><p>新增：四椽栿 T-021 / D-072；平梁 T-022 / D-074；丁栿 T-023 / D-080；乳栿 T-024 / D-085。</p></div><div class="card"><h2>当前状态</h2><p class="ok"><strong>2026-09-20 DAILY CLOSE COMPLETE</strong></p><p>T-024 乳栿已 CLOSED / PR #11 MERGED；当前无活动工程 T-task。</p><p>Cloud Mode 生产窗口已结束，当前唯一立即操作：<strong>Mac 本地同步核验</strong>。</p><p>本地同步 PASS 后，再从 Stage 1 Coverage Matrix 选择下一缺失 Master；D-076 视觉参考审核继续生效。</p></div></div>
-<div class="card"><h2>T-021｜四椽栿</h2><p class="ok"><strong>APPROVED / D-072 / PR #7 MERGED / PUBLICATION CLOSED</strong></p><p>42/42 PASS；6/6 review PNG PASS；canonical .blend SHA-256 = 9f1c8531…0997。</p></div>
-<div class="card"><h2>T-022｜平梁 Master</h2><p class="ok"><strong>APPROVED / D-074 / PR #9 MERGED / PUBLICATION CLOSED</strong></p><p>首件 Run 35483530705：56/56 PASS；10/10 review PNG PASS。</p><p>最终 head 回归 Run 35486533628：SUCCESS；protected inputs、双 Variant build、independent reopen、mutations、canonical restore、locked validation 全部 PASS。</p><p><strong>EW_SEAM：</strong>395.5 × 280.5 mm，DIRECT_MEASURED_FAMILY_MEAN。</p><p><strong>GABLE：</strong>346 × 245.4 mm；245.4 mm = PARAMETRIC_COMPLETION / replaceable / non-historical；observed thickness 仍为 UNKNOWN/null。</p><p>历史完整长度仍 UNKNOWN；1000 mm 仅为非历史 Master reference，整殿实例长度后续由装配端点显式推导。</p></div>
-<div class="card"><h2>当前｜Stage 1 下一构件</h2><p class="ok"><strong>T-023 丁栿已 CLOSED / PR #10 MERGED</strong></p><p>下一目标：<strong>乳栿 Master</strong>。</p><p>D-076 恢复适用：先做实物/现场图和/或同建筑测绘/式样图审核，再进入证据复核与 Spec 设计。</p><p><strong>未通过视觉/式样审核与 Spec 锁定前，不创建新工程 T-task，不运行 Blender。</strong></p></div>
-<div class="card"><h2>继续保持</h2><p>T-020 / RZ / FV：Stage 5 再审。</p><p>PR #3：SUPERSEDED / DO NOT MERGE。</p><p>PR #6：HOLD / DO NOT PATCH / DO NOT MERGE。</p><p>7项 PENDING_SOURCE_BINDING 继续保留，不静默补写。</p></div>
-<div class="muted">Project Control Baseline 2.0 · Dashboard v102 · current plan: P3_3_DEFINITION_OF_DONE_V002.md · fact source: V008 Component Registry JSON</div><div class="card"><h2>T-024｜乳栿 Master</h2><p class="ok"><strong>APPROVED / D-085 / PR #11 MERGED / PUBLICATION CLOSED</strong></p><p>首件 Run 35496581278：43/43 executed checks PASS；6/6 review PNG PASS。</p><p>最终 head 回归 Run 35498221932：44/44 PASS；Catalog #44 已执行并通过。</p><p>canonical section：330.5 × 187.2 mm；historical full length 与 exact plan angle 均保持 UNKNOWN；无45°默认；槽口为 DIRECT_EXISTENCE / GEOMETRY_DEFERRED。</p></div><div class="card"><h2>本地同步准备</h2><p class="warn"><strong>LOCAL SYNC VERIFICATION PASS</strong></p><p>安全检查单：<code>docs/project_control/LOCAL_SYNC_PREP_2026-09-20.md</code></p><p>先做只读 preflight + fetch；不要直接 pull/reset。Git 同步不包含 Actions-only canonical .blend，T-021～T-024 二进制需单独 SHA 核验。</p></div><div class="card"><h2>V008｜Master 完成进度</h2><p class="ok"><strong>10 / 28 Master 范围类型已批准（35.7%）</strong></p><p>V008：505 条登记记录 / 66 类登记对象。</p><p>Stage 1 Master 范围：28 类；已批准 10；待完成 18。</p><p>已有批准 Master 绑定的登记记录：52 条。</p><p><strong>注意：</strong>505 是登记记录数，不等于整殿物理构件总件数；部分记录是系统、拓扑或族边界。Master Catalog 仍是批准状态唯一权威。</p></div><div class="card"><h2>同步前最终审计</h2><p class="ok"><strong>FINAL PRE-LOCAL-SYNC AUDIT PASS</strong></p><p>V008 = CURRENT；505 records / 66 object types / 28 Master scope / 10 approved / 18 pending / 35.7%；52 条记录已绑定 approved Master；binding errors = 0。</p><p>RC-018 Excel Run 35508113993 = SUCCESS；当前无 active Actions run；仅 PR #3/#6 保持 T-018 HOLD / DO NOT MERGE。</p></div><div class="card"><h2>本地同步与 Master 二进制</h2><p class="ok"><strong>LOCAL SYNC PASS / LOCAL ARTIFACT RECONCILIATION PASS</strong></p><p>Local main 已 fast-forward 到同步基线；V008 / Excel 校验通过。T-021～T-024 共 5 个 approved canonical .blend 已恢复到本地 Master 库并逐个 SHA_MATCH。</p><p>本地 Master 库现有 11 个 .blend 文件，对应 10 个 approved Master；平梁包含 EW_SEAM 与 GABLE 两个正式变体。Git working tree clean。</p></div></main></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>中国古建筑3D复原｜Project Dashboard V2</title>
+<style>
+:root{
+  --bg:#f3efe7;--paper:#fffdf8;--ink:#2b241f;--muted:#776b61;--line:#ded4c6;
+  --red:#8b3428;--green:#376b48;--amber:#9a6a18;--soft:#eee7dc;--softgreen:#edf4ee;--softred:#f8eee7;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}
+main{max-width:1180px;margin:auto;padding:24px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:16px;box-shadow:0 1px 0 rgba(0,0,0,.025)}
+.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--red)}
+h1{font-size:30px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 14px}h3{font-size:15px;margin:0 0 8px}
+.muted,.small{color:var(--muted)}.small{font-size:12px;line-height:1.5}
+.statusline,.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.pill,.chip{padding:7px 10px;border-radius:999px;font-size:12px;font-weight:750;background:var(--soft)}
+.ok{color:var(--green)}.hold{color:var(--red)}.warn{color:var(--amber)}
+.journey{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:18px}
+.node{border:1px solid var(--line);background:#faf7f1;border-radius:12px;padding:10px 12px;font-size:12px}
+.node.done{background:var(--softgreen);color:#315b3d}.node.active{background:var(--softred);border:2px solid #caa797;color:#6f3429}
+.arrow{color:#a39689;font-weight:700}
+.stages{display:grid;grid-template-columns:repeat(7,1fr);gap:8px}
+.stage{min-height:94px;border:1px solid var(--line);border-radius:12px;padding:11px;background:#faf7f1}
+.stage.active{border:2px solid #8a5b47;background:var(--softred)}
+.stage-num{font-size:12px;color:var(--muted);margin-bottom:8px}.stage strong{font-size:13px}
+.big{font-size:38px;font-weight:800;line-height:1}
+.progress{height:14px;background:#e6ded2;border-radius:999px;overflow:hidden;margin:12px 0 8px}.progress div{height:100%;width:46.4%;background:#4d7658}
+.metric{padding:14px;border:1px solid var(--line);border-radius:13px;background:#faf7f1}.metric b{display:block;font-size:25px;margin-bottom:3px}
+.callout{border-left:4px solid var(--red);padding:12px 14px;background:var(--softred);border-radius:8px}.callout.okbox{border-left-color:var(--green);background:var(--softgreen)}
+.kv{display:grid;grid-template-columns:145px 1fr;gap:8px;font-size:13px;line-height:1.45}.kv div:nth-child(odd){color:var(--muted)}
+.chip.done{background:#e6f0e8;color:#315b3d}.chip.next{background:#f3dfd2;color:#7a3327}.chip.future{background:#eee9e1;color:#625a52}
+.batch{padding:12px 0;border-top:1px solid var(--line)}.batch:first-of-type{border-top:0;padding-top:0}
+.note{border:1px dashed #cfc2b4;border-radius:12px;padding:12px;background:#faf7f1}
+.footer{font-size:11px;color:var(--muted);padding:4px}
+@media(max-width:900px){.grid,.grid3{grid-template-columns:1fr}.stages{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){main{padding:12px}.stages{grid-template-columns:1fr}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<main>
+
+<section class="card">
+  <div class="eyebrow">ARCH3D-001 · Dashboard V2 · State R185 · 2026-09-22</div>
+  <h1>中国古建筑3D复原｜平遥镇国寺万佛殿</h1>
+  <div class="muted">目标：从真实构件证据出发，完成可追溯、可重复生成的整殿三维复原。</div>
+
+  <div class="journey">
+    <div class="node done">P2 工程基线<br><strong>✓ CLOSED</strong></div><div class="arrow">→</div>
+    <div class="node done">P3.0<br><strong>✓ CLOSED</strong></div><div class="arrow">→</div>
+    <div class="node done">P3.1<br><strong>✓ CLOSED</strong></div><div class="arrow">→</div>
+    <div class="node done">P3.2<br><strong>✓ CLOSED</strong></div><div class="arrow">→</div>
+    <div class="node active">P3.3 构件驱动整殿重建<br><strong>ACTIVE</strong></div>
+  </div>
+
+  <div class="statusline">
+    <span class="pill ok">当前主线无 Blocker</span>
+    <span class="pill warn">P3.3｜Stage 1 ACTIVE</span>
+    <span class="pill hold">T-018 HOLD，Stage 6 再决策</span>
+  </div>
+</section>
+
+<div class="grid">
+  <section class="card">
+    <h2>P3.3｜七阶段总路线</h2>
+    <div class="stages">
+      <div class="stage active"><div class="stage-num">01</div><strong>真实构件 Master 库</strong><div class="small">ACTIVE<br>13 / 28 · 46.4%</div></div>
+      <div class="stage"><div class="stage-num">02</div><strong>构件变体与装配接口</strong><div class="small">NOT STARTED</div></div>
+      <div class="stage"><div class="stage-num">03</div><strong>代表性组合验证</strong><div class="small">NOT STARTED</div></div>
+      <div class="stage"><div class="stage-num">04</div><strong>整殿真实实例与拓扑</strong><div class="small">NOT STARTED</div></div>
+      <div class="stage"><div class="stage-num">05</div><strong>空间定位与标高规则</strong><div class="small">NOT STARTED</div></div>
+      <div class="stage"><div class="stage-num">06</div><strong>确定性整殿生成</strong><div class="small">NOT STARTED<br>T-018 在此重新决策</div></div>
+      <div class="stage"><div class="stage-num">07</div><strong>整殿验收与 Gate Closure</strong><div class="small">NOT STARTED</div></div>
+    </div>
+    <div class="note small" style="margin-top:12px"><strong>读法：</strong>46.4% 是 Stage 1 的 Master 完成度，不是整个 P3.3 的总完成率。P3.3 的 7 个 Stage 当前尚未有一个整体关闭。</div>
+  </section>
+
+  <section class="card">
+    <h2>当前最重要的数字</h2>
+    <div class="big">13 / 28</div>
+    <div class="muted">Stage 1 Master 已批准 · 46.4%</div>
+    <div class="progress"><div></div></div>
+    <div class="grid3" style="margin-top:12px">
+      <div class="metric"><b>15</b><span class="small">Master 待完成</span></div>
+      <div class="metric"><b>111</b><span class="small">已覆盖 Registry records</span></div>
+      <div class="metric"><b>505</b><span class="small">V008 总登记 records</span></div>
+    </div>
+  </section>
+</div>
+
+<div class="grid">
+  <section class="card">
+    <h2>当前焦点与下一里程碑</h2>
+    <div class="callout okbox">
+      <strong>刚完成：T-027｜托脚 Master</strong><br>
+      <span class="small">PRODUCT OWNER APPROVED · PR #14 MERGED · CLOSED / D-104</span>
+    </div>
+    <div class="callout" style="margin-top:12px">
+      <strong>下一目标：叉手</strong><br>
+      <span class="small">先完成 D-099 A1/A2 资料核查 + D-076 视觉/形制 Gate。通过前不创建新 T-task，不运行 Blender。</span>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>风险 / HOLD / 待补证据</h2>
+    <div class="kv">
+      <div>Active blocker</div><div><strong>NONE</strong></div>
+      <div>T-018</div><div>HOLD；Stage 6 再决定 rebaseline 或 supersede</div>
+      <div>Pending source binding</div><div>7 项：板瓦、勾头、滴水、博风板、悬鱼、惹草、生头木</div>
+      <div>事实主权</div><div>V008 Component Registry JSON</div>
+      <div>Master 主权</div><div>Stage1 Component Master Catalog</div>
+      <div>Excel</div><div>DERIVED_VIEW，不可覆盖 JSON</div>
+    </div>
+  </section>
+</div>
+
+<section class="card">
+  <h2>Stage 1｜28 个 Master Scope 的大进展</h2>
+
+  <div class="batch">
+    <h3>已完成｜13</h3>
+    <div class="chips">
+      <span class="chip done">柱 ✓</span><span class="chip done">柱头栌斗 ✓</span>
+      <span class="chip done">单向长开斗族 ✓</span><span class="chip done">交互斗族 ✓</span>
+      <span class="chip done">下六椽栿 ✓</span><span class="chip done">上六椽栿 ✓</span>
+      <span class="chip done">四椽栿 ✓</span><span class="chip done">平梁 ✓</span>
+      <span class="chip done">丁栿 ✓</span><span class="chip done">乳栿 ✓</span>
+      <span class="chip done">剳牵 ✓</span><span class="chip done">槫 ✓</span><span class="chip done">托脚 ✓</span>
+    </div>
+  </div>
+
+  <div class="batch">
+    <h3>下一批｜7</h3>
+    <div class="chips">
+      <span class="chip next">叉手 ← NEXT</span><span class="chip future">蜀柱</span>
+      <span class="chip future">大角梁</span><span class="chip future">子角梁</span>
+      <span class="chip future">阑额</span><span class="chip future">由额</span>
+      <span class="chip future">补间铺作底斗</span>
+    </div>
+  </div>
+
+  <div class="batch">
+    <h3>后续斗栱细构件组｜8</h3>
+    <div class="chips">
+      <span class="chip future">大型瓜子栱</span><span class="chip future">小型瓜子栱</span>
+      <span class="chip future">大型慢栱</span><span class="chip future">小型慢栱</span>
+      <span class="chip future">令栱</span><span class="chip future">华栱</span>
+      <span class="chip future">头昂</span><span class="chip future">二昂</span>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Dashboard 的职责</h2>
+  <div class="grid3">
+    <div class="metric"><h3>首页只看</h3><span class="small">项目位置 · Gate/Stage · 完成度 · 下一里程碑 · Blocker/HOLD</span></div>
+    <div class="metric"><h3>不再堆在首页</h3><span class="small">Run ID · SHA · PR Patch · Review Patch · validator 逐项日志</span></div>
+    <div class="metric"><h3>需要追溯时</h3><span class="small">进入 Project Control · Task Lifecycle · Decision Log · Evidence / Registry</span></div>
+  </div>
+</section>
+
+<div class="footer">Dashboard v200 · DERIVED_VISUALIZATION · R185 / D-105 · V008 · Catalog 13 approved · Dashboard 本身不是事实主权源。</div>
+</main>
+</body>
+</html>
