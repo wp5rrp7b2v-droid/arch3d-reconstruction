@@ -1,6 +1,6 @@
 # 【中国古建筑3D复原｜T-027｜P3_3_TUOJIAO_MASTER_V2_V001｜托脚 Master 首件生产】
 
-Status: **CONTRACT LOCKED / ENGINEERING EXECUTION NOT AUTHORIZED / D-101**  
+Status: **ENGINEERING EXECUTION AUTHORIZED / D-102 / FIRST ARTICLE IN PROGRESS**  
 Execution architecture: **MASTER V2 / MINIMAL_SUFFICIENT / SHARED INFRASTRUCTURE**  
 Phase/Gate: P3 / P3.3 V002  
 Stage: Stage 1｜真实构件 Master 库  
@@ -338,3 +338,18 @@ To begin engineering, Product Owner must explicitly authorize:
 Only then may the locked engineering Definition be created/finalized with execution=true, branch/PR be created, and GitHub Actions/Blender run.
 
 Final Master approval and PR merge each remain separate Product Owner authorization boundaries.
+
+
+## 14. Engineering execution authorization / D-102
+
+Product Owner explicitly authorized **开始 T-027** on 2026-09-22.
+
+Execution boundary now:
+- engineering_execution_authorized = true
+- Blender/GitHub Actions execution = authorized
+- production branch = `codex/t027-p3-3-tuojiao-master-v2-v001`
+- PR creation = authorized
+- final first-article acceptance = still requires separate Product Owner approval
+- PR merge = still requires separate Product Owner authorization
+
+Engineering implementation must preserve all D-101 contract boundaries. Shared V2 infrastructure changes require T-025/T-026 regression before T-027 may be declared engineering-complete.

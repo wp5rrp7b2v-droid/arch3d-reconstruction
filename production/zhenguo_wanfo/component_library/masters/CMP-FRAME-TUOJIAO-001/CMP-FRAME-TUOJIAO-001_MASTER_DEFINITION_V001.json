@@ -1,0 +1,258 @@
+{
+  "schema_version": "MASTER_V2_DEFINITION_1.2",
+  "task_id": "T-027",
+  "component_id": "CMP-FRAME-TUOJIAO-001",
+  "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+  "master_version": "V001",
+  "component_name_zh": "托脚",
+  "component_name_en": "Tuojiao / diagonal frame support",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-102 / ENGINEERING_EXECUTION_AUTHORIZED",
+  "architecture_rule": "D-089 / MINIMAL_SUFFICIENT_COMPONENT_PACKAGE",
+  "authority": {
+    "primary_source": {
+      "source_id": "SRC-ZG-WF-001",
+      "title": "《山西平遥镇国寺万佛殿与天王殿精细测绘报告》",
+      "locator": "PDF p89-90 / printed p74-75 / §2.3.1.8 / Table 2-45",
+      "cross_check": "PDF p102 / printed p87 / Table 2-50",
+      "binding_record": "docs/evidence/zhenguo_wanfo/P3_3_TUOJIAO_DIRECT_SOURCE_BINDING_V001.md",
+      "role": "A1_PRIMARY_ENGINEERING_AUTHORITY"
+    },
+    "source_priority_decision": "D-099 / RC-019",
+    "locked_spec": "D-100 / P3_3_STAGE1_TUOJIAO_MASTER_SPEC_V001",
+    "visual_reference_gate": {
+      "decision_id": "D-100",
+      "result": "PASS_WITH_GEOMETRY_BOUNDARY",
+      "source_url": "https://szbwgvue.chwhyun.cn/wanfodian/",
+      "source_class": "A2_OFFICIAL_SAME_BUILDING_VISUAL_STRUCTURE",
+      "supported_claim": "四椽栿两端有托脚作支撑",
+      "dimension_authority": false
+    },
+    "registry_schema_version_expected": "V008",
+    "registry_record_count_expected": 505
+  },
+  "registry_boundary": {
+    "physical_instance_count": 12,
+    "historical_full_length_mm": null,
+    "exact_placement_angle_deg": null,
+    "section_mm": {
+      "width": 237.1,
+      "thickness": 153.7,
+      "classification": "REPORT_PUBLISHED_MEAN_WITH_INTERNAL_ARITHMETIC_CONFLICT"
+    },
+    "sample_to_instance_mapping": "UNKNOWN",
+    "exact_instance_endpoints": "UNKNOWN"
+  },
+  "registry_role_counts": {
+    "MAIN_FRAME": {
+      "count": 8,
+      "id_prefixes": [
+        "托脚-东缝",
+        "托脚-西缝"
+      ],
+      "geometry_policy": "SHARED_CANONICAL_BODY"
+    },
+    "GABLE": {
+      "count": 4,
+      "id_prefixes": [
+        "托脚-东山",
+        "托脚-西山"
+      ],
+      "geometry_policy": "SHARED_CANONICAL_BODY"
+    }
+  },
+  "source_numeric_conflict": {
+    "conflict_type": "SOURCE_INTERNAL_NUMERIC_CONFLICT",
+    "conflict": true,
+    "table_row_count": 11,
+    "complete_visible_sample_count": 10,
+    "unmeasured_visible_row_count": 1,
+    "published_mean_mm": {
+      "width": 237.1,
+      "thickness": 153.7
+    },
+    "visible_rows_recomputed_mean_mm": {
+      "width": 234.1,
+      "thickness": 154.1
+    },
+    "recomputed_classification": "AUDIT_ONLY",
+    "canonical_geometry_basis": "PUBLISHED_MEAN",
+    "silent_arithmetic_correction": "PROHIBITED",
+    "visible_samples_mm": [
+      {
+        "width": 249,
+        "thickness": 152
+      },
+      {
+        "width": null,
+        "thickness": null,
+        "note": "source table: 未及"
+      },
+      {
+        "width": 245,
+        "thickness": 151
+      },
+      {
+        "width": 245,
+        "thickness": 152
+      },
+      {
+        "width": 244,
+        "thickness": 149
+      },
+      {
+        "width": 250,
+        "thickness": 151
+      },
+      {
+        "width": 250,
+        "thickness": 154
+      },
+      {
+        "width": 214,
+        "thickness": 151
+      },
+      {
+        "width": 213,
+        "thickness": 158
+      },
+      {
+        "width": 212,
+        "thickness": 150
+      },
+      {
+        "width": 219,
+        "thickness": 173
+      }
+    ]
+  },
+  "report_analysis": {
+    "converted_fen": {
+      "width": 15.5,
+      "thickness": 10.05
+    },
+    "rounded_fen": {
+      "width": 15,
+      "thickness": 10
+    },
+    "classification": "REPORT_INFERRED / METADATA_ONLY",
+    "geometry_use_count": 0
+  },
+  "assembly_semantics": {
+    "member_type": "DIAGONAL_FRAME_SUPPORT",
+    "official_same_building_semantic": "SUPPORTS_ENDS_OF_FOUR_CHUANFU",
+    "exact_endpoint_contact_geometry": "UNKNOWN / ASSEMBLY_ENDPOINT_TO_BE_RESOLVED",
+    "role_geometry_policy": "MAIN_FRAME_AND_GABLE_SHARE_CANONICAL_BODY"
+  },
+  "geometry_contract": {
+    "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+    "canonical_reference_length_mm": 1000,
+    "canonical_reference_length_historical_claim": false,
+    "axes": {
+      "x": "+X longitudinal",
+      "y": "+Y width / 广",
+      "z": "+Z thickness / 厚"
+    },
+    "origin": "longitudinal midpoint / transverse center / lower reference plane",
+    "transform": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "placement_policy": "ASSEMBLY_OWNED / real length, angle and endpoints resolved later",
+    "exact_section_profile": "UNKNOWN",
+    "section_envelope_is_historical_profile": false,
+    "section_envelope_mm": {
+      "width": 237.1,
+      "thickness": 153.7
+    },
+    "joinery_geometry": "DEFERRED / NO UNSUPPORTED CUTS",
+    "end_geometry": "DEFERRED",
+    "unsupported_geometry": [],
+    "engineering_representation": {
+      "primitive": "RECTANGULAR_BOUNDING_ENVELOPE_PROXY",
+      "historical_profile_claim": false,
+      "purpose": "STAGE1 MASTER VALIDATION / NOT A 963 HISTORICAL PROFILE CLAIM",
+      "label_requirement": "REPORT-PUBLISHED WIDTH/THICKNESS BOUNDING ENVELOPE; SOURCE NUMERIC CONFLICT MUST REMAIN VISIBLE"
+    }
+  },
+  "legacy_proxy_reuse": false,
+  "unknowns": [
+    "historical full length",
+    "exact placement angle",
+    "exact member endpoints and contact faces",
+    "hidden joinery and end-profile geometry",
+    "sample-to-instance mapping",
+    "whether MAIN_FRAME and GABLE have any historically stable body-geometry difference"
+  ],
+  "hard_fails": [
+    "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW",
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "FIXED_MASTER_ANGLE",
+    "FIXED_HISTORICAL_LENGTH_WITHOUT_A1_EVIDENCE",
+    "SILENT_HISTORICIZATION",
+    "SILENT_ARITHMETIC_CORRECTION",
+    "UNDECLARED_PARAMETRIC_COMPLETION",
+    "MASTER_WITHOUT_EVIDENCE_BINDING",
+    "UNSUPPORTED_JOINERY_GEOMETRY",
+    "P2_FRAME_SUPPORT_PROXY_REUSED_AS_TUOJIAO_GEOMETRY"
+  ],
+  "review_contract": {
+    "board_policy": "ADAPTIVE / DEFINITION_DRIVEN",
+    "fixed_panel_count_required": false,
+    "required_panels": [
+      "AXON",
+      "LONG_SIDE",
+      "END_SECTION_ENVELOPE",
+      "DIMENSION_PARAMETER_SUMMARY",
+      "ROLE_ASSEMBLY_SEMANTICS",
+      "EVIDENCE_UNCERTAINTY_AND_NUMERIC_CONFLICT"
+    ],
+    "rationale": "Tuojiao is geometrically simple but has a source-internal numeric conflict that requires explicit human review."
+  },
+  "minimal_sufficient_package": {
+    "principle": "MINIMAL_SUFFICIENT_COMPONENT_PACKAGE",
+    "fixed_file_count_required": false,
+    "component_specific_expected_formal_outputs": [
+      "CMP-FRAME-TUOJIAO-001_MASTER_DEFINITION_V001.json",
+      "CMP-FRAME-TUOJIAO-001_MASTER_SEMANTIC_V001.json",
+      "CMP-FRAME-TUOJIAO-001_MASTER_V001.blend (Actions artifact + local only; not Git)",
+      "CMP-FRAME-TUOJIAO-001_MASTER_REVIEW_BOARD_V001.png",
+      "CMP-FRAME-TUOJIAO-001_MASTER_VALIDATION_V001.json",
+      "T-027_P3_3_TUOJIAO_MASTER_V2_V001.md"
+    ],
+    "rule": "Definition / Semantic / Validation remain independent; no fixed universal file count."
+  },
+  "execution_boundary": {
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "executor": "GitHub Actions / Blender 4.5.13",
+    "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
+    "final_master_approval_requires_separate_product_owner_decision": true,
+    "pr_merge_requires_separate_product_owner_authorization": true
+  },
+  "approval": {
+    "contract_decision_id": "D-101",
+    "execution_decision_id": "D-102",
+    "date": "2026-09-22",
+    "definition_locked": true,
+    "engineering_execution_authorized": true,
+    "shared_infrastructure_regression_required_if_changed": [
+      "T-025",
+      "T-026"
+    ],
+    "final_master_acceptance_requires_separate_product_owner_decision": true,
+    "pr_merge_requires_separate_product_owner_authorization": true
+  }
+}
