@@ -1,6 +1,6 @@
 # CLOSE FILE｜2026-09-22｜P3.3 Stage1｜托脚 Master + Dashboard V2
 
-Status: **CLOSED FOR CLOUD WORK / GITHUB CROSS-CHECK PASS / LOCAL SYNC PENDING**
+Status: **CLOSED / GITHUB CROSS-CHECK PASS / LOCAL SYNC CONTENT COMPLETE / A1 CANONICAL PDF PUBLISHED / FINAL LOCAL FAST-FORWARD REQUIRED**
 
 Canonical repository: `wp5rrp7b2v-droid/arch3d-reconstruction`
 Pre-close main SHA: `163f58ccda5b4a9d8e4b93c91c1e7d4efd968e51`
@@ -115,35 +115,41 @@ Open PRs at close:
 PR #14 = MERGED / CLOSED.
 Current engineering T-task = NONE.
 
-## 8. Local synchronization required tonight
+## 8. Local synchronization closure
 
 Expected local repo: `/Users/caroline/中国古建筑3D复原`.
 
 ### A. Git fast-forward
-Perform read-only preflight → fetch → verify clean main + ancestor relationship → `git pull --ff-only origin main` → verify local HEAD == origin/main == final Close File SHA.
+PASS. Local `main` was safely fast-forwarded from `29153adb9fa18777d7fb1aa3add87619454f8387` to `0430a603dcdc081aa975b52c62c49178efdd8b04`; local HEAD and `origin/main` matched at that checkpoint. After D-107 / Close File publication, one terminal fast-forward to the latest GitHub `main` remains required.
 
 ### B. Restore today's newly approved canonical binary
-Only T-027 is newly pending today.
+PASS. T-027 approved canonical binary restored locally.
 
 - Artifact ID: `10689220649`
 - file: `CMP-FRAME-TUOJIAO-001_MASTER_V001.blend`
 - expected SHA-256: `23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f`
 - target: `production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/`
-- require exact SHA match;
-- keep .blend local-only / ignored / untracked;
-- do not substitute final-regression regenerated binary.
+- exact SHA match = PASS;
+- `.blend` remains local-only / ignored / untracked = PASS;
+- approved first-article binary was used; final-regression regenerated binary was not substituted.
 
 T-025/T-026 binaries were already restored and SHA-verified on 2026-09-21; do not redownload unless missing.
 
 ### C. A1 PDF archival item
 
-The original A1 PDF is not yet in GitHub.
-File size = 84,117,628 bytes (~80.2 MiB), so GitHub web upload rejected it.
-Planned canonical path:
+PASS / MERGED via PR #15.
+
+Canonical path:
 `docs/evidence/zhenguo_wanfo/source_primary/SRC-ZG-WF-001_山西平遥镇国寺万佛殿与天王殿精细测绘报告.pdf`
 
-This remains a local Git LFS archival action, not a Stage1 blocker.
-Do not split, recompress, screenshot or re-encode the PDF.
+Locked exact-byte identity:
+- SHA-256: `94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472`
+- size: 84,117,628 bytes
+- pages: 434
+- Git LFS pointer size: 133 bytes
+- PR #15 merge commit: `e4dfcc3cc7eddcb615bb297dd28a4b84d4a6e497`
+
+No split, recompression, screenshot or re-encoding occurred. `SOURCE_REGISTER.md` now records A1 as Primary Engineering Authority and GitHub canonical binary storage.
 
 ## 9. Next-session start rule
 
@@ -160,11 +166,24 @@ T-018 remains HOLD.
 
 ## 10. Close File result
 
-**PASS / CLOUD WORK CLOSED / LOCAL SYNC PENDING**
+**PASS / LOCAL SYNC CONTENT COMPLETE / A1 CANONICAL PDF PUBLISHED / FINAL LOCAL FAST-FORWARD REQUIRED**
 
-No known omitted T-027 approval/materialization/binding/regression/merge, Dashboard V2 governance, automation correction, or next-component boundary.
+No known omitted T-027 approval/materialization/binding/regression/merge, Dashboard V2 governance, automation correction, source-authority publication, or next-component boundary.
 
-Only intentional remaining work tonight:
-1. final local Git fast-forward;
-2. T-027 approved canonical .blend local restore + SHA check;
-3. A1 PDF Git LFS archival once the original local PDF path is confirmed.
+Completed tonight:
+1. local Git fast-forward to the pre-archive canonical main checkpoint;
+2. T-027 approved canonical `.blend` restore with exact SHA match and Git containment verification;
+3. A1 PDF exact-byte verification, Git LFS installation/configuration, canonical-path publication, `SOURCE_REGISTER.md` update, PR #15 review and merge.
+
+Only remaining terminal action: local `main` fast-forward to the latest GitHub `main` containing PR #15, D-107 and this Close File closure update; then verify `local HEAD == origin/main` and clean worktree.
+
+## 11. D-107 closure record
+
+- Decision: D-107
+- A1 LFS PR: #15 / MERGED
+- A1 merge commit: `e4dfcc3cc7eddcb615bb297dd28a4b84d4a6e497`
+- T-027 local canonical blend SHA: `23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f` / MATCH
+- A1 PDF SHA: `94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472`
+- A1 size/pages: 84,117,628 bytes / 434 pages
+- Project state revision after closure: R187
+- Stage1 state remains 13/28 = 46.4%; next component = 叉手; T-018 = HOLD.
