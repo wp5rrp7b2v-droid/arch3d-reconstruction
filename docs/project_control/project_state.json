@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R186",
+  "state_revision": "R187",
   "last_updated": "2026-09-22",
-  "session_status": "DAY CLOSE COMPLETE / P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-027 CLOSED / DASHBOARD V2 CURRENT / LOCAL SYNC PENDING / T-018 HOLD",
+  "session_status": "DAY CLOSE COMPLETE / LOCAL SYNC VERIFIED / T-027 CANONICAL BLEND RESTORED / A1 CANONICAL PDF PUBLISHED VIA GIT LFS / P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active project blocker. Day close is complete. Local Mac final fast-forward and T-027 approved canonical .blend restore remain as the only required local-sync actions; A1 PDF Git LFS archival remains a planned local archival action. T-018 remains HOLD.",
+  "blocker": "No active project blocker. 2026-09-22 local synchronization is complete: local main was fast-forwarded to the pre-archive close state, T-027 approved canonical .blend was restored locally with exact SHA match and remains ignored/untracked, and SRC-ZG-WF-001 was published as an exact-byte Git LFS canonical binary via PR #15. T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -296,15 +296,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-106",
+    "id": "D-107",
     "date": "2026-09-22",
-    "decision": "2026-09-22 Close File completed; cloud/project-control work closed. Local sync pending: final fast-forward + exact approved T-027 canonical blend restore; A1 primary PDF LFS archival remains planned local archival work."
+    "decision": "2026-09-22 local-sync closure completed. T-027 approved canonical .blend restored locally with exact SHA match; SRC-ZG-WF-001 exact-byte primary PDF published through Git LFS via PR #15; final local main fast-forward to the resulting canonical main remains the single terminal sync command."
   },
   "latest_material_review": {
     "date": "2026-09-22",
-    "result": "DAILY CLOSE PASS / CLOUD WORK CLOSED / LOCAL SYNC PENDING",
-    "evidence": "T-027 closed/merged; Stage1 13/28; Dashboard V2 final sync Run 35730009332 SUCCESS; open PRs only expected T-018 #3/#6.",
-    "decision_required": "NONE UNTIL LOCAL SYNC RESULT"
+    "result": "LOCAL SYNC CLOSURE PASS / A1 CANONICAL BINARY PUBLISHED / FINAL LOCAL FAST-FORWARD REQUIRED",
+    "evidence": "T-027 local blend SHA match 23ed48f...; Git LFS pointer oid sha256:94c2fede... size 84117628; PR #15 merged as e4dfcc3cc7eddcb615bb297dd28a4b84d4a6e497.",
+    "decision_required": "NONE"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -362,14 +362,14 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Perform safe Mac local synchronization to the final Close File main SHA, restore the Product Owner-approved T-027 canonical .blend with exact SHA verification and keep it untracked, then record local-sync closure. A1 PDF Git LFS archival may be completed in the same local session once its original local path is confirmed. Next production target after sync remains 叉手, starting with D-099 + D-076 review.",
+  "next_action": "Perform one final local fast-forward of main to the post-D-107 canonical GitHub main and verify local HEAD == origin/main with a clean worktree. Next production target remains 叉手, starting with D-099 + D-076 source/visual review; do not create a new T-task or run Blender before explicit Product Owner authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R185 / D-105",
+    "refresh_status": "CURRENT / R186 / D-106; R187 local-sync closure recorded after A1 LFS publication",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -966,6 +966,26 @@
       "expected_size_bytes": 84117628,
       "target_path": "docs/evidence/zhenguo_wanfo/source_primary/SRC-ZG-WF-001_山西平遥镇国寺万佛殿与天王殿精细测绘报告.pdf",
       "blocker": false
+    }
+  },
+  "local_sync_2026_09_22": {
+    "status": "PASS / FINAL FAST-FORWARD OF CLOSURE COMMITS REQUIRED",
+    "pre_archive_local_main": "0430a603dcdc081aa975b52c62c49178efdd8b04",
+    "t027_local_restore": {
+      "file": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_V001.blend",
+      "sha256": "23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f",
+      "sha_match": true,
+      "git_tracking": "IGNORED / UNTRACKED"
+    },
+    "a1_git_lfs": {
+      "source_id": "SRC-ZG-WF-001",
+      "canonical_path": "docs/evidence/zhenguo_wanfo/source_primary/SRC-ZG-WF-001_山西平遥镇国寺万佛殿与天王殿精细测绘报告.pdf",
+      "sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+      "byte_size": 84117628,
+      "pages": 434,
+      "pr_number": 15,
+      "merge_commit": "e4dfcc3cc7eddcb615bb297dd28a4b84d4a6e497",
+      "status": "MERGED / CANONICAL BINARY PUBLISHED"
     }
   }
 }
