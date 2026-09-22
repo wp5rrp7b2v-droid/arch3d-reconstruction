@@ -1,0 +1,64 @@
+name: T-027 Publish Approved First Article
+
+on:
+  push:
+    branches:
+      - codex/t027-p3-3-tuojiao-master-v2-v001
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish-approved-t027:
+    if: contains(github.event.head_commit.message, 'D-103: publish approved T-027 artifact')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - name: Download exact approved artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: P3_3_T-027_MASTER_V2_FIRST_ARTICLE_V001
+          path: /tmp/t027-approved
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
+          run-id: 35712113350
+
+      - name: Verify approved bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/t027-approved
+          echo "23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f  CMP-FRAME-TUOJIAO-001_MASTER_V001.blend" | sha256sum -c -
+          echo "cd28dc19cdfbeefa391298c9ae060341e4fe6e40341333bea539fe0e671084a6  CMP-FRAME-TUOJIAO-001_MASTER_SEMANTIC_V001.json" | sha256sum -c -
+          echo "69a289a2f449f68bad18d317ab65370359751accb1765e5f6d71fb38fe448655  CMP-FRAME-TUOJIAO-001_MASTER_VALIDATION_V001.json" | sha256sum -c -
+          echo "6bc5f05c212d07d08a0e9e1b48415718c17734dad5d8239a75b29198880b7c0f  CMP-FRAME-TUOJIAO-001_MASTER_REVIEW_BOARD_V001.png" | sha256sum -c -
+
+      - name: Materialize exact approved repository files
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEST="production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001"
+          mkdir -p "$DEST"
+          cp /tmp/t027-approved/CMP-FRAME-TUOJIAO-001_MASTER_SEMANTIC_V001.json "$DEST/"
+          cp /tmp/t027-approved/CMP-FRAME-TUOJIAO-001_MASTER_VALIDATION_V001.json "$DEST/"
+          cp /tmp/t027-approved/CMP-FRAME-TUOJIAO-001_MASTER_REVIEW_BOARD_V001.png "$DEST/"
+          test ! -f "$DEST/CMP-FRAME-TUOJIAO-001_MASTER_V001.blend"
+
+      - name: Commit exact approved materialization
+        shell: bash
+        run: |
+          set -euo pipefail
+          DEST="production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$DEST/CMP-FRAME-TUOJIAO-001_MASTER_SEMANTIC_V001.json" \
+                  "$DEST/CMP-FRAME-TUOJIAO-001_MASTER_VALIDATION_V001.json" \
+                  "$DEST/CMP-FRAME-TUOJIAO-001_MASTER_REVIEW_BOARD_V001.png"
+          git diff --cached --quiet && { echo "No materialization changes"; exit 0; }
+          git commit -m "T-027: materialize D-103 approved first article"
+          git push origin HEAD:codex/t027-p3-3-tuojiao-master-v2-v001
