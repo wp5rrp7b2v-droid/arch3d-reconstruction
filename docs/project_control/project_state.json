@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R180",
+  "state_revision": "R181",
   "last_updated": "2026-09-22",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / TUOJIAO SPEC V001 LOCKED / NO ACTIVE ENGINEERING T-TASK / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / T-027 CONTRACT V001 LOCKED / ENGINEERING EXECUTION NOT AUTHORIZED / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -25,8 +25,8 @@
       "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-026 CLOSED / 12 OF 28 MASTERS APPROVED / NEXT MASTER SELECTION REQUIRES VISUAL GATE / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No engineering blocker. Tuojiao Master Spec V001 is locked with a recorded source-internal numeric conflict. T-027 engineering execution is not authorized. SRC-ZG-WF-001 PDF canonical binary publication to GitHub LFS is deferred to evening local work.",
+  "decision_required": true,
+  "blocker": "No technical blocker. T-027 Task Contract V001 is locked, but engineering execution is intentionally blocked pending explicit Product Owner authorization to start T-027.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -61,17 +61,17 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "NONE",
-    "name": "No active engineering T-task",
-    "status": "TUOJIAO SPEC V001 LOCKED / T-027 NOT STARTED"
+    "id": "T-027",
+    "name": "P3_3_TUOJIAO_MASTER_V2_V001 / 托脚 Master 首件生产",
+    "status": "CONTRACT LOCKED / ENGINEERING EXECUTION NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-027",
-    "name": "P3_3_TUOJIAO_MASTER_FIRST_ARTICLE_V001 / 托脚 Master 首件生产",
-    "status": "TASK CONTRACT DESIGN READY / ENGINEERING EXECUTION NOT AUTHORIZED",
-    "new_t_task_created": false,
+    "id": "T-027_EXECUTION",
+    "name": "Start T-027 engineering first article",
+    "status": "AWAITING EXPLICIT PRODUCT OWNER AUTHORIZATION",
+    "new_t_task_created": true,
     "engineering_execution_authorized": false,
-    "prerequisite": "Prepare and review T-027 Task Contract; explicit Product Owner authorization required before engineering execution"
+    "prerequisite": "Product Owner explicitly says 开始 T-027"
   },
   "last_completed_task": {
     "id": "T-026",
@@ -302,15 +302,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-100",
+    "id": "D-101",
     "date": "2026-09-22",
-    "decision": "Product Owner approved Tuojiao Master Spec V0.1 and locked V001; report-published 237.1×153.7 mm retained as canonical section with SOURCE_INTERNAL_NUMERIC_CONFLICT against visible-row recompute 234.1×154.1 mm; T-027 execution not authorized."
+    "decision": "T-027 Tuojiao Master V2 Task Contract V001 locked; engineering execution remains unauthorized. Shared V2 infrastructure must preserve numeric-conflict evidence and regress T-025/T-026 if extended."
   },
   "latest_material_review": {
     "date": "2026-09-22",
-    "result": "TUOJIAO A1 ORIGINAL-PAGE REVIEW PASS WITH SOURCE-INTERNAL NUMERIC CONFLICT / VISUAL GATE PASS WITH GEOMETRY BOUNDARY / SPEC V001 LOCKED",
-    "evidence": "SRC-ZG-WF-001 PDF p89-90 / printed p74-75 / §2.3.1.8 / Table 2-45; cross-check p102 / printed p87 / Table 2-50; A2 official same-building Wanfodian topic.",
-    "decision_required": "NONE FOR SPEC; EXPLICIT APPROVAL REQUIRED BEFORE T-027 ENGINEERING EXECUTION"
+    "result": "T-027 TASK CONTRACT V001 LOCKED / EXECUTION BOUNDARY CLOSED",
+    "evidence": "D-100 locked Tuojiao Spec V001 + D-101 contract lock; no production branch/PR/Actions/Blender authorized.",
+    "decision_required": "EXPLICIT START T-027 AUTHORIZATION"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -368,7 +368,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Prepare T-027 Task Contract only; do not start Blender or production execution until explicit Product Owner authorization. Defer local Git sync and SRC-ZG-WF-001 PDF Git LFS publication to the evening batch. T-018 remains HOLD.",
+  "next_action": "Wait for explicit Product Owner authorization '开始 T-027'. Until then do not create production branch/PR, do not run GitHub Actions or Blender, and do not generate the first article. Local Git sync remains deferred to the evening batch. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v102",
@@ -916,5 +916,23 @@
     "exact_placement_angle_deg": null,
     "canonical_reference_length_mm": 1000,
     "engineering_execution_authorized": false
+  },
+  "t027": {
+    "task_id": "T-027",
+    "task_key": "P3_3_TUOJIAO_MASTER_V2_V001",
+    "status": "CONTRACT_LOCKED / ENGINEERING_EXECUTION_NOT_AUTHORIZED",
+    "decision_id": "D-101",
+    "component_id": "CMP-FRAME-TUOJIAO-001",
+    "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+    "proposed_branch": "codex/t027-p3-3-tuojiao-master-v2-v001",
+    "architecture": "MASTER_V2 / D-089 MINIMAL_SUFFICIENT / SHARED_INFRASTRUCTURE",
+    "shared_infrastructure_regression_if_changed": [
+      "T-025",
+      "T-026"
+    ],
+    "engineering_execution_authorized": false,
+    "blender_execution_authorized": false,
+    "production_branch_creation_authorized": false,
+    "pr_creation_authorized": false
   }
 }

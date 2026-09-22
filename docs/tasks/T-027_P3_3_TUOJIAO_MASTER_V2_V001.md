@@ -1,0 +1,340 @@
+# 【中国古建筑3D复原｜T-027｜P3_3_TUOJIAO_MASTER_V2_V001｜托脚 Master 首件生产】
+
+Status: **CONTRACT LOCKED / ENGINEERING EXECUTION NOT AUTHORIZED / D-101**  
+Execution architecture: **MASTER V2 / MINIMAL_SUFFICIENT / SHARED INFRASTRUCTURE**  
+Phase/Gate: P3 / P3.3 V002  
+Stage: Stage 1｜真实构件 Master 库  
+Date: 2026-09-22  
+Proposed branch: `codex/t027-p3-3-tuojiao-master-v2-v001`  
+PR policy: **ONE TASK = ONE BRANCH = ONE PR / DO NOT CREATE UNTIL EXECUTION AUTHORIZED**
+
+## 1. Objective
+
+建立并验证一个托脚 canonical Master：
+
+- component id: `CMP-FRAME-TUOJIAO-001`
+- master id: `CMP-FRAME-TUOJIAO-001_MASTER`
+- master version: `V001`
+
+Stage1 只允许一个 shared canonical body。
+
+Assembly / placement roles：
+- `MAIN_FRAME` = 8
+- `GABLE` = 4
+
+Role 差异不得自动生成 geometry Variant。
+
+## 2. Authoritative Inputs
+
+### A1｜一级工程主权来源
+`SRC-ZG-WF-001《山西平遥镇国寺万佛殿与天王殿精细测绘报告》`
+
+Direct binding：
+- PDF p89–90 / printed p74–75
+- §2.3.1.8｜托脚与叉手
+- 表2-45
+- cross-check: PDF p102 / printed p87 / 表2-50
+
+Formal evidence record：
+`docs/evidence/zhenguo_wanfo/P3_3_TUOJIAO_DIRECT_SOURCE_BINDING_V001.md`
+
+### A2｜官方同建筑视觉/结构来源
+山西文物数字博物馆·万佛殿专题。
+
+锁定结构语义：
+`SUPPORTS_ENDS_OF_FOUR_CHUANFU`
+
+### Canonical project inputs
+- `docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json` / V008
+- `docs/production/zhenguo_wanfo/P3_3_STAGE1_TUOJIAO_MASTER_SPEC_V001.md`
+- `production/zhenguo_wanfo/registry/P3_3_STAGE1_TUOJIAO_MASTER_SPEC_V001.json`
+
+Decision chain：
+- D-076 visual gate
+- D-099 / RC-019 source-authority priority
+- D-100 Tuojiao Master Spec V001
+
+SRC-ZG-WF-001 canonical PDF Git/LFS publication may remain pending during contract locking; it must not be used as a reason to downgrade already completed direct-page review.
+
+## 3. Locked Measurement Boundary
+
+Physical instances：
+- total = **12**
+- MAIN_FRAME = **8**
+- GABLE = **4**
+
+Table 2-45：
+- rows = **11**
+- complete visible measured rows = **10**
+- unmeasured visible row = **1**
+
+Visible complete samples, mm：
+- 249×152
+- 245×151
+- 245×152
+- 244×149
+- 250×151
+- 250×154
+- 214×151
+- 213×158
+- 212×150
+- 219×173
+
+Report-published mean：
+- width = **237.1 mm**
+- thickness = **153.7 mm**
+
+Visible-row arithmetic recompute：
+- width = **234.1 mm**
+- thickness = **154.1 mm**
+- classification = `AUDIT_ONLY`
+
+Locked source status：
+- `SOURCE_INTERNAL_NUMERIC_CONFLICT = TRUE`
+- `SILENT_ARITHMETIC_CORRECTION = PROHIBITED`
+
+Canonical section uses the report-published value:
+**237.1 × 153.7 mm**
+
+The recomputed value must remain visible in Definition / Review / Validation as an audit discrepancy and must never silently replace canonical geometry.
+
+## 4. Geometry Contract
+
+Geometry mode：
+`BOUNDED_LONG_MEMBER_OUTER_ENVELOPE`
+
+Canonical body：
+- X = **1000 mm**
+- Y = **237.1 mm**
+- Z = **153.7 mm**
+
+Axes：
+- +X longitudinal
+- +Y width / 广
+- +Z thickness / 厚
+
+Origin：
+- longitudinal midpoint
+- transverse center
+- lower reference plane
+
+Canonical transform：
+- Location=(0,0,0)
+- Rotation=(0,0,0)
+- Scale=(1,1,1)
+
+1000 mm = `NON_HISTORICAL_REFERENCE_ONLY`.
+
+Historical full length = `null / UNKNOWN`.  
+Exact placement angle = `null / UNKNOWN`.
+
+Real length and orientation are assembly-owned and must later derive from explicit assembly endpoints.
+
+## 5. Role Policy
+
+`MAIN_FRAME` and `GABLE` are semantic assembly / placement roles only.
+
+They must not alter:
+- canonical section
+- canonical body signature
+- end profile
+- joinery
+- canonical transform
+- fixed angle
+
+A future Variant split requires new A1 evidence proving stable body-geometry differences.
+
+## 6. Assembly / Joinery Boundary
+
+Allowed semantic:
+- `member_type = DIAGONAL_FRAME_SUPPORT`
+- `official_same_building_semantic = SUPPORTS_ENDS_OF_FOUR_CHUANFU`
+- `exact_endpoint_contact_geometry = UNKNOWN / ASSEMBLY_ENDPOINT_TO_BE_RESOLVED`
+
+Stage1 must not generate:
+- four-chuanfu geometry
+- purlin geometry
+- building placement coordinates
+- fixed installation angle
+- exact contact faces
+- mortise / tenon
+- notch / groove
+- hidden joint
+- unsupported end cuts
+
+Old P2 `FRAME_SUPPORT` proxy must not be renamed/reused as Tuojiao geometry.
+
+## 7. Master V2 Architecture
+
+T-027 must reuse the shared V2 infrastructure introduced and validated by T-025 / T-026:
+
+- `production/zhenguo_wanfo/scripts/p3_3_master_v2_common.py`
+- `production/zhenguo_wanfo/scripts/validate_p3_3_master_v2.py`
+- `.github/workflows/p3_3_master_v2.yml`
+
+Do not create Tuojiao-specific builder / validator / workflow unless a genuinely non-shareable requirement is discovered and formally recorded.
+
+### Numeric-conflict extension rule
+
+Current shared V2 infrastructure does not yet provide a generic source-internal numeric-conflict presentation/validation contract.
+
+If T-027 execution requires an infrastructure extension, it must be **generic / Definition-driven**, supporting fields such as:
+- source numeric conflict
+- published mean
+- recomputed audit mean
+- silent-correction prohibition
+- conflict-specific Review Board text
+
+It must not be hard-coded only for Tuojiao.
+
+Any shared-infrastructure change must run regression against approved V2 Masters:
+- T-025 剳牵
+- T-026 槫
+
+No existing approved Master may be weakened or reinterpreted.
+
+## 8. Adaptive Review Board
+
+Formal review output:
+one adaptive `MASTER_REVIEW_BOARD_V001.png`.
+
+Required panels for Tuojiao:
+
+1. `AXON`
+2. `LONG_SIDE`
+3. `END_SECTION_ENVELOPE`
+4. `DIMENSION_PARAMETER_SUMMARY`
+5. `ROLE_ASSEMBLY_SEMANTICS`
+6. `EVIDENCE_UNCERTAINTY_AND_NUMERIC_CONFLICT`
+
+The final panel must visibly state:
+- REPORT PUBLISHED MEAN = 237.1 × 153.7 mm
+- VISIBLE-ROW RECOMPUTED MEAN = 234.1 × 154.1 mm
+- SOURCE_INTERNAL_NUMERIC_CONFLICT = TRUE
+- NO SILENT CORRECTION
+- historical length UNKNOWN
+- exact angle UNKNOWN
+- endpoints UNKNOWN
+- joinery/end geometry DEFERRED
+
+Panel count is Definition-driven, not a universal project rule.
+
+## 9. Minimal-sufficient Formal Package
+
+Expected component-specific formal outputs:
+
+1. `CMP-FRAME-TUOJIAO-001_MASTER_DEFINITION_V001.json`
+2. `CMP-FRAME-TUOJIAO-001_MASTER_SEMANTIC_V001.json`
+3. `CMP-FRAME-TUOJIAO-001_MASTER_V001.blend` — Actions artifact + local-only, not Git
+4. `CMP-FRAME-TUOJIAO-001_MASTER_REVIEW_BOARD_V001.png`
+5. `CMP-FRAME-TUOJIAO-001_MASTER_VALIDATION_V001.json`
+6. this lifecycle record
+
+This is an expected minimal-sufficient result, not a fixed six-file rule.
+
+Definition / Semantic / Validation must remain independent.
+
+## 10. Validation Contract
+
+Machine validation must be Definition-driven and check at least:
+
+### Identity / registry
+1. task/component/master/version identity
+2. V008 schema/record authority
+3. physical instances=12
+4. MAIN_FRAME=8
+5. GABLE=4
+
+### A1 measurement
+6. table rows=11
+7. complete visible rows=10
+8. unmeasured row=1
+9. visible raw samples retained
+10. sample-to-instance mapping=UNKNOWN
+11. published width=237.1
+12. published thickness=153.7
+13. audit width=234.1
+14. audit thickness=154.1
+15. source internal numeric conflict=true
+16. silent arithmetic correction prohibited
+17. report fen metadata only / geometry_use_count=0
+
+### Geometry
+18. historical full length=null
+19. canonical reference length=1000 / non-historical
+20. exact angle=null
+21. bbox=1000×237.1×153.7
+22. canonical origin/transform
+23. length mutation isolates X
+24. width mutation isolates Y
+25. thickness mutation isolates Z
+26. MAIN_FRAME/GABLE role mutation preserves body geometry
+
+### Assembly / uncertainty
+27. A2 four-chuanfu support semantic retained
+28. exact endpoints unresolved
+29. joinery/end geometry deferred
+30. no actual unsupported cuts
+31. no P2 proxy reuse
+
+### Reproducibility / evidence
+32. independent reopen PASS
+33. deterministic semantic restore
+34. Definition↔Semantic identity
+35. binary SHA recorded
+36. Blender 4.5.13 LTS
+37. all Definition-required Review Board panels complete
+38. canonical .blend not tracked in Master directory
+39. D-076 / D-099 / D-100 traceable
+
+### Hard-fail guards
+40. no `REFERENCE_LENGTH_LEAKS_INTO_BUILDING`
+41. no `FIXED_MASTER_ANGLE`
+42. no `FIXED_HISTORICAL_LENGTH_WITHOUT_A1_EVIDENCE`
+43. no `SILENT_HISTORICIZATION`
+44. no `SILENT_ARITHMETIC_CORRECTION`
+45. no `UNDECLARED_PARAMETRIC_COMPLETION`
+46. no `MASTER_WITHOUT_EVIDENCE_BINDING`
+
+If shared V2 infrastructure is changed, T-025 and T-026 regression must also PASS before Tuojiao engineering may be considered complete.
+
+Exact validation check count may exceed 46 if atomic checks are split further; no required information domain may be merged away merely to reduce the count.
+
+## 11. Blender / Artifact Rule
+
+- Blender pinned to **4.5.13 LTS**
+- formal execution through GitHub Actions
+- canonical .blend remains Actions Artifact + local-only
+- no canonical Tuojiao .blend committed to Git
+- exact Blender version unavailable = STOP
+
+## 12. Protected Boundaries
+
+T-027 must not modify/reactivate:
+- T-018 / PR #3 / PR #6
+- T-020
+- RZ D-063
+- FV D-064
+- approved T-021–T-026 historical facts
+- P2 frozen baseline
+
+T-018 remains HOLD.
+
+## 13. Authorization Boundary
+
+D-101 locks this Task Contract only.
+
+Current status:
+
+`ENGINEERING_EXECUTION_AUTHORIZED = FALSE`  
+`BLENDER_EXECUTION_AUTHORIZED = FALSE`  
+`PRODUCTION_BRANCH_CREATION_AUTHORIZED = FALSE`  
+`PR_CREATION_AUTHORIZED = FALSE`
+
+To begin engineering, Product Owner must explicitly authorize:
+
+> **开始 T-027**
+
+Only then may the locked engineering Definition be created/finalized with execution=true, branch/PR be created, and GitHub Actions/Blender run.
+
+Final Master approval and PR merge each remain separate Product Owner authorization boundaries.
