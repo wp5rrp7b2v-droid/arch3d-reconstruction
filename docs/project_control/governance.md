@@ -240,3 +240,18 @@ Checkpoint 不负责首次落档，只负责一致性核对、压缩、Phase Clo
 8. **Relation to Dashboard｜与Dashboard一致**：Dashboard 派生自 Project Control；构件 Excel 派生自 Component Registry JSON。两种派生物均可删除重建，项目事实不能依赖派生文件才能恢复。
 9. **Automation｜自动化**：正式 generator 为 `scripts/generate_wanfo_component_registry_excel.py`；GitHub Actions workflow 为 `.github/workflows/wanfo-component-registry-excel.yml`。
 10. **Authorization Boundary｜权限边界**：本规则只建立数据同步机制，不自动授权 T-018、Blender、Actions 生产建模、PR merge 或 Gate PASS；构件 Excel 自动生成 workflow 属于数据派生维护流程，不等于整殿工程执行。
+
+### 4.10 Wanfodian Source Authority Priority｜万佛殿资料主权优先级
+
+适用于 P3.3 及后续所有构件 Master / Variant / Interface、组合关系、整殿拓扑、空间定位、屋架、屋面与整体搭建的资料检索和证据锁定。
+
+1. **A1｜一级工程主权来源**：`SRC-ZG-WF-001《山西平遥镇国寺万佛殿与天王殿精细测绘报告》`。直接测绘尺寸、原始测绘图、构件数量/位置、报告明确记载的构造关系与测量事实，以该来源原页为最高工程 authority。
+2. **A2｜官方同建筑视觉/结构来源**：`山西文物数字博物馆·万佛殿专题`。用于同建筑实物视觉、官方结构说明、构件形态、层位、现场状态及官方数字展示的直接交叉验证。
+3. **Mandatory First Lookup｜强制先查**：进入低等级论文、媒体、其他建筑对比例或通用知识之前，必须先核查 A1 与 A2。两者并列为“最高优先检索层”，但职责不同：A1 主导工程测绘事实；A2 主导官方同建筑视觉/结构核验。
+4. **Secondary Sources｜低等级来源**：学术二级论文、媒体文章、模型网站、其他寺院或其他时代建筑的 comparison 仅能补充或交叉验证；不得因其解释更完整而静默覆盖 A1/A2。
+5. **Conflict Handling｜冲突处理**：几何、尺寸、数量、测绘事实冲突时优先回到 A1 原页；若 A1 与 A2 在结构语义上存在冲突，不得自行平均、猜测或选择方便建模的一方，必须标记 `CONFLICT/UNKNOWN` 并提交 Product Owner 复核。
+6. **Availability Disclosure｜可用性披露**：任一正式审核若当前无法实际访问 A1 或 A2，必须写明 `SOURCE_NOT_AVAILABLE_THIS_PASS`；不得用 secondary/comparative 来源替代后声称一级核查已完成。
+7. **Visual Gate Relation｜与 D-076 的关系**：D-076 的 Pre-Model Visual Reference Gate 继续有效；A2 应作为同建筑视觉审核的首要官方入口，A1 中的测绘/式样图仍是更高工程证据。自制图仅可标记 `SOURCE_DERIVED_SCHEMATIC`，comparative 资料必须显式标注 `COMPARATIVE`。
+8. **No Historical Upgrade｜禁止静默历史化**：官方同建筑展示或二级解释均不得自动升级为 963 年原状事实；时间层、修缮层和 originality 仍按既有 evidence-boundary 规则独立判断。
+
+Decision authority: **D-099 / RC-019**.
