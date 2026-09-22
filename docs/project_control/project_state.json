@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R184",
+  "state_revision": "R185",
   "last_updated": "2026-09-22",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-027 CLOSED / PR #14 MERGED / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-027 CLOSED / DASHBOARD V2 ACTIVE / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 12 OF 28 MASTERS APPROVED / T-026 CLOSED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 13 OF 28 MASTERS APPROVED / T-027 CLOSED / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-026 CLOSED / 12 OF 28 MASTERS APPROVED / NEXT MASTER SELECTION REQUIRES VISUAL GATE / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-027 CLOSED / 13 OF 28 MASTERS APPROVED / NEXT MASTER=叉手 / REQUIRES D-076+D-099 SOURCE/VISUAL GATE / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "No T-027 blocker. T-027 is closed and merged to main. Stage1 remains active at 13/28; T-018 remains HOLD.",
+  "blocker": "No active blocker on the current Stage1 route. Seven source-binding items remain visible but do not block the next Master review. T-018 is an intentional HOLD until Stage 6.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -67,31 +67,25 @@
   },
   "proposed_next_task": {
     "id": "NEXT_STAGE1_COMPONENT",
-    "name": "Next Stage1 missing Master after Tuojiao",
-    "status": "NOT STARTED / REQUIRES D-076 VISUAL GATE",
+    "name": "叉手｜Stage1 next missing Master",
+    "status": "NOT STARTED / REQUIRES D-076 + D-099 SOURCE/VISUAL GATE",
     "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "prerequisite": "Run next component source/visual gate before any new T-task"
+    "prerequisite": "Review A1/A2 direct evidence and visual/form references before creating a new T-task"
   },
   "last_completed_task": {
-    "id": "T-026",
-    "engineering_id": "P3_3_PURLIN_MASTER_V2_V001",
-    "status": "PASS / PRODUCT OWNER APPROVED / FORMAL DELIVERY CLOSED / PR #13 MERGED / D-096",
-    "github_pr_number": 13,
-    "approved_first_article_head_sha": "abbcfa05a2817cb04da9d917cf61377e8a379215",
-    "final_engineering_head_sha": "817e8dd842d765bf7a0a8cc28d2c509b64910da9",
-    "merge_commit": "a588895004d61b0c5bc3615db4a74f1c2f4a91bc",
-    "approved_actions_run": 35584601233,
-    "approved_validation": "41/41 PASS",
-    "final_head_actions_run": 35589254034,
-    "final_validation": "47/47 PASS",
-    "review_board": "1 adaptive board / 7 required panels / PASS",
-    "approved_artifact_id": 10632275014,
-    "final_regression_artifact_id": 10634445266,
-    "canonical_blend_sha256": "5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4",
-    "semantic_geometry_signature": "6ab5ea18d771d70377a693706ef669b208546d6453c7762ef4f72b8087224cd5",
-    "formal_delivery": "Definition + Semantic + Review Board + Validation + Lifecycle Record + canonical blend Artifact/local-only; Catalog/V008/Excel closed",
-    "geometry_boundary": "220.1 x 270.8 mm bounding-envelope proxy / exact historical section profile UNKNOWN"
+    "id": "T-027",
+    "engineering_id": "P3_3_TUOJIAO_MASTER_V2_V001",
+    "component": "托脚",
+    "status": "PASS / PRODUCT OWNER APPROVED / FORMAL DELIVERY CLOSED / PR #14 MERGED / D-104",
+    "github_pr_number": 14,
+    "merge_commit": "9cbcd9638a98db7db2723ae15d7dc8e9971f8e1a",
+    "approved_actions_run": 35712113350,
+    "approved_validation": "56/56 PASS",
+    "final_head_actions_run": 35716932997,
+    "final_validation": "62/62 PASS",
+    "canonical_blend_sha256": "23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f",
+    "semantic_geometry_signature": "3c8f39d3b6eab08ad8d09651dce70dc07c1cb5c2a7a9387369416c1611911a2c"
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -129,7 +123,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 12 OF 28 MASTERS APPROVED / T-021..T-026 CLOSED / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-021..T-027 CLOSED / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -302,15 +296,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-104",
+    "id": "D-105",
     "date": "2026-09-22",
-    "decision": "Product Owner authorized and completed merge of PR #14. T-027 is closed on main; Stage1 is 13/28 = 46.4%; T-018 remains HOLD."
+    "decision": "Dashboard V2 information architecture refactor authorized: project/gate/stage progress first; current focus, next milestone and blockers visible; detailed run/SHA/PR audit data removed from the primary dashboard."
   },
   "latest_material_review": {
     "date": "2026-09-22",
-    "result": "T-027 CLOSED / PR #14 MERGED / MAIN VERIFIED",
-    "evidence": "Approved Run 35712113350 56/56 PASS; final Run 35716932997 62/62 PASS; T-025 44/44 and T-026 47/47 shared regressions PASS; Excel sync SUCCESS.",
-    "decision_required": "NONE FOR T-027"
+    "result": "DASHBOARD V2 RESTRUCTURE / PROJECT-LEVEL VISIBILITY RESTORED",
+    "evidence": "R184/D-104 + V008 505 records + Stage1 Catalog 13 approved + Coverage Matrix 28 Master-scope types.",
+    "decision_required": "NONE"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -368,13 +362,15 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Do not start another T-task until the next missing Stage1 component passes D-076 visual/source review. Local Git synchronization remains deferred to the evening batch unless otherwise directed. T-018 remains HOLD.",
+  "next_action": "Stage1 next target is 叉手. First run D-099 A1/A2 source review plus D-076 visual/form gate; do not create a new T-task or run Blender before that review. Local Git synchronization remains deferred to the evening batch unless otherwise directed. T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v102",
+    "visualization_version": "v200",
+    "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R162 / LOCAL SYNC + APPROVED ARTIFACT RECONCILIATION PASS / D-087 ACTIVE / T-018 HOLD"
+    "refresh_status": "CURRENT / R185 / D-105",
+    "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
     {
@@ -485,7 +481,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / T-021 + T-022 + T-023 + T-024 + T-025 PRODUCT OWNER APPROVED + CLOSED / NEXT MASTER SELECTION",
+    "status": "ACTIVE / T-021..T-027 PRODUCT OWNER APPROVED + CLOSED / 13 OF 28 MASTERS APPROVED / NEXT=叉手 SOURCE+VISUAL GATE",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -731,7 +727,8 @@
         "final_regression_artifact_zip_sha256": "2de17b1077473f6a66acbdcf278505e26cc19e5d1f50fedb0256d6afb33a0beb",
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
-    }
+    },
+    "next_master_candidate": "叉手 / PRIORITY 8 / D-076 + D-099 GATE REQUIRED"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
