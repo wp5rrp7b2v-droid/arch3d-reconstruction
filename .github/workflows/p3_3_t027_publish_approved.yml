@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   publish-approved-t027:
-    if: contains(github.event.head_commit.message, 'D-103: publish approved T-027 artifact')
+    if: "${{ contains(github.event.head_commit.message, 'D-103: publish approved T-027 artifact') }}"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
