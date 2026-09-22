@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R185",
+  "state_revision": "R186",
   "last_updated": "2026-09-22",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-027 CLOSED / DASHBOARD V2 ACTIVE / LOCAL SYNC DEFERRED TO EVENING / T-018 HOLD",
+  "session_status": "DAY CLOSE COMPLETE / P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-027 CLOSED / DASHBOARD V2 CURRENT / LOCAL SYNC PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active blocker on the current Stage1 route. Seven source-binding items remain visible but do not block the next Master review. T-018 is an intentional HOLD until Stage 6.",
+  "blocker": "No active project blocker. Day close is complete. Local Mac final fast-forward and T-027 approved canonical .blend restore remain as the only required local-sync actions; A1 PDF Git LFS archival remains a planned local archival action. T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,7 +63,7 @@
   "current_task": {
     "id": "NONE",
     "name": "No active engineering T-task",
-    "status": "T-027 CLOSED / MERGED_TO_MAIN"
+    "status": "DAY CLOSE COMPLETE / T-027 CLOSED / MERGED_TO_MAIN"
   },
   "proposed_next_task": {
     "id": "NEXT_STAGE1_COMPONENT",
@@ -296,15 +296,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-105",
+    "id": "D-106",
     "date": "2026-09-22",
-    "decision": "Dashboard V2 information architecture refactor authorized: project/gate/stage progress first; current focus, next milestone and blockers visible; detailed run/SHA/PR audit data removed from the primary dashboard."
+    "decision": "2026-09-22 Close File completed; cloud/project-control work closed. Local sync pending: final fast-forward + exact approved T-027 canonical blend restore; A1 primary PDF LFS archival remains planned local archival work."
   },
   "latest_material_review": {
     "date": "2026-09-22",
-    "result": "DASHBOARD V2 RESTRUCTURE / PROJECT-LEVEL VISIBILITY RESTORED",
-    "evidence": "R184/D-104 + V008 505 records + Stage1 Catalog 13 approved + Coverage Matrix 28 Master-scope types.",
-    "decision_required": "NONE"
+    "result": "DAILY CLOSE PASS / CLOUD WORK CLOSED / LOCAL SYNC PENDING",
+    "evidence": "T-027 closed/merged; Stage1 13/28; Dashboard V2 final sync Run 35730009332 SUCCESS; open PRs only expected T-018 #3/#6.",
+    "decision_required": "NONE UNTIL LOCAL SYNC RESULT"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -362,7 +362,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Stage1 next target is 叉手. First run D-099 A1/A2 source review plus D-076 visual/form gate; do not create a new T-task or run Blender before that review. Local Git synchronization remains deferred to the evening batch unless otherwise directed. T-018 remains HOLD.",
+  "next_action": "Perform safe Mac local synchronization to the final Close File main SHA, restore the Product Owner-approved T-027 canonical .blend with exact SHA verification and keep it untracked, then record local-sync closure. A1 PDF Git LFS archival may be completed in the same local session once its original local path is confirmed. Next production target after sync remains 叉手, starting with D-099 + D-076 review.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -939,5 +939,33 @@
     "merge_commit_sha": "9cbcd9638a98db7db2723ae15d7dc8e9971f8e1a",
     "final_regression_run": 35716932997,
     "final_regression_validation": "62/62 PASS"
+  },
+  "daily_close_2026_09_22": {
+    "status": "PASS / CLOUD WORK CLOSED / LOCAL SYNC PENDING",
+    "decision_id": "D-106",
+    "close_file": "docs/project_control/CLOSE_FILE_2026-09-22.md",
+    "stage1": "13/28 / 46.4%",
+    "last_task": "T-027 CLOSED / PR #14 MERGED",
+    "dashboard": "V2 v200 / R185 source state / final sync Run 35730009332 SUCCESS",
+    "open_prs": [
+      3,
+      6
+    ],
+    "open_pr_policy": "T-018 only / expected HOLD or superseded",
+    "local_sync_required": true,
+    "t027_local_restore": {
+      "artifact_id": 10689220649,
+      "filename": "CMP-FRAME-TUOJIAO-001_MASTER_V001.blend",
+      "expected_sha256": "23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f",
+      "target_dir": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/",
+      "tracked_policy": "LOCAL_ONLY / UNTRACKED"
+    },
+    "a1_pdf_lfs": {
+      "status": "PENDING_LOCAL_ARCHIVAL",
+      "source_id": "SRC-ZG-WF-001",
+      "expected_size_bytes": 84117628,
+      "target_path": "docs/evidence/zhenguo_wanfo/source_primary/SRC-ZG-WF-001_山西平遥镇国寺万佛殿与天王殿精细测绘报告.pdf",
+      "blocker": false
+    }
   }
 }
