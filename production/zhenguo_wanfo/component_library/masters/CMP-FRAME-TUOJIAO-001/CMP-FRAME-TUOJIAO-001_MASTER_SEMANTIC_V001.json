@@ -1,0 +1,254 @@
+{
+  "assembly_role": null,
+  "assembly_semantics": {
+    "exact_endpoint_contact_geometry": "UNKNOWN / ASSEMBLY_ENDPOINT_TO_BE_RESOLVED",
+    "member_type": "DIAGONAL_FRAME_SUPPORT",
+    "official_same_building_semantic": "SUPPORTS_ENDS_OF_FOUR_CHUANFU",
+    "role_geometry_policy": "MAIN_FRAME_AND_GABLE_SHARE_CANONICAL_BODY"
+  },
+  "blender_version": "4.5.13 LTS",
+  "body": {
+    "face_count": 6,
+    "geometry_faces": [
+      [
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        4
+      ],
+      [
+        1,
+        2,
+        6,
+        5
+      ],
+      [
+        2,
+        3,
+        7,
+        6
+      ],
+      [
+        3,
+        0,
+        4,
+        7
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "geometry_vertices_mm": [
+      [
+        -500.0,
+        -118.550003,
+        0.0
+      ],
+      [
+        500.0,
+        -118.550003,
+        0.0
+      ],
+      [
+        500.0,
+        118.550003,
+        0.0
+      ],
+      [
+        -500.0,
+        118.550003,
+        0.0
+      ],
+      [
+        -500.0,
+        -118.550003,
+        153.699997
+      ],
+      [
+        500.0,
+        -118.550003,
+        153.699997
+      ],
+      [
+        500.0,
+        118.550003,
+        153.699997
+      ],
+      [
+        -500.0,
+        118.550003,
+        153.699997
+      ]
+    ],
+    "joinery_cut_count": 0,
+    "local_bbox_mm": {
+      "dimensions": [
+        1000.0,
+        237.100006,
+        153.699997
+      ],
+      "max": [
+        500.0,
+        118.550003,
+        153.699997
+      ],
+      "min": [
+        -500.0,
+        -118.550003,
+        0.0
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "name": "MASTER__CMP_FRAME_TUOJIAO_001__BODY",
+    "primitive": "rectangular_bounding_envelope_proxy_profile_unknown",
+    "section_envelope_historical_claim": false,
+    "section_profile_state": "UNKNOWN",
+    "shengtou_wood_baked_in": false,
+    "unsupported_detail_count": 0,
+    "vertex_count": 8
+  },
+  "canonical_blend_sha256": "23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f",
+  "canonical_reference_length_historical_claim": false,
+  "component_id": "CMP-FRAME-TUOJIAO-001",
+  "definition_sha256": "f8e7642ce9ce7e2e6f40411cc83bae762a4e3c771602fcb3ff054b0f8db808f9",
+  "engineering_representation": {
+    "historical_profile_claim": false,
+    "label_requirement": "REPORT-PUBLISHED WIDTH/THICKNESS BOUNDING ENVELOPE; SOURCE NUMERIC CONFLICT MUST REMAIN VISIBLE",
+    "primitive": "RECTANGULAR_BOUNDING_ENVELOPE_PROXY",
+    "purpose": "STAGE1 MASTER VALIDATION / NOT A 963 HISTORICAL PROFILE CLAIM"
+  },
+  "geometry_mode": "BOUNDED_LONG_MEMBER_OUTER_ENVELOPE",
+  "historical_full_length_mm": null,
+  "joinery_geometry": "DEFERRED / NO UNSUPPORTED CUTS",
+  "legacy_proxy_reuse": false,
+  "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+  "master_version": "V001",
+  "placement_policy": "ASSEMBLY_OWNED / real length, angle and endpoints resolved later",
+  "registry_role_counts": {
+    "GABLE": {
+      "count": 4,
+      "geometry_policy": "SHARED_CANONICAL_BODY",
+      "id_prefixes": [
+        "托脚-东山",
+        "托脚-西山"
+      ]
+    },
+    "MAIN_FRAME": {
+      "count": 8,
+      "geometry_policy": "SHARED_CANONICAL_BODY",
+      "id_prefixes": [
+        "托脚-东缝",
+        "托脚-西缝"
+      ]
+    }
+  },
+  "resolved_dimensions_mm": {
+    "length": 1000.0,
+    "thickness": 153.7,
+    "width": 237.1
+  },
+  "schema_version": "MASTER_V2_SEMANTIC_1.1",
+  "section_envelope_historical_claim": false,
+  "section_profile_state": "UNKNOWN",
+  "semantic_geometry_signature": "3c8f39d3b6eab08ad8d09651dce70dc07c1cb5c2a7a9387369416c1611911a2c",
+  "shengtou_wood_baked_in": false,
+  "source_numeric_conflict": {
+    "canonical_geometry_basis": "PUBLISHED_MEAN",
+    "complete_visible_sample_count": 10,
+    "conflict": true,
+    "conflict_type": "SOURCE_INTERNAL_NUMERIC_CONFLICT",
+    "published_mean_mm": {
+      "thickness": 153.7,
+      "width": 237.1
+    },
+    "recomputed_classification": "AUDIT_ONLY",
+    "silent_arithmetic_correction": "PROHIBITED",
+    "table_row_count": 11,
+    "unmeasured_visible_row_count": 1,
+    "visible_rows_recomputed_mean_mm": {
+      "thickness": 154.1,
+      "width": 234.1
+    },
+    "visible_samples_mm": [
+      {
+        "thickness": 152,
+        "width": 249
+      },
+      {
+        "note": "source table: 未及",
+        "thickness": null,
+        "width": null
+      },
+      {
+        "thickness": 151,
+        "width": 245
+      },
+      {
+        "thickness": 152,
+        "width": 245
+      },
+      {
+        "thickness": 149,
+        "width": 244
+      },
+      {
+        "thickness": 151,
+        "width": 250
+      },
+      {
+        "thickness": 154,
+        "width": 250
+      },
+      {
+        "thickness": 151,
+        "width": 214
+      },
+      {
+        "thickness": 158,
+        "width": 213
+      },
+      {
+        "thickness": 150,
+        "width": 212
+      },
+      {
+        "thickness": 173,
+        "width": 219
+      }
+    ]
+  },
+  "task_id": "T-027",
+  "unknowns": [
+    "historical full length",
+    "exact placement angle",
+    "exact member endpoints and contact faces",
+    "hidden joinery and end-profile geometry",
+    "sample-to-instance mapping",
+    "whether MAIN_FRAME and GABLE have any historically stable body-geometry difference"
+  ]
+}

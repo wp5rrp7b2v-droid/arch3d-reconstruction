@@ -111,6 +111,31 @@ jobs:
           "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" --             --mode build --definition "$DEFINITION" --asset "$ARTIFACT_DIR/thickness.blend" --semantic "$ARTIFACT_DIR/thickness.json" --thickness-mm 200
           "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" --             --mode build --definition "$DEFINITION" --asset "$ARTIFACT_DIR/restore.blend" --semantic "$ARTIFACT_DIR/restore.json"
 
+      - name: Definition-driven role mutation builds
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t ROLES < <(python - "$DEFINITION" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          for name in d.get("registry_role_counts",{}).keys():
+              print(name)
+          PY
+          )
+          if [[ "${#ROLES[@]}" -gt 0 ]]; then
+            if [[ "${#ROLES[@]}" -ne 2 ]]; then
+              echo "Current generic role-mutation harness expects exactly two role families when role contract is present."
+              printf '%s\n' "${ROLES[@]}"
+              exit 2
+            fi
+            "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
+              --mode build --definition "$DEFINITION" --asset "$ARTIFACT_DIR/role_a.blend" --semantic "$ARTIFACT_DIR/role_a.json" --role "${ROLES[0]}"
+            "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
+              --mode build --definition "$DEFINITION" --asset "$ARTIFACT_DIR/role_b.blend" --semantic "$ARTIFACT_DIR/role_b.json" --role "${ROLES[1]}"
+            echo "ROLE_A_SEM=$ARTIFACT_DIR/role_a.json" >> "$GITHUB_ENV"
+            echo "ROLE_B_SEM=$ARTIFACT_DIR/role_b.json" >> "$GITHUB_ENV"
+          fi
+
       - name: Compose adaptive Review Board
         shell: bash
         run: |
@@ -121,7 +146,74 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python "$VALIDATOR"             --definition "$DEFINITION"             --canonical "$SEMANTIC"             --reopen "$ARTIFACT_DIR/reopen.json"             --length "$ARTIFACT_DIR/length.json"             --width "$ARTIFACT_DIR/width.json"             --thickness "$ARTIFACT_DIR/thickness.json"             --restore "$ARTIFACT_DIR/restore.json"             --asset "$ASSET"             --review-dir "$REVIEW_DIR"             --board "$BOARD"             --registry "$REGISTRY"             --catalog "$CATALOG"             --output "$VALIDATION"
+          EXTRA=()
+          if [[ -n "${ROLE_A_SEM:-}" ]]; then
+            EXTRA+=(--role-a "$ROLE_A_SEM" --role-b "$ROLE_B_SEM")
+          fi
+          python "$VALIDATOR" \
+            --definition "$DEFINITION" \
+            --canonical "$SEMANTIC" \
+            --reopen "$ARTIFACT_DIR/reopen.json" \
+            --length "$ARTIFACT_DIR/length.json" \
+            --width "$ARTIFACT_DIR/width.json" \
+            --thickness "$ARTIFACT_DIR/thickness.json" \
+            --restore "$ARTIFACT_DIR/restore.json" \
+            --asset "$ASSET" \
+            --review-dir "$REVIEW_DIR" \
+            --board "$BOARD" \
+            --registry "$REGISTRY" \
+            --catalog "$CATALOG" \
+            --output "$VALIDATION" \
+            "${EXTRA[@]}"
+
+      - name: Shared V2 infrastructure regression (T-025 + T-026)
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin "${{ github.base_ref }}" --depth=1
+          if git diff --quiet "origin/${{ github.base_ref }}...HEAD" -- "$COMMON" "$VALIDATOR" ".github/workflows/p3_3_master_v2.yml"; then
+            echo "Shared V2 infrastructure unchanged; regression not required."
+            exit 0
+          fi
+          mkdir -p artifacts/shared_regression
+          for DEF in \
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZHAQIAN-001/CMP-FRAME-ZHAQIAN-001_MASTER_DEFINITION_V001.json \
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PURLIN-001/CMP-FRAME-PURLIN-001_MASTER_DEFINITION_V001.json
+          do
+            KEY="$(python - "$DEF" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          print(d["task_id"])
+          PY
+            )"
+            MID="$(python - "$DEF" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          print(d["master_id"])
+          PY
+            )"
+            RDIR="artifacts/shared_regression/$KEY"
+            mkdir -p "$RDIR/review"
+            "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
+              --mode build --definition "$DEF" --asset "$RDIR/canonical.blend" --semantic "$RDIR/canonical.json" --review-dir "$RDIR/review"
+            "$BLENDER" --background "$RDIR/canonical.blend" --python-exit-code 10 --python "$COMMON" -- \
+              --mode inspect --asset "$RDIR/canonical.blend" --expected "$RDIR/canonical.json" --output "$RDIR/reopen.json"
+            "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
+              --mode build --definition "$DEF" --asset "$RDIR/length.blend" --semantic "$RDIR/length.json" --length-mm 1100
+            "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
+              --mode build --definition "$DEF" --asset "$RDIR/width.blend" --semantic "$RDIR/width.json" --width-mm 350
+            "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
+              --mode build --definition "$DEF" --asset "$RDIR/thickness.blend" --semantic "$RDIR/thickness.json" --thickness-mm 200
+            "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
+              --mode build --definition "$DEF" --asset "$RDIR/restore.blend" --semantic "$RDIR/restore.json"
+            python "$COMMON" --mode compose-board --definition "$DEF" --review-dir "$RDIR/review" --board "$RDIR/board.png"
+            python "$VALIDATOR" \
+              --definition "$DEF" --canonical "$RDIR/canonical.json" --reopen "$RDIR/reopen.json" \
+              --length "$RDIR/length.json" --width "$RDIR/width.json" --thickness "$RDIR/thickness.json" \
+              --restore "$RDIR/restore.json" --asset "$RDIR/canonical.blend" --review-dir "$RDIR/review" \
+              --board "$RDIR/board.png" --registry "$REGISTRY" --catalog "$CATALOG" --output "$RDIR/validation.json"
+            echo "SHARED_V2_REGRESSION_PASS $KEY $MID"
+          done
 
       - name: Assert minimal formal artifact surface
         shell: bash
@@ -140,6 +232,15 @@ jobs:
           assert v["formal_file_count_policy"]=="ADAPTIVE / MINIMAL SUFFICIENT / NO FIXED COUNT"
           print("MASTER_V2_MINIMAL_SUFFICIENT_SURFACE_PASS")
           PY
+
+      - name: Upload shared-infrastructure regression evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T027_SHARED_V2_REGRESSION
+          retention-days: 30
+          if-no-files-found: ignore
+          path: |
+            artifacts/shared_regression/**/validation.json
 
       - name: Upload formal V2 first-article evidence
         uses: actions/upload-artifact@v4

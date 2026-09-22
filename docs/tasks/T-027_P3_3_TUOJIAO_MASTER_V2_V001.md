@@ -1,6 +1,6 @@
 # 【中国古建筑3D复原｜T-027｜P3_3_TUOJIAO_MASTER_V2_V001｜托脚 Master 首件生产】
 
-Status: **CONTRACT LOCKED / ENGINEERING EXECUTION NOT AUTHORIZED / D-101**  
+Status: **ENGINEERING EXECUTION AUTHORIZED / D-102 / FIRST ARTICLE IN PROGRESS**  
 Execution architecture: **MASTER V2 / MINIMAL_SUFFICIENT / SHARED INFRASTRUCTURE**  
 Phase/Gate: P3 / P3.3 V002  
 Stage: Stage 1｜真实构件 Master 库  
@@ -338,3 +338,152 @@ To begin engineering, Product Owner must explicitly authorize:
 Only then may the locked engineering Definition be created/finalized with execution=true, branch/PR be created, and GitHub Actions/Blender run.
 
 Final Master approval and PR merge each remain separate Product Owner authorization boundaries.
+
+
+## 14. Engineering execution authorization / D-102
+
+Product Owner explicitly authorized **开始 T-027** on 2026-09-22.
+
+Execution boundary now:
+- engineering_execution_authorized = true
+- Blender/GitHub Actions execution = authorized
+- production branch = `codex/t027-p3-3-tuojiao-master-v2-v001`
+- PR creation = authorized
+- final first-article acceptance = still requires separate Product Owner approval
+- PR merge = still requires separate Product Owner authorization
+
+Engineering implementation must preserve all D-101 contract boundaries. Shared V2 infrastructure changes require T-025/T-026 regression before T-027 may be declared engineering-complete.
+
+
+## 15. First-article engineering result｜Review Patch 01 final
+
+**ENGINEERING COMPLETE / PRODUCT OWNER REVIEW REQUIRED**
+
+Final reviewed engineering run:
+- GitHub Actions Run: `35712113350`
+- reviewed engineering commit: `86892ce6904075f0abc4813ee50bf6fd3c294f73`
+- Blender: **4.5.13 LTS**
+- T-027 machine validation: **56 / 56 PASS**
+- canonical .blend SHA-256: `23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f`
+- semantic geometry signature: `3c8f39d3b6eab08ad8d09651dce70dc07c1cb5c2a7a9387369416c1611911a2c`
+- Semantic SHA-256: `cd28dc19cdfbeefa391298c9ae060341e4fe6e40341333bea539fe0e671084a6`
+- Validation SHA-256: `69a289a2f449f68bad18d317ab65370359751accb1765e5f6d71fb38fe448655`
+- Review Board SHA-256: `6bc5f05c212d07d08a0e9e1b48415718c17734dad5d8239a75b29198880b7c0f`
+- formal first-article Artifact ID: `10689220649`
+- Artifact ZIP SHA-256: `f255355b915c6c842b8d7e2d9a3090fce1787670d545f3d432ed8aa46f875749`
+- Artifact size: 1,385,479 bytes
+- Review Board: 6 Definition-required panels
+
+Shared V2 regression after the generic numeric-conflict / role-support extension:
+- T-025 剳牵: **44 / 44 PASS**
+- T-026 槫: **47 / 47 PASS**
+- shared-regression Artifact ID: `10689000813`
+- shared-regression Artifact ZIP SHA-256: `2bb7111e739180e88ad689f65baef4411e9306a674bb617c27d2dd7747dd2419`
+
+### Review Patch 01
+
+Initial Run `35709735882` passed machine validation and shared regressions, but ChatGPT human review found one presentation defect in the Review Board:
+
+- `DIMENSION_PARAMETER_SUMMARY` inherited Purlin-style distribution text and displayed `0 main / 0 E gable / 0 W gable`.
+- This was a shared Review Board display defect only; canonical geometry, numeric-conflict preservation, Registry counts, role mutation, reopen, and machine validation were not affected.
+- Patch commit `86892ce6904075f0abc4813ee50bf6fd3c294f73` changed the shared renderer to use Definition-driven `registry_role_counts` when present.
+- Final Board now correctly displays `MAIN_FRAME 8 / GABLE 4`.
+- Patch triggered a complete T-027 rerun plus T-025/T-026 regressions; all passed.
+
+Initial Run `35709735882` is therefore **SUPERSEDED FOR HUMAN REVIEW** by final Run `35712113350`.
+
+### Final engineering boundary
+
+Verified:
+- one shared Tuojiao canonical body;
+- body reference bbox = 1000 × 237.1 × 153.7 mm;
+- 1000 mm remains non-historical;
+- MAIN_FRAME=8 / GABLE=4;
+- role mutation preserves the canonical geometry signature;
+- report-published 237.1×153.7 drives canonical section;
+- visible-row recompute 234.1×154.1 remains AUDIT_ONLY;
+- `SOURCE_INTERNAL_NUMERIC_CONFLICT = TRUE`;
+- `SILENT_ARITHMETIC_CORRECTION = PROHIBITED`;
+- historical length / exact angle / endpoints / joinery remain UNKNOWN / DEFERRED;
+- no unsupported joinery cuts;
+- no P2 FRAME_SUPPORT proxy reuse;
+- canonical .blend is Artifact/local-only and is not tracked in Git.
+
+PR #14 static check at reviewed engineering head:
+- branch behind main: **0**
+- mergeable: **true**
+- changed-file scope: exactly 5 T-027 / shared-V2 files
+- PR remains **DRAFT**
+- no merge authorization has been granted.
+
+### Current authorization boundary
+
+Engineering has reached:
+
+`ENGINEERING_COMPLETE_PENDING_PRODUCT_OWNER_REVIEW`
+
+Not yet authorized:
+- Product Owner first-article acceptance;
+- formal materialization / Catalog + Registry binding;
+- PR #14 Ready/merge;
+- Stage1 PASS;
+- Stage2;
+- T-018 resume.
+
+
+## 16. Product Owner acceptance / D-103
+
+**PRODUCT OWNER APPROVED / FIRST ARTICLE ACCEPTED / FORMAL DELIVERY AUTHORIZED**
+
+Product Owner approved the final T-027 Tuojiao V2 first article after Review Patch 01.
+
+Accepted evidence:
+- final approved Run: `35712113350` / SUCCESS
+- validation: **56 / 56 PASS**
+- accepted engineering head: `86892ce6904075f0abc4813ee50bf6fd3c294f73`
+- canonical .blend SHA-256: `23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f`
+- semantic geometry signature: `3c8f39d3b6eab08ad8d09651dce70dc07c1cb5c2a7a9387369416c1611911a2c`
+- Semantic SHA-256: `cd28dc19cdfbeefa391298c9ae060341e4fe6e40341333bea539fe0e671084a6`
+- Validation SHA-256: `69a289a2f449f68bad18d317ab65370359751accb1765e5f6d71fb38fe448655`
+- Review Board SHA-256: `6bc5f05c212d07d08a0e9e1b48415718c17734dad5d8239a75b29198880b7c0f`
+- Artifact ID: `10689220649`
+- Artifact ZIP SHA-256: `f255355b915c6c842b8d7e2d9a3090fce1787670d545f3d432ed8aa46f875749`
+
+Accepted boundary:
+- one shared canonical Master;
+- 12 instances = MAIN_FRAME 8 + GABLE 4;
+- canonical reference body = 1000 × 237.1 × 153.7 mm;
+- 1000 mm remains non-historical;
+- report-published 237.1 × 153.7 remains canonical;
+- visible-row recompute 234.1 × 154.1 remains AUDIT_ONLY;
+- SOURCE_INTERNAL_NUMERIC_CONFLICT remains explicit;
+- historical full length / exact angle / endpoints / hidden joinery remain UNKNOWN / DEFERRED.
+
+D-103 authorizes exact materialization, Catalog registration, V008/CURRENT binding, derived Excel synchronization, and final regression / pre-merge cross-check.
+
+D-103 does **not** authorize PR #14 merge, Stage1 PASS, Stage2, or T-018 resume.
+
+## 17. Formal materialization
+
+**PASS / EXACT D-103 APPROVED ARTIFACT MATERIALIZED**
+
+- publication workflow Run: `35716617847` = SUCCESS
+- materialization commit: `4d588623fffa5e554d9b2c616ffb13bd34bd8ef1`
+- source Artifact ID: `10689220649`
+- exact-source SHA verification: PASS for .blend / Semantic / Validation / Review Board
+- repository materialized files: Semantic / Validation / Review Board
+- canonical .blend remains Actions Artifact + local-only / not tracked in Git
+- approved Definition remained unchanged.
+
+## 18. Catalog / Registry binding
+
+**PASS / FINAL REGRESSION PENDING**
+
+- Stage1 Catalog approved Master count: **13**
+- V008/CURRENT Tuojiao binding: **12 / 12**
+- Stage1 Master progress: **13 / 28 = 46.4%**
+- approved-Master-covered Registry records: **111**
+- pending Master object types: **15**
+- derived Excel remains DERIVED_VIEW and must synchronize from JSON before merge.
+
+Final regression and PR #14 pre-merge cross-check are required before requesting merge authorization.

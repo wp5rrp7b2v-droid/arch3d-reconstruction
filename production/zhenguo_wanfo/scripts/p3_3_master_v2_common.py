@@ -203,9 +203,15 @@ def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
     rb=d["registry_boundary"]
     vg=d["authority"]["visual_reference_gate"]
     profile_unknown=is_profile_unknown(d)
-    location_line=(f'Exact-location unresolved: {rb["exact_location_unresolved_count"]}'
-                   if "exact_location_unresolved_count" in rb
-                   else f'Instance distribution: {rb.get("main_body_count",0)} main / {rb.get("east_gable_count",0)} E gable / {rb.get("west_gable_count",0)} W gable')
+    role_cfg=d.get("registry_role_counts")
+    if role_cfg:
+        location_line="Role distribution: " + " / ".join(
+            f'{name} {cfg.get("count")}' for name,cfg in role_cfg.items()
+        )
+    elif "exact_location_unresolved_count" in rb:
+        location_line=f'Exact-location unresolved: {rb["exact_location_unresolved_count"]}'
+    else:
+        location_line=f'Instance distribution: {rb.get("main_body_count",0)} main / {rb.get("east_gable_count",0)} E gable / {rb.get("west_gable_count",0)} W gable'
     section_label="BOUNDING ENVELOPE / PROFILE UNKNOWN" if profile_unknown else "CANONICAL SECTION"
     text_page(review/"DIMENSION_PARAMETER_SUMMARY.png","MASTER V2 / DIMENSION + PARAMETER",[
       f'Component: {d["component_id"]}',
@@ -246,10 +252,40 @@ def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
           'Corner-beam connection: existence known / geometry deferred',
           'All real segment lengths and orientations: assembly-owned'
         ])
+    if "ROLE_ASSEMBLY_SEMANTICS" in required:
+        role_cfg=d.get("registry_role_counts",{})
+        sem=d.get("assembly_semantics",{})
+        lines=[f'{name}: {cfg.get("count")} instances / shared canonical body'
+               for name,cfg in role_cfg.items()]
+        lines += [
+          f'Member type: {sem.get("member_type","UNKNOWN")}',
+          f'Official same-building semantic: {sem.get("official_same_building_semantic","UNKNOWN")}',
+          f'Endpoint/contact geometry: {sem.get("exact_endpoint_contact_geometry","UNKNOWN")}',
+          'Role difference alone does NOT create a geometry Variant'
+        ]
+        text_page(review/"ROLE_ASSEMBLY_SEMANTICS.png","MASTER V2 / ROLE + ASSEMBLY SEMANTICS",lines)
+    if "EVIDENCE_UNCERTAINTY_AND_NUMERIC_CONFLICT" in required:
+        nc=d.get("source_numeric_conflict")
+        if not nc:
+            raise ValueError("numeric-conflict review panel required but source_numeric_conflict is absent")
+        pub=nc["published_mean_mm"]; rec=nc["visible_rows_recomputed_mean_mm"]
+        text_page(review/"EVIDENCE_UNCERTAINTY_AND_NUMERIC_CONFLICT.png","MASTER V2 / EVIDENCE + NUMERIC CONFLICT",[
+          f'REPORT PUBLISHED MEAN: {pub["width"]:.1f} x {pub["thickness"]:.1f} mm',
+          f'VISIBLE-ROW RECOMPUTED MEAN: {rec["width"]:.1f} x {rec["thickness"]:.1f} mm / AUDIT ONLY',
+          f'SOURCE_INTERNAL_NUMERIC_CONFLICT: {str(nc.get("conflict")).upper()}',
+          f'SILENT ARITHMETIC CORRECTION: {nc.get("silent_arithmetic_correction")}',
+          'Historical full length: UNKNOWN / null',
+          'Exact placement angle: UNKNOWN / null',
+          'Endpoints/contact faces: UNKNOWN',
+          'Joinery/end geometry: DEFERRED'
+        ])
 
-def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None,thickness_mm=None):
+def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None,thickness_mm=None,role=None):
     import bpy
     d=load_definition(definition)
+    role_contract=d.get("registry_role_counts",{})
+    if role is not None:
+        assert role in role_contract, f"Unknown assembly role: {role}"
     rb=d["registry_boundary"]
     base_w,base_h=get_section(d)
     L=float(length_mm if length_mm is not None else d["geometry_contract"]["canonical_reference_length_mm"])
@@ -282,6 +318,11 @@ def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None
       "engineering_representation":d["geometry_contract"].get("engineering_representation"),
       "shengtou_wood_baked_in":False,
       "unknowns":d["unknowns"],
+      "assembly_role":role,
+      "registry_role_counts":d.get("registry_role_counts"),
+      "assembly_semantics":d.get("assembly_semantics"),
+      "source_numeric_conflict":d.get("source_numeric_conflict"),
+      "legacy_proxy_reuse":d.get("legacy_proxy_reuse"),
       "body":body,
       "semantic_geometry_signature":sig,
       "canonical_blend_sha256":sha256(asset)
@@ -352,13 +393,14 @@ def parse_args():
     ap.add_argument("--length-mm",type=float)
     ap.add_argument("--width-mm",type=float)
     ap.add_argument("--thickness-mm",type=float)
+    ap.add_argument("--role")
     argv=sys.argv[sys.argv.index("--")+1:] if "--" in sys.argv else sys.argv[1:]
     return ap.parse_args(argv)
 
 def main():
     a=parse_args()
     if a.mode=="build":
-        build(a.definition,a.asset,a.semantic,a.review_dir,a.length_mm,a.width_mm,a.thickness_mm)
+        build(a.definition,a.asset,a.semantic,a.review_dir,a.length_mm,a.width_mm,a.thickness_mm,a.role)
     elif a.mode=="inspect":
         inspect(a.asset,a.expected,a.output)
     else:

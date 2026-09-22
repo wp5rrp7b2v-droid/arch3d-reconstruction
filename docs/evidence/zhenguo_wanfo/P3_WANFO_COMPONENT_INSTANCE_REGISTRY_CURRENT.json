@@ -1,9 +1,9 @@
 {
   "schema_version": "V008",
-  "date": "2026-09-21",
+  "date": "2026-09-22",
   "status": "CURRENT_BUILD_BASELINE_INSTANCE_REGISTRY",
   "source": "SRC-ZG-WF-001",
-  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility.",
+  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility. D-103 binds the Product Owner-approved Tuojiao V2 Master to all 12 托脚 registry records and updates Stage1 Master progress visibility.",
   "item_count": 505,
   "items": [
     {
@@ -2575,7 +2575,8 @@
       "evidence": "8根正身托脚+拓扑",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2586,7 +2587,8 @@
       "evidence": "8根正身托脚+拓扑",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2597,7 +2599,8 @@
       "evidence": "8根正身托脚+拓扑",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2608,7 +2611,8 @@
       "evidence": "8根正身托脚+拓扑",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2619,7 +2623,8 @@
       "evidence": "8根正身托脚+拓扑",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2630,7 +2635,8 @@
       "evidence": "8根正身托脚+拓扑",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2641,7 +2647,8 @@
       "evidence": "8根正身托脚+拓扑",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2652,7 +2659,8 @@
       "evidence": "8根正身托脚+拓扑",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2663,7 +2671,8 @@
       "evidence": "报告直接给出山面4根",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2674,7 +2683,8 @@
       "evidence": "报告直接给出山面4根",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2685,7 +2695,8 @@
       "evidence": "报告直接给出山面4根",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2696,7 +2707,8 @@
       "evidence": "报告直接给出山面4根",
       "section_mm": "平均广237.1；厚153.7",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-TUOJIAO-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -7192,14 +7204,14 @@
     "生头木"
   ],
   "stage1_master_progress_summary": {
-    "snapshot_date": "2026-09-21",
-    "status": "CURRENT / D-087 VISIBILITY RULE / D-095 PURLIN MASTER BINDING",
+    "snapshot_date": "2026-09-22",
+    "status": "CURRENT / D-087 VISIBILITY RULE / D-103 TUOJIAO MASTER BINDING",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 12,
-    "pending_master_object_type_count": 16,
-    "master_completion_percent": 42.9,
+    "approved_master_count": 13,
+    "pending_master_object_type_count": 15,
+    "master_completion_percent": 46.4,
     "pending_source_binding_count": 7,
     "completed_definition": "PRODUCT_OWNER_APPROVED Master available in Stage1 Component Master Catalog",
     "total_definition": "Master scope includes 需新建Master plus all 已有Master categories; not all registered object types require a Master",
@@ -7227,11 +7239,12 @@
       "上六椽栿",
       "四椽栿",
       "槫",
+      "托脚",
       "下六椽栿",
       "柱",
       "柱头栌斗"
     ],
-    "master_covered_registry_record_count": 99,
-    "progress_display_note": "505 is registry-record count, not a whole-building physical-piece total. Stage1 Master completion uses 28 Master-scope object types as denominator: 12 approved / 16 pending = 42.9%."
+    "master_covered_registry_record_count": 111,
+    "progress_display_note": "505 is registry-record count, not a whole-building physical-piece total. Stage1 Master completion uses 28 Master-scope object types as denominator: 13 approved / 15 pending = 46.4%."
   }
 }

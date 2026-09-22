@@ -41,6 +41,8 @@ def main():
     ap=argparse.ArgumentParser()
     for n in ("definition","canonical","reopen","length","width","thickness","restore","asset","review_dir","board","registry","catalog","output"):
         ap.add_argument("--"+n.replace("_","-"),dest=n,required=True)
+    ap.add_argument("--role-a")
+    ap.add_argument("--role-b")
     a=ap.parse_args()
     d=load(a.definition); c=load(a.canonical); r=load(a.reopen)
     lm=load(a.length); wm=load(a.width); tm=load(a.thickness); rs=load(a.restore)
@@ -64,17 +66,29 @@ def main():
     ck("06_component_identity",c["component_id"]==d["component_id"] and c["master_id"]==d["master_id"] and c["master_version"]==d["master_version"])
     ck("07_instance_count",len(items)==rb["physical_instance_count"])
 
-    east=[x for x in items if x.get("id","").startswith(component+"-东山")]
-    west=[x for x in items if x.get("id","").startswith(component+"-西山")]
-    main=[x for x in items if x.get("id","").startswith(component+"-正身")]
-    if "east_gable_known_count" in rb:
-        ck("08_known_gable_counts",len(east)==rb["east_gable_known_count"] and len(west)==rb["west_gable_known_count"])
+    role_cfg=d.get("registry_role_counts")
+    if role_cfg:
+        matched_ids=set()
+        role_ok=True
+        for role,cfg in role_cfg.items():
+            prefixes=cfg.get("id_prefixes",[])
+            matched=[x for x in items if any(x.get("id","").startswith(p) for p in prefixes)]
+            role_ok = role_ok and len(matched)==cfg["count"]
+            matched_ids.update(x.get("id") for x in matched)
+        ck("08_definition_driven_role_counts",role_ok)
+        ck("09_registry_role_partition_complete",len(matched_ids)==len(items) and sum(cfg["count"] for cfg in role_cfg.values())==len(items))
     else:
-        ck("08_distribution_counts",len(main)==rb.get("main_body_count",len(main)) and len(east)==rb.get("east_gable_count",len(east)) and len(west)==rb.get("west_gable_count",len(west)))
-    if "exact_location_unresolved_count" in rb:
-        ck("09_unresolved_count",len(items)-len(east)-len(west)==rb["exact_location_unresolved_count"])
-    else:
-        ck("09_all_registry_instances_located",all(x.get("location") not in (None,"","待定位") for x in items))
+        east=[x for x in items if x.get("id","").startswith(component+"-东山")]
+        west=[x for x in items if x.get("id","").startswith(component+"-西山")]
+        main=[x for x in items if x.get("id","").startswith(component+"-正身")]
+        if "east_gable_known_count" in rb:
+            ck("08_known_gable_counts",len(east)==rb["east_gable_known_count"] and len(west)==rb["west_gable_known_count"])
+        else:
+            ck("08_distribution_counts",len(main)==rb.get("main_body_count",len(main)) and len(east)==rb.get("east_gable_count",len(east)) and len(west)==rb.get("west_gable_count",len(west)))
+        if "exact_location_unresolved_count" in rb:
+            ck("09_unresolved_count",len(items)-len(east)-len(west)==rb["exact_location_unresolved_count"])
+        else:
+            ck("09_all_registry_instances_located",all(x.get("location") not in (None,"","待定位") for x in items))
 
     section_strings=[str(x.get("section_mm","")) for x in items]
     exact=[s for s in section_strings if str(w) in s and (str(h) in s or str(int(h)) in s)]
@@ -120,6 +134,31 @@ def main():
     ck("34_reference_length_assembly_guard","ASSEMBLY_OWNED" in gc["placement_policy"] and gc["canonical_reference_length_historical_claim"] is False)
     vg=auth["visual_reference_gate"]
     ck("35_visual_source_not_dimension_authority",vg.get("dimension_authority") is False or vg.get("unsupported_as_dimension_authority") is True)
+
+    nc=d.get("source_numeric_conflict")
+    if nc:
+        pub=nc["published_mean_mm"]; rec=nc["visible_rows_recomputed_mean_mm"]
+        ck("NC01_conflict_declared",nc.get("conflict") is True and nc.get("conflict_type")=="SOURCE_INTERNAL_NUMERIC_CONFLICT")
+        ck("NC02_published_mean_drives_canonical_section",near(pub["width"],w) and near(pub["thickness"],h))
+        ck("NC03_recomputed_mean_preserved_as_distinct_audit",not near(rec["width"],pub["width"]) and not near(rec["thickness"],pub["thickness"]) and nc.get("recomputed_classification")=="AUDIT_ONLY")
+        ck("NC04_silent_correction_prohibited",nc.get("silent_arithmetic_correction")=="PROHIBITED")
+        ck("NC05_semantic_preserves_numeric_conflict",c.get("source_numeric_conflict")==nc)
+        ck("NC06_conflict_panel_required","EVIDENCE_UNCERTAINTY_AND_NUMERIC_CONFLICT" in panels)
+        ck("NC07_measurement_row_accounting",nc.get("table_row_count")==nc.get("complete_visible_sample_count")+nc.get("unmeasured_visible_row_count"))
+        ck("NC08_fen_metadata_not_geometry",d.get("report_analysis",{}).get("geometry_use_count")==0)
+
+    if role_cfg:
+        ck("ROLE01_semantic_preserves_role_contract",c.get("registry_role_counts")==role_cfg)
+        ck("ROLE02_assembly_semantics_preserved",c.get("assembly_semantics")==d.get("assembly_semantics"))
+        ck("ROLE03_exact_angle_unknown",rb.get("exact_placement_angle_deg") is None)
+        ck("ROLE04_legacy_proxy_not_reused",d.get("legacy_proxy_reuse") is False and c.get("legacy_proxy_reuse") is False)
+        ck("ROLE05_role_panel_required","ROLE_ASSEMBLY_SEMANTICS" in panels)
+        if not a.role_a or not a.role_b:
+            raise AssertionError("role mutation semantics required but --role-a/--role-b not supplied")
+        ra=load(a.role_a); rbsem=load(a.role_b)
+        role_names=list(role_cfg.keys())
+        ck("ROLE06_role_mutation_names",ra.get("assembly_role")==role_names[0] and rbsem.get("assembly_role")==role_names[1])
+        ck("ROLE07_role_mutation_preserves_geometry",ra["body"]==c["body"] and rbsem["body"]==c["body"] and ra["semantic_geometry_signature"]==c["semantic_geometry_signature"]==rbsem["semantic_geometry_signature"])
 
     if "identity_boundary" in d:
         ib=d["identity_boundary"]
@@ -168,6 +207,8 @@ def main():
       "required_review_panels":panels,
       "section_profile_state":c.get("section_profile_state"),
       "section_envelope_historical_claim":c.get("section_envelope_historical_claim"),
+      "source_numeric_conflict":c.get("source_numeric_conflict"),
+      "registry_role_counts":c.get("registry_role_counts"),
       "formal_file_count_policy":"ADAPTIVE / MINIMAL SUFFICIENT / NO FIXED COUNT",
       "blender_version":c["blender_version"]
     }

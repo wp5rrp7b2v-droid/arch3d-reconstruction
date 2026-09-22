@@ -1,0 +1,166 @@
+{
+  "approval_boundary": "ENGINEERING_COMPLETE_PENDING_PRODUCT_OWNER_REVIEW",
+  "blender_version": "4.5.13 LTS",
+  "canonical_blend_sha256": "23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f",
+  "check_count": 56,
+  "checks": {
+    "01_definition_locked": "PASS",
+    "02_execution_authorized": "PASS",
+    "03_visual_gate": "PASS",
+    "04_registry_version": "PASS",
+    "05_registry_record_count": "PASS",
+    "06_component_identity": "PASS",
+    "07_instance_count": "PASS",
+    "08_definition_driven_role_counts": "PASS",
+    "09_registry_role_partition_complete": "PASS",
+    "10_registry_section_binding": "PASS",
+    "11_historical_length_null": "PASS",
+    "12_reference_nonhistorical": "PASS",
+    "13_no_unsupported_geometry": "PASS",
+    "14_definition_hash": "PASS",
+    "15_bbox_length": "PASS",
+    "16_bbox_width": "PASS",
+    "17_bbox_thickness": "PASS",
+    "18_origin_transform": "PASS",
+    "19_reopen": "PASS",
+    "20_restore": "PASS",
+    "21_length_mutation": "PASS",
+    "22_width_mutation": "PASS",
+    "23_thickness_mutation": "PASS",
+    "24_binary_sha": "PASS",
+    "25_blender_version": "PASS",
+    "26_required_panels_complete": "PASS",
+    "27_review_board_exists": "PASS",
+    "28_review_board_dimensions": "PASS",
+    "29_no_fixed_panel_rule": "PASS",
+    "30_minimal_sufficient_rule": "PASS",
+    "31_no_tracked_canonical_blend_in_master_dir": "PASS",
+    "32_definition_semantic_validation_independence": "PASS",
+    "33_unknowns_preserved": "PASS",
+    "34_reference_length_assembly_guard": "PASS",
+    "35_visual_source_not_dimension_authority": "PASS",
+    "36_legacy_identity_not_applicable": "PASS",
+    "37_profile_unknown_semantic": "PASS",
+    "38_profile_unknown_body": "PASS",
+    "39_envelope_proxy_nonhistorical": "PASS",
+    "40_no_shengtou_baked": "PASS",
+    "41_preapproval_catalog_absent": "PASS",
+    "NC01_conflict_declared": "PASS",
+    "NC02_published_mean_drives_canonical_section": "PASS",
+    "NC03_recomputed_mean_preserved_as_distinct_audit": "PASS",
+    "NC04_silent_correction_prohibited": "PASS",
+    "NC05_semantic_preserves_numeric_conflict": "PASS",
+    "NC06_conflict_panel_required": "PASS",
+    "NC07_measurement_row_accounting": "PASS",
+    "NC08_fen_metadata_not_geometry": "PASS",
+    "ROLE01_semantic_preserves_role_contract": "PASS",
+    "ROLE02_assembly_semantics_preserved": "PASS",
+    "ROLE03_exact_angle_unknown": "PASS",
+    "ROLE04_legacy_proxy_not_reused": "PASS",
+    "ROLE05_role_panel_required": "PASS",
+    "ROLE06_role_mutation_names": "PASS",
+    "ROLE07_role_mutation_preserves_geometry": "PASS"
+  },
+  "component_id": "CMP-FRAME-TUOJIAO-001",
+  "definition_sha256": "f8e7642ce9ce7e2e6f40411cc83bae762a4e3c771602fcb3ff054b0f8db808f9",
+  "formal_file_count_policy": "ADAPTIVE / MINIMAL SUFFICIENT / NO FIXED COUNT",
+  "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+  "registry_role_counts": {
+    "GABLE": {
+      "count": 4,
+      "geometry_policy": "SHARED_CANONICAL_BODY",
+      "id_prefixes": [
+        "托脚-东山",
+        "托脚-西山"
+      ]
+    },
+    "MAIN_FRAME": {
+      "count": 8,
+      "geometry_policy": "SHARED_CANONICAL_BODY",
+      "id_prefixes": [
+        "托脚-东缝",
+        "托脚-西缝"
+      ]
+    }
+  },
+  "required_review_panels": [
+    "AXON",
+    "LONG_SIDE",
+    "END_SECTION_ENVELOPE",
+    "DIMENSION_PARAMETER_SUMMARY",
+    "ROLE_ASSEMBLY_SEMANTICS",
+    "EVIDENCE_UNCERTAINTY_AND_NUMERIC_CONFLICT"
+  ],
+  "review_board_sha256": "6bc5f05c212d07d08a0e9e1b48415718c17734dad5d8239a75b29198880b7c0f",
+  "schema_version": "MASTER_V2_VALIDATION_1.1",
+  "section_envelope_historical_claim": false,
+  "section_profile_state": "UNKNOWN",
+  "semantic_geometry_signature": "3c8f39d3b6eab08ad8d09651dce70dc07c1cb5c2a7a9387369416c1611911a2c",
+  "source_numeric_conflict": {
+    "canonical_geometry_basis": "PUBLISHED_MEAN",
+    "complete_visible_sample_count": 10,
+    "conflict": true,
+    "conflict_type": "SOURCE_INTERNAL_NUMERIC_CONFLICT",
+    "published_mean_mm": {
+      "thickness": 153.7,
+      "width": 237.1
+    },
+    "recomputed_classification": "AUDIT_ONLY",
+    "silent_arithmetic_correction": "PROHIBITED",
+    "table_row_count": 11,
+    "unmeasured_visible_row_count": 1,
+    "visible_rows_recomputed_mean_mm": {
+      "thickness": 154.1,
+      "width": 234.1
+    },
+    "visible_samples_mm": [
+      {
+        "thickness": 152,
+        "width": 249
+      },
+      {
+        "note": "source table: 未及",
+        "thickness": null,
+        "width": null
+      },
+      {
+        "thickness": 151,
+        "width": 245
+      },
+      {
+        "thickness": 152,
+        "width": 245
+      },
+      {
+        "thickness": 149,
+        "width": 244
+      },
+      {
+        "thickness": 151,
+        "width": 250
+      },
+      {
+        "thickness": 154,
+        "width": 250
+      },
+      {
+        "thickness": 151,
+        "width": 214
+      },
+      {
+        "thickness": 158,
+        "width": 213
+      },
+      {
+        "thickness": 150,
+        "width": 212
+      },
+      {
+        "thickness": 173,
+        "width": 219
+      }
+    ]
+  },
+  "status": "PASS",
+  "task_id": "T-027"
+}
