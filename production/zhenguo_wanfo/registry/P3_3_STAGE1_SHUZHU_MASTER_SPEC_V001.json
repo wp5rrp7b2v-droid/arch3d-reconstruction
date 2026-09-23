@@ -1,0 +1,70 @@
+{
+  "schema_version": "P3_3_STAGE1_MASTER_SPEC_1.0",
+  "component_id": "CMP-FRAME-SHUZHU-001",
+  "master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+  "master_version": "V001",
+  "component_name_zh": "蜀柱",
+  "status": "LOCKED / D-115",
+  "authority": {
+    "source_priority": "D-099 / RC-019",
+    "reconstruction_policy": "D-108 / RC-020",
+    "visual_gate": "D-076 PASS / D-115"
+  },
+  "evidence": {
+    "a1": {
+      "source_id": "SRC-ZG-WF-001",
+      "locator": "PDF p90-91 / printed p75-76 / §2.3.1.9 / Table 2-46 / Fig 2-51 + 2-52"
+    },
+    "a2": {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/",
+      "claim": "平梁之上设驼峰、蜀柱、叉手",
+      "dimension_authority": false
+    }
+  },
+  "physical_instance_count": 4,
+  "roles": {
+    "INTERIOR_FRAME": 2,
+    "GABLE_FRAME": 2
+  },
+  "geometry_variant_count": 0,
+  "canonical_section_mm": {
+    "width": 218.75,
+    "thickness": 157.5
+  },
+  "source_numeric_conflict": false,
+  "measurement_audit": {
+    "width_rows_mm": [
+      218,
+      220,
+      220,
+      217
+    ],
+    "thickness_rows_mm": [
+      158,
+      null,
+      157,
+      157.5
+    ],
+    "unmeasured_record": "东山 thickness / 未及",
+    "recomputed_mean_mm": {
+      "width": 218.75,
+      "thickness": 157.5
+    }
+  },
+  "historical_full_length_mm": null,
+  "canonical_reference_length_mm": 1000,
+  "canonical_reference_length_historical_claim": false,
+  "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER",
+  "endpoint_semantics": {
+    "lower": "PINGLIANG_UPPER_SUPPORT_REGION",
+    "upper": "RIDGE_SUPPORT_LOWER_CONNECTION_REGION"
+  },
+  "end_geometry": "STRUCTURAL_SIMPLIFIED_FLAT_END / RECONSTRUCTED_DESIGN",
+  "historical_joinery": "UNKNOWN / DEFERRED",
+  "approval": {
+    "decision_id": "D-115",
+    "date": "2026-09-23",
+    "product_owner_instruction": "complete next component end-to-end",
+    "delegated_conditional_acceptance": true
+  }
+}

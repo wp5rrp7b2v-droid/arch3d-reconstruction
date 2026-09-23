@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R194",
+  "state_revision": "R195",
   "last_updated": "2026-09-23",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 14 OF 28 MASTERS APPROVED / T-028 CLOSED D-114 / NEXT=蜀柱 / RC-020 ACTIVE / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 14 OF 28 MASTERS APPROVED / T-029 SHUZHU END-TO-END EXECUTION AUTHORIZED D-116 / FIRST ARTICLE IN PROGRESS / RC-020 ACTIVE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active project blocker. T-028 is CLOSED / MERGED_TO_MAIN under D-114. Stage1 remains ACTIVE at 14/28; next Master target is 蜀柱. T-018 remains HOLD.",
+  "blocker": "No active project blocker. T-029 end-to-end execution is authorized under D-116. Any hard-gate failure must be repaired or stopped; T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -61,15 +61,23 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "NONE",
-    "name": "No active engineering T-task",
-    "status": "NONE / T-028 CLOSED / NEXT COMPONENT=蜀柱"
+    "id": "T-029",
+    "engineering_id": "P3_3_SHUZHU_MASTER_V2_V001",
+    "name": "蜀柱 Master 首件生产",
+    "status": "END-TO-END EXECUTION AUTHORIZED / D-116 / FIRST ARTICLE IN PROGRESS",
+    "engineering_execution_authorized": true,
+    "production_branch_creation_authorized": true,
+    "pr_creation_authorized": true,
+    "blender_execution_authorized": true,
+    "delegated_conditional_acceptance": true,
+    "formalization_authorized_conditionally": true,
+    "pr_merge_authorized_conditionally": true
   },
   "proposed_next_task": {
-    "id": "NEXT-MASTER-SHUZHU",
-    "name": "蜀柱｜Source + Visual Gate → Master Spec",
-    "status": "PLANNING NEXT / NO ENGINEERING T-TASK CREATED",
-    "prerequisite": "D-099 A1/A2 source review + D-076 visual/form gate + Product Owner Master Spec approval before any execution task"
+    "id": "T-029",
+    "name": "P3_3_SHUZHU_MASTER_V2_V001｜蜀柱 Master 首件生产",
+    "status": "IN EXECUTION / END-TO-END AUTHORIZED",
+    "prerequisite": "D-115+D-116 satisfied"
   },
   "last_completed_task": {
     "id": "T-028",
@@ -122,7 +130,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 14 OF 28 MASTERS APPROVED / T-028 CLOSED D-114 / NEXT=蜀柱 / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 14 OF 28 MASTERS APPROVED / T-029 SHUZHU END-TO-END EXECUTION AUTHORIZED D-116 / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -338,6 +346,28 @@
       "v008_bound_rows": 8,
       "master_covered_registry_record_count": 119,
       "stage1_master_completion": "14/28 / 50.0%"
+    },
+    "shuzhu": {
+      "status": "SPEC V001 LOCKED D-115 / T-029 EXECUTION AUTHORIZED D-116 / FIRST ARTICLE IN PROGRESS",
+      "component": "蜀柱",
+      "component_id": "CMP-FRAME-SHUZHU-001",
+      "master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+      "physical_instance_count": 4,
+      "roles": {
+        "INTERIOR_FRAME": 2,
+        "GABLE_FRAME": 2
+      },
+      "canonical_section_mm": {
+        "width": 218.75,
+        "thickness": 157.5
+      },
+      "source_internal_numeric_conflict": false,
+      "canonical_reference_length_mm": 1000,
+      "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER",
+      "geometry_variant_count": 0,
+      "task_id": "T-029",
+      "task_contract": "docs/tasks/T-029_P3_3_SHUZHU_MASTER_V2_V001.md",
+      "delegated_conditional_acceptance": true
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -362,9 +392,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-114",
+    "id": "D-116",
     "date": "2026-09-23",
-    "decision": "T-028 Chashou Master V2 closed and PR #16 merged to main after D-113 authorization and latest-head checks PASS. Stage1 is now 14/28=50.0%; V008 Chashou binding is 8/8; next Master target is 蜀柱; T-018 remains HOLD."
+    "decision": "T-029 Shuzhu end-to-end execution authorized with delegated conditional acceptance/materialization/merge only after all locked gates PASS."
   },
   "latest_material_review": {
     "date": "2026-09-23",
@@ -428,7 +458,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Begin 蜀柱 source/evidence and visual/form review under D-099/RC-019 and D-076. Do not create a new engineering T-task or run Blender until the Master Spec and Task Contract are separately approved.",
+  "next_action": "Execute T-029 Shuzhu first article on dedicated branch; do not resume T-018 or start Stage2.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
