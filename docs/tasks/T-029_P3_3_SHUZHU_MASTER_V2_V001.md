@@ -143,3 +143,14 @@ This does not authorize:
 - changing direct source facts silently
 - resuming T-018
 - starting Stage2
+
+## 10. Engineering implementation start
+
+D-116 execution started on branch `codex/t029-p3-3-shuzhu-master-v2-v001`.
+
+Shared infrastructure change required:
+- endpoint fixture direction variation becomes Definition-driven;
+- backward-compatible default remains `directions_must_differ=true`;
+- T-029 declares `directions_must_match=true`;
+- mandatory regressions expanded to T-025 / T-026 / T-027 / T-028.
+

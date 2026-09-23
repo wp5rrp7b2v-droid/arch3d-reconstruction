@@ -195,8 +195,19 @@ def main():
             ck("EP_"+fid+"_direction",all(near(rr["derived_direction"][i],direction[i],1e-6) for i in range(3)))
             ck("EP_"+fid+"_classification","NOT_BUILDING_COORDINATES" in fixture["classification"] and rr.get("building_coordinate_claim") is False and rr.get("historical_claim") is False)
             lengths.append(rr["derived_length_mm"]); directions.append(rr["derived_direction"])
-        ck("EP90_fixture_lengths_differ",len({round(float(x),6) for x in lengths})==len(lengths))
-        ck("EP91_fixture_directions_differ",len({tuple(round(float(v),6) for v in x) for x in directions})==len(directions))
+        variation=endpoint.get("fixture_variation_contract",{})
+        unique_lengths={round(float(x),6) for x in lengths}
+        unique_directions={tuple(round(float(v),6) for v in x) for x in directions}
+        if variation.get("lengths_must_differ",True):
+            ck("EP90_fixture_lengths_differ",len(unique_lengths)==len(lengths))
+        else:
+            ck("EP90_fixture_length_policy",True)
+        if variation.get("directions_must_match",False):
+            ck("EP91_fixture_directions_match",len(unique_directions)==1)
+        elif variation.get("directions_must_differ",True):
+            ck("EP91_fixture_directions_differ",len(unique_directions)==len(directions))
+        else:
+            ck("EP91_fixture_direction_policy",True)
         ck("EP92_reference_length_not_leaked",all(not near(x,gc["canonical_reference_length_mm"]) for x in lengths))
         ck("EP93_same_master_section",near(cd[1],w) and near(cd[2],h))
         ck("EP94_required_panel","PLACEMENT_AND_ENDPOINT_LOGIC" in panels)

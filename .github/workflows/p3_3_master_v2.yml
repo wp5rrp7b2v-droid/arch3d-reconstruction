@@ -166,7 +166,7 @@ jobs:
             --output "$VALIDATION" \
             "${EXTRA[@]}"
 
-      - name: Shared V2 infrastructure regression (T-025 + T-026 + T-027)
+      - name: Shared V2 infrastructure regression (T-025 + T-026 + T-027 + T-028)
         shell: bash
         run: |
           set -euo pipefail
@@ -179,7 +179,8 @@ jobs:
           for DEF in \
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZHAQIAN-001/CMP-FRAME-ZHAQIAN-001_MASTER_DEFINITION_V001.json \
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PURLIN-001/CMP-FRAME-PURLIN-001_MASTER_DEFINITION_V001.json \
-            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_DEFINITION_V001.json
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_DEFINITION_V001.json \
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-CHASHOU-001/CMP-FRAME-CHASHOU-001_MASTER_DEFINITION_V001.json
           do
             KEY="$(python - "$DEF" <<'PY'
           import json,sys
