@@ -1,0 +1,367 @@
+{
+  "assembly_role": null,
+  "assembly_semantics": {
+    "exact_endpoint_contact_geometry": "RECONSTRUCTED_DESIGN_LATER / ENDPOINT_DRIVEN",
+    "member_type": "VERTICAL_RIDGE_SUPPORT_POST",
+    "official_same_building_semantic": "ABOVE_PINGLIANG / RIDGE_SUPPORT_SYSTEM",
+    "role_geometry_policy": "INTERIOR_FRAME_AND_GABLE_FRAME_SHARE_CANONICAL_BODY"
+  },
+  "blender_version": "4.5.13 LTS",
+  "body": {
+    "face_count": 6,
+    "geometry_faces": [
+      [
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        4
+      ],
+      [
+        1,
+        2,
+        6,
+        5
+      ],
+      [
+        2,
+        3,
+        7,
+        6
+      ],
+      [
+        3,
+        0,
+        4,
+        7
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "geometry_vertices_mm": [
+      [
+        -500.0,
+        -109.375,
+        0.0
+      ],
+      [
+        500.0,
+        -109.375,
+        0.0
+      ],
+      [
+        500.0,
+        109.375,
+        0.0
+      ],
+      [
+        -500.0,
+        109.375,
+        0.0
+      ],
+      [
+        -500.0,
+        -109.375,
+        157.5
+      ],
+      [
+        500.0,
+        -109.375,
+        157.5
+      ],
+      [
+        500.0,
+        109.375,
+        157.5
+      ],
+      [
+        -500.0,
+        109.375,
+        157.5
+      ]
+    ],
+    "joinery_cut_count": 0,
+    "local_bbox_mm": {
+      "dimensions": [
+        1000.0,
+        218.75,
+        157.5
+      ],
+      "max": [
+        500.0,
+        109.375,
+        157.5
+      ],
+      "min": [
+        -500.0,
+        -109.375,
+        0.0
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "name": "MASTER__CMP_FRAME_SHUZHU_001__BODY",
+    "primitive": "rectangular_bounding_envelope_proxy_profile_unknown",
+    "section_envelope_historical_claim": false,
+    "section_profile_state": "UNKNOWN",
+    "shengtou_wood_baked_in": false,
+    "unsupported_detail_count": 0,
+    "vertex_count": 8
+  },
+  "canonical_blend_sha256": "becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6",
+  "canonical_reference_length_historical_claim": false,
+  "component_id": "CMP-FRAME-SHUZHU-001",
+  "definition_sha256": "fed1727f810e09a43091c24736cc34f034a6dfc12ceb52800bffda51f47efc5c",
+  "endpoint_fixture_results": [
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        0.0,
+        0.0,
+        600.0
+      ],
+      "derived_direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "derived_length_mm": 1200.0,
+      "fixture_id": "TEST-A",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        0.0,
+        0.0,
+        1200.0
+      ]
+    },
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        0.0,
+        0.0,
+        750.0
+      ],
+      "derived_direction": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "derived_length_mm": 1500.0,
+      "fixture_id": "TEST-B",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        0.0,
+        0.0,
+        1500.0
+      ]
+    }
+  ],
+  "endpoint_resolver_contract": {
+    "building_coordinate_claim": false,
+    "center_rule": "(P_upper + P_lower) / 2",
+    "classification": "RECONSTRUCTED_DESIGN / GENERIC_ENDPOINT_DRIVEN_ASSEMBLY",
+    "enabled": true,
+    "fixture_variation_contract": {
+      "directions_must_differ": false,
+      "directions_must_match": true,
+      "lengths_must_differ": true,
+      "rationale": "Shuzhu proves variable endpoint-derived height while retaining a vertical support direction."
+    },
+    "fixtures": [
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          0,
+          0,
+          600
+        ],
+        "expected_direction": [
+          0,
+          0,
+          1
+        ],
+        "expected_length_mm": 1200,
+        "fixture_id": "TEST-A",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          0,
+          0,
+          1200
+        ]
+      },
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          0,
+          0,
+          750
+        ],
+        "expected_direction": [
+          0,
+          0,
+          1
+        ],
+        "expected_length_mm": 1500,
+        "fixture_id": "TEST-B",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          0,
+          0,
+          1500
+        ]
+      }
+    ],
+    "historical_claim": false,
+    "length_rule": "norm(P_upper - P_lower)",
+    "lower_endpoint_semantic": "PINGLIANG_UPPER_SUPPORT_REGION",
+    "orientation_rule": "local +X aligns to normalized(P_upper - P_lower)",
+    "upper_endpoint_semantic": "RIDGE_SUPPORT_LOWER_CONNECTION_REGION"
+  },
+  "engineering_representation": {
+    "historical_profile_claim": false,
+    "label_requirement": "DIRECT MEASURED WIDTH/THICKNESS MEAN; RECTANGULAR PROFILE AND FLAT ENDS ARE RECONSTRUCTED-DESIGN REPRESENTATION",
+    "primitive": "RECTANGULAR_BOUNDING_ENVELOPE_PROXY",
+    "purpose": "STAGE1 MASTER + ENDPOINT-RESOLVER VALIDATION / RECONSTRUCTED DESIGN"
+  },
+  "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER",
+  "historical_full_length_mm": null,
+  "joinery_geometry": "STAGE1_SIMPLIFIED_FLAT_END / NO HISTORICAL JOINERY CLAIM",
+  "legacy_proxy_reuse": false,
+  "master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+  "master_version": "V001",
+  "placement_policy": "ASSEMBLY_OWNED / ENDPOINT_DERIVED / RECONSTRUCTED_DESIGN_ALLOWED / STAGE1_BUILDING_XYZ_NOT_LOCKED",
+  "reconstruction_policy": {
+    "classification": "EVIDENCE_CONSTRAINED_RECONSTRUCTION",
+    "decision_id": "D-108",
+    "reconstructed_design_must_be_explicit": true,
+    "reconstructed_design_replaceable": true,
+    "rule_id": "RC-020",
+    "silent_historicization": "PROHIBITED",
+    "unknown_does_not_automatically_block": true
+  },
+  "registry_role_counts": {
+    "GABLE_FRAME": {
+      "count": 2,
+      "geometry_policy": "SHARED_CANONICAL_BODY / PLACEMENT_ONLY",
+      "id_prefixes": [
+        "蜀柱-东山",
+        "蜀柱-西山"
+      ]
+    },
+    "INTERIOR_FRAME": {
+      "count": 2,
+      "geometry_policy": "SHARED_CANONICAL_BODY / PLACEMENT_ONLY",
+      "id_prefixes": [
+        "蜀柱-东缝",
+        "蜀柱-西缝"
+      ]
+    }
+  },
+  "resolved_dimensions_mm": {
+    "length": 1000.0,
+    "thickness": 157.5,
+    "width": 218.75
+  },
+  "schema_version": "MASTER_V2_SEMANTIC_1.1",
+  "section_envelope_historical_claim": false,
+  "section_profile_state": "UNKNOWN",
+  "semantic_geometry_signature": "301e5a8ecf45cdc586d701571be7415aa3eb9e3e0d02bbb8a6b82ebef3a64a40",
+  "shengtou_wood_baked_in": false,
+  "source_numeric_conflict": {
+    "canonical_geometry_basis": "PUBLISHED_MEAN_MATCHING_RECOMPUTE",
+    "complete_thickness_sample_count": 2,
+    "complete_visible_sample_count": 2,
+    "complete_width_sample_count": 4,
+    "conflict": false,
+    "conflict_type": "SOURCE_INTERNAL_NUMERIC_CONFLICT",
+    "published_mean_mm": {
+      "thickness": 157.5,
+      "width": 218.75
+    },
+    "unmeasured_record_present": true,
+    "visible_rows_recomputed_mean_mm": {
+      "thickness": 157.5,
+      "width": 218.75
+    },
+    "visible_samples_mm": [
+      {
+        "location": "东缝",
+        "thickness": 158,
+        "width": 218
+      },
+      {
+        "location": "东山",
+        "note": "厚未及",
+        "thickness": null,
+        "width": 220
+      },
+      {
+        "location": "西缝",
+        "thickness": 157,
+        "width": 220
+      },
+      {
+        "location": "西山",
+        "note": "厚未及",
+        "thickness": null,
+        "width": 217
+      }
+    ]
+  },
+  "task_id": "T-029",
+  "unknowns": [
+    "historical full height remains unresolved but does not block endpoint-derived production placement",
+    "historical-original hidden joinery and exact end profile remain unresolved",
+    "both gable thickness measurements (东山 / 西山) are 未及",
+    "final four building XYZ endpoints belong to later whole-building placement stage",
+    "sample-to-instance correspondence is position-labeled by A1 table/V008 closure; no separate historical identity evidence beyond those location labels is claimed"
+  ]
+}

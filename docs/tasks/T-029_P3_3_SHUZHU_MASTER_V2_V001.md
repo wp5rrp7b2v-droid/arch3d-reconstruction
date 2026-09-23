@@ -143,3 +143,93 @@ This does not authorize:
 - changing direct source facts silently
 - resuming T-018
 - starting Stage2
+
+## 10. Engineering implementation start
+
+D-116 execution started on branch `codex/t029-p3-3-shuzhu-master-v2-v001`.
+
+Shared infrastructure change required:
+- endpoint fixture direction variation becomes Definition-driven;
+- backward-compatible default remains `directions_must_differ=true`;
+- T-029 declares `directions_must_match=true`;
+- mandatory regressions expanded to T-025 / T-026 / T-027 / T-028.
+
+## 11. Source transcription correction / D-117
+
+Before first-article acceptance, cross-check against the V008 Stage1 disposition audit corrected one A1 Table 2-46 transcription:
+
+- 东缝: 218 × 158 mm
+- 东山: 220 × 未及
+- 西缝: 220 × 157 mm
+- 西山: 217 × 未及
+- width mean = 218.75 mm
+- measured thickness mean = (158 + 157) / 2 = 157.5 mm
+- source numeric conflict = FALSE
+- canonical section remains 218.75 × 157.5 mm
+
+Both gable thickness rows are unmeasured. No direct 157.5 mm West-Gable thickness claim is retained.
+
+First article Run `35845395762` started before this correction entered the Definition. Regardless of its eventual technical result, it is classified:
+
+`SUPERSEDED_PRE_D117_SOURCE_CORRECTION`
+
+It must not be used for first-article acceptance or formalization. A new run from the corrected Definition is mandatory.
+
+## 12. Run #1 failure analysis + generic registry-section fix
+
+Superseded pre-correction Run `35845395762` also exposed a shared-validator assumption at:
+
+`10_registry_section_binding`
+
+Root cause:
+- legacy validator expected every Registry row either to contain the canonical numeric section or explicitly say it inherited measured statistics;
+- Shuzhu V008 intentionally preserves measurement state instead:
+  - 2 interior rows: `广厚有直接实测`
+  - 2 gable rows: `广有实测；厚未及`
+- forcing a numeric gable thickness into Registry would violate D-117 and the pre-existing V008 audit.
+
+Fix:
+- add generic Definition-driven `registry_section_binding_contract`;
+- mode `SEMANTIC_MEASUREMENT_STATE_WITH_MASTER_MEAN` verifies 2 measured-full rows + 2 thickness-UNKNOWN rows;
+- verifies that UNKNOWN remains explicit;
+- verifies canonical 218.75 × 157.5 mm comes from the A1 table published/recomputed mean rather than silently filling gable measurements;
+- legacy Definitions retain the old numeric/inherited binding rule.
+
+Corrected Run `35846114260`, which started before this validator fix, is also **SUPERSEDED_FOR_KNOWN_VALIDATOR_COMPATIBILITY_GAP** and must not be accepted. A fresh run is required.
+
+## 13. First-article Run #3｜Validator uncertainty-boundary mismatch
+
+Run `35846386214` completed:
+- Blender 4.5.13 install = PASS
+- canonical Master build = PASS
+- independent reopen = PASS
+- length/width/thickness mutation = PASS
+- INTERIOR_FRAME / GABLE_FRAME role mutation = PASS
+- six-panel Review Board = PASS
+
+It stopped at validator check `33_unknowns_preserved`.
+
+Cause:
+- the shared validator requires an explicit `sample-to-instance` uncertainty phrase;
+- Shuzhu Definition already preserves the real boundary as A1 table location labels + V008 closure, but the unknowns array did not repeat that phrase.
+
+Patch:
+- add an explicit statement that sample-to-instance correspondence is position-labeled by A1/V008 closure while no additional historical identity provenance is claimed;
+- no geometry, section, count, role, endpoint fixture, or source measurement value changes.
+
+Classification:
+- `VALIDATOR_UNCERTAINTY_BOUNDARY_TEXT_MISMATCH`
+- Run #3 is superseded and cannot be accepted because main validation/regressions did not finish.
+
+
+## 14. D-118 delegated conditional acceptance + formalization
+
+Run 35847859509 completed all locked gates: Blender/build/reopen/mutations, 79 machine checks, six-panel Review Board, and shared T-025/T-026/T-027/T-028 regression. Under D-116 delegated conditional acceptance, exact Artifact 10744639697 is accepted.
+
+Exact accepted identities:
+- .blend SHA-256 becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6 — Actions Artifact/local-only, NOT Git
+- Semantic SHA-256 3327a95918d61c0ed830fb49a46042c88cb9be2b36a64b958e29918529d2cd93
+- Validation SHA-256 5cfe4c5086d847e7c1f34b6ff7ea6488b20b7f9381d55e0c5fb063b5cfe6a5cb
+- Review Board SHA-256 8fc89aed2ad0f0329bceb890e9a5350bac6d2aea22de2d92d34d935fa3db7d64
+
+Run 35860705896 materialized the three formal repo outputs byte-for-byte and verified the .blend SHA without committing it. Catalog candidate = 15 approved; V008/CURRENT and versioned V008 = 4/4 蜀柱 bound; approved-master-covered Registry records = 123; Stage1 candidate = 15/28 = 53.6%. Final latest-head regression, Excel sync, pre-merge cross-check and merge remain required before closure.

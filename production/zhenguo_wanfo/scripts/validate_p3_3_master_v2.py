@@ -91,9 +91,26 @@ def main():
             ck("09_all_registry_instances_located",all(x.get("location") not in (None,"","待定位") for x in items))
 
     section_strings=[str(x.get("section_mm","")) for x in items]
-    exact=[s for s in section_strings if str(w) in s and (str(h) in s or str(int(h)) in s)]
-    inherited=[s for s in section_strings if ("沿用" in s and "实测统计" in s)]
-    ck("10_registry_section_binding",len(exact)>=1 and len(exact)+len(inherited)==len(items))
+    section_binding=d.get("registry_section_binding_contract")
+    if section_binding and section_binding.get("mode")=="SEMANTIC_MEASUREMENT_STATE_WITH_MASTER_MEAN":
+        measured_token=section_binding["measured_full_section_token"]
+        unknown_token=section_binding["unknown_thickness_token"]
+        measured=[s for s in section_strings if measured_token in s]
+        unknown=[s for s in section_strings if unknown_token in s]
+        ck("10_registry_section_binding",
+           len(measured)==section_binding["measured_full_section_count"] and
+           len(unknown)==section_binding["unknown_thickness_count"] and
+           len(measured)+len(unknown)==len(items))
+        ck("10A_registry_unknown_thickness_preserved",
+           all(unknown_token in s for s in unknown) and
+           section_binding.get("unknown_must_not_be_silently_filled") is True)
+        ck("10B_master_mean_has_A1_authority",
+           section_binding.get("canonical_section_authority")=="A1_TABLE_PUBLISHED_MEAN_MATCHING_RECOMPUTE" and
+           near(rb["section_mm"]["width"],w) and near(rb["section_mm"]["thickness"],h))
+    else:
+        exact=[s for s in section_strings if str(w) in s and (str(h) in s or str(int(h)) in s)]
+        inherited=[s for s in section_strings if ("沿用" in s and "实测统计" in s)]
+        ck("10_registry_section_binding",len(exact)>=1 and len(exact)+len(inherited)==len(items))
 
     ck("11_historical_length_null",rb["historical_full_length_mm"] is None and c["historical_full_length_mm"] is None)
     ck("12_reference_nonhistorical",gc["canonical_reference_length_historical_claim"] is False and c["canonical_reference_length_historical_claim"] is False)
@@ -195,8 +212,19 @@ def main():
             ck("EP_"+fid+"_direction",all(near(rr["derived_direction"][i],direction[i],1e-6) for i in range(3)))
             ck("EP_"+fid+"_classification","NOT_BUILDING_COORDINATES" in fixture["classification"] and rr.get("building_coordinate_claim") is False and rr.get("historical_claim") is False)
             lengths.append(rr["derived_length_mm"]); directions.append(rr["derived_direction"])
-        ck("EP90_fixture_lengths_differ",len({round(float(x),6) for x in lengths})==len(lengths))
-        ck("EP91_fixture_directions_differ",len({tuple(round(float(v),6) for v in x) for x in directions})==len(directions))
+        variation=endpoint.get("fixture_variation_contract",{})
+        unique_lengths={round(float(x),6) for x in lengths}
+        unique_directions={tuple(round(float(v),6) for v in x) for x in directions}
+        if variation.get("lengths_must_differ",True):
+            ck("EP90_fixture_lengths_differ",len(unique_lengths)==len(lengths))
+        else:
+            ck("EP90_fixture_length_policy",True)
+        if variation.get("directions_must_match",False):
+            ck("EP91_fixture_directions_match",len(unique_directions)==1)
+        elif variation.get("directions_must_differ",True):
+            ck("EP91_fixture_directions_differ",len(unique_directions)==len(directions))
+        else:
+            ck("EP91_fixture_direction_policy",True)
         ck("EP92_reference_length_not_leaked",all(not near(x,gc["canonical_reference_length_mm"]) for x in lengths))
         ck("EP93_same_master_section",near(cd[1],w) and near(cd[2],h))
         ck("EP94_required_panel","PLACEMENT_AND_ENDPOINT_LOGIC" in panels)
