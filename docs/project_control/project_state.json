@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R195",
+  "state_revision": "R196",
   "last_updated": "2026-09-23",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 14 OF 28 MASTERS APPROVED / T-029 SHUZHU END-TO-END EXECUTION AUTHORIZED D-116 / FIRST ARTICLE IN PROGRESS / RC-020 ACTIVE / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 14 OF 28 MASTERS APPROVED / T-029 SHUZHU EXECUTION D-116 / SOURCE TRANSCRIPTION CORRECTED D-117 / FIRST ARTICLE IN PROGRESS / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -367,7 +367,8 @@
       "geometry_variant_count": 0,
       "task_id": "T-029",
       "task_contract": "docs/tasks/T-029_P3_3_SHUZHU_MASTER_V2_V001.md",
-      "delegated_conditional_acceptance": true
+      "delegated_conditional_acceptance": true,
+      "source_transcription_correction": "D-117 / EAST+WEST GABLE THICKNESS=未及 / CANONICAL 218.75×157.5 UNCHANGED"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -392,9 +393,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-116",
+    "id": "D-117",
     "date": "2026-09-23",
-    "decision": "T-029 Shuzhu end-to-end execution authorized with delegated conditional acceptance/materialization/merge only after all locked gates PASS."
+    "decision": "Correct Shuzhu A1 table transcription: both gable thickness rows are 未及; 157.5mm mean thickness is recomputed from 158 and 157 only. Canonical section unchanged."
   },
   "latest_material_review": {
     "date": "2026-09-23",

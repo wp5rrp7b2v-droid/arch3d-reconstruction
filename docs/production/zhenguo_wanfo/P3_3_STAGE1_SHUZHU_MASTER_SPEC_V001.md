@@ -29,7 +29,7 @@ The 1000 mm length is `RECONSTRUCTION_REFERENCE_LENGTH` only and is not a histor
 A1:
 - PDF p90-91 / printed p75-76 / §2.3.1.9 / Table 2-46
 - published/recomputed mean = 218.75 × 157.5 mm
-- one gable thickness record = 未及
+- both gable thickness records (东山 / 西山) = 未及
 - no source-internal numeric conflict detected
 
 A2:
@@ -64,7 +64,7 @@ Do **not** create a Geometry Variant for:
 - 东山 vs 西山
 - INTERIOR_FRAME vs GABLE_FRAME
 - different endpoint-derived height
-- the single `未及` thickness record
+- the two gable `未及` thickness records
 
 A future Variant requires a stable repeated body-geometry difference supported by evidence.
 

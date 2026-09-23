@@ -43,13 +43,15 @@
       158,
       null,
       157,
-      157.5
+      null
     ],
-    "unmeasured_record": "东山 thickness / 未及",
+    "unmeasured_record": "东山 + 西山 thickness / 未及",
     "recomputed_mean_mm": {
       "width": 218.75,
       "thickness": 157.5
-    }
+    },
+    "complete_width_sample_count": 4,
+    "complete_thickness_sample_count": 2
   },
   "historical_full_length_mm": null,
   "canonical_reference_length_mm": 1000,

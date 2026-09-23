@@ -23,17 +23,17 @@ Visible measurement rows, table order:
 - 东缝: width 218 mm / thickness 158 mm
 - 东山: width 220 mm / thickness 未及
 - 西缝: width 220 mm / thickness 157 mm
-- 西山: width 217 mm / thickness 157.5 mm
+- 西山: width 217 mm / thickness 未及
 
 Published / recomputed mean:
 - width: 218.75 mm
 - thickness: 157.5 mm
 - width recompute: (218 + 220 + 220 + 217) / 4 = 218.75 mm
-- thickness recompute from measured rows: (158 + 157 + 157.5) / 3 = 157.5 mm
+- thickness recompute from measured interior-frame rows: (158 + 157) / 2 = 157.5 mm
 - `SOURCE_INTERNAL_NUMERIC_CONFLICT = FALSE`
 
 Boundary:
-- one thickness entry is explicitly unmeasured (未及)
+- both gable thickness entries (东山 / 西山) are explicitly unmeasured (未及)
 - sample-to-final-instance historical identity is not separately proven beyond the table/location labels
 - exact historical full height, end profile and hidden joinery are not directly locked here
 

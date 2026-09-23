@@ -199,3 +199,5 @@
 
 | D-116 | 2026-09-23 | 基于 Product Owner “一次性完成蜀柱直到全部完成”的明确指令，正式锁定并授权 `T-029｜P3_3_SHUZHU_MASTER_V2_V001` 端到端执行。允许建立独立 branch/PR、Blender 4.5.13 首件、必要的Definition-driven shared Master V2通用扩展、T-025/T-026/T-027/T-028回归、条件化首件接受、exact materialization、Catalog/V008绑定、Excel同步、final regression、Ready与merge及T-029 closure。端点测试锁定TEST-A=1200mm、TEST-B=1500mm，二者同为垂直方向[0,0,1]；共享validator必须支持Definition-driven `directions_must_match=true`，且对未声明策略的T-028保持原direction-difference默认。该授权不允许降低Hard Fail、不允许静默修改直接证据、不允许恢复T-018或启动Stage2。只有全部锁定证据/视觉/机器/回归条件PASS时，委托式自动首件接受与merge方可生效。 | ACTIVE / T-029 END-TO-END EXECUTION AUTHORIZED / CONDITIONAL DELEGATED ACCEPTANCE |
 
+| D-117 | 2026-09-23 | T-029 首件验收前证据交叉核对发现 D-115 对A1表2-46厚度行的文字转写有一处需要纠正：V008既有Stage1 disposition audit明确“东/西山厚度未测”，A1表对应为东山=未及、西山=未及；因此厚度157.5mm均值来自正身两条实测158mm与157mm的平均，而不是三条厚度记录。广度四条218/220/220/217mm与均值218.75mm不变；canonical section仍为218.75×157.5mm；SOURCE_INTERNAL_NUMERIC_CONFLICT仍为false；4根实例、2+2角色、0 Variant、endpoint-driven策略均不变。本决策为source-transcription correction，必须在任何首件接受之前进入Definition与Validation lineage，禁止保留错误的“西山厚157.5实测”表述。 | COMPLETE / SOURCE TRANSCRIPTION CORRECTED / CANONICAL GEOMETRY UNCHANGED |
+
