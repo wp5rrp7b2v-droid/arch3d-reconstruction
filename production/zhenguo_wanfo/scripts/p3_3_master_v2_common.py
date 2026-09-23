@@ -40,6 +40,33 @@ def is_profile_unknown(d):
     gc=d["geometry_contract"]
     return gc.get("exact_section_profile")=="UNKNOWN" or gc.get("section_envelope_is_historical_profile") is False
 
+def resolve_endpoint_fixture(fixture):
+    lower=[float(x) for x in fixture["p_lower_mm"]]
+    upper=[float(x) for x in fixture["p_upper_mm"]]
+    vec=[upper[i]-lower[i] for i in range(3)]
+    length=math.sqrt(sum(x*x for x in vec))
+    if length<=0:
+        raise ValueError("endpoint fixture must have non-zero length")
+    center=[(upper[i]+lower[i])/2.0 for i in range(3)]
+    direction=[x/length for x in vec]
+    return {
+      "fixture_id":fixture["fixture_id"],
+      "classification":fixture["classification"],
+      "building_coordinate_claim":bool(fixture.get("building_coordinate_claim",False)),
+      "historical_claim":bool(fixture.get("historical_claim",False)),
+      "p_lower_mm":lower,
+      "p_upper_mm":upper,
+      "derived_length_mm":round(length,6),
+      "derived_center_mm":[round(x,6) for x in center],
+      "derived_direction":[round(x,9) for x in direction]
+    }
+
+def resolve_endpoint_fixtures(d):
+    contract=d.get("endpoint_resolver_contract")
+    if not contract or contract.get("enabled") is not True:
+        return None
+    return [resolve_endpoint_fixture(x) for x in contract.get("fixtures",[])]
+
 def safe_name(s):
     return re.sub(r"[^A-Za-z0-9_]+","_",s.replace("-","_"))
 
@@ -175,6 +202,7 @@ def render_views(obj,d,review_dir):
     # Semantic aliases: no duplicate Blender render cost.
     shutil.copyfile(review/"FRONT.png",review/"LONG_SIDE.png")
     shutil.copyfile(review/"SIDE.png",review/"END_SECTION_ENVELOPE.png")
+    shutil.copyfile(review/"SIDE.png",review/"END_SECTION.png")
 
 def text_page(path,title,lines):
     import bpy
@@ -280,6 +308,37 @@ def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
           'Joinery/end geometry: DEFERRED'
         ])
 
+    endpoint_results=resolve_endpoint_fixtures(d)
+    if "DIMENSION_AND_PARAMETRIC_LENGTH" in required:
+        text_page(review/"DIMENSION_AND_PARAMETRIC_LENGTH.png","MASTER V2 / DIMENSION + PARAMETRIC LENGTH",[
+          f'Component: {d["component_id"]}',
+          f'Canonical section: {width_mm:.1f} x {thickness_mm:.1f} mm',
+          f'Master specimen length: {length_mm:.1f} mm / RECONSTRUCTION REFERENCE ONLY',
+          'Building instance length: ENDPOINT-DERIVED',
+          'Building instance orientation: ENDPOINT-DERIVED',
+          'REFERENCE LENGTH LEAKAGE: PROHIBITED'
+        ])
+    if "PLACEMENT_AND_ENDPOINT_LOGIC" in required:
+        if not endpoint_results or len(endpoint_results)<2:
+            raise ValueError("endpoint placement panel requires at least two endpoint fixtures")
+        lines=['Same canonical Master / same section / endpoint-driven instances']
+        for x in endpoint_results:
+            lines += [
+              f'{x["fixture_id"]}: {x["classification"]}',
+              f'lower={x["p_lower_mm"]} upper={x["p_upper_mm"]}',
+              f'length={x["derived_length_mm"]:.1f} mm center={x["derived_center_mm"]}',
+              f'direction={x["derived_direction"]}'
+            ]
+        text_page(review/"PLACEMENT_AND_ENDPOINT_LOGIC.png","MASTER V2 / PLACEMENT + ENDPOINT LOGIC",lines)
+    if "SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY" in required:
+        text_page(review/"SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY.png","MASTER V2 / SOURCE + RECONSTRUCTION BOUNDARY",[
+          'EVIDENCE LOCKED: identity / count / measured section / structural layer',
+          'RECONSTRUCTED DESIGN: endpoint placement / derived length / orientation / simplified flat ends',
+          'NOT CLAIMED: exact 963 full length / angle / historical-original joinery',
+          'UNKNOWN historical metadata does NOT automatically block required production geometry',
+          'Reconstructed design remains explicit, replaceable, and source-consistent'
+        ])
+
 def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None,thickness_mm=None,role=None):
     import bpy
     d=load_definition(definition)
@@ -322,6 +381,9 @@ def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None
       "registry_role_counts":d.get("registry_role_counts"),
       "assembly_semantics":d.get("assembly_semantics"),
       "source_numeric_conflict":d.get("source_numeric_conflict"),
+      "reconstruction_policy":d.get("reconstruction_policy"),
+      "endpoint_resolver_contract":d.get("endpoint_resolver_contract"),
+      "endpoint_fixture_results":resolve_endpoint_fixtures(d),
       "legacy_proxy_reuse":d.get("legacy_proxy_reuse"),
       "body":body,
       "semantic_geometry_signature":sig,

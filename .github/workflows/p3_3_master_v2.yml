@@ -178,7 +178,8 @@ jobs:
           mkdir -p artifacts/shared_regression
           for DEF in \
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZHAQIAN-001/CMP-FRAME-ZHAQIAN-001_MASTER_DEFINITION_V001.json \
-            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PURLIN-001/CMP-FRAME-PURLIN-001_MASTER_DEFINITION_V001.json
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PURLIN-001/CMP-FRAME-PURLIN-001_MASTER_DEFINITION_V001.json \
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_DEFINITION_V001.json
           do
             KEY="$(python - "$DEF" <<'PY'
           import json,sys
@@ -207,11 +208,31 @@ jobs:
             "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
               --mode build --definition "$DEF" --asset "$RDIR/restore.blend" --semantic "$RDIR/restore.json"
             python "$COMMON" --mode compose-board --definition "$DEF" --review-dir "$RDIR/review" --board "$RDIR/board.png"
+            EXTRA_REG=()
+            mapfile -t REG_ROLES < <(python - "$DEF" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          for name in d.get("registry_role_counts",{}).keys():
+              print(name)
+          PY
+            )
+            if [[ "${#REG_ROLES[@]}" -gt 0 ]]; then
+              if [[ "${#REG_ROLES[@]}" -ne 2 ]]; then
+                echo "Shared regression role harness expects exactly two role families when declared."
+                exit 2
+              fi
+              "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
+                --mode build --definition "$DEF" --asset "$RDIR/role_a.blend" --semantic "$RDIR/role_a.json" --role "${REG_ROLES[0]}"
+              "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
+                --mode build --definition "$DEF" --asset "$RDIR/role_b.blend" --semantic "$RDIR/role_b.json" --role "${REG_ROLES[1]}"
+              EXTRA_REG+=(--role-a "$RDIR/role_a.json" --role-b "$RDIR/role_b.json")
+            fi
             python "$VALIDATOR" \
               --definition "$DEF" --canonical "$RDIR/canonical.json" --reopen "$RDIR/reopen.json" \
               --length "$RDIR/length.json" --width "$RDIR/width.json" --thickness "$RDIR/thickness.json" \
               --restore "$RDIR/restore.json" --asset "$RDIR/canonical.blend" --review-dir "$RDIR/review" \
-              --board "$RDIR/board.png" --registry "$REGISTRY" --catalog "$CATALOG" --output "$RDIR/validation.json"
+              --board "$RDIR/board.png" --registry "$REGISTRY" --catalog "$CATALOG" --output "$RDIR/validation.json" \
+              "${EXTRA_REG[@]}"
             echo "SHARED_V2_REGRESSION_PASS $KEY $MID"
           done
 
@@ -236,7 +257,7 @@ jobs:
       - name: Upload shared-infrastructure regression evidence
         uses: actions/upload-artifact@v4
         with:
-          name: P3_3_T027_SHARED_V2_REGRESSION
+          name: P3_3_MASTER_V2_SHARED_REGRESSION
           retention-days: 30
           if-no-files-found: ignore
           path: |

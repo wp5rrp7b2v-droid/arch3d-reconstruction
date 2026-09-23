@@ -138,13 +138,19 @@ def main():
     nc=d.get("source_numeric_conflict")
     if nc:
         pub=nc["published_mean_mm"]; rec=nc["visible_rows_recomputed_mean_mm"]
-        ck("NC01_conflict_declared",nc.get("conflict") is True and nc.get("conflict_type")=="SOURCE_INTERNAL_NUMERIC_CONFLICT")
+        ck("NC01_conflict_contract_declared",nc.get("conflict_type")=="SOURCE_INTERNAL_NUMERIC_CONFLICT" and isinstance(nc.get("conflict"),bool))
         ck("NC02_published_mean_drives_canonical_section",near(pub["width"],w) and near(pub["thickness"],h))
-        ck("NC03_recomputed_mean_preserved_as_distinct_audit",not near(rec["width"],pub["width"]) and not near(rec["thickness"],pub["thickness"]) and nc.get("recomputed_classification")=="AUDIT_ONLY")
-        ck("NC04_silent_correction_prohibited",nc.get("silent_arithmetic_correction")=="PROHIBITED")
-        ck("NC05_semantic_preserves_numeric_conflict",c.get("source_numeric_conflict")==nc)
-        ck("NC06_conflict_panel_required","EVIDENCE_UNCERTAINTY_AND_NUMERIC_CONFLICT" in panels)
-        ck("NC07_measurement_row_accounting",nc.get("table_row_count")==nc.get("complete_visible_sample_count")+nc.get("unmeasured_visible_row_count"))
+        if nc.get("conflict") is True:
+            ck("NC03_recomputed_mean_preserved_as_distinct_audit",not near(rec["width"],pub["width"]) and not near(rec["thickness"],pub["thickness"]) and nc.get("recomputed_classification")=="AUDIT_ONLY")
+            ck("NC04_silent_correction_prohibited",nc.get("silent_arithmetic_correction")=="PROHIBITED")
+            ck("NC06_conflict_panel_required","EVIDENCE_UNCERTAINTY_AND_NUMERIC_CONFLICT" in panels)
+        else:
+            ck("NC03_matching_recompute_preserved",near(rec["width"],pub["width"]) and near(rec["thickness"],pub["thickness"]))
+            ck("NC04_no_false_conflict",nc.get("canonical_geometry_basis")=="PUBLISHED_MEAN_MATCHING_RECOMPUTE")
+        ck("NC05_semantic_preserves_numeric_conflict_contract",c.get("source_numeric_conflict")==nc)
+        complete=nc.get("complete_visible_sample_count")
+        unmeasured=nc.get("unmeasured_record_present")
+        ck("NC07_measurement_accounting_preserved",isinstance(complete,int) and complete>0 and unmeasured is True)
         ck("NC08_fen_metadata_not_geometry",d.get("report_analysis",{}).get("geometry_use_count")==0)
 
     if role_cfg:
@@ -159,6 +165,38 @@ def main():
         role_names=list(role_cfg.keys())
         ck("ROLE06_role_mutation_names",ra.get("assembly_role")==role_names[0] and rbsem.get("assembly_role")==role_names[1])
         ck("ROLE07_role_mutation_preserves_geometry",ra["body"]==c["body"] and rbsem["body"]==c["body"] and ra["semantic_geometry_signature"]==c["semantic_geometry_signature"]==rbsem["semantic_geometry_signature"])
+
+    endpoint=d.get("endpoint_resolver_contract")
+    if endpoint and endpoint.get("enabled") is True:
+        ck("EP01_contract_enabled",endpoint.get("enabled") is True)
+        ck("EP02_nonhistorical_contract",endpoint.get("historical_claim") is False)
+        ck("EP03_not_building_coordinates",endpoint.get("building_coordinate_claim") is False)
+        fixtures=endpoint.get("fixtures",[])
+        results=c.get("endpoint_fixture_results")
+        ck("EP04_fixture_count",len(fixtures)>=2 and isinstance(results,list) and len(results)==len(fixtures))
+        result_by_id={x["fixture_id"]:x for x in results}
+        directions=[]; lengths=[]
+        for fixture in fixtures:
+            fid=fixture["fixture_id"]; rr=result_by_id.get(fid)
+            ck("EP_"+fid+"_result_present",rr is not None)
+            lower=[float(x) for x in fixture["p_lower_mm"]]; upper=[float(x) for x in fixture["p_upper_mm"]]
+            vec=[upper[i]-lower[i] for i in range(3)]
+            length=math.sqrt(sum(x*x for x in vec))
+            center=[(upper[i]+lower[i])/2.0 for i in range(3)]
+            direction=[x/length for x in vec]
+            ck("EP_"+fid+"_length",near(rr["derived_length_mm"],fixture["expected_length_mm"]) and near(rr["derived_length_mm"],length))
+            ck("EP_"+fid+"_center",all(near(rr["derived_center_mm"][i],center[i]) for i in range(3)))
+            ck("EP_"+fid+"_direction",all(near(rr["derived_direction"][i],direction[i],1e-6) for i in range(3)))
+            ck("EP_"+fid+"_classification","NOT_BUILDING_COORDINATES" in fixture["classification"] and rr.get("building_coordinate_claim") is False and rr.get("historical_claim") is False)
+            lengths.append(rr["derived_length_mm"]); directions.append(rr["derived_direction"])
+        ck("EP90_fixture_lengths_differ",len({round(float(x),6) for x in lengths})==len(lengths))
+        ck("EP91_fixture_directions_differ",len({tuple(round(float(v),6) for v in x) for x in directions})==len(directions))
+        ck("EP92_reference_length_not_leaked",all(not near(x,gc["canonical_reference_length_mm"]) for x in lengths))
+        ck("EP93_same_master_section",near(cd[1],w) and near(cd[2],h))
+        ck("EP94_required_panel","PLACEMENT_AND_ENDPOINT_LOGIC" in panels)
+        ck("EP95_reconstruction_boundary_panel","SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY" in panels)
+        ck("EP96_semantic_contract_preserved",c.get("endpoint_resolver_contract")==endpoint)
+        ck("EP97_reconstruction_policy_preserved",c.get("reconstruction_policy")==d.get("reconstruction_policy"))
 
     if "identity_boundary" in d:
         ib=d["identity_boundary"]
@@ -208,6 +246,9 @@ def main():
       "section_profile_state":c.get("section_profile_state"),
       "section_envelope_historical_claim":c.get("section_envelope_historical_claim"),
       "source_numeric_conflict":c.get("source_numeric_conflict"),
+      "endpoint_resolver_contract":c.get("endpoint_resolver_contract"),
+      "endpoint_fixture_results":c.get("endpoint_fixture_results"),
+      "reconstruction_policy":c.get("reconstruction_policy"),
       "registry_role_counts":c.get("registry_role_counts"),
       "formal_file_count_policy":"ADAPTIVE / MINIMAL SUFFICIENT / NO FIXED COUNT",
       "blender_version":c["blender_version"]

@@ -463,3 +463,28 @@ Only after that authorization may：
 - first-article evidence be generated.
 
 First-article acceptance and PR merge remain separate Product Owner authorization boundaries.
+
+## 19. Engineering execution authorization / D-110
+
+Product Owner explicitly authorized **开始 T-028** on 2026-09-23.
+
+Authorized:
+- engineering execution = true
+- Blender/GitHub Actions execution = true
+- production branch = `codex/t028-p3-3-chashou-master-v2-v001`
+- Draft PR creation = true
+- locked execution Definition creation = true
+- generic Definition-driven endpoint-resolver extension to shared Master V2 infrastructure = permitted if required
+
+Mandatory regression if shared infrastructure changes:
+- T-025 剳牵
+- T-026 槫
+- T-027 托脚
+
+Still requires separate Product Owner authorization:
+- first-article acceptance
+- formal materialization / Catalog + V008 approved binding
+- PR merge
+- Stage1 PASS / Stage2
+- T-018 resume
+
