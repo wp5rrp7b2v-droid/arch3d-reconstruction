@@ -1,0 +1,50 @@
+name: T-029 One-time Accepted Artifact Materialization
+on:
+  pull_request:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  materialize:
+    if: github.event.pull_request.number == 17 && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+      - name: Download accepted artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: P3_3_T-029_MASTER_V2_FIRST_ARTICLE_V001
+          path: /tmp/t029
+          github-token: ${{ github.token }}
+          repository: wp5rrp7b2v-droid/arch3d-reconstruction
+          run-id: 35847859509
+      - name: Verify and materialize exact accepted bytes
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/t029
+          echo "becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6  CMP-FRAME-SHUZHU-001_MASTER_V001.blend" | sha256sum -c -
+          echo "3327a95918d61c0ed830fb49a46042c88cb9be2b36a64b958e29918529d2cd93  CMP-FRAME-SHUZHU-001_MASTER_SEMANTIC_V001.json" | sha256sum -c -
+          echo "5cfe4c5086d847e7c1f34b6ff7ea6488b20b7f9381d55e0c5fb063b5cfe6a5cb  CMP-FRAME-SHUZHU-001_MASTER_VALIDATION_V001.json" | sha256sum -c -
+          echo "8fc89aed2ad0f0329bceb890e9a5350bac6d2aea22de2d92d34d935fa3db7d64  CMP-FRAME-SHUZHU-001_MASTER_REVIEW_BOARD_V001.png" | sha256sum -c -
+          cd "$GITHUB_WORKSPACE"
+          DEST=production/zhenguo_wanfo/component_library/masters/CMP-FRAME-SHUZHU-001
+          cp /tmp/t029/*_SEMANTIC_V001.json "$DEST/"
+          cp /tmp/t029/*_VALIDATION_V001.json "$DEST/"
+          cp /tmp/t029/*_REVIEW_BOARD_V001.png "$DEST/"
+          python scripts/t029_materialize_once.py
+          test ! -f "$DEST/CMP-FRAME-SHUZHU-001_MASTER_V001.blend"
+      - name: Commit formalization candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/p3_3_t029_materialize_once.yml scripts/t029_materialize_once.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --check
+          git commit -m "T-029 materialize D-118 accepted first article and bind Catalog/V008"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
