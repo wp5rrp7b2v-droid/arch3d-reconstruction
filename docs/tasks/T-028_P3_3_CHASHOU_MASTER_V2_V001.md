@@ -563,3 +563,28 @@ Classification:
 - T-028 geometry/endpoint validation itself was PASS in Run #3;
 - Run #3 remains **SUPERSEDED** because the mandatory T-027 regression did not finish PASS.
 
+## 23. Product Owner first-article approval / D-111
+
+Product Owner completed manual review and explicitly approved the T-028 first article on 2026-09-23.
+
+Accepted evidence:
+- final successful Actions Run: `35825911214`
+- accepted engineering head: `eba3b798f05de54713910549bd198dbb43110f26`
+- T-028 main validation: **77 checks PASS**
+- T-025 shared regression: **PASS**
+- T-026 shared regression: **PASS**
+- T-027 shared regression: **PASS**
+- minimal-sufficient formal surface: **PASS**
+- canonical geometry signature: `410a64eac567e256253e56b94ab44f8273ccac634fa01a1d211913ca1b0bd72e`
+
+Status:
+- `FIRST_ARTICLE_PRODUCT_OWNER_APPROVED = TRUE`
+- `FORMAL_MATERIALIZATION_AUTHORIZED = FALSE`
+- `CATALOG_V008_BINDING_AUTHORIZED = FALSE`
+- `PR_MERGE_AUTHORIZED = FALSE`
+
+Next authorization boundary:
+- formal materialization + Catalog/V008 approved binding
+
+PR #16 remains Draft and must not be merged under D-111 alone.
+
