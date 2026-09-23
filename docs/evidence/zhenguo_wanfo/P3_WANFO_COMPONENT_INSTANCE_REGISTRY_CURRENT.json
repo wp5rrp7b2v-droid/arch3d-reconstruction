@@ -2815,7 +2815,8 @@
       "evidence": "附件1-7实测位置+木结构测绘图闭合",
       "section_mm": "广厚有直接实测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-SHUZHU-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2826,7 +2827,8 @@
       "evidence": "附件1-7实测位置+木结构测绘图闭合",
       "section_mm": "广厚有直接实测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-SHUZHU-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2837,7 +2839,8 @@
       "evidence": "附件1-7实测位置+木结构测绘图闭合",
       "section_mm": "广有实测；厚未及",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-SHUZHU-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2848,7 +2851,8 @@
       "evidence": "附件1-7实测位置+木结构测绘图闭合",
       "section_mm": "广有实测；厚未及",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-SHUZHU-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -7213,13 +7217,13 @@
   ],
   "stage1_master_progress_summary": {
     "snapshot_date": "2026-09-23",
-    "status": "CANONICAL ON MAIN / D-114 / T-028 CLOSED / 14 OF 28 MASTERS APPROVED",
+    "status": "PR #17 FORMALIZED CANDIDATE / D-118 SHUZHU ACCEPTED / MERGE PENDING",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 14,
-    "pending_master_object_type_count": 14,
-    "master_completion_percent": 50,
+    "approved_master_count": 15,
+    "pending_master_object_type_count": 13,
+    "master_completion_percent": 53.6,
     "pending_source_binding_count": 7,
     "completed_definition": "PRODUCT_OWNER_APPROVED Master available in Stage1 Component Master Catalog",
     "total_definition": "Master scope includes 需新建Master plus all 已有Master categories; not all registered object types require a Master",
@@ -7251,9 +7255,10 @@
       "下六椽栿",
       "柱",
       "柱头栌斗",
-      "叉手"
+      "叉手",
+      "蜀柱"
     ],
-    "master_covered_registry_record_count": 119,
-    "progress_display_note": "505 is registry-record count, not a whole-building physical-piece total. Stage1 Master completion uses 28 Master-scope object types as denominator: 14 approved / 14 pending = 50.0%. T-028 Chashou is canonical on main after PR #16 merge."
+    "master_covered_registry_record_count": 123,
+    "progress_display_note": "505 Registry records; Stage1 Master completion: 15 approved / 13 pending = 53.6%. PR #17 candidate until merge."
   }
 }
