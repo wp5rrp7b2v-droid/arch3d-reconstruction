@@ -643,3 +643,23 @@ Formalized PR-branch candidate:
 
 This state is not canonical on main until PR #16 merge.
 PR #16 merge remains separately unauthorized.
+
+## 27. Formalization execution result
+
+D-112 exact materialization completed successfully.
+
+- materialization workflow Run: `35835680348` — SUCCESS
+- formalization commit: `5bcf61933aff9f14fe5f2f7f3c7f6b6d76861567`
+- exact D-111 Artifact byte verification: PASS
+- Semantic / Validation / Review Board exact materialization: PASS
+- canonical .blend SHA verification: PASS / NOT COMMITTED
+- Stage1 Catalog candidate: 14 approved Masters
+- V008 Chashou binding: 8 / 8
+- approved-Master-covered Registry records: 119
+- candidate Stage1 completion: 14 / 28 = 50.0%
+- next Master target after merge: 蜀柱
+
+The bot-authored materialization commit caused subsequent PR workflows to enter GitHub `action_required` rather than execute. A human-authored metadata commit is therefore used to retrigger final regression / derived Excel checks. This is workflow-trigger handling only and does not change the formalized engineering state.
+
+PR #16 merge remains unauthorized.
+

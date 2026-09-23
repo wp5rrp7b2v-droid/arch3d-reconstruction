@@ -315,7 +315,9 @@
         "review_board_count": 1,
         "required_review_panel_count": 6
       },
-      "accepted_engineering_head": "eba3b798f05de54713910549bd198dbb43110f26"
+      "accepted_engineering_head": "eba3b798f05de54713910549bd198dbb43110f26",
+      "materialization_run": 35835680348,
+      "materialization_commit_sha": "5bcf61933aff9f14fe5f2f7f3c7f6b6d76861567"
     }
   ],
   "approved_master_count": 14
