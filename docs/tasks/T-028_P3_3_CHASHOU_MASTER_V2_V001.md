@@ -539,3 +539,27 @@ Classification:
 - no evidence that canonical geometry or endpoint calculations were wrong;
 - Run #2 is **SUPERSEDED** and cannot be accepted because final validation and shared regressions did not execute.
 
+## 22. First-article Run #3｜Superseded backward-compatibility regression failure
+
+Run `35817372011` produced a **PASS for the complete T-028 Chashou validation**, then entered mandatory shared Master V2 regression.
+
+Regression results before failure:
+- T-025 剳牵: **PASS**
+- T-026 槫: **PASS**
+- T-027 托脚: canonical build / reopen / mutation / role builds / Review Board all completed, but validator stopped at `NC07_measurement_accounting_preserved`.
+
+Root cause:
+- T-027's approved Definition uses legacy accounting fields `table_row_count + complete_visible_sample_count + unmeasured_visible_row_count`;
+- the T-028 generic validator extension initially expected the newer `complete_visible_sample_count + unmeasured_record_present` form only.
+
+Patch:
+- NC07 is now schema-tolerant and Definition-driven:
+  - legacy definitions validate `table_row_count == complete_visible_sample_count + unmeasured_visible_row_count`;
+  - newer definitions validate `complete_visible_sample_count > 0 && unmeasured_record_present == true`.
+- No T-027 source facts, Master geometry, approved semantic, or measurement values are changed.
+
+Classification:
+- `SHARED_VALIDATOR_BACKWARD_COMPATIBILITY_FAILURE`
+- T-028 geometry/endpoint validation itself was PASS in Run #3;
+- Run #3 remains **SUPERSEDED** because the mandatory T-027 regression did not finish PASS.
+

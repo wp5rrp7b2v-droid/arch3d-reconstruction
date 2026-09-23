@@ -149,8 +149,14 @@ def main():
             ck("NC04_no_false_conflict",nc.get("canonical_geometry_basis")=="PUBLISHED_MEAN_MATCHING_RECOMPUTE")
         ck("NC05_semantic_preserves_numeric_conflict_contract",c.get("source_numeric_conflict")==nc)
         complete=nc.get("complete_visible_sample_count")
-        unmeasured=nc.get("unmeasured_record_present")
-        ck("NC07_measurement_accounting_preserved",isinstance(complete,int) and complete>0 and unmeasured is True)
+        if "table_row_count" in nc or "unmeasured_visible_row_count" in nc:
+            ck("NC07_measurement_accounting_preserved",
+               isinstance(complete,int) and complete>0 and
+               isinstance(nc.get("unmeasured_visible_row_count"),int) and
+               nc.get("table_row_count")==complete+nc.get("unmeasured_visible_row_count"))
+        else:
+            ck("NC07_measurement_accounting_preserved",
+               isinstance(complete,int) and complete>0 and nc.get("unmeasured_record_present") is True)
         ck("NC08_fen_metadata_not_geometry",d.get("report_analysis",{}).get("geometry_use_count")==0)
 
     if role_cfg:
