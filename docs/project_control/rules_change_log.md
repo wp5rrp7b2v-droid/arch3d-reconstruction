@@ -69,3 +69,8 @@
 | **RC-019** | **2026-09-22** | **建立万佛殿资料主权优先级：任何后续构件建模、组合审核与整殿搭建资料检索必须首先核查 ① SRC-ZG-WF-001《精细测绘报告》（一级工程主权来源）与 ② 山西文物数字博物馆·万佛殿专题（官方同建筑视觉/结构来源）。低等级论文、媒体、对比例和通用知识仅可补充，不得在未核查 A1/A2 时主导结论或覆盖直接证据；A1/A2 冲突必须显式 CONFLICT/UNKNOWN 并升级复核；不可访问时记录 SOURCE_NOT_AVAILABLE_THIS_PASS。** | **防止 secondary/comparative 来源先入为主，确保真实构件 Master 与整殿装配始终回到同建筑直接测绘和官方视觉证据。** | **ACTIVE / WANFODIAN SOURCE AUTHORITY PRIORITY / D-099** |
 
 `Wanfodian evidence lookup = SRC-ZG-WF-001 first + Shanxi Cultural Relics Digital Museum Wanfodian official topic first; lower-tier sources supplement only`
+
+| **RC-020** | **2026-09-23** | **建立 Evidence-Constrained Reconstruction｜资料约束下的工程复原规则：P3.3 的目标是完成与当前可靠资料一致、结构自洽、几何闭合、可生成的万佛殿3D模型，而非要求证明并复制963年全部历史原始几何。直接资料继续优先；历史字段 UNKNOWN 不自动阻塞必要生产几何，可建立显式、可替换的 RECONSTRUCTED_DESIGN 参数；Master保存稳定本体，长度/倾角/坐标等优先由 assembly 几何推导；任何工程补全不得静默历史化。只有直接证据冲突、无法闭合或明确违背锁定资料才进入 HOLD。** | **避免因历史资料不完整长期停滞，同时保留证据边界与未来替换能力。** | **ACTIVE / EVIDENCE-CONSTRAINED RECONSTRUCTION / D-108** |
+
+`P3.3 completion target = source-consistent + structurally coherent + geometrically closed + buildable 3D model; UNKNOWN historical data may be supplemented by explicit replaceable RECONSTRUCTED_DESIGN instead of automatically blocking production.`
+

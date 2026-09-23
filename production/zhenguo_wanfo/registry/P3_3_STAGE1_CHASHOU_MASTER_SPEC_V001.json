@@ -1,0 +1,134 @@
+{
+  "version": "V001",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED",
+  "date": "2026-09-23",
+  "decision_id": "D-108",
+  "reconstruction_policy": {
+    "rule_id": "RC-020",
+    "name": "EVIDENCE_CONSTRAINED_RECONSTRUCTION",
+    "project_goal": "COMPLETE_A_SOURCE_CONSISTENT_STRUCTURALLY_COHERENT_BUILDABLE_3D_MODEL",
+    "unknown_policy": "UNKNOWN_DOES_NOT_AUTOMATICALLY_BLOCK_REQUIRED_RECONSTRUCTED_DESIGN",
+    "historical_claim_separation": "MANDATORY"
+  },
+  "source_authority": {
+    "decision_id": "D-099",
+    "rule_id": "RC-019",
+    "a1": "SRC-ZG-WF-001",
+    "a2": "山西文物数字博物馆·万佛殿专题"
+  },
+  "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_CHASHOU_DIRECT_SOURCE_BINDING_V001.md",
+  "component_id": "CMP-FRAME-CHASHOU-001",
+  "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+  "master_version": "V001",
+  "physical_instance_count": 8,
+  "roles": {
+    "INTERIOR_FRAME": 4,
+    "GABLE_FRAME": 4,
+    "geometry_policy": "PLACEMENT_ROLE_ONLY / SHARED_CANONICAL_MASTER"
+  },
+  "registry_locations": [
+    "东缝平梁至脊部/南侧",
+    "东缝平梁至脊部/北侧",
+    "西缝平梁至脊部/南侧",
+    "西缝平梁至脊部/北侧",
+    "东山平梁至脊部/南侧",
+    "东山平梁至脊部/北侧",
+    "西山平梁至脊部/南侧",
+    "西山平梁至脊部/北侧"
+  ],
+  "measurement": {
+    "complete_visible_samples_mm": [
+      {
+        "width": 232,
+        "thickness": 92
+      },
+      {
+        "width": 234,
+        "thickness": 90
+      },
+      {
+        "width": 228,
+        "thickness": 91
+      },
+      {
+        "width": 228,
+        "thickness": 89
+      }
+    ],
+    "unmeasured_record_present": true,
+    "report_published_mean_mm": {
+      "width": 230.5,
+      "thickness": 90.5
+    },
+    "independent_recomputed_mean_mm": {
+      "width": 230.5,
+      "thickness": 90.5
+    },
+    "source_internal_numeric_conflict": false,
+    "canonical_section_basis": "DIRECT_MEASURED_REPORT_MEAN_WITH_MATCHING_RECOMPUTE",
+    "sample_to_instance_mapping": "UNKNOWN"
+  },
+  "report_analysis": {
+    "converted_fen": {
+      "width": 15.07,
+      "thickness": 5.92
+    },
+    "rounded_fen": {
+      "width": 15,
+      "thickness": 6
+    },
+    "classification": "REPORT_ANALYSIS_METADATA"
+  },
+  "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER",
+  "canonical_reference_length_mm": 1000,
+  "canonical_reference_policy": "RECONSTRUCTION_REFERENCE_LENGTH / NON_HISTORICAL / REPLACEABLE / MASTER_SPECIMEN_ONLY",
+  "canonical_body_mm": {
+    "length": 1000,
+    "width": 230.5,
+    "thickness": 90.5
+  },
+  "assembly_geometry": {
+    "lower_endpoint_role": "PINGLIANG_UPPER_CONNECTION_REGION",
+    "upper_endpoint_role": "RIDGE_SUPPORT_CONNECTION_REGION",
+    "actual_length_rule": "norm(P_upper - P_lower)",
+    "center_rule": "(P_upper + P_lower) / 2",
+    "orientation_rule": "local +X aligns to (P_upper - P_lower)",
+    "endpoint_status_may_be": "RECONSTRUCTED_DESIGN",
+    "historical_exact_endpoint_required_for_production": false
+  },
+  "end_joinery": {
+    "master_reference_end_profile": "STRUCTURAL_SIMPLIFIED_FLAT_END",
+    "historical_end_profile": "UNRESOLVED_METADATA",
+    "hidden_mortise_tenon": "NOT_MODELED_AT_STAGE1",
+    "notch_groove": "NOT_MODELED_AT_STAGE1",
+    "reconstructed_end_treatment_later_allowed": true
+  },
+  "variant_policy": {
+    "geometry_variant_count": 0,
+    "mirror_is_variant": false,
+    "role_is_variant": false,
+    "varying_length_is_variant": false,
+    "varying_angle_is_variant": false
+  },
+  "review_board_required_panels": [
+    "AXON",
+    "LONG_SIDE",
+    "END_SECTION",
+    "DIMENSION_AND_PARAMETRIC_LENGTH",
+    "PLACEMENT_AND_ENDPOINT_LOGIC",
+    "SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY"
+  ],
+  "hard_fails": [
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "FIXED_MASTER_INSTALLATION_ANGLE",
+    "SILENT_HISTORICIZATION",
+    "RECONSTRUCTED_DESIGN_MARKED_AS_DIRECT_MEASURED",
+    "DIRECT_EVIDENCE_OVERRIDDEN_WITHOUT_DECISION",
+    "FALSE_GEOMETRY_VARIANT_FROM_PLACEMENT_ONLY",
+    "MASTER_WITHOUT_EVIDENCE_BINDING",
+    "MODEL_BEFORE_SOURCE_REVIEW"
+  ],
+  "next_task_id": "T-028",
+  "task_contract_design_authorized": true,
+  "engineering_execution_authorized": false
+}

@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R187",
-  "last_updated": "2026-09-22",
-  "session_status": "DAY CLOSE COMPLETE / LOCAL SYNC VERIFIED / T-027 CANONICAL BLEND RESTORED / A1 CANONICAL PDF PUBLISHED VIA GIT LFS / P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-018 HOLD",
+  "state_revision": "R188",
+  "last_updated": "2026-09-23",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / CHASHOU MASTER SPEC V001 LOCKED / RC-020 ACTIVE / T-028 CONTRACT DESIGN NEXT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 13 OF 28 MASTERS APPROVED / T-027 CLOSED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 13 OF 28 MASTERS APPROVED / CHASHOU SPEC LOCKED / T-028 CONTRACT DESIGN NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-027 CLOSED / 13 OF 28 MASTERS APPROVED / NEXT MASTER=叉手 / REQUIRES D-076+D-099 SOURCE/VISUAL GATE / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-027 CLOSED / 13 OF 28 MASTERS APPROVED / CHASHOU MASTER SPEC V001 LOCKED D-108 / RC-020 ACTIVE / NEXT=T-028 CONTRACT DESIGN / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "No active project blocker. 2026-09-22 local synchronization is complete: local main was fast-forwarded to the pre-archive close state, T-027 approved canonical .blend was restored locally with exact SHA match and remains ignored/untracked, and SRC-ZG-WF-001 was published as an exact-byte Git LFS canonical binary via PR #15. T-018 remains HOLD.",
+  "blocker": "No active project blocker. Chashou Master Spec V001 is locked under D-108. Historical unknowns do not automatically block required reconstructed-design geometry under RC-020. T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,15 +63,15 @@
   "current_task": {
     "id": "NONE",
     "name": "No active engineering T-task",
-    "status": "DAY CLOSE COMPLETE / T-027 CLOSED / MERGED_TO_MAIN"
+    "status": "CHASHOU MASTER SPEC V001 LOCKED / T-028 CONTRACT NOT YET CREATED / ENGINEERING EXECUTION NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "NEXT_STAGE1_COMPONENT",
-    "name": "叉手｜Stage1 next missing Master",
-    "status": "NOT STARTED / REQUIRES D-076 + D-099 SOURCE/VISUAL GATE",
+    "id": "T-028",
+    "name": "P3_3_CHASHOU_MASTER_V2_V001｜叉手 Master 首件生产",
+    "status": "TASK CONTRACT DESIGN NEXT / MASTER SPEC LOCKED D-108 / ENGINEERING EXECUTION NOT AUTHORIZED",
     "new_t_task_created": false,
     "engineering_execution_authorized": false,
-    "prerequisite": "Review A1/A2 direct evidence and visual/form references before creating a new T-task"
+    "prerequisite": "Create and Product Owner approve T-028 Task Contract from locked Chashou Master Spec V001 before any production branch, PR, Actions or Blender execution"
   },
   "last_completed_task": {
     "id": "T-027",
@@ -123,7 +123,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-021..T-027 CLOSED / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / CHASHOU SPEC V001 LOCKED D-108 / T-028 CONTRACT DESIGN NEXT / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -272,6 +272,28 @@
       "merge_commit": "a588895004d61b0c5bc3615db4a74f1c2f4a91bc",
       "main_verified": true,
       "local_sync_status": "DEFERRED_TO_EVENING"
+    },
+    "chashou": {
+      "status": "MASTER SPEC V001 LOCKED / D-108 / ENGINEERING EXECUTION NOT AUTHORIZED",
+      "component": "叉手",
+      "component_id": "CMP-FRAME-CHASHOU-001",
+      "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+      "physical_instance_count": 8,
+      "roles": {
+        "INTERIOR_FRAME": 4,
+        "GABLE_FRAME": 4
+      },
+      "canonical_section_mm": {
+        "width": 230.5,
+        "thickness": 90.5
+      },
+      "source_internal_numeric_conflict": false,
+      "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER",
+      "canonical_reference_length_mm": 1000,
+      "actual_length_and_angle": "ASSEMBLY_ENDPOINT_DERIVED / RECONSTRUCTED_DESIGN_ALLOWED",
+      "geometry_variant_count": 0,
+      "next_task": "T-028 Task Contract design",
+      "engineering_execution_authorized": false
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -296,14 +318,14 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-107",
-    "date": "2026-09-22",
-    "decision": "2026-09-22 local-sync closure completed. T-027 approved canonical .blend restored locally with exact SHA match; SRC-ZG-WF-001 exact-byte primary PDF published through Git LFS via PR #15; final local main fast-forward to the resulting canonical main remains the single terminal sync command."
+    "id": "D-108",
+    "date": "2026-09-23",
+    "decision": "Chashou Master Spec V0.1 approved and locked as P3_3_STAGE1_CHASHOU_MASTER_SPEC_V001; RC-020 Evidence-Constrained Reconstruction activated; next step is T-028 Task Contract design only, with engineering execution still unauthorized."
   },
   "latest_material_review": {
-    "date": "2026-09-22",
-    "result": "LOCAL SYNC CLOSURE PASS / A1 CANONICAL BINARY PUBLISHED / FINAL LOCAL FAST-FORWARD REQUIRED",
-    "evidence": "T-027 local blend SHA match 23ed48f...; Git LFS pointer oid sha256:94c2fede... size 84117628; PR #15 merged as e4dfcc3cc7eddcb615bb297dd28a4b84d4a6e497.",
+    "date": "2026-09-23",
+    "result": "CHASHOU DESIGN READINESS PASS / MASTER SPEC V001 LOCKED / T-028 CONTRACT DESIGN NEXT",
+    "evidence": "A1 Table 2-45 section mean 230.5×90.5 mm with matching independent recompute; V008/CURRENT 8 locked Chashou instances; A2 same-building structure places Chashou above Pingliang.",
     "decision_required": "NONE"
   },
   "daily_closing_audit": {
@@ -987,5 +1009,15 @@
       "merge_commit": "e4dfcc3cc7eddcb615bb297dd28a4b84d4a6e497",
       "status": "MERGED / CANONICAL BINARY PUBLISHED"
     }
+  },
+  "reconstruction_policy": {
+    "rule_id": "RC-020",
+    "decision_id": "D-108",
+    "name": "EVIDENCE_CONSTRAINED_RECONSTRUCTION",
+    "status": "ACTIVE",
+    "goal": "Source-consistent, structurally coherent, geometrically closed, buildable and iteratively replaceable Wanfodian 3D model",
+    "unknown_policy": "Historical UNKNOWN does not automatically block production; required geometry may use explicit replaceable RECONSTRUCTED_DESIGN",
+    "evidence_priority": "D-099 / RC-019 remains authoritative; reconstructed design may not override direct evidence",
+    "master_assembly_policy": "Stable body in Master; placement-derived length/orientation/coordinates remain assembly-owned where appropriate"
   }
 }

@@ -255,3 +255,21 @@ Checkpoint 不负责首次落档，只负责一致性核对、压缩、Phase Clo
 8. **No Historical Upgrade｜禁止静默历史化**：官方同建筑展示或二级解释均不得自动升级为 963 年原状事实；时间层、修缮层和 originality 仍按既有 evidence-boundary 规则独立判断。
 
 Decision authority: **D-099 / RC-019**.
+
+### 4.11 Evidence-Constrained Reconstruction｜资料约束下的工程复原
+
+Decision authority：**D-108 / RC-020**。
+
+P3.3 的项目目标是完成一座与当前可靠资料一致、结构自洽、几何闭合、可生成并可持续迭代的万佛殿3D模型；不把“证明并复制963年全部历史原始几何”设为完成前提。
+
+1. **Evidence First｜资料优先但不等于资料完备才可建模**：A1/A2 与 Registry 已明确的尺寸、数量、位置和结构关系必须优先采用；不得为了建模方便静默覆盖直接证据。
+2. **UNKNOWN ≠ BLOCKED**：资料未给出的历史全长、角度、端点、隐藏连接等字段可以继续保留 UNKNOWN/UNRESOLVED 作为历史证据状态；只要模型完成确有需要，可同时建立显式 `RECONSTRUCTED_DESIGN` 参数继续工程。
+3. **Reconstructed Design｜工程补全**：reconstructed-design 参数应优先由已锁定构件关系、整体几何、装配端点、对称/拓扑和碰撞闭合推导；必要时允许采用简化、可替换的工程几何。
+4. **No Silent Historicization｜禁止静默历史化**：任何 reconstructed-design 值都不得标成 DIRECT_MEASURED、963原值或历史事实；历史证据状态与项目生产几何状态必须同时可追踪。
+5. **Replaceability｜可替换性**：后续获得更高质量同建筑直接资料时，reconstructed-design 参数应可被替换，不应要求推翻整个 Master/assembly 架构。
+6. **Blocking Criteria｜真正阻塞条件**：只有直接证据冲突未解决、几何无法闭合、构件身份/拓扑不明到无法定义生产对象，或设计会明确违背已锁资料时才进入 HOLD/STOP。
+7. **Master / Assembly Separation｜本体与装配分离**：构件 Master 优先保存稳定本体特征；长度、倾角、镜像、具体坐标等若由装配决定，应归 assembly-owned，而不是为每个 placement 复制历史化 Variant。
+8. **Detail Staging｜细节分阶段**：隐藏榫卯、端头修形等若非当前阶段实现结构闭合所必需，可先采用明确标注的简化工程表示，后续 Detail Stage 再增强。
+9. **D-099 Compatibility｜与资料主权规则兼容**：RC-020 不降低 D-099/RC-019 的 A1/A2 优先级；它改变的是“资料缺口如何处理”，不是“资料冲突时可以忽略资料”。
+10. **Completion Standard｜完成标准**：模型验收首先看资料一致性、结构/拓扑一致性、几何闭合、可重复生成和视觉可用性；历史原貌一致性作为独立证据维度记录，不作为所有生产步骤的绝对前置条件。
+
