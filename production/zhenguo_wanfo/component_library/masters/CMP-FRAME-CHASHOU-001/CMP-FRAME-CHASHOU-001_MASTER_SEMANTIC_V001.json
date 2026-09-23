@@ -1,0 +1,358 @@
+{
+  "assembly_role": null,
+  "assembly_semantics": {
+    "exact_endpoint_contact_geometry": "RECONSTRUCTED_DESIGN_LATER / ENDPOINT_DRIVEN",
+    "member_type": "DIAGONAL_RIDGE_SUPPORT_MEMBER",
+    "official_same_building_semantic": "ABOVE_PINGLIANG / RIDGE_SUPPORT_SYSTEM",
+    "role_geometry_policy": "INTERIOR_FRAME_AND_GABLE_FRAME_SHARE_CANONICAL_BODY"
+  },
+  "blender_version": "4.5.13 LTS",
+  "body": {
+    "face_count": 6,
+    "geometry_faces": [
+      [
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        4
+      ],
+      [
+        1,
+        2,
+        6,
+        5
+      ],
+      [
+        2,
+        3,
+        7,
+        6
+      ],
+      [
+        3,
+        0,
+        4,
+        7
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "geometry_vertices_mm": [
+      [
+        -500.0,
+        -115.25,
+        0.0
+      ],
+      [
+        500.0,
+        -115.25,
+        0.0
+      ],
+      [
+        500.0,
+        115.25,
+        0.0
+      ],
+      [
+        -500.0,
+        115.25,
+        0.0
+      ],
+      [
+        -500.0,
+        -115.25,
+        90.5
+      ],
+      [
+        500.0,
+        -115.25,
+        90.5
+      ],
+      [
+        500.0,
+        115.25,
+        90.5
+      ],
+      [
+        -500.0,
+        115.25,
+        90.5
+      ]
+    ],
+    "joinery_cut_count": 0,
+    "local_bbox_mm": {
+      "dimensions": [
+        1000.0,
+        230.5,
+        90.5
+      ],
+      "max": [
+        500.0,
+        115.25,
+        90.5
+      ],
+      "min": [
+        -500.0,
+        -115.25,
+        0.0
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "name": "MASTER__CMP_FRAME_CHASHOU_001__BODY",
+    "primitive": "rectangular_bounding_envelope_proxy_profile_unknown",
+    "section_envelope_historical_claim": false,
+    "section_profile_state": "UNKNOWN",
+    "shengtou_wood_baked_in": false,
+    "unsupported_detail_count": 0,
+    "vertex_count": 8
+  },
+  "canonical_blend_sha256": "25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25",
+  "canonical_reference_length_historical_claim": false,
+  "component_id": "CMP-FRAME-CHASHOU-001",
+  "definition_sha256": "338c885cb4cc453edc909ea100637ef714865764a3b0b682f23c6250264b59db",
+  "endpoint_fixture_results": [
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        450.0,
+        0.0,
+        600.0
+      ],
+      "derived_direction": [
+        0.6,
+        0.0,
+        0.8
+      ],
+      "derived_length_mm": 1500.0,
+      "fixture_id": "TEST-A",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        900.0,
+        0.0,
+        1200.0
+      ]
+    },
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        600.0,
+        0.0,
+        250.0
+      ],
+      "derived_direction": [
+        0.923076923,
+        0.0,
+        0.384615385
+      ],
+      "derived_length_mm": 1300.0,
+      "fixture_id": "TEST-B",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        1200.0,
+        0.0,
+        500.0
+      ]
+    }
+  ],
+  "endpoint_resolver_contract": {
+    "building_coordinate_claim": false,
+    "center_rule": "(P_upper + P_lower) / 2",
+    "classification": "RECONSTRUCTED_DESIGN / GENERIC_ENDPOINT_DRIVEN_ASSEMBLY",
+    "enabled": true,
+    "fixtures": [
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          450,
+          0,
+          600
+        ],
+        "expected_direction": [
+          0.6,
+          0,
+          0.8
+        ],
+        "expected_length_mm": 1500,
+        "fixture_id": "TEST-A",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          900,
+          0,
+          1200
+        ]
+      },
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          600,
+          0,
+          250
+        ],
+        "expected_direction": [
+          0.9230769230769231,
+          0,
+          0.38461538461538464
+        ],
+        "expected_length_mm": 1300,
+        "fixture_id": "TEST-B",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          1200,
+          0,
+          500
+        ]
+      }
+    ],
+    "historical_claim": false,
+    "length_rule": "norm(P_upper - P_lower)",
+    "lower_endpoint_semantic": "PINGLIANG_UPPER_CONNECTION_REGION",
+    "orientation_rule": "local +X aligns to normalized(P_upper - P_lower)",
+    "upper_endpoint_semantic": "RIDGE_SUPPORT_CONNECTION_REGION"
+  },
+  "engineering_representation": {
+    "historical_profile_claim": false,
+    "label_requirement": "DIRECT MEASURED WIDTH/THICKNESS; RECTANGULAR PROFILE AND FLAT ENDS ARE RECONSTRUCTED-DESIGN REPRESENTATION",
+    "primitive": "RECTANGULAR_BOUNDING_ENVELOPE_PROXY",
+    "purpose": "STAGE1 MASTER + ENDPOINT-RESOLVER VALIDATION / RECONSTRUCTED DESIGN"
+  },
+  "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER",
+  "historical_full_length_mm": null,
+  "joinery_geometry": "STAGE1_SIMPLIFIED_FLAT_END / NO HISTORICAL JOINERY CLAIM",
+  "legacy_proxy_reuse": false,
+  "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+  "master_version": "V001",
+  "placement_policy": "ASSEMBLY_OWNED / ENDPOINT_DERIVED / RECONSTRUCTED_DESIGN_ALLOWED / STAGE1_BUILDING_XYZ_NOT_LOCKED",
+  "reconstruction_policy": {
+    "classification": "EVIDENCE_CONSTRAINED_RECONSTRUCTION",
+    "decision_id": "D-108",
+    "reconstructed_design_must_be_explicit": true,
+    "reconstructed_design_replaceable": true,
+    "rule_id": "RC-020",
+    "silent_historicization": "PROHIBITED",
+    "unknown_does_not_automatically_block": true
+  },
+  "registry_role_counts": {
+    "GABLE_FRAME": {
+      "count": 4,
+      "geometry_policy": "SHARED_CANONICAL_BODY / PLACEMENT_ONLY",
+      "id_prefixes": [
+        "叉手-东山",
+        "叉手-西山"
+      ]
+    },
+    "INTERIOR_FRAME": {
+      "count": 4,
+      "geometry_policy": "SHARED_CANONICAL_BODY / PLACEMENT_ONLY",
+      "id_prefixes": [
+        "叉手-东缝",
+        "叉手-西缝"
+      ]
+    }
+  },
+  "resolved_dimensions_mm": {
+    "length": 1000.0,
+    "thickness": 90.5,
+    "width": 230.5
+  },
+  "schema_version": "MASTER_V2_SEMANTIC_1.1",
+  "section_envelope_historical_claim": false,
+  "section_profile_state": "UNKNOWN",
+  "semantic_geometry_signature": "410a64eac567e256253e56b94ab44f8273ccac634fa01a1d211913ca1b0bd72e",
+  "shengtou_wood_baked_in": false,
+  "source_numeric_conflict": {
+    "canonical_geometry_basis": "PUBLISHED_MEAN_MATCHING_RECOMPUTE",
+    "complete_visible_sample_count": 4,
+    "conflict": false,
+    "conflict_type": "SOURCE_INTERNAL_NUMERIC_CONFLICT",
+    "published_mean_mm": {
+      "thickness": 90.5,
+      "width": 230.5
+    },
+    "unmeasured_record_present": true,
+    "visible_rows_recomputed_mean_mm": {
+      "thickness": 90.5,
+      "width": 230.5
+    },
+    "visible_samples_mm": [
+      {
+        "thickness": 92,
+        "width": 232
+      },
+      {
+        "thickness": 90,
+        "width": 234
+      },
+      {
+        "thickness": 91,
+        "width": 228
+      },
+      {
+        "thickness": 89,
+        "width": 228
+      },
+      {
+        "note": "source table includes 未及",
+        "thickness": null,
+        "width": null
+      }
+    ]
+  },
+  "task_id": "T-028",
+  "unknowns": [
+    "historical full length metadata remains unresolved but does not block reconstructed-design placement",
+    "historical exact placement angle metadata remains unresolved",
+    "historical-original hidden joinery and end-profile geometry remain unresolved",
+    "sample-to-instance mapping remains UNKNOWN",
+    "final eight building XYZ endpoints belong to later whole-building placement stage"
+  ]
+}

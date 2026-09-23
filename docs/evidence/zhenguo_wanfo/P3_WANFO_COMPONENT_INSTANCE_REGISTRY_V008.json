@@ -3,7 +3,7 @@
   "date": "2026-09-22",
   "status": "CURRENT_BUILD_BASELINE_INSTANCE_REGISTRY",
   "source": "SRC-ZG-WF-001",
-  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility. D-103 binds the Product Owner-approved Tuojiao V2 Master to all 12 托脚 registry records and updates Stage1 Master progress visibility.",
+  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility. D-103 binds the Product Owner-approved Tuojiao V2 Master to all 12 托脚 registry records and updates Stage1 Master progress visibility. D-111 approves the Chashou first article; D-112 formalizes the accepted outputs and binds all 8 叉手 records to CMP-FRAME-CHASHOU-001_MASTER on PR #16 pending merge.",
   "item_count": 505,
   "items": [
     {
@@ -2719,7 +2719,8 @@
       "evidence": "总数8+每榀一对构造关系",
       "section_mm": "平均广230.5；厚90.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-CHASHOU-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2730,7 +2731,8 @@
       "evidence": "总数8+每榀一对构造关系",
       "section_mm": "平均广230.5；厚90.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-CHASHOU-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2741,7 +2743,8 @@
       "evidence": "总数8+每榀一对构造关系",
       "section_mm": "平均广230.5；厚90.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-CHASHOU-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2752,7 +2755,8 @@
       "evidence": "总数8+每榀一对构造关系",
       "section_mm": "平均广230.5；厚90.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-CHASHOU-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2763,7 +2767,8 @@
       "evidence": "总数8+每榀一对构造关系",
       "section_mm": "平均广230.5；厚90.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-CHASHOU-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2774,7 +2779,8 @@
       "evidence": "总数8+每榀一对构造关系",
       "section_mm": "平均广230.5；厚90.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-CHASHOU-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2785,7 +2791,8 @@
       "evidence": "总数8+每榀一对构造关系",
       "section_mm": "平均广230.5；厚90.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-CHASHOU-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2796,7 +2803,8 @@
       "evidence": "总数8+每榀一对构造关系",
       "section_mm": "平均广230.5；厚90.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-CHASHOU-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -7204,14 +7212,14 @@
     "生头木"
   ],
   "stage1_master_progress_summary": {
-    "snapshot_date": "2026-09-22",
-    "status": "CURRENT / D-087 VISIBILITY RULE / D-103 TUOJIAO MASTER BINDING",
+    "snapshot_date": "2026-09-23",
+    "status": "PR #16 FORMALIZED CANDIDATE / D-111 CHASHOU APPROVED / D-112 CATALOG+V008 BINDING / MERGE PENDING",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 13,
-    "pending_master_object_type_count": 15,
-    "master_completion_percent": 46.4,
+    "approved_master_count": 14,
+    "pending_master_object_type_count": 14,
+    "master_completion_percent": 50.0,
     "pending_source_binding_count": 7,
     "completed_definition": "PRODUCT_OWNER_APPROVED Master available in Stage1 Component Master Catalog",
     "total_definition": "Master scope includes 需新建Master plus all 已有Master categories; not all registered object types require a Master",
@@ -7242,9 +7250,10 @@
       "托脚",
       "下六椽栿",
       "柱",
-      "柱头栌斗"
+      "柱头栌斗",
+      "叉手"
     ],
-    "master_covered_registry_record_count": 111,
-    "progress_display_note": "505 is registry-record count, not a whole-building physical-piece total. Stage1 Master completion uses 28 Master-scope object types as denominator: 13 approved / 15 pending = 46.4%."
+    "master_covered_registry_record_count": 119,
+    "progress_display_note": "505 is registry-record count, not a whole-building physical-piece total. Stage1 Master completion uses 28 Master-scope object types as denominator: 14 approved / 14 pending = 50.0%. This is a PR #16 formalized candidate until merge to main."
   }
 }

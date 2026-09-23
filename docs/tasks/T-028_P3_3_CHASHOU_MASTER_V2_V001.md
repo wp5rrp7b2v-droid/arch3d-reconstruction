@@ -1,12 +1,12 @@
 # 【中国古建筑3D复原｜T-028｜P3_3_CHASHOU_MASTER_V2_V001｜叉手 Master 首件生产】
 
-Status: **TASK CONTRACT V001 LOCKED / PRODUCT OWNER APPROVED / D-109 / ENGINEERING EXECUTION NOT AUTHORIZED**  
-Think Level: **HIGH**  
-Execution architecture: **MASTER V2 / MINIMAL_SUFFICIENT / ENDPOINT-DRIVEN**  
-Phase/Gate: P3 / P3.3 V002  
-Stage: Stage 1｜真实构件 Master 库  
-Date: 2026-09-23  
-Proposed branch: `codex/t028-p3-3-chashou-master-v2-v001`  
+Status: **TASK CONTRACT V001 LOCKED / PRODUCT OWNER APPROVED / D-109 / ENGINEERING EXECUTION NOT AUTHORIZED**
+Think Level: **HIGH**
+Execution architecture: **MASTER V2 / MINIMAL_SUFFICIENT / ENDPOINT-DRIVEN**
+Phase/Gate: P3 / P3.3 V002
+Stage: Stage 1｜真实构件 Master 库
+Date: 2026-09-23
+Proposed branch: `codex/t028-p3-3-chashou-master-v2-v001`
 PR policy: **ONE TASK = ONE BRANCH = ONE PR / DO NOT CREATE UNTIL EXECUTION AUTHORIZED**
 
 ## 1. Objective
@@ -463,3 +463,243 @@ Only after that authorization may：
 - first-article evidence be generated.
 
 First-article acceptance and PR merge remain separate Product Owner authorization boundaries.
+
+## 19. Engineering execution authorization / D-110
+
+Product Owner explicitly authorized **开始 T-028** on 2026-09-23.
+
+Authorized:
+- engineering execution = true
+- Blender/GitHub Actions execution = true
+- production branch = `codex/t028-p3-3-chashou-master-v2-v001`
+- Draft PR creation = true
+- locked execution Definition creation = true
+- generic Definition-driven endpoint-resolver extension to shared Master V2 infrastructure = permitted if required
+
+Mandatory regression if shared infrastructure changes:
+- T-025 剳牵
+- T-026 槫
+- T-027 托脚
+
+Still requires separate Product Owner authorization:
+- first-article acceptance
+- formal materialization / Catalog + V008 approved binding
+- PR merge
+- Stage1 PASS / Stage2
+- T-018 resume
+
+## 20. First-article Run #1｜Superseded infrastructure fetch failure
+
+Run `35816530219` failed at **Resolve locked Master Definition** before Blender installation or any geometry execution.
+
+Root cause:
+- PR base `main` advanced after branch creation because the derived Dashboard synchronized Project Control;
+- the workflow then fetched the base branch with `--depth=1`;
+- `git diff origin/main...HEAD` could not resolve a merge base in that shallow state;
+- result: zero Definitions detected.
+
+Classification:
+- `INFRASTRUCTURE_FETCH_HISTORY_FAILURE`
+- no Chashou geometry was generated;
+- no endpoint resolver logic was executed;
+- no validation or regression result exists from Run #1.
+
+Patch:
+- remove the two `--depth=1` base-branch fetches from the generic Master V2 workflow;
+- retain full-history checkout semantics for PR diff and shared-regression comparisons.
+
+Run #1 is **SUPERSEDED** and must not be used for engineering acceptance.
+
+## 21. First-article Run #2｜Superseded validator presentation-contract mismatch
+
+Run `35816632563` progressed through actual Blender engineering before failing at validator check `ROLE05_role_panel_required`.
+
+Passed before failure:
+- locked Definition resolve = PASS
+- Blender 4.5.13 install/version = PASS
+- canonical Chashou Master build = PASS
+- independent reopen = PASS
+- X/Y/Z mutation builds = PASS
+- INTERIOR_FRAME / GABLE_FRAME role mutation builds = PASS
+- six-panel adaptive Review Board composition = PASS
+
+Canonical geometry signature observed in the run:
+- `410a64eac567e256253e56b94ab44f8273ccac634fa01a1d211913ca1b0bd72e`
+
+Failure:
+- legacy generic validator assumed every Definition with `registry_role_counts` must require `ROLE_ASSEMBLY_SEMANTICS`;
+- T-028's approved six-panel contract intentionally replaces that presentation surface with `PLACEMENT_AND_ENDPOINT_LOGIC`.
+
+Patch:
+- validator now accepts either `ROLE_ASSEMBLY_SEMANTICS` or `PLACEMENT_AND_ENDPOINT_LOGIC` as the Definition-driven role/placement review surface;
+- the endpoint panel explicitly includes INTERIOR_FRAME/GABLE_FRAME role distribution and states that role difference does not create a geometry Variant.
+
+Classification:
+- `VALIDATOR_PRESENTATION_CONTRACT_MISMATCH`
+- no evidence that canonical geometry or endpoint calculations were wrong;
+- Run #2 is **SUPERSEDED** and cannot be accepted because final validation and shared regressions did not execute.
+
+## 22. First-article Run #3｜Superseded backward-compatibility regression failure
+
+Run `35817372011` produced a **PASS for the complete T-028 Chashou validation**, then entered mandatory shared Master V2 regression.
+
+Regression results before failure:
+- T-025 剳牵: **PASS**
+- T-026 槫: **PASS**
+- T-027 托脚: canonical build / reopen / mutation / role builds / Review Board all completed, but validator stopped at `NC07_measurement_accounting_preserved`.
+
+Root cause:
+- T-027's approved Definition uses legacy accounting fields `table_row_count + complete_visible_sample_count + unmeasured_visible_row_count`;
+- the T-028 generic validator extension initially expected the newer `complete_visible_sample_count + unmeasured_record_present` form only.
+
+Patch:
+- NC07 is now schema-tolerant and Definition-driven:
+  - legacy definitions validate `table_row_count == complete_visible_sample_count + unmeasured_visible_row_count`;
+  - newer definitions validate `complete_visible_sample_count > 0 && unmeasured_record_present == true`.
+- No T-027 source facts, Master geometry, approved semantic, or measurement values are changed.
+
+Classification:
+- `SHARED_VALIDATOR_BACKWARD_COMPATIBILITY_FAILURE`
+- T-028 geometry/endpoint validation itself was PASS in Run #3;
+- Run #3 remains **SUPERSEDED** because the mandatory T-027 regression did not finish PASS.
+
+## 23. Product Owner first-article approval / D-111
+
+Product Owner completed manual review and explicitly approved the T-028 first article on 2026-09-23.
+
+Accepted evidence:
+- final successful Actions Run: `35825911214`
+- accepted engineering head: `eba3b798f05de54713910549bd198dbb43110f26`
+- T-028 main validation: **77 checks PASS**
+- T-025 shared regression: **PASS**
+- T-026 shared regression: **PASS**
+- T-027 shared regression: **PASS**
+- minimal-sufficient formal surface: **PASS**
+- canonical geometry signature: `410a64eac567e256253e56b94ab44f8273ccac634fa01a1d211913ca1b0bd72e`
+
+Status:
+- `FIRST_ARTICLE_PRODUCT_OWNER_APPROVED = TRUE`
+- `FORMAL_MATERIALIZATION_AUTHORIZED = FALSE`
+- `CATALOG_V008_BINDING_AUTHORIZED = FALSE`
+- `PR_MERGE_AUTHORIZED = FALSE`
+
+Next authorization boundary:
+- formal materialization + Catalog/V008 approved binding
+
+PR #16 remains Draft and must not be merged under D-111 alone.
+
+## 24. Formal materialization authorization / D-112
+
+Product Owner explicitly authorized **T-028 Formal Materialization + Catalog / V008 Binding** on 2026-09-23.
+
+Locked accepted source:
+- Actions Run: `35825911214`
+- Artifact: `10735946772 / P3_3_T-028_MASTER_V2_FIRST_ARTICLE_V001`
+- Artifact ZIP SHA-256: `5c4a77a41291433b590911d4b1c6aa806a1b2dff579d2cecc80ca1bbd28b4151`
+- canonical .blend SHA-256: `25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25`
+- Semantic SHA-256: `28ccd0ea91f8935ebbeaa7c4c9be59ea1bd25c8acc790cbec53342477d86f05d`
+- Validation SHA-256: `e8cb259cb5fa9be474bce120c0984ae02c7159c1ad27bdc5d63deb457c4dcde6`
+- Review Board SHA-256: `07bf0761410b3db9c7bc00161a04a34027ca7711f38437978715f3807eda577f`
+
+Authorized:
+- exact materialization of accepted Semantic / Validation / Review Board;
+- Stage1 Catalog candidate registration as approved Master;
+- V008/CURRENT 8/8 Chashou approved binding;
+- derived Excel synchronization;
+- final regression and pre-merge cross-check.
+
+Not authorized:
+- committing canonical .blend to Git;
+- PR #16 merge;
+- Stage2;
+- T-018 resume.
+
+Canonical main remains 13/28 until PR #16 is actually merged; the PR branch may carry a 14/28 formalized candidate state.
+
+## 25. Formalization Attempt #1｜Workflow parse failure / no mutation
+
+Run 35835041762 failed during workflow parsing before any job was created.
+Classification: WORKFLOW_YAML_PARSE_FAILURE.
+No Artifact download, materialization, Catalog mutation, V008 mutation, or binary publication occurred.
+The attempt is superseded; D-112 byte identities and authorization boundaries remain unchanged.
+
+
+## 26. D-112 exact materialization + Catalog/V008 binding
+
+Formalization executed from the D-111 accepted Artifact 10735946772 / Run 35825911214.
+
+Exact bytes verified before publication:
+- canonical .blend SHA-256: 25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25 — verified, NOT committed
+- Semantic SHA-256: 28ccd0ea91f8935ebbeaa7c4c9be59ea1bd25c8acc790cbec53342477d86f05d
+- Validation SHA-256: e8cb259cb5fa9be474bce120c0984ae02c7159c1ad27bdc5d63deb457c4dcde6
+- Review Board SHA-256: 07bf0761410b3db9c7bc00161a04a34027ca7711f38437978715f3807eda577f
+
+Formalized PR-branch candidate:
+- Stage1 Catalog approved Masters: 14
+- V008 Chashou binding: 8 / 8
+- approved-Master-covered Registry records: 119
+- Stage1 Master completion candidate: 14 / 28 = 50.0%
+- next Master-scope target: 蜀柱
+
+This state is not canonical on main until PR #16 merge.
+PR #16 merge remains separately unauthorized.
+
+## 27. Formalization execution result
+
+D-112 exact materialization completed successfully.
+
+- materialization workflow Run: `35835680348` — SUCCESS
+- formalization commit: `5bcf61933aff9f14fe5f2f7f3c7f6b6d76861567`
+- exact D-111 Artifact byte verification: PASS
+- Semantic / Validation / Review Board exact materialization: PASS
+- canonical .blend SHA verification: PASS / NOT COMMITTED
+- Stage1 Catalog candidate: 14 approved Masters
+- V008 Chashou binding: 8 / 8
+- approved-Master-covered Registry records: 119
+- candidate Stage1 completion: 14 / 28 = 50.0%
+- next Master target after merge: 蜀柱
+
+The bot-authored materialization commit caused subsequent PR workflows to enter GitHub `action_required` rather than execute. A human-authored metadata commit is therefore used to retrigger final regression / derived Excel checks. This is workflow-trigger handling only and does not change the formalized engineering state.
+
+PR #16 merge remains unauthorized.
+
+## 28. Registry V008 snapshot synchronization
+
+Post-materialization derived Excel Run `35835845383` failed closed before Excel generation because RC-018 requires the canonical `CURRENT` registry to be byte-equivalent in content to the same-version `V008` snapshot.
+
+Root cause:
+- D-112 materialization correctly updated `P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json`;
+- the versioned `P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json` snapshot had not yet been synchronized.
+
+Disposition:
+- synchronize V008 snapshot to the exact formalized CURRENT registry state;
+- no Chashou identity, geometry, count, evidence, Catalog entry, or approval fact changes;
+- rerun derived Excel and final Master V2 regression.
+
+Classification:
+- `VERSIONED_REGISTRY_SNAPSHOT_SYNC_REQUIRED`
+- not an engineering or geometry failure.
+
+## 29. PR #16 merge authorization / D-113
+
+Product Owner explicitly authorized PR #16 merge on 2026-09-23.
+
+Execution is conditional on the latest PR head satisfying all of:
+- T-028 final Master V2 regression = PASS;
+- shared regressions T-025 / T-026 / T-027 = PASS;
+- Wanfo Component Registry Excel Sync = PASS;
+- PR mergeable / no conflict;
+- no unauthorized engineering changes after D-112 formalization.
+
+When satisfied:
+1. convert PR #16 from Draft to Ready;
+2. merge PR #16;
+3. verify canonical main:
+   - Stage1 Catalog = 14 approved Masters;
+   - V008 Chashou binding = 8/8;
+   - Stage1 completion = 14/28 = 50.0%;
+   - next Master target = 蜀柱;
+   - T-018 remains HOLD.
+
+Stage2 remains unauthorized.
+
