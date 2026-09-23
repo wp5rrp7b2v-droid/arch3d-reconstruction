@@ -91,9 +91,26 @@ def main():
             ck("09_all_registry_instances_located",all(x.get("location") not in (None,"","待定位") for x in items))
 
     section_strings=[str(x.get("section_mm","")) for x in items]
-    exact=[s for s in section_strings if str(w) in s and (str(h) in s or str(int(h)) in s)]
-    inherited=[s for s in section_strings if ("沿用" in s and "实测统计" in s)]
-    ck("10_registry_section_binding",len(exact)>=1 and len(exact)+len(inherited)==len(items))
+    section_binding=d.get("registry_section_binding_contract")
+    if section_binding and section_binding.get("mode")=="SEMANTIC_MEASUREMENT_STATE_WITH_MASTER_MEAN":
+        measured_token=section_binding["measured_full_section_token"]
+        unknown_token=section_binding["unknown_thickness_token"]
+        measured=[s for s in section_strings if measured_token in s]
+        unknown=[s for s in section_strings if unknown_token in s]
+        ck("10_registry_section_binding",
+           len(measured)==section_binding["measured_full_section_count"] and
+           len(unknown)==section_binding["unknown_thickness_count"] and
+           len(measured)+len(unknown)==len(items))
+        ck("10A_registry_unknown_thickness_preserved",
+           all(unknown_token in s for s in unknown) and
+           section_binding.get("unknown_must_not_be_silently_filled") is True)
+        ck("10B_master_mean_has_A1_authority",
+           section_binding.get("canonical_section_authority")=="A1_TABLE_PUBLISHED_MEAN_MATCHING_RECOMPUTE" and
+           near(rb["section_mm"]["width"],w) and near(rb["section_mm"]["thickness"],h))
+    else:
+        exact=[s for s in section_strings if str(w) in s and (str(h) in s or str(int(h)) in s)]
+        inherited=[s for s in section_strings if ("沿用" in s and "实测统计" in s)]
+        ck("10_registry_section_binding",len(exact)>=1 and len(exact)+len(inherited)==len(items))
 
     ck("11_historical_length_null",rb["historical_full_length_mm"] is None and c["historical_full_length_mm"] is None)
     ck("12_reference_nonhistorical",gc["canonical_reference_length_historical_claim"] is False and c["canonical_reference_length_historical_claim"] is False)

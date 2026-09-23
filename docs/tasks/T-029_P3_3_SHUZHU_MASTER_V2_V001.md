@@ -175,3 +175,25 @@ First article Run `35845395762` started before this correction entered the Defin
 
 It must not be used for first-article acceptance or formalization. A new run from the corrected Definition is mandatory.
 
+## 12. Run #1 failure analysis + generic registry-section fix
+
+Superseded pre-correction Run `35845395762` also exposed a shared-validator assumption at:
+
+`10_registry_section_binding`
+
+Root cause:
+- legacy validator expected every Registry row either to contain the canonical numeric section or explicitly say it inherited measured statistics;
+- Shuzhu V008 intentionally preserves measurement state instead:
+  - 2 interior rows: `广厚有直接实测`
+  - 2 gable rows: `广有实测；厚未及`
+- forcing a numeric gable thickness into Registry would violate D-117 and the pre-existing V008 audit.
+
+Fix:
+- add generic Definition-driven `registry_section_binding_contract`;
+- mode `SEMANTIC_MEASUREMENT_STATE_WITH_MASTER_MEAN` verifies 2 measured-full rows + 2 thickness-UNKNOWN rows;
+- verifies that UNKNOWN remains explicit;
+- verifies canonical 218.75 × 157.5 mm comes from the A1 table published/recomputed mean rather than silently filling gable measurements;
+- legacy Definitions retain the old numeric/inherited binding rule.
+
+Corrected Run `35846114260`, which started before this validator fix, is also **SUPERSEDED_FOR_KNOWN_VALIDATOR_COMPATIBILITY_GAP** and must not be accepted. A fresh run is required.
+

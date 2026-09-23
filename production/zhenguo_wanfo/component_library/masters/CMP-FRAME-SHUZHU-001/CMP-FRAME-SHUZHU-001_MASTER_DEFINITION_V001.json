@@ -316,5 +316,15 @@
     "delegated_conditional_acceptance": true,
     "delegated_instruction": "complete next component end-to-end until fully complete",
     "source_correction_decision_id": "D-117"
+  },
+  "registry_section_binding_contract": {
+    "mode": "SEMANTIC_MEASUREMENT_STATE_WITH_MASTER_MEAN",
+    "measured_full_section_token": "广厚有直接实测",
+    "measured_full_section_count": 2,
+    "unknown_thickness_token": "厚未及",
+    "unknown_thickness_count": 2,
+    "canonical_section_authority": "A1_TABLE_PUBLISHED_MEAN_MATCHING_RECOMPUTE",
+    "unknown_must_not_be_silently_filled": true,
+    "rationale": "V008 preserves per-instance measurement state. The Stage1 shared Master uses the A1 table mean; gable unknown thickness records remain UNKNOWN metadata and are not relabeled as direct measurements."
   }
 }
