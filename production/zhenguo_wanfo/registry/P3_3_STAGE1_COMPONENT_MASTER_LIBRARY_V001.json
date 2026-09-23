@@ -3,7 +3,7 @@
   "phase": "P3.3",
   "stage": "Stage 1",
   "task": "T-028",
-  "status": "FOURTEEN_APPROVED / T028 PRODUCT_OWNER_APPROVED / FORMALIZED ON PR #16 / MERGE PENDING",
+  "status": "FOURTEEN_APPROVED / T028 CLOSED / PR #16 MERGED_TO_MAIN",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -276,7 +276,7 @@
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-111",
       "formalization_authority": "D-112",
-      "publication_status": "FORMALIZED / PR #16 MERGE PENDING",
+      "publication_status": "CLOSED / MERGED_TO_MAIN",
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL_RESTORE_PENDING",
       "canonical_asset_sha256": "25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25",
       "semantic_sha256": "28ccd0ea91f8935ebbeaa7c4c9be59ea1bd25c8acc790cbec53342477d86f05d",
@@ -317,7 +317,16 @@
       },
       "accepted_engineering_head": "eba3b798f05de54713910549bd198dbb43110f26",
       "materialization_run": 35835680348,
-      "materialization_commit_sha": "5bcf61933aff9f14fe5f2f7f3c7f6b6d76861567"
+      "materialization_commit_sha": "5bcf61933aff9f14fe5f2f7f3c7f6b6d76861567",
+      "merge_commit_sha": "ece18beb1d2fb5cc8f9062ad1d1677c5f693fe94",
+      "final_head_sha": "557f9acd8d7b7e71e9c55e55e8e9e03b90e7efc7",
+      "final_regression_run": 35837451137,
+      "final_regression_validation": "83/83 PASS",
+      "final_regression_geometry_signature": "410a64eac567e256253e56b94ab44f8273ccac634fa01a1d211913ca1b0bd72e",
+      "final_regression_blend_sha256": "e8ab399cfd8492b5b80551d8e02b5a27c1876d65174b98e44ce780661d3082ee",
+      "final_regression_artifact_id": 10740947739,
+      "final_regression_artifact_zip_sha256": "858f627e3c04c7d29d3964aa9e6af4f7b8d73e434cf58137efe33d69bac45844",
+      "excel_sync_run": 35837450471
     }
   ],
   "approved_master_count": 14

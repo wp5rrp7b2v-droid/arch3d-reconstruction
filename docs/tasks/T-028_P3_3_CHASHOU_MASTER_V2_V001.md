@@ -703,3 +703,42 @@ When satisfied:
 
 Stage2 remains unauthorized.
 
+## 30. Final closure / D-114
+
+PR #16 was merged after all D-113 safety conditions passed.
+
+Final merge:
+- PR: `#16`
+- verified head: `557f9acd8d7b7e71e9c55e55e8e9e03b90e7efc7`
+- merge commit: `ece18beb1d2fb5cc8f9062ad1d1677c5f693fe94`
+
+Latest-head final regression:
+- Run: `35837451137` — **SUCCESS**
+- T-028 validation: **83/83 PASS**
+- T-025 shared regression: **PASS**
+- T-026 shared regression: **PASS**
+- T-027 shared regression: **PASS**
+- minimal-sufficient formal surface: **PASS**
+- geometry signature: `410a64eac567e256253e56b94ab44f8273ccac634fa01a1d211913ca1b0bd72e`
+- regenerated .blend SHA-256: `e8ab399cfd8492b5b80551d8e02b5a27c1876d65174b98e44ce780661d3082ee`
+- final regression artifact: `10740947739`
+- artifact ZIP SHA-256: `858f627e3c04c7d29d3964aa9e6af4f7b8d73e434cf58137efe33d69bac45844`
+
+Approved canonical source remains D-111 exact artifact:
+- approved canonical .blend SHA-256: `25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25`
+- final-regression regenerated binary is reproducibility evidence and does not replace the approved source identity.
+
+Registry / Catalog closure:
+- Stage1 Catalog approved Masters: **14**
+- V008/CURRENT Chashou binding: **8/8**
+- approved-Master-covered Registry records: **119**
+- Stage1 Master completion: **14/28 = 50.0%**
+- Registry Excel Sync Run `35837450471`: **SUCCESS**
+
+Final status:
+- `T-028 = CLOSED / MERGED_TO_MAIN`
+- current active engineering task = NONE
+- next Master target = **蜀柱**
+- T-018 remains HOLD
+- Stage2 remains unauthorized
+
