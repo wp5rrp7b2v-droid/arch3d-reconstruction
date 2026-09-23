@@ -588,3 +588,31 @@ Next authorization boundary:
 
 PR #16 remains Draft and must not be merged under D-111 alone.
 
+## 24. Formal materialization authorization / D-112
+
+Product Owner explicitly authorized **T-028 Formal Materialization + Catalog / V008 Binding** on 2026-09-23.
+
+Locked accepted source:
+- Actions Run: `35825911214`
+- Artifact: `10735946772 / P3_3_T-028_MASTER_V2_FIRST_ARTICLE_V001`
+- Artifact ZIP SHA-256: `5c4a77a41291433b590911d4b1c6aa806a1b2dff579d2cecc80ca1bbd28b4151`
+- canonical .blend SHA-256: `25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25`
+- Semantic SHA-256: `28ccd0ea91f8935ebbeaa7c4c9be59ea1bd25c8acc790cbec53342477d86f05d`
+- Validation SHA-256: `e8cb259cb5fa9be474bce120c0984ae02c7159c1ad27bdc5d63deb457c4dcde6`
+- Review Board SHA-256: `07bf0761410b3db9c7bc00161a04a34027ca7711f38437978715f3807eda577f`
+
+Authorized:
+- exact materialization of accepted Semantic / Validation / Review Board;
+- Stage1 Catalog candidate registration as approved Master;
+- V008/CURRENT 8/8 Chashou approved binding;
+- derived Excel synchronization;
+- final regression and pre-merge cross-check.
+
+Not authorized:
+- committing canonical .blend to Git;
+- PR #16 merge;
+- Stage2;
+- T-018 resume.
+
+Canonical main remains 13/28 until PR #16 is actually merged; the PR branch may carry a 14/28 formalized candidate state.
+
