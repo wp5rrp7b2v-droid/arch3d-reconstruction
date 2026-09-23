@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R191",
+  "state_revision": "R192",
   "last_updated": "2026-09-23",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-028 FIRST ARTICLE APPROVED D-111 / FORMALIZATION AUTHORIZATION REQUIRED / RC-020 ACTIVE / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 CANONICAL ON MAIN / T-028 FORMALIZATION AUTHORIZED D-112 / PR #16 MATERIALIZATION IN PROGRESS / RC-020 ACTIVE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No engineering blocker. T-028 first article is approved under D-111. Remaining boundary is Product Owner authorization for formal materialization and Catalog/V008 approved binding. PR #16 merge remains separately unauthorized. T-018 remains HOLD.",
+  "blocker": "No engineering blocker. T-028 formalization is authorized under D-112 and is being executed on PR #16. Main remains canonical 13/28 until PR #16 merge. Merge is not yet authorized. T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,20 +64,20 @@
     "id": "T-028",
     "engineering_id": "P3_3_CHASHOU_MASTER_V2_V001",
     "name": "叉手 Master 首件生产",
-    "status": "FIRST ARTICLE APPROVED / D-111 / FORMAL MATERIALIZATION + CATALOG/V008 BINDING NOT YET AUTHORIZED",
+    "status": "FIRST ARTICLE APPROVED / D-111 / FORMALIZATION AUTHORIZED D-112 / MATERIALIZATION IN PROGRESS",
     "engineering_execution_authorized": true,
     "first_article_engineering_complete": true,
     "first_article_product_owner_approved": true,
-    "formalization_authorized": false,
+    "formalization_authorized": true,
     "pr_merge_authorized": false
   },
   "proposed_next_task": {
     "id": "T-028-FORMALIZATION",
     "name": "T-028 Formal Materialization + Catalog/V008 Binding",
-    "status": "WAITING PRODUCT OWNER AUTHORIZATION",
+    "status": "AUTHORIZED / IN PROGRESS ON PR #16",
     "new_t_task_created": false,
     "engineering_execution_authorized": true,
-    "prerequisite": "Product Owner explicit authorization for formal materialization / Catalog + V008 approved binding"
+    "prerequisite": "D-112 satisfied"
   },
   "last_completed_task": {
     "id": "T-027",
@@ -129,7 +129,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-028 FIRST ARTICLE APPROVED D-111 / FORMALIZATION AUTHORIZATION REQUIRED / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 13 OF 28 CANONICAL ON MAIN / T-028 FORMALIZATION AUTHORIZED D-112 / PR #16 MATERIALIZATION IN PROGRESS / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -280,7 +280,7 @@
       "local_sync_status": "DEFERRED_TO_EVENING"
     },
     "chashou": {
-      "status": "FIRST ARTICLE APPROVED / D-111 / FORMALIZATION NOT YET AUTHORIZED",
+      "status": "FIRST ARTICLE APPROVED / D-111 / FORMALIZATION AUTHORIZED D-112 / MATERIALIZATION IN PROGRESS",
       "component": "叉手",
       "component_id": "CMP-FRAME-CHASHOU-001",
       "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
@@ -308,7 +308,7 @@
         "T-026",
         "T-027"
       ],
-      "next_authorization": "Authorize formal materialization + Catalog/V008 binding",
+      "next_authorization": "PR #16 merge after formalization + final regression PASS",
       "first_article_run_id": 35825911214,
       "first_article_head_sha": "eba3b798f05de54713910549bd198dbb43110f26",
       "first_article_validation_checks": 77,
@@ -319,7 +319,16 @@
         "T027": "PASS"
       },
       "first_article_product_owner_approved": true,
-      "formalization_authorized": false
+      "formalization_authorized": true,
+      "source_artifact": {
+        "actions_run_id": 35825911214,
+        "artifact_id": 10735946772,
+        "artifact_zip_sha256": "5c4a77a41291433b590911d4b1c6aa806a1b2dff579d2cecc80ca1bbd28b4151",
+        "canonical_blend_sha256": "25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25",
+        "semantic_sha256": "28ccd0ea91f8935ebbeaa7c4c9be59ea1bd25c8acc790cbec53342477d86f05d",
+        "validation_sha256": "e8cb259cb5fa9be474bce120c0984ae02c7159c1ad27bdc5d63deb457c4dcde6",
+        "review_board_sha256": "07bf0761410b3db9c7bc00161a04a34027ca7711f38437978715f3807eda577f"
+      }
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -344,15 +353,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-111",
+    "id": "D-112",
     "date": "2026-09-23",
-    "decision": "T-028 Chashou Master V2 first article approved by Product Owner based on successful Run 35825911214; formal materialization, Catalog/V008 binding and PR merge remain separately unauthorized."
+    "decision": "T-028 formal materialization + Stage1 Catalog + V008 binding authorized for the D-111 accepted exact artifact. PR #16 merge remains separately unauthorized; main remains canonical 13/28 until merge."
   },
   "latest_material_review": {
     "date": "2026-09-23",
-    "result": "T-028 FIRST ARTICLE APPROVED / D-111",
-    "evidence": "Run 35825911214 SUCCESS; T-028 77-check validation PASS; T-025/T-026/T-027 shared regressions PASS; minimal-sufficient surface PASS; geometry signature 410a64eac567e256253e56b94ab44f8273ccac634fa01a1d211913ca1b0bd72e.",
-    "decision_required": "FORMAL MATERIALIZATION + CATALOG/V008 BINDING AUTHORIZATION"
+    "result": "T-028 FIRST ARTICLE APPROVED / FORMALIZATION AUTHORIZED",
+    "evidence": "Run 35825911214 SUCCESS; exact Artifact 10735946772 locked by ZIP/content hashes.",
+    "decision_required": "PR #16 MERGE AUTHORIZATION AFTER FORMALIZATION / FINAL REGRESSION"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
