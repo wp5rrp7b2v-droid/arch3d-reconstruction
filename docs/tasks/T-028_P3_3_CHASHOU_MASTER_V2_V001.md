@@ -663,3 +663,20 @@ The bot-authored materialization commit caused subsequent PR workflows to enter 
 
 PR #16 merge remains unauthorized.
 
+## 28. Registry V008 snapshot synchronization
+
+Post-materialization derived Excel Run `35835845383` failed closed before Excel generation because RC-018 requires the canonical `CURRENT` registry to be byte-equivalent in content to the same-version `V008` snapshot.
+
+Root cause:
+- D-112 materialization correctly updated `P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json`;
+- the versioned `P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json` snapshot had not yet been synchronized.
+
+Disposition:
+- synchronize V008 snapshot to the exact formalized CURRENT registry state;
+- no Chashou identity, geometry, count, evidence, Catalog entry, or approval fact changes;
+- rerun derived Excel and final Master V2 regression.
+
+Classification:
+- `VERSIONED_REGISTRY_SNAPSHOT_SYNC_REQUIRED`
+- not an engineering or geometry failure.
+
