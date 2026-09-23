@@ -1,0 +1,292 @@
+{
+  "approval_boundary": "ENGINEERING_COMPLETE_PENDING_PRODUCT_OWNER_REVIEW",
+  "blender_version": "4.5.13 LTS",
+  "canonical_blend_sha256": "25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25",
+  "check_count": 77,
+  "checks": {
+    "01_definition_locked": "PASS",
+    "02_execution_authorized": "PASS",
+    "03_visual_gate": "PASS",
+    "04_registry_version": "PASS",
+    "05_registry_record_count": "PASS",
+    "06_component_identity": "PASS",
+    "07_instance_count": "PASS",
+    "08_definition_driven_role_counts": "PASS",
+    "09_registry_role_partition_complete": "PASS",
+    "10_registry_section_binding": "PASS",
+    "11_historical_length_null": "PASS",
+    "12_reference_nonhistorical": "PASS",
+    "13_no_unsupported_geometry": "PASS",
+    "14_definition_hash": "PASS",
+    "15_bbox_length": "PASS",
+    "16_bbox_width": "PASS",
+    "17_bbox_thickness": "PASS",
+    "18_origin_transform": "PASS",
+    "19_reopen": "PASS",
+    "20_restore": "PASS",
+    "21_length_mutation": "PASS",
+    "22_width_mutation": "PASS",
+    "23_thickness_mutation": "PASS",
+    "24_binary_sha": "PASS",
+    "25_blender_version": "PASS",
+    "26_required_panels_complete": "PASS",
+    "27_review_board_exists": "PASS",
+    "28_review_board_dimensions": "PASS",
+    "29_no_fixed_panel_rule": "PASS",
+    "30_minimal_sufficient_rule": "PASS",
+    "31_no_tracked_canonical_blend_in_master_dir": "PASS",
+    "32_definition_semantic_validation_independence": "PASS",
+    "33_unknowns_preserved": "PASS",
+    "34_reference_length_assembly_guard": "PASS",
+    "35_visual_source_not_dimension_authority": "PASS",
+    "36_legacy_identity_not_applicable": "PASS",
+    "37_profile_unknown_semantic": "PASS",
+    "38_profile_unknown_body": "PASS",
+    "39_envelope_proxy_nonhistorical": "PASS",
+    "40_no_shengtou_baked": "PASS",
+    "41_preapproval_catalog_absent": "PASS",
+    "EP01_contract_enabled": "PASS",
+    "EP02_nonhistorical_contract": "PASS",
+    "EP03_not_building_coordinates": "PASS",
+    "EP04_fixture_count": "PASS",
+    "EP90_fixture_lengths_differ": "PASS",
+    "EP91_fixture_directions_differ": "PASS",
+    "EP92_reference_length_not_leaked": "PASS",
+    "EP93_same_master_section": "PASS",
+    "EP94_required_panel": "PASS",
+    "EP95_reconstruction_boundary_panel": "PASS",
+    "EP96_semantic_contract_preserved": "PASS",
+    "EP97_reconstruction_policy_preserved": "PASS",
+    "EP_TEST-A_center": "PASS",
+    "EP_TEST-A_classification": "PASS",
+    "EP_TEST-A_direction": "PASS",
+    "EP_TEST-A_length": "PASS",
+    "EP_TEST-A_result_present": "PASS",
+    "EP_TEST-B_center": "PASS",
+    "EP_TEST-B_classification": "PASS",
+    "EP_TEST-B_direction": "PASS",
+    "EP_TEST-B_length": "PASS",
+    "EP_TEST-B_result_present": "PASS",
+    "NC01_conflict_contract_declared": "PASS",
+    "NC02_published_mean_drives_canonical_section": "PASS",
+    "NC03_matching_recompute_preserved": "PASS",
+    "NC04_no_false_conflict": "PASS",
+    "NC05_semantic_preserves_numeric_conflict_contract": "PASS",
+    "NC07_measurement_accounting_preserved": "PASS",
+    "NC08_fen_metadata_not_geometry": "PASS",
+    "ROLE01_semantic_preserves_role_contract": "PASS",
+    "ROLE02_assembly_semantics_preserved": "PASS",
+    "ROLE03_exact_angle_unknown": "PASS",
+    "ROLE04_legacy_proxy_not_reused": "PASS",
+    "ROLE05_role_or_placement_panel_required": "PASS",
+    "ROLE06_role_mutation_names": "PASS",
+    "ROLE07_role_mutation_preserves_geometry": "PASS"
+  },
+  "component_id": "CMP-FRAME-CHASHOU-001",
+  "definition_sha256": "338c885cb4cc453edc909ea100637ef714865764a3b0b682f23c6250264b59db",
+  "endpoint_fixture_results": [
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        450.0,
+        0.0,
+        600.0
+      ],
+      "derived_direction": [
+        0.6,
+        0.0,
+        0.8
+      ],
+      "derived_length_mm": 1500.0,
+      "fixture_id": "TEST-A",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        900.0,
+        0.0,
+        1200.0
+      ]
+    },
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        600.0,
+        0.0,
+        250.0
+      ],
+      "derived_direction": [
+        0.923076923,
+        0.0,
+        0.384615385
+      ],
+      "derived_length_mm": 1300.0,
+      "fixture_id": "TEST-B",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        1200.0,
+        0.0,
+        500.0
+      ]
+    }
+  ],
+  "endpoint_resolver_contract": {
+    "building_coordinate_claim": false,
+    "center_rule": "(P_upper + P_lower) / 2",
+    "classification": "RECONSTRUCTED_DESIGN / GENERIC_ENDPOINT_DRIVEN_ASSEMBLY",
+    "enabled": true,
+    "fixtures": [
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          450,
+          0,
+          600
+        ],
+        "expected_direction": [
+          0.6,
+          0,
+          0.8
+        ],
+        "expected_length_mm": 1500,
+        "fixture_id": "TEST-A",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          900,
+          0,
+          1200
+        ]
+      },
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          600,
+          0,
+          250
+        ],
+        "expected_direction": [
+          0.9230769230769231,
+          0,
+          0.38461538461538464
+        ],
+        "expected_length_mm": 1300,
+        "fixture_id": "TEST-B",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          1200,
+          0,
+          500
+        ]
+      }
+    ],
+    "historical_claim": false,
+    "length_rule": "norm(P_upper - P_lower)",
+    "lower_endpoint_semantic": "PINGLIANG_UPPER_CONNECTION_REGION",
+    "orientation_rule": "local +X aligns to normalized(P_upper - P_lower)",
+    "upper_endpoint_semantic": "RIDGE_SUPPORT_CONNECTION_REGION"
+  },
+  "formal_file_count_policy": "ADAPTIVE / MINIMAL SUFFICIENT / NO FIXED COUNT",
+  "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+  "reconstruction_policy": {
+    "classification": "EVIDENCE_CONSTRAINED_RECONSTRUCTION",
+    "decision_id": "D-108",
+    "reconstructed_design_must_be_explicit": true,
+    "reconstructed_design_replaceable": true,
+    "rule_id": "RC-020",
+    "silent_historicization": "PROHIBITED",
+    "unknown_does_not_automatically_block": true
+  },
+  "registry_role_counts": {
+    "GABLE_FRAME": {
+      "count": 4,
+      "geometry_policy": "SHARED_CANONICAL_BODY / PLACEMENT_ONLY",
+      "id_prefixes": [
+        "叉手-东山",
+        "叉手-西山"
+      ]
+    },
+    "INTERIOR_FRAME": {
+      "count": 4,
+      "geometry_policy": "SHARED_CANONICAL_BODY / PLACEMENT_ONLY",
+      "id_prefixes": [
+        "叉手-东缝",
+        "叉手-西缝"
+      ]
+    }
+  },
+  "required_review_panels": [
+    "AXON",
+    "LONG_SIDE",
+    "END_SECTION",
+    "DIMENSION_AND_PARAMETRIC_LENGTH",
+    "PLACEMENT_AND_ENDPOINT_LOGIC",
+    "SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY"
+  ],
+  "review_board_sha256": "07bf0761410b3db9c7bc00161a04a34027ca7711f38437978715f3807eda577f",
+  "schema_version": "MASTER_V2_VALIDATION_1.1",
+  "section_envelope_historical_claim": false,
+  "section_profile_state": "UNKNOWN",
+  "semantic_geometry_signature": "410a64eac567e256253e56b94ab44f8273ccac634fa01a1d211913ca1b0bd72e",
+  "source_numeric_conflict": {
+    "canonical_geometry_basis": "PUBLISHED_MEAN_MATCHING_RECOMPUTE",
+    "complete_visible_sample_count": 4,
+    "conflict": false,
+    "conflict_type": "SOURCE_INTERNAL_NUMERIC_CONFLICT",
+    "published_mean_mm": {
+      "thickness": 90.5,
+      "width": 230.5
+    },
+    "unmeasured_record_present": true,
+    "visible_rows_recomputed_mean_mm": {
+      "thickness": 90.5,
+      "width": 230.5
+    },
+    "visible_samples_mm": [
+      {
+        "thickness": 92,
+        "width": 232
+      },
+      {
+        "thickness": 90,
+        "width": 234
+      },
+      {
+        "thickness": 91,
+        "width": 228
+      },
+      {
+        "thickness": 89,
+        "width": 228
+      },
+      {
+        "note": "source table includes 未及",
+        "thickness": null,
+        "width": null
+      }
+    ]
+  },
+  "status": "PASS",
+  "task_id": "T-028"
+}

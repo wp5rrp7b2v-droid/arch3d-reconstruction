@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-027",
-  "status": "THIRTEEN_APPROVED / T027 PRODUCT_OWNER_APPROVED / T027 MERGED",
+  "task": "T-028",
+  "status": "FOURTEEN_APPROVED / T028 PRODUCT_OWNER_APPROVED / FORMALIZED ON PR #16 / MERGE PENDING",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -268,7 +268,55 @@
       "final_regression_blend_sha256": "702feb0fad1b6e4c62930e261dc5f07b3c3f3e1957f60d1bb2f098712113b9a2",
       "final_regression_artifact_id": 10690273136,
       "final_regression_artifact_zip_sha256": "4ac599097cd556aa786a5b940f148c9f4b0ce8b51d60de524e3bf333a0c0de65"
+    },
+    {
+      "component_id": "CMP-FRAME-CHASHOU-001",
+      "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+      "master_version": "V001",
+      "approval_status": "PRODUCT_OWNER_APPROVED",
+      "decision_id": "D-111",
+      "formalization_authority": "D-112",
+      "publication_status": "FORMALIZED / PR #16 MERGE PENDING",
+      "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL_RESTORE_PENDING",
+      "canonical_asset_sha256": "25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25",
+      "semantic_sha256": "28ccd0ea91f8935ebbeaa7c4c9be59ea1bd25c8acc790cbec53342477d86f05d",
+      "validation_sha256": "e8cb259cb5fa9be474bce120c0984ae02c7159c1ad27bdc5d63deb457c4dcde6",
+      "review_board_sha256": "07bf0761410b3db9c7bc00161a04a34027ca7711f38437978715f3807eda577f",
+      "semantic_geometry_signature": "410a64eac567e256253e56b94ab44f8273ccac634fa01a1d211913ca1b0bd72e",
+      "canonical_section_mm": {
+        "width": 230.5,
+        "thickness": 90.5
+      },
+      "source_internal_numeric_conflict": false,
+      "historical_full_length_mm": null,
+      "canonical_reference_length_mm": 1000,
+      "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER",
+      "physical_instance_count": 8,
+      "distribution": "INTERIOR_FRAME 4 / GABLE_FRAME 4",
+      "geometry_variant_count": 0,
+      "endpoint_policy": "ACTUAL LENGTH / CENTER / ORIENTATION ARE ASSEMBLY-ENDPOINT-DERIVED",
+      "historical_joinery": "UNRESOLVED_METADATA / STAGE1 SIMPLIFIED FLAT END",
+      "source_artifact": {
+        "actions_run_id": 35825911214,
+        "artifact_id": 10735946772,
+        "artifact_zip_sha256": "5c4a77a41291433b590911d4b1c6aa806a1b2dff579d2cecc80ca1bbd28b4151"
+      },
+      "minimal_sufficient_package": {
+        "policy": "ADAPTIVE / NO UNIVERSAL FILE COUNT",
+        "component_specific_formal_file_count": 6,
+        "formal_repo_files": [
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-CHASHOU-001/CMP-FRAME-CHASHOU-001_MASTER_DEFINITION_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-CHASHOU-001/CMP-FRAME-CHASHOU-001_MASTER_SEMANTIC_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-CHASHOU-001/CMP-FRAME-CHASHOU-001_MASTER_REVIEW_BOARD_V001.png",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-CHASHOU-001/CMP-FRAME-CHASHOU-001_MASTER_VALIDATION_V001.json",
+          "docs/tasks/T-028_P3_3_CHASHOU_MASTER_V2_V001.md"
+        ],
+        "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+        "review_board_count": 1,
+        "required_review_panel_count": 6
+      },
+      "accepted_engineering_head": "eba3b798f05de54713910549bd198dbb43110f26"
     }
   ],
-  "approved_master_count": 13
+  "approved_master_count": 14
 }

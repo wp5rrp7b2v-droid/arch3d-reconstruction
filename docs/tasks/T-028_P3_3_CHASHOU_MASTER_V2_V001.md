@@ -1,12 +1,12 @@
 # 【中国古建筑3D复原｜T-028｜P3_3_CHASHOU_MASTER_V2_V001｜叉手 Master 首件生产】
 
-Status: **TASK CONTRACT V001 LOCKED / PRODUCT OWNER APPROVED / D-109 / ENGINEERING EXECUTION NOT AUTHORIZED**  
-Think Level: **HIGH**  
-Execution architecture: **MASTER V2 / MINIMAL_SUFFICIENT / ENDPOINT-DRIVEN**  
-Phase/Gate: P3 / P3.3 V002  
-Stage: Stage 1｜真实构件 Master 库  
-Date: 2026-09-23  
-Proposed branch: `codex/t028-p3-3-chashou-master-v2-v001`  
+Status: **TASK CONTRACT V001 LOCKED / PRODUCT OWNER APPROVED / D-109 / ENGINEERING EXECUTION NOT AUTHORIZED**
+Think Level: **HIGH**
+Execution architecture: **MASTER V2 / MINIMAL_SUFFICIENT / ENDPOINT-DRIVEN**
+Phase/Gate: P3 / P3.3 V002
+Stage: Stage 1｜真实构件 Master 库
+Date: 2026-09-23
+Proposed branch: `codex/t028-p3-3-chashou-master-v2-v001`
 PR policy: **ONE TASK = ONE BRANCH = ONE PR / DO NOT CREATE UNTIL EXECUTION AUTHORIZED**
 
 ## 1. Objective
@@ -616,3 +616,30 @@ Not authorized:
 
 Canonical main remains 13/28 until PR #16 is actually merged; the PR branch may carry a 14/28 formalized candidate state.
 
+## 25. Formalization Attempt #1｜Workflow parse failure / no mutation
+
+Run 35835041762 failed during workflow parsing before any job was created.
+Classification: WORKFLOW_YAML_PARSE_FAILURE.
+No Artifact download, materialization, Catalog mutation, V008 mutation, or binary publication occurred.
+The attempt is superseded; D-112 byte identities and authorization boundaries remain unchanged.
+
+
+## 26. D-112 exact materialization + Catalog/V008 binding
+
+Formalization executed from the D-111 accepted Artifact 10735946772 / Run 35825911214.
+
+Exact bytes verified before publication:
+- canonical .blend SHA-256: 25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25 — verified, NOT committed
+- Semantic SHA-256: 28ccd0ea91f8935ebbeaa7c4c9be59ea1bd25c8acc790cbec53342477d86f05d
+- Validation SHA-256: e8cb259cb5fa9be474bce120c0984ae02c7159c1ad27bdc5d63deb457c4dcde6
+- Review Board SHA-256: 07bf0761410b3db9c7bc00161a04a34027ca7711f38437978715f3807eda577f
+
+Formalized PR-branch candidate:
+- Stage1 Catalog approved Masters: 14
+- V008 Chashou binding: 8 / 8
+- approved-Master-covered Registry records: 119
+- Stage1 Master completion candidate: 14 / 28 = 50.0%
+- next Master-scope target: 蜀柱
+
+This state is not canonical on main until PR #16 merge.
+PR #16 merge remains separately unauthorized.
