@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R188",
+  "state_revision": "R189",
   "last_updated": "2026-09-23",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / CHASHOU MASTER SPEC V001 LOCKED / RC-020 ACTIVE / T-028 CONTRACT DESIGN NEXT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-028 CONTRACT V001 LOCKED D-109 / WAITING EXECUTION AUTHORIZATION / RC-020 ACTIVE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 13 OF 28 MASTERS APPROVED / CHASHOU SPEC LOCKED / T-028 CONTRACT DESIGN NEXT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 13 OF 28 MASTERS APPROVED / T-028 CONTRACT LOCKED / EXECUTION NOT AUTHORIZED / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-027 CLOSED / 13 OF 28 MASTERS APPROVED / CHASHOU MASTER SPEC V001 LOCKED D-108 / RC-020 ACTIVE / NEXT=T-028 CONTRACT DESIGN / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-027 CLOSED / 13 OF 28 MASTERS APPROVED / CHASHOU SPEC D-108 + T-028 CONTRACT D-109 LOCKED / WAITING START T-028 / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "No active project blocker. Chashou Master Spec V001 is locked under D-108. Historical unknowns do not automatically block required reconstructed-design geometry under RC-020. T-018 remains HOLD.",
+  "blocker": "No project blocker. T-028 Task Contract V001 is locked under D-109 and is waiting only for Product Owner execution authorization. T-018 remains HOLD.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -61,17 +61,22 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "NONE",
-    "name": "No active engineering T-task",
-    "status": "CHASHOU MASTER SPEC V001 LOCKED / T-028 CONTRACT NOT YET CREATED / ENGINEERING EXECUTION NOT AUTHORIZED"
+    "id": "T-028",
+    "engineering_id": "P3_3_CHASHOU_MASTER_V2_V001",
+    "name": "叉手 Master 首件生产",
+    "status": "TASK CONTRACT V001 LOCKED / D-109 / ENGINEERING EXECUTION NOT AUTHORIZED",
+    "engineering_execution_authorized": false,
+    "production_branch_creation_authorized": false,
+    "pr_creation_authorized": false,
+    "blender_execution_authorized": false
   },
   "proposed_next_task": {
     "id": "T-028",
     "name": "P3_3_CHASHOU_MASTER_V2_V001｜叉手 Master 首件生产",
-    "status": "TASK CONTRACT DESIGN NEXT / MASTER SPEC LOCKED D-108 / ENGINEERING EXECUTION NOT AUTHORIZED",
-    "new_t_task_created": false,
+    "status": "CONTRACT LOCKED / WAITING PRODUCT OWNER '开始 T-028'",
+    "new_t_task_created": true,
     "engineering_execution_authorized": false,
-    "prerequisite": "Create and Product Owner approve T-028 Task Contract from locked Chashou Master Spec V001 before any production branch, PR, Actions or Blender execution"
+    "prerequisite": "Product Owner explicit authorization: 开始 T-028"
   },
   "last_completed_task": {
     "id": "T-027",
@@ -123,7 +128,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / CHASHOU SPEC V001 LOCKED D-108 / T-028 CONTRACT DESIGN NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 13 OF 28 MASTERS APPROVED / T-028 CONTRACT V001 LOCKED D-109 / WAITING EXECUTION AUTHORIZATION / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -274,7 +279,7 @@
       "local_sync_status": "DEFERRED_TO_EVENING"
     },
     "chashou": {
-      "status": "MASTER SPEC V001 LOCKED / D-108 / ENGINEERING EXECUTION NOT AUTHORIZED",
+      "status": "T-028 CONTRACT V001 LOCKED / D-109 / ENGINEERING EXECUTION NOT AUTHORIZED",
       "component": "叉手",
       "component_id": "CMP-FRAME-CHASHOU-001",
       "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
@@ -293,7 +298,16 @@
       "actual_length_and_angle": "ASSEMBLY_ENDPOINT_DERIVED / RECONSTRUCTED_DESIGN_ALLOWED",
       "geometry_variant_count": 0,
       "next_task": "T-028 Task Contract design",
-      "engineering_execution_authorized": false
+      "engineering_execution_authorized": false,
+      "task_id": "T-028",
+      "task_contract": "docs/tasks/T-028_P3_3_CHASHOU_MASTER_V2_V001.md",
+      "endpoint_resolver_contract": "LOCKED / TWO DETERMINISTIC ENGINEERING TEST FIXTURES / NOT BUILDING COORDINATES",
+      "shared_regression_required_if_infrastructure_changes": [
+        "T-025",
+        "T-026",
+        "T-027"
+      ],
+      "next_authorization": "开始 T-028"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -318,9 +332,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-108",
+    "id": "D-109",
     "date": "2026-09-23",
-    "decision": "Chashou Master Spec V0.1 approved and locked as P3_3_STAGE1_CHASHOU_MASTER_SPEC_V001; RC-020 Evidence-Constrained Reconstruction activated; next step is T-028 Task Contract design only, with engineering execution still unauthorized."
+    "decision": "T-028 Chashou Master V2 Task Contract V001 approved and locked; endpoint-driven shared infrastructure extension is permitted only after explicit execution authorization; engineering remains unauthorized."
   },
   "latest_material_review": {
     "date": "2026-09-23",
