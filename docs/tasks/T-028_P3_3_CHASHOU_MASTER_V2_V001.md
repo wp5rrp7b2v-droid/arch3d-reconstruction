@@ -488,3 +488,25 @@ Still requires separate Product Owner authorization:
 - Stage1 PASS / Stage2
 - T-018 resume
 
+## 20. First-article Run #1｜Superseded infrastructure fetch failure
+
+Run `35816530219` failed at **Resolve locked Master Definition** before Blender installation or any geometry execution.
+
+Root cause:
+- PR base `main` advanced after branch creation because the derived Dashboard synchronized Project Control;
+- the workflow then fetched the base branch with `--depth=1`;
+- `git diff origin/main...HEAD` could not resolve a merge base in that shallow state;
+- result: zero Definitions detected.
+
+Classification:
+- `INFRASTRUCTURE_FETCH_HISTORY_FAILURE`
+- no Chashou geometry was generated;
+- no endpoint resolver logic was executed;
+- no validation or regression result exists from Run #1.
+
+Patch:
+- remove the two `--depth=1` base-branch fetches from the generic Master V2 workflow;
+- retain full-history checkout semantics for PR diff and shared-regression comparisons.
+
+Run #1 is **SUPERSEDED** and must not be used for engineering acceptance.
+

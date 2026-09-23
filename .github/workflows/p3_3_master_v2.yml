@@ -45,7 +45,7 @@ jobs:
           if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
             DEF="${{ inputs.definition_path }}"
           else
-            git fetch origin "${{ github.base_ref }}" --depth=1
+            git fetch origin "${{ github.base_ref }}"
             mapfile -t defs < <(git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -E '^production/zhenguo_wanfo/component_library/masters/.+_MASTER_DEFINITION_V[0-9]+\.json$' || true)
             if [[ "${#defs[@]}" -ne 1 ]]; then
               printf 'Expected exactly one changed Master Definition, got %s\n' "${#defs[@]}"
@@ -170,7 +170,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git fetch origin "${{ github.base_ref }}" --depth=1
+          git fetch origin "${{ github.base_ref }}"
           if git diff --quiet "origin/${{ github.base_ref }}...HEAD" -- "$COMMON" "$VALIDATOR" ".github/workflows/p3_3_master_v2.yml"; then
             echo "Shared V2 infrastructure unchanged; regression not required."
             exit 0
