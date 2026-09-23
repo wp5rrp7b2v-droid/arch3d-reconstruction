@@ -50,6 +50,7 @@ for number, name, status, note in stages:
     stage_html += '<div class="%s"><div class="stage-num">%s</div><strong>%s</strong><div class="small">%s</div></div>' % (cls, number, escape(name), detail)
 
 pct = progress["master_completion_percent"]
+pct_text = f"{float(pct):.1f}"
 last = state.get("last_completed_task", {})
 pending_sources = reg.get("pending_source_binding", [])
 
@@ -120,8 +121,8 @@ h1{font-size:30px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 14px}h3{font-siz
 <div class="footer">Dashboard v200 · DERIVED_VISUALIZATION · %s / D-105 · V008 · Catalog %s approved · Dashboard 本身不是事实主权源。</div>
 </main></body></html>
 """ % (
-    escape(state["state_revision"]), escape(progress["snapshot_date"]), stage_html, pct,
-    progress["approved_master_count"], progress["master_scope_object_type_count"], pct, pct,
+    escape(state["state_revision"]), escape(progress["snapshot_date"]), stage_html, pct_text,
+    progress["approved_master_count"], progress["master_scope_object_type_count"], pct_text, pct_text,
     progress["pending_master_object_type_count"], progress["master_covered_registry_record_count"], progress["registry_record_count"],
     escape(last.get("id","NONE")), escape(last.get("component","")), escape(last.get("status","")),
     escape(next_target), len(pending_sources), escape("、".join(pending_sources)),
