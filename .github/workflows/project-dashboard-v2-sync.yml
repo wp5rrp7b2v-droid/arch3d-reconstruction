@@ -32,9 +32,9 @@ jobs:
         run: |
           set -euo pipefail
           grep -q "Dashboard V2" docs/project_control/dashboard.html
-          grep -q "14 / 28" docs/project_control/dashboard.html
-          grep -q "50.0%" docs/project_control/dashboard.html
-          grep -q "下一目标：蜀柱" docs/project_control/dashboard.html
+          grep -q "15 / 28" docs/project_control/dashboard.html
+          grep -q "53.6%" docs/project_control/dashboard.html
+          grep -q "下一目标：大角梁" docs/project_control/dashboard.html
           grep -q "T-018 HOLD" docs/project_control/dashboard.html
 
       - name: Commit derived Dashboard only when changed
