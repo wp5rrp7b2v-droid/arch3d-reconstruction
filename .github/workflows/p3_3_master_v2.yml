@@ -166,7 +166,7 @@ jobs:
             --output "$VALIDATION" \
             "${EXTRA[@]}"
 
-      - name: Shared V2 infrastructure regression (T-025 + T-026)
+      - name: Shared V2 infrastructure regression (T-025 + T-026 + T-027)
         shell: bash
         run: |
           set -euo pipefail

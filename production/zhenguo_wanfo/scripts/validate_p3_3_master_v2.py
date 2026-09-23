@@ -158,7 +158,7 @@ def main():
         ck("ROLE02_assembly_semantics_preserved",c.get("assembly_semantics")==d.get("assembly_semantics"))
         ck("ROLE03_exact_angle_unknown",rb.get("exact_placement_angle_deg") is None)
         ck("ROLE04_legacy_proxy_not_reused",d.get("legacy_proxy_reuse") is False and c.get("legacy_proxy_reuse") is False)
-        ck("ROLE05_role_panel_required","ROLE_ASSEMBLY_SEMANTICS" in panels)
+        ck("ROLE05_role_or_placement_panel_required","ROLE_ASSEMBLY_SEMANTICS" in panels or "PLACEMENT_AND_ENDPOINT_LOGIC" in panels)
         if not a.role_a or not a.role_b:
             raise AssertionError("role mutation semantics required but --role-a/--role-b not supplied")
         ra=load(a.role_a); rbsem=load(a.role_b)

@@ -322,6 +322,10 @@ def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
         if not endpoint_results or len(endpoint_results)<2:
             raise ValueError("endpoint placement panel requires at least two endpoint fixtures")
         lines=['Same canonical Master / same section / endpoint-driven instances']
+        role_cfg=d.get("registry_role_counts",{})
+        if role_cfg:
+            lines.append('Role distribution: ' + ' / '.join(f'{name} {cfg.get("count")}' for name,cfg in role_cfg.items()))
+            lines.append('Role difference does NOT create a geometry Variant')
         for x in endpoint_results:
             lines += [
               f'{x["fixture_id"]}: {x["classification"]}',

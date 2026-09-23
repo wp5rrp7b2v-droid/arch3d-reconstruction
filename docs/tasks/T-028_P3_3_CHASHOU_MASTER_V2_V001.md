@@ -510,3 +510,32 @@ Patch:
 
 Run #1 is **SUPERSEDED** and must not be used for engineering acceptance.
 
+## 21. First-article Run #2｜Superseded validator presentation-contract mismatch
+
+Run `35816632563` progressed through actual Blender engineering before failing at validator check `ROLE05_role_panel_required`.
+
+Passed before failure:
+- locked Definition resolve = PASS
+- Blender 4.5.13 install/version = PASS
+- canonical Chashou Master build = PASS
+- independent reopen = PASS
+- X/Y/Z mutation builds = PASS
+- INTERIOR_FRAME / GABLE_FRAME role mutation builds = PASS
+- six-panel adaptive Review Board composition = PASS
+
+Canonical geometry signature observed in the run:
+- `410a64eac567e256253e56b94ab44f8273ccac634fa01a1d211913ca1b0bd72e`
+
+Failure:
+- legacy generic validator assumed every Definition with `registry_role_counts` must require `ROLE_ASSEMBLY_SEMANTICS`;
+- T-028's approved six-panel contract intentionally replaces that presentation surface with `PLACEMENT_AND_ENDPOINT_LOGIC`.
+
+Patch:
+- validator now accepts either `ROLE_ASSEMBLY_SEMANTICS` or `PLACEMENT_AND_ENDPOINT_LOGIC` as the Definition-driven role/placement review surface;
+- the endpoint panel explicitly includes INTERIOR_FRAME/GABLE_FRAME role distribution and states that role difference does not create a geometry Variant.
+
+Classification:
+- `VALIDATOR_PRESENTATION_CONTRACT_MISMATCH`
+- no evidence that canonical geometry or endpoint calculations were wrong;
+- Run #2 is **SUPERSEDED** and cannot be accepted because final validation and shared regressions did not execute.
+
