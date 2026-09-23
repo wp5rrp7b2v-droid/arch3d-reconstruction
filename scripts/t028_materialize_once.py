@@ -92,7 +92,7 @@ REGISTRY.write_text(json.dumps(reg,ensure_ascii=False,indent=2)+"\n",encoding="u
 task=TASK.read_text(encoding="utf-8").rstrip()
 if "## 25. Formalization Attempt #1" not in task:
     task += """
-    
+
 ## 25. Formalization Attempt #1｜Workflow parse failure / no mutation
 
 Run 35835041762 failed during workflow parsing before any job was created.
@@ -123,6 +123,7 @@ Formalized PR-branch candidate:
 This state is not canonical on main until PR #16 merge.
 PR #16 merge remains separately unauthorized.
 """
+task="\n".join(line.rstrip() for line in task.splitlines()).rstrip()
 TASK.write_text(task+"\n",encoding="utf-8")
 
 s=DASH_WF.read_text(encoding="utf-8")
