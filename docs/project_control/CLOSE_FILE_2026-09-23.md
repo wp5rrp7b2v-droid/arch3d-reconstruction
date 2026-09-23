@@ -1,6 +1,6 @@
 # CLOSE FILE｜2026-09-23｜P3.3 Stage1｜叉手 + 蜀柱 Master V2
 
-Status: **GITHUB CLOSED / CROSS-CHECK PASS / LOCAL SYNC PENDING**
+Status: **CLOSED / GITHUB CROSS-CHECK PASS / LOCAL SYNC PASS**
 
 Canonical repository: `wp5rrp7b2v-droid/arch3d-reconstruction`
 Pre-close canonical main SHA: `9de5ff6a3afa1e94e9c3f5e5421cfc7debcac6b0`
@@ -169,20 +169,21 @@ Locked identity:
 D-099 / RC-019 source authority remains active.
 RC-020 Evidence-Constrained Reconstruction remains active.
 
-## 9. Local synchronization required
+## 9. Local synchronization completed
 
 Expected local repo:
 `/Users/caroline/中国古建筑3D复原`
 
-Required tonight:
-1. safe fast-forward local `main` to final GitHub `main`;
-2. verify `local HEAD == origin/main`;
-3. ensure worktree has no unexpected tracked modifications;
-4. restore T-028 approved canonical `.blend` locally from first-article Artifact `10735946772`;
-5. restore T-029 approved canonical `.blend` locally from first-article Artifact `10744639697`;
-6. verify exact SHA-256;
-7. keep both `.blend` files ignored / untracked; do not commit them;
-8. do not substitute final-regression regenerated binaries for approved first-article binaries.
+Completed tonight:
+1. local `main` fast-forwarded safely by 53 commits to `9ab1cae7f49b48e8a74aa4e2cab4dd77be49f0ae`;
+2. `LOCAL_HEAD == REMOTE_HEAD` at the synchronization checkpoint;
+3. tracked worktree clean (`git status --short` returned no entries);
+4. A1 Git LFS canonical PDF presence verified;
+5. T-028 approved canonical `.blend` restored from first-article Run `35825911214`;
+6. T-029 approved canonical `.blend` restored from first-article Run `35847859509`;
+7. both binary SHA-256 values matched exactly;
+8. both `.blend` files are ignored by `.gitignore:4:*.blend` and remain outside Git;
+9. final-regression regenerated binaries were not substituted for the approved first-article binaries.
 
 Expected local binaries:
 
@@ -214,8 +215,25 @@ Stage2 remains unauthorized.
 
 ## 11. Close result
 
-**GITHUB CROSS-CHECK PASS / PROJECT STATE RECONCILED / LOCAL SYNC PENDING**
+**PASS / GITHUB + LOCAL FULL CLOSURE COMPLETE**
 
 No known omitted T-028/T-029 evidence, first-article acceptance, materialization, Catalog/V008 binding, Excel sync, final regression, merge, source-transcription correction, Dashboard marker correction, source-authority boundary, or next-component boundary.
 
-The only remaining action for 2026-09-23 is local synchronization and exact approved-binary restore/verification.
+No remaining action for 2026-09-23. GitHub and local synchronization are both closed.
+
+## 12. D-122 local-sync verification
+
+Result: **PASS / CLOSED**
+
+- local branch: `main`
+- safe fast-forward: PASS / 53 commits
+- local/remote checkpoint: `9ab1cae7f49b48e8a74aa4e2cab4dd77be49f0ae` / MATCH
+- A1 LFS presence: PASS
+- GitHub CLI auth: PASS
+- T-028 approved canonical blend SHA: `25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25` / MATCH
+- T-029 approved canonical blend SHA: `becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6` / MATCH
+- both `.blend` files: ignored / untracked / not committed
+- tracked worktree: clean
+
+D-122 is metadata-only closure after the verified local sync; it changes no engineering geometry, Registry instance, Catalog identity, or Stage1 progress.
+

@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R199",
+  "state_revision": "R200",
   "last_updated": "2026-09-23",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-029 CLOSED / DAILY CLOSE D-121 / NEXT=大角梁 / LOCAL SYNC PENDING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-029 CLOSED / DAILY CLOSE D-122 / NEXT=大角梁 / LOCAL SYNC PASS / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No project engineering blocker. Daily GitHub closure is complete. Only local synchronization remains before end-of-day local closure.",
+  "blocker": "No active project blocker. 2026-09-23 GitHub and local synchronization closure both PASS. T-018 remains HOLD; Stage2 remains unauthorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -407,9 +407,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-121",
+    "id": "D-122",
     "date": "2026-09-23",
-    "decision": "Daily close and cross-check complete. GitHub canonical state reconciled at Stage1 15/28=53.6%, next target 大角梁, T-029 closed, T-018 hold. Remaining action is local fast-forward plus T-028/T-029 approved canonical blend restoration and SHA verification."
+    "decision": "2026-09-23 local synchronization verified PASS: local main matched origin/main at 9ab1cae7f49b48e8a74aa4e2cab4dd77be49f0ae before this metadata-only closure commit; A1 LFS present; T-028/T-029 approved canonical blend binaries restored from approved first-article artifacts with exact SHA matches and remain ignored/untracked; worktree clean."
   },
   "latest_material_review": {
     "date": "2026-09-23",
@@ -473,7 +473,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Complete local sync: fast-forward main, restore approved T-028 and T-029 canonical .blend binaries from first-article artifacts, verify SHA and Git ignore containment. Next session starts with 大角梁 D-099/D-076 review.",
+  "next_action": "Next session: read latest GitHub main first, confirm Stage1 15/28=53.6%, current engineering task NONE, next target 大角梁, then begin D-099 A1/A2 evidence review + D-076 visual/form gate. Do not create a new engineering T-task, resume T-018, or start Stage2 without new authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1110,8 +1110,8 @@
     "master_assembly_policy": "Stable body in Master; placement-derived length/orientation/coordinates remain assembly-owned where appropriate"
   },
   "daily_close_2026_09_23": {
-    "status": "GITHUB_CLOSED / CROSS_CHECK_PASS / LOCAL_SYNC_PENDING",
-    "decision_id": "D-121",
+    "status": "CLOSED / GITHUB CROSS-CHECK PASS / LOCAL SYNC PASS",
+    "decision_id": "D-122",
     "canonical_main_before_close_file": "9de5ff6a3afa1e94e9c3f5e5421cfc7debcac6b0",
     "stage1_master_progress": "15/28 / 53.6%",
     "current_engineering_task": "NONE",
@@ -1127,6 +1127,48 @@
       "#6 T-018 replacement HOLD / DO NOT MERGE"
     ],
     "t018": "HOLD",
-    "stage2": "NOT AUTHORIZED"
+    "stage2": "NOT AUTHORIZED",
+    "local_sync_checkpoint_main": "9ab1cae7f49b48e8a74aa4e2cab4dd77be49f0ae",
+    "local_head_origin_match": "PASS",
+    "local_worktree_status": "CLEAN / git status --short returned no entries",
+    "a1_lfs_check": "PASS / 94c2fedef6*",
+    "github_cli_auth": "PASS",
+    "t028_local_canonical_blend": {
+      "file": "CMP-FRAME-CHASHOU-001_MASTER_V001.blend",
+      "sha256": "25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25",
+      "sha_match": "PASS",
+      "git_containment": "PASS / .gitignore *.blend"
+    },
+    "t029_local_canonical_blend": {
+      "file": "CMP-FRAME-SHUZHU-001_MASTER_V001.blend",
+      "sha256": "becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6",
+      "sha_match": "PASS",
+      "git_containment": "PASS / .gitignore *.blend"
+    },
+    "final_result": "PASS / CLOSED"
+  },
+  "local_sync_2026_09_23": {
+    "status": "PASS / CLOSED",
+    "checkpoint_main": "9ab1cae7f49b48e8a74aa4e2cab4dd77be49f0ae",
+    "branch": "main",
+    "fast_forward": "PASS / 53 commits",
+    "local_equals_origin": true,
+    "a1_lfs_present": true,
+    "gh_auth": true,
+    "approved_binary_restore": {
+      "T028": {
+        "artifact_run": 35825911214,
+        "sha256": "25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25",
+        "match": true,
+        "ignored": true
+      },
+      "T029": {
+        "artifact_run": 35847859509,
+        "sha256": "becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6",
+        "match": true,
+        "ignored": true
+      }
+    },
+    "tracked_worktree_clean": true
   }
 }
