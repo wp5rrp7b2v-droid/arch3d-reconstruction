@@ -680,3 +680,26 @@ Classification:
 - `VERSIONED_REGISTRY_SNAPSHOT_SYNC_REQUIRED`
 - not an engineering or geometry failure.
 
+## 29. PR #16 merge authorization / D-113
+
+Product Owner explicitly authorized PR #16 merge on 2026-09-23.
+
+Execution is conditional on the latest PR head satisfying all of:
+- T-028 final Master V2 regression = PASS;
+- shared regressions T-025 / T-026 / T-027 = PASS;
+- Wanfo Component Registry Excel Sync = PASS;
+- PR mergeable / no conflict;
+- no unauthorized engineering changes after D-112 formalization.
+
+When satisfied:
+1. convert PR #16 from Draft to Ready;
+2. merge PR #16;
+3. verify canonical main:
+   - Stage1 Catalog = 14 approved Masters;
+   - V008 Chashou binding = 8/8;
+   - Stage1 completion = 14/28 = 50.0%;
+   - next Master target = 蜀柱;
+   - T-018 remains HOLD.
+
+Stage2 remains unauthorized.
+
