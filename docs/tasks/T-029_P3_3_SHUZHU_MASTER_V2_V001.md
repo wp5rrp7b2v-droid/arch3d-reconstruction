@@ -197,3 +197,27 @@ Fix:
 
 Corrected Run `35846114260`, which started before this validator fix, is also **SUPERSEDED_FOR_KNOWN_VALIDATOR_COMPATIBILITY_GAP** and must not be accepted. A fresh run is required.
 
+## 13. First-article Run #3｜Validator uncertainty-boundary mismatch
+
+Run `35846386214` completed:
+- Blender 4.5.13 install = PASS
+- canonical Master build = PASS
+- independent reopen = PASS
+- length/width/thickness mutation = PASS
+- INTERIOR_FRAME / GABLE_FRAME role mutation = PASS
+- six-panel Review Board = PASS
+
+It stopped at validator check `33_unknowns_preserved`.
+
+Cause:
+- the shared validator requires an explicit `sample-to-instance` uncertainty phrase;
+- Shuzhu Definition already preserves the real boundary as A1 table location labels + V008 closure, but the unknowns array did not repeat that phrase.
+
+Patch:
+- add an explicit statement that sample-to-instance correspondence is position-labeled by A1/V008 closure while no additional historical identity provenance is claimed;
+- no geometry, section, count, role, endpoint fixture, or source measurement value changes.
+
+Classification:
+- `VALIDATOR_UNCERTAINTY_BOUNDARY_TEXT_MISMATCH`
+- Run #3 is superseded and cannot be accepted because main validation/regressions did not finish.
+

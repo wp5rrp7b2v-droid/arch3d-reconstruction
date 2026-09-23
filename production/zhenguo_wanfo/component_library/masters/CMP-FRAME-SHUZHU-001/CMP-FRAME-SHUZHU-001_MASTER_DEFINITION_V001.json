@@ -250,7 +250,8 @@
     "historical full height remains unresolved but does not block endpoint-derived production placement",
     "historical-original hidden joinery and exact end profile remain unresolved",
     "both gable thickness measurements (东山 / 西山) are 未及",
-    "final four building XYZ endpoints belong to later whole-building placement stage"
+    "final four building XYZ endpoints belong to later whole-building placement stage",
+    "sample-to-instance correspondence is position-labeled by A1 table/V008 closure; no separate historical identity evidence beyond those location labels is claimed"
   ],
   "hard_fails": [
     "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
