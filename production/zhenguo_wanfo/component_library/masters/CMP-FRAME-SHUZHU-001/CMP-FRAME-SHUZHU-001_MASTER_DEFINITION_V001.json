@@ -6,7 +6,7 @@
   "master_version": "V001",
   "component_name_zh": "蜀柱",
   "component_name_en": "Shuzhu / vertical ridge-support post",
-  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-116 / ENGINEERING_EXECUTION_AUTHORIZED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-116 / D-117 SOURCE CORRECTION / ENGINEERING_EXECUTION_AUTHORIZED",
   "architecture_rule": "D-089 / MINIMAL_SUFFICIENT_COMPONENT_PACKAGE + D-108/RC-020 EVIDENCE_CONSTRAINED_RECONSTRUCTION",
   "reconstruction_policy": {
     "decision_id": "D-108",
@@ -36,7 +36,8 @@
       "dimension_authority": false
     },
     "registry_schema_version_expected": "V008",
-    "registry_record_count_expected": 505
+    "registry_record_count_expected": 505,
+    "source_transcription_correction": "D-117 / BOTH GABLE THICKNESS ROWS=未及 / CANONICAL SECTION UNCHANGED"
   },
   "registry_boundary": {
     "physical_instance_count": 4,
@@ -71,7 +72,7 @@
   "source_numeric_conflict": {
     "conflict_type": "SOURCE_INTERNAL_NUMERIC_CONFLICT",
     "conflict": false,
-    "complete_visible_sample_count": 3,
+    "complete_visible_sample_count": 2,
     "unmeasured_record_present": true,
     "published_mean_mm": {
       "width": 218.75,
@@ -92,7 +93,7 @@
         "location": "东山",
         "width": 220,
         "thickness": null,
-        "note": "未及"
+        "note": "厚未及"
       },
       {
         "location": "西缝",
@@ -102,9 +103,12 @@
       {
         "location": "西山",
         "width": 217,
-        "thickness": 157.5
+        "thickness": null,
+        "note": "厚未及"
       }
-    ]
+    ],
+    "complete_width_sample_count": 4,
+    "complete_thickness_sample_count": 2
   },
   "report_analysis": {
     "converted_fen": {
@@ -245,7 +249,7 @@
   "unknowns": [
     "historical full height remains unresolved but does not block endpoint-derived production placement",
     "historical-original hidden joinery and exact end profile remain unresolved",
-    "one gable thickness measurement is 未及",
+    "both gable thickness measurements (东山 / 西山) are 未及",
     "final four building XYZ endpoints belong to later whole-building placement stage"
   ],
   "hard_fails": [
@@ -310,6 +314,7 @@
       "T-028"
     ],
     "delegated_conditional_acceptance": true,
-    "delegated_instruction": "complete next component end-to-end until fully complete"
+    "delegated_instruction": "complete next component end-to-end until fully complete",
+    "source_correction_decision_id": "D-117"
   }
 }

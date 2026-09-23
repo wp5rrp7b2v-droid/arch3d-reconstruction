@@ -154,3 +154,24 @@ Shared infrastructure change required:
 - T-029 declares `directions_must_match=true`;
 - mandatory regressions expanded to T-025 / T-026 / T-027 / T-028.
 
+## 11. Source transcription correction / D-117
+
+Before first-article acceptance, cross-check against the V008 Stage1 disposition audit corrected one A1 Table 2-46 transcription:
+
+- 东缝: 218 × 158 mm
+- 东山: 220 × 未及
+- 西缝: 220 × 157 mm
+- 西山: 217 × 未及
+- width mean = 218.75 mm
+- measured thickness mean = (158 + 157) / 2 = 157.5 mm
+- source numeric conflict = FALSE
+- canonical section remains 218.75 × 157.5 mm
+
+Both gable thickness rows are unmeasured. No direct 157.5 mm West-Gable thickness claim is retained.
+
+First article Run `35845395762` started before this correction entered the Definition. Regardless of its eventual technical result, it is classified:
+
+`SUPERSEDED_PRE_D117_SOURCE_CORRECTION`
+
+It must not be used for first-article acceptance or formalization. A new run from the corrected Definition is mandatory.
+
