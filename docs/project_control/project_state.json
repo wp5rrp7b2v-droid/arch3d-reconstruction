@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R198",
+  "state_revision": "R199",
   "last_updated": "2026-09-23",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-029 CLOSED D-119 / NEXT=大角梁 / RC-020 ACTIVE / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-029 CLOSED / DAILY CLOSE D-121 / NEXT=大角梁 / LOCAL SYNC PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,7 +26,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active project blocker. T-029 is CLOSED / MERGED_TO_MAIN. Dashboard marker validation lag from 14/28 to 15/28 is corrected under D-120. Stage1 remains ACTIVE at 15/28; next target 大角梁. T-018 remains HOLD; Stage2 remains unauthorized.",
+  "blocker": "No project engineering blocker. Daily GitHub closure is complete. Only local synchronization remains before end-of-day local closure.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -407,9 +407,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-120",
+    "id": "D-121",
     "date": "2026-09-23",
-    "decision": "Correct Dashboard V2 current-state validation markers after T-029 closure: 15/28, 53.6%, next target 大角梁. Canonical Project Control/Registry data were already correct; this is a derived-dashboard workflow correction."
+    "decision": "Daily close and cross-check complete. GitHub canonical state reconciled at Stage1 15/28=53.6%, next target 大角梁, T-029 closed, T-018 hold. Remaining action is local fast-forward plus T-028/T-029 approved canonical blend restoration and SHA verification."
   },
   "latest_material_review": {
     "date": "2026-09-23",
@@ -473,7 +473,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Next Stage1 target = 大角梁 (Master Coverage Matrix priority 10, immediately after completed 蜀柱 priority 9). Begin D-099 A1/A2 source review + D-076 visual/form gate next session. Do not create a new engineering T-task, resume T-018, or start Stage2 without new authorization.",
+  "next_action": "Complete local sync: fast-forward main, restore approved T-028 and T-029 canonical .blend binaries from first-article artifacts, verify SHA and Git ignore containment. Next session starts with 大角梁 D-099/D-076 review.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1108,5 +1108,25 @@
     "unknown_policy": "Historical UNKNOWN does not automatically block production; required geometry may use explicit replaceable RECONSTRUCTED_DESIGN",
     "evidence_priority": "D-099 / RC-019 remains authoritative; reconstructed design may not override direct evidence",
     "master_assembly_policy": "Stable body in Master; placement-derived length/orientation/coordinates remain assembly-owned where appropriate"
+  },
+  "daily_close_2026_09_23": {
+    "status": "GITHUB_CLOSED / CROSS_CHECK_PASS / LOCAL_SYNC_PENDING",
+    "decision_id": "D-121",
+    "canonical_main_before_close_file": "9de5ff6a3afa1e94e9c3f5e5421cfc7debcac6b0",
+    "stage1_master_progress": "15/28 / 53.6%",
+    "current_engineering_task": "NONE",
+    "next_master_target": "大角梁",
+    "t028": "CLOSED / PR #16 MERGED / approved blend local restore required",
+    "t029": "CLOSED / PR #17 MERGED / approved blend local restore required",
+    "dashboard_sync_run": 35866408076,
+    "dashboard_sync_result": "SUCCESS",
+    "excel_sync_run": 35865342593,
+    "excel_sync_result": "SUCCESS",
+    "open_prs": [
+      "#3 T-018 SUPERSEDED / DO NOT MERGE",
+      "#6 T-018 replacement HOLD / DO NOT MERGE"
+    ],
+    "t018": "HOLD",
+    "stage2": "NOT AUTHORIZED"
   }
 }
