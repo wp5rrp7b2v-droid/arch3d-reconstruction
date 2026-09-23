@@ -221,3 +221,15 @@ Classification:
 - `VALIDATOR_UNCERTAINTY_BOUNDARY_TEXT_MISMATCH`
 - Run #3 is superseded and cannot be accepted because main validation/regressions did not finish.
 
+
+## 14. D-118 delegated conditional acceptance + formalization
+
+Run 35847859509 completed all locked gates: Blender/build/reopen/mutations, 79 machine checks, six-panel Review Board, and shared T-025/T-026/T-027/T-028 regression. Under D-116 delegated conditional acceptance, exact Artifact 10744639697 is accepted.
+
+Exact accepted identities:
+- .blend SHA-256 becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6 — Actions Artifact/local-only, NOT Git
+- Semantic SHA-256 3327a95918d61c0ed830fb49a46042c88cb9be2b36a64b958e29918529d2cd93
+- Validation SHA-256 5cfe4c5086d847e7c1f34b6ff7ea6488b20b7f9381d55e0c5fb063b5cfe6a5cb
+- Review Board SHA-256 8fc89aed2ad0f0329bceb890e9a5350bac6d2aea22de2d92d34d935fa3db7d64
+
+Run 35860705896 materialized the three formal repo outputs byte-for-byte and verified the .blend SHA without committing it. Catalog candidate = 15 approved; V008/CURRENT and versioned V008 = 4/4 蜀柱 bound; approved-master-covered Registry records = 123; Stage1 candidate = 15/28 = 53.6%. Final latest-head regression, Excel sync, pre-merge cross-check and merge remain required before closure.
