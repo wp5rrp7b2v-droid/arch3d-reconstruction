@@ -7217,7 +7217,7 @@
   ],
   "stage1_master_progress_summary": {
     "snapshot_date": "2026-09-23",
-    "status": "PR #17 FORMALIZED CANDIDATE / D-118 SHUZHU ACCEPTED / MERGE PENDING",
+    "status": "CANONICAL ON MAIN / D-119 / T-029 CLOSED / 15 OF 28 MASTERS APPROVED",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
@@ -7259,6 +7259,6 @@
       "蜀柱"
     ],
     "master_covered_registry_record_count": 123,
-    "progress_display_note": "505 Registry records; Stage1 Master completion: 15 approved / 13 pending = 53.6%. PR #17 candidate until merge."
+    "progress_display_note": "505 Registry records; Stage1 Master completion uses 28 Master-scope object types as denominator: 15 approved / 13 pending = 53.6%. T-029 Shuzhu is canonical on main after PR #17 merge."
   }
 }

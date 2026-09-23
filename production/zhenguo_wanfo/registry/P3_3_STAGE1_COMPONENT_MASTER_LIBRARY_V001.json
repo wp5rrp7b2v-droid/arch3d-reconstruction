@@ -3,7 +3,7 @@
   "phase": "P3.3",
   "stage": "Stage 1",
   "task": "T-029",
-  "status": "FIFTEEN_APPROVED / T029 ACCEPTED / FORMALIZED ON PR #17 / MERGE PENDING",
+  "status": "FIFTEEN_APPROVED / T029 CLOSED / PR #17 MERGED_TO_MAIN",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -335,7 +335,7 @@
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-118",
       "formalization_authority": "D-116",
-      "publication_status": "FORMALIZED / PR #17 MERGE PENDING",
+      "publication_status": "CLOSED / MERGED_TO_MAIN",
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL ONLY / NOT GIT",
       "canonical_asset_sha256": "becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6",
       "semantic_sha256": "3327a95918d61c0ed830fb49a46042c88cb9be2b36a64b958e29918529d2cd93",
@@ -352,7 +352,18 @@
         "actions_run_id": 35847859509,
         "artifact_id": 10744639697
       },
-      "accepted_engineering_head": "46eead003019dc30e9fc15439f16f4ba2f94f83c"
+      "accepted_engineering_head": "46eead003019dc30e9fc15439f16f4ba2f94f83c",
+      "merge_commit_sha": "04d186bcfd0b4c898ea77f02ef0fec27f73bb08e",
+      "final_verified_human_head": "27a7755282f1641000cf68c42169490539284fc2",
+      "latest_pr_head": "bad852fab4234b3663b08b71cd16210cdb6c1401",
+      "latest_pr_head_delta": "DERIVED_EXCEL_ONLY / VERIFIED_BY_SUCCESSFUL_EXCEL_SYNC",
+      "final_regression_run": 35860792123,
+      "final_regression_validation": "85/85 PASS",
+      "final_regression_geometry_signature": "301e5a8ecf45cdc586d701571be7415aa3eb9e3e0d02bbb8a6b82ebef3a64a40",
+      "final_regenerated_blend_sha256": "09bbd5817f0e74c33f39a5a5998d1dfe05fcc56a374049a3f1292ab84be7aea0",
+      "final_regression_artifact_id": 10752080958,
+      "final_regression_artifact_zip_sha256": "239e4c05b9b240281bc1aad61401985bb5e46276fd6b826d0fb3d9270f49e11b",
+      "excel_sync_run": 35860792076
     }
   ],
   "approved_master_count": 15

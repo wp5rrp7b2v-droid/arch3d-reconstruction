@@ -233,3 +233,55 @@ Exact accepted identities:
 - Review Board SHA-256 8fc89aed2ad0f0329bceb890e9a5350bac6d2aea22de2d92d34d935fa3db7d64
 
 Run 35860705896 materialized the three formal repo outputs byte-for-byte and verified the .blend SHA without committing it. Catalog candidate = 15 approved; V008/CURRENT and versioned V008 = 4/4 蜀柱 bound; approved-master-covered Registry records = 123; Stage1 candidate = 15/28 = 53.6%. Final latest-head regression, Excel sync, pre-merge cross-check and merge remain required before closure.
+
+## 18. Delegated first-article acceptance / D-118
+
+Under D-116 Product Owner end-to-end delegation, the first article was accepted only after all locked gates passed.
+
+Accepted first article:
+- Run: `35847859509` — SUCCESS
+- main validation: **79/79 PASS**
+- shared regressions T-025/T-026/T-027/T-028: **PASS**
+- minimal-sufficient surface: **PASS**
+- canonical .blend SHA-256: `becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6`
+- semantic geometry signature: `301e5a8ecf45cdc586d701571be7415aa3eb9e3e0d02bbb8a6b82ebef3a64a40`
+- Artifact: `10744639697`
+
+D-117 source-transcription correction is included in the accepted Definition lineage.
+
+## 19. Final closure / D-119
+
+Formalization and publication:
+- exact materialization Run `35860705896`: **SUCCESS**
+- Catalog approved Masters: **15**
+- V008/CURRENT Shuzhu binding: **4/4**
+- approved-Master-covered Registry records: **123**
+- Registry Excel Sync Run `35860792076`: **SUCCESS**
+
+Final regression:
+- Run `35860792123`: **SUCCESS**
+- T-029 validation: **85/85 PASS**
+- T-025/T-026/T-027/T-028 regressions: **PASS**
+- minimal-sufficient surface: **PASS**
+- regenerated .blend SHA-256: `09bbd5817f0e74c33f39a5a5998d1dfe05fcc56a374049a3f1292ab84be7aea0`
+- geometry signature: `301e5a8ecf45cdc586d701571be7415aa3eb9e3e0d02bbb8a6b82ebef3a64a40`
+- Artifact: `10752080958`
+- Artifact ZIP SHA-256: `239e4c05b9b240281bc1aad61401985bb5e46276fd6b826d0fb3d9270f49e11b`
+
+Approved canonical source remains D-118 first article:
+- .blend SHA-256: `becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6`
+- final-regression regenerated binary is reproducibility evidence only.
+
+Merge:
+- PR #17: **MERGED**
+- merge commit: `04d186bcfd0b4c898ea77f02ef0fec27f73bb08e`
+- latest PR head: `bad852fab4234b3663b08b71cd16210cdb6c1401`
+- delta from final-regression human head: derived Registry Excel outputs only
+
+Final status:
+- `T-029 = CLOSED / MERGED_TO_MAIN`
+- Stage1 Master completion = **15/28 = 53.6%**
+- current active engineering task = NONE
+- T-018 remains HOLD
+- Stage2 remains unauthorized
+
