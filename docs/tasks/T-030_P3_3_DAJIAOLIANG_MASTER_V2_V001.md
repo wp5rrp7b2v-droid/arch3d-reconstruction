@@ -1,6 +1,6 @@
 # 【中国古建筑3D复原｜T-030｜P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master 首件生产】
 
-Status: **TASK CONTRACT V001 LOCKED / PRODUCT OWNER APPROVED / D-125 / ENGINEERING EXECUTION NOT AUTHORIZED**  
+Status: **TASK CONTRACT V001 LOCKED / PRODUCT OWNER APPROVED / D-125 / ENGINEERING EXECUTION AUTHORIZED / D-126**  
 Think Level: **HIGH**  
 Execution architecture: **MASTER V2 / MINIMAL_SUFFICIENT / INSTANCE-SECTION-PARAMETRIC / ENDPOINT-DRIVEN**  
 Phase/Gate: P3 / P3.3 V002  
@@ -506,3 +506,29 @@ Only after that authorization may:
 - first-article evidence be generated.
 
 First-article acceptance, formal materialization/Catalog+V008 binding, PR merge, Stage1 PASS, Stage2 and T-018 resume remain separate authorization boundaries unless Product Owner later grants explicit delegated end-to-end authority.
+
+## 20. Engineering execution authorization / D-126
+
+Product Owner explicitly authorized **开始 T-030** on 2026-09-24.
+
+Authorized:
+- engineering execution = true
+- Blender/GitHub Actions execution = true
+- production branch = `codex/t030-p3-3-dajiaoliang-master-v2-v001`
+- Draft PR creation = true
+- locked execution Definition creation = true
+- minimal generic Definition-driven `instance_section_binding_contract` extension to shared Master V2 infrastructure if demonstrably necessary
+
+Mandatory shared regression if shared infrastructure changes:
+- T-025 剳牵
+- T-026 槫
+- T-027 托脚
+- T-028 叉手
+- T-029 蜀柱
+
+Still requires separate Product Owner authorization:
+- first-article acceptance
+- formal materialization / Catalog + V008 approved binding
+- PR merge
+- Stage1 PASS / Stage2
+- T-018 resume
