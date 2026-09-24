@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R200",
-  "last_updated": "2026-09-23",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-029 CLOSED / DAILY CLOSE D-122 / NEXT=大角梁 / LOCAL SYNC PASS / T-018 HOLD",
+  "state_revision": "R201",
+  "last_updated": "2026-09-24",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 TASK CONTRACT LOCKED / EXECUTION NOT AUTHORIZED / D-124+D-125 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 15 OF 28 MASTERS APPROVED / T-029 CLOSED / NEXT=大角梁 / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 15 OF 28 MASTERS APPROVED / T-030 CONTRACT LOCKED / EXECUTION NOT AUTHORIZED / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / NEXT MASTER=大角梁 / D-099 + D-076 GATE REQUIRED / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / NEXT MASTER=大角梁 / D-099 + D-076 GATE REQUIRED / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / DAJIAOLIANG SOURCE+VISUAL+SPEC LOCKED D-124 / T-030 CONTRACT LOCKED D-125 / EXECUTION NOT AUTHORIZED / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No active project blocker. 2026-09-23 GitHub and local synchronization closure both PASS. T-018 remains HOLD; Stage2 remains unauthorized.",
+  "decision_required": true,
+  "blocker": "No technical blocker. T-030 Task Contract is locked; engineering execution is intentionally gated pending explicit Product Owner authorization to start T-030. T-018 remains HOLD; Stage2 remains unauthorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -61,15 +62,15 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "NONE",
-    "name": "No active engineering T-task",
-    "status": "NONE / T-029 CLOSED / 15 OF 28 MASTERS APPROVED"
+    "id": "T-030",
+    "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master 首件生产",
+    "status": "TASK CONTRACT LOCKED / D-125 / ENGINEERING EXECUTION NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "NEXT-MASTER-DALIAOLIANG",
-    "name": "大角梁｜Source + Visual Gate → Master Spec",
-    "status": "PLANNING NEXT / NO ENGINEERING T-TASK CREATED",
-    "prerequisite": "D-099 A1/A2 source review + D-076 visual/form gate + Product Owner Master Spec approval before any execution task"
+    "id": "T-030-EXECUTION",
+    "name": "开始 T-030｜大角梁 Master V2 首件工程执行",
+    "status": "AWAITING PRODUCT OWNER AUTHORIZATION",
+    "prerequisite": "D-124 Source+Visual Gate+Master Spec V001 LOCKED / D-125 Task Contract LOCKED / explicit Product Owner command '开始 T-030'"
   },
   "last_completed_task": {
     "id": "T-029",
@@ -124,7 +125,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-029 CLOSED D-119 / NEXT=大角梁 / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 CONTRACT LOCKED D-125 / EXECUTION NOT AUTHORIZED / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -383,6 +384,44 @@
       "pr_number": 17,
       "merge_commit_sha": "04d186bcfd0b4c898ea77f02ef0fec27f73bb08e",
       "next_authorization": "NONE / T-029 CLOSED"
+    },
+    "dajiaoliang": {
+      "status": "SOURCE+VISUAL GATE PASS WITH BOUNDARY / MASTER SPEC V001 LOCKED D-124 / T-030 TASK CONTRACT LOCKED D-125 / EXECUTION NOT AUTHORIZED",
+      "component": "大角梁",
+      "component_id": "CMP-FRAME-DAJIAOLIANG-001",
+      "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+      "physical_instances": 4,
+      "geometry_variant_count": 0,
+      "a1_locator": "PDF p88-89 / printed p73-74 / §2.3.1.7 / Fig 2-50 / Table 2-44",
+      "direct_instance_sections_mm": {
+        "东南角": [
+          240,
+          210
+        ],
+        "东北角": [
+          216,
+          187
+        ],
+        "西南角": [
+          218,
+          206
+        ],
+        "西北角": [
+          226,
+          199
+        ]
+      },
+      "family_mean_section_mm": [
+        225,
+        200.5
+      ],
+      "sample_to_instance_mapping": "DIRECT_LOCKED",
+      "source_internal_numeric_conflict": false,
+      "canonical_reference_length_mm": 1000,
+      "reference_length_policy": "RECONSTRUCTION_REFERENCE_LENGTH / NON_HISTORICAL",
+      "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER_WITH_INSTANCE_SECTION_PARAMETERS",
+      "task_contract": "docs/tasks/T-030_P3_3_DAJIAOLIANG_MASTER_V2_V001.md",
+      "engineering_execution_authorized": false
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -407,15 +446,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-122",
-    "date": "2026-09-23",
-    "decision": "2026-09-23 local synchronization verified PASS: local main matched origin/main at 9ab1cae7f49b48e8a74aa4e2cab4dd77be49f0ae before this metadata-only closure commit; A1 LFS present; T-028/T-029 approved canonical blend binaries restored from approved first-article artifacts with exact SHA matches and remain ignored/untracked; worktree clean."
+    "id": "D-125",
+    "date": "2026-09-24",
+    "decision": "T-030 P3_3_DAJIAOLIANG_MASTER_V2_V001 Task Contract V001 locked. One shared parametric Master must preserve four location-specific A1 measured sections; 225×200.5 mm remains family reference only; endpoint-driven length/orientation; execution not authorized until explicit Product Owner '开始 T-030'."
   },
   "latest_material_review": {
-    "date": "2026-09-23",
-    "result": "T-029 CLOSED / MERGED_TO_MAIN / D-119",
-    "evidence": "PR #17 merge 04d186bcfd0b4c898ea77f02ef0fec27f73bb08e; first article Run 35847859509 PASS; exact materialization Run 35860705896 PASS; Excel Sync Run 35860792076 PASS; final regression Run 35860792123 SUCCESS with T-029 85/85 PASS and T-025/T-026/T-027/T-028 regressions PASS; Catalog=15; Shuzhu 4/4; covered Registry records=123.",
-    "decision_required": "NEXT MASTER SELECTION ONLY / NO ENGINEERING AUTHORIZATION YET"
+    "date": "2026-09-24",
+    "result": "DAJIAOLIANG SOURCE+VISUAL GATE PASS WITH BOUNDARY / MASTER SPEC V001 LOCKED / T-030 CONTRACT LOCKED",
+    "evidence": "A1 canonical PDF p88-89 / printed p73-74 / §2.3.1.7 / Fig 2-50 / Table 2-44; SE 240×210, NE 216×187, SW 218×206, NW 226×199 mm; report and recomputed mean 225×200.5; direct mapping locked; A2 corner topology retained with exact 45°/length/joinery boundaries unresolved.",
+    "decision_required": "EXPLICIT T-030 ENGINEERING EXECUTION AUTHORIZATION"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -473,7 +512,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Next session: read latest GitHub main first, confirm Stage1 15/28=53.6%, current engineering task NONE, next target 大角梁, then begin D-099 A1/A2 evidence review + D-076 visual/form gate. Do not create a new engineering T-task, resume T-018, or start Stage2 without new authorization.",
+  "next_action": "Await Product Owner explicit '开始 T-030'. On authorization: create branch codex/t030-p3-3-dajiaoliang-master-v2-v001, finalize locked execution Definition, open Draft PR, reuse existing Master V2 endpoint infrastructure, add only a minimal generic instance-section binding extension if demonstrably necessary, then run first article. Do not resume T-018 or start Stage2.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
