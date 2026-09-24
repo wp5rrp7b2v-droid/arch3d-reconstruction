@@ -582,3 +582,23 @@ Merge remains conditional on:
 
 Stage2 remains unauthorized and T-018 remains HOLD.
 
+
+
+## 23. Final closure / D-130
+
+- exact materialization Run `35986418607`: **SUCCESS**
+- Catalog approved Masters: **16**
+- V008/CURRENT 大角梁 binding: **4/4**
+- approved-Master-covered Registry records: **127**
+- Stage1 Master completion: **16/28 = 57.1%**
+- Registry Excel Sync Run `36000242318`: **SUCCESS**
+- Final regression Run `36000242504`: **SUCCESS / 97/97 PASS**
+- T-025..T-029 shared regressions: **ALL PASS**
+- minimal-sufficient surface: **PASS**
+- regenerated .blend SHA-256: `17744eeba659f59d62423f3a55f0153de814e2c9a626c2506718990d459bba4a`
+- geometry signature: `b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2`
+- approved canonical .blend remains D-128 SHA: `199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91`
+- PR #18: **MERGED**
+- merge commit: `b249a36850e097564bac0a96692ba2897af232ac`
+- final status: **T-030 CLOSED / MERGED_TO_MAIN**
+- Stage2 remains unauthorized; T-018 remains HOLD.
