@@ -1244,3 +1244,14 @@ Do not restart T-018 by default.
 - Result: **SOURCE_READINESS PASS**.
 - Next: D-076 Visual/Form Gate, then Master Spec design.
 - Not authorized: engineering T-task / Blender / production branch / PR / Stage2 / T-018 resume.
+
+
+## 2026-09-24｜T-030 Closure Confirmation / D-133
+
+- Product Owner explicitly approved: **T-030 CLOSED**.
+- T-030 remains **CLOSED / MERGED_TO_MAIN** under D-130.
+- No remaining T-030 approval or publication step is open.
+- PR #18, Catalog/V008 binding, derived Excel, final regression and main verification remain final.
+- This approval does **not** authorize T-031 or any next-component engineering work.
+- Existing D-132 子角梁 Source Readiness is retained as pre-research only and does not activate Visual/Form Gate, Master Spec, Task Contract, branch, PR, Blender or Actions.
+- Next action: **WAIT FOR PRODUCT OWNER INSTRUCTION**.
