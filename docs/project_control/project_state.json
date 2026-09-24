@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R220",
+  "state_revision": "R221",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED CONFIRMED D-133 / NO NEXT TASK AUTHORIZED / T-018 HOLD",
+  "session_status": "DAILY CLOSE 2026-09-24 PASS / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED CONFIRMED / NO NEXT TASK AUTHORIZED / CLOUD CLOSED / LOCAL SYNC PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active blocker. T-030 closure is formally confirmed by Product Owner under D-133.",
+  "blocker": "No active cloud blocker. Daily close PASS. Local Mac synchronization and approved T-030 canonical .blend restore remain pending.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "NONE",
     "name": "P3.3 V002 Stage 1",
-    "status": "T-030 CLOSED CONFIRMED / NO NEXT TASK AUTHORIZED"
+    "status": "DAILY CLOSED / T-030 CLOSED / 16 OF 28 APPROVED / NO NEXT TASK AUTHORIZED"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -505,15 +505,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-133",
+    "id": "D-134",
     "date": "2026-09-24",
-    "decision": "Product Owner formally confirms T-030 CLOSED. No T-031 or next-component work is authorized by this confirmation."
+    "decision": "Daily Close PASS. T-030 closed and merged; cloud/project-control cross-check complete; no T-031 or next task authorized; local sync and T-030 canonical binary restore pending."
   },
   "latest_material_review": {
     "date": "2026-09-24",
-    "result": "T-030 CLOSED CONFIRMED",
-    "evidence": "D-130 closure remains authoritative; D-133 is Product Owner explicit closure confirmation.",
-    "decision_required": "NONE FOR T-030"
+    "result": "DAILY CLOSE PASS / CLOUD CLOSED",
+    "evidence": "T-030 D-133 CLOSED; PR #18 merged; Catalog=16; CURRENT==V008; Stage1=16/28=57.1%; final regression 36000242504 SUCCESS/97/97; Excel 36003187429 SUCCESS; Dashboard 36009374319 SUCCESS; only open PRs #3/#6 are T-018 HOLD.",
+    "decision_required": "NONE / WAIT FOR PRODUCT OWNER NEXT SESSION"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -571,7 +571,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "WAIT FOR PRODUCT OWNER INSTRUCTION. Do not start T-031, Visual/Form Gate, Master Spec, branch, PR, Blender or Actions for the next component without explicit authorization.",
+  "next_action": "NEXT SESSION: read latest GitHub main, then complete local Mac fast-forward and restore/verify T-030 approved canonical .blend SHA 199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91 if not already present. Do not start T-031 or any next component without explicit Product Owner authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1268,5 +1268,44 @@
       }
     },
     "tracked_worktree_clean": true
+  },
+  "daily_close_2026_09_24": {
+    "status": "PASS / CLOUD WORK CLOSED / LOCAL SYNC PENDING",
+    "decision_id": "D-134",
+    "close_file": "docs/project_control/CLOSE_FILE_2026-09-24.md",
+    "pre_close_main_sha": "92ebc4b7fa96eadb70a589520271c99f849438a1",
+    "completed_tasks": [
+      "T-030"
+    ],
+    "merged_prs": [
+      18
+    ],
+    "stage1_master_progress": "16/28 / 57.1%",
+    "approved_master_covered_registry_rows": 127,
+    "registry_records": 505,
+    "current_equals_v008": true,
+    "final_regression_run": 36000242504,
+    "final_regression_result": "SUCCESS / 97/97 PASS",
+    "latest_registry_excel_sync_run": 36003187429,
+    "latest_registry_excel_sync_result": "SUCCESS",
+    "latest_dashboard_sync_run": 36009374319,
+    "latest_dashboard_sync_result": "SUCCESS",
+    "open_prs_expected_hold": [
+      3,
+      6
+    ],
+    "no_active_engineering_task": true,
+    "no_t031_branch": true,
+    "no_t031_pr": true,
+    "next_engineering_task_authorized": false,
+    "repository_visibility": "PUBLIC",
+    "local_sync_required": true,
+    "local_binary_restore_required": {
+      "task_id": "T-030",
+      "artifact_id": 10800439343,
+      "filename": "CMP-FRAME-DAJIAOLIANG-001_MASTER_V001.blend",
+      "sha256": "199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91",
+      "final_regression_sha_not_canonical": "17744eeba659f59d62423f3a55f0153de814e2c9a626c2506718990d459bba4a"
+    }
   }
 }
