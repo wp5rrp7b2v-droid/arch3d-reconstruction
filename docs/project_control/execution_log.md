@@ -1075,3 +1075,12 @@ Do not restart T-018 by default.
 - Not started: Draft PR / GitHub Actions / Blender first article.
 - Impact: first article cannot safely start until workflow syntax is repaired.
 - Recovery: minimal in-scope repair only; no new architecture/assets/workflow; static verify, then record `BLOCKER CLEARED` before resuming execution.
+
+
+## 2026-09-24｜T-030 Blocker Cleared #1
+
+- Status: **BLOCKER CLEARED / T-030 EXECUTION RESUMED**.
+- Repair: rebuilt `.github/workflows/p3_3_master_v2.yml` from canonical main and re-applied only the D-126-authorized generic instance-section proof extension.
+- Static checks: malformed marker absent; exactly one instance-section step; exactly one role-mutation step; validator instance-section argument wired; T-029 added to shared regression; T-030 Definition JSON parse PASS with 4 direct instance sections.
+- No new asset class, cache, bridge, workflow or architecture introduced.
+- Next: create Draft PR and allow first-article Actions to execute.
