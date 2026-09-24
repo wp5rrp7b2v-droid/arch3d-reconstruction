@@ -1084,3 +1084,14 @@ Do not restart T-018 by default.
 - Static checks: malformed marker absent; exactly one instance-section step; exactly one role-mutation step; validator instance-section argument wired; T-029 added to shared regression; T-030 Definition JSON parse PASS with 4 direct instance sections.
 - No new asset class, cache, bridge, workflow or architecture introduced.
 - Next: create Draft PR and allow first-article Actions to execute.
+
+
+## 2026-09-24｜T-030 First Article Run #1 Started
+
+- Draft PR: **#18**.
+- Branch: `codex/t030-p3-3-dajiaoliang-master-v2-v001`.
+- Head: `eb28017acb82856c01c9f5dda7ed451dc873c363`.
+- Actions Run: **35963282233** / P3.3 Master V2 First Article.
+- Current observed progress: checkout PASS; locked Definition resolve PASS; Blender 4.5.13 install PASS; canonical Master + review tiles IN PROGRESS.
+- Shared infrastructure changed within D-126 scope, therefore mandatory regression set is T-025 / T-026 / T-027 / T-028 / T-029.
+- First-article acceptance remains Product Owner-gated.
