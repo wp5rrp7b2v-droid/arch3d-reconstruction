@@ -31,11 +31,33 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          grep -q "Dashboard V2" docs/project_control/dashboard.html
-          grep -q "15 / 28" docs/project_control/dashboard.html
-          grep -q "53.6%" docs/project_control/dashboard.html
-          grep -q "下一目标：大角梁" docs/project_control/dashboard.html
-          grep -q "T-018 HOLD" docs/project_control/dashboard.html
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          html = Path("docs/project_control/dashboard.html").read_text(encoding="utf-8")
+          reg = json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
+          matrix = json.loads(Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json").read_text(encoding="utf-8"))
+
+          progress = reg["stage1_master_progress_summary"]
+          approved = set(progress["approved_master_components"])
+          scope = [row for row in matrix["rows"] if "Master" in str(row.get("disposition", ""))]
+          pending = [row for row in scope if row["component"] not in approved]
+          pending = sorted(pending, key=lambda row: (999 if row.get("priority") is None else row["priority"], row["component"]))
+          next_target = pending[0]["component"] if pending else "NONE"
+          pct_text = f'{float(progress["master_completion_percent"]):.1f}'
+
+          markers = [
+              "Dashboard V2",
+              f'{progress["approved_master_count"]} / {progress["master_scope_object_type_count"]}',
+              f'{pct_text}%',
+              f'下一目标：{next_target}',
+              "T-018 HOLD",
+          ]
+          missing = [marker for marker in markers if marker not in html]
+          assert not missing, f"Dashboard current-state markers missing: {missing}"
+          print("DASHBOARD_CURRENT_STATE_VALIDATION_PASS", markers)
+          PY
 
       - name: Commit derived Dashboard only when changed
         shell: bash

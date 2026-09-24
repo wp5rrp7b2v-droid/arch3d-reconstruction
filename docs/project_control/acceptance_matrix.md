@@ -709,3 +709,22 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Final：**T-030 FIRST ARTICLE PRODUCT OWNER APPROVED**。
 - Publication boundary：formal materialization + Catalog/V008 approved binding + PR #18 merge **NOT AUTHORIZED**。
 - Boundary：P3.3 Stage 1 remains ACTIVE；Stage2 not authorized；T-018 HOLD。
+
+
+## 2026-09-24｜T-030 大角梁 Master 正式交付闭合
+
+- Decision：**D-130 / D-129 conditional closure fully satisfied**。
+- PR #18：**MERGED**。
+- Merge commit：`b249a36850e097564bac0a96692ba2897af232ac`。
+- Catalog approved count：**16**。
+- V008/CURRENT 大角梁：**4/4 APPROVED_MASTER_AVAILABLE**。
+- Approved-Master-covered Registry records：**127**。
+- Stage1 completion：**16/28 = 57.1%**。
+- Registry Excel Sync Run：`36000242318` = **SUCCESS**。
+- Final Master V2 Run：`36000242504` = **SUCCESS / 97/97 PASS**。
+- Shared regression T-025..T-029：**ALL PASS**。
+- Minimal sufficient surface：**PASS**。
+- Approved canonical .blend SHA：`199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91`。
+- Final regenerated geometry signature：`b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2`。
+- Final status：**T-030 CLOSED / MERGED_TO_MAIN**。
+- Boundary：Stage2 NOT AUTHORIZED；T-018 HOLD。

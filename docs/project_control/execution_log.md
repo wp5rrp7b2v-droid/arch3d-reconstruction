@@ -1178,3 +1178,33 @@ Do not restart T-018 by default.
 - Minimal recovery attempted: user-authored status commits + one PR #18 close→reopen. No runnable latest-head final checks were created.
 - Available GitHub connector has no action to approve an `action_required` workflow run.
 - STOP: PR #18 remains open/draft and must not merge until manual GitHub UI approval enables latest-head Master V2 final regression + Registry Excel Sync and both PASS.
+
+
+## 2026-09-24｜T-030 Final Closure / D-130
+
+- Exact materialization Run `35986418607`: **SUCCESS**.
+- Catalog approved Masters: **16**.
+- V008/CURRENT 大角梁: **4/4 bound** to `CMP-FRAME-DAJIAOLIANG-001_MASTER`.
+- Approved-Master-covered Registry records: **127**.
+- Registry Excel Sync Run `36000242318`: **SUCCESS**.
+- Final regression Run `36000242504`: **SUCCESS / 97/97 PASS**.
+- T-025..T-029 shared regression: **ALL PASS**.
+- Minimal-sufficient surface: **PASS**.
+- Approved canonical .blend SHA-256 remains D-128: `199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91`.
+- Final regenerated .blend SHA-256: `17744eeba659f59d62423f3a55f0153de814e2c9a626c2506718990d459bba4a` (reproducibility evidence only).
+- Semantic geometry signature: `b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2`.
+- PR #18: **MERGED**.
+- Merge commit: `b249a36850e097564bac0a96692ba2897af232ac`.
+- T-030: **CLOSED / MERGED_TO_MAIN**.
+- Stage1: **16/28 = 57.1% / ACTIVE**.
+- Stage2: **NOT AUTHORIZED**.
+- T-018: **HOLD**.
+
+
+## 2026-09-24｜Dashboard V2 Sync blocker after T-030 closure
+
+- Run `36003302364`: generator PASS, validation FAIL.
+- Root cause: workflow marker validation was hard-coded to the superseded T-029 state (`15 / 28`, `53.6%`, next=`大角梁`).
+- Canonical sources are already T-030 closed: `16 / 28`, `57.1%`; generator resolves next target dynamically from Coverage Matrix.
+- D-131 minimal repair: replace only stale hard-coded marker checks with canonical-data-driven validation.
+- No Master / Registry / Catalog / evidence semantics changed.

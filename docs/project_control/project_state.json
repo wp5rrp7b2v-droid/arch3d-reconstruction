@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R216",
+  "state_revision": "R217",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED / PR #18 MERGED / MAIN VERIFIED / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED / DASHBOARD V2 DERIVED VALIDATOR REPAIR D-131 EXECUTING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active T-030 blocker. T-030 is closed and merged to main.",
+  "blocker": "No T-030 blocker. Derived Dashboard V2 sync is under minimal D-131 validator repair after stale hard-coded markers caused sync validation failure.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "NONE",
     "name": "P3.3 V002 Stage 1｜Next Master selection pending",
-    "status": "T-030 CLOSED / 16 OF 28 APPROVED / NEXT MASTER NOT YET STARTED"
+    "status": "T-030 CLOSED / 16 OF 28 APPROVED / DASHBOARD DERIVED SYNC REPAIR EXECUTING"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -469,9 +469,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-130",
+    "id": "D-131",
     "date": "2026-09-24",
-    "decision": "T-030 formalization/publication closure completed under D-129: final regression and Excel Sync PASS; PR #18 merged; T-030 closed on main."
+    "decision": "Repair only the derived Dashboard V2 workflow validator so current-state markers are computed from canonical Registry + Coverage Matrix instead of stale hard-coded T-029 values; no authority or production-data change."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -535,7 +535,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Select the next missing Stage1 Master. Before starting a new T-task, perform the lightweight Source Readiness Check required by RC-022. Do not start Stage2 or resume T-018.",
+  "next_action": "Complete Dashboard V2 derived sync under D-131, verify 16/28 = 57.1% and next target from Coverage Matrix, then select the next missing Stage1 Master. Do not start Stage2 or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
