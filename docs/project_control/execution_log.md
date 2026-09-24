@@ -1144,3 +1144,19 @@ Do not restart T-018 by default.
 - Do not modify T-030 code further.
 - Resume condition: Billing & plans issue resolved and ordinary GitHub Actions jobs can start again.
 - After unblock: rerun T-030 at existing `timeout-minutes: 50`; require T-030 PASS + T-025..T-029 regression PASS + artifact upload before first-article review.
+
+
+## 2026-09-24｜T-030 First Article Run 35977160199｜SUCCESS
+
+- Run: `35977160199` / attempt 3.
+- Head: `a8f195822a96b05bc206cd463c057885c47e2bb1`.
+- Result: **SUCCESS**.
+- T-030 main validation: PASS.
+- T-025 / T-026 / T-027 / T-028 / T-029 shared regressions: PASS.
+- Minimal formal artifact assertion: PASS.
+- Shared regression evidence upload: PASS.
+- Formal V2 first-article artifact upload: PASS.
+- First-article artifact: `P3_3_T-030_MASTER_V2_FIRST_ARTICLE_V001` / Artifact ID `10800439343`.
+- Shared regression artifact: `P3_3_MASTER_V2_SHARED_REGRESSION` / Artifact ID `10801150421`.
+- Current boundary: **ENGINEERING COMPLETE / PENDING PRODUCT OWNER FIRST-ARTICLE REVIEW**.
+- Not yet authorized: first-article acceptance, formal materialization, Catalog/V008 approved binding, PR #18 merge, Stage1 PASS, Stage2, T-018 resume.
