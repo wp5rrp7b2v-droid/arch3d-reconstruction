@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R206",
+  "state_revision": "R207",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 BLOCKED / FIRST ARTICLE RUN 35963282233 CANCELLED BY 35-MIN JOB TIMEOUT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 TIMEOUT RECOVERY AUTHORIZED D-127 / 35→50 / RERUN PREPARING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,8 +26,8 @@
       "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / T-030 ENGINEERING EXECUTION AUTHORIZED D-126 / FIRST ARTICLE IN PROGRESS / T-018 HOLD"
     }
   },
-  "decision_required": true,
-  "blocker": "T-030 BLOCKED: first-article Run 35963282233 reached the workflow job timeout (35 minutes) during mandatory T-029 shared regression. T-030 main validation had already PASSed 91/91; T-025..T-028 shared regressions PASSed; T-029 regression did not complete. Minimal recovery requires Product Owner approval to change the shared workflow timeout before rerun.",
+  "decision_required": false,
+  "blocker": "Recovery authorized by D-127. Original timeout blocker remains open until a complete rerun reaches terminal PASS. Authorized change is limited to timeout-minutes 35→50.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "T-030",
     "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master 首件生产",
-    "status": "BLOCKED / RUN 35963282233 CANCELLED BY JOB TIMEOUT / MAIN VALIDATION 91/91 PASS / T-025..T-028 REGRESSION PASS / T-029 INCOMPLETE"
+    "status": "RECOVERY EXECUTING / D-127 / TIMEOUT 35→50 / RERUN PREPARING"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -386,7 +386,7 @@
       "next_authorization": "NONE / T-029 CLOSED"
     },
     "dajiaoliang": {
-      "status": "ENGINEERING EXECUTION AUTHORIZED D-126 / BLOCKED ON 35-MIN ACTIONS TIMEOUT / T-030 91/91 PASS / T-025..T-028 PASS / T-029 REGRESSION INCOMPLETE",
+      "status": "RECOVERY AUTHORIZED D-127 / TIMEOUT 35→50 / FULL FIRST-ARTICLE RERUN REQUIRED",
       "component": "大角梁",
       "component_id": "CMP-FRAME-DAJIAOLIANG-001",
       "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
@@ -448,9 +448,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-126",
+    "id": "D-127",
     "date": "2026-09-24",
-    "decision": "T-030 engineering execution authorized. Create one shared parametric Dajiao beam Master, preserve four direct instance sections, reuse endpoint-driven V2 architecture, and introduce only a minimal generic instance-section binding extension if existing shared infrastructure cannot express the locked contract."
+    "decision": "Approve minimal T-030 timeout recovery only: p3_3_master_v2.yml timeout 35→50, no other logic/architecture/scope change, then rerun full first article."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -514,7 +514,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Await Product Owner approval for minimal recovery: increase p3_3_master_v2.yml job timeout from 35 minutes to 50 minutes, with no other architecture/process changes, then rerun T-030 first article. After rerun, require T-030 PASS + T-025..T-029 regression PASS + artifact upload before first-article review.",
+  "next_action": "Apply only timeout-minutes 35→50 on T-030 branch, trigger a new PR Actions run, and monitor to terminal state. Require T-030 PASS + T-025..T-029 regression PASS + minimal-sufficient assertion + artifact uploads.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
