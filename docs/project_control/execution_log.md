@@ -1130,3 +1130,17 @@ Do not restart T-018 by default.
 - Specific GitHub-side cause is not exposed by the available connector. Possible account-side causes include Actions usage/billing/spending-limit availability; service-side scheduling is also possible. No such cause is asserted without UI/account evidence.
 - T-030 previous engineering evidence remains valid but incomplete for acceptance: main validation 91/91 PASS; T-025–T-028 regressions PASS; T-029 regression/artifact closure incomplete.
 - STOP: do not change T-030 architecture or workflow further until ordinary Actions jobs can start again.
+
+
+## 2026-09-24｜T-030 Blocker Root Cause Confirmed｜GitHub Billing / Spending Limit
+
+- GitHub Actions UI annotation supplied by Product Owner confirms:
+  - job not started because recent account payments have failed **or**
+  - account spending limit needs to be increased;
+  - GitHub directs the account owner to **Billing & plans**.
+- This explains both T-030 Run `35977160199` and unrelated Dashboard runs failing within seconds with zero steps.
+- Classification: **EXTERNAL ACCOUNT-SIDE GITHUB ACTIONS EXECUTION GATE**.
+- Not a T-030 geometry, validator, Master Definition, workflow syntax, or timeout failure.
+- Do not modify T-030 code further.
+- Resume condition: Billing & plans issue resolved and ordinary GitHub Actions jobs can start again.
+- After unblock: rerun T-030 at existing `timeout-minutes: 50`; require T-030 PASS + T-025..T-029 regression PASS + artifact upload before first-article review.
