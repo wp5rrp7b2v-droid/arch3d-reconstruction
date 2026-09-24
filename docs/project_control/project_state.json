@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R201",
+  "state_revision": "R202",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 TASK CONTRACT LOCKED / EXECUTION NOT AUTHORIZED / D-124+D-125 / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 ENGINEERING EXECUTION AUTHORIZED D-126 / FIRST ARTICLE IN PROGRESS / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 15 OF 28 MASTERS APPROVED / T-030 CONTRACT LOCKED / EXECUTION NOT AUTHORIZED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 15 OF 28 MASTERS APPROVED / T-030 EXECUTING / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
       "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / NEXT MASTER=大角梁 / D-099 + D-076 GATE REQUIRED / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / DAJIAOLIANG SOURCE+VISUAL+SPEC LOCKED D-124 / T-030 CONTRACT LOCKED D-125 / EXECUTION NOT AUTHORIZED / T-018 HOLD"
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / T-030 ENGINEERING EXECUTION AUTHORIZED D-126 / FIRST ARTICLE IN PROGRESS / T-018 HOLD"
     }
   },
-  "decision_required": true,
-  "blocker": "No technical blocker. T-030 Task Contract is locked; engineering execution is intentionally gated pending explicit Product Owner authorization to start T-030. T-018 remains HOLD; Stage2 remains unauthorized.",
+  "decision_required": false,
+  "blocker": "No active technical blocker. T-030 engineering execution authorized by D-126; first-article acceptance remains separately gated. T-018 remains HOLD; Stage2 remains unauthorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,13 +64,13 @@
   "current_task": {
     "id": "T-030",
     "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master 首件生产",
-    "status": "TASK CONTRACT LOCKED / D-125 / ENGINEERING EXECUTION NOT AUTHORIZED"
+    "status": "ENGINEERING EXECUTION AUTHORIZED / D-126 / FIRST ARTICLE IN PROGRESS"
   },
   "proposed_next_task": {
-    "id": "T-030-EXECUTION",
-    "name": "开始 T-030｜大角梁 Master V2 首件工程执行",
-    "status": "AWAITING PRODUCT OWNER AUTHORIZATION",
-    "prerequisite": "D-124 Source+Visual Gate+Master Spec V001 LOCKED / D-125 Task Contract LOCKED / explicit Product Owner command '开始 T-030'"
+    "id": "T-030-FIRST-ARTICLE",
+    "name": "T-030 大角梁 Master V2 首件",
+    "status": "EXECUTING",
+    "prerequisite": "D-124 + D-125 + D-126"
   },
   "last_completed_task": {
     "id": "T-029",
@@ -386,7 +386,7 @@
       "next_authorization": "NONE / T-029 CLOSED"
     },
     "dajiaoliang": {
-      "status": "SOURCE+VISUAL GATE PASS WITH BOUNDARY / MASTER SPEC V001 LOCKED D-124 / T-030 TASK CONTRACT LOCKED D-125 / EXECUTION NOT AUTHORIZED",
+      "status": "SOURCE+VISUAL GATE PASS / MASTER SPEC LOCKED D-124 / TASK CONTRACT LOCKED D-125 / ENGINEERING EXECUTION AUTHORIZED D-126 / FIRST ARTICLE IN PROGRESS",
       "component": "大角梁",
       "component_id": "CMP-FRAME-DAJIAOLIANG-001",
       "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
@@ -421,7 +421,7 @@
       "reference_length_policy": "RECONSTRUCTION_REFERENCE_LENGTH / NON_HISTORICAL",
       "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER_WITH_INSTANCE_SECTION_PARAMETERS",
       "task_contract": "docs/tasks/T-030_P3_3_DAJIAOLIANG_MASTER_V2_V001.md",
-      "engineering_execution_authorized": false
+      "engineering_execution_authorized": true
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -446,9 +446,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-125",
+    "id": "D-126",
     "date": "2026-09-24",
-    "decision": "T-030 P3_3_DAJIAOLIANG_MASTER_V2_V001 Task Contract V001 locked. One shared parametric Master must preserve four location-specific A1 measured sections; 225×200.5 mm remains family reference only; endpoint-driven length/orientation; execution not authorized until explicit Product Owner '开始 T-030'."
+    "decision": "T-030 engineering execution authorized. Create one shared parametric Dajiao beam Master, preserve four direct instance sections, reuse endpoint-driven V2 architecture, and introduce only a minimal generic instance-section binding extension if existing shared infrastructure cannot express the locked contract."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -512,7 +512,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Await Product Owner explicit '开始 T-030'. On authorization: create branch codex/t030-p3-3-dajiaoliang-master-v2-v001, finalize locked execution Definition, open Draft PR, reuse existing Master V2 endpoint infrastructure, add only a minimal generic instance-section binding extension if demonstrably necessary, then run first article. Do not resume T-018 or start Stage2.",
+  "next_action": "Execute T-030 first article on branch codex/t030-p3-3-dajiaoliang-master-v2-v001 via GitHub Actions / Blender 4.5.13. If shared V2 infrastructure changes, regress T-025 through T-029. Stop after first-article evidence is ready for Product Owner review; do not formalize, merge, start Stage2, or resume T-018 without separate authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
