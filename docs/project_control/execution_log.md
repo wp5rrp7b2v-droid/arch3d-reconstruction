@@ -1115,3 +1115,18 @@ Do not restart T-018 by default.
   - minimal-sufficient final assertion and artifact uploads were skipped because the job was cancelled.
 - Root cause: adding mandatory T-029 regression increased valid regression runtime beyond the existing 35-minute job limit; this is a capacity/time-budget blocker, not a T-030 geometry or validation failure.
 - Recommended minimal recovery: change only shared workflow job timeout from **35 → 50 minutes**, then rerun. This changes shared workflow infrastructure and therefore requires Product Owner approval under RC-022.
+
+
+## 2026-09-24｜T-030 Blocker Disclosure #3｜GitHub Actions Pre-Step Failure
+
+- Product Owner approved D-127 minimal timeout recovery.
+- T-030 branch commit: `a8f195822a96b05bc206cd463c057885c47e2bb1`.
+- Verified diff from prior runnable head: exactly one workflow line changed: `timeout-minutes: 35` → `50`.
+- Recovery Run `35977160199` attempt 1: **FAILURE before any job step**; job has zero steps and no downloadable log.
+- One minimal direct rerun was attempted with no code/config changes.
+- Run `35977160199` attempt 2: **FAILURE before any job step** again.
+- Cross-check: unrelated `Project Dashboard V2 Sync` runs on main (`35976501355`, `35977140275`, `35977387060`) also fail within seconds with zero job steps, while earlier run `35963731352` succeeded.
+- Conclusion: current blocker is not T-030 geometry/validator/workflow logic; it is GitHub Actions execution availability at repository/account/service level.
+- Specific GitHub-side cause is not exposed by the available connector. Possible account-side causes include Actions usage/billing/spending-limit availability; service-side scheduling is also possible. No such cause is asserted without UI/account evidence.
+- T-030 previous engineering evidence remains valid but incomplete for acceptance: main validation 91/91 PASS; T-025–T-028 regressions PASS; T-029 regression/artifact closure incomplete.
+- STOP: do not change T-030 architecture or workflow further until ordinary Actions jobs can start again.
