@@ -1,0 +1,134 @@
+{
+  "schema_version": "P3_3_STAGE1_MASTER_SPEC_1.0",
+  "component_id": "CMP-FRAME-DAJIAOLIANG-001",
+  "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+  "master_version": "V001",
+  "component_name_zh": "大角梁",
+  "status": "LOCKED / D-124",
+  "date": "2026-09-24",
+  "authority": {
+    "source_priority": "D-099 / RC-019",
+    "reconstruction_policy": "D-108 / RC-020",
+    "visual_gate": "D-076 PASS WITH GEOMETRY BOUNDARY / D-124"
+  },
+  "evidence": {
+    "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_DAJIAOLIANG_DIRECT_SOURCE_BINDING_V001.md",
+    "a1": {
+      "source_id": "SRC-ZG-WF-001",
+      "locator": "PDF p88-89 / printed p73-74 / §2.3.1.7 / Fig 2-50 / Table 2-44",
+      "pdf_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472"
+    },
+    "a2": {
+      "source": "山西文物数字博物馆·万佛殿专题",
+      "use": "SAME_BUILDING_VISUAL_AND_STRUCTURAL_SEMANTIC",
+      "dimension_authority": false
+    }
+  },
+  "physical_instance_count": 4,
+  "registry_instances": [
+    {
+      "location": "东南角",
+      "source_label": "东南大角梁",
+      "width_mm": 240,
+      "thickness_mm": 210
+    },
+    {
+      "location": "东北角",
+      "source_label": "东北大角梁",
+      "width_mm": 216,
+      "thickness_mm": 187
+    },
+    {
+      "location": "西南角",
+      "source_label": "西南大角梁",
+      "width_mm": 218,
+      "thickness_mm": 206
+    },
+    {
+      "location": "西北角",
+      "source_label": "西北大角梁",
+      "width_mm": 226,
+      "thickness_mm": 199
+    }
+  ],
+  "measurement": {
+    "report_published_mean_mm": {
+      "width": 225,
+      "thickness": 200.5
+    },
+    "independent_recomputed_mean_mm": {
+      "width": 225,
+      "thickness": 200.5
+    },
+    "source_internal_numeric_conflict": false,
+    "sample_to_instance_mapping": "DIRECT_LOCKED",
+    "converted_fen": {
+      "width": 14.7,
+      "thickness": 13.1
+    },
+    "rounded_fen": {
+      "width": 15,
+      "thickness": 13
+    }
+  },
+  "geometry_variant_count": 0,
+  "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER_WITH_INSTANCE_SECTION_PARAMETERS",
+  "canonical_reference_body_mm": {
+    "length": 1000,
+    "width": 225,
+    "thickness": 200.5
+  },
+  "canonical_reference_length_policy": "RECONSTRUCTION_REFERENCE_LENGTH / NON_HISTORICAL / MASTER_SPECIMEN_ONLY",
+  "canonical_section_policy": "DIRECT_MEASURED_REPORT_FAMILY_MEAN / REFERENCE_SPECIMEN_ONLY / MUST_NOT_OVERWRITE_INSTANCE_SECTIONS",
+  "instance_section_policy": "DIRECT_MEASURED_INSTANCE_PARAMETERS / SAME_SHARED_MASTER / NOT_GEOMETRY_VARIANTS",
+  "assembly_geometry": {
+    "actual_length_rule": "norm(P_end - P_start)",
+    "center_rule": "(P_start + P_end) / 2",
+    "orientation_rule": "local +X aligns to (P_end - P_start)",
+    "fixed_historical_full_length": false,
+    "fixed_historical_installation_angle": false,
+    "fixed_45_degree_claim": false,
+    "final_building_endpoints_locked_at_stage1": false
+  },
+  "end_joinery": {
+    "master_reference_end_profile": "STRUCTURAL_SIMPLIFIED_FLAT_END",
+    "historical_end_profile": "UNRESOLVED_METADATA",
+    "mortise_tenon": "NOT_MODELED_AT_STAGE1",
+    "notch_groove": "NOT_MODELED_AT_STAGE1"
+  },
+  "related_component_isolation": {
+    "excluded": [
+      "子角梁",
+      "隐角梁",
+      "隐衬角栿",
+      "递角栿",
+      "翼角椽"
+    ],
+    "hidden_corner_beam_registry_policy": "PARAMETRIC_COMPLETION / NOT_MASTER_TRACKED"
+  },
+  "review_board_required_panels": [
+    "AXON",
+    "LONG_SIDE",
+    "END_SECTION",
+    "DIMENSION_AND_PARAMETRIC_LENGTH",
+    "PLACEMENT_AND_ENDPOINT_LOGIC",
+    "SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY"
+  ],
+  "hard_fails": [
+    "INSTANCE_SECTION_COLLAPSED_TO_FAMILY_MEAN",
+    "INSTANCE_SECTION_MAPPING_MISMATCH",
+    "DUPLICATE_MASTER_PER_CORNER",
+    "FALSE_GEOMETRY_VARIANT_FROM_INSTANCE_SECTION_ONLY",
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "FIXED_MASTER_INSTALLATION_ANGLE",
+    "FIXED_45_DEGREE_HISTORICAL_CLAIM",
+    "SILENT_HISTORICIZATION",
+    "UNSUPPORTED_JOINERY_CLAIM",
+    "RELATED_COMPONENT_IDENTITY_COLLAPSE",
+    "MASTER_WITHOUT_EVIDENCE_BINDING",
+    "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
+  ],
+  "next_task_id": "T-030",
+  "task_contract_design_authorized": true,
+  "engineering_execution_authorized": false
+}
