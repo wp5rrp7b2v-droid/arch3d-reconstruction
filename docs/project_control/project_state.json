@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R213",
+  "state_revision": "R214",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 FIRST ARTICLE PRODUCT OWNER APPROVED D-128 / FORMALIZATION NOT AUTHORIZED / PR #18 DRAFT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 CANONICAL APPROVED / T-030 FIRST ARTICLE APPROVED D-128 / FORMALIZATION + CATALOG/V008 + PR #18 MERGE AUTHORIZED D-129 / EXECUTING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,8 +26,8 @@
       "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / T-030 ENGINEERING EXECUTION AUTHORIZED D-126 / FIRST ARTICLE IN PROGRESS / T-018 HOLD"
     }
   },
-  "decision_required": true,
-  "blocker": "No technical blocker. T-030 first article is Product Owner approved under D-128. Formal materialization/Catalog+V008 approved binding/PR #18 merge remain separately unauthorized.",
+  "decision_required": false,
+  "blocker": "No active blocker. D-129 authorizes T-030 formalization/publication closure, conditional on exact materialization, Catalog/V008 binding, Registry Excel Sync, latest-head final regression and pre-merge cross-check all PASS.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,8 +63,8 @@
   },
   "current_task": {
     "id": "T-030",
-    "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master 首件生产",
-    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-128 / FORMALIZATION NOT AUTHORIZED / PR #18 DRAFT"
+    "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master",
+    "status": "FORMALIZATION EXECUTING / D-129 / MERGE CONDITIONAL ON FINAL PASS"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -386,7 +386,7 @@
       "next_authorization": "NONE / T-029 CLOSED"
     },
     "dajiaoliang": {
-      "status": "FIRST ARTICLE PRODUCT OWNER APPROVED D-128 / FORMALIZATION NOT AUTHORIZED",
+      "status": "FORMALIZATION EXECUTING D-129 / CATALOG+V008 CANDIDATE 16/28 / FINAL REGRESSION REQUIRED",
       "component": "大角梁",
       "component_id": "CMP-FRAME-DAJIAOLIANG-001",
       "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
@@ -455,9 +455,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-128",
+    "id": "D-129",
     "date": "2026-09-24",
-    "decision": "Product Owner approved T-030 first article after reviewing Review Board. Accepted Run 35977160199 attempt 3 and Artifact 10800439343. Formalization/Catalog+V008 binding/PR #18 merge remain separately gated."
+    "decision": "Authorize T-030 exact formalization, Catalog+V008 binding, Registry Excel Sync, final regression/cross-check, then PR #18 merge only if all gates PASS."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -521,7 +521,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Await Product Owner authorization for T-030 formalization/publication closure: exact materialization, Catalog+V008 approved binding, derived Registry Excel/final regression as required, then PR #18 merge. Do not start Stage2 or resume T-018.",
+  "next_action": "Exact-materialize approved Artifact 10800439343 to PR #18 branch (Semantic/Validation/Review Board; verify .blend SHA only), bind Catalog+V008 to 16/28 and 127 covered records, run Excel Sync + final regression, then Ready+merge PR #18 if all PASS.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
