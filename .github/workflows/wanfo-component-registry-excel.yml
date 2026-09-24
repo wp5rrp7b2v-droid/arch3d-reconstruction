@@ -1,132 +1,51 @@
-# RC-018 component-registry derived Excel sync
 name: Wanfo Component Registry Excel Sync
 
 on:
   push:
     branches:
-      - main
+      - source/src-zg-wf-001-lfs
     paths:
-      - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json"
-      - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V*.json"
-      - "scripts/generate_wanfo_component_registry_excel.py"
-      - ".github/workflows/wanfo-component-registry-excel.yml"
-  pull_request:
-    paths:
-      - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json"
-      - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V*.json"
-      - "scripts/generate_wanfo_component_registry_excel.py"
-      - ".github/workflows/wanfo-component-registry-excel.yml"
-  workflow_dispatch:
+      - '.github/workflows/wanfo-component-registry-excel.yml'
 
 permissions:
   contents: write
 
-concurrency:
-  group: wanfo-component-registry-excel-main
-  cancel-in-progress: false
-
 jobs:
-  generate-and-sync:
+  extract-dajiao-a1-evidence:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout triggering revision
+      - name: Checkout with LFS
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
-          fetch-depth: 0
+          lfs: true
+          fetch-depth: 1
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.12"
-
-      - name: Install generator dependency
-        run: python -m pip install --disable-pip-version-check "openpyxl==3.1.5"
-
-      - name: Resolve canonical registry commit
-        id: registry
-        shell: bash
+      - name: Install poppler
         run: |
-          REGISTRY="docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json"
-          REGISTRY_COMMIT="$(git log -1 --format=%H -- "$REGISTRY")"
-          if [ -z "$REGISTRY_COMMIT" ]; then
-            echo "FAIL_CLOSED: cannot resolve registry commit"
-            exit 1
-          fi
-          echo "commit=$REGISTRY_COMMIT" >> "$GITHUB_OUTPUT"
-          echo "REGISTRY_COMMIT=$REGISTRY_COMMIT"
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
 
-      - name: Generate Excel from canonical registry
-        run: |
-          python scripts/generate_wanfo_component_registry_excel.py \
-            --input docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json \
-            --output-dir docs/evidence/zhenguo_wanfo/derived \
-            --source-commit "${{ steps.registry.outputs.commit }}"
-
-      - name: Validate generated artifacts
-        run: |
-          python - <<'PY'
-          import hashlib
-          import json
-          from pathlib import Path
-          from openpyxl import load_workbook
-
-          root = Path("docs/evidence/zhenguo_wanfo/derived")
-          manifest_path = root / "P3_WANFO_COMPONENT_EXCEL_SYNC_MANIFEST.json"
-          manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-
-          assert manifest["status"] == "SYNCED"
-          assert manifest["canonical_truth"] == "JSON"
-          assert manifest["excel_role"] == "DERIVED_VIEW"
-          current = Path(manifest["current_excel"])
-          versioned = Path(manifest["versioned_excel"])
-          assert current.exists()
-          assert versioned.exists()
-          assert hashlib.sha256(current.read_bytes()).hexdigest() == manifest["current_excel_sha256"]
-          assert hashlib.sha256(versioned.read_bytes()).hexdigest() == manifest["versioned_excel_sha256"]
-
-          wb = load_workbook(current, read_only=True, data_only=False)
-          assert set(wb.sheetnames) == {"进度总览", "实例登记", "统计摘要", "版本与来源", "使用规则"}
-          assert wb["实例登记"].max_row - 1 == manifest["record_count"]
-          assert wb["进度总览"]["B4"].value == manifest["record_count"]
-          registry = json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
-          expected_approved = registry["stage1_master_progress_summary"]["approved_master_count"]
-          assert wb["进度总览"]["B7"].value == expected_approved
-          wb.close()
-          print("VALIDATION_PASS", manifest["registry_version"], manifest["record_count"])
-          PY
-
-      - name: Commit derived Excel to PR branch or main
+      - name: Extract candidate pages
         shell: bash
         run: |
           set -euo pipefail
-          DERIVED="docs/evidence/zhenguo_wanfo/derived"
-          REGISTRY="docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json"
+          PDF="$(find docs/evidence/zhenguo_wanfo/source_primary -maxdepth 1 -name 'SRC-ZG-WF-001_*.pdf' -print -quit)"
+          test -n "$PDF"
+          mkdir -p tmp/dajiao_a1
+          sha256sum "$PDF" | tee tmp/dajiao_a1/pdf_sha256.txt
+          pdfinfo "$PDF" > tmp/dajiao_a1/pdfinfo.txt
+          pdftotext -f 96 -l 108 -layout "$PDF" tmp/dajiao_a1/pages_096_108.txt
+          grep -n -C 20 -E '大角梁|子角梁|仔角梁|隐角梁|角梁|表[[:space:]]*2[-－]50|225|200[.]5|216[.]5|152' tmp/dajiao_a1/pages_096_108.txt > tmp/dajiao_a1/keyword_hits.txt || true
+          for p in 99 100 101 102 103 104 105; do
+            pdftoppm -f "$p" -singlefile -png -r 120 "$PDF" "tmp/dajiao_a1/page_${p}"
+          done
 
-          if [ -z "$(git status --porcelain -- "$DERIVED")" ]; then
-            echo "No derived Excel change."
-            exit 0
-          fi
-
+      - name: Commit temporary evidence extraction
+        shell: bash
+        run: |
+          set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "$DERIVED"
-          git commit -m "derived: sync Wanfo component registry Excel"
-
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
-            echo "PR_BRANCH_DERIVED_EXCEL_SYNC_PASS"
-            exit 0
-          fi
-
-          git fetch origin main
-
-          LOCAL_SOURCE_SHA="$(git show HEAD^:"$REGISTRY" | sha256sum | awk '{print $1}')"
-          REMOTE_SOURCE_SHA="$(git show origin/main:"$REGISTRY" | sha256sum | awk '{print $1}')"
-          if [ "$LOCAL_SOURCE_SHA" != "$REMOTE_SOURCE_SHA" ]; then
-            echo "STALE_RUN: canonical registry changed on main; a newer run must generate the Excel."
-            exit 0
-          fi
-
-          git rebase origin/main
-          git push origin HEAD:main
+          git add tmp/dajiao_a1
+          git commit -m "temp: extract dajiao A1 evidence pages"
+          git push origin HEAD:source/src-zg-wf-001-lfs
