@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R208",
+  "state_revision": "R209",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 BLOCKED / RUN 35977160199 FAILED BEFORE STEPS / TIMEOUT CHANGE VERIFIED ONLY / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 BLOCKED / GITHUB ACTIONS PRE-STEP EXECUTION FAILURE ACROSS WORKFLOWS / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,8 +26,8 @@
       "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / T-030 ENGINEERING EXECUTION AUTHORIZED D-126 / FIRST ARTICLE IN PROGRESS / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "T-030 BLOCKED: after the authorized one-line timeout change 35→50, Run 35977160199 failed before any workflow step started. Commit diff is exactly one line (timeout only). No job logs/steps were produced. One direct rerun is allowed as a minimal transient check; no further workflow changes are authorized.",
+  "decision_required": true,
+  "blocker": "T-030 BLOCKED by repository/account-level GitHub Actions execution availability issue. Authorized timeout change 35→50 is verified as the only T-030 code change. Run 35977160199 attempt 1 and attempt 2 both failed before any job step; unrelated Project Dashboard V2 Sync runs on main also fail before any step. This rules out the T-030 geometry/validator as the immediate cause. Specific GitHub-side cause (e.g. Actions usage/billing/spending limit/service scheduling) is not exposed by the available connector.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "T-030",
     "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master 首件生产",
-    "status": "BLOCKED / RUN 35977160199 FAILED BEFORE STEPS / MINIMAL RERUN CHECK NEXT"
+    "status": "BLOCKED / GITHUB ACTIONS PRE-STEP EXECUTION UNAVAILABLE / T-030 91/91 PREVIOUS PASS PRESERVED"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -386,7 +386,7 @@
       "next_authorization": "NONE / T-029 CLOSED"
     },
     "dajiaoliang": {
-      "status": "BLOCKED / TIMEOUT 50 COMMIT VERIFIED / RUN 35977160199 PRE-STEP FAILURE / RERUN CHECK NEXT",
+      "status": "BLOCKED / GITHUB ACTIONS PRE-STEP EXECUTION FAILURE ACROSS WORKFLOWS / TIMEOUT=50 VERIFIED / PREVIOUS T-030 91/91 PASS PRESERVED",
       "component": "大角梁",
       "component_id": "CMP-FRAME-DAJIAOLIANG-001",
       "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
@@ -454,9 +454,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-24",
-    "result": "T-030 RECOVERY RUN FAILED BEFORE JOB STEPS",
-    "evidence": "Run 35977160199 ended failure in ~3 seconds; job 107560241262 has zero steps and no downloadable log. Compare eb28017..a8f19582 shows exactly one file changed, with one addition/one deletion: timeout-minutes 35→50 only.",
-    "decision_required": "NONE FOR ONE DIRECT RERUN / STOP AND REPORT IF FAILURE REPEATS"
+    "result": "T-030 BLOCKED ON GITHUB ACTIONS EXECUTION AVAILABILITY",
+    "evidence": "Run 35977160199 attempt 1 and attempt 2 both fail in seconds with zero job steps/logs. Unrelated Project Dashboard V2 Sync runs 35976501355, 35977140275 and 35977387060 also fail in seconds with zero job steps. Earlier Dashboard run 35963731352 succeeded. T-030 timeout commit a8f195822a96b05bc206cd463c057885c47e2bb1 changes only timeout-minutes 35→50.",
+    "decision_required": "USER/GITHUB ACCOUNT CHECK REQUIRED BEFORE FURTHER ACTIONS RERUN"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -514,7 +514,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Perform one direct rerun of failed job 107560241262 with no code/config changes. If it starts normally, monitor to terminal result. If it again fails before steps, stop and treat as external Actions scheduling/account-service blocker; do not change project workflow further without PO decision.",
+  "next_action": "Do not modify T-030 workflow or Master logic further. Check GitHub Actions account/repository availability in GitHub UI (usage/billing/spending limit or Actions service message). Once Actions can start ordinary jobs again, rerun T-030 without further code changes and monitor to terminal state.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
