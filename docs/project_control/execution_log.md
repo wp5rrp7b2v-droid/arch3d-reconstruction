@@ -1219,3 +1219,28 @@ Do not restart T-018 by default.
 - Root cause permanently removed: validation no longer hard-codes the superseded T-029 state.
 - Dashboard remains DERIVED_VISUALIZATION / non-authoritative.
 - T-030 closure remains unchanged and authoritative.
+
+
+## 2026-09-24｜子角梁 Source Readiness / D-132
+
+- Stage1 next candidate from Coverage Matrix: **子角梁** / priority 11 / 4 records / 需新建Master.
+- A1 available and directly inspected:
+  - PDF p88–89 / printed p73–74 / §2.3.1.7 / Fig.2-50 / actual Table 2-44.
+  - 4 physical instances, one at each corner.
+  - Direct measured sections:
+    - SE 东南: 220×150 mm
+    - NE 东北: 190（含）×153 mm
+    - SW 西南: 213×153 mm
+    - NW 西北: 125（新）×149 mm
+  - A1 text explicitly states NE/NW 子角梁 differ markedly because of historical replacement.
+  - Published mean: 216.5×152 mm.
+  - Mean method is not explicitly stated; published mean is not the all-four-row arithmetic mean and is consistent with SE/SW-only width averaging plus rounded thickness.
+  - Classification: **SOURCE_AGGREGATION_METHOD_AMBIGUOUS**. Never overwrite direct instance values with the published family mean.
+  - Source cross-reference mismatch: §2.3.1.7 says Table 2-41, actual visible angle-beam table is Table 2-44. Use page/section/Fig.2-50/actual Table 2-44 as locator authority.
+- A2 available: 山西文物数字博物馆·万佛殿专题.
+  - 套兽 is installed on the 子角梁 end; mouth faces forward; stated weather-protection role.
+  - 转角铺作里出第三跳承托角梁.
+  - No exact 子角梁 full length, exact slope, end joinery or replacement-piece full-form geometry supplied.
+- Result: **SOURCE_READINESS PASS**.
+- Next: D-076 Visual/Form Gate, then Master Spec design.
+- Not authorized: engineering T-task / Blender / production branch / PR / Stage2 / T-018 resume.
