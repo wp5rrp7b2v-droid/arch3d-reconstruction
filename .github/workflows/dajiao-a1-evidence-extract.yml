@@ -1,0 +1,59 @@
+name: Dajiao A1 Evidence Extract
+
+on:
+  push:
+    branches:
+      - source/src-zg-wf-001-lfs
+    paths:
+      - .github/workflows/dajiao-a1-evidence-extract.yml
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout with LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          fetch-depth: 1
+
+      - name: Install PDF tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+
+      - name: Verify A1 and extract candidate pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          PDF="$(find docs/evidence/zhenguo_wanfo/source_primary -maxdepth 1 -name 'SRC-ZG-WF-001_*.pdf' -print -quit)"
+          test -n "$PDF"
+          echo "PDF=$PDF"
+          sha256sum "$PDF"
+          file "$PDF"
+          pdfinfo "$PDF" | sed -n '1,30p'
+          mkdir -p tmp/dajiao_a1
+          pdftotext -f 98 -l 106 -layout "$PDF" tmp/dajiao_a1/pages_098_106.txt
+          echo "=== KEYWORD HITS ==="
+          grep -n -C 16 -E '大角梁|子角梁|仔角梁|隐角梁|角梁|表[[:space:]]*2[-－]50|225|200[.]5|216[.]5|152' tmp/dajiao_a1/pages_098_106.txt || true
+          for p in 99 100 101 102 103 104 105; do
+            pdftoppm -f "$p" -singlefile -png -r 120 "$PDF" "tmp/dajiao_a1/page_${p}"
+          done
+          cat > tmp/dajiao_a1/README.txt <<'EOF'
+Temporary evidence extraction for D-099 A1 direct-page binding.
+Candidate window: PDF pages 98-106.
+Do not treat extracted values as canonical until reviewed.
+EOF
+
+      - name: Commit temporary evidence pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tmp/dajiao_a1
+          git commit -m "temp: extract dajiao A1 evidence pages"
+          git push
