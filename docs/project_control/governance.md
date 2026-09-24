@@ -273,3 +273,30 @@ P3.3 的项目目标是完成一座与当前可靠资料一致、结构自洽、
 9. **D-099 Compatibility｜与资料主权规则兼容**：RC-020 不降低 D-099/RC-019 的 A1/A2 优先级；它改变的是“资料缺口如何处理”，不是“资料冲突时可以忽略资料”。
 10. **Completion Standard｜完成标准**：模型验收首先看资料一致性、结构/拓扑一致性、几何闭合、可重复生成和视觉可用性；历史原貌一致性作为独立证据维度记录，不作为所有生产步骤的绝对前置条件。
 
+
+
+### 4.12 Minimal Sufficient Infrastructure / No Redundant Asset｜最小充分基础设施 / 禁止冗余资产
+
+Decision authority: **D-123 / RC-021**.
+
+1. Existing canonical assets, Registry, Evidence records, shared builders, validators and workflows must be reused before any new project infrastructure is introduced.
+2. A new rule/tool/bridge/index/cache/derived/intermediate asset is allowed only when a concrete current production requirement cannot be met safely by the existing path.
+3. Any retained derived asset must have an explicit purpose, authority boundary, lifecycle and regeneration path; it must not become a second source of truth.
+4. Temporary troubleshooting assets must be removed after use unless an approved retained purpose is recorded.
+5. “May be useful later” is not sufficient justification for permanent project infrastructure.
+6. The preferred response to a narrow evidence-access or tooling problem is a narrow, reversible fix that returns the project to the existing production path.
+7. Component-specific production must not create duplicate Masters, validators, workflows or caches when Definition-driven shared infrastructure can express the same requirement.
+8. This rule does not permit deletion of evidence, validation, traceability, review surfaces or independent cross-checks that are required by DoD/Task Contract.
+
+### 4.13 Execution Path Blocker Immediate Disclosure｜执行路径阻塞即时披露
+
+Decision authority: **D-123 / RC-022**.
+
+1. Once the approved execution path is confirmed blocked, the task status must immediately change from `EXECUTING` to `BLOCKED`; it must not continue to be described as normal execution.
+2. As soon as sufficient evidence exists to identify a blocker, ChatGPT must report it to the Product Owner before prolonged troubleshooting.
+3. The first blocker report must state: blocker, completed progress, effect on original task achievability, and recommended recovery path.
+4. Troubleshooting, workaround validation and infrastructure repair are exception-handling work and must not be counted or represented as normal task execution time.
+5. If a workaround adds engineering work, changes shared infrastructure/process, expands scope or alters approved architecture, STOP and obtain Product Owner authorization before executing it.
+6. Prohibited pattern: prolonged silent troubleshooting followed by delayed disclosure after failure.
+7. After recovery, explicitly record `BLOCKER CLEARED`; only then may the original task return to `EXECUTING`.
+8. Before declaring a NEXT Master production-ready, perform a lightweight source-readiness check: A1/A2 accessibility, original-page/parameter provenance sufficiency, and known conflict status. This is a readiness check, not a new permanent evidence system.
