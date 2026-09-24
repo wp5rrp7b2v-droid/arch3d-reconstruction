@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R202",
+  "state_revision": "R203",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 ENGINEERING EXECUTION AUTHORIZED D-126 / FIRST ARTICLE IN PROGRESS / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 BLOCKED / SHARED WORKFLOW SYNTAX DEFECT / D-126 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active technical blocker. T-030 engineering execution authorized by D-126; first-article acceptance remains separately gated. T-018 remains HOLD; Stage2 remains unauthorized.",
+  "blocker": "T-030 BLOCKED: authorized generic instance-section extension introduced a malformed YAML/shell insertion in .github/workflows/p3_3_master_v2.yml on the T-030 branch. No PR/Actions first article has been launched. Minimal in-scope syntax repair and static verification required before BLOCKER CLEARED.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "T-030",
     "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master 首件生产",
-    "status": "ENGINEERING EXECUTION AUTHORIZED / D-126 / FIRST ARTICLE IN PROGRESS"
+    "status": "BLOCKED / SHARED WORKFLOW SYNTAX DEFECT / NO ACTIONS RUN STARTED"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -386,7 +386,7 @@
       "next_authorization": "NONE / T-029 CLOSED"
     },
     "dajiaoliang": {
-      "status": "SOURCE+VISUAL GATE PASS / MASTER SPEC LOCKED D-124 / TASK CONTRACT LOCKED D-125 / ENGINEERING EXECUTION AUTHORIZED D-126 / FIRST ARTICLE IN PROGRESS",
+      "status": "ENGINEERING EXECUTION AUTHORIZED D-126 / BLOCKED ON SHARED WORKFLOW SYNTAX DEFECT / NO FIRST-ARTICLE RUN STARTED",
       "component": "大角梁",
       "component_id": "CMP-FRAME-DAJIAOLIANG-001",
       "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
@@ -452,9 +452,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-24",
-    "result": "DAJIAOLIANG SOURCE+VISUAL GATE PASS WITH BOUNDARY / MASTER SPEC V001 LOCKED / T-030 CONTRACT LOCKED",
-    "evidence": "A1 canonical PDF p88-89 / printed p73-74 / §2.3.1.7 / Fig 2-50 / Table 2-44; SE 240×210, NE 216×187, SW 218×206, NW 226×199 mm; report and recomputed mean 225×200.5; direct mapping locked; A2 corner topology retained with exact 45°/length/joinery boundaries unresolved.",
-    "decision_required": "EXPLICIT T-030 ENGINEERING EXECUTION AUTHORIZATION"
+    "result": "T-030 BLOCKED BEFORE PR/ACTIONS",
+    "evidence": "T-030 branch and locked Definition exist; shared builder/validator extension written; workflow insertion is malformed and must be repaired before PR/Actions.",
+    "decision_required": "NONE / repair is within D-126 authorized generic extension; disclose and clear blocker before resuming"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -512,7 +512,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Execute T-030 first article on branch codex/t030-p3-3-dajiaoliang-master-v2-v001 via GitHub Actions / Blender 4.5.13. If shared V2 infrastructure changes, regress T-025 through T-029. Stop after first-article evidence is ready for Product Owner review; do not formalize, merge, start Stage2, or resume T-018 without separate authorization.",
+  "next_action": "Repair only the malformed T-030 shared workflow insertion within D-126 scope; statically verify workflow/Python integration; explicitly record BLOCKER CLEARED; then create Draft PR and start first-article Actions. Do not add new infrastructure or broaden scope.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
