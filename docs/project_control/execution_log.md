@@ -1065,3 +1065,13 @@ Do not restart T-018 by default.
 - Shared infrastructure policy: reuse first; if direct instance-section mapping cannot be expressed, only a minimal generic Definition-driven extension is permitted; T-025–T-029 regression mandatory if shared infrastructure changes.
 - Current boundary: first-article execution only. Acceptance/formalization/merge remain unauthorized.
 - T-018: HOLD. Stage2: NOT AUTHORIZED.
+
+
+## 2026-09-24｜T-030 Blocker Disclosure #1
+
+- Status: **BLOCKED / DISCLOSED IMMEDIATELY BEFORE PR/ACTIONS**.
+- Blocker: malformed YAML/shell insertion in `.github/workflows/p3_3_master_v2.yml` while implementing the D-126-authorized generic instance-section proof extension.
+- Completed before blocker: T-030 branch created; locked Definition created; generic shared builder + validator instance-section support written.
+- Not started: Draft PR / GitHub Actions / Blender first article.
+- Impact: first article cannot safely start until workflow syntax is repaired.
+- Recovery: minimal in-scope repair only; no new architecture/assets/workflow; static verify, then record `BLOCKER CLEARED` before resuming execution.
