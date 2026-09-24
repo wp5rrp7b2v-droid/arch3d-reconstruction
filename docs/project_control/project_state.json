@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R215",
+  "state_revision": "R216",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 CANONICAL APPROVED / T-030 D-128 APPROVED / D-129 FORMALIZATION MATERIALIZED / CATALOG+V008 CANDIDATE 16/28 / BLOCKED ON GITHUB ACTIONS ACTION_REQUIRED / PR #18 OPEN DRAFT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED / PR #18 MERGED / MAIN VERIFIED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,8 +26,8 @@
       "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / T-030 ENGINEERING EXECUTION AUTHORIZED D-126 / FIRST ARTICLE IN PROGRESS / T-018 HOLD"
     }
   },
-  "decision_required": true,
-  "blocker": "T-030 publication closure BLOCKED at final Actions gate. Exact materialization Run 35986418607 PASS and Catalog/V008 candidate binding is complete (16/28, 127 covered records), but bot-triggered post-materialization P3.3 Master V2 and Registry Excel workflows were marked action_required/failure with zero jobs. Subsequent user commits and one close→reopen recovery did not create runnable latest-head checks. Available GitHub connector cannot approve action_required workflow runs. Manual GitHub UI approval is required before final regression/Excel Sync can execute.",
+  "decision_required": false,
+  "blocker": "No active T-030 blocker. T-030 is closed and merged to main.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,9 +62,9 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "T-030",
-    "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master",
-    "status": "BLOCKED / MATERIALIZATION PASS / CATALOG+V008 CANDIDATE 16/28 / ACTION_REQUIRED BEFORE FINAL REGRESSION+EXCEL / PR #18 NOT MERGED"
+    "id": "NONE",
+    "name": "P3.3 V002 Stage 1｜Next Master selection pending",
+    "status": "T-030 CLOSED / 16 OF 28 APPROVED / NEXT MASTER NOT YET STARTED"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -386,7 +386,7 @@
       "next_authorization": "NONE / T-029 CLOSED"
     },
     "dajiaoliang": {
-      "status": "FORMALIZATION MATERIALIZED PASS / CATALOG+V008 CANDIDATE / BLOCKED ON ACTION_REQUIRED / MERGE NOT EXECUTED",
+      "status": "CLOSED / D-128 APPROVED / D-129 FORMALIZED / PR #18 MERGED / D-130",
       "component": "大角梁",
       "component_id": "CMP-FRAME-DAJIAOLIANG-001",
       "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
@@ -430,7 +430,21 @@
       "first_article_validation": "PASS",
       "accepted_canonical_blend_sha256": "199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91",
       "semantic_geometry_signature": "b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2",
-      "first_article_approval_decision": "D-128"
+      "first_article_approval_decision": "D-128",
+      "merged": true,
+      "pr_number": 18,
+      "merge_commit_sha": "b249a36850e097564bac0a96692ba2897af232ac",
+      "final_regression_run": 36000242504,
+      "final_regression_validation": "97/97 PASS",
+      "final_regenerated_blend_sha256": "17744eeba659f59d62423f3a55f0153de814e2c9a626c2506718990d459bba4a",
+      "final_regenerated_semantic_geometry_signature": "b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2",
+      "final_regression_artifact_id": 10808950352,
+      "excel_sync_run": 36000242318,
+      "stage1_catalog_approved_count": 16,
+      "v008_bound_rows": 4,
+      "master_covered_registry_record_count": 127,
+      "stage1_master_completion": "16/28 / 57.1%",
+      "next_authorization": "NONE / T-030 CLOSED"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -455,15 +469,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-129",
+    "id": "D-130",
     "date": "2026-09-24",
-    "decision": "Authorize T-030 exact formalization, Catalog+V008 binding, Registry Excel Sync, final regression/cross-check, then PR #18 merge only if all gates PASS."
+    "decision": "T-030 formalization/publication closure completed under D-129: final regression and Excel Sync PASS; PR #18 merged; T-030 closed on main."
   },
   "latest_material_review": {
     "date": "2026-09-24",
-    "result": "T-030 FORMALIZATION PARTIAL PASS / FINAL ACTIONS GATE BLOCKED",
-    "evidence": "One-time accepted Artifact materialization Run 35986418607 SUCCESS; exact accepted Semantic/Validation/Review Board committed, .blend SHA verified but not committed; Catalog candidate=16; V008/CURRENT 大角梁=4/4 bound; covered Registry records=127. Post-materialization Master V2 Run 35986447914 and Excel Run 35986447868 were action_required/failure with zero jobs. PR close→reopen did not clear gate.",
-    "decision_required": "MANUAL GITHUB UI APPROVAL TO RUN ACTION_REQUIRED WORKFLOWS; DO NOT MERGE UNTIL FINAL PASS"
+    "result": "T-030 CLOSED / MERGED_TO_MAIN / MAIN VERIFIED",
+    "evidence": "Materialization 35986418607 SUCCESS; Excel Sync 36000242318 SUCCESS; final regression 36000242504 SUCCESS / 97/97; shared regressions T-025..T-029 ALL PASS; PR #18 merge b249a36850e097564bac0a96692ba2897af232ac.",
+    "decision_required": "NONE FOR T-030"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -521,7 +535,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Product Owner approves pending PR #18 workflow execution in GitHub UI. Then run latest-head P3.3 Master V2 final regression + Registry Excel Sync; merge PR #18 only if both and pre-merge cross-check PASS.",
+  "next_action": "Select the next missing Stage1 Master. Before starting a new T-task, perform the lightweight Source Readiness Check required by RC-022. Do not start Stage2 or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -915,15 +929,15 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-029 D-119 BINDING CLOSED",
+    "status": "ACTIVE / T-030 D-130 BINDING CLOSED",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 15,
-    "pending_master_object_type_count": 13,
-    "master_completion_percent": 53.6,
-    "master_covered_registry_record_count": 123,
+    "approved_master_count": 16,
+    "pending_master_object_type_count": 12,
+    "master_completion_percent": 57.1,
+    "master_covered_registry_record_count": 127,
     "pending_source_binding_count": 7,
     "row_fields": [
       "stage1_disposition",
