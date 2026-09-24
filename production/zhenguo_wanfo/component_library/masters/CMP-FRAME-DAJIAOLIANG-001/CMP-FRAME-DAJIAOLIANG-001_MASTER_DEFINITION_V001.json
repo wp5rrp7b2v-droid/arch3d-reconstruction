@@ -1,0 +1,360 @@
+{
+  "schema_version": "MASTER_V2_DEFINITION_1.5",
+  "task_id": "T-030",
+  "component_id": "CMP-FRAME-DAJIAOLIANG-001",
+  "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+  "master_version": "V001",
+  "component_name_zh": "大角梁",
+  "component_name_en": "Dajiao beam / large corner beam",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-124 / D-125 / D-126 / ENGINEERING_EXECUTION_AUTHORIZED",
+  "architecture_rule": "D-089 / MINIMAL_SUFFICIENT_COMPONENT_PACKAGE + D-108/RC-020 EVIDENCE_CONSTRAINED_RECONSTRUCTION + D-123/RC-021 MINIMAL_SUFFICIENT_INFRASTRUCTURE",
+  "reconstruction_policy": {
+    "decision_id": "D-108",
+    "rule_id": "RC-020",
+    "classification": "EVIDENCE_CONSTRAINED_RECONSTRUCTION",
+    "unknown_does_not_automatically_block": true,
+    "reconstructed_design_must_be_explicit": true,
+    "reconstructed_design_replaceable": true,
+    "silent_historicization": "PROHIBITED"
+  },
+  "authority": {
+    "primary_source": {
+      "source_id": "SRC-ZG-WF-001",
+      "title": "《山西平遥镇国寺万佛殿与天王殿精细测绘报告》",
+      "locator": "PDF p88-89 / printed p73-74 / §2.3.1.7 / Fig 2-50 / Table 2-44",
+      "binding_record": "docs/evidence/zhenguo_wanfo/P3_3_DAJIAOLIANG_DIRECT_SOURCE_BINDING_V001.md",
+      "role": "A1_PRIMARY_ENGINEERING_AUTHORITY",
+      "pdf_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472"
+    },
+    "source_priority_decision": "D-099 / RC-019",
+    "locked_spec": "D-124 / P3_3_STAGE1_DAJIAOLIANG_MASTER_SPEC_V001",
+    "visual_reference_gate": {
+      "decision_id": "D-124",
+      "result": "PASS_WITH_GEOMETRY_BOUNDARY",
+      "source_class": "A1_DIRECT_FIGURE + A2_OFFICIAL_SAME_BUILDING_VISUAL_STRUCTURE",
+      "supported_claim": "A1 Fig 2-50 establishes large-corner-beam visual/form relation; A2 supports corner-beam structural layer/topology",
+      "dimension_authority": false
+    },
+    "registry_schema_version_expected": "V008",
+    "registry_record_count_expected": 505
+  },
+  "registry_boundary": {
+    "physical_instance_count": 4,
+    "historical_full_length_mm": null,
+    "exact_placement_angle_deg": null,
+    "section_mm": {
+      "width": 225,
+      "thickness": 200.5,
+      "classification": "DIRECT_MEASURED_REPORT_FAMILY_MEAN / REFERENCE_SPECIMEN_ONLY"
+    },
+    "sample_to_instance_mapping": "DIRECT_LOCKED_BY_A1_LOCATION_LABELS",
+    "exact_instance_endpoints": "RECONSTRUCTED_DESIGN_LATER / STAGE1 DOES_NOT_LOCK_BUILDING_XYZ"
+  },
+  "instance_section_binding_contract": {
+    "mode": "DIRECT_LOCKED_LOCATION_SECTION",
+    "family_reference_section_mm": {
+      "width": 225,
+      "thickness": 200.5
+    },
+    "family_reference_only": true,
+    "family_mean_must_not_overwrite_instances": true,
+    "geometry_variant_count": 0,
+    "instances": [
+      {
+        "fixture_id": "SE",
+        "registry_id": "大角梁-东南角",
+        "location": "东南角",
+        "source_label": "东南大角梁",
+        "width_mm": 240,
+        "thickness_mm": 210
+      },
+      {
+        "fixture_id": "NE",
+        "registry_id": "大角梁-东北角",
+        "location": "东北角",
+        "source_label": "东北大角梁",
+        "width_mm": 216,
+        "thickness_mm": 187
+      },
+      {
+        "fixture_id": "SW",
+        "registry_id": "大角梁-西南角",
+        "location": "西南角",
+        "source_label": "西南大角梁",
+        "width_mm": 218,
+        "thickness_mm": 206
+      },
+      {
+        "fixture_id": "NW",
+        "registry_id": "大角梁-西北角",
+        "location": "西北角",
+        "source_label": "西北大角梁",
+        "width_mm": 226,
+        "thickness_mm": 199
+      }
+    ],
+    "registry_family_summary_tokens": [
+      "225",
+      "200.5"
+    ],
+    "same_master_required": true,
+    "direct_mapping_replaceable_without_new_decision": false
+  },
+  "source_numeric_conflict": {
+    "conflict_type": "SOURCE_INTERNAL_NUMERIC_CONFLICT",
+    "conflict": false,
+    "table_row_count": 4,
+    "complete_visible_sample_count": 4,
+    "unmeasured_visible_row_count": 0,
+    "published_mean_mm": {
+      "width": 225,
+      "thickness": 200.5
+    },
+    "visible_rows_recomputed_mean_mm": {
+      "width": 225,
+      "thickness": 200.5
+    },
+    "canonical_geometry_basis": "PUBLISHED_MEAN_MATCHING_RECOMPUTE",
+    "visible_samples_mm": [
+      {
+        "location": "东南角",
+        "source_label": "东南大角梁",
+        "width": 240,
+        "thickness": 210
+      },
+      {
+        "location": "东北角",
+        "source_label": "东北大角梁",
+        "width": 216,
+        "thickness": 187
+      },
+      {
+        "location": "西南角",
+        "source_label": "西南大角梁",
+        "width": 218,
+        "thickness": 206
+      },
+      {
+        "location": "西北角",
+        "source_label": "西北大角梁",
+        "width": 226,
+        "thickness": 199
+      }
+    ]
+  },
+  "report_analysis": {
+    "converted_fen": {
+      "width": 14.7,
+      "thickness": 13.1
+    },
+    "rounded_fen": {
+      "width": 15,
+      "thickness": 13
+    },
+    "classification": "REPORT_ANALYSIS / METADATA_ONLY",
+    "geometry_use_count": 0
+  },
+  "assembly_semantics": {
+    "member_type": "LARGE_CORNER_BEAM",
+    "official_same_building_semantic": "CORNER_BEAM_SUPPORTED_BY_INNER_CORNER-BRACKET LAYER / EXACT 45-DEGREE NODE UNRESOLVED",
+    "exact_endpoint_contact_geometry": "RECONSTRUCTED_DESIGN_LATER / ENDPOINT_DRIVEN",
+    "related_component_policy": "DAJIAOLIANG ONLY / ZIJIAOLIANG + YINJIAOLIANG + YINCHENJIAOFU EXCLUDED"
+  },
+  "endpoint_resolver_contract": {
+    "enabled": true,
+    "classification": "RECONSTRUCTED_DESIGN / GENERIC_ENDPOINT_DRIVEN_ASSEMBLY",
+    "lower_endpoint_semantic": "CORNER_BEAM_INBOARD_SUPPORT_REGION",
+    "upper_endpoint_semantic": "CORNER_EAVE_OUTBOARD_TARGET_REGION",
+    "length_rule": "norm(P_end - P_start)",
+    "center_rule": "(P_start + P_end) / 2",
+    "orientation_rule": "local +X aligns to normalized(P_end - P_start)",
+    "historical_claim": false,
+    "building_coordinate_claim": false,
+    "fixture_variation_contract": {
+      "lengths_must_differ": true,
+      "directions_must_match": false,
+      "directions_must_differ": true,
+      "rationale": "Dajiao beam proves variable endpoint-derived length and orientation without a fixed 45-degree Master angle."
+    },
+    "fixtures": [
+      {
+        "fixture_id": "TEST-A",
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "historical_claim": false,
+        "building_coordinate_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          300,
+          400,
+          1200
+        ],
+        "expected_length_mm": 1300,
+        "expected_center_mm": [
+          150,
+          200,
+          600
+        ],
+        "expected_direction": [
+          0.23076923076923078,
+          0.3076923076923077,
+          0.9230769230769231
+        ]
+      },
+      {
+        "fixture_id": "TEST-B",
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "historical_claim": false,
+        "building_coordinate_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          640,
+          480,
+          1500
+        ],
+        "expected_length_mm": 1700,
+        "expected_center_mm": [
+          320,
+          240,
+          750
+        ],
+        "expected_direction": [
+          0.3764705882352941,
+          0.2823529411764706,
+          0.8823529411764706
+        ]
+      }
+    ]
+  },
+  "geometry_contract": {
+    "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER_WITH_INSTANCE_SECTION_PARAMETERS",
+    "canonical_reference_length_mm": 1000,
+    "canonical_reference_length_historical_claim": false,
+    "axes": {
+      "x": "+X longitudinal",
+      "y": "+Y width / 广",
+      "z": "+Z thickness / 厚"
+    },
+    "origin": "longitudinal midpoint / transverse center / lower reference plane",
+    "transform": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "placement_policy": "ASSEMBLY_OWNED / ENDPOINT_DERIVED / RECONSTRUCTED_DESIGN_ALLOWED / STAGE1_BUILDING_XYZ_NOT_LOCKED",
+    "exact_section_profile": "UNKNOWN",
+    "section_envelope_is_historical_profile": false,
+    "section_envelope_mm": {
+      "width": 225,
+      "thickness": 200.5
+    },
+    "joinery_geometry": "STAGE1_SIMPLIFIED_FLAT_END / NO HISTORICAL JOINERY CLAIM",
+    "end_geometry": "STRUCTURAL_SIMPLIFIED_FLAT_END / RECONSTRUCTED_DESIGN",
+    "unsupported_geometry": [],
+    "engineering_representation": {
+      "primitive": "RECTANGULAR_BOUNDING_ENVELOPE_PROXY",
+      "historical_profile_claim": false,
+      "purpose": "STAGE1 FAMILY REFERENCE + INSTANCE-SECTION PARAMETRIC PROOF + ENDPOINT-RESOLVER VALIDATION",
+      "label_requirement": "FAMILY MEAN 225x200.5 IS REFERENCE ONLY; FOUR DIRECT INSTANCE SECTIONS REMAIN LOCATION-LOCKED; RECTANGULAR PROFILE/FLAT ENDS ARE RECONSTRUCTED-DESIGN REPRESENTATION"
+    }
+  },
+  "legacy_proxy_reuse": false,
+  "unknowns": [
+    "historical full length remains unresolved but does not block endpoint-derived production placement",
+    "historical exact installation angle and exact 45-degree node coordinates remain unresolved",
+    "historical-original hidden joinery and exact end profile remain unresolved",
+    "sample-to-instance mapping is DIRECT_LOCKED by A1 location labels; no additional originality claim is made",
+    "final four building XYZ endpoints belong to later whole-building placement stage",
+    "exact relation to 子角梁 / 隐角梁 / 隐衬角栿 remains outside this Master"
+  ],
+  "hard_fails": [
+    "INSTANCE_SECTION_COLLAPSED_TO_FAMILY_MEAN",
+    "INSTANCE_SECTION_MAPPING_MISMATCH",
+    "DUPLICATE_MASTER_PER_CORNER",
+    "FALSE_GEOMETRY_VARIANT_FROM_INSTANCE_SECTION_ONLY",
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "ENDPOINT_RESOLVER_LENGTH_MISMATCH",
+    "ENDPOINT_RESOLVER_ORIENTATION_MISMATCH",
+    "ENDPOINT_TEST_MARKED_AS_BUILDING_COORDINATE",
+    "FIXED_MASTER_INSTALLATION_ANGLE",
+    "FIXED_45_DEGREE_HISTORICAL_CLAIM",
+    "SILENT_HISTORICIZATION",
+    "RECONSTRUCTED_DESIGN_MARKED_AS_DIRECT_MEASURED",
+    "UNSUPPORTED_JOINERY_CLAIM",
+    "RELATED_COMPONENT_IDENTITY_COLLAPSE",
+    "MASTER_WITHOUT_EVIDENCE_BINDING",
+    "SHARED_V2_REGRESSION_FAILURE"
+  ],
+  "review_contract": {
+    "board_policy": "ADAPTIVE / DEFINITION_DRIVEN",
+    "fixed_panel_count_required": false,
+    "required_panels": [
+      "AXON",
+      "LONG_SIDE",
+      "END_SECTION",
+      "DIMENSION_AND_PARAMETRIC_LENGTH",
+      "PLACEMENT_AND_ENDPOINT_LOGIC",
+      "SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY"
+    ],
+    "rationale": "Dajiao beam requires direct instance-section comparison plus endpoint-driven placement proof while keeping a single shared Master."
+  },
+  "minimal_sufficient_package": {
+    "principle": "MINIMAL_SUFFICIENT_COMPONENT_PACKAGE",
+    "fixed_file_count_required": false,
+    "component_specific_expected_formal_outputs": [
+      "CMP-FRAME-DAJIAOLIANG-001_MASTER_DEFINITION_V001.json",
+      "CMP-FRAME-DAJIAOLIANG-001_MASTER_SEMANTIC_V001.json",
+      "CMP-FRAME-DAJIAOLIANG-001_MASTER_V001.blend (Actions artifact + local only; not Git)",
+      "CMP-FRAME-DAJIAOLIANG-001_MASTER_REVIEW_BOARD_V001.png",
+      "CMP-FRAME-DAJIAOLIANG-001_MASTER_VALIDATION_V001.json",
+      "T-030_P3_3_DAJIAOLIANG_MASTER_V2_V001.md"
+    ],
+    "rule": "Definition / Semantic / Validation remain independent; instance-section and endpoint proof outputs are temporary validation evidence, not standalone formal assets."
+  },
+  "execution_boundary": {
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "executor": "GitHub Actions / Blender 4.5.13",
+    "branch_policy": "ONE TASK = ONE BRANCH = ONE PR",
+    "final_master_approval_requires_separate_product_owner_decision": true,
+    "formalization_requires_separate_product_owner_decision": true,
+    "pr_merge_requires_separate_product_owner_authorization": true
+  },
+  "approval": {
+    "spec_decision_id": "D-124",
+    "contract_decision_id": "D-125",
+    "execution_decision_id": "D-126",
+    "date": "2026-09-24",
+    "definition_locked": true,
+    "engineering_execution_authorized": true,
+    "shared_infrastructure_regression_required_if_changed": [
+      "T-025",
+      "T-026",
+      "T-027",
+      "T-028",
+      "T-029"
+    ],
+    "final_master_acceptance_requires_separate_product_owner_decision": true,
+    "formalization_requires_separate_product_owner_decision": true,
+    "pr_merge_requires_separate_product_owner_authorization": true
+  }
+}

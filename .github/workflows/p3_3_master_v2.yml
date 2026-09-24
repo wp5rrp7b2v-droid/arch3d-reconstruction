@@ -21,7 +21,7 @@ permissions:
 jobs:
   first-article:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 50
     env:
       BLENDER_DIR: /tmp/blender-4.5.13-linux-x64
       BLENDER: /tmp/blender-4.5.13-linux-x64/blender
@@ -111,6 +111,34 @@ jobs:
           "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" --             --mode build --definition "$DEFINITION" --asset "$ARTIFACT_DIR/thickness.blend" --semantic "$ARTIFACT_DIR/thickness.json" --thickness-mm 200
           "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" --             --mode build --definition "$DEFINITION" --asset "$ARTIFACT_DIR/restore.blend" --semantic "$ARTIFACT_DIR/restore.json"
 
+      - name: Definition-driven instance-section builds
+        shell: bash
+        run: |
+          set -euo pipefail
+          INSTANCE_COUNT="$(python - "$DEFINITION" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          print(len(d.get("instance_section_binding_contract",{}).get("instances",[])))
+          PY
+          )"
+          if [[ "$INSTANCE_COUNT" -gt 0 ]]; then
+            IDIR="$ARTIFACT_DIR/instance_sections"
+            mkdir -p "$IDIR"
+            python - "$DEFINITION" > "$ARTIFACT_DIR/instance_sections.txt" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          for x in d.get("instance_section_binding_contract",{}).get("instances",[]):
+              print(x["fixture_id"], x["width_mm"], x["thickness_mm"])
+          PY
+            while read -r FIXTURE_ID WIDTH_MM THICKNESS_MM; do
+              "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
+                --mode build --definition "$DEFINITION" \
+                --asset "$IDIR/$FIXTURE_ID.blend" --semantic "$IDIR/$FIXTURE_ID.json" \
+                --width-mm "$WIDTH_MM" --thickness-mm "$THICKNESS_MM"
+            done < "$ARTIFACT_DIR/instance_sections.txt"
+            echo "INSTANCE_SECTION_DIR=$IDIR" >> "$GITHUB_ENV"
+          fi
+
       - name: Definition-driven role mutation builds
         shell: bash
         run: |
@@ -150,6 +178,9 @@ jobs:
           if [[ -n "${ROLE_A_SEM:-}" ]]; then
             EXTRA+=(--role-a "$ROLE_A_SEM" --role-b "$ROLE_B_SEM")
           fi
+          if [[ -n "${INSTANCE_SECTION_DIR:-}" ]]; then
+            EXTRA+=(--instance-section-dir "$INSTANCE_SECTION_DIR")
+          fi
           python "$VALIDATOR" \
             --definition "$DEFINITION" \
             --canonical "$SEMANTIC" \
@@ -166,7 +197,7 @@ jobs:
             --output "$VALIDATION" \
             "${EXTRA[@]}"
 
-      - name: Shared V2 infrastructure regression (T-025 + T-026 + T-027 + T-028)
+      - name: Shared V2 infrastructure regression (T-025 + T-026 + T-027 + T-028 + T-029)
         shell: bash
         run: |
           set -euo pipefail
@@ -180,7 +211,8 @@ jobs:
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZHAQIAN-001/CMP-FRAME-ZHAQIAN-001_MASTER_DEFINITION_V001.json \
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PURLIN-001/CMP-FRAME-PURLIN-001_MASTER_DEFINITION_V001.json \
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_DEFINITION_V001.json \
-            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-CHASHOU-001/CMP-FRAME-CHASHOU-001_MASTER_DEFINITION_V001.json
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-CHASHOU-001/CMP-FRAME-CHASHOU-001_MASTER_DEFINITION_V001.json \
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-SHUZHU-001/CMP-FRAME-SHUZHU-001_MASTER_DEFINITION_V001.json
           do
             KEY="$(python - "$DEF" <<'PY'
           import json,sys
