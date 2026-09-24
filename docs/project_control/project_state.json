@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R204",
+  "state_revision": "R205",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 EXECUTING / BLOCKER CLEARED / FIRST ARTICLE PR+ACTION NEXT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 EXECUTING / PR #18 DRAFT / RUN 35963282233 IN PROGRESS / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "BLOCKER CLEARED: malformed T-030 shared workflow insertion repaired on task branch and static integration checks PASS. T-030 may resume normal execution. No active technical blocker.",
+  "blocker": "No active technical blocker. T-030 blocker #1 was cleared before PR creation. Draft PR #18 is open and first-article Run 35963282233 is in progress.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "T-030",
     "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master 首件生产",
-    "status": "EXECUTING / BLOCKER CLEARED / D-126"
+    "status": "EXECUTING / PR #18 DRAFT / ACTIONS RUN 35963282233 IN PROGRESS"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -386,7 +386,7 @@
       "next_authorization": "NONE / T-029 CLOSED"
     },
     "dajiaoliang": {
-      "status": "ENGINEERING EXECUTION AUTHORIZED D-126 / BLOCKER CLEARED / READY FOR DRAFT PR + FIRST-ARTICLE ACTIONS",
+      "status": "ENGINEERING EXECUTION AUTHORIZED D-126 / PR #18 DRAFT / FIRST-ARTICLE RUN 35963282233 IN PROGRESS",
       "component": "大角梁",
       "component_id": "CMP-FRAME-DAJIAOLIANG-001",
       "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
@@ -421,7 +421,9 @@
       "reference_length_policy": "RECONSTRUCTION_REFERENCE_LENGTH / NON_HISTORICAL",
       "geometry_mode": "PARAMETRIC_ENDPOINT_DRIVEN_LONG_MEMBER_WITH_INSTANCE_SECTION_PARAMETERS",
       "task_contract": "docs/tasks/T-030_P3_3_DAJIAOLIANG_MASTER_V2_V001.md",
-      "engineering_execution_authorized": true
+      "engineering_execution_authorized": true,
+      "github_pr_number": 18,
+      "first_article_run": 35963282233
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -452,9 +454,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-24",
-    "result": "T-030 BLOCKER CLEARED",
-    "evidence": "Rebuilt workflow from canonical main plus minimal authorized generic instance-section step; corruption markers absent; Definition JSON parse PASS; exactly one instance-section step and one role-mutation step; T-029 added to shared regression; validator instance-section argument connected.",
-    "decision_required": "NONE / RESUME T-030 EXECUTION"
+    "result": "T-030 FIRST ARTICLE RUNNING",
+    "evidence": "PR #18 Draft / head eb28017acb82856c01c9f5dda7ed451dc873c363 / Actions Run 35963282233. Checkout, locked Definition resolve and Blender 4.5.13 install PASS; canonical Master + review tile build currently in progress.",
+    "decision_required": "NONE UNTIL FIRST-ARTICLE RESULT"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -512,7 +514,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Create Draft PR for codex/t030-p3-3-dajiaoliang-master-v2-v001 and run first-article GitHub Actions / Blender 4.5.13. Monitor immediately; any new hard blocker must be disclosed under RC-022.",
+  "next_action": "Continue Run 35963282233. After completion, review T-030 validation + T-025..T-029 shared regressions + minimal-sufficient surface + Review Board. First-article acceptance remains Product Owner-gated.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
