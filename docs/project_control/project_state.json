@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R211",
+  "state_revision": "R212",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 EXECUTING / REPO PUBLIC / ACTIONS BILLING GATE CLEARED / RUN 35977160199 ATTEMPT 3 IN PROGRESS / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 ENGINEERING COMPLETE / FIRST ARTICLE SUCCESS / PENDING PRODUCT OWNER REVIEW / PR #18 DRAFT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,8 +26,8 @@
       "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / T-030 ENGINEERING EXECUTION AUTHORIZED D-126 / FIRST ARTICLE IN PROGRESS / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No active Actions billing blocker observed. Repository visibility is PUBLIC and Run 35977160199 attempt 3 has started normal job steps. T-030 remains in execution until terminal result.",
+  "decision_required": true,
+  "blocker": "No active technical blocker. T-030 first-article Run 35977160199 attempt 3 completed SUCCESS. Product Owner first-article acceptance remains required before formalization/Catalog+V008 binding/merge.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "T-030",
     "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master 首件生产",
-    "status": "EXECUTING / RUN 35977160199 ATTEMPT 3 IN PROGRESS / BILLING GATE CLEARED"
+    "status": "ENGINEERING COMPLETE / FIRST ARTICLE SUCCESS / PENDING PRODUCT OWNER REVIEW / PR #18 DRAFT"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -386,7 +386,7 @@
       "next_authorization": "NONE / T-029 CLOSED"
     },
     "dajiaoliang": {
-      "status": "EXECUTING / REPO PUBLIC / RUN 35977160199 ATTEMPT 3 STARTED NORMALLY / TIMEOUT=50",
+      "status": "FIRST ARTICLE SUCCESS / ENGINEERING COMPLETE / PENDING PRODUCT OWNER REVIEW",
       "component": "大角梁",
       "component_id": "CMP-FRAME-DAJIAOLIANG-001",
       "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
@@ -423,7 +423,11 @@
       "task_contract": "docs/tasks/T-030_P3_3_DAJIAOLIANG_MASTER_V2_V001.md",
       "engineering_execution_authorized": true,
       "github_pr_number": 18,
-      "first_article_run": 35963282233
+      "first_article_run": 35977160199,
+      "first_article_attempt": 3,
+      "first_article_artifact_id": 10800439343,
+      "shared_regression_artifact_id": 10801150421,
+      "first_article_validation": "PASS"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -454,9 +458,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-24",
-    "result": "GITHUB ACTIONS BILLING GATE CLEARED FOR T-030 RERUN",
-    "evidence": "Repository API reports visibility=public. Run 35977160199 attempt 3 is in_progress and normal steps have started: setup, checkout, Definition resolution PASS; Blender install running.",
-    "decision_required": "NONE UNTIL TERMINAL RUN RESULT"
+    "result": "T-030 FIRST ARTICLE SUCCESS / ENGINEERING COMPLETE PENDING PRODUCT OWNER REVIEW",
+    "evidence": "Run 35977160199 attempt 3 SUCCESS. T-030 main validation PASS; T-025..T-029 shared regression PASS; minimal formal artifact assertion PASS; formal V2 first-article artifact upload PASS; shared regression evidence upload PASS. First-article Artifact ID 10800439343; shared regression Artifact ID 10801150421.",
+    "decision_required": "PRODUCT OWNER FIRST-ARTICLE ACCEPTANCE"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -514,7 +518,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Monitor Run 35977160199 attempt 3 to terminal state. Do not modify code/config while run is healthy.",
+  "next_action": "Product Owner reviews T-030 first-article evidence. If approved, record acceptance, then proceed to formal materialization/Catalog+V008 binding and PR #18 merge only under separate authorization boundary. Do not start Stage2 or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
