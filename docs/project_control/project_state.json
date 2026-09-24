@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R209",
+  "state_revision": "R210",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 BLOCKED / GITHUB ACTIONS PRE-STEP EXECUTION FAILURE ACROSS WORKFLOWS / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 BLOCKED / GITHUB ACTIONS BILLING OR SPENDING LIMIT CONFIRMED BY UI ANNOTATION / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": true,
-  "blocker": "T-030 BLOCKED by repository/account-level GitHub Actions execution availability issue. Authorized timeout change 35→50 is verified as the only T-030 code change. Run 35977160199 attempt 1 and attempt 2 both failed before any job step; unrelated Project Dashboard V2 Sync runs on main also fail before any step. This rules out the T-030 geometry/validator as the immediate cause. Specific GitHub-side cause (e.g. Actions usage/billing/spending limit/service scheduling) is not exposed by the available connector.",
+  "blocker": "T-030 BLOCKED by GitHub Actions account billing/spending-limit gate. GitHub UI annotation states: 'The job was not started because recent account payments have failed or your spending limit needs to be increased. Please check the Billing & plans section in your settings.' This is external to T-030 geometry/validator/workflow logic.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "T-030",
     "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master 首件生产",
-    "status": "BLOCKED / GITHUB ACTIONS PRE-STEP EXECUTION UNAVAILABLE / T-030 91/91 PREVIOUS PASS PRESERVED"
+    "status": "BLOCKED / GITHUB ACTIONS BILLING OR SPENDING LIMIT / PREVIOUS T-030 91/91 PASS PRESERVED"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -386,7 +386,7 @@
       "next_authorization": "NONE / T-029 CLOSED"
     },
     "dajiaoliang": {
-      "status": "BLOCKED / GITHUB ACTIONS PRE-STEP EXECUTION FAILURE ACROSS WORKFLOWS / TIMEOUT=50 VERIFIED / PREVIOUS T-030 91/91 PASS PRESERVED",
+      "status": "BLOCKED / GITHUB ACTIONS BILLING OR SPENDING LIMIT CONFIRMED / TIMEOUT=50 VERIFIED / PREVIOUS T-030 91/91 PASS PRESERVED",
       "component": "大角梁",
       "component_id": "CMP-FRAME-DAJIAOLIANG-001",
       "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
@@ -454,9 +454,9 @@
   },
   "latest_material_review": {
     "date": "2026-09-24",
-    "result": "T-030 BLOCKED ON GITHUB ACTIONS EXECUTION AVAILABILITY",
-    "evidence": "Run 35977160199 attempt 1 and attempt 2 both fail in seconds with zero job steps/logs. Unrelated Project Dashboard V2 Sync runs 35976501355, 35977140275 and 35977387060 also fail in seconds with zero job steps. Earlier Dashboard run 35963731352 succeeded. T-030 timeout commit a8f195822a96b05bc206cd463c057885c47e2bb1 changes only timeout-minutes 35→50.",
-    "decision_required": "USER/GITHUB ACCOUNT CHECK REQUIRED BEFORE FURTHER ACTIONS RERUN"
+    "result": "GITHUB ACTIONS ACCOUNT-SIDE BLOCKER CONFIRMED",
+    "evidence": "GitHub Actions UI annotation explicitly states jobs are not starting because recent account payments failed or the spending limit needs to be increased; Billing & plans must be checked.",
+    "decision_required": "USER ACTION IN GITHUB BILLING & PLANS REQUIRED; NO T-030 CODE CHANGE"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -514,7 +514,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Do not modify T-030 workflow or Master logic further. Check GitHub Actions account/repository availability in GitHub UI (usage/billing/spending limit or Actions service message). Once Actions can start ordinary jobs again, rerun T-030 without further code changes and monitor to terminal state.",
+  "next_action": "User resolves GitHub Billing & plans payment/spending-limit issue. After ordinary Actions jobs can start again, rerun T-030 with existing timeout=50 and no further code changes; monitor to terminal state.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
