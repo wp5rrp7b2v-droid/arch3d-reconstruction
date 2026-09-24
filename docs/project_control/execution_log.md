@@ -1095,3 +1095,23 @@ Do not restart T-018 by default.
 - Current observed progress: checkout PASS; locked Definition resolve PASS; Blender 4.5.13 install PASS; canonical Master + review tiles IN PROGRESS.
 - Shared infrastructure changed within D-126 scope, therefore mandatory regression set is T-025 / T-026 / T-027 / T-028 / T-029.
 - First-article acceptance remains Product Owner-gated.
+
+
+## 2026-09-24｜T-030 Blocker Disclosure #2｜Actions Timeout
+
+- Status: **BLOCKED / FIRST ARTICLE NOT ACCEPTABLE YET**.
+- Run: `35963282233` = **CANCELLED by job timeout**.
+- Timeout boundary: workflow job `timeout-minutes: 35`.
+- Completed before timeout:
+  - T-030 locked Definition resolution PASS.
+  - Blender 4.5.13 PASS.
+  - canonical Master / reopen / mutation / four instance-section builds / Review Board PASS.
+  - T-030 validation = **91/91 PASS**.
+  - canonical .blend SHA-256 = `942472630b0998797e9ef3694294fc2ba25c461da1e3df504ee9a56397ecb846`.
+  - semantic geometry signature = `b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2`.
+  - T-025 / T-026 / T-027 / T-028 shared regressions PASS.
+- Incomplete:
+  - T-029 shared regression did not finish.
+  - minimal-sufficient final assertion and artifact uploads were skipped because the job was cancelled.
+- Root cause: adding mandatory T-029 regression increased valid regression runtime beyond the existing 35-minute job limit; this is a capacity/time-budget blocker, not a T-030 geometry or validation failure.
+- Recommended minimal recovery: change only shared workflow job timeout from **35 → 50 minutes**, then rerun. This changes shared workflow infrastructure and therefore requires Product Owner approval under RC-022.
