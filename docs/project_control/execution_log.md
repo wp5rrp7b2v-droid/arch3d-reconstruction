@@ -1160,3 +1160,21 @@ Do not restart T-018 by default.
 - Shared regression artifact: `P3_3_MASTER_V2_SHARED_REGRESSION` / Artifact ID `10801150421`.
 - Current boundary: **ENGINEERING COMPLETE / PENDING PRODUCT OWNER FIRST-ARTICLE REVIEW**.
 - Not yet authorized: first-article acceptance, formal materialization, Catalog/V008 approved binding, PR #18 merge, Stage1 PASS, Stage2, T-018 resume.
+
+
+## 2026-09-24｜T-030 D-129 Formalization｜Materialization PASS / Final Actions Gate BLOCKED
+
+- Product Owner authorized formalization / Catalog + V008 binding / PR #18 merge under D-129, conditional on final PASS.
+- One-time accepted Artifact materialization Run `35986418607`: **SUCCESS**.
+- Accepted source Artifact: `10800439343`; source Run `35977160199` attempt 3.
+- Exact formal repo outputs materialized: Semantic / Validation / Review Board.
+- Approved canonical .blend SHA `199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91` verified; .blend not committed.
+- Catalog candidate: 16 approved.
+- V008/CURRENT 大角梁: 4/4 bound to `CMP-FRAME-DAJIAOLIANG-001_MASTER`.
+- Candidate approved-master-covered Registry rows: 127; Stage1 candidate 16/28 = 57.1%.
+- Post-materialization bot-triggered checks:
+  - Master V2 Run `35986447914`: action_required/failure, zero jobs.
+  - Registry Excel Run `35986447868`: action_required/failure, zero jobs.
+- Minimal recovery attempted: user-authored status commits + one PR #18 close→reopen. No runnable latest-head final checks were created.
+- Available GitHub connector has no action to approve an `action_required` workflow run.
+- STOP: PR #18 remains open/draft and must not merge until manual GitHub UI approval enables latest-head Master V2 final regression + Registry Excel Sync and both PASS.
