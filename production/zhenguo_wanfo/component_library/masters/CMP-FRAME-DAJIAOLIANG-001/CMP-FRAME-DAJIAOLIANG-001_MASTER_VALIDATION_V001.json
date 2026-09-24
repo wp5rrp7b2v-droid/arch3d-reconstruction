@@ -1,0 +1,349 @@
+{
+  "approval_boundary": "ENGINEERING_COMPLETE_PENDING_PRODUCT_OWNER_REVIEW",
+  "blender_version": "4.5.13 LTS",
+  "canonical_blend_sha256": "199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91",
+  "check_count": 91,
+  "checks": {
+    "01_definition_locked": "PASS",
+    "02_execution_authorized": "PASS",
+    "03_visual_gate": "PASS",
+    "04_registry_version": "PASS",
+    "05_registry_record_count": "PASS",
+    "06_component_identity": "PASS",
+    "07_instance_count": "PASS",
+    "08_instance_section_mapping_count": "PASS",
+    "09_instance_section_registry_identity": "PASS",
+    "10A_family_mean_reference_only": "PASS",
+    "10_registry_family_summary_binding": "PASS",
+    "11_historical_length_null": "PASS",
+    "12_reference_nonhistorical": "PASS",
+    "13_no_unsupported_geometry": "PASS",
+    "14_definition_hash": "PASS",
+    "15_bbox_length": "PASS",
+    "16_bbox_width": "PASS",
+    "17_bbox_thickness": "PASS",
+    "18_origin_transform": "PASS",
+    "19_reopen": "PASS",
+    "20_restore": "PASS",
+    "21_length_mutation": "PASS",
+    "22_width_mutation": "PASS",
+    "23_thickness_mutation": "PASS",
+    "24_binary_sha": "PASS",
+    "25_blender_version": "PASS",
+    "26_required_panels_complete": "PASS",
+    "27_review_board_exists": "PASS",
+    "28_review_board_dimensions": "PASS",
+    "29_no_fixed_panel_rule": "PASS",
+    "30_minimal_sufficient_rule": "PASS",
+    "31_no_tracked_canonical_blend_in_master_dir": "PASS",
+    "32_definition_semantic_validation_independence": "PASS",
+    "33_unknowns_preserved": "PASS",
+    "34_reference_length_assembly_guard": "PASS",
+    "35_visual_source_not_dimension_authority": "PASS",
+    "36_legacy_identity_not_applicable": "PASS",
+    "37_profile_unknown_semantic": "PASS",
+    "38_profile_unknown_body": "PASS",
+    "39_envelope_proxy_nonhistorical": "PASS",
+    "40_no_shengtou_baked": "PASS",
+    "41_preapproval_catalog_absent": "PASS",
+    "EP01_contract_enabled": "PASS",
+    "EP02_nonhistorical_contract": "PASS",
+    "EP03_not_building_coordinates": "PASS",
+    "EP04_fixture_count": "PASS",
+    "EP90_fixture_lengths_differ": "PASS",
+    "EP91_fixture_directions_differ": "PASS",
+    "EP92_reference_length_not_leaked": "PASS",
+    "EP93_same_master_section": "PASS",
+    "EP94_required_panel": "PASS",
+    "EP95_reconstruction_boundary_panel": "PASS",
+    "EP96_semantic_contract_preserved": "PASS",
+    "EP97_reconstruction_policy_preserved": "PASS",
+    "EP_TEST-A_center": "PASS",
+    "EP_TEST-A_classification": "PASS",
+    "EP_TEST-A_direction": "PASS",
+    "EP_TEST-A_length": "PASS",
+    "EP_TEST-A_result_present": "PASS",
+    "EP_TEST-B_center": "PASS",
+    "EP_TEST-B_classification": "PASS",
+    "EP_TEST-B_direction": "PASS",
+    "EP_TEST-B_length": "PASS",
+    "EP_TEST-B_result_present": "PASS",
+    "IS01_semantic_preserves_instance_section_contract": "PASS",
+    "IS02_zero_geometry_variants": "PASS",
+    "IS03_same_master_required": "PASS",
+    "IS04_direct_mapping_locked": "PASS",
+    "IS90_all_direct_sections_generated": "PASS",
+    "IS91_family_mean_not_collapsed": "PASS",
+    "IS92_no_duplicate_master_identity": "PASS",
+    "IS93_mapping_immutable_without_decision": "PASS",
+    "IS_NE_identity": "PASS",
+    "IS_NE_section": "PASS",
+    "IS_NE_semantic_exists": "PASS",
+    "IS_NW_identity": "PASS",
+    "IS_NW_section": "PASS",
+    "IS_NW_semantic_exists": "PASS",
+    "IS_SE_identity": "PASS",
+    "IS_SE_section": "PASS",
+    "IS_SE_semantic_exists": "PASS",
+    "IS_SW_identity": "PASS",
+    "IS_SW_section": "PASS",
+    "IS_SW_semantic_exists": "PASS",
+    "NC01_conflict_contract_declared": "PASS",
+    "NC02_published_mean_drives_canonical_section": "PASS",
+    "NC03_matching_recompute_preserved": "PASS",
+    "NC04_no_false_conflict": "PASS",
+    "NC05_semantic_preserves_numeric_conflict_contract": "PASS",
+    "NC07_measurement_accounting_preserved": "PASS",
+    "NC08_fen_metadata_not_geometry": "PASS"
+  },
+  "component_id": "CMP-FRAME-DAJIAOLIANG-001",
+  "definition_sha256": "e31f503ef0f40c35673d53c298150ec0c6a425cb729e8f2d0a2f18672eec0005",
+  "endpoint_fixture_results": [
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        150.0,
+        200.0,
+        600.0
+      ],
+      "derived_direction": [
+        0.230769231,
+        0.307692308,
+        0.923076923
+      ],
+      "derived_length_mm": 1300.0,
+      "fixture_id": "TEST-A",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        300.0,
+        400.0,
+        1200.0
+      ]
+    },
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        320.0,
+        240.0,
+        750.0
+      ],
+      "derived_direction": [
+        0.376470588,
+        0.282352941,
+        0.882352941
+      ],
+      "derived_length_mm": 1700.0,
+      "fixture_id": "TEST-B",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        640.0,
+        480.0,
+        1500.0
+      ]
+    }
+  ],
+  "endpoint_resolver_contract": {
+    "building_coordinate_claim": false,
+    "center_rule": "(P_start + P_end) / 2",
+    "classification": "RECONSTRUCTED_DESIGN / GENERIC_ENDPOINT_DRIVEN_ASSEMBLY",
+    "enabled": true,
+    "fixture_variation_contract": {
+      "directions_must_differ": true,
+      "directions_must_match": false,
+      "lengths_must_differ": true,
+      "rationale": "Dajiao beam proves variable endpoint-derived length and orientation without a fixed 45-degree Master angle."
+    },
+    "fixtures": [
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          150,
+          200,
+          600
+        ],
+        "expected_direction": [
+          0.23076923076923078,
+          0.3076923076923077,
+          0.9230769230769231
+        ],
+        "expected_length_mm": 1300,
+        "fixture_id": "TEST-A",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          300,
+          400,
+          1200
+        ]
+      },
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          320,
+          240,
+          750
+        ],
+        "expected_direction": [
+          0.3764705882352941,
+          0.2823529411764706,
+          0.8823529411764706
+        ],
+        "expected_length_mm": 1700,
+        "fixture_id": "TEST-B",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          640,
+          480,
+          1500
+        ]
+      }
+    ],
+    "historical_claim": false,
+    "length_rule": "norm(P_end - P_start)",
+    "lower_endpoint_semantic": "CORNER_BEAM_INBOARD_SUPPORT_REGION",
+    "orientation_rule": "local +X aligns to normalized(P_end - P_start)",
+    "upper_endpoint_semantic": "CORNER_EAVE_OUTBOARD_TARGET_REGION"
+  },
+  "formal_file_count_policy": "ADAPTIVE / MINIMAL SUFFICIENT / NO FIXED COUNT",
+  "instance_section_binding_contract": {
+    "direct_mapping_replaceable_without_new_decision": false,
+    "family_mean_must_not_overwrite_instances": true,
+    "family_reference_only": true,
+    "family_reference_section_mm": {
+      "thickness": 200.5,
+      "width": 225
+    },
+    "geometry_variant_count": 0,
+    "instances": [
+      {
+        "fixture_id": "SE",
+        "location": "东南角",
+        "registry_id": "大角梁-东南角",
+        "source_label": "东南大角梁",
+        "thickness_mm": 210,
+        "width_mm": 240
+      },
+      {
+        "fixture_id": "NE",
+        "location": "东北角",
+        "registry_id": "大角梁-东北角",
+        "source_label": "东北大角梁",
+        "thickness_mm": 187,
+        "width_mm": 216
+      },
+      {
+        "fixture_id": "SW",
+        "location": "西南角",
+        "registry_id": "大角梁-西南角",
+        "source_label": "西南大角梁",
+        "thickness_mm": 206,
+        "width_mm": 218
+      },
+      {
+        "fixture_id": "NW",
+        "location": "西北角",
+        "registry_id": "大角梁-西北角",
+        "source_label": "西北大角梁",
+        "thickness_mm": 199,
+        "width_mm": 226
+      }
+    ],
+    "mode": "DIRECT_LOCKED_LOCATION_SECTION",
+    "registry_family_summary_tokens": [
+      "225",
+      "200.5"
+    ],
+    "same_master_required": true
+  },
+  "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+  "reconstruction_policy": {
+    "classification": "EVIDENCE_CONSTRAINED_RECONSTRUCTION",
+    "decision_id": "D-108",
+    "reconstructed_design_must_be_explicit": true,
+    "reconstructed_design_replaceable": true,
+    "rule_id": "RC-020",
+    "silent_historicization": "PROHIBITED",
+    "unknown_does_not_automatically_block": true
+  },
+  "registry_role_counts": null,
+  "required_review_panels": [
+    "AXON",
+    "LONG_SIDE",
+    "END_SECTION",
+    "DIMENSION_AND_PARAMETRIC_LENGTH",
+    "PLACEMENT_AND_ENDPOINT_LOGIC",
+    "SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY"
+  ],
+  "review_board_sha256": "2398bff3922f3a6373a7160642d787e1b797911c758c558acfc4a92e58679fff",
+  "schema_version": "MASTER_V2_VALIDATION_1.1",
+  "section_envelope_historical_claim": false,
+  "section_profile_state": "UNKNOWN",
+  "semantic_geometry_signature": "b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2",
+  "source_numeric_conflict": {
+    "canonical_geometry_basis": "PUBLISHED_MEAN_MATCHING_RECOMPUTE",
+    "complete_visible_sample_count": 4,
+    "conflict": false,
+    "conflict_type": "SOURCE_INTERNAL_NUMERIC_CONFLICT",
+    "published_mean_mm": {
+      "thickness": 200.5,
+      "width": 225
+    },
+    "table_row_count": 4,
+    "unmeasured_visible_row_count": 0,
+    "visible_rows_recomputed_mean_mm": {
+      "thickness": 200.5,
+      "width": 225
+    },
+    "visible_samples_mm": [
+      {
+        "location": "东南角",
+        "source_label": "东南大角梁",
+        "thickness": 210,
+        "width": 240
+      },
+      {
+        "location": "东北角",
+        "source_label": "东北大角梁",
+        "thickness": 187,
+        "width": 216
+      },
+      {
+        "location": "西南角",
+        "source_label": "西南大角梁",
+        "thickness": 206,
+        "width": 218
+      },
+      {
+        "location": "西北角",
+        "source_label": "西北大角梁",
+        "thickness": 199,
+        "width": 226
+      }
+    ]
+  },
+  "status": "PASS",
+  "task_id": "T-030"
+}

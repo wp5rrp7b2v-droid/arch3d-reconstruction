@@ -2443,7 +2443,8 @@
       "evidence": "直接实测/报告明确缺口",
       "section_mm": "约225×200.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-DAJIAOLIANG-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2454,7 +2455,8 @@
       "evidence": "直接实测/报告明确缺口",
       "section_mm": "约225×200.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-DAJIAOLIANG-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2465,7 +2467,8 @@
       "evidence": "直接实测/报告明确缺口",
       "section_mm": "约225×200.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-DAJIAOLIANG-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2476,7 +2479,8 @@
       "evidence": "直接实测/报告明确缺口",
       "section_mm": "约225×200.5",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-DAJIAOLIANG-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -7216,14 +7220,14 @@
     "生头木"
   ],
   "stage1_master_progress_summary": {
-    "snapshot_date": "2026-09-23",
-    "status": "CANONICAL ON MAIN / D-119 / T-029 CLOSED / 15 OF 28 MASTERS APPROVED",
+    "snapshot_date": "2026-09-24",
+    "status": "PR #18 FORMALIZED CANDIDATE / D-128 DAJIAOLIANG ACCEPTED / D-129 MERGE AUTHORIZED AFTER FINAL PASS",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 15,
-    "pending_master_object_type_count": 13,
-    "master_completion_percent": 53.6,
+    "approved_master_count": 16,
+    "pending_master_object_type_count": 12,
+    "master_completion_percent": 57.1,
     "pending_source_binding_count": 7,
     "completed_definition": "PRODUCT_OWNER_APPROVED Master available in Stage1 Component Master Catalog",
     "total_definition": "Master scope includes 需新建Master plus all 已有Master categories; not all registered object types require a Master",
@@ -7256,9 +7260,10 @@
       "柱",
       "柱头栌斗",
       "叉手",
-      "蜀柱"
+      "蜀柱",
+      "大角梁"
     ],
-    "master_covered_registry_record_count": 123,
-    "progress_display_note": "505 Registry records; Stage1 Master completion uses 28 Master-scope object types as denominator: 15 approved / 13 pending = 53.6%. T-029 Shuzhu is canonical on main after PR #17 merge."
+    "master_covered_registry_record_count": 127,
+    "progress_display_note": "505 Registry records; Stage1 Master completion: 16 approved / 12 pending = 57.1%. T-030 Dajiao beam formalized candidate on PR #18; merge only after final regression/cross-check PASS."
   }
 }
