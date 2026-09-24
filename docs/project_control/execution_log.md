@@ -1065,3 +1065,116 @@ Do not restart T-018 by default.
 - Shared infrastructure policy: reuse first; if direct instance-section mapping cannot be expressed, only a minimal generic Definition-driven extension is permitted; T-025–T-029 regression mandatory if shared infrastructure changes.
 - Current boundary: first-article execution only. Acceptance/formalization/merge remain unauthorized.
 - T-018: HOLD. Stage2: NOT AUTHORIZED.
+
+
+## 2026-09-24｜T-030 Blocker Disclosure #1
+
+- Status: **BLOCKED / DISCLOSED IMMEDIATELY BEFORE PR/ACTIONS**.
+- Blocker: malformed YAML/shell insertion in `.github/workflows/p3_3_master_v2.yml` while implementing the D-126-authorized generic instance-section proof extension.
+- Completed before blocker: T-030 branch created; locked Definition created; generic shared builder + validator instance-section support written.
+- Not started: Draft PR / GitHub Actions / Blender first article.
+- Impact: first article cannot safely start until workflow syntax is repaired.
+- Recovery: minimal in-scope repair only; no new architecture/assets/workflow; static verify, then record `BLOCKER CLEARED` before resuming execution.
+
+
+## 2026-09-24｜T-030 Blocker Cleared #1
+
+- Status: **BLOCKER CLEARED / T-030 EXECUTION RESUMED**.
+- Repair: rebuilt `.github/workflows/p3_3_master_v2.yml` from canonical main and re-applied only the D-126-authorized generic instance-section proof extension.
+- Static checks: malformed marker absent; exactly one instance-section step; exactly one role-mutation step; validator instance-section argument wired; T-029 added to shared regression; T-030 Definition JSON parse PASS with 4 direct instance sections.
+- No new asset class, cache, bridge, workflow or architecture introduced.
+- Next: create Draft PR and allow first-article Actions to execute.
+
+
+## 2026-09-24｜T-030 First Article Run #1 Started
+
+- Draft PR: **#18**.
+- Branch: `codex/t030-p3-3-dajiaoliang-master-v2-v001`.
+- Head: `eb28017acb82856c01c9f5dda7ed451dc873c363`.
+- Actions Run: **35963282233** / P3.3 Master V2 First Article.
+- Current observed progress: checkout PASS; locked Definition resolve PASS; Blender 4.5.13 install PASS; canonical Master + review tiles IN PROGRESS.
+- Shared infrastructure changed within D-126 scope, therefore mandatory regression set is T-025 / T-026 / T-027 / T-028 / T-029.
+- First-article acceptance remains Product Owner-gated.
+
+
+## 2026-09-24｜T-030 Blocker Disclosure #2｜Actions Timeout
+
+- Status: **BLOCKED / FIRST ARTICLE NOT ACCEPTABLE YET**.
+- Run: `35963282233` = **CANCELLED by job timeout**.
+- Timeout boundary: workflow job `timeout-minutes: 35`.
+- Completed before timeout:
+  - T-030 locked Definition resolution PASS.
+  - Blender 4.5.13 PASS.
+  - canonical Master / reopen / mutation / four instance-section builds / Review Board PASS.
+  - T-030 validation = **91/91 PASS**.
+  - canonical .blend SHA-256 = `942472630b0998797e9ef3694294fc2ba25c461da1e3df504ee9a56397ecb846`.
+  - semantic geometry signature = `b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2`.
+  - T-025 / T-026 / T-027 / T-028 shared regressions PASS.
+- Incomplete:
+  - T-029 shared regression did not finish.
+  - minimal-sufficient final assertion and artifact uploads were skipped because the job was cancelled.
+- Root cause: adding mandatory T-029 regression increased valid regression runtime beyond the existing 35-minute job limit; this is a capacity/time-budget blocker, not a T-030 geometry or validation failure.
+- Recommended minimal recovery: change only shared workflow job timeout from **35 → 50 minutes**, then rerun. This changes shared workflow infrastructure and therefore requires Product Owner approval under RC-022.
+
+
+## 2026-09-24｜T-030 Blocker Disclosure #3｜GitHub Actions Pre-Step Failure
+
+- Product Owner approved D-127 minimal timeout recovery.
+- T-030 branch commit: `a8f195822a96b05bc206cd463c057885c47e2bb1`.
+- Verified diff from prior runnable head: exactly one workflow line changed: `timeout-minutes: 35` → `50`.
+- Recovery Run `35977160199` attempt 1: **FAILURE before any job step**; job has zero steps and no downloadable log.
+- One minimal direct rerun was attempted with no code/config changes.
+- Run `35977160199` attempt 2: **FAILURE before any job step** again.
+- Cross-check: unrelated `Project Dashboard V2 Sync` runs on main (`35976501355`, `35977140275`, `35977387060`) also fail within seconds with zero job steps, while earlier run `35963731352` succeeded.
+- Conclusion: current blocker is not T-030 geometry/validator/workflow logic; it is GitHub Actions execution availability at repository/account/service level.
+- Specific GitHub-side cause is not exposed by the available connector. Possible account-side causes include Actions usage/billing/spending-limit availability; service-side scheduling is also possible. No such cause is asserted without UI/account evidence.
+- T-030 previous engineering evidence remains valid but incomplete for acceptance: main validation 91/91 PASS; T-025–T-028 regressions PASS; T-029 regression/artifact closure incomplete.
+- STOP: do not change T-030 architecture or workflow further until ordinary Actions jobs can start again.
+
+
+## 2026-09-24｜T-030 Blocker Root Cause Confirmed｜GitHub Billing / Spending Limit
+
+- GitHub Actions UI annotation supplied by Product Owner confirms:
+  - job not started because recent account payments have failed **or**
+  - account spending limit needs to be increased;
+  - GitHub directs the account owner to **Billing & plans**.
+- This explains both T-030 Run `35977160199` and unrelated Dashboard runs failing within seconds with zero steps.
+- Classification: **EXTERNAL ACCOUNT-SIDE GITHUB ACTIONS EXECUTION GATE**.
+- Not a T-030 geometry, validator, Master Definition, workflow syntax, or timeout failure.
+- Do not modify T-030 code further.
+- Resume condition: Billing & plans issue resolved and ordinary GitHub Actions jobs can start again.
+- After unblock: rerun T-030 at existing `timeout-minutes: 50`; require T-030 PASS + T-025..T-029 regression PASS + artifact upload before first-article review.
+
+
+## 2026-09-24｜T-030 First Article Run 35977160199｜SUCCESS
+
+- Run: `35977160199` / attempt 3.
+- Head: `a8f195822a96b05bc206cd463c057885c47e2bb1`.
+- Result: **SUCCESS**.
+- T-030 main validation: PASS.
+- T-025 / T-026 / T-027 / T-028 / T-029 shared regressions: PASS.
+- Minimal formal artifact assertion: PASS.
+- Shared regression evidence upload: PASS.
+- Formal V2 first-article artifact upload: PASS.
+- First-article artifact: `P3_3_T-030_MASTER_V2_FIRST_ARTICLE_V001` / Artifact ID `10800439343`.
+- Shared regression artifact: `P3_3_MASTER_V2_SHARED_REGRESSION` / Artifact ID `10801150421`.
+- Current boundary: **ENGINEERING COMPLETE / PENDING PRODUCT OWNER FIRST-ARTICLE REVIEW**.
+- Not yet authorized: first-article acceptance, formal materialization, Catalog/V008 approved binding, PR #18 merge, Stage1 PASS, Stage2, T-018 resume.
+
+
+## 2026-09-24｜T-030 D-129 Formalization｜Materialization PASS / Final Actions Gate BLOCKED
+
+- Product Owner authorized formalization / Catalog + V008 binding / PR #18 merge under D-129, conditional on final PASS.
+- One-time accepted Artifact materialization Run `35986418607`: **SUCCESS**.
+- Accepted source Artifact: `10800439343`; source Run `35977160199` attempt 3.
+- Exact formal repo outputs materialized: Semantic / Validation / Review Board.
+- Approved canonical .blend SHA `199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91` verified; .blend not committed.
+- Catalog candidate: 16 approved.
+- V008/CURRENT 大角梁: 4/4 bound to `CMP-FRAME-DAJIAOLIANG-001_MASTER`.
+- Candidate approved-master-covered Registry rows: 127; Stage1 candidate 16/28 = 57.1%.
+- Post-materialization bot-triggered checks:
+  - Master V2 Run `35986447914`: action_required/failure, zero jobs.
+  - Registry Excel Run `35986447868`: action_required/failure, zero jobs.
+- Minimal recovery attempted: user-authored status commits + one PR #18 close→reopen. No runnable latest-head final checks were created.
+- Available GitHub connector has no action to approve an `action_required` workflow run.
+- STOP: PR #18 remains open/draft and must not merge until manual GitHub UI approval enables latest-head Master V2 final regression + Registry Excel Sync and both PASS.
