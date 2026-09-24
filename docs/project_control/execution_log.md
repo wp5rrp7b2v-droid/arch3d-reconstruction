@@ -1208,3 +1208,14 @@ Do not restart T-018 by default.
 - Canonical sources are already T-030 closed: `16 / 28`, `57.1%`; generator resolves next target dynamically from Coverage Matrix.
 - D-131 minimal repair: replace only stale hard-coded marker checks with canonical-data-driven validation.
 - No Master / Registry / Catalog / evidence semantics changed.
+
+
+## 2026-09-24｜Dashboard V2 D-131 Repair Closure
+
+- Dashboard Sync Run `36005017161`: **SUCCESS**.
+- Generator: PASS.
+- Dynamic current-state validation: **PASS**.
+- Validated markers: `16 / 28`, `57.1%`, `下一目标：子角梁`, `T-018 HOLD`.
+- Root cause permanently removed: validation no longer hard-codes the superseded T-029 state.
+- Dashboard remains DERIVED_VISUALIZATION / non-authoritative.
+- T-030 closure remains unchanged and authoritative.

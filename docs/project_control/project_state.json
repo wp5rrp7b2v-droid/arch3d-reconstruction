@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R217",
+  "state_revision": "R218",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED / DASHBOARD V2 DERIVED VALIDATOR REPAIR D-131 EXECUTING / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED / DASHBOARD V2 SYNC PASS D-131 / NEXT=子角梁 SOURCE READINESS / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No T-030 blocker. Derived Dashboard V2 sync is under minimal D-131 validator repair after stale hard-coded markers caused sync validation failure.",
+  "blocker": "No active blocker. T-030 is closed; Dashboard V2 derived sync validator repair D-131 passed.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -63,8 +63,8 @@
   },
   "current_task": {
     "id": "NONE",
-    "name": "P3.3 V002 Stage 1｜Next Master selection pending",
-    "status": "T-030 CLOSED / 16 OF 28 APPROVED / DASHBOARD DERIVED SYNC REPAIR EXECUTING"
+    "name": "P3.3 V002 Stage 1｜Next Master selection",
+    "status": "T-030 CLOSED / 16 OF 28 APPROVED / NEXT CANDIDATE=子角梁 / SOURCE READINESS CHECK NOT YET STARTED"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -471,13 +471,13 @@
   "latest_material_decision": {
     "id": "D-131",
     "date": "2026-09-24",
-    "decision": "Repair only the derived Dashboard V2 workflow validator so current-state markers are computed from canonical Registry + Coverage Matrix instead of stale hard-coded T-029 values; no authority or production-data change."
+    "decision": "Dashboard V2 derived validator repaired and verified by Run 36005017161 SUCCESS. Current-state validation is now canonical-data-driven; no authority or production-data semantics changed."
   },
   "latest_material_review": {
     "date": "2026-09-24",
-    "result": "T-030 CLOSED / MERGED_TO_MAIN / MAIN VERIFIED",
-    "evidence": "Materialization 35986418607 SUCCESS; Excel Sync 36000242318 SUCCESS; final regression 36000242504 SUCCESS / 97/97; shared regressions T-025..T-029 ALL PASS; PR #18 merge b249a36850e097564bac0a96692ba2897af232ac.",
-    "decision_required": "NONE FOR T-030"
+    "result": "T-030 CLOSED + DASHBOARD DERIVED SYNC PASS",
+    "evidence": "T-030 D-130 closed on main. Dashboard V2 Sync Run 36005017161 SUCCESS; validation markers PASS: 16/28, 57.1%, next target 子角梁, T-018 HOLD.",
+    "decision_required": "NONE"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -535,14 +535,14 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Complete Dashboard V2 derived sync under D-131, verify 16/28 = 57.1% and next target from Coverage Matrix, then select the next missing Stage1 Master. Do not start Stage2 or resume T-018.",
+  "next_action": "Before starting the next T-task, perform the lightweight Source Readiness Check for 子角梁 under RC-022/D-099/D-076. Do not start Stage2 or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R186 / D-106; R187 local-sync closure recorded after A1 LFS publication",
+    "refresh_status": "CURRENT / R218 / D-131 / RUN 36005017161 SUCCESS",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -654,7 +654,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / NEXT=大角梁 SOURCE+VISUAL GATE",
+    "status": "ACTIVE / T-021..T-030 CLOSED / 16 OF 28 MASTERS APPROVED / NEXT=子角梁 SOURCE READINESS",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -901,7 +901,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "大角梁 / MATRIX PRIORITY 10 / D-099 + D-076 GATE REQUIRED / NO T-TASK YET"
+    "next_master_candidate": "子角梁 / MATRIX NEXT / SOURCE READINESS CHECK REQUIRED / NO T-TASK YET"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -929,7 +929,7 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-030 D-130 BINDING CLOSED",
+    "status": "ACTIVE / T-030 D-130 BINDING CLOSED / 16 OF 28",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
@@ -946,7 +946,7 @@
     ],
     "approval_authority": "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json",
     "excel_generator_version": "1.0.2",
-    "excel_sync_run": 35860792076,
+    "excel_sync_run": 36003187429,
     "excel_sync_result": "SUCCESS",
     "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure."
   },
