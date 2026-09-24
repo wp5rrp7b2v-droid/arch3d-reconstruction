@@ -43,6 +43,7 @@ def main():
         ap.add_argument("--"+n.replace("_","-"),dest=n,required=True)
     ap.add_argument("--role-a")
     ap.add_argument("--role-b")
+    ap.add_argument("--instance-section-dir")
     a=ap.parse_args()
     d=load(a.definition); c=load(a.canonical); r=load(a.reopen)
     lm=load(a.length); wm=load(a.width); tm=load(a.thickness); rs=load(a.restore)
@@ -66,8 +67,15 @@ def main():
     ck("06_component_identity",c["component_id"]==d["component_id"] and c["master_id"]==d["master_id"] and c["master_version"]==d["master_version"])
     ck("07_instance_count",len(items)==rb["physical_instance_count"])
 
+    instance_sections=d.get("instance_section_binding_contract")
     role_cfg=d.get("registry_role_counts")
-    if role_cfg:
+    if instance_sections:
+        mappings=instance_sections.get("instances",[])
+        by_id={x.get("id"):x for x in items}
+        ck("08_instance_section_mapping_count",len(mappings)==len(items)==rb["physical_instance_count"])
+        ck("09_instance_section_registry_identity",
+           all(m.get("registry_id") in by_id and by_id[m.get("registry_id")].get("location")==m.get("location") for m in mappings))
+    elif role_cfg:
         matched_ids=set()
         role_ok=True
         for role,cfg in role_cfg.items():
@@ -92,7 +100,16 @@ def main():
 
     section_strings=[str(x.get("section_mm","")) for x in items]
     section_binding=d.get("registry_section_binding_contract")
-    if section_binding and section_binding.get("mode")=="SEMANTIC_MEASUREMENT_STATE_WITH_MASTER_MEAN":
+    if instance_sections and instance_sections.get("mode")=="DIRECT_LOCKED_LOCATION_SECTION":
+        fam=instance_sections["family_reference_section_mm"]
+        tokens=[str(x) for x in instance_sections.get("registry_family_summary_tokens",[])]
+        ck("10_registry_family_summary_binding",
+           near(fam["width"],w) and near(fam["thickness"],h) and
+           all(all(tok in s for tok in tokens) for s in section_strings))
+        ck("10A_family_mean_reference_only",
+           instance_sections.get("family_reference_only") is True and
+           instance_sections.get("family_mean_must_not_overwrite_instances") is True)
+    elif section_binding and section_binding.get("mode")=="SEMANTIC_MEASUREMENT_STATE_WITH_MASTER_MEAN":
         measured_token=section_binding["measured_full_section_token"]
         unknown_token=section_binding["unknown_thickness_token"]
         measured=[s for s in section_strings if measured_token in s]
@@ -130,6 +147,35 @@ def main():
     ck("23_thickness_mutation",near(td[0],cd[0]) and near(td[1],cd[1]) and not near(td[2],cd[2]))
     ck("24_binary_sha",digest(a.asset)==c["canonical_blend_sha256"] and len(c["canonical_blend_sha256"])==64)
     ck("25_blender_version",str(c["blender_version"]).startswith("4.5.13"))
+
+    if instance_sections:
+        ck("IS01_semantic_preserves_instance_section_contract",c.get("instance_section_binding_contract")==instance_sections)
+        ck("IS02_zero_geometry_variants",instance_sections.get("geometry_variant_count")==0)
+        ck("IS03_same_master_required",instance_sections.get("same_master_required") is True)
+        ck("IS04_direct_mapping_locked",
+           rb.get("sample_to_instance_mapping")=="DIRECT_LOCKED_BY_A1_LOCATION_LABELS")
+        if not a.instance_section_dir:
+            raise AssertionError("instance-section semantics required but --instance-section-dir not supplied")
+        idir=Path(a.instance_section_dir)
+        family=instance_sections["family_reference_section_mm"]
+        generated=[]
+        for m in instance_sections.get("instances",[]):
+            p=idir/(m["fixture_id"]+".json")
+            ck("IS_"+m["fixture_id"]+"_semantic_exists",p.exists())
+            s=load(p)
+            dd=dims(s)
+            ck("IS_"+m["fixture_id"]+"_identity",
+               s["component_id"]==d["component_id"] and s["master_id"]==d["master_id"] and s["master_version"]==d["master_version"])
+            ck("IS_"+m["fixture_id"]+"_section",
+               near(dd[0],gc["canonical_reference_length_mm"]) and near(dd[1],m["width_mm"]) and near(dd[2],m["thickness_mm"]))
+            generated.append((float(dd[1]),float(dd[2])))
+        ck("IS90_all_direct_sections_generated",len(generated)==len(instance_sections.get("instances",[])))
+        ck("IS91_family_mean_not_collapsed",
+           any(not (near(wi,family["width"]) and near(hi,family["thickness"])) for wi,hi in generated))
+        ck("IS92_no_duplicate_master_identity",
+           len({load(idir/(m["fixture_id"]+".json"))["master_id"] for m in instance_sections.get("instances",[])})==1)
+        ck("IS93_mapping_immutable_without_decision",
+           instance_sections.get("direct_mapping_replaceable_without_new_decision") is False)
 
     rc=get_review_contract(d); panels=rc["required_panels"]; review=Path(a.review_dir)
     ck("26_required_panels_complete",all((review/(x+".png")).exists() and (review/(x+".png")).stat().st_size>1000 for x in panels))
@@ -280,6 +326,7 @@ def main():
       "section_profile_state":c.get("section_profile_state"),
       "section_envelope_historical_claim":c.get("section_envelope_historical_claim"),
       "source_numeric_conflict":c.get("source_numeric_conflict"),
+      "instance_section_binding_contract":c.get("instance_section_binding_contract"),
       "endpoint_resolver_contract":c.get("endpoint_resolver_contract"),
       "endpoint_fixture_results":c.get("endpoint_fixture_results"),
       "reconstruction_policy":c.get("reconstruction_policy"),
