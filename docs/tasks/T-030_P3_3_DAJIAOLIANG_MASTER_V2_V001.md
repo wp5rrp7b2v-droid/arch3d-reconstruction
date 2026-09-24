@@ -532,3 +532,23 @@ Still requires separate Product Owner authorization:
 - PR merge
 - Stage1 PASS / Stage2
 - T-018 resume
+
+
+## 21. Product Owner first-article acceptance / D-128
+
+Product Owner reviewed the formal Review Board and explicitly approved the T-030 first article on 2026-09-24.
+
+Accepted evidence:
+- Run `35977160199` attempt 3: **SUCCESS**
+- main validation: **91/91 PASS**
+- shared regression T-025..T-029: **ALL PASS**
+- minimal formal artifact assertion: **PASS**
+- first-article Artifact ID: `10800439343`
+- shared regression Artifact ID: `10801150421`
+- accepted canonical .blend SHA-256: `199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91`
+- semantic geometry signature: `b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2`
+- Semantic JSON SHA-256: `ef69a45735415c618bdfe995181d545e231674b12476af119f92b8d1da610617`
+- Validation JSON SHA-256: `8ef4970b6b3b353c5b58a94248a6d978f5ac89e10e03e0ad82ebc9c155911062`
+- Review Board SHA-256: `2398bff3922f3a6373a7160642d787e1b797911c758c558acfc4a92e58679fff`
+
+This acceptance does **not** authorize formal materialization, Catalog/V008 approved binding, PR #18 merge, Stage1 PASS, Stage2, or T-018 resume.
