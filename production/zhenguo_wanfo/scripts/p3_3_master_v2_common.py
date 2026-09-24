@@ -257,7 +257,7 @@ def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
       f'Visual source dimension authority: {dimension_authority}',
       'Historical full length: UNKNOWN / null',
       f'Section profile: {"UNKNOWN / ENVELOPE NOT HISTORICAL" if profile_unknown else "DEFINED"}',
-      'Sample-to-instance mapping: UNKNOWN',
+      f'Sample-to-instance mapping: {d.get("registry_boundary",{}).get("sample_to_instance_mapping","UNKNOWN")}',
       'Hidden joinery/end geometry: UNKNOWN / DEFERRED'
     ])
     required=set(get_review_contract(d)["required_panels"])
@@ -308,6 +308,22 @@ def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
           'Joinery/end geometry: DEFERRED'
         ])
 
+    instance_sections=d.get("instance_section_binding_contract")
+    if "END_SECTION" in required and instance_sections:
+        fam=instance_sections["family_reference_section_mm"]
+        lines=[
+          f'FAMILY REFERENCE ONLY: {fam["width"]:.1f} x {fam["thickness"]:.1f} mm',
+          'ONE SHARED MASTER / ZERO GEOMETRY VARIANT',
+          'DIRECT INSTANCE SECTIONS:'
+        ]
+        for x in instance_sections.get("instances",[]):
+            lines.append(f'{x["fixture_id"]} / {x["location"]}: {x["width_mm"]:.1f} x {x["thickness_mm"]:.1f} mm / DIRECT MEASURED')
+        lines += [
+          'Family mean MUST NOT overwrite direct instance measurements',
+          'Rectangular outline is Stage1 bounded-envelope representation'
+        ]
+        text_page(review/"END_SECTION.png","MASTER V2 / END SECTION + INSTANCE SECTIONS",lines)
+
     endpoint_results=resolve_endpoint_fixtures(d)
     if "DIMENSION_AND_PARAMETRIC_LENGTH" in required:
         text_page(review/"DIMENSION_AND_PARAMETRIC_LENGTH.png","MASTER V2 / DIMENSION + PARAMETRIC LENGTH",[
@@ -335,13 +351,17 @@ def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
             ]
         text_page(review/"PLACEMENT_AND_ENDPOINT_LOGIC.png","MASTER V2 / PLACEMENT + ENDPOINT LOGIC",lines)
     if "SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY" in required:
-        text_page(review/"SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY.png","MASTER V2 / SOURCE + RECONSTRUCTION BOUNDARY",[
+        boundary_lines=[
           'EVIDENCE LOCKED: identity / count / measured section / structural layer',
           'RECONSTRUCTED DESIGN: endpoint placement / derived length / orientation / simplified flat ends',
           'NOT CLAIMED: exact 963 full length / angle / historical-original joinery',
           'UNKNOWN historical metadata does NOT automatically block required production geometry',
           'Reconstructed design remains explicit, replaceable, and source-consistent'
-        ])
+        ]
+        if instance_sections:
+            boundary_lines.insert(1,'EVIDENCE LOCKED: location-specific instance sections remain direct and must not collapse to family mean')
+            boundary_lines.append('RELATED IDENTITIES remain separate; this Master does not absorb adjacent component families')
+        text_page(review/"SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY.png","MASTER V2 / SOURCE + RECONSTRUCTION BOUNDARY",boundary_lines)
 
 def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None,thickness_mm=None,role=None):
     import bpy
@@ -385,6 +405,7 @@ def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None
       "registry_role_counts":d.get("registry_role_counts"),
       "assembly_semantics":d.get("assembly_semantics"),
       "source_numeric_conflict":d.get("source_numeric_conflict"),
+      "instance_section_binding_contract":d.get("instance_section_binding_contract"),
       "reconstruction_policy":d.get("reconstruction_policy"),
       "endpoint_resolver_contract":d.get("endpoint_resolver_contract"),
       "endpoint_fixture_results":resolve_endpoint_fixtures(d),
