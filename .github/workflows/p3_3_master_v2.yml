@@ -21,7 +21,7 @@ permissions:
 jobs:
   first-article:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 50
     env:
       BLENDER_DIR: /tmp/blender-4.5.13-linux-x64
       BLENDER: /tmp/blender-4.5.13-linux-x64/blender
