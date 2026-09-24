@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R212",
+  "state_revision": "R213",
   "last_updated": "2026-09-24",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 ENGINEERING COMPLETE / FIRST ARTICLE SUCCESS / PENDING PRODUCT OWNER REVIEW / PR #18 DRAFT / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 FIRST ARTICLE PRODUCT OWNER APPROVED D-128 / FORMALIZATION NOT AUTHORIZED / PR #18 DRAFT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": true,
-  "blocker": "No active technical blocker. T-030 first-article Run 35977160199 attempt 3 completed SUCCESS. Product Owner first-article acceptance remains required before formalization/Catalog+V008 binding/merge.",
+  "blocker": "No technical blocker. T-030 first article is Product Owner approved under D-128. Formal materialization/Catalog+V008 approved binding/PR #18 merge remain separately unauthorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "T-030",
     "name": "P3_3_DAJIAOLIANG_MASTER_V2_V001｜大角梁 Master 首件生产",
-    "status": "ENGINEERING COMPLETE / FIRST ARTICLE SUCCESS / PENDING PRODUCT OWNER REVIEW / PR #18 DRAFT"
+    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-128 / FORMALIZATION NOT AUTHORIZED / PR #18 DRAFT"
   },
   "proposed_next_task": {
     "id": "T-030-FIRST-ARTICLE",
@@ -386,7 +386,7 @@
       "next_authorization": "NONE / T-029 CLOSED"
     },
     "dajiaoliang": {
-      "status": "FIRST ARTICLE SUCCESS / ENGINEERING COMPLETE / PENDING PRODUCT OWNER REVIEW",
+      "status": "FIRST ARTICLE PRODUCT OWNER APPROVED D-128 / FORMALIZATION NOT AUTHORIZED",
       "component": "大角梁",
       "component_id": "CMP-FRAME-DAJIAOLIANG-001",
       "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
@@ -427,7 +427,10 @@
       "first_article_attempt": 3,
       "first_article_artifact_id": 10800439343,
       "shared_regression_artifact_id": 10801150421,
-      "first_article_validation": "PASS"
+      "first_article_validation": "PASS",
+      "accepted_canonical_blend_sha256": "199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91",
+      "semantic_geometry_signature": "b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2",
+      "first_article_approval_decision": "D-128"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -452,15 +455,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-127",
+    "id": "D-128",
     "date": "2026-09-24",
-    "decision": "Approve minimal T-030 timeout recovery only: p3_3_master_v2.yml timeout 35→50, no other logic/architecture/scope change, then rerun full first article."
+    "decision": "Product Owner approved T-030 first article after reviewing Review Board. Accepted Run 35977160199 attempt 3 and Artifact 10800439343. Formalization/Catalog+V008 binding/PR #18 merge remain separately gated."
   },
   "latest_material_review": {
     "date": "2026-09-24",
-    "result": "T-030 FIRST ARTICLE SUCCESS / ENGINEERING COMPLETE PENDING PRODUCT OWNER REVIEW",
-    "evidence": "Run 35977160199 attempt 3 SUCCESS. T-030 main validation PASS; T-025..T-029 shared regression PASS; minimal formal artifact assertion PASS; formal V2 first-article artifact upload PASS; shared regression evidence upload PASS. First-article Artifact ID 10800439343; shared regression Artifact ID 10801150421.",
-    "decision_required": "PRODUCT OWNER FIRST-ARTICLE ACCEPTANCE"
+    "result": "T-030 FIRST ARTICLE PRODUCT OWNER APPROVED",
+    "evidence": "Run 35977160199 attempt 3 SUCCESS; 91/91 PASS; T-025..T-029 regressions ALL PASS; artifact 10800439343 accepted; canonical blend SHA 199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91.",
+    "decision_required": "SEPARATE AUTHORIZATION FOR FORMAL MATERIALIZATION / CATALOG+V008 BINDING / PR #18 MERGE"
   },
   "daily_closing_audit": {
     "date": "2026-09-20",
@@ -518,7 +521,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Product Owner reviews T-030 first-article evidence. If approved, record acceptance, then proceed to formal materialization/Catalog+V008 binding and PR #18 merge only under separate authorization boundary. Do not start Stage2 or resume T-018.",
+  "next_action": "Await Product Owner authorization for T-030 formalization/publication closure: exact materialization, Catalog+V008 approved binding, derived Registry Excel/final regression as required, then PR #18 merge. Do not start Stage2 or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
