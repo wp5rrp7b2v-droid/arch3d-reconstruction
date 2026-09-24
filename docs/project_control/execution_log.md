@@ -1052,3 +1052,16 @@ Do not restart T-018 by default.
 - No new Product Owner decision required; D-087 remains latest formal decision.
 - No new T-task created.
 - T-018 remains HOLD.
+
+
+## 2026-09-24｜T-030 Engineering Start
+
+- Product Owner authorization: **D-126 / 开始 T-030**.
+- Task: `T-030｜P3_3_DAJIAOLIANG_MASTER_V2_V001`.
+- Branch: `codex/t030-p3-3-dajiaoliang-master-v2-v001`.
+- Locked instance sections: SE 240×210 / NE 216×187 / SW 218×206 / NW 226×199 mm.
+- Family reference specimen: 1000×225×200.5 mm; 1000 mm non-historical only.
+- Execution architecture: Master V2 / shared parametric Master / instance-section parameters / endpoint-driven placement.
+- Shared infrastructure policy: reuse first; if direct instance-section mapping cannot be expressed, only a minimal generic Definition-driven extension is permitted; T-025–T-029 regression mandatory if shared infrastructure changes.
+- Current boundary: first-article execution only. Acceptance/formalization/merge remain unauthorized.
+- T-018: HOLD. Stage2: NOT AUTHORIZED.
