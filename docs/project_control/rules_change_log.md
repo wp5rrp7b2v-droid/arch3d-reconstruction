@@ -74,3 +74,11 @@
 
 `P3.3 completion target = source-consistent + structurally coherent + geometrically closed + buildable 3D model; UNKNOWN historical data may be supplemented by explicit replaceable RECONSTRUCTED_DESIGN instead of automatically blocking production.`
 
+
+
+| **RC-021** | **2026-09-24** | **建立 Minimal Sufficient Infrastructure / No Redundant Asset：优先复用既有 canonical assets、Registry/Evidence、shared builder/validator/workflow；只有当前明确生产需求无法由既有路径安全满足时才允许新增基础设施；派生/缓存/中间资产不得成为第二事实源，临时排障资产用后清理，禁止“以后可能有用”式永久资产。** | **2026-09-24 大角梁 Source Gate 中，LFS/页面读取异常一度诱发 Bridge/TXT cache/OCR 等过度方案；Product Owner 明确要求不要为解决一个问题引入更大负担与冗余资产。** | **ACTIVE / MINIMAL-SUFFICIENT INFRASTRUCTURE / D-123** |
+| **RC-022** | **2026-09-24** | **建立 Execution Path Blocker Immediate Disclosure：原执行路径一旦确认 blocked，立即停止以“执行中”表述并向 Product Owner 报告 blocker、已完成进度、对原任务影响和建议路径；排障/替代路径属于 exception handling；凡引入新工程、改变共享基础设施/流程、扩 scope 或改架构，必须先获批准；恢复后必须明确 BLOCKER CLEARED。NEXT Master 正式启动前增加轻量 Source Readiness Check。** | **2026-09-24 大角梁 A1 LFS 读取问题中发生延迟披露，Product Owner 明确指出应在确认阻塞时第一时间报告。** | **ACTIVE / BLOCKER IMMEDIATE DISCLOSURE / D-123** |
+
+`Infrastructure change = current necessity + minimal scope + no second authority`
+
+`Execution blocker = STOP normal execution → immediate PO disclosure → approved minimal recovery → BLOCKER CLEARED → resume`
