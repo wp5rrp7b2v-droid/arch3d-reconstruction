@@ -687,3 +687,25 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Derived Excel Run：35508113993 = SUCCESS。
 - Authority boundary：Master Catalog controls approval/version/SHA/publication; V008 exposes linkage/progress only。
 - Next Master：NOT STARTED。
+
+
+## 2026-09-24｜T-030 大角梁 Master 首件正式验收
+
+- Decision：**D-128 / Product Owner APPROVED**。
+- Task：T-030。
+- Master：`CMP-FRAME-DAJIAOLIANG-001_MASTER`。
+- Actions Run：`35977160199` attempt 3 = **SUCCESS**。
+- Reviewed head：`a8f195822a96b05bc206cd463c057885c47e2bb1`。
+- Machine validation：**91/91 PASS**。
+- Shared regression：T-025 / T-026 / T-027 / T-028 / T-029 = **ALL PASS**。
+- Minimal formal artifact assertion：PASS。
+- Formal first-article artifact upload：PASS。
+- Shared regression evidence upload：PASS。
+- Accepted first-article Artifact：`P3_3_T-030_MASTER_V2_FIRST_ARTICLE_V001` / ID `10800439343`。
+- Shared regression Artifact：ID `10801150421`。
+- Canonical `.blend` SHA-256：`199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91`。
+- Semantic geometry signature：`b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2`。
+- Review Board SHA-256：`2398bff3922f3a6373a7160642d787e1b797911c758c558acfc4a92e58679fff`。
+- Final：**T-030 FIRST ARTICLE PRODUCT OWNER APPROVED**。
+- Publication boundary：formal materialization + Catalog/V008 approved binding + PR #18 merge **NOT AUTHORIZED**。
+- Boundary：P3.3 Stage 1 remains ACTIVE；Stage2 not authorized；T-018 HOLD。
