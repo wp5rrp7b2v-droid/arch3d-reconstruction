@@ -532,3 +532,33 @@ Still requires separate Product Owner authorization:
 - PR merge
 - Stage1 PASS / Stage2
 - T-018 resume
+
+
+## 22. D-129 formalization / publication closure authorization
+
+Product Owner explicitly authorized T-030 formalization, Catalog + V008 binding, and PR #18 merge subject to final PASS gates.
+
+Exact accepted Artifact materialization:
+- one-time materialization Run: `35986418607` — **SUCCESS**
+- source first-article Run: `35977160199` / attempt 3
+- source Artifact: `10800439343`
+- canonical .blend SHA-256 verified but **NOT COMMITTED TO GIT**: `199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91`
+- exact Semantic SHA-256: `ef69a45735415c618bdfe995181d545e231674b12476af119f92b8d1da610617`
+- exact Validation SHA-256: `8ef4970b6b3b353c5b58a94248a6d978f5ac89e10e03e0ad82ebc9c155911062`
+- exact Review Board SHA-256: `2398bff3922f3a6373a7160642d787e1b797911c758c558acfc4a92e58679fff`
+- one-time workflow/helper removed in the same materialization commit.
+
+Formalization candidate:
+- Catalog approved count candidate: **16**
+- V008/CURRENT 大角梁 binding: **4/4** to `CMP-FRAME-DAJIAOLIANG-001_MASTER`
+- approved-Master-covered Registry records candidate: **127**
+- Stage1 candidate: **16/28 = 57.1%**
+
+Merge remains conditional on:
+- Registry Excel Sync PASS
+- latest-head T-030 Master V2 final validation PASS
+- T-025..T-029 shared regression PASS
+- minimal-sufficient surface PASS
+- pre-merge cross-check PASS
+
+Stage2 remains unauthorized and T-018 remains HOLD.
