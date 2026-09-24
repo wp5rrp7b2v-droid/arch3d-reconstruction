@@ -1,0 +1,18 @@
+Creator:         Pdg2Pic
+Producer:        FreePic2Pdf_Lib - v3.06
+CreationDate:    Tue Oct 13 10:37:27 2015 UTC
+ModDate:         Tue Oct 13 10:37:27 2015 UTC
+Custom Metadata: no
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           434
+Encrypted:       no
+Page size:       533.764 x 773.897 pts
+Page rot:        0
+File size:       84117628 bytes
+Optimized:       no
+PDF version:     1.5
