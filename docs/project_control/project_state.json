@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R225",
+  "state_revision": "R226",
   "last_updated": "2026-09-25",
-  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-031 PLACEMENT PROOF CLOSED / T-032 CONNECTION-AWARE COMPLETE ASSEMBLY PROOF CLOSED / RC-024 LOCKED / LOCAL SYNC REQUIRED BEFORE NEXT COMPONENT / NEXT AFTER SYNC 子角梁 / T-018 HOLD",
+  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-031+T-032 CLOSED / RC-024 LOCKED / LOCAL SYNC PASS AT d889002 / 子角梁 D-076 VISUAL-FORM GATE ACTIVE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 16 OF 28 MASTERS APPROVED / T-031+T-032 ARCHITECTURE PROOFS CLOSED / NO ACTIVE ENGINEERING TASK / LOCAL SYNC PENDING / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 16 OF 28 MASTERS APPROVED / 子角梁 D-076 VISUAL-FORM GATE ACTIVE / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 MASTER TASKS CLOSED / T-031 PLACEMENT PROOF CLOSED / T-032 CONNECTION-LAYER PROOF CLOSED / 16 OF 28 MASTERS APPROVED / RC-024 ACTIVE / LOCAL SYNC BEFORE NEXT COMPONENT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 MASTER TASKS CLOSED / T-031 PLACEMENT PROOF CLOSED / T-032 CONNECTION-LAYER PROOF CLOSED / 16 OF 28 MASTERS APPROVED / RC-024 ACTIVE / LOCAL SYNC BEFORE NEXT COMPONENT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 MASTER TASKS CLOSED / T-031+T-032 ARCHITECTURE PROOFS CLOSED / 16 OF 28 MASTERS APPROVED / RC-024 ACTIVE / 子角梁 D-076 ACTIVE / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 MASTER TASKS CLOSED / T-031+T-032 ARCHITECTURE PROOFS CLOSED / 16 OF 28 MASTERS APPROVED / RC-024 ACTIVE / 子角梁 D-076 ACTIVE / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "No engineering blocker. T-031/T-032 are merged and closed on GitHub; local main must fast-forward to the post-closure canonical main before the next Stage1 component begins.",
+  "blocker": "No active blocker. Initial local GitHub 443 timeout recovered on retry; fast-forward completed and LOCAL_HEAD == REMOTE_HEAD == d889002b5ea895eb8dc945fbaaef6b07b8dfb3d3.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,15 +62,15 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "NONE",
-    "name": "P3.3 V002 Stage 1",
-    "status": "ACTIVE GATE / NO ACTIVE ENGINEERING T-TASK / T-031+T-032 CLOSED / 16 OF 28 APPROVED / LOCAL SYNC REQUIRED BEFORE NEXT COMPONENT"
+    "id": "P3_3_ZIJIAOLIANG_VISUAL_FORM_GATE",
+    "name": "子角梁｜D-076 Visual/Form Gate",
+    "status": "ACTIVE / RESUMED FROM D-132 SOURCE READINESS PASS / PRE-ENGINEERING ONLY / NO BLENDER OR PRODUCTION BRANCH YET"
   },
   "proposed_next_task": {
-    "id": "POST_SYNC_NEXT_COMPONENT",
-    "name": "子角梁｜resume from D-132 source-readiness baseline",
-    "status": "AUTHORIZED SEQUENCE / NOT STARTED / START ONLY AFTER LOCAL SYNC PASS",
-    "prerequisite": "FAST-FORWARD LOCAL MAIN TO FINAL POST-R225 CANONICAL HEAD; then continue D-076 Visual/Form Gate → Master Spec → engineering task. Do not pause Stage1 for a full Connection Matrix."
+    "id": "POST_D076_ZIJIAOLIANG_MASTER_SPEC",
+    "name": "子角梁｜Stage1 Master Spec design",
+    "status": "PENDING D-076 GATE COMPLETION",
+    "prerequisite": "Complete Visual/Form Gate using D-132 A1/A2 evidence boundary; then lock Master Spec before any engineering T-task."
   },
   "last_completed_task": {
     "id": "T-030",
@@ -125,7 +125,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-031 PLACEMENT PROOF CLOSED / T-032 CONNECTION-AWARE COMPLETE ASSEMBLY PROOF CLOSED / RC-024 ACTIVE / LOCAL SYNC PENDING / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-031+T-032 CLOSED / RC-024 ACTIVE / 子角梁 D-076 ACTIVE / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -523,7 +523,7 @@
       "connector_geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
       "stage_advance": false
     },
-    "next_master_candidate": "子角梁 / D-132 SOURCE READINESS PASS / D-140 CONTINUE AFTER LOCAL SYNC / NOT STARTED"
+    "next_master_candidate": "子角梁 / D-132 SOURCE READINESS PASS / D-076 VISUAL-FORM GATE ACTIVE / ENGINEERING NOT AUTHORIZED"
   },
   "roof_control_audit_2026_09_17": {
     "status": "READ_ONLY / COMPLETE / B-STOP",
@@ -547,9 +547,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-140",
+    "id": "D-141",
     "date": "2026-09-25",
-    "decision": "Sequence locked: T-031/T-032 conclusions formalized and merged; local sync must complete next; then resume remaining Stage1 component production from 子角梁 D-132 baseline. Full Connection Matrix must not pause Master production."
+    "decision": "Local sync after T-031/T-032 closure is verified PASS at d889002b5ea895eb8dc945fbaaef6b07b8dfb3d3 despite one transient 443 timeout. Per D-140, Stage1 resumes with 子角梁 from D-132 into D-076 Visual/Form Gate; no Blender/production branch/engineering task is authorized until the gate and Master Spec are locked."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -613,7 +613,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "LOCAL SYNC FIRST. After local main matches final canonical main, resume Stage1 next component: 子角梁 from D-132 Source Readiness → D-076 Visual/Form Gate → Master Spec; integrate Connection Layer metadata incrementally. Do not start Stage2 or T-018.",
+  "next_action": "Continue 子角梁 D-076 Visual/Form Gate from D-132 Source Readiness. After gate PASS, lock Stage1 Master Spec; only then create/authorize the engineering T-task. Keep T-018 HOLD and Stage2 NOT AUTHORIZED.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1414,7 +1414,7 @@
     "precedence": "RC-020 + RC-023 override conflicting current-production interpretations of older labels; historical records remain unchanged."
   },
   "connection_layer_closure_2026_09_25": {
-    "status": "GITHUB CLOSED / LOCAL SYNC PENDING",
+    "status": "GITHUB CLOSED / LOCAL SYNC PASS",
     "decisions": [
       "D-138",
       "D-139",
@@ -1435,7 +1435,19 @@
     },
     "approved_master_count_unchanged": 16,
     "stage1_progress_unchanged": "16/28 / 57.1%",
-    "local_sync_required": true,
-    "next_after_sync": "子角梁 / resume D-132 → D-076 Visual/Form Gate"
+    "local_sync_required": false,
+    "next_after_sync": "子角梁 / resume D-132 → D-076 Visual/Form Gate",
+    "local_sync_head": "d889002b5ea895eb8dc945fbaaef6b07b8dfb3d3",
+    "local_sync_result": "PASS"
+  },
+  "post_t032_local_sync_2026_09_25": {
+    "status": "PASS / COMPLETE",
+    "decision_id": "D-141",
+    "local_branch": "main",
+    "local_head": "d889002b5ea895eb8dc945fbaaef6b07b8dfb3d3",
+    "remote_head": "d889002b5ea895eb8dc945fbaaef6b07b8dfb3d3",
+    "branch_status": "main...origin/main",
+    "transient_network_event": "Initial github.com:443 timeout occurred, then retry succeeded; no residual sync blocker.",
+    "next_stage1_action": "子角梁 D-076 Visual/Form Gate"
   }
 }
