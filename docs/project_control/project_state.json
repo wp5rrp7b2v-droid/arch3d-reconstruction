@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R222",
+  "state_revision": "R223",
   "last_updated": "2026-09-25",
-  "session_status": "SESSION START 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED CONFIRMED / NO NEXT TASK AUTHORIZED / PROJECT STATE CONSISTENCY REPAIRED / LOCAL SYNC PENDING / T-018 HOLD",
+  "session_status": "SESSION START 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED CONFIRMED / NO NEXT TASK AUTHORIZED / PROJECT STATE CONSISTENCY PASS / LOCAL SYNC PASS / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active cloud blocker. Daily close PASS. Local Mac synchronization and approved T-030 canonical .blend restore remain pending.",
+  "blocker": "No active cloud or local-sync blocker. T-030 approved canonical .blend is restored locally with exact SHA match; A1 Git LFS present; local main matched origin/main at sync checkpoint.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -571,7 +571,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "NEXT: complete local Mac fast-forward to latest GitHub main and restore/verify T-030 approved canonical .blend SHA 199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91 if not already present. Do not start T-031 or any next component without explicit Product Owner authorization.",
+  "next_action": "NO ACTIVE ENGINEERING TASK. Await Product Owner explicit authorization before any T-031 or next component work. If next work is 子角梁, resume from D-076 Visual/Form Gate; D-132 remains Source Readiness only.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1326,5 +1326,25 @@
     "canonical_current_state": "P3.3 V002 Stage1 ACTIVE / 16 OF 28 APPROVED / T-030 CLOSED / NO ACTIVE ENGINEERING TASK / T-018 HOLD / STAGE2 NOT AUTHORIZED / LOCAL SYNC PENDING",
     "historical_records_policy": "Historical daily-close/task snapshots are intentionally preserved unchanged.",
     "authority_change": false
+  },
+  "local_sync_2026_09_25": {
+    "status": "PASS / COMPLETE",
+    "decision_id": "D-136",
+    "local_repo_path": "/Users/caroline/中国古建筑3D复原",
+    "branch": "main",
+    "sync_checkpoint_head": "e0fb90fb07480a483a22bcfe96944071e54f77aa",
+    "local_equals_origin_at_checkpoint": true,
+    "project_state_verified": "R222 before closure record",
+    "a1_lfs_present": true,
+    "a1_lfs_oid_prefix": "94c2fedef6",
+    "t030_canonical_blend": {
+      "file": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-DAJIAOLIANG-001/CMP-FRAME-DAJIAOLIANG-001_MASTER_V001.blend",
+      "source_artifact_id": 10800439343,
+      "sha256": "199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91",
+      "sha_match": true,
+      "git_ignored": true
+    },
+    "tracked_worktree_clean": true,
+    "final_result": "PASS / LOCAL PRODUCTION ASSET RESTORED / NO ENGINEERING AUTHORITY CHANGE"
   }
 }
