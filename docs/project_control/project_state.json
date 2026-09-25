@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R221",
-  "last_updated": "2026-09-24",
-  "session_status": "DAILY CLOSE 2026-09-24 PASS / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED CONFIRMED / NO NEXT TASK AUTHORIZED / CLOUD CLOSED / LOCAL SYNC PENDING / T-018 HOLD",
+  "state_revision": "R222",
+  "last_updated": "2026-09-25",
+  "session_status": "SESSION START 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED CONFIRMED / NO NEXT TASK AUTHORIZED / PROJECT STATE CONSISTENCY REPAIRED / LOCAL SYNC PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 15 OF 28 MASTERS APPROVED / T-030 EXECUTING / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 16 OF 28 MASTERS APPROVED / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / NEXT MASTER=大角梁 / D-099 + D-076 GATE REQUIRED / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-029 CLOSED / 15 OF 28 MASTERS APPROVED / T-030 ENGINEERING EXECUTION AUTHORIZED D-126 / FIRST ARTICLE IN PROGRESS / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 CLOSED / 16 OF 28 MASTERS APPROVED / NO NEXT ENGINEERING TASK AUTHORIZED / D-099 + D-076 GATE REQUIRED FOR NEXT COMPONENT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 CLOSED / 16 OF 28 MASTERS APPROVED / NO ACTIVE ENGINEERING TASK / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,30 +64,30 @@
   "current_task": {
     "id": "NONE",
     "name": "P3.3 V002 Stage 1",
-    "status": "DAILY CLOSED / T-030 CLOSED / 16 OF 28 APPROVED / NO NEXT TASK AUTHORIZED"
+    "status": "ACTIVE GATE / NO ACTIVE ENGINEERING T-TASK / T-030 CLOSED / 16 OF 28 APPROVED / NO NEXT TASK AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-030-FIRST-ARTICLE",
-    "name": "T-030 大角梁 Master V2 首件",
-    "status": "EXECUTING",
-    "prerequisite": "D-124 + D-125 + D-126"
+    "id": "NONE",
+    "name": "NO NEXT ENGINEERING TASK AUTHORIZED",
+    "status": "NONE / D-133 + D-134 BOUNDARY",
+    "prerequisite": "PRODUCT OWNER EXPLICIT AUTHORIZATION REQUIRED; D-132 ZIJIAOLIANG SOURCE READINESS IS PRE-RESEARCH ONLY"
   },
   "last_completed_task": {
-    "id": "T-029",
-    "engineering_id": "P3_3_SHUZHU_MASTER_V2_V001",
-    "component": "蜀柱",
-    "status": "PASS / DELEGATED PRODUCT OWNER AUTHORITY / FORMAL DELIVERY CLOSED / PR #17 MERGED / D-119",
-    "github_pr_number": 17,
-    "merge_commit": "04d186bcfd0b4c898ea77f02ef0fec27f73bb08e",
-    "approved_actions_run": 35847859509,
-    "approved_validation": "79/79 PASS",
-    "final_head_actions_run": 35860792123,
-    "final_validation": "85/85 PASS",
-    "canonical_blend_sha256": "becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6",
-    "final_regenerated_blend_sha256": "09bbd5817f0e74c33f39a5a5998d1dfe05fcc56a374049a3f1292ab84be7aea0",
-    "semantic_geometry_signature": "301e5a8ecf45cdc586d701571be7415aa3eb9e3e0d02bbb8a6b82ebef3a64a40",
-    "first_article_artifact_id": 10744639697,
-    "final_regression_artifact_id": 10752080958
+    "id": "T-030",
+    "engineering_id": "P3_3_DAJIAOLIANG_MASTER_V2_V001",
+    "component": "大角梁",
+    "status": "CLOSED / D-128 APPROVED / D-129 FORMALIZED / PR #18 MERGED / D-130",
+    "github_pr_number": 18,
+    "merge_commit": "b249a36850e097564bac0a96692ba2897af232ac",
+    "approved_actions_run": 35977160199,
+    "approved_validation": "PASS",
+    "final_head_actions_run": 36000242504,
+    "final_validation": "97/97 PASS",
+    "canonical_blend_sha256": "199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91",
+    "final_regenerated_blend_sha256": "17744eeba659f59d62423f3a55f0153de814e2c9a626c2506718990d459bba4a",
+    "semantic_geometry_signature": "b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2",
+    "first_article_artifact_id": 10800439343,
+    "final_regression_artifact_id": 10808950352
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -125,7 +125,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 15 OF 28 MASTERS APPROVED / T-030 CONTRACT LOCKED D-125 / EXECUTION NOT AUTHORIZED / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -571,7 +571,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "NEXT SESSION: read latest GitHub main, then complete local Mac fast-forward and restore/verify T-030 approved canonical .blend SHA 199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91 if not already present. Do not start T-031 or any next component without explicit Product Owner authorization.",
+  "next_action": "NEXT: complete local Mac fast-forward to latest GitHub main and restore/verify T-030 approved canonical .blend SHA 199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91 if not already present. Do not start T-031 or any next component without explicit Product Owner authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1307,5 +1307,24 @@
       "sha256": "199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91",
       "final_regression_sha_not_canonical": "17744eeba659f59d62423f3a55f0153de814e2c9a626c2506718990d459bba4a"
     }
+  },
+  "project_state_consistency_repair_2026_09_25": {
+    "status": "PASS / CURRENT-STATE FIELDS NORMALIZED / NO ENGINEERING AUTHORITY CHANGE",
+    "decision_id": "D-135",
+    "repaired_from_revision": "R221",
+    "corrected_fields": [
+      "current_gate.status",
+      "current_gate.items.P3.3",
+      "current_gate.items.P3_3",
+      "current_task",
+      "proposed_next_task",
+      "last_completed_task",
+      "p3_3.status",
+      "p3_3.engineering_execution_authorized",
+      "next_action"
+    ],
+    "canonical_current_state": "P3.3 V002 Stage1 ACTIVE / 16 OF 28 APPROVED / T-030 CLOSED / NO ACTIVE ENGINEERING TASK / T-018 HOLD / STAGE2 NOT AUTHORIZED / LOCAL SYNC PENDING",
+    "historical_records_policy": "Historical daily-close/task snapshots are intentionally preserved unchanged.",
+    "authority_change": false
   }
 }
