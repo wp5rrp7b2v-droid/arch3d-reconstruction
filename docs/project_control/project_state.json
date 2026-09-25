@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R224",
+  "state_revision": "R225",
   "last_updated": "2026-09-25",
-  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED / RC-023 PRODUCTION EVIDENCE NON-BLOCKING LOCKED / NO NEXT TASK AUTHORIZED / LOCAL SYNC PASS / T-018 HOLD",
+  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-031 PLACEMENT PROOF CLOSED / T-032 CONNECTION-AWARE COMPLETE ASSEMBLY PROOF CLOSED / RC-024 LOCKED / LOCAL SYNC REQUIRED BEFORE NEXT COMPONENT / NEXT AFTER SYNC 子角梁 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 16 OF 28 MASTERS APPROVED / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 16 OF 28 MASTERS APPROVED / T-031+T-032 ARCHITECTURE PROOFS CLOSED / NO ACTIVE ENGINEERING TASK / LOCAL SYNC PENDING / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 CLOSED / 16 OF 28 MASTERS APPROVED / NO NEXT ENGINEERING TASK AUTHORIZED / D-099 + D-076 GATE REQUIRED FOR NEXT COMPONENT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 CLOSED / 16 OF 28 MASTERS APPROVED / NO ACTIVE ENGINEERING TASK / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 MASTER TASKS CLOSED / T-031 PLACEMENT PROOF CLOSED / T-032 CONNECTION-LAYER PROOF CLOSED / 16 OF 28 MASTERS APPROVED / RC-024 ACTIVE / LOCAL SYNC BEFORE NEXT COMPONENT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 MASTER TASKS CLOSED / T-031 PLACEMENT PROOF CLOSED / T-032 CONNECTION-LAYER PROOF CLOSED / 16 OF 28 MASTERS APPROVED / RC-024 ACTIVE / LOCAL SYNC BEFORE NEXT COMPONENT / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "No active cloud or local-sync blocker. T-030 approved canonical .blend is restored locally with exact SHA match; A1 Git LFS present; local main matched origin/main at sync checkpoint.",
+  "blocker": "No engineering blocker. T-031/T-032 are merged and closed on GitHub; local main must fast-forward to the post-closure canonical main before the next Stage1 component begins.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,13 +64,13 @@
   "current_task": {
     "id": "NONE",
     "name": "P3.3 V002 Stage 1",
-    "status": "ACTIVE GATE / NO ACTIVE ENGINEERING T-TASK / T-030 CLOSED / 16 OF 28 APPROVED / NO NEXT TASK AUTHORIZED"
+    "status": "ACTIVE GATE / NO ACTIVE ENGINEERING T-TASK / T-031+T-032 CLOSED / 16 OF 28 APPROVED / LOCAL SYNC REQUIRED BEFORE NEXT COMPONENT"
   },
   "proposed_next_task": {
-    "id": "NONE",
-    "name": "NO NEXT ENGINEERING TASK AUTHORIZED",
-    "status": "NONE / D-133 + D-134 BOUNDARY",
-    "prerequisite": "PRODUCT OWNER EXPLICIT AUTHORIZATION REQUIRED; D-132 ZIJIAOLIANG SOURCE READINESS IS PRE-RESEARCH ONLY"
+    "id": "POST_SYNC_NEXT_COMPONENT",
+    "name": "子角梁｜resume from D-132 source-readiness baseline",
+    "status": "AUTHORIZED SEQUENCE / NOT STARTED / START ONLY AFTER LOCAL SYNC PASS",
+    "prerequisite": "FAST-FORWARD LOCAL MAIN TO FINAL POST-R225 CANONICAL HEAD; then continue D-076 Visual/Form Gate → Master Spec → engineering task. Do not pause Stage1 for a full Connection Matrix."
   },
   "last_completed_task": {
     "id": "T-030",
@@ -125,7 +125,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
+    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-031 PLACEMENT PROOF CLOSED / T-032 CONNECTION-AWARE COMPLETE ASSEMBLY PROOF CLOSED / RC-024 ACTIVE / LOCAL SYNC PENDING / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -481,7 +481,49 @@
       "a1_locator": "PDF p88-89 / printed p73-74 / §2.3.1.7 / Fig 2-50 / actual Table 2-44",
       "a2_status": "AVAILABLE / official Wanfo Hall digital museum / 子角梁 end carries 套兽",
       "engineering_execution_authorized": false
-    }
+    },
+    "connection_layer_policy": {
+      "status": "LOCKED / ACTIVE",
+      "rule_id": "RC-024",
+      "decision_id": "D-139",
+      "contract": "docs/production/zhenguo_wanfo/P3_3_CONNECTION_LAYER_CONTRACT_V001.md",
+      "schema": "production/zhenguo_wanfo/assembly/P3_3_CONNECTION_LAYER_SCHEMA_V001.json",
+      "complete_assembly_rule": "Master A + explicit Connection Layer + Master B; body-to-body touching alone is insufficient.",
+      "allowed_connection_kinds": [
+        "PHYSICAL_CONNECTOR",
+        "JOINERY_FEATURE",
+        "CONTACT_INTERFACE"
+      ],
+      "missing_exact_historical_connection_geometry_policy": "RC-020 + RC-023 allow explicit replaceable RECONSTRUCTED_DESIGN / CONNECTOR_PROXY; no silent historicization.",
+      "future_stage1_policy": "Continue remaining Masters; incrementally register known interfaces/connection kinds; do not halt Master production for a full Matrix."
+    },
+    "t031": {
+      "status": "CLOSED / PLACEMENT_LAYER_PASS / OVERALL_ASSEMBLY_INCOMPLETE",
+      "decision_id": "D-138",
+      "pr_number": 23,
+      "merge_commit_sha": "fb13600f36acb66f3144b5d0ef5b9dc2261cf4da",
+      "canonical_run_id": 36094815356,
+      "validation": "12/12 PASS",
+      "artifact_id": 10846594498,
+      "conclusion": "Automatic two-Master placement/mutation/determinism proven; complete assembly not proven without Connection Layer."
+    },
+    "t032": {
+      "status": "CLOSED / CONNECTION_AWARE_COMPLETE_ASSEMBLY_PASS",
+      "decision_id": "D-139",
+      "pr_number": 24,
+      "merge_commit_sha": "bf3028da75d6093b01be468af4845a4e1d319cde",
+      "canonical_run_id": 36095981034,
+      "canonical_validation": "18/18 PASS",
+      "canonical_artifact_id": 10846909100,
+      "final_regression_run_id": 36117976721,
+      "final_regression_result": "SUCCESS",
+      "final_regression_artifact_id": 10855792610,
+      "connection_id": "CONN-SAN-DOU-UPPER6-FOUR-001",
+      "assembly_chain": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER → 散斗 connector proxy → CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "connector_geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
+      "stage_advance": false
+    },
+    "next_master_candidate": "子角梁 / D-132 SOURCE READINESS PASS / D-140 CONTINUE AFTER LOCAL SYNC / NOT STARTED"
   },
   "roof_control_audit_2026_09_17": {
     "status": "READ_ONLY / COMPLETE / B-STOP",
@@ -505,9 +547,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-137",
+    "id": "D-140",
     "date": "2026-09-25",
-    "decision": "RC-023 locked: missing Northern-Song/963 historical originals alone cannot block P3.3 production. Current reliable sources plus explicit replaceable RECONSTRUCTED_DESIGN may continue; only unresolved direct conflicts, undefinable identity/topology, no verifiable closure, or contradiction of locked direct evidence may HOLD/STOP."
+    "decision": "Sequence locked: T-031/T-032 conclusions formalized and merged; local sync must complete next; then resume remaining Stage1 component production from 子角梁 D-132 baseline. Full Connection Matrix must not pause Master production."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -571,7 +613,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "NO ACTIVE ENGINEERING TASK. Await Product Owner explicit authorization before any T-031 or next component work. If next work is 子角梁, resume from D-076 Visual/Form Gate; D-132 remains Source Readiness only.",
+  "next_action": "LOCAL SYNC FIRST. After local main matches final canonical main, resume Stage1 next component: 子角梁 from D-132 Source Readiness → D-076 Visual/Form Gate → Master Spec; integrate Connection Layer metadata incrementally. Do not start Stage2 or T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1370,5 +1412,30 @@
       "DEFERRED_INSUFFICIENT_EVIDENCE"
     ],
     "precedence": "RC-020 + RC-023 override conflicting current-production interpretations of older labels; historical records remain unchanged."
+  },
+  "connection_layer_closure_2026_09_25": {
+    "status": "GITHUB CLOSED / LOCAL SYNC PENDING",
+    "decisions": [
+      "D-138",
+      "D-139",
+      "D-140"
+    ],
+    "rule_id": "RC-024",
+    "t031": {
+      "result": "PLACEMENT LAYER PASS ONLY",
+      "pr": 23,
+      "merge_sha": "fb13600f36acb66f3144b5d0ef5b9dc2261cf4da"
+    },
+    "t032": {
+      "result": "CONNECTION-AWARE COMPLETE ASSEMBLY PASS",
+      "pr": 24,
+      "merge_sha": "bf3028da75d6093b01be468af4845a4e1d319cde",
+      "final_regression_run": 36117976721,
+      "final_regression": "SUCCESS"
+    },
+    "approved_master_count_unchanged": 16,
+    "stage1_progress_unchanged": "16/28 / 57.1%",
+    "local_sync_required": true,
+    "next_after_sync": "子角梁 / resume D-132 → D-076 Visual/Form Gate"
   }
 }
