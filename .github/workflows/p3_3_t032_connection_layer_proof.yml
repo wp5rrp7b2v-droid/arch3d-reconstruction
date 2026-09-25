@@ -1,0 +1,98 @@
+name: P3.3 T-032 Connection Layer Complete Assembly Proof
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p3_3_t032_connection_layer_proof.yml'
+      - 'docs/tasks/T-032_P3_3_CONNECTION_LAYER_COMPLETE_ASSEMBLY_PROOF_V001.md'
+      - 'docs/production/zhenguo_wanfo/P3_3_CONNECTION_LAYER_CONTRACT_V001.md'
+      - 'production/zhenguo_wanfo/assembly/P3_3_CONNECTION_LAYER_SCHEMA_V001.json'
+      - 'production/zhenguo_wanfo/scripts/build_p3_3_connection_layer_proof_v001.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  complete-assembly-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      SCRIPT: production/zhenguo_wanfo/scripts/build_p3_3_connection_layer_proof_v001.py
+      OUT: artifacts/t032
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Boundary preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q 'PHYSICAL_CONNECTOR' production/zhenguo_wanfo/assembly/P3_3_CONNECTION_LAYER_SCHEMA_V001.json
+          grep -q 'RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY' production/zhenguo_wanfo/assembly/P3_3_CONNECTION_LAYER_SCHEMA_V001.json
+          grep -q 'full 隔架单栱 group completion' docs/tasks/T-032_P3_3_CONNECTION_LAYER_COMPLETE_ASSEMBLY_PROOF_V001.md
+          echo "T032_BOUNDARY_PASS"
+
+      - name: Install Blender 4.5.13
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions T032"             -o /tmp/blender.tar.xz             "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+
+      - name: Build TEST_A
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT/A/review"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" --             --mode build --case A             --blend "$OUT/A/T032_TEST_A.blend"             --semantic "$OUT/A/semantic.json"             --review-dir "$OUT/A/review"
+
+      - name: Build TEST_B mutation
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT/B/review"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" --             --mode build --case B             --blend "$OUT/B/T032_TEST_B.blend"             --semantic "$OUT/B/semantic.json"             --review-dir "$OUT/B/review"
+
+      - name: Deterministic TEST_A rebuild
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT/A_restore"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" --             --mode build --case A             --blend "$OUT/A_restore/T032_TEST_A_RESTORE.blend"             --semantic "$OUT/A_restore/semantic.json"
+
+      - name: Validate complete assembly
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" --             --mode validate             --a "$OUT/A/semantic.json"             --b "$OUT/B/semantic.json"             --restore "$OUT/A_restore/semantic.json"             --output "$OUT/validation.json"
+          python - "$OUT/validation.json" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1]))
+          assert d["status"]=="PASS"
+          assert d["check_count"]==18
+          assert d["stage_advance"] is False
+          print("T032_FINAL_PASS",d["test_a_connector_height_mm"],d["test_b_connector_height_mm"])
+          PY
+
+      - name: Upload proof
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T032_CONNECTION_LAYER_COMPLETE_ASSEMBLY_PROOF_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            artifacts/t032/A/T032_TEST_A.blend
+            artifacts/t032/A/semantic.json
+            artifacts/t032/A/review/*.png
+            artifacts/t032/B/T032_TEST_B.blend
+            artifacts/t032/B/semantic.json
+            artifacts/t032/B/review/*.png
+            artifacts/t032/A_restore/semantic.json
+            artifacts/t032/validation.json

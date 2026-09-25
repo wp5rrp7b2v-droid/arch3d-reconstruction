@@ -1,0 +1,65 @@
+{
+  "schema_version": "P3_3_CONNECTION_LAYER_V001",
+  "status": "PROOF_BOUND",
+  "allowed_connection_kinds": [
+    "PHYSICAL_CONNECTOR",
+    "JOINERY_FEATURE",
+    "CONTACT_INTERFACE"
+  ],
+  "required_fields": [
+    "connection_id",
+    "connection_kind",
+    "participants",
+    "structural_semantic",
+    "evidence_binding",
+    "geometry_classification",
+    "historical_claim",
+    "replaceable",
+    "interfaces",
+    "resolver",
+    "validation_tolerance_mm",
+    "prohibited_claims"
+  ],
+  "t032_proof": {
+    "connection_id": "CONN-SAN-DOU-UPPER6-FOUR-001",
+    "connection_kind": "PHYSICAL_CONNECTOR",
+    "connector_family": "散斗族",
+    "participants": {
+      "lower_master": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "connector_role": "SAN_DOU_SUPPORT",
+      "upper_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER"
+    },
+    "structural_semantic": "FOUR_CHUANFU_SUPPORTED_BY_SAN_DOU_ABOVE_UPPER_SIX_CHUANFU",
+    "evidence_binding": {
+      "source_id": "SRC-ZG-WF-001",
+      "binding_record": "docs/evidence/zhenguo_wanfo/P3_3_FOUR_CHUANFU_DIRECT_SOURCE_BINDING_V001.md",
+      "statement_level": "DIRECT_SOURCE_SEMANTIC"
+    },
+    "geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
+    "historical_claim": false,
+    "replaceable": true,
+    "registry_physical_instance_claim": false,
+    "connector_geometry_rule": {
+      "xy_size_rule": "0.60 * min(lower_width_mm, upper_width_mm)",
+      "height_parameter_mm": 160,
+      "shape": "RECTANGULAR_CONNECTOR_PROXY",
+      "historical_shape_claim": false
+    },
+    "interfaces": {
+      "lower_interface": "LOWER_MASTER_TOP_PLANE ↔ CONNECTOR_BOTTOM_PLANE",
+      "upper_interface": "CONNECTOR_TOP_PLANE ↔ UPPER_MASTER_BOTTOM_PLANE"
+    },
+    "resolver": {
+      "placement": "centered_in_test_span",
+      "upper_z_rule": "lower_top_z + connector_height_mm",
+      "mutation_parameter": "connector_height_mm"
+    },
+    "validation_tolerance_mm": 0.1,
+    "prohibited_claims": [
+      "963_SAN_DOU_EXACT_GEOMETRY",
+      "HISTORICAL_SAN_DOU_DIMENSIONS",
+      "FULL_SPACER_SINGLE_GONG_GROUP_CLOSED",
+      "HISTORICAL_JOINERY_CLOSED"
+    ]
+  }
+}
