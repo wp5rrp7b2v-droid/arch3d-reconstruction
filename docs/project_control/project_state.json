@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R230",
+  "state_revision": "R231",
   "last_updated": "2026-09-25",
-  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-033 子角梁 CLOSED / PR #27 MERGED / FINAL HEAD REGRESSION PASS / RC-024 ACTIVE / LOCAL SYNC PENDING / T-018 HOLD",
+  "session_status": "DAILY CLOSE 2026-09-25 / PASS / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / LOCAL SYNC PASS / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active engineering blocker. T-033 is closed on main at 17/28. Local Mac sync to the post-closure main remains a separate pending synchronization step.",
+  "blocker": "No active engineering blocker. Daily close passed. PR #22 superseded proof is closed without merge. T-018 PR #3/#6 remain intentionally open on HOLD. Stage2 is not authorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "NONE",
     "name": "P3.3 V002 Stage 1",
-    "status": "ACTIVE GATE / NO ACTIVE ENGINEERING T-TASK / T-033 CLOSED / 17 OF 28 APPROVED"
+    "status": "DAILY CLOSE / NO ACTIVE ENGINEERING T-TASK / 17 OF 28 APPROVED"
   },
   "proposed_next_task": {
     "id": "NONE",
@@ -125,7 +125,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-033 CLOSED / RC-024 ACTIVE / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / NO ACTIVE ENGINEERING TASK / RC-024 ACTIVE / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -589,7 +589,7 @@
       "final_head_shared_regression_artifact_zip_sha256": "f5a16313891393d5a7deb0d29c5816b5ba22fb047a8d795f976ddc9a7da7e8e0",
       "final_head_shared_regression": "T-025..T-029 ALL PASS",
       "product_owner_final_approval": "2026-09-25 / APPROVED",
-      "local_sync_status": "PENDING"
+      "local_sync_status": "PASS / LOCAL_HEAD==REMOTE_HEAD 29b934a6881b93fac127cce8565a181fd9c6be97 / CANONICAL BLEND SHA MATCH"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -614,9 +614,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-146",
+    "id": "D-147",
     "date": "2026-09-25",
-    "decision": "Product Owner approved T-033 final Review Board. PR #27 merged at 096c4dfb3cb3970e2836ba867ae2496cb943c5ed. Latest-head Run 36132308751 completed SUCCESS including T-025..T-029 shared regression, minimal artifact checks and evidence uploads. T-033 is formally CLOSED; Stage1 progress is locked at 17/28 = 60.7%. current_task is cleared. No next component is started. Local sync remains a separate pending step."
+    "decision": "Daily close PASS. T-031 placement proof and T-032 Connection-Layer complete assembly proof remain closed; RC-024 remains active. T-033 子角梁 is fully closed at 17/28 = 60.7%. Local Mac synchronized to main 29b934a6881b93fac127cce8565a181fd9c6be97 and T-033 canonical .blend restored with exact SHA 104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b. Legacy Draft PR #22 was closed as SUPERSEDED / DO NOT MERGE. PR #3/#6 remain intentionally HOLD for T-018. No next component, Stage2, or T-018 execution is authorized."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -680,7 +680,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "T-033 closure complete at 17/28. Do not start another component, Stage2, or T-018 until Product Owner gives the next instruction. Local Mac sync is pending as a separate step.",
+  "next_action": "Daily close complete. Wait for Product Owner instruction before selecting the next Stage1 component. After this closeout PR and derived Dashboard sync merge to main, perform one final local fast-forward only; do not start new engineering work.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1516,5 +1516,23 @@
     "branch_status": "main...origin/main",
     "transient_network_event": "Initial github.com:443 timeout occurred, then retry succeeded; no residual sync blocker.",
     "next_stage1_action": "子角梁 D-076 Visual/Form Gate"
+  },
+  "daily_close": {
+    "date": "2026-09-25",
+    "status": "PASS",
+    "close_file": "docs/project_control/CLOSE_FILE_2026-09-25.md",
+    "local_sync": {
+      "status": "PASS",
+      "local_head": "29b934a6881b93fac127cce8565a181fd9c6be97",
+      "remote_head": "29b934a6881b93fac127cce8565a181fd9c6be97",
+      "branch_status": "main...origin/main",
+      "t033_canonical_blend_sha256": "104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b",
+      "t033_blend_sha_match": true
+    },
+    "open_pr_policy": {
+      "pr22": "CLOSED / SUPERSEDED / NOT MERGED",
+      "pr3": "OPEN / T-018 HOLD",
+      "pr6": "OPEN / T-018 HOLD"
+    }
   }
 }
