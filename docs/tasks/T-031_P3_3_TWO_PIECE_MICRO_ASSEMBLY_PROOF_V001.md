@@ -1,7 +1,7 @@
 # T-031｜P3.3 Two-piece Micro Assembly Proof V001
 
 ## Status
-AUTHORIZED / PRODUCT OWNER 2026-09-25 / ARCHITECTURE RISK PROOF ONLY
+MACHINE + HUMAN REVIEW PASS / AWAITING PRODUCT OWNER ACCEPTANCE / ARCHITECTURE RISK PROOF ONLY
 
 ## Objective
 Validate that two already-approved Masters can be assembled automatically from clean state without manual Blender placement:
@@ -95,3 +95,66 @@ It does **not**:
 - establish whole-building XYZ;
 - authorize T-018;
 - establish historical joinery or historical angle/length.
+
+
+## Execution Result｜2026-09-25
+
+- GitHub Actions Run: `36094815356`
+- Job: `micro-assembly-proof`
+- Blender: `4.5.13 LTS`
+- Result: **SUCCESS**
+- Validation: **12/12 PASS**
+- Artifact: `P3_3_T031_TWO_PIECE_MICRO_ASSEMBLY_PROOF_V001`
+- Artifact ID: `10846594498`
+- Artifact ZIP SHA-256: `35b3b669190b46c780b1d5c0dfb8af3dc626809ecd016cfa537bdbf13c43d6e2`
+- Artifact expiry: 2026-10-25
+
+### TEST_A
+- Four-chuanfu test length: 2400 mm / ENGINEERING_TEST_ONLY
+- Tuojiao derived length: **1387.117132 mm**
+- Tuojiao direction: `[0.550881922, 0, 0.834583282]`
+- support gap: **0.00012207 mm**
+- penetration: **0.00012207 mm**
+- tolerance: 0.1 mm
+- semantic signature: `5ba3556ddaa32a4f4db9ef4e3fdf3ec9ed353a0e640cb637a4a737f8464a773f`
+
+### TEST_B mutation
+- support target X changed from -900 to -700 mm
+- Tuojiao derived length changed to **1498.030102 mm**
+- Tuojiao direction changed to `[0.640198708, 0, 0.768209457]`
+- support gap: **0.0 mm**
+- penetration: **0.0 mm**
+- Four-chuanfu and Tuojiao sections unchanged
+- semantic signature: `01386b4b8828143fd5140c8586fa5e2811626896d9ac40b72792577b5d07fb08`
+
+### Determinism
+- TEST_A restore signature:
+  `5ba3556ddaa32a4f4db9ef4e3fdf3ec9ed353a0e640cb637a4a737f8464a773f`
+- MATCH: **YES**
+
+### Human visual review
+FRONT and AXON images for TEST_A and TEST_B were actually inspected.
+
+- no visible gross gap;
+- no visible gross interpenetration;
+- changing the support target visibly changes Tuojiao angle/length while retaining the same two component identities;
+- the current contact is a simplified tangent support using bounded rectangular envelopes;
+- this proof does **not** establish historical end profile, mortise/tenon, bearing surface, or real structural mechanics.
+
+### Proof conclusion
+**PASS for Micro Assembly architecture objective.**
+
+What is proven:
+- clean-state scripted two-piece assembly works;
+- no manual Blender placement is required;
+- assembly-owned target mutation automatically updates Tuojiao;
+- reference length 1000 mm does not leak into assembly;
+- deterministic rebuild works.
+
+What is NOT proven:
+- Stage 2 PASS;
+- Stage 3 PASS;
+- real Wanfodian XYZ;
+- historical joinery/contact face;
+- structural load-path correctness;
+- whole-building placement authority.
