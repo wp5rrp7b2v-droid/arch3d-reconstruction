@@ -182,6 +182,10 @@ def main():
     board=Path(a.board)
     ck("27_review_board_exists",board.exists() and board.stat().st_size>10000)
     im=Image.open(board)
+    ck("27A_review_board_chinese_identity",
+       bool(component.strip()) and
+       im.info.get("component_name_zh")==component and
+       im.info.get("review_board_identity_rule")=="RC-012")
     cols=min(3,max(1,len(panels))); rows=math.ceil(len(panels)/cols)
     ck("28_review_board_dimensions",im.size==(cols*1200,rows*940))
     ck("29_no_fixed_panel_rule",rc.get("fixed_panel_count_required",d.get("v2_slim_file_contract",{}).get("fixed_review_panel_count_required")) is False)
