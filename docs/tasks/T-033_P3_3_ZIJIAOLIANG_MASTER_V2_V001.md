@@ -116,3 +116,16 @@ This authority does **not** authorize:
 - T-018;
 - rewriting A1 evidence;
 - exact 963 geometry claims.
+
+## Formalization checkpoint｜D-144
+
+- First article Run: `36121884128` / **SUCCESS**
+- Validation: **84/84 PASS**
+- Artifact ID: `10858207870`
+- Canonical blend SHA-256: `104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b`
+- Semantic geometry signature: `26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5`
+- Exact Semantic / Validation / Review Board materialized to PR branch.
+- Catalog + V008/CURRENT binding advanced to **17/28 = 60.7%** on the PR branch.
+- Approved-Master-covered Registry rows: **131**.
+- Latest-head Registry Excel sync + Master V2 final regression are required before merge.
+
