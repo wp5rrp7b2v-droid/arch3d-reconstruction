@@ -11,6 +11,7 @@
 - Decision：D-066
 - Visual-reference amendment：D-076 / 2026-09-20
 - Production evidence non-blocking clarification：D-137 / RC-023 / 2026-09-25
+- Connection Layer complete-assembly clarification：D-139 / RC-024 / 2026-09-25
 - Approval date：2026-09-19
 - Supersedes：P3.3 Definition of Done V001 / D-047 as the current P3.3 implementation plan
 - Historical preservation：V001 remains retained for audit history; its five Gate Hard Fails remain inherited unless explicitly replaced below
@@ -187,6 +188,8 @@ For each production-eligible component:
 - start/end or support interfaces;
 - SUPPORT / CONNECT / LOCATE / REPEAT / BELONG relations;
 - parent/child assembly semantics;
+- explicit Connection Layer record for every production attachment, classified as `PHYSICAL_CONNECTOR` / `JOINERY_FEATURE` / `CONTACT_INTERFACE`;
+- connector/interface identity, evidence boundary, geometry classification, resolver and validation tolerance;
 - dimension authority;
 - length determination rule:
   - direct measured length;
@@ -198,6 +201,7 @@ For each production-eligible component:
 ### Stage 2 exit criteria
 
 - no production Master depends on an undocumented attachment convention;
+- every production attachment is represented by an explicit machine-readable Connection Layer record; body-to-body proximity alone is not an attachment definition;
 - component geometry and component placement remain separate;
 - the same component identity can be instantiated at multiple valid locations without manual per-instance remodeling.
 
@@ -224,8 +228,11 @@ At minimum:
 
 - representative assembly relationships validate;
 - interface directions and attachment points are machine-readable;
+- every accepted representative assembly contains an explicit Connection Layer; `PHYSICAL_CONNECTOR`, `JOINERY_FEATURE`, or an explicitly declared `CONTACT_INTERFACE` must close the relationship;
+- two Master bodies merely touching does **not** count as complete Assembly PASS unless that contact is itself registered and validated as a `CONTACT_INTERFACE`;
 - no assembly requires manual Blender placement to make the parts meet;
-- unresolved historical details remain explicit.
+- connector/interface mutation propagates deterministically to participating placement/geometry where applicable;
+- unresolved historical details remain explicit and may use replaceable `RECONSTRUCTED_DESIGN` under RC-020 + RC-023.
 
 ---
 
