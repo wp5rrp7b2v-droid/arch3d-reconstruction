@@ -1,0 +1,163 @@
+name: T-033 RC-012 Review Board Patch
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/t033_rc012_review_board_patch.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  patch:
+    if: github.event.pull_request.head.ref == 'codex/t033-p3-3-zijiaoliang-master-v2-v001'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: Download RC-012-passing regression artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api -H "Accept: application/vnd.github+json"             /repos/${{ github.repository }}/actions/artifacts/10861609433/zip > /tmp/t033_rc012.zip
+          rm -rf /tmp/t033_rc012 && mkdir -p /tmp/t033_rc012
+          unzip -q /tmp/t033_rc012.zip -d /tmp/t033_rc012
+          echo "f77b06d362df998b9a9f6d94895620369f9af797c9229563f705cb5f820a92d9  /tmp/t033_rc012/CMP-FRAME-ZIJIAOLIANG-001_MASTER_REVIEW_BOARD_V001.png" | sha256sum -c -
+
+      - name: Materialize RC-012 Review Board and governance evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          D=production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZIJIAOLIANG-001
+          cp /tmp/t033_rc012/CMP-FRAME-ZIJIAOLIANG-001_MASTER_REVIEW_BOARD_V001.png "$D/"
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          old_board="4dbe0c44bcca82f8eb503c87af98256838e992b69f7fd634916223da1df149e4"
+          new_board="f77b06d362df998b9a9f6d94895620369f9af797c9229563f705cb5f820a92d9"
+          canonical_blend="104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b"
+          regenerated_blend="029937842fb4650a3ae43c270af285e34a339d53b31370d0d8757a34bff550f1"
+          semantic_sig="26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5"
+
+          cp=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json")
+          c=json.loads(cp.read_text(encoding="utf-8"))
+          rows=[x for x in c["new_masters"] if x.get("master_id")=="CMP-FRAME-ZIJIAOLIANG-001_MASTER"]
+          assert len(rows)==1
+          x=rows[0]
+          assert x["canonical_asset_sha256"]==canonical_blend
+          assert x["review_board_sha256"]==old_board
+          x["first_article_review_board_sha256"]=old_board
+          x["review_board_sha256"]=new_board
+          x["review_board_status"]="RC-012 PATCHED / CANONICAL CHINESE COMPONENT NAME VISIBLE"
+          x["review_board_authority"]="D-145 / Run 36129460213 / Artifact 10861609433"
+          x["rc012_regression"]={
+            "run_id":36129460213,
+            "result":"SUCCESS",
+            "validation":"91/91 PASS",
+            "artifact_id":10861609433,
+            "artifact_zip_sha256":"bb0c6bb838876e907f64b72674969c02eea37ce9363d4972f25ab69df25f5792",
+            "shared_regression_artifact_id":10861259769,
+            "shared_regression_artifact_zip_sha256":"2041fc8e4c8194e55a7b56927a1b257a4173ffae0ab5c5a8f03ec14992918c37",
+            "review_board_sha256":new_board,
+            "regenerated_blend_sha256":regenerated_blend,
+            "regenerated_blend_promoted_to_canonical":False,
+            "semantic_geometry_signature":semantic_sig
+          }
+          cp.write_text(json.dumps(c,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+
+          ap=Path("docs/production/zhenguo_wanfo/P3_3_T033_ZIJIAOLIANG_FIRST_ARTICLE_ACCEPTANCE_2026-09-25.md")
+          s=ap.read_text(encoding="utf-8").rstrip()
+          s += """
+
+## RC-012 Review Board Patch｜D-145
+
+Human audit after D-144 found that the formal Review Board did not visibly show the canonical Chinese component name **子角梁**. Geometry/semantic validation was not affected, but formal human-review identity did not satisfy RC-012.
+
+Correction:
+- shared Master V2 Review Board generator now renders `component_name_zh｜panel` with Noto CJK;
+- validator now requires RC-012 Chinese-identity PNG metadata;
+- latest regression Run `36129460213`: **SUCCESS / 91/91 PASS**;
+- T-025～T-029 shared infrastructure regression: **ALL PASS**;
+- RC-012 Review Board SHA-256: `f77b06d362df998b9a9f6d94895620369f9af797c9229563f705cb5f820a92d9`;
+- proof Artifact: `10861609433`, ZIP SHA-256 `bb0c6bb838876e907f64b72674969c02eea37ce9363d4972f25ab69df25f5792`;
+- shared-regression Artifact: `10861259769`, ZIP SHA-256 `2041fc8e4c8194e55a7b56927a1b257a4173ffae0ab5c5a8f03ec14992918c37`.
+
+Canonical identity rule:
+- D-144 accepted canonical .blend remains `104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b`;
+- Run 36129460213 regenerated .blend SHA `029937842fb4650a3ae43c270af285e34a339d53b31370d0d8757a34bff550f1` is regression-only and **does not replace canonical binary authority**;
+- semantic geometry signature remains exactly `26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5`.
+
+Result: **RC-012 CLOSED / REVIEW BOARD HUMAN + MACHINE PASS**.
+"""
+          ap.write_text(s+"\n",encoding="utf-8")
+
+          tp=Path("docs/tasks/T-033_P3_3_ZIJIAOLIANG_MASTER_V2_V001.md")
+          s=tp.read_text(encoding="utf-8").rstrip()
+          s += """
+
+## Final RC-012 regression checkpoint｜D-145
+
+- Run `36129460213`: SUCCESS
+- Validation: 91/91 PASS
+- shared T-025～T-029 regression: ALL PASS
+- canonical Chinese name **子角梁** visibly rendered on every Review Board panel
+- canonical D-144 .blend identity retained; regenerated regression binary not promoted
+- T-033 is ready for PR Ready + merge after this exact board is materialized.
+"""
+          tp.write_text(s+"\n",encoding="utf-8")
+
+          pp=Path("docs/project_control/project_state.json")
+          p=json.loads(pp.read_text(encoding="utf-8"))
+          p["state_revision"]="R229"
+          p["session_status"]="SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 RC-012 CLOSED / FINAL REGRESSION 91 OF 91 PASS / PR #27 READY FOR MERGE / T-018 HOLD"
+          p["blocker"]="No active blocker. T-033 RC-012 Review Board identity issue is corrected and verified; final Run 36129460213 SUCCESS with 91/91 PASS and T-025..T-029 shared regression ALL PASS."
+          p["current_task"]["status"]="FORMALIZED / RC-012 CLOSED / FINAL REGRESSION PASS / PR #27 READY FOR MERGE"
+          p["p3_3"]["status"]="V002 LOCKED / STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 READY FOR MERGE / RC-024 ACTIVE / T-018 HOLD"
+          p["p3_3"]["t033"].update({
+            "status":"FORMALIZED / RC-012 CLOSED / FINAL REGRESSION PASS / PR #27 READY FOR MERGE",
+            "rc012_decision_id":"D-145",
+            "rc012_final_run_id":36129460213,
+            "rc012_final_validation":"91/91 PASS",
+            "rc012_final_artifact_id":10861609433,
+            "rc012_review_board_sha256":new_board,
+            "rc012_shared_regression":"T-025..T-029 ALL PASS",
+            "canonical_blend_sha256":canonical_blend,
+            "regenerated_regression_blend_sha256":regenerated_blend,
+            "regenerated_regression_blend_promoted":False,
+            "semantic_geometry_signature":semantic_sig
+          })
+          p["latest_material_decision"]={
+            "id":"D-145",
+            "date":"2026-09-25",
+            "decision":"T-033 RC-012 Review Board identity gap corrected. Run 36129460213 SUCCESS / 91 of 91 PASS; T-025..T-029 shared regression ALL PASS; Chinese canonical name 子角梁 visibly present. D-144 canonical blend identity remains unchanged; regenerated regression binary is not promoted. PR #27 may proceed to Ready + merge."
+          }
+          p["next_action"]="Materialize the exact RC-012 Review Board, Ready+merge PR #27, verify main, close T-033 at 17/28. Stage2 and T-018 remain out of scope."
+          pp.write_text(json.dumps(p,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+
+          dp=Path("docs/project_control/decision_log.md")
+          s=dp.read_text(encoding="utf-8").rstrip()
+          s += """
+
+| D-145 | 2026-09-25 | T-033 final human audit found an RC-012 presentation-identity gap: the already machine-PASS Review Board did not visibly display canonical Chinese component name “子角梁”. This did not invalidate geometry or D-144 first-article acceptance, but blocked PR merge. Shared Master V2 board generator was corrected to render component_name_zh with Noto CJK; validator now machine-checks RC-012 PNG identity metadata. Latest-head Run 36129460213 SUCCESS / 91/91 PASS; T-025～T-029 shared regression ALL PASS; new Review Board SHA=f77b06d362df998b9a9f6d94895620369f9af797c9229563f705cb5f820a92d9 and visual inspection confirms “子角梁” on every panel. D-144 canonical .blend SHA=104e62ad... remains authoritative; regenerated Run-84 binary SHA=02993784... is regression-only and not promoted because semantic geometry signature remains 26d3aceb... . One-shot formalization workflow removed to prevent duplicate rerun failures. | COMPLETE / RC-012 CLOSED / T-033 READY FOR MERGE |
+"""
+          dp.write_text(s+"\n",encoding="utf-8")
+          PY
+
+      - name: Commit patch and remove one-shot workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/t033_rc012_review_board_patch.yml
+          git add             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZIJIAOLIANG-001/CMP-FRAME-ZIJIAOLIANG-001_MASTER_REVIEW_BOARD_V001.png             production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json             docs/production/zhenguo_wanfo/P3_3_T033_ZIJIAOLIANG_FIRST_ARTICLE_ACCEPTANCE_2026-09-25.md             docs/tasks/T-033_P3_3_ZIJIAOLIANG_MASTER_V2_V001.md             docs/project_control/project_state.json             docs/project_control/decision_log.md
+          git commit -m "T-033: close RC-012 Review Board identity gap"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
