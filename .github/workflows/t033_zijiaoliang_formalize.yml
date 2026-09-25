@@ -1,0 +1,183 @@
+name: T-033 Zijiaoliang Formalize Approved First Article
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/t033_zijiaoliang_formalize.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  formalize:
+    if: github.event.pull_request.head.ref == 'codex/t033-p3-3-zijiaoliang-master-v2-v001'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: Download approved first article
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api -H "Accept: application/vnd.github+json"             /repos/${{ github.repository }}/actions/artifacts/10858207870/zip > /tmp/t033.zip
+          rm -rf /tmp/t033 && mkdir -p /tmp/t033
+          unzip -q /tmp/t033.zip -d /tmp/t033
+          sha256sum /tmp/t033/*
+
+      - name: Verify approved identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b  /tmp/t033/CMP-FRAME-ZIJIAOLIANG-001_MASTER_V001.blend" | sha256sum -c -
+          echo "28726a3483deee2c89fc460a081d56e36af3c8dd2d71f46838f63d42d05f5c92  /tmp/t033/CMP-FRAME-ZIJIAOLIANG-001_MASTER_SEMANTIC_V001.json" | sha256sum -c -
+          echo "fb8809950ec581d38b20c5d5728d06e007e04858397b62184c946485e9d718b5  /tmp/t033/CMP-FRAME-ZIJIAOLIANG-001_MASTER_VALIDATION_V001.json" | sha256sum -c -
+          echo "4dbe0c44bcca82f8eb503c87af98256838e992b69f7fd634916223da1df149e4  /tmp/t033/CMP-FRAME-ZIJIAOLIANG-001_MASTER_REVIEW_BOARD_V001.png" | sha256sum -c -
+
+      - name: Materialize formal text and review board
+        shell: bash
+        run: |
+          set -euo pipefail
+          D=production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZIJIAOLIANG-001
+          cp /tmp/t033/CMP-FRAME-ZIJIAOLIANG-001_MASTER_SEMANTIC_V001.json "$D/"
+          cp /tmp/t033/CMP-FRAME-ZIJIAOLIANG-001_MASTER_VALIDATION_V001.json "$D/"
+          cp /tmp/t033/CMP-FRAME-ZIJIAOLIANG-001_MASTER_REVIEW_BOARD_V001.png "$D/"
+          test ! -e "$D/CMP-FRAME-ZIJIAOLIANG-001_MASTER_V001.blend"
+
+      - name: Bind Catalog and Registry
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          catalog_path=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json")
+          c=json.loads(catalog_path.read_text(encoding="utf-8"))
+          mid="CMP-FRAME-ZIJIAOLIANG-001_MASTER"
+          assert not any(x.get("master_id")==mid for x in c["new_masters"])
+          c["task"]="T-033"
+          c["status"]="SEVENTEEN_APPROVED / T033 FORMALIZED / PR #27 OPEN"
+          c["approved_master_count"]=17
+          c["new_masters"].append({
+            "component_id":"CMP-FRAME-ZIJIAOLIANG-001",
+            "master_id":mid,
+            "master_version":"V001",
+            "approval_status":"PRODUCT_OWNER_APPROVED",
+            "decision_id":"D-144",
+            "formalization_authority":"D-143 / DELEGATED END-TO-END COMPLETION",
+            "publication_status":"FORMALIZED / PR #27 OPEN",
+            "canonical_asset_status":"ACTIONS_ARTIFACT / APPROVED / LOCAL ONLY / NOT GIT",
+            "canonical_asset_sha256":"104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b",
+            "semantic_sha256":"28726a3483deee2c89fc460a081d56e36af3c8dd2d71f46838f63d42d05f5c92",
+            "validation_sha256":"fb8809950ec581d38b20c5d5728d06e007e04858397b62184c946485e9d718b5",
+            "review_board_sha256":"4dbe0c44bcca82f8eb503c87af98256838e992b69f7fd634916223da1df149e4",
+            "semantic_geometry_signature":"26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5",
+            "canonical_section_mm":{"width":216.5,"thickness":152},
+            "physical_instance_count":4,
+            "distribution":"SE / NE / SW / NW = 1 EACH / DIRECT_LOCKED_LOCATION_SECTION",
+            "source_aggregation_method_ambiguous":True,
+            "source_artifact":{"actions_run_id":36121884128,"artifact_id":10858207870,"artifact_zip_sha256":"c1b0f227ed55c00529e5ac722a2195bff59282c428a84de0743a4124f52fc466"},
+            "connection_layer_incremental":{
+              "outboard":"套兽 attachment semantic / PHYSICAL_CONNECTOR intent / exact geometry unresolved",
+              "inboard":"corner assembly family relation / JOINERY_FEATURE vs CONTACT_INTERFACE deferred"
+            }
+          })
+          catalog_path.write_text(json.dumps(c,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+
+          for rp in [
+            Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json"),
+            Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json")
+          ]:
+            r=json.loads(rp.read_text(encoding="utf-8"))
+            rows=[x for x in r["items"] if x.get("component")=="子角梁"]
+            assert len(rows)==4
+            for x in rows:
+              x["master_reference"]=mid
+              x["master_coverage_status"]="APPROVED_MASTER_AVAILABLE"
+            p=r["stage1_master_progress_summary"]
+            p["snapshot_date"]="2026-09-25"
+            p["status"]="CANONICAL ON T-033 BRANCH / D-144 / 17 OF 28 MASTERS APPROVED"
+            p["approved_master_count"]=17
+            p["pending_master_object_type_count"]=11
+            p["master_completion_percent"]=60.7
+            p["master_covered_registry_record_count"]=131
+            if "子角梁" not in p["approved_master_components"]:
+              p["approved_master_components"].append("子角梁")
+            p["progress_display_note"]="505 Registry records; Stage1 Master completion uses 28 Master-scope object types as denominator: 17 approved / 11 pending = 60.7%. T-033 子角梁 formalized on PR #27 branch."
+            rp.write_text(json.dumps(r,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          PY
+
+      - name: Record acceptance and project state
+        shell: bash
+        run: |
+          cat > docs/production/zhenguo_wanfo/P3_3_T033_ZIJIAOLIANG_FIRST_ARTICLE_ACCEPTANCE_2026-09-25.md <<'EOF'
+          # T-033｜子角梁 Master V2｜First Article Acceptance
+
+          Status: **PASS / ACCEPTED UNDER D-143 DELEGATED END-TO-END AUTHORITY**
+          Date: 2026-09-25
+
+          - Run: 36121884128
+          - Validation: 84/84 PASS
+          - Artifact: 10858207870
+          - Artifact ZIP SHA-256: c1b0f227ed55c00529e5ac722a2195bff59282c428a84de0743a4124f52fc466
+          - Canonical .blend SHA-256: 104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b
+          - Semantic SHA-256: 28726a3483deee2c89fc460a081d56e36af3c8dd2d71f46838f63d42d05f5c92
+          - Validation SHA-256: fb8809950ec581d38b20c5d5728d06e007e04858397b62184c946485e9d718b5
+          - Review Board SHA-256: 4dbe0c44bcca82f8eb503c87af98256838e992b69f7fd634916223da1df149e4
+          - Semantic geometry signature: 26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5
+
+          Human review:
+          - rectangular Stage1 envelope is consistent with the locked geometry boundary;
+          - four instance sections are visibly preserved;
+          - family mean is labelled reference-only;
+          - no unsupported 套兽/joinery geometry is baked into the Master;
+          - endpoint proof is clearly marked engineering-test-only.
+
+          Decision: D-144.
+          EOF
+
+          cat >> docs/project_control/decision_log.md <<'EOF'
+
+          | D-144 | 2026-09-25 | T-033 子角梁首件在 D-143 端到端授权下完成机器+人工证据审核并接受。Run 36121884128 SUCCESS；84/84 PASS；Artifact 10858207870；canonical blend SHA=104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b；semantic geometry signature=26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5。四角直接截面 SE220×150 / NE190×153 / SW213×153 / NW125×149 均由同一 Master 参数生成；216.5×152 仅 family reference；1000mm 未泄漏；endpoint A/B=1300/1700mm；无固定45°、无历史榫卯/套兽几何虚构。Review Board 人工核对 PASS。按 D-143 自动进入 formalization + Catalog/V008 binding + final regression。 | COMPLETE / T-033 FIRST ARTICLE ACCEPTED / FORMALIZATION ACTIVE |
+          EOF
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          pth=Path("docs/project_control/project_state.json")
+          p=json.loads(pth.read_text(encoding="utf-8"))
+          p["state_revision"]="R228"
+          p["last_updated"]="2026-09-25"
+          p["session_status"]="SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 FIRST ARTICLE ACCEPTED + FORMALIZED / FINAL REGRESSION PENDING / RC-024 ACTIVE / T-018 HOLD"
+          p["current_task"]={"id":"T-033","name":"P3_3_ZIJIAOLIANG_MASTER_V2_V001｜子角梁 Master","status":"FIRST ARTICLE ACCEPTED / FORMALIZED / CATALOG+V008 BOUND / FINAL REGRESSION PENDING"}
+          p["blocker"]="No active blocker. T-033 first article 84/84 PASS; formalization and Registry binding completed on PR #27 branch; final regression pending."
+          p["p3_3"]["status"]="V002 LOCKED / STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 FINAL REGRESSION PENDING / RC-024 ACTIVE / T-018 HOLD"
+          p["p3_3"]["engineering_execution_authorized"]=True
+          p["p3_3"]["t033"].update({
+            "status":"FIRST ARTICLE ACCEPTED / FORMALIZED / CATALOG+V008 BOUND / FINAL REGRESSION PENDING",
+            "first_article_run_id":36121884128,
+            "first_article_validation":"84/84 PASS",
+            "first_article_artifact_id":10858207870,
+            "canonical_blend_sha256":"104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b",
+            "semantic_geometry_signature":"26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5",
+            "product_owner_acceptance":"D-144 / delegated by D-143"
+          })
+          p["latest_material_decision"]={"id":"D-144","date":"2026-09-25","decision":"T-033 first article accepted under D-143 end-to-end authority; formalization and 17/28 Registry/Catalog binding completed; final regression pending."}
+          p["next_action"]="Wait for PR-branch Registry Excel sync and latest-head Master V2 final regression. If PASS, Ready+merge PR #27 and close T-033 at 17/28. Stage2/T-018 remain out of scope."
+          pth.write_text(json.dumps(p,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          PY
+
+      - name: Commit exact formalization
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZIJIAOLIANG-001             production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json             docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json             docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json             docs/production/zhenguo_wanfo/P3_3_T033_ZIJIAOLIANG_FIRST_ARTICLE_ACCEPTANCE_2026-09-25.md             docs/project_control/decision_log.md             docs/project_control/project_state.json
+          git commit -m "T-033: formalize approved 子角梁 Master and bind 17/28"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
