@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R223",
+  "state_revision": "R224",
   "last_updated": "2026-09-25",
-  "session_status": "SESSION START 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED CONFIRMED / NO NEXT TASK AUTHORIZED / PROJECT STATE CONSISTENCY PASS / LOCAL SYNC PASS / T-018 HOLD",
+  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-030 CLOSED / RC-023 PRODUCTION EVIDENCE NON-BLOCKING LOCKED / NO NEXT TASK AUTHORIZED / LOCAL SYNC PASS / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -93,7 +93,7 @@
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
     "accounting": "11/11 families / 40/40 variants / 365/365 instances",
     "purlin_component_id": "CMP-PURLIN-001",
-    "purlin_qualification": "DEFERRED_INSUFFICIENT_EVIDENCE",
+    "purlin_qualification": "DEFERRED_INSUFFICIENT_EVIDENCE / HISTORICAL P3.1-T019 QUALIFICATION / NOT CURRENT P3.3 PRODUCTION BLOCKER",
     "purlin_instance_count": 7,
     "purlin_disposition": "DEFERRED",
     "cross_layer_direct_identity_conflicts": 0,
@@ -115,7 +115,7 @@
     "status": "PASS / APPROVED / CLOSED / D-040",
     "gate_score": "9/9 PASS",
     "approved_master_count": 6,
-    "relevant_locked_boundary": "CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE"
+    "relevant_locked_boundary": "CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE / HISTORICAL P3.1 BOUNDARY / NOT CURRENT P3.3 PRODUCTION BLOCKER"
   },
   "p3_2": {
     "status": "PASS / APPROVED / CLOSED / D-046",
@@ -500,14 +500,14 @@
     "DG-114": "UNKNOWN / no unified small-dou historical specification claim",
     "HIS-002": "component originality unknown",
     "six_chuanfu_length": "UNKNOWN / null; 1000 mm is non-historical canonical reference only",
-    "purlin": "CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE; 7/7 building instances DEFERRED; current audit only clarifies control topology, not historical member identity/section/length/end conditions",
+    "purlin": "CMP-PURLIN-001 = DEFERRED_INSUFFICIENT_EVIDENCE in historical P3.1/T-019 context; 7/7 legacy engineering instances DEFERRED; under RC-020 + RC-023 this historical label does not itself block current P3.3 production; missing geometry may use explicit replaceable RECONSTRUCTED_DESIGN where required.",
     "corner_and_joinery": "45-degree corner, mortise and hidden-angle beam unresolved / bounded",
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-134",
-    "date": "2026-09-24",
-    "decision": "Daily Close PASS. T-030 closed and merged; cloud/project-control cross-check complete; no T-031 or next task authorized; local sync and T-030 canonical binary restore pending."
+    "id": "D-137",
+    "date": "2026-09-25",
+    "decision": "RC-023 locked: missing Northern-Song/963 historical originals alone cannot block P3.3 production. Current reliable sources plus explicit replaceable RECONSTRUCTED_DESIGN may continue; only unresolved direct conflicts, undefinable identity/topology, no verifiable closure, or contradiction of locked direct evidence may HOLD/STOP."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -1205,7 +1205,17 @@
     "goal": "Source-consistent, structurally coherent, geometrically closed, buildable and iteratively replaceable Wanfodian 3D model",
     "unknown_policy": "Historical UNKNOWN does not automatically block production; required geometry may use explicit replaceable RECONSTRUCTED_DESIGN",
     "evidence_priority": "D-099 / RC-019 remains authoritative; reconstructed design may not override direct evidence",
-    "master_assembly_policy": "Stable body in Master; placement-derived length/orientation/coordinates remain assembly-owned where appropriate"
+    "master_assembly_policy": "Stable body in Master; placement-derived length/orientation/coordinates remain assembly-owned where appropriate",
+    "precedence_rule_id": "RC-023",
+    "precedence_decision_id": "D-137",
+    "missing_historical_originals_policy": "Missing 963/Northern-Song original dimensions, imagery, exact length/angle, hidden joinery or end profile alone NEVER blocks P3.3 production.",
+    "visual_gate_interpretation": "D-076 reviews available evidence + missing-evidence boundary + bounded production disposition; evidence completeness is not required.",
+    "true_evidence_blockers": [
+      "UNRESOLVED_DIRECT_EVIDENCE_CONFLICT",
+      "PRODUCTION_OBJECT_IDENTITY_OR_TOPOLOGY_UNDEFINABLE",
+      "NO_VERIFIABLE_GEOMETRIC_OR_STRUCTURAL_CLOSURE",
+      "PROPOSED_DESIGN_CONTRADICTS_LOCKED_DIRECT_EVIDENCE"
+    ]
   },
   "daily_close_2026_09_23": {
     "status": "CLOSED / GITHUB CROSS-CHECK PASS / LOCAL SYNC PASS",
@@ -1346,5 +1356,19 @@
     },
     "tracked_worktree_clean": true,
     "final_result": "PASS / LOCAL PRODUCTION ASSET RESTORED / NO ENGINEERING AUTHORITY CHANGE"
+  },
+  "production_evidence_nonblocking_2026_09_25": {
+    "status": "LOCKED / ACTIVE / CURRENT P3.3 INTERPRETATION",
+    "rule_id": "RC-023",
+    "decision_id": "D-137",
+    "missing_historical_originals_is_blocker": false,
+    "visual_reference_completeness_required": false,
+    "po_review_of_boundary_required": true,
+    "reconstructed_design_allowed": true,
+    "historical_labels_preserved_but_nonblocking": [
+      "UNKNOWN_BLOCKED",
+      "DEFERRED_INSUFFICIENT_EVIDENCE"
+    ],
+    "precedence": "RC-020 + RC-023 override conflicting current-production interpretations of older labels; historical records remain unchanged."
   }
 }
