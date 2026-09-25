@@ -299,4 +299,16 @@ Decision authority: **D-123 / RC-022**.
 5. If a workaround adds engineering work, changes shared infrastructure/process, expands scope or alters approved architecture, STOP and obtain Product Owner authorization before executing it.
 6. Prohibited pattern: prolonged silent troubleshooting followed by delayed disclosure after failure.
 7. After recovery, explicitly record `BLOCKER CLEARED`; only then may the original task return to `EXECUTING`.
-8. Before declaring a NEXT Master production-ready, perform a lightweight source-readiness check: A1/A2 accessibility, original-page/parameter provenance sufficiency, and known conflict status. This is a readiness check, not a new permanent evidence system.
+8. Before declaring a NEXT Master production-ready, perform a lightweight source-readiness check: A1/A2 accessibility, original-page/parameter provenance sufficiency, and known conflict status. This is a readiness check, not a new permanent evidence system, and it must **not** fail solely because Northern-Song/963 original dimensions, imagery, joinery, full length, angle, or other period-original data are unavailable.
+
+### 4.14 Production Evidence Non-Blocking Precedence｜生产证据非阻塞优先规则
+
+Decision authority: **D-137 / RC-023**.
+
+1. **Missing historical originals are not blockers**：缺少963年/北宋原始尺寸、原始图像、精确全长、角度、隐藏榫卯、端部形态等历史原值，本身不得触发 P3.3 HOLD / STOP / Hard Fail。
+2. **Current reliable sources are production authority**：A1现状/测绘资料、A2同建筑官方资料、Registry、已批准工程关系与可验证整体几何共同构成当前生产依据；不得要求“必须有北宋原始数据”才能继续。
+3. **Gap handling**：资料缺口保留为 UNKNOWN / UNRESOLVED，同时可建立显式、可替换的 `RECONSTRUCTED_DESIGN` / PARAMETRIC_COMPLETION / simplified proxy 继续生产。
+4. **True blockers only**：只有直接资料冲突未解决、生产对象身份/拓扑无法定义、几何/结构无法形成可验证闭合方案，或拟采用方案明确违背已锁直接证据时，才允许因 evidence issue 进入 HOLD/STOP。
+5. **D-076 interpretation**：Pre-Model Visual/Form Gate 审核的是“现有资料 + 缺口边界 + 拟采用生产处置是否清楚并获批准”，不是要求资料完整。没有同建筑历史原图/北宋原值不得单独触发 `BLOCKED_ON_VISUAL_REFERENCE_REVIEW`。
+6. **Precedence**：若旧 Project Control、历史 Gate 标签、`UNKNOWN_BLOCKED`、`DEFERRED_INSUFFICIENT_EVIDENCE` 等历史术语与本规则产生歧义，历史记录保留原文，但 P3.3 当前生产解释以 RC-020 + RC-023 为准。
+
