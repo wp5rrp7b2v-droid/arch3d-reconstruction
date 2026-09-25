@@ -78,7 +78,10 @@
 
 | **RC-021** | **2026-09-24** | **建立 Minimal Sufficient Infrastructure / No Redundant Asset：优先复用既有 canonical assets、Registry/Evidence、shared builder/validator/workflow；只有当前明确生产需求无法由既有路径安全满足时才允许新增基础设施；派生/缓存/中间资产不得成为第二事实源，临时排障资产用后清理，禁止“以后可能有用”式永久资产。** | **2026-09-24 大角梁 Source Gate 中，LFS/页面读取异常一度诱发 Bridge/TXT cache/OCR 等过度方案；Product Owner 明确要求不要为解决一个问题引入更大负担与冗余资产。** | **ACTIVE / MINIMAL-SUFFICIENT INFRASTRUCTURE / D-123** |
 | **RC-022** | **2026-09-24** | **建立 Execution Path Blocker Immediate Disclosure：原执行路径一旦确认 blocked，立即停止以“执行中”表述并向 Product Owner 报告 blocker、已完成进度、对原任务影响和建议路径；排障/替代路径属于 exception handling；凡引入新工程、改变共享基础设施/流程、扩 scope 或改架构，必须先获批准；恢复后必须明确 BLOCKER CLEARED。NEXT Master 正式启动前增加轻量 Source Readiness Check。** | **2026-09-24 大角梁 A1 LFS 读取问题中发生延迟披露，Product Owner 明确指出应在确认阻塞时第一时间报告。** | **ACTIVE / BLOCKER IMMEDIATE DISCLOSURE / D-123** |
+| **RC-023** | **2026-09-25** | **锁定 Production Evidence Non-Blocking Precedence：缺少963年/北宋原始尺寸、图像、精确全长、角度、隐藏榫卯或端部形态本身不得成为 P3.3 blocker；现有可靠测绘/现状/官方同建筑资料 + Registry + 已批准工程关系可作为生产依据，缺口以显式可替换 RECONSTRUCTED_DESIGN / PARAMETRIC_COMPLETION / UNKNOWN 继续。Evidence 类 HOLD 仅允许用于未解决直接资料冲突、对象身份/拓扑无法定义、无法形成可验证几何/结构闭合方案，或方案明确违背已锁直接证据。D-076 Visual/Form Gate 改解释为审核资料边界与生产处置，而非要求历史资料完备。旧 UNKNOWN_BLOCKED / DEFERRED_INSUFFICIENT_EVIDENCE 保留为历史标签，不得作为当前 P3.3 blocker 复活。** | **RC-020 已建立 UNKNOWN≠BLOCKED，但 DoD/Acceptance Matrix/Project State 仍残留旧阻塞语义，存在后续执行重新把“缺北宋数据”当 blocker 的风险。** | **ACTIVE / PRODUCTION EVIDENCE NON-BLOCKING PRECEDENCE / D-137** |
 
 `Infrastructure change = current necessity + minimal scope + no second authority`
 
 `Execution blocker = STOP normal execution → immediate PO disclosure → approved minimal recovery → BLOCKER CLEARED → resume`
+
+`P3.3 evidence gap = UNKNOWN/RECONSTRUCTED_DESIGN as needed; missing Northern-Song/963 originals alone NEVER = blocker`

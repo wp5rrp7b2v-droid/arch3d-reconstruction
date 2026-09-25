@@ -10,6 +10,7 @@
 - Status：LOCKED / PRODUCT OWNER APPROVED / EXECUTION NOT YET AUTHORIZED
 - Decision：D-066
 - Visual-reference amendment：D-076 / 2026-09-20
+- Production evidence non-blocking clarification：D-137 / RC-023 / 2026-09-25
 - Approval date：2026-09-19
 - Supersedes：P3.3 Definition of Done V001 / D-047 as the current P3.3 implementation plan
 - Historical preservation：V001 remains retained for audit history; its five Gate Hard Fails remain inherited unless explicitly replaced below
@@ -131,7 +132,7 @@ This order may be changed only for a documented dependency reason; it is not a h
 - every in-scope V007 component family has an explicit modeling disposition;
 - all Masters used later have:
   - canonical component identity;
-  - evidence-linked dimensions;
+  - dimension authority explicitly classified as direct evidence / explicit derivation / RECONSTRUCTED_DESIGN / UNKNOWN as appropriate;
   - local axes/orientation;
   - allowed variable parameters;
   - connection/interface points;
@@ -166,7 +167,9 @@ A visual reference may support form understanding, but it must not silently crea
 
 **One-off waiver:** D-077 explicitly waives this visual-reference review for **丁栿 only** and authorizes direct evidence review + Master Spec design. D-077 does not repeal D-076 for later new components.
 
-If no adequate visual/form reference can be produced, engineering modeling is **BLOCKED_ON_VISUAL_REFERENCE_REVIEW** until Product Owner explicitly accepts a bounded proxy/completion approach.
+If no adequate same-building historical/visual/form reference can be produced, that absence alone is **NOT** a P3.3 production blocker. The review must record the missing evidence boundary, use the best available approved source tier, and define an explicit bounded `RECONSTRUCTED_DESIGN` / simplified proxy / UNKNOWN disposition as appropriate. `BLOCKED_ON_VISUAL_REFERENCE_REVIEW` applies only when the required Product Owner review itself has not occurred, or when the proposed production geometry cannot be bounded without conflicting with locked evidence.
+
+**RC-023 controlling clarification:** missing 963 / Northern-Song original values or imagery—including exact full length, angle, hidden joinery, end profile, or period-original photographs/drawings—is not by itself a Hard Fail, HOLD, or STOP condition.
 
 
 ## Stage 2｜构件变体与装配接口
@@ -394,13 +397,13 @@ V002 adds:
    missing geometry is filled by project convention without explicit PARAMETRIC_COMPLETION / PROJECT_RULE labeling.
 
 9. `MASTER_WITHOUT_EVIDENCE_BINDING`  
-   a production Master lacks traceable dimension/evidence authority or silently embeds unsupported detail.
+   a production Master lacks traceable production authority for its geometry (direct evidence, explicit derivation, or declared `RECONSTRUCTED_DESIGN`) or silently embeds unsupported detail. Missing Northern-Song/963 original data alone does not trigger this Hard Fail.
 
 10. `EXCEL_AS_CANONICAL_SOURCE`  
     derived Excel is used to override or diverge from the canonical Component Registry JSON.
 
 11. `MODEL_BEFORE_VISUAL_REFERENCE_REVIEW`  
-    a new component Master is sent to engineering/Blender before the Product Owner has reviewed the required real-object / form-drawing reference set.
+    a new component Master is sent to engineering/Blender before the Product Owner has reviewed the available visual/form evidence, the missing-evidence boundary, and the proposed bounded production disposition. Absence of same-building historical reference alone does not trigger this Hard Fail.
 
 Any occurrence is a Gate FAIL until corrected at its owning layer.
 

@@ -50,6 +50,14 @@
 
 **P3 Gate Progress：3/4。**
 
+### P3.3 Current Evidence Interpretation｜RC-020 + RC-023 / D-137
+
+- 缺少963年/北宋原始尺寸、图像、精确全长、角度、隐藏榫卯或端部形态，**本身不是当前 P3.3 blocker**。
+- 当前生产依据为已锁定 A1/A2、Registry、现有可靠测绘/现状资料、已批准工程关系与可验证整体几何；资料缺口以显式可替换 `RECONSTRUCTED_DESIGN` / PARAMETRIC_COMPLETION / UNKNOWN 处理。
+- Evidence 类 HOLD 仅允许用于：未解决直接资料冲突；对象身份/拓扑无法定义；无法形成可验证几何/结构闭合方案；拟采用方案明确违背已锁直接证据。
+- 本文件后文出现的 `UNKNOWN_BLOCKED`、`DEFERRED_INSUFFICIENT_EVIDENCE` 等属于相应历史 Gate/Run 的原始分类记录；**不得作为当前 P3.3 生产阻断规则解释或复活**。
+
+
 ### P3.1 Final｜PASS / D-040
 
 - MASTER_REQUIRED：6/6 approved。
@@ -87,7 +95,7 @@ Gate Hard Fail：
 
 - PR #4 merged；merge commit `b9803fb416e375fd2f94f5d83df5fab73fe00063`。
 - 7/7 `CMP-PURLIN-001`：`DEFERRED`。
-- P3.1 qualification 继续 `DEFERRED_INSUFFICIENT_EVIDENCE`；未创建 PURLIN Master；未知截面/长度/端部条件未补造。
+- P3.1 qualification 继续 `DEFERRED_INSUFFICIENT_EVIDENCE`；未创建 PURLIN Master；未知截面/长度/端部条件未补造。**该标签为历史 P3.1 qualification，不构成 RC-023 下当前 P3.3 production blocker。**
 
 ### T-018｜整殿确定性生成与参数变更验证｜HOLD
 
@@ -99,7 +107,7 @@ Gate Hard Fail：
 
 - 365/365 `RULE_DERIVED`
 - `NOT_REALIZED_NO_APPROVED_PLACEMENT_RULE = 0`
-- Formal 12 / Proxy 178 / Control 66 / Envelope 6 / UNKNOWN_BLOCKED 96 / DEFERRED 7
+- Formal 12 / Proxy 178 / Control 66 / Envelope 6 / UNKNOWN_BLOCKED 96 / DEFERRED 7 **（Round 2 历史 accounting 标签；不代表当前 P3.3 blocker 分类）**
 - 7/7 PURLIN = DEFERRED
 - omission=0；anonymous formal mesh=0；broken identity=0
 - PM-005 mutation / restore PASS
