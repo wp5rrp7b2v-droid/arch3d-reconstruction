@@ -753,3 +753,20 @@ Current controlling acceptance rule｜RC-024：
 - Stage2 / Stage3 仍未授权/未通过；
 - D-140：本地同步后继续剩余 Stage1 Master，下一构件从子角梁 D-132 基线恢复；Connection 信息随 Master 增量登记，不为完整 Matrix 单独停线。
 
+### T-033｜子角梁 Master｜2026-09-25
+
+| Gate | Result | Evidence |
+|---|---|---|
+| D-132 Source Readiness | **PASS** | A1/A2 evidence boundary locked; four direct instance sections preserved. |
+| D-076 Visual/Form Gate / D-142 | **PASS WITH GEOMETRY BOUNDARY** | Shared parametric Master; exact historical length/slope/joinery not claimed. |
+| First Article / D-144 | **PASS** | Run `36121884128` / 84/84; canonical .blend SHA `104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b`. |
+| RC-012 Review identity / D-145 | **PASS** | Chinese canonical name “子角梁” visibly present; board SHA `f77b06d362df998b9a9f6d94895620369f9af797c9229563f705cb5f820a92d9`. |
+| Latest-head final regression | **PASS** | Run `36132308751` SUCCESS; T-025～T-029 shared regression ALL PASS; artifact IDs `10862794764` / `10863074483`. |
+| PR / main | **PASS / MERGED** | PR #27 merge SHA `096c4dfb3cb3970e2836ba867ae2496cb943c5ed`. |
+| Final closure / D-146 | **CLOSED** | Stage1 approved Masters = **17/28 = 60.7%**; no next task auto-started. |
+
+Boundary retained:
+- D-144 canonical .blend remains authoritative; regenerated regression binaries do not replace it.
+- RC-024 connection metadata remains incremental: outboard 套兽 attachment semantic; inboard corner-assembly connection kind deferred to later assembly resolution.
+- Stage2 remains not authorized; T-018 remains HOLD.
+
