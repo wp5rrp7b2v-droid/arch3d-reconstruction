@@ -1,7 +1,7 @@
 # T-032｜P3.3 Connection-Layer Complete Assembly Proof V001
 
 ## Status
-AUTHORIZED / PRODUCT OWNER 2026-09-25 / COMPLETE-ASSEMBLY ARCHITECTURE PROOF
+MACHINE + HUMAN REVIEW PASS / AWAITING PRODUCT OWNER ACCEPTANCE / COMPLETE-ASSEMBLY ARCHITECTURE PROOF
 
 ## Objective
 Upgrade the prior placement-only proof into a complete assembly proof:
@@ -97,3 +97,61 @@ PASS does NOT claim:
 - Stage 3 PASS;
 - whole-building placement authority;
 - T-018 authorization.
+
+
+## Execution Result｜2026-09-25
+
+- GitHub Actions Run: `36095981034`
+- Blender: `4.5.13 LTS`
+- Validation: **18/18 PASS**
+- Artifact: `P3_3_T032_CONNECTION_LAYER_COMPLETE_ASSEMBLY_PROOF_V001`
+- Artifact ID: `10846909100`
+- Artifact ZIP SHA-256: `94f67748e32304639b678bec8cdd2d11169495107a123666defe8529baf64cea`
+- Artifact expiry: 2026-10-25
+
+### TEST_A
+- lower Master: 上六椽栿 / section 334 × 240.5 mm
+- Connection Layer: `CONN-SAN-DOU-UPPER6-FOUR-001`
+- connector kind: `PHYSICAL_CONNECTOR`
+- connector geometry: `RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY`
+- connector envelope: 200.4 × 200.4 × 160 mm
+- upper Master: 四椽栿 / section 426.5 × 302 mm
+- lower interface gap / penetration: 0 / 0 mm
+- upper interface gap / penetration: 0 / 0 mm
+- upper Master resolved bottom Z: 400.5 mm
+- semantic signature: `99ceecbd3bcd1ed548e4bce165d3b34e4a1c109e0a467fdba071cb7fdc170c5e`
+
+### TEST_B mutation
+- connector height: 160 → 220 mm
+- upper Master resolved bottom Z: 400.5 → 460.5 mm
+- both interfaces remain 0 mm gap / 0 mm penetration
+- lower/upper Master sections unchanged
+- semantic signature: `8175d1f5067b2ac160178bed6167017b94e439245a28c3e1c545b2950e289de3`
+
+### Determinism
+- TEST_A restore signature:
+  `99ceecbd3bcd1ed548e4bce165d3b34e4a1c109e0a467fdba071cb7fdc170c5e`
+- exact match: **YES**
+
+### Human visual review
+TEST_A / TEST_B FRONT and AXON were inspected:
+- lower beam, connector and upper beam are visually distinct;
+- connector bridges the two Masters;
+- no visible gap or gross interpenetration;
+- TEST_B visibly raises the upper Master as connector height changes.
+
+### Scope conclusion
+**PASS for one connector-aware complete assembly architecture proof.**
+
+This proves:
+- Connection Layer exists as a machine-readable assembly layer;
+- a physical connector can carry its own identity and evidence boundary;
+- connection mutation propagates to participating Master placement;
+- full assembly can rebuild deterministically without manual Blender transforms.
+
+This does NOT prove:
+- historical san-dou profile or dimensions;
+- historical mortise/tenon;
+- the full 隔架单栱 group;
+- Stage 2 / Stage 3 completion;
+- whole-building placement authority.
