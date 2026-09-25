@@ -129,3 +129,13 @@ This authority does **not** authorize:
 - Approved-Master-covered Registry rows: **131**.
 - Latest-head Registry Excel sync + Master V2 final regression are required before merge.
 
+## Final RC-012 regression checkpoint｜D-145
+
+- Run `36129460213`: **SUCCESS / 91/91 PASS**
+- shared T-025～T-029 regression: **ALL PASS**
+- canonical Chinese name **子角梁** visibly rendered on every Review Board panel
+- formal Review Board SHA-256: `f77b06d362df998b9a9f6d94895620369f9af797c9229563f705cb5f820a92d9`
+- materialization Run: `36132158728` / SUCCESS
+- D-144 canonical .blend identity retained; regenerated regression binary not promoted
+- T-033 is ready for PR #27 Ready + merge.
+
