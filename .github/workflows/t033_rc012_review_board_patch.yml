@@ -1,7 +1,9 @@
 name: T-033 RC-012 Review Board Patch
 
 on:
-  pull_request:
+  push:
+    branches:
+      - 'codex/t033-p3-3-zijiaoliang-master-v2-v001'
     paths:
       - '.github/workflows/t033_rc012_review_board_patch.yml'
 
@@ -11,12 +13,11 @@ permissions:
 
 jobs:
   patch:
-    if: github.event.pull_request.head.ref == 'codex/t033-p3-3-zijiaoliang-master-v2-v001'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.sha }}
           fetch-depth: 0
 
       - name: Download RC-012-passing regression artifact
@@ -160,4 +161,4 @@ Result: **RC-012 CLOSED / REVIEW BOARD HUMAN + MACHINE PASS**.
           git rm .github/workflows/t033_rc012_review_board_patch.yml
           git add             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZIJIAOLIANG-001/CMP-FRAME-ZIJIAOLIANG-001_MASTER_REVIEW_BOARD_V001.png             production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json             docs/production/zhenguo_wanfo/P3_3_T033_ZIJIAOLIANG_FIRST_ARTICLE_ACCEPTANCE_2026-09-25.md             docs/tasks/T-033_P3_3_ZIJIAOLIANG_MASTER_V2_V001.md             docs/project_control/project_state.json             docs/project_control/decision_log.md
           git commit -m "T-033: close RC-012 Review Board identity gap"
-          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
+          git push origin "HEAD:codex/t033-p3-3-zijiaoliang-master-v2-v001"
