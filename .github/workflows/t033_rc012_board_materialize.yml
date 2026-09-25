@@ -1,0 +1,43 @@
+name: T-033 RC-012 Board Materialize
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/t033_rc012_board_materialize.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  materialize:
+    if: github.event.pull_request.head.ref == 'codex/t033-p3-3-zijiaoliang-master-v2-v001'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+
+      - name: Download and verify approved RC-012 board
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api -H "Accept: application/vnd.github+json" /repos/${{ github.repository }}/actions/artifacts/10861609433/zip > /tmp/t033.zip
+          rm -rf /tmp/t033 && mkdir -p /tmp/t033
+          unzip -q /tmp/t033.zip -d /tmp/t033
+          echo "f77b06d362df998b9a9f6d94895620369f9af797c9229563f705cb5f820a92d9  /tmp/t033/CMP-FRAME-ZIJIAOLIANG-001_MASTER_REVIEW_BOARD_V001.png" | sha256sum -c -
+          cp /tmp/t033/CMP-FRAME-ZIJIAOLIANG-001_MASTER_REVIEW_BOARD_V001.png production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZIJIAOLIANG-001/
+
+      - name: Commit exact board and self-remove
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZIJIAOLIANG-001/CMP-FRAME-ZIJIAOLIANG-001_MASTER_REVIEW_BOARD_V001.png
+          git rm .github/workflows/t033_rc012_board_materialize.yml
+          git commit -m "T-033: materialize RC-012 compliant Review Board"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
