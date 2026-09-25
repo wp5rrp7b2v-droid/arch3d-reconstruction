@@ -1,7 +1,7 @@
 # T-031｜P3.3 Two-piece Micro Assembly Proof V001
 
 ## Status
-MACHINE + HUMAN REVIEW PASS / AWAITING PRODUCT OWNER ACCEPTANCE / ARCHITECTURE RISK PROOF ONLY
+PLACEMENT LAYER PASS / OVERALL ASSEMBLY INCOMPLETE / SUPERSEDED AS FINAL SUCCESS CRITERION BY CONNECTION-LAYER REQUIREMENT
 
 ## Objective
 Validate that two already-approved Masters can be assembled automatically from clean state without manual Blender placement:
@@ -158,3 +158,15 @@ What is NOT proven:
 - historical joinery/contact face;
 - structural load-path correctness;
 - whole-building placement authority.
+
+
+## Product Owner refinement｜2026-09-25
+
+T-031 is **not** accepted as a complete component-assembly success criterion.
+
+Product Owner requires that a successful assembly proof must include an explicit **Connection Layer** between participating Masters. Therefore:
+
+- T-031 result remains valid only as **Placement Layer PASS**;
+- two bodies merely touching is insufficient for complete-assembly acceptance;
+- full success requires a connector-aware proof with explicit connection identity, connection geometry/feature semantics, automatic closure, mutation propagation and deterministic rebuild;
+- this refinement does not invalidate T-031's placement calculations; it narrows what T-031 proves.
