@@ -1278,3 +1278,13 @@ Do not restart T-018 by default.
 - Cloud close: PASS.
 - Local Mac sync + approved T-030 canonical .blend restore: PENDING.
 - No next engineering task authorized.
+
+## 2026-09-25｜RC-023 Production Evidence Non-Blocking Migration
+
+- Trigger: Product Owner identified recurring risk that missing Northern-Song/963 original data could be reinterpreted as a production blocker despite RC-020.
+- Audit result: RC-020 was correct, but current DoD/Acceptance Matrix/Project State retained ambiguous legacy blocker semantics.
+- Fix: D-137 / RC-023 aligns current P3.3 controls. Missing historical originals alone are NOT a blocker; explicit replaceable RECONSTRUCTED_DESIGN / PARAMETRIC_COMPLETION may continue production within locked evidence boundaries.
+- True evidence HOLD conditions only: unresolved direct-evidence conflict; production identity/topology undefinable; no verifiable geometry/structure closure; proposed design contradicts locked direct evidence.
+- D-076 remains active as a boundary/disposition review, not an evidence-completeness requirement.
+- Historical logs and labels remain preserved for audit; they do not regain current production authority.
+
