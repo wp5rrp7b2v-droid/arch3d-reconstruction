@@ -1,0 +1,88 @@
+{
+  "schema_version": "P3_3_MICRO_ASSEMBLY_PROOF_1.0",
+  "proof_id": "P3_3_2PIECE_FOUR_CHUANFU_TUOJIAO_PROOF_V001",
+  "status": "ENGINEERING_PROOF / NOT_STAGE2_OR_STAGE3 / PRODUCT_OWNER_AUTHORIZED_2026-09-25",
+  "objective": "Verify clean-state automatic placement of one Four-Chuanfu and one Tuojiao into a bounded support relationship without manual Blender transforms.",
+  "scope_boundary": {
+    "stage1_remains_active": true,
+    "stage2_pass_claim": false,
+    "stage3_pass_claim": false,
+    "building_coordinate_claim": false,
+    "historical_geometry_claim": false,
+    "joinery_claim": false,
+    "merge_requires_separate_review": true
+  },
+  "authority": {
+    "rc020": "EVIDENCE_CONSTRAINED_RECONSTRUCTION",
+    "rc023": "PRODUCTION_EVIDENCE_NON_BLOCKING_PRECEDENCE",
+    "four_chuanfu_params": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-FOUR-CHUANFU-001/CMP-FRAME-FOUR-CHUANFU-001_MASTER_PARAMS_V001.json",
+    "four_chuanfu_semantic": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-FOUR-CHUANFU-001/CMP-FRAME-FOUR-CHUANFU-001_MASTER_SEMANTIC_V001.json",
+    "tuojiao_definition": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_DEFINITION_V001.json",
+    "tuojiao_semantic": "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_SEMANTIC_V001.json"
+  },
+  "locked_identity": {
+    "four_chuanfu": {
+      "component_id": "CMP-FRAME-FOUR-CHUANFU-001",
+      "master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "canonical_blend_sha256": "9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997"
+    },
+    "tuojiao": {
+      "component_id": "CMP-FRAME-TUOJIAO-001",
+      "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "canonical_blend_sha256": "23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f",
+      "required_official_semantic": "SUPPORTS_ENDS_OF_FOUR_CHUANFU"
+    }
+  },
+  "engineering_fixture": {
+    "classification": "ENGINEERING_TEST_ONLY / RECONSTRUCTED_DESIGN / NOT_BUILDING_COORDINATES / NOT_HISTORICAL",
+    "four_chuanfu": {
+      "derived_instance_length_mm": 2400,
+      "center_x_mm": 0,
+      "center_y_mm": 0,
+      "bottom_z_mm": 0
+    },
+    "support_contact": {
+      "beam_support_x_mm": 1000,
+      "beam_support_y_mm": 0,
+      "beam_underside_z_mm": 0,
+      "contact_model": "UPPER_END_ENVELOPE_TANGENT_TO_BEAM_UNDERSIDE / SIMPLIFIED_ASSEMBLY_CONTACT"
+    },
+    "fixtures": [
+      {
+        "fixture_id": "BASELINE",
+        "p_lower_centerline_mm": [
+          0,
+          0,
+          -1250
+        ]
+      },
+      {
+        "fixture_id": "MUTATION",
+        "p_lower_centerline_mm": [
+          -200,
+          0,
+          -1450
+        ]
+      }
+    ],
+    "tolerance_mm": 0.05
+  },
+  "acceptance": [
+    "canonical component/master identities are read from locked inputs",
+    "Four-Chuanfu section = 426.5 x 302.0 mm from approved params",
+    "Tuojiao section = 237.1 x 153.7 mm from approved Definition",
+    "Four-Chuanfu proof length is assembly-derived 2400 mm and not canonical 1000 mm",
+    "Tuojiao proof length is endpoint/contact-derived and not canonical 1000 mm",
+    "official SUPPORTS_ENDS_OF_FOUR_CHUANFU semantic is retained",
+    "support upper envelope is tangent to Four-Chuanfu underside within tolerance",
+    "support body does not penetrate Four-Chuanfu volume",
+    "contact lies inside Four-Chuanfu support footprint",
+    "no manual Blender transform is used",
+    "baseline and clean repeat have identical semantic assembly signature",
+    "independent reopen matches baseline semantic assembly signature",
+    "lower-end mutation changes Tuojiao length and orientation",
+    "lower-end mutation preserves Four-Chuanfu geometry and support contact",
+    "fixture remains NOT_BUILDING_COORDINATES / NOT_HISTORICAL",
+    "no joinery or historical endpoint geometry is claimed"
+  ]
+}
