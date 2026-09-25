@@ -1,0 +1,133 @@
+name: P3.3 2-Piece Micro Assembly Proof
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p3_3_two_piece_micro_assembly_proof.yml'
+      - 'production/zhenguo_wanfo/assembly_proofs/P3_3_2PIECE_FOUR_CHUANFU_TUOJIAO_PROOF_V001.json'
+      - 'production/zhenguo_wanfo/scripts/p3_3_two_piece_micro_assembly_proof_v001.py'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-FOUR-CHUANFU-001/CMP-FRAME-FOUR-CHUANFU-001_MASTER_PARAMS_V001.json'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-FOUR-CHUANFU-001/CMP-FRAME-FOUR-CHUANFU-001_MASTER_SEMANTIC_V001.json'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_DEFINITION_V001.json'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_SEMANTIC_V001.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      SCRIPT: production/zhenguo_wanfo/scripts/p3_3_two_piece_micro_assembly_proof_v001.py
+      CONTRACT: production/zhenguo_wanfo/assembly_proofs/P3_3_2PIECE_FOUR_CHUANFU_TUOJIAO_PROOF_V001.json
+      OUT: artifacts/p3_3_2piece_micro_assembly
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Static contract check
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m py_compile "$SCRIPT"
+          python - "$CONTRACT" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert d["status"].startswith("ENGINEERING_PROOF")
+          assert d["scope_boundary"]["stage2_pass_claim"] is False
+          assert d["scope_boundary"]["stage3_pass_claim"] is False
+          assert d["scope_boundary"]["building_coordinate_claim"] is False
+          assert d["scope_boundary"]["historical_geometry_claim"] is False
+          assert len(d["engineering_fixture"]["fixtures"])==2
+          print("MICRO_ASSEMBLY_CONTRACT_PASS")
+          PY
+
+      - name: Install Blender 4.5.13
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions MicroAssembly" -o /tmp/blender.tar.xz "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | head -1
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+
+      - name: Build baseline proof
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" -- \
+            --mode build --contract "$CONTRACT" --fixture BASELINE \
+            --asset "$OUT/baseline.blend" --semantic "$OUT/baseline.json" --render "$OUT/baseline.png"
+
+      - name: Independent reopen baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$OUT/baseline.blend" --python-exit-code 10 --python "$SCRIPT" -- \
+            --mode inspect --expected "$OUT/baseline.json" --output "$OUT/reopen.json"
+
+      - name: Build endpoint mutation
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" -- \
+            --mode build --contract "$CONTRACT" --fixture MUTATION \
+            --asset "$OUT/mutation.blend" --semantic "$OUT/mutation.json" --render "$OUT/mutation.png"
+
+      - name: Clean-state deterministic repeat
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" -- \
+            --mode build --contract "$CONTRACT" --fixture BASELINE \
+            --asset "$OUT/repeat.blend" --semantic "$OUT/repeat.json" --render "$OUT/repeat.png"
+
+      - name: Validate 2-piece assembly
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$SCRIPT" --mode validate --contract "$CONTRACT" \
+            --baseline "$OUT/baseline.json" --mutation "$OUT/mutation.json" \
+            --repeat "$OUT/repeat.json" --reopen "$OUT/reopen.json" \
+            --output "$OUT/validation.json"
+          python - "$OUT/validation.json" <<'PY'
+          import json,sys
+          v=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert v["status"]=="PASS"
+          assert v["pass_count"]==v["total_count"]
+          print("P3_3_2PIECE_MICRO_ASSEMBLY_PROOF_PASS",v["pass_count"],v["total_count"])
+          PY
+
+      - name: Git containment
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -z "$(git ls-files -- '*.blend')"
+          git diff --exit-code
+          echo "MICRO_ASSEMBLY_GIT_CONTAINMENT_PASS"
+
+      - name: Upload proof artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_2PIECE_FOUR_CHUANFU_TUOJIAO_PROOF_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            artifacts/p3_3_2piece_micro_assembly/baseline.blend
+            artifacts/p3_3_2piece_micro_assembly/baseline.json
+            artifacts/p3_3_2piece_micro_assembly/baseline.png
+            artifacts/p3_3_2piece_micro_assembly/mutation.blend
+            artifacts/p3_3_2piece_micro_assembly/mutation.json
+            artifacts/p3_3_2piece_micro_assembly/mutation.png
+            artifacts/p3_3_2piece_micro_assembly/repeat.json
+            artifacts/p3_3_2piece_micro_assembly/reopen.json
+            artifacts/p3_3_2piece_micro_assembly/validation.json
