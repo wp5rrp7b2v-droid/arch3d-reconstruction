@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R226",
+  "state_revision": "R229",
   "last_updated": "2026-09-25",
-  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-031+T-032 CLOSED / RC-024 LOCKED / LOCAL SYNC PASS AT d889002 / 子角梁 D-076 VISUAL-FORM GATE ACTIVE / T-018 HOLD",
+  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 RC-012 CLOSED / FINAL REGRESSION 91 OF 91 PASS / PR #27 READY FOR MERGE / RC-024 ACTIVE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 16 OF 28 MASTERS APPROVED / 子角梁 D-076 VISUAL-FORM GATE ACTIVE / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 READY FOR MERGE / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 MASTER TASKS CLOSED / T-031+T-032 ARCHITECTURE PROOFS CLOSED / 16 OF 28 MASTERS APPROVED / RC-024 ACTIVE / 子角梁 D-076 ACTIVE / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 MASTER TASKS CLOSED / T-031+T-032 ARCHITECTURE PROOFS CLOSED / 16 OF 28 MASTERS APPROVED / RC-024 ACTIVE / 子角梁 D-076 ACTIVE / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 CLOSED / T-031+T-032 ARCHITECTURE PROOFS CLOSED / T-033 READY FOR MERGE / 17 OF 28 MASTERS APPROVED ON BRANCH / RC-024 ACTIVE / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 CLOSED / T-031+T-032 ARCHITECTURE PROOFS CLOSED / T-033 READY FOR MERGE / 17 OF 28 MASTERS APPROVED ON BRANCH / RC-024 ACTIVE / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "No active blocker. Initial local GitHub 443 timeout recovered on retry; fast-forward completed and LOCAL_HEAD == REMOTE_HEAD == d889002b5ea895eb8dc945fbaaef6b07b8dfb3d3.",
+  "blocker": "No active blocker. T-033 RC-012 Review Board identity gap is corrected, materialized and verified. Latest Run 36129460213 SUCCESS / 91/91 PASS; T-025..T-029 shared regression ALL PASS.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,15 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "P3_3_ZIJIAOLIANG_VISUAL_FORM_GATE",
-    "name": "子角梁｜D-076 Visual/Form Gate",
-    "status": "ACTIVE / RESUMED FROM D-132 SOURCE READINESS PASS / PRE-ENGINEERING ONLY / NO BLENDER OR PRODUCTION BRANCH YET"
+    "id": "T-033",
+    "name": "P3_3_ZIJIAOLIANG_MASTER_V2_V001｜子角梁 Master",
+    "status": "FORMALIZED / RC-012 CLOSED / FINAL REGRESSION PASS / PR #27 READY FOR MERGE"
   },
   "proposed_next_task": {
-    "id": "POST_D076_ZIJIAOLIANG_MASTER_SPEC",
-    "name": "子角梁｜Stage1 Master Spec design",
-    "status": "PENDING D-076 GATE COMPLETION",
-    "prerequisite": "Complete Visual/Form Gate using D-132 A1/A2 evidence boundary; then lock Master Spec before any engineering T-task."
+    "id": "NONE",
+    "name": "T-033 closure first",
+    "status": "NO NEXT COMPONENT UNTIL PR #27 MERGES"
   },
   "last_completed_task": {
     "id": "T-030",
@@ -125,14 +124,14 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-031+T-032 CLOSED / RC-024 ACTIVE / 子角梁 D-076 ACTIVE / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 READY FOR MERGE / RC-024 ACTIVE / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-066",
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md",
     "engineering_planning_authorized": true,
-    "engineering_execution_authorized": false,
+    "engineering_execution_authorized": true,
     "t017": {
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
@@ -523,7 +522,61 @@
       "connector_geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
       "stage_advance": false
     },
-    "next_master_candidate": "子角梁 / D-132 SOURCE READINESS PASS / D-076 VISUAL-FORM GATE ACTIVE / ENGINEERING NOT AUTHORIZED"
+    "next_master_candidate": "子角梁 / T-033 ACTIVE / D-142+D-143",
+    "t033": {
+      "task_id": "T-033",
+      "component": "子角梁",
+      "component_id": "CMP-FRAME-ZIJIAOLIANG-001",
+      "master_id": "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
+      "status": "FORMALIZED / RC-012 CLOSED / FINAL REGRESSION PASS / PR #27 READY FOR MERGE",
+      "source_readiness": "D-132 PASS",
+      "visual_form_gate": "D-142 PASS WITH GEOMETRY BOUNDARY",
+      "task_authority": "D-143 END-TO-END COMPONENT COMPLETION AUTHORIZED",
+      "physical_instance_count": 4,
+      "family_reference_section_mm": {
+        "width": 216.5,
+        "thickness": 152
+      },
+      "source_aggregation_method_ambiguous": true,
+      "direct_instance_sections_mm": {
+        "SE": [
+          220,
+          150
+        ],
+        "NE": [
+          190,
+          153
+        ],
+        "SW": [
+          213,
+          153
+        ],
+        "NW": [
+          125,
+          149
+        ]
+      },
+      "connection_layer_incremental": {
+        "outboard": "套兽 attachment semantic / exact geometry unresolved",
+        "inboard": "corner assembly relation / JOINERY_FEATURE vs CONTACT_INTERFACE deferred"
+      },
+      "first_article_run_id": 36121884128,
+      "first_article_validation": "84/84 PASS",
+      "first_article_artifact_id": 10858207870,
+      "canonical_blend_sha256": "104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b",
+      "semantic_geometry_signature": "26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5",
+      "product_owner_acceptance": "D-144 / delegated by D-143",
+      "rc012_decision_id": "D-145",
+      "rc012_final_run_id": 36129460213,
+      "rc012_final_validation": "91/91 PASS",
+      "rc012_final_artifact_id": 10861609433,
+      "rc012_review_board_sha256": "f77b06d362df998b9a9f6d94895620369f9af797c9229563f705cb5f820a92d9",
+      "rc012_materialization_run_id": 36132158728,
+      "rc012_materialization_result": "SUCCESS",
+      "rc012_shared_regression": "T-025..T-029 ALL PASS",
+      "regenerated_regression_blend_sha256": "029937842fb4650a3ae43c270af285e34a339d53b31370d0d8757a34bff550f1",
+      "regenerated_regression_blend_promoted": false
+    }
   },
   "roof_control_audit_2026_09_17": {
     "status": "READ_ONLY / COMPLETE / B-STOP",
@@ -547,9 +600,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-141",
+    "id": "D-145",
     "date": "2026-09-25",
-    "decision": "Local sync after T-031/T-032 closure is verified PASS at d889002b5ea895eb8dc945fbaaef6b07b8dfb3d3 despite one transient 443 timeout. Per D-140, Stage1 resumes with 子角梁 from D-132 into D-076 Visual/Form Gate; no Blender/production branch/engineering task is authorized until the gate and Master Spec are locked."
+    "decision": "T-033 RC-012 Review Board identity gap corrected and exact board materialized. Run 36129460213 SUCCESS / 91 of 91 PASS; T-025..T-029 shared regression ALL PASS; Chinese canonical name 子角梁 visibly present. D-144 canonical blend identity remains unchanged; regenerated regression binary is not promoted. PR #27 may proceed to Ready + merge."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -613,7 +666,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Continue 子角梁 D-076 Visual/Form Gate from D-132 Source Readiness. After gate PASS, lock Stage1 Master Spec; only then create/authorize the engineering T-task. Keep T-018 HOLD and Stage2 NOT AUTHORIZED.",
+  "next_action": "Ready+merge PR #27, verify main, then close T-033 at 17/28. Stage2 and T-018 remain out of scope.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1007,15 +1060,15 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-030 D-130 BINDING CLOSED / 16 OF 28",
+    "status": "ACTIVE / T-033 D-145 BINDING READY / 17 OF 28",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 16,
-    "pending_master_object_type_count": 12,
-    "master_completion_percent": 57.1,
-    "master_covered_registry_record_count": 127,
+    "approved_master_count": 17,
+    "pending_master_object_type_count": 11,
+    "master_completion_percent": 60.7,
+    "master_covered_registry_record_count": 131,
     "pending_source_binding_count": 7,
     "row_fields": [
       "stage1_disposition",

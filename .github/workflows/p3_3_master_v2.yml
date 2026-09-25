@@ -82,7 +82,7 @@ jobs:
         run: |
           set -euo pipefail
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1 fonts-noto-cjk
           curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions MasterV2" -o /tmp/blender.tar.xz "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
           tar -xf /tmp/blender.tar.xz -C /tmp
           "$BLENDER" --version
