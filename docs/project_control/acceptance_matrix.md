@@ -736,3 +736,20 @@ T-020 已关闭。T-018 upstream datum STOP 解除；下一步必须在原 PR #3
 - Final regenerated geometry signature：`b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2`。
 - Final status：**T-030 CLOSED / MERGED_TO_MAIN**。
 - Boundary：Stage2 NOT AUTHORIZED；T-018 HOLD。
+
+### T-031 / T-032｜Micro Assembly Architecture Proofs｜2026-09-25
+
+| Proof | Result | Formal interpretation |
+|---|---|---|
+| T-031｜四椽栿 + 托脚 | **PASS / CLOSED / PR #23 MERGED / D-138** | Placement Layer only：自动定位、mutation、deterministic rebuild 已验证；**不构成完整 Assembly PASS**。 |
+| T-032｜上六椽栿 → 散斗 → 四椽栿 | **PASS / CLOSED / PR #24 MERGED / D-139** | 首个 Connection-aware Complete Assembly proof；18/18 PASS；散斗 exact geometry 为 replaceable `RECONSTRUCTED_DESIGN / CONNECTOR_PROXY`。 |
+
+Current controlling acceptance rule｜RC-024：
+
+- Complete Assembly 必须包含显式 Connection Layer；
+- Connection Layer 类型为 `PHYSICAL_CONNECTOR` / `JOINERY_FEATURE` / `CONTACT_INTERFACE`；
+- 两个 Master 单纯贴合不能视为完整组合；直接接触必须显式登记为 `CONTACT_INTERFACE` 后才能接受；
+- T-031 / T-032 均为 Stage1 期间架构风险 proof，**不增加 Approved Master 计数**，当前仍为 **16/28 = 57.1%**；
+- Stage2 / Stage3 仍未授权/未通过；
+- D-140：本地同步后继续剩余 Stage1 Master，下一构件从子角梁 D-132 基线恢复；Connection 信息随 Master 增量登记，不为完整 Matrix 单独停线。
+
