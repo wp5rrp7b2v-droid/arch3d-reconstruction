@@ -312,3 +312,20 @@ Decision authority: **D-137 / RC-023**.
 5. **D-076 interpretation**：Pre-Model Visual/Form Gate 审核的是“现有资料 + 缺口边界 + 拟采用生产处置是否清楚并获批准”，不是要求资料完整。没有同建筑历史原图/北宋原值不得单独触发 `BLOCKED_ON_VISUAL_REFERENCE_REVIEW`。
 6. **Precedence**：若旧 Project Control、历史 Gate 标签、`UNKNOWN_BLOCKED`、`DEFERRED_INSUFFICIENT_EVIDENCE` 等历史术语与本规则产生歧义，历史记录保留原文，但 P3.3 当前生产解释以 RC-020 + RC-023 为准。
 
+### 4.15 Connection Layer / Complete Assembly Rule｜连接层与完整组合规则
+
+Decision authority: **D-139 / RC-024**.
+
+1. **Placement ≠ Complete Assembly**：两个 Master 能自动就位、接触或相交检查 PASS，只能证明 placement/interface resolver 可工作；不得单独声明“完整构件组合成功”。
+2. **Complete Assembly requires Connection Layer**：任何正式组合关系必须通过显式 Connection Layer 闭合，类型统一为：
+   - `PHYSICAL_CONNECTOR`：独立实体连接/承托件，如散斗、木楔等；
+   - `JOINERY_FEATURE`：榫、卯、槽口、缺口等母材加工特征；
+   - `CONTACT_INTERFACE`：无独立连接件但有明确承压/搭接/接触面的关系。
+3. **Machine-readable identity**：Connection Layer 至少记录 `connection_id`、participants、evidence boundary、geometry classification、interfaces、resolver、validation tolerance、historical claim 与 replaceability。
+4. **No silent connector invention**：不得因建模方便虚构“有榫卯/木楔/散斗”；连接类型与存在性优先服从 A1/A2。资料只证明连接关系、不证明精确几何时，可依 RC-020/RC-023 使用显式可替换 `RECONSTRUCTED_DESIGN / CONNECTOR_PROXY`。
+5. **Contact must be explicit**：若真实结构就是直接承托/搭接，不要求强行加入第三实体，但必须登记为 `CONTACT_INTERFACE` 并验证接触面、方向、容差和 mutation 行为。
+6. **Mutation + determinism**：Connection 参数变化后，受影响 Master 的装配位置/几何必须由 resolver 自动更新；禁止靠人工 Blender 移动补齐；clean rebuild 必须语义确定。
+7. **T-031 precedent**：T-031 正式分类为 `PLACEMENT_LAYER_PASS / OVERALL_ASSEMBLY_INCOMPLETE`。
+8. **T-032 precedent**：T-032 以 `上六椽栿 → 散斗 connector proxy → 四椽栿` 首次证明 Connection Layer 完整装配架构可行；散斗精确形制仍为可替换重建设计，不构成963历史原貌声明。
+9. **Future Masters**：Stage 1 继续完成剩余 Master，不因 Connection Matrix 单独停线；每个后续 Master 在生产/验收时增量登记已知接口与 Connection Layer 类型，完整 Matrix 在 Master 库成熟后由这些记录派生。
+

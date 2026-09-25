@@ -1288,3 +1288,13 @@ Do not restart T-018 by default.
 - D-076 remains active as a boundary/disposition review, not an evidence-completeness requirement.
 - Historical logs and labels remain preserved for audit; they do not regain current production authority.
 
+## 2026-09-25｜T-031 / T-032 Assembly Architecture Closure
+
+- T-031: PR #23 merged at `fb13600f36acb66f3144b5d0ef5b9dc2261cf4da`; classification locked to `PLACEMENT_LAYER_PASS / OVERALL_ASSEMBLY_INCOMPLETE`.
+- T-032: PR #24 merged at `bf3028da75d6093b01be468af4845a4e1d319cde`; final post-base-sync regression Run `36117976721` SUCCESS.
+- RC-024 locked: complete assembly requires an explicit Connection Layer; body-to-body touching alone is insufficient.
+- Allowed Connection Layer kinds: `PHYSICAL_CONNECTOR`, `JOINERY_FEATURE`, `CONTACT_INTERFACE`.
+- T-032 first complete proof chain: 上六椽栿 → 散斗 connector proxy → 四椽栿.
+- Master progress remains 16/28; no Stage2/Stage3 advancement.
+- Product Owner sequence: local sync next; only after sync PASS resume Stage1 remaining Masters, beginning from 子角梁 D-132 baseline.
+
