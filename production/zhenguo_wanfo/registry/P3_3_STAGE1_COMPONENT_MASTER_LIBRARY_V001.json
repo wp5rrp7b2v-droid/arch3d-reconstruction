@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-030",
-  "status": "SIXTEEN_APPROVED / T030 CLOSED / PR #18 MERGED_TO_MAIN",
+  "task": "T-033",
+  "status": "SEVENTEEN_APPROVED / T033 FORMALIZED / PR #27 OPEN",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -404,7 +404,38 @@
       "shared_regression_artifact_id_final": 10808219712,
       "shared_regression_artifact_zip_sha256": "a28e4fc8b328ad80aa534c07489d87a2b0ff0be9c575e2df55915a6b88f5228f",
       "excel_sync_run": 36000242318
+    },
+    {
+      "component_id": "CMP-FRAME-ZIJIAOLIANG-001",
+      "master_id": "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
+      "master_version": "V001",
+      "approval_status": "PRODUCT_OWNER_APPROVED",
+      "decision_id": "D-144",
+      "formalization_authority": "D-143 / DELEGATED END-TO-END COMPLETION",
+      "publication_status": "FORMALIZED / PR #27 OPEN",
+      "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL ONLY / NOT GIT",
+      "canonical_asset_sha256": "104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b",
+      "semantic_sha256": "28726a3483deee2c89fc460a081d56e36af3c8dd2d71f46838f63d42d05f5c92",
+      "validation_sha256": "fb8809950ec581d38b20c5d5728d06e007e04858397b62184c946485e9d718b5",
+      "review_board_sha256": "4dbe0c44bcca82f8eb503c87af98256838e992b69f7fd634916223da1df149e4",
+      "semantic_geometry_signature": "26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5",
+      "canonical_section_mm": {
+        "width": 216.5,
+        "thickness": 152
+      },
+      "physical_instance_count": 4,
+      "distribution": "SE / NE / SW / NW = 1 EACH / DIRECT_LOCKED_LOCATION_SECTION",
+      "source_aggregation_method_ambiguous": true,
+      "source_artifact": {
+        "actions_run_id": 36121884128,
+        "artifact_id": 10858207870,
+        "artifact_zip_sha256": "c1b0f227ed55c00529e5ac722a2195bff59282c428a84de0743a4124f52fc466"
+      },
+      "connection_layer_incremental": {
+        "outboard": "套兽 attachment semantic / PHYSICAL_CONNECTOR intent / exact geometry unresolved",
+        "inboard": "corner assembly family relation / JOINERY_FEATURE vs CONTACT_INTERFACE deferred"
+      }
     }
   ],
-  "approved_master_count": 16
+  "approved_master_count": 17
 }

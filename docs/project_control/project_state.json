@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R227",
+  "state_revision": "R228",
   "last_updated": "2026-09-25",
-  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-033 子角梁 ENGINEERING AUTHORIZED / D-076 PASS / RC-024 ACTIVE / T-018 HOLD",
+  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 FIRST ARTICLE ACCEPTED + FORMALIZED / FINAL REGRESSION PENDING / RC-024 ACTIVE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active blocker. Initial local GitHub 443 timeout recovered on retry; fast-forward completed and LOCAL_HEAD == REMOTE_HEAD == d889002b5ea895eb8dc945fbaaef6b07b8dfb3d3.",
+  "blocker": "No active blocker. T-033 first article 84/84 PASS; formalization and Registry binding completed on PR #27 branch; final regression pending.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "T-033",
     "name": "P3_3_ZIJIAOLIANG_MASTER_V2_V001｜子角梁 Master",
-    "status": "ENGINEERING EXECUTION AUTHORIZED / FIRST ARTICLE PENDING"
+    "status": "FIRST ARTICLE ACCEPTED / FORMALIZED / CATALOG+V008 BOUND / FINAL REGRESSION PENDING"
   },
   "proposed_next_task": {
     "id": "NONE",
@@ -124,7 +124,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / D-066 / STAGE 1 ACTIVE / 16 OF 28 MASTERS APPROVED / T-033 ACTIVE / RC-024 ACTIVE / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 FINAL REGRESSION PENDING / RC-024 ACTIVE / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -528,7 +528,7 @@
       "component": "子角梁",
       "component_id": "CMP-FRAME-ZIJIAOLIANG-001",
       "master_id": "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
-      "status": "ENGINEERING EXECUTION AUTHORIZED / FIRST ARTICLE PENDING",
+      "status": "FIRST ARTICLE ACCEPTED / FORMALIZED / CATALOG+V008 BOUND / FINAL REGRESSION PENDING",
       "source_readiness": "D-132 PASS",
       "visual_form_gate": "D-142 PASS WITH GEOMETRY BOUNDARY",
       "task_authority": "D-143 END-TO-END COMPONENT COMPLETION AUTHORIZED",
@@ -559,7 +559,13 @@
       "connection_layer_incremental": {
         "outboard": "套兽 attachment semantic / exact geometry unresolved",
         "inboard": "corner assembly relation / JOINERY_FEATURE vs CONTACT_INTERFACE deferred"
-      }
+      },
+      "first_article_run_id": 36121884128,
+      "first_article_validation": "84/84 PASS",
+      "first_article_artifact_id": 10858207870,
+      "canonical_blend_sha256": "104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b",
+      "semantic_geometry_signature": "26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5",
+      "product_owner_acceptance": "D-144 / delegated by D-143"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -584,9 +590,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-143",
+    "id": "D-144",
     "date": "2026-09-25",
-    "decision": "T-033 子角梁 end-to-end Stage1 completion authorized after D-142 D-076 PASS. Stage2 and T-018 remain unauthorized/HOLD."
+    "decision": "T-033 first article accepted under D-143 end-to-end authority; formalization and 17/28 Registry/Catalog binding completed; final regression pending."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -650,7 +656,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Execute T-033 first article via existing Master V2 pipeline; review PASS evidence, then formalize and merge if all gates pass.",
+  "next_action": "Wait for PR-branch Registry Excel sync and latest-head Master V2 final regression. If PASS, Ready+merge PR #27 and close T-033 at 17/28. Stage2/T-018 remain out of scope.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
