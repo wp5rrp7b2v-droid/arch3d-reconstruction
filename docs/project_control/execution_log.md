@@ -1324,3 +1324,28 @@ Do not restart T-018 by default.
 - T-018: HOLD.
 - Local Mac sync: PENDING / separate next step.
 
+## 2026-09-25｜Daily Close / D-147
+
+- T-031: CLOSED / PLACEMENT LAYER PASS / overall assembly incomplete by design.
+- T-032: CLOSED / Connection Layer complete assembly proof PASS / RC-024 remains authoritative.
+- T-033 子角梁: CLOSED / Product Owner approved / PR #27 merged / D-146.
+- Stage1 Master progress: **17/28 = 60.7%**.
+- Approved-Master-covered Registry records: **131**.
+- Latest T-033 latest-head Run: `36132308751` / SUCCESS.
+- Local Git sync:
+  - network path: `git-proxy-auto`
+  - proxy observed: `http://127.0.0.1:15236`
+  - LOCAL_HEAD: `29b934a6881b93fac127cce8565a181fd9c6be97`
+  - REMOTE_HEAD: `29b934a6881b93fac127cce8565a181fd9c6be97`
+  - status: `## main...origin/main`
+- T-033 canonical Blender restored locally:
+  - path: `production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZIJIAOLIANG-001/CMP-FRAME-ZIJIAOLIANG-001_MASTER_V001.blend`
+  - SHA-256: `104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b`
+  - SHA_MATCH: YES
+- Legacy Draft PR #22: CLOSED / SUPERSEDED / NOT MERGED.
+- Open PR #3/#6: retained intentionally / T-018 HOLD.
+- Active engineering task: NONE.
+- Stage2: NOT AUTHORIZED.
+- Next Stage1 component: NOT SELECTED / NOT STARTED.
+- Daily Close result: **PASS**.
+
