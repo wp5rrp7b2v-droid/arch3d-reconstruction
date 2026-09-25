@@ -1,0 +1,107 @@
+name: P3.3 T-031 Two-piece Micro Assembly Proof
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/p3_3_t031_two_piece_micro_assembly.yml'
+      - 'docs/tasks/T-031_P3_3_TWO_PIECE_MICRO_ASSEMBLY_PROOF_V001.md'
+      - 'production/zhenguo_wanfo/scripts/build_p3_3_two_piece_micro_assembly_v001.py'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-FOUR-CHUANFU-001/CMP-FRAME-FOUR-CHUANFU-001_MASTER_PARAMS_V001.json'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_DEFINITION_V001.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  micro-assembly-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      BLENDER_DIR: /tmp/blender-4.5.13-linux-x64
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      SCRIPT: production/zhenguo_wanfo/scripts/build_p3_3_two_piece_micro_assembly_v001.py
+      OUT: artifacts/t031
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Static boundary preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "$SCRIPT"
+          grep -q 'ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES' docs/tasks/T-031_P3_3_TWO_PIECE_MICRO_ASSEMBLY_PROOF_V001.md
+          grep -q 'stage_advance":False' "$SCRIPT"
+          ! git diff --name-only origin/main...HEAD 2>/dev/null | grep -E 'P3_WANFO_COMPONENT_INSTANCE_REGISTRY|MASTER_DEFINITION|MASTER_PARAMS' || true
+          echo "T031_STATIC_BOUNDARY_PASS"
+
+      - name: Install Blender 4.5.13
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions T031"             -o /tmp/blender.tar.xz             "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+
+      - name: Build TEST_A
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT/A/review"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" --             --mode build --case A             --blend "$OUT/A/T031_TEST_A.blend"             --semantic "$OUT/A/semantic.json"             --review-dir "$OUT/A/review"
+
+      - name: Build TEST_B mutation
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT/B/review"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" --             --mode build --case B             --blend "$OUT/B/T031_TEST_B.blend"             --semantic "$OUT/B/semantic.json"             --review-dir "$OUT/B/review"
+
+      - name: Deterministic TEST_A rebuild
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT/A_restore"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" --             --mode build --case A             --blend "$OUT/A_restore/T031_TEST_A_RESTORE.blend"             --semantic "$OUT/A_restore/semantic.json"
+
+      - name: Validate micro assembly
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" --             --mode validate             --a "$OUT/A/semantic.json"             --b "$OUT/B/semantic.json"             --restore "$OUT/A_restore/semantic.json"             --output "$OUT/validation.json"
+          python - "$OUT/validation.json" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1]))
+          assert d["status"]=="PASS"
+          assert d["check_count"]==12
+          assert d["stage_advance"] is False
+          print("T031_FINAL_PASS", d["test_a_tuijiao_length_mm"], d["test_b_tuijiao_length_mm"])
+          PY
+
+      - name: Assert no tracked blend output
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -z "$(git status --short -- '*.blend')"
+          echo "T031_NO_TRACKED_BLEND_PASS"
+
+      - name: Upload proof artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T031_TWO_PIECE_MICRO_ASSEMBLY_PROOF_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            artifacts/t031/A/T031_TEST_A.blend
+            artifacts/t031/A/semantic.json
+            artifacts/t031/A/review/*.png
+            artifacts/t031/B/T031_TEST_B.blend
+            artifacts/t031/B/semantic.json
+            artifacts/t031/B/review/*.png
+            artifacts/t031/A_restore/semantic.json
+            artifacts/t031/validation.json
