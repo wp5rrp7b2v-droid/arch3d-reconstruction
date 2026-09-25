@@ -417,7 +417,7 @@
       "canonical_asset_sha256": "104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b",
       "semantic_sha256": "28726a3483deee2c89fc460a081d56e36af3c8dd2d71f46838f63d42d05f5c92",
       "validation_sha256": "fb8809950ec581d38b20c5d5728d06e007e04858397b62184c946485e9d718b5",
-      "review_board_sha256": "4dbe0c44bcca82f8eb503c87af98256838e992b69f7fd634916223da1df149e4",
+      "review_board_sha256": "f77b06d362df998b9a9f6d94895620369f9af797c9229563f705cb5f820a92d9",
       "semantic_geometry_signature": "26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5",
       "canonical_section_mm": {
         "width": 216.5,
@@ -434,6 +434,22 @@
       "connection_layer_incremental": {
         "outboard": "套兽 attachment semantic / PHYSICAL_CONNECTOR intent / exact geometry unresolved",
         "inboard": "corner assembly family relation / JOINERY_FEATURE vs CONTACT_INTERFACE deferred"
+      },
+      "first_article_review_board_sha256": "4dbe0c44bcca82f8eb503c87af98256838e992b69f7fd634916223da1df149e4",
+      "review_board_status": "RC-012 PATCHED / CANONICAL CHINESE COMPONENT NAME VISIBLE",
+      "review_board_authority": "D-145 / Run 36129460213 / Artifact 10861609433",
+      "rc012_regression": {
+        "run_id": 36129460213,
+        "result": "SUCCESS",
+        "validation": "91/91 PASS",
+        "artifact_id": 10861609433,
+        "artifact_zip_sha256": "bb0c6bb838876e907f64b72674969c02eea37ce9363d4972f25ab69df25f5792",
+        "shared_regression_artifact_id": 10861259769,
+        "shared_regression_artifact_zip_sha256": "2041fc8e4c8194e55a7b56927a1b257a4173ffae0ab5c5a8f03ec14992918c37",
+        "review_board_sha256": "f77b06d362df998b9a9f6d94895620369f9af797c9229563f705cb5f820a92d9",
+        "regenerated_blend_sha256": "029937842fb4650a3ae43c270af285e34a339d53b31370d0d8757a34bff550f1",
+        "regenerated_blend_promoted_to_canonical": false,
+        "semantic_geometry_signature": "26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5"
       }
     }
   ],
