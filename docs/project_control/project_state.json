@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R229",
+  "state_revision": "R230",
   "last_updated": "2026-09-25",
-  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 RC-012 CLOSED / FINAL REGRESSION 91 OF 91 PASS / PR #27 READY FOR MERGE / RC-024 ACTIVE / T-018 HOLD",
+  "session_status": "SESSION 2026-09-25 / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-033 子角梁 CLOSED / PR #27 MERGED / FINAL HEAD REGRESSION PASS / RC-024 ACTIVE / LOCAL SYNC PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 READY FOR MERGE / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 17 OF 28 MASTERS APPROVED / T-033 CLOSED / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 CLOSED / T-031+T-032 ARCHITECTURE PROOFS CLOSED / T-033 READY FOR MERGE / 17 OF 28 MASTERS APPROVED ON BRANCH / RC-024 ACTIVE / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-030 CLOSED / T-031+T-032 ARCHITECTURE PROOFS CLOSED / T-033 READY FOR MERGE / 17 OF 28 MASTERS APPROVED ON BRANCH / RC-024 ACTIVE / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-033 CLOSED EXCEPT T-031/T-032 ARCHITECTURE PROOFS / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-033 CLOSED EXCEPT T-031/T-032 ARCHITECTURE PROOFS / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / NO ACTIVE ENGINEERING TASK / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "No active blocker. T-033 RC-012 Review Board identity gap is corrected, materialized and verified. Latest Run 36129460213 SUCCESS / 91/91 PASS; T-025..T-029 shared regression ALL PASS.",
+  "blocker": "No active engineering blocker. T-033 is closed on main at 17/28. Local Mac sync to the post-closure main remains a separate pending synchronization step.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,31 +62,32 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "T-033",
-    "name": "P3_3_ZIJIAOLIANG_MASTER_V2_V001｜子角梁 Master",
-    "status": "FORMALIZED / RC-012 CLOSED / FINAL REGRESSION PASS / PR #27 READY FOR MERGE"
+    "id": "NONE",
+    "name": "P3.3 V002 Stage 1",
+    "status": "ACTIVE GATE / NO ACTIVE ENGINEERING T-TASK / T-033 CLOSED / 17 OF 28 APPROVED"
   },
   "proposed_next_task": {
     "id": "NONE",
-    "name": "T-033 closure first",
-    "status": "NO NEXT COMPONENT UNTIL PR #27 MERGES"
+    "name": "Next Stage1 component",
+    "status": "NOT SELECTED / NOT STARTED / WAIT FOR PRODUCT OWNER INSTRUCTION"
   },
   "last_completed_task": {
-    "id": "T-030",
-    "engineering_id": "P3_3_DAJIAOLIANG_MASTER_V2_V001",
-    "component": "大角梁",
-    "status": "CLOSED / D-128 APPROVED / D-129 FORMALIZED / PR #18 MERGED / D-130",
-    "github_pr_number": 18,
-    "merge_commit": "b249a36850e097564bac0a96692ba2897af232ac",
-    "approved_actions_run": 35977160199,
-    "approved_validation": "PASS",
-    "final_head_actions_run": 36000242504,
-    "final_validation": "97/97 PASS",
-    "canonical_blend_sha256": "199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91",
-    "final_regenerated_blend_sha256": "17744eeba659f59d62423f3a55f0153de814e2c9a626c2506718990d459bba4a",
-    "semantic_geometry_signature": "b38684fe6adac315a53e62c5d773f36c5eabb305b744e03627b1ac9814f32dc2",
-    "first_article_artifact_id": 10800439343,
-    "final_regression_artifact_id": 10808950352
+    "id": "T-033",
+    "engineering_id": "P3_3_ZIJIAOLIANG_MASTER_V2_V001",
+    "component": "子角梁",
+    "status": "CLOSED / PRODUCT OWNER APPROVED / D-144+D-145 / PR #27 MERGED / D-146",
+    "github_pr_number": 27,
+    "merge_commit": "096c4dfb3cb3970e2836ba867ae2496cb943c5ed",
+    "approved_actions_run": 36121884128,
+    "approved_validation": "84/84 PASS",
+    "final_head_actions_run": 36132308751,
+    "final_validation": "SUCCESS / latest-head complete",
+    "canonical_blend_sha256": "104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b",
+    "semantic_geometry_signature": "26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5",
+    "review_board_sha256": "f77b06d362df998b9a9f6d94895620369f9af797c9229563f705cb5f820a92d9",
+    "first_article_artifact_id": 10858207870,
+    "final_regression_artifact_id": 10862794764,
+    "shared_regression_artifact_id": 10863074483
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -124,14 +125,14 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED ON T-033 BRANCH / T-033 READY FOR MERGE / RC-024 ACTIVE / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-033 CLOSED / RC-024 ACTIVE / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-066",
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md",
     "engineering_planning_authorized": true,
-    "engineering_execution_authorized": true,
+    "engineering_execution_authorized": false,
     "t017": {
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
@@ -528,7 +529,7 @@
       "component": "子角梁",
       "component_id": "CMP-FRAME-ZIJIAOLIANG-001",
       "master_id": "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
-      "status": "FORMALIZED / RC-012 CLOSED / FINAL REGRESSION PASS / PR #27 READY FOR MERGE",
+      "status": "CLOSED / PRODUCT OWNER APPROVED / PR #27 MERGED / D-146",
       "source_readiness": "D-132 PASS",
       "visual_form_gate": "D-142 PASS WITH GEOMETRY BOUNDARY",
       "task_authority": "D-143 END-TO-END COMPONENT COMPLETION AUTHORIZED",
@@ -575,7 +576,20 @@
       "rc012_materialization_result": "SUCCESS",
       "rc012_shared_regression": "T-025..T-029 ALL PASS",
       "regenerated_regression_blend_sha256": "029937842fb4650a3ae43c270af285e34a339d53b31370d0d8757a34bff550f1",
-      "regenerated_regression_blend_promoted": false
+      "regenerated_regression_blend_promoted": false,
+      "merged": true,
+      "pr_number": 27,
+      "merge_commit_sha": "096c4dfb3cb3970e2836ba867ae2496cb943c5ed",
+      "main_verified": true,
+      "final_head_run_id": 36132308751,
+      "final_head_result": "SUCCESS",
+      "final_head_first_article_artifact_id": 10862794764,
+      "final_head_first_article_artifact_zip_sha256": "6bc9b582fbbb87fbd90ed87f982d309c4d0adbe9ea4903815863fbfa72d3f19d",
+      "final_head_shared_regression_artifact_id": 10863074483,
+      "final_head_shared_regression_artifact_zip_sha256": "f5a16313891393d5a7deb0d29c5816b5ba22fb047a8d795f976ddc9a7da7e8e0",
+      "final_head_shared_regression": "T-025..T-029 ALL PASS",
+      "product_owner_final_approval": "2026-09-25 / APPROVED",
+      "local_sync_status": "PENDING"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -600,9 +614,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-145",
+    "id": "D-146",
     "date": "2026-09-25",
-    "decision": "T-033 RC-012 Review Board identity gap corrected and exact board materialized. Run 36129460213 SUCCESS / 91 of 91 PASS; T-025..T-029 shared regression ALL PASS; Chinese canonical name 子角梁 visibly present. D-144 canonical blend identity remains unchanged; regenerated regression binary is not promoted. PR #27 may proceed to Ready + merge."
+    "decision": "Product Owner approved T-033 final Review Board. PR #27 merged at 096c4dfb3cb3970e2836ba867ae2496cb943c5ed. Latest-head Run 36132308751 completed SUCCESS including T-025..T-029 shared regression, minimal artifact checks and evidence uploads. T-033 is formally CLOSED; Stage1 progress is locked at 17/28 = 60.7%. current_task is cleared. No next component is started. Local sync remains a separate pending step."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -666,7 +680,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Ready+merge PR #27, verify main, then close T-033 at 17/28. Stage2 and T-018 remain out of scope.",
+  "next_action": "T-033 closure complete at 17/28. Do not start another component, Stage2, or T-018 until Product Owner gives the next instruction. Local Mac sync is pending as a separate step.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1060,7 +1074,7 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-033 D-145 BINDING READY / 17 OF 28",
+    "status": "ACTIVE / T-033 CLOSED / 17 OF 28",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
