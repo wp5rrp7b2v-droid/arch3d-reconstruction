@@ -442,9 +442,15 @@ def inspect(asset,expected,output):
     print("MASTER_V2_REOPEN_OK")
 
 def compose_board(definition,review_dir,board):
-    from PIL import Image,ImageDraw,ImageFont
+    from PIL import Image,ImageDraw,ImageFont,PngImagePlugin
     d=load_definition(definition)
     panels=get_review_contract(d)["required_panels"]
+    component_name_zh=str(d.get("component_name_zh","")).strip()
+    if not component_name_zh:
+        raise ValueError("RC-012 requires component_name_zh on every formal Review Board")
+    font_path=Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc")
+    if not font_path.exists():
+        raise FileNotFoundError(f"RC-012 CJK font missing: {font_path}")
     review=Path(review_dir)
     cols=min(3,max(1,len(panels)))
     rows=math.ceil(len(panels)/cols)
@@ -452,7 +458,7 @@ def compose_board(definition,review_dir,board):
     label_h=40
     canvas=Image.new("RGB",(cols*iw,rows*(ih+label_h)),"white")
     draw=ImageDraw.Draw(canvas)
-    font=ImageFont.load_default()
+    font=ImageFont.truetype(str(font_path),22)
     for idx,panel in enumerate(panels):
         src=review/(panel+".png")
         if not src.exists():
@@ -461,11 +467,15 @@ def compose_board(definition,review_dir,board):
         if im.size!=(iw,ih):
             im=im.resize((iw,ih))
         x=(idx%cols)*iw; y=(idx//cols)*(ih+label_h)
-        draw.text((x+12,y+12),panel,fill="black",font=font)
+        draw.text((x+12,y+6),f"{component_name_zh}｜{panel}",fill="black",font=font)
         canvas.paste(im,(x,y+label_h))
     out=Path(board); out.parent.mkdir(parents=True,exist_ok=True)
-    canvas.save(out)
-    print("MASTER_V2_REVIEW_BOARD_OK",len(panels),out)
+    meta=PngImagePlugin.PngInfo()
+    meta.add_text("component_name_zh",component_name_zh)
+    meta.add_text("review_board_identity_rule","RC-012")
+    meta.add_text("review_board_label_format","{component_name_zh}｜{panel}")
+    canvas.save(out,pnginfo=meta)
+    print("MASTER_V2_REVIEW_BOARD_OK",len(panels),component_name_zh,out)
 
 def parse_args():
     ap=argparse.ArgumentParser()
