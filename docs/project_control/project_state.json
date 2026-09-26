@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R233",
+  "state_revision": "R234",
   "last_updated": "2026-09-26",
   "session_status": "DAILY CLOSE 2026-09-25 / PASS / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / LOCAL SYNC PASS / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
   "phase": {
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 17 OF 28 MASTERS APPROVED / T-034 TASK CONTRACT LOCKED D-149 / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-034 EXECUTING / FIRST ARTICLE PENDING / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 TASK CONTRACT LOCKED D-149 / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 TASK CONTRACT LOCKED D-149 / ENGINEERING NOT AUTHORIZED / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 EXECUTING D-150 / FIRST ARTICLE PENDING / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 EXECUTING D-150 / FIRST ARTICLE PENDING / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -62,14 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "NONE",
-    "name": "P3.3 V002 Stage 1",
-    "status": "NO ACTIVE ENGINEERING T-TASK / 17 OF 28 APPROVED / T-034 TASK CONTRACT LOCKED / EXECUTION NOT AUTHORIZED"
-  },
-  "proposed_next_task": {
     "id": "T-034",
     "name": "P3_3_LANE_MASTER_V2_V001",
-    "status": "TASK CONTRACT LOCKED / D-149 / WAITING FOR PRODUCT OWNER ENGINEERING EXECUTION AUTHORIZATION"
+    "status": "ENGINEERING EXECUTION AUTHORIZED / EXECUTING / FIRST ARTICLE PENDING"
+  },
+  "proposed_next_task": {
+    "id": "NONE",
+    "name": "No next task while T-034 active",
+    "status": "BLOCKED UNTIL T-034 FIRST-ARTICLE REVIEW"
   },
   "last_completed_task": {
     "id": "T-033",
@@ -680,7 +680,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "T-034 Task Contract is locked by D-149. Wait for explicit Product Owner instruction '开始 T-034' before creating the production branch/PR or running Blender/GitHub Actions.",
+  "next_action": "Execute T-034 on branch codex/t034-p3-3-lane-master-v2-v001 through first-article evidence only. Create Draft PR and run Master V2 GitHub Actions/Blender. Stop at Product Owner first-article acceptance boundary; do not formalize, bind Catalog/V008, merge, start Stage2, or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1560,7 +1560,7 @@
     "engineering_execution_authorized": false
   },
   "t034": {
-    "status": "TASK_CONTRACT_LOCKED",
+    "status": "ENGINEERING_EXECUTION_AUTHORIZED",
     "decision_id": "D-149",
     "task_id": "T-034",
     "task_name": "P3_3_LANE_MASTER_V2_V001",
@@ -1583,9 +1583,14 @@
       "T-033"
     ],
     "proposed_branch": "codex/t034-p3-3-lane-master-v2-v001",
-    "engineering_execution_authorized": false,
-    "blender_execution_authorized": false,
-    "production_branch_creation_authorized": false,
-    "pr_creation_authorized": false
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "production_branch_creation_authorized": true,
+    "pr_creation_authorized": true,
+    "execution_decision_id": "D-150",
+    "formalization_authorized": false,
+    "catalog_v008_binding_authorized": false,
+    "merge_authorized": false,
+    "first_article_acceptance_required": true
   }
 }
