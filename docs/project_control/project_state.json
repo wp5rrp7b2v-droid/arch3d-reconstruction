@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R250",
+  "state_revision": "R251",
   "last_updated": "2026-09-26",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 19 OF 28 MASTERS APPROVED / T-036 FIRST ARTICLE REVIEW READY / ROUTING FIXED / AWAITING PRODUCT OWNER APPROVAL / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / 19 OF 28 MASTERS APPROVED / T-036 FIRST ARTICLE APPROVED / FORMALIZATION NOT AUTHORIZED / PR #32 DRAFT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": true,
-  "blocker": "No engineering blocker. T-036 routing correction is complete and the dedicated first-article run passed; awaiting Product Owner first-article approval. T-018 remains HOLD; Stage2 not authorized.",
+  "blocker": "No engineering blocker. T-036 first article is Product Owner approved; formalization and Catalog/V008 binding require separate authorization. PR #32 remains Draft. T-018 remains HOLD; Stage2 not authorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-036",
     "name": "P3_3_BUJIAN_DIDOU_MASTER_V2_V001｜补间铺作底斗 Master",
-    "status": "FIRST ARTICLE MACHINE+VISUAL REVIEW READY / AWAITING PRODUCT OWNER APPROVAL"
+    "status": "FIRST ARTICLE APPROVED / FORMALIZATION NOT AUTHORIZED / PR #32 DRAFT"
   },
   "proposed_next_task": {
-    "id": "T-036-PO-REVIEW",
-    "name": "补间铺作底斗 Master first-article Product Owner review",
-    "status": "READY / DECISION REQUIRED"
+    "id": "T-036-FORMALIZATION",
+    "name": "补间铺作底斗 Master formalization + Catalog/V008 binding",
+    "status": "AWAITING PRODUCT OWNER AUTHORIZATION"
   },
   "last_completed_task": {
     "id": "T-035",
@@ -824,7 +824,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Product Owner reviews T-036 first article. If approved, separately authorize formalization / Catalog+V008 binding; PR Ready/merge remains later.",
+  "next_action": "Await explicit Product Owner authorization for T-036 formalization + Catalog/V008 binding. Do not convert PR #32 to Ready or merge yet.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1906,7 +1906,7 @@
     "engineering_execution_authorized": false
   },
   "t036": {
-    "status": "FIRST ARTICLE REVIEW READY / D-169 / AWAITING PRODUCT OWNER APPROVAL",
+    "status": "FIRST ARTICLE APPROVED / D-170 / FORMALIZATION NOT AUTHORIZED",
     "decision_id": "D-167",
     "task_id": "T-036",
     "task_name": "P3_3_BUJIAN_DIDOU_MASTER_V2_V001",
@@ -1927,7 +1927,7 @@
       "CMP-DOU-INTERACTIVE-001"
     ],
     "execution_decision_id": "D-168",
-    "first_article_acceptance_authorized": false,
+    "first_article_acceptance_authorized": true,
     "formalization_authorized": false,
     "merge_authorized": false,
     "routing_fix_decision_id": "D-169",
@@ -1940,6 +1940,11 @@
     "first_article_artifact_digest_sha256": "648cf7d99d8c71bf8cdaa4aa9025e03869d77d9c5914f300122a888285825d07",
     "canonical_blend_sha256": "7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66",
     "semantic_geometry_signature": "7b3517bcbb2007954d11ea18b75e9103f3a6b4e0d3a6e46e97c05fef5ba449f6",
-    "validation_checks": "37/37 PASS"
+    "validation_checks": "37/37 PASS",
+    "first_article_approval_decision_id": "D-170",
+    "first_article_approved": true,
+    "catalog_v008_binding_authorized": false,
+    "pr_number": 32,
+    "pr_status": "DRAFT"
   }
 }
