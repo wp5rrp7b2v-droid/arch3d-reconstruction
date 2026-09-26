@@ -1,0 +1,87 @@
+{
+  "schema_version": "V001",
+  "status": "LOCKED / PRODUCT OWNER APPROVED / D-166",
+  "component_name_zh": "补间铺作底斗",
+  "component_id": "CMP-DOU-BOTTOM-LONGKAI-001",
+  "master_id": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+  "master_version": "V001",
+  "physical_instance_count": 12,
+  "measured_instance_count": 9,
+  "master_family_count": 1,
+  "geometry_variant_count": 0,
+  "source_readiness_decision": "D-164",
+  "visual_form_gate_decision": "D-165",
+  "approval_decision": "D-166",
+  "direct_a1_observed_family_mean_mm": {
+    "top_width": 255.56,
+    "bottom_width": 178.56,
+    "total_height": 161.78,
+    "flat_height": 38.333,
+    "qi_height": 65.6
+  },
+  "direct_measurement_semantics": "OBSERVED_AS_MEASURED_FAMILY_MEAN / 9 MEASURED / NOT_12_INDIVIDUAL / NOT_PROVEN_963_DESIGN",
+  "historical_963_design_dimensions": "UNRESOLVED",
+  "a1_depth": {
+    "top_depth_mm": null,
+    "bottom_depth_mm": null,
+    "status": "UNKNOWN / NOT MEASURED FOR BOTTOM DOU"
+  },
+  "production_depth_completion": {
+    "top_depth_mm": 240,
+    "bottom_depth_mm": 165.1,
+    "classification": "PARAMETRIC_COMPLETION / RECONSTRUCTED_DESIGN / REPLACEABLE / NOT_A1_DIRECT",
+    "historical_claim": false
+  },
+  "profile": {
+    "profile_class": "CURVED_QI_PROFILE",
+    "exact_curvature": "UNKNOWN",
+    "classification": "RECONSTRUCTED_DESIGN / REPLACEABLE",
+    "control_parameter_count": 1,
+    "symmetry": "LEFT_RIGHT_SYMMETRIC",
+    "flat_height_geometry_breakpoint_claim": false,
+    "qi_height_geometry_breakpoint_claim": false,
+    "note": "flat_height and qi_height remain direct evidence metadata; source does not close all vertical profile segmentation."
+  },
+  "canonical_geometry": {
+    "coordinate_convention": {
+      "+X": "width",
+      "+Y": "depth",
+      "+Z": "gravity_up_height"
+    },
+    "origin": "bottom_footprint_center",
+    "transform": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "top_width_mm": 255.56,
+    "bottom_width_mm": 178.56,
+    "total_height_mm": 161.78,
+    "production_top_depth_mm": 240,
+    "production_bottom_depth_mm": 165.1
+  },
+  "deferred_geometry": [
+    "exact_dou_ear_profile",
+    "exact_top_slots_or_cavities",
+    "exact_bottom_mortise_tenon",
+    "concealed_joinery",
+    "wear_cracking_compression_deformation",
+    "per_instance_damage",
+    "exact_963_profile"
+  ],
+  "next_task_id": "T-036",
+  "task_contract_design_authorized": true,
+  "engineering_execution_authorized": false
+}
