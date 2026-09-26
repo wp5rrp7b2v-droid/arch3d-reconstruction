@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R242",
+  "state_revision": "R243",
   "last_updated": "2026-09-26",
   "session_status": "DAILY CLOSE 2026-09-25 / PASS / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / LOCAL SYNC PASS / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
   "phase": {
@@ -22,8 +22,8 @@
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-035 ENGINEERING EXECUTION AUTHORIZED D-158 / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-035 ENGINEERING EXECUTION AUTHORIZED D-158 / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 FIRST ARTICLE APPROVED D-159 / FORMALIZATION NOT AUTHORIZED / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 FIRST ARTICLE APPROVED D-159 / FORMALIZATION NOT AUTHORIZED / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-035",
     "name": "P3_3_YOUE_MASTER_V2_V001",
-    "status": "ENGINEERING EXECUTION AUTHORIZED / D-158 / STARTING"
+    "status": "FIRST ARTICLE APPROVED / D-159 / FORMALIZATION NOT AUTHORIZED / PR #31 DRAFT"
   },
   "proposed_next_task": {
-    "id": "NONE",
-    "name": "Next Stage1 component",
-    "status": "NOT SELECTED / T-035 ACTIVE"
+    "id": "T-035",
+    "name": "P3_3_YOUE_MASTER_V2_V001",
+    "status": "FORMALIZATION + CATALOG/V008 BINDING AWAITING PRODUCT OWNER AUTHORIZATION"
   },
   "last_completed_task": {
     "id": "T-034",
@@ -524,7 +524,7 @@
       "connector_geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
       "stage_advance": false
     },
-    "next_master_candidate": "由额 / T-035 ENGINEERING EXECUTION AUTHORIZED D-158 / FIRST ARTICLE PENDING",
+    "next_master_candidate": "由额 / T-035 FIRST ARTICLE APPROVED D-159 / FORMALIZATION NOT AUTHORIZED",
     "t033": {
       "task_id": "T-033",
       "component": "子角梁",
@@ -628,7 +628,7 @@
       "local_sync_status": "REQUIRED"
     },
     "youe": {
-      "status": "T-035_ENGINEERING_EXECUTION_AUTHORIZED / D-158",
+      "status": "T-035_FIRST_ARTICLE_APPROVED / D-159 / FORMALIZATION_NOT_AUTHORIZED",
       "component": "由额",
       "physical_instance_count": 4,
       "registry_locations": [
@@ -710,7 +710,14 @@
       "next_task_id": "T-035",
       "task_contract_design_authorized": true,
       "task_id": "T-035",
-      "task_contract": "docs/tasks/T-035_P3_3_YOUE_MASTER_V2_V001.md"
+      "task_contract": "docs/tasks/T-035_P3_3_YOUE_MASTER_V2_V001.md",
+      "first_article_run_id": 36231069458,
+      "first_article_validation": "97/97 PASS",
+      "canonical_blend_sha256": "6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16",
+      "semantic_geometry_signature": "4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8",
+      "review_board_sha256": "8c5e32edadf442a316daa7c120a1615f49ba13268824e0c91da754082adb2e62",
+      "first_article_approved": true,
+      "formalization_authorized": false
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -801,7 +808,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Execute T-035 through first-article evidence only. Product Owner first-article acceptance, formalization, Catalog/V008 binding and merge remain separate gates.",
+  "next_action": "T-035 first article is Product Owner approved under D-159. Wait for explicit authorization before exact accepted-artifact formalization, Catalog/V008 binding, Registry Excel sync, final regression, PR Ready/merge, or closure.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1167,7 +1174,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "由额 / T-035 TASK CONTRACT LOCKED D-157 / ENGINEERING NOT AUTHORIZED"
+    "next_master_candidate": "由额 / T-035 FIRST ARTICLE APPROVED D-159 / FORMALIZATION NOT AUTHORIZED"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -1742,7 +1749,7 @@
     "local_sync_status": "REQUIRED"
   },
   "t035": {
-    "status": "ENGINEERING_EXECUTION_AUTHORIZED",
+    "status": "FIRST_ARTICLE_APPROVED / D-159 / FORMALIZATION_NOT_AUTHORIZED",
     "decision_id": "D-157",
     "task_id": "T-035",
     "task_name": "P3_3_YOUE_MASTER_V2_V001",
@@ -1775,8 +1782,35 @@
     "production_branch_creation_authorized": true,
     "pr_creation_authorized": true,
     "execution_decision_id": "D-158",
-    "first_article_acceptance_authorized": false,
+    "first_article_acceptance_authorized": true,
     "formalization_authorized": false,
-    "merge_authorized": false
+    "merge_authorized": false,
+    "first_article_approval_decision_id": "D-159",
+    "first_article_approved": true,
+    "catalog_v008_binding_authorized": false,
+    "pr_number": 31,
+    "production_head": "cab973375d6f88906d1815c06b3a10725a06ef87",
+    "first_article_run_id": 36231069458,
+    "first_article_result": "SUCCESS",
+    "first_article_validation": "97/97 PASS",
+    "first_article_artifact_id": 10903011230,
+    "first_article_artifact_zip_sha256": "d664456279065be2d7db01f373dbd60c9744f957e04d0f90636fb23d6731deb7",
+    "shared_regression_artifact_id": 10902682823,
+    "shared_regression_artifact_zip_sha256": "531e2190c85dc62f3a17fa05e352dd9125c5fd960138319b1140d149b5e90dec",
+    "canonical_blend_sha256": "6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16",
+    "semantic_geometry_signature": "4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8",
+    "semantic_json_sha256": "7e1d0a132f54680fab11b8d373461dba0931552f60e10e55356d9a86471d392a",
+    "review_board_sha256": "8c5e32edadf442a316daa7c120a1615f49ba13268824e0c91da754082adb2e62",
+    "validation_json_sha256": "f7422adec32e98d51457f33c22128677704569bdf493ca76d8b2a9fd164a1fb8",
+    "shared_regression_results": {
+      "T-025": "45/45 PASS",
+      "T-026": "48/48 PASS",
+      "T-027": "63/63 PASS",
+      "T-028": "84/84 PASS",
+      "T-029": "86/86 PASS",
+      "T-030": "98/98 PASS",
+      "T-033": "91/91 PASS",
+      "T-034": "126/126 PASS"
+    }
   }
 }
