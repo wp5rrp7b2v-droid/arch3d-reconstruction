@@ -1413,3 +1413,15 @@ Do not restart T-018 by default.
 - Open PRs: #3 / #6 only; both T-018 HOLD / DO NOT MERGE.
 - Next candidate: 瓜子栱族 / priority 15 / Source Readiness + D-076 only.
 - Local repository sync: NOT CHECKED; separate user-local step.
+
+## 2026-09-26｜Local Repository Sync / D-179
+
+- Correct local repo: `/Users/caroline/中国古建筑3D复原`.
+- Remote verified: `wp5rrp7b2v-droid/arch3d-reconstruction`.
+- Pre-sync local main: `d0bde4808195b671ba7a990107abf19ca4328b72`.
+- Fetch updated `origin/main` to `34bd36cff8205286a8c89fe52956f73ee1abe591`.
+- `git-proxy-auto pull --ff-only origin main`: FAST-FORWARD PASS.
+- Post-pull status: `## main...origin/main`.
+- Post-pull local HEAD: `34bd36cff8205286a8c89fe52956f73ee1abe591`.
+- Result: **LOCAL SYNC PASS / LOCAL_HEAD == REMOTE_HEAD AT SYNC CHECKPOINT**.
+- Final note: D-179 Project Control recording advances main after the checkpoint, so one last fast-forward pull is required to absorb the record itself.

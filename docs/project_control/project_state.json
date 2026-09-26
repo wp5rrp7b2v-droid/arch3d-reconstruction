@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R259",
+  "state_revision": "R260",
   "last_updated": "2026-09-26",
-  "session_status": "DAILY CLOSE PASS / RC-013 CROSS-FILE CONSISTENCY PATCH COMPLETE / T-034+T-035+T-036 CLOSED / 20 OF 28 / NEXT 瓜子栱族 SOURCE READINESS / T-018 HOLD",
+  "session_status": "DAILY CLOSE PASS / LOCAL SYNC PASS / T-034+T-035+T-036 CLOSED / 20 OF 28 / NEXT 瓜子栱族 SOURCE READINESS / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active Stage1 engineering blocker. Daily GitHub close is complete. Local repository synchronization was not checked. T-018 remains HOLD; Stage2 remains unauthorized.",
+  "blocker": "No active Stage1 engineering blocker. GitHub canonical close and local repository synchronization are complete. T-018 remains HOLD; Stage2 remains unauthorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -777,7 +777,7 @@
   },
   "daily_closing_audit": {
     "date": "2026-09-26",
-    "status": "PASS / GITHUB CANONICAL / CROSS-FILE MIRRORS ALIGNED / NO KNOWN MISSING CURRENT-STATE REGISTRATIONS",
+    "status": "PASS / GITHUB CANONICAL / CROSS-FILE MIRRORS ALIGNED / LOCAL SYNC COMPLETE",
     "decisions_checked": "D-148..D-177 relevant daily chain",
     "tasks_checked": [
       "T-034",
@@ -803,14 +803,14 @@
     ],
     "active_stage1_engineering_prs": 0,
     "omission_audit_missing_items": [],
-    "local_sync": "NOT CHECKED",
+    "local_sync": "PASS / LOCAL_HEAD == REMOTE_HEAD AT D-179 SYNC CHECKPOINT",
     "caution": "Do not start priority 15 engineering before Source Readiness + D-076 + Master Spec approval + Task Contract + explicit engineering execution authorization.",
     "execution_log_aligned": true,
     "acceptance_matrix_aligned": true,
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Next session only: priority 15 瓜子栱族 Source Readiness + D-076. Do not create a T-task, branch, PR or Blender execution before evidence/form review and explicit Product Owner authorization.",
+  "next_action": "Final local catch-up: pull the D-179 Project Control recording commit (and derived Dashboard commit if generated), then verify LOCAL_HEAD == origin/main. Next session only: priority 15 瓜子栱族 Source Readiness + D-076.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1649,7 +1649,7 @@
   },
   "daily_close": {
     "date": "2026-09-26",
-    "status": "PASS / GITHUB CANONICAL CLOSE + RC-013 CROSS-FILE CONSISTENCY COMPLETE / LOCAL SYNC NOT CHECKED",
+    "status": "PASS / GITHUB CANONICAL CLOSE + RC-013 CONSISTENCY + LOCAL SYNC COMPLETE",
     "close_file": "docs/project_control/CLOSE_FILE_2026-09-26.md",
     "completed_today": [
       "T-034 / 阑额 / CLOSED / PR #30 MERGED",
@@ -1673,7 +1673,15 @@
     "t018": "HOLD",
     "stage2": "NOT AUTHORIZED",
     "local_sync": {
-      "status": "NOT CHECKED / SEPARATE USER-LOCAL STEP"
+      "status": "PASS",
+      "repository": "wp5rrp7b2v-droid/arch3d-reconstruction",
+      "local_path": "/Users/caroline/中国古建筑3D复原",
+      "pre_sync_head": "d0bde4808195b671ba7a990107abf19ca4328b72",
+      "synced_head": "34bd36cff8205286a8c89fe52956f73ee1abe591",
+      "remote_head_at_sync": "34bd36cff8205286a8c89fe52956f73ee1abe591",
+      "branch_status": "main...origin/main",
+      "method": "git-proxy-auto fetch origin + git-proxy-auto pull --ff-only origin main",
+      "result": "FAST_FORWARD / LOCAL_HEAD == REMOTE_HEAD"
     }
   },
   "lane_stage1": {
@@ -2029,6 +2037,17 @@
       "historical Cloud Mode / prior DAILY_CLOSE / LOCAL_SYNC_PREP records"
     ],
     "status": "PASS / GITHUB CANONICAL PROJECT CONTROL CURRENT-STATE MIRRORS ALIGNED",
-    "local_sync": "NOT CHECKED"
+    "local_sync": "PASS / completed under D-179"
+  },
+  "local_sync_2026_09_26": {
+    "decision_id": "D-179",
+    "status": "PASS",
+    "repository": "wp5rrp7b2v-droid/arch3d-reconstruction",
+    "local_path": "/Users/caroline/中国古建筑3D复原",
+    "pre_sync_head": "d0bde4808195b671ba7a990107abf19ca4328b72",
+    "local_head": "34bd36cff8205286a8c89fe52956f73ee1abe591",
+    "remote_head_at_check": "34bd36cff8205286a8c89fe52956f73ee1abe591",
+    "branch_status": "main...origin/main",
+    "note": "This record is written after the sync checkpoint; a final pull of this Project Control record itself is required to make local HEAD equal the new canonical main."
   }
 }

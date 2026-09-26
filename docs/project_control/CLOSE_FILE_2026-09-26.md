@@ -537,3 +537,23 @@ D-178 corrections:
 After D-178, GitHub canonical current-state Project Control mirrors are aligned.
 
 Local working-copy synchronization remains **NOT CHECKED** and is still a separate step.
+
+## 26. Local Repository Synchronization｜D-179
+
+Local repository:
+- path: `/Users/caroline/中国古建筑3D复原`
+- remote: `wp5rrp7b2v-droid/arch3d-reconstruction`
+- branch: `main`
+
+Synchronization:
+- pre-sync local HEAD: `d0bde4808195b671ba7a990107abf19ca4328b72`
+- canonical remote HEAD at sync checkpoint: `34bd36cff8205286a8c89fe52956f73ee1abe591`
+- method: `git-proxy-auto fetch origin` → `git-proxy-auto pull --ff-only origin main`
+- result: FAST-FORWARD PASS
+- post-pull branch status: `## main...origin/main`
+- post-pull local HEAD: `34bd36cff8205286a8c89fe52956f73ee1abe591`
+- LOCAL_HEAD == REMOTE_HEAD: PASS
+
+The earlier fetch performed inside the Black Lady repository did not change this project. The correct repository was then selected and synchronized successfully.
+
+This D-179 record is itself committed after the synchronization checkpoint. Therefore one final fast-forward pull is required after this record (and any derived Dashboard update) lands on main, solely to bring the local working copy to the newly advanced canonical main.
