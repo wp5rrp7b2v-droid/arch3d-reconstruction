@@ -1,0 +1,227 @@
+{
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-166 / ENGINEERING_EXECUTION_AUTHORIZED_D-168",
+  "task_id": "T-036",
+  "canonical_name_zh": "补间铺作底斗",
+  "component_id": "CMP-DOU-BOTTOM-LONGKAI-001",
+  "master_id": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+  "master_version": "V001",
+  "unit": "mm",
+  "canonical_transform": {
+    "location": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "coordinate_convention": {
+    "+X": "canonical_width",
+    "+Y": "canonical_depth",
+    "+Z": "gravity_up_height",
+    "handedness": "right_handed"
+  },
+  "origin_convention": "bottom_footprint_center",
+  "geometry_lod": "STAGE1_MINIMAL_SUFFICIENT",
+  "geometry_mode": "EVIDENCE_BOUNDED_CURVED_QI_PROFILE_WITH_RECONSTRUCTED_DEPTH",
+  "interpolation": "PROJECT_RULE / RECONSTRUCTED_DESIGN / REPLACEABLE_CURVED_PROFILE",
+  "physical_instance_count": 12,
+  "measured_instance_count": 9,
+  "geometry_variant_count": 0,
+  "historical_963_design_dimensions": "UNRESOLVED",
+  "historical_state": {
+    "historical_claim": "not_proven_963_design",
+    "model_layer": "observed_as_measured_width_height_plus_explicit_parametric_depth",
+    "reconstructed_963_candidate": "not_inferred"
+  },
+  "parameters": [
+    {
+      "key": "top_width_mm",
+      "value": 255.56,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "source_ids": [
+        "SRC-ZG-WF-001",
+        "D-164"
+      ],
+      "time_layer": "observed_as_measured",
+      "production_use": "OBSERVED_FAMILY_MEAN_OUTER_ENVELOPE",
+      "replaceable": false
+    },
+    {
+      "key": "bottom_width_mm",
+      "value": 178.56,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "source_ids": [
+        "SRC-ZG-WF-001",
+        "D-164"
+      ],
+      "time_layer": "observed_as_measured",
+      "production_use": "OBSERVED_FAMILY_MEAN_OUTER_ENVELOPE",
+      "replaceable": false
+    },
+    {
+      "key": "top_depth_mm",
+      "value": 240,
+      "unit": "mm",
+      "classification": "PARAMETRIC_COMPLETION",
+      "source_layer": "SECONDARY_REPORT_DERIVED",
+      "source_ids": [
+        "E-022",
+        "D-166"
+      ],
+      "time_layer": "production_completion",
+      "production_use": "RECONSTRUCTED_DEPTH_REFERENCE",
+      "replaceable": true,
+      "historical_claim": false
+    },
+    {
+      "key": "bottom_depth_mm",
+      "value": 165.1,
+      "unit": "mm",
+      "classification": "PARAMETRIC_COMPLETION",
+      "source_layer": "SECONDARY_REPORT_DERIVED",
+      "source_ids": [
+        "E-022",
+        "D-166"
+      ],
+      "time_layer": "production_completion",
+      "production_use": "RECONSTRUCTED_DEPTH_REFERENCE",
+      "replaceable": true,
+      "historical_claim": false
+    },
+    {
+      "key": "total_height_mm",
+      "value": 161.78,
+      "unit": "mm",
+      "classification": "CONFIRMED",
+      "source_layer": "DIRECT_PRIMARY",
+      "source_ids": [
+        "SRC-ZG-WF-001",
+        "D-164"
+      ],
+      "time_layer": "observed_as_measured",
+      "production_use": "OBSERVED_FAMILY_MEAN_OUTER_ENVELOPE",
+      "replaceable": false
+    }
+  ],
+  "profile_evidence": {
+    "flat_height_mm": {
+      "value": 38.333,
+      "classification": "CONFIRMED / DIRECT_PRIMARY / OBSERVED_AS_MEASURED_FAMILY_MEAN",
+      "geometry_breakpoint_claim": false
+    },
+    "qi_height_mm": {
+      "value": 65.6,
+      "classification": "CONFIRMED / DIRECT_PRIMARY / OBSERVED_AS_MEASURED_FAMILY_MEAN",
+      "geometry_breakpoint_claim": false
+    },
+    "residual_segment_inference": "FORBIDDEN"
+  },
+  "evidence_depth_contract": {
+    "a1_top_depth_mm": null,
+    "a1_bottom_depth_mm": null,
+    "a1_status": "UNKNOWN / NOT_DIRECTLY_MEASURED_FOR_BOTTOM_DOU",
+    "production_top_depth_mm": 240,
+    "production_bottom_depth_mm": 165.1,
+    "production_classification": "PARAMETRIC_COMPLETION / RECONSTRUCTED_DESIGN / REPLACEABLE / NOT_A1_DIRECT",
+    "historical_claim": false,
+    "evidence_and_completion_fields_must_remain_separate": true
+  },
+  "profile_contract": {
+    "profile_class": "CURVED_QI_PROFILE",
+    "exact_curvature": "UNKNOWN",
+    "classification": "RECONSTRUCTED_DESIGN / REPLACEABLE",
+    "parameter_name": "curve_amount",
+    "parameter_count": 1,
+    "default_curve_amount": 0.5,
+    "legal_curve_amount_range": [
+      0.25,
+      0.75
+    ],
+    "mutation_test_values": [
+      0.25,
+      0.75
+    ],
+    "vertical_segments": 16,
+    "interpolation_function": "(1-a)*t + a*(3*t^2-2*t^3)",
+    "monotonic_required": true,
+    "envelope_overshoot_forbidden": true,
+    "self_intersection_forbidden": true,
+    "historical_claim": false
+  },
+  "registry_contract": {
+    "registry_schema": "V008/CURRENT",
+    "physical_instance_count": 12,
+    "measured_instance_count": 9,
+    "north_unmeasured_count": 3,
+    "one_master_required": true,
+    "geometry_variant_count": 0,
+    "locations": [
+      "南立面西次间",
+      "南立面明间",
+      "南立面东次间",
+      "北立面西次间",
+      "北立面明间",
+      "北立面东次间",
+      "东山北次间",
+      "东山明间",
+      "东山南次间",
+      "西山北次间",
+      "西山明间",
+      "西山南次间"
+    ]
+  },
+  "unsupported_geometry": [],
+  "deferred_geometry": [
+    "exact_dou_ear_profile",
+    "exact_top_slots_or_cavities",
+    "exact_bottom_mortise_tenon",
+    "concealed_joinery",
+    "wear_cracking_compression_deformation",
+    "per_instance_damage",
+    "exact_963_profile"
+  ],
+  "connection_layer": {
+    "bottom_support_interface": {
+      "existence": "KNOWN",
+      "exact_geometry": "DEFERRED"
+    },
+    "top_bearing_interface": {
+      "existence": "KNOWN_AS_SUPPORT_ROLE",
+      "exact_counterpart_or_joint": "UNRESOLVED",
+      "exact_geometry": "DEFERRED"
+    }
+  },
+  "execution_boundary": {
+    "engineering_execution_authorized": true,
+    "decision_id": "D-168",
+    "first_article_acceptance_authorized": false,
+    "formalization_authorized": false,
+    "merge_authorized": false
+  },
+  "known_unknowns": [
+    "A1 bottom-dou top/bottom depth not directly measured",
+    "Exact curvature unknown",
+    "Exact dou-ear/slot/cavity/joinery geometry unresolved",
+    "Observed means are not proven 963 design dimensions"
+  ],
+  "originality_status": "unknown",
+  "evidence_references": [
+    "docs/production/zhenguo_wanfo/P3_3_STAGE1_BUJIAN_DIDOU_MASTER_SPEC_V001.md",
+    "docs/tasks/T-036_P3_3_BUJIAN_DIDOU_MASTER_V2_V001.md",
+    "docs/evidence/zhenguo_wanfo/P1_2_DIRECT_PAGE_REVIEW_V001.md",
+    "docs/evidence/zhenguo_wanfo/P1_2_CORE_EVIDENCE_BATCH_02.md"
+  ]
+}

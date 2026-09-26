@@ -248,7 +248,7 @@ Mandatory visible statements:
 ## 13. Minimal-Sufficient Formal Package
 
 After separate execution authorization, expected outputs:
-1. CMP-DOU-BOTTOM-LONGKAI-001_MASTER_DEFINITION_V001.json
+1. CMP-DOU-BOTTOM-LONGKAI-001_DOU_MASTER_DEFINITION_V001.json
 2. CMP-DOU-BOTTOM-LONGKAI-001_MASTER_SEMANTIC_V001.json
 3. CMP-DOU-BOTTOM-LONGKAI-001_MASTER_V001.blend — Actions Artifact + local-only / NOT GIT
 4. CMP-DOU-BOTTOM-LONGKAI-001_MASTER_REVIEW_BOARD_V001.png
@@ -395,3 +395,100 @@ Only then may:
 - first-article evidence be generated.
 
 First-article acceptance, formalization, Catalog/V008 binding, PR merge, Stage2 and T-018 resume remain separate authorization boundaries.
+
+## 18. D-168 Engineering Execution Authorization
+
+Product Owner explicitly authorized **“开始 T-036 工程执行”** on 2026-09-26.
+
+Authorized:
+- branch `codex/t036-p3-3-bujian-didou-master-v2-v001`
+- Draft PR
+- execution Definition
+- GitHub Actions / Blender 4.5.13
+- minimal backward-compatible shared dou profile extension
+- first-article evidence generation
+- required legacy dou regressions when shared code changes
+
+Not authorized:
+- first-article acceptance
+- formalization
+- Catalog/V008 binding
+- PR Ready/merge
+- closure
+- Stage2
+- T-018 resume
+
+## 19. Routing Review Patch 01
+
+To prevent T-036 from being misrouted into the frame-oriented generic `P3.3 Master V2 First Article` workflow, the execution Definition filename is routed through the dou-specific namespace:
+
+`CMP-DOU-BOTTOM-LONGKAI-001_DOU_MASTER_DEFINITION_V001.json`
+
+This patch changes **routing only**. It does not change geometry, dimensions, evidence semantics, curve parameters, Master identity, or approval boundaries.
+
+
+## 19. D-170 First-Article Approval
+
+Product Owner approved the T-036 first article on 2026-09-26.
+
+Accepted authority:
+- dedicated Run: `36248233440` = SUCCESS
+- Artifact: `10908700631`
+- Artifact ZIP SHA-256: `648cf7d99d8c71bf8cdaa4aa9025e03869d77d9c5914f300122a888285825d07`
+- canonical .blend SHA-256: `7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66`
+- semantic geometry signature: `7b3517bcbb2007954d11ea18b75e9103f3a6b4e0d3a6e46e97c05fef5ba449f6`
+- machine validation: 37/37 PASS
+- legacy dou regression: PASS
+
+
+## 20. D-171 Formalization + Catalog / V008 Binding
+
+Product Owner authorized:
+- exact-byte materialization of accepted Semantic / Review Board / Validation;
+- verification of accepted canonical .blend while keeping it Actions Artifact + local-only / NOT GIT;
+- Catalog registration as Stage1 approved Master #20;
+- binding all 12 补间铺作底斗 V008/CURRENT records to `CMP-DOU-BOTTOM-LONGKAI-001_MASTER`.
+
+Target:
+- Stage1 = 20/28 = 71.4%
+- pending Master object types = 8
+- Master-covered Registry records = 159
+- bottom-dou binding = 12/12
+
+Not authorized by D-171:
+- Registry Excel Sync
+- latest-head final regression
+- PR #32 Ready/merge
+- T-036 closure
+- next component
+- Stage2
+- T-018 resume
+
+## 21. D-173 Final Regression Authorization
+
+Product Owner authorized the post-formalization closeout test step on 2026-09-26.
+
+Authorized:
+- Registry Excel Sync from authoritative CURRENT/V008 JSON;
+- latest-head T-036 final regression after the derived Excel commit;
+- revalidation of the approved geometry signature and evidence boundaries;
+- legacy dou regression for CMP-LUDOU-COLUMN-001 / CMP-DOU-SINGLE-LONGKAI-001 / CMP-DOU-INTERACTIVE-001.
+
+Formalization checkpoint:
+- formalization Run: `36249158964` = SUCCESS
+- formalization commit: `be266d490a260122e3dc9363645ff43c32b16fce`
+- Catalog: 20 approved
+- Stage1: 20/28 = 71.4%
+- Master-covered Registry records: 159
+- 补间铺作底斗: 12/12 bound
+- CURRENT == V008
+- accepted canonical authority remains Artifact `10908700631` / blend SHA-256 `7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66`.
+
+This human-authored checkpoint intentionally triggers the derived Excel workflow and PR validation after the bot-authored formalization commit.
+
+Not authorized:
+- PR #32 Ready / merge
+- T-036 closure
+- next component
+- Stage2
+- T-018 resume

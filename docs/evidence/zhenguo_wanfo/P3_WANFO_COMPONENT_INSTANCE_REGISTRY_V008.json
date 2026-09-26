@@ -3603,7 +3603,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -3614,7 +3615,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -3625,7 +3627,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -3636,7 +3639,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -3647,7 +3651,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -3658,7 +3663,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -3669,7 +3675,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -3680,7 +3687,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -3691,7 +3699,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -3702,7 +3711,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -3713,7 +3723,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -3724,7 +3735,8 @@
       "evidence": "报告直接称12组",
       "dimensions_mm": "总宽255.56/下宽178.56/总高161.78；进深未测",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -7241,13 +7253,13 @@
   ],
   "stage1_master_progress_summary": {
     "snapshot_date": "2026-09-26",
-    "status": "CANONICAL ON MAIN / D-162 / T-035 CLOSED / 19 OF 28 MASTERS APPROVED",
+    "status": "FORMALIZED / D-171 / T-036 / PR #32 OPEN / 20 OF 28 MASTERS APPROVED",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 19,
-    "pending_master_object_type_count": 9,
-    "master_completion_percent": 67.9,
+    "approved_master_count": 20,
+    "pending_master_object_type_count": 8,
+    "master_completion_percent": 71.4,
     "pending_source_binding_count": 7,
     "completed_definition": "PRODUCT_OWNER_APPROVED Master available in Stage1 Component Master Catalog",
     "total_definition": "Master scope includes 需新建Master plus all 已有Master categories; not all registered object types require a Master",
@@ -7284,9 +7296,10 @@
       "大角梁",
       "子角梁",
       "阑额",
-      "由额"
+      "由额",
+      "补间铺作底斗"
     ],
-    "master_covered_registry_record_count": 147,
-    "progress_display_note": "505 Registry records; Stage1 Master completion: 19 approved / 9 pending = 67.9%. T-035 由额 is CLOSED under D-162 after PR #31 merge; 4/4 由额 rows bound to CMP-FRAME-YOUE-001_MASTER; Registry Excel Sync SUCCESS; latest-head Master V2 regression 103/103 PASS. Next candidate: 补间铺作底斗 (priority 14)."
+    "master_covered_registry_record_count": 159,
+    "progress_display_note": "505 Registry records; Stage1 Master completion: 20 approved / 8 pending = 71.4%. T-036 补间铺作底斗 exact accepted-artifact formalization PASS under D-171; 12/12 rows bound to CMP-DOU-BOTTOM-LONGKAI-001_MASTER. Human-authored D-173 checkpoint requests Registry Excel Sync and latest-head final T-036 regression; both remain pending until PASS."
   }
 }
