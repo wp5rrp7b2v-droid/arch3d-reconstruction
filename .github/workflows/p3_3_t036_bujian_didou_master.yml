@@ -1,0 +1,153 @@
+name: T-036 Bujian Didou Master First Article
+
+# Routing note: this workflow is the authoritative T-036 first-article pipeline.
+# The generic P3.3 frame Master V2 workflow intentionally skips the T-036 PR.
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/p3_3_t036_bujian_didou_master.yml'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-DOU-BOTTOM-LONGKAI-001/**'
+      - 'production/zhenguo_wanfo/scripts/dou_master_common_v001.py'
+      - 'production/zhenguo_wanfo/scripts/validate_t036_bujian_didou.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  first-article:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    env:
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      COMMON: production/zhenguo_wanfo/scripts/dou_master_common_v001.py
+      VALIDATOR: production/zhenguo_wanfo/scripts/validate_t036_bujian_didou.py
+      DEF: production/zhenguo_wanfo/component_library/masters/CMP-DOU-BOTTOM-LONGKAI-001/CMP-DOU-BOTTOM-LONGKAI-001_DOU_MASTER_DEFINITION_V001.json
+      WRAPPER: production/zhenguo_wanfo/component_library/masters/CMP-DOU-BOTTOM-LONGKAI-001/build_dou_master_v001.py
+      REGISTRY: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json
+      OUT: artifacts/t036
+      REVIEW: artifacts/t036/review
+      ASSET: artifacts/t036/CMP-DOU-BOTTOM-LONGKAI-001_MASTER_V001.blend
+      SEM: artifacts/t036/CMP-DOU-BOTTOM-LONGKAI-001_MASTER_SEMANTIC_V001.json
+      BOARD: artifacts/t036/CMP-DOU-BOTTOM-LONGKAI-001_MASTER_REVIEW_BOARD_V001.png
+      VAL: artifacts/t036/CMP-DOU-BOTTOM-LONGKAI-001_MASTER_VALIDATION_V001.json
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Install Blender 4.5.13 and Pillow
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1 fonts-noto-cjk
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions T036" -o /tmp/blender.tar.xz "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+          python -m pip install --disable-pip-version-check pillow
+
+      - name: Validate execution Definition
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - "$DEF" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert d["task_id"]=="T-036"
+          assert d["execution_boundary"]["engineering_execution_authorized"] is True
+          assert d["profile_contract"]["parameter_count"]==1
+          assert d["profile_contract"]["profile_class"]=="CURVED_QI_PROFILE"
+          assert d["evidence_depth_contract"]["a1_top_depth_mm"] is None
+          assert d["evidence_depth_contract"]["a1_bottom_depth_mm"] is None
+          print("T036_DEFINITION_PRECHECK_PASS")
+          PY
+
+      - name: Build canonical curved Master
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT" "$REVIEW"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$DEF" --asset "$ASSET" --semantic "$SEM" --review-dir "$REVIEW"
+
+      - name: Independent reopen
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$ASSET" --python-exit-code 10 --python "$WRAPPER" --             --mode inspect --asset "$ASSET" --expected "$SEM" --output "$OUT/reopen.json"
+
+      - name: Curve stability mutations and deterministic restore
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$DEF" --asset "$OUT/curve_low.blend" --semantic "$OUT/curve_low.json" --curve-amount 0.25
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$DEF" --asset "$OUT/curve_high.blend" --semantic "$OUT/curve_high.json" --curve-amount 0.75
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --params "$DEF" --asset "$OUT/restore.blend" --semantic "$OUT/restore.json"
+
+      - name: Legacy shared-dou regression
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT/legacy"
+          for ID in CMP-LUDOU-COLUMN-001 CMP-DOU-SINGLE-LONGKAI-001 CMP-DOU-INTERACTIVE-001; do
+            PARAMS="production/zhenguo_wanfo/component_library/masters/$ID/${ID}_MASTER_PARAMS_V001.json"
+            BASE="production/zhenguo_wanfo/component_library/masters/$ID/${ID}_MASTER_SEMANTIC_V001.json"
+            "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" --               --mode build --params "$PARAMS" --asset "$OUT/legacy/$ID.blend" --semantic "$OUT/legacy/$ID.json"
+            python - "$BASE" "$OUT/legacy/$ID.json" <<'PY'
+          import json,sys
+          a=json.load(open(sys.argv[1],encoding="utf-8")); b=json.load(open(sys.argv[2],encoding="utf-8"))
+          assert a["semantic_geometry_signature"]==b["semantic_geometry_signature"]
+          assert a["body"]["geometry_vertices_mm"]==b["body"]["geometry_vertices_mm"]
+          assert a["body"]["geometry_faces"]==b["body"]["geometry_faces"]
+          print("LEGACY_DOU_REGRESSION_PASS",b["component_id"])
+          PY
+          done
+
+      - name: Compose Review Board
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode compose-board --definition "$DEF" --review-dir "$REVIEW" --board "$BOARD"
+
+      - name: Validate first article
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode validate             --definition "$DEF" --canonical "$SEM" --reopen "$OUT/reopen.json"             --curve-low "$OUT/curve_low.json" --curve-high "$OUT/curve_high.json"             --restore "$OUT/restore.json" --registry "$REGISTRY" --asset "$ASSET"             --board "$BOARD" --output "$VAL"
+          python - "$VAL" <<'PY'
+          import json,sys
+          v=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert v["status"]=="PASS"
+          print("T036_FIRST_ARTICLE_MACHINE_PASS",v["check_count"])
+          PY
+
+      - name: Assert binary not tracked
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -z "$(git ls-files -- 'production/zhenguo_wanfo/component_library/masters/CMP-DOU-BOTTOM-LONGKAI-001/*.blend' 'production/zhenguo_wanfo/component_library/masters/CMP-DOU-BOTTOM-LONGKAI-001/asset/*.blend')"
+
+      - name: Upload T-036 first article
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T036_BUJIAN_DIDOU_MASTER_V2_FIRST_ARTICLE_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            ${{ env.ASSET }}
+            ${{ env.SEM }}
+            ${{ env.BOARD }}
+            ${{ env.VAL }}
+
+      - name: Upload T-036 legacy regression evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T036_LEGACY_DOU_REGRESSION_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            artifacts/t036/legacy/*.json

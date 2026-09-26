@@ -20,6 +20,9 @@ permissions:
 
 jobs:
   first-article:
+    # T-036 uses a dedicated dou-specific first-article pipeline. The generic
+    # frame-oriented Master V2 schema is intentionally not applied to that PR.
+    if: ${{ github.event_name != 'pull_request' || github.head_ref != 'codex/t036-p3-3-bujian-didou-master-v2-v001' }}
     runs-on: ubuntu-latest
     timeout-minutes: 50
     env:

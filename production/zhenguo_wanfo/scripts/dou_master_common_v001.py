@@ -58,12 +58,50 @@ def clear_scene():
         bpy.data.collections.remove(collection)
 
 
-def make_mesh(component_id, values):
+def make_mesh(component_id, values, data=None, curve_amount=None):
     bw, bd, tw, td, height = (float(values[key]) for key in DIMENSIONS)
-    verts = [(-bw / 2, -bd / 2, 0), (bw / 2, -bd / 2, 0), (bw / 2, bd / 2, 0), (-bw / 2, bd / 2, 0),
-             (-tw / 2, -td / 2, height), (tw / 2, -td / 2, height), (tw / 2, td / 2, height), (-tw / 2, td / 2, height)]
-    faces = [(3, 2, 1, 0), (0, 1, 5, 4), (1, 2, 6, 5), (2, 3, 7, 6), (3, 0, 4, 7), (4, 5, 6, 7)]
+    profile = (data or {}).get("profile_contract", {})
+    profile_class = profile.get("profile_class", "LINEAR_OUTER_ENVELOPE")
     collection_name, body_name = names(component_id)
+
+    if profile_class == "CURVED_QI_PROFILE":
+        amount = float(profile.get("default_curve_amount", 0.5) if curve_amount is None else curve_amount)
+        lo, hi = profile.get("legal_curve_amount_range", [0.0, 1.0])
+        assert float(lo) <= amount <= float(hi)
+        segments = int(profile.get("vertical_segments", 16))
+        assert segments >= 4
+        verts = []
+        for i in range(segments + 1):
+            t = i / segments
+            smooth = 3.0 * t * t - 2.0 * t * t * t
+            f = (1.0 - amount) * t + amount * smooth
+            width = bw + (tw - bw) * f
+            depth = bd + (td - bd) * f
+            z = height * t
+            verts.extend([
+                (-width / 2, -depth / 2, z),
+                ( width / 2, -depth / 2, z),
+                ( width / 2,  depth / 2, z),
+                (-width / 2,  depth / 2, z),
+            ])
+        faces = [(3, 2, 1, 0)]
+        for i in range(segments):
+            a = i * 4
+            b = (i + 1) * 4
+            faces.extend([
+                (a + 0, a + 1, b + 1, b + 0),
+                (a + 1, a + 2, b + 2, b + 1),
+                (a + 2, a + 3, b + 3, b + 2),
+                (a + 3, a + 0, b + 0, b + 3),
+            ])
+        top = segments * 4
+        faces.append((top + 0, top + 1, top + 2, top + 3))
+    else:
+        amount = None
+        verts = [(-bw / 2, -bd / 2, 0), (bw / 2, -bd / 2, 0), (bw / 2, bd / 2, 0), (-bw / 2, bd / 2, 0),
+                 (-tw / 2, -td / 2, height), (tw / 2, -td / 2, height), (tw / 2, td / 2, height), (-tw / 2, td / 2, height)]
+        faces = [(3, 2, 1, 0), (0, 1, 5, 4), (1, 2, 6, 5), (2, 3, 7, 6), (3, 0, 4, 7), (4, 5, 6, 7)]
+
     mesh = bpy.data.meshes.new(body_name + "__MESH")
     mesh.from_pydata(verts, [], faces)
     mesh.update()
@@ -76,9 +114,12 @@ def make_mesh(component_id, values):
     obj.scale = (1, 1, 1)
     obj["component_id"] = component_id
     obj["master_version"] = "V001"
-    obj["geometry_mode"] = "MEASURED_OUTER_ENVELOPE_WITH_BOUNDED_PROFILE"
-    obj["interpolation"] = "PROJECT_RULE / REPLACEABLE_ENGINEERING_INTERPOLATION"
+    obj["geometry_mode"] = (data or {}).get("geometry_mode", "MEASURED_OUTER_ENVELOPE_WITH_BOUNDED_PROFILE")
+    obj["interpolation"] = (data or {}).get("interpolation", "PROJECT_RULE / REPLACEABLE_ENGINEERING_INTERPOLATION")
     obj["unit"] = "mm"
+    obj["profile_class"] = profile_class
+    if amount is not None:
+        obj["curve_amount"] = amount
     return obj
 
 
@@ -88,18 +129,37 @@ def body_payload(obj):
     mins = [min(v[i] for v in verts) for i in range(3)]
     maxs = [max(v[i] for v in verts) for i in range(3)]
     transform = {"location": [float(x) for x in obj.location], "rotation": [float(x) for x in obj.rotation_euler], "scale": [float(x) for x in obj.scale]}
-    bottom = verts[:4]
-    top = verts[4:]
+    profile_class = obj.get("profile_class", "LINEAR_OUTER_ENVELOPE")
     section = lambda ring: {"width": round(max(v[0] for v in ring) - min(v[0] for v in ring), 5), "depth": round(max(v[1] for v in ring) - min(v[1] for v in ring), 5)}
-    mid = [[round((a[i] + b[i]) / 2, 5) for i in range(3)] for a, b in zip(bottom, top)]
-    return {
+    if profile_class == "CURVED_QI_PROFILE":
+        ring_count = len(verts) // 4
+        bottom = verts[:4]
+        top = verts[-4:]
+        mid_start = (ring_count // 2) * 4
+        mid = verts[mid_start:mid_start + 4]
+        primitive = "closed_centered_rectangular_curved_qi_outer_envelope"
+    else:
+        bottom = verts[:4]
+        top = verts[4:]
+        mid = [[round((a[i] + b[i]) / 2, 5) for i in range(3)] for a, b in zip(bottom, top)]
+        primitive = "closed_centered_rectangular_linear_outer_envelope"
+    payload = {
         "body": {"name": obj.name, "vertex_count": len(verts), "face_count": len(faces), "local_transform": transform,
                  "local_bbox_mm": {"min": mins, "max": maxs, "dimensions": [round(maxs[i] - mins[i], 5) for i in range(3)]},
-                 "primitive": "closed_centered_rectangular_linear_outer_envelope", "unsupported_detail_count": 0,
+                 "primitive": primitive, "unsupported_detail_count": 0,
                  "geometry_vertices_mm": verts, "geometry_faces": faces},
         "sections_mm": {"bottom": section(bottom), "mid": section(mid), "top": section(top)},
         "semantic_geometry_signature": signature({"vertices": verts, "faces": faces}),
     }
+    if profile_class == "CURVED_QI_PROFILE":
+        payload["profile_geometry"] = {
+            "profile_class": profile_class,
+            "curve_amount": float(obj["curve_amount"]),
+            "ring_count": len(verts) // 4,
+            "monotonic_expected": True,
+            "exact_curvature_claim": False,
+        }
+    return payload
 
 
 def snapshot(data, params, obj, params_path, wrapper_path, asset_path):
@@ -116,13 +176,21 @@ def snapshot(data, params, obj, params_path, wrapper_path, asset_path):
         "canonical_asset_path": relative(asset_path), "canonical_blend_sha256": digest(asset_path),
     }
     result.update(body_payload(obj))
+    if obj.get("profile_class") == "CURVED_QI_PROFILE":
+        result["profile_contract"] = data.get("profile_contract", {})
+        result["evidence_depth_contract"] = data.get("evidence_depth_contract", {})
+        result["profile_evidence"] = data.get("profile_evidence", {})
+        result["registry_contract"] = data.get("registry_contract", {})
+        result["deferred_geometry"] = data.get("deferred_geometry", [])
+        result["historical_963_design_dimensions"] = data.get("historical_963_design_dimensions", "UNRESOLVED")
     return result
 
 
 def setup_review():
     scene = bpy.context.scene
-    scene.render.engine = "BLENDER_EEVEE"
-    scene.eevee.taa_render_samples = 32
+    scene.render.engine = "BLENDER_EEVEE_NEXT"
+    if hasattr(scene, "eevee") and hasattr(scene.eevee, "taa_render_samples"):
+        scene.eevee.taa_render_samples = 32
     scene.render.image_settings.file_format = "PNG"
     scene.render.film_transparent = False
     scene.render.resolution_percentage = 100
@@ -240,6 +308,7 @@ def main():
     parser.add_argument("--expected")
     parser.add_argument("--output")
     parser.add_argument("--assets", nargs="*")
+    parser.add_argument("--curve-amount", type=float)
     args = parser.parse_args(sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else [])
     if args.mode == "inspect":
         inspect(args.expected, args.asset, args.output)
@@ -255,7 +324,7 @@ def main():
     scene.unit_settings.system = "METRIC"
     scene.unit_settings.scale_length = 0.001
     scene.unit_settings.length_unit = "MILLIMETERS"
-    obj = make_mesh(data["component_id"], values)
+    obj = make_mesh(data["component_id"], values, data=data, curve_amount=args.curve_amount)
     asset_path = Path(args.asset).resolve()
     asset_path.parent.mkdir(parents=True, exist_ok=True)
     bpy.context.preferences.filepaths.save_version = 0

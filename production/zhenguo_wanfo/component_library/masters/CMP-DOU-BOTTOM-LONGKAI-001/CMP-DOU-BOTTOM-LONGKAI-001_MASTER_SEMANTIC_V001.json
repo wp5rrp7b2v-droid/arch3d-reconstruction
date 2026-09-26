@@ -1,0 +1,934 @@
+{
+  "blender_version": "4.5.13 LTS",
+  "body": {
+    "face_count": 66,
+    "geometry_faces": [
+      [
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        4
+      ],
+      [
+        1,
+        2,
+        6,
+        5
+      ],
+      [
+        2,
+        3,
+        7,
+        6
+      ],
+      [
+        3,
+        0,
+        4,
+        7
+      ],
+      [
+        4,
+        5,
+        9,
+        8
+      ],
+      [
+        5,
+        6,
+        10,
+        9
+      ],
+      [
+        6,
+        7,
+        11,
+        10
+      ],
+      [
+        7,
+        4,
+        8,
+        11
+      ],
+      [
+        8,
+        9,
+        13,
+        12
+      ],
+      [
+        9,
+        10,
+        14,
+        13
+      ],
+      [
+        10,
+        11,
+        15,
+        14
+      ],
+      [
+        11,
+        8,
+        12,
+        15
+      ],
+      [
+        12,
+        13,
+        17,
+        16
+      ],
+      [
+        13,
+        14,
+        18,
+        17
+      ],
+      [
+        14,
+        15,
+        19,
+        18
+      ],
+      [
+        15,
+        12,
+        16,
+        19
+      ],
+      [
+        16,
+        17,
+        21,
+        20
+      ],
+      [
+        17,
+        18,
+        22,
+        21
+      ],
+      [
+        18,
+        19,
+        23,
+        22
+      ],
+      [
+        19,
+        16,
+        20,
+        23
+      ],
+      [
+        20,
+        21,
+        25,
+        24
+      ],
+      [
+        21,
+        22,
+        26,
+        25
+      ],
+      [
+        22,
+        23,
+        27,
+        26
+      ],
+      [
+        23,
+        20,
+        24,
+        27
+      ],
+      [
+        24,
+        25,
+        29,
+        28
+      ],
+      [
+        25,
+        26,
+        30,
+        29
+      ],
+      [
+        26,
+        27,
+        31,
+        30
+      ],
+      [
+        27,
+        24,
+        28,
+        31
+      ],
+      [
+        28,
+        29,
+        33,
+        32
+      ],
+      [
+        29,
+        30,
+        34,
+        33
+      ],
+      [
+        30,
+        31,
+        35,
+        34
+      ],
+      [
+        31,
+        28,
+        32,
+        35
+      ],
+      [
+        32,
+        33,
+        37,
+        36
+      ],
+      [
+        33,
+        34,
+        38,
+        37
+      ],
+      [
+        34,
+        35,
+        39,
+        38
+      ],
+      [
+        35,
+        32,
+        36,
+        39
+      ],
+      [
+        36,
+        37,
+        41,
+        40
+      ],
+      [
+        37,
+        38,
+        42,
+        41
+      ],
+      [
+        38,
+        39,
+        43,
+        42
+      ],
+      [
+        39,
+        36,
+        40,
+        43
+      ],
+      [
+        40,
+        41,
+        45,
+        44
+      ],
+      [
+        41,
+        42,
+        46,
+        45
+      ],
+      [
+        42,
+        43,
+        47,
+        46
+      ],
+      [
+        43,
+        40,
+        44,
+        47
+      ],
+      [
+        44,
+        45,
+        49,
+        48
+      ],
+      [
+        45,
+        46,
+        50,
+        49
+      ],
+      [
+        46,
+        47,
+        51,
+        50
+      ],
+      [
+        47,
+        44,
+        48,
+        51
+      ],
+      [
+        48,
+        49,
+        53,
+        52
+      ],
+      [
+        49,
+        50,
+        54,
+        53
+      ],
+      [
+        50,
+        51,
+        55,
+        54
+      ],
+      [
+        51,
+        48,
+        52,
+        55
+      ],
+      [
+        52,
+        53,
+        57,
+        56
+      ],
+      [
+        53,
+        54,
+        58,
+        57
+      ],
+      [
+        54,
+        55,
+        59,
+        58
+      ],
+      [
+        55,
+        52,
+        56,
+        59
+      ],
+      [
+        56,
+        57,
+        61,
+        60
+      ],
+      [
+        57,
+        58,
+        62,
+        61
+      ],
+      [
+        58,
+        59,
+        63,
+        62
+      ],
+      [
+        59,
+        56,
+        60,
+        63
+      ],
+      [
+        60,
+        61,
+        65,
+        64
+      ],
+      [
+        61,
+        62,
+        66,
+        65
+      ],
+      [
+        62,
+        63,
+        67,
+        66
+      ],
+      [
+        63,
+        60,
+        64,
+        67
+      ],
+      [
+        64,
+        65,
+        66,
+        67
+      ]
+    ],
+    "geometry_vertices_mm": [
+      [
+        -89.28,
+        -82.55,
+        0.0
+      ],
+      [
+        89.28,
+        -82.55,
+        0.0
+      ],
+      [
+        89.28,
+        82.55,
+        0.0
+      ],
+      [
+        -89.28,
+        82.55,
+        0.0
+      ],
+      [
+        -90.69931,
+        -83.9306,
+        10.11125
+      ],
+      [
+        90.69931,
+        -83.9306,
+        10.11125
+      ],
+      [
+        90.69931,
+        83.9306,
+        10.11125
+      ],
+      [
+        -90.69931,
+        83.9306,
+        10.11125
+      ],
+      [
+        -92.5134,
+        -85.69521,
+        20.2225
+      ],
+      [
+        92.5134,
+        -85.69521,
+        20.2225
+      ],
+      [
+        92.5134,
+        85.69521,
+        20.2225
+      ],
+      [
+        -92.5134,
+        85.69521,
+        20.2225
+      ],
+      [
+        -94.66586,
+        -87.78898,
+        30.33375
+      ],
+      [
+        94.66586,
+        -87.78898,
+        30.33375
+      ],
+      [
+        94.66586,
+        87.78898,
+        30.33375
+      ],
+      [
+        -94.66586,
+        87.78898,
+        30.33375
+      ],
+      [
+        -97.10031,
+        -90.15703,
+        40.445
+      ],
+      [
+        97.10031,
+        -90.15703,
+        40.445
+      ],
+      [
+        97.10031,
+        90.15703,
+        40.445
+      ],
+      [
+        -97.10031,
+        90.15703,
+        40.445
+      ],
+      [
+        -99.76035,
+        -92.74452,
+        50.55625
+      ],
+      [
+        99.76035,
+        -92.74452,
+        50.55625
+      ],
+      [
+        99.76035,
+        92.74452,
+        50.55625
+      ],
+      [
+        -99.76035,
+        92.74452,
+        50.55625
+      ],
+      [
+        -102.58957,
+        -95.49658,
+        60.6675
+      ],
+      [
+        102.58957,
+        -95.49658,
+        60.6675
+      ],
+      [
+        102.58957,
+        95.49658,
+        60.6675
+      ],
+      [
+        -102.58957,
+        95.49658,
+        60.6675
+      ],
+      [
+        -105.53159,
+        -98.35836,
+        70.77875
+      ],
+      [
+        105.53159,
+        -98.35836,
+        70.77875
+      ],
+      [
+        105.53159,
+        98.35836,
+        70.77875
+      ],
+      [
+        -105.53159,
+        98.35836,
+        70.77875
+      ],
+      [
+        -108.53,
+        -101.275,
+        80.89
+      ],
+      [
+        108.53,
+        -101.275,
+        80.89
+      ],
+      [
+        108.53,
+        101.275,
+        80.89
+      ],
+      [
+        -108.53,
+        101.275,
+        80.89
+      ],
+      [
+        -111.52841,
+        -104.19164,
+        91.00125
+      ],
+      [
+        111.52841,
+        -104.19164,
+        91.00125
+      ],
+      [
+        111.52841,
+        104.19164,
+        91.00125
+      ],
+      [
+        -111.52841,
+        104.19164,
+        91.00125
+      ],
+      [
+        -114.47043,
+        -107.05342,
+        101.1125
+      ],
+      [
+        114.47043,
+        -107.05342,
+        101.1125
+      ],
+      [
+        114.47043,
+        107.05342,
+        101.1125
+      ],
+      [
+        -114.47043,
+        107.05342,
+        101.1125
+      ],
+      [
+        -117.29965,
+        -109.80548,
+        111.22375
+      ],
+      [
+        117.29965,
+        -109.80548,
+        111.22375
+      ],
+      [
+        117.29965,
+        109.80548,
+        111.22375
+      ],
+      [
+        -117.29965,
+        109.80548,
+        111.22375
+      ],
+      [
+        -119.95969,
+        -112.39297,
+        121.335
+      ],
+      [
+        119.95969,
+        -112.39297,
+        121.335
+      ],
+      [
+        119.95969,
+        112.39297,
+        121.335
+      ],
+      [
+        -119.95969,
+        112.39297,
+        121.335
+      ],
+      [
+        -122.39413,
+        -114.76102,
+        131.44624
+      ],
+      [
+        122.39413,
+        -114.76102,
+        131.44624
+      ],
+      [
+        122.39413,
+        114.76102,
+        131.44624
+      ],
+      [
+        -122.39413,
+        114.76102,
+        131.44624
+      ],
+      [
+        -124.5466,
+        -116.85478,
+        141.5575
+      ],
+      [
+        124.5466,
+        -116.85478,
+        141.5575
+      ],
+      [
+        124.5466,
+        116.85478,
+        141.5575
+      ],
+      [
+        -124.5466,
+        116.85478,
+        141.5575
+      ],
+      [
+        -126.36069,
+        -118.6194,
+        151.66875
+      ],
+      [
+        126.36069,
+        -118.6194,
+        151.66875
+      ],
+      [
+        126.36069,
+        118.6194,
+        151.66875
+      ],
+      [
+        -126.36069,
+        118.6194,
+        151.66875
+      ],
+      [
+        -127.78,
+        -120.0,
+        161.78
+      ],
+      [
+        127.78,
+        -120.0,
+        161.78
+      ],
+      [
+        127.78,
+        120.0,
+        161.78
+      ],
+      [
+        -127.78,
+        120.0,
+        161.78
+      ]
+    ],
+    "local_bbox_mm": {
+      "dimensions": [
+        255.56,
+        240.0,
+        161.78
+      ],
+      "max": [
+        127.78,
+        120.0,
+        161.78
+      ],
+      "min": [
+        -127.78,
+        -120.0,
+        0.0
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "name": "MASTER__CMP_DOU_BOTTOM_LONGKAI_001__BODY",
+    "primitive": "closed_centered_rectangular_curved_qi_outer_envelope",
+    "unsupported_detail_count": 0,
+    "vertex_count": 68
+  },
+  "canonical_asset_path": "artifacts/t036/CMP-DOU-BOTTOM-LONGKAI-001_MASTER_V001.blend",
+  "canonical_blend_sha256": "7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66",
+  "collection_names": [
+    "MASTER__CMP_DOU_BOTTOM_LONGKAI_001"
+  ],
+  "component_id": "CMP-DOU-BOTTOM-LONGKAI-001",
+  "deferred_geometry": [
+    "exact_dou_ear_profile",
+    "exact_top_slots_or_cavities",
+    "exact_bottom_mortise_tenon",
+    "concealed_joinery",
+    "wear_cracking_compression_deformation",
+    "per_instance_damage",
+    "exact_963_profile"
+  ],
+  "dg114_geometry_use_count": 0,
+  "evidence_classes": {
+    "bottom_depth_mm": "PARAMETRIC_COMPLETION",
+    "bottom_width_mm": "CONFIRMED",
+    "top_depth_mm": "PARAMETRIC_COMPLETION",
+    "top_width_mm": "CONFIRMED",
+    "total_height_mm": "CONFIRMED"
+  },
+  "evidence_depth_contract": {
+    "a1_bottom_depth_mm": null,
+    "a1_status": "UNKNOWN / NOT_DIRECTLY_MEASURED_FOR_BOTTOM_DOU",
+    "a1_top_depth_mm": null,
+    "evidence_and_completion_fields_must_remain_separate": true,
+    "historical_claim": false,
+    "production_bottom_depth_mm": 165.1,
+    "production_classification": "PARAMETRIC_COMPLETION / RECONSTRUCTED_DESIGN / REPLACEABLE / NOT_A1_DIRECT",
+    "production_top_depth_mm": 240
+  },
+  "generator_version": "V001",
+  "geometry_lod": "STAGE1_MINIMAL_SUFFICIENT",
+  "geometry_mode": "EVIDENCE_BOUNDED_CURVED_QI_PROFILE_WITH_RECONSTRUCTED_DEPTH",
+  "historical_963_design_dimensions": "UNRESOLVED",
+  "historical_state": {
+    "historical_claim": "not_proven_963_design",
+    "model_layer": "observed_as_measured_width_height_plus_explicit_parametric_depth",
+    "reconstructed_963_candidate": "not_inferred"
+  },
+  "input_hashes": {
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-BOTTOM-LONGKAI-001/CMP-DOU-BOTTOM-LONGKAI-001_DOU_MASTER_DEFINITION_V001.json": "c1b96f12d69542a23e16b342c36525afe4dc06f1aa9c2e096e9c8fb2bf914ba8",
+    "production/zhenguo_wanfo/component_library/masters/CMP-DOU-BOTTOM-LONGKAI-001/build_dou_master_v001.py": "648d0ae9c55bfffb6e53a9ac17c7eb49033b24239f76e1162fef1fcc14fedb8d",
+    "production/zhenguo_wanfo/scripts/dou_master_common_v001.py": "bb1c7c77ed8dcd63a7ebf23cd640f48a3f2caa51caf4e6768e7587d9480ffcb7"
+  },
+  "interpolation": "PROJECT_RULE / RECONSTRUCTED_DESIGN / REPLACEABLE_CURVED_PROFILE",
+  "known_unknowns": [
+    "A1 bottom-dou top/bottom depth not directly measured",
+    "Exact curvature unknown",
+    "Exact dou-ear/slot/cavity/joinery geometry unresolved",
+    "Observed means are not proven 963 design dimensions"
+  ],
+  "master_id": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+  "master_version": "V001",
+  "mesh_count": 1,
+  "non_mesh_auxiliary_objects": [],
+  "object_count": 1,
+  "object_names": [
+    "MASTER__CMP_DOU_BOTTOM_LONGKAI_001__BODY"
+  ],
+  "originality_status": "unknown",
+  "profile_contract": {
+    "classification": "RECONSTRUCTED_DESIGN / REPLACEABLE",
+    "default_curve_amount": 0.5,
+    "envelope_overshoot_forbidden": true,
+    "exact_curvature": "UNKNOWN",
+    "historical_claim": false,
+    "interpolation_function": "(1-a)*t + a*(3*t^2-2*t^3)",
+    "legal_curve_amount_range": [
+      0.25,
+      0.75
+    ],
+    "monotonic_required": true,
+    "mutation_test_values": [
+      0.25,
+      0.75
+    ],
+    "parameter_count": 1,
+    "parameter_name": "curve_amount",
+    "profile_class": "CURVED_QI_PROFILE",
+    "self_intersection_forbidden": true,
+    "vertical_segments": 16
+  },
+  "profile_evidence": {
+    "flat_height_mm": {
+      "classification": "CONFIRMED / DIRECT_PRIMARY / OBSERVED_AS_MEASURED_FAMILY_MEAN",
+      "geometry_breakpoint_claim": false,
+      "value": 38.333
+    },
+    "qi_height_mm": {
+      "classification": "CONFIRMED / DIRECT_PRIMARY / OBSERVED_AS_MEASURED_FAMILY_MEAN",
+      "geometry_breakpoint_claim": false,
+      "value": 65.6
+    },
+    "residual_segment_inference": "FORBIDDEN"
+  },
+  "profile_geometry": {
+    "curve_amount": 0.5,
+    "exact_curvature_claim": false,
+    "monotonic_expected": true,
+    "profile_class": "CURVED_QI_PROFILE",
+    "ring_count": 17
+  },
+  "registry_contract": {
+    "geometry_variant_count": 0,
+    "locations": [
+      "南立面西次间",
+      "南立面明间",
+      "南立面东次间",
+      "北立面西次间",
+      "北立面明间",
+      "北立面东次间",
+      "东山北次间",
+      "东山明间",
+      "东山南次间",
+      "西山北次间",
+      "西山明间",
+      "西山南次间"
+    ],
+    "measured_instance_count": 9,
+    "north_unmeasured_count": 3,
+    "one_master_required": true,
+    "physical_instance_count": 12,
+    "registry_schema": "V008/CURRENT"
+  },
+  "resolved_parameters": {
+    "bottom_depth_mm": 165.1,
+    "bottom_width_mm": 178.56,
+    "top_depth_mm": 240,
+    "top_width_mm": 255.56,
+    "total_height_mm": 161.78
+  },
+  "sections_mm": {
+    "bottom": {
+      "depth": 165.1,
+      "width": 178.56
+    },
+    "mid": {
+      "depth": 202.55,
+      "width": 217.06
+    },
+    "top": {
+      "depth": 240.0,
+      "width": 255.56
+    }
+  },
+  "semantic_geometry_signature": "7b3517bcbb2007954d11ea18b75e9103f3a6b4e0d3a6e46e97c05fef5ba449f6",
+  "unit": "mm"
+}

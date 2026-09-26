@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-035",
-  "status": "NINETEEN_APPROVED / T035 CLOSED / PR #31 MERGED",
+  "task": "T-036",
+  "status": "TWENTY_APPROVED / T036 FORMALIZED / PR #32 OPEN",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -592,7 +592,68 @@
       "closure_decision_id": "D-162",
       "close_date": "2026-09-26",
       "main_verified": true
+    },
+    {
+      "component_id": "CMP-DOU-BOTTOM-LONGKAI-001",
+      "master_id": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+      "master_version": "V001",
+      "approval_status": "PRODUCT_OWNER_APPROVED",
+      "decision_id": "D-170",
+      "formalization_authority": "D-171",
+      "publication_status": "FORMALIZED / PR #32 OPEN",
+      "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL ONLY / NOT GIT",
+      "canonical_asset_sha256": "7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66",
+      "semantic_sha256": "c9a92d853f61ba8569262a6ec161d3c0a6a5f440b8f500d5c6748fff2257c1b7",
+      "validation_sha256": "21fb46f54e09bc081c79b4aa9bd5d97e84a480d5fc5dcd0431f2b4cd87df7179",
+      "review_board_sha256": "e22464a8702f380d79e4394090ad8e63f9b390e23580619b3ff0d27caeb78d43",
+      "semantic_geometry_signature": "7b3517bcbb2007954d11ea18b75e9103f3a6b4e0d3a6e46e97c05fef5ba449f6",
+      "physical_instance_count": 12,
+      "measured_instance_count": 9,
+      "north_unmeasured_count": 3,
+      "geometry_variant_count": 0,
+      "distribution": "12 LOCATION-LOCKED INSTANCES / SOUTH+EAST+WEST 9 MEASURED / NORTH 3 UNMEASURED",
+      "observed_family_mean_mm": {
+        "top_width": 255.56,
+        "bottom_width": 178.56,
+        "total_height": 161.78,
+        "flat_height": 38.333,
+        "qi_height": 65.6
+      },
+      "observed_family_mean_policy": "DIRECT_PRIMARY / 9 MEASURED FAMILY MEAN / NOT 12 INDIVIDUAL VALUES / NOT PROVEN 963 DESIGN",
+      "profile_policy": {
+        "profile_class": "CURVED_QI_PROFILE",
+        "exact_curvature": "UNKNOWN",
+        "curve_amount": "RECONSTRUCTED_DESIGN / REPLACEABLE / NON_HISTORICAL",
+        "curve_parameter_count": 1
+      },
+      "depth_policy": {
+        "a1_top_depth": "UNKNOWN",
+        "a1_bottom_depth": "UNKNOWN",
+        "production_top_depth_mm": 240.0,
+        "production_bottom_depth_mm": 165.1,
+        "classification": "PARAMETRIC_COMPLETION / RECONSTRUCTED_DESIGN / REPLACEABLE / NOT_A1_DIRECT"
+      },
+      "unsupported_geometry": "DOU EARS / SLOTS / CAVITIES / MORTISE-TENON / DAMAGE DEFERRED",
+      "source_artifact": {
+        "actions_run_id": 36248233440,
+        "artifact_id": 10908700631,
+        "artifact_zip_sha256": "648cf7d99d8c71bf8cdaa4aa9025e03869d77d9c5914f300122a888285825d07"
+      },
+      "accepted_engineering_head": "b56a62640dec64483adc882034c30c6a2d601710",
+      "minimal_sufficient_package": {
+        "policy": "ADAPTIVE / NO UNIVERSAL FILE COUNT",
+        "formal_repo_files": [
+          "production/zhenguo_wanfo/component_library/masters/CMP-DOU-BOTTOM-LONGKAI-001/CMP-DOU-BOTTOM-LONGKAI-001_MASTER_DEFINITION_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-DOU-BOTTOM-LONGKAI-001/CMP-DOU-BOTTOM-LONGKAI-001_MASTER_SEMANTIC_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-DOU-BOTTOM-LONGKAI-001/CMP-DOU-BOTTOM-LONGKAI-001_MASTER_REVIEW_BOARD_V001.png",
+          "production/zhenguo_wanfo/component_library/masters/CMP-DOU-BOTTOM-LONGKAI-001/CMP-DOU-BOTTOM-LONGKAI-001_MASTER_VALIDATION_V001.json",
+          "docs/tasks/T-036_P3_3_BUJIAN_DIDOU_MASTER_V2_V001.md"
+        ],
+        "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+        "review_board_count": 1,
+        "required_review_panel_count": 6
+      }
     }
   ],
-  "approved_master_count": 19
+  "approved_master_count": 20
 }
