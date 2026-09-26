@@ -2256,7 +2256,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2268,7 +2269,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2280,7 +2282,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2292,7 +2295,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2304,7 +2308,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2316,7 +2321,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2328,7 +2334,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2340,7 +2347,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2352,7 +2360,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2364,7 +2373,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2376,7 +2386,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -2388,7 +2399,8 @@
       "length_rule": "柱心距离",
       "section_rule": "有单件实测则用单件，否则参数化/未知",
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-FRAME-LANE-001_MASTER"
     },
     {
       "system": "主体木构",
@@ -7224,14 +7236,14 @@
     "生头木"
   ],
   "stage1_master_progress_summary": {
-    "snapshot_date": "2026-09-25",
-    "status": "CANONICAL ON T-033 BRANCH / D-144 / 17 OF 28 MASTERS APPROVED",
+    "snapshot_date": "2026-09-26",
+    "status": "PR #30 FORMALIZED CANDIDATE / D-151 ACCEPTED / D-152 FORMALIZATION AUTHORIZED / FINAL VALIDATION PENDING",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 17,
-    "pending_master_object_type_count": 11,
-    "master_completion_percent": 60.7,
+    "approved_master_count": 18,
+    "pending_master_object_type_count": 10,
+    "master_completion_percent": 64.3,
     "pending_source_binding_count": 7,
     "completed_definition": "PRODUCT_OWNER_APPROVED Master available in Stage1 Component Master Catalog",
     "total_definition": "Master scope includes 需新建Master plus all 已有Master categories; not all registered object types require a Master",
@@ -7268,7 +7280,10 @@
       "大角梁",
       "子角梁"
     ],
-    "master_covered_registry_record_count": 131,
-    "progress_display_note": "505 Registry records; Stage1 Master completion uses 28 Master-scope object types as denominator: 17 approved / 11 pending = 60.7%. T-033 子角梁 formalized on PR #27 branch."
+    "master_covered_registry_record_count": 143,
+    "progress_display_note": "505 Registry records; Stage1 Master completion: 18 approved / 10 pending = 64.3%. T-034 阑额 formalized candidate on PR #30; 12/12 阑额 rows bound to CMP-FRAME-LANE-001_MASTER; final regression and derived Excel sync required before merge.",
+    "completed_master_components": [
+      "阑额"
+    ]
   }
 }

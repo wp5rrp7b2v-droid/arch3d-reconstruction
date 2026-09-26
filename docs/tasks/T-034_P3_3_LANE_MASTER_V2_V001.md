@@ -717,3 +717,23 @@ Still not authorized:
 - Stage2
 - T-018 resume
 
+
+
+## 24. D-152 formalization authorization
+
+Product Owner authorized T-034 formalization + Catalog/V008 binding on 2026-09-26.
+
+Formalization rules:
+- materialize exact D-151 accepted Semantic / Validation / Review Board from Artifact 10899808683;
+- canonical .blend remains Actions Artifact + local only / not Git;
+- Catalog candidate becomes 18 approved Masters;
+- V008/CURRENT 阑额 binding = 12/12 to CMP-FRAME-LANE-001_MASTER;
+- Stage1 candidate = 18/28 = 64.3%;
+- Master-covered Registry rows candidate = 143;
+- derived Excel sync and latest-head Master V2 regression are mandatory.
+
+Still not authorized:
+- PR #30 merge;
+- next component;
+- Stage2;
+- T-018 resume.

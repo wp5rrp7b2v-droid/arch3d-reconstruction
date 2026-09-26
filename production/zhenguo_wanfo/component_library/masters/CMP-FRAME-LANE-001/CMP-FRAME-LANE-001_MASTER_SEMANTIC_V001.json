@@ -1,0 +1,552 @@
+{
+  "assembly_role": null,
+  "assembly_semantics": {
+    "assembly_span_rule": "COLUMN_CENTER_DISTANCE",
+    "connection_layer_intents": [
+      {
+        "allowed_future_connection_kinds": [
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "interface_id": "LANE_LEFT_COLUMN",
+        "related_family": "柱",
+        "status": "CONNECTION_EXISTENCE_KNOWN / EXACT_GEOMETRY_DEFERRED",
+        "unsupported_joinery_claim": false
+      },
+      {
+        "allowed_future_connection_kinds": [
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "interface_id": "LANE_RIGHT_COLUMN",
+        "related_family": "柱",
+        "status": "CONNECTION_EXISTENCE_KNOWN / EXACT_GEOMETRY_DEFERRED",
+        "unsupported_joinery_claim": false
+      }
+    ],
+    "corner_projection": "NONE",
+    "historical_full_timber_length_claim": false,
+    "member_type": "HORIZONTAL_INTERCOLUMN_TIE_TIMBER",
+    "official_same_building_semantic": "A2: no pu-paifang; columns connected by 阑额/由额; 阑额 does not project beyond corner columns.",
+    "related_component_policy": "LANE ONLY / YOUE + EJIANBAN + PU_PAIFANG + COLUMN + BRACKET SET EXCLUDED"
+  },
+  "blender_version": "4.5.13 LTS",
+  "body": {
+    "face_count": 6,
+    "geometry_faces": [
+      [
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        4
+      ],
+      [
+        1,
+        2,
+        6,
+        5
+      ],
+      [
+        2,
+        3,
+        7,
+        6
+      ],
+      [
+        3,
+        0,
+        4,
+        7
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "geometry_vertices_mm": [
+      [
+        -500.0,
+        -132.800003,
+        0.0
+      ],
+      [
+        500.0,
+        -132.800003,
+        0.0
+      ],
+      [
+        500.0,
+        132.800003,
+        0.0
+      ],
+      [
+        -500.0,
+        132.800003,
+        0.0
+      ],
+      [
+        -500.0,
+        -132.800003,
+        105.0
+      ],
+      [
+        500.0,
+        -132.800003,
+        105.0
+      ],
+      [
+        500.0,
+        132.800003,
+        105.0
+      ],
+      [
+        -500.0,
+        132.800003,
+        105.0
+      ]
+    ],
+    "joinery_cut_count": 0,
+    "local_bbox_mm": {
+      "dimensions": [
+        1000.0,
+        265.600006,
+        105.0
+      ],
+      "max": [
+        500.0,
+        132.800003,
+        105.0
+      ],
+      "min": [
+        -500.0,
+        -132.800003,
+        0.0
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "name": "MASTER__CMP_FRAME_LANE_001__BODY",
+    "primitive": "rectangular_bounding_envelope_proxy_profile_unknown",
+    "section_envelope_historical_claim": false,
+    "section_profile_state": "UNKNOWN",
+    "shengtou_wood_baked_in": false,
+    "unsupported_detail_count": 0,
+    "vertex_count": 8
+  },
+  "canonical_blend_sha256": "b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d",
+  "canonical_reference_length_historical_claim": false,
+  "component_id": "CMP-FRAME-LANE-001",
+  "definition_sha256": "ab3d1925f08ea1c46a0460ae989f9a6e9710c19d0e122ec51f4642cf15b775ba",
+  "endpoint_fixture_results": [
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        650.0,
+        0.0,
+        0.0
+      ],
+      "derived_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "derived_length_mm": 1300.0,
+      "fixture_id": "TEST-X",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        1300.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        0.0,
+        850.0,
+        0.0
+      ],
+      "derived_direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "derived_length_mm": 1700.0,
+      "fixture_id": "TEST-Y",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        0.0,
+        1700.0,
+        0.0
+      ]
+    }
+  ],
+  "endpoint_resolver_contract": {
+    "building_coordinate_claim": false,
+    "center_rule": "(P_start + P_end) / 2",
+    "classification": "PROJECT_ASSEMBLY_CONTROL / GENERIC_ENDPOINT_DRIVEN",
+    "enabled": true,
+    "fixture_variation_contract": {
+      "directions_must_differ": true,
+      "directions_must_match": false,
+      "lengths_must_differ": true,
+      "rationale": "Prove shared Master is independent of reference length and facade/world direction."
+    },
+    "fixtures": [
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          650,
+          0,
+          0
+        ],
+        "expected_direction": [
+          1,
+          0,
+          0
+        ],
+        "expected_length_mm": 1300,
+        "fixture_id": "TEST-X",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          1300,
+          0,
+          0
+        ]
+      },
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          0,
+          850,
+          0
+        ],
+        "expected_direction": [
+          0,
+          1,
+          0
+        ],
+        "expected_length_mm": 1700,
+        "fixture_id": "TEST-Y",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          0,
+          1700,
+          0
+        ]
+      }
+    ],
+    "historical_claim": false,
+    "length_rule": "norm(P_end - P_start)",
+    "lower_endpoint_semantic": "COLUMN_CENTER_A",
+    "orientation_rule": "local +X aligns to normalized(P_end - P_start)",
+    "review_panel_required": false,
+    "upper_endpoint_semantic": "COLUMN_CENTER_B"
+  },
+  "engineering_representation": {
+    "historical_profile_claim": false,
+    "label_requirement": "12/12 width direct; 4/12 thickness direct; 8/12 thickness production-completed at 105 with evidence null; no pu-paifang; no corner projection.",
+    "primitive": "RECTANGULAR_BOUNDING_ENVELOPE_PROXY",
+    "purpose": "STAGE1 FAMILY REFERENCE + 12 INSTANCE WIDTH PROOF + DUAL-THICKNESS EVIDENCE/PRODUCTION PROOF + ASSEMBLY SPAN VALIDATION"
+  },
+  "geometry_mode": "PARAMETRIC_HORIZONTAL_LONG_MEMBER_WITH_INSTANCE_SECTION_PARAMETERS",
+  "historical_full_length_mm": null,
+  "instance_section_binding_contract": {
+    "completion_basis": "4 directly measured specimens + report family reference",
+    "direct_mapping_replaceable_without_new_decision": false,
+    "direct_thickness_count": 4,
+    "family_mean_must_not_overwrite_instances": true,
+    "family_reference_only": true,
+    "family_reference_section_mm": {
+      "thickness": 105,
+      "width": 265.6
+    },
+    "geometry_variant_count": 0,
+    "instances": [
+      {
+        "completion_basis": null,
+        "evidence_thickness_mm": 105,
+        "fixture_id": "S_W",
+        "historical_claim": false,
+        "location": "南立面西次间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-南立面-西次间",
+        "replaceable": false,
+        "source_label": "南西次间",
+        "source_note": "A1 DIRECT WIDTH + DIRECT THICKNESS",
+        "thickness_classification": "DIRECT_MEASURED",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 268
+      },
+      {
+        "completion_basis": null,
+        "evidence_thickness_mm": 105,
+        "fixture_id": "S_C",
+        "historical_claim": false,
+        "location": "南立面明间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-南立面-明间",
+        "replaceable": false,
+        "source_label": "南明间",
+        "source_note": "A1 DIRECT WIDTH + DIRECT THICKNESS",
+        "thickness_classification": "DIRECT_MEASURED",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 264
+      },
+      {
+        "completion_basis": null,
+        "evidence_thickness_mm": 105,
+        "fixture_id": "S_E",
+        "historical_claim": false,
+        "location": "南立面东次间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-南立面-东次间",
+        "replaceable": false,
+        "source_label": "南东次间",
+        "source_note": "A1 DIRECT WIDTH + DIRECT THICKNESS",
+        "thickness_classification": "DIRECT_MEASURED",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 269
+      },
+      {
+        "completion_basis": "4 directly measured specimens + report family reference",
+        "evidence_thickness_mm": null,
+        "fixture_id": "N_W",
+        "historical_claim": false,
+        "location": "北立面西次间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-北立面-西次间",
+        "replaceable": true,
+        "source_label": "北西次间",
+        "source_note": "A1 DIRECT WIDTH + THICKNESS 未及 / PRODUCTION COMPLETION",
+        "thickness_classification": "PARAMETRIC_COMPLETION",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 259
+      },
+      {
+        "completion_basis": null,
+        "evidence_thickness_mm": 105,
+        "fixture_id": "N_C",
+        "historical_claim": false,
+        "location": "北立面明间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-北立面-明间",
+        "replaceable": false,
+        "source_label": "北明间",
+        "source_note": "A1 DIRECT WIDTH + DIRECT THICKNESS",
+        "thickness_classification": "DIRECT_MEASURED",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 264
+      },
+      {
+        "completion_basis": "4 directly measured specimens + report family reference",
+        "evidence_thickness_mm": null,
+        "fixture_id": "N_E",
+        "historical_claim": false,
+        "location": "北立面东次间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-北立面-东次间",
+        "replaceable": true,
+        "source_label": "北东次间",
+        "source_note": "A1 DIRECT WIDTH + THICKNESS 未及 / PRODUCTION COMPLETION",
+        "thickness_classification": "PARAMETRIC_COMPLETION",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 269
+      },
+      {
+        "completion_basis": "4 directly measured specimens + report family reference",
+        "evidence_thickness_mm": null,
+        "fixture_id": "E_N",
+        "historical_claim": false,
+        "location": "东山北次间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-东山-北次间",
+        "replaceable": true,
+        "source_label": "东北次间",
+        "source_note": "A1 DIRECT WIDTH + THICKNESS 未及 / PRODUCTION COMPLETION",
+        "thickness_classification": "PARAMETRIC_COMPLETION",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 266
+      },
+      {
+        "completion_basis": "4 directly measured specimens + report family reference",
+        "evidence_thickness_mm": null,
+        "fixture_id": "E_C",
+        "historical_claim": false,
+        "location": "东山明间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-东山-明间",
+        "replaceable": true,
+        "source_label": "东明间",
+        "source_note": "A1 DIRECT WIDTH + THICKNESS 未及 / PRODUCTION COMPLETION",
+        "thickness_classification": "PARAMETRIC_COMPLETION",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 264
+      },
+      {
+        "completion_basis": "4 directly measured specimens + report family reference",
+        "evidence_thickness_mm": null,
+        "fixture_id": "E_S",
+        "historical_claim": false,
+        "location": "东山南次间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-东山-南次间",
+        "replaceable": true,
+        "source_label": "东南次间",
+        "source_note": "A1 DIRECT WIDTH + THICKNESS 未及 / PRODUCTION COMPLETION",
+        "thickness_classification": "PARAMETRIC_COMPLETION",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 266
+      },
+      {
+        "completion_basis": "4 directly measured specimens + report family reference",
+        "evidence_thickness_mm": null,
+        "fixture_id": "W_N",
+        "historical_claim": false,
+        "location": "西山北次间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-西山-北次间",
+        "replaceable": true,
+        "source_label": "西北次间",
+        "source_note": "A1 DIRECT WIDTH + THICKNESS 未及 / PRODUCTION COMPLETION",
+        "thickness_classification": "PARAMETRIC_COMPLETION",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 266
+      },
+      {
+        "completion_basis": "4 directly measured specimens + report family reference",
+        "evidence_thickness_mm": null,
+        "fixture_id": "W_C",
+        "historical_claim": false,
+        "location": "西山明间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-西山-明间",
+        "replaceable": true,
+        "source_label": "西明间",
+        "source_note": "A1 DIRECT WIDTH + THICKNESS 未及 / PRODUCTION COMPLETION",
+        "thickness_classification": "PARAMETRIC_COMPLETION",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 271
+      },
+      {
+        "completion_basis": "4 directly measured specimens + report family reference",
+        "evidence_thickness_mm": null,
+        "fixture_id": "W_S",
+        "historical_claim": false,
+        "location": "西山南次间",
+        "production_thickness_mm": 105,
+        "registry_id": "阑额-西山-南次间",
+        "replaceable": true,
+        "source_label": "西南次间",
+        "source_note": "A1 DIRECT WIDTH + THICKNESS 未及 / PRODUCTION COMPLETION",
+        "thickness_classification": "PARAMETRIC_COMPLETION",
+        "thickness_mm": 105,
+        "width_classification": "DIRECT_MEASURED",
+        "width_mm": 261
+      }
+    ],
+    "mode": "DIRECT_LOCKED_WIDTH_PARTIAL_THICKNESS_WITH_PRODUCTION_COMPLETION",
+    "production_ready_thickness_count": 12,
+    "same_geometry_different_evidence_regression": {
+      "completion_fixture_id": "E_C",
+      "direct_fixture_id": "S_C",
+      "expected_different_evidence_classification": true,
+      "expected_same_geometry_signature": true
+    },
+    "same_master_required": true,
+    "unmeasured_thickness_count": 8,
+    "width_mapping": "DIRECT_LOCKED_12_OF_12"
+  },
+  "joinery_geometry": "STAGE1_SIMPLIFIED_FLAT_END / NO HISTORICAL JOINERY CLAIM",
+  "legacy_proxy_reuse": false,
+  "master_id": "CMP-FRAME-LANE-001_MASTER",
+  "master_version": "V001",
+  "placement_policy": "ASSEMBLY_OWNED / COLUMN_CENTER_SPAN_CONTROL / ENDPOINT_DERIVED / STAGE1_BUILDING_XYZ_NOT_LOCKED",
+  "reconstruction_policy": {
+    "classification": "EVIDENCE_CONSTRAINED_RECONSTRUCTION",
+    "decision_id": "D-137",
+    "reconstructed_design_must_be_explicit": true,
+    "reconstructed_design_replaceable": true,
+    "rule_id": "RC-023",
+    "silent_historicization": "PROHIBITED",
+    "unknown_does_not_automatically_block": true
+  },
+  "registry_role_counts": null,
+  "resolved_dimensions_mm": {
+    "length": 1000.0,
+    "thickness": 105.0,
+    "width": 265.6
+  },
+  "schema_version": "MASTER_V2_SEMANTIC_1.1",
+  "section_envelope_historical_claim": false,
+  "section_profile_state": "UNKNOWN",
+  "semantic_geometry_signature": "d1117d15868e5f9df37fc679b9c7cc6b0732ef79bcfef6b5e15c4a91fff94ed5",
+  "shengtou_wood_baked_in": false,
+  "source_numeric_conflict": null,
+  "task_id": "T-034",
+  "unknowns": [
+    "historical exact concealed full timber length and hidden end penetration remain unresolved",
+    "sample-to-instance width mapping is direct; thickness evidence is partial with 8 unmeasured rows production-completed explicitly",
+    "historical exact mortise/tenon, shoulder cuts and end profile remain unresolved",
+    "historical exact 963 section is not claimed from extant-state measurements",
+    "final building XYZ endpoints belong to later whole-building placement stage"
+  ]
+}
