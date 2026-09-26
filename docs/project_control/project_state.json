@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-034 EXECUTING / FIRST ARTICLE PENDING / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 17 OF 28 MASTERS APPROVED / T-034 ACTIVE D-150 / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 EXECUTING D-150 / FIRST ARTICLE PENDING / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 EXECUTING D-150 / FIRST ARTICLE PENDING / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 ENGINEERING EXECUTION AUTHORIZED D-150 / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 ENGINEERING EXECUTION AUTHORIZED D-150 / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-034",
     "name": "P3_3_LANE_MASTER_V2_V001",
-    "status": "ENGINEERING EXECUTION AUTHORIZED / EXECUTING / FIRST ARTICLE PENDING"
+    "status": "ENGINEERING EXECUTION AUTHORIZED / D-150 / STARTING"
   },
   "proposed_next_task": {
     "id": "NONE",
-    "name": "No next task while T-034 active",
-    "status": "BLOCKED UNTIL T-034 FIRST-ARTICLE REVIEW"
+    "name": "Next Stage1 component",
+    "status": "NOT SELECTED / T-034 ACTIVE"
   },
   "last_completed_task": {
     "id": "T-033",
@@ -680,7 +680,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Execute T-034 on branch codex/t034-p3-3-lane-master-v2-v001 through first-article evidence only. Create Draft PR and run Master V2 GitHub Actions/Blender. Stop at Product Owner first-article acceptance boundary; do not formalize, bind Catalog/V008, merge, start Stage2, or resume T-018.",
+  "next_action": "Execute T-034 on branch codex/t034-p3-3-lane-master-v2-v001 through first-article evidence only. Product Owner first-article acceptance, formalization, Catalog/V008 binding and merge remain separate gates.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1591,6 +1591,7 @@
     "formalization_authorized": false,
     "catalog_v008_binding_authorized": false,
     "merge_authorized": false,
-    "first_article_acceptance_required": true
+    "first_article_acceptance_required": true,
+    "first_article_acceptance_authorized": false
   }
 }
