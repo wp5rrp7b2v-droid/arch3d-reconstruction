@@ -3,8 +3,8 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R231",
-  "last_updated": "2026-09-25",
+  "state_revision": "R232",
+  "last_updated": "2026-09-26",
   "session_status": "DAILY CLOSE 2026-09-25 / PASS / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / LOCAL SYNC PASS / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
   "phase": {
     "id": "P3",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 17 OF 28 MASTERS APPROVED / T-033 CLOSED / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 17 OF 28 MASTERS APPROVED / 阑额 SPEC V001 LOCKED D-148 / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-033 CLOSED EXCEPT T-031/T-032 ARCHITECTURE PROOFS / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / T-021..T-033 CLOSED EXCEPT T-031/T-032 ARCHITECTURE PROOFS / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / NO ACTIVE ENGINEERING TASK / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / 阑额 SPEC V001 LOCKED D-148 / T-034 CONTRACT DESIGN AUTHORIZED / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 17 OF 28 MASTERS APPROVED / RC-024 ACTIVE / 阑额 SPEC V001 LOCKED D-148 / T-034 CONTRACT DESIGN AUTHORIZED / NO ACTIVE ENGINEERING TASK / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "NONE",
     "name": "P3.3 V002 Stage 1",
-    "status": "DAILY CLOSE / NO ACTIVE ENGINEERING T-TASK / 17 OF 28 APPROVED"
+    "status": "NO ACTIVE ENGINEERING T-TASK / 17 OF 28 APPROVED / 阑额 SPEC V001 LOCKED / D-148"
   },
   "proposed_next_task": {
-    "id": "NONE",
-    "name": "Next Stage1 component",
-    "status": "NOT SELECTED / NOT STARTED / WAIT FOR PRODUCT OWNER INSTRUCTION"
+    "id": "T-034",
+    "name": "P3_3_LANE_MASTER_V2_V001",
+    "status": "TASK CONTRACT DESIGN AUTHORIZED / NOT CREATED / ENGINEERING EXECUTION NOT AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-033",
@@ -680,7 +680,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Daily close complete. Wait for Product Owner instruction before selecting the next Stage1 component. After this closeout PR and derived Dashboard sync merge to main, perform one final local fast-forward only; do not start new engineering work.",
+  "next_action": "D-148 locked 阑额 Master Spec V001. Next step is T-034 Task Contract design/lock only when instructed by Product Owner. Do not create production branch/PR or run Blender/GitHub Actions before separate engineering execution authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1534,5 +1534,29 @@
       "pr3": "OPEN / T-018 HOLD",
       "pr6": "OPEN / T-018 HOLD"
     }
+  },
+  "lane_stage1": {
+    "status": "SPEC_V001_LOCKED",
+    "decision_id": "D-148",
+    "visual_gate": "D-076 PASS WITH GEOMETRY BOUNDARY",
+    "component_id": "CMP-FRAME-LANE-001",
+    "master_id": "CMP-FRAME-LANE-001_MASTER",
+    "physical_instance_count": 12,
+    "geometry_variant_count": 0,
+    "report_published_mean_mm": {
+      "width": 265.6,
+      "thickness": 105
+    },
+    "direct_width_count": 12,
+    "direct_thickness_count": 4,
+    "unmeasured_thickness_count": 8,
+    "unmeasured_thickness_production_completion_mm": 105,
+    "production_completion_classification": "PARAMETRIC_COMPLETION / REPLACEABLE / HISTORICAL_CLAIM_FALSE",
+    "historical_full_timber_length_mm": null,
+    "canonical_reference_length_mm": 1000,
+    "assembly_control_span_rule": "COLUMN_CENTER_DISTANCE",
+    "next_task_id": "T-034",
+    "task_contract_design_authorized": true,
+    "engineering_execution_authorized": false
   }
 }

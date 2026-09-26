@@ -1,0 +1,239 @@
+{
+  "schema_version": "P3_3_STAGE1_MASTER_SPEC_1.0",
+  "component_id": "CMP-FRAME-LANE-001",
+  "master_id": "CMP-FRAME-LANE-001_MASTER",
+  "master_version": "V001",
+  "component_name_zh": "阑额",
+  "status": "LOCKED / PRODUCT OWNER APPROVED / D-148",
+  "date": "2026-09-26",
+  "authority": {
+    "source_priority": "D-099 / RC-019",
+    "reconstruction_policy": "D-108 / RC-020",
+    "connection_layer": "RC-024",
+    "visual_gate": "D-076 PASS WITH GEOMETRY BOUNDARY / D-148"
+  },
+  "evidence": {
+    "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_LANE_DIRECT_SOURCE_BINDING_V001.md",
+    "a1": {
+      "source_id": "SRC-ZG-WF-001",
+      "locator": "PDF p86-88 / printed p71-73 / §2.3.1.6 / Table 2-43 / Fig 2-46..2-49",
+      "pdf_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472"
+    },
+    "a2": {
+      "source": "山西文物数字博物馆·万佛殿专题",
+      "use": "SAME_BUILDING_VISUAL_AND_STRUCTURAL_SEMANTIC",
+      "dimension_authority": false
+    }
+  },
+  "physical_instance_count": 12,
+  "geometry_variant_count": 0,
+  "instance_sections": [
+    {
+      "registry_location": "南立面西次间",
+      "source_label": "南西次间",
+      "width_mm": 268,
+      "evidence_thickness_mm": 105,
+      "production_thickness_mm": 105,
+      "thickness_classification": "DIRECT_MEASURED"
+    },
+    {
+      "registry_location": "南立面明间",
+      "source_label": "南明间",
+      "width_mm": 264,
+      "evidence_thickness_mm": 105,
+      "production_thickness_mm": 105,
+      "thickness_classification": "DIRECT_MEASURED"
+    },
+    {
+      "registry_location": "南立面东次间",
+      "source_label": "南东次间",
+      "width_mm": 269,
+      "evidence_thickness_mm": 105,
+      "production_thickness_mm": 105,
+      "thickness_classification": "DIRECT_MEASURED"
+    },
+    {
+      "registry_location": "北立面西次间",
+      "source_label": "北西次间",
+      "width_mm": 259,
+      "evidence_thickness_mm": null,
+      "production_thickness_mm": 105,
+      "thickness_classification": "PARAMETRIC_COMPLETION"
+    },
+    {
+      "registry_location": "北立面明间",
+      "source_label": "北明间",
+      "width_mm": 264,
+      "evidence_thickness_mm": 105,
+      "production_thickness_mm": 105,
+      "thickness_classification": "DIRECT_MEASURED"
+    },
+    {
+      "registry_location": "北立面东次间",
+      "source_label": "北东次间",
+      "width_mm": 269,
+      "evidence_thickness_mm": null,
+      "production_thickness_mm": 105,
+      "thickness_classification": "PARAMETRIC_COMPLETION"
+    },
+    {
+      "registry_location": "东山北次间",
+      "source_label": "东北次间",
+      "width_mm": 266,
+      "evidence_thickness_mm": null,
+      "production_thickness_mm": 105,
+      "thickness_classification": "PARAMETRIC_COMPLETION"
+    },
+    {
+      "registry_location": "东山明间",
+      "source_label": "东明间",
+      "width_mm": 264,
+      "evidence_thickness_mm": null,
+      "production_thickness_mm": 105,
+      "thickness_classification": "PARAMETRIC_COMPLETION"
+    },
+    {
+      "registry_location": "东山南次间",
+      "source_label": "东南次间",
+      "width_mm": 266,
+      "evidence_thickness_mm": null,
+      "production_thickness_mm": 105,
+      "thickness_classification": "PARAMETRIC_COMPLETION"
+    },
+    {
+      "registry_location": "西山北次间",
+      "source_label": "西北次间",
+      "width_mm": 266,
+      "evidence_thickness_mm": null,
+      "production_thickness_mm": 105,
+      "thickness_classification": "PARAMETRIC_COMPLETION"
+    },
+    {
+      "registry_location": "西山明间",
+      "source_label": "西明间",
+      "width_mm": 271,
+      "evidence_thickness_mm": null,
+      "production_thickness_mm": 105,
+      "thickness_classification": "PARAMETRIC_COMPLETION"
+    },
+    {
+      "registry_location": "西山南次间",
+      "source_label": "西南次间",
+      "width_mm": 261,
+      "evidence_thickness_mm": null,
+      "production_thickness_mm": 105,
+      "thickness_classification": "PARAMETRIC_COMPLETION"
+    }
+  ],
+  "measurement": {
+    "report_published_mean_mm": {
+      "width": 265.6,
+      "thickness": 105
+    },
+    "independent_recomputed_width_mean_mm": 265.5833333333,
+    "width_direct_count": 12,
+    "thickness_direct_count": 4,
+    "thickness_unmeasured_count": 8,
+    "source_internal_numeric_conflict": false,
+    "width_sample_to_instance_mapping": "DIRECT_LOCKED",
+    "thickness_sample_to_instance_mapping": "PARTIAL_DIRECT_4_OF_12",
+    "unmeasured_thickness_production_completion": {
+      "value_mm": 105,
+      "basis": "4 directly measured specimens + report family reference",
+      "classification": "PARAMETRIC_COMPLETION",
+      "replaceable": true,
+      "historical_claim": false
+    },
+    "converted_fen": {
+      "width": 17.36,
+      "thickness": 6.86
+    },
+    "rounded_fen": {
+      "width": 17,
+      "thickness": 7
+    },
+    "fen_geometry_authority": false
+  },
+  "geometry_mode": "PARAMETRIC_HORIZONTAL_LONG_MEMBER_WITH_INSTANCE_SECTION_PARAMETERS",
+  "canonical_reference_body_mm": {
+    "length": 1000,
+    "width": 265.6,
+    "thickness": 105
+  },
+  "canonical_reference_length_policy": "NON_HISTORICAL_REFERENCE_LENGTH / MASTER_SPECIMEN_ONLY / REPLACEABLE",
+  "assembly_geometry": {
+    "control_span_rule": "COLUMN_CENTER_DISTANCE",
+    "control_span_semantics": "TOPOLOGY_AND_PLACEMENT_CONTROL_ONLY",
+    "historical_full_timber_length_mm": null,
+    "hidden_tenon_extension_mm": null,
+    "exact_end_penetration_mm": null,
+    "fixed_historical_length": false
+  },
+  "corner_rule": {
+    "projection": "NONE",
+    "semantic_source": "A2 same-building official evidence",
+    "exact_hidden_end_geometry_locked": false
+  },
+  "end_joinery": {
+    "reference_end_profile": "STRUCTURAL_SIMPLIFIED_FLAT_END",
+    "historical_end_profile": "UNRESOLVED_METADATA",
+    "mortise_tenon": "NOT_MODELED_AT_STAGE1",
+    "exact_joinery_geometry": "DEFERRED"
+  },
+  "connection_layer": [
+    {
+      "interface": "LEFT_END",
+      "related_family": "柱",
+      "semantic": "COLUMN_CONNECTION",
+      "existence": "KNOWN",
+      "exact_geometry": "DEFERRED"
+    },
+    {
+      "interface": "RIGHT_END",
+      "related_family": "柱",
+      "semantic": "COLUMN_CONNECTION",
+      "existence": "KNOWN",
+      "exact_geometry": "DEFERRED"
+    }
+  ],
+  "related_component_isolation": {
+    "excluded": [
+      "由额",
+      "额间板",
+      "普拍枋",
+      "柱",
+      "斗栱"
+    ]
+  },
+  "review_board_required_panels": [
+    "AXON",
+    "LONG_SIDE",
+    "END_SECTION",
+    "12_INSTANCE_WIDTH_MAPPING",
+    "THICKNESS_EVIDENCE_BOUNDARY",
+    "SOURCE_AND_RECONSTRUCTION_BOUNDARY"
+  ],
+  "hard_fails": [
+    "INSTANCE_WIDTH_COLLAPSED_TO_FAMILY_MEAN",
+    "INSTANCE_WIDTH_MAPPING_MISMATCH",
+    "UNMEASURED_THICKNESS_MARKED_AS_DIRECT",
+    "PARAMETRIC_COMPLETION_WITHOUT_EVIDENCE_LABEL",
+    "UNKNOWN_THICKNESS_SILENTLY_HISTORICIZED",
+    "DUPLICATE_MASTER_PER_LOCATION",
+    "FALSE_GEOMETRY_VARIANT_FROM_LOCATION_OR_SECTION_ONLY",
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "COLUMN_CENTER_SPAN_MISREPRESENTED_AS_HISTORICAL_FULL_TIMBER_LENGTH",
+    "CORNER_PROJECTION_INVENTED",
+    "UNSUPPORTED_JOINERY_CLAIM",
+    "LANE_YOUE_IDENTITY_COLLAPSE",
+    "PU_PAIFANG_FALSELY_INTRODUCED",
+    "SILENT_HISTORICIZATION",
+    "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
+  ],
+  "next_task_id": "T-034",
+  "task_contract_design_authorized": true,
+  "engineering_execution_authorized": false,
+  "blender_execution_authorized": false,
+  "production_branch_creation_authorized": false,
+  "pr_creation_authorized": false
+}
