@@ -604,3 +604,37 @@ Only after that separate authorization may:
 - first-article evidence be generated.
 
 First-article acceptance, formalization, Catalog/V008 approved binding, PR merge, Stage1 PASS, Stage2, and T-018 resume remain separate authorization boundaries unless explicitly delegated later.
+
+
+## 21. Engineering execution authorization｜D-150
+
+Product Owner explicitly authorized **开始 T-034 工程执行** on 2026-09-26.
+
+Authorized:
+- engineering execution = true
+- Blender / GitHub Actions execution = true
+- production branch = `codex/t034-p3-3-lane-master-v2-v001`
+- Draft PR creation = true
+- execution Definition creation/finalization = true
+- minimal generic shared Master V2 extension only if required to express the D-149 dual-thickness evidence/production contract
+
+If shared infrastructure changes, mandatory regression:
+- T-025 剳牵
+- T-026 槫
+- T-027 托脚
+- T-028 叉手
+- T-029 蜀柱
+- T-030 大角梁
+- T-033 子角梁
+
+Current stop boundary:
+- FIRST ARTICLE EVIDENCE READY / PRODUCT OWNER REVIEW
+
+Still not authorized:
+- first-article acceptance
+- formalization
+- Catalog/V008 approved binding
+- PR merge
+- Stage1 PASS
+- Stage2
+- T-018 resume
