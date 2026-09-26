@@ -675,3 +675,32 @@ Not authorized:
 - next component;
 - Stage2;
 - T-018 resume.
+
+
+## 24. D-160 exact materialization checkpoint
+
+One-time accepted-artifact materialization workflow Run `36233327371` completed **SUCCESS**.
+
+Verified source:
+- accepted Run `36231069458`
+- accepted Artifact `10903011230`
+- Artifact ZIP SHA-256 `d664456279065be2d7db01f373dbd60c9744f957e04d0f90636fb23d6731deb7`
+
+Exact accepted identities verified before repository materialization:
+- canonical .blend SHA-256 `6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16` — verified only; remains Actions Artifact + local-only / NOT GIT
+- Semantic SHA-256 `7e1d0a132f54680fab11b8d373461dba0931552f60e10e55356d9a86471d392a`
+- Review Board SHA-256 `8c5e32edadf442a316daa7c120a1615f49ba13268824e0c91da754082adb2e62`
+- Validation SHA-256 `f7422adec32e98d51457f33c22128677704569bdf493ca76d8b2a9fd164a1fb8`
+
+Formalization commit:
+- `bfd760514870717187aa42b5dd8d4e93a6757045`
+
+Binding result:
+- Catalog = 19 approved
+- 由额 V008/CURRENT = 4/4 `APPROVED_MASTER_AVAILABLE`
+- master reference = `CMP-FRAME-YOUE-001_MASTER`
+- Master-covered Registry records = 147
+- Stage1 = 19/28 = 67.9%
+- CURRENT == V008 at the authoritative JSON layer
+
+Because the formalization commit was pushed by GitHub Actions using the repository token, it cannot itself trigger the required downstream workflows. This human-authored checkpoint commit intentionally triggers Registry Excel Sync and latest-head Master V2 regression without changing geometry, evidence, or approval authority.

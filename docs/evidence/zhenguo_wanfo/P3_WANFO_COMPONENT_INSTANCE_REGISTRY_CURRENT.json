@@ -7287,6 +7287,6 @@
       "由额"
     ],
     "master_covered_registry_record_count": 147,
-    "progress_display_note": "505 Registry records; Stage1 Master completion: 19 approved / 9 pending = 67.9%. T-035 由额 formalized under D-160; 4/4 由额 rows bound to CMP-FRAME-YOUE-001_MASTER; Registry Excel Sync and final regression pending."
+    "progress_display_note": "505 Registry records; Stage1 Master completion: 19 approved / 9 pending = 67.9%. T-035 由额 exact accepted-artifact formalization PASS under D-160; 4/4 由额 rows bound to CMP-FRAME-YOUE-001_MASTER. Human-authored trigger commit requests Registry Excel Sync and latest-head final Master V2 regression; both remain pending until PASS."
   }
 }
