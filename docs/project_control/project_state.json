@@ -67,9 +67,9 @@
     "status": "ENGINEERING EXECUTION AUTHORIZED / FIRST ARTICLE PENDING"
   },
   "proposed_next_task": {
-    "id": "T-036",
+    "id": "T-036-FIRST-ARTICLE",
     "name": "补间铺作底斗 Master first article",
-    "status": "ACTIVE / ENGINEERING EXECUTION AUTHORIZED"
+    "status": "AUTHORIZED / ENGINEERING IN PROGRESS"
   },
   "last_completed_task": {
     "id": "T-035",
@@ -824,7 +824,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Execute T-036 first article on codex/t036-p3-3-bujian-didou-master-v2-v001; stop at Product Owner first-article review gate.",
+  "next_action": "Execute T-036 on production branch; open Draft PR; run GitHub Actions / Blender 4.5.13; stop at Product Owner first-article review gate.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
