@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R258",
+  "state_revision": "R259",
   "last_updated": "2026-09-26",
-  "session_status": "DAILY CLOSE PASS / P3.3 V002 STAGE 1 ACTIVE / T-034+T-035+T-036 CLOSED / 20 OF 28 MASTERS APPROVED / NO ACTIVE STAGE1 ENGINEERING TASK / NEXT 瓜子栱族 SOURCE READINESS / T-018 HOLD",
+  "session_status": "DAILY CLOSE PASS / RC-013 CROSS-FILE CONSISTENCY PATCH COMPLETE / T-034+T-035+T-036 CLOSED / 20 OF 28 / NEXT 瓜子栱族 SOURCE READINESS / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -777,7 +777,7 @@
   },
   "daily_closing_audit": {
     "date": "2026-09-26",
-    "status": "PASS / GITHUB CANONICAL / NO KNOWN MISSING CURRENT-STATE REGISTRATIONS",
+    "status": "PASS / GITHUB CANONICAL / CROSS-FILE MIRRORS ALIGNED / NO KNOWN MISSING CURRENT-STATE REGISTRATIONS",
     "decisions_checked": "D-148..D-177 relevant daily chain",
     "tasks_checked": [
       "T-034",
@@ -804,7 +804,11 @@
     "active_stage1_engineering_prs": 0,
     "omission_audit_missing_items": [],
     "local_sync": "NOT CHECKED",
-    "caution": "Do not start priority 15 engineering before Source Readiness + D-076 + Master Spec approval + Task Contract + explicit engineering execution authorization."
+    "caution": "Do not start priority 15 engineering before Source Readiness + D-076 + Master Spec approval + Task Contract + explicit engineering execution authorization.",
+    "execution_log_aligned": true,
+    "acceptance_matrix_aligned": true,
+    "governance_change_required": false,
+    "rules_change_log_change_required": false
   },
   "next_action": "Next session only: priority 15 瓜子栱族 Source Readiness + D-076. Do not create a T-task, branch, PR or Blender execution before evidence/form review and explicit Product Owner authorization.",
   "dashboard": {
@@ -1645,7 +1649,7 @@
   },
   "daily_close": {
     "date": "2026-09-26",
-    "status": "PASS / GITHUB CANONICAL CLOSE COMPLETE / LOCAL SYNC NOT CHECKED",
+    "status": "PASS / GITHUB CANONICAL CLOSE + RC-013 CROSS-FILE CONSISTENCY COMPLETE / LOCAL SYNC NOT CHECKED",
     "close_file": "docs/project_control/CLOSE_FILE_2026-09-26.md",
     "completed_today": [
       "T-034 / 阑额 / CLOSED / PR #30 MERGED",
@@ -2003,5 +2007,28 @@
     "closure_dashboard_sync_run": 36250350588,
     "closure_dashboard_sync_result": "SUCCESS",
     "next_candidate": "瓜子栱族 / Coverage Matrix priority 15 / Source Readiness + D-076 only"
+  },
+  "latest_project_control_consistency_patch": {
+    "decision_id": "D-178",
+    "date": "2026-09-26",
+    "reason": "execution_log.md and acceptance_matrix.md lagged today's T-034/T-035/T-036 closure state",
+    "corrected_files": [
+      "docs/project_control/execution_log.md",
+      "docs/project_control/acceptance_matrix.md"
+    ],
+    "verified_current_state_files": [
+      "docs/project_control/project_state.json",
+      "docs/project_control/decision_log.md",
+      "docs/project_control/dashboard.html",
+      "docs/project_control/CLOSE_FILE_2026-09-26.md"
+    ],
+    "intentionally_unchanged": [
+      "docs/project_control/governance.md",
+      "docs/project_control/rules_change_log.md",
+      "docs/project_control/phase_archive/*",
+      "historical Cloud Mode / prior DAILY_CLOSE / LOCAL_SYNC_PREP records"
+    ],
+    "status": "PASS / GITHUB CANONICAL PROJECT CONTROL CURRENT-STATE MIRRORS ALIGNED",
+    "local_sync": "NOT CHECKED"
   }
 }

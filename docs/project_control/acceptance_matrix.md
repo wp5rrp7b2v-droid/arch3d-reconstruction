@@ -770,3 +770,30 @@ Boundary retained:
 - RC-024 connection metadata remains incremental: outboard 套兽 attachment semantic; inboard corner-assembly connection kind deferred to later assembly resolution.
 - Stage2 remains not authorized; T-018 remains HOLD.
 
+
+## 2026-09-26｜P3.3 Stage1 Current Acceptance Snapshot｜D-178
+
+| Item | Current acceptance state | Evidence / boundary |
+|---|---|---|
+| T-034 阑额 | **CLOSED / APPROVED / MERGED** | First article 120/120 PASS; PR #30 merged; 12/12 Registry rows bound; 8/12 thickness evidence remains UNKNOWN with explicit PARAMETRIC_COMPLETION. |
+| T-035 由额 | **CLOSED / APPROVED / MERGED** | First article 97/97 PASS; final regression 103/103 PASS; PR #31 merged; 4/4 Registry rows bound; historical repair orientation remains semantic, original 963 orientation UNRESOLVED. |
+| T-036 补间铺作底斗 | **CLOSED / APPROVED / MERGED** | Accepted Run 36248233440 = 37/37 PASS; post-rebase final Run 36249880372 = 37/37 PASS; PR #32 merged; 12/12 Registry rows bound; approved geometry signature MATCH; legacy dou regressions all PASS. |
+| Stage1 Master Library | **ACTIVE / 20 OF 28 APPROVED / 71.4%** | 505 Registry records; 159 covered by approved Masters; 8 Master-scope types pending. |
+| Registry CURRENT vs V008 | **PASS** | JSON equality verified at daily close. |
+| Registry Excel | **PASS / DERIVED_VIEW** | Closure sync Run 36250350582 SUCCESS; JSON remains canonical truth. |
+| Dashboard | **PASS / DERIVED_VIEW** | Final daily Dashboard sync PASS; T-036 CLOSED, 20/28, next 瓜子栱族 visible. |
+| Current Stage1 engineering task | **NONE** | No active Stage1 engineering PR. |
+| Next candidate | **瓜子栱族 / SOURCE READINESS + D-076 ONLY** | Priority 15; 小型28 + 大型16 = 44 Registry rows; no Task Contract/engineering authorization yet. |
+| T-018 | **HOLD** | PR #3 original SUPERSEDED/READ-ONLY; PR #6 replacement HOLD; both DO NOT MERGE. |
+| Stage2 | **NOT AUTHORIZED** | Stage1 continues; no stage advancement. |
+
+### T-036 Acceptance Boundary
+
+- Canonical accepted .blend authority remains SHA-256 `7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66`.
+- Final-regression regenerated binaries are validation evidence only and are not promoted to canonical.
+- A1 top/bottom depth remains UNKNOWN.
+- 240.0 / 165.1 mm remains explicit replaceable production completion, not A1 direct measurement.
+- Exact curvature remains UNKNOWN; one engineering `curve_amount` parameter does not become historical fact.
+- Exact dou ears / slots / cavities / mortise-tenon remain deferred.
+
+**P3.3 Stage1 current status: ACTIVE / 20 OF 28 APPROVED / T-036 CLOSED / NEXT 瓜子栱族 SOURCE READINESS / T-018 HOLD.**

@@ -1349,3 +1349,67 @@ Do not restart T-018 by default.
 - Next Stage1 component: NOT SELECTED / NOT STARTED.
 - Daily Close result: **PASS**.
 
+
+## 2026-09-26｜T-034 阑额 Master Final Closure / D-153
+
+- First article Run `36222778768`: SUCCESS / 120/120 PASS.
+- Product Owner first-article approval: D-151.
+- Formalization / Catalog+V008 binding: D-152.
+- PR #30: MERGED; merge commit `5f577914ca3e2001b391176b394404f872619c91`.
+- 12/12 阑额 Registry rows bound to `CMP-FRAME-LANE-001_MASTER`.
+- Evidence boundary preserved: 4/12 direct thickness=105mm; 8/12 evidence thickness remains UNKNOWN/null while production thickness=105mm as PARAMETRIC_COMPLETION.
+- Canonical .blend SHA-256: `b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d`.
+- Semantic geometry signature: `d1117d15868e5f9df37fc679b9c7cc6b0732ef79bcfef6b5e15c4a91fff94ed5`.
+- Final regression Run `36225081197`: SUCCESS.
+- Registry Excel Sync Run `36225081188`: SUCCESS.
+- Stage1 after close: 18/28 = 64.3%; Master-covered Registry rows=143.
+- Final: **T-034 CLOSED / MERGED_TO_MAIN**.
+
+## 2026-09-26｜T-035 由额 Master Final Closure / D-162 + D-163
+
+- First article Run `36231069458`: SUCCESS / 97/97 PASS.
+- Product Owner first-article approval: D-159.
+- Formalization / Catalog+V008 / Excel / final regression: D-160.
+- PR #31: MERGED; merge commit `ac3460189012dcf69190178bf7b243f5c9eb5c50`.
+- 4/4 由额 Registry rows bound to `CMP-FRAME-YOUE-001_MASTER`.
+- Canonical .blend SHA-256: `6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16`.
+- Semantic geometry signature: `4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8`.
+- Final regression Run `36234487231`: SUCCESS / 103/103 PASS.
+- Historical-repair boundary preserved: current orientation HISTORICAL_REPAIR_FLIPPED; original 963 top/bottom orientation UNRESOLVED; exact mortise geometry UNRESOLVED.
+- Closure Excel Sync Run `36238489886`: SUCCESS on retry after derived-main ref race.
+- D-163 corrected stale Dashboard last-completed referent only; engineering unchanged.
+- Stage1 after close: 19/28 = 67.9%; Master-covered Registry rows=147.
+- Final: **T-035 CLOSED / MERGED_TO_MAIN / MAIN VERIFIED**.
+
+## 2026-09-26｜T-036 补间铺作底斗 Master Final Closure / D-176
+
+- Source/visual/spec/contract chain: D-164 / D-165 / D-166 / D-167.
+- Engineering authorization: D-168.
+- Workflow routing correction: D-169; generic frame Master V2 skipped as intended.
+- First article approval: D-170.
+- Accepted first-article Run `36248233440`: SUCCESS / 37/37 PASS.
+- Accepted Artifact: `10908700631`.
+- Canonical .blend SHA-256: `7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66`.
+- Semantic geometry signature: `7b3517bcbb2007954d11ea18b75e9103f3a6b4e0d3a6e46e97c05fef5ba449f6`.
+- Formalization + Catalog/V008 binding: D-171 / D-172; formalization Run `36249158964` SUCCESS.
+- Registry: 12/12 补间铺作底斗 rows bound to `CMP-DOU-BOTTOM-LONGKAI-001_MASTER`.
+- Evidence boundary preserved: A1 top/bottom depth UNKNOWN; production depth 240.0/165.1mm = PARAMETRIC_COMPLETION / RECONSTRUCTED_DESIGN / REPLACEABLE / NOT_A1_DIRECT; exact curvature UNKNOWN.
+- Excel + final regression authorization/result: D-173 / D-174.
+- Pre-merge latest-head final regression Run `36249492816`: SUCCESS / 37/37 PASS.
+- PR #32: READY + MERGED under D-175; merge commit `0dbec3a2c34b1a6dd94940a807d65fd915ab9d81`.
+- Post-rebase final Run `36249880372`: SUCCESS / 37/37 PASS; geometry signature MATCH approved first article.
+- Legacy shared-dou regressions: CMP-LUDOU-COLUMN-001 / CMP-DOU-SINGLE-LONGKAI-001 / CMP-DOU-INTERACTIVE-001 all PASS.
+- Post-merge closure Excel Sync Run `36250350582`: SUCCESS.
+- Post-close Dashboard Sync Run `36250443489`: SUCCESS.
+- Stage1 after close: 20/28 = 71.4%; Master-covered Registry rows=159.
+- Final: **T-036 CLOSED / MERGED_TO_MAIN / MAIN VERIFIED**.
+
+## 2026-09-26｜Daily Engineering Close / D-177 + D-178
+
+- T-034 / T-035 / T-036 all CLOSED.
+- Stage1 approved Masters: 20/28 = 71.4%.
+- Registry records: 505; Master-covered rows: 159; CURRENT == V008.
+- No active Stage1 engineering T-task.
+- Open PRs: #3 / #6 only; both T-018 HOLD / DO NOT MERGE.
+- Next candidate: 瓜子栱族 / priority 15 / Source Readiness + D-076 only.
+- Local repository sync: NOT CHECKED; separate user-local step.

@@ -516,3 +516,24 @@ If local sync is required later:
 - T-018 = **HOLD**
 - Stage2 = **NOT AUTHORIZED**
 - local sync = **NOT CHECKED**
+
+## 25. Daily Close Consistency Review Patch｜D-178
+
+A final RC-013 cross-file audit found two Project Control mirrors that had not yet been advanced to today's T-034/T-035/T-036 closure state:
+
+- `execution_log.md`
+- `acceptance_matrix.md`
+
+This was a documentation synchronization lag only. It did not change Master geometry, approvals, Registry, Catalog, Excel, Dashboard, PR merge state, or evidence boundaries.
+
+D-178 corrections:
+- execution_log now records T-034 / T-035 / T-036 final engineering closure and daily engineering close;
+- acceptance_matrix now records the current Stage1 acceptance snapshot: 20/28 = 71.4%, 159 Master-covered Registry rows, T-036 CLOSED, next 瓜子栱族 Source Readiness + D-076 only;
+- governance.md unchanged: no new management rule was created today;
+- rules_change_log.md unchanged: no new RC rule was created today;
+- phase_archive remains historical and is intentionally not rewritten;
+- historical Cloud Mode / earlier DAILY_CLOSE / LOCAL_SYNC_PREP files remain immutable historical records.
+
+After D-178, GitHub canonical current-state Project Control mirrors are aligned.
+
+Local working-copy synchronization remains **NOT CHECKED** and is still a separate step.
