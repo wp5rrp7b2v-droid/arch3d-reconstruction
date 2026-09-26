@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R234",
+  "state_revision": "R235",
   "last_updated": "2026-09-26",
   "session_status": "DAILY CLOSE 2026-09-25 / PASS / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / LOCAL SYNC PASS / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
   "phase": {
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-034",
     "name": "P3_3_LANE_MASTER_V2_V001",
-    "status": "ENGINEERING EXECUTION AUTHORIZED / D-150 / STARTING"
+    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-151 / FORMALIZATION NOT AUTHORIZED"
   },
   "proposed_next_task": {
     "id": "NONE",
     "name": "Next Stage1 component",
-    "status": "NOT SELECTED / T-034 ACTIVE"
+    "status": "NOT SELECTED / T-034 NOT CLOSED"
   },
   "last_completed_task": {
     "id": "T-033",
@@ -680,7 +680,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Execute T-034 on branch codex/t034-p3-3-lane-master-v2-v001 through first-article evidence only. Product Owner first-article acceptance, formalization, Catalog/V008 binding and merge remain separate gates.",
+  "next_action": "T-034 first article is approved by D-151. Wait for explicit authorization before formalization and Catalog/V008 binding. Do not merge PR #30. Stage2 remains unauthorized and T-018 remains HOLD.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1560,7 +1560,7 @@
     "engineering_execution_authorized": false
   },
   "t034": {
-    "status": "ENGINEERING_EXECUTION_AUTHORIZED",
+    "status": "FIRST_ARTICLE_PRODUCT_OWNER_APPROVED",
     "decision_id": "D-149",
     "task_id": "T-034",
     "task_name": "P3_3_LANE_MASTER_V2_V001",
@@ -1592,6 +1592,15 @@
     "catalog_v008_binding_authorized": false,
     "merge_authorized": false,
     "first_article_acceptance_required": true,
-    "first_article_acceptance_authorized": false
+    "first_article_acceptance_authorized": false,
+    "first_article_decision_id": "D-151",
+    "first_article_approved": true,
+    "first_article_run_id": 36222778768,
+    "first_article_artifact_id": 10899808683,
+    "shared_regression_artifact_id": 10899644135,
+    "validation_check_count": 120,
+    "canonical_blend_sha256": "b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d",
+    "semantic_geometry_signature": "d1117d15868e5f9df37fc679b9c7cc6b0732ef79bcfef6b5e15c4a91fff94ed5",
+    "review_board_sha256": "29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef"
   }
 }
