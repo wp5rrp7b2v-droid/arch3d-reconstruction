@@ -761,3 +761,28 @@ Formalization candidate:
 Latest-head final Master V2 validation and Registry Excel Sync are triggered by the following Product Owner-authored synchronization commit.
 
 PR #30 merge remains unauthorized.
+
+
+## 26. D-153 merge / closure
+
+Product Owner authorized PR #30 Ready → merge → T-034 closure on 2026-09-26.
+
+Final gates:
+- accepted-artifact materialization Run `36225008816` = **SUCCESS**
+- Registry Excel Sync Run `36225081188` = **SUCCESS**
+- final Master V2 regression Run `36225081197` = **SUCCESS**
+- final first-article artifact = `10901122038`
+- final shared-regression artifact = `10901172033`
+- final validated head = `da149c9e852bc8f8eaed9063b6d9f84413726b78`
+- latest PR head = `134222d5097a726afac4cf8f940b27b3e5ef223a` (derived Excel only)
+- PR #30 merge commit = `5f577914ca3e2001b391176b394404f872619c91`
+
+Canonical closure:
+- Catalog = **18 approved Masters**
+- V008/CURRENT 阑额 binding = **12/12**
+- Master-covered Registry records = **143**
+- Stage1 completion = **18/28 = 64.3%**
+- T-034 = **CLOSED / PRODUCT OWNER APPROVED / MERGED TO MAIN**
+
+Next component is 由额, but no new engineering task is authorized by D-153.
+Stage2 remains unauthorized. T-018 remains HOLD.

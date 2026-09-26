@@ -7237,7 +7237,7 @@
   ],
   "stage1_master_progress_summary": {
     "snapshot_date": "2026-09-26",
-    "status": "PR #30 FORMALIZED CANDIDATE / D-151 ACCEPTED / D-152 MATERIALIZATION PASS / FINAL VALIDATION TRIGGERED",
+    "status": "CANONICAL ON MAIN / D-153 / T-034 CLOSED / 18 OF 28 MASTERS APPROVED",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
@@ -7282,6 +7282,6 @@
       "阑额"
     ],
     "master_covered_registry_record_count": 143,
-    "progress_display_note": "505 Registry records; Stage1 Master completion: 18 approved / 10 pending = 64.3%. T-034 exact accepted-artifact materialization Run 36225008816 PASS; 12/12 阑额 rows bound to CMP-FRAME-LANE-001_MASTER; latest-head Master V2 validation and derived Excel Sync triggered before merge."
+    "progress_display_note": "505 Registry records; Stage1 Master completion: 18 approved / 10 pending = 64.3%. T-034 阑额 is canonical on main after PR #30 merge; 12/12 阑额 rows bound to CMP-FRAME-LANE-001_MASTER; Registry Excel Sync PASS; final Master V2 regression PASS."
   }
 }

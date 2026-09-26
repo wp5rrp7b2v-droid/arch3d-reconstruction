@@ -3,7 +3,7 @@
   "phase": "P3.3",
   "stage": "Stage 1",
   "task": "T-034",
-  "status": "EIGHTEEN_APPROVED / T034 FORMALIZED / PR #30 OPEN",
+  "status": "EIGHTEEN_APPROVED / T034 CLOSED / PR #30 MERGED",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -459,7 +459,7 @@
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-151",
       "formalization_authority": "D-152",
-      "publication_status": "FORMALIZED / PR #30 OPEN",
+      "publication_status": "CLOSED / MERGED_TO_MAIN",
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL ONLY / NOT GIT",
       "canonical_asset_sha256": "b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d",
       "semantic_sha256": "a47651910a96543f1426cc3293ca787e8b373b47dc481056f45b4e198744e083",
@@ -503,7 +503,18 @@
         "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
         "review_board_count": 1,
         "required_review_panel_count": 6
-      }
+      },
+      "merge_commit_sha": "5f577914ca3e2001b391176b394404f872619c91",
+      "final_verified_human_head": "da149c9e852bc8f8eaed9063b6d9f84413726b78",
+      "latest_pr_head": "134222d5097a726afac4cf8f940b27b3e5ef223a",
+      "latest_pr_head_delta": "DERIVED_EXCEL_ONLY / VERIFIED_BY_SUCCESSFUL_EXCEL_SYNC",
+      "final_regression_run": 36225081197,
+      "final_regression_result": "SUCCESS",
+      "final_regression_artifact_id": 10901122038,
+      "final_regression_artifact_zip_sha256": "bce48acc34a934ed6052b71f5f9eb192ff9bcb34b77b61bbc4686f3fb26f20bd",
+      "final_shared_regression_artifact_id": 10901172033,
+      "final_shared_regression_artifact_zip_sha256": "6ceb68a3359ed391c9788150557a339dfbc378d5b51c4d402d867e9a00496188",
+      "excel_sync_run": 36225081188
     }
   ],
   "approved_master_count": 18
