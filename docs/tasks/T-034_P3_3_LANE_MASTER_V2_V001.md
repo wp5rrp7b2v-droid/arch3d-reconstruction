@@ -638,3 +638,56 @@ Still not authorized:
 - Stage1 PASS
 - Stage2
 - T-018 resume
+
+## 22. First-article engineering checkpoint｜PENDING PRODUCT OWNER REVIEW
+
+GitHub Actions first article:
+- Run: `36222778768` / run #93
+- conclusion: **SUCCESS**
+- reviewed head: `7daedf91d161f26235dd69e095ff93291a1e9fb2`
+- Draft PR: **#30**
+- formal artifact: `10899808683`
+- formal artifact ZIP SHA-256: `8034aec4b79740d52b68b162bcf04c0a1ce0b81e2ddeff9cd352e32e11985e88`
+- shared regression artifact: `10899644135`
+- shared regression ZIP SHA-256: `7273a13ce96b166879cc92d1c808e495f459960df6653dc392a9efcc6a6d5949`
+
+Formal first-article evidence:
+- validation: **PASS / 120 checks**
+- Blender: **4.5.13 LTS**
+- canonical .blend SHA-256: `b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d`
+- semantic geometry signature: `d1117d15868e5f9df37fc679b9c7cc6b0732ef79bcfef6b5e15c4a91fff94ed5`
+- Semantic JSON SHA-256: `a47651910a96543f1426cc3293ca787e8b373b47dc481056f45b4e198744e083`
+- Validation JSON SHA-256: `ec554a490ca2a9f112be6146d013037f7b543f035127d4c7e9108c563ca0882f`
+- Review Board SHA-256: `29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef`
+
+Locked evidence/geometry checks confirmed:
+- 12/12 location-labelled widths preserved;
+- 4/12 evidence thickness = 105 / DIRECT_MEASURED;
+- 8/12 evidence thickness = null, production thickness = 105 / PARAMETRIC_COMPLETION / replaceable / non-historical;
+- same-geometry/different-evidence pair S_C vs E_C PASS;
+- one shared Master / zero Geometry Variant;
+- TEST-X 1300mm and TEST-Y 1700mm endpoint/span fixtures PASS;
+- 1000mm reference length does not leak into instance placement;
+- no unsupported joinery and no false 963 section claim;
+- Review Board visibly identifies component as “阑额” and exposes the dual-thickness evidence boundary.
+
+Shared Master V2 regression after generic infrastructure extension:
+- T-025 PASS / 45 checks
+- T-026 PASS / 48 checks
+- T-027 PASS / 63 checks
+- T-028 PASS / 84 checks
+- T-029 PASS / 86 checks
+- T-030 PASS / 98 checks
+- T-033 PASS / 91 checks
+
+Current boundary:
+**ENGINEERING COMPLETE / FIRST ARTICLE READY FOR PRODUCT OWNER REVIEW**
+
+Not authorized:
+- Product Owner first-article acceptance;
+- formalization;
+- Catalog / V008 approved binding;
+- PR #30 merge;
+- Stage2;
+- T-018 resume.
+
