@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R244",
+  "state_revision": "R245",
   "last_updated": "2026-09-26",
   "session_status": "DAILY CLOSE 2026-09-25 / PASS / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / LOCAL SYNC PASS / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
   "phase": {
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 18 OF 28 MASTERS APPROVED / T-035 ACTIVE D-158 / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 19 OF 28 MASTERS APPROVED / T-035 PR #31 MERGED / CLOSURE CHECK PENDING / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 FORMALIZATION AUTHORIZED D-160 / PR #31 DRAFT / MERGE NOT AUTHORIZED / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 FORMALIZATION AUTHORIZED D-160 / PR #31 DRAFT / MERGE NOT AUTHORIZED / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 19 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 PR #31 MERGED D-161 / CLOSURE CHECK PENDING / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 19 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 PR #31 MERGED D-161 / CLOSURE CHECK PENDING / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-035",
     "name": "P3_3_YOUE_MASTER_V2_V001",
-    "status": "FORMALIZATION + CATALOG/V008 BINDING AUTHORIZED / D-160 / PR #31 DRAFT / MERGE NOT AUTHORIZED"
+    "status": "PR #31 MERGED / D-161 / POST-MERGE CLOSURE CHECK PENDING"
   },
   "proposed_next_task": {
     "id": "T-035",
     "name": "P3_3_YOUE_MASTER_V2_V001",
-    "status": "FORMALIZATION ACTIVE / EXACT ACCEPTED ARTIFACT + CATALOG/V008 + EXCEL + FINAL REGRESSION"
+    "status": "POST-MERGE CLOSURE / MAIN+DERIVED CROSS-CHECK PENDING"
   },
   "last_completed_task": {
     "id": "T-034",
@@ -126,7 +126,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 18 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / T-034 CLOSED / NO ACTIVE ENGINEERING TASK / RC-024 ACTIVE / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 19 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / T-034 CLOSED / T-035 PR #31 MERGED / CLOSURE CHECK PENDING / RC-024 ACTIVE / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -524,7 +524,7 @@
       "connector_geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
       "stage_advance": false
     },
-    "next_master_candidate": "由额 / T-035 FORMALIZATION AUTHORIZED D-160 / PR #31 DRAFT / MERGE NOT AUTHORIZED",
+    "next_master_candidate": "T-035 POST-MERGE CLOSURE CHECK PENDING / DO NOT START NEXT MASTER",
     "t033": {
       "task_id": "T-033",
       "component": "子角梁",
@@ -628,7 +628,7 @@
       "local_sync_status": "REQUIRED"
     },
     "youe": {
-      "status": "T-035_FORMALIZATION_AUTHORIZED / D-160 / ACTIVE",
+      "status": "T-035_PR_31_MERGED / D-161 / CLOSURE_CHECK_PENDING",
       "component": "由额",
       "physical_instance_count": 4,
       "registry_locations": [
@@ -718,7 +718,14 @@
       "review_board_sha256": "8c5e32edadf442a316daa7c120a1615f49ba13268824e0c91da754082adb2e62",
       "first_article_approved": true,
       "formalization_authorized": true,
-      "merge_authorized": false
+      "merge_authorized": true,
+      "merged": true,
+      "pr_number": 31,
+      "merge_commit_sha": "ac3460189012dcf69190178bf7b243f5c9eb5c50",
+      "final_regression_run": 36234487231,
+      "final_regression_validation": "103/103 PASS",
+      "final_regression_geometry_signature": "4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8",
+      "excel_sync_run": 36234487241
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -809,7 +816,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Execute D-160 formalization scope for accepted T-035 first article: exact accepted-artifact materialization; Catalog 19th Master registration; bind all 4 由额 V008/CURRENT rows; Registry Excel sync; latest-head final Master V2 regression. Do not Ready/merge PR #31 or close T-035 without separate Product Owner authorization.",
+  "next_action": "PR #31 is merged under D-161. Complete T-035 post-merge closure cross-check (main, Catalog, V008/CURRENT, Excel derived view, Dashboard) before starting the next Master. Do not start Stage2 or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1175,7 +1182,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "由额 / T-035 FORMALIZATION AUTHORIZED D-160 / PR #31 DRAFT"
+    "next_master_candidate": "T-035 POST-MERGE CLOSURE CHECK PENDING / 19 OF 28 APPROVED"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -1750,7 +1757,7 @@
     "local_sync_status": "REQUIRED"
   },
   "t035": {
-    "status": "FORMALIZATION_AUTHORIZED / D-160 / ACTIVE",
+    "status": "PR_31_MERGED / D-161 / CLOSURE_CHECK_PENDING",
     "decision_id": "D-157",
     "task_id": "T-035",
     "task_name": "P3_3_YOUE_MASTER_V2_V001",
@@ -1785,7 +1792,7 @@
     "execution_decision_id": "D-158",
     "first_article_acceptance_authorized": true,
     "formalization_authorized": true,
-    "merge_authorized": false,
+    "merge_authorized": true,
     "first_article_approval_decision_id": "D-159",
     "first_article_approved": true,
     "catalog_v008_binding_authorized": true,
@@ -1819,6 +1826,27 @@
     "target_catalog_approved_count": 19,
     "target_v008_bound_rows": 4,
     "target_master_covered_registry_record_count": 147,
-    "target_stage1_master_completion": "19/28 / 67.9%"
+    "target_stage1_master_completion": "19/28 / 67.9%",
+    "merge_decision_id": "D-161",
+    "merged": true,
+    "pr_ready": true,
+    "merged_head_sha": "76bcc5163b06486f2715c4deda30e4873f7156b1",
+    "merge_commit_sha": "ac3460189012dcf69190178bf7b243f5c9eb5c50",
+    "final_regression_run": 36234487231,
+    "final_regression_result": "SUCCESS",
+    "final_regression_validation": "103/103 PASS",
+    "final_regenerated_blend_sha256": "02d65aa451bb5818c60f6da80ead6bb100f322d1266b917a1fd1849479c8f1ca",
+    "final_regenerated_semantic_sha256": "4bcd650df58b9819a121238f7726940dc27270c4ff718224b0f85d0c1615df18",
+    "final_regenerated_validation_sha256": "608a2d0e1c309fc0087ef08c8ff4c68f97b12899fa1c6d11b0d1426cf744d07a",
+    "final_review_board_sha256": "8c5e32edadf442a316daa7c120a1615f49ba13268824e0c91da754082adb2e62",
+    "final_regression_geometry_signature": "4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8",
+    "final_regression_artifact_id": 10903973175,
+    "final_regression_artifact_zip_sha256": "70ba9bdf5d2d65517914ec03144a1479b3ef68255d853ce6543ce71dc63243cf",
+    "final_shared_regression_artifact_id": 10904476320,
+    "final_shared_regression_artifact_zip_sha256": "b31602a789e5b99abfbb77c964420640a2fd9a65249c798f60a9d69f0d2d54e0",
+    "excel_sync_run": 36234487241,
+    "excel_sync_result": "SUCCESS",
+    "main_verified": true,
+    "closure_authorized": false
   }
 }

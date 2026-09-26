@@ -704,3 +704,38 @@ Binding result:
 - CURRENT == V008 at the authoritative JSON layer
 
 Because the formalization commit was pushed by GitHub Actions using the repository token, it cannot itself trigger the required downstream workflows. This human-authored checkpoint commit intentionally triggers Registry Excel Sync and latest-head Master V2 regression without changing geometry, evidence, or approval authority.
+
+
+## 25. D-161 PR Ready + merge
+
+Product Owner explicitly authorized **“把 PR #31 转 Ready，并执行 merge”** on 2026-09-26.
+
+Pre-merge verified head:
+- PR head: `76bcc5163b06486f2715c4deda30e4873f7156b1`
+- PR mergeable: true
+- Draft → Ready: PASS
+- Registry Excel Sync Run `36234487241`: SUCCESS
+- latest-head Master V2 Run `36234487231`: SUCCESS
+- latest-head validation: **103/103 PASS**
+
+Final regression evidence:
+- Artifact `10903973175`
+- Artifact ZIP SHA-256 `70ba9bdf5d2d65517914ec03144a1479b3ef68255d853ce6543ce71dc63243cf`
+- regenerated .blend SHA-256 `02d65aa451bb5818c60f6da80ead6bb100f322d1266b917a1fd1849479c8f1ca`
+- regenerated Semantic SHA-256 `4bcd650df58b9819a121238f7726940dc27270c4ff718224b0f85d0c1615df18`
+- regenerated Validation SHA-256 `608a2d0e1c309fc0087ef08c8ff4c68f97b12899fa1c6d11b0d1426cf744d07a`
+- Review Board SHA-256 `8c5e32edadf442a316daa7c120a1615f49ba13268824e0c91da754082adb2e62`
+- semantic geometry signature `4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8`
+- Shared regression Artifact `10904476320`
+- Shared regression ZIP SHA-256 `b31602a789e5b99abfbb77c964420640a2fd9a65249c798f60a9d69f0d2d54e0`
+
+Canonical acceptance remains the D-159 accepted artifact identity; the regenerated final-regression .blend is validation evidence and is **not promoted** over the approved canonical asset.
+
+Merge:
+- PR #31 = MERGED
+- merge commit = `ac3460189012dcf69190178bf7b243f5c9eb5c50`
+
+Status after D-161:
+**MERGED TO MAIN / POST-MERGE CLOSURE CHECK PENDING**
+
+D-161 does not start the next Master, Stage2, or T-018.

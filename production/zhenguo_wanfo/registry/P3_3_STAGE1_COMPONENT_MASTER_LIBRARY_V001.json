@@ -3,7 +3,7 @@
   "phase": "P3.3",
   "stage": "Stage 1",
   "task": "T-035",
-  "status": "NINETEEN_APPROVED / T035 FORMALIZED / PR #31 OPEN",
+  "status": "NINETEEN_APPROVED / T035 MERGED TO MAIN / CLOSURE PENDING",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -523,7 +523,7 @@
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-159",
       "formalization_authority": "D-160",
-      "publication_status": "FORMALIZED / PR #31 OPEN",
+      "publication_status": "MERGED TO MAIN / CLOSURE PENDING",
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL ONLY / NOT GIT",
       "canonical_asset_sha256": "6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16",
       "semantic_sha256": "7e1d0a132f54680fab11b8d373461dba0931552f60e10e55356d9a86471d392a",
@@ -573,7 +573,22 @@
         "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
         "review_board_count": 1,
         "required_review_panel_count": 6
-      }
+      },
+      "merge_commit_sha": "ac3460189012dcf69190178bf7b243f5c9eb5c50",
+      "final_verified_human_head": "76bcc5163b06486f2715c4deda30e4873f7156b1",
+      "latest_pr_head": "76bcc5163b06486f2715c4deda30e4873f7156b1",
+      "latest_pr_head_delta": "NONE / HUMAN CHECKPOINT AFTER DERIVED EXCEL / FINAL REGRESSION PASS",
+      "final_regression_run": 36234487231,
+      "final_regression_result": "SUCCESS",
+      "final_regression_validation": "103/103 PASS",
+      "final_regression_geometry_signature": "4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8",
+      "final_regenerated_blend_sha256": "02d65aa451bb5818c60f6da80ead6bb100f322d1266b917a1fd1849479c8f1ca",
+      "final_regenerated_blend_promoted_to_canonical": false,
+      "final_regression_artifact_id": 10903973175,
+      "final_regression_artifact_zip_sha256": "70ba9bdf5d2d65517914ec03144a1479b3ef68255d853ce6543ce71dc63243cf",
+      "final_shared_regression_artifact_id": 10904476320,
+      "final_shared_regression_artifact_zip_sha256": "b31602a789e5b99abfbb77c964420640a2fd9a65249c798f60a9d69f0d2d54e0",
+      "excel_sync_run": 36234487241
     }
   ],
   "approved_master_count": 19
