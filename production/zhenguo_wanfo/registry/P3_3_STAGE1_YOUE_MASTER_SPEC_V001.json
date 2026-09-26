@@ -1,0 +1,159 @@
+{
+  "schema_version": "P3_3_STAGE1_MASTER_SPEC_1.0",
+  "component_id": "CMP-FRAME-YOUE-001",
+  "master_id": "CMP-FRAME-YOUE-001_MASTER",
+  "master_version": "V001",
+  "component_name_zh": "由额",
+  "status": "LOCKED / PRODUCT OWNER APPROVED / D-156",
+  "date": "2026-09-26",
+  "authority": {
+    "source_priority": "D-099 / RC-019",
+    "reconstruction_policy": "D-108 / RC-020",
+    "historical_gap_policy": "D-137 / RC-023",
+    "connection_layer": "RC-024",
+    "visual_gate": "D-155 / D-076 PASS WITH HISTORICAL-ORIENTATION BOUNDARY"
+  },
+  "evidence": {
+    "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_YOUE_DIRECT_SOURCE_BINDING_V001.md",
+    "a1": {
+      "source_id": "SRC-ZG-WF-001",
+      "locator": "PDF p86-88 / printed p71-73 / §2.3.1.6 / Table 2-43 / Fig 2-46, 2-47, 2-49",
+      "pdf_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472"
+    },
+    "a2": {
+      "source": "山西文物数字博物馆·万佛殿专题",
+      "use": "SAME_BUILDING_VISUAL_AND_STRUCTURAL_SEMANTIC",
+      "dimension_authority": false
+    }
+  },
+  "physical_instance_count": 4,
+  "geometry_variant_count": 0,
+  "instance_sections": [
+    {
+      "registry_location": "南立面西次间",
+      "source_label": "南西次间",
+      "width_mm": 255,
+      "thickness_mm": 105,
+      "classification": "DIRECT_MEASURED"
+    },
+    {
+      "registry_location": "南立面明间",
+      "source_label": "南明间",
+      "width_mm": 245,
+      "thickness_mm": 105,
+      "classification": "DIRECT_MEASURED"
+    },
+    {
+      "registry_location": "南立面东次间",
+      "source_label": "南东次间",
+      "width_mm": 250,
+      "thickness_mm": 105,
+      "classification": "DIRECT_MEASURED"
+    },
+    {
+      "registry_location": "北立面明间",
+      "source_label": "北明间",
+      "width_mm": 259,
+      "thickness_mm": 105,
+      "classification": "DIRECT_MEASURED"
+    }
+  ],
+  "measurement": {
+    "width_direct_count": 4,
+    "thickness_direct_count": 4,
+    "source_published_facade_statistics_mm": {
+      "south": {
+        "width_mean": 250,
+        "thickness": 105
+      },
+      "north_center_bay": {
+        "width": 259,
+        "thickness": 105
+      }
+    },
+    "project_derived_all_instance_reference_width_mm": 252.25,
+    "project_derived_reference_classification": "PROJECT_DERIVED_REFERENCE / NOT_SOURCE_PUBLISHED_FAMILY_MEAN",
+    "source_internal_numeric_conflict": false
+  },
+  "geometry_mode": "PARAMETRIC_HORIZONTAL_LONG_MEMBER_WITH_INSTANCE_SECTION_PARAMETERS",
+  "canonical_reference_body_mm": {
+    "length": 1000,
+    "width": 252.25,
+    "thickness": 105
+  },
+  "canonical_reference_length_policy": "NON_HISTORICAL_REFERENCE_LENGTH / MASTER_SPECIMEN_ONLY / REPLACEABLE",
+  "length_contract": {
+    "actual_instance_length": "ASSEMBLY_ENDPOINT_DERIVED",
+    "historical_full_timber_length_mm": null,
+    "hidden_end_penetration_mm": null
+  },
+  "historical_orientation": {
+    "current_orientation_state": "HISTORICAL_REPAIR_FLIPPED",
+    "original_963_top_bottom_orientation": "UNRESOLVED",
+    "geometry_variant_created": false
+  },
+  "mortise_trace": {
+    "existence": "DIRECT_EVIDENCE",
+    "exact_geometry": "UNRESOLVED",
+    "current_structural_function": "UNRESOLVED",
+    "canonical_body_cut": false,
+    "classification": "HISTORICAL_REPAIR_TRACE_METADATA"
+  },
+  "connection_layer": [
+    {
+      "interface": "LEFT_END",
+      "related_family": "柱",
+      "semantic": "COLUMN_CONNECTION",
+      "existence": "KNOWN",
+      "exact_geometry": "DEFERRED"
+    },
+    {
+      "interface": "RIGHT_END",
+      "related_family": "柱",
+      "semantic": "COLUMN_CONNECTION",
+      "existence": "KNOWN",
+      "exact_geometry": "DEFERRED"
+    }
+  ],
+  "related_component_isolation": {
+    "excluded": [
+      "阑额",
+      "额间板",
+      "普拍枋",
+      "柱",
+      "斗栱"
+    ]
+  },
+  "review_board_required_panels": [
+    "AXON",
+    "LONG_SIDE",
+    "END_SECTION",
+    "4_INSTANCE_SECTION_MAPPING",
+    "HISTORICAL_ORIENTATION_BOUNDARY",
+    "SOURCE_AND_RECONSTRUCTION_BOUNDARY"
+  ],
+  "hard_fails": [
+    "INSTANCE_SECTION_COLLAPSED_TO_REFERENCE_MEAN",
+    "PROJECT_DERIVED_REFERENCE_MARKED_AS_SOURCE_PUBLISHED",
+    "HISTORICAL_REPAIR_FLIP_IGNORED",
+    "CURRENT_ORIENTATION_MARKED_AS_963_ORIGINAL",
+    "OLD_MORTISE_TRACE_MODELED_AS_CANONICAL_JOINERY",
+    "UNSUPPORTED_JOINERY_CLAIM",
+    "DUPLICATE_MASTER_PER_LOCATION",
+    "FALSE_GEOMETRY_VARIANT_FROM_SECTION_DIFFERENCE",
+    "FALSE_GEOMETRY_VARIANT_FROM_HISTORICAL_ORIENTATION_METADATA",
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "ASSEMBLY_LENGTH_MARKED_AS_HISTORICAL_FULL_TIMBER_LENGTH",
+    "YOUE_LANE_IDENTITY_COLLAPSE",
+    "YOUE_EJIANBAN_IDENTITY_COLLAPSE",
+    "PU_PAIFANG_FALSELY_INTRODUCED",
+    "SILENT_HISTORICIZATION",
+    "MODEL_BEFORE_VISUAL_REFERENCE_REVIEW"
+  ],
+  "next_task_id": "T-035",
+  "task_contract_design_authorized": true,
+  "engineering_execution_authorized": false,
+  "blender_execution_authorized": false,
+  "production_branch_creation_authorized": false,
+  "pr_creation_authorized": false
+}
