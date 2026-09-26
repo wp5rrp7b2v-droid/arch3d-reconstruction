@@ -737,3 +737,27 @@ Still not authorized:
 - next component;
 - Stage2;
 - T-018 resume.
+
+
+## 25. D-152 materialization result
+
+Exact accepted-artifact materialization:
+- one-time materialization Run: `36225008816` — **SUCCESS**
+- materialization commit: `be698ac940902bfac6dde7a9b6b27394d3a7e855`
+- source first-article Run: `36222778768`
+- source Artifact: `10899808683`
+- canonical .blend SHA-256 verified but **NOT COMMITTED TO GIT**: `b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d`
+- exact Semantic SHA-256: `a47651910a96543f1426cc3293ca787e8b373b47dc481056f45b4e198744e083`
+- exact Validation SHA-256: `ec554a490ca2a9f112be6146d013037f7b543f035127d4c7e9108c563ca0882f`
+- exact Review Board SHA-256: `29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef`
+- one-time workflow/helper removed in the same materialization commit.
+
+Formalization candidate:
+- Catalog approved count: **18**
+- V008/CURRENT 阑额 binding: **12/12**
+- approved-Master-covered Registry records: **143**
+- Stage1 candidate: **18/28 = 64.3%**
+
+Latest-head final Master V2 validation and Registry Excel Sync are triggered by the following Product Owner-authored synchronization commit.
+
+PR #30 merge remains unauthorized.
