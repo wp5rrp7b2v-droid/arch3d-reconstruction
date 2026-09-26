@@ -1,0 +1,59 @@
+name: T-034 One-time Accepted Artifact Materialization
+on:
+  pull_request:
+permissions:
+  contents: write
+  actions: read
+jobs:
+  materialize:
+    if: github.event.pull_request.number == 30 && github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Download D-151 accepted artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: P3_3_T-034_MASTER_V2_FIRST_ARTICLE_V001
+          path: /tmp/t034
+          github-token: ${{ github.token }}
+          repository: wp5rrp7b2v-droid/arch3d-reconstruction
+          run-id: 36222778768
+
+      - name: Verify exact accepted bytes and materialize
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/t034
+          echo "b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d  CMP-FRAME-LANE-001_MASTER_V001.blend" | sha256sum -c -
+          echo "a47651910a96543f1426cc3293ca787e8b373b47dc481056f45b4e198744e083  CMP-FRAME-LANE-001_MASTER_SEMANTIC_V001.json" | sha256sum -c -
+          echo "ec554a490ca2a9f112be6146d013037f7b543f035127d4c7e9108c563ca0882f  CMP-FRAME-LANE-001_MASTER_VALIDATION_V001.json" | sha256sum -c -
+          echo "29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef  CMP-FRAME-LANE-001_MASTER_REVIEW_BOARD_V001.png" | sha256sum -c -
+
+          cd "$GITHUB_WORKSPACE"
+          DEST=production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LANE-001
+          mkdir -p "$DEST"
+          cp /tmp/t034/CMP-FRAME-LANE-001_MASTER_SEMANTIC_V001.json "$DEST/"
+          cp /tmp/t034/CMP-FRAME-LANE-001_MASTER_VALIDATION_V001.json "$DEST/"
+          cp /tmp/t034/CMP-FRAME-LANE-001_MASTER_REVIEW_BOARD_V001.png "$DEST/"
+          python scripts/t034_materialize_once.py
+
+          test ! -f "$DEST/CMP-FRAME-LANE-001_MASTER_V001.blend"
+          echo "a47651910a96543f1426cc3293ca787e8b373b47dc481056f45b4e198744e083  $DEST/CMP-FRAME-LANE-001_MASTER_SEMANTIC_V001.json" | sha256sum -c -
+          echo "ec554a490ca2a9f112be6146d013037f7b543f035127d4c7e9108c563ca0882f  $DEST/CMP-FRAME-LANE-001_MASTER_VALIDATION_V001.json" | sha256sum -c -
+          echo "29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef  $DEST/CMP-FRAME-LANE-001_MASTER_REVIEW_BOARD_V001.png" | sha256sum -c -
+
+      - name: Commit formalization candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/p3_3_t034_materialize_once.yml scripts/t034_materialize_once.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --check
+          git commit -m "T-034 materialize D-151 accepted first article and bind Catalog/V008"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
