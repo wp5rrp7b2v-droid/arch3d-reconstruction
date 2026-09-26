@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R254",
+  "state_revision": "R255",
   "last_updated": "2026-09-26",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / MAIN 19 OF 28 / PR #32 T-036 FORMALIZED 20 OF 28 / EXCEL SYNC + FINAL REGRESSION AUTHORIZED / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / MAIN 19 OF 28 / PR #32 FORMALIZED 20 OF 28 / T-036 FINAL REGRESSION PASS / AWAITING MERGE AUTHORIZATION / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -26,8 +26,8 @@
       "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 19 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-035 CLOSED D-162 / T-036 CONTRACT LOCKED D-167 / T-018 HOLD"
     }
   },
-  "decision_required": false,
-  "blocker": "No blocker. T-036 Registry Excel Sync + latest-head final regression are authorized. PR #32 must remain Draft and unmerged.",
+  "decision_required": true,
+  "blocker": "No engineering blocker. T-036 Excel sync and latest-head final regression passed. PR #32 remains Draft and mergeable; Product Owner authorization is required before Ready/merge.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-036",
     "name": "P3_3_BUJIAN_DIDOU_MASTER_V2_V001｜补间铺作底斗 Master",
-    "status": "EXCEL SYNC + LATEST-HEAD FINAL REGRESSION AUTHORIZED / IN PROGRESS / PR #32 DRAFT"
+    "status": "FINAL REGRESSION PASS / PR #32 DRAFT / AWAITING READY+MERGE AUTHORIZATION"
   },
   "proposed_next_task": {
-    "id": "T-036-FINAL-REGRESSION",
-    "name": "Registry Excel Sync + latest-head T-036 final regression",
-    "status": "AUTHORIZED / IN PROGRESS"
+    "id": "T-036-MERGE",
+    "name": "PR #32 Ready + merge",
+    "status": "AWAITING PRODUCT OWNER AUTHORIZATION"
   },
   "last_completed_task": {
     "id": "T-035",
@@ -824,7 +824,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Trigger Registry Excel Sync from a human-authored PR checkpoint; after derived Excel bot commit, trigger latest-head T-036 final regression. Stop before PR Ready/merge.",
+  "next_action": "Await explicit Product Owner authorization to convert PR #32 from Draft to Ready and merge. After merge, perform post-merge closure cross-check before T-036 closure.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1906,7 +1906,7 @@
     "engineering_execution_authorized": false
   },
   "t036": {
-    "status": "EXCEL SYNC + FINAL REGRESSION AUTHORIZED / D-173 / IN PROGRESS",
+    "status": "FINAL REGRESSION PASS / D-174 / AWAITING MERGE AUTHORIZATION",
     "decision_id": "D-167",
     "task_id": "T-036",
     "task_name": "P3_3_BUJIAN_DIDOU_MASTER_V2_V001",
@@ -1964,6 +1964,24 @@
     "bottom_dou_registry_binding_count": 12,
     "current_equals_v008": true,
     "main_merged_approved_master_count": 19,
-    "final_regression_authority": "D-173"
+    "final_regression_authority": "D-173",
+    "final_regression_result_decision_id": "D-174",
+    "registry_excel_sync_result": "SUCCESS",
+    "registry_excel_sync_run_id": 36249451042,
+    "registry_excel_derived_commit": "9e208d4ed8c376ffe276f55b626b4e79c182320f",
+    "registry_excel_latest_head_validation_run_id": 36249492848,
+    "registry_excel_sha256": "8ac9fa1e8fc8a5d09f79e1fa4035cd8fe84a026f3797b172fdb4c36c0bf25a70",
+    "final_regression_run_id": 36249492816,
+    "final_regression_result": "SUCCESS",
+    "final_regression_validation": "37/37 PASS",
+    "final_regression_artifact_id": 10908289322,
+    "final_regression_artifact_zip_sha256": "afeed5a612e48c604b965f021ce41656dbec0563e388380b08ca6551ab83897f",
+    "final_regression_geometry_signature": "7b3517bcbb2007954d11ea18b75e9103f3a6b4e0d3a6e46e97c05fef5ba449f6",
+    "final_regenerated_blend_sha256": "4e0adf5fe34c3f9b3d6f268d793001f843071de74209001591c8f11c956aa085",
+    "final_regenerated_blend_promoted_to_canonical": false,
+    "final_legacy_regression_artifact_id": 10908925091,
+    "final_legacy_regression_artifact_zip_sha256": "217b4ba8413df35d90e2fe04146098536264d3a8df2ba6dd70b4c8438a8847d1",
+    "latest_pr_head": "5a6760ac66b0fe2235686919b27449d5c722c2de",
+    "pr_mergeable": true
   }
 }
