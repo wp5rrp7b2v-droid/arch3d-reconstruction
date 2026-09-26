@@ -691,3 +691,29 @@ Not authorized:
 - Stage2;
 - T-018 resume.
 
+## 23. Product Owner first-article approval｜D-151
+
+Product Owner formally approved the T-034 阑额 first article on 2026-09-26.
+
+Accepted evidence:
+- Run `36222778768` = SUCCESS
+- Validation = **120 / 120 PASS**
+- reviewed production head = `7daedf91d161f26235dd69e095ff93291a1e9fb2`
+- canonical .blend SHA-256 = `b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d`
+- semantic geometry signature = `d1117d15868e5f9df37fc679b9c7cc6b0732ef79bcfef6b5e15c4a91fff94ed5`
+- Review Board SHA-256 = `29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef`
+- first-article Artifact = `10899808683`
+- shared-regression Artifact = `10899644135`
+
+Approval scope:
+- first article = **PRODUCT OWNER APPROVED**
+- geometry/evidence dual-thickness contract accepted
+- shared Master V2 regression result accepted
+
+Still not authorized:
+- formalization
+- Catalog / V008 approved binding
+- PR #30 merge
+- Stage2
+- T-018 resume
+
