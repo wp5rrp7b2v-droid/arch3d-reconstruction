@@ -230,3 +230,289 @@ Closure-time Excel Sync:
 
 Final closure remains:
 **T-035 CLOSED / D-162 + D-163 REVIEW PATCH / PR #31 MERGED / MAIN VERIFIED**
+
+# DAILY FINAL CLOSE｜2026-09-26｜P3.3 Stage1｜T-034 + T-035 + T-036
+
+Status: **PASS / THREE STAGE1 MASTERS CLOSED / MAIN VERIFIED / 20 OF 28 APPROVED / T-018 HOLD**
+
+Canonical repository: wp5rrp7b2v-droid/arch3d-reconstruction
+Daily final close main baseline before this close commit: 1629e86ddb839224da2910b5917796567213f038
+
+## 14. Daily work summary
+
+Today completed three consecutive Stage1 Master closures:
+
+1. **T-034｜阑额 Master**
+   - PR #30 merged
+   - closure decision: D-153
+   - Stage1 advanced to 18/28 = 64.3%
+   - 12/12 阑额 Registry rows bound
+   - Master-covered Registry records: 143
+
+2. **T-035｜由额 Master**
+   - PR #31 merged
+   - closure: D-162 + D-163 review patch
+   - Stage1 advanced to 19/28 = 67.9%
+   - 4/4 由额 Registry rows bound
+   - Master-covered Registry records: 147
+
+3. **T-036｜补间铺作底斗 Master**
+   - PR #32 merged
+   - closure: D-176
+   - Stage1 advanced to 20/28 = 71.4%
+   - 12/12 补间铺作底斗 Registry rows bound
+   - Master-covered Registry records: 159
+
+No Stage1 engineering T-task remains active at daily close.
+
+## 15. T-034 closure snapshot
+
+Canonical identity:
+- component: CMP-FRAME-LANE-001
+- master: CMP-FRAME-LANE-001_MASTER
+- 12 physical instances
+- 0 Geometry Variant
+- 12/12 direct widths
+- 4/12 direct thicknesses = 105 mm
+- 8/12 thickness evidence remains UNKNOWN while production thickness = 105 mm as PARAMETRIC_COMPLETION
+- 1000 mm remains NON_HISTORICAL reference length
+- assembly span remains endpoint / topology controlled
+
+Approved first article:
+- Run 36222778768 = SUCCESS
+- validation = 120/120 PASS
+- canonical .blend SHA-256 = b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d
+- semantic geometry signature = d1117d15868e5f9df37fc679b9c7cc6b0732ef79bcfef6b5e15c4a91fff94ed5
+- Artifact ID = 10899808683
+
+Finalization:
+- final regression Run 36225081197 = SUCCESS
+- Excel Sync Run 36225081188 = SUCCESS
+- PR #30 merge commit = 5f577914ca3e2001b391176b394404f872619c91
+- T-034 status = CLOSED
+
+## 16. T-035 closure snapshot
+
+Canonical identity:
+- component: CMP-FRAME-YOUE-001
+- master: CMP-FRAME-YOUE-001_MASTER
+- 4 physical instances
+- 0 Geometry Variant
+- 4/4 direct width + thickness sections
+- 252.25 mm remains PROJECT_DERIVED_REFERENCE, not source-published family mean
+- 1000 mm remains NON_HISTORICAL reference length
+- current orientation = HISTORICAL_REPAIR_FLIPPED
+- original 963 top/bottom orientation = UNRESOLVED
+- old mortise-trace existence = DIRECT_EVIDENCE
+- exact mortise geometry / current structural function = UNRESOLVED
+
+Approved first article:
+- Run 36231069458 = SUCCESS
+- validation = 97/97 PASS
+- canonical .blend SHA-256 = 6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16
+- semantic geometry signature = 4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8
+- Artifact ID = 10903011230
+
+Finalization:
+- final regression Run 36234487231 = SUCCESS / 103/103 PASS
+- Excel Sync Run 36238489886 = SUCCESS after derived-main race retry
+- PR #31 merge commit = ac3460189012dcf69190178bf7b243f5c9eb5c50
+- T-035 status = CLOSED
+
+## 17. T-036 closure snapshot
+
+Canonical identity:
+- component: CMP-DOU-BOTTOM-LONGKAI-001
+- master: CMP-DOU-BOTTOM-LONGKAI-001_MASTER
+- 12 physical instances
+- 9 measured instances
+- north 3 unmeasured for the locked dimension set
+- one Master / 0 Geometry Variant
+- profile = CURVED_QI_PROFILE
+- exact curvature = UNKNOWN
+- one curve_amount engineering parameter only
+
+Direct A1 observed-family-mean evidence:
+- top width = 255.56 mm
+- bottom width = 178.56 mm
+- total height = 161.78 mm
+- flat height = 38.333 mm
+- qi height = 65.6 mm
+
+Depth boundary:
+- A1 top depth = UNKNOWN
+- A1 bottom depth = UNKNOWN
+- production top depth = 240.0 mm
+- production bottom depth = 165.1 mm
+- classification = PARAMETRIC_COMPLETION / RECONSTRUCTED_DESIGN / REPLACEABLE / NOT_A1_DIRECT
+- no evidence/completion field collapse is allowed
+
+Unsupported geometry remains deferred:
+- exact dou ears
+- exact top slots / cavities
+- exact bottom mortise-tenon
+- concealed joinery
+- wear / compression deformation
+- exact 963 profile
+
+Approved first article:
+- canonical Run 36248233440 = SUCCESS
+- validation = 37/37 PASS
+- Artifact ID = 10908700631
+- canonical .blend SHA-256 = 7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66
+- semantic geometry signature = 7b3517bcbb2007954d11ea18b75e9103f3a6b4e0d3a6e46e97c05fef5ba449f6
+
+Formalization / binding:
+- formalization Run 36249158964 = SUCCESS
+- formalization commit = be266d490a260122e3dc9363645ff43c32b16fce
+- 12/12 bottom-dou rows = APPROVED_MASTER_AVAILABLE
+- all 12 bind to CMP-DOU-BOTTOM-LONGKAI-001_MASTER
+
+Final regression and merge:
+- latest post-rebase T-036 Run 36249880372 = SUCCESS / 37/37 PASS
+- final geometry signature = approved signature MATCH
+- regenerated .blend SHA-256 = 2c59155964cf4adeee59f288a87d957ea6ff22ba184cbfcba095c7c555b4ed63
+- regenerated .blend = regression evidence only; NOT canonical promotion
+- final regression Artifact ID = 10908049227
+- final legacy-dou Artifact ID = 10907864510
+- CMP-LUDOU-COLUMN-001 = PASS
+- CMP-DOU-SINGLE-LONGKAI-001 = PASS
+- CMP-DOU-INTERACTIVE-001 = PASS
+- PR #32 merge commit = 0dbec3a2c34b1a6dd94940a807d65fd915ab9d81
+
+Post-merge closure:
+- D-176
+- closure Excel Sync Run 36250350582 = SUCCESS
+- closure Dashboard Sync Run 36250443489 = SUCCESS
+- closure Excel SHA-256 = 586e88dab4d64b6531f7afc1507d72eb96cb0254c2f4df40b86e096a6be6a021
+- T-036 status = CLOSED
+
+## 18. Stage1 canonical state at end of day
+
+Registry:
+- total Registry records = 505
+- registered object types = 66
+- Master-scope object types = 28
+- approved Masters = **20**
+- pending Masters = **8**
+- completion = **71.4%**
+- Master-covered Registry records = **159**
+- pending source binding = 7
+- CURRENT JSON == V008 JSON = PASS
+
+Catalog:
+- status = TWENTY_APPROVED / T036 CLOSED / MERGED_TO_MAIN
+
+Derived Excel:
+- status = SYNCED
+- canonical truth = JSON
+- Excel role = DERIVED_VIEW
+- record count = 505
+- CURRENT/V008 Excel SHA-256 = 586e88dab4d64b6531f7afc1507d72eb96cb0254c2f4df40b86e096a6be6a021
+
+Dashboard:
+- T-036 CLOSED visible
+- 20/28 visible
+- next target 瓜子栱族 visible
+
+## 19. Open PR / workflow boundary
+
+Open PRs at daily close:
+- PR #3｜T-018 original｜SUPERSEDED / READ-ONLY / DO NOT MERGE
+- PR #6｜T-018 replacement｜HOLD / DO NOT MERGE
+
+No active Stage1 engineering PR remains.
+
+T-018:
+- remains HOLD
+- not resumed today
+
+Stage2:
+- remains NOT AUTHORIZED
+
+P2:
+- frozen baseline unchanged
+
+T-020 / RZ / FV:
+- authority unchanged
+
+## 20. Next Stage1 candidate
+
+Coverage Matrix priority 15:
+
+**瓜子栱族**
+- 小型瓜子栱: 28 registered records
+- 大型瓜子栱: 16 registered records
+- total = 44 Registry records
+- family direction: shared parametric 栱 family boundary
+
+Next permitted work:
+1. Source Readiness;
+2. D-076 Visual/Form Gate;
+3. only after those, design Master Spec;
+4. no new T-task until Product Owner approves the Master Spec path;
+5. no engineering execution until separately authorized.
+
+No branch / PR / Blender execution is authorized for the next candidate by this daily close.
+
+## 21. Evidence / reconstruction boundaries preserved today
+
+Across T-034 / T-035 / T-036:
+- UNKNOWN remains UNKNOWN unless explicitly classified as replaceable production completion;
+- source-measured and production-completion layers remain separated;
+- no inferred hidden joinery was promoted to historical fact;
+- no 963 original-design claim was made from current measured means;
+- non-historical reference lengths remain non-historical;
+- historical-repair metadata remains semantic and does not silently create geometry variants;
+- final-regression generated binaries do not replace the Product Owner accepted canonical artifact unless explicitly promoted.
+
+## 22. Daily omission audit
+
+Checked:
+- D-148 through D-176 current-day decision chain relevant to T-034/T-035/T-036;
+- PR #30 / #31 / #32 merge state;
+- T-034 / T-035 / T-036 approved canonical identities;
+- Catalog approved count = 20;
+- V008 / CURRENT equality;
+- 505 Registry records;
+- 159 Master-covered records;
+- Registry Excel manifest;
+- Dashboard visibility;
+- open PR #3/#6 HOLD state;
+- Stage2 authorization boundary;
+- T-018 HOLD boundary;
+- next candidate priority 15;
+- no active Stage1 engineering task.
+
+Known missing daily-close action:
+- local repository synchronization has **not** been checked in this GitHub close.
+
+No known missing GitHub canonical-state registration remains.
+
+## 23. Local synchronization boundary
+
+This daily close verifies the GitHub canonical repository only.
+
+Local synchronization is explicitly **NOT CHECKED** in this close.
+
+If local sync is required later:
+- fetch latest main;
+- fast-forward local main;
+- verify local HEAD == remote main;
+- preserve any local untracked assets separately;
+- do not treat local unsynced state as canonical.
+
+## 24. Final daily status
+
+**2026-09-26 DAILY CLOSE PASS**
+
+- T-034 CLOSED
+- T-035 CLOSED
+- T-036 CLOSED
+- Stage1 = **20 / 28 = 71.4%**
+- approved-Master-covered Registry records = **159**
+- active Stage1 engineering T-task = **NONE**
+- next candidate = **瓜子栱族 / priority 15 / Source Readiness + D-076 only**
+- T-018 = **HOLD**
+- Stage2 = **NOT AUTHORIZED**
+- local sync = **NOT CHECKED**

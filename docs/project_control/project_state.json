@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R257",
+  "state_revision": "R258",
   "last_updated": "2026-09-26",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-036 CLOSED / 20 OF 28 MASTERS APPROVED / NEXT PRIORITY 15 瓜子栱族 SOURCE READINESS / T-018 HOLD",
+  "session_status": "DAILY CLOSE PASS / P3.3 V002 STAGE 1 ACTIVE / T-034+T-035+T-036 CLOSED / 20 OF 28 MASTERS APPROVED / NO ACTIVE STAGE1 ENGINEERING TASK / NEXT 瓜子栱族 SOURCE READINESS / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active Stage1 engineering blocker. T-036 is CLOSED. Only T-018 PR #3/#6 remain open and both are SUPERSEDED/HOLD. Stage2 is not authorized.",
+  "blocker": "No active Stage1 engineering blocker. Daily GitHub close is complete. Local repository synchronization was not checked. T-018 remains HOLD; Stage2 remains unauthorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": null,
     "name": "No active Stage1 engineering T-task",
-    "status": "T-036 CLOSED / NEXT CANDIDATE SOURCE READINESS ONLY"
+    "status": "DAILY CLOSE / WORK STOPPED FOR 2026-09-26"
   },
   "proposed_next_task": {
     "id": "P3.3-STAGE1-PRIORITY-15-SOURCE-READINESS",
     "name": "瓜子栱族｜小型瓜子栱 + 大型瓜子栱 Source Readiness + D-076",
-    "status": "READY FOR EVIDENCE REVIEW / NO T-TASK / NO ENGINEERING AUTHORIZATION",
+    "status": "NEXT SESSION / EVIDENCE REVIEW ONLY / NO T-TASK / NO ENGINEERING AUTHORIZATION",
     "coverage_matrix_priority": 15,
     "registered_records": 44,
     "family_rule": "small 28 + large 16 share one parametric 栱 family boundary"
@@ -776,62 +776,37 @@
     "decision_required": "NONE / WAIT FOR PRODUCT OWNER NEXT SESSION"
   },
   "daily_closing_audit": {
-    "date": "2026-09-20",
-    "status": "PASS / COMPLETE / LOCAL SYNC + ARTIFACT RECONCILIATION COMPLETE",
-    "execution_log_recorded": true,
-    "acceptance_matrix_recorded": true,
-    "dashboard_aligned": true,
-    "sync_ledger_day5_complete": true,
-    "detailed_close": "docs/project_control/DAILY_CLOSE_2026-09-20.md",
-    "local_sync_prep": "docs/project_control/LOCAL_SYNC_PREP_2026-09-20.md",
-    "phase_archive_action": "NONE / P3 ACTIVE",
-    "latest_formal_decision": "D-087",
-    "new_decision_at_close": false,
-    "new_execution_authorization_at_close": false,
-    "project_state_revision": "R162",
-    "dashboard_version": "v102",
-    "post_close_omission_audit": "PASS / FINAL PRE-LOCAL-SYNC RECHECK / NO KNOWN MISSING CURRENT-STATE REGISTRATIONS",
-    "omission_audit_checked": [
-      "D-073..D-087 decisions",
-      "T-022/T-023/T-024 approvals + formal delivery + merges",
-      "Stage1 Catalog 10 approved Masters",
-      "V008 / 505 Registry",
-      "RC-018 V008 / 505 derived Excel manifest",
-      "Execution Log",
-      "Acceptance Matrix",
-      "Cloud Mode Day 5",
-      "Dashboard",
-      "Open PR #3/#6 HOLD state",
-      "Local Sync Prep"
+    "date": "2026-09-26",
+    "status": "PASS / GITHUB CANONICAL / NO KNOWN MISSING CURRENT-STATE REGISTRATIONS",
+    "decisions_checked": "D-148..D-177 relevant daily chain",
+    "tasks_checked": [
+      "T-034",
+      "T-035",
+      "T-036"
     ],
+    "merged_prs_checked": [
+      30,
+      31,
+      32
+    ],
+    "catalog_approved_masters": 20,
+    "pending_masters": 8,
+    "master_completion_percent": 71.4,
+    "registry_records": 505,
+    "approved_master_bound_rows": 159,
+    "current_equals_v008": true,
+    "excel_sync": "PASS / closure source d2147e2f1dfbf9a122fcb56a73b8f9c385dd7394",
+    "dashboard": "PASS / T-036 CLOSED / 20 OF 28 / NEXT 瓜子栱族",
+    "open_prs": [
+      3,
+      6
+    ],
+    "active_stage1_engineering_prs": 0,
     "omission_audit_missing_items": [],
-    "caution": "Local synchronization is complete. T-018 remains HOLD. No next Master engineering execution is authorized until D-076 visual-reference review and a new task authorization.",
-    "post_close_visibility_patch": "D-087 / V008 Master progress visibility implemented / Excel sync PASS 35508113993",
-    "post_close_decision": "D-087 / V008 MASTER PROGRESS VISIBILITY",
-    "final_pre_local_sync_audit": {
-      "date": "2026-09-20",
-      "status": "PASS",
-      "v008_equals_current": true,
-      "registry_records": 505,
-      "registered_object_types": 66,
-      "master_scope_types": 28,
-      "approved_masters": 10,
-      "pending_masters": 18,
-      "master_completion_percent": 35.7,
-      "approved_master_bound_rows": 52,
-      "binding_errors": 0,
-      "excel_sync_run": 35508113993,
-      "excel_sync_result": "SUCCESS",
-      "open_prs": [
-        3,
-        6
-      ],
-      "active_actions_runs": 0,
-      "note": "Historical failed intermediate Actions runs are superseded by later successful accepted runs and are not active blockers."
-    },
-    "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
+    "local_sync": "NOT CHECKED",
+    "caution": "Do not start priority 15 engineering before Source Readiness + D-076 + Master Spec approval + Task Contract + explicit engineering execution authorization."
   },
-  "next_action": "Next complete step: priority 15 瓜子栱族 Source Readiness + D-076. Do not create a T-task, branch, PR or Blender execution before Master Spec and explicit engineering authorization.",
+  "next_action": "Next session only: priority 15 瓜子栱族 Source Readiness + D-076. Do not create a T-task, branch, PR or Blender execution before evidence/form review and explicit Product Owner authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1669,21 +1644,32 @@
     "next_stage1_action": "子角梁 D-076 Visual/Form Gate"
   },
   "daily_close": {
-    "date": "2026-09-25",
-    "status": "PASS",
-    "close_file": "docs/project_control/CLOSE_FILE_2026-09-25.md",
-    "local_sync": {
-      "status": "PASS",
-      "local_head": "29b934a6881b93fac127cce8565a181fd9c6be97",
-      "remote_head": "29b934a6881b93fac127cce8565a181fd9c6be97",
-      "branch_status": "main...origin/main",
-      "t033_canonical_blend_sha256": "104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b",
-      "t033_blend_sha_match": true
+    "date": "2026-09-26",
+    "status": "PASS / GITHUB CANONICAL CLOSE COMPLETE / LOCAL SYNC NOT CHECKED",
+    "close_file": "docs/project_control/CLOSE_FILE_2026-09-26.md",
+    "completed_today": [
+      "T-034 / 阑额 / CLOSED / PR #30 MERGED",
+      "T-035 / 由额 / CLOSED / PR #31 MERGED",
+      "T-036 / 补间铺作底斗 / CLOSED / PR #32 MERGED"
+    ],
+    "stage1": {
+      "approved_masters": 20,
+      "pending_masters": 8,
+      "completion_percent": 71.4,
+      "master_covered_registry_records": 159,
+      "registry_records": 505,
+      "current_equals_v008": true
     },
     "open_pr_policy": {
-      "pr22": "CLOSED / SUPERSEDED / NOT MERGED",
-      "pr3": "OPEN / T-018 HOLD",
-      "pr6": "OPEN / T-018 HOLD"
+      "pr3": "OPEN / T-018 ORIGINAL / SUPERSEDED / READ-ONLY / DO NOT MERGE",
+      "pr6": "OPEN / T-018 REPLACEMENT / HOLD / DO NOT MERGE"
+    },
+    "active_stage1_engineering_task": "NONE",
+    "next_candidate": "瓜子栱族 / priority 15 / Source Readiness + D-076 only",
+    "t018": "HOLD",
+    "stage2": "NOT AUTHORIZED",
+    "local_sync": {
+      "status": "NOT CHECKED / SEPARATE USER-LOCAL STEP"
     }
   },
   "lane_stage1": {
