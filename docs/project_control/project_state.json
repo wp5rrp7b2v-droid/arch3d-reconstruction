@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R255",
+  "state_revision": "R256",
   "last_updated": "2026-09-26",
-  "session_status": "P3.3 V002 STAGE 1 ACTIVE / MAIN 19 OF 28 / PR #32 FORMALIZED 20 OF 28 / T-036 FINAL REGRESSION PASS / AWAITING MERGE AUTHORIZATION / T-018 HOLD",
+  "session_status": "P3.3 V002 STAGE 1 ACTIVE / T-036 PR #32 MERGED / MAIN 20 OF 28 / POST-MERGE CLOSURE CHECK PENDING / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": true,
-  "blocker": "No engineering blocker. T-036 Excel sync and latest-head final regression passed. PR #32 remains Draft and mergeable; Product Owner authorization is required before Ready/merge.",
+  "blocker": "No engineering blocker. PR #32 is merged. T-036 requires post-merge closure cross-check before formal closure; T-018 remains HOLD and Stage2 is not authorized.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-036",
     "name": "P3_3_BUJIAN_DIDOU_MASTER_V2_V001｜补间铺作底斗 Master",
-    "status": "FINAL REGRESSION PASS / PR #32 DRAFT / AWAITING READY+MERGE AUTHORIZATION"
+    "status": "PR #32 MERGED / POST-MERGE CLOSURE CHECK PENDING"
   },
   "proposed_next_task": {
-    "id": "T-036-MERGE",
-    "name": "PR #32 Ready + merge",
-    "status": "AWAITING PRODUCT OWNER AUTHORIZATION"
+    "id": "T-036-CLOSURE",
+    "name": "补间铺作底斗 post-merge closure cross-check",
+    "status": "READY / NOT YET CLOSED"
   },
   "last_completed_task": {
     "id": "T-035",
@@ -824,7 +824,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "Await explicit Product Owner authorization to convert PR #32 from Draft to Ready and merge. After merge, perform post-merge closure cross-check before T-036 closure.",
+  "next_action": "Perform T-036 post-merge closure cross-check, update merged publication/closure references, then close T-036 if all checks remain consistent. Do not start next Master or Stage2 yet.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1906,7 +1906,7 @@
     "engineering_execution_authorized": false
   },
   "t036": {
-    "status": "FINAL REGRESSION PASS / D-174 / AWAITING MERGE AUTHORIZATION",
+    "status": "PR #32 MERGED / D-175 / POST-MERGE CLOSURE CHECK PENDING",
     "decision_id": "D-167",
     "task_id": "T-036",
     "task_name": "P3_3_BUJIAN_DIDOU_MASTER_V2_V001",
@@ -1945,7 +1945,7 @@
     "first_article_approved": true,
     "catalog_v008_binding_authorized": true,
     "pr_number": 32,
-    "pr_status": "DRAFT",
+    "pr_status": "MERGED",
     "formalization_authority": "D-171",
     "registry_excel_sync_authorized": true,
     "final_regression_authorized": true,
@@ -1982,6 +1982,15 @@
     "final_legacy_regression_artifact_id": 10908925091,
     "final_legacy_regression_artifact_zip_sha256": "217b4ba8413df35d90e2fe04146098536264d3a8df2ba6dd70b4c8438a8847d1",
     "latest_pr_head": "5a6760ac66b0fe2235686919b27449d5c722c2de",
-    "pr_mergeable": true
+    "pr_mergeable": true,
+    "merge_authority": "D-175",
+    "ready_for_review": true,
+    "merged": true,
+    "merged_head_sha": "e7a6013981941e3e6d22d84e867e37fcb43566bd",
+    "merge_commit_sha": "0dbec3a2c34b1a6dd94940a807d65fd915ab9d81",
+    "merged_main_approved_master_count": 20,
+    "merged_main_completion_percent": 71.4,
+    "merged_main_master_covered_registry_record_count": 159,
+    "post_merge_closure_check_pending": true
   }
 }
