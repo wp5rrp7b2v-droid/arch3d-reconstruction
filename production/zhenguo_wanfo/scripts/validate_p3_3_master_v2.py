@@ -109,6 +109,21 @@ def main():
         ck("10A_family_mean_reference_only",
            instance_sections.get("family_reference_only") is True and
            instance_sections.get("family_mean_must_not_overwrite_instances") is True)
+    elif instance_sections and instance_sections.get("mode")=="DIRECT_LOCKED_LOCATION_SECTION_PROJECT_REFERENCE":
+        fam=instance_sections["family_reference_section_mm"]
+        ck("10_registry_project_reference_binding",near(fam["width"],w) and near(fam["thickness"],h))
+        ck("10A_project_reference_only",
+           instance_sections.get("family_reference_only") is True and
+           instance_sections.get("family_mean_must_not_overwrite_instances") is True and
+           instance_sections.get("reference_classification")=="PROJECT_DERIVED_REFERENCE / NOT_SOURCE_PUBLISHED_FAMILY_MEAN")
+        expected={(float(x["width_mm"]),float(x["thickness_mm"])) for x in instance_sections.get("instances",[])}
+        observed=set()
+        for s in section_strings:
+            for pair in expected:
+                token=f"{pair[0]:g}×{pair[1]:g}"
+                if token in s:
+                    observed.add(pair)
+        ck("10B_all_direct_registry_sections_present",observed==expected)
     elif instance_sections and instance_sections.get("mode")=="DIRECT_LOCKED_WIDTH_PARTIAL_THICKNESS_WITH_PRODUCTION_COMPLETION":
         fam=instance_sections["family_reference_section_mm"]
         ck("10_registry_family_reference_binding",near(fam["width"],w) and near(fam["thickness"],h))
@@ -218,6 +233,21 @@ def main():
             measured_mean=sum(float(x["width_mm"]) for x in rows)/len(rows)
             ck("IS103_report_width_mean_reconciles",
                near(measured_mean,instance_sections["family_reference_section_mm"]["width"],0.05))
+
+    hr=d.get("historical_repair_contract")
+    if hr:
+        ck("HR01_semantic_contract_preserved",c.get("historical_repair_contract")==hr)
+        ck("HR02_current_orientation_flipped",hr.get("current_orientation_state")=="HISTORICAL_REPAIR_FLIPPED")
+        ck("HR03_original_orientation_unresolved",hr.get("original_963_top_bottom_orientation")=="UNRESOLVED")
+        ck("HR04_orientation_metadata_no_variant",hr.get("geometry_variant_created") is False and instance_sections.get("geometry_variant_count")==0)
+        mt=hr.get("mortise_trace",{})
+        ck("HR05_mortise_trace_direct",mt.get("existence")=="DIRECT_EVIDENCE")
+        ck("HR06_mortise_trace_geometry_unresolved",mt.get("exact_geometry")=="UNRESOLVED")
+        ck("HR07_mortise_trace_function_unresolved",mt.get("current_structural_function")=="UNRESOLVED")
+        ck("HR08_no_canonical_body_cut",mt.get("canonical_body_cut") is False and c["body"]["joinery_cut_count"]==0)
+        ck("HR09_trace_metadata_classification",mt.get("classification")=="HISTORICAL_REPAIR_TRACE_METADATA")
+        ck("HR10_metadata_does_not_change_geometry",c["semantic_geometry_signature"]==rs["semantic_geometry_signature"] and c["body"]==rs["body"])
+        ck("HR11_required_orientation_panel","HISTORICAL_ORIENTATION_BOUNDARY" in get_review_contract(d)["required_panels"])
 
     rc=get_review_contract(d); panels=rc["required_panels"]; review=Path(a.review_dir)
     ck("26_required_panels_complete",all((review/(x+".png")).exists() and (review/(x+".png")).stat().st_size>1000 for x in panels))

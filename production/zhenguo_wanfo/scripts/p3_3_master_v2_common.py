@@ -328,6 +328,36 @@ def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
         ]
         text_page(review/"END_SECTION.png","MASTER V2 / END SECTION + INSTANCE SECTIONS",lines)
 
+    if "4_INSTANCE_SECTION_MAPPING" in required:
+        if not instance_sections:
+            raise ValueError("4-instance section panel requires instance_section_binding_contract")
+        fam=instance_sections["family_reference_section_mm"]
+        lines=[
+          f'PROJECT REFERENCE: {fam["width"]:.2f} x {fam["thickness"]:.1f} mm / REFERENCE ONLY',
+          '4/4 WIDTH + THICKNESS DIRECT_MEASURED:',
+        ]
+        for x in instance_sections.get("instances",[]):
+            lines.append(f'{x["fixture_id"]} / {x["location"]}: {x["width_mm"]:.1f} x {x["thickness_mm"]:.1f} mm / DIRECT_MEASURED')
+        lines += [
+          '252.25 mm = PROJECT_DERIVED_REFERENCE / NOT SOURCE-PUBLISHED FAMILY MEAN',
+          'Direct instance sections MUST NOT collapse to project reference'
+        ]
+        text_page(review/"4_INSTANCE_SECTION_MAPPING.png","由额 / 4 INSTANCE SECTION MAPPING",lines)
+
+    if "HISTORICAL_ORIENTATION_BOUNDARY" in required:
+        hr=d.get("historical_repair_contract")
+        if not hr:
+            raise ValueError("historical-orientation panel requires historical_repair_contract")
+        text_page(review/"HISTORICAL_ORIENTATION_BOUNDARY.png","由额 / HISTORICAL ORIENTATION BOUNDARY",[
+          f'CURRENT STATE: {hr["current_orientation_state"]}',
+          f'ORIGINAL 963 TOP/BOTTOM: {hr["original_963_top_bottom_orientation"]}',
+          f'MORTISE TRACE EXISTENCE: {hr["mortise_trace"]["existence"]}',
+          f'EXACT TRACE GEOMETRY: {hr["mortise_trace"]["exact_geometry"]}',
+          f'CURRENT STRUCTURAL FUNCTION: {hr["mortise_trace"]["current_structural_function"]}',
+          'CANONICAL BODY CUT: FALSE / old traces are metadata only',
+          'Historical orientation metadata MUST NOT create a Geometry Variant'
+        ])
+
     if "12_INSTANCE_WIDTH_MAPPING" in required:
         if not instance_sections:
             raise ValueError("12-instance width panel requires instance_section_binding_contract")
@@ -360,14 +390,24 @@ def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
         text_page(review/"THICKNESS_EVIDENCE_BOUNDARY.png","阑额 / THICKNESS EVIDENCE BOUNDARY",lines)
 
     if "SOURCE_AND_RECONSTRUCTION_BOUNDARY" in required:
-        text_page(review/"SOURCE_AND_RECONSTRUCTION_BOUNDARY.png","阑额 / SOURCE + RECONSTRUCTION BOUNDARY",[
-          'EVIDENCE LOCKED: identity / count / 12 direct widths / 4 direct thicknesses',
-          'PRODUCTION COMPLETION: 8 thickness values = 105 mm / replaceable / non-historical',
-          'A2 LOCKED: no pu-paifang / corner projection none',
-          'PROJECT RULE: 1000 mm Master reference / column-center assembly span',
-          'NOT CLAIMED: exact 963 section / concealed timber full length',
-          'NOT CLAIMED: exact mortise-tenon / end cuts / penetration depth'
-        ])
+        if d.get("component_name_zh")=="由额":
+            text_page(review/"SOURCE_AND_RECONSTRUCTION_BOUNDARY.png","由额 / SOURCE + RECONSTRUCTION BOUNDARY",[
+              'EVIDENCE LOCKED: identity / 4 locations / 4 direct sections',
+              'EVIDENCE LOCKED: current historical-repair flip / old mortise trace existence',
+              'PROJECT RULE: 1000 mm Master reference / 252.25 project-derived width reference',
+              'ASSEMBLY RULE: production length endpoint-derived / historical full length UNKNOWN',
+              'NOT CLAIMED: exact 963 section / original top-bottom orientation',
+              'NOT CLAIMED: exact mortise-tenon / trace geometry / penetration depth'
+            ])
+        else:
+            text_page(review/"SOURCE_AND_RECONSTRUCTION_BOUNDARY.png","阑额 / SOURCE + RECONSTRUCTION BOUNDARY",[
+              'EVIDENCE LOCKED: identity / count / 12 direct widths / 4 direct thicknesses',
+              'PRODUCTION COMPLETION: 8 thickness values = 105 mm / replaceable / non-historical',
+              'A2 LOCKED: no pu-paifang / corner projection none',
+              'PROJECT RULE: 1000 mm Master reference / column-center assembly span',
+              'NOT CLAIMED: exact 963 section / concealed timber full length',
+              'NOT CLAIMED: exact mortise-tenon / end cuts / penetration depth'
+            ])
 
     endpoint_results=resolve_endpoint_fixtures(d)
     if "DIMENSION_AND_PARAMETRIC_LENGTH" in required:
@@ -450,6 +490,7 @@ def build(definition,asset,semantic,review_dir=None,length_mm=None,width_mm=None
       "registry_role_counts":d.get("registry_role_counts"),
       "assembly_semantics":d.get("assembly_semantics"),
       "source_numeric_conflict":d.get("source_numeric_conflict"),
+      "historical_repair_contract":d.get("historical_repair_contract"),
       "instance_section_binding_contract":d.get("instance_section_binding_contract"),
       "reconstruction_policy":d.get("reconstruction_policy"),
       "endpoint_resolver_contract":d.get("endpoint_resolver_contract"),

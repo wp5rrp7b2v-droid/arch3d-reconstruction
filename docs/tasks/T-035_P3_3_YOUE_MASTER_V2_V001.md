@@ -590,3 +590,117 @@ Only after that separate authorization may:
 - first-article evidence be generated.
 
 First-article acceptance, formalization, Catalog/V008 binding, merge, Stage2, and T-018 resume remain separate authorization boundaries unless explicitly delegated later.
+
+
+## 21. D-158 engineering execution
+
+Product Owner explicitly authorized **“开始 T-035 工程执行”** on 2026-09-26.
+
+Authorized:
+- production branch `codex/t035-p3-3-youe-master-v2-v001`
+- Draft PR
+- Definition finalization
+- GitHub Actions / Blender 4.5.13
+- minimal generic shared Master V2 extension if required by the locked contract
+- first-article evidence generation
+
+Not authorized:
+- first-article acceptance
+- formalization
+- Catalog/V008 binding
+- PR Ready/merge
+- closure
+- Stage2
+- T-018 resume
+
+## 22. D-159 first-article acceptance
+
+Product Owner approved the T-035 first article on 2026-09-26.
+
+Canonical engineering evidence:
+- Run `36231069458` = **SUCCESS**
+- validation = **97/97 PASS**
+- first-article Artifact = `10903011230`
+- first-article Artifact ZIP SHA-256 = `d664456279065be2d7db01f373dbd60c9744f957e04d0f90636fb23d6731deb7`
+- canonical .blend SHA-256 = `6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16`
+- Semantic JSON SHA-256 = `7e1d0a132f54680fab11b8d373461dba0931552f60e10e55356d9a86471d392a`
+- semantic geometry signature = `4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8`
+- Review Board SHA-256 = `8c5e32edadf442a316daa7c120a1615f49ba13268824e0c91da754082adb2e62`
+- Validation JSON SHA-256 = `f7422adec32e98d51457f33c22128677704569bdf493ca76d8b2a9fd164a1fb8`
+
+Shared Master V2 infrastructure regressions:
+- T-025 = 45/45 PASS
+- T-026 = 48/48 PASS
+- T-027 = 63/63 PASS
+- T-028 = 84/84 PASS
+- T-029 = 86/86 PASS
+- T-030 = 98/98 PASS
+- T-033 = 91/91 PASS
+- T-034 = 126/126 PASS
+
+Accepted boundaries:
+- one shared Master / four direct-section instances / zero Geometry Variant
+- `HISTORICAL_REPAIR_FLIPPED` remains semantic metadata
+- original 963 top/bottom orientation remains `UNRESOLVED`
+- old mortise-trace existence remains direct evidence
+- exact mortise geometry remains unresolved and is not cut into canonical body
+- 252.25 mm remains PROJECT_DERIVED_REFERENCE only
+- 1000 mm remains non-historical Master reference only
+
+Status after D-159:
+**FIRST ARTICLE APPROVED / FORMALIZATION NOT AUTHORIZED / PR #31 REMAINS DRAFT**
+
+A separate Product Owner authorization is required before exact accepted-artifact formalization, Catalog/V008 binding, Registry Excel sync, final regression, PR Ready/merge, or closure.
+
+## 23. D-160 formalization authorization
+
+Product Owner authorized the post-approval formalization step on 2026-09-26.
+
+Authorized scope:
+- exact-byte materialization of accepted Semantic / Review Board / Validation from Artifact `10903011230`;
+- verify accepted canonical .blend SHA but keep .blend Actions Artifact + local-only / NOT GIT;
+- register `CMP-FRAME-YOUE-001_MASTER` as Stage1 approved Master #19;
+- bind all 4 由额 V008/CURRENT rows to the approved Master;
+- Registry Excel Sync;
+- latest-head final Master V2 regression.
+
+Target progress after binding:
+- Stage1 approved Masters = **19/28 = 67.9%**
+- Master-covered Registry records = **147**
+- 由额 bindings = **4/4**
+
+Not authorized:
+- PR #31 Ready/merge;
+- T-035 closure;
+- next component;
+- Stage2;
+- T-018 resume.
+
+
+## 24. D-160 exact materialization checkpoint
+
+One-time accepted-artifact materialization workflow Run `36233327371` completed **SUCCESS**.
+
+Verified source:
+- accepted Run `36231069458`
+- accepted Artifact `10903011230`
+- Artifact ZIP SHA-256 `d664456279065be2d7db01f373dbd60c9744f957e04d0f90636fb23d6731deb7`
+
+Exact accepted identities verified before repository materialization:
+- canonical .blend SHA-256 `6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16` — verified only; remains Actions Artifact + local-only / NOT GIT
+- Semantic SHA-256 `7e1d0a132f54680fab11b8d373461dba0931552f60e10e55356d9a86471d392a`
+- Review Board SHA-256 `8c5e32edadf442a316daa7c120a1615f49ba13268824e0c91da754082adb2e62`
+- Validation SHA-256 `f7422adec32e98d51457f33c22128677704569bdf493ca76d8b2a9fd164a1fb8`
+
+Formalization commit:
+- `bfd760514870717187aa42b5dd8d4e93a6757045`
+
+Binding result:
+- Catalog = 19 approved
+- 由额 V008/CURRENT = 4/4 `APPROVED_MASTER_AVAILABLE`
+- master reference = `CMP-FRAME-YOUE-001_MASTER`
+- Master-covered Registry records = 147
+- Stage1 = 19/28 = 67.9%
+- CURRENT == V008 at the authoritative JSON layer
+
+Because the formalization commit was pushed by GitHub Actions using the repository token, it cannot itself trigger the required downstream workflows. This human-authored checkpoint commit intentionally triggers Registry Excel Sync and latest-head Master V2 regression without changing geometry, evidence, or approval authority.
