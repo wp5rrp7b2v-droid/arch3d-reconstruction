@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-036",
-  "status": "TWENTY_APPROVED / T036 FORMALIZED / PR #32 OPEN",
+  "task": "T-036 CLOSED",
+  "status": "TWENTY_APPROVED / T036 CLOSED / MERGED_TO_MAIN",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -600,7 +600,7 @@
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-170",
       "formalization_authority": "D-171",
-      "publication_status": "FORMALIZED / PR #32 OPEN",
+      "publication_status": "CLOSED / MERGED_TO_MAIN",
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL ONLY / NOT GIT",
       "canonical_asset_sha256": "7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66",
       "semantic_sha256": "c9a92d853f61ba8569262a6ec161d3c0a6a5f440b8f500d5c6748fff2257c1b7",
@@ -629,7 +629,7 @@
       "depth_policy": {
         "a1_top_depth": "UNKNOWN",
         "a1_bottom_depth": "UNKNOWN",
-        "production_top_depth_mm": 240.0,
+        "production_top_depth_mm": 240,
         "production_bottom_depth_mm": 165.1,
         "classification": "PARAMETRIC_COMPLETION / RECONSTRUCTED_DESIGN / REPLACEABLE / NOT_A1_DIRECT"
       },
@@ -652,7 +652,25 @@
         "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
         "review_board_count": 1,
         "required_review_panel_count": 6
-      }
+      },
+      "merge_commit_sha": "0dbec3a2c34b1a6dd94940a807d65fd915ab9d81",
+      "final_verified_human_head": "e7a6013981941e3e6d22d84e867e37fcb43566bd",
+      "latest_pr_head": "e7a6013981941e3e6d22d84e867e37fcb43566bd",
+      "latest_pr_head_delta": "REBASING TO LATEST MAIN / FINAL REGRESSION PASS",
+      "final_regression_run": 36249880372,
+      "final_regression_result": "SUCCESS",
+      "final_regression_validation": "37/37 PASS",
+      "final_regression_geometry_signature": "7b3517bcbb2007954d11ea18b75e9103f3a6b4e0d3a6e46e97c05fef5ba449f6",
+      "final_regenerated_blend_sha256": "2c59155964cf4adeee59f288a87d957ea6ff22ba184cbfcba095c7c555b4ed63",
+      "final_regenerated_blend_promoted_to_canonical": false,
+      "final_regression_artifact_id": 10908049227,
+      "final_regression_artifact_zip_sha256": "1daf1a576b944ce5317125f113d37b2acbd562493a45acaeea748e8ed8e65167",
+      "final_shared_regression_artifact_id": 10907864510,
+      "final_shared_regression_artifact_zip_sha256": "25b5706f715ab4fb9f9aa5b1e98316cd49781491c423907e0dccd92b56266904",
+      "excel_sync_run": 36249880454,
+      "closure_decision_id": "D-176",
+      "close_date": "2026-09-26",
+      "main_verified": true
     }
   ],
   "approved_master_count": 20

@@ -492,3 +492,50 @@ Not authorized:
 - next component
 - Stage2
 - T-018 resume
+
+## 22. D-176 Post-Merge Closure
+
+T-036 post-merge closure cross-check completed on 2026-09-26.
+
+Merged authority:
+- PR #32 = MERGED
+- merge commit = `0dbec3a2c34b1a6dd94940a807d65fd915ab9d81`
+- final verified PR head = `e7a6013981941e3e6d22d84e867e37fcb43566bd`
+
+Post-merge main verification:
+- Catalog = 20 approved
+- Stage1 = 20/28 = 71.4%
+- pending Master types = 8
+- Master-covered Registry records = 159
+- 补间铺作底斗 = 12/12 `APPROVED_MASTER_AVAILABLE`
+- master reference = `CMP-DOU-BOTTOM-LONGKAI-001_MASTER`
+- CURRENT == V008
+- accepted Semantic / Validation / Review Board Git blobs remain exact materialized bytes
+
+Final post-rebase regression:
+- T-036 Run `36249880372` = SUCCESS
+- validation = 37/37 PASS
+- semantic geometry signature = `7b3517bcbb2007954d11ea18b75e9103f3a6b4e0d3a6e46e97c05fef5ba449f6` = approved signature
+- regenerated blend SHA-256 = `2c59155964cf4adeee59f288a87d957ea6ff22ba184cbfcba095c7c555b4ed63`
+- final regression Artifact = `10908049227` / ZIP SHA-256 `1daf1a576b944ce5317125f113d37b2acbd562493a45acaeea748e8ed8e65167`
+- final legacy-dou regression Artifact = `10907864510` / ZIP SHA-256 `25b5706f715ab4fb9f9aa5b1e98316cd49781491c423907e0dccd92b56266904`
+- CMP-LUDOU-COLUMN-001 / CMP-DOU-SINGLE-LONGKAI-001 / CMP-DOU-INTERACTIVE-001 = PASS
+
+Canonical authority remains the D-170 accepted first article:
+- canonical .blend SHA-256 = `7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66`
+- final-regression regenerated blend is validation evidence only and is not promoted to canonical.
+
+Historical/evidence boundaries remain unchanged:
+- A1 bottom-dou top/bottom depth = UNKNOWN
+- 240.0 / 165.1 mm = PARAMETRIC_COMPLETION / RECONSTRUCTED_DESIGN / REPLACEABLE / NOT_A1_DIRECT
+- exact curvature = UNKNOWN
+- dou ears / slots / cavities / mortise-tenon remain DEFERRED
+- observed means are not proven 963 design dimensions
+
+T-036 status: **CLOSED**.
+
+Next Coverage Matrix candidate:
+- priority 15 = 瓜子栱族
+- small and large records share a parametric 栱 family boundary
+- next allowed activity is Source Readiness + D-076 only
+- no engineering T-task, Blender, PR or Stage2 authorization is created by D-176.
