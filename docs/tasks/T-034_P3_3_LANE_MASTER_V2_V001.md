@@ -604,3 +604,160 @@ Only after that separate authorization may:
 - first-article evidence be generated.
 
 First-article acceptance, formalization, Catalog/V008 approved binding, PR merge, Stage1 PASS, Stage2, and T-018 resume remain separate authorization boundaries unless explicitly delegated later.
+
+
+## 21. Engineering execution authorization｜D-150
+
+Product Owner explicitly authorized **开始 T-034 工程执行** on 2026-09-26.
+
+Authorized:
+- engineering execution = true
+- Blender / GitHub Actions execution = true
+- production branch = `codex/t034-p3-3-lane-master-v2-v001`
+- Draft PR creation = true
+- execution Definition creation/finalization = true
+- minimal generic shared Master V2 extension only if required to express the D-149 dual-thickness evidence/production contract
+
+If shared infrastructure changes, mandatory regression:
+- T-025 剳牵
+- T-026 槫
+- T-027 托脚
+- T-028 叉手
+- T-029 蜀柱
+- T-030 大角梁
+- T-033 子角梁
+
+Current stop boundary:
+- FIRST ARTICLE EVIDENCE READY / PRODUCT OWNER REVIEW
+
+Still not authorized:
+- first-article acceptance
+- formalization
+- Catalog/V008 approved binding
+- PR merge
+- Stage1 PASS
+- Stage2
+- T-018 resume
+
+## 22. First-article engineering checkpoint｜PENDING PRODUCT OWNER REVIEW
+
+GitHub Actions first article:
+- Run: `36222778768` / run #93
+- conclusion: **SUCCESS**
+- reviewed head: `7daedf91d161f26235dd69e095ff93291a1e9fb2`
+- Draft PR: **#30**
+- formal artifact: `10899808683`
+- formal artifact ZIP SHA-256: `8034aec4b79740d52b68b162bcf04c0a1ce0b81e2ddeff9cd352e32e11985e88`
+- shared regression artifact: `10899644135`
+- shared regression ZIP SHA-256: `7273a13ce96b166879cc92d1c808e495f459960df6653dc392a9efcc6a6d5949`
+
+Formal first-article evidence:
+- validation: **PASS / 120 checks**
+- Blender: **4.5.13 LTS**
+- canonical .blend SHA-256: `b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d`
+- semantic geometry signature: `d1117d15868e5f9df37fc679b9c7cc6b0732ef79bcfef6b5e15c4a91fff94ed5`
+- Semantic JSON SHA-256: `a47651910a96543f1426cc3293ca787e8b373b47dc481056f45b4e198744e083`
+- Validation JSON SHA-256: `ec554a490ca2a9f112be6146d013037f7b543f035127d4c7e9108c563ca0882f`
+- Review Board SHA-256: `29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef`
+
+Locked evidence/geometry checks confirmed:
+- 12/12 location-labelled widths preserved;
+- 4/12 evidence thickness = 105 / DIRECT_MEASURED;
+- 8/12 evidence thickness = null, production thickness = 105 / PARAMETRIC_COMPLETION / replaceable / non-historical;
+- same-geometry/different-evidence pair S_C vs E_C PASS;
+- one shared Master / zero Geometry Variant;
+- TEST-X 1300mm and TEST-Y 1700mm endpoint/span fixtures PASS;
+- 1000mm reference length does not leak into instance placement;
+- no unsupported joinery and no false 963 section claim;
+- Review Board visibly identifies component as “阑额” and exposes the dual-thickness evidence boundary.
+
+Shared Master V2 regression after generic infrastructure extension:
+- T-025 PASS / 45 checks
+- T-026 PASS / 48 checks
+- T-027 PASS / 63 checks
+- T-028 PASS / 84 checks
+- T-029 PASS / 86 checks
+- T-030 PASS / 98 checks
+- T-033 PASS / 91 checks
+
+Current boundary:
+**ENGINEERING COMPLETE / FIRST ARTICLE READY FOR PRODUCT OWNER REVIEW**
+
+Not authorized:
+- Product Owner first-article acceptance;
+- formalization;
+- Catalog / V008 approved binding;
+- PR #30 merge;
+- Stage2;
+- T-018 resume.
+
+## 23. Product Owner first-article approval｜D-151
+
+Product Owner formally approved the T-034 阑额 first article on 2026-09-26.
+
+Accepted evidence:
+- Run `36222778768` = SUCCESS
+- Validation = **120 / 120 PASS**
+- reviewed production head = `7daedf91d161f26235dd69e095ff93291a1e9fb2`
+- canonical .blend SHA-256 = `b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d`
+- semantic geometry signature = `d1117d15868e5f9df37fc679b9c7cc6b0732ef79bcfef6b5e15c4a91fff94ed5`
+- Review Board SHA-256 = `29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef`
+- first-article Artifact = `10899808683`
+- shared-regression Artifact = `10899644135`
+
+Approval scope:
+- first article = **PRODUCT OWNER APPROVED**
+- geometry/evidence dual-thickness contract accepted
+- shared Master V2 regression result accepted
+
+Still not authorized:
+- formalization
+- Catalog / V008 approved binding
+- PR #30 merge
+- Stage2
+- T-018 resume
+
+
+
+## 24. D-152 formalization authorization
+
+Product Owner authorized T-034 formalization + Catalog/V008 binding on 2026-09-26.
+
+Formalization rules:
+- materialize exact D-151 accepted Semantic / Validation / Review Board from Artifact 10899808683;
+- canonical .blend remains Actions Artifact + local only / not Git;
+- Catalog candidate becomes 18 approved Masters;
+- V008/CURRENT 阑额 binding = 12/12 to CMP-FRAME-LANE-001_MASTER;
+- Stage1 candidate = 18/28 = 64.3%;
+- Master-covered Registry rows candidate = 143;
+- derived Excel sync and latest-head Master V2 regression are mandatory.
+
+Still not authorized:
+- PR #30 merge;
+- next component;
+- Stage2;
+- T-018 resume.
+
+
+## 25. D-152 materialization result
+
+Exact accepted-artifact materialization:
+- one-time materialization Run: `36225008816` — **SUCCESS**
+- materialization commit: `be698ac940902bfac6dde7a9b6b27394d3a7e855`
+- source first-article Run: `36222778768`
+- source Artifact: `10899808683`
+- canonical .blend SHA-256 verified but **NOT COMMITTED TO GIT**: `b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d`
+- exact Semantic SHA-256: `a47651910a96543f1426cc3293ca787e8b373b47dc481056f45b4e198744e083`
+- exact Validation SHA-256: `ec554a490ca2a9f112be6146d013037f7b543f035127d4c7e9108c563ca0882f`
+- exact Review Board SHA-256: `29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef`
+- one-time workflow/helper removed in the same materialization commit.
+
+Formalization candidate:
+- Catalog approved count: **18**
+- V008/CURRENT 阑额 binding: **12/12**
+- approved-Master-covered Registry records: **143**
+- Stage1 candidate: **18/28 = 64.3%**
+
+Latest-head final Master V2 validation and Registry Excel Sync are triggered by the following Product Owner-authored synchronization commit.
+
+PR #30 merge remains unauthorized.

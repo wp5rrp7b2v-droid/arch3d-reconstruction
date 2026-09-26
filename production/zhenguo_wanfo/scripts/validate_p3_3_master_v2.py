@@ -109,6 +109,16 @@ def main():
         ck("10A_family_mean_reference_only",
            instance_sections.get("family_reference_only") is True and
            instance_sections.get("family_mean_must_not_overwrite_instances") is True)
+    elif instance_sections and instance_sections.get("mode")=="DIRECT_LOCKED_WIDTH_PARTIAL_THICKNESS_WITH_PRODUCTION_COMPLETION":
+        fam=instance_sections["family_reference_section_mm"]
+        ck("10_registry_family_reference_binding",near(fam["width"],w) and near(fam["thickness"],h))
+        ck("10A_width_mapping_direct_locked",
+           instance_sections.get("width_mapping")=="DIRECT_LOCKED_12_OF_12" and
+           instance_sections.get("family_mean_must_not_overwrite_instances") is True)
+        ck("10B_partial_thickness_contract",
+           instance_sections.get("direct_thickness_count")==4 and
+           instance_sections.get("unmeasured_thickness_count")==8 and
+           instance_sections.get("production_ready_thickness_count")==12)
     elif section_binding and section_binding.get("mode")=="SEMANTIC_MEASUREMENT_STATE_WITH_MASTER_MEAN":
         measured_token=section_binding["measured_full_section_token"]
         unknown_token=section_binding["unknown_thickness_token"]
@@ -176,6 +186,38 @@ def main():
            len({load(idir/(m["fixture_id"]+".json"))["master_id"] for m in instance_sections.get("instances",[])})==1)
         ck("IS93_mapping_immutable_without_decision",
            instance_sections.get("direct_mapping_replaceable_without_new_decision") is False)
+
+        if instance_sections.get("mode")=="DIRECT_LOCKED_WIDTH_PARTIAL_THICKNESS_WITH_PRODUCTION_COMPLETION":
+            rows=instance_sections.get("instances",[])
+            direct=[x for x in rows if x.get("thickness_classification")=="DIRECT_MEASURED"]
+            completion=[x for x in rows if x.get("thickness_classification")=="PARAMETRIC_COMPLETION"]
+            ck("IS94_direct_width_count",len(rows)==12 and all(x.get("width_classification")=="DIRECT_MEASURED" for x in rows))
+            ck("IS95_direct_thickness_count",len(direct)==4)
+            ck("IS96_completion_thickness_count",len(completion)==8)
+            ck("IS97_direct_thickness_integrity",
+               all(near(x.get("evidence_thickness_mm"),105) and near(x.get("production_thickness_mm"),105) and near(x.get("thickness_mm"),105) for x in direct))
+            ck("IS98_completion_thickness_integrity",
+               all(x.get("evidence_thickness_mm") is None and near(x.get("production_thickness_mm"),105) and near(x.get("thickness_mm"),105) and x.get("replaceable") is True and x.get("historical_claim") is False for x in completion))
+            ck("IS99_completion_basis",
+               instance_sections.get("completion_basis")=="4 directly measured specimens + report family reference")
+            pair=instance_sections.get("same_geometry_different_evidence_regression",{})
+            da=next((x for x in rows if x.get("fixture_id")==pair.get("direct_fixture_id")),None)
+            cb=next((x for x in rows if x.get("fixture_id")==pair.get("completion_fixture_id")),None)
+            ck("IS100_evidence_regression_pair_declared",
+               da is not None and cb is not None and
+               da.get("thickness_classification")=="DIRECT_MEASURED" and
+               cb.get("thickness_classification")=="PARAMETRIC_COMPLETION" and
+               near(da["width_mm"],cb["width_mm"]) and near(da["thickness_mm"],cb["thickness_mm"]))
+            sa=load(idir/(da["fixture_id"]+".json")); sb=load(idir/(cb["fixture_id"]+".json"))
+            ck("IS101_same_geometry_different_evidence",
+               sa["body"]==sb["body"] and
+               sa["semantic_geometry_signature"]==sb["semantic_geometry_signature"] and
+               da.get("thickness_classification")!=cb.get("thickness_classification"))
+            ck("IS102_zero_variant_despite_evidence_difference",
+               instance_sections.get("geometry_variant_count")==0)
+            measured_mean=sum(float(x["width_mm"]) for x in rows)/len(rows)
+            ck("IS103_report_width_mean_reconciles",
+               near(measured_mean,instance_sections["family_reference_section_mm"]["width"],0.05))
 
     rc=get_review_contract(d); panels=rc["required_panels"]; review=Path(a.review_dir)
     ck("26_required_panels_complete",all((review/(x+".png")).exists() and (review/(x+".png")).stat().st_size>1000 for x in panels))
@@ -277,8 +319,11 @@ def main():
             ck("EP91_fixture_direction_policy",True)
         ck("EP92_reference_length_not_leaked",all(not near(x,gc["canonical_reference_length_mm"]) for x in lengths))
         ck("EP93_same_master_section",near(cd[1],w) and near(cd[2],h))
-        ck("EP94_required_panel","PLACEMENT_AND_ENDPOINT_LOGIC" in panels)
-        ck("EP95_reconstruction_boundary_panel","SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY" in panels)
+        ck("EP94_required_panel",
+           "PLACEMENT_AND_ENDPOINT_LOGIC" in panels or endpoint.get("review_panel_required") is False)
+        ck("EP95_reconstruction_boundary_panel",
+           "SOURCE_AND_RECONSTRUCTION_DESIGN_BOUNDARY" in panels or
+           "SOURCE_AND_RECONSTRUCTION_BOUNDARY" in panels)
         ck("EP96_semantic_contract_preserved",c.get("endpoint_resolver_contract")==endpoint)
         ck("EP97_reconstruction_policy_preserved",c.get("reconstruction_policy")==d.get("reconstruction_policy"))
 

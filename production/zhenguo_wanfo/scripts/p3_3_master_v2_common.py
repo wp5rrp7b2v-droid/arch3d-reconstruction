@@ -314,15 +314,60 @@ def render_summaries(d,review_dir,length_mm,width_mm,thickness_mm):
         lines=[
           f'FAMILY REFERENCE ONLY: {fam["width"]:.1f} x {fam["thickness"]:.1f} mm',
           'ONE SHARED MASTER / ZERO GEOMETRY VARIANT',
-          'DIRECT INSTANCE SECTIONS:'
+          'INSTANCE SECTIONS:'
         ]
         for x in instance_sections.get("instances",[]):
-            lines.append(f'{x["fixture_id"]} / {x["location"]}: {x["width_mm"]:.1f} x {x["thickness_mm"]:.1f} mm / DIRECT MEASURED')
+            ev=x.get("evidence_thickness_mm",x.get("thickness_mm"))
+            prod=x.get("production_thickness_mm",x.get("thickness_mm"))
+            cls=x.get("thickness_classification","DIRECT_MEASURED")
+            ev_text="UNKNOWN/null" if ev is None else f'{float(ev):.1f} mm'
+            lines.append(f'{x["fixture_id"]} / {x["location"]}: width {x["width_mm"]:.1f} / production thickness {float(prod):.1f} mm / {cls} / evidence thickness {ev_text}')
         lines += [
-          'Family mean MUST NOT overwrite direct instance measurements',
+          'Family mean MUST NOT overwrite direct instance width measurements',
           'Rectangular outline is Stage1 bounded-envelope representation'
         ]
         text_page(review/"END_SECTION.png","MASTER V2 / END SECTION + INSTANCE SECTIONS",lines)
+
+    if "12_INSTANCE_WIDTH_MAPPING" in required:
+        if not instance_sections:
+            raise ValueError("12-instance width panel requires instance_section_binding_contract")
+        fam=instance_sections["family_reference_section_mm"]
+        lines=[
+          f'FAMILY WIDTH REFERENCE: {fam["width"]:.1f} mm / REFERENCE ONLY',
+          f'INSTANCE COUNT: {len(instance_sections.get("instances",[]))}',
+          'DIRECT LOCATION-LABELLED WIDTHS:'
+        ]
+        for x in instance_sections.get("instances",[]):
+            lines.append(f'{x["fixture_id"]} / {x["location"]}: {x["width_mm"]:.1f} mm')
+        lines.append('Family mean MUST NOT overwrite instance widths')
+        text_page(review/"12_INSTANCE_WIDTH_MAPPING.png","阑额 / 12 INSTANCE WIDTH MAPPING",lines)
+
+    if "THICKNESS_EVIDENCE_BOUNDARY" in required:
+        if not instance_sections:
+            raise ValueError("thickness evidence panel requires instance_section_binding_contract")
+        rows=instance_sections.get("instances",[])
+        direct=[x for x in rows if x.get("thickness_classification","DIRECT_MEASURED")=="DIRECT_MEASURED"]
+        completion=[x for x in rows if x.get("thickness_classification")=="PARAMETRIC_COMPLETION"]
+        pair=instance_sections.get("same_geometry_different_evidence_regression",{})
+        lines=[
+          f'DIRECT THICKNESS: {len(direct)}/{len(rows)} / evidence=105 / production=105 mm',
+          f'UNMEASURED THICKNESS: {len(completion)}/{len(rows)} / evidence=UNKNOWN/null',
+          'PRODUCTION COMPLETION: 105 mm / PARAMETRIC_COMPLETION',
+          'Completion is REPLACEABLE / historical_claim=false',
+          'Geometry may match while evidence classification remains different',
+          f'Regression pair: {pair.get("direct_fixture_id","N/A")} DIRECT vs {pair.get("completion_fixture_id","N/A")} COMPLETION'
+        ]
+        text_page(review/"THICKNESS_EVIDENCE_BOUNDARY.png","阑额 / THICKNESS EVIDENCE BOUNDARY",lines)
+
+    if "SOURCE_AND_RECONSTRUCTION_BOUNDARY" in required:
+        text_page(review/"SOURCE_AND_RECONSTRUCTION_BOUNDARY.png","阑额 / SOURCE + RECONSTRUCTION BOUNDARY",[
+          'EVIDENCE LOCKED: identity / count / 12 direct widths / 4 direct thicknesses',
+          'PRODUCTION COMPLETION: 8 thickness values = 105 mm / replaceable / non-historical',
+          'A2 LOCKED: no pu-paifang / corner projection none',
+          'PROJECT RULE: 1000 mm Master reference / column-center assembly span',
+          'NOT CLAIMED: exact 963 section / concealed timber full length',
+          'NOT CLAIMED: exact mortise-tenon / end cuts / penetration depth'
+        ])
 
     endpoint_results=resolve_endpoint_fixtures(d)
     if "DIMENSION_AND_PARAMETRIC_LENGTH" in required:

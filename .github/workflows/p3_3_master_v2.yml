@@ -197,7 +197,7 @@ jobs:
             --output "$VALIDATION" \
             "${EXTRA[@]}"
 
-      - name: Shared V2 infrastructure regression (T-025 + T-026 + T-027 + T-028 + T-029)
+      - name: Shared V2 infrastructure regression (T-025..T-030 + T-033)
         shell: bash
         run: |
           set -euo pipefail
@@ -212,7 +212,9 @@ jobs:
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-PURLIN-001/CMP-FRAME-PURLIN-001_MASTER_DEFINITION_V001.json \
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOJIAO-001/CMP-FRAME-TUOJIAO-001_MASTER_DEFINITION_V001.json \
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-CHASHOU-001/CMP-FRAME-CHASHOU-001_MASTER_DEFINITION_V001.json \
-            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-SHUZHU-001/CMP-FRAME-SHUZHU-001_MASTER_DEFINITION_V001.json
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-SHUZHU-001/CMP-FRAME-SHUZHU-001_MASTER_DEFINITION_V001.json \
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-DAJIAOLIANG-001/CMP-FRAME-DAJIAOLIANG-001_MASTER_DEFINITION_V001.json \
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZIJIAOLIANG-001/CMP-FRAME-ZIJIAOLIANG-001_MASTER_DEFINITION_V001.json
           do
             KEY="$(python - "$DEF" <<'PY'
           import json,sys
@@ -260,12 +262,36 @@ jobs:
                 --mode build --definition "$DEF" --asset "$RDIR/role_b.blend" --semantic "$RDIR/role_b.json" --role "${REG_ROLES[1]}"
               EXTRA_REG+=(--role-a "$RDIR/role_a.json" --role-b "$RDIR/role_b.json")
             fi
+            EXTRA_INSTANCE=()
+            INSTANCE_COUNT="$(python - "$DEF" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          print(len(d.get("instance_section_binding_contract",{}).get("instances",[])))
+          PY
+            )"
+            if [[ "$INSTANCE_COUNT" -gt 0 ]]; then
+              IDIR="$RDIR/instance_sections"
+              mkdir -p "$IDIR"
+              python - "$DEF" > "$RDIR/instance_sections.txt" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          for x in d.get("instance_section_binding_contract",{}).get("instances",[]):
+              print(x["fixture_id"], x["width_mm"], x["thickness_mm"])
+          PY
+              while read -r FIXTURE_ID WIDTH_MM THICKNESS_MM; do
+                "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$COMMON" -- \
+                  --mode build --definition "$DEF" \
+                  --asset "$IDIR/$FIXTURE_ID.blend" --semantic "$IDIR/$FIXTURE_ID.json" \
+                  --width-mm "$WIDTH_MM" --thickness-mm "$THICKNESS_MM"
+              done < "$RDIR/instance_sections.txt"
+              EXTRA_INSTANCE+=(--instance-section-dir "$IDIR")
+            fi
             python "$VALIDATOR" \
               --definition "$DEF" --canonical "$RDIR/canonical.json" --reopen "$RDIR/reopen.json" \
               --length "$RDIR/length.json" --width "$RDIR/width.json" --thickness "$RDIR/thickness.json" \
               --restore "$RDIR/restore.json" --asset "$RDIR/canonical.blend" --review-dir "$RDIR/review" \
               --board "$RDIR/board.png" --registry "$REGISTRY" --catalog "$CATALOG" --output "$RDIR/validation.json" \
-              "${EXTRA_REG[@]}"
+              "${EXTRA_REG[@]}" "${EXTRA_INSTANCE[@]}"
             echo "SHARED_V2_REGRESSION_PASS $KEY $MID"
           done
 
