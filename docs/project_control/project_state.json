@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R240",
+  "state_revision": "R241",
   "last_updated": "2026-09-26",
   "session_status": "DAILY CLOSE 2026-09-25 / PASS / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / LOCAL SYNC PASS / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
   "phase": {
@@ -22,8 +22,8 @@
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / 由额 SPEC V001 LOCKED D-156 / T-035 CONTRACT DESIGN AUTHORIZED / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / 由额 SPEC V001 LOCKED D-156 / T-035 CONTRACT DESIGN AUTHORIZED / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 CONTRACT LOCKED D-157 / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 CONTRACT LOCKED D-157 / ENGINEERING NOT AUTHORIZED / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "NONE",
     "name": "P3.3 V002 Stage 1",
-    "status": "NO ACTIVE ENGINEERING T-TASK / 18 OF 28 MASTERS APPROVED / 由额 SPEC V001 LOCKED D-156"
+    "status": "NO ACTIVE ENGINEERING T-TASK / 18 OF 28 MASTERS APPROVED / T-035 TASK CONTRACT LOCKED / EXECUTION NOT AUTHORIZED"
   },
   "proposed_next_task": {
     "id": "T-035",
     "name": "P3_3_YOUE_MASTER_V2_V001",
-    "status": "TASK CONTRACT DESIGN AUTHORIZED / NOT CREATED / ENGINEERING EXECUTION NOT AUTHORIZED"
+    "status": "TASK CONTRACT LOCKED / D-157 / WAITING FOR PRODUCT OWNER ENGINEERING EXECUTION AUTHORIZATION"
   },
   "last_completed_task": {
     "id": "T-034",
@@ -524,7 +524,7 @@
       "connector_geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
       "stage_advance": false
     },
-    "next_master_candidate": "由额 / SPEC V001 LOCKED D-156 / T-035 CONTRACT DESIGN AUTHORIZED / ENGINEERING NOT AUTHORIZED",
+    "next_master_candidate": "由额 / T-035 TASK CONTRACT LOCKED D-157 / ENGINEERING NOT AUTHORIZED",
     "t033": {
       "task_id": "T-033",
       "component": "子角梁",
@@ -628,7 +628,7 @@
       "local_sync_status": "REQUIRED"
     },
     "youe": {
-      "status": "SPEC_V001_LOCKED / D-156",
+      "status": "T-035_TASK_CONTRACT_LOCKED / D-157",
       "component": "由额",
       "physical_instance_count": 4,
       "registry_locations": [
@@ -708,7 +708,9 @@
       "mortise_trace_existence": "DIRECT_EVIDENCE",
       "mortise_trace_exact_geometry": "UNRESOLVED",
       "next_task_id": "T-035",
-      "task_contract_design_authorized": true
+      "task_contract_design_authorized": true,
+      "task_id": "T-035",
+      "task_contract": "docs/tasks/T-035_P3_3_YOUE_MASTER_V2_V001.md"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -799,7 +801,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "D-156 locked 由额 Master Spec V001. Next complete step is T-035 Task Contract design/lock only when instructed by Product Owner. Do not create a production branch/PR or run Blender/GitHub Actions before separate engineering execution authorization.",
+  "next_action": "T-035 Task Contract is locked by D-157. Wait for explicit Product Owner instruction '开始 T-035' before creating a production branch/PR or running Blender/GitHub Actions.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1165,7 +1167,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "由额 / SPEC V001 LOCKED D-156 / T-035 CONTRACT DESIGN AUTHORIZED / ENGINEERING NOT AUTHORIZED"
+    "next_master_candidate": "由额 / T-035 TASK CONTRACT LOCKED D-157 / ENGINEERING NOT AUTHORIZED"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -1738,5 +1740,39 @@
     "master_covered_registry_record_count": 143,
     "stage1_master_completion": "18/28 / 64.3%",
     "local_sync_status": "REQUIRED"
+  },
+  "t035": {
+    "status": "TASK_CONTRACT_LOCKED",
+    "decision_id": "D-157",
+    "task_id": "T-035",
+    "task_name": "P3_3_YOUE_MASTER_V2_V001",
+    "component_id": "CMP-FRAME-YOUE-001",
+    "master_id": "CMP-FRAME-YOUE-001_MASTER",
+    "architecture": "MASTER V2 / MINIMAL_SUFFICIENT / DIRECT-SECTION-PARAMETRIC / HISTORICAL-ORIENTATION-AWARE / ASSEMBLY-ENDPOINT-DRIVEN",
+    "physical_instance_count": 4,
+    "geometry_variant_count": 0,
+    "direct_width_count": 4,
+    "direct_thickness_count": 4,
+    "project_derived_reference_width_mm": 252.25,
+    "canonical_reference_length_mm": 1000,
+    "current_orientation_state": "HISTORICAL_REPAIR_FLIPPED",
+    "original_963_top_bottom_orientation": "UNRESOLVED",
+    "mortise_trace_existence": "DIRECT_EVIDENCE",
+    "mortise_trace_exact_geometry": "UNRESOLVED",
+    "shared_regression_if_infra_changes": [
+      "T-025",
+      "T-026",
+      "T-027",
+      "T-028",
+      "T-029",
+      "T-030",
+      "T-033",
+      "T-034"
+    ],
+    "proposed_branch": "codex/t035-p3-3-youe-master-v2-v001",
+    "engineering_execution_authorized": false,
+    "blender_execution_authorized": false,
+    "production_branch_creation_authorized": false,
+    "pr_creation_authorized": false
   }
 }
