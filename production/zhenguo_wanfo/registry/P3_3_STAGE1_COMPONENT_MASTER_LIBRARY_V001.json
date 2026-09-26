@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-034",
-  "status": "EIGHTEEN_APPROVED / T034 CLOSED / PR #30 MERGED",
+  "task": "T-035",
+  "status": "NINETEEN_APPROVED / T035 FORMALIZED / PR #31 OPEN",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -515,7 +515,66 @@
       "final_shared_regression_artifact_id": 10901172033,
       "final_shared_regression_artifact_zip_sha256": "6ceb68a3359ed391c9788150557a339dfbc378d5b51c4d402d867e9a00496188",
       "excel_sync_run": 36225081188
+    },
+    {
+      "component_id": "CMP-FRAME-YOUE-001",
+      "master_id": "CMP-FRAME-YOUE-001_MASTER",
+      "master_version": "V001",
+      "approval_status": "PRODUCT_OWNER_APPROVED",
+      "decision_id": "D-159",
+      "formalization_authority": "D-160",
+      "publication_status": "FORMALIZED / PR #31 OPEN",
+      "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL ONLY / NOT GIT",
+      "canonical_asset_sha256": "6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16",
+      "semantic_sha256": "7e1d0a132f54680fab11b8d373461dba0931552f60e10e55356d9a86471d392a",
+      "validation_sha256": "f7422adec32e98d51457f33c22128677704569bdf493ca76d8b2a9fd164a1fb8",
+      "review_board_sha256": "8c5e32edadf442a316daa7c120a1615f49ba13268824e0c91da754082adb2e62",
+      "semantic_geometry_signature": "4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8",
+      "canonical_section_mm": {
+        "width": 252.25,
+        "thickness": 105
+      },
+      "physical_instance_count": 4,
+      "geometry_variant_count": 0,
+      "distribution": "4 LOCATION-LOCKED INSTANCES / 4 DIRECT WIDTHS / 4 DIRECT THICKNESSES",
+      "reference_width_policy": "252.25 = PROJECT_DERIVED_REFERENCE / NOT_SOURCE_PUBLISHED_FAMILY_MEAN",
+      "historical_orientation_policy": {
+        "current_orientation_state": "HISTORICAL_REPAIR_FLIPPED",
+        "original_963_top_bottom_orientation": "UNRESOLVED",
+        "geometry_variant_created": false
+      },
+      "mortise_trace_policy": {
+        "existence": "DIRECT_EVIDENCE",
+        "exact_geometry": "UNRESOLVED",
+        "current_structural_function": "UNRESOLVED",
+        "canonical_body_cut": false
+      },
+      "source_artifact": {
+        "actions_run_id": 36231069458,
+        "artifact_id": 10903011230,
+        "artifact_zip_sha256": "d664456279065be2d7db01f373dbd60c9744f957e04d0f90636fb23d6731deb7"
+      },
+      "shared_regression_artifact_id": 10902682823,
+      "shared_regression_artifact_zip_sha256": "531e2190c85dc62f3a17fa05e352dd9125c5fd960138319b1140d149b5e90dec",
+      "accepted_engineering_head": "cab973375d6f88906d1815c06b3a10725a06ef87",
+      "historical_full_timber_length_mm": null,
+      "canonical_reference_length_mm": 1000,
+      "assembly_span_rule": "ENDPOINT_DERIVED / ASSEMBLY_OWNED",
+      "joinery_boundary": "COLUMN CONNECTION EXISTENCE KNOWN / EXACT JOINERY + PENETRATION DEFERRED",
+      "minimal_sufficient_package": {
+        "policy": "ADAPTIVE / NO UNIVERSAL FILE COUNT",
+        "formal_repo_files": [
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-YOUE-001/CMP-FRAME-YOUE-001_MASTER_DEFINITION_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-YOUE-001/CMP-FRAME-YOUE-001_MASTER_SEMANTIC_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-YOUE-001/CMP-FRAME-YOUE-001_MASTER_REVIEW_BOARD_V001.png",
+          "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-YOUE-001/CMP-FRAME-YOUE-001_MASTER_VALIDATION_V001.json",
+          "docs/tasks/T-035_P3_3_YOUE_MASTER_V2_V001.md"
+        ],
+        "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+        "review_board_count": 1,
+        "required_review_panel_count": 6
+      }
     }
   ],
-  "approved_master_count": 18
+  "approved_master_count": 19
 }

@@ -651,3 +651,27 @@ Status after D-159:
 **FIRST ARTICLE APPROVED / FORMALIZATION NOT AUTHORIZED / PR #31 REMAINS DRAFT**
 
 A separate Product Owner authorization is required before exact accepted-artifact formalization, Catalog/V008 binding, Registry Excel sync, final regression, PR Ready/merge, or closure.
+
+## 23. D-160 formalization authorization
+
+Product Owner authorized the post-approval formalization step on 2026-09-26.
+
+Authorized scope:
+- exact-byte materialization of accepted Semantic / Review Board / Validation from Artifact `10903011230`;
+- verify accepted canonical .blend SHA but keep .blend Actions Artifact + local-only / NOT GIT;
+- register `CMP-FRAME-YOUE-001_MASTER` as Stage1 approved Master #19;
+- bind all 4 由额 V008/CURRENT rows to the approved Master;
+- Registry Excel Sync;
+- latest-head final Master V2 regression.
+
+Target progress after binding:
+- Stage1 approved Masters = **19/28 = 67.9%**
+- Master-covered Registry records = **147**
+- 由额 bindings = **4/4**
+
+Not authorized:
+- PR #31 Ready/merge;
+- T-035 closure;
+- next component;
+- Stage2;
+- T-018 resume.

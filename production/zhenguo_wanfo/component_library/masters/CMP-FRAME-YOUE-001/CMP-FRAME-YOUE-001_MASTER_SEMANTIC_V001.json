@@ -1,0 +1,395 @@
+{
+  "assembly_role": null,
+  "assembly_semantics": {
+    "connection_layer_intents": [
+      {
+        "allowed_future_connection_kinds": [
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "interface_id": "YOUE_LEFT_COLUMN",
+        "related_family": "柱",
+        "status": "CONNECTION_EXISTENCE_KNOWN / EXACT_GEOMETRY_DEFERRED",
+        "unsupported_joinery_claim": false
+      },
+      {
+        "allowed_future_connection_kinds": [
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "interface_id": "YOUE_RIGHT_COLUMN",
+        "related_family": "柱",
+        "status": "CONNECTION_EXISTENCE_KNOWN / EXACT_GEOMETRY_DEFERRED",
+        "unsupported_joinery_claim": false
+      }
+    ],
+    "member_type": "HORIZONTAL_INTERCOLUMN_TIE_TIMBER",
+    "official_same_building_semantic": "A2: no pu-paifang; columns connected by 阑额/由额.",
+    "related_component_policy": "YOUE ONLY / LANE + EJIANBAN + PU_PAIFANG + COLUMN + BRACKET SET EXCLUDED"
+  },
+  "blender_version": "4.5.13 LTS",
+  "body": {
+    "face_count": 6,
+    "geometry_faces": [
+      [
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        1,
+        5,
+        4
+      ],
+      [
+        1,
+        2,
+        6,
+        5
+      ],
+      [
+        2,
+        3,
+        7,
+        6
+      ],
+      [
+        3,
+        0,
+        4,
+        7
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "geometry_vertices_mm": [
+      [
+        -500.0,
+        -126.125,
+        0.0
+      ],
+      [
+        500.0,
+        -126.125,
+        0.0
+      ],
+      [
+        500.0,
+        126.125,
+        0.0
+      ],
+      [
+        -500.0,
+        126.125,
+        0.0
+      ],
+      [
+        -500.0,
+        -126.125,
+        105.0
+      ],
+      [
+        500.0,
+        -126.125,
+        105.0
+      ],
+      [
+        500.0,
+        126.125,
+        105.0
+      ],
+      [
+        -500.0,
+        126.125,
+        105.0
+      ]
+    ],
+    "joinery_cut_count": 0,
+    "local_bbox_mm": {
+      "dimensions": [
+        1000.0,
+        252.25,
+        105.0
+      ],
+      "max": [
+        500.0,
+        126.125,
+        105.0
+      ],
+      "min": [
+        -500.0,
+        -126.125,
+        0.0
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "name": "MASTER__CMP_FRAME_YOUE_001__BODY",
+    "primitive": "rectangular_bounding_envelope_proxy_profile_unknown",
+    "section_envelope_historical_claim": false,
+    "section_profile_state": "UNKNOWN",
+    "shengtou_wood_baked_in": false,
+    "unsupported_detail_count": 0,
+    "vertex_count": 8
+  },
+  "canonical_blend_sha256": "6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16",
+  "canonical_reference_length_historical_claim": false,
+  "component_id": "CMP-FRAME-YOUE-001",
+  "definition_sha256": "1579da171abf107292da61d97905942918953bdc36a339db9ac682224aaf09b7",
+  "endpoint_fixture_results": [
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        650.0,
+        0.0,
+        0.0
+      ],
+      "derived_direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "derived_length_mm": 1300.0,
+      "fixture_id": "TEST-X",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        1300.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "building_coordinate_claim": false,
+      "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+      "derived_center_mm": [
+        0.0,
+        850.0,
+        0.0
+      ],
+      "derived_direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "derived_length_mm": 1700.0,
+      "fixture_id": "TEST-Y",
+      "historical_claim": false,
+      "p_lower_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "p_upper_mm": [
+        0.0,
+        1700.0,
+        0.0
+      ]
+    }
+  ],
+  "endpoint_resolver_contract": {
+    "building_coordinate_claim": false,
+    "center_rule": "(P_start + P_end) / 2",
+    "classification": "PROJECT_ASSEMBLY_CONTROL / GENERIC_ENDPOINT_DRIVEN",
+    "enabled": true,
+    "fixture_variation_contract": {
+      "directions_must_differ": true,
+      "directions_must_match": false,
+      "lengths_must_differ": true,
+      "rationale": "Prove shared Master is independent of reference length and facade/world direction."
+    },
+    "fixtures": [
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          650,
+          0,
+          0
+        ],
+        "expected_direction": [
+          1,
+          0,
+          0
+        ],
+        "expected_length_mm": 1300,
+        "fixture_id": "TEST-X",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          1300,
+          0,
+          0
+        ]
+      },
+      {
+        "building_coordinate_claim": false,
+        "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_COORDINATES",
+        "expected_center_mm": [
+          0,
+          850,
+          0
+        ],
+        "expected_direction": [
+          0,
+          1,
+          0
+        ],
+        "expected_length_mm": 1700,
+        "fixture_id": "TEST-Y",
+        "historical_claim": false,
+        "p_lower_mm": [
+          0,
+          0,
+          0
+        ],
+        "p_upper_mm": [
+          0,
+          1700,
+          0
+        ]
+      }
+    ],
+    "historical_claim": false,
+    "length_rule": "norm(P_end - P_start)",
+    "lower_endpoint_semantic": "COLUMN_CONNECTION_A",
+    "orientation_rule": "local +X aligns to normalized(P_end - P_start)",
+    "review_panel_required": false,
+    "upper_endpoint_semantic": "COLUMN_CONNECTION_B"
+  },
+  "engineering_representation": {
+    "historical_profile_claim": false,
+    "label_requirement": "4/4 sections direct; 252.25 project-derived only; current historical repair flip metadata; old mortise traces not modeled.",
+    "primitive": "RECTANGULAR_BOUNDING_ENVELOPE_PROXY",
+    "purpose": "STAGE1 PROJECT REFERENCE + 4 DIRECT INSTANCE SECTION PROOF + HISTORICAL ORIENTATION/MORTISE TRACE METADATA PROOF + ENDPOINT VALIDATION"
+  },
+  "geometry_mode": "PARAMETRIC_HORIZONTAL_LONG_MEMBER_WITH_INSTANCE_SECTION_PARAMETERS",
+  "historical_full_length_mm": null,
+  "historical_repair_contract": {
+    "current_orientation_state": "HISTORICAL_REPAIR_FLIPPED",
+    "geometry_variant_created": false,
+    "mortise_trace": {
+      "canonical_body_cut": false,
+      "classification": "HISTORICAL_REPAIR_TRACE_METADATA",
+      "current_structural_function": "UNRESOLVED",
+      "exact_geometry": "UNRESOLVED",
+      "existence": "DIRECT_EVIDENCE"
+    },
+    "original_963_top_bottom_orientation": "UNRESOLVED"
+  },
+  "instance_section_binding_contract": {
+    "direct_mapping_replaceable_without_new_decision": false,
+    "family_mean_must_not_overwrite_instances": true,
+    "family_reference_only": true,
+    "family_reference_section_mm": {
+      "thickness": 105,
+      "width": 252.25
+    },
+    "geometry_variant_count": 0,
+    "instances": [
+      {
+        "fixture_id": "S_W",
+        "location": "南立面西次间",
+        "registry_id": "由额-南立面-西次间",
+        "source_label": "南西次间",
+        "source_note": "A1 DIRECT ROW",
+        "thickness_mm": 105,
+        "width_mm": 255
+      },
+      {
+        "fixture_id": "S_C",
+        "location": "南立面明间",
+        "registry_id": "由额-南立面-明间",
+        "source_label": "南明间",
+        "source_note": "A1 DIRECT ROW",
+        "thickness_mm": 105,
+        "width_mm": 245
+      },
+      {
+        "fixture_id": "S_E",
+        "location": "南立面东次间",
+        "registry_id": "由额-南立面-东次间",
+        "source_label": "南东次间",
+        "source_note": "A1 DIRECT ROW",
+        "thickness_mm": 105,
+        "width_mm": 250
+      },
+      {
+        "fixture_id": "N_C",
+        "location": "北立面明间",
+        "registry_id": "由额-北立面-明间",
+        "source_label": "北明间",
+        "source_note": "A1 DIRECT ROW",
+        "thickness_mm": 105,
+        "width_mm": 259
+      }
+    ],
+    "mode": "DIRECT_LOCKED_LOCATION_SECTION_PROJECT_REFERENCE",
+    "reference_classification": "PROJECT_DERIVED_REFERENCE / NOT_SOURCE_PUBLISHED_FAMILY_MEAN",
+    "same_master_required": true
+  },
+  "joinery_geometry": "STAGE1_SIMPLIFIED_FLAT_END / NO HISTORICAL JOINERY CLAIM",
+  "legacy_proxy_reuse": false,
+  "master_id": "CMP-FRAME-YOUE-001_MASTER",
+  "master_version": "V001",
+  "placement_policy": "ASSEMBLY_OWNED / ENDPOINT_DERIVED / STAGE1_BUILDING_XYZ_NOT_LOCKED",
+  "reconstruction_policy": {
+    "classification": "EVIDENCE_CONSTRAINED_RECONSTRUCTION",
+    "decision_id": "D-137",
+    "reconstructed_design_must_be_explicit": true,
+    "reconstructed_design_replaceable": true,
+    "rule_id": "RC-023",
+    "silent_historicization": "PROHIBITED",
+    "unknown_does_not_automatically_block": true
+  },
+  "registry_role_counts": null,
+  "resolved_dimensions_mm": {
+    "length": 1000.0,
+    "thickness": 105.0,
+    "width": 252.25
+  },
+  "schema_version": "MASTER_V2_SEMANTIC_1.1",
+  "section_envelope_historical_claim": false,
+  "section_profile_state": "UNKNOWN",
+  "semantic_geometry_signature": "4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8",
+  "shengtou_wood_baked_in": false,
+  "source_numeric_conflict": null,
+  "task_id": "T-035",
+  "unknowns": [
+    "historical exact concealed full timber length and hidden end penetration remain unresolved",
+    "sample-to-instance mapping is DIRECT_LOCKED by A1 location labels; all four sections are directly measured",
+    "historical exact mortise/tenon and old trace geometry remain unresolved",
+    "historical original 963 top-bottom orientation remains unresolved while current state is repair-flipped",
+    "final building XYZ endpoints belong to later whole-building placement stage"
+  ]
+}
