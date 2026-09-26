@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R237",
+  "state_revision": "R238",
   "last_updated": "2026-09-26",
   "session_status": "DAILY CLOSE 2026-09-25 / PASS / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / LOCAL SYNC PASS / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
   "phase": {
@@ -22,8 +22,8 @@
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / NEXT 由额 SOURCE READINESS NOT AUTHORIZED / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / NEXT 由额 SOURCE READINESS NOT AUTHORIZED / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / 由额 SOURCE READINESS PASS D-154 / D-076 NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 18 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / 由额 SOURCE READINESS PASS D-154 / D-076 NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "NONE",
     "name": "P3.3 V002 Stage 1",
-    "status": "NO ACTIVE ENGINEERING T-TASK / 18 OF 28 MASTERS APPROVED / T-034 CLOSED / T-018 HOLD"
+    "status": "NO ACTIVE ENGINEERING T-TASK / 18 OF 28 MASTERS APPROVED / 由额 SOURCE READINESS PASS D-154 / D-076 VISUAL-FORM GATE NEXT"
   },
   "proposed_next_task": {
     "id": "NONE",
     "name": "由额",
-    "status": "NEXT STAGE1 COMPONENT / SOURCE READINESS NEXT / NOT AUTHORIZED"
+    "status": "SOURCE READINESS PASS / D-154 / D-076 VISUAL-FORM GATE NEXT / NO T-TASK"
   },
   "last_completed_task": {
     "id": "T-034",
@@ -524,7 +524,7 @@
       "connector_geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
       "stage_advance": false
     },
-    "next_master_candidate": "由额 / SOURCE READINESS NEXT / NOT AUTHORIZED",
+    "next_master_candidate": "由额 / SOURCE READINESS PASS D-154 / D-076 VISUAL-FORM GATE NEXT / NO T-TASK",
     "t033": {
       "task_id": "T-033",
       "component": "子角梁",
@@ -626,6 +626,56 @@
       "merge_commit_sha": "5f577914ca3e2001b391176b394404f872619c91",
       "main_verified": true,
       "local_sync_status": "REQUIRED"
+    },
+    "youe": {
+      "status": "SOURCE_READINESS_PASS / D-154 / D-076_VISUAL_FORM_GATE_NEXT",
+      "component": "由额",
+      "physical_instance_count": 4,
+      "registry_locations": [
+        "南立面西次间",
+        "南立面明间",
+        "南立面东次间",
+        "北立面明间"
+      ],
+      "direct_instance_sections_mm": {
+        "南立面西次间": [
+          255,
+          105
+        ],
+        "南立面明间": [
+          245,
+          105
+        ],
+        "南立面东次间": [
+          250,
+          105
+        ],
+        "北立面明间": [
+          259,
+          105
+        ]
+      },
+      "direct_width_count": 4,
+      "direct_thickness_count": 4,
+      "report_facade_reference_mm": {
+        "南立面": {
+          "width_mean": 250,
+          "thickness": 105
+        },
+        "北立面": {
+          "width": 259,
+          "thickness": 105
+        }
+      },
+      "source_distribution": "南立面明三间 + 北立面明间有由额；其余各面各间仅显阑额",
+      "historical_repair_evidence": "A1 states original 阑额/由额 members were retained and adjusted in historical repair; 由额 was flipped vertically to hide pre-existing mortise openings from view.",
+      "historical_orientation_status": "CURRENT ORIENTATION ALTERED BY HISTORICAL REPAIR / ORIGINAL TOP-BOTTOM ORIENTATION NOT CURRENTLY PRESUMED",
+      "joinery_trace_evidence": "A1 records 破子棂及立颊卯口痕迹 on exposed upper surface area; exact dimensions/complete joinery geometry remain unresolved.",
+      "exact_historical_full_length_mm": null,
+      "exact_joinery_geometry": "UNRESOLVED",
+      "source_internal_conflict": false,
+      "a1_a2_direct_conflict": false,
+      "engineering_execution_authorized": false
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -716,7 +766,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "T-034 is closed on main. Next complete step, when Product Owner instructs, is 由额 Source Readiness Check followed by D-076 Visual/Form Gate; do not create a T-task or run Blender before those gates.",
+  "next_action": "由额 Source Readiness is PASS under D-154. Next complete step is D-076 Visual/Form Gate using A1 Fig 2-46/2-47/2-49 plus A2 same-building official visuals. Do not create a T-task, production branch, PR, or run Blender before the gate and Master Spec are approved.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1082,7 +1132,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "由额 / SOURCE READINESS NEXT / NOT AUTHORIZED"
+    "next_master_candidate": "由额 / SOURCE READINESS PASS D-154 / D-076 VISUAL-FORM GATE NEXT / NO T-TASK"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
