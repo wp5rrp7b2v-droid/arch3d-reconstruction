@@ -739,3 +739,53 @@ Status after D-161:
 **MERGED TO MAIN / POST-MERGE CLOSURE CHECK PENDING**
 
 D-161 does not start the next Master, Stage2, or T-018.
+
+
+## 26. D-162 final closure
+
+Post-merge closure cross-check completed on 2026-09-26.
+
+Final canonical state:
+- PR #31 = MERGED
+- merge commit = `ac3460189012dcf69190178bf7b243f5c9eb5c50`
+- merged head = `76bcc5163b06486f2715c4deda30e4873f7156b1`
+- latest-head final Master V2 Run `36234487231` = SUCCESS
+- final validation = **103/103 PASS**
+- Registry Excel Sync Run `36234487241` = SUCCESS
+- Catalog approved Masters = **19**
+- Stage1 completion = **19/28 = 67.9%**
+- 由额 V008/CURRENT binding = **4/4**
+- Master-covered Registry records = **147**
+- CURRENT JSON == V008 JSON
+- main Definition / Semantic / Review Board / Validation Git blobs match the merged PR branch
+- canonical accepted .blend remains Actions Artifact + local-only / NOT GIT
+- final regenerated .blend remains regression evidence only and is not promoted over the D-159 accepted canonical asset
+
+Historical/source boundaries remain unchanged:
+- `HISTORICAL_REPAIR_FLIPPED` = current historical-repair state
+- original 963 top/bottom orientation = `UNRESOLVED`
+- old mortise trace existence = `DIRECT_EVIDENCE`
+- exact mortise geometry/current structural function = `UNRESOLVED`
+- geometry variants = 0
+- 252.25 mm = PROJECT_DERIVED_REFERENCE only
+- 1000 mm = NON_HISTORICAL reference only
+
+Open PR cross-check after T-035:
+- PR #3 = T-018 original / SUPERSEDED / READ-ONLY / DO NOT MERGE
+- PR #6 = T-018 replacement / HOLD / DO NOT MERGE
+- no active Stage1 engineering PR remains
+
+T-035 status:
+**CLOSED / D-162 / PR #31 MERGED / MAIN VERIFIED**
+
+Next Stage1 candidate:
+**补间铺作底斗 / Coverage Matrix priority 14**
+
+Before any new T-task:
+1. D-099 / RC-019 source readiness;
+2. D-076 visual/form gate;
+3. Master Spec design/approval;
+4. separate Product Owner engineering authorization.
+
+Stage2 remains unauthorized.
+T-018 remains HOLD.

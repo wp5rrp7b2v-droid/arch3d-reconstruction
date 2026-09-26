@@ -3,7 +3,7 @@
   "phase": "P3.3",
   "stage": "Stage 1",
   "task": "T-035",
-  "status": "NINETEEN_APPROVED / T035 MERGED TO MAIN / CLOSURE PENDING",
+  "status": "NINETEEN_APPROVED / T035 CLOSED / PR #31 MERGED",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -523,7 +523,7 @@
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-159",
       "formalization_authority": "D-160",
-      "publication_status": "MERGED TO MAIN / CLOSURE PENDING",
+      "publication_status": "CLOSED / MERGED_TO_MAIN",
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL ONLY / NOT GIT",
       "canonical_asset_sha256": "6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16",
       "semantic_sha256": "7e1d0a132f54680fab11b8d373461dba0931552f60e10e55356d9a86471d392a",
@@ -588,7 +588,10 @@
       "final_regression_artifact_zip_sha256": "70ba9bdf5d2d65517914ec03144a1479b3ef68255d853ce6543ce71dc63243cf",
       "final_shared_regression_artifact_id": 10904476320,
       "final_shared_regression_artifact_zip_sha256": "b31602a789e5b99abfbb77c964420640a2fd9a65249c798f60a9d69f0d2d54e0",
-      "excel_sync_run": 36234487241
+      "excel_sync_run": 36234487241,
+      "closure_decision_id": "D-162",
+      "close_date": "2026-09-26",
+      "main_verified": true
     }
   ],
   "approved_master_count": 19

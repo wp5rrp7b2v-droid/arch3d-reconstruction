@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R245",
+  "state_revision": "R246",
   "last_updated": "2026-09-26",
   "session_status": "DAILY CLOSE 2026-09-25 / PASS / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / LOCAL SYNC PASS / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
   "phase": {
@@ -22,8 +22,8 @@
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 19 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 PR #31 MERGED D-161 / CLOSURE CHECK PENDING / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 19 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 PR #31 MERGED D-161 / CLOSURE CHECK PENDING / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 19 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 CLOSED D-162 / NEXT 补间铺作底斗 / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 19 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-034 CLOSED D-153 / T-035 CLOSED D-162 / NEXT 补间铺作底斗 / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -62,14 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "T-035",
-    "name": "P3_3_YOUE_MASTER_V2_V001",
-    "status": "PR #31 MERGED / D-161 / POST-MERGE CLOSURE CHECK PENDING"
+    "id": "NONE",
+    "name": "P3.3 V002 Stage 1",
+    "status": "NO ACTIVE ENGINEERING T-TASK / 19 OF 28 MASTERS APPROVED / T-035 CLOSED D-162"
   },
   "proposed_next_task": {
-    "id": "T-035",
-    "name": "P3_3_YOUE_MASTER_V2_V001",
-    "status": "POST-MERGE CLOSURE / MAIN+DERIVED CROSS-CHECK PENDING"
+    "id": "NONE",
+    "name": "补间铺作底斗",
+    "status": "NEXT MASTER CANDIDATE / PRIORITY 14 / SOURCE READINESS + D-076 FIRST / NO T-TASK"
   },
   "last_completed_task": {
     "id": "T-034",
@@ -126,7 +126,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 19 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / T-034 CLOSED / T-035 PR #31 MERGED / CLOSURE CHECK PENDING / RC-024 ACTIVE / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 19 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / T-034 CLOSED / T-035 CLOSED D-162 / RC-024 ACTIVE / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -524,7 +524,7 @@
       "connector_geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
       "stage_advance": false
     },
-    "next_master_candidate": "T-035 POST-MERGE CLOSURE CHECK PENDING / DO NOT START NEXT MASTER",
+    "next_master_candidate": "补间铺作底斗 / PRIORITY 14 / SOURCE READINESS + D-076 NEXT / NO T-TASK",
     "t033": {
       "task_id": "T-033",
       "component": "子角梁",
@@ -628,7 +628,7 @@
       "local_sync_status": "REQUIRED"
     },
     "youe": {
-      "status": "T-035_PR_31_MERGED / D-161 / CLOSURE_CHECK_PENDING",
+      "status": "CLOSED / T-035 / D-162 / PR #31 MERGED / MAIN VERIFIED",
       "component": "由额",
       "physical_instance_count": 4,
       "registry_locations": [
@@ -725,7 +725,13 @@
       "final_regression_run": 36234487231,
       "final_regression_validation": "103/103 PASS",
       "final_regression_geometry_signature": "4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8",
-      "excel_sync_run": 36234487241
+      "excel_sync_run": 36234487241,
+      "closure_decision_id": "D-162",
+      "closed": true,
+      "catalog_approved_master_count": 19,
+      "v008_bound_rows": 4,
+      "master_covered_registry_record_count": 147,
+      "stage1_master_completion": "19/28 / 67.9%"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -816,7 +822,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "PR #31 is merged under D-161. Complete T-035 post-merge closure cross-check (main, Catalog, V008/CURRENT, Excel derived view, Dashboard) before starting the next Master. Do not start Stage2 or resume T-018.",
+  "next_action": "T-035 is CLOSED under D-162. Next Stage1 candidate is 补间铺作底斗 (Coverage Matrix priority 14). Complete D-099/RC-019 source readiness and D-076 visual/form gate before any Master Spec/T-task. Do not start Stage2 or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1182,7 +1188,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "T-035 POST-MERGE CLOSURE CHECK PENDING / 19 OF 28 APPROVED"
+    "next_master_candidate": "补间铺作底斗 / PRIORITY 14 / SOURCE READINESS + D-076 NEXT / NO T-TASK"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -1757,7 +1763,7 @@
     "local_sync_status": "REQUIRED"
   },
   "t035": {
-    "status": "PR_31_MERGED / D-161 / CLOSURE_CHECK_PENDING",
+    "status": "CLOSED / D-162 / PR #31 MERGED / MAIN VERIFIED",
     "decision_id": "D-157",
     "task_id": "T-035",
     "task_name": "P3_3_YOUE_MASTER_V2_V001",
@@ -1847,6 +1853,22 @@
     "excel_sync_run": 36234487241,
     "excel_sync_result": "SUCCESS",
     "main_verified": true,
-    "closure_authorized": false
+    "closure_authorized": true,
+    "closure_decision_id": "D-162",
+    "closed": true,
+    "close_date": "2026-09-26",
+    "close_file": "docs/project_control/CLOSE_FILE_2026-09-26.md",
+    "post_merge_main_head_at_check": "e2de8b3c5f76da9ce287218324a2d5573e1802b8",
+    "catalog_approved_master_count": 19,
+    "v008_bound_rows": 4,
+    "master_covered_registry_record_count": 147,
+    "stage1_master_completion": "19/28 / 67.9%",
+    "post_merge_exact_repo_file_cross_check": "PASS / DEFINITION+SEMANTIC+REVIEW_BOARD+VALIDATION MATCH MERGED BRANCH BLOBS",
+    "current_equals_v008": true,
+    "only_open_prs_after_close": [
+      "PR #3 / T-018 original / SUPERSEDED-READ-ONLY",
+      "PR #6 / T-018 replacement / HOLD"
+    ],
+    "local_sync_status": "NOT CHECKED IN THIS GITHUB CLOSURE / SEPARATE USER-LOCAL STEP"
   }
 }
