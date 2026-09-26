@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R246",
+  "state_revision": "R247",
   "last_updated": "2026-09-26",
   "session_status": "DAILY CLOSE 2026-09-25 / PASS / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / LOCAL SYNC PASS / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
   "phase": {
@@ -72,23 +72,25 @@
     "status": "NEXT MASTER CANDIDATE / PRIORITY 14 / SOURCE READINESS + D-076 FIRST / NO T-TASK"
   },
   "last_completed_task": {
-    "id": "T-034",
-    "engineering_id": "P3_3_LANE_MASTER_V2_V001",
-    "component": "阑额",
-    "status": "CLOSED / PRODUCT OWNER APPROVED / D-151+D-152+D-153 / PR #30 MERGED",
-    "github_pr_number": 30,
-    "merge_commit": "5f577914ca3e2001b391176b394404f872619c91",
-    "approved_actions_run": 36222778768,
-    "approved_validation": "120/120 PASS",
-    "final_regression_run": 36225081197,
+    "id": "T-035",
+    "engineering_id": "P3_3_YOUE_MASTER_V2_V001",
+    "component": "由额",
+    "status": "CLOSED / PRODUCT OWNER APPROVED / D-159+D-160+D-161+D-162 / PR #31 MERGED",
+    "github_pr_number": 31,
+    "merge_commit": "ac3460189012dcf69190178bf7b243f5c9eb5c50",
+    "approved_actions_run": 36231069458,
+    "approved_validation": "97/97 PASS",
+    "final_regression_run": 36234487231,
     "final_regression_result": "SUCCESS",
-    "canonical_blend_sha256": "b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d",
-    "semantic_geometry_signature": "d1117d15868e5f9df37fc679b9c7cc6b0732ef79bcfef6b5e15c4a91fff94ed5",
-    "review_board_sha256": "29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef",
-    "first_article_artifact_id": 10899808683,
-    "final_regression_artifact_id": 10901122038,
-    "final_shared_regression_artifact_id": 10901172033,
-    "excel_sync_run": 36225081188
+    "final_regression_validation": "103/103 PASS",
+    "canonical_blend_sha256": "6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16",
+    "semantic_geometry_signature": "4ba3601e1603697c03991c08c01c2edc5d2e5c00321bc4ec5a10ea1f4c5580b8",
+    "review_board_sha256": "8c5e32edadf442a316daa7c120a1615f49ba13268824e0c91da754082adb2e62",
+    "first_article_artifact_id": 10903011230,
+    "final_regression_artifact_id": 10903973175,
+    "final_shared_regression_artifact_id": 10904476320,
+    "excel_sync_run": 36238489886,
+    "excel_sync_result": "SUCCESS / RETRY ATTEMPT 2 AFTER DERIVED-MAIN RACE"
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -1869,6 +1871,9 @@
       "PR #3 / T-018 original / SUPERSEDED-READ-ONLY",
       "PR #6 / T-018 replacement / HOLD"
     ],
-    "local_sync_status": "NOT CHECKED IN THIS GITHUB CLOSURE / SEPARATE USER-LOCAL STEP"
+    "local_sync_status": "NOT CHECKED IN THIS GITHUB CLOSURE / SEPARATE USER-LOCAL STEP",
+    "closure_dashboard_alignment": "PASS / D-163",
+    "closure_excel_sync_run": 36238489886,
+    "closure_excel_sync_result": "SUCCESS / ATTEMPT 2"
   }
 }

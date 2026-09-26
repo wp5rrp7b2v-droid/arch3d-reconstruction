@@ -208,3 +208,25 @@ Next candidate: **补间铺作底斗**
 Engineering execution: **NOT AUTHORIZED**  
 T-018: **HOLD**  
 Stage2: **NOT AUTHORIZED**
+
+
+## 13. Closure Review Patch｜D-163
+
+Post-D-162 derived-view cross-check found one stale Project Control referent:
+- Dashboard counts were correct at 19/28 and 67.9%;
+- 由额 appeared in the completed Master chip list;
+- next target correctly showed 补间铺作底斗;
+- but the “刚完成” card still showed T-034｜阑额.
+
+Root cause:
+`project_state.json.last_completed_task` had not been advanced from T-034 to T-035.
+
+D-163 corrects only this Project Control referent and regenerates Dashboard V2. No Master geometry, Catalog identity, Registry binding, evidence fact, or source authority changes.
+
+Closure-time Excel Sync:
+- Run `36238489886` Attempt 1 generated and validated the derived Excel successfully, but its final push lost a race to the simultaneous Dashboard derived commit.
+- Attempt 2 = **SUCCESS**.
+- This was a derived-main concurrency race, not an Excel data/validation failure.
+
+Final closure remains:
+**T-035 CLOSED / D-162 + D-163 REVIEW PATCH / PR #31 MERGED / MAIN VERIFIED**
