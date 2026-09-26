@@ -214,7 +214,8 @@ jobs:
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-CHASHOU-001/CMP-FRAME-CHASHOU-001_MASTER_DEFINITION_V001.json \
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-SHUZHU-001/CMP-FRAME-SHUZHU-001_MASTER_DEFINITION_V001.json \
             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-DAJIAOLIANG-001/CMP-FRAME-DAJIAOLIANG-001_MASTER_DEFINITION_V001.json \
-            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZIJIAOLIANG-001/CMP-FRAME-ZIJIAOLIANG-001_MASTER_DEFINITION_V001.json
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-ZIJIAOLIANG-001/CMP-FRAME-ZIJIAOLIANG-001_MASTER_DEFINITION_V001.json \
+            production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LANE-001/CMP-FRAME-LANE-001_MASTER_DEFINITION_V001.json
           do
             KEY="$(python - "$DEF" <<'PY'
           import json,sys
