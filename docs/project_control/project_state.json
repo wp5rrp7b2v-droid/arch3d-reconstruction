@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R235",
+  "state_revision": "R236",
   "last_updated": "2026-09-26",
   "session_status": "DAILY CLOSE 2026-09-25 / PASS / P3.3 V002 STAGE 1 ACTIVE / 17 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / LOCAL SYNC PASS / NO ACTIVE ENGINEERING TASK / T-018 HOLD",
   "phase": {
@@ -64,7 +64,7 @@
   "current_task": {
     "id": "T-034",
     "name": "P3_3_LANE_MASTER_V2_V001",
-    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-151 / FORMALIZATION NOT AUTHORIZED"
+    "status": "FIRST ARTICLE APPROVED / FORMALIZATION + CATALOG/V008 BINDING AUTHORIZED / D-152"
   },
   "proposed_next_task": {
     "id": "NONE",
@@ -680,7 +680,7 @@
     },
     "local_sync_completion": "PASS / main fast-forwarded / V008+Excel verified / 5 approved T-021—T-024 canonical .blend binaries restored with exact SHA matches"
   },
-  "next_action": "T-034 first article is approved by D-151. Wait for explicit authorization before formalization and Catalog/V008 binding. Do not merge PR #30. Stage2 remains unauthorized and T-018 remains HOLD.",
+  "next_action": "Execute T-034 formalization and Catalog/V008 binding on PR #30; run derived Excel sync and latest-head regression. Stop before PR merge and wait for Product Owner.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -1560,7 +1560,7 @@
     "engineering_execution_authorized": false
   },
   "t034": {
-    "status": "FIRST_ARTICLE_PRODUCT_OWNER_APPROVED",
+    "status": "FORMALIZATION_AUTHORIZED",
     "decision_id": "D-149",
     "task_id": "T-034",
     "task_name": "P3_3_LANE_MASTER_V2_V001",
@@ -1588,8 +1588,8 @@
     "production_branch_creation_authorized": true,
     "pr_creation_authorized": true,
     "execution_decision_id": "D-150",
-    "formalization_authorized": false,
-    "catalog_v008_binding_authorized": false,
+    "formalization_authorized": true,
+    "catalog_v008_binding_authorized": true,
     "merge_authorized": false,
     "first_article_acceptance_required": true,
     "first_article_acceptance_authorized": false,
@@ -1601,6 +1601,9 @@
     "validation_check_count": 120,
     "canonical_blend_sha256": "b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d",
     "semantic_geometry_signature": "d1117d15868e5f9df37fc679b9c7cc6b0732ef79bcfef6b5e15c4a91fff94ed5",
-    "review_board_sha256": "29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef"
+    "review_board_sha256": "29f24d066a258693dbeba080f8e46a56aa191be9f1bff76816f96e2661187cef",
+    "formalization_decision_id": "D-152",
+    "final_regression_authorized": true,
+    "excel_sync_authorized": true
   }
 }
