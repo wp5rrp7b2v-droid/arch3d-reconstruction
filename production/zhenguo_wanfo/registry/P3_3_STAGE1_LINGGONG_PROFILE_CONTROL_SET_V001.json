@@ -1,6 +1,6 @@
 {
   "schema_version": "P3_3_STAGE1_LINGGONG_PROFILE_CONTROL_SET_V001",
-  "status": "CANDIDATE_01 / PRODUCT_OWNER_REVIEW_REQUIRED / D-214",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-215",
   "date": "2026-09-27",
   "task_id": "T-039",
   "candidate_id": "LINGGONG_PROFILE_CONTROL_SET_V001_C01",
@@ -105,7 +105,9 @@
     "hidden_connection_cuts",
     "wear_damage_deformation"
   ],
-  "product_owner_approved": false,
-  "locked": false,
-  "engineering_execution_authorized": false
+  "product_owner_approved": true,
+  "locked": true,
+  "engineering_execution_authorized": false,
+  "approval_decision_id": "D-215",
+  "definition_path": "production/zhenguo_wanfo/component_library/masters/CMP-GONG-LINGGONG-001/CMP-GONG-LINGGONG-001_LINGGONG_DEFINITION_V001.json"
 }
