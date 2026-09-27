@@ -137,7 +137,7 @@ def validate(a):
     ck("14_source_provenance",pc["source_pages"]==[73,74,75,76] and "QUALITATIVE_FORM_AND_ENVELOPE_AUTHORITY" in pc["source_role"])
     ck("15_profile_simple",polygon_simple(pc["normalized_points"]))
     ck("16_profile_extent",near(min(p[0] for p in pc["normalized_points"]),-0.5) and near(max(p[0] for p in pc["normalized_points"]),0.5) and near(min(p[1] for p in pc["normalized_points"]),-0.5) and near(max(p[1] for p in pc["normalized_points"]),0.5))
-    ck("17_profile_control_set",pc["candidate_id"]=="MANGONG_PROFILE_CONTROL_SET_V001_C01" and pc["point_count"]==18 and pc["control_set_sha256"]=="07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4")
+    ck("17_profile_control_set",pc["candidate_id"]=="MANGONG_PROFILE_CONTROL_SET_V001_C01" and pc["point_count"]==18 and pc["control_set_sha256"]=="07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4" and pc["product_owner_approved"] is True and pc["approval_decision_id"]=="D-201")
     ck("18_candidates_not_per_instance",es["family_candidate_is_per_instance_direct"] is False and es["width_slow_gong_specific_raw_observed_mean_verified"] is False and es["thickness_slow_gong_specific_raw_observed_mean_verified"] is False)
     ck("18a_width_semantics",es["width_classification"]=="REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE")
     ck("18b_thickness_semantics",es["thickness_classification"]=="REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE")
@@ -160,8 +160,8 @@ def validate(a):
     ck("31_first_article_only",d["first_article_contract"]["variant_count"]==2 and d["first_article_contract"]["registry_instance_assembly"] is False)
     ck("32_formalization_not_authorized",d["execution_boundary"]["formalization_authorized"] is False and d["execution_boundary"]["catalog_v008_binding_authorized"] is False and d["execution_boundary"]["merge_authorized"] is False)
     ck("33_t018_hold",d["execution_boundary"]["t018_status"]=="HOLD" and d["execution_boundary"]["stage2_authorized"] is False)
-    ck("34_deferred_geometry",all(x in d["deferred_geometry"] for x in ["exact_mortise_tenon","hidden_slots_or_cavities","exact_local_curve_control_dimensions"]))
-    ck("35_source_counts",d["authority"]["dimension_pages"][0]["sample_count"]==44 and d["authority"]["dimension_pages"][1]["sample_count"]==16)
+    ck("34_deferred_geometry",all(x in d["deferred_geometry"] for x in ["exact_mortise_tenon","hidden_slots_or_cavities","exact_historical_profile_curve","grooves","local_connection_cuts"]))
+    ck("35_source_counts",d["registry_boundary"]["large_count"]==16 and d["registry_boundary"]["small_count"]==28 and d["variants"][0]["count"]==16 and d["variants"][1]["count"]==28)
     out={"status":"PASS","task_id":"T-038","master_id":d["master_id"],"check_count":len(checks),"checks":checks,
          "canonical_blend_sha256":digest(a.asset),"family_semantic_signature":c["family_semantic_signature"],
          "variant_signatures":{k:v["semantic_geometry_signature"] for k,v in c["variants"].items()}}
