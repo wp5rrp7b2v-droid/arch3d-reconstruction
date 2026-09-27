@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R295",
+  "state_revision": "R296",
   "last_updated": "2026-09-27",
-  "session_status": "T-039 ENGINEERING EXECUTION AUTHORIZED D-216 / FIRST ARTICLE EXECUTION NEXT / MAIN 22 OF 28 / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-039 FIRST ARTICLE MACHINE PASS D-217 / 43 OF 43 / READY FOR PRODUCT OWNER REVIEW / PR #35 DRAFT / MAIN 22 OF 28 UNTIL FUTURE MERGE / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 22 OF 28 MASTERS APPROVED / T-039 EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 22 OF 28 MASTERS APPROVED / T-039 FIRST ARTICLE MACHINE PASS D-217 / PO REVIEW NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 ENGINEERING EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 ENGINEERING EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 FIRST ARTICLE MACHINE PASS D-217 / PR #35 DRAFT / PO REVIEW NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 FIRST ARTICLE MACHINE PASS D-217 / PR #35 DRAFT / PO REVIEW NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-039",
     "name": "P3_3_LINGGONG_MASTER_V2_V001",
-    "status": "ENGINEERING EXECUTION AUTHORIZED / D-216 / FIRST ARTICLE EXECUTION NEXT"
+    "status": "FIRST ARTICLE MACHINE PASS / D-217 / READY FOR PRODUCT OWNER REVIEW / PR #35 DRAFT"
   },
   "proposed_next_task": {
-    "id": "T-039-FIRST-ARTICLE-EXECUTION",
-    "name": "T-039 令栱 engineering execution + First Article machine validation",
-    "status": "AUTHORIZED / NEXT COMPLETE STEP"
+    "id": "T-039-FIRST-ARTICLE-PO-REVIEW",
+    "name": "T-039 令栱 First Article Product Owner review",
+    "status": "NEXT GATE / AWAITING PRODUCT OWNER"
   },
   "last_completed_task": {
     "id": "T-038",
@@ -127,7 +127,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 FIRST ARTICLE MACHINE PASS D-217 / PO REVIEW NEXT / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -847,7 +847,7 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Execute isolated T-039 engineering work on codex/t039-p3-3-linggong-master-v2-v001: builder, validator, workflow, Blender 4.5.13 First Article, 8-domain Review Board, machine validation and Draft PR. Do not formalize, bind Catalog/V008, merge, close, start Stage2, or resume T-018.",
+  "next_action": "Product Owner review of the D-217 T-039 First Article and 8-domain Review Board. Do not formalize, bind Catalog/V008/CURRENT, run Derived Excel, mark PR Ready, merge, close, start Stage2, or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -966,7 +966,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 EXECUTION AUTHORIZED / FIRST ARTICLE NEXT",
+    "status": "ACTIVE / MAIN 22 OF 28 MASTERS APPROVED / T-039 FIRST ARTICLE MACHINE PASS / PO REVIEW REQUIRED",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -2373,7 +2373,7 @@
     "active_engineering_task": false
   },
   "linggong_stage1": {
-    "status": "ENGINEERING EXECUTION AUTHORIZED / D-216 / FIRST ARTICLE NEXT",
+    "status": "FIRST ARTICLE MACHINE PASS / D-217 / PRODUCT OWNER REVIEW REQUIRED / PR #35 DRAFT",
     "component": "令栱",
     "coverage_matrix_priority": 17,
     "physical_instance_count": 28,
@@ -2465,8 +2465,8 @@
     "task_contract_path": "docs/tasks/T-039_P3_3_LINGGONG_MASTER_V2_V001.md",
     "profile_control_gate_id": "PROFILE_CONTROL_SET_V0.1",
     "profile_control_status": "LOCKED / PRODUCT OWNER APPROVED / D-215",
-    "production_branch_created": false,
-    "draft_pr_created": false,
+    "production_branch_created": true,
+    "draft_pr_created": true,
     "profile_control_candidate_decision_id": "D-214",
     "profile_control_candidate_id": "LINGGONG_PROFILE_CONTROL_SET_V001_C01",
     "profile_control_candidate_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_LINGGONG_PROFILE_CONTROL_SET_V001.md",
@@ -2486,9 +2486,27 @@
     "workflow_execution_authorized": true,
     "production_branch_authorized": true,
     "draft_pr_authorized": true,
-    "first_article_acceptance_authorized": false,
+    "first_article_acceptance_authorized": true,
     "formalization_authorized": false,
     "catalog_v008_binding_authorized": false,
-    "merge_authorized": false
+    "merge_authorized": false,
+    "production_branch": "codex/t039-p3-3-linggong-master-v2-v001",
+    "pr_number": 35,
+    "pr_draft": true,
+    "pr_mergeable": true,
+    "first_article_machine_pass": true,
+    "first_article_machine_decision_id": "D-217",
+    "first_article_run_id": 36304085862,
+    "first_article_head_sha": "9037a750775b55c36b4173146be8eb5d2a7c9b9e",
+    "first_article_validation": "43/43 PASS",
+    "first_article_artifact_id": 10927005772,
+    "first_article_artifact_digest": "sha256:db181f3392acab1504f118236cec32d9e3e043ba4cf84ff944834c28ce9a0ede",
+    "first_article_canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
+    "first_article_semantic_sha256": "14e1b0ce3a724d10ed11f638d3184cb323abd1b8a6e59f84f2898d50f1a676b7",
+    "first_article_validation_sha256": "d1ae6617ec48c9a8945e368b748e4160ed7f4c95b487826f0511ccf3567d0b62",
+    "first_article_review_board_sha256": "769275ae578cd12a5871aee8c532e3353122190926a47be89497602e3b0ba095",
+    "family_semantic_signature": "d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7",
+    "geometry_signature": "e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61",
+    "first_article_product_owner_approved": false
   }
 }
