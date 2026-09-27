@@ -1617,3 +1617,10 @@ Do not restart T-018 by default.
 - Metric source-image calibration: NOT PERFORMED / NOT CLAIMED.
 - T-037 guazi control set reuse: NO.
 - Engineering execution / Blender / builder implementation remains NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Engineering Execution Authorization｜D-202
+
+- Product Owner: AUTHORIZED.
+- Scope: isolated builder + validator + workflow; Blender 4.5.13 two-variant first article; deterministic rebuild/reopen; 8-domain Review Board; artifact; Draft PR.
+- Locked inputs: D-198 Master Spec / D-199 Task Contract / D-201 18-point profile control set.
+- First-article acceptance, formalization, Catalog/V008 binding, PR Ready/merge and closure remain NOT AUTHORIZED.
