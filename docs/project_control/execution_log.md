@@ -1951,3 +1951,18 @@ Do not restart T-018 by default.
 - Active engineering T-task after closure: NONE.
 - Next Stage1 candidate: 华栱 / Source Readiness + D-076 only; no engineering T-task started.
 - T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜华栱 Source Readiness + D-076｜D-225
+
+- Canonical primary source verified by exact bytes: 84,117,628 / SHA-256 `94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472`.
+- V008 target: 56 `LOCKED_SUBSET` 华栱 records = 28 一跳 + 28 二跳; scope is 正身方向明确子集, not whole-hall total.
+- Direct primary assembly metric: 第一、二跳总出跳 = mean 732.4 mm / min 704 / max 755 / n=46 / Table 2-33.
+- Direct metric semantics: combined assembly projection only; not standalone 一跳/二跳 full length; sample-to-instance mapping UNKNOWN.
+- Report ideal-model synthesis: 第一、二跳总出跳 48分 under 306 mm 营造尺; REPORT_INFERRED / not direct 963 evidence.
+- Individual standalone lengths: primary report NOT DIRECTLY CLOSED.
+- Existing 二跳 1630 mm / centre 1464.8 mm: SECONDARY_CALCULATED / REPLACEABLE.
+- 一跳 standalone full length: UNRESOLVED.
+- Same-building visual/form evidence: PASS for broad component identity / first-second jump assembly relationship; exact profile/end/joinery unresolved.
+- Result: **SOURCE READINESS PASS WITH BOUNDARIES / D-076 PASS WITH BOUNDARIES**.
+- Next complete step: 华栱 Master Spec V0.1 design only.
+- Engineering T-task / branch / PR / Blender / Stage2 / T-018 resume: NOT AUTHORIZED.
