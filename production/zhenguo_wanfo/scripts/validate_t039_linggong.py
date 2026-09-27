@@ -122,7 +122,11 @@ def validate(a):
     pre_formal=(d["execution_boundary"]["formalization_authorized"] is False and d["execution_boundary"]["catalog_v008_binding_authorized"] is False)
     post_formal=(d["execution_boundary"].get("formalization_authorized") is True and d["execution_boundary"].get("catalog_v008_binding_authorized") is True and d["execution_boundary"].get("formalization_complete") is True and d["execution_boundary"].get("catalog_v008_binding_complete") is True and d.get("formalization",{}).get("formalization_result")=="D-220")
     ck("40_formalization_lifecycle_boundary",pre_formal or post_formal)
-    ck("41_merge_close_not_authorized",d["execution_boundary"]["merge_authorized"] is False and d["execution_boundary"]["closure_authorized"] is False)
+    merge_state=d["execution_boundary"]
+    pre_merge=(merge_state["merge_authorized"] is False and merge_state["closure_authorized"] is False)
+    merged_pending_close=(merge_state.get("merge_authorized") is True and merge_state.get("ready_transition_authorized") is True and merge_state.get("merged") is True and merge_state.get("closure_authorized") is False)
+    closed_state=(merge_state.get("merge_authorized") is True and merge_state.get("merged") is True and merge_state.get("closure_authorized") is True)
+    ck("41_merge_close_lifecycle_boundary",pre_merge or merged_pending_close or closed_state)
     ck("42_t018_stage2",d["execution_boundary"]["t018_status"]=="HOLD" and d["execution_boundary"]["stage2_authorized"] is False)
     ck("43_deferred",all(x in d["deferred_geometry"] for x in ["exact_mortise_tenon","grooves","slots","cavities","hidden_connection_cuts","exact_historical_profile_curve"]))
     out={"status":"PASS","task_id":"T-039","master_id":d["master_id"],"check_count":len(checks),"checks":checks,

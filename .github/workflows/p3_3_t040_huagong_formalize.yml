@@ -1,6 +1,12 @@
 name: T-040 Huagong Formalization
 
 on:
+  push:
+    branches: [ codex/t040-p3-3-huagong-master-v2-v001 ]
+    paths:
+      - '.github/workflows/p3_3_t040_huagong_formalize.yml'
+      - 'docs/project_control/project_state.json'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/**'
   pull_request:
     branches: [ main ]
     paths:
