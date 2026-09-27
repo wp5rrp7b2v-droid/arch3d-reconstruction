@@ -1668,3 +1668,15 @@ Do not restart T-018 by default.
 - Scope: synchronize V008/CURRENT progress summary to D-205 branch truth; derived Excel sync; latest-head T-038 regression; shared canonical-registry regressions; PR #34 readiness review.
 - D-205 row binding remains 44/44 and Catalog remains 22/28.
 - Ready transition / merge / closure / Stage2 / T-018 resume remain NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Post-Formalization Verification + Readiness｜D-207
+
+- Derived Excel sync: Run 36300610732 SUCCESS; source Registry commit 17d9369230226d407d3e7e0fdc45cc372054f5da; Excel SHA c3337c818120db8adc1a6f36f079724e6629f6765fab11eb5415d01e21b3a6a6.
+- Latest-head Excel validation: Run 36300841753 SUCCESS / V008 / 505 / no derived change.
+- Latest-head T-038 regression: Run 36300841791 SUCCESS / 43/43 / head f0f50cb5f4877c44d5991f93e00e72f70c5c18c1.
+- Family/LARGE/SMALL signatures exactly match D-204 accepted first article.
+- Regression blend SHA 7a6ac978f3ba7b1ad5947bc3ce2bf2ea7e20e437ed18dd8069a08abc7d355f4f is NOT promoted; accepted canonical remains 1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023.
+- Shared regressions: T-021/T-022/T-023/T-024/T-037 = PASS. Generic P3.3 route = SKIPPED AS INTENDED for dedicated T-038 pipeline.
+- PR #34: OPEN / DRAFT / MERGEABLE.
+- Readiness: PASS / READY FOR PRODUCT OWNER D-194 COMBINED READY+MERGE DECISION.
+- Ready transition / merge / closure remain NOT AUTHORIZED until explicit Product Owner approval.

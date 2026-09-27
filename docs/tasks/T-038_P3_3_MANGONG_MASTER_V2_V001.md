@@ -260,8 +260,8 @@ Locked sequence:
 6. First Article — **MACHINE PASS / D-203 / READY FOR PRODUCT OWNER REVIEW**
 7. Product Owner First Article Approval — **APPROVED / D-204**
 8. Formalization + Catalog/V008 binding — **COMPLETE / D-205**
-9. Derived Excel + latest-head regression + readiness review — **AUTHORIZED / D-206 / IN PROGRESS**
-10. D-194 combined Ready+Merge — **NOT AUTHORIZED**
+9. Derived Excel + latest-head regression + readiness review — **PASS / D-207**
+10. D-194 combined Ready+Merge — **NEXT GATE / AWAITING PRODUCT OWNER EXPLICIT APPROVAL**
 11. Closure — **NOT AUTHORIZED**
 
 ## 15. Current Authorization Boundary
@@ -314,3 +314,8 @@ D-205 records successful formalization under D-204. Catalog branch count = 22/28
 ## 22. Post-Formalization Verification Authorization
 
 D-206 authorizes V008/CURRENT progress-summary synchronization to the D-205 formalized branch state, derived Excel synchronization, latest-head T-038 regression, shared canonical-registry regressions and PR #34 readiness review. Ready transition, merge and closure remain separate Product Owner gates.
+
+
+## 23. Post-Formalization Readiness Result
+
+D-207 records derived Excel PASS, latest-head T-038 43/43 regression PASS with exact D-204 geometry-signature match, shared-regression PASS, generic-route intentional skip, and PR #34 open/Draft/mergeable. The regenerated regression blend is validation evidence only and does not replace the D-204 accepted canonical blend. T-038 is ready for the Product Owner's explicit D-194 combined Draft→Ready + merge decision.

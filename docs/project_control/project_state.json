@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R285",
+  "state_revision": "R286",
   "last_updated": "2026-09-27",
-  "session_status": "T-038 POST-FORMALIZATION VERIFICATION AUTHORIZED D-206 / EXCEL + LATEST-HEAD REGRESSION IN PROGRESS / PR #34 DRAFT / T-018 HOLD",
+  "session_status": "T-038 POST-FORMALIZATION READINESS PASS D-207 / PR #34 DRAFT + MERGEABLE / READY+MERGE AWAITING PRODUCT OWNER / BRANCH 22 OF 28 / MAIN 21 OF 28 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": null,
+  "blocker": "Product Owner explicit approval required for D-194 combined Draft→Ready + merge.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "POST-FORMALIZATION VERIFICATION AUTHORIZED / D-206 / IN PROGRESS"
+    "status": "POST-FORMALIZATION READINESS PASS / D-207 / PR #34 DRAFT / READY+MERGE NOT YET AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-038-READINESS-REVIEW",
-    "name": "T-038 derived Excel + latest-head regression + PR readiness review",
-    "status": "IN PROGRESS"
+    "id": "T-038-D194-READY-MERGE",
+    "name": "PR #34 Draft→Ready + Merge under D-194",
+    "status": "AWAITING PRODUCT OWNER EXPLICIT APPROVAL"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "POST-FORMALIZATION VERIFICATION AUTHORIZED / D-206 / IN PROGRESS",
+    "status": "POST-FORMALIZATION READINESS PASS / D-207 / PR #34 DRAFT / MERGEABLE",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2325,6 +2325,44 @@
     "review_board_sha256": "f0038fd1a6da007a4526460cd67beb3060acaf42e9185bb7a58214a606ed2531",
     "post_formalization_authority": "D-206",
     "readiness_review_authorized": true,
-    "ready_transition_authorized": false
+    "ready_transition_authorized": false,
+    "readiness_decision_id": "D-207",
+    "readiness_review_pass": true,
+    "derived_excel_sync_run": 36300610732,
+    "latest_head_excel_validation_run": 36300841753,
+    "latest_head_regression_run": 36300841791,
+    "latest_head_regression_head": "f0f50cb5f4877c44d5991f93e00e72f70c5c18c1",
+    "latest_head_regression_validation": "43/43 PASS",
+    "latest_head_regenerated_blend_sha256": "7a6ac978f3ba7b1ad5947bc3ce2bf2ea7e20e437ed18dd8069a08abc7d355f4f",
+    "latest_head_regenerated_blend_promoted_to_canonical": false,
+    "latest_head_regression_artifact_id": 10925591420,
+    "latest_head_regression_artifact_digest": "sha256:5c58ac6518c550d36424a5c0ba07c8caeee294e21440744b5aa482ba21590af7",
+    "shared_regressions": {
+      "T-021": {
+        "run_id": 36300841769,
+        "result": "SUCCESS"
+      },
+      "T-022": {
+        "run_id": 36300841766,
+        "result": "SUCCESS"
+      },
+      "T-023": {
+        "run_id": 36300841818,
+        "result": "SUCCESS"
+      },
+      "T-024": {
+        "run_id": 36300841749,
+        "result": "SUCCESS"
+      },
+      "T-037": {
+        "run_id": 36300841854,
+        "result": "SUCCESS"
+      },
+      "generic_p3_3_master_v2": {
+        "run_id": 36300841755,
+        "result": "SKIPPED_AS_INTENDED"
+      }
+    },
+    "closure_authorized": false
   }
 }
