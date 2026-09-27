@@ -959,3 +959,12 @@ Boundary retained:
 - Draft PR #34: **OPEN / DRAFT / MERGEABLE**.
 - Product Owner first-article approval: **PENDING**.
 - Formalization / Catalog-V008 / Ready-Merge / closure: **NOT AUTHORIZED**.
+
+### T-038 First Article Approval + Formalization Authorization｜D-204
+
+- Product Owner first article: **APPROVED**.
+- Accepted machine evidence: **Run 36299005477 / 43/43 PASS**.
+- Accepted canonical .blend SHA: `1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023`.
+- Formalization + Catalog/V008 binding: **AUTHORIZED**.
+- Evidence semantics: **UNCHANGED / BOUNDED**.
+- Excel / post-formalization readiness / Ready-Merge / closure: **NOT AUTHORIZED**.
