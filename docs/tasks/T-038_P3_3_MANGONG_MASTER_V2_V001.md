@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-038｜P3_3_MANGONG_MASTER_V2_V001
 
-Status: **ENGINEERING EXECUTION AUTHORIZED / D-202 / FIRST ARTICLE IN PROGRESS**
+Status: **FIRST ARTICLE MACHINE PASS / D-203 / READY FOR PRODUCT OWNER REVIEW**
 Stage: P3.3 V002 Stage 1
 Branch: codex/t038-p3-3-mangong-master-v2-v001
 
@@ -257,7 +257,7 @@ Locked sequence:
 3. Task Contract — **LOCKED / D-199**
 4. Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-201**
 5. Engineering Execution Authorization — **AUTHORIZED / D-202**
-6. First Article — **IN PROGRESS**
+6. First Article — **MACHINE PASS / D-203 / READY FOR PRODUCT OWNER REVIEW**
 7. Product Owner First Article Approval — **NOT AUTHORIZED**
 8. Formalization + Catalog/V008 binding — **NOT AUTHORIZED**
 9. Derived Excel + latest-head regression + readiness review — **NOT AUTHORIZED**
@@ -295,3 +295,8 @@ D-201 records Product Owner approval of `MANGONG_PROFILE_CONTROL_SET_V001_C01`. 
 ## 18. Engineering Execution Authorization
 
 D-202 authorizes T-038 isolated engineering execution: builder, validator and GitHub Actions workflow implementation; Blender 4.5.13 two-variant first article; deterministic rebuild/reopen validation; 8-domain Review Board generation; Draft PR creation. It does not authorize Product Owner first-article acceptance, formalization, Catalog/V008 binding, PR Ready/merge, closure, Stage2 or T-018 resume.
+
+
+## 19. First Article Machine Result
+
+D-203 records final valid Run `36299005477` = SUCCESS / 43/43 PASS. Artifact `10924188411` / `sha256:bf279ee4b3b1bf04d8263cf12983e0124a4a39d654f7a2297a95d7a12ca47060`. Canonical .blend SHA `1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023`; family semantic signature `ae8ad824401a75b694d404e494038a90aa19f92406e3a1def53db4153dcc0e6d`; LARGE `324fb1aab0c469010e6adaf4dc9372eafe9d165ee99c01a8764edff3a98f898a`; SMALL `6858ad94e5e89c8b8ff6059a18ece7a04949f52836b39e12052913c4b8338245`. Draft PR #34 remains Draft. Product Owner first-article approval is still required before any formalization or Catalog/V008 binding.
