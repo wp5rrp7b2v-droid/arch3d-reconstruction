@@ -1030,3 +1030,18 @@ Boundary retained:
 - Active engineering task: **NONE**.
 - T-018: **HOLD**.
 - Stage2: **NOT AUTHORIZED**.
+
+### 令栱 Source Readiness + D-076｜D-210
+
+- Coverage / identity: **PASS** — 28 V008 Registry records / priority 17 / Master required.
+- Direct width evidence: **PASS** — 217.4mm mean / n=28.
+- Direct thickness evidence: **PASS** — 155.6mm mean / n=28.
+- Direct length evidence: **PASS** — 897mm mean / n=28.
+- Physical count vs sample-count separation: **PASS**.
+- Same-building visual/form context: **PASS WITH BOUNDARIES**.
+- Exact standalone profile: **UNRESOLVED**.
+- Joinery / grooves / local cuts: **DEFERRED**.
+- Generic-template substitution: **PROHIBITED**.
+- T-037/T-038 profile-control inheritance: **PROHIBITED WITHOUT NEW EVIDENCE**.
+- Result: **PASS WITH BOUNDARIES / MASTER SPEC V0.1 NEXT**.
+- Engineering execution: **NOT AUTHORIZED**.
