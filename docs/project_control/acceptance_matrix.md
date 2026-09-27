@@ -919,3 +919,13 @@ Boundary retained:
 - Profile control set: **MANDATORY PRE-EXECUTION GATE / NOT YET LOCKED**.
 - T-037 guazi profile reuse: **FORBIDDEN WITHOUT EXPLICIT EVIDENCE/APPROVAL**.
 - Engineering/modeling: **NOT AUTHORIZED**.
+
+### T-038 Profile Control Set V0.1 Candidate 01｜D-200
+
+- Candidate: **READY FOR PRODUCT OWNER REVIEW / NOT LOCKED**.
+- Control points: **18 / bilateral Stage1 simplification**.
+- Classification: **SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT**.
+- Same-building visual source: **PDF p73–76**.
+- Metric source-image calibration: **NOT PERFORMED / NOT CLAIMED**.
+- T-037 guazi profile reuse: **NO**.
+- Engineering/modeling: **NOT AUTHORIZED**.
