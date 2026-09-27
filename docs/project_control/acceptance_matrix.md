@@ -830,3 +830,15 @@ Boundary retained:
 - SMALL geometry signature exact MATCH accepted first article: `e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842`.
 - Family semantic signature changed only because D-186 evidence/profile traceability metadata changed; geometry did not change.
 - Formalization remains **NOT AUTHORIZED**; Stage1 formal approved count remains **20/28**.
+
+### T-037 Formalization + Catalog/V008 Binding｜D-189
+
+- **FORMALIZED / BRANCH** under D-188.
+- Stage1 Catalog: **21/28 = 75.0%** on T-037 branch.
+- Registry binding: **44/44** guazi records = APPROVED_MASTER_AVAILABLE / CMP-GONG-GUAZI-001_MASTER.
+- Master-covered Registry records: **203**.
+- CURRENT == V008: **PASS**.
+- Approved canonical .blend SHA-256: 932571bcbff0c3f166dd5c449a35a96a618876ad8986d0dacbb668f9a510048a.
+- LARGE / SMALL geometry signatures: **MATCH D-185**.
+- Derived Excel sync: **PENDING / NOT AUTHORIZED**.
+- PR #33: **DRAFT / MERGE NOT AUTHORIZED**.

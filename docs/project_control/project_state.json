@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R269",
+  "state_revision": "R270",
   "last_updated": "2026-09-27",
-  "session_status": "T-037 FORMALIZATION + CATALOG/V008 BINDING AUTHORIZED D-188 / IN PROGRESS / PR #33 DRAFT / MERGE NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "T-037 FORMALIZED + CATALOG/V008 BOUND D-189 / BRANCH 21 OF 28 / MAIN 20 OF 28 UNTIL MERGE / PR #33 DRAFT / MERGE NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 20 OF 28 MASTERS APPROVED / T-037 GUAZI GONG FIRST ARTICLE IN PROGRESS / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / BRANCH 21 OF 28 MASTERS APPROVED / MAIN 20 OF 28 / T-037 GUAZI GONG FIRST ARTICLE IN PROGRESS / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 20 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-037 ENGINEERING ACTIVE D-183 / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 20 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-037 ENGINEERING ACTIVE D-183 / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / BRANCH 21 OF 28 / MAIN 20 OF 28 / T-037 FORMALIZED D-189 / PR #33 DRAFT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / BRANCH 21 OF 28 / MAIN 20 OF 28 / T-037 FORMALIZED D-189 / PR #33 DRAFT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-037",
     "name": "P3_3_GUAZI_GONG_MASTER_V2_V001",
-    "status": "FORMALIZATION + CATALOG/V008 BINDING AUTHORIZED D-188 / IN PROGRESS"
+    "status": "FORMALIZED + 44 ROWS BOUND / D-189 / PR #33 DRAFT / MERGE NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-037-FORMALIZATION-RESULT",
-    "name": "瓜子栱族 formalization verification",
-    "status": "IN PROGRESS"
+    "id": "T-037-POST-FORMALIZATION",
+    "name": "derived Excel sync + latest-head regression + PR readiness review",
+    "status": "NOT AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-036",
@@ -1246,15 +1246,15 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-033 CLOSED / 17 OF 28",
+    "status": "ACTIVE / T-037 FORMALIZED ON BRANCH / 21 OF 28",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 17,
-    "pending_master_object_type_count": 11,
-    "master_completion_percent": 60.7,
-    "master_covered_registry_record_count": 131,
+    "approved_master_count": 21,
+    "pending_master_object_type_count": 7,
+    "master_completion_percent": 75.0,
+    "master_covered_registry_record_count": 203,
     "pending_source_binding_count": 7,
     "row_fields": [
       "stage1_disposition",
@@ -1265,7 +1265,8 @@
     "excel_generator_version": "1.0.2",
     "excel_sync_run": 36003187429,
     "excel_sync_result": "SUCCESS",
-    "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure."
+    "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure.",
+    "excel_sync_pending": true
   },
   "local_sync_verification_2026_09_20": {
     "status": "PASS / COMPLETE",
@@ -2093,7 +2094,7 @@
     "note": "This record is written after the sync checkpoint; a final pull of this Project Control record itself is required to make local HEAD equal the new canonical main."
   },
   "guazi_gong_stage1": {
-    "status": "FORMALIZATION + CATALOG/V008 BINDING AUTHORIZED D-188 / IN PROGRESS",
+    "status": "FORMALIZED + CATALOG/V008 BOUND / D-189 / PR #33 DRAFT / MERGE NOT AUTHORIZED",
     "source_readiness_decision_id": "D-180",
     "visual_form_gate_decision_id": "D-180",
     "master_spec_decision_id": "D-181",
@@ -2144,6 +2145,21 @@
     "regenerated_blend_sha256": "2c7ee97d349ae7e05e8912e3dc575160536cd08e4942e539b4d18b46ed424769",
     "regenerated_blend_promoted_to_canonical": false,
     "formalization_authority": "D-188",
-    "excel_sync_authorized": false
+    "excel_sync_authorized": false,
+    "formalization_result_decision_id": "D-189",
+    "formalization_complete": true,
+    "formalization_run_id": 36293945358,
+    "branch_approved_master_count": 21,
+    "branch_master_completion_percent": 75.0,
+    "branch_master_covered_registry_record_count": 203,
+    "guazi_registry_binding_count": 44,
+    "current_equals_v008": true,
+    "canonical_blend_sha256": "932571bcbff0c3f166dd5c449a35a96a618876ad8986d0dacbb668f9a510048a",
+    "semantic_sha256": "e2cde73556e13d50b8001633d15fbcd8811650146fe37a148f71181825cbb61c",
+    "validation_sha256": "dbea36c19c86c1772877a74a353a820a1e23bd4fc7b1adbce73244999b4b2219",
+    "review_board_sha256": "9f621af4f27831c4b2fb0e8cd4f08767117dece7604e3a40ba8918fce1d7543f",
+    "family_semantic_signature": "69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c",
+    "formal_regenerated_blend_sha256": "2d8e46f6de85e7c60f715c0a19c72a04f735aeab4ee9b95497a26e4cc1292376",
+    "formal_regenerated_blend_promoted_to_canonical": false
   }
 }

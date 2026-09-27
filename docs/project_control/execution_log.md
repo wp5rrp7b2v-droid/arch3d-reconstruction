@@ -1485,3 +1485,17 @@ Do not restart T-018 by default.
 - Preconditions satisfied: D-185 first article APPROVED; D-186 traceability patch COMPLETE; D-187 post-traceability regression SUCCESS / 43/43 / geometry MATCH.
 - Authorized: minimal sufficient formal package + Stage1 Catalog entry + 44-row V008/CURRENT binding + branch consistency validation.
 - Not authorized: derived Excel sync, PR Ready, merge, closure, Stage2, T-018 resume.
+
+## 2026-09-27｜T-037 Formalization + Catalog/V008 Binding｜D-189
+
+- Authority: D-188.
+- Formalization workflow run: 36293945358.
+- Formal package: Definition + Semantic + Review Board + Validation + Task Contract.
+- Approved canonical .blend remains D-185 SHA-256: 932571bcbff0c3f166dd5c449a35a96a618876ad8986d0dacbb668f9a510048a; current regression binary is evidence only and is not promoted.
+- Geometry signatures: LARGE=5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d; SMALL=e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842; MATCH accepted first article.
+- Stage1 Catalog branch count: 21/28 = 75.0%.
+- V008/CURRENT guazi binding: 44/44 APPROVED_MASTER_AVAILABLE -> CMP-GONG-GUAZI-001_MASTER.
+- Master-covered Registry records: 203.
+- CURRENT == V008: PASS.
+- Derived Excel sync: NOT AUTHORIZED / PENDING.
+- PR #33 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.
