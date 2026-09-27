@@ -908,3 +908,14 @@ Boundary retained:
 - Joinery/local cuts: **DEFERRED**.
 - Task Contract: **NEXT GATE / NOT YET AUTHORIZED**.
 - Engineering/modeling: **NOT AUTHORIZED**.
+
+### T-038 Task Contract｜D-199
+
+- Task Contract: **LOCKED / PRODUCT OWNER AUTHORIZED**.
+- Family: **1 Master / 2 variants / 44 records**.
+- Variant rule: **independent generation / no uniform global scaling**.
+- W/T evidence semantics: **report-inferred / replaceable / not direct observations**.
+- First-article Review Board: **8 required domains**.
+- Profile control set: **MANDATORY PRE-EXECUTION GATE / NOT YET LOCKED**.
+- T-037 guazi profile reuse: **FORBIDDEN WITHOUT EXPLICIT EVIDENCE/APPROVAL**.
+- Engineering/modeling: **NOT AUTHORIZED**.
