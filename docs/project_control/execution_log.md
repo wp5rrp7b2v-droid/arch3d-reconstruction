@@ -1785,3 +1785,19 @@ Do not restart T-018 by default.
 - Candidate locked: NO.
 - Product Owner approval: PENDING.
 - Engineering execution / branch / PR / Blender: NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 令栱 Profile Control Set Lock｜D-215
+
+- Product Owner approval: RECEIVED.
+- Locked candidate: `LINGGONG_PROFILE_CONTROL_SET_V001_C01`.
+- Point count: 14.
+- Signature: `0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7`.
+- Classification: SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT.
+- Definition materialized: `production/zhenguo_wanfo/component_library/masters/CMP-GONG-LINGGONG-001/CMP-GONG-LINGGONG-001_LINGGONG_DEFINITION_V001.json`.
+- T-037/T-038 profile reuse: FALSE.
+- Metric calibration: NOT PERFORMED / NOT CLAIMED.
+- Exact historical profile/end/joinery: UNRESOLVED / DEFERRED.
+- Mandatory pre-execution profile gate: COMPLETE.
+- Engineering execution / branch / PR / Blender: NOT AUTHORIZED.
+- Next gate: Engineering Execution Authorization.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
