@@ -104,8 +104,8 @@ Locked draft boundary:
   - reproducible from its locked numeric Definition,
   - not represented as metrically re-extracted from the report unless that calibration is actually performed.
 
-**V0.1 does not yet lock a numeric profile control set.**
-That control set must be designed and visually reviewed before engineering execution.
+**Numeric Profile Control Set V0.1 is LOCKED / PRODUCT OWNER APPROVED / D-201.**
+The locked 18-point set is classified SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT and is stored in the T-038 Definition. Engineering execution still requires a separate authorization.
 
 ## 5. Variant rule
 
@@ -205,7 +205,8 @@ A future T-038 Task Contract should hard-fail at least:
 Current gate:
 - Master Spec V0.1 = **LOCKED / PRODUCT OWNER APPROVED / D-198**
 - Task Contract = **LOCKED / D-199**
-- Profile Control Set V0.1 = **NEXT GATE / NOT YET APPROVED**
+- Profile Control Set V0.1 = **LOCKED / PRODUCT OWNER APPROVED / D-201**
+- Engineering Execution Authorization = **NEXT GATE / NOT YET AUTHORIZED**
 - engineering execution = **NOT AUTHORIZED**
 - Blender generation = **NOT AUTHORIZED**
 - formalization = **NOT AUTHORIZED**
@@ -213,3 +214,5 @@ Current gate:
 - PR creation / merge = **NOT AUTHORIZED**
 - Stage2 = **NOT AUTHORIZED**
 - T-018 = **HOLD**
+
+- D-201: Profile Control Set V0.1 PRODUCT OWNER APPROVED / LOCKED
