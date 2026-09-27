@@ -1933,3 +1933,21 @@ Do not restart T-018 by default.
 - D-222 latest-head regression and six shared regressions remain readiness evidence; regression-only .blend is not canonical.
 - Formal T-039 closure: **PENDING / NOT AUTHORIZED BY D-223**.
 - T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 Formal Closure｜D-224
+
+- Product Owner closure approval: RECEIVED.
+- Task: `T-039｜P3_3_LINGGONG_MASTER_V2_V001`.
+- Final status: **CLOSED**.
+- PR #35 merge commit: `e1726096e1d9bb936f24dd786d357220b52942b8`.
+- Canonical main Stage1 progress: **23/28 = 82.1%**.
+- Master-covered Registry records: **275/505**.
+- 令栱 binding: **28/28** → `CMP-GONG-LINGGONG-001_MASTER`.
+- Accepted canonical .blend SHA-256: `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`.
+- Family semantic signature: `d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7`.
+- Geometry signature: `e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61`.
+- Final readiness evidence: D-222 / T-039 latest-head 43/43 PASS / six shared regressions SUCCESS.
+- Lifecycle-only closure: V008/CURRENT / Catalog geometry identity / Derived Excel are not changed by D-224.
+- Active engineering T-task after closure: NONE.
+- Next Stage1 candidate: 华栱 / Source Readiness + D-076 only; no engineering T-task started.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
