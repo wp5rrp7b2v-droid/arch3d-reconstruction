@@ -1,7 +1,7 @@
 {
   "schema_version": "LINGGONG_MASTER_DEFINITION_V001",
   "task_id": "T-039",
-  "status": "LOCKED / PROFILE_CONTROL_APPROVED D-215 / ENGINEERING_EXECUTION_NOT_AUTHORIZED",
+  "status": "LOCKED / PROFILE_CONTROL_APPROVED D-215 / ENGINEERING_EXECUTION_AUTHORIZED D-216",
   "component_family_id": "CMP-GONG-LINGGONG-001",
   "component_names_zh": [
     "令栱"
@@ -171,15 +171,19 @@
     "per_instance_originality_repair_state"
   ],
   "execution_boundary": {
-    "engineering_execution_authorized": false,
-    "blender_execution_authorized": false,
-    "production_builder_authorized": false,
-    "workflow_execution_authorized": false,
-    "draft_pr_authorized": false,
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "production_builder_authorized": true,
+    "validator_authorized": true,
+    "workflow_execution_authorized": true,
+    "production_branch_authorized": true,
+    "draft_pr_authorized": true,
     "first_article_acceptance_authorized": false,
     "formalization_authorized": false,
     "catalog_v008_binding_authorized": false,
+    "derived_excel_sync_authorized": false,
     "merge_authorized": false,
+    "closure_authorized": false,
     "stage2_authorized": false,
     "t018_status": "HOLD"
   },
@@ -188,7 +192,8 @@
     "master_spec": "D-212",
     "task_contract": "D-213",
     "profile_candidate": "D-214",
-    "profile_control_approval": "D-215"
+    "profile_control_approval": "D-215",
+    "engineering_execution": "D-216"
   },
   "first_article_contract": {
     "canonical_body_count": 1,
