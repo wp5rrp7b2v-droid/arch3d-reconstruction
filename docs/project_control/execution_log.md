@@ -1605,3 +1605,15 @@ Do not restart T-018 by default.
 - T-037 guazi 13-point set reuse: NO.
 - Candidate is ready for Product Owner visual review; not locked.
 - Engineering / Blender remains NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Profile Control Set Approval｜D-201
+
+- Product Owner: APPROVED.
+- Candidate: MANGONG_PROFILE_CONTROL_SET_V001_C01.
+- 18-point normalized set locked in the T-038 Definition.
+- Signature: 07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4.
+- Classification: SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT.
+- Exact historical curve/control dimensions remain UNRESOLVED.
+- Metric source-image calibration: NOT PERFORMED / NOT CLAIMED.
+- T-037 guazi control set reuse: NO.
+- Engineering execution / Blender / builder implementation remains NOT AUTHORIZED.
