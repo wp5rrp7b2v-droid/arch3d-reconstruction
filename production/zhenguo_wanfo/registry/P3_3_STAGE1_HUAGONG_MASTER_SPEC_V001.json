@@ -200,5 +200,16 @@
     "validation_total_projection_mm": 732.4,
     "instance_historical_full_lengths_closed": false,
     "engineering_execution_authorized": false
+  },
+  "profile_control_set": {
+    "control_id": "HUAGONG_PROFILE_CONTROL_SET_V001_C01",
+    "path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_HUAGONG_PROFILE_CONTROL_SET_V001.json",
+    "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-233",
+    "approval_decision_id": "D-233",
+    "control_set_sha256": "f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e",
+    "point_count": 16,
+    "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "gate_a_control_sha256": "ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b",
+    "engineering_execution_authorized": false
   }
 }

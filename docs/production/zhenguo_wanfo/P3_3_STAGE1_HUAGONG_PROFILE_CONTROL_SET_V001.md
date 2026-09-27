@@ -1,6 +1,6 @@
 # P3.3 Stage1｜T-040 华栱 Profile Control Set V0.1
 
-Status: **CANDIDATE 01 / PRODUCT OWNER REVIEW REQUIRED / D-232 / NOT LOCKED**
+Status: **LOCKED / PRODUCT OWNER APPROVED / D-233**
 Date: 2026-09-27
 Task: `T-040｜P3_3_HUAGONG_MASTER_V2_V001`
 Task Contract: **LOCKED / D-229**
@@ -373,7 +373,7 @@ D-232 prepares this Profile Control Set Candidate for Product Owner review only.
 
 Current status:
 
-**CANDIDATE 01 / NOT LOCKED / PRODUCT OWNER REVIEW REQUIRED**
+**LOCKED / PRODUCT OWNER APPROVED / D-233**
 
 D-232 does **not** authorize:
 - Profile Control Set lock;
@@ -390,3 +390,45 @@ D-232 does **not** authorize:
 If Product Owner approves this Candidate, the next complete step is:
 
 **formally lock `HUAGONG_PROFILE_CONTROL_SET_V0.1`; Engineering Execution remains a separate authorization gate.**
+
+
+## 15. Product Owner Approval / Lock｜D-233
+
+Product Owner approved D-232 Candidate 01 without changing any normalized point, evidence classification, Gate A dependency or deferred boundary.
+
+D-233 formally locks:
+
+- candidate id: `HUAGONG_PROFILE_CONTROL_SET_V001_C01`;
+- point count: **16**;
+- normalized control-set SHA-256: `f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e`;
+- classification: `SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT`;
+- source role: `QUALITATIVE_FORM_AND_ENVELOPE_AUTHORITY`;
+- metric source-image calibration: `NOT PERFORMED / NOT CLAIMED`;
+- JUMP_1 Gate A envelope: **898.8 × 214.2 × 153.0 mm**;
+- JUMP_2 Gate A envelope: **1630.0 × 214.2 × 153.0 mm**;
+- same normalized profile method for both variants;
+- independent body generation requirement;
+- no finished-mesh uniform scaling;
+- no prior-gong control reuse / averaging / morphing.
+
+The locked profile controls remain reconstruction controls and do not establish:
+- exact historical 华栱 curve;
+- exact historical profile-point dimensions;
+- exact end shoulder/notch;
+- hidden overlap/contact datum;
+- mortise-tenon / grooves / slots / cavities / hidden cuts;
+- per-instance deformation/originality.
+
+D-233 closes Gate B but does **not** authorize:
+- production branch / PR;
+- builder implementation;
+- GitHub Actions / Blender;
+- First Article;
+- formalization;
+- Catalog/V008/CURRENT binding;
+- Stage2;
+- T-018 resume.
+
+Next complete gate:
+
+**Engineering Execution Authorization for T-040 — NOT YET AUTHORIZED.**

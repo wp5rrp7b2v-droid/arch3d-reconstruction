@@ -1,6 +1,6 @@
 {
   "schema_version": "P3_3_STAGE1_HUAGONG_PROFILE_CONTROL_SET_V001",
-  "status": "CANDIDATE_01 / PRODUCT_OWNER_REVIEW_REQUIRED / D-232 / NOT_LOCKED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-233",
   "date": "2026-09-27",
   "task_id": "T-040",
   "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
@@ -154,7 +154,10 @@
     "per_instance_deformation",
     "per_instance_originality_repair_state"
   ],
-  "product_owner_approved": false,
-  "locked": false,
-  "engineering_execution_authorized": false
+  "product_owner_approved": true,
+  "locked": true,
+  "engineering_execution_authorized": false,
+  "approval_decision_id": "D-233",
+  "locked_date": "2026-09-27",
+  "control_input_status": "LOCKED_CANONICAL / CONSUMABLE_ONLY_AFTER_SEPARATE_ENGINEERING_EXECUTION_AUTHORIZATION"
 }
