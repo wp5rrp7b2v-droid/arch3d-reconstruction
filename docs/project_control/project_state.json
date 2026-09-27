@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R284",
+  "state_revision": "R285",
   "last_updated": "2026-09-27",
-  "session_status": "T-038 FORMALIZED + CATALOG/V008 BOUND D-205 / BRANCH 22 OF 28 / MAIN 21 OF 28 UNTIL MERGE / PR #34 DRAFT / T-018 HOLD",
+  "session_status": "T-038 POST-FORMALIZATION VERIFICATION AUTHORIZED D-206 / EXCEL + LATEST-HEAD REGRESSION IN PROGRESS / PR #34 DRAFT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "FORMALIZED + 44 ROWS BOUND / D-205 / PR #34 DRAFT / MERGE NOT AUTHORIZED"
+    "status": "POST-FORMALIZATION VERIFICATION AUTHORIZED / D-206 / IN PROGRESS"
   },
   "proposed_next_task": {
-    "id": "T-038-POST-FORMALIZATION",
-    "name": "derived Excel sync + latest-head regression + PR readiness review",
-    "status": "NOT AUTHORIZED"
+    "id": "T-038-READINESS-REVIEW",
+    "name": "T-038 derived Excel + latest-head regression + PR readiness review",
+    "status": "IN PROGRESS"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "FORMALIZED + CATALOG/V008 BOUND / D-205 / PR #34 DRAFT / MERGE NOT AUTHORIZED",
+    "status": "POST-FORMALIZATION VERIFICATION AUTHORIZED / D-206 / IN PROGRESS",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2309,8 +2309,8 @@
     "first_article_product_owner_approved": true,
     "first_article_approval_decision_id": "D-204",
     "formalization_authority": "D-204",
-    "excel_sync_authorized": false,
-    "post_formalization_verification_authorized": false,
+    "excel_sync_authorized": true,
+    "post_formalization_verification_authorized": true,
     "formalization_result_decision_id": "D-205",
     "formalization_complete": true,
     "formalization_run_id": 36300220135,
@@ -2322,6 +2322,9 @@
     "canonical_blend_sha256": "1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023",
     "semantic_sha256": "1223ad42c788e04967bc8f35f832b1e84061d1b118f2d6adc84da1d8ada19690",
     "validation_sha256": "613d2a33fb32ef4f842e562b6104c8f73cf456d422f8a873e291a9d29ea1bc2b",
-    "review_board_sha256": "f0038fd1a6da007a4526460cd67beb3060acaf42e9185bb7a58214a606ed2531"
+    "review_board_sha256": "f0038fd1a6da007a4526460cd67beb3060acaf42e9185bb7a58214a606ed2531",
+    "post_formalization_authority": "D-206",
+    "readiness_review_authorized": true,
+    "ready_transition_authorized": false
   }
 }
