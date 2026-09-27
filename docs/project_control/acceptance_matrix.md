@@ -797,3 +797,18 @@ Boundary retained:
 - Exact dou ears / slots / cavities / mortise-tenon remain deferred.
 
 **P3.3 Stage1 current status: ACTIVE / 20 OF 28 APPROVED / T-036 CLOSED / NEXT 瓜子栱族 SOURCE READINESS / T-018 HOLD.**
+
+## 2026-09-27｜T-037 瓜子栱族 Master First Article｜D-185
+
+| Gate | Result | Evidence / boundary |
+|---|---|---|
+| Machine first article | **PASS** | Run 36290968633; build/reopen/restore/review/validation/upload PASS. |
+| Product Owner visual review | **APPROVED / D-185** | LARGE + SMALL first article accepted after Review Board render repair D-184. |
+| Family architecture | **ACCEPTED** | 1 Master family / 2 geometry variants / 44 Registry records (16 large + 28 small). |
+| Dimensions | **ACCEPTED WITH EVIDENCE BOUNDARY** | LARGE L=1007mm n=16; SMALL L=895mm n=28; W=214.7mm family mean n=44; T=156.5mm sample mean n=16, subgroup attribution UNRESOLVED. |
+| Profile | **ACCEPTED AS SOURCE_DERIVED_SIMPLIFIED / REPLACEABLE** | Exact historical curve/control dimensions remain UNRESOLVED; normalized controls are not direct measurements. |
+| Joinery / grooves / cavities | **DEFERRED** | Resolve later from connection-aware assembly evidence; no unsupported slotting in Stage1 Master. |
+| Formalization | **NOT AUTHORIZED / BLOCKED** | Traceability Review Patch required before Catalog/V008 binding or PR Ready/merge. |
+| Stage2 / T-018 | **UNCHANGED** | Stage2 NOT AUTHORIZED; T-018 HOLD. |
+
+**T-037 first article is Product Owner approved, but it does not yet increase the Stage1 approved Master count. Current formal Stage1 count remains 20/28 until formalization and canonical publication complete.**
