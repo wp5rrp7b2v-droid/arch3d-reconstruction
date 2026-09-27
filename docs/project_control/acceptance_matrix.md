@@ -876,3 +876,13 @@ Boundary retained:
 - Target: **慢栱族（大型16 + 小型28）**.
 - Current gate: **SOURCE READINESS + VISUAL/FORM EVIDENCE REVIEW**.
 - Engineering/modeling: **NOT AUTHORIZED**.
+
+### T-038 Source Readiness + D-076｜D-196
+
+- LARGE length: **1641 mm / DIRECT_PRIMARY OBSERVED_MEAN / n=16**.
+- SMALL length: **1607 mm / DIRECT_PRIMARY OBSERVED_MEAN / n=28**.
+- W=218.9 / T=156.9: **REPORT_INFERRED FAMILY DESIGN CANDIDATE / REPLACEABLE**, not member-specific direct observations.
+- Same-building visual/form evidence: **PASS WITH BOUNDARIES**.
+- Exact standalone profile: **UNRESOLVED**.
+- Joinery/local cuts: **DEFERRED**.
+- Master Spec: **NOT YET AUTHORIZED**.
