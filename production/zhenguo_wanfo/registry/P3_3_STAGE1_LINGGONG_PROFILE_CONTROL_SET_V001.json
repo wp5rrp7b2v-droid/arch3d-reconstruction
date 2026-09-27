@@ -1,0 +1,111 @@
+{
+  "schema_version": "P3_3_STAGE1_LINGGONG_PROFILE_CONTROL_SET_V001",
+  "status": "CANDIDATE_01 / PRODUCT_OWNER_REVIEW_REQUIRED / D-214",
+  "date": "2026-09-27",
+  "task_id": "T-039",
+  "candidate_id": "LINGGONG_PROFILE_CONTROL_SET_V001_C01",
+  "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+  "source": {
+    "source_id": "SRC-ZG-WF-001",
+    "visual_pages": [
+      73,
+      74,
+      75,
+      76
+    ],
+    "role": "QUALITATIVE_FORM_AND_ENVELOPE_AUTHORITY",
+    "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "historical_control_point_claim": false
+  },
+  "coordinate_meaning": {
+    "x": "fraction of full member length centered at 0",
+    "z": "fraction of full profile thickness centered at 0"
+  },
+  "normalized_points": [
+    [
+      -0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.18
+    ],
+    [
+      0.45,
+      0.08
+    ],
+    [
+      0.36,
+      -0.1
+    ],
+    [
+      0.24,
+      -0.28
+    ],
+    [
+      0.1,
+      -0.44
+    ],
+    [
+      0.04,
+      -0.5
+    ],
+    [
+      -0.04,
+      -0.5
+    ],
+    [
+      -0.1,
+      -0.44
+    ],
+    [
+      -0.24,
+      -0.28
+    ],
+    [
+      -0.36,
+      -0.1
+    ],
+    [
+      -0.45,
+      0.08
+    ],
+    [
+      -0.5,
+      0.18
+    ]
+  ],
+  "point_count": 14,
+  "control_set_sha256": "0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7",
+  "bilateral_symmetry": true,
+  "symmetry_classification": "STAGE1_SIMPLIFICATION / NOT_HISTORICAL_ASYMMETRY_CLAIM",
+  "independent_from_prior_gong_control_sets": true,
+  "t037_guazi_control_set_reused": false,
+  "t038_mangong_control_set_reused": false,
+  "derivation_method": "INDEPENDENT_SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED_14_POINT_ENVELOPE",
+  "canonical_application": {
+    "length_mm": 897,
+    "width_mm": 217.4,
+    "thickness_mm": 155.6,
+    "uniform_scaling_from_prior_gong": false
+  },
+  "deferred": [
+    "exact_historical_curve",
+    "exact_historical_control_point_dimensions",
+    "metric_source_image_calibration",
+    "exact_end_notch_shoulder",
+    "mortise_tenon",
+    "grooves",
+    "slots",
+    "cavities",
+    "hidden_connection_cuts",
+    "wear_damage_deformation"
+  ],
+  "product_owner_approved": false,
+  "locked": false,
+  "engineering_execution_authorized": false
+}
