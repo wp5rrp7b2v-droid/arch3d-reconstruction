@@ -1,0 +1,39 @@
+{
+  "schema_version": "T038_POST_FORMALIZATION_VERIFICATION_D206_V001",
+  "task_id": "T-038",
+  "decision_id": "D-206",
+  "status": "LATEST_HEAD_REGRESSION_TRIGGER",
+  "date": "2026-09-27",
+  "formalization_decision": "D-205",
+  "first_article_approval_decision": "D-204",
+  "accepted_first_article": {
+    "run_id": 36299005477,
+    "canonical_blend_sha256": "1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023",
+    "family_semantic_signature": "ae8ad824401a75b694d404e494038a90aa19f92406e3a1def53db4153dcc0e6d",
+    "large_geometry_signature": "324fb1aab0c469010e6adaf4dc9372eafe9d165ee99c01a8764edff3a98f898a",
+    "small_geometry_signature": "6858ad94e5e89c8b8ff6059a18ece7a04949f52836b39e12052913c4b8338245"
+  },
+  "registry": {
+    "version": "V008",
+    "record_count": 505,
+    "approved_master_count": 22,
+    "pending_master_count": 6,
+    "completion_percent": 78.6,
+    "master_covered_registry_record_count": 247,
+    "mangong_binding_count": 44,
+    "current_equals_v008": true
+  },
+  "derived_excel": {
+    "sync_run_id": 36300610732,
+    "source_commit": "17d9369230226d407d3e7e0fdc45cc372054f5da",
+    "current_excel_sha256": "c3337c818120db8adc1a6f36f079724e6629f6765fab11eb5415d01e21b3a6a6",
+    "versioned_excel_sha256": "c3337c818120db8adc1a6f36f079724e6629f6765fab11eb5415d01e21b3a6a6",
+    "status": "PASS"
+  },
+  "purpose": "Trigger T-038 latest-head regression after derived Excel materialization without modifying locked Definition or formal semantic package.",
+  "ready_transition_authorized": false,
+  "merge_authorized": false,
+  "closure_authorized": false,
+  "stage2_authorized": false,
+  "t018_status": "HOLD"
+}

@@ -1,0 +1,200 @@
+{
+  "schema_version": "P3_3_STAGE1_MANGONG_MASTER_SPEC_V001",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-198",
+  "date": "2026-09-27",
+  "stage": "P3.3 V002 Stage 1",
+  "task_id": "T-038",
+  "source": {
+    "source_id": "SRC-ZG-WF-001",
+    "title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告",
+    "canonical_pdf_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "direct_length_bindings": [
+      {
+        "pdf_page": 60,
+        "printed_page": 45,
+        "section": "2.2.2.2 慢栱",
+        "field": "大型慢栱长",
+        "mean_mm": 1641,
+        "sample_count": 16,
+        "classification": "DIRECT_PRIMARY / OBSERVED_MEAN"
+      },
+      {
+        "pdf_page": 60,
+        "printed_page": 45,
+        "section": "2.2.2.2 慢栱",
+        "field": "小型慢栱长",
+        "mean_mm": 1607,
+        "sample_count": 28,
+        "classification": "DIRECT_PRIMARY / OBSERVED_MEAN"
+      }
+    ],
+    "visual_form_pages": [
+      73,
+      74,
+      75,
+      76
+    ],
+    "visual_gate": {
+      "decision_id": "D-196",
+      "result": "PASS WITH BOUNDARIES"
+    }
+  },
+  "architecture": {
+    "master_family_id": "CMP-GONG-MANGONG-001",
+    "master_id": "CMP-GONG-MANGONG-001_MASTER",
+    "master_family_count": 1,
+    "geometry_variant_count": 2,
+    "physical_instance_count": 44,
+    "variants": [
+      {
+        "variant_id": "LARGE_MANGONG",
+        "component_name_zh": "大型慢栱",
+        "count": 16,
+        "length_mm": 1641,
+        "width_mm": 218.9,
+        "thickness_mm": 156.9
+      },
+      {
+        "variant_id": "SMALL_MANGONG",
+        "component_name_zh": "小型慢栱",
+        "count": 28,
+        "length_mm": 1607,
+        "width_mm": 218.9,
+        "thickness_mm": 156.9
+      }
+    ]
+  },
+  "evidence_semantics": {
+    "length": "DIRECT_PRIMARY / OBSERVED_MEAN / VARIANT_SPECIFIC",
+    "width": "REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
+    "thickness": "REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
+    "width_slow_gong_specific_raw_observed_mean_verified": false,
+    "thickness_slow_gong_specific_raw_observed_mean_verified": false,
+    "per_instance_exact_claim": false,
+    "original_963_design_claim": false
+  },
+  "profile": {
+    "authority": "SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED / PROVISIONAL",
+    "exact_historical_curve": "UNRESOLVED",
+    "exact_historical_control_dimensions": "UNRESOLVED",
+    "numeric_control_set_locked": true,
+    "direct_control_point_measurements": false,
+    "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "allowed_visual_source": [
+      "PDF p73",
+      "PDF p74",
+      "PDF p75",
+      "PDF p76"
+    ],
+    "generic_song_template_substitution": false,
+    "future_control_set_requirements": [
+      "DETERMINISTIC",
+      "VERSIONED",
+      "VISUALLY_REVIEWABLE",
+      "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE",
+      "REPRODUCIBLE_FROM_LOCKED_NUMERIC_DEFINITION",
+      "NOT_DIRECT_MEASUREMENT_UNLESS_EXPLICITLY_ESTABLISHED"
+    ],
+    "control_set_id": "MANGONG_PROFILE_CONTROL_SET_V001_C01",
+    "control_set_sha256": "07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4",
+    "control_point_count": 18,
+    "control_set_approval_decision": "D-201",
+    "definition_path": "production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MANGONG_DEFINITION_V001.json"
+  },
+  "coordinate_convention": {
+    "x": "length",
+    "y": "width/extrusion",
+    "z": "profile thickness/vertical",
+    "placement_transform_in_master": false
+  },
+  "variant_rules": {
+    "shared": [
+      "family topology",
+      "coordinate convention",
+      "profile derivation method",
+      "builder/validator logic",
+      "evidence schema",
+      "width/thickness Stage1 candidates"
+    ],
+    "discriminator": "length",
+    "forbidden": [
+      "SMALL = uniform_scale(LARGE,1607/1641)",
+      "scale width/thickness by length ratio",
+      "location-specific variants without evidence",
+      "different LARGE/SMALL profile shape without evidence",
+      "upgrade width/thickness to direct-measurement fact"
+    ]
+  },
+  "deferred_geometry": [
+    "exact_mortise_tenon",
+    "grooves",
+    "hidden_slots_or_cavities",
+    "local_connection_cuts",
+    "exact_historical_profile_curve",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "unmeasured_chamfers",
+    "per_instance_963_originality"
+  ],
+  "first_article_required_panels": [
+    "LARGE_AXON",
+    "SMALL_AXON",
+    "LARGE_FRONT_PROFILE",
+    "SMALL_FRONT_PROFILE",
+    "LARGE_SMALL_OVERLAY",
+    "DIMENSION_PROOF",
+    "PROFILE_PROVENANCE",
+    "EVIDENCE_BOUNDARY"
+  ],
+  "proposed_hard_fails": [
+    "WRONG_LARGE_COUNT",
+    "WRONG_SMALL_COUNT",
+    "WRONG_LARGE_LENGTH",
+    "WRONG_SMALL_LENGTH",
+    "WIDTH_THICKNESS_EVIDENCE_OVERCLAIM",
+    "PER_INSTANCE_EXACT_CLAIM",
+    "ORIGINAL_963_FACT_UPGRADE",
+    "SMALL_UNIFORM_SCALED_FROM_LARGE",
+    "UNSUPPORTED_PROFILE_INVENTION",
+    "PROFILE_CONTROL_SET_NOT_VERSIONED",
+    "GENERIC_TEMPLATE_SUBSTITUTION",
+    "UNSUPPORTED_JOINERY_OR_LOCAL_CUTS",
+    "REVIEW_RENDER_NEAR_UNIFORM",
+    "MODEL_BEFORE_EXECUTION_AUTHORIZATION"
+  ],
+  "gates": {
+    "source_readiness": "PASS WITH BOUNDARIES / D-196",
+    "master_spec": "LOCKED / PRODUCT_OWNER_APPROVED / D-198",
+    "task_contract": "LOCKED / D-199",
+    "engineering_execution": "NEXT GATE / NOT YET AUTHORIZED",
+    "formalization": "NOT AUTHORIZED",
+    "catalog_v008_binding": "NOT AUTHORIZED",
+    "pr_merge": "NOT AUTHORIZED",
+    "stage2": "NOT AUTHORIZED",
+    "t018": "HOLD",
+    "profile_control_set": "LOCKED / PRODUCT_OWNER_APPROVED / D-201"
+  },
+  "decisions": [
+    "D-195",
+    "D-196",
+    "D-197",
+    "D-198",
+    "D-199",
+    "D-201"
+  ],
+  "approval": {
+    "decision_id": "D-198",
+    "product_owner_approved": true,
+    "locked": true,
+    "approval_date": "2026-09-27",
+    "note": "V0.1 is locked with explicit evidence boundaries. Numeric profile control set remains unresolved/not locked; Task Contract design is a separate gate."
+  },
+  "task_contract": {
+    "decision_id": "D-199",
+    "locked": true,
+    "path": "docs/tasks/T-038_P3_3_MANGONG_MASTER_V2_V001.md",
+    "profile_control_pre_execution_gate_required": true,
+    "profile_control_gate_id": "PROFILE_CONTROL_SET_V0.1",
+    "engineering_execution_blocked_until_profile_control_approved": true
+  }
+}

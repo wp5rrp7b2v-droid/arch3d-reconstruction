@@ -876,3 +876,127 @@ Boundary retained:
 - Target: **慢栱族（大型16 + 小型28）**.
 - Current gate: **SOURCE READINESS + VISUAL/FORM EVIDENCE REVIEW**.
 - Engineering/modeling: **NOT AUTHORIZED**.
+
+### T-038 Source Readiness + D-076｜D-196
+
+- LARGE length: **1641 mm / DIRECT_PRIMARY OBSERVED_MEAN / n=16**.
+- SMALL length: **1607 mm / DIRECT_PRIMARY OBSERVED_MEAN / n=28**.
+- W=218.9 / T=156.9: **REPORT_INFERRED FAMILY DESIGN CANDIDATE / REPLACEABLE**, not member-specific direct observations.
+- Same-building visual/form evidence: **PASS WITH BOUNDARIES**.
+- Exact standalone profile: **UNRESOLVED**.
+- Joinery/local cuts: **DEFERRED**.
+- Master Spec: **NOT YET AUTHORIZED**.
+
+### T-038 Master Spec V0.1 Draft｜D-197
+
+- Status: **DRAFT / PRODUCT OWNER REVIEW REQUIRED**.
+- Family architecture: **1 Master / 2 variants / 44 records**.
+- LARGE length: **1641mm / n=16 / direct observed mean**.
+- SMALL length: **1607mm / n=28 / direct observed mean**.
+- W/T: **report-inferred family design candidates / replaceable**.
+- Numeric profile control set: **NOT LOCKED**.
+- Engineering/modeling: **NOT AUTHORIZED**.
+
+### T-038 Master Spec V0.1 Approval｜D-198
+
+- Master Spec: **LOCKED / PRODUCT OWNER APPROVED**.
+- Family architecture: **1 Master / 2 variants / 44 records**.
+- LARGE: **1641mm / n=16 / direct observed mean**.
+- SMALL: **1607mm / n=28 / direct observed mean**.
+- W/T: **REPORT_INFERRED family design candidates / replaceable**.
+- Numeric profile control set: **NOT LOCKED / UNRESOLVED**.
+- Joinery/local cuts: **DEFERRED**.
+- Task Contract: **NEXT GATE / NOT YET AUTHORIZED**.
+- Engineering/modeling: **NOT AUTHORIZED**.
+
+### T-038 Task Contract｜D-199
+
+- Task Contract: **LOCKED / PRODUCT OWNER AUTHORIZED**.
+- Family: **1 Master / 2 variants / 44 records**.
+- Variant rule: **independent generation / no uniform global scaling**.
+- W/T evidence semantics: **report-inferred / replaceable / not direct observations**.
+- First-article Review Board: **8 required domains**.
+- Profile control set: **MANDATORY PRE-EXECUTION GATE / NOT YET LOCKED**.
+- T-037 guazi profile reuse: **FORBIDDEN WITHOUT EXPLICIT EVIDENCE/APPROVAL**.
+- Engineering/modeling: **NOT AUTHORIZED**.
+
+### T-038 Profile Control Set V0.1 Candidate 01｜D-200
+
+- Candidate: **READY FOR PRODUCT OWNER REVIEW / NOT LOCKED**.
+- Control points: **18 / bilateral Stage1 simplification**.
+- Classification: **SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT**.
+- Same-building visual source: **PDF p73–76**.
+- Metric source-image calibration: **NOT PERFORMED / NOT CLAIMED**.
+- T-037 guazi profile reuse: **NO**.
+- Engineering/modeling: **NOT AUTHORIZED**.
+
+### T-038 Profile Control Set Approval｜D-201
+
+- Candidate 01: **APPROVED / LOCKED**.
+- Control points: **18**.
+- Signature: `07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4`.
+- Classification: **SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT**.
+- Exact historical profile: **UNRESOLVED**.
+- T-037 guazi profile reuse: **NO**.
+- Engineering execution: **NEXT GATE / NOT AUTHORIZED**.
+
+### T-038 Engineering Execution Authorization｜D-202
+
+- Engineering execution: **AUTHORIZED**.
+- Blender first article: **AUTHORIZED**.
+- Draft PR: **AUTHORIZED**.
+- First-article Product Owner acceptance: **NOT AUTHORIZED / FUTURE DECISION**.
+- Formalization / Catalog-V008 / Ready-Merge / closure: **NOT AUTHORIZED**.
+
+### T-038 First Article Machine Gate｜D-203
+
+- Machine validation: **PASS 43/43** / Run 36299005477.
+- Deterministic build/reopen/restore: **PASS**.
+- 8-domain Review Board / nonblank render checks: **PASS**.
+- LARGE bbox: **1641 × 218.9 × 156.9 mm**.
+- SMALL bbox: **1607 × 218.9 × 156.9 mm**.
+- Canonical .blend SHA: `1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023`.
+- Draft PR #34: **OPEN / DRAFT / MERGEABLE**.
+- Product Owner first-article approval: **PENDING**.
+- Formalization / Catalog-V008 / Ready-Merge / closure: **NOT AUTHORIZED**.
+
+### T-038 First Article Approval + Formalization Authorization｜D-204
+
+- Product Owner first article: **APPROVED**.
+- Accepted machine evidence: **Run 36299005477 / 43/43 PASS**.
+- Accepted canonical .blend SHA: `1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023`.
+- Formalization + Catalog/V008 binding: **AUTHORIZED**.
+- Evidence semantics: **UNCHANGED / BOUNDED**.
+- Excel / post-formalization readiness / Ready-Merge / closure: **NOT AUTHORIZED**.
+
+### T-038 Formalization + Catalog/V008 Binding｜D-205
+
+- **FORMALIZED / BRANCH** under D-204.
+- Stage1 Catalog: **22/28 = 78.6%** on T-038 branch.
+- Registry binding: **44/44** slow-gong records = APPROVED_MASTER_AVAILABLE / CMP-GONG-MANGONG-001_MASTER.
+- Master-covered Registry records: **247**.
+- CURRENT == V008: **PASS**.
+- Accepted canonical .blend SHA-256: `1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023`.
+- LARGE / SMALL geometry signatures: **MATCH D-204 accepted first article**.
+- Derived Excel / post-formalization readiness: **PENDING / NOT AUTHORIZED**.
+- PR #34: **DRAFT / MERGE NOT AUTHORIZED**.
+
+### T-038 Post-Formalization Verification Authorization｜D-206
+
+- V008/CURRENT progress-summary synchronization: **AUTHORIZED**.
+- Derived Excel sync: **AUTHORIZED**.
+- Latest-head T-038 regression: **AUTHORIZED**.
+- Shared registry regressions + PR readiness review: **AUTHORIZED**.
+- Ready / Merge / closure: **NOT AUTHORIZED**.
+
+### T-038 Post-Formalization Verification + PR Readiness｜D-207
+
+- Derived Excel: **PASS** / Run 36300610732; latest-head revalidation Run 36300841753.
+- T-038 latest-head regression: **PASS 43/43** / Run 36300841791.
+- Family / LARGE / SMALL geometry signatures: **EXACT MATCH D-204**.
+- Regenerated blend: **VALIDATION EVIDENCE ONLY / NOT PROMOTED**.
+- Shared T-021/T-022/T-023/T-024/T-037: **PASS**.
+- Generic P3.3 Master V2: **SKIPPED AS INTENDED** for dedicated T-038 route.
+- PR #34: **OPEN / DRAFT / MERGEABLE**.
+- Readiness review: **PASS / READY FOR PRODUCT OWNER D-194 READY+MERGE DECISION**.
+- Ready / merge / closure: **NOT YET AUTHORIZED**.

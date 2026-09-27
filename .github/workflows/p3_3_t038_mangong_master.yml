@@ -1,0 +1,128 @@
+name: T-038 Mangong Master First Article
+
+# D-206 latest-head regression during T-038 post-formalization verification.
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/p3_3_t038_mangong_master.yml'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/**'
+      - 'production/zhenguo_wanfo/scripts/validate_t038_mangong.py'
+      - 'docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  first-article:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    env:
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      DEF: production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MANGONG_DEFINITION_V001.json
+      WRAPPER: production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/build_mangong_master_v001.py
+      VALIDATOR: production/zhenguo_wanfo/scripts/validate_t038_mangong.py
+      REGISTRY: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json
+      OUT: artifacts/t038
+      REVIEW: artifacts/t038/review
+      ASSET: artifacts/t038/CMP-GONG-MANGONG-001_MASTER_V001.blend
+      SEM: artifacts/t038/CMP-GONG-MANGONG-001_MASTER_SEMANTIC_V001.json
+      BOARD: artifacts/t038/CMP-GONG-MANGONG-001_MASTER_REVIEW_BOARD_V001.png
+      VAL: artifacts/t038/CMP-GONG-MANGONG-001_MASTER_VALIDATION_V001.json
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Install Blender 4.5.13 and Pillow
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1 fonts-noto-cjk
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions T038" -o /tmp/blender.tar.xz "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+          python -m pip install --disable-pip-version-check pillow
+
+      - name: Precheck locked Definition
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - "$DEF" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert d["task_id"]=="T-038"
+          assert d["execution_boundary"]["engineering_execution_authorized"] is True
+          assert d["profile_contract"]["authority"]=="SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED"
+          assert d["profile_contract"]["exact_historical_curve"]=="UNRESOLVED"
+          assert d["profile_contract"]["candidate_id"]=="MANGONG_PROFILE_CONTROL_SET_V001_C01"
+          assert d["profile_contract"]["point_count"]==18
+          assert d["profile_contract"]["control_set_sha256"]=="07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4"
+          assert d["profile_contract"]["t037_guazi_control_set_reused"] is False
+          assert d["profile_contract"]["product_owner_approved"] is True
+          assert d["registry_boundary"]["physical_instance_count"]==44
+          assert d["registry_boundary"]["geometry_variant_count"]==2
+          print("T038_DEFINITION_PRECHECK_PASS")
+          PY
+
+      - name: Build canonical two-variant first article
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT" "$REVIEW"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --definition "$DEF" --asset "$ASSET" --semantic "$SEM" --review-dir "$REVIEW"
+
+      - name: Independent reopen
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$ASSET" --python-exit-code 10 --python "$WRAPPER" --             --mode inspect --asset "$ASSET" --expected "$SEM" --output "$OUT/reopen.json"
+
+      - name: Deterministic restore build
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --definition "$DEF" --asset "$OUT/restore.blend" --semantic "$OUT/restore.json"
+
+      - name: Compose 8-panel Review Board
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode compose-board --definition "$DEF" --canonical "$SEM"             --review-dir "$REVIEW" --board "$BOARD"
+
+      - name: Validate first article
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode validate --definition "$DEF" --canonical "$SEM"             --reopen "$OUT/reopen.json" --restore "$OUT/restore.json" --registry "$REGISTRY"             --asset "$ASSET" --review-dir "$REVIEW" --board "$BOARD" --output "$VAL"
+          python - "$VAL" <<'PY'
+          import json,sys
+          v=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert v["status"]=="PASS"
+          print("T038_FIRST_ARTICLE_MACHINE_PASS",v["check_count"])
+          PY
+
+      - name: Assert canonical binary is not tracked
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -z "$(git ls-files -- 'production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/*.blend' 'production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/asset/*.blend')"
+
+      - name: Upload T-038 first article
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T038_MANGONG_MASTER_V2_FIRST_ARTICLE_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            ${{ env.ASSET }}
+            ${{ env.SEM }}
+            ${{ env.BOARD }}
+            ${{ env.VAL }}
+            ${{ env.REVIEW }}/*.png
+

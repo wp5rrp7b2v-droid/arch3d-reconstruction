@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R274",
+  "state_revision": "R286",
   "last_updated": "2026-09-27",
-  "session_status": "T-037 CLOSED D-193 / PR #33 MERGED / MAIN 21 OF 28 = 75.0% / T-038 SOURCE READINESS ACTIVE D-195 / T-018 HOLD",
+  "session_status": "T-038 POST-FORMALIZATION READINESS PASS D-207 / PR #34 DRAFT + MERGEABLE / READY+MERGE AWAITING PRODUCT OWNER / BRANCH 22 OF 28 / MAIN 21 OF 28 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 21 OF 28 MASTERS APPROVED / T-038 SOURCE READINESS ACTIVE / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / BRANCH 22 OF 28 MASTERS APPROVED / MAIN 21 OF 28 / T-038 SOURCE READINESS ACTIVE / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 21 OF 28 MASTERS APPROVED / T-038 SOURCE READINESS ACTIVE D-195 / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 21 OF 28 MASTERS APPROVED / T-038 SOURCE READINESS ACTIVE D-195 / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / BRANCH 22 OF 28 / MAIN 21 OF 28 / T-038 FORMALIZED D-205 / PR #34 DRAFT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / BRANCH 22 OF 28 / MAIN 21 OF 28 / T-038 FORMALIZED D-205 / PR #34 DRAFT / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "T-038 source attribution + visual/form evidence must be reviewed before Master Spec or modeling.",
+  "blocker": "Product Owner explicit approval required for D-194 combined Draft→Ready + merge.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "SOURCE READINESS + VISUAL/FORM EVIDENCE REVIEW ACTIVE / D-195 / NO ENGINEERING AUTHORITY"
+    "status": "POST-FORMALIZATION READINESS PASS / D-207 / PR #34 DRAFT / READY+MERGE NOT YET AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-038-SOURCE-READINESS",
-    "name": "慢栱族 Source Readiness + D-076 visual/form evidence review",
-    "status": "ACTIVE / REVIEW REQUIRED BEFORE MASTER SPEC"
+    "id": "T-038-D194-READY-MERGE",
+    "name": "PR #34 Draft→Ready + Merge under D-194",
+    "status": "AWAITING PRODUCT OWNER EXPLICIT APPROVAL"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -1243,16 +1243,16 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-037 CLOSED / 21 OF 28 / T-038 SOURCE READINESS ACTIVE",
+    "status": "ACTIVE / T-038 FORMALIZED ON BRANCH / 22 OF 28",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 21,
-    "pending_master_object_type_count": 7,
-    "master_completion_percent": 75,
-    "master_covered_registry_record_count": 203,
-    "pending_source_binding_count": 7,
+    "approved_master_count": 22,
+    "pending_master_object_type_count": 6,
+    "master_completion_percent": 78.6,
+    "master_covered_registry_record_count": 247,
+    "pending_source_binding_count": 6,
     "row_fields": [
       "stage1_disposition",
       "master_coverage_status",
@@ -1263,7 +1263,7 @@
     "excel_sync_run": 36296704267,
     "excel_sync_result": "SUCCESS",
     "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure.",
-    "excel_sync_pending": false
+    "excel_sync_pending": true
   },
   "local_sync_verification_2026_09_20": {
     "status": "PASS / COMPLETE",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "SOURCE READINESS + VISUAL/FORM EVIDENCE REVIEW ACTIVE / D-195",
+    "status": "POST-FORMALIZATION READINESS PASS / D-207 / PR #34 DRAFT / MERGEABLE",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2224,10 +2224,145 @@
       "thickness": 156.9
     },
     "evidence_boundary": "Registry dimensions are current V008 production records; direct primary source attribution and member profile/form evidence must be re-closed before Master Spec.",
-    "source_readiness_pass": false,
-    "visual_form_gate": "NOT YET REVIEWED",
-    "master_spec_authorized": false,
-    "task_contract_authorized": false,
-    "engineering_execution_authorized": false
+    "source_readiness_pass": true,
+    "visual_form_gate": "PASS WITH BOUNDARIES / D-196",
+    "master_spec_authorized": true,
+    "task_contract_authorized": true,
+    "engineering_execution_authorized": true,
+    "source_readiness_decision_id": "D-196",
+    "direct_length_evidence": {
+      "large_observed_mean_mm": 1641,
+      "large_n": 16,
+      "small_observed_mean_mm": 1607,
+      "small_n": 28,
+      "classification": "DIRECT_PRIMARY / OBSERVED_MEAN",
+      "source": "SRC-ZG-WF-001 / PDF p60 / printed p45 / §2.2.2.2 慢栱"
+    },
+    "width_thickness_evidence": {
+      "width_mm": 218.9,
+      "thickness_mm": 156.9,
+      "classification": "REPORT_INFERRED / FAMILY DESIGN CANDIDATE / REPLACEABLE",
+      "slow_gong_specific_raw_observed_mean_verified": false,
+      "per_instance_direct": false,
+      "source_note": "Report design synthesis includes these values; do not relabel as slow-gong-specific direct measurement."
+    },
+    "profile_status": "SAME_BUILDING_FORM_CONTEXT_SUPPORTED / EXACT_STANDALONE_PROFILE_UNRESOLVED",
+    "joinery_connection_details": "DEFERRED",
+    "source_readiness_review_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_MANGONG_SOURCE_READINESS_V001.md",
+    "master_spec_draft_decision_id": "D-197",
+    "master_spec_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_MANGONG_MASTER_SPEC_V001.md",
+    "master_spec_json_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_MANGONG_MASTER_SPEC_V001.json",
+    "master_family_id": "CMP-GONG-MANGONG-001",
+    "master_id": "CMP-GONG-MANGONG-001_MASTER",
+    "geometry_variants": [
+      "LARGE_MANGONG",
+      "SMALL_MANGONG"
+    ],
+    "width_mm": 218.9,
+    "thickness_mm": 156.9,
+    "width_thickness_classification": "REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
+    "numeric_profile_control_set_locked": true,
+    "master_spec_locked": true,
+    "master_spec_approval_decision_id": "D-198",
+    "task_contract_decision_id": "D-199",
+    "task_contract_path": "docs/tasks/T-038_P3_3_MANGONG_MASTER_V2_V001.md",
+    "task_contract_locked": true,
+    "profile_control_gate_required": true,
+    "profile_control_gate_id": "PROFILE_CONTROL_SET_V0.1",
+    "profile_control_candidate_decision_id": "D-200",
+    "profile_control_candidate_id": "MANGONG_PROFILE_CONTROL_SET_V001_C01",
+    "profile_control_candidate_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_MANGONG_PROFILE_CONTROL_SET_V001.md",
+    "profile_control_candidate_json_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_MANGONG_PROFILE_CONTROL_SET_V001.json",
+    "profile_control_candidate_svg_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_MANGONG_PROFILE_CONTROL_SET_V001.svg",
+    "profile_control_candidate_sha256": "07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4",
+    "profile_control_point_count": 18,
+    "profile_control_classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "profile_control_product_owner_approved": true,
+    "profile_control_approval_decision_id": "D-201",
+    "definition_path": "production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MANGONG_DEFINITION_V001.json",
+    "engineering_execution_decision_id": "D-202",
+    "blender_execution_authorized": true,
+    "builder_execution_authorized": true,
+    "workflow_execution_authorized": true,
+    "draft_pr_authorized": true,
+    "first_article_acceptance_authorized": true,
+    "formalization_authorized": true,
+    "catalog_v008_binding_authorized": true,
+    "merge_authorized": false,
+    "first_article_machine_decision_id": "D-203",
+    "first_article_run_id": 36299005477,
+    "first_article_head_sha": "a4361a4a156448d791c2a6cd7f9b759264159003",
+    "first_article_validation": "43/43 PASS",
+    "first_article_artifact_id": 10924188411,
+    "first_article_artifact_digest": "sha256:bf279ee4b3b1bf04d8263cf12983e0124a4a39d654f7a2297a95d7a12ca47060",
+    "first_article_canonical_blend_sha256": "1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023",
+    "first_article_semantic_sha256": "a63eefe09f00c65b331f745ea3145f0ff29c8acce49309f620d5de0d537a90cc",
+    "first_article_validation_sha256": "9c9e840aec1dd61d7ceb777087c7c3f7a40d589368edaaeb1000964ea5f1b04d",
+    "first_article_review_board_sha256": "f0038fd1a6da007a4526460cd67beb3060acaf42e9185bb7a58214a606ed2531",
+    "family_semantic_signature": "ae8ad824401a75b694d404e494038a90aa19f92406e3a1def53db4153dcc0e6d",
+    "large_geometry_signature": "324fb1aab0c469010e6adaf4dc9372eafe9d165ee99c01a8764edff3a98f898a",
+    "small_geometry_signature": "6858ad94e5e89c8b8ff6059a18ece7a04949f52836b39e12052913c4b8338245",
+    "pr_number": 34,
+    "pr_draft": true,
+    "pr_mergeable": true,
+    "first_article_machine_pass": true,
+    "first_article_product_owner_approved": true,
+    "first_article_approval_decision_id": "D-204",
+    "formalization_authority": "D-204",
+    "excel_sync_authorized": true,
+    "post_formalization_verification_authorized": true,
+    "formalization_result_decision_id": "D-205",
+    "formalization_complete": true,
+    "formalization_run_id": 36300220135,
+    "branch_approved_master_count": 22,
+    "branch_master_completion_percent": 78.6,
+    "branch_master_covered_registry_record_count": 247,
+    "mangong_registry_binding_count": 44,
+    "current_equals_v008": true,
+    "canonical_blend_sha256": "1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023",
+    "semantic_sha256": "1223ad42c788e04967bc8f35f832b1e84061d1b118f2d6adc84da1d8ada19690",
+    "validation_sha256": "613d2a33fb32ef4f842e562b6104c8f73cf456d422f8a873e291a9d29ea1bc2b",
+    "review_board_sha256": "f0038fd1a6da007a4526460cd67beb3060acaf42e9185bb7a58214a606ed2531",
+    "post_formalization_authority": "D-206",
+    "readiness_review_authorized": true,
+    "ready_transition_authorized": false,
+    "readiness_decision_id": "D-207",
+    "readiness_review_pass": true,
+    "derived_excel_sync_run": 36300610732,
+    "latest_head_excel_validation_run": 36300841753,
+    "latest_head_regression_run": 36300841791,
+    "latest_head_regression_head": "f0f50cb5f4877c44d5991f93e00e72f70c5c18c1",
+    "latest_head_regression_validation": "43/43 PASS",
+    "latest_head_regenerated_blend_sha256": "7a6ac978f3ba7b1ad5947bc3ce2bf2ea7e20e437ed18dd8069a08abc7d355f4f",
+    "latest_head_regenerated_blend_promoted_to_canonical": false,
+    "latest_head_regression_artifact_id": 10925591420,
+    "latest_head_regression_artifact_digest": "sha256:5c58ac6518c550d36424a5c0ba07c8caeee294e21440744b5aa482ba21590af7",
+    "shared_regressions": {
+      "T-021": {
+        "run_id": 36300841769,
+        "result": "SUCCESS"
+      },
+      "T-022": {
+        "run_id": 36300841766,
+        "result": "SUCCESS"
+      },
+      "T-023": {
+        "run_id": 36300841818,
+        "result": "SUCCESS"
+      },
+      "T-024": {
+        "run_id": 36300841749,
+        "result": "SUCCESS"
+      },
+      "T-037": {
+        "run_id": 36300841854,
+        "result": "SUCCESS"
+      },
+      "generic_p3_3_master_v2": {
+        "run_id": 36300841755,
+        "result": "SKIPPED_AS_INTENDED"
+      }
+    },
+    "closure_authorized": false
   }
 }

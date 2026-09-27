@@ -1552,3 +1552,131 @@ Do not restart T-018 by default.
 - V008 production dimensions currently carried: LARGE L=1641mm; SMALL L=1607mm; W=218.9mm; T=156.9mm.
 - Current scope: Source Readiness + visual/form evidence review only.
 - No Master Spec lock, Task Contract lock, engineering execution, Blender generation, or PR creation is authorized yet.
+
+## 2026-09-27｜T-038 Source Readiness + D-076 Review｜D-196
+
+- Primary report PDF p60 / printed p45 directly supports LARGE slow-gong observed mean 1641mm (n=16) and SMALL 1607mm (n=28).
+- V008 W=218.9mm / T=156.9mm are retained as REPORT_INFERRED family design candidates, not slow-gong-specific raw observed means.
+- Same-building report PDF p73–76 provides photo/section/CAD evidence sufficient for orientation, assembly context and broad form.
+- Exact standalone profile and joinery remain unresolved/deferred.
+- Result: Source Readiness PASS WITH BOUNDARIES / D-076 PASS WITH BOUNDARIES.
+- No Master Spec lock, Task Contract, engineering execution, Blender generation, formalization or PR authority.
+
+## 2026-09-27｜T-038 Master Spec V0.1 Draft｜D-197
+
+- Draft only; Product Owner review required.
+- Proposed family: CMP-GONG-MANGONG-001_MASTER / LARGE_MANGONG + SMALL_MANGONG.
+- Direct length evidence: LARGE 1641mm / n=16; SMALL 1607mm / n=28.
+- Width/thickness: 218.9 / 156.9mm = REPORT_INFERRED family design candidates / replaceable.
+- Exact numeric profile control set is not locked in V0.1.
+- No Task Contract, engineering execution, Blender generation, formalization, Catalog/V008 binding or PR authority.
+
+## 2026-09-27｜T-038 Master Spec V0.1 Approval｜D-198
+
+- Product Owner: APPROVED.
+- Master Spec V0.1: LOCKED.
+- Family: CMP-GONG-MANGONG-001_MASTER / LARGE_MANGONG + SMALL_MANGONG.
+- LARGE length: 1641mm / n=16 / DIRECT_PRIMARY OBSERVED_MEAN.
+- SMALL length: 1607mm / n=28 / DIRECT_PRIMARY OBSERVED_MEAN.
+- Width/thickness: 218.9 / 156.9mm remain REPORT_INFERRED family design candidates / replaceable.
+- Numeric profile control set remains NOT LOCKED; exact historical profile remains UNRESOLVED.
+- Joinery/grooves/local cuts remain DEFERRED.
+- Task Contract is the next separate gate. Engineering/Blender remains NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Task Contract Lock｜D-199
+
+- Task Contract: LOCKED.
+- Architecture: one CMP-GONG-MANGONG-001_MASTER family / LARGE_MANGONG + SMALL_MANGONG / 44 Registry records.
+- Length authority retained: LARGE 1641mm n=16; SMALL 1607mm n=28.
+- W/T remain report-inferred family design candidates / replaceable.
+- Mandatory new pre-execution gate: PROFILE_CONTROL_SET_V0.1.
+- Profile control set must be deterministic, versioned, same-building-source-guided, visually reviewable, replaceable and Product Owner approved.
+- T-037 guazi profile control points cannot be silently reused.
+- Engineering execution / Blender remains NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Profile Control Set V0.1 Candidate 01｜D-200
+
+- Product Owner authorized entry into the profile-control design/review gate.
+- Candidate: MANGONG_PROFILE_CONTROL_SET_V001_C01 / 18 points.
+- Signature: 07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4.
+- Classification: SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT.
+- Source: same-building PDF p73–76 qualitative form/envelope only.
+- Metric calibration: NOT PERFORMED / NOT CLAIMED.
+- T-037 guazi 13-point set reuse: NO.
+- Candidate is ready for Product Owner visual review; not locked.
+- Engineering / Blender remains NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Profile Control Set Approval｜D-201
+
+- Product Owner: APPROVED.
+- Candidate: MANGONG_PROFILE_CONTROL_SET_V001_C01.
+- 18-point normalized set locked in the T-038 Definition.
+- Signature: 07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4.
+- Classification: SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT.
+- Exact historical curve/control dimensions remain UNRESOLVED.
+- Metric source-image calibration: NOT PERFORMED / NOT CLAIMED.
+- T-037 guazi control set reuse: NO.
+- Engineering execution / Blender / builder implementation remains NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Engineering Execution Authorization｜D-202
+
+- Product Owner: AUTHORIZED.
+- Scope: isolated builder + validator + workflow; Blender 4.5.13 two-variant first article; deterministic rebuild/reopen; 8-domain Review Board; artifact; Draft PR.
+- Locked inputs: D-198 Master Spec / D-199 Task Contract / D-201 18-point profile control set.
+- First-article acceptance, formalization, Catalog/V008 binding, PR Ready/merge and closure remain NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 First Article Machine Gate｜D-203
+
+- Valid run: 36299005477 / SUCCESS / 43/43 PASS / head a4361a4a156448d791c2a6cd7f9b759264159003.
+- Precheck / canonical build / independent reopen / deterministic restore / 8-panel Review Board / validation / no-tracked-blend / artifact upload: PASS.
+- Artifact: 10924188411 / sha256:bf279ee4b3b1bf04d8263cf12983e0124a4a39d654f7a2297a95d7a12ca47060.
+- Canonical .blend SHA-256: 1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023.
+- Family semantic signature: ae8ad824401a75b694d404e494038a90aa19f92406e3a1def53db4153dcc0e6d.
+- LARGE geometry signature: 324fb1aab0c469010e6adaf4dc9372eafe9d165ee99c01a8764edff3a98f898a.
+- SMALL geometry signature: 6858ad94e5e89c8b8ff6059a18ece7a04949f52836b39e12052913c4b8338245.
+- Review Board SHA-256: f0038fd1a6da007a4526460cd67beb3060acaf42e9185bb7a58214a606ed2531.
+- Draft PR #34: open / draft / mergeable.
+- Runs #1-#3: superseded setup/precheck failures; no accepted first-article evidence from those runs.
+- Product Owner first-article acceptance remains pending. Formalization / Catalog-V008 / Ready-Merge / closure remain unauthorized.
+
+## 2026-09-27｜T-038 First Article Approval + Formalization Authorization｜D-204
+
+- Product Owner first article: APPROVED.
+- Accepted Run: 36299005477 / 43/43 PASS.
+- Accepted canonical .blend SHA-256: 1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023.
+- Family/LARGE/SMALL signatures retained from D-203.
+- Evidence boundaries retained: W/T report-inferred + replaceable; 18-point profile source-guided simplified + replaceable + not direct measurement; joinery/local cuts deferred.
+- Formalization + Stage1 Catalog/V008/CURRENT binding: AUTHORIZED.
+- Derived Excel, post-formalization regression/readiness, Ready/Merge, closure: NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Formalization + Catalog/V008 Binding｜D-205
+
+- Authority: D-204.
+- Formalization workflow run: 36300220135.
+- Formal package: Definition + Semantic + Review Board + Validation + Task Contract.
+- Accepted canonical .blend remains SHA-256 1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023; .blend is not tracked in Git.
+- Geometry signatures: LARGE=324fb1aab0c469010e6adaf4dc9372eafe9d165ee99c01a8764edff3a98f898a; SMALL=6858ad94e5e89c8b8ff6059a18ece7a04949f52836b39e12052913c4b8338245; family=ae8ad824401a75b694d404e494038a90aa19f92406e3a1def53db4153dcc0e6d.
+- Stage1 Catalog branch count: 22/28 = 78.6%.
+- V008/CURRENT slow-gong binding: 44/44 APPROVED_MASTER_AVAILABLE -> CMP-GONG-MANGONG-001_MASTER.
+- Master-covered Registry records: 247. CURRENT == V008: PASS.
+- Derived Excel sync / post-formalization regression / PR readiness: NOT AUTHORIZED.
+- PR #34 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.
+
+## 2026-09-27｜T-038 Post-Formalization Verification Authorization｜D-206
+
+- Product Owner: AUTHORIZED.
+- Scope: synchronize V008/CURRENT progress summary to D-205 branch truth; derived Excel sync; latest-head T-038 regression; shared canonical-registry regressions; PR #34 readiness review.
+- D-205 row binding remains 44/44 and Catalog remains 22/28.
+- Ready transition / merge / closure / Stage2 / T-018 resume remain NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Post-Formalization Verification + Readiness｜D-207
+
+- Derived Excel sync: Run 36300610732 SUCCESS; source Registry commit 17d9369230226d407d3e7e0fdc45cc372054f5da; Excel SHA c3337c818120db8adc1a6f36f079724e6629f6765fab11eb5415d01e21b3a6a6.
+- Latest-head Excel validation: Run 36300841753 SUCCESS / V008 / 505 / no derived change.
+- Latest-head T-038 regression: Run 36300841791 SUCCESS / 43/43 / head f0f50cb5f4877c44d5991f93e00e72f70c5c18c1.
+- Family/LARGE/SMALL signatures exactly match D-204 accepted first article.
+- Regression blend SHA 7a6ac978f3ba7b1ad5947bc3ce2bf2ea7e20e437ed18dd8069a08abc7d355f4f is NOT promoted; accepted canonical remains 1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023.
+- Shared regressions: T-021/T-022/T-023/T-024/T-037 = PASS. Generic P3.3 route = SKIPPED AS INTENDED for dedicated T-038 pipeline.
+- PR #34: OPEN / DRAFT / MERGEABLE.
+- Readiness: PASS / READY FOR PRODUCT OWNER D-194 COMBINED READY+MERGE DECISION.
+- Ready transition / merge / closure remain NOT AUTHORIZED until explicit Product Owner approval.

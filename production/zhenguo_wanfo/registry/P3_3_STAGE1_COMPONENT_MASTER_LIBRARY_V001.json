@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-037 CLOSED / T-038 SOURCE READINESS ACTIVE",
-  "status": "TWENTY_ONE_APPROVED / T037 CLOSED / MERGED_TO_MAIN / T038 SOURCE READINESS ACTIVE",
+  "task": "T-038 FORMALIZED / PR #34 DRAFT",
+  "status": "TWENTY_TWO_APPROVED / T038 FORMALIZED / PR #34 DRAFT / MERGE NOT AUTHORIZED",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -747,7 +747,67 @@
       "final_regression_artifact_id": 10924670395,
       "final_regression_artifact_zip_sha256": "678e2305cf9849a53b6eafc694ce2374e4ea407d609cc7e4829def71fe3fc944",
       "main_verified": true
+    },
+    {
+      "component_id": "CMP-GONG-MANGONG-001",
+      "master_id": "CMP-GONG-MANGONG-001_MASTER",
+      "master_version": "V001",
+      "variant_ids": [
+        "LARGE_MANGONG",
+        "SMALL_MANGONG"
+      ],
+      "approval_status": "PRODUCT_OWNER_APPROVED",
+      "decision_id": "D-204",
+      "formalization_authority": "D-204",
+      "publication_status": "FORMALIZED / PR #34 DRAFT / MERGE NOT AUTHORIZED",
+      "canonical_asset_status": "ACTIONS_ARTIFACT / PRODUCT_OWNER_APPROVED / LOCAL ONLY / NOT GIT",
+      "canonical_asset_sha256": "1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023",
+      "semantic_sha256": "1223ad42c788e04967bc8f35f832b1e84061d1b118f2d6adc84da1d8ada19690",
+      "validation_sha256": "613d2a33fb32ef4f842e562b6104c8f73cf456d422f8a873e291a9d29ea1bc2b",
+      "review_board_sha256": "f0038fd1a6da007a4526460cd67beb3060acaf42e9185bb7a58214a606ed2531",
+      "family_semantic_signature": "ae8ad824401a75b694d404e494038a90aa19f92406e3a1def53db4153dcc0e6d",
+      "variant_geometry_signatures": {
+        "LARGE_MANGONG": "324fb1aab0c469010e6adaf4dc9372eafe9d165ee99c01a8764edff3a98f898a",
+        "SMALL_MANGONG": "6858ad94e5e89c8b8ff6059a18ece7a04949f52836b39e12052913c4b8338245"
+      },
+      "physical_instance_count": 44,
+      "geometry_variant_count": 2,
+      "distribution": "LARGE 16 / SMALL 28 / ONE SHARED MASTER FAMILY",
+      "dimension_policy": {
+        "large_length_mm": "1641 / DIRECT_PRIMARY OBSERVED_MEAN / n=16",
+        "small_length_mm": "1607 / DIRECT_PRIMARY OBSERVED_MEAN / n=28",
+        "width_mm": "218.9 / REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
+        "thickness_mm": "156.9 / REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE"
+      },
+      "profile_policy": {
+        "authority": "SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED",
+        "control_set": "LOCKED_18_POINT / SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+        "control_set_sha256": "07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4",
+        "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+        "exact_historical_curve": "UNRESOLVED"
+      },
+      "joinery_boundary": "GROOVES / MORTISE-TENON / CAVITIES / LOCAL CONNECTION CUTS DEFERRED",
+      "source_artifact": {
+        "accepted_first_article": {
+          "run_id": 36299005477,
+          "artifact_id": 10924188411,
+          "artifact_zip_sha256": "bf279ee4b3b1bf04d8263cf12983e0124a4a39d654f7a2297a95d7a12ca47060"
+        }
+      },
+      "minimal_sufficient_package": {
+        "policy": "ADAPTIVE / NO UNIVERSAL FILE COUNT",
+        "formal_repo_files": [
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MANGONG_DEFINITION_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MASTER_SEMANTIC_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MASTER_REVIEW_BOARD_V001.png",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MASTER_VALIDATION_V001.json",
+          "docs/tasks/T-038_P3_3_MANGONG_MASTER_V2_V001.md"
+        ],
+        "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+        "review_board_count": 1,
+        "required_review_panel_count": 8
+      }
     }
   ],
-  "approved_master_count": 21
+  "approved_master_count": 22
 }
