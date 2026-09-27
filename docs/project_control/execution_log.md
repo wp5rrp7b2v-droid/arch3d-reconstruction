@@ -1844,3 +1844,20 @@ Do not restart T-018 by default.
 - Canonical .blend is artifact-only and not tracked in Git: PASS.
 - Product Owner First Article approval: PENDING.
 - Formalization / Catalog binding / Ready+Merge / closure: NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 First Article Product Owner Approval｜D-218
+
+- Product Owner approval: RECEIVED.
+- Accepted machine gate: D-217 / Run `36304085862` / 43 of 43 PASS.
+- Accepted Artifact ID: `10927005772`.
+- Accepted canonical .blend SHA-256: `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`.
+- Accepted family semantic signature: `d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7`.
+- Accepted geometry signature: `e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61`.
+- Accepted canonical dimensions: 897 × 217.4 × 155.6 mm.
+- Architecture retained: 1 shared Master / 0 Geometry Variant / 28 Registry bindings.
+- Profile retained: locked 14-point / SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT.
+- Evidence boundaries unchanged.
+- Formalization: NOT AUTHORIZED.
+- Catalog/V008/CURRENT binding: NOT AUTHORIZED.
+- PR #35 remains Draft; Ready/Merge not authorized.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
