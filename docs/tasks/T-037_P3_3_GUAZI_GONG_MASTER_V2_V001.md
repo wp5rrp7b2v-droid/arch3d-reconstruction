@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-037｜P3_3_GUAZI_GONG_MASTER_V2_V001
 
-Status: **FIRST ARTICLE PRODUCT OWNER APPROVED / D-185 / TRACEABILITY PATCH REQUIRED BEFORE FORMALIZATION**
+Status: **FIRST ARTICLE PRODUCT OWNER APPROVED / D-185 / TRACEABILITY PATCH COMPLETE D-186 / FORMALIZATION NOT AUTHORIZED**
 Stage: P3.3 V002 Stage 1
 Branch: codex/t037-p3-3-guazi-gong-master-v2-v001
 
@@ -173,4 +173,12 @@ Evidence boundary retained:
 - normalized profile controls = SOURCE_DERIVED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT
 - grooves / mortise-tenon / cavities / local connection cuts = DEFERRED
 
-Before formalization, a traceability Review Patch must explicitly close the thickness subgroup-attribution metadata and document a reproducible source-profile derivation/calibration method. D-185 does not authorize formalization, Catalog/V008 binding, PR Ready/merge, closure, Stage2, or T-018 resume.
+Traceability Review Patch D-186 completed:
+- thickness 156.5mm = OBSERVED_SAMPLE_MEAN / n=16 / subgroup attribution UNRESOLVED;
+- applying 156.5mm to LARGE and SMALL is Stage1 production-family application, not variant-specific direct observation;
+- the current profile is reproducible from the locked 13-point Definition control set;
+- no metric pixel-to-mm calibration or independently reproducible source-image re-extraction is claimed;
+- PDF p73 Fig 2-27 and p76 Fig 2-31 remain qualitative same-building form/envelope authority;
+- exact historical curve/control dimensions remain UNRESOLVED and the control set remains REPLACEABLE.
+
+D-185/D-186 do not authorize formalization, Catalog/V008 binding, PR Ready/merge, closure, Stage2, or T-018 resume.
