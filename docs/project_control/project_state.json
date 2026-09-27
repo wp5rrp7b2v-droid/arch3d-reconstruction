@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R303",
+  "state_revision": "R304",
   "last_updated": "2026-09-27",
-  "session_status": "T-039 CLOSED D-224 / MAIN 23 OF 28 = 82.1% / 275 COVERED / NO ACTIVE ENGINEERING T-TASK / NEXT CANDIDATE 华栱 SOURCE READINESS / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "HUAGONG SOURCE READINESS + D-076 PASS WITH BOUNDARIES D-225 / MASTER SPEC V0.1 NEXT / MAIN 23 OF 28 = 82.1% / 275 COVERED / NO ACTIVE ENGINEERING T-TASK / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 23 OF 28 MASTERS APPROVED / T-039 CLOSED D-224 / NO ACTIVE ENGINEERING T-TASK / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 23 OF 28 / HUAGONG SOURCE READINESS D-225 PASS WITH BOUNDARIES / MASTER SPEC NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-039 CLOSED D-224 / NEXT CANDIDATE 华栱 SOURCE READINESS / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-039 CLOSED D-224 / NEXT CANDIDATE 华栱 SOURCE READINESS / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / HUAGONG D-225 SOURCE READINESS PASS / MASTER SPEC NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / HUAGONG D-225 SOURCE READINESS PASS / MASTER SPEC NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -67,9 +67,9 @@
     "status": "NO ACTIVE ENGINEERING T-TASK"
   },
   "proposed_next_task": {
-    "id": "HUAGONG-SOURCE-READINESS",
-    "name": "华栱 Source Readiness + D-076 visual/form gate",
-    "status": "NEXT STAGE1 CANDIDATE / NOT STARTED / NO ENGINEERING T-TASK"
+    "id": "HUAGONG-MASTER-SPEC-V0.1",
+    "name": "华栱 Master Spec V0.1 design",
+    "status": "NEXT COMPLETE STEP / PRODUCT OWNER REVIEW REQUIRED"
   },
   "last_completed_task": {
     "id": "T-039",
@@ -126,7 +126,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 23 OF 28 MASTERS APPROVED / T-039 CLOSED D-224 / NO ACTIVE ENGINEERING T-TASK / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 23 OF 28 MASTERS APPROVED / HUAGONG SOURCE READINESS PASS D-225 / MASTER SPEC NEXT / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -846,7 +846,7 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "If Product Owner authorizes the next Stage1 candidate, begin 华栱 Source Readiness + D-076 visual/form gate only. Do not create an engineering T-task or run Blender before that gate passes. T-018 remains HOLD; Stage2 remains NOT AUTHORIZED.",
+  "next_action": "Design 华栱 Master Spec V0.1 only, preserving the 56-record subset boundary, direct combined 732.4 mm out-jump constraint, unresolved individual 一跳/二跳 full lengths, and separate future Length/Assembly + Profile Control gates. Do not create an engineering T-task or run Blender.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -965,7 +965,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / MAIN 23 OF 28 MASTERS APPROVED / T-039 CLOSED / NO ACTIVE ENGINEERING T-TASK",
+    "status": "ACTIVE / MAIN 23 OF 28 / HUAGONG SOURCE READINESS PASS / MASTER SPEC V0.1 NEXT",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1212,7 +1212,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "华栱 / SOURCE READINESS + D-076 NEXT / NO T-TASK"
+    "next_master_candidate": "华栱 / MASTER SPEC V0.1 DESIGN NEXT / NO ENGINEERING T-TASK"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -2588,5 +2588,89 @@
     "closed": true,
     "final_stage1_disposition": "已有Master｜正式绑定完成",
     "closure_decision_id": "D-224"
+  },
+  "huagong_stage1": {
+    "status": "SOURCE READINESS + D-076 PASS WITH BOUNDARIES / D-225 / MASTER SPEC V0.1 NEXT",
+    "component": "华栱",
+    "coverage_matrix_priority": 18,
+    "registry_record_count": 56,
+    "registry_count_status": "LOCKED_SUBSET",
+    "registry_scope": "正身方向明确子集 / NOT WHOLE-HALL TOTAL",
+    "registry_distribution": {
+      "south": {
+        "jump_1": 7,
+        "jump_2": 7
+      },
+      "north": {
+        "jump_1": 7,
+        "jump_2": 7
+      },
+      "east": {
+        "jump_1": 7,
+        "jump_2": 7
+      },
+      "west": {
+        "jump_1": 7,
+        "jump_2": 7
+      },
+      "total_jump_1": 28,
+      "total_jump_2": 28
+    },
+    "stage1_disposition": "需新建Master",
+    "master_coverage_status": "MASTER_REQUIRED_PENDING",
+    "source_readiness_decision_id": "D-225",
+    "visual_form_gate_decision_id": "D-225",
+    "source_readiness_review_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_HUAGONG_SOURCE_READINESS_V001.md",
+    "primary_source": {
+      "id": "SRC-ZG-WF-001",
+      "sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+      "byte_size": 84117628
+    },
+    "direct_observed_assembly_constraint": {
+      "parameter": "FIRST_SECOND_JUMP_TOTAL_PROJECTION",
+      "mean_mm": 732.4,
+      "min_mm": 704,
+      "max_mm": 755,
+      "variance": 115.61,
+      "n": 46,
+      "classification": "DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION",
+      "source": "SRC-ZG-WF-001 / PDF p71 / printed p56 / §2.2.4.2 / Fig 2-25 / Table 2-33",
+      "standalone_member_length": false,
+      "per_instance_exact": false,
+      "original_963_design": false
+    },
+    "report_ideal_model": {
+      "yingzao_ruler_mm": 306,
+      "first_second_total_projection_fen": 48,
+      "single_material_width_fen": 14,
+      "material_thickness_fen": 10,
+      "classification": "REPORT_INFERRED / REPORT_IDEAL_MODEL / REPLACEABLE",
+      "source": "SRC-ZG-WF-001 / PDF p72 + p120 / printed p57 + p105"
+    },
+    "individual_length_evidence": {
+      "jump_1_direct_full_length_mm": null,
+      "jump_1_status": "UNRESOLVED",
+      "jump_2_direct_full_length_mm": null,
+      "jump_2_status": "UNRESOLVED / LATER CALCULATED VALUE EXISTS",
+      "later_calculated_jump_2_full_length_mm": 1630,
+      "later_calculated_jump_2_center_length_mm": 1464.8,
+      "later_calculated_classification": "SECONDARY_CALCULATED / REPLACEABLE / NOT_DIRECT_PRIMARY",
+      "sample_to_instance_mapping": "UNKNOWN"
+    },
+    "same_building_visual_form_context": "SUPPORTED / SRC-ZG-WF-001 FIG 2-27 PHOTO + SCHEMATIC",
+    "exact_standalone_profile": "UNRESOLVED",
+    "numeric_profile_controls": "UNRESOLVED",
+    "exact_end_geometry": "UNRESOLVED",
+    "hidden_overlap_length": "UNRESOLVED",
+    "joinery_connection_details": "DEFERRED",
+    "master_spec_design_authorized": true,
+    "master_spec_locked": false,
+    "engineering_task_created": false,
+    "engineering_execution_authorized": false,
+    "length_assembly_control_gate_required": true,
+    "profile_control_gate_required": true,
+    "prior_gong_profile_reuse": "PROHIBITED WITHOUT NEW EVIDENCE",
+    "generic_template_substitution": "PROHIBITED",
+    "comparative_building_geometry_reuse": "PROHIBITED AS AUTHORITY"
   }
 }
