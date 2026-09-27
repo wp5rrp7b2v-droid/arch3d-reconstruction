@@ -1061,3 +1061,19 @@ Boundary retained:
 - Generic Song template substitution: **PROHIBITED**.
 - Master Spec status: **DRAFT / PRODUCT OWNER REVIEW REQUIRED**.
 - Engineering execution: **NOT AUTHORIZED**.
+
+### 令栱 Master Spec V0.1 Lock｜D-212
+
+- Product Owner approval: **PASS / RECEIVED**.
+- Master Spec: **LOCKED / V001**.
+- Shared Master count: **1**.
+- Geometry Variant count: **0**.
+- Physical instance bindings: **28**.
+- Canonical envelope: **897 × 217.4 × 155.6 mm**.
+- Evidence semantics retained: **PASS**.
+- Per-instance exact claim: **FALSE / PROHIBITED**.
+- Sample-to-instance mapping: **UNKNOWN / PRESERVED**.
+- Profile Control Set: **SEPARATE PRE-EXECUTION GATE REQUIRED**.
+- Unsupported joinery/local cuts: **DEFERRED**.
+- Next gate: **TASK CONTRACT DESIGN/LOCK**.
+- Engineering execution: **NOT AUTHORIZED**.
