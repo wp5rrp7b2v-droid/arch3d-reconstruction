@@ -1,5 +1,7 @@
 name: T-037 Guazi Gong Master First Article
 
+# D-190 latest-head regression trigger; formalization re-entry is disabled after D-189.
+
 on:
   pull_request:
     branches: [ main ]
@@ -121,7 +123,9 @@ jobs:
 
 
   formalize:
-    if: ${{ github.event_name == 'pull_request' && github.actor != 'github-actions[bot]' }}
+    # D-189 completed formalization. Keep this historical job definition but
+    # disable re-entry during D-190 latest-head regression.
+    if: ${{ false }}
     needs: first-article
     runs-on: ubuntu-latest
     timeout-minutes: 15
