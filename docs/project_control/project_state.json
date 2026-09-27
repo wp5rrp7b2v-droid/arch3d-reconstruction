@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R282",
+  "state_revision": "R283",
   "last_updated": "2026-09-27",
-  "session_status": "T-038 FIRST ARTICLE MACHINE PASS D-203 / RUN 36299005477 43/43 / READY FOR PRODUCT OWNER REVIEW / PR #34 DRAFT / 21 OF 28 / T-018 HOLD",
+  "session_status": "T-038 FIRST ARTICLE APPROVED D-204 / FORMALIZATION + CATALOG-V008 BINDING AUTHORIZED / PR #34 DRAFT / MAIN 21 OF 28 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "Product Owner first-article review/approval required before formalization or Catalog/V008 binding.",
+  "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "FIRST ARTICLE MACHINE PASS / D-203 / READY FOR PRODUCT OWNER REVIEW"
+    "status": "FIRST ARTICLE APPROVED / D-204 / FORMALIZATION + CATALOG-V008 BINDING AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-038-FIRST-ARTICLE-PO-REVIEW",
-    "name": "T-038 慢栱族 First Article Product Owner Review",
-    "status": "AWAITING PRODUCT OWNER DECISION"
+    "id": "T-038-FORMALIZATION",
+    "name": "T-038 formalization + Catalog/V008 binding",
+    "status": "AUTHORIZED / EXECUTION PENDING"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "FIRST ARTICLE MACHINE PASS / D-203 / READY FOR PRODUCT OWNER REVIEW",
+    "status": "FIRST ARTICLE APPROVED / D-204 / FORMALIZATION AUTHORIZED",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2285,9 +2285,9 @@
     "builder_execution_authorized": true,
     "workflow_execution_authorized": true,
     "draft_pr_authorized": true,
-    "first_article_acceptance_authorized": false,
-    "formalization_authorized": false,
-    "catalog_v008_binding_authorized": false,
+    "first_article_acceptance_authorized": true,
+    "formalization_authorized": true,
+    "catalog_v008_binding_authorized": true,
     "merge_authorized": false,
     "first_article_machine_decision_id": "D-203",
     "first_article_run_id": 36299005477,
@@ -2306,6 +2306,10 @@
     "pr_draft": true,
     "pr_mergeable": true,
     "first_article_machine_pass": true,
-    "first_article_product_owner_approved": false
+    "first_article_product_owner_approved": true,
+    "first_article_approval_decision_id": "D-204",
+    "formalization_authority": "D-204",
+    "excel_sync_authorized": false,
+    "post_formalization_verification_authorized": false
   }
 }
