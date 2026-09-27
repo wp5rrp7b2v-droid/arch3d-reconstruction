@@ -351,45 +351,41 @@ jobs:
           decision+=f"| D-189 | 2026-09-27 | T-037 formalization + Catalog/V008 binding executed under D-188 after first-article and traceability gates. Formal minimal package materialized; Stage1 Catalog now has 21 approved Masters on branch; all 44 guazi Registry rows bind to CMP-GONG-GUAZI-001_MASTER; CURRENT==V008. Approved canonical blend remains D-185 SHA {ACCEPTED_BLEND}; regression blend {regression_blend} is not promoted. LARGE/SMALL geometry signatures remain {LARGE_SIG} / {SMALL_SIG}. Branch progress = 21/28 = 75.0%, covered Registry records = 203. Derived Excel sync, PR Ready/merge, closure, Stage2 and T-018 resume remain unauthorized. | COMPLETE / T-037 FORMALIZED + 44 ROWS BOUND / PR #33 DRAFT / MERGE NOT AUTHORIZED |\n"
           DECISION.write_text(decision,encoding="utf-8")
 
-          execution=EXECUTION.read_text(encoding="utf-8").rstrip()+f"""\n\n## 2026-09-27｜T-037 Formalization + Catalog/V008 Binding｜D-189
-
-- Authority: D-188.
-- Formalization workflow run: {run_id}.
-- Formal package: Definition + Semantic + Review Board + Validation + Task Contract.
-- Approved canonical .blend remains D-185 SHA-256: {ACCEPTED_BLEND}; current regression binary is evidence only and is not promoted.
-- Geometry signatures: LARGE={LARGE_SIG}; SMALL={SMALL_SIG}; MATCH accepted first article.
-- Stage1 Catalog branch count: 21/28 = 75.0%.
-- V008/CURRENT guazi binding: 44/44 APPROVED_MASTER_AVAILABLE -> CMP-GONG-GUAZI-001_MASTER.
-- Master-covered Registry records: 203.
-- CURRENT == V008: PASS.
-- Derived Excel sync: NOT AUTHORIZED / PENDING.
-- PR #33 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.
-"""
+          execution=EXECUTION.read_text(encoding="utf-8").rstrip()+"\n\n"
+          execution+=f"## 2026-09-27｜T-037 Formalization + Catalog/V008 Binding｜D-189\n\n"
+          execution+=f"- Authority: D-188.\n"
+          execution+=f"- Formalization workflow run: {run_id}.\n"
+          execution+=f"- Formal package: Definition + Semantic + Review Board + Validation + Task Contract.\n"
+          execution+=f"- Approved canonical .blend remains D-185 SHA-256: {ACCEPTED_BLEND}; current regression binary is evidence only and is not promoted.\n"
+          execution+=f"- Geometry signatures: LARGE={LARGE_SIG}; SMALL={SMALL_SIG}; MATCH accepted first article.\n"
+          execution+=f"- Stage1 Catalog branch count: 21/28 = 75.0%.\n"
+          execution+=f"- V008/CURRENT guazi binding: 44/44 APPROVED_MASTER_AVAILABLE -> CMP-GONG-GUAZI-001_MASTER.\n"
+          execution+=f"- Master-covered Registry records: 203.\n"
+          execution+=f"- CURRENT == V008: PASS.\n"
+          execution+=f"- Derived Excel sync: NOT AUTHORIZED / PENDING.\n"
+          execution+=f"- PR #33 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.\n"
           EXECUTION.write_text(execution,encoding="utf-8")
 
-          acceptance=ACCEPTANCE.read_text(encoding="utf-8").rstrip()+f"""\n\n### T-037 Formalization + Catalog/V008 Binding｜D-189
-
-- **FORMALIZED / BRANCH** under D-188.
-- Stage1 Catalog: **21/28 = 75.0%** on T-037 branch.
-- Registry binding: **44/44** guazi records = APPROVED_MASTER_AVAILABLE / CMP-GONG-GUAZI-001_MASTER.
-- Master-covered Registry records: **203**.
-- CURRENT == V008: **PASS**.
-- Approved canonical .blend SHA-256: `{ACCEPTED_BLEND}`.
-- LARGE / SMALL geometry signatures: **MATCH D-185**.
-- Derived Excel sync: **PENDING / NOT AUTHORIZED**.
-- PR #33: **DRAFT / MERGE NOT AUTHORIZED**.
-"""
+          acceptance=ACCEPTANCE.read_text(encoding="utf-8").rstrip()+"\n\n"
+          acceptance+="### T-037 Formalization + Catalog/V008 Binding｜D-189\n\n"
+          acceptance+="- **FORMALIZED / BRANCH** under D-188.\n"
+          acceptance+="- Stage1 Catalog: **21/28 = 75.0%** on T-037 branch.\n"
+          acceptance+="- Registry binding: **44/44** guazi records = APPROVED_MASTER_AVAILABLE / CMP-GONG-GUAZI-001_MASTER.\n"
+          acceptance+="- Master-covered Registry records: **203**.\n"
+          acceptance+="- CURRENT == V008: **PASS**.\n"
+          acceptance+=f"- Approved canonical .blend SHA-256: {ACCEPTED_BLEND}.\n"
+          acceptance+="- LARGE / SMALL geometry signatures: **MATCH D-185**.\n"
+          acceptance+="- Derived Excel sync: **PENDING / NOT AUTHORIZED**.\n"
+          acceptance+="- PR #33: **DRAFT / MERGE NOT AUTHORIZED**.\n"
           ACCEPTANCE.write_text(acceptance,encoding="utf-8")
 
           task=TASK.read_text(encoding="utf-8")
           import re
           task=re.sub(r"Status: \*\*.*?\*\*","Status: **FORMALIZED + CATALOG/V008 BOUND / D-189 / PR #33 DRAFT / MERGE NOT AUTHORIZED**",task,count=1)
-          task=task.rstrip()+f"""\n\n## 15. Formalization Result
-
-D-189 records successful formalization under D-188. Catalog branch count = 21/28; 44/44 guazi V008/CURRENT rows are bound to CMP-GONG-GUAZI-001_MASTER; CURRENT==V008. Approved canonical blend remains D-185 SHA `{ACCEPTED_BLEND}`. Derived Excel sync, PR Ready/merge and closure remain separate gates.
-"""
+          task=task.rstrip()+"\n\n"
+          task+="## 15. Formalization Result\n\n"
+          task+=f"D-189 records successful formalization under D-188. Catalog branch count = 21/28; 44/44 guazi V008/CURRENT rows are bound to CMP-GONG-GUAZI-001_MASTER; CURRENT==V008. Approved canonical blend remains D-185 SHA {ACCEPTED_BLEND}. Derived Excel sync, PR Ready/merge and closure remain separate gates.\n"
           TASK.write_text(task,encoding="utf-8")
-
           print("T037_FORMALIZATION_PASS", semantic_sha, validation_sha, board_sha, len(bound))
           PY
 
