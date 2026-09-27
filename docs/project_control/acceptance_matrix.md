@@ -896,3 +896,15 @@ Boundary retained:
 - W/T: **report-inferred family design candidates / replaceable**.
 - Numeric profile control set: **NOT LOCKED**.
 - Engineering/modeling: **NOT AUTHORIZED**.
+
+### T-038 Master Spec V0.1 Approval｜D-198
+
+- Master Spec: **LOCKED / PRODUCT OWNER APPROVED**.
+- Family architecture: **1 Master / 2 variants / 44 records**.
+- LARGE: **1641mm / n=16 / direct observed mean**.
+- SMALL: **1607mm / n=28 / direct observed mean**.
+- W/T: **REPORT_INFERRED family design candidates / replaceable**.
+- Numeric profile control set: **NOT LOCKED / UNRESOLVED**.
+- Joinery/local cuts: **DEFERRED**.
+- Task Contract: **NEXT GATE / NOT YET AUTHORIZED**.
+- Engineering/modeling: **NOT AUTHORIZED**.
