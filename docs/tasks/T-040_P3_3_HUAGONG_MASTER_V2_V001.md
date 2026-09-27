@@ -492,8 +492,8 @@ The future task must not:
 1. Source Readiness + D-076 — **PASS / D-225**
 2. Master Spec V0.1 — **LOCKED / D-227**
 3. Task Contract — **LOCKED / PRODUCT OWNER APPROVED / D-229**
-4. Length/Assembly Control Set V0.1 — **NOT DESIGNED / NOT LOCKED**
-5. Profile Control Set V0.1 — **NOT DESIGNED / NOT LOCKED**
+4. Length/Assembly Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-231**
+5. Profile Control Set V0.1 — **CANDIDATE 01 / D-232 / PRODUCT OWNER REVIEW REQUIRED**
 6. Engineering Execution Authorization — **NOT AUTHORIZED**
 7. First Article machine validation — **NOT STARTED**
 8. Product Owner First Article Approval — **NOT STARTED**
@@ -568,3 +568,7 @@ D-230 prepares `HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001_C01` for Product Owner 
 ## 19. Length / Assembly Control Set Approval｜D-231
 
 Product Owner approved and locked `HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001_C01` without changing D-230 numerical controls or evidence semantics. Locked control SHA-256=`ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b`. Canonical Stage1 reference controls are JUMP_1 reference specimen 898.8mm, JUMP_2 reference specimen 1630.0mm, family section 214.2×153.0mm, and validation fixture D0/D1/D2=0/366.2/732.4mm. Only D0→D2=732.4mm remains DIRECT_PRIMARY assembly-level observed mean; D1 is reconstruction/project-fixture guidance. All 56 instance historical standalone full lengths remain UNRESOLVED. Gate A is now CLOSED/PASS. Gate B `HUAGONG_PROFILE_CONTROL_SET_V0.1` is next. Engineering execution, branch/PR, builder/Blender, First Article and formalization remain unauthorized.
+
+## 20. Profile Control Set Candidate｜D-232
+
+D-232 prepares `HUAGONG_PROFILE_CONTROL_SET_V001_C01` for Product Owner review. Candidate uses an independently constructed 16-point bilateral normalized profile with SHA `f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e`, classification `SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT`, and same-building SRC-ZG-WF-001 p73–76 as qualitative form/envelope authority only. It does not copy, scale, average or morph the T-037/T-038/T-039 control polygons. Both JUMP_1 and JUMP_2 use the same normalized controls but are evaluated independently against locked Gate A reference envelopes 898.8×214.2×153.0mm and 1630.0×214.2×153.0mm; W/T do not scale by length ratio and no finished-mesh uniform scaling is permitted. Candidate is NOT LOCKED. Engineering execution remains blocked pending Product Owner Gate B approval plus a separate execution authorization.

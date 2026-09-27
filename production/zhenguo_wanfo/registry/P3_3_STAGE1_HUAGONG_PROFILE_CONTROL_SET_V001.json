@@ -1,0 +1,160 @@
+{
+  "schema_version": "P3_3_STAGE1_HUAGONG_PROFILE_CONTROL_SET_V001",
+  "status": "CANDIDATE_01 / PRODUCT_OWNER_REVIEW_REQUIRED / D-232 / NOT_LOCKED",
+  "date": "2026-09-27",
+  "task_id": "T-040",
+  "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
+  "candidate_id": "HUAGONG_PROFILE_CONTROL_SET_V001_C01",
+  "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+  "source": {
+    "source_id": "SRC-ZG-WF-001",
+    "visual_pages": [
+      73,
+      74,
+      75,
+      76
+    ],
+    "primary_visual_reference": "PDF p73 / printed p58 / Fig 2-27",
+    "role": "QUALITATIVE_FORM_AND_ENVELOPE_AUTHORITY",
+    "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "historical_control_point_claim": false
+  },
+  "coordinate_meaning": {
+    "x": "fraction of variant Gate-A reference-specimen full length centered at 0",
+    "z": "fraction of Gate-A reference thickness centered at 0",
+    "y": "extrusion width from Gate-A section control"
+  },
+  "normalized_points": [
+    [
+      -0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.26
+    ],
+    [
+      0.465,
+      0.16
+    ],
+    [
+      0.405,
+      0
+    ],
+    [
+      0.325,
+      -0.18
+    ],
+    [
+      0.235,
+      -0.34
+    ],
+    [
+      0.145,
+      -0.44
+    ],
+    [
+      0.09,
+      -0.5
+    ],
+    [
+      -0.09,
+      -0.5
+    ],
+    [
+      -0.145,
+      -0.44
+    ],
+    [
+      -0.235,
+      -0.34
+    ],
+    [
+      -0.325,
+      -0.18
+    ],
+    [
+      -0.405,
+      0
+    ],
+    [
+      -0.465,
+      0.16
+    ],
+    [
+      -0.5,
+      0.26
+    ]
+  ],
+  "point_count": 16,
+  "control_set_sha256": "f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e",
+  "signature_method": "SHA256(UTF8(JSON_COMPACT(normalized_points)))",
+  "bilateral_symmetry": true,
+  "symmetry_classification": "STAGE1_SIMPLIFICATION / NOT_HISTORICAL_ASYMMETRY_CLAIM",
+  "independent_from_prior_gong_control_sets": true,
+  "prior_control_audit": {
+    "t037_guazi_sha256": "35041b73a096c3cc46f4145ac24477523cf8e74d6324d8b6523a654fa1991920",
+    "t038_mangong_sha256": "07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4",
+    "t039_linggong_sha256": "0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7",
+    "t037_reused": false,
+    "t038_reused": false,
+    "t039_reused": false,
+    "averaged": false,
+    "morphed": false
+  },
+  "derivation_method": "INDEPENDENT_SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED_16_POINT_ENVELOPE",
+  "gate_a_dependency": {
+    "control_id": "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001_C01",
+    "approval_decision_id": "D-231",
+    "control_set_sha256": "ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b"
+  },
+  "variant_application": {
+    "JUMP_1_HUAGONG": {
+      "reference_length_mm": 898.8,
+      "width_mm": 214.2,
+      "thickness_mm": 153,
+      "x_rule": "normalized_x * 898.8",
+      "z_rule": "normalized_z * 153.0",
+      "reference_specimen_only": true
+    },
+    "JUMP_2_HUAGONG": {
+      "reference_length_mm": 1630,
+      "width_mm": 214.2,
+      "thickness_mm": 153,
+      "x_rule": "normalized_x * 1630.0",
+      "z_rule": "normalized_z * 153.0",
+      "reference_specimen_only": true
+    },
+    "same_normalized_control_set": true,
+    "distinct_historical_profile_claim": false,
+    "uniform_3d_scaling": false,
+    "width_thickness_scaled_by_length_ratio": false,
+    "independent_body_generation_required": true
+  },
+  "visual_review_artifact": "docs/production/zhenguo_wanfo/P3_3_STAGE1_HUAGONG_PROFILE_CONTROL_SET_V001.svg",
+  "visual_artifact_semantics": "DETERMINISTIC_NORMALIZED_CONTROL_RENDER / NOT_SOURCE_TRACE / NOT_METRIC_OVERLAY",
+  "deferred": [
+    "exact_historical_curve",
+    "exact_historical_control_point_dimensions",
+    "metric_source_image_calibration",
+    "exact_end_notch_shoulder",
+    "hidden_overlap",
+    "historical_contact_datum",
+    "mortise_tenon",
+    "grooves",
+    "slots",
+    "cavities",
+    "hidden_connection_cuts",
+    "unmeasured_chamfers",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "per_instance_originality_repair_state"
+  ],
+  "product_owner_approved": false,
+  "locked": false,
+  "engineering_execution_authorized": false
+}

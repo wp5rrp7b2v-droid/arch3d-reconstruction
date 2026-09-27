@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R310",
+  "state_revision": "R311",
   "last_updated": "2026-09-27",
-  "session_status": "T-040 HUAGONG LENGTH-ASSEMBLY CONTROL LOCKED D-231 / PROFILE CONTROL CANDIDATE NEXT / ENGINEERING EXECUTION BLOCKED / MAIN 23 OF 28 = 82.1% / 275 COVERED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-040 HUAGONG PROFILE CONTROL CANDIDATE 01 D-232 / PRODUCT OWNER REVIEW REQUIRED / GATE A LOCKED D-231 / GATE B NOT LOCKED / ENGINEERING EXECUTION BLOCKED / MAIN 23 OF 28 = 82.1% / 275 COVERED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 23 OF 28 / T-040 GATE A LOCKED D-231 / PROFILE CONTROL NEXT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 23 OF 28 / T-040 GATE B CANDIDATE D-232 / PO REVIEW NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 GATE A LOCKED D-231 / PROFILE CONTROL NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 GATE A LOCKED D-231 / PROFILE CONTROL NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 PROFILE CONTROL CANDIDATE D-232 / PO REVIEW NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 PROFILE CONTROL CANDIDATE D-232 / PO REVIEW NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -66,15 +66,15 @@
     "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
     "name": "华栱 Master",
     "component": "华栱",
-    "status": "TASK CONTRACT LOCKED D-229 / GATE A LENGTH-ASSEMBLY CONTROL LOCKED D-231 / GATE B PROFILE CONTROL NEXT / ENGINEERING EXECUTION BLOCKED",
+    "status": "TASK CONTRACT LOCKED D-229 / GATE A LOCKED D-231 / GATE B PROFILE CANDIDATE D-232 / PO REVIEW REQUIRED / ENGINEERING EXECUTION BLOCKED",
     "branch": null,
     "branch_status": "NOT CREATED",
     "engineering_execution_authorized": false
   },
   "proposed_next_task": {
-    "id": "HUAGONG-PROFILE-CONTROL-SET",
-    "name": "HUAGONG_PROFILE_CONTROL_SET_V0.1 Candidate design",
-    "status": "NEXT / NOT YET DESIGNED OR LOCKED"
+    "id": "HUAGONG-PROFILE-CONTROL-APPROVAL",
+    "name": "HUAGONG_PROFILE_CONTROL_SET_V0.1 Candidate 01 Product Owner review / lock decision",
+    "status": "AWAITING PRODUCT OWNER"
   },
   "last_completed_task": {
     "id": "T-039",
@@ -131,7 +131,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 23 OF 28 MASTERS APPROVED / T-040 GATE A LOCKED D-231 / PROFILE CONTROL NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 23 OF 28 MASTERS APPROVED / T-040 PROFILE CONTROL CANDIDATE D-232 / PO REVIEW NEXT / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -970,7 +970,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / MAIN 23 OF 28 / T-040 GATE A LOCKED D-231 / PROFILE CONTROL NEXT",
+    "status": "ACTIVE / MAIN 23 OF 28 / T-040 PROFILE CONTROL CANDIDATE D-232 / PO REVIEW REQUIRED",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1217,7 +1217,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "华栱 / T-040 PROFILE CONTROL CANDIDATE NEXT"
+    "next_master_candidate": "华栱 / T-040 GATE B CANDIDATE D-232 / PO REVIEW"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -2595,7 +2595,7 @@
     "closure_decision_id": "D-224"
   },
   "huagong_stage1": {
-    "status": "T-040 LENGTH-ASSEMBLY CONTROL LOCKED / D-231 / PROFILE CONTROL NEXT / ENGINEERING EXECUTION BLOCKED",
+    "status": "T-040 PROFILE CONTROL CANDIDATE 01 / D-232 / PRODUCT OWNER REVIEW REQUIRED",
     "component": "华栱",
     "coverage_matrix_priority": 18,
     "registry_record_count": 56,
@@ -2722,7 +2722,7 @@
     "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
     "branch_created": false,
     "length_assembly_control_gate_status": "LOCKED / PRODUCT OWNER APPROVED / D-231",
-    "profile_control_gate_status": "NEXT / NOT DESIGNED / NOT LOCKED",
+    "profile_control_gate_status": "CANDIDATE 01 / D-232 / NOT LOCKED / PRODUCT OWNER REVIEW REQUIRED",
     "length_assembly_control_candidate_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001.md",
     "length_assembly_control_candidate_json_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001.json",
     "length_assembly_control_candidate_id": "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001_C01",
@@ -2740,6 +2740,13 @@
     },
     "length_assembly_control_product_owner_approved": true,
     "length_assembly_control_approval_decision_id": "D-231",
-    "length_assembly_control_sha256": "ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b"
+    "length_assembly_control_sha256": "ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b",
+    "profile_control_candidate_id": "HUAGONG_PROFILE_CONTROL_SET_V001_C01",
+    "profile_control_candidate_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_HUAGONG_PROFILE_CONTROL_SET_V001.md",
+    "profile_control_candidate_json_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_HUAGONG_PROFILE_CONTROL_SET_V001.json",
+    "profile_control_candidate_svg_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_HUAGONG_PROFILE_CONTROL_SET_V001.svg",
+    "profile_control_candidate_sha256": "f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e",
+    "profile_control_locked": false,
+    "profile_control_point_count": 16
   }
 }
