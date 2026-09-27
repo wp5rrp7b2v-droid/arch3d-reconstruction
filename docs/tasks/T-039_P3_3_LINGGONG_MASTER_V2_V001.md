@@ -371,3 +371,7 @@ D-213 does **not** authorize:
 Next complete step:
 
 **prepare 令栱 PROFILE_CONTROL_SET_V0.1 Candidate 01 for Product Owner review.**
+
+## 17. Profile Control Set Candidate 01｜D-214
+
+D-214 records preparation of `LINGGONG_PROFILE_CONTROL_SET_V001_C01` for Product Owner review. Candidate 01 is an independent 14-point normalized same-building-source-guided profile control set with signature `0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7`. It does not reuse, scale, average or morph the T-037瓜子栱 13-point or T-038慢栱 18-point control polygons. Classification remains SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT. Metric source-image calibration is NOT PERFORMED / NOT CLAIMED. Candidate remains NOT LOCKED; engineering execution remains blocked pending Product Owner approval.
