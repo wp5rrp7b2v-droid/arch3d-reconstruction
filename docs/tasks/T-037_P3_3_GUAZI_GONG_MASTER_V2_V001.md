@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-037｜P3_3_GUAZI_GONG_MASTER_V2_V001
 
-Status: **FORMALIZED + CATALOG/V008 BOUND D-189 / POST-FORMALIZATION VERIFICATION AUTHORIZED D-190 / IN PROGRESS / PR #33 DRAFT / MERGE NOT AUTHORIZED**
+Status: **POST-FORMALIZATION VERIFICATION PASS D-191 / PR #33 READY FOR PO PR-READY DECISION / PR STILL DRAFT / MERGE NOT AUTHORIZED**
 Stage: P3.3 V002 Stage 1
 Branch: codex/t037-p3-3-guazi-gong-master-v2-v001
 
@@ -198,3 +198,7 @@ D-189 records successful formalization under D-188. Catalog branch count = 21/28
 ## 16. Post-Formalization Verification Authorization
 
 D-190 authorizes derived Excel synchronization, latest-head T-037 regression, and PR #33 readiness review. PR Ready transition, merge/closure, Stage2 and T-018 resume remain separately gated.
+
+## 17. Post-Formalization Verification Result
+
+D-191 records completion of D-190: derived Excel validation PASS, latest-head T-037 regression PASS 43/43 with exact LARGE/SMALL geometry-signature match to D-185, shared T-021/T-022/T-023/T-024 regressions PASS, and PR #33 readiness review PASS. PR #33 remains Draft; Ready transition, merge and closure require separate Product Owner authorization.
