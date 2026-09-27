@@ -7369,7 +7369,7 @@
   ],
   "stage1_master_progress_summary": {
     "snapshot_date": "2026-09-27",
-    "status": "T-039 FORMALIZED ON BRANCH / D-220 / BRANCH 23 OF 28 MASTERS APPROVED / MAIN 22 OF 28 UNTIL MERGE",
+    "status": "CANONICAL MAIN / D-223 / 23 OF 28 MASTERS APPROVED / T-039 MERGED / FORMAL CLOSURE PENDING",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
@@ -7421,6 +7421,6 @@
       "令栱"
     ],
     "master_covered_registry_record_count": 275,
-    "progress_display_note": "505 Registry records; Stage1 Master completion on T-039 branch: 23 approved / 5 pending = 82.1%. T-039 令栱 formalized under D-220; 28/28 rows bound to CMP-GONG-LINGGONG-001_MASTER. Canonical main remains 22/28 until PR #35 merge. Derived Excel sync + latest-head/shared regressions + readiness review authorized under D-221; T-018 HOLD; Stage2 NOT AUTHORIZED."
+    "progress_display_note": "505 Registry records; canonical main Stage1 Master completion after T-039 merge: 23 approved / 5 pending = 82.1%. T-039 令栱 has 28/28 rows bound to CMP-GONG-LINGGONG-001_MASTER. PR #35 merged under D-223. Formal T-039 closure remains pending; T-018 HOLD; Stage2 NOT AUTHORIZED."
   }
 }
