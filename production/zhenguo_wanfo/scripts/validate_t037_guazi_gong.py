@@ -1,7 +1,7 @@
 """T-037 瓜子栱 first-article validator and 8-panel Review Board composer."""
 import argparse, hashlib, json, math
 from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageStat
 
 def load(p): return json.loads(Path(p).read_text(encoding="utf-8"))
 def digest(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
@@ -44,7 +44,13 @@ def compose(a):
     for n in names:
         p=r/(n+".png")
         if not p.exists(): raise AssertionError("missing "+str(p))
-        im=Image.open(p).convert("RGB"); im.thumbnail((800,500)); imgs[n]=im.copy()
+        im=Image.open(p).convert("RGB")
+        # Hard fail any near-uniform render. This is the visual-review gate:
+        # machine geometry PASS is insufficient if PO cannot see the member.
+        stat=ImageStat.Stat(im.convert("L"))
+        if stat.var[0] < 120.0:
+            raise AssertionError("REVIEW_RENDER_NEAR_UNIFORM "+n+" variance="+str(stat.var[0]))
+        im.thumbnail((800,500)); imgs[n]=im.copy()
     W,H=2000,2500
     out=Image.new("RGB",(W,H),"white"); draw=ImageDraw.Draw(out)
     title=font(34); head=font(23); small=font(19)
@@ -142,6 +148,9 @@ def validate(a):
     ck("28_binary_sha",digest(a.asset)==c["canonical_blend_sha256"])
     ck("29_definition_hash",digest(a.definition)==c["definition_sha256"])
     ck("30_board",Path(a.board).exists() and Path(a.board).stat().st_size>10000)
+    for name in ("LARGE_AXON","SMALL_AXON","LARGE_FRONT","SMALL_FRONT","OVERLAY_FRONT"):
+        rim=Image.open(Path(a.review_dir)/(name+".png")).convert("L")
+        ck("30_render_"+name.lower(),ImageStat.Stat(rim).var[0]>=120.0)
     ck("31_first_article_only",d["first_article_contract"]["variant_count"]==2 and d["first_article_contract"]["registry_instance_assembly"] is False)
     ck("32_formalization_not_authorized",d["execution_boundary"]["formalization_authorized"] is False and d["execution_boundary"]["catalog_v008_binding_authorized"] is False and d["execution_boundary"]["merge_authorized"] is False)
     ck("33_t018_hold",d["execution_boundary"]["t018_status"]=="HOLD" and d["execution_boundary"]["stage2_authorized"] is False)
