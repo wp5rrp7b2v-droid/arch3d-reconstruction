@@ -1570,3 +1570,15 @@ Do not restart T-018 by default.
 - Width/thickness: 218.9 / 156.9mm = REPORT_INFERRED family design candidates / replaceable.
 - Exact numeric profile control set is not locked in V0.1.
 - No Task Contract, engineering execution, Blender generation, formalization, Catalog/V008 binding or PR authority.
+
+## 2026-09-27｜T-038 Master Spec V0.1 Approval｜D-198
+
+- Product Owner: APPROVED.
+- Master Spec V0.1: LOCKED.
+- Family: CMP-GONG-MANGONG-001_MASTER / LARGE_MANGONG + SMALL_MANGONG.
+- LARGE length: 1641mm / n=16 / DIRECT_PRIMARY OBSERVED_MEAN.
+- SMALL length: 1607mm / n=28 / DIRECT_PRIMARY OBSERVED_MEAN.
+- Width/thickness: 218.9 / 156.9mm remain REPORT_INFERRED family design candidates / replaceable.
+- Numeric profile control set remains NOT LOCKED; exact historical profile remains UNRESOLVED.
+- Joinery/grooves/local cuts remain DEFERRED.
+- Task Contract is the next separate gate. Engineering/Blender remains NOT AUTHORIZED.
