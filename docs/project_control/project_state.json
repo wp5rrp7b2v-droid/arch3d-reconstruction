@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R275",
+  "state_revision": "R276",
   "last_updated": "2026-09-27",
-  "session_status": "T-038 SOURCE READINESS + D-076 PASS WITH BOUNDARIES D-196 / MASTER SPEC AWAITING PRODUCT OWNER APPROVAL / 21 OF 28 / T-018 HOLD",
+  "session_status": "T-038 MASTER SPEC V0.1 DRAFT PREPARED D-197 / PRODUCT OWNER REVIEW REQUIRED / 21 OF 28 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "Product Owner approval required before T-038 Master Spec V0.1 drafting.",
+  "blocker": "Product Owner review/approval required before Master Spec lock and before Task Contract design.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "SOURCE READINESS + D-076 PASS WITH BOUNDARIES / D-196 / MASTER SPEC NOT AUTHORIZED"
+    "status": "MASTER SPEC V0.1 DRAFT / D-197 / PRODUCT OWNER REVIEW REQUIRED"
   },
   "proposed_next_task": {
-    "id": "T-038-MASTER-SPEC-V0.1",
-    "name": "慢栱族 Master Spec V0.1",
-    "status": "AWAITING PRODUCT OWNER APPROVAL TO DRAFT"
+    "id": "T-038-MASTER-SPEC-APPROVAL",
+    "name": "慢栱族 Master Spec V0.1 approval",
+    "status": "AWAITING PRODUCT OWNER DECISION"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "SOURCE READINESS + D-076 PASS WITH BOUNDARIES / D-196",
+    "status": "MASTER SPEC V0.1 DRAFT / D-197 / PRODUCT OWNER REVIEW REQUIRED",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2248,6 +2248,20 @@
     },
     "profile_status": "SAME_BUILDING_FORM_CONTEXT_SUPPORTED / EXACT_STANDALONE_PROFILE_UNRESOLVED",
     "joinery_connection_details": "DEFERRED",
-    "source_readiness_review_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_MANGONG_SOURCE_READINESS_V001.md"
+    "source_readiness_review_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_MANGONG_SOURCE_READINESS_V001.md",
+    "master_spec_draft_decision_id": "D-197",
+    "master_spec_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_MANGONG_MASTER_SPEC_V001.md",
+    "master_spec_json_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_MANGONG_MASTER_SPEC_V001.json",
+    "master_family_id": "CMP-GONG-MANGONG-001",
+    "master_id": "CMP-GONG-MANGONG-001_MASTER",
+    "geometry_variants": [
+      "LARGE_MANGONG",
+      "SMALL_MANGONG"
+    ],
+    "width_mm": 218.9,
+    "thickness_mm": 156.9,
+    "width_thickness_classification": "REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
+    "numeric_profile_control_set_locked": false,
+    "master_spec_locked": false
   }
 }
