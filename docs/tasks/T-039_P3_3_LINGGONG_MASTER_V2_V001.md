@@ -338,8 +338,8 @@ Locked sequence:
 1. Source Readiness + D-076 — **PASS / D-210**
 2. Master Spec V0.1 — **LOCKED / D-212**
 3. Task Contract — **LOCKED / D-213**
-4. Profile Control Set V0.1 — **NEXT GATE / NOT YET PREPARED**
-5. Engineering Execution Authorization — **NOT AUTHORIZED**
+4. Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-215**
+5. Engineering Execution Authorization — **NEXT GATE / NOT AUTHORIZED**
 6. First Article machine validation — **NOT STARTED**
 7. Product Owner First Article Approval — **NOT AUTHORIZED**
 8. Formalization + Catalog/V008/CURRENT binding — **NOT AUTHORIZED**
@@ -375,3 +375,7 @@ Next complete step:
 ## 17. Profile Control Set Candidate 01｜D-214
 
 D-214 records preparation of `LINGGONG_PROFILE_CONTROL_SET_V001_C01` for Product Owner review. Candidate 01 is an independent 14-point normalized same-building-source-guided profile control set with signature `0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7`. It does not reuse, scale, average or morph the T-037瓜子栱 13-point or T-038慢栱 18-point control polygons. Classification remains SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT. Metric source-image calibration is NOT PERFORMED / NOT CLAIMED. Candidate remains NOT LOCKED; engineering execution remains blocked pending Product Owner approval.
+
+## 18. Profile Control Set Approval｜D-215
+
+D-215 records Product Owner approval of `LINGGONG_PROFILE_CONTROL_SET_V001_C01`. The independent 14-point normalized set is now locked in `production/zhenguo_wanfo/component_library/masters/CMP-GONG-LINGGONG-001/CMP-GONG-LINGGONG-001_LINGGONG_DEFINITION_V001.json` with signature `0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7`. Classification remains SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT. This approval does not authorize builder implementation, production branch/PR creation, Blender generation, workflow execution, First Article production, formalization, Catalog/V008 binding, merge, Stage2 or T-018 resume. Engineering Execution Authorization is the next separate gate.
