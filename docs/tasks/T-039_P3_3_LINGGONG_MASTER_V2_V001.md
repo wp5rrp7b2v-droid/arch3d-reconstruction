@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-039｜P3_3_LINGGONG_MASTER_V2_V001
 
-Status: **FORMALIZED + CATALOG/V008/CURRENT BOUND / D-220 / PR #35 DRAFT / MERGE NOT AUTHORIZED**
+Status: **MERGED TO MAIN / MAIN VERIFIED / D-223 / FORMAL CLOSURE PENDING**
 Stage: P3.3 V002 Stage 1
 Branch: `codex/t039-p3-3-linggong-master-v2-v001`
 Branch creation status: **CREATED / D-216**
@@ -407,3 +407,7 @@ Product Owner authorized the complete post-formalization verification sequence: 
 ## 24. Post-Formalization Readiness Result｜D-222
 
 D-222 records PASS of the complete D-221 verification. Derived Excel is synchronized and revalidated; latest-head T-039 remains 43/43 PASS with accepted family/body signatures unchanged; shared regressions T-021/T-022/T-023/T-024/T-037/T-038 all succeed; generic P3.3 route is skipped as intended. PR #35 remains Draft and mergeable. T-039 is now ready for the Product Owner D-194 combined Draft→Ready + Merge decision; no Ready transition or merge is authorized by D-222 itself.
+
+## 25. D-194 Ready + Merge / Main Verification｜D-223
+
+Product Owner approved the D-194 combined gate after D-222 readiness PASS. PR #35 was transitioned Draft→Ready and merged. Merge commit: `e1726096e1d9bb936f24dd786d357220b52942b8`; merged head: `97954f7ac10f6c1f1a4a6c656355c888a92b67da`. Canonical main now carries Stage1 23/28 = 82.1%, 275/505 master-covered records, and 28/28 令栱 Registry bindings to `CMP-GONG-LINGGONG-001_MASTER`. The accepted canonical .blend remains the D-218 artifact SHA; no regression-only binary was promoted. Formal T-039 closure remains a separate Product Owner decision.
