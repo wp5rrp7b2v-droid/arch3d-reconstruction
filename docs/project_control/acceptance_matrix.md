@@ -1190,3 +1190,13 @@ Boundary retained:
 - Family / body geometry signatures: **MATCH D-218 accepted First Article**.
 - Derived Excel / post-formalization readiness: **PENDING / NOT AUTHORIZED**.
 - PR #35: **DRAFT / MERGE NOT AUTHORIZED**.
+
+### T-039｜Post-Formalization Verification Authorization｜D-221
+
+- D-220 formalization: **PASS / COMPLETE**.
+- Registry progress summary synchronization: **AUTHORIZED**.
+- Derived Excel synchronization: **AUTHORIZED**.
+- Latest-head T-039 regression: **AUTHORIZED**.
+- Shared regressions T-021/T-022/T-023/T-024/T-037/T-038: **AUTHORIZED**.
+- PR readiness review: **AUTHORIZED**.
+- Ready/Merge: **NOT AUTHORIZED**.

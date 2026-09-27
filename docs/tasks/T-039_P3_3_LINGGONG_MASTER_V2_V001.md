@@ -343,7 +343,7 @@ Locked sequence:
 6. First Article machine validation — **PASS / D-217 / 43 OF 43**
 7. Product Owner First Article Approval — **PASS / D-218**
 8. Formalization + Catalog/V008/CURRENT binding — **COMPLETE / D-220**
-9. Derived Excel + latest-head regression + readiness review — **NOT AUTHORIZED**
+9. Derived Excel + latest-head regression + shared regressions + readiness review — **AUTHORIZED / D-221 / EXECUTION PENDING**
 10. D-194 combined Draft→Ready + Merge — **NOT AUTHORIZED**
 11. Formal Closure — **NOT AUTHORIZED**
 
@@ -399,3 +399,7 @@ Product Owner authorized formalization of the D-218 accepted First Article and S
 ## 23. Formalization Result｜D-220
 
 D-220 records successful formalization under D-219. Catalog branch count = 23/28; 28/28 Linggong V008/CURRENT rows are bound to CMP-GONG-LINGGONG-001_MASTER; master-covered records = 275; CURRENT==V008. Accepted canonical blend remains D-218 SHA 4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.
+
+## 24. Post-Formalization Verification Authorization｜D-221
+
+Product Owner authorized the complete post-formalization verification sequence: atomic V008/CURRENT progress-summary synchronization to 23/28 / 275 covered, Derived Excel sync, latest-head T-039 regression, shared regressions for T-021/T-022/T-023/T-024/T-037/T-038, generic P3.3 route behavior check, and PR #35 readiness review. D-194 Draft→Ready/Merge and formal closure remain separate gates.

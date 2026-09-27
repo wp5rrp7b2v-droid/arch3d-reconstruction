@@ -1887,3 +1887,16 @@ Do not restart T-018 by default.
 - Master-covered Registry records: 275. CURRENT == V008: PASS.
 - Derived Excel sync / post-formalization regression / PR readiness: NOT AUTHORIZED.
 - PR #35 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.
+
+## 2026-09-27｜T-039 Post-Formalization Verification Authorization｜D-221
+
+- Product Owner authorization: RECEIVED.
+- Registry summary synchronization: AUTHORIZED / atomic V008+CURRENT update to 23/28 = 82.1% / 275 covered.
+- Derived Excel sync: AUTHORIZED.
+- Latest-head T-039 regression: AUTHORIZED.
+- Shared regressions: T-021 / T-022 / T-023 / T-024 / T-037 / T-038 AUTHORIZED.
+- Generic P3.3 route behavior check: AUTHORIZED.
+- PR #35 readiness review: AUTHORIZED.
+- D-194 Draft→Ready / Merge: NOT AUTHORIZED by D-221.
+- Closure: NOT AUTHORIZED.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
