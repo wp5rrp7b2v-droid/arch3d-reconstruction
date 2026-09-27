@@ -1077,3 +1077,19 @@ Boundary retained:
 - Unsupported joinery/local cuts: **DEFERRED**.
 - Next gate: **TASK CONTRACT DESIGN/LOCK**.
 - Engineering execution: **NOT AUTHORIZED**.
+
+### T-039｜令栱 Task Contract Lock｜D-213
+
+- Task ID availability: **PASS**.
+- Task Contract: **LOCKED / PRODUCT OWNER APPROVED**.
+- Master identity: **PASS**.
+- 1 Master / 0 Variant / 28 bindings: **LOCKED**.
+- 897 × 217.4 × 155.6 mm observed-mean envelope: **LOCKED**.
+- Per-instance exact claim: **PROHIBITED**.
+- Sample-to-instance mapping: **UNKNOWN / PRESERVED**.
+- 8-domain Review Board requirement: **LOCKED**.
+- Profile Control Set pre-execution gate: **MANDATORY**.
+- Prior gong profile reuse: **HARD FAIL**.
+- Generic template substitution: **HARD FAIL**.
+- Unsupported joinery/local cuts: **HARD FAIL**.
+- Engineering execution: **NOT AUTHORIZED**.
