@@ -1593,3 +1593,15 @@ Do not restart T-018 by default.
 - Profile control set must be deterministic, versioned, same-building-source-guided, visually reviewable, replaceable and Product Owner approved.
 - T-037 guazi profile control points cannot be silently reused.
 - Engineering execution / Blender remains NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Profile Control Set V0.1 Candidate 01｜D-200
+
+- Product Owner authorized entry into the profile-control design/review gate.
+- Candidate: MANGONG_PROFILE_CONTROL_SET_V001_C01 / 18 points.
+- Signature: 07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4.
+- Classification: SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT.
+- Source: same-building PDF p73–76 qualitative form/envelope only.
+- Metric calibration: NOT PERFORMED / NOT CLAIMED.
+- T-037 guazi 13-point set reuse: NO.
+- Candidate is ready for Product Owner visual review; not locked.
+- Engineering / Blender remains NOT AUTHORIZED.
