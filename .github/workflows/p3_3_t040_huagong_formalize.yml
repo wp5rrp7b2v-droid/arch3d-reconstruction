@@ -48,9 +48,12 @@ jobs:
           assert hg["first_article_po_approval_decision_id"]=="D-236"
           assert hg["formalization_authorized"] is True
           assert hg["formalization_authorization_decision_id"]=="D-237"
-          assert hg["derived_excel_sync_authorized"] is False
-          assert hg["ready_merge_authorized"] is False
-          print("do_formalize="+("false" if hg.get("formalization_complete") else "true"))
+          if hg.get("formalization_complete"):
+              print("do_formalize=false")
+          else:
+              assert hg["derived_excel_sync_authorized"] is False
+              assert hg["ready_merge_authorized"] is False
+              print("do_formalize=true")
           PY
 
       - name: Download accepted T-040 first-article artifact
