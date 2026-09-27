@@ -1561,3 +1561,12 @@ Do not restart T-018 by default.
 - Exact standalone profile and joinery remain unresolved/deferred.
 - Result: Source Readiness PASS WITH BOUNDARIES / D-076 PASS WITH BOUNDARIES.
 - No Master Spec lock, Task Contract, engineering execution, Blender generation, formalization or PR authority.
+
+## 2026-09-27｜T-038 Master Spec V0.1 Draft｜D-197
+
+- Draft only; Product Owner review required.
+- Proposed family: CMP-GONG-MANGONG-001_MASTER / LARGE_MANGONG + SMALL_MANGONG.
+- Direct length evidence: LARGE 1641mm / n=16; SMALL 1607mm / n=28.
+- Width/thickness: 218.9 / 156.9mm = REPORT_INFERRED family design candidates / replaceable.
+- Exact numeric profile control set is not locked in V0.1.
+- No Task Contract, engineering execution, Blender generation, formalization, Catalog/V008 binding or PR authority.
