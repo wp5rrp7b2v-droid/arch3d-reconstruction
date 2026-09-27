@@ -495,8 +495,8 @@ The future task must not:
 4. Length/Assembly Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-231**
 5. Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-233**
 6. Engineering Execution Authorization — **AUTHORIZED / D-234**
-7. First Article machine validation — **NOT STARTED**
-8. Product Owner First Article Approval — **NOT STARTED**
+7. First Article machine validation — **PASS / D-235 / 76 OF 76**
+8. Product Owner First Article Approval — **AWAITING PRODUCT OWNER**
 9. Formalization + Catalog/V008/CURRENT binding — **NOT AUTHORIZED**
 10. Derived Excel + latest-head/shared regressions + readiness — **NOT AUTHORIZED**
 11. D-194 combined Draft→Ready + Merge — **NOT AUTHORIZED**
@@ -645,3 +645,52 @@ Base commit:
 `7c4dc0d88bc928ea1abe73a1109172a95a69c67a`
 
 This branch creation does not itself start First Article generation or expand the D-234 authorization boundary.
+
+
+## 23. First Article Machine Result｜D-235
+
+Final machine run:
+- Workflow: `T-040 Huagong Master First Article`
+- Run ID: **36317889355**
+- Run number: **3**
+- execution head: `51fc6e2a506a5950dc14f52d5aac0378872a531d`
+- result: **SUCCESS**
+- machine checks: **76 / 76 PASS**
+- Draft PR: **#36**
+- artifact: `P3_3_T040_HUAGONG_MASTER_V2_FIRST_ARTICLE_V001`
+- Artifact ID: **10930899677**
+- artifact digest: `sha256:de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f`
+- artifact expiry: **2026-10-27**
+- canonical .blend SHA-256: `0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e`
+- family semantic signature: `0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77`
+- JUMP_1 geometry signature: `565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a`
+- JUMP_2 geometry signature: `451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001`
+- Gate A signature verified: `ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b`
+- Gate B signature verified: `f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e`
+- fixture combined projection: **732.4 mm**
+- Blender: **4.5.13 LTS**
+
+Machine evidence confirms:
+- exactly two canonical bodies;
+- JUMP_1 = 898.8 × 214.2 × 153.0 mm reference specimen;
+- JUMP_2 = 1630.0 × 214.2 × 153.0 mm reference specimen;
+- separate deterministic geometry signatures;
+- no finished-mesh uniform scaling;
+- fixture remains non-canonical / non-Registry / non-Catalog;
+- D0/D1/D2 = 0 / 366.2 / 732.4 mm;
+- only D0→D2 = 732.4 mm carries DIRECT_PRIMARY assembly-level semantics;
+- all 56 instance historical standalone full lengths remain UNRESOLVED;
+- unsupported end/joinery details remain absent;
+- deterministic reopen and restore signatures match;
+- 9-domain Review Board and all six technical renders are nonblank.
+
+Run history:
+- Run #1 (36317398213): geometry/reopen/restore/Review Board passed; validator stopped at profile SHA numeric-serialization normalization.
+- Run #2 (36317658877): geometry/reopen/restore passed; validation patch contained a literal-newline syntax defect.
+- Run #3 (36317889355): normalization syntax corrected; **76/76 PASS**.
+
+D-235 is a machine-gate result only. Product Owner First Article acceptance remains required.
+
+Current status:
+
+**FIRST ARTICLE MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
