@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R304",
+  "state_revision": "R305",
   "last_updated": "2026-09-27",
-  "session_status": "HUAGONG SOURCE READINESS + D-076 PASS WITH BOUNDARIES D-225 / MASTER SPEC V0.1 NEXT / MAIN 23 OF 28 = 82.1% / 275 COVERED / NO ACTIVE ENGINEERING T-TASK / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "HUAGONG MASTER SPEC V0.1 CANDIDATE 01 D-226 / PRODUCT OWNER REVIEW REQUIRED / MAIN 23 OF 28 = 82.1% / 275 COVERED / NO ENGINEERING T-TASK / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 23 OF 28 / HUAGONG SOURCE READINESS D-225 PASS WITH BOUNDARIES / MASTER SPEC NEXT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 23 OF 28 / HUAGONG MASTER SPEC CANDIDATE D-226 / PO REVIEW NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / HUAGONG D-225 SOURCE READINESS PASS / MASTER SPEC NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / HUAGONG D-225 SOURCE READINESS PASS / MASTER SPEC NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / HUAGONG MASTER SPEC CANDIDATE D-226 / PO REVIEW NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / HUAGONG MASTER SPEC CANDIDATE D-226 / PO REVIEW NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -67,9 +67,9 @@
     "status": "NO ACTIVE ENGINEERING T-TASK"
   },
   "proposed_next_task": {
-    "id": "HUAGONG-MASTER-SPEC-V0.1",
-    "name": "华栱 Master Spec V0.1 design",
-    "status": "NEXT COMPLETE STEP / PRODUCT OWNER REVIEW REQUIRED"
+    "id": "HUAGONG-MASTER-SPEC-APPROVAL",
+    "name": "华栱 Master Spec V0.1 Product Owner review / lock decision",
+    "status": "AWAITING PRODUCT OWNER"
   },
   "last_completed_task": {
     "id": "T-039",
@@ -126,7 +126,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 23 OF 28 MASTERS APPROVED / HUAGONG SOURCE READINESS PASS D-225 / MASTER SPEC NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 23 OF 28 MASTERS APPROVED / HUAGONG MASTER SPEC CANDIDATE D-226 / PO REVIEW NEXT / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -846,7 +846,7 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Design 华栱 Master Spec V0.1 only, preserving the 56-record subset boundary, direct combined 732.4 mm out-jump constraint, unresolved individual 一跳/二跳 full lengths, and separate future Length/Assembly + Profile Control gates. Do not create an engineering T-task or run Blender.",
+  "next_action": "Product Owner review Candidate 01. If approved, lock the Master Spec only. Do not create an engineering T-task, control-set implementation branch, PR, or Blender execution in the same step unless separately authorized.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -965,7 +965,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / MAIN 23 OF 28 / HUAGONG SOURCE READINESS PASS / MASTER SPEC V0.1 NEXT",
+    "status": "ACTIVE / MAIN 23 OF 28 / HUAGONG MASTER SPEC CANDIDATE / PO REVIEW REQUIRED",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1212,7 +1212,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "华栱 / MASTER SPEC V0.1 DESIGN NEXT / NO ENGINEERING T-TASK"
+    "next_master_candidate": "华栱 / MASTER SPEC V0.1 CANDIDATE 01 D-226 / PO REVIEW"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -2590,7 +2590,7 @@
     "closure_decision_id": "D-224"
   },
   "huagong_stage1": {
-    "status": "SOURCE READINESS + D-076 PASS WITH BOUNDARIES / D-225 / MASTER SPEC V0.1 NEXT",
+    "status": "MASTER SPEC V0.1 CANDIDATE 01 / D-226 / PRODUCT OWNER REVIEW REQUIRED",
     "component": "华栱",
     "coverage_matrix_priority": 18,
     "registry_record_count": 56,
@@ -2671,6 +2671,30 @@
     "profile_control_gate_required": true,
     "prior_gong_profile_reuse": "PROHIBITED WITHOUT NEW EVIDENCE",
     "generic_template_substitution": "PROHIBITED",
-    "comparative_building_geometry_reuse": "PROHIBITED AS AUTHORITY"
+    "comparative_building_geometry_reuse": "PROHIBITED AS AUTHORITY",
+    "master_spec_candidate_decision_id": "D-226",
+    "master_spec_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_HUAGONG_MASTER_SPEC_V001.md",
+    "master_spec_json_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_HUAGONG_MASTER_SPEC_V001.json",
+    "proposed_component_id": "CMP-GONG-HUAGONG-001",
+    "proposed_master_id": "CMP-GONG-HUAGONG-001_MASTER",
+    "proposed_master_family_count": 1,
+    "proposed_geometry_variant_count": 2,
+    "proposed_variants": [
+      {
+        "variant_id": "JUMP_1_HUAGONG",
+        "registry_binding_count": 28,
+        "canonical_length_status": "UNRESOLVED"
+      },
+      {
+        "variant_id": "JUMP_2_HUAGONG",
+        "registry_binding_count": 28,
+        "canonical_length_status": "UNRESOLVED"
+      }
+    ],
+    "direction_geometry_variant_count": 0,
+    "length_assembly_control_gate_id": "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V0.1",
+    "profile_control_gate_id": "HUAGONG_PROFILE_CONTROL_SET_V0.1",
+    "master_spec_candidate_prepared": true,
+    "master_spec_product_owner_approved": false
   }
 }
