@@ -1457,3 +1457,14 @@ Do not restart T-018 by default.
 - Connection boundary retained: grooves / mortise-tenon / cavities / local interface cuts remain DEFERRED and will be resolved only from later connection-aware assembly evidence.
 - Required before formalization: traceability Review Patch for thickness subgroup attribution and reproducible profile derivation/calibration record.
 - Not authorized: formalization, Catalog/V008 binding, PR Ready/merge, closure, Stage2, T-018 resume.
+
+## 2026-09-27｜T-037 Traceability Review Patch｜D-186
+
+- Product Owner authorization: APPROVED.
+- Scope: evidence/traceability record only; no geometry change.
+- Thickness: 156.5mm = OBSERVED_SAMPLE_MEAN / n=16; subgroup attribution = UNRESOLVED; LARGE+SMALL use = Stage1 production-family application, not separate direct observation.
+- Profile: PDF p73 Fig 2-27 + p76 Fig 2-31 = same-building qualitative form/envelope authority.
+- Current 13-point normalized control polygon: PO-approved Stage1 reconstructed control set, numerically reproducible from locked Definition, NOT direct measured curve coordinates.
+- Metric image calibration: NOT PERFORMED / NOT CLAIMED. Independent source-image re-extraction yielding the same numeric points: NOT CLAIMED.
+- Exact historical curve/control dimensions remain UNRESOLVED; profile remains REPLACEABLE.
+- Formalization / Catalog-V008 binding / PR Ready / merge remain NOT AUTHORIZED.
