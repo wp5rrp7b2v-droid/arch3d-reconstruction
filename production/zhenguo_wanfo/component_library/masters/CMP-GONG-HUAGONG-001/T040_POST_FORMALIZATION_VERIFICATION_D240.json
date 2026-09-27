@@ -1,0 +1,76 @@
+{
+  "schema_version": "T040_POST_FORMALIZATION_VERIFICATION_D240_V001",
+  "task_id": "T-040",
+  "decision_id": "D-240",
+  "authority": "D-239",
+  "status": "PASS / READY_FOR_PRODUCT_OWNER_READY_MERGE_DECISION",
+  "verification_run": {
+    "run_id": 36323489326,
+    "conclusion": "success",
+    "head_sha": "7c4afeaed06764a4bc5c4508fcb05786d45ba198",
+    "artifact_id": 10933900871,
+    "artifact_name": "P3_3_T040_POST_FORMALIZATION_VERIFICATION_V001",
+    "artifact_digest": "sha256:d83dcb134ff7ed7e030055fae1e76dcabad0e2a9bb3c53f29e9b7e2b41516c1c",
+    "artifact_expires_at": "2026-10-27T13:51:50Z"
+  },
+  "branch_progress": {
+    "approved_master_count": 24,
+    "pending_master_count": 4,
+    "completion_percent": 85.7,
+    "master_covered_registry_records": 331,
+    "current_equals_v008": true
+  },
+  "derived_excel": {
+    "status": "PASS",
+    "record_count": 505,
+    "approved_master_count": 24,
+    "master_covered_registry_records": 331,
+    "source_registry_commit": "0e0c084f42deffc068b8a8bae25bac596a74cef2",
+    "current_excel_sha256": "53583e21d3d418c260b39fa7f44cb5eade02009081b494eecba0985d7d4b86aa",
+    "versioned_excel_sha256": "53583e21d3d418c260b39fa7f44cb5eade02009081b494eecba0985d7d4b86aa"
+  },
+  "t040_latest_head": {
+    "status": "PASS",
+    "check_count": 76,
+    "accepted_geometry_match": true,
+    "accepted_canonical_blend_sha256": "0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e",
+    "regenerated_blend_sha256": "be9e386a289a64e35d8f14f47e6d88e6ef45cc697ab8474a69392e5222b42199",
+    "regenerated_blend_promoted_to_canonical": false,
+    "family_semantic_signature": "0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77",
+    "jump_1_geometry_signature": "565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a",
+    "jump_2_geometry_signature": "451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001",
+    "profile_control_signature": "f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e",
+    "length_assembly_control_signature": "ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b",
+    "fixture_combined_projection_mm": 732.4
+  },
+  "shared_regressions": {
+    "status": "PASS / 7 OF 7",
+    "runs": {
+      "T021": 36323689959,
+      "T022": 36323691130,
+      "T023": 36323692320,
+      "T024": 36323693438,
+      "T037": 36323694454,
+      "T038": 36323695468,
+      "T039": 36323696692
+    }
+  },
+  "lifecycle_patch": {
+    "scope": "T-039 validator only",
+    "reason": "historical T-039 validator still asserted merge/closure unauthorized after T-039 had advanced to merged lifecycle",
+    "effect": "merge lifecycle assertion made state-aware",
+    "geometry_changed": false,
+    "evidence_semantics_changed": false
+  },
+  "readiness": {
+    "status": "PASS",
+    "generic_p3_3_master_v2": "SKIPPED_AS_INTENDED / dedicated T-040 route authoritative",
+    "pr_number": 36,
+    "pr_must_remain_draft": true,
+    "ready_transition_authorized": false,
+    "merge_authorized": false,
+    "closure_authorized": false,
+    "stage2_authorized": false,
+    "t018_status": "HOLD"
+  }
+}

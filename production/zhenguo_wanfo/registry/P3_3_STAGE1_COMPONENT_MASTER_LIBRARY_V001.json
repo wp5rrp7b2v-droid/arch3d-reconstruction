@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-039 MERGED / MAIN VERIFIED",
-  "status": "TWENTY_THREE_APPROVED / T039 MERGED TO MAIN / D-223 / FORMAL CLOSURE PENDING",
+  "task": "T-040 FORMALIZED / PR #36 DRAFT",
+  "status": "TWENTY_FOUR_APPROVED / T040 FORMALIZED / PR #36 DRAFT / MERGE NOT AUTHORIZED",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -867,7 +867,76 @@
       "merge_decision_id": "D-223",
       "merge_commit_sha": "e1726096e1d9bb936f24dd786d357220b52942b8",
       "main_verified": true
+    },
+    {
+      "component_id": "CMP-GONG-HUAGONG-001",
+      "master_id": "CMP-GONG-HUAGONG-001_MASTER",
+      "master_version": "V001",
+      "variant_ids": [
+        "JUMP_1_HUAGONG",
+        "JUMP_2_HUAGONG"
+      ],
+      "approval_status": "PRODUCT_OWNER_APPROVED",
+      "decision_id": "D-236",
+      "formalization_authority": "D-237",
+      "formalization_result": "D-238",
+      "publication_status": "FORMALIZED / PR #36 DRAFT / MERGE NOT AUTHORIZED",
+      "canonical_asset_status": "ACTIONS_ARTIFACT / PRODUCT_OWNER_APPROVED / LOCAL ONLY / NOT GIT",
+      "canonical_asset_sha256": "0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e",
+      "semantic_sha256": "b5ab09f0cb9121ab3d27887d8cff65dc92bb06f6e0b3fe8197f6980820d8b783",
+      "validation_sha256": "b5d23c5878fd25353855675d7c701924bf8d0cb179e4817513865c46147ba295",
+      "review_board_sha256": "54d4c79bd83e23c6ac31c330323fce70e0a83f7a1c2f2d1355c2e9d3f16af2f1",
+      "family_semantic_signature": "0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77",
+      "variant_geometry_signatures": {
+        "JUMP_1_HUAGONG": "565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a",
+        "JUMP_2_HUAGONG": "451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001"
+      },
+      "physical_instance_count": 56,
+      "geometry_variant_count": 2,
+      "distribution": "JUMP_1 28 / JUMP_2 28 / SOUTH,NORTH,EAST,WEST EACH 7+7 / LOCKED_SUBSET / NOT WHOLE-HALL TOTAL",
+      "dimension_policy": {
+        "jump_1_reference_specimen_length_mm": "898.8 / RECONSTRUCTED_DESIGN / SECONDARY_HYPOTHESIS_GUIDED / REFERENCE_SPECIMEN_ONLY / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+        "jump_2_reference_specimen_length_mm": "1630.0 / SECONDARY_CALCULATED / REFERENCE_SPECIMEN_ONLY / REPLACEABLE / NOT_DIRECT_PRIMARY",
+        "width_mm": "214.2 / REPORT_INFERRED / REPORT_IDEAL_MODEL / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
+        "thickness_mm": "153.0 / REPORT_INFERRED / REPORT_IDEAL_MODEL / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
+        "instance_historical_full_length_status": "UNRESOLVED",
+        "reference_specimen_length_applies_to_instance": false
+      },
+      "assembly_policy": {
+        "combined_projection_mean_mm": "732.4 / DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION / n=46",
+        "fixture_midpoint_mm": "366.2 / RECONSTRUCTED_DESIGN / PROJECT_FIXTURE_ONLY / REPLACEABLE",
+        "report_ideal_total_mm": "734.4 / REPORT_INFERRED / REPORT_IDEAL_MODEL / CROSSCHECK_ONLY",
+        "sample_to_instance_mapping": "UNKNOWN"
+      },
+      "profile_policy": {
+        "authority": "SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED",
+        "control_set": "LOCKED_16_POINT / SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+        "control_set_sha256": "f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e",
+        "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+        "exact_historical_curve": "UNRESOLVED"
+      },
+      "joinery_boundary": "MORTISE-TENON / GROOVES / SLOTS / CAVITIES / HIDDEN CONNECTION CUTS DEFERRED",
+      "source_artifact": {
+        "accepted_first_article": {
+          "run_id": 36317889355,
+          "artifact_id": 10930899677,
+          "artifact_zip_sha256": "de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f"
+        }
+      },
+      "minimal_sufficient_package": {
+        "policy": "ADAPTIVE / NO UNIVERSAL FILE COUNT",
+        "formal_repo_files": [
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/CMP-GONG-HUAGONG-001_HUAGONG_DEFINITION_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/CMP-GONG-HUAGONG-001_MASTER_SEMANTIC_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/CMP-GONG-HUAGONG-001_MASTER_REVIEW_BOARD_V001.png",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/CMP-GONG-HUAGONG-001_MASTER_VALIDATION_V001.json",
+          "docs/tasks/T-040_P3_3_HUAGONG_MASTER_V2_V001.md"
+        ],
+        "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+        "review_board_count": 1,
+        "required_review_domain_count": 9
+      }
     }
   ],
-  "approved_master_count": 23
+  "approved_master_count": 24
 }
