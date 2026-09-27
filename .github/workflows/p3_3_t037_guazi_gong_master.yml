@@ -117,3 +117,4 @@ jobs:
             ${{ env.SEM }}
             ${{ env.BOARD }}
             ${{ env.VAL }}
+            ${{ env.REVIEW }}/*.png
