@@ -1,6 +1,6 @@
 {
   "schema_version": "P3_3_STAGE1_MANGONG_PROFILE_CONTROL_SET_V001",
-  "status": "CANDIDATE_01 / READY_FOR_PRODUCT_OWNER_REVIEW / NOT_LOCKED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-201",
   "date": "2026-09-27",
   "task_id": "T-038",
   "candidate_id": "MANGONG_PROFILE_CONTROL_SET_V001_C01",
@@ -125,7 +125,9 @@
     "wear_damage_warp",
     "per_instance_deformation"
   ],
-  "product_owner_approved": false,
-  "locked": false,
-  "engineering_execution_authorized": false
+  "product_owner_approved": true,
+  "locked": true,
+  "engineering_execution_authorized": false,
+  "approval_decision_id": "D-201",
+  "definition_path": "production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MANGONG_DEFINITION_V001.json"
 }
