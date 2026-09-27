@@ -85,11 +85,13 @@
     "candidate_id": "LINGGONG_PROFILE_CONTROL_SET_V001_C01",
     "candidate_control_set_sha256": "0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7",
     "candidate_point_count": 14,
-    "candidate_locked": false,
-    "candidate_product_owner_approved": false,
+    "candidate_locked": true,
+    "candidate_product_owner_approved": true,
     "independent_from_prior_gong_control_sets": true,
     "t037_guazi_control_set_reused": false,
-    "t038_mangong_control_set_reused": false
+    "t038_mangong_control_set_reused": false,
+    "approval_decision_id": "D-215",
+    "definition_path": "production/zhenguo_wanfo/component_library/masters/CMP-GONG-LINGGONG-001/CMP-GONG-LINGGONG-001_LINGGONG_DEFINITION_V001.json"
   },
   "coordinate_convention": {
     "x": "length",
@@ -145,8 +147,8 @@
     "source_readiness": "PASS WITH BOUNDARIES / D-210",
     "master_spec": "LOCKED / PRODUCT_OWNER_APPROVED / D-212",
     "task_contract": "LOCKED / PRODUCT_OWNER_APPROVED / D-213",
-    "profile_control_set": "CANDIDATE_01 PREPARED / D-214 / PRODUCT OWNER REVIEW REQUIRED",
-    "engineering_execution": "NOT AUTHORIZED",
+    "profile_control_set": "LOCKED / PRODUCT_OWNER_APPROVED / D-215",
+    "engineering_execution": "NEXT GATE / NOT AUTHORIZED",
     "formalization": "NOT AUTHORIZED",
     "catalog_v008_binding": "NOT AUTHORIZED",
     "merge": "NOT AUTHORIZED",
@@ -165,7 +167,8 @@
     "D-211",
     "D-212",
     "D-213",
-    "D-214"
+    "D-214",
+    "D-215"
   ],
   "task_contract": {
     "task_id": "T-039",
