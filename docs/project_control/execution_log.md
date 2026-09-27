@@ -1499,3 +1499,8 @@ Do not restart T-018 by default.
 - CURRENT == V008: PASS.
 - Derived Excel sync: NOT AUTHORIZED / PENDING.
 - PR #33 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.
+
+## 2026-09-27｜T-037 Post-Formalization Verification Authorization｜D-190
+
+- Product Owner authorized: derived Registry Excel sync + latest-head T-037 regression + PR readiness review.
+- Not authorized: PR Ready transition, merge, closure, Stage2, T-018 resume.
