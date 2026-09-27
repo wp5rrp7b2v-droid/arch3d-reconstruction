@@ -1,0 +1,148 @@
+{
+  "schema_version": "P3_3_STAGE1_LINGGONG_MASTER_SPEC_V001",
+  "status": "DRAFT / CANDIDATE_01 / PRODUCT_OWNER_REVIEW_REQUIRED / D-211",
+  "date": "2026-09-27",
+  "stage": "P3.3 V002 Stage 1",
+  "source_gate": "D-210 / SOURCE READINESS + D-076 PASS WITH BOUNDARIES",
+  "identity": {
+    "component_name_zh": "令栱",
+    "component_id": "CMP-GONG-LINGGONG-001",
+    "master_id": "CMP-GONG-LINGGONG-001_MASTER",
+    "master_version": "V001",
+    "master_family_count": 1,
+    "geometry_variant_count": 0,
+    "physical_instance_count": 28,
+    "distribution": {
+      "south": 7,
+      "north": 7,
+      "east": 7,
+      "west": 7
+    },
+    "architecture": "ONE_SHARED_MASTER / ZERO_GEOMETRY_VARIANT / 28_INSTANCE_BINDINGS"
+  },
+  "source": {
+    "source_id": "SRC-ZG-WF-001",
+    "title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告",
+    "canonical_pdf_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "bindings": {
+      "length": {
+        "mean_mm": 897,
+        "min_mm": 860,
+        "max_mm": 925.6,
+        "n": 28,
+        "classification": "DIRECT_PRIMARY / OBSERVED_MEAN",
+        "locator": "PDF p60-61 / printed p45-46 / §2.2.2.3 / Fig 2-16 / Table 2-24"
+      },
+      "width": {
+        "mean_mm": 217.4,
+        "min_mm": 208,
+        "max_mm": 228,
+        "n": 28,
+        "classification": "DIRECT_PRIMARY / OBSERVED_MEAN",
+        "locator": "PDF p55 / printed p40 / §2.2.1.5 / Table 2-14"
+      },
+      "thickness": {
+        "mean_mm": 155.6,
+        "min_mm": 150,
+        "max_mm": 165,
+        "n": 28,
+        "classification": "DIRECT_PRIMARY / OBSERVED_MEAN",
+        "locator": "PDF p57 / printed p42 / §2.2.1.6 / Table 2-17"
+      }
+    }
+  },
+  "canonical_reference_geometry_mm": {
+    "length": 897,
+    "width": 217.4,
+    "thickness": 155.6,
+    "classification": "FAMILY_OBSERVED_MEAN_REFERENCE_SPECIMEN",
+    "per_instance_exact_claim": false,
+    "original_963_design_claim": false
+  },
+  "instance_policy": {
+    "registry_physical_count": 28,
+    "sample_count": 28,
+    "sample_to_instance_mapping": "UNKNOWN",
+    "count_equivalence_does_not_imply_mapping": true,
+    "direction_is_instance_owned": true,
+    "placement_is_assembly_owned": true,
+    "geometry_variant_count": 0
+  },
+  "profile": {
+    "authority": "SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED / PROVISIONAL",
+    "exact_historical_curve": "UNRESOLVED",
+    "exact_numeric_control_dimensions": "UNRESOLVED",
+    "exact_end_geometry": "UNRESOLVED",
+    "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "numeric_control_set_locked": false,
+    "separate_pre_execution_gate_required": true,
+    "future_control_set_classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "prohibited_reuse": [
+      "T-037 GUAZI PROFILE CONTROLS",
+      "T-038 MANGONG PROFILE CONTROLS",
+      "GENERIC SONG/YINGZAO FASHI TEMPLATE"
+    ]
+  },
+  "coordinate_convention": {
+    "x": "length",
+    "y": "width / extrusion",
+    "z": "profile thickness / vertical",
+    "placement_transform_in_master": false
+  },
+  "deferred_geometry": [
+    "exact_mortise_tenon",
+    "grooves",
+    "slots",
+    "cavities",
+    "hidden_connection_cuts",
+    "exact_end_notches_shoulders",
+    "exact_historical_profile_curve",
+    "unmeasured_chamfers",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "per_instance_originality_repair_state",
+    "one_to_one_measurement_mapping"
+  ],
+  "future_first_article_panels": [
+    "AXON",
+    "FRONT_PROFILE",
+    "END_WIDTH_VIEW",
+    "DIMENSION_PROOF",
+    "28_INSTANCE_DISTRIBUTION_AND_ZERO_VARIANT_RULE",
+    "PROFILE_PROVENANCE_AND_CONTROL_SET_CLASSIFICATION",
+    "SOURCE_VS_RECONSTRUCTION_BOUNDARY",
+    "UNKNOWN_DEFERRED_GEOMETRY"
+  ],
+  "proposed_hard_fails": [
+    "WRONG_PHYSICAL_INSTANCE_COUNT",
+    "WRONG_CANONICAL_LENGTH",
+    "WRONG_CANONICAL_WIDTH",
+    "WRONG_CANONICAL_THICKNESS",
+    "OBSERVED_MEAN_MARKED_AS_PER_INSTANCE_EXACT",
+    "ORIGINAL_963_FACT_UPGRADE",
+    "SAMPLE_TO_INSTANCE_MAPPING_INVENTED",
+    "DUPLICATE_MASTER_PER_LOCATION",
+    "FALSE_DIRECTION_GEOMETRY_VARIANT",
+    "UNSUPPORTED_PROFILE_INVENTION",
+    "PRIOR_GONG_PROFILE_CONTROL_REUSE",
+    "GENERIC_TEMPLATE_SUBSTITUTION",
+    "PROFILE_CONTROL_SET_NOT_VERSIONED",
+    "UNSUPPORTED_END_SHAPE",
+    "UNSUPPORTED_JOINERY_OR_LOCAL_CUTS",
+    "BUILDING_PLACEMENT_BAKED_INTO_MASTER",
+    "REVIEW_RENDER_NEAR_UNIFORM",
+    "MODEL_BEFORE_EXECUTION_AUTHORIZATION"
+  ],
+  "gates": {
+    "source_readiness": "PASS WITH BOUNDARIES / D-210",
+    "master_spec": "DRAFT / PRODUCT OWNER REVIEW REQUIRED / D-211",
+    "task_contract": "NOT AUTHORIZED",
+    "profile_control_set": "REQUIRED BEFORE ENGINEERING EXECUTION / NOT YET PREPARED",
+    "engineering_execution": "NOT AUTHORIZED",
+    "formalization": "NOT AUTHORIZED",
+    "catalog_v008_binding": "NOT AUTHORIZED",
+    "merge": "NOT AUTHORIZED",
+    "stage2": "NOT AUTHORIZED",
+    "t018": "HOLD"
+  }
+}
