@@ -260,7 +260,7 @@ Locked sequence:
 6. First Article — **MACHINE PASS / D-203 / READY FOR PRODUCT OWNER REVIEW**
 7. Product Owner First Article Approval — **APPROVED / D-204**
 8. Formalization + Catalog/V008 binding — **COMPLETE / D-205**
-9. Derived Excel + latest-head regression + readiness review — **NOT AUTHORIZED**
+9. Derived Excel + latest-head regression + readiness review — **AUTHORIZED / D-206 / IN PROGRESS**
 10. D-194 combined Ready+Merge — **NOT AUTHORIZED**
 11. Closure — **NOT AUTHORIZED**
 
@@ -309,3 +309,8 @@ D-204 records Product Owner approval of the D-203 first article and authorizes f
 ## 21. Formalization Result
 
 D-205 records successful formalization under D-204. Catalog branch count = 22/28; 44/44 slow-gong V008/CURRENT rows are bound to CMP-GONG-MANGONG-001_MASTER; CURRENT==V008. Accepted canonical blend remains D-204 SHA 1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.
+
+
+## 22. Post-Formalization Verification Authorization
+
+D-206 authorizes V008/CURRENT progress-summary synchronization to the D-205 formalized branch state, derived Excel synchronization, latest-head T-038 regression, shared canonical-registry regressions and PR #34 readiness review. Ready transition, merge and closure remain separate Product Owner gates.
