@@ -1756,3 +1756,18 @@ Do not restart T-018 by default.
 - Next complete step: Task Contract design/lock.
 - Engineering branch / PR / Blender / formalization / Catalog binding: NOT AUTHORIZED.
 - T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 令栱 Task Contract Design + Lock｜D-213
+
+- T-039 availability check: PASS / no prior T-039 or P3_3_LINGGONG task found.
+- Task created: `T-039｜P3_3_LINGGONG_MASTER_V2_V001`.
+- Task Contract: PRODUCT OWNER APPROVED / LOCKED.
+- Master: `CMP-GONG-LINGGONG-001_MASTER`.
+- Architecture: 1 shared Master / 0 Geometry Variant / 28 bindings.
+- Canonical family envelope: 897 × 217.4 × 155.6 mm.
+- Evidence semantics: DIRECT_PRIMARY / OBSERVED_MEAN / n=28; not per-instance exact; not proven 963 design.
+- Sample-to-instance mapping: UNKNOWN.
+- Review Board: 8 required domains.
+- Profile Control Set V0.1: mandatory separate pre-execution gate.
+- Engineering execution / branch / PR / Blender: NOT AUTHORIZED.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
