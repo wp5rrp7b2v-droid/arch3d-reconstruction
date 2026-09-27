@@ -1624,3 +1624,17 @@ Do not restart T-018 by default.
 - Scope: isolated builder + validator + workflow; Blender 4.5.13 two-variant first article; deterministic rebuild/reopen; 8-domain Review Board; artifact; Draft PR.
 - Locked inputs: D-198 Master Spec / D-199 Task Contract / D-201 18-point profile control set.
 - First-article acceptance, formalization, Catalog/V008 binding, PR Ready/merge and closure remain NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 First Article Machine Gate｜D-203
+
+- Valid run: 36299005477 / SUCCESS / 43/43 PASS / head a4361a4a156448d791c2a6cd7f9b759264159003.
+- Precheck / canonical build / independent reopen / deterministic restore / 8-panel Review Board / validation / no-tracked-blend / artifact upload: PASS.
+- Artifact: 10924188411 / sha256:bf279ee4b3b1bf04d8263cf12983e0124a4a39d654f7a2297a95d7a12ca47060.
+- Canonical .blend SHA-256: 1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023.
+- Family semantic signature: ae8ad824401a75b694d404e494038a90aa19f92406e3a1def53db4153dcc0e6d.
+- LARGE geometry signature: 324fb1aab0c469010e6adaf4dc9372eafe9d165ee99c01a8764edff3a98f898a.
+- SMALL geometry signature: 6858ad94e5e89c8b8ff6059a18ece7a04949f52836b39e12052913c4b8338245.
+- Review Board SHA-256: f0038fd1a6da007a4526460cd67beb3060acaf42e9185bb7a58214a606ed2531.
+- Draft PR #34: open / draft / mergeable.
+- Runs #1-#3: superseded setup/precheck failures; no accepted first-article evidence from those runs.
+- Product Owner first-article acceptance remains pending. Formalization / Catalog-V008 / Ready-Merge / closure remain unauthorized.
