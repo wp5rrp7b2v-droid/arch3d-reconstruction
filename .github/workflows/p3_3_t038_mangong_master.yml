@@ -1,12 +1,12 @@
 name: T-038 Mangong Master First Article
 
-# D-190 latest-head regression trigger; formalization re-entry is disabled after D-189.
+# D-206 latest-head regression during T-038 post-formalization verification.
 
 on:
   pull_request:
     branches: [ main ]
     paths:
-      - '.github/workflows/p3_3_t037_mangong_master.yml'
+      - '.github/workflows/p3_3_t038_mangong_master.yml'
       - 'production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/**'
       - 'production/zhenguo_wanfo/scripts/validate_t038_mangong.py'
       - 'docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json'
