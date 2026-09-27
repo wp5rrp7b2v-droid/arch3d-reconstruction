@@ -1308,3 +1308,17 @@ Boundary retained:
 - Readiness review: **PASS**.
 - Result: **READY FOR PRODUCT OWNER READY+MERGE DECISION**.
 - PR #36: **DRAFT / Ready transition NOT AUTHORIZED / merge NOT AUTHORIZED**.
+
+### T-040 Formal Closure｜D-243
+
+- Product Owner closure: **APPROVED**.
+- PR #36: **MERGED / MAIN VERIFIED**.
+- Merge commit: `783d6ce89b14a07a580c0744dd63e848a152690c`.
+- Stage1 Master Catalog: **24/28 = 85.7%**.
+- Master-covered Registry: **331/505**.
+- 华栱 V008/CURRENT: **56/56 APPROVED_MASTER_AVAILABLE**.
+- Variant binding: **JUMP_1 28 / JUMP_2 28**.
+- CURRENT == V008: **PASS**.
+- Derived Excel: **SYNCED / PASS**.
+- Evidence boundary preservation: **PASS**.
+- Final lifecycle state: **CLOSED**.
