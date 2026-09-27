@@ -342,7 +342,7 @@ Locked sequence:
 5. Engineering Execution Authorization — **AUTHORIZED / D-216**
 6. First Article machine validation — **PASS / D-217 / 43 OF 43**
 7. Product Owner First Article Approval — **PASS / D-218**
-8. Formalization + Catalog/V008/CURRENT binding — **NEXT GATE / NOT AUTHORIZED**
+8. Formalization + Catalog/V008/CURRENT binding — **AUTHORIZED / D-219 / EXECUTION PENDING**
 9. Derived Excel + latest-head regression + readiness review — **NOT AUTHORIZED**
 10. D-194 combined Draft→Ready + Merge — **NOT AUTHORIZED**
 11. Formal Closure — **NOT AUTHORIZED**
@@ -391,3 +391,7 @@ Run `36304085862` completed SUCCESS with **43/43 PASS** at execution head `9037a
 ## 21. First Article Product Owner Approval｜D-218
 
 Product Owner approved the D-217 machine-PASS First Article. Accepted canonical .blend SHA=`4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`; family semantic signature=`d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7`; geometry signature=`e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61`. This approval accepts the one-body 令栱 Stage1 First Article only. It does not upgrade any evidence semantics and does not authorize formalization, Catalog/V008/CURRENT binding, Derived Excel sync, PR Ready/Merge, closure, Stage2 or T-018 resume. Formalization authorization is the next separate gate.
+
+## 22. Formalization Authorization｜D-219
+
+Product Owner authorized formalization of the D-218 accepted First Article and Stage1 Catalog/V008/CURRENT binding. The operation must byte-verify accepted Artifact 10927005772 and preserve the accepted canonical .blend SHA and geometry signatures. Success target: branch Catalog 23/28, 28/28 令栱 rows bound to CMP-GONG-LINGGONG-001_MASTER, master-covered Registry rows 275, CURRENT==V008. Derived Excel, post-formalization regressions/readiness, PR Ready/Merge and closure remain separate gates.
