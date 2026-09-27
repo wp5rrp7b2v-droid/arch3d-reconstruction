@@ -1136,3 +1136,21 @@ Boundary retained:
 - Draft PR: **AUTHORIZED**.
 - First Article Product Owner acceptance: **SEPARATE GATE**.
 - Formalization / merge / closure: **NOT AUTHORIZED**.
+
+### T-039｜First Article Machine Gate｜D-217
+
+- GitHub Actions Run: **36304085862 / SUCCESS**.
+- Machine validation: **43/43 PASS**.
+- Artifact: **10927005772 / digest locked**.
+- Canonical .blend SHA: **LOCKED AS MACHINE CANDIDATE**.
+- 897 × 217.4 × 155.6 mm: **PASS**.
+- 1 Master / 0 Variant / 28 records: **PASS**.
+- Direction distribution 7/7/7/7: **PASS**.
+- 14-point profile signature: **PASS**.
+- Deterministic rebuild + reopen: **PASS**.
+- Closed manifold: **PASS**.
+- Unsupported joinery/local cuts: **ABSENT / PASS**.
+- Review Board: **8 domains / NONBLANK / READABLE**.
+- Draft PR #35: **OPEN / DRAFT / MERGEABLE**.
+- Product Owner First Article approval: **REQUIRED / PENDING**.
+- Formalization / Catalog binding / merge: **NOT AUTHORIZED**.
