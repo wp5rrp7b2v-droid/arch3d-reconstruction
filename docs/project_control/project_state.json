@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R279",
+  "state_revision": "R280",
   "last_updated": "2026-09-27",
-  "session_status": "T-038 PROFILE CONTROL SET V0.1 CANDIDATE 01 READY FOR PRODUCT OWNER REVIEW D-200 / NOT LOCKED / ENGINEERING NOT AUTHORIZED / 21 OF 28 / T-018 HOLD",
+  "session_status": "T-038 PROFILE CONTROL SET V0.1 LOCKED D-201 / ENGINEERING EXECUTION AUTHORIZATION NEXT GATE / 21 OF 28 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "Product Owner must approve or reject Profile Control Set V0.1 Candidate 01 before engineering execution.",
+  "blocker": "Product Owner authorization required before builder/validator/workflow implementation and Blender first-article execution.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "PROFILE CONTROL SET V0.1 CANDIDATE 01 / READY FOR PRODUCT OWNER REVIEW / NOT LOCKED"
+    "status": "PROFILE CONTROL SET V0.1 LOCKED / D-201 / ENGINEERING EXECUTION NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-038-PROFILE-CONTROL-APPROVAL",
-    "name": "慢栱族 Profile Control Set V0.1 Candidate 01 approval",
-    "status": "AWAITING PRODUCT OWNER DECISION"
+    "id": "T-038-ENGINEERING-EXECUTION",
+    "name": "T-038 Engineering Execution Authorization",
+    "status": "AWAITING PRODUCT OWNER AUTHORIZATION"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "PROFILE CONTROL SET V0.1 CANDIDATE 01 / READY FOR PRODUCT OWNER REVIEW / D-200",
+    "status": "PROFILE CONTROL SET V0.1 LOCKED / PRODUCT OWNER APPROVED / D-201",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2261,7 +2261,7 @@
     "width_mm": 218.9,
     "thickness_mm": 156.9,
     "width_thickness_classification": "REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
-    "numeric_profile_control_set_locked": false,
+    "numeric_profile_control_set_locked": true,
     "master_spec_locked": true,
     "master_spec_approval_decision_id": "D-198",
     "task_contract_decision_id": "D-199",
@@ -2277,6 +2277,8 @@
     "profile_control_candidate_sha256": "07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4",
     "profile_control_point_count": 18,
     "profile_control_classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
-    "profile_control_product_owner_approved": false
+    "profile_control_product_owner_approved": true,
+    "profile_control_approval_decision_id": "D-201",
+    "definition_path": "production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MANGONG_DEFINITION_V001.json"
   }
 }
