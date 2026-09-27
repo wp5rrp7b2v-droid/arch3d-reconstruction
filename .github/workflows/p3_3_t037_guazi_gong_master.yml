@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   first-article:
@@ -118,3 +118,288 @@ jobs:
             ${{ env.BOARD }}
             ${{ env.VAL }}
             ${{ env.REVIEW }}/*.png
+
+
+  formalize:
+    if: github.event_name == 'pull_request' && github.actor != 'github-actions[bot]'
+    needs: first-article
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      FORMAL_SRC: artifacts/formal_source
+      MASTER_DIR: production/zhenguo_wanfo/component_library/masters/CMP-GONG-GUAZI-001
+      CATALOG: production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json
+      REG_V008: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json
+      REG_CURRENT: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json
+      STATE: docs/project_control/project_state.json
+      DECISION: docs/project_control/decision_log.md
+      EXECUTION: docs/project_control/execution_log.md
+      ACCEPTANCE: docs/project_control/acceptance_matrix.md
+      TASK: docs/tasks/T-037_P3_3_GUAZI_GONG_MASTER_V2_V001.md
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
+
+      - name: Download validated T-037 artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: P3_3_T037_GUAZI_GONG_MASTER_V2_FIRST_ARTICLE_V001
+          path: ${{ env.FORMAL_SRC }}
+
+      - name: Formalize approved package and bind Catalog/V008
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import copy, hashlib, json, os, shutil
+          from pathlib import Path
+
+          FORMAL_SRC=Path(os.environ["FORMAL_SRC"])
+          MASTER_DIR=Path(os.environ["MASTER_DIR"])
+          CATALOG=Path(os.environ["CATALOG"])
+          REG_V008=Path(os.environ["REG_V008"])
+          REG_CURRENT=Path(os.environ["REG_CURRENT"])
+          STATE=Path(os.environ["STATE"])
+          DECISION=Path(os.environ["DECISION"])
+          EXECUTION=Path(os.environ["EXECUTION"])
+          ACCEPTANCE=Path(os.environ["ACCEPTANCE"])
+          TASK=Path(os.environ["TASK"])
+
+          ACCEPTED_BLEND="932571bcbff0c3f166dd5c449a35a96a618876ad8986d0dacbb668f9a510048a"
+          LARGE_SIG="5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d"
+          SMALL_SIG="e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842"
+          FAMILY_SIG="69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c"
+          run_id=int(os.environ["GITHUB_RUN_ID"])
+
+          def load(p): return json.loads(Path(p).read_text(encoding="utf-8"))
+          def dump(p,obj): Path(p).write_text(json.dumps(obj,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+          state=load(STATE)
+          gg=state["guazi_gong_stage1"]
+          assert gg["formalization_authorized"] is True and gg["formalization_authority"]=="D-188"
+          assert gg["catalog_v008_binding_authorized"] is True
+          assert gg["merge_authorized"] is False
+          assert gg["geometry_match_approved_first_article"] is True
+
+          sem_src=FORMAL_SRC/"CMP-GONG-GUAZI-001_MASTER_SEMANTIC_V001.json"
+          val_src=FORMAL_SRC/"CMP-GONG-GUAZI-001_MASTER_VALIDATION_V001.json"
+          board_src=FORMAL_SRC/"CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png"
+          sem=load(sem_src); val=load(val_src)
+          assert val["status"]=="PASS" and val["check_count"]==43
+          assert val["variant_signatures"]["LARGE_GUAZI_GONG"]==LARGE_SIG
+          assert val["variant_signatures"]["SMALL_GUAZI_GONG"]==SMALL_SIG
+          assert sem["family_semantic_signature"]==FAMILY_SIG
+          assert sem["variants"]["LARGE_GUAZI_GONG"]["semantic_geometry_signature"]==LARGE_SIG
+          assert sem["variants"]["SMALL_GUAZI_GONG"]["semantic_geometry_signature"]==SMALL_SIG
+
+          regression_blend=sem["canonical_blend_sha256"]
+          sem["formalization"]={
+            "authority":"D-188",
+            "first_article_approval":"D-185",
+            "traceability_patch":"D-186",
+            "post_traceability_regression":"D-187",
+            "approved_canonical_blend_sha256":ACCEPTED_BLEND,
+            "source_regression_blend_sha256":regression_blend,
+            "source_regression_blend_promoted":False,
+            "geometry_match_approved_first_article":True,
+            "formalization_run_id":run_id
+          }
+          val["formalization"]={
+            "authority":"D-188",
+            "approved_canonical_blend_sha256":ACCEPTED_BLEND,
+            "source_regression_blend_sha256":val["canonical_blend_sha256"],
+            "source_regression_blend_promoted":False,
+            "geometry_match_approved_first_article":True,
+            "formalization_run_id":run_id
+          }
+
+          MASTER_DIR.mkdir(parents=True,exist_ok=True)
+          sem_dst=MASTER_DIR/"CMP-GONG-GUAZI-001_MASTER_SEMANTIC_V001.json"
+          val_dst=MASTER_DIR/"CMP-GONG-GUAZI-001_MASTER_VALIDATION_V001.json"
+          board_dst=MASTER_DIR/"CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png"
+          dump(sem_dst,sem); dump(val_dst,val); shutil.copyfile(board_src,board_dst)
+
+          semantic_sha=sha(sem_dst); validation_sha=sha(val_dst); board_sha=sha(board_dst)
+
+          cat=load(CATALOG)
+          assert cat["approved_master_count"]==20
+          assert not any(x.get("master_id")=="CMP-GONG-GUAZI-001_MASTER" for x in cat["new_masters"])
+          cat["task"]="T-037 FORMALIZED / PR #33 DRAFT"
+          cat["status"]="TWENTY_ONE_APPROVED / T037 FORMALIZED / PR #33 DRAFT / MERGE NOT AUTHORIZED"
+          cat["approved_master_count"]=21
+          cat["new_masters"].append({
+            "component_id":"CMP-GONG-GUAZI-001",
+            "master_id":"CMP-GONG-GUAZI-001_MASTER",
+            "master_version":"V001",
+            "variant_ids":["LARGE_GUAZI_GONG","SMALL_GUAZI_GONG"],
+            "approval_status":"PRODUCT_OWNER_APPROVED",
+            "decision_id":"D-185",
+            "formalization_authority":"D-188",
+            "publication_status":"FORMALIZED / PR #33 DRAFT / MERGE NOT AUTHORIZED",
+            "canonical_asset_status":"ACTIONS_ARTIFACT / PRODUCT_OWNER_APPROVED / LOCAL ONLY / NOT GIT",
+            "canonical_asset_sha256":ACCEPTED_BLEND,
+            "semantic_sha256":semantic_sha,
+            "validation_sha256":validation_sha,
+            "review_board_sha256":board_sha,
+            "family_semantic_signature":FAMILY_SIG,
+            "variant_geometry_signatures":{"LARGE_GUAZI_GONG":LARGE_SIG,"SMALL_GUAZI_GONG":SMALL_SIG},
+            "physical_instance_count":44,
+            "geometry_variant_count":2,
+            "distribution":"LARGE 16 / SMALL 28 / ONE SHARED MASTER FAMILY",
+            "dimension_policy":{
+              "large_length_mm":"1007 / OBSERVED_MEAN / n=16",
+              "small_length_mm":"895 / OBSERVED_MEAN / n=28",
+              "width_mm":"214.7 / FAMILY OBSERVED_MEAN / n=44",
+              "thickness_mm":"156.5 / OBSERVED_SAMPLE_MEAN / n=16 / subgroup attribution UNRESOLVED",
+              "thickness_variant_application":"STAGE1_PRODUCTION_FAMILY_APPLICATION / NOT_VARIANT_SPECIFIC_DIRECT_OBSERVATION"
+            },
+            "profile_policy":{
+              "authority":"SOURCE_DERIVED_PROFILE",
+              "control_set":"LOCKED_13_POINT_STAGE1_RECONSTRUCTION / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+              "metric_scale_calibration":"NOT_PERFORMED / NOT_CLAIMED",
+              "exact_historical_curve":"UNRESOLVED"
+            },
+            "joinery_boundary":"GROOVES / MORTISE-TENON / CAVITIES / LOCAL CONNECTION CUTS DEFERRED",
+            "source_artifacts":{
+              "accepted_first_article":{"run_id":36290968633,"artifact_id":10922436059,"artifact_zip_sha256":"4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736"},
+              "post_traceability_regression":{"run_id":36292530436,"artifact_id":10923335229,"artifact_zip_sha256":"86447cef31497033c9c9aadcc7089822bfe947649e88aa3c8b80353142d98e68"}
+            },
+            "regenerated_blend_sha256":regression_blend,
+            "regenerated_blend_promoted_to_canonical":False,
+            "minimal_sufficient_package":{
+              "policy":"ADAPTIVE / NO UNIVERSAL FILE COUNT",
+              "formal_repo_files":[
+                "production/zhenguo_wanfo/component_library/masters/CMP-GONG-GUAZI-001/CMP-GONG-GUAZI-001_GUAZI_DEFINITION_V001.json",
+                "production/zhenguo_wanfo/component_library/masters/CMP-GONG-GUAZI-001/CMP-GONG-GUAZI-001_MASTER_SEMANTIC_V001.json",
+                "production/zhenguo_wanfo/component_library/masters/CMP-GONG-GUAZI-001/CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png",
+                "production/zhenguo_wanfo/component_library/masters/CMP-GONG-GUAZI-001/CMP-GONG-GUAZI-001_MASTER_VALIDATION_V001.json",
+                "docs/tasks/T-037_P3_3_GUAZI_GONG_MASTER_V2_V001.md"
+              ],
+              "canonical_blend":"ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+              "review_board_count":1,
+              "required_review_panel_count":8
+            }
+          })
+          dump(CATALOG,cat)
+
+          base=load(REG_V008)
+          cur=load(REG_CURRENT)
+          assert base==cur, "CURRENT_V008_PRE_BIND_MISMATCH"
+          target={"大型瓜子栱","小型瓜子栱"}
+          count=0
+          for item in base["items"]:
+            if item.get("component") in target:
+              assert item.get("master_coverage_status")=="MASTER_REQUIRED_PENDING"
+              item["master_coverage_status"]="APPROVED_MASTER_AVAILABLE"
+              item["master_reference"]="CMP-GONG-GUAZI-001_MASTER"
+              count+=1
+          assert count==44
+          base["generation_note"]=base.get("generation_note","").rstrip()+ " D-188 binds the Product Owner-approved T-037 Guazi Gong Master family to all 44 guazi records (16 large + 28 small); exact historical profile and connection-detail boundaries remain explicit."
+          dump(REG_V008,base); dump(REG_CURRENT,base)
+          assert load(REG_V008)==load(REG_CURRENT)
+          bound=[x for x in base["items"] if x.get("component") in target and x.get("master_reference")=="CMP-GONG-GUAZI-001_MASTER" and x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE"]
+          assert len(bound)==44
+
+          state=load(STATE)
+          state["state_revision"]="R270"
+          state["last_updated"]="2026-09-27"
+          state["session_status"]="T-037 FORMALIZED + CATALOG/V008 BOUND D-189 / BRANCH 21 OF 28 / MAIN 20 OF 28 UNTIL MERGE / PR #33 DRAFT / MERGE NOT AUTHORIZED / T-018 HOLD"
+          state["current_task"]={"id":"T-037","name":"P3_3_GUAZI_GONG_MASTER_V2_V001","status":"FORMALIZED + 44 ROWS BOUND / D-189 / PR #33 DRAFT / MERGE NOT AUTHORIZED"}
+          state["proposed_next_task"]={"id":"T-037-POST-FORMALIZATION","name":"derived Excel sync + latest-head regression + PR readiness review","status":"NOT AUTHORIZED"}
+          state["blocker"]=None
+          for key in ("status",):
+            state["current_gate"][key]=state["current_gate"][key].replace("20 OF 28 MASTERS APPROVED","BRANCH 21 OF 28 MASTERS APPROVED / MAIN 20 OF 28")
+          for key in ("P3.3","P3_3"):
+            state["current_gate"]["items"][key]="V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / BRANCH 21 OF 28 / MAIN 20 OF 28 / T-037 FORMALIZED D-189 / PR #33 DRAFT / T-018 HOLD"
+          vis=state["v008_master_progress_visibility"]
+          vis.update({
+            "status":"ACTIVE / T-037 FORMALIZED ON BRANCH / 21 OF 28",
+            "approved_master_count":21,
+            "pending_master_object_type_count":7,
+            "master_completion_percent":75.0,
+            "master_covered_registry_record_count":203,
+            "excel_sync_pending":True
+          })
+          gg=state["guazi_gong_stage1"]
+          gg.update({
+            "status":"FORMALIZED + CATALOG/V008 BOUND / D-189 / PR #33 DRAFT / MERGE NOT AUTHORIZED",
+            "formalization_result_decision_id":"D-189",
+            "formalization_complete":True,
+            "formalization_run_id":run_id,
+            "branch_approved_master_count":21,
+            "branch_master_completion_percent":75.0,
+            "branch_master_covered_registry_record_count":203,
+            "guazi_registry_binding_count":44,
+            "current_equals_v008":True,
+            "canonical_blend_sha256":ACCEPTED_BLEND,
+            "semantic_sha256":semantic_sha,
+            "validation_sha256":validation_sha,
+            "review_board_sha256":board_sha,
+            "family_semantic_signature":FAMILY_SIG,
+            "formal_regenerated_blend_sha256":regression_blend,
+            "formal_regenerated_blend_promoted_to_canonical":False,
+            "excel_sync_authorized":False,
+            "merge_authorized":False
+          })
+          dump(STATE,state)
+
+          decision=DECISION.read_text(encoding="utf-8").rstrip()+"\n"
+          decision+=f"| D-189 | 2026-09-27 | T-037 formalization + Catalog/V008 binding executed under D-188 after first-article and traceability gates. Formal minimal package materialized; Stage1 Catalog now has 21 approved Masters on branch; all 44 guazi Registry rows bind to CMP-GONG-GUAZI-001_MASTER; CURRENT==V008. Approved canonical blend remains D-185 SHA {ACCEPTED_BLEND}; regression blend {regression_blend} is not promoted. LARGE/SMALL geometry signatures remain {LARGE_SIG} / {SMALL_SIG}. Branch progress = 21/28 = 75.0%, covered Registry records = 203. Derived Excel sync, PR Ready/merge, closure, Stage2 and T-018 resume remain unauthorized. | COMPLETE / T-037 FORMALIZED + 44 ROWS BOUND / PR #33 DRAFT / MERGE NOT AUTHORIZED |\n"
+          DECISION.write_text(decision,encoding="utf-8")
+
+          execution=EXECUTION.read_text(encoding="utf-8").rstrip()+f"""\n\n## 2026-09-27｜T-037 Formalization + Catalog/V008 Binding｜D-189
+
+- Authority: D-188.
+- Formalization workflow run: {run_id}.
+- Formal package: Definition + Semantic + Review Board + Validation + Task Contract.
+- Approved canonical .blend remains D-185 SHA-256: {ACCEPTED_BLEND}; current regression binary is evidence only and is not promoted.
+- Geometry signatures: LARGE={LARGE_SIG}; SMALL={SMALL_SIG}; MATCH accepted first article.
+- Stage1 Catalog branch count: 21/28 = 75.0%.
+- V008/CURRENT guazi binding: 44/44 APPROVED_MASTER_AVAILABLE -> CMP-GONG-GUAZI-001_MASTER.
+- Master-covered Registry records: 203.
+- CURRENT == V008: PASS.
+- Derived Excel sync: NOT AUTHORIZED / PENDING.
+- PR #33 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.
+"""
+          EXECUTION.write_text(execution,encoding="utf-8")
+
+          acceptance=ACCEPTANCE.read_text(encoding="utf-8").rstrip()+f"""\n\n### T-037 Formalization + Catalog/V008 Binding｜D-189
+
+- **FORMALIZED / BRANCH** under D-188.
+- Stage1 Catalog: **21/28 = 75.0%** on T-037 branch.
+- Registry binding: **44/44** guazi records = APPROVED_MASTER_AVAILABLE / CMP-GONG-GUAZI-001_MASTER.
+- Master-covered Registry records: **203**.
+- CURRENT == V008: **PASS**.
+- Approved canonical .blend SHA-256: `{ACCEPTED_BLEND}`.
+- LARGE / SMALL geometry signatures: **MATCH D-185**.
+- Derived Excel sync: **PENDING / NOT AUTHORIZED**.
+- PR #33: **DRAFT / MERGE NOT AUTHORIZED**.
+"""
+          ACCEPTANCE.write_text(acceptance,encoding="utf-8")
+
+          task=TASK.read_text(encoding="utf-8")
+          import re
+          task=re.sub(r"Status: \*\*.*?\*\*","Status: **FORMALIZED + CATALOG/V008 BOUND / D-189 / PR #33 DRAFT / MERGE NOT AUTHORIZED**",task,count=1)
+          task=task.rstrip()+f"""\n\n## 15. Formalization Result
+
+D-189 records successful formalization under D-188. Catalog branch count = 21/28; 44/44 guazi V008/CURRENT rows are bound to CMP-GONG-GUAZI-001_MASTER; CURRENT==V008. Approved canonical blend remains D-185 SHA `{ACCEPTED_BLEND}`. Derived Excel sync, PR Ready/merge and closure remain separate gates.
+"""
+          TASK.write_text(task,encoding="utf-8")
+
+          print("T037_FORMALIZATION_PASS", semantic_sha, validation_sha, board_sha, len(bound))
+          PY
+
+      - name: Commit formalization result to T-037 branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             "$MASTER_DIR/CMP-GONG-GUAZI-001_MASTER_SEMANTIC_V001.json"             "$MASTER_DIR/CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png"             "$MASTER_DIR/CMP-GONG-GUAZI-001_MASTER_VALIDATION_V001.json"             "$CATALOG" "$REG_V008" "$REG_CURRENT" "$STATE" "$DECISION" "$EXECUTION" "$ACCEPTANCE" "$TASK"
+          git diff --cached --check
+          git commit -m "T-037: formalize guazi gong Master and bind V008"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
