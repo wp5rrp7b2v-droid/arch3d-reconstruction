@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R270",
+  "state_revision": "R271",
   "last_updated": "2026-09-27",
-  "session_status": "T-037 FORMALIZED + CATALOG/V008 BOUND D-189 / BRANCH 21 OF 28 / MAIN 20 OF 28 UNTIL MERGE / PR #33 DRAFT / MERGE NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "T-037 D-190 POST-FORMALIZATION VERIFICATION AUTHORIZED / EXCEL SYNC + LATEST-HEAD REGRESSION + PR READINESS REVIEW IN PROGRESS / PR #33 DRAFT / MERGE NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-037",
     "name": "P3_3_GUAZI_GONG_MASTER_V2_V001",
-    "status": "FORMALIZED + 44 ROWS BOUND / D-189 / PR #33 DRAFT / MERGE NOT AUTHORIZED"
+    "status": "POST-FORMALIZATION VERIFICATION AUTHORIZED D-190 / IN PROGRESS"
   },
   "proposed_next_task": {
-    "id": "T-037-POST-FORMALIZATION",
-    "name": "derived Excel sync + latest-head regression + PR readiness review",
-    "status": "NOT AUTHORIZED"
+    "id": "T-037-PR-READY-DECISION",
+    "name": "PR #33 Ready transition and merge decision",
+    "status": "NOT YET AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-036",
@@ -1253,7 +1253,7 @@
     "master_scope_object_type_count": 28,
     "approved_master_count": 21,
     "pending_master_object_type_count": 7,
-    "master_completion_percent": 75.0,
+    "master_completion_percent": 75,
     "master_covered_registry_record_count": 203,
     "pending_source_binding_count": 7,
     "row_fields": [
@@ -2094,7 +2094,7 @@
     "note": "This record is written after the sync checkpoint; a final pull of this Project Control record itself is required to make local HEAD equal the new canonical main."
   },
   "guazi_gong_stage1": {
-    "status": "FORMALIZED + CATALOG/V008 BOUND / D-189 / PR #33 DRAFT / MERGE NOT AUTHORIZED",
+    "status": "POST-FORMALIZATION VERIFICATION AUTHORIZED D-190 / IN PROGRESS",
     "source_readiness_decision_id": "D-180",
     "visual_form_gate_decision_id": "D-180",
     "master_spec_decision_id": "D-181",
@@ -2145,12 +2145,12 @@
     "regenerated_blend_sha256": "2c7ee97d349ae7e05e8912e3dc575160536cd08e4942e539b4d18b46ed424769",
     "regenerated_blend_promoted_to_canonical": false,
     "formalization_authority": "D-188",
-    "excel_sync_authorized": false,
+    "excel_sync_authorized": true,
     "formalization_result_decision_id": "D-189",
     "formalization_complete": true,
     "formalization_run_id": 36293945358,
     "branch_approved_master_count": 21,
-    "branch_master_completion_percent": 75.0,
+    "branch_master_completion_percent": 75,
     "branch_master_covered_registry_record_count": 203,
     "guazi_registry_binding_count": 44,
     "current_equals_v008": true,
@@ -2160,6 +2160,10 @@
     "review_board_sha256": "9f621af4f27831c4b2fb0e8cd4f08767117dece7604e3a40ba8918fce1d7543f",
     "family_semantic_signature": "69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c",
     "formal_regenerated_blend_sha256": "2d8e46f6de85e7c60f715c0a19c72a04f735aeab4ee9b95497a26e4cc1292376",
-    "formal_regenerated_blend_promoted_to_canonical": false
+    "formal_regenerated_blend_promoted_to_canonical": false,
+    "final_regression_authorized": true,
+    "pr_readiness_review_authorized": true,
+    "pr_ready_authorized": false,
+    "post_formalization_authority": "D-190"
   }
 }
