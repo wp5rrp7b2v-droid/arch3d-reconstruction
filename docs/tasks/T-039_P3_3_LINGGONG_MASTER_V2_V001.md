@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-039｜P3_3_LINGGONG_MASTER_V2_V001
 
-Status: **FIRST ARTICLE MACHINE PASS / D-217 / PRODUCT OWNER REVIEW REQUIRED / PR #35 DRAFT**
+Status: **FIRST ARTICLE PRODUCT OWNER APPROVED / D-218 / FORMALIZATION NOT AUTHORIZED / PR #35 DRAFT**
 Stage: P3.3 V002 Stage 1
 Branch: `codex/t039-p3-3-linggong-master-v2-v001`
 Branch creation status: **CREATED / D-216**
@@ -341,8 +341,8 @@ Locked sequence:
 4. Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-215**
 5. Engineering Execution Authorization — **AUTHORIZED / D-216**
 6. First Article machine validation — **PASS / D-217 / 43 OF 43**
-7. Product Owner First Article Approval — **NEXT GATE / AWAITING PRODUCT OWNER**
-8. Formalization + Catalog/V008/CURRENT binding — **NOT AUTHORIZED**
+7. Product Owner First Article Approval — **PASS / D-218**
+8. Formalization + Catalog/V008/CURRENT binding — **NEXT GATE / NOT AUTHORIZED**
 9. Derived Excel + latest-head regression + readiness review — **NOT AUTHORIZED**
 10. D-194 combined Draft→Ready + Merge — **NOT AUTHORIZED**
 11. Formal Closure — **NOT AUTHORIZED**
@@ -387,3 +387,7 @@ D-216 authorizes isolated T-039 engineering execution: production branch creatio
 ## 20. First Article Machine Result｜D-217
 
 Run `36304085862` completed SUCCESS with **43/43 PASS** at execution head `9037a750775b55c36b4173146be8eb5d2a7c9b9e`. Artifact `10927005772` has digest `sha256:db181f3392acab1504f118236cec32d9e3e043ba4cf84ff944834c28ce9a0ede`. Canonical First Article .blend SHA is `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`; family semantic signature `d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7`; body geometry signature `e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61`. The Review Board is nonblank and contains all 8 required domains. Draft PR #35 remains Draft. Machine PASS does not equal Product Owner acceptance; formalization/Catalog binding/Ready+Merge/closure remain blocked.
+
+## 21. First Article Product Owner Approval｜D-218
+
+Product Owner approved the D-217 machine-PASS First Article. Accepted canonical .blend SHA=`4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`; family semantic signature=`d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7`; geometry signature=`e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61`. This approval accepts the one-body 令栱 Stage1 First Article only. It does not upgrade any evidence semantics and does not authorize formalization, Catalog/V008/CURRENT binding, Derived Excel sync, PR Ready/Merge, closure, Stage2 or T-018 resume. Formalization authorization is the next separate gate.
