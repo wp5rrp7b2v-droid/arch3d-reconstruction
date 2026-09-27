@@ -822,3 +822,11 @@ Boundary retained:
 - No metric source-image calibration or direct historical control-point claim.
 - Exact historical profile remains **UNRESOLVED / REPLACEABLE**.
 - Formal Stage1 approved Master count remains **20/28** until separate formalization/publication.
+
+### T-037 Post-Traceability Regression｜D-187
+
+- **PASS / 43 OF 43** — Run 36292530436.
+- LARGE geometry signature exact MATCH accepted first article: `5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d`.
+- SMALL geometry signature exact MATCH accepted first article: `e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842`.
+- Family semantic signature changed only because D-186 evidence/profile traceability metadata changed; geometry did not change.
+- Formalization remains **NOT AUTHORIZED**; Stage1 formal approved count remains **20/28**.
