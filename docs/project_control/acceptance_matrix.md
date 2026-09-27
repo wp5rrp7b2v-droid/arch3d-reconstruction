@@ -929,3 +929,13 @@ Boundary retained:
 - Metric source-image calibration: **NOT PERFORMED / NOT CLAIMED**.
 - T-037 guazi profile reuse: **NO**.
 - Engineering/modeling: **NOT AUTHORIZED**.
+
+### T-038 Profile Control Set Approval｜D-201
+
+- Candidate 01: **APPROVED / LOCKED**.
+- Control points: **18**.
+- Signature: `07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4`.
+- Classification: **SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT**.
+- Exact historical profile: **UNRESOLVED**.
+- T-037 guazi profile reuse: **NO**.
+- Engineering execution: **NEXT GATE / NOT AUTHORIZED**.
