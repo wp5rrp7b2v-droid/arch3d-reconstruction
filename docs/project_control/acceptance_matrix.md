@@ -1213,3 +1213,17 @@ Boundary retained:
 - PR #35: **OPEN / DRAFT / MERGEABLE**.
 - Readiness: **PASS**.
 - D-194 Ready+Merge decision: **AWAITING PRODUCT OWNER**.
+
+### T-039｜D-194 Ready + Merge / Main Verification｜D-223
+
+- D-222 readiness: **PASS**.
+- Product Owner D-194 approval: **RECEIVED**.
+- PR #35 Draft→Ready: **PASS**.
+- PR #35 merge: **PASS**.
+- Merge commit: **e1726096e1d9bb936f24dd786d357220b52942b8**.
+- Main Stage1 Master progress: **23/28 = 82.1%**.
+- Main covered Registry rows: **275/505**.
+- 令栱 binding: **28/28 PASS**.
+- CURRENT == V008: **PASS**.
+- Accepted canonical First Article identity: **UNCHANGED**.
+- Formal closure: **SEPARATE GATE / PENDING**.
