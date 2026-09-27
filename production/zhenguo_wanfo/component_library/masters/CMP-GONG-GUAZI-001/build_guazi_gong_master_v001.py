@@ -20,6 +20,14 @@ def digest(path):
 def stable(value):
     return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",",":")).encode("utf-8")).hexdigest()
 
+def canonical_geometry(vertices, faces):
+    # Blender stores mesh coordinates as float32. Quantize only for the semantic
+    # signature so a save/reopen round-trip does not fail on harmless sub-micron
+    # representation drift; dimensional validation remains independent.
+    qverts=[[round(float(x),4),round(float(y),4),round(float(z),4)] for x,y,z in vertices]
+    qfaces=[[int(i) for i in face] for face in faces]
+    return qverts,qfaces
+
 def mesh_payload(length, width, thickness, normalized_points):
     pts=[(float(x)*length, float(z)*thickness) for x,z in normalized_points]
     n=len(pts); y0=-width/2.0; y1=width/2.0
@@ -111,11 +119,12 @@ def semantic_from_def(d, variant_payloads, blender_version):
           "joinery_cut_count":0,
           "local_transform":{"location":[0.0,0.0,0.0],"rotation":[0.0,0.0,0.0],"scale":[1.0,1.0,1.0]}
         }
+        qverts,qfaces=canonical_geometry(payload["geometry_vertices_mm"],payload["geometry_faces"])
         payload["semantic_geometry_signature"]=stable({
           "variant_id":v,
           "dimensions":payload["resolved_dimensions_mm"],
-          "vertices":payload["geometry_vertices_mm"],
-          "faces":payload["geometry_faces"]
+          "vertices":qverts,
+          "faces":qfaces
         })
         variants[v]=payload
     return {
@@ -192,7 +201,8 @@ def inspect(args):
         if obj is None: raise AssertionError("missing object "+vid)
         verts=[[float(v.co.x),float(v.co.y),float(v.co.z)] for v in obj.data.vertices]
         faces=[[int(i) for i in p.vertices] for p in obj.data.polygons]
-        sig=stable({"variant_id":vid,"dimensions":ev["resolved_dimensions_mm"],"vertices":verts,"faces":faces})
+        qverts,qfaces=canonical_geometry(verts,faces)
+        sig=stable({"variant_id":vid,"dimensions":ev["resolved_dimensions_mm"],"vertices":qverts,"faces":qfaces})
         if sig!=ev["semantic_geometry_signature"]:
             raise AssertionError("geometry signature mismatch "+vid)
         out["variants"][vid]={"semantic_geometry_signature":sig,"vertex_count":len(verts),"face_count":len(faces)}
