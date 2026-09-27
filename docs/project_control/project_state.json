@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R264",
+  "state_revision": "R265",
   "last_updated": "2026-09-27",
-  "session_status": "T-037 GUAZI GONG ENGINEERING ACTIVE / SOURCE+D-076 PASS / MASTER SPEC+TASK CONTRACT LOCKED / 20 OF 28 APPROVED / FIRST ARTICLE IN PROGRESS / T-018 HOLD",
+  "session_status": "T-037 GUAZI GONG FIRST ARTICLE MACHINE PASS / REVIEW RENDER FIX PASS D-184 / READY FOR PRODUCT OWNER VISUAL REVIEW / 20 OF 28 APPROVED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No active blocker. T-037 engineering execution is authorized through first-article evidence only; Product Owner acceptance is still required before formalization.",
+  "blocker": "No engineering blocker. T-037 first article and repaired visual Review Board are ready for Product Owner review; no formalization or merge before approval.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-037",
     "name": "P3_3_GUAZI_GONG_MASTER_V2_V001",
-    "status": "ENGINEERING EXECUTION AUTHORIZED / FIRST ARTICLE IN PROGRESS / D-183"
+    "status": "FIRST ARTICLE MACHINE PASS / REVIEW RENDER FIX PASS / READY FOR PRODUCT OWNER VISUAL REVIEW / D-184"
   },
   "proposed_next_task": {
-    "id": "T-037-FIRST-ARTICLE-REVIEW",
-    "name": "瓜子栱族 LARGE + SMALL canonical first article review",
-    "status": "NEXT GATE / PRODUCT OWNER REVIEW REQUIRED",
+    "id": "T-037-FIRST-ARTICLE-PO-REVIEW",
+    "name": "瓜子栱族 LARGE + SMALL 首件人工审核",
+    "status": "AWAITING PRODUCT OWNER DECISION",
     "registered_records": 44,
     "family_rule": "1 Master family / 2 geometry variants / large 16 + small 28"
   },
@@ -742,7 +742,7 @@
       "stage1_master_completion": "19/28 / 67.9%"
     },
     "t037": {
-      "status": "ACTIVE / ENGINEERING EXECUTION AUTHORIZED / FIRST ARTICLE IN PROGRESS",
+      "status": "FIRST ARTICLE MACHINE PASS / REVIEW RENDER FIX PASS / READY FOR PRODUCT OWNER VISUAL REVIEW",
       "decision_ids": [
         "D-180",
         "D-181",
@@ -780,7 +780,11 @@
       "first_article_acceptance_authorized": false,
       "formalization_authorized": false,
       "catalog_v008_binding_authorized": false,
-      "merge_authorized": false
+      "merge_authorized": false,
+      "run_id": 36290968633,
+      "artifact_id": 10922436059,
+      "artifact_digest": "sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736",
+      "review_render_fix_decision_id": "D-184"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -2091,7 +2095,7 @@
     "note": "This record is written after the sync checkpoint; a final pull of this Project Control record itself is required to make local HEAD equal the new canonical main."
   },
   "guazi_gong_stage1": {
-    "status": "TASK CONTRACT LOCKED / D-182 / ENGINEERING ACTIVE D-183",
+    "status": "FIRST ARTICLE MACHINE PASS / REVIEW RENDER FIX PASS D-184 / READY FOR PRODUCT OWNER VISUAL REVIEW",
     "source_readiness_decision_id": "D-180",
     "visual_form_gate_decision_id": "D-180",
     "master_spec_decision_id": "D-181",
@@ -2107,6 +2111,10 @@
     "exact_historical_curve": "UNRESOLVED",
     "task_contract_path": "docs/tasks/T-037_P3_3_GUAZI_GONG_MASTER_V2_V001.md",
     "engineering_execution_authorized": true,
-    "first_article_acceptance_authorized": false
+    "first_article_acceptance_authorized": false,
+    "review_render_fix_decision_id": "D-184",
+    "first_article_run_id": 36290968633,
+    "first_article_artifact_id": 10922436059,
+    "first_article_artifact_digest": "sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736"
   }
 }
