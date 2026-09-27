@@ -323,3 +323,7 @@ D-207 records derived Excel PASS, latest-head T-038 43/43 regression PASS with e
 ## 24. D-194 Ready+Merge Execution
 
 D-208 records Product Owner approval and successful execution of the D-194 combined gate. PR #34 transitioned Draft→Ready and merged at `b89458436b0338cd3bd72e7d4780ec4a134859d8`. Main now canonically carries the T-038 formalized Catalog/V008/CURRENT state: 22/28 approved Masters, 78.6% completion, 247 Master-covered Registry records, and 44/44 慢栱 records bound to `CMP-GONG-MANGONG-001_MASTER`. This is a merge/main-verification record only; formal T-038 closure remains a separate pending gate. T-018 remains HOLD and Stage2 remains NOT AUTHORIZED.
+
+## 25. Formal Closure
+
+D-209 records Product Owner approval of formal T-038 closure after D-208 merged/main-verified state. T-038 is CLOSED. Canonical main remains 22/28 approved Masters = 78.6%, 247/505 Master-covered Registry records, and 44/44 慢栱 rows bound to `CMP-GONG-MANGONG-001_MASTER`. Accepted canonical binary authority remains the D-204 first article SHA `1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023`; D-207 43/43 latest-head regression is closure validation evidence only. No evidence classification, geometry, Registry row, Catalog identity, or derived Excel mutation is introduced by closure. Next candidate 令栱 is not started. T-018 remains HOLD; Stage2 remains NOT AUTHORIZED.
