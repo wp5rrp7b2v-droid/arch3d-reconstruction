@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R271",
+  "state_revision": "R272",
   "last_updated": "2026-09-27",
-  "session_status": "T-037 D-190 POST-FORMALIZATION VERIFICATION AUTHORIZED / EXCEL SYNC + LATEST-HEAD REGRESSION + PR READINESS REVIEW IN PROGRESS / PR #33 DRAFT / MERGE NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "T-037 POST-FORMALIZATION VERIFICATION PASS D-191 / EXCEL SYNC VALIDATED / LATEST-HEAD REGRESSION 43/43 PASS / PR #33 READY FOR PRODUCT OWNER PR-READY DECISION / PR STILL DRAFT / MERGE NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-037",
     "name": "P3_3_GUAZI_GONG_MASTER_V2_V001",
-    "status": "POST-FORMALIZATION VERIFICATION AUTHORIZED D-190 / IN PROGRESS"
+    "status": "POST-FORMALIZATION VERIFICATION PASS D-191 / PR #33 READY FOR PO PR-READY DECISION"
   },
   "proposed_next_task": {
     "id": "T-037-PR-READY-DECISION",
-    "name": "PR #33 Ready transition and merge decision",
-    "status": "NOT YET AUTHORIZED"
+    "name": "PR #33 Ready transition",
+    "status": "AWAITING PRODUCT OWNER AUTHORIZATION"
   },
   "last_completed_task": {
     "id": "T-036",
@@ -2094,7 +2094,7 @@
     "note": "This record is written after the sync checkpoint; a final pull of this Project Control record itself is required to make local HEAD equal the new canonical main."
   },
   "guazi_gong_stage1": {
-    "status": "POST-FORMALIZATION VERIFICATION AUTHORIZED D-190 / IN PROGRESS",
+    "status": "POST-FORMALIZATION VERIFICATION PASS D-191 / PR #33 READY FOR PO PR-READY DECISION",
     "source_readiness_decision_id": "D-180",
     "visual_form_gate_decision_id": "D-180",
     "master_spec_decision_id": "D-181",
@@ -2164,6 +2164,24 @@
     "final_regression_authorized": true,
     "pr_readiness_review_authorized": true,
     "pr_ready_authorized": false,
-    "post_formalization_authority": "D-190"
+    "post_formalization_authority": "D-190",
+    "post_formalization_result_decision_id": "D-191",
+    "excel_sync_run_id": 36294703456,
+    "excel_sync_result": "SUCCESS / V008 / 505 / NO FURTHER DERIVED DELTA",
+    "excel_manifest_source_commit": "7b69c7a60ed684584147141e73695eea519bae6d",
+    "excel_current_sha256": "3c80fbf9c3b9345fe8e2de56e6de05e469ba66e3b1f2b0a9cddcaec3728716a8",
+    "latest_head_regression_run_id": 36294703418,
+    "latest_head_regression_result": "SUCCESS / 43 OF 43 PASS",
+    "latest_head_sha": "a0dc6ada9c7eb23859b8a1857400dbf5a2789e67",
+    "latest_head_artifact_id": 10923462649,
+    "latest_head_artifact_digest": "sha256:8d4002d26a4670fa57ae48447a6d2a83f74b601f9f5ee8d63155ab4607c2df27",
+    "latest_head_large_geometry_signature": "5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d",
+    "latest_head_small_geometry_signature": "e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842",
+    "latest_head_family_semantic_signature": "69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c",
+    "shared_regression_summary": "T-021 PASS / T-022 PASS / T-023 PASS / T-024 PASS / GENERIC P3.3 SKIPPED AS INTENDED",
+    "pr_number": 33,
+    "pr_draft": true,
+    "pr_mergeable": true,
+    "pr_readiness_review": "PASS / READY FOR PRODUCT OWNER PR-READY DECISION"
   }
 }
