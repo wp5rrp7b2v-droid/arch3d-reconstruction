@@ -300,3 +300,7 @@ T-039｜P3_3_LINGGONG_MASTER_V2_V001 Task Contract is PRODUCT OWNER APPROVED / L
 ## 13. Profile Control Candidate｜D-214
 
 `LINGGONG_PROFILE_CONTROL_SET_V001_C01` has been prepared for Product Owner review as an independent 14-point normalized control polygon. Signature: `0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7`. Classification: SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT. It is not derived by copying, scaling, averaging or morphing T-037/T-038 profile controls. Candidate is not yet locked; engineering execution remains unauthorized.
+
+## 14. Profile Control Approval｜D-215
+
+Product Owner approved and locked `LINGGONG_PROFILE_CONTROL_SET_V001_C01`: 14 normalized points, signature `0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7`. The numeric set is stored in the locked 令栱 Definition and remains SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT. Engineering execution remains a separate, not-yet-authorized gate.
