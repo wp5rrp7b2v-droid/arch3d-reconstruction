@@ -1,7 +1,7 @@
 {
   "schema_version": "HUAGONG_MASTER_DEFINITION_V001",
   "task_id": "T-040",
-  "status": "FORMALIZED + CATALOG/V008/CURRENT BOUND / D-238 / PR #36 DRAFT / MERGE NOT AUTHORIZED",
+  "status": "CLOSED / PRODUCT OWNER APPROVED / D-243 / PR #36 MERGED / MAIN VERIFIED",
   "component_family_id": "CMP-GONG-HUAGONG-001",
   "component_names_zh": [
     "华栱"
@@ -263,14 +263,17 @@
     "first_article_acceptance_authorized": true,
     "formalization_authorized": true,
     "catalog_v008_binding_authorized": true,
-    "derived_excel_sync_authorized": false,
-    "merge_authorized": false,
-    "closure_authorized": false,
+    "derived_excel_sync_authorized": true,
+    "merge_authorized": true,
+    "closure_authorized": true,
     "stage2_authorized": false,
     "t018_status": "HOLD",
     "first_article_product_owner_approved": true,
     "formalization_complete": true,
-    "catalog_v008_binding_complete": true
+    "catalog_v008_binding_complete": true,
+    "ready_transition_authorized": true,
+    "merged": true,
+    "closure_complete": true
   },
   "first_article_contract": {
     "canonical_body_count": 2,
@@ -294,7 +297,9 @@
     "first_article_machine_gate": "D-235",
     "first_article_product_owner_approval": "D-236",
     "formalization_authorization": "D-237",
-    "formalization_result": "D-238"
+    "formalization_result": "D-238",
+    "ready_merge_main_verification": "D-242",
+    "formal_closure": "D-243"
   },
   "first_article_approval": {
     "decision_id": "D-236",
@@ -346,5 +351,26 @@
     "jump_1_binding_count": 28,
     "jump_2_binding_count": 28,
     "current_equals_v008": true
+  },
+  "merge": {
+    "decision_id": "D-242",
+    "pr_number": 36,
+    "merged": true,
+    "merge_commit_sha": "783d6ce89b14a07a580c0744dd63e848a152690c",
+    "main_verified": true,
+    "main_approved_master_count": 24,
+    "main_completion_percent": 85.7,
+    "main_master_covered_registry_record_count": 331,
+    "huagong_registry_binding_count": 56,
+    "jump_1_binding_count": 28,
+    "jump_2_binding_count": 28
+  },
+  "closure": {
+    "decision_id": "D-243",
+    "product_owner_authorized": true,
+    "closed": true,
+    "main_verified": true,
+    "final_stage1_disposition": "已有Master｜正式绑定完成",
+    "next_stage1_candidate": "昂族（头昂 / 二昂） / PRIORITY 19 / NOT STARTED"
   }
 }
