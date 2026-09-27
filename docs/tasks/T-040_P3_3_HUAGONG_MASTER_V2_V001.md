@@ -497,7 +497,7 @@ The future task must not:
 6. Engineering Execution Authorization — **AUTHORIZED / D-234**
 7. First Article machine validation — **PASS / D-235 / 76 OF 76**
 8. Product Owner First Article Approval — **APPROVED / D-236**
-9. Formalization + Catalog/V008/CURRENT binding — **NOT AUTHORIZED**
+9. Formalization + Catalog/V008/CURRENT binding — **AUTHORIZED / D-237 / EXECUTION PENDING**
 10. Derived Excel + latest-head/shared regressions + readiness — **NOT AUTHORIZED**
 11. D-194 combined Draft→Ready + Merge — **NOT AUTHORIZED**
 12. Formal Closure — **NOT AUTHORIZED**
@@ -742,3 +742,81 @@ It does **not** authorize:
 Current status:
 
 **FIRST ARTICLE PRODUCT OWNER APPROVED / FORMALIZATION NEXT GATE NOT AUTHORIZED**
+
+
+## 25. Formalization + Catalog/V008/CURRENT Binding Authorization｜D-237
+
+Product Owner authorized T-040 formalization after D-236 First Article approval.
+
+Authorized execution scope:
+
+1. Download and byte-verify the accepted D-235/D-236 artifact:
+   - Run ID: **36317889355**
+   - Artifact ID: **10930899677**
+   - Artifact digest: `sha256:de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f`
+   - accepted canonical .blend SHA-256: `0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e`
+   - accepted Semantic SHA-256: `e3264826dce4d747aa4c73ddbaa2ec29a042859b9f3f611a35fca8b999ae2ef9`
+   - accepted Validation SHA-256: `ccb7baaee7e1e3e7c7f69d474bd77d97b22491998c1973152273fd4a87b3ee81`
+   - accepted Review Board SHA-256: `54d4c79bd83e23c6ac31c330323fce70e0a83f7a1c2f2d1355c2e9d3f16af2f1`.
+
+2. Materialize the minimal sufficient formal repo package for `CMP-GONG-HUAGONG-001_MASTER`:
+   - Huagong Definition;
+   - accepted Semantic JSON;
+   - accepted Validation JSON;
+   - accepted Review Board PNG;
+   - T-040 Task Contract / lifecycle record.
+   The canonical .blend remains **ACTIONS ARTIFACT / LOCAL ONLY / NOT GIT**.
+
+3. Add one Product-Owner-approved Master family to:
+   `production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json`
+   with:
+   - master id = `CMP-GONG-HUAGONG-001_MASTER`;
+   - variant ids = `JUMP_1_HUAGONG`, `JUMP_2_HUAGONG`;
+   - geometry variant count = 2;
+   - physical Registry subset count = 56;
+   - accepted First Article hashes/signatures and locked Gate A / Gate B provenance.
+
+4. Update exactly the current **56 华栱 V008/CURRENT LOCKED_SUBSET rows**:
+   - 28 JUMP_1 rows bind to `CMP-GONG-HUAGONG-001_MASTER / JUMP_1_HUAGONG`;
+   - 28 JUMP_2 rows bind to `CMP-GONG-HUAGONG-001_MASTER / JUMP_2_HUAGONG`;
+   - `master_coverage_status`: `MASTER_REQUIRED_PENDING` → `APPROVED_MASTER_AVAILABLE`;
+   - preserve `count_status = LOCKED_SUBSET`;
+   - preserve the explicit statement that 56 is not the whole-hall 华栱 total;
+   - preserve per-instance historical standalone full length = `UNRESOLVED`;
+   - do not propagate 898.8 mm or 1630.0 mm as per-instance exact lengths.
+
+5. Require:
+   - V008 item count = 505;
+   - CURRENT item count = 505;
+   - CURRENT == V008 after binding;
+   - exactly 56 华栱 rows changed;
+   - JUMP_1/JUMP_2 binding counts = 28/28;
+   - no non-华栱 Registry row changed.
+
+6. Update Stage1 Master progress only after successful binding:
+   - approved Masters: **23 → 24 of 28**;
+   - pending Masters: **5 → 4**;
+   - completion: **82.1% → 85.7%**;
+   - master-covered Registry records: **275 → 331**.
+
+Evidence boundaries that must survive formalization:
+- 898.8 mm and 1630.0 mm remain **Master reference-specimen controls only**;
+- 732.4 mm remains `DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION`, not a member length;
+- D1=366.2 mm remains project/reconstruction fixture guidance;
+- 48分/14分/10分 remain report-inferred ideal-model values;
+- profile remains `SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT`;
+- exact historical per-instance full lengths / profile / end / hidden overlap remain unresolved;
+- unsupported joinery/local cuts remain deferred/absent.
+
+D-237 does **not** authorize:
+- Derived Excel synchronization;
+- latest-head/shared regression/readiness conclusion;
+- PR #36 Draft→Ready;
+- merge;
+- closure;
+- Stage2;
+- T-018 resume.
+
+Current status:
+
+**FORMALIZATION + CATALOG/V008/CURRENT BINDING AUTHORIZED / EXECUTION PENDING**

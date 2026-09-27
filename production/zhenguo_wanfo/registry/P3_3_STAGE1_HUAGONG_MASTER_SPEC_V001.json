@@ -243,6 +243,29 @@
     "jump_2_geometry_signature": "451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001",
     "actual_machine_artifact_only": true,
     "illustrative_images_excluded": true,
-    "formalization_authorized": false
+    "formalization_authorized": true,
+    "formalization_authorization_decision_id": "D-237"
+  },
+  "formalization_authorization": {
+    "decision_id": "D-237",
+    "authorized": true,
+    "execution_status": "PENDING",
+    "accepted_artifact_id": 10930899677,
+    "accepted_artifact_digest": "sha256:de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f",
+    "accepted_canonical_blend_sha256": "0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e",
+    "catalog_master_id": "CMP-GONG-HUAGONG-001_MASTER",
+    "variant_ids": [
+      "JUMP_1_HUAGONG",
+      "JUMP_2_HUAGONG"
+    ],
+    "registry_binding_count": 56,
+    "jump_1_binding_count": 28,
+    "jump_2_binding_count": 28,
+    "target_stage1_approved_master_count": 24,
+    "target_stage1_pending_master_count": 4,
+    "target_stage1_completion_percent": 85.7,
+    "target_master_covered_registry_record_count": 331,
+    "derived_excel_sync_authorized": false,
+    "ready_merge_authorized": false
   }
 }
