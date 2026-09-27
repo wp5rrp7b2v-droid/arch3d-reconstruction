@@ -1528,3 +1528,27 @@ Do not restart T-018 by default.
 - Merge is NOT authorized.
 - Main remains 20/28 until PR #33 is merged; branch remains 21/28.
 - Stage2 remains NOT AUTHORIZED; T-018 remains HOLD.
+
+## 2026-09-27｜T-037 Merge + Closure｜D-193
+
+- Product Owner approved merge; PR #33 merged to main.
+- Merge commit: fe8cd98ba5b6f994a90d39118611a374503694ec.
+- Final pre-merge T-037 regression: Run 36296587731 / SUCCESS / 43/43 PASS.
+- Final artifact: 10924670395 / sha256:678e2305cf9849a53b6eafc694ce2374e4ea407d609cc7e4829def71fe3fc944.
+- Main Stage1: 21/28 = 75.0%; Master-covered Registry records = 203.
+- Post-merge Excel sync Run 36296704267: SUCCESS.
+- T-037 status: CLOSED / MAIN VERIFIED.
+
+## 2026-09-27｜Stage1 PR Gate Workflow Update｜D-194
+
+- Future Stage1 tasks may combine Draft->Ready and merge under one explicit Product Owner approval after readiness review PASS.
+- This is a gate-compression rule only; it does not remove evidence, first-article, formalization, regression, or readiness checks.
+
+## 2026-09-27｜T-038 Start｜D-195
+
+- Target: 慢栱族 / 大型慢栱 16 + 小型慢栱 28 / 44 Registry records.
+- Coverage Matrix priority: 16.
+- Family direction: one shared parametric 栱 Master family with LARGE/SMALL length variants.
+- V008 production dimensions currently carried: LARGE L=1641mm; SMALL L=1607mm; W=218.9mm; T=156.9mm.
+- Current scope: Source Readiness + visual/form evidence review only.
+- No Master Spec lock, Task Contract lock, engineering execution, Blender generation, or PR creation is authorized yet.

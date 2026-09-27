@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R273",
+  "state_revision": "R274",
   "last_updated": "2026-09-27",
-  "session_status": "T-037 PR #33 READY FOR REVIEW D-192 / MERGEABLE TRUE / MERGE NOT AUTHORIZED / MAIN REMAINS 20 OF 28 UNTIL MERGE / T-018 HOLD",
+  "session_status": "T-037 CLOSED D-193 / PR #33 MERGED / MAIN 21 OF 28 = 75.0% / T-038 SOURCE READINESS ACTIVE D-195 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / BRANCH 21 OF 28 MASTERS APPROVED / MAIN 20 OF 28 / T-037 GUAZI GONG FIRST ARTICLE IN PROGRESS / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 21 OF 28 MASTERS APPROVED / T-038 SOURCE READINESS ACTIVE / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / BRANCH 21 OF 28 / MAIN 20 OF 28 / T-037 FORMALIZED D-189 / PR #33 DRAFT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / BRANCH 21 OF 28 / MAIN 20 OF 28 / T-037 FORMALIZED D-189 / PR #33 DRAFT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 21 OF 28 MASTERS APPROVED / T-038 SOURCE READINESS ACTIVE D-195 / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 21 OF 28 MASTERS APPROVED / T-038 SOURCE READINESS ACTIVE D-195 / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": null,
+  "blocker": "T-038 source attribution + visual/form evidence must be reviewed before Master Spec or modeling.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,39 +62,36 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "T-037",
-    "name": "P3_3_GUAZI_GONG_MASTER_V2_V001",
-    "status": "PR #33 READY FOR REVIEW / D-192 / MERGE NOT AUTHORIZED"
+    "id": "T-038",
+    "name": "P3_3_MANGONG_MASTER_V2_V001",
+    "status": "SOURCE READINESS + VISUAL/FORM EVIDENCE REVIEW ACTIVE / D-195 / NO ENGINEERING AUTHORITY"
   },
   "proposed_next_task": {
-    "id": "T-037-MERGE-DECISION",
-    "name": "PR #33 merge decision",
-    "status": "AWAITING PRODUCT OWNER AUTHORIZATION"
+    "id": "T-038-SOURCE-READINESS",
+    "name": "慢栱族 Source Readiness + D-076 visual/form evidence review",
+    "status": "ACTIVE / REVIEW REQUIRED BEFORE MASTER SPEC"
   },
   "last_completed_task": {
-    "id": "T-036",
-    "engineering_id": "P3_3_BUJIAN_DIDOU_MASTER_V2_V001",
-    "component": "补间铺作底斗",
-    "status": "CLOSED / PRODUCT OWNER APPROVED / D-170+D-171+D-173+D-175+D-176 / PR #32 MERGED",
-    "github_pr_number": 32,
-    "merge_commit": "0dbec3a2c34b1a6dd94940a807d65fd915ab9d81",
-    "approved_actions_run": 36248233440,
-    "approved_validation": "37/37 PASS",
-    "approved_first_article_artifact_id": 10908700631,
-    "canonical_blend_sha256": "7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66",
-    "semantic_geometry_signature": "7b3517bcbb2007954d11ea18b75e9103f3a6b4e0d3a6e46e97c05fef5ba449f6",
-    "final_regression_run": 36249880372,
+    "id": "T-037",
+    "engineering_id": "P3_3_GUAZI_GONG_MASTER_V2_V001",
+    "component": "瓜子栱族（大型+小型）",
+    "status": "CLOSED / PRODUCT OWNER APPROVED / D-185+D-193 / PR #33 MERGED",
+    "github_pr_number": 33,
+    "merge_commit": "fe8cd98ba5b6f994a90d39118611a374503694ec",
+    "approved_actions_run": 36290968633,
+    "approved_validation": "43/43 PASS after D-186 traceability patch",
+    "approved_first_article_artifact_id": 10922436059,
+    "canonical_blend_sha256": "932571bcbff0c3f166dd5c449a35a96a618876ad8986d0dacbb668f9a510048a",
+    "family_semantic_signature": "69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c",
+    "large_geometry_signature": "5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d",
+    "small_geometry_signature": "e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842",
+    "final_regression_run": 36296587731,
     "final_regression_result": "SUCCESS",
-    "final_regression_validation": "37/37 PASS",
-    "final_regression_artifact_id": 10908049227,
-    "final_shared_regression_artifact_id": 10907864510,
-    "final_regenerated_blend_sha256": "2c59155964cf4adeee59f288a87d957ea6ff22ba184cbfcba095c7c555b4ed63",
-    "final_regenerated_blend_promoted_to_canonical": false,
-    "closure_excel_sync_run": 36250350582,
-    "closure_excel_sync_result": "SUCCESS",
-    "closure_excel_sha256": "586e88dab4d64b6531f7afc1507d72eb96cb0254c2f4df40b86e096a6be6a021",
-    "closure_dashboard_sync_run": 36250350588,
-    "closure_dashboard_sync_result": "SUCCESS"
+    "final_regression_validation": "43/43 PASS",
+    "final_regression_artifact_id": 10924670395,
+    "final_regression_artifact_zip_sha256": "678e2305cf9849a53b6eafc694ce2374e4ea407d609cc7e4829def71fe3fc944",
+    "closure_excel_sync_run": 36296704267,
+    "closure_excel_sync_result": "SUCCESS"
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -132,7 +129,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 20 OF 28 MASTERS APPROVED / T-037 ENGINEERING ACTIVE D-183 / RC-024 ACTIVE / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 21 OF 28 MASTERS APPROVED / T-038 SOURCE READINESS ACTIVE D-195 / RC-024 ACTIVE / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -1246,7 +1243,7 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-037 FORMALIZED ON BRANCH / 21 OF 28",
+    "status": "ACTIVE / T-037 CLOSED / 21 OF 28 / T-038 SOURCE READINESS ACTIVE",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
@@ -1263,10 +1260,10 @@
     ],
     "approval_authority": "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json",
     "excel_generator_version": "1.0.2",
-    "excel_sync_run": 36003187429,
+    "excel_sync_run": 36296704267,
     "excel_sync_result": "SUCCESS",
     "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure.",
-    "excel_sync_pending": true
+    "excel_sync_pending": false
   },
   "local_sync_verification_2026_09_20": {
     "status": "PASS / COMPLETE",
@@ -2094,7 +2091,7 @@
     "note": "This record is written after the sync checkpoint; a final pull of this Project Control record itself is required to make local HEAD equal the new canonical main."
   },
   "guazi_gong_stage1": {
-    "status": "PR #33 READY FOR REVIEW / D-192 / MERGE NOT AUTHORIZED",
+    "status": "CLOSED / D-193 / PR #33 MERGED / MAIN VERIFIED",
     "source_readiness_decision_id": "D-180",
     "visual_form_gate_decision_id": "D-180",
     "master_spec_decision_id": "D-181",
@@ -2119,7 +2116,7 @@
     "first_article_approval_decision_id": "D-185",
     "formalization_authorized": true,
     "catalog_v008_binding_authorized": true,
-    "merge_authorized": false,
+    "merge_authorized": true,
     "thickness_observed_sample_mean_mm": 156.5,
     "thickness_observed_n": 16,
     "thickness_subgroup_attribution": "UNRESOLVED",
@@ -2184,6 +2181,53 @@
     "pr_mergeable": true,
     "pr_readiness_review": "PASS / READY FOR PRODUCT OWNER PR-READY DECISION",
     "pr_ready_decision_id": "D-192",
-    "pr_ready_complete": true
+    "pr_ready_complete": true,
+    "merge_decision_id": "D-193",
+    "merge_commit_sha": "fe8cd98ba5b6f994a90d39118611a374503694ec",
+    "closure_decision_id": "D-193",
+    "final_regression_run_id": 36296587731,
+    "final_regression_result": "SUCCESS / 43 OF 43 PASS",
+    "final_regression_artifact_id": 10924670395,
+    "final_regression_artifact_digest": "sha256:678e2305cf9849a53b6eafc694ce2374e4ea407d609cc7e4829def71fe3fc944",
+    "main_verified": true,
+    "main_approved_master_count": 21,
+    "main_master_completion_percent": 75,
+    "main_master_covered_registry_record_count": 203
+  },
+  "stage1_pr_gate_policy": {
+    "decision_id": "D-194",
+    "status": "ACTIVE",
+    "rule": "After readiness review PASS, one explicit Product Owner approval may authorize Draft-to-Ready plus merge in the same complete step.",
+    "safeguards": [
+      "Readiness review must PASS first.",
+      "Explicit Product Owner approval is still required.",
+      "No automatic merge.",
+      "No bypass of first-article, evidence, formalization, Catalog/V008, Excel, or regression gates."
+    ]
+  },
+  "mangong_stage1": {
+    "status": "SOURCE READINESS + VISUAL/FORM EVIDENCE REVIEW ACTIVE / D-195",
+    "task_id": "T-038",
+    "target_components": [
+      "大型慢栱",
+      "小型慢栱"
+    ],
+    "coverage_matrix_priority": 16,
+    "physical_instance_count": 44,
+    "large_count": 16,
+    "small_count": 28,
+    "family_plan": "ONE SHARED PARAMETRIC GONG MASTER FAMILY / LENGTH VARIANTS",
+    "registry_dimensions_mm": {
+      "large_length": 1641,
+      "small_length": 1607,
+      "width": 218.9,
+      "thickness": 156.9
+    },
+    "evidence_boundary": "Registry dimensions are current V008 production records; direct primary source attribution and member profile/form evidence must be re-closed before Master Spec.",
+    "source_readiness_pass": false,
+    "visual_form_gate": "NOT YET REVIEWED",
+    "master_spec_authorized": false,
+    "task_contract_authorized": false,
+    "engineering_execution_authorized": false
   }
 }

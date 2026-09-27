@@ -861,3 +861,18 @@ Boundary retained:
 - Merge: **NOT AUTHORIZED**.
 - Main Stage1 count: **20/28 until merge**.
 - Branch Stage1 count: **21/28**.
+
+### T-037 Final Closure｜D-193
+
+- PR #33: **MERGED**.
+- Merge commit: `fe8cd98ba5b6f994a90d39118611a374503694ec`.
+- Final pre-merge regression: **43/43 PASS** / Run 36296587731.
+- Main Stage1: **21/28 = 75.0%**.
+- Master-covered Registry records: **203**.
+- T-037: **CLOSED / MAIN VERIFIED**.
+
+### T-038 Start｜D-195
+
+- Target: **慢栱族（大型16 + 小型28）**.
+- Current gate: **SOURCE READINESS + VISUAL/FORM EVIDENCE REVIEW**.
+- Engineering/modeling: **NOT AUTHORIZED**.

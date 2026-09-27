@@ -3,7 +3,7 @@
   "date": "2026-09-22",
   "status": "CURRENT_BUILD_BASELINE_INSTANCE_REGISTRY",
   "source": "SRC-ZG-WF-001",
-  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility. D-103 binds the Product Owner-approved Tuojiao V2 Master to all 12 托脚 registry records and updates Stage1 Master progress visibility. D-111 approves the Chashou first article; D-112 formalizes the accepted outputs and binds all 8 叉手 records to CMP-FRAME-CHASHOU-001_MASTER on PR #16 pending merge. D-188 binds the Product Owner-approved T-037 Guazi Gong Master family to all 44 guazi records (16 large + 28 small); exact historical profile and connection-detail boundaries remain explicit.",
+  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility. D-103 binds the Product Owner-approved Tuojiao V2 Master to all 12 托脚 registry records and updates Stage1 Master progress visibility. D-111 approves the Chashou first article; D-112 formalizes the accepted outputs and binds all 8 叉手 records to CMP-FRAME-CHASHOU-001_MASTER on PR #16 pending merge. D-188 binds the Product Owner-approved T-037 Guazi Gong Master family to all 44 guazi records (16 large + 28 small); exact historical profile and connection-detail boundaries remain explicit. D-193 closes T-037 on main after PR #33 merge; Stage1 progress is 21/28 and 203 Registry records are Master-covered. D-195 starts T-038 slow-gong family Source Readiness only.",
   "item_count": 505,
   "items": [
     {
@@ -7296,14 +7296,14 @@
     "生头木"
   ],
   "stage1_master_progress_summary": {
-    "snapshot_date": "2026-09-26",
-    "status": "CLOSED / D-176 / T-036 MERGED / 20 OF 28 MASTERS APPROVED",
+    "snapshot_date": "2026-09-27",
+    "status": "CLOSED / D-193 / T-037 MERGED / 21 OF 28 MASTERS APPROVED / T-038 SOURCE READINESS ACTIVE",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 20,
-    "pending_master_object_type_count": 8,
-    "master_completion_percent": 71.4,
+    "approved_master_count": 21,
+    "pending_master_object_type_count": 7,
+    "master_completion_percent": 75,
     "pending_source_binding_count": 7,
     "completed_definition": "PRODUCT_OWNER_APPROVED Master available in Stage1 Component Master Catalog",
     "total_definition": "Master scope includes 需新建Master plus all 已有Master categories; not all registered object types require a Master",
@@ -7341,9 +7341,11 @@
       "子角梁",
       "阑额",
       "由额",
-      "补间铺作底斗"
+      "补间铺作底斗",
+      "大型瓜子栱",
+      "小型瓜子栱"
     ],
-    "master_covered_registry_record_count": 159,
-    "progress_display_note": "505 Registry records; Stage1 Master completion: 20 approved / 8 pending = 71.4%. T-036 补间铺作底斗 CLOSED under D-176; 12/12 rows bound to CMP-DOU-BOTTOM-LONGKAI-001_MASTER; final regression 37/37 PASS. Next Coverage Matrix priority 15 is 瓜子栱族 (small/large shared parametric family); Source Readiness + D-076 only, no engineering T-task authorized."
+    "master_covered_registry_record_count": 203,
+    "progress_display_note": "505 Registry records; Stage1 Master completion: 21 approved / 7 pending = 75.0%. T-037 瓜子栱族 CLOSED under D-193; 44/44 rows bound to CMP-GONG-GUAZI-001_MASTER; final regression 43/43 PASS. Next Coverage Matrix priority 16 is 慢栱族 (大型16 + 小型28 shared parametric family). T-038 Source Readiness + visual/form evidence review ACTIVE; no engineering execution authorized."
   }
 }
