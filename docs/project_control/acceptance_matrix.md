@@ -1154,3 +1154,17 @@ Boundary retained:
 - Draft PR #35: **OPEN / DRAFT / MERGEABLE**.
 - Product Owner First Article approval: **REQUIRED / PENDING**.
 - Formalization / Catalog binding / merge: **NOT AUTHORIZED**.
+
+### T-039｜First Article Product Owner Approval｜D-218
+
+- Product Owner review: **APPROVED**.
+- Machine gate D-217: **43/43 PASS**.
+- Accepted canonical .blend SHA: **4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7**.
+- Family semantic signature: **d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7**.
+- Geometry signature: **e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61**.
+- 897 × 217.4 × 155.6 mm: **ACCEPTED AS FAMILY OBSERVED-MEAN REFERENCE**.
+- 1 Master / 0 Variant / 28 bindings: **ACCEPTED**.
+- 14-point profile classification: **UNCHANGED / REPLACEABLE / NOT DIRECT MEASUREMENT**.
+- Evidence boundaries: **UNCHANGED**.
+- Formalization + Catalog binding: **NOT AUTHORIZED / NEXT SEPARATE GATE**.
+- PR Ready/Merge: **NOT AUTHORIZED**.
