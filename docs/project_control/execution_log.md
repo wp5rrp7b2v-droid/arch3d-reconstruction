@@ -1582,3 +1582,14 @@ Do not restart T-018 by default.
 - Numeric profile control set remains NOT LOCKED; exact historical profile remains UNRESOLVED.
 - Joinery/grooves/local cuts remain DEFERRED.
 - Task Contract is the next separate gate. Engineering/Blender remains NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Task Contract Lock｜D-199
+
+- Task Contract: LOCKED.
+- Architecture: one CMP-GONG-MANGONG-001_MASTER family / LARGE_MANGONG + SMALL_MANGONG / 44 Registry records.
+- Length authority retained: LARGE 1641mm n=16; SMALL 1607mm n=28.
+- W/T remain report-inferred family design candidates / replaceable.
+- Mandatory new pre-execution gate: PROFILE_CONTROL_SET_V0.1.
+- Profile control set must be deterministic, versioned, same-building-source-guided, visually reviewable, replaceable and Product Owner approved.
+- T-037 guazi profile control points cannot be silently reused.
+- Engineering execution / Blender remains NOT AUTHORIZED.
