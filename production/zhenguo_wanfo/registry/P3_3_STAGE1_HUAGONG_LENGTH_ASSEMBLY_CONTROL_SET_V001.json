@@ -1,6 +1,6 @@
 {
   "schema_version": "P3_3_STAGE1_HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001",
-  "status": "CANDIDATE_01 / PRODUCT_OWNER_REVIEW_REQUIRED / D-230 / NOT_LOCKED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-231",
   "date": "2026-09-27",
   "control_id": "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001_C01",
   "task_id": "T-040",
@@ -104,9 +104,15 @@
     "citation": "Xiao Min, 2024, A Study on the Scale Rules of the Zhenguo Temple Main Hall, Journal of Architectural History 5(2):53-68, DOI 10.12329/20969368.2024.02006",
     "authority": "SECONDARY_HYPOTHESIS_GUIDANCE_ONLY"
   },
-  "candidate_signature_status": "PENDING_LOCK",
-  "locked": false,
-  "product_owner_approved": false,
+  "candidate_signature_status": "LOCKED",
+  "locked": true,
+  "product_owner_approved": true,
   "executable": false,
-  "engineering_execution_authorized": false
+  "engineering_execution_authorized": false,
+  "control_set_sha256": "ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b",
+  "signature_scope": "CANONICALIZED_SEMANTIC_CONTROL_PAYLOAD_EXCLUDING_GOVERNANCE_STATUS_AND_SIGNATURE_FIELDS",
+  "signature_canonicalization": "UTF-8 JSON / recursively sorted object keys / compact separators",
+  "approval_decision_id": "D-231",
+  "locked_date": "2026-09-27",
+  "control_input_status": "LOCKED_CANONICAL / CONSUMABLE_ONLY_AFTER_SEPARATE_ENGINEERING_EXECUTION_AUTHORIZATION"
 }

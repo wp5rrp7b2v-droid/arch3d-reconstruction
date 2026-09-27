@@ -186,5 +186,19 @@
       "HUAGONG_PROFILE_CONTROL_SET_V0.1",
       "ENGINEERING_EXECUTION_AUTHORIZATION"
     ]
+  },
+  "length_assembly_control_set": {
+    "control_id": "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001_C01",
+    "path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001.json",
+    "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-231",
+    "approval_decision_id": "D-231",
+    "control_set_sha256": "ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b",
+    "reference_specimen_jump_1_length_mm": 898.8,
+    "reference_specimen_jump_2_length_mm": 1630,
+    "reference_specimen_width_mm": 214.2,
+    "reference_specimen_thickness_mm": 153,
+    "validation_total_projection_mm": 732.4,
+    "instance_historical_full_lengths_closed": false,
+    "engineering_execution_authorized": false
   }
 }

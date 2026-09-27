@@ -1,6 +1,6 @@
 # P3.3 Stage1｜华栱 Length / Assembly Control Set V0.1
 
-Status: **CANDIDATE 01 / PRODUCT OWNER REVIEW REQUIRED / D-230 / NOT LOCKED**
+Status: **LOCKED / PRODUCT OWNER APPROVED / D-231**
 Date: 2026-09-27
 Task: `T-040｜P3_3_HUAGONG_MASTER_V2_V001`
 Task Contract: **LOCKED / D-229**
@@ -306,9 +306,12 @@ Candidate control id:
 Canonical signature shall be calculated only from the final locked machine-readable control payload.
 
 Until Product Owner approval:
-- signature status = `PENDING_LOCK`
-- control set = `NOT EXECUTABLE`
-- no builder may consume Candidate values as canonical inputs.
+- signature status = `LOCKED`
+- control set semantic SHA-256 = `ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b`
+- signature scope = canonicalized semantic control payload excluding governance/status/signature fields
+- signature canonicalization = UTF-8 JSON / recursively sorted object keys / compact separators
+- the locked control payload may be consumed only after a separate Engineering Execution Authorization.
+- no builder/Blender execution is authorized by the control-set lock itself.
 
 ## 12. Mandatory hard fails after future lock
 
@@ -370,11 +373,10 @@ Critical semantic rule:
 
 Current status:
 
-**CANDIDATE 01 / NOT LOCKED / PRODUCT OWNER REVIEW REQUIRED**
+**LOCKED / PRODUCT OWNER APPROVED / D-231**
 
-D-230 does not authorize:
-- control-set lock;
-- Profile Control Set design/lock;
+D-231 locks this Length/Assembly Control Set but does not authorize:
+- Profile Control Set lock;
 - engineering execution;
 - branch / PR;
 - builder implementation;
@@ -384,3 +386,45 @@ D-230 does not authorize:
 - Catalog/V008 binding;
 - Stage2;
 - T-018 resume.
+
+
+## 15. Product Owner Approval / Lock｜D-231
+
+Product Owner approved D-230 Candidate 01 without changing any numerical control, evidence classification, or unresolved/deferred boundary.
+
+D-231 formally locks:
+
+- control id: `HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001_C01`;
+- JUMP_1 Master reference specimen full length = **898.8 mm**;
+- JUMP_2 Master reference specimen full length = **1630.0 mm**;
+- family reference section = **214.2 × 153.0 mm**;
+- validation fixture datums = **D0 0.0 / D1 366.2 / D2 732.4 mm**;
+- report ideal-model cross-check = **734.4 mm / 48分**;
+- machine implementation tolerance = **±0.1 mm**;
+- semantic control SHA-256 = `ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b`.
+
+The SHA-256 covers the canonicalized semantic control payload only, excluding governance/status/signature fields, so approval metadata does not alter the control identity.
+
+Evidence semantics remain unchanged:
+- 898.8 mm = `RECONSTRUCTED_DESIGN / SECONDARY_HYPOTHESIS_GUIDED / REFERENCE_SPECIMEN_ONLY / REPLACEABLE / NOT_DIRECT_MEASUREMENT`;
+- 1630.0 mm = `SECONDARY_CALCULATED / REFERENCE_SPECIMEN_ONLY / REPLACEABLE / NOT_DIRECT_PRIMARY`;
+- 214.2 × 153.0 mm = `REPORT_INFERRED / REPORT_IDEAL_MODEL / FAMILY_DESIGN_CANDIDATE / REPLACEABLE`;
+- D0→D2 = 732.4 mm remains the only direct-primary assembly metric assertion in the fixture;
+- D1 = 366.2 mm remains reconstruction/project-fixture guidance, not an observed individual-jump fact;
+- 56 Registry instance historical standalone full lengths remain `UNRESOLVED`;
+- sample-to-instance mapping remains `UNKNOWN`.
+
+D-231 does **not** authorize:
+- production branch / PR;
+- builder implementation;
+- Profile Control Set adoption;
+- GitHub Actions / Blender execution;
+- First Article;
+- formalization;
+- Catalog/V008/CURRENT binding;
+- Stage2;
+- T-018 resume.
+
+Next complete step:
+
+**design `HUAGONG_PROFILE_CONTROL_SET_V0.1` Candidate.**
