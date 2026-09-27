@@ -1,0 +1,112 @@
+{
+  "schema_version": "P3_3_STAGE1_HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001",
+  "status": "CANDIDATE_01 / PRODUCT_OWNER_REVIEW_REQUIRED / D-230 / NOT_LOCKED",
+  "date": "2026-09-27",
+  "control_id": "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001_C01",
+  "task_id": "T-040",
+  "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
+  "master_id": "CMP-GONG-HUAGONG-001_MASTER",
+  "registry_scope": {
+    "record_count": 56,
+    "count_status": "LOCKED_SUBSET",
+    "whole_hall_total_claim": false,
+    "jump_1_count": 28,
+    "jump_2_count": 28,
+    "instance_full_length_status": "UNRESOLVED",
+    "sample_to_instance_mapping": "UNKNOWN"
+  },
+  "reference_specimens": {
+    "JUMP_1_HUAGONG": {
+      "full_length_mm": 898.8,
+      "derivation": "2.8 * M; M=321.0 mm from Xiao Min 2024 secondary design hypothesis",
+      "classification": "RECONSTRUCTED_DESIGN / SECONDARY_HYPOTHESIS_GUIDED / REFERENCE_SPECIMEN_ONLY / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+      "applies_to_instance": false,
+      "historical_instance_full_length_closed": false,
+      "alternate_context": {
+        "column_head_full_length_hypothesis_mm": 1011.15,
+        "formula": "3.15 * 321.0",
+        "classification": "SECONDARY_HYPOTHESIS / CONTEXT_ONLY / NOT_CONTROL"
+      }
+    },
+    "JUMP_2_HUAGONG": {
+      "full_length_mm": 1630,
+      "classification": "SECONDARY_CALCULATED / REFERENCE_SPECIMEN_ONLY / REPLACEABLE / NOT_DIRECT_PRIMARY",
+      "applies_to_instance": false,
+      "historical_instance_full_length_closed": false,
+      "centre_length_secondary_mm": 1464.8,
+      "modular_hypothesis_full_length_mm": 1605,
+      "modular_hypothesis_centre_length_mm": 1444.5
+    }
+  },
+  "section_control": {
+    "width_mm": 214.2,
+    "thickness_mm": 153,
+    "derivation": {
+      "fen_mm": 15.3,
+      "width_fen": 14,
+      "thickness_fen": 10
+    },
+    "classification": "REPORT_INFERRED / REPORT_IDEAL_MODEL / FAMILY_DESIGN_CANDIDATE / REPLACEABLE / NOT_DIRECT_HUAGONG_MEASUREMENT",
+    "observed_context_width_band_mm": [
+      214.1,
+      218.9
+    ],
+    "observed_context_thickness_band_mm": [
+      154,
+      156.9
+    ],
+    "silent_clip_to_observed_band": false
+  },
+  "primary_assembly_constraint": {
+    "total_projection_mean_mm": 732.4,
+    "min_mm": 704,
+    "max_mm": 755,
+    "variance": 115.61,
+    "n": 46,
+    "classification": "DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION",
+    "standalone_member_length": false,
+    "full_length_sum": false,
+    "per_instance_exact": false,
+    "original_963_design": false
+  },
+  "validation_fixture": {
+    "id": "TWO_JUMP_ASSEMBLY_FIXTURE_VALIDATION_ONLY",
+    "canonical_asset": false,
+    "registry_binding": false,
+    "catalog_asset": false,
+    "d0_mm": 0,
+    "d1_mm": 366.2,
+    "d2_mm": 732.4,
+    "d1_classification": "RECONSTRUCTED_DESIGN / SECONDARY_HYPOTHESIS_GUIDED_EQUAL_JUMP_RULE / PROJECT_FIXTURE_ONLY / REPLACEABLE",
+    "direct_assertion": "D2-D0 = 732.4 mm",
+    "individual_jump_projection_direct": false,
+    "mesh_end_measurement_authority": false,
+    "hidden_overlap_used": false,
+    "machine_tolerance_mm": 0.1
+  },
+  "report_ideal_crosscheck": {
+    "total_projection_fen": 48,
+    "fen_mm": 15.3,
+    "total_projection_mm": 734.4,
+    "midpoint_mm": 367.2,
+    "delta_from_observed_mean_mm": 2,
+    "relative_delta_percent": 0.273,
+    "classification": "REPORT_INFERRED / REPORT_IDEAL_MODEL / CROSSCHECK_ONLY / REPLACEABLE"
+  },
+  "local_coordinate": {
+    "x_axis": "+X longitudinal / out-jump",
+    "y_axis": "+Y width",
+    "z_axis": "+Z vertical / profile thickness",
+    "body_origin": "GEOMETRIC_CENTRE_OF_REFERENCE_ENVELOPE / PROJECT_MODEL_DATUM",
+    "historical_contact_datum_claim": false
+  },
+  "source_secondary": {
+    "citation": "Xiao Min, 2024, A Study on the Scale Rules of the Zhenguo Temple Main Hall, Journal of Architectural History 5(2):53-68, DOI 10.12329/20969368.2024.02006",
+    "authority": "SECONDARY_HYPOTHESIS_GUIDANCE_ONLY"
+  },
+  "candidate_signature_status": "PENDING_LOCK",
+  "locked": false,
+  "product_owner_approved": false,
+  "executable": false,
+  "engineering_execution_authorized": false
+}

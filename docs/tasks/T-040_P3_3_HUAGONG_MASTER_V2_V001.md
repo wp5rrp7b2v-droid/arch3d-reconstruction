@@ -560,3 +560,7 @@ Current status:
 Next complete step:
 
 **design HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V0.1 Candidate.**
+
+## 18. Length / Assembly Control Set Candidate｜D-230
+
+D-230 prepares `HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001_C01` for Product Owner review. Candidate architecture separates Master reference-specimen lengths from unresolved per-instance historical full lengths. Proposed reference specimens: JUMP_1=898.8mm (2.8M secondary-hypothesis-guided / reference-only), JUMP_2=1630.0mm (SECONDARY_CALCULATED / reference-only); family section=214.2×153.0mm from report 14分/10分 ideal-model synthesis. The validation fixture uses D0=0, D1=366.2, D2=732.4mm; only D0→D2=732.4 is direct-primary, while the equal midpoint split is project/reconstruction guidance and not an observed per-jump fact. Report 48分=734.4mm remains a separate cross-check. Candidate is NOT LOCKED; instance full lengths remain UNRESOLVED and engineering execution remains blocked.
