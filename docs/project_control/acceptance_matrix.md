@@ -1136,3 +1136,80 @@ Boundary retained:
 - Draft PR: **AUTHORIZED**.
 - First Article Product Owner acceptance: **SEPARATE GATE**.
 - Formalization / merge / closure: **NOT AUTHORIZED**.
+
+### T-039｜First Article Machine Gate｜D-217
+
+- GitHub Actions Run: **36304085862 / SUCCESS**.
+- Machine validation: **43/43 PASS**.
+- Artifact: **10927005772 / digest locked**.
+- Canonical .blend SHA: **LOCKED AS MACHINE CANDIDATE**.
+- 897 × 217.4 × 155.6 mm: **PASS**.
+- 1 Master / 0 Variant / 28 records: **PASS**.
+- Direction distribution 7/7/7/7: **PASS**.
+- 14-point profile signature: **PASS**.
+- Deterministic rebuild + reopen: **PASS**.
+- Closed manifold: **PASS**.
+- Unsupported joinery/local cuts: **ABSENT / PASS**.
+- Review Board: **8 domains / NONBLANK / READABLE**.
+- Draft PR #35: **OPEN / DRAFT / MERGEABLE**.
+- Product Owner First Article approval: **REQUIRED / PENDING**.
+- Formalization / Catalog binding / merge: **NOT AUTHORIZED**.
+
+### T-039｜First Article Product Owner Approval｜D-218
+
+- Product Owner review: **APPROVED**.
+- Machine gate D-217: **43/43 PASS**.
+- Accepted canonical .blend SHA: **4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7**.
+- Family semantic signature: **d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7**.
+- Geometry signature: **e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61**.
+- 897 × 217.4 × 155.6 mm: **ACCEPTED AS FAMILY OBSERVED-MEAN REFERENCE**.
+- 1 Master / 0 Variant / 28 bindings: **ACCEPTED**.
+- 14-point profile classification: **UNCHANGED / REPLACEABLE / NOT DIRECT MEASUREMENT**.
+- Evidence boundaries: **UNCHANGED**.
+- Formalization + Catalog binding: **NOT AUTHORIZED / NEXT SEPARATE GATE**.
+- PR Ready/Merge: **NOT AUTHORIZED**.
+
+### T-039｜Formalization Authorization｜D-219
+
+- D-218 First Article approval: **PASS**.
+- Formalization: **AUTHORIZED / EXECUTION PENDING**.
+- Catalog/V008/CURRENT binding: **AUTHORIZED / EXECUTION PENDING**.
+- Expected Catalog count: **23/28**.
+- Expected covered Registry rows: **275/505**.
+- Expected 令栱 rows bound: **28/28**.
+- Derived Excel / readiness / merge: **NOT AUTHORIZED**.
+
+### T-039 Formalization + Catalog/V008/CURRENT Binding｜D-220
+
+- **FORMALIZED / BRANCH** under D-219.
+- Stage1 Catalog: **23/28 = 82.1%** on T-039 branch.
+- Registry binding: **28/28** Linggong records = APPROVED_MASTER_AVAILABLE / CMP-GONG-LINGGONG-001_MASTER.
+- Master-covered Registry records: **275**.
+- CURRENT == V008: **PASS**.
+- Accepted canonical .blend SHA-256: `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`.
+- Family / body geometry signatures: **MATCH D-218 accepted First Article**.
+- Derived Excel / post-formalization readiness: **PENDING / NOT AUTHORIZED**.
+- PR #35: **DRAFT / MERGE NOT AUTHORIZED**.
+
+### T-039｜Post-Formalization Verification Authorization｜D-221
+
+- D-220 formalization: **PASS / COMPLETE**.
+- Registry progress summary synchronization: **AUTHORIZED**.
+- Derived Excel synchronization: **AUTHORIZED**.
+- Latest-head T-039 regression: **AUTHORIZED**.
+- Shared regressions T-021/T-022/T-023/T-024/T-037/T-038: **AUTHORIZED**.
+- PR readiness review: **AUTHORIZED**.
+- Ready/Merge: **NOT AUTHORIZED**.
+
+### T-039｜Post-Formalization Readiness｜D-222
+
+- Derived Excel sync/revalidation: **PASS**.
+- Branch progress 23/28 / 275 covered: **PASS**.
+- T-039 latest-head regression: **43/43 PASS**.
+- Accepted family/body signatures unchanged: **PASS**.
+- Regression-only blend not promoted: **PASS**.
+- Shared T-021/T-022/T-023/T-024/T-037/T-038 regressions: **ALL SUCCESS**.
+- Generic P3.3 route: **SKIPPED_AS_INTENDED**.
+- PR #35: **OPEN / DRAFT / MERGEABLE**.
+- Readiness: **PASS**.
+- D-194 Ready+Merge decision: **AWAITING PRODUCT OWNER**.

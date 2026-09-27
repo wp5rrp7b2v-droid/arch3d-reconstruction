@@ -1,0 +1,450 @@
+{
+  "blender_version": "4.5.13 LTS",
+  "canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
+  "canonical_body": {
+    "body_id": "LINGGONG",
+    "component_name_zh": "令栱",
+    "geometry_faces": [
+      [
+        13,
+        12,
+        11,
+        10,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0
+      ],
+      [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      [
+        0,
+        1,
+        15,
+        14
+      ],
+      [
+        1,
+        2,
+        16,
+        15
+      ],
+      [
+        2,
+        3,
+        17,
+        16
+      ],
+      [
+        3,
+        4,
+        18,
+        17
+      ],
+      [
+        4,
+        5,
+        19,
+        18
+      ],
+      [
+        5,
+        6,
+        20,
+        19
+      ],
+      [
+        6,
+        7,
+        21,
+        20
+      ],
+      [
+        7,
+        8,
+        22,
+        21
+      ],
+      [
+        8,
+        9,
+        23,
+        22
+      ],
+      [
+        9,
+        10,
+        24,
+        23
+      ],
+      [
+        10,
+        11,
+        25,
+        24
+      ],
+      [
+        11,
+        12,
+        26,
+        25
+      ],
+      [
+        12,
+        13,
+        27,
+        26
+      ],
+      [
+        13,
+        0,
+        14,
+        27
+      ]
+    ],
+    "geometry_vertices_mm": [
+      [
+        -448.5,
+        -108.7,
+        77.8
+      ],
+      [
+        448.5,
+        -108.7,
+        77.8
+      ],
+      [
+        448.5,
+        -108.7,
+        28.008
+      ],
+      [
+        403.65000000000003,
+        -108.7,
+        12.448
+      ],
+      [
+        322.92,
+        -108.7,
+        -15.56
+      ],
+      [
+        215.28,
+        -108.7,
+        -43.568000000000005
+      ],
+      [
+        89.7,
+        -108.7,
+        -68.464
+      ],
+      [
+        35.88,
+        -108.7,
+        -77.8
+      ],
+      [
+        -35.88,
+        -108.7,
+        -77.8
+      ],
+      [
+        -89.7,
+        -108.7,
+        -68.464
+      ],
+      [
+        -215.28,
+        -108.7,
+        -43.568000000000005
+      ],
+      [
+        -322.92,
+        -108.7,
+        -15.56
+      ],
+      [
+        -403.65000000000003,
+        -108.7,
+        12.448
+      ],
+      [
+        -448.5,
+        -108.7,
+        28.008
+      ],
+      [
+        -448.5,
+        108.7,
+        77.8
+      ],
+      [
+        448.5,
+        108.7,
+        77.8
+      ],
+      [
+        448.5,
+        108.7,
+        28.008
+      ],
+      [
+        403.65000000000003,
+        108.7,
+        12.448
+      ],
+      [
+        322.92,
+        108.7,
+        -15.56
+      ],
+      [
+        215.28,
+        108.7,
+        -43.568000000000005
+      ],
+      [
+        89.7,
+        108.7,
+        -68.464
+      ],
+      [
+        35.88,
+        108.7,
+        -77.8
+      ],
+      [
+        -35.88,
+        108.7,
+        -77.8
+      ],
+      [
+        -89.7,
+        108.7,
+        -68.464
+      ],
+      [
+        -215.28,
+        108.7,
+        -43.568000000000005
+      ],
+      [
+        -322.92,
+        108.7,
+        -15.56
+      ],
+      [
+        -403.65000000000003,
+        108.7,
+        12.448
+      ],
+      [
+        -448.5,
+        108.7,
+        28.008
+      ]
+    ],
+    "joinery_cut_count": 0,
+    "local_bbox_mm": {
+      "dimensions": [
+        897.0,
+        217.4,
+        155.6
+      ],
+      "max": [
+        448.5,
+        108.7,
+        77.8
+      ],
+      "min": [
+        -448.5,
+        -108.7,
+        -77.8
+      ]
+    },
+    "local_transform": {
+      "location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "resolved_dimensions_mm": {
+      "length": 897,
+      "thickness": 155.6,
+      "width": 217.4
+    },
+    "semantic_geometry_signature": "e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61",
+    "unsupported_detail_count": 0
+  },
+  "component_family_id": "CMP-GONG-LINGGONG-001",
+  "deferred_geometry": [
+    "exact_mortise_tenon",
+    "grooves",
+    "slots",
+    "cavities",
+    "hidden_connection_cuts",
+    "exact_end_notch_shoulder",
+    "exact_historical_profile_curve",
+    "unmeasured_chamfers",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "per_instance_originality_repair_state"
+  ],
+  "definition_sha256": "836f3cf866c192c25f2b5b751f987a145cd807cd8975abf6576bbb1d2512340e",
+  "direction_distribution": {
+    "east": 7,
+    "north": 7,
+    "south": 7,
+    "west": 7
+  },
+  "evidence_semantics": {
+    "family_mean_is_per_instance_exact": false,
+    "length_classification": "DIRECT_PRIMARY / OBSERVED_MEAN / n=28",
+    "original_963_design_claim": false,
+    "sample_to_instance_mapping": "UNKNOWN",
+    "thickness_classification": "DIRECT_PRIMARY / OBSERVED_MEAN / n=28",
+    "width_classification": "DIRECT_PRIMARY / OBSERVED_MEAN / n=28"
+  },
+  "family_semantic_signature": "d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7",
+  "geometry_variant_count": 0,
+  "master_family_count": 1,
+  "master_id": "CMP-GONG-LINGGONG-001_MASTER",
+  "master_version": "V001",
+  "physical_instance_count": 28,
+  "profile_contract": {
+    "approval_decision_id": "D-215",
+    "authority": "SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED",
+    "bilateral_symmetry": true,
+    "candidate_id": "LINGGONG_PROFILE_CONTROL_SET_V001_C01",
+    "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "control_set_sha256": "0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7",
+    "exact_end_geometry": "UNRESOLVED",
+    "exact_historical_control_dimensions": "UNRESOLVED",
+    "exact_historical_curve": "UNRESOLVED",
+    "future_upgrade_rule": "REPLACEABLE_IF_DIRECT_OR_METRICALLY_CALIBRATED_PROFILE_EVIDENCE_BECOMES_AVAILABLE",
+    "independent_from_prior_gong_control_sets": true,
+    "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "normalized_coordinate_meaning": {
+      "x": "fraction of full member length centered at 0",
+      "z": "fraction of full profile thickness centered at 0"
+    },
+    "normalized_points": [
+      [
+        -0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.18
+      ],
+      [
+        0.45,
+        0.08
+      ],
+      [
+        0.36,
+        -0.1
+      ],
+      [
+        0.24,
+        -0.28
+      ],
+      [
+        0.1,
+        -0.44
+      ],
+      [
+        0.04,
+        -0.5
+      ],
+      [
+        -0.04,
+        -0.5
+      ],
+      [
+        -0.1,
+        -0.44
+      ],
+      [
+        -0.24,
+        -0.28
+      ],
+      [
+        -0.36,
+        -0.1
+      ],
+      [
+        -0.45,
+        0.08
+      ],
+      [
+        -0.5,
+        0.18
+      ]
+    ],
+    "normalized_points_are_direct_measurements": false,
+    "numeric_reproduction_basis": "LOCKED_14_POINT_CONTROL_SET_IN_THIS_DEFINITION",
+    "point_count": 14,
+    "product_owner_approved": true,
+    "source_pages": [
+      73,
+      74,
+      75,
+      76
+    ],
+    "source_role": "QUALITATIVE_FORM_AND_ENVELOPE_AUTHORITY / NOT_METRIC_CONTROL_POINT_AUTHORITY",
+    "symmetry_classification": "STAGE1_SIMPLIFICATION / NOT_HISTORICAL_ASYMMETRY_CLAIM",
+    "t037_guazi_control_set_reused": false,
+    "t038_mangong_control_set_reused": false
+  },
+  "sample_to_instance_mapping": "UNKNOWN",
+  "schema_version": "LINGGONG_MASTER_SEMANTIC_V001",
+  "task_id": "T-039",
+  "formalization": {
+    "authority": "D-219",
+    "formalization_result": "D-220",
+    "first_article_approval": "D-218",
+    "first_article_machine_gate": "D-217",
+    "accepted_run_id": 36304085862,
+    "artifact_id": 10927005772,
+    "artifact_zip_sha256": "sha256:db181f3392acab1504f118236cec32d9e3e043ba4cf84ff944834c28ce9a0ede",
+    "approved_canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
+    "geometry_match_approved_first_article": true,
+    "formalization_run_id": 36305012834
+  }
+}

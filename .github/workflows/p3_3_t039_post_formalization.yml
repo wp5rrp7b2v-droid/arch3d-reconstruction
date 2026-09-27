@@ -1,0 +1,341 @@
+# D-221 Review Patch 01 trigger
+name: T-039 Post-Formalization Verification
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/p3_3_t039_post_formalization.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 95
+    env:
+      BRANCH_NAME: ${{ github.event.pull_request.head.ref || github.ref_name }}
+      REGISTRY: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json
+      REGISTRY_V008: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json
+      DERIVED: docs/evidence/zhenguo_wanfo/derived
+      DEF: production/zhenguo_wanfo/component_library/masters/CMP-GONG-LINGGONG-001/CMP-GONG-LINGGONG-001_LINGGONG_DEFINITION_V001.json
+      WRAPPER: production/zhenguo_wanfo/component_library/masters/CMP-GONG-LINGGONG-001/build_linggong_master_v001.py
+      VALIDATOR: production/zhenguo_wanfo/scripts/validate_t039_linggong.py
+      OUT: artifacts/t039_post
+      REVIEW: artifacts/t039_post/review
+      ASSET: artifacts/t039_post/regression.blend
+      SEM: artifacts/t039_post/regression_semantic.json
+      BOARD: artifacts/t039_post/regression_review_board.png
+      VAL: artifacts/t039_post/regression_validation.json
+      ACCEPTED_BLEND: 4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7
+      ACCEPTED_FAMILY_SIG: d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7
+      ACCEPTED_GEOMETRY_SIG: e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61
+      ACCEPTED_PROFILE_SIG: 0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7
+
+    steps:
+      - name: Checkout latest PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: Precheck D-221 branch truth
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT" "$REVIEW"
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          s=json.loads(Path("docs/project_control/project_state.json").read_text(encoding="utf-8"))
+          v8=json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json").read_text(encoding="utf-8"))
+          cur=json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
+          cat=json.loads(Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json").read_text(encoding="utf-8"))
+          assert v8==cur
+          assert cat["approved_master_count"]==23
+          p=v8["stage1_master_progress_summary"]
+          assert p["approved_master_count"]==23
+          assert p["pending_master_object_type_count"]==5
+          assert abs(float(p["master_completion_percent"])-82.1)<1e-9
+          assert p["master_covered_registry_record_count"]==275
+          target=[x for x in v8["items"] if x.get("component")=="令栱"]
+          assert len(target)==28
+          assert all(x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE" for x in target)
+          assert all(x.get("master_reference")=="CMP-GONG-LINGGONG-001_MASTER" for x in target)
+          lg=s["linggong_stage1"]
+          assert lg["formalization_complete"] is True
+          assert lg["formalization_result_decision_id"]=="D-220"
+          assert lg["post_formalization_authority"]=="D-221"
+          assert lg["post_formalization_verification_authorized"] is True
+          assert lg["merge_authorized"] is False
+          print("T039_D221_PRECHECK_PASS")
+          PY
+          echo "PRE_EXCEL_HEAD=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+          echo "REGISTRY_SOURCE_COMMIT=$(git log -1 --format=%H -- "$REGISTRY")" >> "$GITHUB_ENV"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Excel and review dependencies
+        run: python -m pip install --disable-pip-version-check "openpyxl==3.1.5" pillow
+
+      - name: Generate Derived Excel from synchronized CURRENT
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/generate_wanfo_component_registry_excel.py             --input "$REGISTRY"             --output-dir "$DERIVED"             --source-commit "$REGISTRY_SOURCE_COMMIT"
+
+      - name: Validate Derived Excel
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          from openpyxl import load_workbook
+          root=Path("docs/evidence/zhenguo_wanfo/derived")
+          m=json.loads((root/"P3_WANFO_COMPONENT_EXCEL_SYNC_MANIFEST.json").read_text(encoding="utf-8"))
+          assert m["status"]=="SYNCED"
+          assert m["canonical_truth"]=="JSON"
+          assert m["excel_role"]=="DERIVED_VIEW"
+          assert m["record_count"]==505
+          current=Path(m["current_excel"]); versioned=Path(m["versioned_excel"])
+          assert current.exists() and versioned.exists()
+          csha=hashlib.sha256(current.read_bytes()).hexdigest()
+          vsha=hashlib.sha256(versioned.read_bytes()).hexdigest()
+          assert csha==m["current_excel_sha256"]
+          assert vsha==m["versioned_excel_sha256"]
+          reg=json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
+          assert reg["stage1_master_progress_summary"]["approved_master_count"]==23
+          assert reg["stage1_master_progress_summary"]["master_covered_registry_record_count"]==275
+          wb=load_workbook(current,read_only=True,data_only=False)
+          assert set(wb.sheetnames)=={"进度总览","实例登记","统计摘要","版本与来源","使用规则"}
+          assert wb["实例登记"].max_row-1==505
+          assert wb["进度总览"]["B4"].value==505
+          assert wb["进度总览"]["B7"].value==23
+          wb.close()
+          print("T039_DERIVED_EXCEL_PASS",csha,vsha,m["source_commit"])
+          Path("artifacts/t039_post/excel_summary.json").write_text(json.dumps({
+            "status":"PASS","source_commit":m["source_commit"],
+            "current_excel":str(current),"versioned_excel":str(versioned),
+            "current_excel_sha256":csha,"versioned_excel_sha256":vsha,
+            "record_count":505,"approved_master_count":23,"master_covered_registry_record_count":275
+          },indent=2)+"\n",encoding="utf-8")
+          PY
+
+      - name: Commit Derived Excel to T-039 branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [ -n "$(git status --porcelain -- "$DERIVED")" ]; then
+            git add "$DERIVED"
+            git diff --cached --check
+            git commit -m "derived: sync Wanfo component registry Excel for T-039"
+            git push origin "HEAD:$BRANCH_NAME"
+          fi
+          echo "REGRESSION_HEAD=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Install Blender 4.5.13
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1 fonts-noto-cjk
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions T039Post"             -o /tmp/blender.tar.xz             "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          /tmp/blender-4.5.13-linux-x64/blender --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+
+      - name: Prepare latest-head regression Definition
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          src=Path("production/zhenguo_wanfo/component_library/masters/CMP-GONG-LINGGONG-001/CMP-GONG-LINGGONG-001_LINGGONG_DEFINITION_V001.json")
+          d=json.loads(src.read_text(encoding="utf-8"))
+          assert d["status"].startswith("FORMALIZED + CATALOG/V008/CURRENT BOUND / D-220")
+          assert d["execution_boundary"]["formalization_complete"] is True
+          assert d["execution_boundary"]["catalog_v008_binding_complete"] is True
+          assert d["execution_boundary"]["merge_authorized"] is False
+          assert d["profile_contract"]["control_set_sha256"]=="0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7"
+          # Review Patch 01 makes the validator lifecycle-aware. The regression consumes
+          # the latest canonical formalized Definition unchanged.
+          Path("/tmp/t039_regression_definition.json").write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          print("T039_REGRESSION_DEFINITION_PASS / CANONICAL_UNCHANGED")
+          PY
+
+      - name: Latest-head T-039 rebuild and reopen
+        shell: bash
+        env:
+          BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --definition /tmp/t039_regression_definition.json             --asset "$ASSET" --semantic "$SEM" --review-dir "$REVIEW"
+          "$BLENDER" --background "$ASSET" --python-exit-code 10 --python "$WRAPPER" --             --mode inspect --asset "$ASSET" --expected "$SEM" --output "$OUT/reopen.json"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" --             --mode build --definition /tmp/t039_regression_definition.json             --asset "$OUT/restore.blend" --semantic "$OUT/restore.json"
+          python "$VALIDATOR" --mode compose-board --definition /tmp/t039_regression_definition.json             --canonical "$SEM" --review-dir "$REVIEW" --board "$BOARD"
+          python "$VALIDATOR" --mode validate --definition /tmp/t039_regression_definition.json             --canonical "$SEM" --reopen "$OUT/reopen.json" --restore "$OUT/restore.json"             --registry "$REGISTRY" --asset "$ASSET" --review-dir "$REVIEW" --board "$BOARD" --output "$VAL"
+
+      - name: Assert T-039 regression matches accepted geometry
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,os
+          from pathlib import Path
+          v=json.loads(Path("artifacts/t039_post/regression_validation.json").read_text(encoding="utf-8"))
+          s=json.loads(Path("artifacts/t039_post/regression_semantic.json").read_text(encoding="utf-8"))
+          assert v["status"]=="PASS" and v["check_count"]==43
+          assert v["family_semantic_signature"]==os.environ["ACCEPTED_FAMILY_SIG"]
+          assert v["geometry_signature"]==os.environ["ACCEPTED_GEOMETRY_SIG"]
+          assert s["profile_contract"]["control_set_sha256"]==os.environ["ACCEPTED_PROFILE_SIG"]
+          regen=hashlib.sha256(Path("artifacts/t039_post/regression.blend").read_bytes()).hexdigest()
+          summary={
+            "status":"PASS","check_count":43,
+            "regression_head":os.environ["REGRESSION_HEAD"],
+            "family_semantic_signature":v["family_semantic_signature"],
+            "geometry_signature":v["geometry_signature"],
+            "profile_control_signature":v["profile_control_signature"],
+            "regenerated_blend_sha256":regen,
+            "regenerated_blend_promoted_to_canonical":False,
+            "accepted_canonical_blend_sha256":os.environ["ACCEPTED_BLEND"],
+            "accepted_geometry_match":True,
+            "definition_mode":"latest canonical formalized Definition copied unchanged to /tmp for regression"
+          }
+          Path("artifacts/t039_post/t039_regression_summary.json").write_text(json.dumps(summary,indent=2)+"\n",encoding="utf-8")
+          print("T039_LATEST_HEAD_REGRESSION_PASS",regen)
+          PY
+
+      - name: Dispatch shared regressions
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          workflows=(
+            p3_3_t021_four_chuanfu_master.yml
+            p3_3_t022_pingliang_master.yml
+            p3_3_t023_dingfu_master.yml
+            p3_3_t024_rufu_master.yml
+            p3_3_t037_guazi_gong_master.yml
+            p3_3_t038_mangong_master.yml
+          )
+          for wf in "${workflows[@]}"; do
+            echo "Dispatching $wf at $BRANCH_NAME"
+            gh workflow run "$wf" --ref "$BRANCH_NAME"
+          done
+          printf '%s\n' "${workflows[@]}" > "$OUT/shared_workflows.txt"
+
+      - name: Wait for shared regressions
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json,os,subprocess,time
+          workflows=[x.strip() for x in open("artifacts/t039_post/shared_workflows.txt") if x.strip()]
+          branch=os.environ["BRANCH_NAME"]
+          head=os.environ["REGRESSION_HEAD"]
+          results={}
+          deadline=time.time()+3600
+          while time.time()<deadline:
+              all_done=True
+              for wf in workflows:
+                  if wf in results and results[wf].get("status")=="completed":
+                      continue
+                  cp=subprocess.run([
+                      "gh","run","list","--workflow",wf,"--branch",branch,"--event","workflow_dispatch",
+                      "--limit","10","--json","databaseId,status,conclusion,headSha,createdAt,url"
+                  ],capture_output=True,text=True,check=True,env={**os.environ,"GH_TOKEN":os.environ["GH_TOKEN"]})
+                  arr=json.loads(cp.stdout or "[]")
+                  matches=[r for r in arr if r.get("headSha")==head]
+                  if not matches:
+                      all_done=False
+                      continue
+                  r=matches[0]
+                  results[wf]=r
+                  if r.get("status")!="completed":
+                      all_done=False
+              if all_done and len(results)==len(workflows):
+                  break
+              time.sleep(15)
+          if len(results)!=len(workflows):
+              raise SystemExit("SHARED_REGRESSION_RUN_NOT_FOUND "+json.dumps(results))
+          bad={k:v for k,v in results.items() if v.get("conclusion")!="success"}
+          if bad:
+              raise SystemExit("SHARED_REGRESSION_FAIL "+json.dumps(bad))
+          Path=None
+          with open("artifacts/t039_post/shared_regression_runs.json","w",encoding="utf-8") as f:
+              json.dump({"status":"PASS","regression_head":head,"runs":results},f,indent=2)
+              f.write("\n")
+          print("T039_SHARED_REGRESSIONS_PASS",json.dumps({k:v["databaseId"] for k,v in results.items()}))
+          PY
+
+      - name: Final readiness evidence precheck
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,os
+          from pathlib import Path
+          reg=json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
+          v8=json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json").read_text(encoding="utf-8"))
+          cat=json.loads(Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json").read_text(encoding="utf-8"))
+          state=json.loads(Path("docs/project_control/project_state.json").read_text(encoding="utf-8"))
+          excel=json.loads(Path("artifacts/t039_post/excel_summary.json").read_text(encoding="utf-8"))
+          t039=json.loads(Path("artifacts/t039_post/t039_regression_summary.json").read_text(encoding="utf-8"))
+          shared=json.loads(Path("artifacts/t039_post/shared_regression_runs.json").read_text(encoding="utf-8"))
+          assert reg==v8
+          assert cat["approved_master_count"]==23
+          assert reg["stage1_master_progress_summary"]["approved_master_count"]==23
+          assert reg["stage1_master_progress_summary"]["master_covered_registry_record_count"]==275
+          assert excel["approved_master_count"]==23 and excel["master_covered_registry_record_count"]==275
+          assert t039["status"]=="PASS" and t039["check_count"]==43 and t039["accepted_geometry_match"] is True
+          assert shared["status"]=="PASS"
+          assert state["linggong_stage1"]["merge_authorized"] is False
+          summary={
+            "status":"READY_FOR_PRODUCT_OWNER_D194_DECISION",
+            "authority":"D-221",
+            "source_registry_commit":os.environ["REGISTRY_SOURCE_COMMIT"],
+            "verification_head":os.environ["REGRESSION_HEAD"],
+            "catalog_approved_master_count":23,
+            "master_completion_percent":82.1,
+            "master_covered_registry_record_count":275,
+            "current_equals_v008":True,
+            "excel":excel,
+            "t039_latest_head_regression":t039,
+            "shared_regressions":shared,
+            "generic_p3_3_master_v2":"SKIPPED_AS_INTENDED / dedicated T-039 route is authoritative",
+            "pr_number":35,
+            "pr_must_remain_draft":True,
+            "ready_transition_authorized":False,
+            "merge_authorized":False,
+            "closure_authorized":False
+          }
+          Path("artifacts/t039_post/post_formalization_readiness_evidence.json").write_text(json.dumps(summary,indent=2)+"\n",encoding="utf-8")
+          print("T039_POST_FORMALIZATION_EVIDENCE_PASS")
+          PY
+
+      - name: Upload post-formalization verification
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T039_POST_FORMALIZATION_VERIFICATION_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            ${{ env.OUT }}/excel_summary.json
+            ${{ env.OUT }}/t039_regression_summary.json
+            ${{ env.OUT }}/regression_validation.json
+            ${{ env.OUT }}/regression_semantic.json
+            ${{ env.OUT }}/regression_review_board.png
+            ${{ env.OUT }}/shared_regression_runs.json
+            ${{ env.OUT }}/post_formalization_readiness_evidence.json

@@ -1,9 +1,9 @@
 # 中国古建筑3D复原｜T-039｜P3_3_LINGGONG_MASTER_V2_V001
 
-Status: **TASK CONTRACT LOCKED / PRODUCT OWNER APPROVED / D-213 / ENGINEERING EXECUTION NOT AUTHORIZED**
+Status: **FORMALIZED + CATALOG/V008/CURRENT BOUND / D-220 / PR #35 DRAFT / MERGE NOT AUTHORIZED**
 Stage: P3.3 V002 Stage 1
-Future branch: `codex/t039-p3-3-linggong-master-v2-v001`
-Branch creation status: **NOT AUTHORIZED / NOT CREATED**
+Branch: `codex/t039-p3-3-linggong-master-v2-v001`
+Branch creation status: **CREATED / D-216**
 
 ## 1. Objective
 
@@ -340,10 +340,10 @@ Locked sequence:
 3. Task Contract — **LOCKED / D-213**
 4. Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-215**
 5. Engineering Execution Authorization — **AUTHORIZED / D-216**
-6. First Article machine validation — **NEXT / AUTHORIZED TO EXECUTE**
-7. Product Owner First Article Approval — **NOT AUTHORIZED**
-8. Formalization + Catalog/V008/CURRENT binding — **NOT AUTHORIZED**
-9. Derived Excel + latest-head regression + readiness review — **NOT AUTHORIZED**
+6. First Article machine validation — **PASS / D-217 / 43 OF 43**
+7. Product Owner First Article Approval — **PASS / D-218**
+8. Formalization + Catalog/V008/CURRENT binding — **COMPLETE / D-220**
+9. Derived Excel + latest-head regression + shared regressions + readiness review — **AUTHORIZED / D-221 / EXECUTION PENDING**
 10. D-194 combined Draft→Ready + Merge — **NOT AUTHORIZED**
 11. Formal Closure — **NOT AUTHORIZED**
 
@@ -383,3 +383,27 @@ D-215 records Product Owner approval of `LINGGONG_PROFILE_CONTROL_SET_V001_C01`.
 ## 19. Engineering Execution Authorization｜D-216
 
 D-216 authorizes isolated T-039 engineering execution: production branch creation, builder/validator/workflow implementation, Blender 4.5.13 generation of exactly one canonical 令栱 First Article, deterministic rebuild/reopen validation, 8-domain Review Board generation, machine evidence artifact, and Draft PR creation. The execution must consume the locked D-215 14-point Definition and preserve one shared Master / zero Geometry Variant / 28 Registry bindings with canonical family envelope 897×217.4×155.6 mm. Product Owner First Article acceptance, formalization, Catalog/V008/CURRENT binding, Derived Excel sync, PR Ready/merge, closure, Stage2 and T-018 resume remain separate and unauthorized.
+
+## 20. First Article Machine Result｜D-217
+
+Run `36304085862` completed SUCCESS with **43/43 PASS** at execution head `9037a750775b55c36b4173146be8eb5d2a7c9b9e`. Artifact `10927005772` has digest `sha256:db181f3392acab1504f118236cec32d9e3e043ba4cf84ff944834c28ce9a0ede`. Canonical First Article .blend SHA is `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`; family semantic signature `d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7`; body geometry signature `e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61`. The Review Board is nonblank and contains all 8 required domains. Draft PR #35 remains Draft. Machine PASS does not equal Product Owner acceptance; formalization/Catalog binding/Ready+Merge/closure remain blocked.
+
+## 21. First Article Product Owner Approval｜D-218
+
+Product Owner approved the D-217 machine-PASS First Article. Accepted canonical .blend SHA=`4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`; family semantic signature=`d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7`; geometry signature=`e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61`. This approval accepts the one-body 令栱 Stage1 First Article only. It does not upgrade any evidence semantics and does not authorize formalization, Catalog/V008/CURRENT binding, Derived Excel sync, PR Ready/Merge, closure, Stage2 or T-018 resume. Formalization authorization is the next separate gate.
+
+## 22. Formalization Authorization｜D-219
+
+Product Owner authorized formalization of the D-218 accepted First Article and Stage1 Catalog/V008/CURRENT binding. The operation must byte-verify accepted Artifact 10927005772 and preserve the accepted canonical .blend SHA and geometry signatures. Success target: branch Catalog 23/28, 28/28 令栱 rows bound to CMP-GONG-LINGGONG-001_MASTER, master-covered Registry rows 275, CURRENT==V008. Derived Excel, post-formalization regressions/readiness, PR Ready/Merge and closure remain separate gates.
+
+## 23. Formalization Result｜D-220
+
+D-220 records successful formalization under D-219. Catalog branch count = 23/28; 28/28 Linggong V008/CURRENT rows are bound to CMP-GONG-LINGGONG-001_MASTER; master-covered records = 275; CURRENT==V008. Accepted canonical blend remains D-218 SHA 4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.
+
+## 24. Post-Formalization Verification Authorization｜D-221
+
+Product Owner authorized the complete post-formalization verification sequence: atomic V008/CURRENT progress-summary synchronization to 23/28 / 275 covered, Derived Excel sync, latest-head T-039 regression, shared regressions for T-021/T-022/T-023/T-024/T-037/T-038, generic P3.3 route behavior check, and PR #35 readiness review. D-194 Draft→Ready/Merge and formal closure remain separate gates.
+
+## 24. Post-Formalization Readiness Result｜D-222
+
+D-222 records PASS of the complete D-221 verification. Derived Excel is synchronized and revalidated; latest-head T-039 remains 43/43 PASS with accepted family/body signatures unchanged; shared regressions T-021/T-022/T-023/T-024/T-037/T-038 all succeed; generic P3.3 route is skipped as intended. PR #35 remains Draft and mergeable. T-039 is now ready for the Product Owner D-194 combined Draft→Ready + Merge decision; no Ready transition or merge is authorized by D-222 itself.

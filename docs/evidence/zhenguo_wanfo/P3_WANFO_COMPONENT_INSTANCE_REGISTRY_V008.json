@@ -3,7 +3,7 @@
   "date": "2026-09-22",
   "status": "CURRENT_BUILD_BASELINE_INSTANCE_REGISTRY",
   "source": "SRC-ZG-WF-001",
-  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility. D-103 binds the Product Owner-approved Tuojiao V2 Master to all 12 托脚 registry records and updates Stage1 Master progress visibility. D-111 approves the Chashou first article; D-112 formalizes the accepted outputs and binds all 8 叉手 records to CMP-FRAME-CHASHOU-001_MASTER on PR #16 pending merge. D-188 binds the Product Owner-approved T-037 Guazi Gong Master family to all 44 guazi records (16 large + 28 small); exact historical profile and connection-detail boundaries remain explicit. D-193 closes T-037 on main after PR #33 merge; Stage1 progress is 21/28 and 203 Registry records are Master-covered. D-195 starts T-038 slow-gong family Source Readiness only. D-204/D-205 bind the Product Owner-approved T-038 Mangong Master family to all 44 slow-gong records (16 large + 28 small); W/T remain report-inferred replaceable family candidates and exact historical profile/joinery boundaries remain explicit. D-206 synchronizes Stage1 progress summary to the D-205 formalized branch state: 22/28 approved, 247 Master-covered Registry rows, 6 pending.",
+  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility. D-103 binds the Product Owner-approved Tuojiao V2 Master to all 12 托脚 registry records and updates Stage1 Master progress visibility. D-111 approves the Chashou first article; D-112 formalizes the accepted outputs and binds all 8 叉手 records to CMP-FRAME-CHASHOU-001_MASTER on PR #16 pending merge. D-188 binds the Product Owner-approved T-037 Guazi Gong Master family to all 44 guazi records (16 large + 28 small); exact historical profile and connection-detail boundaries remain explicit. D-193 closes T-037 on main after PR #33 merge; Stage1 progress is 21/28 and 203 Registry records are Master-covered. D-195 starts T-038 slow-gong family Source Readiness only. D-204/D-205 bind the Product Owner-approved T-038 Mangong Master family to all 44 slow-gong records (16 large + 28 small); W/T remain report-inferred replaceable family candidates and exact historical profile/joinery boundaries remain explicit. D-206 synchronizes Stage1 progress summary to the D-205 formalized branch state: 22/28 approved, 247 Master-covered Registry rows, 6 pending. D-219/D-220 bind the Product Owner-approved T-039 Linggong Master to all 28 Linggong records; L/W/T remain family DIRECT_PRIMARY observed means rather than per-instance exact values, sample-to-instance mapping remains UNKNOWN, and exact historical profile/end/joinery boundaries remain explicit.",
   "item_count": 505,
   "items": [
     {
@@ -4365,7 +4365,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -4458,7 +4459,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -4499,7 +4501,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -4592,7 +4595,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -4633,7 +4637,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -4726,7 +4731,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -4767,7 +4773,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -4860,7 +4867,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -4953,7 +4961,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -4994,7 +5003,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5087,7 +5097,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5128,7 +5139,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5221,7 +5233,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5262,7 +5275,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5355,7 +5369,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5448,7 +5463,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5489,7 +5505,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5582,7 +5599,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5623,7 +5641,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5716,7 +5735,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5757,7 +5777,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5850,7 +5871,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5943,7 +5965,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -5984,7 +6007,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -6077,7 +6101,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -6118,7 +6143,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -6211,7 +6237,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -6252,7 +6279,8 @@
       "width_mm": 217.4,
       "thickness_mm": 155.6,
       "stage1_disposition": "需新建Master",
-      "master_coverage_status": "MASTER_REQUIRED_PENDING"
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
       "system": "外檐斗栱",
@@ -7341,14 +7369,14 @@
   ],
   "stage1_master_progress_summary": {
     "snapshot_date": "2026-09-27",
-    "status": "T-038 MERGED TO MAIN / D-208 / MAIN 22 OF 28 MASTERS APPROVED / T-038 CLOSURE PENDING",
+    "status": "T-039 FORMALIZED ON BRANCH / D-220 / BRANCH 23 OF 28 MASTERS APPROVED / MAIN 22 OF 28 UNTIL MERGE",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 22,
-    "pending_master_object_type_count": 6,
-    "master_completion_percent": 78.6,
-    "pending_source_binding_count": 6,
+    "approved_master_count": 23,
+    "pending_master_object_type_count": 5,
+    "master_completion_percent": 82.1,
+    "pending_source_binding_count": 5,
     "completed_definition": "PRODUCT_OWNER_APPROVED Master available in Stage1 Component Master Catalog",
     "total_definition": "Master scope includes 需新建Master plus all 已有Master categories; not all registered object types require a Master",
     "disposition_summary": {
@@ -7389,9 +7417,10 @@
       "大型瓜子栱",
       "小型瓜子栱",
       "大型慢栱",
-      "小型慢栱"
+      "小型慢栱",
+      "令栱"
     ],
-    "master_covered_registry_record_count": 247,
-    "progress_display_note": "505 Registry records; Stage1 Master completion on canonical main: 22 approved / 6 pending = 78.6%. T-038 慢栱族 merged under D-208; 44/44 rows bound to CMP-GONG-MANGONG-001_MASTER. PR #34 merged at b89458436b0338cd3bd72e7d4780ec4a134859d8. Formal T-038 closure remains pending; T-018 HOLD; Stage2 NOT AUTHORIZED."
+    "master_covered_registry_record_count": 275,
+    "progress_display_note": "505 Registry records; Stage1 Master completion on T-039 branch: 23 approved / 5 pending = 82.1%. T-039 令栱 formalized under D-220; 28/28 rows bound to CMP-GONG-LINGGONG-001_MASTER. Canonical main remains 22/28 until PR #35 merge. Derived Excel sync + latest-head/shared regressions + readiness review authorized under D-221; T-018 HOLD; Stage2 NOT AUTHORIZED."
   }
 }

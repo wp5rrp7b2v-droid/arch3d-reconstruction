@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R295",
+  "state_revision": "R301",
   "last_updated": "2026-09-27",
-  "session_status": "T-039 ENGINEERING EXECUTION AUTHORIZED D-216 / FIRST ARTICLE EXECUTION NEXT / MAIN 22 OF 28 / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-039 READINESS PASS D-222 / READY FOR PRODUCT OWNER D-194 DECISION / BRANCH 23 OF 28 = 82.1% / 275 COVERED / PR #35 DRAFT / MAIN 22 OF 28 / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 22 OF 28 MASTERS APPROVED / T-039 EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / BRANCH 23 OF 28 / MAIN 22 OF 28 / T-039 READINESS PASS D-222 / D-194 PO DECISION NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 ENGINEERING EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 ENGINEERING EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / BRANCH 23 OF 28 / MAIN 22 OF 28 / T-039 READINESS PASS D-222 / PR #35 DRAFT / D-194 PO DECISION NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / BRANCH 23 OF 28 / MAIN 22 OF 28 / T-039 READINESS PASS D-222 / PR #35 DRAFT / D-194 PO DECISION NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-039",
     "name": "P3_3_LINGGONG_MASTER_V2_V001",
-    "status": "ENGINEERING EXECUTION AUTHORIZED / D-216 / FIRST ARTICLE EXECUTION NEXT"
+    "status": "READINESS PASS / D-222 / READY FOR PRODUCT OWNER D-194 COMBINED READY+MERGE DECISION / PR #35 DRAFT"
   },
   "proposed_next_task": {
-    "id": "T-039-FIRST-ARTICLE-EXECUTION",
-    "name": "T-039 令栱 engineering execution + First Article machine validation",
-    "status": "AUTHORIZED / NEXT COMPLETE STEP"
+    "id": "T-039-D194-READY-MERGE",
+    "name": "T-039 PR #35 D-194 combined Ready + Merge decision",
+    "status": "AWAITING PRODUCT OWNER"
   },
   "last_completed_task": {
     "id": "T-038",
@@ -127,7 +127,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / BRANCH 23 OF 28 / MAIN 22 OF 28 / T-039 READINESS PASS D-222 / D-194 PO DECISION NEXT / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -847,7 +847,7 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Execute isolated T-039 engineering work on codex/t039-p3-3-linggong-master-v2-v001: builder, validator, workflow, Blender 4.5.13 First Article, 8-domain Review Board, machine validation and Draft PR. Do not formalize, bind Catalog/V008, merge, close, start Stage2, or resume T-018.",
+  "next_action": "Await Product Owner D-194 combined Ready+Merge approval for PR #35. Do not transition Draft→Ready, merge, close T-039, start Stage2, or resume T-018 without explicit approval.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -966,7 +966,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 EXECUTION AUTHORIZED / FIRST ARTICLE NEXT",
+    "status": "ACTIVE / BRANCH 23 OF 28 / MAIN 22 OF 28 / T-039 READINESS PASS / D-194 PO DECISION NEXT",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1241,16 +1241,16 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-038 FORMALIZED ON BRANCH / 22 OF 28",
+    "status": "ACTIVE / T-039 FORMALIZED ON BRANCH / 23 OF 28 / POST-FORMALIZATION VERIFICATION IN PROGRESS",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 22,
-    "pending_master_object_type_count": 6,
-    "master_completion_percent": 78.6,
-    "master_covered_registry_record_count": 247,
-    "pending_source_binding_count": 6,
+    "approved_master_count": 23,
+    "pending_master_object_type_count": 5,
+    "master_completion_percent": 82.1,
+    "master_covered_registry_record_count": 275,
+    "pending_source_binding_count": 5,
     "row_fields": [
       "stage1_disposition",
       "master_coverage_status",
@@ -2373,7 +2373,7 @@
     "active_engineering_task": false
   },
   "linggong_stage1": {
-    "status": "ENGINEERING EXECUTION AUTHORIZED / D-216 / FIRST ARTICLE NEXT",
+    "status": "READINESS PASS / D-222 / READY FOR PRODUCT OWNER D-194 DECISION / PR #35 DRAFT",
     "component": "令栱",
     "coverage_matrix_priority": 17,
     "physical_instance_count": 28,
@@ -2465,8 +2465,8 @@
     "task_contract_path": "docs/tasks/T-039_P3_3_LINGGONG_MASTER_V2_V001.md",
     "profile_control_gate_id": "PROFILE_CONTROL_SET_V0.1",
     "profile_control_status": "LOCKED / PRODUCT OWNER APPROVED / D-215",
-    "production_branch_created": false,
-    "draft_pr_created": false,
+    "production_branch_created": true,
+    "draft_pr_created": true,
     "profile_control_candidate_decision_id": "D-214",
     "profile_control_candidate_id": "LINGGONG_PROFILE_CONTROL_SET_V001_C01",
     "profile_control_candidate_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_LINGGONG_PROFILE_CONTROL_SET_V001.md",
@@ -2486,9 +2486,97 @@
     "workflow_execution_authorized": true,
     "production_branch_authorized": true,
     "draft_pr_authorized": true,
-    "first_article_acceptance_authorized": false,
-    "formalization_authorized": false,
-    "catalog_v008_binding_authorized": false,
-    "merge_authorized": false
+    "first_article_acceptance_authorized": true,
+    "formalization_authorized": true,
+    "catalog_v008_binding_authorized": true,
+    "merge_authorized": false,
+    "production_branch": "codex/t039-p3-3-linggong-master-v2-v001",
+    "pr_number": 35,
+    "pr_draft": true,
+    "pr_mergeable": true,
+    "first_article_machine_pass": true,
+    "first_article_machine_decision_id": "D-217",
+    "first_article_run_id": 36304085862,
+    "first_article_head_sha": "9037a750775b55c36b4173146be8eb5d2a7c9b9e",
+    "first_article_validation": "43/43 PASS",
+    "first_article_artifact_id": 10927005772,
+    "first_article_artifact_digest": "sha256:db181f3392acab1504f118236cec32d9e3e043ba4cf84ff944834c28ce9a0ede",
+    "first_article_canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
+    "first_article_semantic_sha256": "14e1b0ce3a724d10ed11f638d3184cb323abd1b8a6e59f84f2898d50f1a676b7",
+    "first_article_validation_sha256": "d1ae6617ec48c9a8945e368b748e4160ed7f4c95b487826f0511ccf3567d0b62",
+    "first_article_review_board_sha256": "769275ae578cd12a5871aee8c532e3353122190926a47be89497602e3b0ba095",
+    "family_semantic_signature": "d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7",
+    "geometry_signature": "e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61",
+    "first_article_product_owner_approved": true,
+    "first_article_approval_decision_id": "D-218",
+    "accepted_first_article_run_id": 36304085862,
+    "accepted_first_article_artifact_id": 10927005772,
+    "accepted_canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
+    "accepted_family_semantic_signature": "d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7",
+    "accepted_geometry_signature": "e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61",
+    "derived_excel_sync_authorized": true,
+    "closure_authorized": false,
+    "formalization_authority": "D-219",
+    "post_formalization_verification_authorized": true,
+    "formalization_result_decision_id": "D-220",
+    "formalization_complete": true,
+    "formalization_run_id": 36305012834,
+    "branch_approved_master_count": 23,
+    "branch_master_completion_percent": 82.1,
+    "branch_master_covered_registry_record_count": 275,
+    "linggong_registry_binding_count": 28,
+    "current_equals_v008": true,
+    "canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
+    "semantic_sha256": "ee0bc2ef02b3e1da43c1d7b6d4a8a5f18269b36bbcd189b52de15112f77abb97",
+    "validation_sha256": "9932a0d1f57a243f4997fa8e16539083213969863d3d69c0ac350ce48d935737",
+    "review_board_sha256": "769275ae578cd12a5871aee8c532e3353122190926a47be89497602e3b0ba095",
+    "excel_sync_authorized": true,
+    "post_formalization_authority": "D-221",
+    "registry_summary_sync_authorized": true,
+    "registry_summary_synced": true,
+    "readiness_review_authorized": true,
+    "readiness_review_pass": true,
+    "ready_transition_authorized": false,
+    "post_formalization_readiness_decision_id": "D-222",
+    "post_formalization_verification_run_id": 36305841141,
+    "post_formalization_artifact_id": 10927705970,
+    "post_formalization_artifact_digest": "sha256:3f6d2f20079d6729e97dcf0d1a6f8241ac8ccdc6d0e9e16be3af806ff6d1edd6",
+    "derived_excel_sync_run_id": 36305841250,
+    "derived_excel_source_commit": "119dc2ae9b18a536cefb02360fa84fafe66016a7",
+    "derived_excel_sha256": "1116a439b0f714378b07712633bce55067fc27aef0a188f3832da76edfd02f3d",
+    "latest_head_regression_run_id": 36305841159,
+    "latest_head_regression_head": "c10ffcf22d6244887659c55385142f0eeef995cf",
+    "latest_head_regression_validation": "43/43 PASS",
+    "latest_head_regenerated_blend_sha256": "33bdb9efcebd18fb6da24431e966b80f2cec69f1ff049674300b763ab5b5c5ff",
+    "latest_head_regenerated_blend_promoted_to_canonical": false,
+    "shared_regressions": {
+      "T-021": {
+        "run_id": 36305940041,
+        "result": "SUCCESS"
+      },
+      "T-022": {
+        "run_id": 36305940938,
+        "result": "SUCCESS"
+      },
+      "T-023": {
+        "run_id": 36305941815,
+        "result": "SUCCESS"
+      },
+      "T-024": {
+        "run_id": 36305942766,
+        "result": "SUCCESS"
+      },
+      "T-037": {
+        "run_id": 36305943733,
+        "result": "SUCCESS"
+      },
+      "T-038": {
+        "run_id": 36305944709,
+        "result": "SUCCESS"
+      },
+      "generic_p3_3_master_v2": {
+        "result": "SKIPPED_AS_INTENDED"
+      }
+    }
   }
 }

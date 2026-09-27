@@ -1818,3 +1818,103 @@ Do not restart T-018 by default.
 - Product Owner First Article acceptance: NOT AUTHORIZED BY THIS DECISION.
 - Formalization / Catalog binding / Ready+Merge / closure: NOT AUTHORIZED.
 - T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 First Article Machine Result｜D-217
+
+- Branch: `codex/t039-p3-3-linggong-master-v2-v001`.
+- Draft PR: #35 / OPEN / DRAFT / MERGEABLE.
+- Workflow Run: `36304085862` / SUCCESS.
+- Execution head: `9037a750775b55c36b4173146be8eb5d2a7c9b9e`.
+- Validation: **43/43 PASS**.
+- Artifact ID: `10927005772`.
+- Artifact digest: `sha256:db181f3392acab1504f118236cec32d9e3e043ba4cf84ff944834c28ce9a0ede`.
+- Canonical .blend SHA-256: `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`.
+- Family semantic signature: `d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7`.
+- Geometry signature: `e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61`.
+- Semantic SHA-256: `14e1b0ce3a724d10ed11f638d3184cb323abd1b8a6e59f84f2898d50f1a676b7`.
+- Validation SHA-256: `d1ae6617ec48c9a8945e368b748e4160ed7f4c95b487826f0511ccf3567d0b62`.
+- Review Board SHA-256: `769275ae578cd12a5871aee8c532e3353122190926a47be89497602e3b0ba095`.
+- Review Board self-check: nonblank / 8 domains present / readable; PO review still required.
+- Canonical dimensions: 897 × 217.4 × 155.6 mm.
+- First Article body count: 1.
+- Geometry Variant count: 0.
+- Registry target count: 28 / direction 7+7+7+7.
+- Deterministic restore / independent reopen / manifold / binary SHA / Definition hash: PASS.
+- Unsupported joinery/local cuts: absent.
+- Canonical .blend is artifact-only and not tracked in Git: PASS.
+- Product Owner First Article approval: PENDING.
+- Formalization / Catalog binding / Ready+Merge / closure: NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 First Article Product Owner Approval｜D-218
+
+- Product Owner approval: RECEIVED.
+- Accepted machine gate: D-217 / Run `36304085862` / 43 of 43 PASS.
+- Accepted Artifact ID: `10927005772`.
+- Accepted canonical .blend SHA-256: `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`.
+- Accepted family semantic signature: `d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7`.
+- Accepted geometry signature: `e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61`.
+- Accepted canonical dimensions: 897 × 217.4 × 155.6 mm.
+- Architecture retained: 1 shared Master / 0 Geometry Variant / 28 Registry bindings.
+- Profile retained: locked 14-point / SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT.
+- Evidence boundaries unchanged.
+- Formalization: NOT AUTHORIZED.
+- Catalog/V008/CURRENT binding: NOT AUTHORIZED.
+- PR #35 remains Draft; Ready/Merge not authorized.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 Formalization Authorization｜D-219
+
+- Product Owner authorization: RECEIVED.
+- Accepted source: D-218 / D-217 Run 36304085862 / Artifact 10927005772.
+- Accepted canonical .blend SHA-256: 4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7.
+- Formalization + Catalog/V008/CURRENT binding: AUTHORIZED.
+- Expected branch Catalog after success: 23/28 = 82.1%.
+- Expected master-covered Registry records after success: 275/505.
+- Expected 令栱 binding: 28/28 -> CMP-GONG-LINGGONG-001_MASTER.
+- CURRENT==V008 required.
+- Canonical .blend remains Actions artifact / not tracked in Git.
+- Derived Excel / post-formalization regressions / readiness / Ready+Merge / closure: NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 Formalization + Catalog/V008/CURRENT Binding｜D-220
+
+- Authority: D-219.
+- Formalization workflow run: 36305012834.
+- Formal package: Definition + Semantic + Review Board + Validation + Task Contract.
+- Accepted canonical .blend remains SHA-256 4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7; .blend is not tracked in Git.
+- Geometry signatures: family=d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7; body=e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61.
+- Stage1 Catalog branch count: 23/28 = 82.1%.
+- V008/CURRENT Linggong binding: 28/28 APPROVED_MASTER_AVAILABLE -> CMP-GONG-LINGGONG-001_MASTER.
+- Master-covered Registry records: 275. CURRENT == V008: PASS.
+- Derived Excel sync / post-formalization regression / PR readiness: NOT AUTHORIZED.
+- PR #35 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.
+
+## 2026-09-27｜T-039 Post-Formalization Verification Authorization｜D-221
+
+- Product Owner authorization: RECEIVED.
+- Registry summary synchronization: AUTHORIZED / atomic V008+CURRENT update to 23/28 = 82.1% / 275 covered.
+- Derived Excel sync: AUTHORIZED.
+- Latest-head T-039 regression: AUTHORIZED.
+- Shared regressions: T-021 / T-022 / T-023 / T-024 / T-037 / T-038 AUTHORIZED.
+- Generic P3.3 route behavior check: AUTHORIZED.
+- PR #35 readiness review: AUTHORIZED.
+- D-194 Draft→Ready / Merge: NOT AUTHORIZED by D-221.
+- Closure: NOT AUTHORIZED.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 Post-Formalization Readiness Review｜D-222
+
+- Authority: D-221.
+- Verification Run: `36305841141` / SUCCESS.
+- Verification Artifact: `10927705970` / digest `sha256:3f6d2f20079d6729e97dcf0d1a6f8241ac8ccdc6d0e9e16be3af806ff6d1edd6`.
+- Registry branch truth: 23/28 = 82.1% / 275 covered / 28/28 令栱 bound / CURRENT==V008.
+- Derived Excel: Run `36305841250` / PASS / source commit `119dc2ae9b18a536cefb02360fa84fafe66016a7` / SHA `1116a439b0f714378b07712633bce55067fc27aef0a188f3832da76edfd02f3d`.
+- T-039 latest-head: `c10ffcf22d6244887659c55385142f0eeef995cf` / 43/43 PASS.
+- T-039 family signature: MATCH accepted D-218.
+- T-039 geometry signature: MATCH accepted D-218.
+- Regression-only .blend SHA: `33bdb9efcebd18fb6da24431e966b80f2cec69f1ff049674300b763ab5b5c5ff` / validation-only / NOT canonical.
+- Accepted canonical .blend remains: `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`.
+- Shared regressions: T-021 `36305940041` SUCCESS; T-022 `36305940938` SUCCESS; T-023 `36305941815` SUCCESS; T-024 `36305942766` SUCCESS; T-037 `36305943733` SUCCESS; T-038 `36305944709` SUCCESS.
+- Generic P3.3 Master V2: SKIPPED_AS_INTENDED.
+- PR #35: OPEN / DRAFT / MERGEABLE.
+- Readiness result: **PASS / READY FOR PRODUCT OWNER D-194 COMBINED READY+MERGE DECISION**.
+- Ready transition / merge / closure: NOT AUTHORIZED BY D-222.
