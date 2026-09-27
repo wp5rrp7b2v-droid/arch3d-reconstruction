@@ -7341,7 +7341,7 @@
   ],
   "stage1_master_progress_summary": {
     "snapshot_date": "2026-09-27",
-    "status": "T-038 FORMALIZED / D-205 / BRANCH 22 OF 28 MASTERS APPROVED / PR #34 DRAFT / MERGE NOT AUTHORIZED",
+    "status": "T-038 MERGED TO MAIN / D-208 / MAIN 22 OF 28 MASTERS APPROVED / T-038 CLOSURE PENDING",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
@@ -7392,6 +7392,6 @@
       "小型慢栱"
     ],
     "master_covered_registry_record_count": 247,
-    "progress_display_note": "505 Registry records; Stage1 Master completion on T-038 branch: 22 approved / 6 pending = 78.6%. T-038 慢栱族 formalized under D-205; 44/44 rows bound to CMP-GONG-MANGONG-001_MASTER. D-206 authorizes derived Excel sync, latest-head regression and PR readiness review. PR #34 remains Draft; merge not authorized."
+    "progress_display_note": "505 Registry records; Stage1 Master completion on canonical main: 22 approved / 6 pending = 78.6%. T-038 慢栱族 merged under D-208; 44/44 rows bound to CMP-GONG-MANGONG-001_MASTER. PR #34 merged at b89458436b0338cd3bd72e7d4780ec4a134859d8. Formal T-038 closure remains pending; T-018 HOLD; Stage2 NOT AUTHORIZED."
   }
 }
