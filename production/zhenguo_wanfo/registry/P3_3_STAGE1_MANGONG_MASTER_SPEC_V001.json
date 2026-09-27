@@ -160,19 +160,21 @@
   "gates": {
     "source_readiness": "PASS WITH BOUNDARIES / D-196",
     "master_spec": "LOCKED / PRODUCT_OWNER_APPROVED / D-198",
-    "task_contract": "NEXT GATE / NOT YET AUTHORIZED",
-    "engineering_execution": "NOT AUTHORIZED",
+    "task_contract": "LOCKED / D-199",
+    "engineering_execution": "NOT AUTHORIZED / REQUIRES PROFILE_CONTROL_SET_V0.1 PASS",
     "formalization": "NOT AUTHORIZED",
     "catalog_v008_binding": "NOT AUTHORIZED",
     "pr_merge": "NOT AUTHORIZED",
     "stage2": "NOT AUTHORIZED",
-    "t018": "HOLD"
+    "t018": "HOLD",
+    "profile_control_set": "NEXT GATE / NOT YET APPROVED"
   },
   "decisions": [
     "D-195",
     "D-196",
     "D-197",
-    "D-198"
+    "D-198",
+    "D-199"
   ],
   "approval": {
     "decision_id": "D-198",
@@ -180,5 +182,13 @@
     "locked": true,
     "approval_date": "2026-09-27",
     "note": "V0.1 is locked with explicit evidence boundaries. Numeric profile control set remains unresolved/not locked; Task Contract design is a separate gate."
+  },
+  "task_contract": {
+    "decision_id": "D-199",
+    "locked": true,
+    "path": "docs/tasks/T-038_P3_3_MANGONG_MASTER_V2_V001.md",
+    "profile_control_pre_execution_gate_required": true,
+    "profile_control_gate_id": "PROFILE_CONTROL_SET_V0.1",
+    "engineering_execution_blocked_until_profile_control_approved": true
   }
 }
