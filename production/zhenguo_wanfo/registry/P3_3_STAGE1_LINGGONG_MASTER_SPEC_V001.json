@@ -1,6 +1,6 @@
 {
   "schema_version": "P3_3_STAGE1_LINGGONG_MASTER_SPEC_V001",
-  "status": "DRAFT / CANDIDATE_01 / PRODUCT_OWNER_REVIEW_REQUIRED / D-211",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-212",
   "date": "2026-09-27",
   "stage": "P3.3 V002 Stage 1",
   "source_gate": "D-210 / SOURCE READINESS + D-076 PASS WITH BOUNDARIES",
@@ -135,8 +135,8 @@
   ],
   "gates": {
     "source_readiness": "PASS WITH BOUNDARIES / D-210",
-    "master_spec": "DRAFT / PRODUCT OWNER REVIEW REQUIRED / D-211",
-    "task_contract": "NOT AUTHORIZED",
+    "master_spec": "LOCKED / PRODUCT_OWNER_APPROVED / D-212",
+    "task_contract": "NEXT GATE / NOT YET AUTHORIZED",
     "profile_control_set": "REQUIRED BEFORE ENGINEERING EXECUTION / NOT YET PREPARED",
     "engineering_execution": "NOT AUTHORIZED",
     "formalization": "NOT AUTHORIZED",
@@ -144,5 +144,17 @@
     "merge": "NOT AUTHORIZED",
     "stage2": "NOT AUTHORIZED",
     "t018": "HOLD"
-  }
+  },
+  "approval": {
+    "decision_id": "D-212",
+    "product_owner_approved": true,
+    "locked": true,
+    "approval_date": "2026-09-27",
+    "note": "V0.1 locked with one shared Master, zero Geometry Variant, 28 instance bindings, observed-mean reference envelope 897×217.4×155.6 mm, explicit sample-to-instance UNKNOWN, and separate Profile Control Set gate required before engineering execution."
+  },
+  "decisions": [
+    "D-210",
+    "D-211",
+    "D-212"
+  ]
 }
