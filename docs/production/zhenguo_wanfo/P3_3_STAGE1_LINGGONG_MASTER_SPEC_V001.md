@@ -292,3 +292,7 @@ Not authorized by D-212:
 - merge;
 - Stage2;
 - T-018 resume.
+
+## 12. Task Contract Lock｜D-213
+
+T-039｜P3_3_LINGGONG_MASTER_V2_V001 Task Contract is PRODUCT OWNER APPROVED / LOCKED. The contract preserves the D-212 architecture (1 shared Master / 0 Geometry Variant / 28 bindings), the 897 × 217.4 × 155.6 mm observed-mean family reference, UNKNOWN sample-to-instance mapping, and unresolved/deferred profile/end/joinery boundaries. Engineering execution remains blocked until a separate Profile Control Set V0.1 is Product Owner approved.
