@@ -1468,3 +1468,13 @@ Do not restart T-018 by default.
 - Metric image calibration: NOT PERFORMED / NOT CLAIMED. Independent source-image re-extraction yielding the same numeric points: NOT CLAIMED.
 - Exact historical curve/control dimensions remain UNRESOLVED; profile remains REPLACEABLE.
 - Formalization / Catalog-V008 binding / PR Ready / merge remain NOT AUTHORIZED.
+
+## 2026-09-27｜T-037 Post-Traceability Regression｜D-187
+
+- Run: 36292530436 / SUCCESS / 43/43 PASS.
+- Artifact: 10923335229 / sha256:86447cef31497033c9c9aadcc7089822bfe947649e88aa3c8b80353142d98e68.
+- LARGE geometry signature: 5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d / MATCH D-185 accepted first article.
+- SMALL geometry signature: e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842 / MATCH D-185 accepted first article.
+- Family semantic signature changed to 69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c because D-186 intentionally changed evidence/profile metadata; this is not a geometry change.
+- Regenerated .blend SHA-256: 2c7ee97d349ae7e05e8912e3dc575160536cd08e4942e539b4d18b46ed424769; regression evidence only, not promoted to replace the D-185 accepted first-article binary authority.
+- Result: D-186 traceability supplement verified with no geometry drift. Formalization/Registry binding/merge remain separately gated.
