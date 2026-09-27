@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-040｜P3_3_HUAGONG_MASTER_V2_V001
 
-Status: **FORMALIZED + CATALOG/V008/CURRENT BOUND / D-238 / PR #36 DRAFT / MERGE NOT AUTHORIZED**
+Status: **MERGED TO MAIN / MAIN VERIFIED / D-242 / FORMAL CLOSURE PENDING**
 Date: 2026-09-27
 Stage: P3.3 V002 Stage 1
 Locked Master Spec: D-227｜P3_3_STAGE1_HUAGONG_MASTER_SPEC_V001
@@ -784,3 +784,7 @@ D-240 records successful completion of the D-239 verification gate. Final run **
 ## 29. Ready + Merge Authorization｜D-241
 
 Product Owner authorized PR #36 Draft→Ready and merge after D-240 readiness PASS. Scope is limited to Ready transition, merge to main and main verification. Formal closure remains a separate gate. Stage2 remains NOT AUTHORIZED and T-018 remains HOLD.
+
+## 30. Ready + Merge Result｜D-242
+
+PR #36 transitioned from Draft to Ready and merged under D-241. Merge commit: `783d6ce89b14a07a580c0744dd63e848a152690c`. Main verification confirms 24/28 = 85.7%, 331 covered records, 56/56 华栱 bindings with JUMP_1/JUMP_2 = 28/28, and CURRENT==V008. Historical per-instance standalone full lengths remain UNRESOLVED. Formal closure remains a separate Product Owner gate.
