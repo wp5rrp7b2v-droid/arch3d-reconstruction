@@ -886,3 +886,13 @@ Boundary retained:
 - Exact standalone profile: **UNRESOLVED**.
 - Joinery/local cuts: **DEFERRED**.
 - Master Spec: **NOT YET AUTHORIZED**.
+
+### T-038 Master Spec V0.1 Draft｜D-197
+
+- Status: **DRAFT / PRODUCT OWNER REVIEW REQUIRED**.
+- Family architecture: **1 Master / 2 variants / 44 records**.
+- LARGE length: **1641mm / n=16 / direct observed mean**.
+- SMALL length: **1607mm / n=28 / direct observed mean**.
+- W/T: **report-inferred family design candidates / replaceable**.
+- Numeric profile control set: **NOT LOCKED**.
+- Engineering/modeling: **NOT AUTHORIZED**.
