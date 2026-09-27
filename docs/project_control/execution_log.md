@@ -1993,3 +1993,14 @@ Do not restart T-018 by default.
 - Master-covered Registry records: 331. CURRENT == V008: PASS.
 - 898.8/1630.0 remain reference-specimen-only; instance historical full lengths remain UNRESOLVED.
 - Derived Excel / post-formalization readiness / PR Ready+Merge: NOT AUTHORIZED.
+ 
+## 2026-09-27｜T-040 Post-Formalization Verification Authorization｜D-239
+
+- Product Owner authorization: RECEIVED.
+- Derived Excel sync: AUTHORIZED.
+- Latest-head T-040 regression: AUTHORIZED.
+- Shared regressions: T-021 / T-022 / T-023 / T-024 / T-037 / T-038 / T-039 AUTHORIZED.
+- Generic P3.3 dedicated-route ownership check: AUTHORIZED.
+- PR #36 readiness review: AUTHORIZED.
+- Draft→Ready / merge / closure: NOT AUTHORIZED.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.

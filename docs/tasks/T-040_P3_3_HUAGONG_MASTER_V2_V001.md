@@ -751,3 +751,28 @@ Current status:
 ## 26. Formalization Result｜D-238
 
 D-238 records successful formalization under D-237. Catalog branch count = 24/28 = 85.7%; all 56 Huagong V008/CURRENT LOCKED_SUBSET rows are bound to CMP-GONG-HUAGONG-001_MASTER with JUMP_1/JUMP_2 28/28; master-covered records = 331; CURRENT==V008. Accepted canonical blend remains D-236 SHA 0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e. The 898.8/1630.0 controls remain reference-specimen-only and do not close per-instance historical standalone lengths. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.
+
+## 27. Post-Formalization Verification Authorization｜D-239
+
+Product Owner authorized the complete post-formalization verification sequence after D-238:
+
+- Derived Excel sync from synchronized CURRENT;
+- Excel validation against 505 rows / 24 approved Masters / 331 covered;
+- latest-head T-040 deterministic rebuild/reopen regression;
+- accepted family + JUMP_1 + JUMP_2 geometry signature comparison against D-236;
+- shared regressions: T-021 / T-022 / T-023 / T-024 / T-037 / T-038 / T-039;
+- generic P3.3 route ownership check for dedicated T-040;
+- PR #36 readiness review.
+
+Regression-only generated .blend must not replace the D-236 accepted canonical .blend.
+
+D-239 does **not** authorize:
+- PR #36 Draft→Ready;
+- merge;
+- closure;
+- Stage2;
+- T-018 resume.
+
+Current status:
+
+**POST-FORMALIZATION VERIFICATION AUTHORIZED / EXECUTION IN PROGRESS**

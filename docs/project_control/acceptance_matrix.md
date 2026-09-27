@@ -1286,3 +1286,13 @@ Boundary retained:
 - Reference-specimen lengths remain non-instance-exact; historical instance full lengths remain UNRESOLVED.
 - Derived Excel / post-formalization readiness: **PENDING / NOT AUTHORIZED**.
 - PR #36: **DRAFT / MERGE NOT AUTHORIZED**.
+
+### T-040｜Post-Formalization Verification Authorization｜D-239
+
+- D-238 formalization: **PASS / COMPLETE**.
+- Derived Excel synchronization: **AUTHORIZED**.
+- Latest-head T-040 regression: **AUTHORIZED**.
+- Shared regressions T-021/T-022/T-023/T-024/T-037/T-038/T-039: **AUTHORIZED**.
+- Generic P3.3 route check: **AUTHORIZED**.
+- PR #36 readiness review: **AUTHORIZED**.
+- Draft→Ready / merge / closure: **NOT AUTHORIZED**.
