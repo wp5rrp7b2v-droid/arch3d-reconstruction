@@ -1708,3 +1708,19 @@ Do not restart T-018 by default.
 - Active engineering task: NONE.
 - Next candidate: 令栱 Source Readiness + D-076 only; not started.
 - T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜令栱 Source Readiness + D-076｜D-210
+
+- Coverage Matrix: 令栱 / priority 17 / 28 records / 需新建Master.
+- V008: 28 physical records, LOCKED_DERIVED, 7 per direction.
+- Direct width: 217.4mm observed mean / n=28 / SRC-ZG-WF-001 PDF p55 / printed p40 / Table 2-14.
+- Direct thickness: 155.6mm observed mean / n=28 / PDF p57 / printed p42 / Table 2-17.
+- Direct length: 897mm observed mean / n=28 / PDF p60-61 / printed p45-46 / Fig 2-16 / Table 2-24.
+- Classification: DIRECT_PRIMARY / OBSERVED_MEAN family statistics; not per-instance exact; not proven 963 design values.
+- A2 official same-building source: available and supports dougong system/form context; not standalone numeric/profile authority.
+- Exact historical profile/control points/end shaping/joinery: UNRESOLVED / DEFERRED.
+- Source Readiness: PASS WITH BOUNDARIES.
+- D-076 Visual/Form Gate: PASS WITH BOUNDARIES.
+- Next: Master Spec V0.1 design only.
+- Engineering T-task / branch / PR / Blender: NOT AUTHORIZED.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
