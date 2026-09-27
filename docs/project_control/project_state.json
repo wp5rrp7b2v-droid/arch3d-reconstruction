@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R297",
+  "state_revision": "R298",
   "last_updated": "2026-09-27",
-  "session_status": "T-039 FIRST ARTICLE PRODUCT OWNER APPROVED D-218 / FORMALIZATION AUTHORIZATION NEXT / PR #35 DRAFT / MAIN 22 OF 28 UNTIL FUTURE MERGE / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-039 FORMALIZATION + CATALOG/V008/CURRENT BINDING AUTHORIZED D-219 / EXECUTION PENDING / PR #35 DRAFT / MAIN 22 OF 28 / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-039",
     "name": "P3_3_LINGGONG_MASTER_V2_V001",
-    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-218 / FORMALIZATION NOT AUTHORIZED / PR #35 DRAFT"
+    "status": "FORMALIZATION + CATALOG/V008/CURRENT BINDING AUTHORIZED / D-219 / EXECUTION PENDING"
   },
   "proposed_next_task": {
-    "id": "T-039-FORMALIZATION-AUTHORIZATION",
-    "name": "T-039 令栱 Formalization + Catalog/V008/CURRENT binding authorization",
-    "status": "NEXT GATE / AWAITING PRODUCT OWNER"
+    "id": "T-039-FORMALIZATION-EXECUTION",
+    "name": "T-039 formalization + Catalog/V008/CURRENT binding execution",
+    "status": "AUTHORIZED / IN PROGRESS"
   },
   "last_completed_task": {
     "id": "T-038",
@@ -847,7 +847,7 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Await Product Owner authorization for T-039 formalization + Catalog/V008/CURRENT binding. Do not formalize, update Registry/Catalog, sync Derived Excel, mark PR Ready, merge, close, start Stage2, or resume T-018.",
+  "next_action": "Execute fail-closed T-039 formalization from accepted Artifact 10927005772 and bind 28 Linggong Registry rows. Do not sync Derived Excel, run readiness/merge/closure, start Stage2, or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -2373,7 +2373,7 @@
     "active_engineering_task": false
   },
   "linggong_stage1": {
-    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-218 / FORMALIZATION AUTHORIZATION NEXT / PR #35 DRAFT",
+    "status": "FORMALIZATION + CATALOG/V008/CURRENT BINDING AUTHORIZED / D-219 / EXECUTION PENDING",
     "component": "令栱",
     "coverage_matrix_priority": 17,
     "physical_instance_count": 28,
@@ -2487,8 +2487,8 @@
     "production_branch_authorized": true,
     "draft_pr_authorized": true,
     "first_article_acceptance_authorized": true,
-    "formalization_authorized": false,
-    "catalog_v008_binding_authorized": false,
+    "formalization_authorized": true,
+    "catalog_v008_binding_authorized": true,
     "merge_authorized": false,
     "production_branch": "codex/t039-p3-3-linggong-master-v2-v001",
     "pr_number": 35,
@@ -2515,6 +2515,8 @@
     "accepted_family_semantic_signature": "d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7",
     "accepted_geometry_signature": "e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61",
     "derived_excel_sync_authorized": false,
-    "closure_authorized": false
+    "closure_authorized": false,
+    "formalization_authority": "D-219",
+    "post_formalization_verification_authorized": false
   }
 }
