@@ -1739,3 +1739,20 @@ Do not restart T-018 by default.
 - Prior gong profile-control reuse and generic-template substitution prohibited.
 - Candidate is not locked; Product Owner review required.
 - No engineering T-task / branch / PR / Blender authorized.
+
+## 2026-09-27｜令栱 Master Spec V0.1 Lock｜D-212
+
+- Product Owner approval: RECEIVED.
+- Master Spec V0.1 Candidate 01 → LOCKED as V001.
+- Component ID: `CMP-GONG-LINGGONG-001`.
+- Master ID: `CMP-GONG-LINGGONG-001_MASTER`.
+- Architecture: 1 shared Master / 0 Geometry Variant / 28 instance bindings.
+- Canonical observed-mean envelope: 897 × 217.4 × 155.6 mm.
+- L/W/T classification: DIRECT_PRIMARY / OBSERVED_MEAN / n=28; not per-instance exact; not proven 963 design.
+- Sample-to-instance mapping: UNKNOWN.
+- Exact profile / numeric controls / end geometry: UNRESOLVED.
+- Joinery / grooves / slots / cavities / local cuts: DEFERRED.
+- Separate Profile Control Set gate remains required before engineering execution.
+- Next complete step: Task Contract design/lock.
+- Engineering branch / PR / Blender / formalization / Catalog binding: NOT AUTHORIZED.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
