@@ -5,7 +5,7 @@
   "project_name": "中国古建筑3D复原",
   "state_revision": "R313",
   "last_updated": "2026-09-27",
-  "session_status": "T-040 HUAGONG ENGINEERING EXECUTION AUTHORIZED D-234 / BRANCH CREATION AUTHORIZED / FIRST ARTICLE MACHINE VALIDATION NEXT / GATE A+B LOCKED / MAIN 23 OF 28 = 82.1% / 275 COVERED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-040 HUAGONG ENGINEERING EXECUTION AUTHORIZED D-234 / BRANCH CREATED / FIRST ARTICLE MACHINE VALIDATION NEXT / GATE A+B LOCKED / MAIN 23 OF 28 = 82.1% / 275 COVERED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -68,7 +68,7 @@
     "component": "华栱",
     "status": "ENGINEERING EXECUTION AUTHORIZED / D-234 / FIRST ARTICLE MACHINE VALIDATION NEXT",
     "branch": "codex/t040-p3-3-huagong-master-v2-v001",
-    "branch_status": "AUTHORIZED / TO BE CREATED FROM D-234 MAIN",
+    "branch_status": "CREATED / BASE D-234 MAIN 7c4dc0d88bc928ea1abe73a1109172a95a69c67a",
     "engineering_execution_authorized": true
   },
   "proposed_next_task": {
@@ -2720,7 +2720,7 @@
     "task_contract_path": "docs/tasks/T-040_P3_3_HUAGONG_MASTER_V2_V001.md",
     "engineering_task_id": "T-040",
     "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
-    "branch_created": false,
+    "branch_created": true,
     "length_assembly_control_gate_status": "LOCKED / PRODUCT OWNER APPROVED / D-231",
     "profile_control_gate_status": "LOCKED / PRODUCT OWNER APPROVED / D-233",
     "length_assembly_control_candidate_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001.md",
@@ -2755,6 +2755,7 @@
     "engineering_branch": "codex/t040-p3-3-huagong-master-v2-v001",
     "first_article_status": "NOT STARTED / AUTHORIZED",
     "first_article_po_approved": false,
-    "formalization_authorized": false
+    "formalization_authorized": false,
+    "engineering_branch_base_commit": "7c4dc0d88bc928ea1abe73a1109172a95a69c67a"
   }
 }
