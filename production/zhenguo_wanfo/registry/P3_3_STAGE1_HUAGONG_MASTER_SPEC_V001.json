@@ -1,0 +1,174 @@
+{
+  "schema_version": "P3_3_STAGE1_HUAGONG_MASTER_SPEC_V001",
+  "status": "CANDIDATE_01 / PRODUCT_OWNER_REVIEW_REQUIRED / D-226",
+  "date": "2026-09-27",
+  "component": {
+    "name_zh": "华栱",
+    "component_id": "CMP-GONG-HUAGONG-001",
+    "master_id": "CMP-GONG-HUAGONG-001_MASTER",
+    "master_version": "V001",
+    "master_family_count": 1,
+    "geometry_variant_count": 2,
+    "variants": [
+      {
+        "variant_id": "JUMP_1_HUAGONG",
+        "registry_binding_count": 28,
+        "standalone_full_length_mm": null,
+        "length_status": "UNRESOLVED"
+      },
+      {
+        "variant_id": "JUMP_2_HUAGONG",
+        "registry_binding_count": 28,
+        "standalone_full_length_mm": null,
+        "length_status": "UNRESOLVED / SECONDARY_CALCULATED_VALUES_EXIST"
+      }
+    ]
+  },
+  "registry_scope": {
+    "record_count": 56,
+    "count_status": "LOCKED_SUBSET",
+    "scope": "正身方向明确子集 / NOT WHOLE-HALL TOTAL",
+    "distribution": {
+      "south": {
+        "jump_1": 7,
+        "jump_2": 7
+      },
+      "north": {
+        "jump_1": 7,
+        "jump_2": 7
+      },
+      "east": {
+        "jump_1": 7,
+        "jump_2": 7
+      },
+      "west": {
+        "jump_1": 7,
+        "jump_2": 7
+      },
+      "total_jump_1": 28,
+      "total_jump_2": 28
+    },
+    "sample_to_instance_mapping": "UNKNOWN"
+  },
+  "primary_source": {
+    "id": "SRC-ZG-WF-001",
+    "sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "source_gate": "D-225"
+  },
+  "assembly_evidence": {
+    "first_second_total_projection": {
+      "mean_mm": 732.4,
+      "min_mm": 704,
+      "max_mm": 755,
+      "variance": 115.61,
+      "n": 46,
+      "classification": "DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION",
+      "source": "PDF p71 / printed p56 / §2.2.4.2 / Fig 2-25 / Table 2-33",
+      "standalone_member_length": false,
+      "full_length_sum": false,
+      "per_instance_exact": false,
+      "original_963_design": false
+    },
+    "report_ideal_model": {
+      "first_second_total_projection_fen": 48,
+      "single_material_width_fen": 14,
+      "material_thickness_fen": 10,
+      "yingzao_ruler_mm": 306,
+      "material_width_band_mm": [
+        214.1,
+        218.9
+      ],
+      "material_thickness_band_mm": [
+        154,
+        156.9
+      ],
+      "classification": "REPORT_INFERRED / REPORT_IDEAL_MODEL / REPLACEABLE",
+      "source": "PDF p72 + p120 / printed p57 + p105"
+    }
+  },
+  "length_policy": {
+    "jump_1": {
+      "direct_full_length_mm": null,
+      "status": "UNRESOLVED",
+      "canonical_stage1_length_locked": false
+    },
+    "jump_2": {
+      "direct_full_length_mm": null,
+      "status": "UNRESOLVED",
+      "later_calculated_full_length_mm": 1630,
+      "later_calculated_center_length_mm": 1464.8,
+      "later_value_classification": "SECONDARY_CALCULATED / REPLACEABLE / NOT_DIRECT_PRIMARY",
+      "canonical_stage1_length_locked": false
+    },
+    "mandatory_control_set": "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V0.1",
+    "full_length_sum_must_not_equal_combined_projection_by_assumption": true
+  },
+  "section_policy": {
+    "huagong_specific_direct_mean_locked": false,
+    "allowed_report_width_band_mm": [
+      214.1,
+      218.9
+    ],
+    "allowed_report_thickness_band_mm": [
+      154,
+      156.9
+    ],
+    "report_ideal_width_fen": 14,
+    "report_ideal_thickness_fen": 10,
+    "future_classification": "REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
+    "resolved_in": "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V0.1"
+  },
+  "profile_policy": {
+    "authority": "SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED / PROVISIONAL",
+    "same_building_source": "PDF p73 / printed p58 / Fig 2-27",
+    "exact_historical_profile": "UNRESOLVED",
+    "numeric_profile_controls": "UNRESOLVED",
+    "metric_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "mandatory_control_set": "HUAGONG_PROFILE_CONTROL_SET_V0.1",
+    "future_classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "jump_variants_share_profile_method_by_default": true,
+    "distinct_jump_profile_requires_new_evidence": true,
+    "t037_reuse_prohibited": true,
+    "t038_reuse_prohibited": true,
+    "t039_reuse_prohibited": true,
+    "generic_template_substitution_prohibited": true,
+    "comparative_building_geometry_authority_prohibited": true
+  },
+  "coordinate_policy": {
+    "x_axis": "+X longitudinal / out-jump axis",
+    "y_axis": "+Y member width",
+    "z_axis": "+Z vertical / profile thickness",
+    "local_origin": "UNRESOLVED / MUST_BE_LOCKED_BY_LENGTH_ASSEMBLY_CONTROL_SET",
+    "building_world_placement_in_master": false
+  },
+  "deferred_geometry": [
+    "exact_jump_1_historical_full_length",
+    "exact_jump_2_historical_full_length",
+    "hidden_overlap",
+    "assembly_reference_datum",
+    "exact_historical_side_profile",
+    "exact_profile_control_dimensions",
+    "exact_end_shoulder_notch",
+    "mortise_tenon",
+    "grooves",
+    "slots",
+    "cavities",
+    "hidden_connection_cuts",
+    "unmeasured_chamfers",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "per_instance_originality_repair_state",
+    "whole_hall_huagong_total_count",
+    "sample_to_instance_mapping"
+  ],
+  "required_pre_engineering_gates": [
+    "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V0.1",
+    "HUAGONG_PROFILE_CONTROL_SET_V0.1",
+    "ENGINEERING_EXECUTION_AUTHORIZATION"
+  ],
+  "candidate_decision_id": "D-226",
+  "product_owner_approved": false,
+  "locked": false,
+  "engineering_task_created": false,
+  "engineering_execution_authorized": false
+}
