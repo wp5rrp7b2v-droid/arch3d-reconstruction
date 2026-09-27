@@ -155,7 +155,9 @@
     "normalized_points_are_direct_measurements": false,
     "t037_guazi_control_set_reused": false,
     "numeric_reproduction_basis": "LOCKED_18_POINT_CONTROL_SET_IN_THIS_DEFINITION",
-    "future_upgrade_rule": "REPLACEABLE_IF_DIRECT_OR_METRICALLY_CALIBRATED_PROFILE_EVIDENCE_BECOMES_AVAILABLE"
+    "future_upgrade_rule": "REPLACEABLE_IF_DIRECT_OR_METRICALLY_CALIBRATED_PROFILE_EVIDENCE_BECOMES_AVAILABLE",
+    "product_owner_approved": true,
+    "approval_decision_id": "D-201"
   },
   "coordinate_contract": {
     "x_axis": "+X member length",
@@ -210,5 +212,14 @@
     "profile_candidate": "D-200",
     "profile_control_approval": "D-201",
     "engineering_execution": "D-202"
+  },
+  "first_article_contract": {
+    "variant_count": 2,
+    "variants": [
+      "LARGE_MANGONG",
+      "SMALL_MANGONG"
+    ],
+    "registry_instance_assembly": false,
+    "product_owner_acceptance_required": true
   }
 }
