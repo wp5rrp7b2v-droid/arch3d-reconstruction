@@ -121,7 +121,7 @@ jobs:
 
 
   formalize:
-    if: github.event_name == 'pull_request' && github.actor != 'github-actions[bot]'
+    if: ${{ github.event_name == 'pull_request' && github.actor != 'github-actions[bot]' }}
     needs: first-article
     runs-on: ubuntu-latest
     timeout-minutes: 15
