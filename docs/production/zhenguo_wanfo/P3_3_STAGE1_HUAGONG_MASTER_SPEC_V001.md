@@ -1,6 +1,6 @@
 # P3.3 Stage1｜华栱 Master Spec V0.1
 
-Status: **CANDIDATE 01 / PRODUCT OWNER REVIEW REQUIRED / D-226**
+Status: **LOCKED / PRODUCT OWNER APPROVED / D-227**
 Date: 2026-09-27
 Stage: P3.3 V002 Stage 1
 Source Gate: D-225｜Source Readiness + D-076 PASS WITH BOUNDARIES
@@ -367,3 +367,50 @@ D-226 does **not** authorize:
 - Catalog/V008 binding;
 - Stage2;
 - T-018 resume.
+
+
+## 13. Locked Decision｜D-227
+
+Product Owner approved **华栱 Master Spec V0.1 Candidate 01** without geometry/evidence-boundary changes. D-227 formally locks this specification as the Stage1 governance baseline.
+
+Locked architecture:
+- one `CMP-GONG-HUAGONG-001_MASTER` family;
+- two independent geometry-variant identities:
+  - `JUMP_1_HUAGONG` → 28 V008 `LOCKED_SUBSET` bindings;
+  - `JUMP_2_HUAGONG` → 28 V008 `LOCKED_SUBSET` bindings;
+- total target remains **56 direction-explicit 正身 subset records**, not the whole-hall 华栱 total;
+- zero direction/location geometry variants.
+
+Locked evidence boundaries:
+- 第一、二跳总出跳 **732.4 mm / n=46** remains `DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION`;
+- 732.4 mm is not either standalone member length and must not be equated to the sum of two full member lengths;
+- report **48分 / 14分 / 10分** remains `REPORT_INFERRED / REPORT_IDEAL_MODEL / REPLACEABLE`;
+- JUMP_1 standalone full length remains `UNRESOLVED`;
+- JUMP_2 direct standalone full length remains `UNRESOLVED`;
+- JUMP_2 1630 / 1464.8 mm remains `SECONDARY_CALCULATED / REPLACEABLE / NOT_DIRECT_PRIMARY`;
+- exact historical profile/end geometry/hidden overlap remain `UNRESOLVED`;
+- mortise-tenon / grooves / slots / cavities / hidden cuts remain `DEFERRED`;
+- report n=46 to Registry 56 sample-instance mapping remains `UNKNOWN`.
+
+Mandatory independent pre-engineering control gates remain:
+- `HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V0.1`;
+- `HUAGONG_PROFILE_CONTROL_SET_V0.1`.
+
+This approval does **not** authorize:
+- engineering T-task creation;
+- production branch / PR;
+- Length/Assembly Control Set adoption;
+- Profile Control Set adoption;
+- Blender / GitHub Actions execution;
+- First Article;
+- formalization;
+- Catalog/V008 binding;
+- Stage2;
+- T-018 resume.
+
+Current status:
+
+**MASTER SPEC V0.1 LOCKED / PRODUCT OWNER APPROVED / D-227**
+
+Next complete step:
+**华栱 Task Contract design**.

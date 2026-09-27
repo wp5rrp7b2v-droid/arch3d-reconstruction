@@ -1,6 +1,6 @@
 {
   "schema_version": "P3_3_STAGE1_HUAGONG_MASTER_SPEC_V001",
-  "status": "CANDIDATE_01 / PRODUCT_OWNER_REVIEW_REQUIRED / D-226",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-227",
   "date": "2026-09-27",
   "component": {
     "name_zh": "华栱",
@@ -167,8 +167,10 @@
     "ENGINEERING_EXECUTION_AUTHORIZATION"
   ],
   "candidate_decision_id": "D-226",
-  "product_owner_approved": false,
-  "locked": false,
+  "product_owner_approved": true,
+  "locked": true,
   "engineering_task_created": false,
-  "engineering_execution_authorized": false
+  "engineering_execution_authorized": false,
+  "approval_decision_id": "D-227",
+  "master_spec_locked_date": "2026-09-27"
 }
