@@ -319,3 +319,7 @@ D-206 authorizes V008/CURRENT progress-summary synchronization to the D-205 form
 ## 23. Post-Formalization Readiness Result
 
 D-207 records derived Excel PASS, latest-head T-038 43/43 regression PASS with exact D-204 geometry-signature match, shared-regression PASS, generic-route intentional skip, and PR #34 open/Draft/mergeable. The regenerated regression blend is validation evidence only and does not replace the D-204 accepted canonical blend. T-038 is ready for the Product Owner's explicit D-194 combined Draft→Ready + merge decision.
+
+## 24. D-194 Ready+Merge Execution
+
+D-208 records Product Owner approval and successful execution of the D-194 combined gate. PR #34 transitioned Draft→Ready and merged at `b89458436b0338cd3bd72e7d4780ec4a134859d8`. Main now canonically carries the T-038 formalized Catalog/V008/CURRENT state: 22/28 approved Masters, 78.6% completion, 247 Master-covered Registry records, and 44/44 慢栱 records bound to `CMP-GONG-MANGONG-001_MASTER`. This is a merge/main-verification record only; formal T-038 closure remains a separate pending gate. T-018 remains HOLD and Stage2 remains NOT AUTHORIZED.
