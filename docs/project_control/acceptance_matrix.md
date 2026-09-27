@@ -1121,3 +1121,18 @@ Boundary retained:
 - Exact historical curve/end/joinery: **UNRESOLVED / DEFERRED**.
 - Pre-execution profile gate: **CLOSED / PASS**.
 - Engineering execution: **NOT AUTHORIZED**.
+
+### T-039｜Engineering Execution Authorization｜D-216
+
+- Master Spec lock: **PASS / D-212**.
+- Task Contract lock: **PASS / D-213**.
+- Profile Control lock: **PASS / D-215**.
+- Engineering execution: **AUTHORIZED**.
+- Production branch creation: **AUTHORIZED**.
+- Builder / validator / workflow: **AUTHORIZED**.
+- Blender 4.5.13 First Article: **AUTHORIZED**.
+- Canonical body count: **1**.
+- 8-domain Review Board: **REQUIRED**.
+- Draft PR: **AUTHORIZED**.
+- First Article Product Owner acceptance: **SEPARATE GATE**.
+- Formalization / merge / closure: **NOT AUTHORIZED**.
