@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R268",
+  "state_revision": "R269",
   "last_updated": "2026-09-27",
-  "session_status": "T-037 FIRST ARTICLE APPROVED D-185 / TRACEABILITY PATCH D-186 COMPLETE / POST-TRACEABILITY REGRESSION D-187 PASS 43/43 / GEOMETRY MATCH / READY FOR SEPARATE FORMALIZATION DECISION / 20 OF 28 FORMALLY APPROVED / T-018 HOLD",
+  "session_status": "T-037 FORMALIZATION + CATALOG/V008 BINDING AUTHORIZED D-188 / IN PROGRESS / PR #33 DRAFT / MERGE NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-037",
     "name": "P3_3_GUAZI_GONG_MASTER_V2_V001",
-    "status": "FIRST ARTICLE APPROVED / TRACEABILITY PATCH COMPLETE / REGRESSION PASS D-187 / READY FOR FORMALIZATION DECISION"
+    "status": "FORMALIZATION + CATALOG/V008 BINDING AUTHORIZED D-188 / IN PROGRESS"
   },
   "proposed_next_task": {
-    "id": "T-037-FORMALIZATION",
-    "name": "瓜子栱族 formalization + Catalog/V008 binding",
-    "status": "AWAITING SEPARATE PRODUCT OWNER AUTHORIZATION"
+    "id": "T-037-FORMALIZATION-RESULT",
+    "name": "瓜子栱族 formalization verification",
+    "status": "IN PROGRESS"
   },
   "last_completed_task": {
     "id": "T-036",
@@ -2093,7 +2093,7 @@
     "note": "This record is written after the sync checkpoint; a final pull of this Project Control record itself is required to make local HEAD equal the new canonical main."
   },
   "guazi_gong_stage1": {
-    "status": "FIRST ARTICLE APPROVED / TRACEABILITY PATCH COMPLETE / POST-TRACEABILITY REGRESSION PASS D-187 / READY FOR FORMALIZATION DECISION",
+    "status": "FORMALIZATION + CATALOG/V008 BINDING AUTHORIZED D-188 / IN PROGRESS",
     "source_readiness_decision_id": "D-180",
     "visual_form_gate_decision_id": "D-180",
     "master_spec_decision_id": "D-181",
@@ -2116,8 +2116,8 @@
     "first_article_artifact_digest": "sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736",
     "first_article_approved": true,
     "first_article_approval_decision_id": "D-185",
-    "formalization_authorized": false,
-    "catalog_v008_binding_authorized": false,
+    "formalization_authorized": true,
+    "catalog_v008_binding_authorized": true,
     "merge_authorized": false,
     "thickness_observed_sample_mean_mm": 156.5,
     "thickness_observed_n": 16,
@@ -2142,6 +2142,8 @@
     "geometry_match_approved_first_article": true,
     "post_patch_family_semantic_signature": "69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c",
     "regenerated_blend_sha256": "2c7ee97d349ae7e05e8912e3dc575160536cd08e4942e539b4d18b46ed424769",
-    "regenerated_blend_promoted_to_canonical": false
+    "regenerated_blend_promoted_to_canonical": false,
+    "formalization_authority": "D-188",
+    "excel_sync_authorized": false
   }
 }
