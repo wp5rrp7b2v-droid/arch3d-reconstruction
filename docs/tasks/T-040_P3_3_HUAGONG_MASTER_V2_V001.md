@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-040｜P3_3_HUAGONG_MASTER_V2_V001
 
-Status: **MERGED TO MAIN / MAIN VERIFIED / D-242 / FORMAL CLOSURE PENDING**
+Status: **CLOSED / D-243 / PR #36 MERGED / MAIN VERIFIED**
 Date: 2026-09-27
 Stage: P3.3 V002 Stage 1
 Locked Master Spec: D-227｜P3_3_STAGE1_HUAGONG_MASTER_SPEC_V001
@@ -788,3 +788,38 @@ Product Owner authorized PR #36 Draft→Ready and merge after D-240 readiness PA
 ## 30. Ready + Merge Result｜D-242
 
 PR #36 transitioned from Draft to Ready and merged under D-241. Merge commit: `783d6ce89b14a07a580c0744dd63e848a152690c`. Main verification confirms 24/28 = 85.7%, 331 covered records, 56/56 华栱 bindings with JUMP_1/JUMP_2 = 28/28, and CURRENT==V008. Historical per-instance standalone full lengths remain UNRESOLVED. Formal closure remains a separate Product Owner gate.
+
+## 31. Formal Closure｜D-243
+
+Product Owner authorized formal closure after D-242 PR #36 merge and main verification.
+
+Final canonical state:
+- PR #36: **MERGED**
+- merge commit: `783d6ce89b14a07a580c0744dd63e848a152690c`
+- Stage1 Catalog: **24 / 28 = 85.7%**
+- Registry: **505**
+- Master-covered Registry records: **331**
+- 华栱 bindings: **56 / 56**
+  - JUMP_1_HUAGONG = **28**
+  - JUMP_2_HUAGONG = **28**
+- CURRENT == V008: **PASS**
+- Derived Excel: **SYNCED / PASS**
+- accepted canonical .blend SHA-256: `0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e`
+- family semantic signature: `0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77`
+- JUMP_1 geometry signature: `565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a`
+- JUMP_2 geometry signature: `451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001`
+- post-formalization verification: D-240 / Run 36323489326 / 76 of 76 T-040 PASS / shared regressions 7 of 7 PASS.
+
+Evidence boundaries remain unchanged after closure:
+- 56 = direction-explicit LOCKED_SUBSET, **not whole-hall Huagong total**;
+- 898.8 / 1630.0 mm = Master reference-specimen controls only;
+- per-instance historical standalone full lengths = **UNRESOLVED**;
+- 732.4 mm = DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION only;
+- exact historical profile/end/hidden overlap/joinery remain unresolved/deferred.
+
+T-040 is now **CLOSED**. No active engineering T-task remains.
+
+Next Stage1 candidate:
+**昂族（头昂 / 二昂） / Priority 19 / Source Readiness + D-076 visual/form gate only / NOT STARTED.**
+
+Stage2 remains **NOT AUTHORIZED**. T-018 remains **HOLD**.
