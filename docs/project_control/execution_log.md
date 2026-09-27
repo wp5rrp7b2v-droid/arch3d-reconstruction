@@ -1771,3 +1771,17 @@ Do not restart T-018 by default.
 - Profile Control Set V0.1: mandatory separate pre-execution gate.
 - Engineering execution / branch / PR / Blender: NOT AUTHORIZED.
 - T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 令栱 Profile Control Set Candidate 01｜D-214
+
+- Candidate: `LINGGONG_PROFILE_CONTROL_SET_V001_C01`.
+- Point count: 14.
+- Signature: `0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7`.
+- Classification: SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT.
+- Source role: SRC-ZG-WF-001 p73–76 qualitative form/envelope authority.
+- Metric calibration: NOT PERFORMED / NOT CLAIMED.
+- Independent from T-037/T-038 control polygons: YES.
+- Canonical application: 897 × 217.4 × 155.6 mm.
+- Candidate locked: NO.
+- Product Owner approval: PENDING.
+- Engineering execution / branch / PR / Blender: NOT AUTHORIZED.
