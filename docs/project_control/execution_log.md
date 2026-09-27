@@ -1638,3 +1638,13 @@ Do not restart T-018 by default.
 - Draft PR #34: open / draft / mergeable.
 - Runs #1-#3: superseded setup/precheck failures; no accepted first-article evidence from those runs.
 - Product Owner first-article acceptance remains pending. Formalization / Catalog-V008 / Ready-Merge / closure remain unauthorized.
+
+## 2026-09-27｜T-038 First Article Approval + Formalization Authorization｜D-204
+
+- Product Owner first article: APPROVED.
+- Accepted Run: 36299005477 / 43/43 PASS.
+- Accepted canonical .blend SHA-256: 1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023.
+- Family/LARGE/SMALL signatures retained from D-203.
+- Evidence boundaries retained: W/T report-inferred + replaceable; 18-point profile source-guided simplified + replaceable + not direct measurement; joinery/local cuts deferred.
+- Formalization + Stage1 Catalog/V008/CURRENT binding: AUTHORIZED.
+- Derived Excel, post-formalization regression/readiness, Ready/Merge, closure: NOT AUTHORIZED.
