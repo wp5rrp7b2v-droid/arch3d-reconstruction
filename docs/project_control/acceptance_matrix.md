@@ -1227,3 +1227,18 @@ Boundary retained:
 - CURRENT == V008: **PASS**.
 - Accepted canonical First Article identity: **UNCHANGED**.
 - Formal closure: **SEPARATE GATE / PENDING**.
+
+### T-039｜Formal Closure｜D-224
+
+- D-218 First Article Product Owner approval: **PASS**.
+- D-220 Formalization + 28 Registry bindings: **PASS**.
+- D-222 Post-formalization readiness: **PASS**.
+- D-223 PR #35 Ready+Merge + main verification: **PASS**.
+- Main Stage1 progress: **23/28 = 82.1%**.
+- Main Master-covered records: **275/505**.
+- 令栱 Registry binding: **28/28 PASS**.
+- Canonical First Article identity: **LOCKED / UNCHANGED**.
+- Formal closure: **PASS / D-224 / CLOSED**.
+- Active engineering task: **NONE**.
+- Stage2: **NOT AUTHORIZED**.
+- T-018: **HOLD**.
