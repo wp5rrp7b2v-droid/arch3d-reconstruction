@@ -1,7 +1,7 @@
 {
   "schema_version": "LINGGONG_MASTER_DEFINITION_V001",
   "task_id": "T-039",
-  "status": "LOCKED / PROFILE_CONTROL_APPROVED D-215 / ENGINEERING_EXECUTION_AUTHORIZED D-216",
+  "status": "FIRST_ARTICLE_PRODUCT_OWNER_APPROVED / D-218 / FORMALIZATION_NOT_AUTHORIZED",
   "component_family_id": "CMP-GONG-LINGGONG-001",
   "component_names_zh": [
     "令栱"
@@ -178,14 +178,15 @@
     "workflow_execution_authorized": true,
     "production_branch_authorized": true,
     "draft_pr_authorized": true,
-    "first_article_acceptance_authorized": false,
+    "first_article_acceptance_authorized": true,
     "formalization_authorized": false,
     "catalog_v008_binding_authorized": false,
     "derived_excel_sync_authorized": false,
     "merge_authorized": false,
     "closure_authorized": false,
     "stage2_authorized": false,
-    "t018_status": "HOLD"
+    "t018_status": "HOLD",
+    "first_article_product_owner_approved": true
   },
   "decisions": {
     "source_visual": "D-210",
@@ -193,12 +194,24 @@
     "task_contract": "D-213",
     "profile_candidate": "D-214",
     "profile_control_approval": "D-215",
-    "engineering_execution": "D-216"
+    "engineering_execution": "D-216",
+    "first_article_product_owner_approval": "D-218"
   },
   "first_article_contract": {
     "canonical_body_count": 1,
     "registry_instance_assembly": false,
     "product_owner_acceptance_required": true,
     "required_review_domain_count": 8
+  },
+  "first_article_approval": {
+    "decision_id": "D-218",
+    "product_owner_approved": true,
+    "machine_gate_decision_id": "D-217",
+    "run_id": 36304085862,
+    "artifact_id": 10927005772,
+    "canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
+    "family_semantic_signature": "d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7",
+    "geometry_signature": "e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61",
+    "geometry_match_machine_candidate": true
   }
 }
