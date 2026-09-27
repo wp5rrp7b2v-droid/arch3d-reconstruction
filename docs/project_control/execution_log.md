@@ -1445,3 +1445,15 @@ Do not restart T-018 by default.
 - Artifact: 10922436059 / sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736.
 - Result: LARGE/SMALL AXON, LARGE/SMALL FRONT, and overlay are visibly readable; first article remains awaiting Product Owner acceptance.
 - No formalization / Catalog-V008 binding / PR Ready / merge. T-018 remains HOLD; Stage2 remains unauthorized.
+
+## 2026-09-27｜T-037 First Article Product Owner Approval｜D-185
+
+- Product Owner decision: **APPROVED**.
+- Accepted Run: 36290968633 / SUCCESS.
+- Accepted Artifact: 10922436059 / sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736.
+- Accepted visual scope: LARGE / SMALL canonical bodies, repaired 8-panel Review Board, dimension/evidence boundary presentation.
+- Evidence boundary retained: W=214.7mm family observed mean n=44; T=156.5mm observed sample mean n=16 with subgroup attribution UNRESOLVED; neither may be rewritten as per-instance exact historical dimensions.
+- Profile boundary retained: SOURCE_DERIVED_PROFILE; normalized controls are simplified/reconstructive and replaceable, not direct measured curve coordinates; exact historical curve remains UNRESOLVED.
+- Connection boundary retained: grooves / mortise-tenon / cavities / local interface cuts remain DEFERRED and will be resolved only from later connection-aware assembly evidence.
+- Required before formalization: traceability Review Patch for thickness subgroup attribution and reproducible profile derivation/calibration record.
+- Not authorized: formalization, Catalog/V008 binding, PR Ready/merge, closure, Stage2, T-018 resume.
