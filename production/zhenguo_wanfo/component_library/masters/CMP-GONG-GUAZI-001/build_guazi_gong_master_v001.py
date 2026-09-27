@@ -48,9 +48,18 @@ def bbox(verts):
     }
 
 def setup_material(bpy,name,rgba):
+    # Review materials use emission so GitHub headless rendering cannot collapse
+    # into a near-uniform dark frame because of lighting/EGL differences.
     m=bpy.data.materials.new(name)
     m.diffuse_color=rgba
-    m.roughness=0.58
+    m.use_nodes=True
+    nodes=m.node_tree.nodes
+    nodes.clear()
+    emission=nodes.new("ShaderNodeEmission")
+    emission.inputs["Color"].default_value=rgba
+    emission.inputs["Strength"].default_value=0.82
+    output=nodes.new("ShaderNodeOutputMaterial")
+    m.node_tree.links.new(emission.outputs[0],output.inputs["Surface"])
     return m
 
 def look_at(obj,target):
@@ -66,17 +75,20 @@ def setup_scene(bpy):
     scene.render.resolution_x=900; scene.render.resolution_y=650; scene.render.resolution_percentage=100
     scene.render.image_settings.file_format="PNG"
     scene.render.film_transparent=False
-    scene.world.color=(0.94,0.94,0.94)
-    # Groundless studio lighting, stable in headless mode.
-    bpy.ops.object.light_add(type="AREA", location=(0,-700,900))
-    key=bpy.context.object; key.data.energy=900; key.data.shape="DISK"; key.data.size=1000
-    look_at(key,(0,0,0))
-    bpy.ops.object.light_add(type="AREA", location=(700,400,500))
-    fill=bpy.context.object; fill.data.energy=650; fill.data.size=800
-    look_at(fill,(0,0,0))
+    scene.world.use_nodes=True
+    bg=next(n for n in scene.world.node_tree.nodes if n.type=="BACKGROUND")
+    bg.inputs["Color"].default_value=(0.96,0.96,0.96,1.0)
+    bg.inputs["Strength"].default_value=1.0
+    scene.view_settings.view_transform="Standard"
     bpy.ops.object.camera_add(location=(0,-1600,0))
-    cam=bpy.context.object; cam.data.type="ORTHO"; cam.data.ortho_scale=1250
-    look_at(cam,(0,0,0)); scene.camera=cam
+    cam=bpy.context.object
+    cam.data.type="ORTHO"
+    cam.data.clip_start=1.0
+    cam.data.clip_end=10000.0
+    cam.data.ortho_scale=1200
+    # Explicit front rotation: camera looks +Y and keeps +Z vertical.
+    cam.rotation_euler=(math.radians(90.0),0.0,0.0)
+    scene.camera=cam
     return scene,cam
 
 def make_object(bpy,name,verts,faces,mat):
@@ -92,15 +104,21 @@ def render_variant(bpy,scene,cam,objects,which,path,view):
     for key,obj in objects.items():
         obj.hide_render=(key!=which)
     if view=="FRONT":
-        cam.location=(0,-1600,0); cam.data.ortho_scale=1200; look_at(cam,(0,0,0))
+        cam.location=(0,-1600,0)
+        cam.data.ortho_scale=1200
+        cam.rotation_euler=(math.radians(90.0),0.0,0.0)
     else:
-        cam.location=(1100,-1100,800); cam.data.ortho_scale=1350; look_at(cam,(0,0,0))
+        cam.location=(1100,-1100,800)
+        cam.data.ortho_scale=1350
+        look_at(cam,(0,0,0))
     scene.render.filepath=str(path)
     bpy.ops.render.render(write_still=True)
 
 def render_overlay(bpy,scene,cam,objects,path):
     for obj in objects.values(): obj.hide_render=False
-    cam.location=(0,-1600,0); cam.data.ortho_scale=1200; look_at(cam,(0,0,0))
+    cam.location=(0,-1600,0)
+    cam.data.ortho_scale=1200
+    cam.rotation_euler=(math.radians(90.0),0.0,0.0)
     scene.render.filepath=str(path)
     bpy.ops.render.render(write_still=True)
 
