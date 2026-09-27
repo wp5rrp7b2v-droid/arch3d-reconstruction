@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-038｜P3_3_MANGONG_MASTER_V2_V001
 
-Status: **TASK CONTRACT LOCKED / PROFILE CONTROL SET LOCKED D-201 / ENGINEERING EXECUTION NOT AUTHORIZED**
+Status: **ENGINEERING EXECUTION AUTHORIZED / D-202 / FIRST ARTICLE IN PROGRESS**
 Stage: P3.3 V002 Stage 1
 Branch: codex/t038-p3-3-mangong-master-v2-v001
 
@@ -256,8 +256,8 @@ Locked sequence:
 2. Master Spec V0.1 — **LOCKED / D-198**
 3. Task Contract — **LOCKED / D-199**
 4. Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-201**
-5. Engineering Execution Authorization — **NEXT GATE / NOT AUTHORIZED**
-6. First Article — **NOT STARTED**
+5. Engineering Execution Authorization — **AUTHORIZED / D-202**
+6. First Article — **IN PROGRESS**
 7. Product Owner First Article Approval — **NOT AUTHORIZED**
 8. Formalization + Catalog/V008 binding — **NOT AUTHORIZED**
 9. Derived Excel + latest-head regression + readiness review — **NOT AUTHORIZED**
@@ -290,3 +290,8 @@ D-200 records Product Owner authorization to enter the profile-control design/re
 ## 17. Profile Control Set Approval
 
 D-201 records Product Owner approval of `MANGONG_PROFILE_CONTROL_SET_V001_C01`. The 18-point normalized control set is now locked in `production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MANGONG_DEFINITION_V001.json` with signature `07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4`. Classification remains SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT. This approval does not authorize builder implementation, Blender generation, workflow execution, Draft PR creation, first-article acceptance, formalization, Catalog/V008 binding, merge, Stage2 or T-018 resume.
+
+
+## 18. Engineering Execution Authorization
+
+D-202 authorizes T-038 isolated engineering execution: builder, validator and GitHub Actions workflow implementation; Blender 4.5.13 two-variant first article; deterministic rebuild/reopen validation; 8-domain Review Board generation; Draft PR creation. It does not authorize Product Owner first-article acceptance, formalization, Catalog/V008 binding, PR Ready/merge, closure, Stage2 or T-018 resume.
