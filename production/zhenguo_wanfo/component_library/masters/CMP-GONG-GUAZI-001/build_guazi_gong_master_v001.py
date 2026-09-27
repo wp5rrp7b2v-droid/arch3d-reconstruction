@@ -205,7 +205,7 @@ def main():
     ap.add_argument("--mode",choices=("build","inspect"),required=True)
     ap.add_argument("--definition"); ap.add_argument("--asset",required=True); ap.add_argument("--semantic")
     ap.add_argument("--review-dir"); ap.add_argument("--expected"); ap.add_argument("--output")
-    a=ap.parse_args()
+    a=ap.parse_args(sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else [])
     if a.mode=="build":
         if not a.definition or not a.semantic: ap.error("build requires --definition --semantic")
         build(a)
