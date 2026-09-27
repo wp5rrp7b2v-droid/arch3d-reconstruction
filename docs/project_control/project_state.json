@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R266",
+  "state_revision": "R267",
   "last_updated": "2026-09-27",
-  "session_status": "T-037 FIRST ARTICLE PRODUCT OWNER APPROVED D-185 / TRACEABILITY PATCH REQUIRED BEFORE FORMALIZATION / 20 OF 28 APPROVED / T-018 HOLD",
+  "session_status": "T-037 FIRST ARTICLE APPROVED D-185 / TRACEABILITY PATCH COMPLETE D-186 / READY FOR SEPARATE FORMALIZATION DECISION / 20 OF 28 FORMALLY APPROVED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "T-037 first article is Product Owner approved, but formalization remains unauthorized and blocked pending explicit thickness subgroup-attribution and reproducible profile-derivation traceability patch.",
+  "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,13 +64,12 @@
   "current_task": {
     "id": "T-037",
     "name": "P3_3_GUAZI_GONG_MASTER_V2_V001",
-    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-185 / TRACEABILITY PATCH REQUIRED BEFORE FORMALIZATION"
+    "status": "FIRST ARTICLE APPROVED / TRACEABILITY PATCH COMPLETE D-186 / FORMALIZATION NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-037-TRACEABILITY-REVIEW-PATCH",
-    "name": "瓜子栱族 thickness attribution + profile derivation traceability patch",
-    "status": "REQUIRED BEFORE FORMALIZATION",
-    "scope": "metadata/spec/definition traceability only; no geometry change unless reproducible source derivation requires it"
+    "id": "T-037-FORMALIZATION",
+    "name": "瓜子栱族 formalization + Catalog/V008 binding",
+    "status": "AWAITING SEPARATE PRODUCT OWNER AUTHORIZATION"
   },
   "last_completed_task": {
     "id": "T-036",
@@ -2094,7 +2093,7 @@
     "note": "This record is written after the sync checkpoint; a final pull of this Project Control record itself is required to make local HEAD equal the new canonical main."
   },
   "guazi_gong_stage1": {
-    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-185 / TRACEABILITY PATCH REQUIRED BEFORE FORMALIZATION",
+    "status": "FIRST ARTICLE APPROVED / TRACEABILITY PATCH COMPLETE D-186 / READY FOR SEPARATE FORMALIZATION DECISION",
     "source_readiness_decision_id": "D-180",
     "visual_form_gate_decision_id": "D-180",
     "master_spec_decision_id": "D-181",
@@ -2126,6 +2125,12 @@
     "thickness_is_44_instance_direct": false,
     "profile_control_status": "SOURCE_DERIVED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
     "joinery_connection_details": "DEFERRED",
-    "traceability_patch_required_before_formalization": true
+    "traceability_patch_required_before_formalization": false,
+    "traceability_patch_decision_id": "D-186",
+    "traceability_patch_status": "COMPLETE",
+    "thickness_variant_application": "STAGE1_PRODUCTION_FAMILY_APPLICATION / NOT_VARIANT_SPECIFIC_DIRECT_OBSERVATION",
+    "profile_numeric_reproduction_basis": "LOCKED_13_POINT_CONTROL_SET_IN_DEFINITION",
+    "profile_metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "profile_source_reextraction_reproducible": false
   }
 }
