@@ -1,0 +1,199 @@
+{
+  "schema_version": "LINGGONG_MASTER_DEFINITION_V001",
+  "task_id": "T-039",
+  "status": "LOCKED / PROFILE_CONTROL_APPROVED D-215 / ENGINEERING_EXECUTION_NOT_AUTHORIZED",
+  "component_family_id": "CMP-GONG-LINGGONG-001",
+  "component_names_zh": [
+    "令栱"
+  ],
+  "master_id": "CMP-GONG-LINGGONG-001_MASTER",
+  "master_version": "V001",
+  "architecture": "MASTER V2 / ONE SHARED MASTER / ZERO GEOMETRY VARIANT / SOURCE_GUIDED_SIMPLIFIED PROFILE / MINIMAL_SUFFICIENT",
+  "authority": {
+    "source_id": "SRC-ZG-WF-001",
+    "source_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "source_title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告",
+    "source_readiness_decision": "D-210",
+    "master_spec_decision": "D-212",
+    "task_contract_decision": "D-213",
+    "profile_candidate_decision": "D-214",
+    "profile_approval_decision": "D-215"
+  },
+  "registry_boundary": {
+    "registry_schema_version_expected": "V008",
+    "registry_record_count_expected": 505,
+    "physical_instance_count": 28,
+    "direction_distribution": {
+      "south": 7,
+      "north": 7,
+      "east": 7,
+      "west": 7
+    },
+    "master_family_count": 1,
+    "geometry_variant_count": 0,
+    "sample_to_instance_mapping": "UNKNOWN"
+  },
+  "canonical_reference_geometry_mm": {
+    "length": 897,
+    "width": 217.4,
+    "thickness": 155.6
+  },
+  "evidence_semantics": {
+    "length_classification": "DIRECT_PRIMARY / OBSERVED_MEAN / n=28",
+    "width_classification": "DIRECT_PRIMARY / OBSERVED_MEAN / n=28",
+    "thickness_classification": "DIRECT_PRIMARY / OBSERVED_MEAN / n=28",
+    "family_mean_is_per_instance_exact": false,
+    "original_963_design_claim": false,
+    "sample_to_instance_mapping": "UNKNOWN"
+  },
+  "profile_contract": {
+    "candidate_id": "LINGGONG_PROFILE_CONTROL_SET_V001_C01",
+    "control_set_sha256": "0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7",
+    "point_count": 14,
+    "authority": "SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED",
+    "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "exact_historical_curve": "UNRESOLVED",
+    "exact_historical_control_dimensions": "UNRESOLVED",
+    "exact_end_geometry": "UNRESOLVED",
+    "source_pages": [
+      73,
+      74,
+      75,
+      76
+    ],
+    "source_role": "QUALITATIVE_FORM_AND_ENVELOPE_AUTHORITY / NOT_METRIC_CONTROL_POINT_AUTHORITY",
+    "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "normalized_coordinate_meaning": {
+      "x": "fraction of full member length centered at 0",
+      "z": "fraction of full profile thickness centered at 0"
+    },
+    "normalized_points": [
+      [
+        -0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.18
+      ],
+      [
+        0.45,
+        0.08
+      ],
+      [
+        0.36,
+        -0.1
+      ],
+      [
+        0.24,
+        -0.28
+      ],
+      [
+        0.1,
+        -0.44
+      ],
+      [
+        0.04,
+        -0.5
+      ],
+      [
+        -0.04,
+        -0.5
+      ],
+      [
+        -0.1,
+        -0.44
+      ],
+      [
+        -0.24,
+        -0.28
+      ],
+      [
+        -0.36,
+        -0.1
+      ],
+      [
+        -0.45,
+        0.08
+      ],
+      [
+        -0.5,
+        0.18
+      ]
+    ],
+    "bilateral_symmetry": true,
+    "symmetry_classification": "STAGE1_SIMPLIFICATION / NOT_HISTORICAL_ASYMMETRY_CLAIM",
+    "normalized_points_are_direct_measurements": false,
+    "independent_from_prior_gong_control_sets": true,
+    "t037_guazi_control_set_reused": false,
+    "t038_mangong_control_set_reused": false,
+    "numeric_reproduction_basis": "LOCKED_14_POINT_CONTROL_SET_IN_THIS_DEFINITION",
+    "future_upgrade_rule": "REPLACEABLE_IF_DIRECT_OR_METRICALLY_CALIBRATED_PROFILE_EVIDENCE_BECOMES_AVAILABLE",
+    "product_owner_approved": true,
+    "approval_decision_id": "D-215"
+  },
+  "coordinate_contract": {
+    "x_axis": "+X member length",
+    "y_axis": "+Y width / 栱广",
+    "z_axis": "+Z thickness / 栱厚",
+    "origin": "canonical envelope center",
+    "location": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "deferred_geometry": [
+    "exact_mortise_tenon",
+    "grooves",
+    "slots",
+    "cavities",
+    "hidden_connection_cuts",
+    "exact_end_notch_shoulder",
+    "exact_historical_profile_curve",
+    "unmeasured_chamfers",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "per_instance_originality_repair_state"
+  ],
+  "execution_boundary": {
+    "engineering_execution_authorized": false,
+    "blender_execution_authorized": false,
+    "production_builder_authorized": false,
+    "workflow_execution_authorized": false,
+    "draft_pr_authorized": false,
+    "first_article_acceptance_authorized": false,
+    "formalization_authorized": false,
+    "catalog_v008_binding_authorized": false,
+    "merge_authorized": false,
+    "stage2_authorized": false,
+    "t018_status": "HOLD"
+  },
+  "decisions": {
+    "source_visual": "D-210",
+    "master_spec": "D-212",
+    "task_contract": "D-213",
+    "profile_candidate": "D-214",
+    "profile_control_approval": "D-215"
+  },
+  "first_article_contract": {
+    "canonical_body_count": 1,
+    "registry_instance_assembly": false,
+    "product_owner_acceptance_required": true,
+    "required_review_domain_count": 8
+  }
+}
