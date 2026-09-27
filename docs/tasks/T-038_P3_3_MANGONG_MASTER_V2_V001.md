@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-038｜P3_3_MANGONG_MASTER_V2_V001
 
-Status: **FIRST ARTICLE APPROVED / D-204 / FORMALIZATION + CATALOG-V008 BINDING AUTHORIZED**
+Status: **FORMALIZED + CATALOG/V008 BOUND / D-205 / PR #34 DRAFT / MERGE NOT AUTHORIZED**
 Stage: P3.3 V002 Stage 1
 Branch: codex/t038-p3-3-mangong-master-v2-v001
 
@@ -259,7 +259,7 @@ Locked sequence:
 5. Engineering Execution Authorization — **AUTHORIZED / D-202**
 6. First Article — **MACHINE PASS / D-203 / READY FOR PRODUCT OWNER REVIEW**
 7. Product Owner First Article Approval — **APPROVED / D-204**
-8. Formalization + Catalog/V008 binding — **AUTHORIZED / D-204 / EXECUTION PENDING**
+8. Formalization + Catalog/V008 binding — **COMPLETE / D-205**
 9. Derived Excel + latest-head regression + readiness review — **NOT AUTHORIZED**
 10. D-194 combined Ready+Merge — **NOT AUTHORIZED**
 11. Closure — **NOT AUTHORIZED**
@@ -305,3 +305,7 @@ D-203 records final valid Run `36299005477` = SUCCESS / 43/43 PASS. Artifact `10
 ## 20. First Article Approval + Formalization Authorization
 
 D-204 records Product Owner approval of the D-203 first article and authorizes formal package materialization plus Stage1 Catalog/V008/CURRENT binding. The accepted canonical first-article blend remains SHA `1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023`. Evidence classifications do not change. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.
+
+## 21. Formalization Result
+
+D-205 records successful formalization under D-204. Catalog branch count = 22/28; 44/44 slow-gong V008/CURRENT rows are bound to CMP-GONG-MANGONG-001_MASTER; CURRENT==V008. Accepted canonical blend remains D-204 SHA 1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.

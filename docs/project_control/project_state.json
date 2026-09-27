@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R283",
+  "state_revision": "R284",
   "last_updated": "2026-09-27",
-  "session_status": "T-038 FIRST ARTICLE APPROVED D-204 / FORMALIZATION + CATALOG-V008 BINDING AUTHORIZED / PR #34 DRAFT / MAIN 21 OF 28 / T-018 HOLD",
+  "session_status": "T-038 FORMALIZED + CATALOG/V008 BOUND D-205 / BRANCH 22 OF 28 / MAIN 21 OF 28 UNTIL MERGE / PR #34 DRAFT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 21 OF 28 MASTERS APPROVED / T-038 SOURCE READINESS ACTIVE / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / BRANCH 22 OF 28 MASTERS APPROVED / MAIN 21 OF 28 / T-038 SOURCE READINESS ACTIVE / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 21 OF 28 MASTERS APPROVED / T-038 SOURCE READINESS ACTIVE D-195 / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 21 OF 28 MASTERS APPROVED / T-038 SOURCE READINESS ACTIVE D-195 / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / BRANCH 22 OF 28 / MAIN 21 OF 28 / T-038 FORMALIZED D-205 / PR #34 DRAFT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / BRANCH 22 OF 28 / MAIN 21 OF 28 / T-038 FORMALIZED D-205 / PR #34 DRAFT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "FIRST ARTICLE APPROVED / D-204 / FORMALIZATION + CATALOG-V008 BINDING AUTHORIZED"
+    "status": "FORMALIZED + 44 ROWS BOUND / D-205 / PR #34 DRAFT / MERGE NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-038-FORMALIZATION",
-    "name": "T-038 formalization + Catalog/V008 binding",
-    "status": "AUTHORIZED / EXECUTION PENDING"
+    "id": "T-038-POST-FORMALIZATION",
+    "name": "derived Excel sync + latest-head regression + PR readiness review",
+    "status": "NOT AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -1243,16 +1243,16 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-037 CLOSED / 21 OF 28 / T-038 SOURCE READINESS ACTIVE",
+    "status": "ACTIVE / T-038 FORMALIZED ON BRANCH / 22 OF 28",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 21,
-    "pending_master_object_type_count": 7,
-    "master_completion_percent": 75,
-    "master_covered_registry_record_count": 203,
-    "pending_source_binding_count": 7,
+    "approved_master_count": 22,
+    "pending_master_object_type_count": 6,
+    "master_completion_percent": 78.6,
+    "master_covered_registry_record_count": 247,
+    "pending_source_binding_count": 6,
     "row_fields": [
       "stage1_disposition",
       "master_coverage_status",
@@ -1263,7 +1263,7 @@
     "excel_sync_run": 36296704267,
     "excel_sync_result": "SUCCESS",
     "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure.",
-    "excel_sync_pending": false
+    "excel_sync_pending": true
   },
   "local_sync_verification_2026_09_20": {
     "status": "PASS / COMPLETE",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "FIRST ARTICLE APPROVED / D-204 / FORMALIZATION AUTHORIZED",
+    "status": "FORMALIZED + CATALOG/V008 BOUND / D-205 / PR #34 DRAFT / MERGE NOT AUTHORIZED",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2310,6 +2310,18 @@
     "first_article_approval_decision_id": "D-204",
     "formalization_authority": "D-204",
     "excel_sync_authorized": false,
-    "post_formalization_verification_authorized": false
+    "post_formalization_verification_authorized": false,
+    "formalization_result_decision_id": "D-205",
+    "formalization_complete": true,
+    "formalization_run_id": 36300220135,
+    "branch_approved_master_count": 22,
+    "branch_master_completion_percent": 78.6,
+    "branch_master_covered_registry_record_count": 247,
+    "mangong_registry_binding_count": 44,
+    "current_equals_v008": true,
+    "canonical_blend_sha256": "1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023",
+    "semantic_sha256": "1223ad42c788e04967bc8f35f832b1e84061d1b118f2d6adc84da1d8ada19690",
+    "validation_sha256": "613d2a33fb32ef4f842e562b6104c8f73cf456d422f8a873e291a9d29ea1bc2b",
+    "review_board_sha256": "f0038fd1a6da007a4526460cd67beb3060acaf42e9185bb7a58214a606ed2531"
   }
 }

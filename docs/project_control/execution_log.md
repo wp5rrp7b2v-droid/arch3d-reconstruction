@@ -1648,3 +1648,16 @@ Do not restart T-018 by default.
 - Evidence boundaries retained: W/T report-inferred + replaceable; 18-point profile source-guided simplified + replaceable + not direct measurement; joinery/local cuts deferred.
 - Formalization + Stage1 Catalog/V008/CURRENT binding: AUTHORIZED.
 - Derived Excel, post-formalization regression/readiness, Ready/Merge, closure: NOT AUTHORIZED.
+
+## 2026-09-27｜T-038 Formalization + Catalog/V008 Binding｜D-205
+
+- Authority: D-204.
+- Formalization workflow run: 36300220135.
+- Formal package: Definition + Semantic + Review Board + Validation + Task Contract.
+- Accepted canonical .blend remains SHA-256 1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023; .blend is not tracked in Git.
+- Geometry signatures: LARGE=324fb1aab0c469010e6adaf4dc9372eafe9d165ee99c01a8764edff3a98f898a; SMALL=6858ad94e5e89c8b8ff6059a18ece7a04949f52836b39e12052913c4b8338245; family=ae8ad824401a75b694d404e494038a90aa19f92406e3a1def53db4153dcc0e6d.
+- Stage1 Catalog branch count: 22/28 = 78.6%.
+- V008/CURRENT slow-gong binding: 44/44 APPROVED_MASTER_AVAILABLE -> CMP-GONG-MANGONG-001_MASTER.
+- Master-covered Registry records: 247. CURRENT == V008: PASS.
+- Derived Excel sync / post-formalization regression / PR readiness: NOT AUTHORIZED.
+- PR #34 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.

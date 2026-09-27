@@ -968,3 +968,15 @@ Boundary retained:
 - Formalization + Catalog/V008 binding: **AUTHORIZED**.
 - Evidence semantics: **UNCHANGED / BOUNDED**.
 - Excel / post-formalization readiness / Ready-Merge / closure: **NOT AUTHORIZED**.
+
+### T-038 Formalization + Catalog/V008 Binding｜D-205
+
+- **FORMALIZED / BRANCH** under D-204.
+- Stage1 Catalog: **22/28 = 78.6%** on T-038 branch.
+- Registry binding: **44/44** slow-gong records = APPROVED_MASTER_AVAILABLE / CMP-GONG-MANGONG-001_MASTER.
+- Master-covered Registry records: **247**.
+- CURRENT == V008: **PASS**.
+- Accepted canonical .blend SHA-256: `1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023`.
+- LARGE / SMALL geometry signatures: **MATCH D-204 accepted first article**.
+- Derived Excel / post-formalization readiness: **PENDING / NOT AUTHORIZED**.
+- PR #34: **DRAFT / MERGE NOT AUTHORIZED**.
