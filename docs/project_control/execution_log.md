@@ -1918,3 +1918,18 @@ Do not restart T-018 by default.
 - PR #35: OPEN / DRAFT / MERGEABLE.
 - Readiness result: **PASS / READY FOR PRODUCT OWNER D-194 COMBINED READY+MERGE DECISION**.
 - Ready transition / merge / closure: NOT AUTHORIZED BY D-222.
+
+## 2026-09-27｜T-039 D-194 Ready + Merge / Main Verification｜D-223
+
+- Product Owner D-194 combined Ready+Merge approval: RECEIVED.
+- PR #35: Draft → Ready → MERGED.
+- Merged head: `97954f7ac10f6c1f1a4a6c656355c888a92b67da`.
+- Merge commit: `e1726096e1d9bb936f24dd786d357220b52942b8`.
+- Canonical main Stage1 Master progress: **23/28 = 82.1%**.
+- Canonical main master-covered Registry records: **275/505**.
+- 令栱 Registry rows: **28/28 APPROVED_MASTER_AVAILABLE** → `CMP-GONG-LINGGONG-001_MASTER`.
+- CURRENT == V008: **PASS**.
+- Accepted canonical .blend remains D-218 SHA `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`.
+- D-222 latest-head regression and six shared regressions remain readiness evidence; regression-only .blend is not canonical.
+- Formal T-039 closure: **PENDING / NOT AUTHORIZED BY D-223**.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
