@@ -812,3 +812,13 @@ Boundary retained:
 | Stage2 / T-018 | **UNCHANGED** | Stage2 NOT AUTHORIZED; T-018 HOLD. |
 
 **T-037 first article is Product Owner approved, but it does not yet increase the Stage1 approved Master count. Current formal Stage1 count remains 20/28 until formalization and canonical publication complete.**
+
+### T-037 Traceability Review Patch｜D-186
+
+- **COMPLETE / NO GEOMETRY CHANGE**.
+- Thickness evidence corrected to **OBSERVED_SAMPLE_MEAN / n=16 / subgroup attribution UNRESOLVED**.
+- Cross-variant 156.5mm use classified as **STAGE1_PRODUCTION_FAMILY_APPLICATION**, not variant-specific direct observation.
+- Profile provenance corrected to **same-building qualitative form/envelope authority + locked numeric Stage1 reconstruction controls**.
+- No metric source-image calibration or direct historical control-point claim.
+- Exact historical profile remains **UNRESOLVED / REPLACEABLE**.
+- Formal Stage1 approved Master count remains **20/28** until separate formalization/publication.
