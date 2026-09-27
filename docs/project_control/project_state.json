@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R280",
+  "state_revision": "R281",
   "last_updated": "2026-09-27",
-  "session_status": "T-038 PROFILE CONTROL SET V0.1 LOCKED D-201 / ENGINEERING EXECUTION AUTHORIZATION NEXT GATE / 21 OF 28 / T-018 HOLD",
+  "session_status": "T-038 ENGINEERING EXECUTION AUTHORIZED D-202 / FIRST ARTICLE IN PROGRESS / 21 OF 28 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "Product Owner authorization required before builder/validator/workflow implementation and Blender first-article execution.",
+  "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "PROFILE CONTROL SET V0.1 LOCKED / D-201 / ENGINEERING EXECUTION NOT AUTHORIZED"
+    "status": "ENGINEERING EXECUTION AUTHORIZED / D-202 / FIRST ARTICLE IN PROGRESS"
   },
   "proposed_next_task": {
-    "id": "T-038-ENGINEERING-EXECUTION",
-    "name": "T-038 Engineering Execution Authorization",
-    "status": "AWAITING PRODUCT OWNER AUTHORIZATION"
+    "id": "T-038-FIRST-ARTICLE-REVIEW",
+    "name": "T-038 慢栱族 First Article Product Owner Review",
+    "status": "PENDING MACHINE EVIDENCE"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "PROFILE CONTROL SET V0.1 LOCKED / PRODUCT OWNER APPROVED / D-201",
+    "status": "ENGINEERING EXECUTION AUTHORIZED / D-202 / FIRST ARTICLE IN PROGRESS",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2228,7 +2228,7 @@
     "visual_form_gate": "PASS WITH BOUNDARIES / D-196",
     "master_spec_authorized": true,
     "task_contract_authorized": true,
-    "engineering_execution_authorized": false,
+    "engineering_execution_authorized": true,
     "source_readiness_decision_id": "D-196",
     "direct_length_evidence": {
       "large_observed_mean_mm": 1641,
@@ -2279,6 +2279,15 @@
     "profile_control_classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
     "profile_control_product_owner_approved": true,
     "profile_control_approval_decision_id": "D-201",
-    "definition_path": "production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MANGONG_DEFINITION_V001.json"
+    "definition_path": "production/zhenguo_wanfo/component_library/masters/CMP-GONG-MANGONG-001/CMP-GONG-MANGONG-001_MANGONG_DEFINITION_V001.json",
+    "engineering_execution_decision_id": "D-202",
+    "blender_execution_authorized": true,
+    "builder_execution_authorized": true,
+    "workflow_execution_authorized": true,
+    "draft_pr_authorized": true,
+    "first_article_acceptance_authorized": false,
+    "formalization_authorized": false,
+    "catalog_v008_binding_authorized": false,
+    "merge_authorized": false
   }
 }
