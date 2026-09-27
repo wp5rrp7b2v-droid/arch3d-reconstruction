@@ -1,6 +1,6 @@
 # P3.3 Stage1｜令栱 Master Spec V0.1
 
-Status: **DRAFT / CANDIDATE 01 / PRODUCT OWNER REVIEW REQUIRED / D-211**
+Status: **LOCKED / PRODUCT OWNER APPROVED / D-212**
 Date: 2026-09-27
 Stage: P3.3 V002 Stage 1
 Source Gate: D-210｜Source Readiness + D-076 PASS WITH BOUNDARIES
@@ -261,11 +261,11 @@ Review must be able to detect:
 - `REVIEW_RENDER_NEAR_UNIFORM`
 - `MODEL_BEFORE_EXECUTION_AUTHORIZATION`
 
-## 11. Candidate Decision Boundary｜D-211
+## 11. Locked Decision｜D-212
 
-D-211 records preparation of **Master Spec V0.1 Candidate 01** for Product Owner review.
+D-211 prepared Master Spec V0.1 Candidate 01 for Product Owner review. D-212 records Product Owner approval and formally locks this V0.1 as V001.
 
-Candidate recommendation:
+Locked architecture:
 - one `CMP-GONG-LINGGONG-001_MASTER`;
 - zero Geometry Variant;
 - 28 physical instance bindings;
@@ -275,9 +275,13 @@ Candidate recommendation:
 - exact historical profile/end/joinery remain unresolved/deferred;
 - separate numeric Profile Control Set gate required before engineering execution.
 
-This Candidate is **NOT LOCKED** until Product Owner approval.
+This Master Spec is now **PRODUCT OWNER APPROVED / LOCKED / D-212**.
 
-Not authorized by D-211:
+Next complete step:
+- design and lock the 令栱 Task Contract;
+- the separate Profile Control Set gate remains mandatory before engineering execution.
+
+Not authorized by D-212:
 - Task Contract lock;
 - engineering T-task creation;
 - branch / PR creation;
