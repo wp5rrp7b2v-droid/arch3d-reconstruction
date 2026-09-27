@@ -1,7 +1,7 @@
 {
   "schema_version": "LINGGONG_MASTER_DEFINITION_V001",
   "task_id": "T-039",
-  "status": "FORMALIZED + CATALOG/V008/CURRENT BOUND / D-220 / PR #35 DRAFT / MERGE NOT AUTHORIZED",
+  "status": "MERGED TO MAIN / MAIN VERIFIED / D-223 / FORMAL_CLOSURE_PENDING",
   "component_family_id": "CMP-GONG-LINGGONG-001",
   "component_names_zh": [
     "令栱"
@@ -182,13 +182,15 @@
     "formalization_authorized": true,
     "catalog_v008_binding_authorized": true,
     "derived_excel_sync_authorized": false,
-    "merge_authorized": false,
+    "merge_authorized": true,
     "closure_authorized": false,
     "stage2_authorized": false,
     "t018_status": "HOLD",
     "first_article_product_owner_approved": true,
     "formalization_complete": true,
-    "catalog_v008_binding_complete": true
+    "catalog_v008_binding_complete": true,
+    "ready_transition_authorized": true,
+    "merged": true
   },
   "decisions": {
     "source_visual": "D-210",
@@ -199,7 +201,8 @@
     "engineering_execution": "D-216",
     "first_article_product_owner_approval": "D-218",
     "formalization_authorization": "D-219",
-    "formalization_result": "D-220"
+    "formalization_result": "D-220",
+    "ready_merge_main_verification": "D-223"
   },
   "first_article_contract": {
     "canonical_body_count": 1,
@@ -245,5 +248,17 @@
     "catalog_binding_complete": true,
     "registry_binding_count": 28,
     "current_equals_v008": true
+  },
+  "merge": {
+    "decision_id": "D-223",
+    "d194_combined_gate": true,
+    "pr_number": 35,
+    "merged_head_sha": "97954f7ac10f6c1f1a4a6c656355c888a92b67da",
+    "merge_commit_sha": "e1726096e1d9bb936f24dd786d357220b52942b8",
+    "main_verified": true,
+    "main_approved_master_count": 23,
+    "main_completion_percent": 82.1,
+    "main_master_covered_registry_record_count": 275,
+    "linggong_registry_binding_count": 28
   }
 }
