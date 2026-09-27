@@ -1107,3 +1107,17 @@ Boundary retained:
 - Generic template substitution: **FALSE / PASS**.
 - Candidate status: **NOT LOCKED / PRODUCT OWNER REVIEW REQUIRED**.
 - Engineering execution: **BLOCKED**.
+
+### T-039｜令栱 Profile Control Set Lock｜D-215
+
+- Product Owner approval: **PASS / RECEIVED**.
+- Candidate: **LOCKED**.
+- Point count: **14**.
+- Signature: **LOCKED / MATCHING D-214 CANDIDATE**.
+- Definition materialization: **PASS**.
+- Classification retained: **SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT**.
+- Metric calibration claim: **NONE / PASS**.
+- T-037/T-038 profile reuse: **FALSE / PASS**.
+- Exact historical curve/end/joinery: **UNRESOLVED / DEFERRED**.
+- Pre-execution profile gate: **CLOSED / PASS**.
+- Engineering execution: **NOT AUTHORIZED**.
