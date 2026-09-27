@@ -1818,3 +1818,29 @@ Do not restart T-018 by default.
 - Product Owner First Article acceptance: NOT AUTHORIZED BY THIS DECISION.
 - Formalization / Catalog binding / Ready+Merge / closure: NOT AUTHORIZED.
 - T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 First Article Machine Result｜D-217
+
+- Branch: `codex/t039-p3-3-linggong-master-v2-v001`.
+- Draft PR: #35 / OPEN / DRAFT / MERGEABLE.
+- Workflow Run: `36304085862` / SUCCESS.
+- Execution head: `9037a750775b55c36b4173146be8eb5d2a7c9b9e`.
+- Validation: **43/43 PASS**.
+- Artifact ID: `10927005772`.
+- Artifact digest: `sha256:db181f3392acab1504f118236cec32d9e3e043ba4cf84ff944834c28ce9a0ede`.
+- Canonical .blend SHA-256: `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`.
+- Family semantic signature: `d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7`.
+- Geometry signature: `e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61`.
+- Semantic SHA-256: `14e1b0ce3a724d10ed11f638d3184cb323abd1b8a6e59f84f2898d50f1a676b7`.
+- Validation SHA-256: `d1ae6617ec48c9a8945e368b748e4160ed7f4c95b487826f0511ccf3567d0b62`.
+- Review Board SHA-256: `769275ae578cd12a5871aee8c532e3353122190926a47be89497602e3b0ba095`.
+- Review Board self-check: nonblank / 8 domains present / readable; PO review still required.
+- Canonical dimensions: 897 × 217.4 × 155.6 mm.
+- First Article body count: 1.
+- Geometry Variant count: 0.
+- Registry target count: 28 / direction 7+7+7+7.
+- Deterministic restore / independent reopen / manifold / binary SHA / Definition hash: PASS.
+- Unsupported joinery/local cuts: absent.
+- Canonical .blend is artifact-only and not tracked in Git: PASS.
+- Product Owner First Article approval: PENDING.
+- Formalization / Catalog binding / Ready+Merge / closure: NOT AUTHORIZED.
