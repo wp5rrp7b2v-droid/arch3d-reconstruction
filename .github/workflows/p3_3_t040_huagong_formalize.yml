@@ -1,0 +1,457 @@
+name: T-040 Huagong Formalization
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/p3_3_t040_huagong_formalize.yml'
+      - 'docs/project_control/project_state.json'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  formalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      ARTIFACT_ID: "10930899677"
+      ARTIFACT_ZIP_SHA256: "de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f"
+      ACCEPTED_BLEND_SHA256: "0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e"
+      ACCEPTED_SEMANTIC_SHA256: "e3264826dce4d747aa4c73ddbaa2ec29a042859b9f3f611a35fca8b999ae2ef9"
+      ACCEPTED_VALIDATION_SHA256: "ccb7baaee7e1e3e7c7f69d474bd77d97b22491998c1973152273fd4a87b3ee81"
+      BOARD_SHA256: "54d4c79bd83e23c6ac31c330323fce70e0a83f7a1c2f2d1355c2e9d3f16af2f1"
+      FAMILY_SIG: "0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77"
+      JUMP1_SIG: "565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a"
+      JUMP2_SIG: "451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001"
+      GATE_A_SIG: "ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b"
+      PROFILE_SIG: "f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          fetch-depth: 0
+
+      - name: One-time formalization gate
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          s=json.load(open("docs/project_control/project_state.json",encoding="utf-8"))
+          hg=s["huagong_stage1"]
+          assert hg["first_article_po_approved"] is True
+          assert hg["first_article_po_approval_decision_id"]=="D-236"
+          assert hg["formalization_authorized"] is True
+          assert hg["formalization_authorization_decision_id"]=="D-237"
+          assert hg["derived_excel_sync_authorized"] is False
+          assert hg["ready_merge_authorized"] is False
+          print("do_formalize="+("false" if hg.get("formalization_complete") else "true"))
+          PY
+
+      - name: Download accepted T-040 first-article artifact
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/t040_formal
+          curl --fail --location --show-error \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            -o /tmp/t040.zip \
+            "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/artifacts/$ARTIFACT_ID/zip"
+          test "$(sha256sum /tmp/t040.zip | awk '{print $1}')" = "$ARTIFACT_ZIP_SHA256"
+          unzip -q /tmp/t040.zip -d /tmp/t040_formal
+
+      - name: Verify accepted first-article payload
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,os
+          from pathlib import Path
+          root=Path("/tmp/t040_formal")
+          def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+          blend=root/"CMP-GONG-HUAGONG-001_MASTER_V001.blend"
+          sem=root/"CMP-GONG-HUAGONG-001_MASTER_SEMANTIC_V001.json"
+          val=root/"CMP-GONG-HUAGONG-001_MASTER_VALIDATION_V001.json"
+          board=root/"CMP-GONG-HUAGONG-001_MASTER_REVIEW_BOARD_V001.png"
+          assert sha(blend)==os.environ["ACCEPTED_BLEND_SHA256"]
+          assert sha(sem)==os.environ["ACCEPTED_SEMANTIC_SHA256"]
+          assert sha(val)==os.environ["ACCEPTED_VALIDATION_SHA256"]
+          assert sha(board)==os.environ["BOARD_SHA256"]
+          s=json.loads(sem.read_text(encoding="utf-8"))
+          v=json.loads(val.read_text(encoding="utf-8"))
+          assert v["status"]=="PASS" and v["check_count"]==76
+          assert s["family_semantic_signature"]==os.environ["FAMILY_SIG"]
+          bodies={x["variant_id"]:x for x in s["canonical_bodies"]}
+          assert set(bodies)=={"JUMP_1_HUAGONG","JUMP_2_HUAGONG"}
+          assert bodies["JUMP_1_HUAGONG"]["semantic_geometry_signature"]==os.environ["JUMP1_SIG"]
+          assert bodies["JUMP_2_HUAGONG"]["semantic_geometry_signature"]==os.environ["JUMP2_SIG"]
+          assert bodies["JUMP_1_HUAGONG"]["resolved_dimensions_mm"]=={"length":898.8,"thickness":153.0,"width":214.2}
+          assert bodies["JUMP_2_HUAGONG"]["resolved_dimensions_mm"]=={"length":1630.0,"thickness":153.0,"width":214.2}
+          assert bodies["JUMP_1_HUAGONG"]["applies_to_registry_instance_exact"] is False
+          assert bodies["JUMP_2_HUAGONG"]["applies_to_registry_instance_exact"] is False
+          assert s["profile_contract"]["control_set_sha256"]==os.environ["PROFILE_SIG"]
+          assert s["profile_contract"]["classification"]=="SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT"
+          assert s["length_assembly_contract"]["control_set_sha256"]==os.environ["GATE_A_SIG"]
+          fx=s["validation_fixture"]
+          assert fx["canonical_asset"] is False and fx["registry_binding"] is False and fx["catalog_asset"] is False
+          assert fx["datums_mm"]=={"D0":0.0,"D1":366.2,"D2":732.4}
+          assert abs(fx["combined_projection_mm"]-732.4)<1e-9
+          print("T040_ACCEPTED_PAYLOAD_PASS")
+          PY
+
+      - name: Formalize approved package and bind Catalog/V008/CURRENT
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,os,shutil,re
+          from pathlib import Path
+
+          ROOT=Path("/tmp/t040_formal")
+          MASTER=Path("production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001")
+          DEF=MASTER/"CMP-GONG-HUAGONG-001_HUAGONG_DEFINITION_V001.json"
+          CATALOG=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json")
+          REG=Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json")
+          CURRENT=Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json")
+          STATE=Path("docs/project_control/project_state.json")
+          DECISION=Path("docs/project_control/decision_log.md")
+          EXECUTION=Path("docs/project_control/execution_log.md")
+          ACCEPTANCE=Path("docs/project_control/acceptance_matrix.md")
+          TASK=Path("docs/tasks/T-040_P3_3_HUAGONG_MASTER_V2_V001.md")
+          DASH=Path("docs/project_control/dashboard.html")
+
+          RUN=int(os.environ["GITHUB_RUN_ID"])
+          BLEND=os.environ["ACCEPTED_BLEND_SHA256"]
+          FAMILY=os.environ["FAMILY_SIG"]
+          J1=os.environ["JUMP1_SIG"]
+          J2=os.environ["JUMP2_SIG"]
+          GATE_A=os.environ["GATE_A_SIG"]
+          PROFILE=os.environ["PROFILE_SIG"]
+          ART=int(os.environ["ARTIFACT_ID"])
+          ART_DIG="sha256:"+os.environ["ARTIFACT_ZIP_SHA256"]
+
+          def load(p): return json.loads(Path(p).read_text(encoding="utf-8"))
+          def dump(p,o): Path(p).write_text(json.dumps(o,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+          state=load(STATE)
+          hg=state["huagong_stage1"]
+          assert hg["first_article_po_approved"] is True
+          assert hg["first_article_po_approval_decision_id"]=="D-236"
+          assert hg["formalization_authorized"] is True
+          assert hg["formalization_authorization_decision_id"]=="D-237"
+          assert hg["derived_excel_sync_authorized"] is False
+          assert hg["ready_merge_authorized"] is False
+
+          definition=load(DEF)
+          assert definition["first_article_approval"]["decision_id"]=="D-236"
+          assert definition["formalization_authorization"]["decision_id"]=="D-237"
+          assert definition["first_article_approval"]["canonical_blend_sha256"]==BLEND
+
+          sem=load(ROOT/"CMP-GONG-HUAGONG-001_MASTER_SEMANTIC_V001.json")
+          val=load(ROOT/"CMP-GONG-HUAGONG-001_MASTER_VALIDATION_V001.json")
+          assert sem["canonical_blend_sha256"]==BLEND
+          assert sem["family_semantic_signature"]==FAMILY
+          bodies={x["variant_id"]:x for x in sem["canonical_bodies"]}
+          assert bodies["JUMP_1_HUAGONG"]["semantic_geometry_signature"]==J1
+          assert bodies["JUMP_2_HUAGONG"]["semantic_geometry_signature"]==J2
+          assert val["status"]=="PASS" and val["check_count"]==76
+          assert sem["profile_contract"]["control_set_sha256"]==PROFILE
+          assert sem["length_assembly_contract"]["control_set_sha256"]==GATE_A
+
+          formal_meta={
+            "authority":"D-237",
+            "formalization_result":"D-238",
+            "first_article_approval":"D-236",
+            "first_article_machine_gate":"D-235",
+            "accepted_run_id":36317889355,
+            "artifact_id":ART,
+            "artifact_zip_sha256":ART_DIG,
+            "approved_canonical_blend_sha256":BLEND,
+            "geometry_match_approved_first_article":True,
+            "formalization_run_id":RUN
+          }
+          sem["formalization"]=formal_meta
+          val["formalization"]=formal_meta
+
+          MASTER.mkdir(parents=True,exist_ok=True)
+          sem_dst=MASTER/"CMP-GONG-HUAGONG-001_MASTER_SEMANTIC_V001.json"
+          val_dst=MASTER/"CMP-GONG-HUAGONG-001_MASTER_VALIDATION_V001.json"
+          board_dst=MASTER/"CMP-GONG-HUAGONG-001_MASTER_REVIEW_BOARD_V001.png"
+          dump(sem_dst,sem); dump(val_dst,val)
+          shutil.copyfile(ROOT/"CMP-GONG-HUAGONG-001_MASTER_REVIEW_BOARD_V001.png",board_dst)
+          semantic_sha=sha(sem_dst); validation_sha=sha(val_dst); board_sha=sha(board_dst)
+          assert board_sha==os.environ["BOARD_SHA256"]
+
+          definition["status"]="FORMALIZED + CATALOG/V008/CURRENT BOUND / D-238 / PR #36 DRAFT / MERGE NOT AUTHORIZED"
+          definition["formalization"]={
+            **formal_meta,
+            "semantic_sha256":semantic_sha,
+            "validation_sha256":validation_sha,
+            "review_board_sha256":board_sha,
+            "catalog_binding_complete":True,
+            "registry_binding_count":56,
+            "jump_1_binding_count":28,
+            "jump_2_binding_count":28,
+            "current_equals_v008":True
+          }
+          definition["execution_boundary"]["formalization_complete"]=True
+          definition["execution_boundary"]["catalog_v008_binding_complete"]=True
+          definition["execution_boundary"]["derived_excel_sync_authorized"]=False
+          definition["execution_boundary"]["merge_authorized"]=False
+          definition["execution_boundary"]["closure_authorized"]=False
+          definition["formalization_authorization"]["execution_status"]="COMPLETE / D-238"
+          definition["decisions"]["formalization_result"]="D-238"
+          dump(DEF,definition)
+
+          cat=load(CATALOG)
+          assert cat["approved_master_count"]==23
+          assert not any(x.get("master_id")=="CMP-GONG-HUAGONG-001_MASTER" for x in cat["new_masters"])
+          cat["task"]="T-040 FORMALIZED / PR #36 DRAFT"
+          cat["status"]="TWENTY_FOUR_APPROVED / T040 FORMALIZED / PR #36 DRAFT / MERGE NOT AUTHORIZED"
+          cat["approved_master_count"]=24
+          cat["new_masters"].append({
+            "component_id":"CMP-GONG-HUAGONG-001",
+            "master_id":"CMP-GONG-HUAGONG-001_MASTER",
+            "master_version":"V001",
+            "variant_ids":["JUMP_1_HUAGONG","JUMP_2_HUAGONG"],
+            "approval_status":"PRODUCT_OWNER_APPROVED",
+            "decision_id":"D-236",
+            "formalization_authority":"D-237",
+            "formalization_result":"D-238",
+            "publication_status":"FORMALIZED / PR #36 DRAFT / MERGE NOT AUTHORIZED",
+            "canonical_asset_status":"ACTIONS_ARTIFACT / PRODUCT_OWNER_APPROVED / LOCAL ONLY / NOT GIT",
+            "canonical_asset_sha256":BLEND,
+            "semantic_sha256":semantic_sha,
+            "validation_sha256":validation_sha,
+            "review_board_sha256":board_sha,
+            "family_semantic_signature":FAMILY,
+            "variant_geometry_signatures":{"JUMP_1_HUAGONG":J1,"JUMP_2_HUAGONG":J2},
+            "physical_instance_count":56,
+            "geometry_variant_count":2,
+            "distribution":"JUMP_1 28 / JUMP_2 28 / SOUTH,NORTH,EAST,WEST EACH 7+7 / LOCKED_SUBSET / NOT WHOLE-HALL TOTAL",
+            "dimension_policy":{
+              "jump_1_reference_specimen_length_mm":"898.8 / RECONSTRUCTED_DESIGN / SECONDARY_HYPOTHESIS_GUIDED / REFERENCE_SPECIMEN_ONLY / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+              "jump_2_reference_specimen_length_mm":"1630.0 / SECONDARY_CALCULATED / REFERENCE_SPECIMEN_ONLY / REPLACEABLE / NOT_DIRECT_PRIMARY",
+              "width_mm":"214.2 / REPORT_INFERRED / REPORT_IDEAL_MODEL / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
+              "thickness_mm":"153.0 / REPORT_INFERRED / REPORT_IDEAL_MODEL / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
+              "instance_historical_full_length_status":"UNRESOLVED",
+              "reference_specimen_length_applies_to_instance":False
+            },
+            "assembly_policy":{
+              "combined_projection_mean_mm":"732.4 / DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION / n=46",
+              "fixture_midpoint_mm":"366.2 / RECONSTRUCTED_DESIGN / PROJECT_FIXTURE_ONLY / REPLACEABLE",
+              "report_ideal_total_mm":"734.4 / REPORT_INFERRED / REPORT_IDEAL_MODEL / CROSSCHECK_ONLY",
+              "sample_to_instance_mapping":"UNKNOWN"
+            },
+            "profile_policy":{
+              "authority":"SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED",
+              "control_set":"LOCKED_16_POINT / SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+              "control_set_sha256":PROFILE,
+              "metric_scale_calibration":"NOT_PERFORMED / NOT_CLAIMED",
+              "exact_historical_curve":"UNRESOLVED"
+            },
+            "joinery_boundary":"MORTISE-TENON / GROOVES / SLOTS / CAVITIES / HIDDEN CONNECTION CUTS DEFERRED",
+            "source_artifact":{
+              "accepted_first_article":{
+                "run_id":36317889355,
+                "artifact_id":ART,
+                "artifact_zip_sha256":os.environ["ARTIFACT_ZIP_SHA256"]
+              }
+            },
+            "minimal_sufficient_package":{
+              "policy":"ADAPTIVE / NO UNIVERSAL FILE COUNT",
+              "formal_repo_files":[
+                str(DEF),
+                str(sem_dst),
+                str(board_dst),
+                str(val_dst),
+                str(TASK)
+              ],
+              "canonical_blend":"ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+              "review_board_count":1,
+              "required_review_domain_count":9
+            }
+          })
+          dump(CATALOG,cat)
+
+          base=load(REG); cur=load(CURRENT)
+          assert base==cur, "CURRENT_V008_PRE_BIND_MISMATCH"
+          bound=j1=j2=0
+          for item in base["items"]:
+            if item.get("component")=="华栱":
+              assert item.get("count_status")=="LOCKED_SUBSET"
+              assert item.get("master_coverage_status")=="MASTER_REQUIRED_PENDING"
+              ident=item.get("id","")
+              if ident.endswith("-一跳"):
+                variant="JUMP_1_HUAGONG"; j1+=1
+              elif ident.endswith("-二跳"):
+                variant="JUMP_2_HUAGONG"; j2+=1
+              else:
+                raise AssertionError("HUAGONG_JUMP_ROLE_UNRESOLVED:"+ident)
+              item["master_coverage_status"]="APPROVED_MASTER_AVAILABLE"
+              item["master_reference"]="CMP-GONG-HUAGONG-001_MASTER"
+              item["master_variant"]=variant
+              item["historical_standalone_full_length_status"]="UNRESOLVED"
+              item["reference_specimen_length_applies_to_instance"]=False
+              bound+=1
+          assert (bound,j1,j2)==(56,28,28)
+
+          summary=base["stage1_master_progress_summary"]
+          assert summary["approved_master_count"]==23
+          assert summary["master_covered_registry_record_count"]==275
+          summary["status"]="T-040 FORMALIZED ON BRANCH / D-238 / 24 OF 28 MASTERS APPROVED / PR #36 DRAFT / MERGE NOT AUTHORIZED"
+          summary["approved_master_count"]=24
+          summary["pending_master_object_type_count"]=4
+          summary["master_completion_percent"]=85.7
+          summary["pending_source_binding_count"]=4
+          summary["master_covered_registry_record_count"]=331
+          if "华栱" not in summary["approved_master_components"]:
+            summary["approved_master_components"].append("华栱")
+          summary["progress_display_note"]="505 Registry records; T-040 branch Stage1 Master completion after formalization: 24 approved / 4 pending = 85.7%. 华栱 56/56 LOCKED_SUBSET rows bound to CMP-GONG-HUAGONG-001_MASTER with JUMP_1/JUMP_2 variants 28/28. Reference specimen lengths are not per-instance historical full lengths. PR #36 remains Draft; Derived Excel/readiness/merge not authorized; T-018 HOLD; Stage2 NOT AUTHORIZED."
+          base["generation_note"]=base.get("generation_note","").rstrip()+" D-237/D-238 bind the Product Owner-approved T-040 Huagong Master to all 56 current LOCKED_SUBSET Huagong records (JUMP_1 28 / JUMP_2 28). Reference-specimen lengths 898.8/1630.0 are not propagated as per-instance historical full lengths; those remain UNRESOLVED. 732.4mm remains assembly-level direct observed mean only."
+          dump(REG,base); dump(CURRENT,base)
+          assert load(REG)==load(CURRENT)
+          assert sum(1 for x in base["items"] if x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE")==331
+          assert sum(1 for x in base["items"] if x.get("component")=="华栱" and x.get("master_reference")=="CMP-GONG-HUAGONG-001_MASTER")==56
+
+          state=load(STATE)
+          state["state_revision"]="R317"
+          state["last_updated"]="2026-09-27"
+          state["session_status"]="T-040 FORMALIZED + CATALOG/V008/CURRENT BOUND D-238 / BRANCH 24 OF 28 = 85.7% / 331 COVERED / MAIN 23 OF 28 UNTIL MERGE / PR #36 DRAFT / DERIVED EXCEL NOT AUTHORIZED / READINESS NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED"
+          state["current_task"]={"id":"T-040","engineering_id":"P3_3_HUAGONG_MASTER_V2_V001","name":"华栱 Master","component":"华栱","status":"FORMALIZED + 56 ROWS BOUND / D-238 / PR #36 DRAFT / MERGE NOT AUTHORIZED","branch":"codex/t040-p3-3-huagong-master-v2-v001","branch_status":"ACTIVE / PR #36 DRAFT","engineering_execution_authorized":True}
+          state["proposed_next_task"]={"id":"T-040-POST-FORMALIZATION","name":"Derived Excel sync + latest-head/shared regressions + readiness review","status":"NOT AUTHORIZED"}
+          if "current_gate" in state:
+            state["current_gate"]["status"]="P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED D-238 / PR #36 DRAFT / T-018 HOLD"
+            state["current_gate"]["items"]["P3.3"]="V002 LOCKED / D-066 / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED D-238 / PR #36 DRAFT / T-018 HOLD"
+            state["current_gate"]["items"]["P3_3"]=state["current_gate"]["items"]["P3.3"]
+          if "p3_3" in state:
+            state["p3_3"]["status"]="V002 LOCKED / STAGE 1 ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED D-238 / T-018 HOLD"
+          if "p3_3_stage_1_2026_09_19" in state:
+            state["p3_3_stage_1_2026_09_19"]["status"]="ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED / POST-FORMALIZATION NOT AUTHORIZED"
+          if "v008_master_progress_visibility" in state:
+            state["v008_master_progress_visibility"].update({
+              "status":"ACTIVE / T-040 FORMALIZED ON BRANCH / 24 OF 28",
+              "approved_master_count":24,
+              "pending_master_object_type_count":4,
+              "master_completion_percent":85.7,
+              "master_covered_registry_record_count":331,
+              "pending_source_binding_count":4,
+              "excel_sync_pending":True
+            })
+          hg=state["huagong_stage1"]
+          hg.update({
+            "status":"FORMALIZED + CATALOG/V008/CURRENT BOUND / D-238 / PR #36 DRAFT / MERGE NOT AUTHORIZED",
+            "formalization_result_decision_id":"D-238",
+            "formalization_complete":True,
+            "formalization_execution_status":"COMPLETE / D-238",
+            "formalization_run_id":RUN,
+            "branch_approved_master_count":24,
+            "branch_master_completion_percent":85.7,
+            "branch_master_covered_registry_record_count":331,
+            "huagong_registry_binding_count":56,
+            "jump_1_binding_count":28,
+            "jump_2_binding_count":28,
+            "current_equals_v008":True,
+            "canonical_blend_sha256":BLEND,
+            "semantic_sha256":semantic_sha,
+            "validation_sha256":validation_sha,
+            "review_board_sha256":board_sha,
+            "family_semantic_signature":FAMILY,
+            "jump_1_geometry_signature":J1,
+            "jump_2_geometry_signature":J2,
+            "derived_excel_sync_authorized":False,
+            "post_formalization_verification_authorized":False,
+            "ready_merge_authorized":False,
+            "formalization_authorized":True
+          })
+          dump(STATE,state)
+
+          decision=DECISION.read_text(encoding="utf-8").rstrip()+"\n"
+          if "| D-238 |" not in decision:
+            decision+=f"| D-238 | 2026-09-27 | T-040 formalization + Stage1 Catalog/V008/CURRENT binding completed under D-237. Accepted Artifact {ART} was byte-verified against D-236; formal minimal package materialized; Catalog branch count = 24/28 = 85.7%; all 56 Huagong LOCKED_SUBSET rows bind to CMP-GONG-HUAGONG-001_MASTER with JUMP_1_HUAGONG 28 + JUMP_2_HUAGONG 28; CURRENT==V008; Master-covered Registry records = 331. Accepted canonical blend remains D-236 SHA {BLEND}; family/JUMP_1/JUMP_2 signatures remain {FAMILY} / {J1} / {J2}. No reference-specimen length was propagated as per-instance historical full length; 732.4mm remains assembly-level direct observed mean only. Derived Excel sync, post-formalization regression/readiness, Ready/Merge, closure, Stage2 and T-018 resume remain unauthorized. | COMPLETE / T-040 FORMALIZED + 56 ROWS BOUND / PR #36 DRAFT / MERGE NOT AUTHORIZED |\n"
+          DECISION.write_text(decision,encoding="utf-8")
+
+          execution=EXECUTION.read_text(encoding="utf-8").rstrip()+"\n\n"
+          execution+=f"## 2026-09-27｜T-040 Formalization + Catalog/V008/CURRENT Binding｜D-238\n\n"
+          execution+=f"- Authority: D-237.\n- Formalization workflow run: {RUN}.\n"
+          execution+=f"- Accepted Artifact: {ART}; canonical .blend SHA-256 {BLEND}; .blend remains not tracked in Git.\n"
+          execution+=f"- Formal package: Definition + Semantic + Review Board + Validation + Task Contract.\n"
+          execution+=f"- Geometry signatures: family={FAMILY}; JUMP_1={J1}; JUMP_2={J2}.\n"
+          execution+=f"- Stage1 Catalog branch count: 24/28 = 85.7%.\n"
+          execution+=f"- V008/CURRENT Huagong binding: 56/56 APPROVED_MASTER_AVAILABLE; variants JUMP_1=28 / JUMP_2=28.\n"
+          execution+=f"- Master-covered Registry records: 331. CURRENT == V008: PASS.\n"
+          execution+=f"- 898.8/1630.0 remain reference-specimen-only; instance historical full lengths remain UNRESOLVED.\n"
+          execution+=f"- Derived Excel / post-formalization readiness / PR Ready+Merge: NOT AUTHORIZED.\n"
+          EXECUTION.write_text(execution,encoding="utf-8")
+
+          acceptance=ACCEPTANCE.read_text(encoding="utf-8").rstrip()+"\n\n"
+          acceptance+="### T-040 Formalization + Catalog/V008/CURRENT Binding｜D-238\n\n"
+          acceptance+="- **FORMALIZED / BRANCH** under D-237.\n"
+          acceptance+="- Stage1 Catalog: **24/28 = 85.7%** on T-040 branch.\n"
+          acceptance+="- Registry binding: **56/56** 华栱 records = APPROVED_MASTER_AVAILABLE / CMP-GONG-HUAGONG-001_MASTER.\n"
+          acceptance+="- Variant binding: **JUMP_1 28 / JUMP_2 28**.\n"
+          acceptance+="- Master-covered Registry records: **331**.\n"
+          acceptance+="- CURRENT == V008: **PASS**.\n"
+          acceptance+=f"- Accepted canonical .blend SHA-256: `{BLEND}`.\n"
+          acceptance+="- Reference-specimen lengths remain non-instance-exact; historical instance full lengths remain UNRESOLVED.\n"
+          acceptance+="- Derived Excel / post-formalization readiness: **PENDING / NOT AUTHORIZED**.\n"
+          acceptance+="- PR #36: **DRAFT / MERGE NOT AUTHORIZED**.\n"
+          ACCEPTANCE.write_text(acceptance,encoding="utf-8")
+
+          task=TASK.read_text(encoding="utf-8")
+          task=re.sub(r"Status: \*\*.*?\*\*","Status: **FORMALIZED + CATALOG/V008/CURRENT BOUND / D-238 / PR #36 DRAFT / MERGE NOT AUTHORIZED**",task,count=1)
+          task=task.replace("9. Formalization + Catalog/V008/CURRENT binding — **AUTHORIZED / D-237 / EXECUTION PENDING**","9. Formalization + Catalog/V008/CURRENT binding — **COMPLETE / D-238**")
+          if "## 26. Formalization Result｜D-238" not in task:
+            task=task.rstrip()+"\n\n## 26. Formalization Result｜D-238\n\n"
+            task+=f"D-238 records successful formalization under D-237. Catalog branch count = 24/28 = 85.7%; all 56 Huagong V008/CURRENT LOCKED_SUBSET rows are bound to CMP-GONG-HUAGONG-001_MASTER with JUMP_1/JUMP_2 28/28; master-covered records = 331; CURRENT==V008. Accepted canonical blend remains D-236 SHA {BLEND}. The 898.8/1630.0 controls remain reference-specimen-only and do not close per-instance historical standalone lengths. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.\n"
+          TASK.write_text(task,encoding="utf-8")
+
+          dash=DASH.read_text(encoding="utf-8")
+          dash=re.sub(r'<div class="callout" style="margin-top:12px"><strong>当前焦点：.*?</strong><br><span class="small">.*?</span></div>',
+              '<div class="callout" style="margin-top:12px"><strong>当前焦点：T-040｜华栱</strong><br><span class="small">D-238 已完成 Formalization + Catalog/V008/CURRENT binding；branch 24/28 = 85.7%，331 covered，华栱 56/56 已按 JUMP_1/JUMP_2=28/28 绑定。PR #36 仍 Draft；Derived Excel / readiness / merge 尚未授权。</span></div>',dash,count=1)
+          DASH.write_text(dash,encoding="utf-8")
+
+          print("T040_FORMALIZATION_PASS",semantic_sha,validation_sha,board_sha,bound,j1,j2)
+          PY
+
+      - name: Commit formalization result to T-040 branch
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/CMP-GONG-HUAGONG-001_HUAGONG_DEFINITION_V001.json \
+            production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/CMP-GONG-HUAGONG-001_MASTER_SEMANTIC_V001.json \
+            production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/CMP-GONG-HUAGONG-001_MASTER_REVIEW_BOARD_V001.png \
+            production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/CMP-GONG-HUAGONG-001_MASTER_VALIDATION_V001.json \
+            production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json \
+            docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json \
+            docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json \
+            docs/project_control/project_state.json \
+            docs/project_control/decision_log.md \
+            docs/project_control/execution_log.md \
+            docs/project_control/acceptance_matrix.md \
+            docs/project_control/dashboard.html \
+            docs/tasks/T-040_P3_3_HUAGONG_MASTER_V2_V001.md
+          git diff --cached --check
+          git commit -m "T-040: formalize Huagong Master and bind V008"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref || github.ref_name }}"
+
+      - name: Already formalized
+        if: steps.gate.outputs.do_formalize == 'false'
+        run: echo "T040_FORMALIZATION_ALREADY_COMPLETE"
