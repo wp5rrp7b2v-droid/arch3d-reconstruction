@@ -79,7 +79,8 @@ def compose(a):
       "LARGE: L 1007.0 mm (OBSERVED_MEAN, n=16)",
       "SMALL: L 895.0 mm (OBSERVED_MEAN, n=28)",
       "WIDTH: 214.7 mm (family OBSERVED_MEAN, n=44)",
-      "THICKNESS: 156.5 mm (family OBSERVED_MEAN, n=16)",
+      "THICKNESS: 156.5 mm (OBSERVED_SAMPLE_MEAN, n=16)",
+      "Thickness subgroup attribution: UNRESOLVED.",
       "Width/thickness remain identical across variants.",
       "SMALL is NOT a uniform global scale of LARGE."
     ]:
@@ -92,13 +93,15 @@ def compose(a):
     mapped=[(gx0+(px+0.5)*(gx1-gx0), gy0+(0.5-pz)*(gy1-gy0)) for px,pz in pts]
     mapped.append(mapped[0]); draw.line(mapped,fill=(50,50,50),width=4)
     draw.text((x0+28,y1-108),"Authority: SOURCE_DERIVED_PROFILE",font=small,fill="black")
-    draw.text((x0+28,y1-72),"Same-building PDF p73/p76; exact curve dimensions UNRESOLVED.",font=font(16),fill="black")
+    draw.text((x0+28,y1-90),"Same-building PDF p73 Fig 2-27 / p76 Fig 2-31.",font=font(15),fill="black")
+    draw.text((x0+28,y1-60),"Locked numeric control set; NO metric source calibration claim.",font=font(15),fill="black")
 
     x0,y0,x1,y1=boxes[7]; yy=y0+78
     for line in [
       "44 physical = 16 LARGE + 28 SMALL",
       "1 Master family / 2 geometry variants",
-      "Normalized profile points = reconstructed controls",
+      "Profile controls = Stage1 reconstructed / replaceable",
+      "Source re-extraction reproducible = FALSE",
       "Direct curve-control measurement = FALSE",
       "Original 963 design claim = FALSE",
       "Exact mortise/slots/local curve = DEFERRED",
@@ -136,6 +139,9 @@ def validate(a):
     ck("16_profile_extent",near(min(p[0] for p in pc["normalized_points"]),-0.5) and near(max(p[0] for p in pc["normalized_points"]),0.5) and near(min(p[1] for p in pc["normalized_points"]),-0.5) and near(max(p[1] for p in pc["normalized_points"]),0.5))
     ck("17_profile_shared_rule",pc["shared_profile_rule"] is True)
     ck("18_means_not_per_instance",es["family_mean_is_per_instance_direct"] is False and es["thickness_is_44_instance_direct"] is False)
+    ck("18a_thickness_attribution",es["thickness_classification"]=="OBSERVED_SAMPLE_MEAN / n=16" and es["thickness_subgroup_attribution"]=="UNRESOLVED")
+    ck("18b_thickness_application",es["thickness_variant_application"]=="STAGE1_PRODUCTION_FAMILY_APPLICATION / NOT_VARIANT_SPECIFIC_DIRECT_OBSERVATION")
+    ck("18c_profile_traceability",pc["numeric_reproduction_basis"]=="LOCKED_13_POINT_CONTROL_SET_IN_THIS_DEFINITION" and pc["source_reextraction_reproducible"] is False and pc["metric_scale_calibration"]=="NOT_PERFORMED / NOT_CLAIMED" and pc["historical_control_point_claim"] is False)
     ck("19_not_original_design",es["original_963_design_claim"] is False)
     ck("20_no_unsupported",all(v["unsupported_detail_count"]==0 and v["joinery_cut_count"]==0 for v in (L,S)))
     ck("21_manifold_large",manifold_edges(L["geometry_faces"]))
