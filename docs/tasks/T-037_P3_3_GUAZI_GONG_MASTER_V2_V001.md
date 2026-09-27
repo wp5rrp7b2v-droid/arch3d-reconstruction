@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-037｜P3_3_GUAZI_GONG_MASTER_V2_V001
 
-Status: **FIRST ARTICLE PRODUCT OWNER APPROVED / D-185 / TRACEABILITY PATCH COMPLETE D-186 / FORMALIZATION NOT AUTHORIZED**
+Status: **FIRST ARTICLE PRODUCT OWNER APPROVED / D-185 / TRACEABILITY PATCH COMPLETE D-186 / POST-TRACEABILITY REGRESSION PASS D-187 / FORMALIZATION NOT AUTHORIZED**
 Stage: P3.3 V002 Stage 1
 Branch: codex/t037-p3-3-guazi-gong-master-v2-v001
 
@@ -182,3 +182,7 @@ Traceability Review Patch D-186 completed:
 - exact historical curve/control dimensions remain UNRESOLVED and the control set remains REPLACEABLE.
 
 D-185/D-186 do not authorize formalization, Catalog/V008 binding, PR Ready/merge, closure, Stage2, or T-018 resume.
+
+## 13. Post-Traceability Regression
+
+D-187 records Run 36292530436 = SUCCESS / 43/43 PASS. LARGE and SMALL semantic geometry signatures exactly match the D-185 accepted first article, confirming D-186 changed traceability metadata only and did not change geometry. Formalization/Catalog-V008 binding/PR Ready/merge remain separately gated.
