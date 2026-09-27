@@ -1,9 +1,9 @@
 # P3.3 Stage1｜T-038 慢栱族 Profile Control Set V0.1
 
-Status: **CANDIDATE 01 / READY FOR PRODUCT OWNER REVIEW / NOT LOCKED**
+Status: **LOCKED / PRODUCT OWNER APPROVED / D-201**
 Date: 2026-09-27
 Task: T-038｜P3_3_MANGONG_MASTER_V2_V001
-Decision lineage: D-196 / D-198 / D-199 / D-200
+Decision lineage: D-196 / D-198 / D-199 / D-200 / D-201
 
 ## 1. Purpose
 
@@ -178,12 +178,24 @@ Product Owner review should check:
 
 ## 9. Current decision boundary
 
-Candidate 01 is **NOT LOCKED**.
+Candidate 01 is **LOCKED / PRODUCT OWNER APPROVED / D-201**.
 
-Product Owner approval is required before:
-- storing this numeric set in the execution Definition;
+The approved 18-point numeric set is now stored in the locked T-038 Definition.
+
+This approval does not authorize:
 - builder implementation;
 - Blender generation;
-- engineering execution authorization.
+- workflow execution;
+- Draft PR creation;
+- engineering execution.
 
-If rejected, Candidate 02 must replace it without changing the locked D-198 dimension/evidence semantics.
+Classification remains `SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT`.
+
+
+## 10. Approval Result
+
+- Product Owner approval: **PASS / D-201**
+- Locked candidate: `MANGONG_PROFILE_CONTROL_SET_V001_C01`
+- Locked control-set signature: `07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4`
+- Point count: **18**
+- Engineering execution: **NOT AUTHORIZED**
