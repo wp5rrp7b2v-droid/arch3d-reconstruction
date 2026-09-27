@@ -12,6 +12,9 @@ permissions:
 
 jobs:
   formalize:
+    # D-205 completed formalization. Disable re-entry during D-206
+    # post-formalization Excel/regression/readiness verification.
+    if: ${{ false }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     env:
