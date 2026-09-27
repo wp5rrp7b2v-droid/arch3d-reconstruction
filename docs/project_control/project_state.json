@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R320",
+  "state_revision": "R321",
   "last_updated": "2026-09-27",
-  "session_status": "T-040 READY+MERGE AUTHORIZED D-241 / PR #36 READY TRANSITION + MERGE AUTHORIZED / D-240 READINESS PASS / CLOSURE NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-040 PR #36 MERGED + MAIN VERIFIED D-242 / MAIN 24 OF 28 = 85.7% / 331 COVERED / 56 HUAGONG BOUND / FORMAL CLOSURE NEXT GATE NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 READINESS PASS D-240 / READY+MERGE DECISION NEXT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 24 OF 28 = 85.7% / 331 COVERED / T-040 MERGED D-242 / FORMAL CLOSURE NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 READINESS PASS D-240 / READY+MERGE DECISION NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 READINESS PASS D-240 / READY+MERGE DECISION NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / MAIN 24 OF 28 = 85.7% / 331 COVERED / T-040 MERGED D-242 / FORMAL CLOSURE NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / MAIN 24 OF 28 = 85.7% / 331 COVERED / T-040 MERGED D-242 / FORMAL CLOSURE NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -66,15 +66,15 @@
     "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
     "name": "华栱 Master",
     "component": "华栱",
-    "status": "READY+MERGE AUTHORIZED / D-241 / EXECUTION IN PROGRESS",
+    "status": "MERGED TO MAIN / MAIN VERIFIED / D-242 / FORMAL CLOSURE NEXT GATE",
     "branch": "codex/t040-p3-3-huagong-master-v2-v001",
-    "branch_status": "ACTIVE / PR #36 DRAFT",
+    "branch_status": "PR #36 MERGED",
     "engineering_execution_authorized": true
   },
   "proposed_next_task": {
-    "id": "T-040-READY-MERGE-EXECUTION",
-    "name": "T-040 PR #36 Ready transition + merge + main verification",
-    "status": "AUTHORIZED / EXECUTION IN PROGRESS"
+    "id": "T-040-FORMAL-CLOSURE",
+    "name": "T-040 华栱 Formal Closure",
+    "status": "NEXT GATE / NOT YET AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-039",
@@ -131,7 +131,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 READINESS PASS D-240 / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 24 OF 28 MASTERS APPROVED / 85.7% / 331 COVERED / T-040 MERGED D-242 / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -970,7 +970,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 READINESS PASS D-240 / READY+MERGE DECISION NEXT",
+    "status": "ACTIVE / MAIN 24 OF 28 = 85.7% / 331 COVERED / T-040 MERGED D-242 / FORMAL CLOSURE NEXT",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1217,7 +1217,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "华栱 / T-040 READY+MERGE PRODUCT OWNER DECISION"
+    "next_master_candidate": "华栱 / T-040 FORMAL CLOSURE NEXT"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -2595,7 +2595,7 @@
     "closure_decision_id": "D-224"
   },
   "huagong_stage1": {
-    "status": "READY+MERGE AUTHORIZED / D-241 / CLOSURE NOT AUTHORIZED",
+    "status": "MERGED TO MAIN / MAIN VERIFIED / D-242 / FORMAL CLOSURE NOT AUTHORIZED",
     "component": "华栱",
     "coverage_matrix_priority": 18,
     "registry_record_count": 56,
@@ -2858,6 +2858,16 @@
     "t039_shared_validator_lifecycle_patch": "D-239 REVIEW PATCH / OLD MERGE-CLOSE ASSERTION UPDATED / GEOMETRY UNCHANGED",
     "prior_failed_post_formalization_run_id": 36322586643,
     "prior_failed_run_classification": "SHARED T-039 VALIDATOR LIFECYCLE ASSERTION ONLY / T-040 LATEST-HEAD PASS / NOT GEOMETRY FAILURE",
-    "ready_merge_authorization_decision_id": "D-241"
+    "ready_merge_authorization_decision_id": "D-241",
+    "merged": true,
+    "merge_result_decision_id": "D-242",
+    "pr_number": 36,
+    "pr_status": "MERGED",
+    "merge_commit_sha": "783d6ce89b14a07a580c0744dd63e848a152690c",
+    "main_verified": true,
+    "main_verified_approved_master_count": 24,
+    "main_verified_master_completion_percent": 85.7,
+    "main_verified_master_covered_registry_record_count": 331,
+    "main_verified_huagong_binding_count": 56
   }
 }
