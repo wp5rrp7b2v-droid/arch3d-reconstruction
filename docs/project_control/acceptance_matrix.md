@@ -947,3 +947,15 @@ Boundary retained:
 - Draft PR: **AUTHORIZED**.
 - First-article Product Owner acceptance: **NOT AUTHORIZED / FUTURE DECISION**.
 - Formalization / Catalog-V008 / Ready-Merge / closure: **NOT AUTHORIZED**.
+
+### T-038 First Article Machine Gate｜D-203
+
+- Machine validation: **PASS 43/43** / Run 36299005477.
+- Deterministic build/reopen/restore: **PASS**.
+- 8-domain Review Board / nonblank render checks: **PASS**.
+- LARGE bbox: **1641 × 218.9 × 156.9 mm**.
+- SMALL bbox: **1607 × 218.9 × 156.9 mm**.
+- Canonical .blend SHA: `1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023`.
+- Draft PR #34: **OPEN / DRAFT / MERGEABLE**.
+- Product Owner first-article approval: **PENDING**.
+- Formalization / Catalog-V008 / Ready-Merge / closure: **NOT AUTHORIZED**.
