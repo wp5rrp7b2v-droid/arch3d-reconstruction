@@ -255,7 +255,7 @@ Locked sequence:
 1. Source Readiness + D-076 — **PASS / D-196**
 2. Master Spec V0.1 — **LOCKED / D-198**
 3. Task Contract — **LOCKED / D-199**
-4. Profile Control Set V0.1 — **NEXT GATE / PRODUCT OWNER APPROVAL REQUIRED**
+4. Profile Control Set V0.1 — **CANDIDATE 01 READY FOR PRODUCT OWNER REVIEW / D-200 / NOT LOCKED**
 5. Engineering Execution Authorization — **NOT AUTHORIZED**
 6. First Article — **NOT STARTED**
 7. Product Owner First Article Approval — **NOT AUTHORIZED**
@@ -281,3 +281,7 @@ D-199 does **not** authorize:
 - closure;
 - Stage2;
 - T-018 resume.
+
+## 16. Profile Control Set Candidate 01
+
+D-200 records Product Owner authorization to enter the profile-control design/review gate. Candidate 01 is an independent 18-point same-building-source-guided Stage1 profile control set with signature `07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4`. It is not metrically traced, not a direct historical measurement, and does not reuse the T-037 guazi control polygon. Candidate 01 remains NOT LOCKED pending Product Owner visual review/approval; engineering execution remains blocked.
