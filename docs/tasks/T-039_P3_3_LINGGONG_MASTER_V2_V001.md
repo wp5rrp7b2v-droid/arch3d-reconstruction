@@ -1,9 +1,9 @@
 # 中国古建筑3D复原｜T-039｜P3_3_LINGGONG_MASTER_V2_V001
 
-Status: **TASK CONTRACT LOCKED / PRODUCT OWNER APPROVED / D-213 / ENGINEERING EXECUTION NOT AUTHORIZED**
+Status: **FIRST ARTICLE MACHINE PASS / D-217 / PRODUCT OWNER REVIEW REQUIRED / PR #35 DRAFT**
 Stage: P3.3 V002 Stage 1
-Future branch: `codex/t039-p3-3-linggong-master-v2-v001`
-Branch creation status: **NOT AUTHORIZED / NOT CREATED**
+Branch: `codex/t039-p3-3-linggong-master-v2-v001`
+Branch creation status: **CREATED / D-216**
 
 ## 1. Objective
 
@@ -340,8 +340,8 @@ Locked sequence:
 3. Task Contract — **LOCKED / D-213**
 4. Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-215**
 5. Engineering Execution Authorization — **AUTHORIZED / D-216**
-6. First Article machine validation — **NEXT / AUTHORIZED TO EXECUTE**
-7. Product Owner First Article Approval — **NOT AUTHORIZED**
+6. First Article machine validation — **PASS / D-217 / 43 OF 43**
+7. Product Owner First Article Approval — **NEXT GATE / AWAITING PRODUCT OWNER**
 8. Formalization + Catalog/V008/CURRENT binding — **NOT AUTHORIZED**
 9. Derived Excel + latest-head regression + readiness review — **NOT AUTHORIZED**
 10. D-194 combined Draft→Ready + Merge — **NOT AUTHORIZED**
@@ -383,3 +383,7 @@ D-215 records Product Owner approval of `LINGGONG_PROFILE_CONTROL_SET_V001_C01`.
 ## 19. Engineering Execution Authorization｜D-216
 
 D-216 authorizes isolated T-039 engineering execution: production branch creation, builder/validator/workflow implementation, Blender 4.5.13 generation of exactly one canonical 令栱 First Article, deterministic rebuild/reopen validation, 8-domain Review Board generation, machine evidence artifact, and Draft PR creation. The execution must consume the locked D-215 14-point Definition and preserve one shared Master / zero Geometry Variant / 28 Registry bindings with canonical family envelope 897×217.4×155.6 mm. Product Owner First Article acceptance, formalization, Catalog/V008/CURRENT binding, Derived Excel sync, PR Ready/merge, closure, Stage2 and T-018 resume remain separate and unauthorized.
+
+## 20. First Article Machine Result｜D-217
+
+Run `36304085862` completed SUCCESS with **43/43 PASS** at execution head `9037a750775b55c36b4173146be8eb5d2a7c9b9e`. Artifact `10927005772` has digest `sha256:db181f3392acab1504f118236cec32d9e3e043ba4cf84ff944834c28ce9a0ede`. Canonical First Article .blend SHA is `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`; family semantic signature `d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7`; body geometry signature `e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61`. The Review Board is nonblank and contains all 8 required domains. Draft PR #35 remains Draft. Machine PASS does not equal Product Owner acceptance; formalization/Catalog binding/Ready+Merge/closure remain blocked.
