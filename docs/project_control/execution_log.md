@@ -1478,3 +1478,10 @@ Do not restart T-018 by default.
 - Family semantic signature changed to 69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c because D-186 intentionally changed evidence/profile metadata; this is not a geometry change.
 - Regenerated .blend SHA-256: 2c7ee97d349ae7e05e8912e3dc575160536cd08e4942e539b4d18b46ed424769; regression evidence only, not promoted to replace the D-185 accepted first-article binary authority.
 - Result: D-186 traceability supplement verified with no geometry drift. Formalization/Registry binding/merge remain separately gated.
+
+## 2026-09-27｜T-037 Formalization Authorization｜D-188
+
+- Product Owner explicitly authorized formalization + Catalog/V008 binding.
+- Preconditions satisfied: D-185 first article APPROVED; D-186 traceability patch COMPLETE; D-187 post-traceability regression SUCCESS / 43/43 / geometry MATCH.
+- Authorized: minimal sufficient formal package + Stage1 Catalog entry + 44-row V008/CURRENT binding + branch consistency validation.
+- Not authorized: derived Excel sync, PR Ready, merge, closure, Stage2, T-018 resume.
