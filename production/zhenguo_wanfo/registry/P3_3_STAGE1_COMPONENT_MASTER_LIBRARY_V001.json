@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-039 FORMALIZED / PR #35 DRAFT",
-  "status": "TWENTY_THREE_APPROVED / T039 FORMALIZED / PR #35 DRAFT / MERGE NOT AUTHORIZED",
+  "task": "T-039 MERGED / MAIN VERIFIED",
+  "status": "TWENTY_THREE_APPROVED / T039 MERGED TO MAIN / D-223 / FORMAL CLOSURE PENDING",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -817,7 +817,7 @@
       "decision_id": "D-218",
       "formalization_authority": "D-219",
       "formalization_result": "D-220",
-      "publication_status": "FORMALIZED / PR #35 DRAFT / MERGE NOT AUTHORIZED",
+      "publication_status": "FORMALIZED / PR #35 MERGED / MAIN VERIFIED / D-223",
       "canonical_asset_status": "ACTIONS_ARTIFACT / PRODUCT_OWNER_APPROVED / LOCAL ONLY / NOT GIT",
       "canonical_asset_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
       "semantic_sha256": "ee0bc2ef02b3e1da43c1d7b6d4a8a5f18269b36bbcd189b52de15112f77abb97",
@@ -863,7 +863,10 @@
         "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
         "review_board_count": 1,
         "required_review_domain_count": 8
-      }
+      },
+      "merge_decision_id": "D-223",
+      "merge_commit_sha": "e1726096e1d9bb936f24dd786d357220b52942b8",
+      "main_verified": true
     }
   ],
   "approved_master_count": 23
