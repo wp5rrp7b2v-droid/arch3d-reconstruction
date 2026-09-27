@@ -797,3 +797,67 @@ Boundary retained:
 - Exact dou ears / slots / cavities / mortise-tenon remain deferred.
 
 **P3.3 Stage1 current status: ACTIVE / 20 OF 28 APPROVED / T-036 CLOSED / NEXT 瓜子栱族 SOURCE READINESS / T-018 HOLD.**
+
+## 2026-09-27｜T-037 瓜子栱族 Master First Article｜D-185
+
+| Gate | Result | Evidence / boundary |
+|---|---|---|
+| Machine first article | **PASS** | Run 36290968633; build/reopen/restore/review/validation/upload PASS. |
+| Product Owner visual review | **APPROVED / D-185** | LARGE + SMALL first article accepted after Review Board render repair D-184. |
+| Family architecture | **ACCEPTED** | 1 Master family / 2 geometry variants / 44 Registry records (16 large + 28 small). |
+| Dimensions | **ACCEPTED WITH EVIDENCE BOUNDARY** | LARGE L=1007mm n=16; SMALL L=895mm n=28; W=214.7mm family mean n=44; T=156.5mm sample mean n=16, subgroup attribution UNRESOLVED. |
+| Profile | **ACCEPTED AS SOURCE_DERIVED_SIMPLIFIED / REPLACEABLE** | Exact historical curve/control dimensions remain UNRESOLVED; normalized controls are not direct measurements. |
+| Joinery / grooves / cavities | **DEFERRED** | Resolve later from connection-aware assembly evidence; no unsupported slotting in Stage1 Master. |
+| Formalization | **NOT AUTHORIZED / BLOCKED** | Traceability Review Patch required before Catalog/V008 binding or PR Ready/merge. |
+| Stage2 / T-018 | **UNCHANGED** | Stage2 NOT AUTHORIZED; T-018 HOLD. |
+
+**T-037 first article is Product Owner approved, but it does not yet increase the Stage1 approved Master count. Current formal Stage1 count remains 20/28 until formalization and canonical publication complete.**
+
+### T-037 Traceability Review Patch｜D-186
+
+- **COMPLETE / NO GEOMETRY CHANGE**.
+- Thickness evidence corrected to **OBSERVED_SAMPLE_MEAN / n=16 / subgroup attribution UNRESOLVED**.
+- Cross-variant 156.5mm use classified as **STAGE1_PRODUCTION_FAMILY_APPLICATION**, not variant-specific direct observation.
+- Profile provenance corrected to **same-building qualitative form/envelope authority + locked numeric Stage1 reconstruction controls**.
+- No metric source-image calibration or direct historical control-point claim.
+- Exact historical profile remains **UNRESOLVED / REPLACEABLE**.
+- Formal Stage1 approved Master count remains **20/28** until separate formalization/publication.
+
+### T-037 Post-Traceability Regression｜D-187
+
+- **PASS / 43 OF 43** — Run 36292530436.
+- LARGE geometry signature exact MATCH accepted first article: `5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d`.
+- SMALL geometry signature exact MATCH accepted first article: `e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842`.
+- Family semantic signature changed only because D-186 evidence/profile traceability metadata changed; geometry did not change.
+- Formalization remains **NOT AUTHORIZED**; Stage1 formal approved count remains **20/28**.
+
+### T-037 Formalization + Catalog/V008 Binding｜D-189
+
+- **FORMALIZED / BRANCH** under D-188.
+- Stage1 Catalog: **21/28 = 75.0%** on T-037 branch.
+- Registry binding: **44/44** guazi records = APPROVED_MASTER_AVAILABLE / CMP-GONG-GUAZI-001_MASTER.
+- Master-covered Registry records: **203**.
+- CURRENT == V008: **PASS**.
+- Approved canonical .blend SHA-256: 932571bcbff0c3f166dd5c449a35a96a618876ad8986d0dacbb668f9a510048a.
+- LARGE / SMALL geometry signatures: **MATCH D-185**.
+- Derived Excel sync: **PENDING / NOT AUTHORIZED**.
+- PR #33: **DRAFT / MERGE NOT AUTHORIZED**.
+
+### T-037 Post-Formalization Verification｜D-191
+
+- Derived Registry Excel sync validation: **PASS** / Run 36294703456 / V008 / 505.
+- Latest-head T-037 regression: **PASS 43/43** / Run 36294703418.
+- LARGE / SMALL geometry signatures: **EXACT MATCH D-185**.
+- Shared T-021/T-022/T-023/T-024 regressions: **PASS**.
+- Generic P3.3 Master V2 route: **SKIPPED AS INTENDED**.
+- PR #33: **MERGEABLE / DRAFT**.
+- Readiness review: **PASS / READY FOR PRODUCT OWNER PR-READY DECISION**.
+- PR Ready / merge / closure remain **NOT AUTHORIZED**.
+
+### T-037 PR #33 Ready Transition｜D-192
+
+- PR #33: **READY FOR REVIEW**.
+- GitHub: **open / draft=false / mergeable=true**.
+- Merge: **NOT AUTHORIZED**.
+- Main Stage1 count: **20/28 until merge**.
+- Branch Stage1 count: **21/28**.

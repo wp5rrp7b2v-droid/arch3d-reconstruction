@@ -1425,3 +1425,106 @@ Do not restart T-018 by default.
 - Post-pull local HEAD: `34bd36cff8205286a8c89fe52956f73ee1abe591`.
 - Result: **LOCAL SYNC PASS / LOCAL_HEAD == REMOTE_HEAD AT SYNC CHECKPOINT**.
 - Final note: D-179 Project Control recording advances main after the checkpoint, so one last fast-forward pull is required to absorb the record itself.
+
+## 2026-09-27｜T-037 瓜子栱族工程启动
+
+- D-180: Source Readiness + D-076 PASS; direct measurement bindings closed for length/width/thickness, profile remains SOURCE_DERIVED_PROFILE.
+- D-181: Master Spec V001 LOCKED; one family / two variants / 44 records.
+- D-182: T-037 Task Contract V001 LOCKED; no execution authorization at that decision.
+- D-183: Product Owner authorized engineering execution through first-article evidence.
+- Branch: codex/t037-p3-3-guazi-gong-master-v2-v001
+- Current Stage1 approved count remains 20/28; T-037 is not counted approved until formalization after Product Owner first-article acceptance.
+- T-018 remains HOLD; Stage2 remains NOT AUTHORIZED.
+
+## 2026-09-27｜T-037 Review Board Render Repair｜D-184
+
+- Trigger: original 8-panel Review Board rendered panels 1-5 as near-uniform dark frames, so Product Owner visual review was not possible.
+- Scope: presentation/render repair only; no change to locked dimensions, evidence semantics, variant counts, Master architecture, or profile authority.
+- Patch: emission review materials + explicit light background + stable front-camera rotation; validator now hard-fails near-uniform review images; artifact now includes five individual review PNGs.
+- Final run: 36290968633 / SUCCESS.
+- Artifact: 10922436059 / sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736.
+- Result: LARGE/SMALL AXON, LARGE/SMALL FRONT, and overlay are visibly readable; first article remains awaiting Product Owner acceptance.
+- No formalization / Catalog-V008 binding / PR Ready / merge. T-018 remains HOLD; Stage2 remains unauthorized.
+
+## 2026-09-27｜T-037 First Article Product Owner Approval｜D-185
+
+- Product Owner decision: **APPROVED**.
+- Accepted Run: 36290968633 / SUCCESS.
+- Accepted Artifact: 10922436059 / sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736.
+- Accepted visual scope: LARGE / SMALL canonical bodies, repaired 8-panel Review Board, dimension/evidence boundary presentation.
+- Evidence boundary retained: W=214.7mm family observed mean n=44; T=156.5mm observed sample mean n=16 with subgroup attribution UNRESOLVED; neither may be rewritten as per-instance exact historical dimensions.
+- Profile boundary retained: SOURCE_DERIVED_PROFILE; normalized controls are simplified/reconstructive and replaceable, not direct measured curve coordinates; exact historical curve remains UNRESOLVED.
+- Connection boundary retained: grooves / mortise-tenon / cavities / local interface cuts remain DEFERRED and will be resolved only from later connection-aware assembly evidence.
+- Required before formalization: traceability Review Patch for thickness subgroup attribution and reproducible profile derivation/calibration record.
+- Not authorized: formalization, Catalog/V008 binding, PR Ready/merge, closure, Stage2, T-018 resume.
+
+## 2026-09-27｜T-037 Traceability Review Patch｜D-186
+
+- Product Owner authorization: APPROVED.
+- Scope: evidence/traceability record only; no geometry change.
+- Thickness: 156.5mm = OBSERVED_SAMPLE_MEAN / n=16; subgroup attribution = UNRESOLVED; LARGE+SMALL use = Stage1 production-family application, not separate direct observation.
+- Profile: PDF p73 Fig 2-27 + p76 Fig 2-31 = same-building qualitative form/envelope authority.
+- Current 13-point normalized control polygon: PO-approved Stage1 reconstructed control set, numerically reproducible from locked Definition, NOT direct measured curve coordinates.
+- Metric image calibration: NOT PERFORMED / NOT CLAIMED. Independent source-image re-extraction yielding the same numeric points: NOT CLAIMED.
+- Exact historical curve/control dimensions remain UNRESOLVED; profile remains REPLACEABLE.
+- Formalization / Catalog-V008 binding / PR Ready / merge remain NOT AUTHORIZED.
+
+## 2026-09-27｜T-037 Post-Traceability Regression｜D-187
+
+- Run: 36292530436 / SUCCESS / 43/43 PASS.
+- Artifact: 10923335229 / sha256:86447cef31497033c9c9aadcc7089822bfe947649e88aa3c8b80353142d98e68.
+- LARGE geometry signature: 5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d / MATCH D-185 accepted first article.
+- SMALL geometry signature: e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842 / MATCH D-185 accepted first article.
+- Family semantic signature changed to 69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c because D-186 intentionally changed evidence/profile metadata; this is not a geometry change.
+- Regenerated .blend SHA-256: 2c7ee97d349ae7e05e8912e3dc575160536cd08e4942e539b4d18b46ed424769; regression evidence only, not promoted to replace the D-185 accepted first-article binary authority.
+- Result: D-186 traceability supplement verified with no geometry drift. Formalization/Registry binding/merge remain separately gated.
+
+## 2026-09-27｜T-037 Formalization Authorization｜D-188
+
+- Product Owner explicitly authorized formalization + Catalog/V008 binding.
+- Preconditions satisfied: D-185 first article APPROVED; D-186 traceability patch COMPLETE; D-187 post-traceability regression SUCCESS / 43/43 / geometry MATCH.
+- Authorized: minimal sufficient formal package + Stage1 Catalog entry + 44-row V008/CURRENT binding + branch consistency validation.
+- Not authorized: derived Excel sync, PR Ready, merge, closure, Stage2, T-018 resume.
+
+## 2026-09-27｜T-037 Formalization + Catalog/V008 Binding｜D-189
+
+- Authority: D-188.
+- Formalization workflow run: 36293945358.
+- Formal package: Definition + Semantic + Review Board + Validation + Task Contract.
+- Approved canonical .blend remains D-185 SHA-256: 932571bcbff0c3f166dd5c449a35a96a618876ad8986d0dacbb668f9a510048a; current regression binary is evidence only and is not promoted.
+- Geometry signatures: LARGE=5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d; SMALL=e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842; MATCH accepted first article.
+- Stage1 Catalog branch count: 21/28 = 75.0%.
+- V008/CURRENT guazi binding: 44/44 APPROVED_MASTER_AVAILABLE -> CMP-GONG-GUAZI-001_MASTER.
+- Master-covered Registry records: 203.
+- CURRENT == V008: PASS.
+- Derived Excel sync: NOT AUTHORIZED / PENDING.
+- PR #33 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.
+
+## 2026-09-27｜T-037 Post-Formalization Verification Authorization｜D-190
+
+- Product Owner authorized: derived Registry Excel sync + latest-head T-037 regression + PR readiness review.
+- Not authorized: PR Ready transition, merge, closure, Stage2, T-018 resume.
+
+## 2026-09-27｜T-037 Post-Formalization Verification｜D-191
+
+- Authority: D-190.
+- Derived Excel validation: Run 36294703456 / SUCCESS / V008 / 505 records.
+- Excel generator result: no further derived delta; branch workbook already matches canonical CURRENT/V008.
+- Current/Versioned Excel SHA-256: 3c80fbf9c3b9345fe8e2de56e6de05e469ba66e3b1f2b0a9cddcaec3728716a8.
+- Latest-head T-037 regression: Run 36294703418 / SUCCESS / 43/43 PASS.
+- Head: a0dc6ada9c7eb23859b8a1857400dbf5a2789e67.
+- Artifact: 10923462649 / sha256:8d4002d26a4670fa57ae48447a6d2a83f74b601f9f5ee8d63155ab4607c2df27.
+- Geometry signatures: LARGE 5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d / SMALL e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842 / exact match to D-185.
+- Family semantic signature: 69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c.
+- Shared regressions on same head: T-021/T-022/T-023/T-024 PASS; generic P3.3 Master V2 SKIPPED as intended for dedicated T-037 routing.
+- PR #33: mergeable=true / draft=true / readiness review PASS.
+- PR Ready transition and merge remain not authorized.
+
+## 2026-09-27｜T-037 PR #33 Ready Transition｜D-192
+
+- Product Owner authorization: APPROVED.
+- PR #33 transition: Draft -> Ready for Review.
+- GitHub state after transition: open / draft=false / mergeable=true.
+- Merge is NOT authorized.
+- Main remains 20/28 until PR #33 is merged; branch remains 21/28.
+- Stage2 remains NOT AUTHORIZED; T-018 remains HOLD.

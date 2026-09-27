@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-036 CLOSED",
-  "status": "TWENTY_APPROVED / T036 CLOSED / MERGED_TO_MAIN",
+  "task": "T-037 FORMALIZED / PR #33 DRAFT",
+  "status": "TWENTY_ONE_APPROVED / T037 FORMALIZED / PR #33 DRAFT / MERGE NOT AUTHORIZED",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -671,7 +671,74 @@
       "closure_decision_id": "D-176",
       "close_date": "2026-09-26",
       "main_verified": true
+    },
+    {
+      "component_id": "CMP-GONG-GUAZI-001",
+      "master_id": "CMP-GONG-GUAZI-001_MASTER",
+      "master_version": "V001",
+      "variant_ids": [
+        "LARGE_GUAZI_GONG",
+        "SMALL_GUAZI_GONG"
+      ],
+      "approval_status": "PRODUCT_OWNER_APPROVED",
+      "decision_id": "D-185",
+      "formalization_authority": "D-188",
+      "publication_status": "FORMALIZED / PR #33 DRAFT / MERGE NOT AUTHORIZED",
+      "canonical_asset_status": "ACTIONS_ARTIFACT / PRODUCT_OWNER_APPROVED / LOCAL ONLY / NOT GIT",
+      "canonical_asset_sha256": "932571bcbff0c3f166dd5c449a35a96a618876ad8986d0dacbb668f9a510048a",
+      "semantic_sha256": "e2cde73556e13d50b8001633d15fbcd8811650146fe37a148f71181825cbb61c",
+      "validation_sha256": "dbea36c19c86c1772877a74a353a820a1e23bd4fc7b1adbce73244999b4b2219",
+      "review_board_sha256": "9f621af4f27831c4b2fb0e8cd4f08767117dece7604e3a40ba8918fce1d7543f",
+      "family_semantic_signature": "69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c",
+      "variant_geometry_signatures": {
+        "LARGE_GUAZI_GONG": "5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d",
+        "SMALL_GUAZI_GONG": "e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842"
+      },
+      "physical_instance_count": 44,
+      "geometry_variant_count": 2,
+      "distribution": "LARGE 16 / SMALL 28 / ONE SHARED MASTER FAMILY",
+      "dimension_policy": {
+        "large_length_mm": "1007 / OBSERVED_MEAN / n=16",
+        "small_length_mm": "895 / OBSERVED_MEAN / n=28",
+        "width_mm": "214.7 / FAMILY OBSERVED_MEAN / n=44",
+        "thickness_mm": "156.5 / OBSERVED_SAMPLE_MEAN / n=16 / subgroup attribution UNRESOLVED",
+        "thickness_variant_application": "STAGE1_PRODUCTION_FAMILY_APPLICATION / NOT_VARIANT_SPECIFIC_DIRECT_OBSERVATION"
+      },
+      "profile_policy": {
+        "authority": "SOURCE_DERIVED_PROFILE",
+        "control_set": "LOCKED_13_POINT_STAGE1_RECONSTRUCTION / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+        "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+        "exact_historical_curve": "UNRESOLVED"
+      },
+      "joinery_boundary": "GROOVES / MORTISE-TENON / CAVITIES / LOCAL CONNECTION CUTS DEFERRED",
+      "source_artifacts": {
+        "accepted_first_article": {
+          "run_id": 36290968633,
+          "artifact_id": 10922436059,
+          "artifact_zip_sha256": "4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736"
+        },
+        "post_traceability_regression": {
+          "run_id": 36292530436,
+          "artifact_id": 10923335229,
+          "artifact_zip_sha256": "86447cef31497033c9c9aadcc7089822bfe947649e88aa3c8b80353142d98e68"
+        }
+      },
+      "regenerated_blend_sha256": "2d8e46f6de85e7c60f715c0a19c72a04f735aeab4ee9b95497a26e4cc1292376",
+      "regenerated_blend_promoted_to_canonical": false,
+      "minimal_sufficient_package": {
+        "policy": "ADAPTIVE / NO UNIVERSAL FILE COUNT",
+        "formal_repo_files": [
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-GUAZI-001/CMP-GONG-GUAZI-001_GUAZI_DEFINITION_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-GUAZI-001/CMP-GONG-GUAZI-001_MASTER_SEMANTIC_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-GUAZI-001/CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-GUAZI-001/CMP-GONG-GUAZI-001_MASTER_VALIDATION_V001.json",
+          "docs/tasks/T-037_P3_3_GUAZI_GONG_MASTER_V2_V001.md"
+        ],
+        "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+        "review_board_count": 1,
+        "required_review_panel_count": 8
+      }
     }
   ],
-  "approved_master_count": 20
+  "approved_master_count": 21
 }

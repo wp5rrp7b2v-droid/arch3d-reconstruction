@@ -1,4 +1,5 @@
 # RC-018 component-registry derived Excel sync
+# D-190 authorized post-formalization Excel sync trigger for T-037
 name: Wanfo Component Registry Excel Sync
 
 on:

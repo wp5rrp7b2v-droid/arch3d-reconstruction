@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R260",
-  "last_updated": "2026-09-26",
-  "session_status": "DAILY CLOSE PASS / LOCAL SYNC PASS / T-034+T-035+T-036 CLOSED / 20 OF 28 / NEXT 瓜子栱族 SOURCE READINESS / T-018 HOLD",
+  "state_revision": "R273",
+  "last_updated": "2026-09-27",
+  "session_status": "T-037 PR #33 READY FOR REVIEW D-192 / MERGEABLE TRUE / MERGE NOT AUTHORIZED / MAIN REMAINS 20 OF 28 UNTIL MERGE / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / 20 OF 28 MASTERS APPROVED / T-036 CLOSED / NEXT PRIORITY 15 瓜子栱族 SOURCE READINESS / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / BRANCH 21 OF 28 MASTERS APPROVED / MAIN 20 OF 28 / T-037 GUAZI GONG FIRST ARTICLE IN PROGRESS / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 20 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-036 CLOSED D-176 / NEXT PRIORITY 15 瓜子栱族 SOURCE READINESS / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / 20 OF 28 MASTERS APPROVED / RC-024 ACTIVE / T-036 CLOSED D-176 / NEXT PRIORITY 15 瓜子栱族 SOURCE READINESS / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / BRANCH 21 OF 28 / MAIN 20 OF 28 / T-037 FORMALIZED D-189 / PR #33 DRAFT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / BRANCH 21 OF 28 / MAIN 20 OF 28 / T-037 FORMALIZED D-189 / PR #33 DRAFT / T-018 HOLD"
     }
   },
   "decision_required": false,
-  "blocker": "No active Stage1 engineering blocker. GitHub canonical close and local repository synchronization are complete. T-018 remains HOLD; Stage2 remains unauthorized.",
+  "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,17 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": null,
-    "name": "No active Stage1 engineering T-task",
-    "status": "DAILY CLOSE / WORK STOPPED FOR 2026-09-26"
+    "id": "T-037",
+    "name": "P3_3_GUAZI_GONG_MASTER_V2_V001",
+    "status": "PR #33 READY FOR REVIEW / D-192 / MERGE NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "P3.3-STAGE1-PRIORITY-15-SOURCE-READINESS",
-    "name": "瓜子栱族｜小型瓜子栱 + 大型瓜子栱 Source Readiness + D-076",
-    "status": "NEXT SESSION / EVIDENCE REVIEW ONLY / NO T-TASK / NO ENGINEERING AUTHORIZATION",
-    "coverage_matrix_priority": 15,
-    "registered_records": 44,
-    "family_rule": "small 28 + large 16 share one parametric 栱 family boundary"
+    "id": "T-037-MERGE-DECISION",
+    "name": "PR #33 merge decision",
+    "status": "AWAITING PRODUCT OWNER AUTHORIZATION"
   },
   "last_completed_task": {
     "id": "T-036",
@@ -135,14 +132,14 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 19 OF 28 MASTERS APPROVED / T-031 CLOSED / T-032 CLOSED / T-033 CLOSED / T-034 CLOSED / T-035 CLOSED D-162 / RC-024 ACTIVE / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 20 OF 28 MASTERS APPROVED / T-037 ENGINEERING ACTIVE D-183 / RC-024 ACTIVE / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-066",
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md",
     "engineering_planning_authorized": true,
-    "engineering_execution_authorized": false,
+    "engineering_execution_authorized": true,
     "t017": {
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
@@ -741,6 +738,51 @@
       "v008_bound_rows": 4,
       "master_covered_registry_record_count": 147,
       "stage1_master_completion": "19/28 / 67.9%"
+    },
+    "t037": {
+      "status": "FIRST ARTICLE MACHINE PASS / REVIEW RENDER FIX PASS / READY FOR PRODUCT OWNER VISUAL REVIEW",
+      "decision_ids": [
+        "D-180",
+        "D-181",
+        "D-182",
+        "D-183"
+      ],
+      "task_id": "T-037",
+      "task_name": "P3_3_GUAZI_GONG_MASTER_V2_V001",
+      "component_family_id": "CMP-GONG-GUAZI-001",
+      "master_id": "CMP-GONG-GUAZI-001_MASTER",
+      "branch": "codex/t037-p3-3-guazi-gong-master-v2-v001",
+      "physical_instance_count": 44,
+      "large_count": 16,
+      "small_count": 28,
+      "geometry_variant_count": 2,
+      "dimensions_mm": {
+        "large": {
+          "length": 1007,
+          "width": 214.7,
+          "thickness": 156.5
+        },
+        "small": {
+          "length": 895,
+          "width": 214.7,
+          "thickness": 156.5
+        }
+      },
+      "evidence_semantics": {
+        "width": "OBSERVED_MEAN / n=44",
+        "thickness": "OBSERVED_MEAN / n=16",
+        "profile": "SOURCE_DERIVED_PROFILE / exact curve UNRESOLVED"
+      },
+      "engineering_execution_authorized": true,
+      "blender_execution_authorized": true,
+      "first_article_acceptance_authorized": false,
+      "formalization_authorized": false,
+      "catalog_v008_binding_authorized": false,
+      "merge_authorized": false,
+      "run_id": 36290968633,
+      "artifact_id": 10922436059,
+      "artifact_digest": "sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736",
+      "review_render_fix_decision_id": "D-184"
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -1204,15 +1246,15 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-033 CLOSED / 17 OF 28",
+    "status": "ACTIVE / T-037 FORMALIZED ON BRANCH / 21 OF 28",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 17,
-    "pending_master_object_type_count": 11,
-    "master_completion_percent": 60.7,
-    "master_covered_registry_record_count": 131,
+    "approved_master_count": 21,
+    "pending_master_object_type_count": 7,
+    "master_completion_percent": 75,
+    "master_covered_registry_record_count": 203,
     "pending_source_binding_count": 7,
     "row_fields": [
       "stage1_disposition",
@@ -1223,7 +1265,8 @@
     "excel_generator_version": "1.0.2",
     "excel_sync_run": 36003187429,
     "excel_sync_result": "SUCCESS",
-    "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure."
+    "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure.",
+    "excel_sync_pending": true
   },
   "local_sync_verification_2026_09_20": {
     "status": "PASS / COMPLETE",
@@ -2049,5 +2092,98 @@
     "remote_head_at_check": "34bd36cff8205286a8c89fe52956f73ee1abe591",
     "branch_status": "main...origin/main",
     "note": "This record is written after the sync checkpoint; a final pull of this Project Control record itself is required to make local HEAD equal the new canonical main."
+  },
+  "guazi_gong_stage1": {
+    "status": "PR #33 READY FOR REVIEW / D-192 / MERGE NOT AUTHORIZED",
+    "source_readiness_decision_id": "D-180",
+    "visual_form_gate_decision_id": "D-180",
+    "master_spec_decision_id": "D-181",
+    "task_contract_decision_id": "D-182",
+    "execution_decision_id": "D-183",
+    "component_family_id": "CMP-GONG-GUAZI-001",
+    "master_id": "CMP-GONG-GUAZI-001_MASTER",
+    "physical_instance_count": 44,
+    "large_count": 16,
+    "small_count": 28,
+    "geometry_variant_count": 2,
+    "profile_authority": "SOURCE_DERIVED_PROFILE",
+    "exact_historical_curve": "UNRESOLVED",
+    "task_contract_path": "docs/tasks/T-037_P3_3_GUAZI_GONG_MASTER_V2_V001.md",
+    "engineering_execution_authorized": true,
+    "first_article_acceptance_authorized": true,
+    "review_render_fix_decision_id": "D-184",
+    "first_article_run_id": 36290968633,
+    "first_article_artifact_id": 10922436059,
+    "first_article_artifact_digest": "sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736",
+    "first_article_approved": true,
+    "first_article_approval_decision_id": "D-185",
+    "formalization_authorized": true,
+    "catalog_v008_binding_authorized": true,
+    "merge_authorized": false,
+    "thickness_observed_sample_mean_mm": 156.5,
+    "thickness_observed_n": 16,
+    "thickness_subgroup_attribution": "UNRESOLVED",
+    "thickness_is_44_instance_direct": false,
+    "profile_control_status": "SOURCE_DERIVED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "joinery_connection_details": "DEFERRED",
+    "traceability_patch_required_before_formalization": false,
+    "traceability_patch_decision_id": "D-186",
+    "traceability_patch_status": "COMPLETE",
+    "thickness_variant_application": "STAGE1_PRODUCTION_FAMILY_APPLICATION / NOT_VARIANT_SPECIFIC_DIRECT_OBSERVATION",
+    "profile_numeric_reproduction_basis": "LOCKED_13_POINT_CONTROL_SET_IN_DEFINITION",
+    "profile_metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "profile_source_reextraction_reproducible": false,
+    "post_traceability_regression_decision_id": "D-187",
+    "post_traceability_regression_run_id": 36292530436,
+    "post_traceability_regression_result": "SUCCESS / 43 OF 43 PASS",
+    "post_traceability_artifact_id": 10923335229,
+    "post_traceability_artifact_digest": "sha256:86447cef31497033c9c9aadcc7089822bfe947649e88aa3c8b80353142d98e68",
+    "large_geometry_signature": "5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d",
+    "small_geometry_signature": "e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842",
+    "geometry_match_approved_first_article": true,
+    "post_patch_family_semantic_signature": "69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c",
+    "regenerated_blend_sha256": "2c7ee97d349ae7e05e8912e3dc575160536cd08e4942e539b4d18b46ed424769",
+    "regenerated_blend_promoted_to_canonical": false,
+    "formalization_authority": "D-188",
+    "excel_sync_authorized": true,
+    "formalization_result_decision_id": "D-189",
+    "formalization_complete": true,
+    "formalization_run_id": 36293945358,
+    "branch_approved_master_count": 21,
+    "branch_master_completion_percent": 75,
+    "branch_master_covered_registry_record_count": 203,
+    "guazi_registry_binding_count": 44,
+    "current_equals_v008": true,
+    "canonical_blend_sha256": "932571bcbff0c3f166dd5c449a35a96a618876ad8986d0dacbb668f9a510048a",
+    "semantic_sha256": "e2cde73556e13d50b8001633d15fbcd8811650146fe37a148f71181825cbb61c",
+    "validation_sha256": "dbea36c19c86c1772877a74a353a820a1e23bd4fc7b1adbce73244999b4b2219",
+    "review_board_sha256": "9f621af4f27831c4b2fb0e8cd4f08767117dece7604e3a40ba8918fce1d7543f",
+    "family_semantic_signature": "69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c",
+    "formal_regenerated_blend_sha256": "2d8e46f6de85e7c60f715c0a19c72a04f735aeab4ee9b95497a26e4cc1292376",
+    "formal_regenerated_blend_promoted_to_canonical": false,
+    "final_regression_authorized": true,
+    "pr_readiness_review_authorized": true,
+    "pr_ready_authorized": true,
+    "post_formalization_authority": "D-190",
+    "post_formalization_result_decision_id": "D-191",
+    "excel_sync_run_id": 36294703456,
+    "excel_sync_result": "SUCCESS / V008 / 505 / NO FURTHER DERIVED DELTA",
+    "excel_manifest_source_commit": "7b69c7a60ed684584147141e73695eea519bae6d",
+    "excel_current_sha256": "3c80fbf9c3b9345fe8e2de56e6de05e469ba66e3b1f2b0a9cddcaec3728716a8",
+    "latest_head_regression_run_id": 36294703418,
+    "latest_head_regression_result": "SUCCESS / 43 OF 43 PASS",
+    "latest_head_sha": "a0dc6ada9c7eb23859b8a1857400dbf5a2789e67",
+    "latest_head_artifact_id": 10923462649,
+    "latest_head_artifact_digest": "sha256:8d4002d26a4670fa57ae48447a6d2a83f74b601f9f5ee8d63155ab4607c2df27",
+    "latest_head_large_geometry_signature": "5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d",
+    "latest_head_small_geometry_signature": "e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842",
+    "latest_head_family_semantic_signature": "69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c",
+    "shared_regression_summary": "T-021 PASS / T-022 PASS / T-023 PASS / T-024 PASS / GENERIC P3.3 SKIPPED AS INTENDED",
+    "pr_number": 33,
+    "pr_draft": false,
+    "pr_mergeable": true,
+    "pr_readiness_review": "PASS / READY FOR PRODUCT OWNER PR-READY DECISION",
+    "pr_ready_decision_id": "D-192",
+    "pr_ready_complete": true
   }
 }

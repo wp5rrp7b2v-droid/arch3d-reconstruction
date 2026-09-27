@@ -1,0 +1,248 @@
+{
+  "schema_version": "GUAZI_GONG_MASTER_DEFINITION_V001",
+  "task_id": "T-037",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-181 / FIRST_ARTICLE_APPROVED D-185 / TRACEABILITY_PATCH D-186",
+  "component_family_id": "CMP-GONG-GUAZI-001",
+  "component_names_zh": [
+    "大型瓜子栱",
+    "小型瓜子栱"
+  ],
+  "master_id": "CMP-GONG-GUAZI-001_MASTER",
+  "master_version": "V001",
+  "architecture": "MASTER V2 / ONE FAMILY / TWO LENGTH VARIANTS / SOURCE-DERIVED PROFILE / MINIMAL_SUFFICIENT",
+  "authority": {
+    "source_id": "SRC-ZG-WF-001",
+    "source_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "source_title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告",
+    "dimension_pages": [
+      {
+        "pdf_page": 54,
+        "table": "2-12",
+        "field": "width",
+        "mean_mm": 214.7,
+        "sample_count": 44
+      },
+      {
+        "pdf_page": 56,
+        "table": "2-16",
+        "field": "thickness",
+        "mean_mm": 156.5,
+        "sample_count": 16,
+        "classification": "OBSERVED_SAMPLE_MEAN",
+        "subgroup_attribution": "UNRESOLVED",
+        "variant_specific_direct_claim": false
+      },
+      {
+        "pdf_page": 58,
+        "table": "2-20",
+        "field": "large_length",
+        "mean_mm": 1007,
+        "sample_count": 16
+      },
+      {
+        "pdf_page": 58,
+        "table": "2-20",
+        "field": "small_length",
+        "mean_mm": 895,
+        "sample_count": 28
+      }
+    ],
+    "visual_reference_gate": {
+      "decision_id": "D-180",
+      "result": "PASS / PRODUCT_OWNER",
+      "same_building_pages": [
+        73,
+        74,
+        75,
+        76
+      ],
+      "figures": [
+        "2-27",
+        "2-28",
+        "2-29",
+        "2-31"
+      ],
+      "dimension_authority": false
+    }
+  },
+  "registry_boundary": {
+    "registry_schema_version_expected": "V008",
+    "registry_record_count_expected": 505,
+    "physical_instance_count": 44,
+    "large_count": 16,
+    "small_count": 28,
+    "master_family_count": 1,
+    "geometry_variant_count": 2
+  },
+  "variants": [
+    {
+      "variant_id": "LARGE_GUAZI_GONG",
+      "component_name_zh": "大型瓜子栱",
+      "count": 16,
+      "length_mm": 1007,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    },
+    {
+      "variant_id": "SMALL_GUAZI_GONG",
+      "component_name_zh": "小型瓜子栱",
+      "count": 28,
+      "length_mm": 895,
+      "width_mm": 214.7,
+      "thickness_mm": 156.5
+    }
+  ],
+  "evidence_semantics": {
+    "length_classification": "OBSERVED_MEAN / VARIANT_SPECIFIC",
+    "width_classification": "OBSERVED_MEAN / FAMILY / n=44",
+    "thickness_classification": "OBSERVED_SAMPLE_MEAN / n=16",
+    "family_mean_is_per_instance_direct": false,
+    "thickness_is_44_instance_direct": false,
+    "original_963_design_claim": false,
+    "thickness_subgroup_attribution": "UNRESOLVED",
+    "thickness_variant_application": "STAGE1_PRODUCTION_FAMILY_APPLICATION / NOT_VARIANT_SPECIFIC_DIRECT_OBSERVATION"
+  },
+  "profile_contract": {
+    "authority": "SOURCE_DERIVED_PROFILE",
+    "classification": "SOURCE_DERIVED_SIMPLIFIED_PROFILE / REPLACEABLE",
+    "exact_historical_curve": "UNRESOLVED",
+    "source_figures": [
+      "PDF p73 Fig 2-27",
+      "PDF p76 Fig 2-31"
+    ],
+    "derivation_method": "PO_APPROVED_STAGE1_SYMMETRIC_NORMALIZED_CONTROL_SET_FROM_SAME_BUILDING_QUALITATIVE_FORM_EVIDENCE",
+    "normalized_coordinate_meaning": {
+      "x": "fraction of full variant length, centered at 0",
+      "z": "fraction of full thickness, centered at 0"
+    },
+    "normalized_points": [
+      [
+        -0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.1
+      ],
+      [
+        0.46,
+        -0.02
+      ],
+      [
+        0.4,
+        -0.16
+      ],
+      [
+        0.31,
+        -0.3
+      ],
+      [
+        0.2,
+        -0.42
+      ],
+      [
+        0,
+        -0.5
+      ],
+      [
+        -0.2,
+        -0.42
+      ],
+      [
+        -0.31,
+        -0.3
+      ],
+      [
+        -0.4,
+        -0.16
+      ],
+      [
+        -0.46,
+        -0.02
+      ],
+      [
+        -0.5,
+        0.1
+      ]
+    ],
+    "normalized_points_are_direct_measurements": false,
+    "shared_profile_rule": true,
+    "exact_roll_cut_dimensions": "UNRESOLVED",
+    "source_role": "QUALITATIVE_FORM_AND_ENVELOPE_AUTHORITY / NOT_METRIC_CONTROL_POINT_AUTHORITY",
+    "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "source_reextraction_reproducible": false,
+    "numeric_reproduction_basis": "LOCKED_13_POINT_CONTROL_SET_IN_THIS_DEFINITION",
+    "construction_steps": [
+      "Use PDF p73 Fig 2-27 and PDF p76 Fig 2-31 as same-building qualitative form/envelope references.",
+      "Use a bilateral-symmetric Stage1 control envelope centered at x=0; no generic Song template substitution.",
+      "Normalize x by full variant length and z by representative thickness; lock top/bottom envelope extrema to +0.5/-0.5.",
+      "Use the approved 13-point normalized polygon stored in normalized_points; reproduce geometry from these versioned numbers rather than re-measuring pixels.",
+      "Extrude the resulting 2D profile across the representative width."
+    ],
+    "historical_control_point_claim": false,
+    "future_upgrade_rule": "REPLACEABLE_IF_DIRECT_OR_METRICALLY_CALIBRATED_PROFILE_EVIDENCE_BECOMES_AVAILABLE"
+  },
+  "coordinate_contract": {
+    "x_axis": "+X member length",
+    "y_axis": "+Y width / 栱广",
+    "z_axis": "+Z thickness / 栱厚",
+    "origin": "canonical envelope center",
+    "location": [
+      0,
+      0,
+      0
+    ],
+    "rotation": [
+      0,
+      0,
+      0
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ]
+  },
+  "deferred_geometry": [
+    "exact_mortise_tenon",
+    "hidden_slots_or_cavities",
+    "exact_local_curve_control_dimensions",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "unmeasured_micro_chamfers"
+  ],
+  "unsupported_detail_count": 0,
+  "first_article_contract": {
+    "variant_count": 2,
+    "variants": [
+      "LARGE_GUAZI_GONG",
+      "SMALL_GUAZI_GONG"
+    ],
+    "registry_instance_assembly": false,
+    "product_owner_acceptance_required": true
+  },
+  "execution_boundary": {
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "production_branch_creation_authorized": true,
+    "draft_pr_authorized": true,
+    "first_article_acceptance_authorized": true,
+    "formalization_authorized": false,
+    "catalog_v008_binding_authorized": false,
+    "merge_authorized": false,
+    "stage2_authorized": false,
+    "t018_status": "HOLD"
+  },
+  "decisions": {
+    "source_visual": "D-180",
+    "master_spec": "D-181",
+    "task_contract": "D-182",
+    "engineering_execution": "D-183",
+    "first_article_approval": "D-185",
+    "traceability_patch": "D-186"
+  }
+}
