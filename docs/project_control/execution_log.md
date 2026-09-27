@@ -1801,3 +1801,20 @@ Do not restart T-018 by default.
 - Engineering execution / branch / PR / Blender: NOT AUTHORIZED.
 - Next gate: Engineering Execution Authorization.
 - T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 Engineering Execution Authorization｜D-216
+
+- Product Owner authorization: RECEIVED.
+- Preconditions: D-212 Master Spec LOCKED / D-213 Task Contract LOCKED / D-215 14-point Profile Control LOCKED.
+- Authorized production branch: `codex/t039-p3-3-linggong-master-v2-v001`.
+- Authorized implementation: isolated builder / validator / GitHub Actions workflow.
+- Authorized Blender version: 4.5.13.
+- Authorized First Article: exactly 1 canonical 令栱 body.
+- Locked geometry: 897 × 217.4 × 155.6 mm / 1 shared Master / 0 Geometry Variant.
+- Locked profile: 14-point signature `0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7`.
+- Required validation: deterministic rebuild/reopen / manifold / semantic+geometry signature / canonical binary SHA / no tracked .blend / Review Board nonblank check.
+- Required Review Board: 8 domains per T-039 contract.
+- Draft PR creation: AUTHORIZED.
+- Product Owner First Article acceptance: NOT AUTHORIZED BY THIS DECISION.
+- Formalization / Catalog binding / Ready+Merge / closure: NOT AUTHORIZED.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
