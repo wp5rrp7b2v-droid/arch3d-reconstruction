@@ -1661,3 +1661,10 @@ Do not restart T-018 by default.
 - Master-covered Registry records: 247. CURRENT == V008: PASS.
 - Derived Excel sync / post-formalization regression / PR readiness: NOT AUTHORIZED.
 - PR #34 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.
+
+## 2026-09-27｜T-038 Post-Formalization Verification Authorization｜D-206
+
+- Product Owner: AUTHORIZED.
+- Scope: synchronize V008/CURRENT progress summary to D-205 branch truth; derived Excel sync; latest-head T-038 regression; shared canonical-registry regressions; PR #34 readiness review.
+- D-205 row binding remains 44/44 and Catalog remains 22/28.
+- Ready transition / merge / closure / Stage2 / T-018 resume remain NOT AUTHORIZED.
