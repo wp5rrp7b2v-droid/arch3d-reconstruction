@@ -1552,3 +1552,12 @@ Do not restart T-018 by default.
 - V008 production dimensions currently carried: LARGE L=1641mm; SMALL L=1607mm; W=218.9mm; T=156.9mm.
 - Current scope: Source Readiness + visual/form evidence review only.
 - No Master Spec lock, Task Contract lock, engineering execution, Blender generation, or PR creation is authorized yet.
+
+## 2026-09-27｜T-038 Source Readiness + D-076 Review｜D-196
+
+- Primary report PDF p60 / printed p45 directly supports LARGE slow-gong observed mean 1641mm (n=16) and SMALL 1607mm (n=28).
+- V008 W=218.9mm / T=156.9mm are retained as REPORT_INFERRED family design candidates, not slow-gong-specific raw observed means.
+- Same-building report PDF p73–76 provides photo/section/CAD evidence sufficient for orientation, assembly context and broad form.
+- Exact standalone profile and joinery remain unresolved/deferred.
+- Result: Source Readiness PASS WITH BOUNDARIES / D-076 PASS WITH BOUNDARIES.
+- No Master Spec lock, Task Contract, engineering execution, Blender generation, formalization or PR authority.
