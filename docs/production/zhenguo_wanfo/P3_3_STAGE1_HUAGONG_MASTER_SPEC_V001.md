@@ -414,3 +414,7 @@ Current status:
 
 Next complete step:
 **华栱 Task Contract design**.
+
+## 14. Task Contract Lock｜D-229
+
+Product Owner approved D-228 and locked `T-040｜P3_3_HUAGONG_MASTER_V2_V001` Task Contract. T-040 is now the active engineering task identity, but engineering execution remains blocked. Mandatory pre-execution sequence is locked as: (1) HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V0.1, then (2) HUAGONG_PROFILE_CONTROL_SET_V0.1, then (3) separate Engineering Execution Authorization. No branch/PR/builder/Blender/First Article/formalization/Catalog binding is authorized by D-229.

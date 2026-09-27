@@ -169,8 +169,22 @@
   "candidate_decision_id": "D-226",
   "product_owner_approved": true,
   "locked": true,
-  "engineering_task_created": false,
+  "engineering_task_created": true,
   "engineering_execution_authorized": false,
   "approval_decision_id": "D-227",
-  "master_spec_locked_date": "2026-09-27"
+  "master_spec_locked_date": "2026-09-27",
+  "task_contract": {
+    "task_id": "T-040",
+    "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
+    "path": "docs/tasks/T-040_P3_3_HUAGONG_MASTER_V2_V001.md",
+    "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-229",
+    "decision_id": "D-229",
+    "engineering_task_created": true,
+    "engineering_execution_authorized": false,
+    "pre_execution_gate_sequence": [
+      "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V0.1",
+      "HUAGONG_PROFILE_CONTROL_SET_V0.1",
+      "ENGINEERING_EXECUTION_AUTHORIZATION"
+    ]
+  }
 }
