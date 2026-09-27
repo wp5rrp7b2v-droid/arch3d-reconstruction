@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R277",
+  "state_revision": "R278",
   "last_updated": "2026-09-27",
-  "session_status": "T-038 MASTER SPEC V0.1 LOCKED D-198 / TASK CONTRACT NEXT GATE / 21 OF 28 / T-018 HOLD",
+  "session_status": "T-038 TASK CONTRACT LOCKED D-199 / PROFILE CONTROL SET V0.1 NEXT GATE / ENGINEERING NOT AUTHORIZED / 21 OF 28 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "Product Owner authorization required before T-038 Task Contract design/lock.",
+  "blocker": "T-038 numeric profile control set is unresolved. PROFILE_CONTROL_SET_V0.1 must be designed, visually reviewed and Product Owner approved before engineering execution.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "MASTER SPEC V0.1 LOCKED / PRODUCT OWNER APPROVED / D-198 / TASK CONTRACT NOT YET AUTHORIZED"
+    "status": "TASK CONTRACT LOCKED / D-199 / PROFILE CONTROL SET V0.1 REQUIRED BEFORE EXECUTION"
   },
   "proposed_next_task": {
-    "id": "T-038-TASK-CONTRACT",
-    "name": "T-038 慢栱族 Task Contract",
-    "status": "AWAITING PRODUCT OWNER AUTHORIZATION TO DESIGN/LOCK"
+    "id": "T-038-PROFILE-CONTROL-V0.1",
+    "name": "慢栱族 Profile Control Set V0.1",
+    "status": "AWAITING PRODUCT OWNER AUTHORIZATION TO DESIGN/REVIEW"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "MASTER SPEC V0.1 LOCKED / PRODUCT OWNER APPROVED / D-198",
+    "status": "TASK CONTRACT LOCKED / D-199 / PROFILE CONTROL SET NEXT GATE",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2227,7 +2227,7 @@
     "source_readiness_pass": true,
     "visual_form_gate": "PASS WITH BOUNDARIES / D-196",
     "master_spec_authorized": true,
-    "task_contract_authorized": false,
+    "task_contract_authorized": true,
     "engineering_execution_authorized": false,
     "source_readiness_decision_id": "D-196",
     "direct_length_evidence": {
@@ -2263,6 +2263,11 @@
     "width_thickness_classification": "REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
     "numeric_profile_control_set_locked": false,
     "master_spec_locked": true,
-    "master_spec_approval_decision_id": "D-198"
+    "master_spec_approval_decision_id": "D-198",
+    "task_contract_decision_id": "D-199",
+    "task_contract_path": "docs/tasks/T-038_P3_3_MANGONG_MASTER_V2_V001.md",
+    "task_contract_locked": true,
+    "profile_control_gate_required": true,
+    "profile_control_gate_id": "PROFILE_CONTROL_SET_V0.1"
   }
 }
