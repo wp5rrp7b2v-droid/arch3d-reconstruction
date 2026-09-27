@@ -1093,3 +1093,17 @@ Boundary retained:
 - Generic template substitution: **HARD FAIL**.
 - Unsupported joinery/local cuts: **HARD FAIL**.
 - Engineering execution: **NOT AUTHORIZED**.
+
+### T-039｜令栱 Profile Control Set Candidate 01｜D-214
+
+- Candidate identity: **PASS**.
+- Point count: **14**.
+- Signature present: **PASS**.
+- Same-building source role explicit: **PASS**.
+- Metric calibration claim: **NONE / PASS**.
+- Historical control-point claim: **FALSE / PASS**.
+- T-037 reuse: **FALSE / PASS**.
+- T-038 reuse: **FALSE / PASS**.
+- Generic template substitution: **FALSE / PASS**.
+- Candidate status: **NOT LOCKED / PRODUCT OWNER REVIEW REQUIRED**.
+- Engineering execution: **BLOCKED**.
