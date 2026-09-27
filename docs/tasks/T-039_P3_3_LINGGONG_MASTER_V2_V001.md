@@ -339,8 +339,8 @@ Locked sequence:
 2. Master Spec V0.1 — **LOCKED / D-212**
 3. Task Contract — **LOCKED / D-213**
 4. Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-215**
-5. Engineering Execution Authorization — **NEXT GATE / NOT AUTHORIZED**
-6. First Article machine validation — **NOT STARTED**
+5. Engineering Execution Authorization — **AUTHORIZED / D-216**
+6. First Article machine validation — **NEXT / AUTHORIZED TO EXECUTE**
 7. Product Owner First Article Approval — **NOT AUTHORIZED**
 8. Formalization + Catalog/V008/CURRENT binding — **NOT AUTHORIZED**
 9. Derived Excel + latest-head regression + readiness review — **NOT AUTHORIZED**
@@ -379,3 +379,7 @@ D-214 records preparation of `LINGGONG_PROFILE_CONTROL_SET_V001_C01` for Product
 ## 18. Profile Control Set Approval｜D-215
 
 D-215 records Product Owner approval of `LINGGONG_PROFILE_CONTROL_SET_V001_C01`. The independent 14-point normalized set is now locked in `production/zhenguo_wanfo/component_library/masters/CMP-GONG-LINGGONG-001/CMP-GONG-LINGGONG-001_LINGGONG_DEFINITION_V001.json` with signature `0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7`. Classification remains SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT. This approval does not authorize builder implementation, production branch/PR creation, Blender generation, workflow execution, First Article production, formalization, Catalog/V008 binding, merge, Stage2 or T-018 resume. Engineering Execution Authorization is the next separate gate.
+
+## 19. Engineering Execution Authorization｜D-216
+
+D-216 authorizes isolated T-039 engineering execution: production branch creation, builder/validator/workflow implementation, Blender 4.5.13 generation of exactly one canonical 令栱 First Article, deterministic rebuild/reopen validation, 8-domain Review Board generation, machine evidence artifact, and Draft PR creation. The execution must consume the locked D-215 14-point Definition and preserve one shared Master / zero Geometry Variant / 28 Registry bindings with canonical family envelope 897×217.4×155.6 mm. Product Owner First Article acceptance, formalization, Catalog/V008/CURRENT binding, Derived Excel sync, PR Ready/merge, closure, Stage2 and T-018 resume remain separate and unauthorized.
