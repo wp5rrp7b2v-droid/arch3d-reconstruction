@@ -1,6 +1,6 @@
 {
   "schema_version": "P3_3_STAGE1_GUAZI_GONG_MASTER_SPEC_V001",
-  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-181",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-181 / FIRST_ARTICLE_APPROVED D-185 / TRACEABILITY_PATCH D-186",
   "date": "2026-09-27",
   "stage": "P3.3 V002 Stage 1",
   "source": {
@@ -20,7 +20,10 @@
         "table": "2-16",
         "field": "瓜子栱厚",
         "mean_mm": 156.5,
-        "sample_count": 16
+        "sample_count": 16,
+        "classification": "OBSERVED_SAMPLE_MEAN",
+        "subgroup_attribution": "UNRESOLVED",
+        "variant_specific_direct_claim": false
       },
       {
         "pdf_page": 58,
@@ -76,16 +79,26 @@
   "evidence_semantics": {
     "length": "OBSERVED_MEAN / VARIANT_SPECIFIC",
     "width": "OBSERVED_MEAN / FAMILY / n=44",
-    "thickness": "OBSERVED_MEAN / FAMILY / n=16",
+    "thickness": "OBSERVED_SAMPLE_MEAN / n=16 / subgroup_attribution=UNRESOLVED",
     "per_instance_exact_claim": false,
-    "original_963_design_claim": false
+    "original_963_design_claim": false,
+    "thickness_variant_application": "STAGE1_PRODUCTION_FAMILY_APPLICATION / NOT_VARIANT_SPECIFIC_DIRECT_OBSERVATION",
+    "thickness_is_44_instance_direct": false
   },
   "profile": {
     "authority": "SOURCE_DERIVED_PROFILE",
     "exact_historical_curve": "UNRESOLVED",
     "classification": "SOURCE_DERIVED_SIMPLIFIED_PROFILE / REPLACEABLE",
     "direct_control_point_measurements": false,
-    "shared_profile_rule": true
+    "shared_profile_rule": true,
+    "source_figures": [
+      "PDF p73 Fig 2-27",
+      "PDF p76 Fig 2-31"
+    ],
+    "control_set_reproduction": "LOCKED_NUMERIC_CONTROL_SET_IN_DEFINITION",
+    "source_reextraction_reproducible": false,
+    "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "derivation_note": "Same-building drawings provide qualitative form/envelope authority. The approved 13-point symmetric normalized control polygon is a Stage1 reconstruction control set, not a metric trace or direct curve measurement."
   },
   "deferred_geometry": [
     "exact_mortise_tenon",
@@ -99,6 +112,8 @@
     "D-180",
     "D-181",
     "D-182",
-    "D-183"
+    "D-183",
+    "D-185",
+    "D-186"
   ]
 }
