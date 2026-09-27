@@ -2017,3 +2017,19 @@ Do not restart T-018 by default.
 - Generic Master V2 route: **T-040 excluded as intended**.
 - Readiness: **PASS / READY FOR PRODUCT OWNER READY+MERGE DECISION**.
 - PR #36 remains **Draft**; Ready/Merge/Closure remain unauthorized. Stage2 not authorized; T-018 HOLD.
+
+## 2026-09-27｜T-040 Formal Closure｜D-243
+
+- PR #36 merge commit: `783d6ce89b14a07a580c0744dd63e848a152690c`.
+- Canonical main verification: **PASS**.
+- Stage1: **24/28 = 85.7%**.
+- Registry: **505**; Master-covered: **331**.
+- 华栱: **56/56 bound**; JUMP_1=28 / JUMP_2=28.
+- CURRENT == V008: **PASS**.
+- Derived Excel: **SYNCED**; current Excel SHA `53583e21d3d418c260b39fa7f44cb5eade02009081b494eecba0985d7d4b86aa`.
+- D-240 readiness chain: T-040 **76/76 PASS**; shared regressions **7/7 PASS**.
+- T-040 status: **CLOSED**.
+- Active engineering T-task: **NONE**.
+- Next candidate: **昂族（头昂 / 二昂） / Priority 19 / Source Readiness only / NOT STARTED**.
+- T-018: **HOLD**.
+- Stage2: **NOT AUTHORIZED**.
