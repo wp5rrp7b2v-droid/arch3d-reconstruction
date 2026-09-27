@@ -1504,3 +1504,18 @@ Do not restart T-018 by default.
 
 - Product Owner authorized: derived Registry Excel sync + latest-head T-037 regression + PR readiness review.
 - Not authorized: PR Ready transition, merge, closure, Stage2, T-018 resume.
+
+## 2026-09-27｜T-037 Post-Formalization Verification｜D-191
+
+- Authority: D-190.
+- Derived Excel validation: Run 36294703456 / SUCCESS / V008 / 505 records.
+- Excel generator result: no further derived delta; branch workbook already matches canonical CURRENT/V008.
+- Current/Versioned Excel SHA-256: 3c80fbf9c3b9345fe8e2de56e6de05e469ba66e3b1f2b0a9cddcaec3728716a8.
+- Latest-head T-037 regression: Run 36294703418 / SUCCESS / 43/43 PASS.
+- Head: a0dc6ada9c7eb23859b8a1857400dbf5a2789e67.
+- Artifact: 10923462649 / sha256:8d4002d26a4670fa57ae48447a6d2a83f74b601f9f5ee8d63155ab4607c2df27.
+- Geometry signatures: LARGE 5808e3f4cd7a13565e25369939479514a256b08385f76c9b5aa02dea3308e66d / SMALL e395debc85e226810421188004f6fa90e3025ce83e4de7331df944b68f200842 / exact match to D-185.
+- Family semantic signature: 69858e4333099574a9f534ff74037ef8571282d53875ab761bf5030c1bfbfb3c.
+- Shared regressions on same head: T-021/T-022/T-023/T-024 PASS; generic P3.3 Master V2 SKIPPED as intended for dedicated T-037 routing.
+- PR #33: mergeable=true / draft=true / readiness review PASS.
+- PR Ready transition and merge remain not authorized.
