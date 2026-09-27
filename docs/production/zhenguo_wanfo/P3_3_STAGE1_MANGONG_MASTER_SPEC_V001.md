@@ -1,6 +1,6 @@
 # P3.3 Stage1｜慢栱族 Master Spec V0.1
 
-Status: **DRAFT / PRODUCT OWNER REVIEW REQUIRED / D-197**
+Status: **LOCKED / PRODUCT OWNER APPROVED / D-198**
 Date: 2026-09-27
 Stage: P3.3 V002 Stage 1
 Task: T-038｜P3_3_MANGONG_MASTER_V2_V001
@@ -199,10 +199,11 @@ A future T-038 Task Contract should hard-fail at least:
 - D-195: T-038 start / Source Readiness authorized
 - D-196: Source Readiness + D-076 PASS WITH BOUNDARIES
 - D-197: Master Spec V0.1 DRAFT prepared / Product Owner review required
+- D-198: Master Spec V0.1 PRODUCT OWNER APPROVED / LOCKED
 
 Current gate:
-- Master Spec V0.1 = **DRAFT / NOT LOCKED**
-- Task Contract = **NOT AUTHORIZED**
+- Master Spec V0.1 = **LOCKED / PRODUCT OWNER APPROVED / D-198**
+- Task Contract = **NEXT GATE / NOT YET AUTHORIZED**
 - engineering execution = **NOT AUTHORIZED**
 - Blender generation = **NOT AUTHORIZED**
 - formalization = **NOT AUTHORIZED**
