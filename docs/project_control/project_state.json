@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R294",
+  "state_revision": "R295",
   "last_updated": "2026-09-27",
-  "session_status": "T-039 LINGGONG PROFILE CONTROL LOCKED D-215 / ENGINEERING EXECUTION AUTHORIZATION NEXT / MAIN 22 OF 28 / NO PRODUCTION BRANCH / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-039 ENGINEERING EXECUTION AUTHORIZED D-216 / FIRST ARTICLE EXECUTION NEXT / MAIN 22 OF 28 / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 22 OF 28 MASTERS APPROVED / T-039 PROFILE LOCKED D-215 / ENGINEERING EXECUTION NEXT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 22 OF 28 MASTERS APPROVED / T-039 EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 PROFILE CONTROL LOCKED D-215 / ENGINEERING EXECUTION NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 PROFILE CONTROL LOCKED D-215 / ENGINEERING EXECUTION NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 ENGINEERING EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 ENGINEERING EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-039",
     "name": "P3_3_LINGGONG_MASTER_V2_V001",
-    "status": "PROFILE CONTROL SET LOCKED / D-215 / ENGINEERING EXECUTION NOT AUTHORIZED"
+    "status": "ENGINEERING EXECUTION AUTHORIZED / D-216 / FIRST ARTICLE EXECUTION NEXT"
   },
   "proposed_next_task": {
-    "id": "T-039-ENGINEERING-EXECUTION-AUTHORIZATION",
-    "name": "T-039 令栱 Engineering Execution Authorization",
-    "status": "NEXT GATE / AWAITING PRODUCT OWNER"
+    "id": "T-039-FIRST-ARTICLE-EXECUTION",
+    "name": "T-039 令栱 engineering execution + First Article machine validation",
+    "status": "AUTHORIZED / NEXT COMPLETE STEP"
   },
   "last_completed_task": {
     "id": "T-038",
@@ -127,7 +127,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 PROFILE LOCKED D-215 / ENGINEERING EXECUTION NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 EXECUTION AUTHORIZED D-216 / FIRST ARTICLE NEXT / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -847,7 +847,7 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Await Product Owner authorization for T-039 isolated engineering execution. Do not create production branch/PR, implement builder, run Blender, start Stage2, or resume T-018 until explicitly authorized.",
+  "next_action": "Execute isolated T-039 engineering work on codex/t039-p3-3-linggong-master-v2-v001: builder, validator, workflow, Blender 4.5.13 First Article, 8-domain Review Board, machine validation and Draft PR. Do not formalize, bind Catalog/V008, merge, close, start Stage2, or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -966,7 +966,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 PROFILE LOCKED / ENGINEERING EXECUTION NOT AUTHORIZED",
+    "status": "ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 EXECUTION AUTHORIZED / FIRST ARTICLE NEXT",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1213,7 +1213,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "令栱 / T-039 PROFILE CONTROL LOCKED D-215 / ENGINEERING EXECUTION AUTHORIZATION NEXT"
+    "next_master_candidate": "令栱 / T-039 EXECUTION AUTHORIZED D-216 / FIRST ARTICLE MACHINE EXECUTION NEXT"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -2373,7 +2373,7 @@
     "active_engineering_task": false
   },
   "linggong_stage1": {
-    "status": "PROFILE CONTROL SET V0.1 LOCKED / PRODUCT OWNER APPROVED / D-215 / ENGINEERING EXECUTION NEXT",
+    "status": "ENGINEERING EXECUTION AUTHORIZED / D-216 / FIRST ARTICLE NEXT",
     "component": "令栱",
     "coverage_matrix_priority": 17,
     "physical_instance_count": 28,
@@ -2428,7 +2428,7 @@
     "master_spec_authorized_for_design": true,
     "master_spec_locked": true,
     "engineering_task_created": true,
-    "engineering_execution_authorized": false,
+    "engineering_execution_authorized": true,
     "master_spec_draft_decision_id": "D-211",
     "master_spec_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_LINGGONG_MASTER_SPEC_V001.md",
     "master_spec_json_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_LINGGONG_MASTER_SPEC_V001.json",
@@ -2478,6 +2478,17 @@
     "profile_control_product_owner_approved": true,
     "profile_control_locked": true,
     "profile_control_approval_decision_id": "D-215",
-    "definition_path": "production/zhenguo_wanfo/component_library/masters/CMP-GONG-LINGGONG-001/CMP-GONG-LINGGONG-001_LINGGONG_DEFINITION_V001.json"
+    "definition_path": "production/zhenguo_wanfo/component_library/masters/CMP-GONG-LINGGONG-001/CMP-GONG-LINGGONG-001_LINGGONG_DEFINITION_V001.json",
+    "engineering_execution_decision_id": "D-216",
+    "blender_execution_authorized": true,
+    "builder_execution_authorized": true,
+    "validator_execution_authorized": true,
+    "workflow_execution_authorized": true,
+    "production_branch_authorized": true,
+    "draft_pr_authorized": true,
+    "first_article_acceptance_authorized": false,
+    "formalization_authorized": false,
+    "catalog_v008_binding_authorized": false,
+    "merge_authorized": false
   }
 }
