@@ -1,0 +1,86 @@
+{
+  "schema_version": "T039_POST_FORMALIZATION_VERIFICATION_D221_V001",
+  "task_id": "T-039",
+  "authorization_decision_id": "D-221",
+  "readiness_decision_id": "D-222",
+  "status": "PASS / READY_FOR_PRODUCT_OWNER_D194_DECISION",
+  "date": "2026-09-27",
+  "formalization_decision": "D-220",
+  "first_article_approval_decision": "D-218",
+  "verification_run": {
+    "run_id": 36305841141,
+    "artifact_id": 10927705970,
+    "artifact_digest": "sha256:3f6d2f20079d6729e97dcf0d1a6f8241ac8ccdc6d0e9e16be3af806ff6d1edd6",
+    "verification_head": "c10ffcf22d6244887659c55385142f0eeef995cf"
+  },
+  "registry": {
+    "version": "V008",
+    "record_count": 505,
+    "approved_master_count": 23,
+    "pending_master_count": 5,
+    "completion_percent": 82.1,
+    "master_covered_registry_record_count": 275,
+    "linggong_binding_count": 28,
+    "current_equals_v008": true
+  },
+  "derived_excel": {
+    "sync_run_id": 36305841250,
+    "source_commit": "119dc2ae9b18a536cefb02360fa84fafe66016a7",
+    "current_excel_sha256": "1116a439b0f714378b07712633bce55067fc27aef0a188f3832da76edfd02f3d",
+    "versioned_excel_sha256": "1116a439b0f714378b07712633bce55067fc27aef0a188f3832da76edfd02f3d",
+    "status": "PASS"
+  },
+  "latest_head_t039_regression": {
+    "workflow_run_id": 36305841159,
+    "verification_head": "c10ffcf22d6244887659c55385142f0eeef995cf",
+    "validation": "43/43 PASS",
+    "family_semantic_signature": "d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7",
+    "geometry_signature": "e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61",
+    "accepted_geometry_match": true,
+    "regenerated_blend_sha256": "33bdb9efcebd18fb6da24431e966b80f2cec69f1ff049674300b763ab5b5c5ff",
+    "regenerated_blend_promoted_to_canonical": false,
+    "accepted_canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7"
+  },
+  "shared_regressions": {
+    "T-021": {
+      "run_id": 36305940041,
+      "result": "SUCCESS"
+    },
+    "T-022": {
+      "run_id": 36305940938,
+      "result": "SUCCESS"
+    },
+    "T-023": {
+      "run_id": 36305941815,
+      "result": "SUCCESS"
+    },
+    "T-024": {
+      "run_id": 36305942766,
+      "result": "SUCCESS"
+    },
+    "T-037": {
+      "run_id": 36305943733,
+      "result": "SUCCESS"
+    },
+    "T-038": {
+      "run_id": 36305944709,
+      "result": "SUCCESS"
+    },
+    "generic_p3_3_master_v2": {
+      "result": "SKIPPED_AS_INTENDED",
+      "reason": "dedicated T-039 route is authoritative"
+    }
+  },
+  "pr_readiness": {
+    "pr_number": 35,
+    "state": "OPEN",
+    "draft": true,
+    "mergeable": true,
+    "ready_for_d194_combined_decision": true
+  },
+  "ready_transition_authorized": false,
+  "merge_authorized": false,
+  "closure_authorized": false,
+  "stage2_authorized": false,
+  "t018_status": "HOLD"
+}
