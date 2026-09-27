@@ -35,14 +35,14 @@ Direct measurement bindings:
 LARGE_GUAZI_GONG:
 - length = 1007.0 mm / OBSERVED_MEAN / n=16
 - width = 214.7 mm / FAMILY_OBSERVED_MEAN / n=44
-- thickness = 156.5 mm / FAMILY_OBSERVED_MEAN / n=16
+- thickness = 156.5 mm / OBSERVED_SAMPLE_MEAN / n=16 / subgroup attribution = UNRESOLVED
 
 SMALL_GUAZI_GONG:
 - length = 895.0 mm / OBSERVED_MEAN / n=28
 - width = 214.7 mm / FAMILY_OBSERVED_MEAN / n=44
-- thickness = 156.5 mm / FAMILY_OBSERVED_MEAN / n=16
+- thickness = 156.5 mm / OBSERVED_SAMPLE_MEAN / n=16 / subgroup attribution = UNRESOLVED
 
-The family means are canonical Stage1 representative dimensions. They are not 44 per-instance exact measurements and are not proven 963 original-design dimensions.
+The width mean is a family-level observed mean (n=44). The thickness value is an observed sample mean (n=16), but the report excerpt does not resolve whether those 16 samples belong to LARGE, SMALL, or a mixed subset; therefore subgroup attribution is explicitly UNRESOLVED. Applying 156.5 mm to both geometry variants is a Stage1 production-family application, not a claim that each variant was separately measured at 156.5 mm. None of these means are 44 per-instance exact measurements or proven 963 original-design dimensions.
 
 ## 4. Profile authority
 
@@ -52,9 +52,13 @@ The Stage1 profile is recovered from same-building bracket-set drawings after D-
 
 Locked semantic boundary:
 - exact historical curve/control-point dimensions = UNRESOLVED
-- normalized profile points are deterministic reconstruction controls
+- normalized profile points are deterministic Stage1 reconstruction controls
 - normalized points are NOT direct measurements
-- normalized profile is REPLACEABLE if stronger direct evidence appears
+- current 13-point control set is locked numerically in the Definition and is therefore reproducible from the Definition
+- source-image re-extraction is NOT claimed to reproduce the same numeric points; no metric pixel-to-mm calibration was performed or claimed
+- source role = same-building qualitative form/envelope authority (PDF p73 Fig 2-27; p76 Fig 2-31)
+- construction rule = bilateral symmetric normalized envelope; X normalized by each variant length, Z normalized by representative thickness, then extruded across representative width
+- normalized profile is REPLACEABLE if stronger direct or metrically calibrated evidence appears
 - no generic Song-template profile may silently replace the same-building evidence basis
 
 ## 5. Variant rule
@@ -88,5 +92,7 @@ D-180: Source Readiness + D-076 PASS
 D-181: Master Spec V001 LOCKED
 D-182: T-037 Task Contract LOCKED
 D-183: T-037 Engineering Execution AUTHORIZED
+D-185: T-037 First Article PRODUCT OWNER APPROVED
+D-186: Traceability Review Patch AUTHORIZED + COMPLETED
 
 T-018 remains HOLD. Stage2 remains NOT AUTHORIZED.
