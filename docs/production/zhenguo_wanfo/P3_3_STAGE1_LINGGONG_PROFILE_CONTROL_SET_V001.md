@@ -1,9 +1,9 @@
 # P3.3 Stage1｜T-039 令栱 Profile Control Set V0.1
 
-Status: **CANDIDATE 01 / PRODUCT OWNER REVIEW REQUIRED / D-214**
+Status: **LOCKED / PRODUCT OWNER APPROVED / D-215**
 Date: 2026-09-27
 Task: T-039｜P3_3_LINGGONG_MASTER_V2_V001
-Decision lineage: D-210 / D-212 / D-213 / D-214
+Decision lineage: D-210 / D-212 / D-213 / D-214 / D-215
 
 ## 1. Purpose
 
@@ -194,13 +194,13 @@ Prohibited:
 
 ## 10. Current decision boundary
 
-D-214 prepares Candidate 01 for Product Owner review only.
+D-214 prepared Candidate 01 for Product Owner review. D-215 records Product Owner approval and formally locks Candidate 01.
 
 Current status:
 
-**NOT LOCKED**
+**LOCKED / PRODUCT OWNER APPROVED / D-215**
 
-Engineering execution remains blocked.
+Engineering execution remains a separate authorization gate and is still blocked.
 
 This step does not authorize:
 - builder implementation;
@@ -215,6 +215,24 @@ This step does not authorize:
 - Stage2;
 - T-018 resume.
 
+Locked candidate:
+
+`LINGGONG_PROFILE_CONTROL_SET_V001_C01`
+
+Locked signature:
+
+`0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7`
+
 Next gate:
 
-**Product Owner review / approval of LINGGONG_PROFILE_CONTROL_SET_V001_C01.**
+**Engineering Execution Authorization — not yet authorized.**
+
+## 11. Approval Result｜D-215
+
+- Product Owner approval: **PASS / D-215**
+- Locked candidate: `LINGGONG_PROFILE_CONTROL_SET_V001_C01`
+- Locked control-set signature: `0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7`
+- Point count: **14**
+- Classification remains: `SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT`
+- Metric source-image calibration: **NOT PERFORMED / NOT CLAIMED**
+- Engineering execution: **NOT AUTHORIZED**
