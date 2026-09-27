@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R265",
+  "state_revision": "R266",
   "last_updated": "2026-09-27",
-  "session_status": "T-037 GUAZI GONG FIRST ARTICLE MACHINE PASS / REVIEW RENDER FIX PASS D-184 / READY FOR PRODUCT OWNER VISUAL REVIEW / 20 OF 28 APPROVED / T-018 HOLD",
+  "session_status": "T-037 FIRST ARTICLE PRODUCT OWNER APPROVED D-185 / TRACEABILITY PATCH REQUIRED BEFORE FORMALIZATION / 20 OF 28 APPROVED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "No engineering blocker. T-037 first article and repaired visual Review Board are ready for Product Owner review; no formalization or merge before approval.",
+  "blocker": "T-037 first article is Product Owner approved, but formalization remains unauthorized and blocked pending explicit thickness subgroup-attribution and reproducible profile-derivation traceability patch.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,14 +64,13 @@
   "current_task": {
     "id": "T-037",
     "name": "P3_3_GUAZI_GONG_MASTER_V2_V001",
-    "status": "FIRST ARTICLE MACHINE PASS / REVIEW RENDER FIX PASS / READY FOR PRODUCT OWNER VISUAL REVIEW / D-184"
+    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-185 / TRACEABILITY PATCH REQUIRED BEFORE FORMALIZATION"
   },
   "proposed_next_task": {
-    "id": "T-037-FIRST-ARTICLE-PO-REVIEW",
-    "name": "瓜子栱族 LARGE + SMALL 首件人工审核",
-    "status": "AWAITING PRODUCT OWNER DECISION",
-    "registered_records": 44,
-    "family_rule": "1 Master family / 2 geometry variants / large 16 + small 28"
+    "id": "T-037-TRACEABILITY-REVIEW-PATCH",
+    "name": "瓜子栱族 thickness attribution + profile derivation traceability patch",
+    "status": "REQUIRED BEFORE FORMALIZATION",
+    "scope": "metadata/spec/definition traceability only; no geometry change unless reproducible source derivation requires it"
   },
   "last_completed_task": {
     "id": "T-036",
@@ -2095,7 +2094,7 @@
     "note": "This record is written after the sync checkpoint; a final pull of this Project Control record itself is required to make local HEAD equal the new canonical main."
   },
   "guazi_gong_stage1": {
-    "status": "FIRST ARTICLE MACHINE PASS / REVIEW RENDER FIX PASS D-184 / READY FOR PRODUCT OWNER VISUAL REVIEW",
+    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-185 / TRACEABILITY PATCH REQUIRED BEFORE FORMALIZATION",
     "source_readiness_decision_id": "D-180",
     "visual_form_gate_decision_id": "D-180",
     "master_spec_decision_id": "D-181",
@@ -2111,10 +2110,22 @@
     "exact_historical_curve": "UNRESOLVED",
     "task_contract_path": "docs/tasks/T-037_P3_3_GUAZI_GONG_MASTER_V2_V001.md",
     "engineering_execution_authorized": true,
-    "first_article_acceptance_authorized": false,
+    "first_article_acceptance_authorized": true,
     "review_render_fix_decision_id": "D-184",
     "first_article_run_id": 36290968633,
     "first_article_artifact_id": 10922436059,
-    "first_article_artifact_digest": "sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736"
+    "first_article_artifact_digest": "sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736",
+    "first_article_approved": true,
+    "first_article_approval_decision_id": "D-185",
+    "formalization_authorized": false,
+    "catalog_v008_binding_authorized": false,
+    "merge_authorized": false,
+    "thickness_observed_sample_mean_mm": 156.5,
+    "thickness_observed_n": 16,
+    "thickness_subgroup_attribution": "UNRESOLVED",
+    "thickness_is_44_instance_direct": false,
+    "profile_control_status": "SOURCE_DERIVED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "joinery_connection_details": "DEFERRED",
+    "traceability_patch_required_before_formalization": true
   }
 }
