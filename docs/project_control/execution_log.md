@@ -1861,3 +1861,16 @@ Do not restart T-018 by default.
 - Catalog/V008/CURRENT binding: NOT AUTHORIZED.
 - PR #35 remains Draft; Ready/Merge not authorized.
 - T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 Formalization Authorization｜D-219
+
+- Product Owner authorization: RECEIVED.
+- Accepted source: D-218 / D-217 Run 36304085862 / Artifact 10927005772.
+- Accepted canonical .blend SHA-256: 4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7.
+- Formalization + Catalog/V008/CURRENT binding: AUTHORIZED.
+- Expected branch Catalog after success: 23/28 = 82.1%.
+- Expected master-covered Registry records after success: 275/505.
+- Expected 令栱 binding: 28/28 -> CMP-GONG-LINGGONG-001_MASTER.
+- CURRENT==V008 required.
+- Canonical .blend remains Actions artifact / not tracked in Git.
+- Derived Excel / post-formalization regressions / readiness / Ready+Merge / closure: NOT AUTHORIZED.
