@@ -1435,3 +1435,13 @@ Do not restart T-018 by default.
 - Branch: codex/t037-p3-3-guazi-gong-master-v2-v001
 - Current Stage1 approved count remains 20/28; T-037 is not counted approved until formalization after Product Owner first-article acceptance.
 - T-018 remains HOLD; Stage2 remains NOT AUTHORIZED.
+
+## 2026-09-27｜T-037 Review Board Render Repair｜D-184
+
+- Trigger: original 8-panel Review Board rendered panels 1-5 as near-uniform dark frames, so Product Owner visual review was not possible.
+- Scope: presentation/render repair only; no change to locked dimensions, evidence semantics, variant counts, Master architecture, or profile authority.
+- Patch: emission review materials + explicit light background + stable front-camera rotation; validator now hard-fails near-uniform review images; artifact now includes five individual review PNGs.
+- Final run: 36290968633 / SUCCESS.
+- Artifact: 10922436059 / sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736.
+- Result: LARGE/SMALL AXON, LARGE/SMALL FRONT, and overlay are visibly readable; first article remains awaiting Product Owner acceptance.
+- No formalization / Catalog-V008 binding / PR Ready / merge. T-018 remains HOLD; Stage2 remains unauthorized.
