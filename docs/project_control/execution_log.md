@@ -1693,3 +1693,18 @@ Do not restart T-018 by default.
 - V008 == CURRENT: PASS.
 - T-018: HOLD. Stage2: NOT AUTHORIZED.
 - Formal T-038 closure remains pending separate authorization.
+
+## 2026-09-27｜T-038 Formal Closure｜D-209
+
+- Product Owner closure approval: RECEIVED.
+- T-038 status: CLOSED on canonical main.
+- PR #34 merge commit: `b89458436b0338cd3bd72e7d4780ec4a134859d8`.
+- Stage1: 22/28 = 78.6%.
+- Master-covered Registry records: 247/505.
+- 慢栱 Registry binding: 44/44 → `CMP-GONG-MANGONG-001_MASTER`.
+- Accepted canonical blend remains D-204 SHA `1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023`.
+- Closure validation basis: D-207 latest-head regression 43/43 PASS + shared regressions PASS.
+- No Registry/Catalog/geometry/evidence mutation made during closure; no derived Excel regeneration required for this lifecycle-only close.
+- Active engineering task: NONE.
+- Next candidate: 令栱 Source Readiness + D-076 only; not started.
+- T-018 HOLD; Stage2 NOT AUTHORIZED.
