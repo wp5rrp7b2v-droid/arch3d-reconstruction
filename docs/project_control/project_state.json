@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R319",
+  "state_revision": "R320",
   "last_updated": "2026-09-27",
-  "session_status": "T-040 POST-FORMALIZATION VERIFICATION PASS D-240 / DERIVED EXCEL PASS / T040 LATEST-HEAD 76 OF 76 PASS / SHARED REGRESSIONS 7 OF 7 PASS / READINESS PASS / READY+MERGE PRODUCT OWNER DECISION NEXT / BRANCH 24 OF 28 = 85.7% / 331 COVERED / PR #36 DRAFT / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-040 READY+MERGE AUTHORIZED D-241 / PR #36 READY TRANSITION + MERGE AUTHORIZED / D-240 READINESS PASS / CLOSURE NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -66,15 +66,15 @@
     "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
     "name": "华栱 Master",
     "component": "华栱",
-    "status": "POST-FORMALIZATION VERIFICATION PASS / D-240 / READY+MERGE PRODUCT OWNER DECISION NEXT",
+    "status": "READY+MERGE AUTHORIZED / D-241 / EXECUTION IN PROGRESS",
     "branch": "codex/t040-p3-3-huagong-master-v2-v001",
     "branch_status": "ACTIVE / PR #36 DRAFT",
     "engineering_execution_authorized": true
   },
   "proposed_next_task": {
-    "id": "T-040-READY-MERGE-AUTHORIZATION",
-    "name": "T-040 华栱 PR #36 Ready + Merge authorization",
-    "status": "NEXT GATE / PRODUCT OWNER DECISION REQUIRED"
+    "id": "T-040-READY-MERGE-EXECUTION",
+    "name": "T-040 PR #36 Ready transition + merge + main verification",
+    "status": "AUTHORIZED / EXECUTION IN PROGRESS"
   },
   "last_completed_task": {
     "id": "T-039",
@@ -2595,7 +2595,7 @@
     "closure_decision_id": "D-224"
   },
   "huagong_stage1": {
-    "status": "POST-FORMALIZATION VERIFICATION PASS / D-240 / READY+MERGE PRODUCT OWNER DECISION NEXT",
+    "status": "READY+MERGE AUTHORIZED / D-241 / CLOSURE NOT AUTHORIZED",
     "component": "华栱",
     "coverage_matrix_priority": 18,
     "registry_record_count": 56,
@@ -2790,7 +2790,7 @@
       "jump_2_binding_count": 28
     },
     "derived_excel_sync_authorized": true,
-    "ready_merge_authorized": false,
+    "ready_merge_authorized": true,
     "formalization_workflow_installed": true,
     "formalization_workflow_path": ".github/workflows/p3_3_t040_huagong_formalize.yml",
     "formalization_workflow_trigger_status": "CONTENTS_API_TRIGGER_REQUESTED / D-237 / EXECUTION PENDING",
@@ -2828,8 +2828,8 @@
     "generic_p3_3_route_check_authorized": true,
     "readiness_review_authorized": true,
     "readiness_review_pass": true,
-    "ready_transition_authorized": false,
-    "merge_authorized": false,
+    "ready_transition_authorized": true,
+    "merge_authorized": true,
     "closure_authorized": false,
     "post_formalization_result_decision_id": "D-240",
     "post_formalization_verification_complete": true,
@@ -2857,6 +2857,7 @@
     "readiness_status": "READY_FOR_PRODUCT_OWNER_READY_MERGE_DECISION",
     "t039_shared_validator_lifecycle_patch": "D-239 REVIEW PATCH / OLD MERGE-CLOSE ASSERTION UPDATED / GEOMETRY UNCHANGED",
     "prior_failed_post_formalization_run_id": 36322586643,
-    "prior_failed_run_classification": "SHARED T-039 VALIDATOR LIFECYCLE ASSERTION ONLY / T-040 LATEST-HEAD PASS / NOT GEOMETRY FAILURE"
+    "prior_failed_run_classification": "SHARED T-039 VALIDATOR LIFECYCLE ASSERTION ONLY / T-040 LATEST-HEAD PASS / NOT GEOMETRY FAILURE",
+    "ready_merge_authorization_decision_id": "D-241"
   }
 }

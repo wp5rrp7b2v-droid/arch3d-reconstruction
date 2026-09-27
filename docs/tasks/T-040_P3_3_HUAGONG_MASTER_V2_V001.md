@@ -780,3 +780,7 @@ Current status:
 ## 28. Post-Formalization Verification Result｜D-240
 
 D-240 records successful completion of the D-239 verification gate. Final run **36323489326** completed SUCCESS. Derived Excel is synchronized to 505 rows / 24 approved Masters / 331 covered records with SHA `53583e21d3d418c260b39fa7f44cb5eade02009081b494eecba0985d7d4b86aa`. T-040 latest-head rebuild/reopen/restore validation returned **76/76 PASS** and preserved the accepted family/JUMP_1/JUMP_2 geometry signatures; regenerated blend SHA `be9e386a289a64e35d8f14f47e6d88e6ef45cc697ab8474a69392e5222b42199` is regression-only and is not promoted to canonical. Shared regressions T-021/T-022/T-023/T-024/T-037/T-038/T-039 all PASS. The T-039 validator required a lifecycle-only Review Patch because its old first-article assertion still required merge/closure to be unauthorized; geometry and evidence semantics were unchanged. Generic P3.3 Master V2 exclusion for T-040 is PASS. Readiness is **READY_FOR_PRODUCT_OWNER_READY_MERGE_DECISION**. PR #36 remains Draft; Ready/Merge/Closure remain separate Product Owner gates.
+
+## 29. Ready + Merge Authorization｜D-241
+
+Product Owner authorized PR #36 Draft→Ready and merge after D-240 readiness PASS. Scope is limited to Ready transition, merge to main and main verification. Formal closure remains a separate gate. Stage2 remains NOT AUTHORIZED and T-018 remains HOLD.
