@@ -842,3 +842,14 @@ Boundary retained:
 - LARGE / SMALL geometry signatures: **MATCH D-185**.
 - Derived Excel sync: **PENDING / NOT AUTHORIZED**.
 - PR #33: **DRAFT / MERGE NOT AUTHORIZED**.
+
+### T-037 Post-Formalization Verification｜D-191
+
+- Derived Registry Excel sync validation: **PASS** / Run 36294703456 / V008 / 505.
+- Latest-head T-037 regression: **PASS 43/43** / Run 36294703418.
+- LARGE / SMALL geometry signatures: **EXACT MATCH D-185**.
+- Shared T-021/T-022/T-023/T-024 regressions: **PASS**.
+- Generic P3.3 Master V2 route: **SKIPPED AS INTENDED**.
+- PR #33: **MERGEABLE / DRAFT**.
+- Readiness review: **PASS / READY FOR PRODUCT OWNER PR-READY DECISION**.
+- PR Ready / merge / closure remain **NOT AUTHORIZED**.
