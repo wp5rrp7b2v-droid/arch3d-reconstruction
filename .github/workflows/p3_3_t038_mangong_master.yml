@@ -59,7 +59,12 @@ jobs:
           assert d["task_id"]=="T-038"
           assert d["execution_boundary"]["engineering_execution_authorized"] is True
           assert d["profile_contract"]["authority"]=="SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED"
-          assert d["profile_contract"]["exact_historical_curve"]=="UNRESOLVED"\n          assert d["profile_contract"]["candidate_id"]=="MANGONG_PROFILE_CONTROL_SET_V001_C01"\n          assert d["profile_contract"]["point_count"]==18\n          assert d["profile_contract"]["control_set_sha256"]=="07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4"\n          assert d["profile_contract"]["t037_guazi_control_set_reused"] is False
+          assert d["profile_contract"]["exact_historical_curve"]=="UNRESOLVED"
+          assert d["profile_contract"]["candidate_id"]=="MANGONG_PROFILE_CONTROL_SET_V001_C01"
+          assert d["profile_contract"]["point_count"]==18
+          assert d["profile_contract"]["control_set_sha256"]=="07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4"
+          assert d["profile_contract"]["t037_guazi_control_set_reused"] is False
+          assert d["profile_contract"]["product_owner_approved"] is True
           assert d["registry_boundary"]["physical_instance_count"]==44
           assert d["registry_boundary"]["geometry_variant_count"]==2
           print("T038_DEFINITION_PRECHECK_PASS")
