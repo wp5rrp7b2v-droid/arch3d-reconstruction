@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R276",
+  "state_revision": "R277",
   "last_updated": "2026-09-27",
-  "session_status": "T-038 MASTER SPEC V0.1 DRAFT PREPARED D-197 / PRODUCT OWNER REVIEW REQUIRED / 21 OF 28 / T-018 HOLD",
+  "session_status": "T-038 MASTER SPEC V0.1 LOCKED D-198 / TASK CONTRACT NEXT GATE / 21 OF 28 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "Product Owner review/approval required before Master Spec lock and before Task Contract design.",
+  "blocker": "Product Owner authorization required before T-038 Task Contract design/lock.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "MASTER SPEC V0.1 DRAFT / D-197 / PRODUCT OWNER REVIEW REQUIRED"
+    "status": "MASTER SPEC V0.1 LOCKED / PRODUCT OWNER APPROVED / D-198 / TASK CONTRACT NOT YET AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-038-MASTER-SPEC-APPROVAL",
-    "name": "慢栱族 Master Spec V0.1 approval",
-    "status": "AWAITING PRODUCT OWNER DECISION"
+    "id": "T-038-TASK-CONTRACT",
+    "name": "T-038 慢栱族 Task Contract",
+    "status": "AWAITING PRODUCT OWNER AUTHORIZATION TO DESIGN/LOCK"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "MASTER SPEC V0.1 DRAFT / D-197 / PRODUCT OWNER REVIEW REQUIRED",
+    "status": "MASTER SPEC V0.1 LOCKED / PRODUCT OWNER APPROVED / D-198",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2226,7 +2226,7 @@
     "evidence_boundary": "Registry dimensions are current V008 production records; direct primary source attribution and member profile/form evidence must be re-closed before Master Spec.",
     "source_readiness_pass": true,
     "visual_form_gate": "PASS WITH BOUNDARIES / D-196",
-    "master_spec_authorized": false,
+    "master_spec_authorized": true,
     "task_contract_authorized": false,
     "engineering_execution_authorized": false,
     "source_readiness_decision_id": "D-196",
@@ -2262,6 +2262,7 @@
     "thickness_mm": 156.9,
     "width_thickness_classification": "REPORT_INFERRED / FAMILY_DESIGN_CANDIDATE / REPLACEABLE",
     "numeric_profile_control_set_locked": false,
-    "master_spec_locked": false
+    "master_spec_locked": true,
+    "master_spec_approval_decision_id": "D-198"
   }
 }
