@@ -1874,3 +1874,16 @@ Do not restart T-018 by default.
 - CURRENT==V008 required.
 - Canonical .blend remains Actions artifact / not tracked in Git.
 - Derived Excel / post-formalization regressions / readiness / Ready+Merge / closure: NOT AUTHORIZED.
+
+## 2026-09-27｜T-039 Formalization + Catalog/V008/CURRENT Binding｜D-220
+
+- Authority: D-219.
+- Formalization workflow run: 36305012834.
+- Formal package: Definition + Semantic + Review Board + Validation + Task Contract.
+- Accepted canonical .blend remains SHA-256 4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7; .blend is not tracked in Git.
+- Geometry signatures: family=d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7; body=e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61.
+- Stage1 Catalog branch count: 23/28 = 82.1%.
+- V008/CURRENT Linggong binding: 28/28 APPROVED_MASTER_AVAILABLE -> CMP-GONG-LINGGONG-001_MASTER.
+- Master-covered Registry records: 275. CURRENT == V008: PASS.
+- Derived Excel sync / post-formalization regression / PR readiness: NOT AUTHORIZED.
+- PR #35 remains Draft; merge/closure not authorized. Stage2 not authorized; T-018 HOLD.

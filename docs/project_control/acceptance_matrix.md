@@ -1178,3 +1178,15 @@ Boundary retained:
 - Expected covered Registry rows: **275/505**.
 - Expected 令栱 rows bound: **28/28**.
 - Derived Excel / readiness / merge: **NOT AUTHORIZED**.
+
+### T-039 Formalization + Catalog/V008/CURRENT Binding｜D-220
+
+- **FORMALIZED / BRANCH** under D-219.
+- Stage1 Catalog: **23/28 = 82.1%** on T-039 branch.
+- Registry binding: **28/28** Linggong records = APPROVED_MASTER_AVAILABLE / CMP-GONG-LINGGONG-001_MASTER.
+- Master-covered Registry records: **275**.
+- CURRENT == V008: **PASS**.
+- Accepted canonical .blend SHA-256: `4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7`.
+- Family / body geometry signatures: **MATCH D-218 accepted First Article**.
+- Derived Excel / post-formalization readiness: **PENDING / NOT AUTHORIZED**.
+- PR #35: **DRAFT / MERGE NOT AUTHORIZED**.

@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-039｜P3_3_LINGGONG_MASTER_V2_V001
 
-Status: **FIRST ARTICLE PRODUCT OWNER APPROVED / D-218 / FORMALIZATION NOT AUTHORIZED / PR #35 DRAFT**
+Status: **FORMALIZED + CATALOG/V008/CURRENT BOUND / D-220 / PR #35 DRAFT / MERGE NOT AUTHORIZED**
 Stage: P3.3 V002 Stage 1
 Branch: `codex/t039-p3-3-linggong-master-v2-v001`
 Branch creation status: **CREATED / D-216**
@@ -342,7 +342,7 @@ Locked sequence:
 5. Engineering Execution Authorization — **AUTHORIZED / D-216**
 6. First Article machine validation — **PASS / D-217 / 43 OF 43**
 7. Product Owner First Article Approval — **PASS / D-218**
-8. Formalization + Catalog/V008/CURRENT binding — **AUTHORIZED / D-219 / EXECUTION PENDING**
+8. Formalization + Catalog/V008/CURRENT binding — **COMPLETE / D-220**
 9. Derived Excel + latest-head regression + readiness review — **NOT AUTHORIZED**
 10. D-194 combined Draft→Ready + Merge — **NOT AUTHORIZED**
 11. Formal Closure — **NOT AUTHORIZED**
@@ -395,3 +395,7 @@ Product Owner approved the D-217 machine-PASS First Article. Accepted canonical 
 ## 22. Formalization Authorization｜D-219
 
 Product Owner authorized formalization of the D-218 accepted First Article and Stage1 Catalog/V008/CURRENT binding. The operation must byte-verify accepted Artifact 10927005772 and preserve the accepted canonical .blend SHA and geometry signatures. Success target: branch Catalog 23/28, 28/28 令栱 rows bound to CMP-GONG-LINGGONG-001_MASTER, master-covered Registry rows 275, CURRENT==V008. Derived Excel, post-formalization regressions/readiness, PR Ready/Merge and closure remain separate gates.
+
+## 23. Formalization Result｜D-220
+
+D-220 records successful formalization under D-219. Catalog branch count = 23/28; 28/28 Linggong V008/CURRENT rows are bound to CMP-GONG-LINGGONG-001_MASTER; master-covered records = 275; CURRENT==V008. Accepted canonical blend remains D-218 SHA 4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.

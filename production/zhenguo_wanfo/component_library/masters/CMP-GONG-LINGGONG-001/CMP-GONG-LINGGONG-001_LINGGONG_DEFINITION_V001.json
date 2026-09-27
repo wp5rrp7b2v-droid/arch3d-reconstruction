@@ -1,7 +1,7 @@
 {
   "schema_version": "LINGGONG_MASTER_DEFINITION_V001",
   "task_id": "T-039",
-  "status": "FIRST_ARTICLE_PRODUCT_OWNER_APPROVED / D-218 / FORMALIZATION_AUTHORIZED D-219 / EXECUTION_PENDING",
+  "status": "FORMALIZED + CATALOG/V008/CURRENT BOUND / D-220 / PR #35 DRAFT / MERGE NOT AUTHORIZED",
   "component_family_id": "CMP-GONG-LINGGONG-001",
   "component_names_zh": [
     "令栱"
@@ -186,7 +186,9 @@
     "closure_authorized": false,
     "stage2_authorized": false,
     "t018_status": "HOLD",
-    "first_article_product_owner_approved": true
+    "first_article_product_owner_approved": true,
+    "formalization_complete": true,
+    "catalog_v008_binding_complete": true
   },
   "decisions": {
     "source_visual": "D-210",
@@ -196,7 +198,8 @@
     "profile_control_approval": "D-215",
     "engineering_execution": "D-216",
     "first_article_product_owner_approval": "D-218",
-    "formalization_authorization": "D-219"
+    "formalization_authorization": "D-219",
+    "formalization_result": "D-220"
   },
   "first_article_contract": {
     "canonical_body_count": 1,
@@ -224,5 +227,23 @@
     "accepted_artifact_id": 10927005772,
     "accepted_artifact_digest": "sha256:db181f3392acab1504f118236cec32d9e3e043ba4cf84ff944834c28ce9a0ede",
     "accepted_canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7"
+  },
+  "formalization": {
+    "authority": "D-219",
+    "formalization_result": "D-220",
+    "first_article_approval": "D-218",
+    "first_article_machine_gate": "D-217",
+    "accepted_run_id": 36304085862,
+    "artifact_id": 10927005772,
+    "artifact_zip_sha256": "sha256:db181f3392acab1504f118236cec32d9e3e043ba4cf84ff944834c28ce9a0ede",
+    "approved_canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
+    "geometry_match_approved_first_article": true,
+    "formalization_run_id": 36305012834,
+    "semantic_sha256": "ee0bc2ef02b3e1da43c1d7b6d4a8a5f18269b36bbcd189b52de15112f77abb97",
+    "validation_sha256": "9932a0d1f57a243f4997fa8e16539083213969863d3d69c0ac350ce48d935737",
+    "review_board_sha256": "769275ae578cd12a5871aee8c532e3353122190926a47be89497602e3b0ba095",
+    "catalog_binding_complete": true,
+    "registry_binding_count": 28,
+    "current_equals_v008": true
   }
 }

@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R298",
+  "state_revision": "R299",
   "last_updated": "2026-09-27",
-  "session_status": "T-039 FORMALIZATION + CATALOG/V008/CURRENT BINDING AUTHORIZED D-219 / EXECUTION PENDING / PR #35 DRAFT / MAIN 22 OF 28 / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-039 FORMALIZED + CATALOG/V008/CURRENT BOUND D-220 / BRANCH 23 OF 28 = 82.1% / 275 COVERED / MAIN 22 OF 28 UNTIL MERGE / PR #35 DRAFT / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 22 OF 28 MASTERS APPROVED / T-039 FIRST ARTICLE PO APPROVED D-218 / FORMALIZATION NEXT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / BRANCH 23 OF 28 / MAIN 22 OF 28 / T-039 FORMALIZED D-220 / PR #35 DRAFT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 FIRST ARTICLE PO APPROVED D-218 / PR #35 DRAFT / FORMALIZATION NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 22 OF 28 / T-039 FIRST ARTICLE PO APPROVED D-218 / PR #35 DRAFT / FORMALIZATION NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / BRANCH 23 OF 28 / MAIN 22 OF 28 / T-039 FORMALIZED D-220 / PR #35 DRAFT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / BRANCH 23 OF 28 / MAIN 22 OF 28 / T-039 FORMALIZED D-220 / PR #35 DRAFT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-039",
     "name": "P3_3_LINGGONG_MASTER_V2_V001",
-    "status": "FORMALIZATION + CATALOG/V008/CURRENT BINDING AUTHORIZED / D-219 / EXECUTION PENDING"
+    "status": "FORMALIZED + 28 ROWS BOUND / D-220 / PR #35 DRAFT / MERGE NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-039-FORMALIZATION-EXECUTION",
-    "name": "T-039 formalization + Catalog/V008/CURRENT binding execution",
-    "status": "AUTHORIZED / IN PROGRESS"
+    "id": "T-039-POST-FORMALIZATION",
+    "name": "derived Excel sync + latest-head regression + shared regressions + readiness review",
+    "status": "NOT AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-038",
@@ -127,7 +127,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 FIRST ARTICLE PO APPROVED D-218 / FORMALIZATION NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / BRANCH 23 OF 28 / MAIN 22 OF 28 / T-039 FORMALIZED D-220 / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -847,7 +847,7 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Execute fail-closed T-039 formalization from accepted Artifact 10927005772 and bind 28 Linggong Registry rows. Do not sync Derived Excel, run readiness/merge/closure, start Stage2, or resume T-018.",
+  "next_action": "Await Product Owner authorization for T-039 post-formalization verification. Do not sync Derived Excel, run readiness/Ready+Merge, close, start Stage2, or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -966,7 +966,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / MAIN 22 OF 28 MASTERS APPROVED / T-039 FIRST ARTICLE PO APPROVED / FORMALIZATION NOT AUTHORIZED",
+    "status": "ACTIVE / BRANCH 23 OF 28 / MAIN 22 OF 28 / T-039 FORMALIZED / POST-FORMALIZATION NOT AUTHORIZED",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1241,16 +1241,16 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-038 FORMALIZED ON BRANCH / 22 OF 28",
+    "status": "ACTIVE / T-039 FORMALIZED ON BRANCH / 23 OF 28",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 22,
-    "pending_master_object_type_count": 6,
-    "master_completion_percent": 78.6,
-    "master_covered_registry_record_count": 247,
-    "pending_source_binding_count": 6,
+    "approved_master_count": 23,
+    "pending_master_object_type_count": 5,
+    "master_completion_percent": 82.1,
+    "master_covered_registry_record_count": 275,
+    "pending_source_binding_count": 5,
     "row_fields": [
       "stage1_disposition",
       "master_coverage_status",
@@ -2373,7 +2373,7 @@
     "active_engineering_task": false
   },
   "linggong_stage1": {
-    "status": "FORMALIZATION + CATALOG/V008/CURRENT BINDING AUTHORIZED / D-219 / EXECUTION PENDING",
+    "status": "FORMALIZED + CATALOG/V008/CURRENT BOUND / D-220 / PR #35 DRAFT / MERGE NOT AUTHORIZED",
     "component": "令栱",
     "coverage_matrix_priority": 17,
     "physical_instance_count": 28,
@@ -2517,6 +2517,19 @@
     "derived_excel_sync_authorized": false,
     "closure_authorized": false,
     "formalization_authority": "D-219",
-    "post_formalization_verification_authorized": false
+    "post_formalization_verification_authorized": false,
+    "formalization_result_decision_id": "D-220",
+    "formalization_complete": true,
+    "formalization_run_id": 36305012834,
+    "branch_approved_master_count": 23,
+    "branch_master_completion_percent": 82.1,
+    "branch_master_covered_registry_record_count": 275,
+    "linggong_registry_binding_count": 28,
+    "current_equals_v008": true,
+    "canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
+    "semantic_sha256": "ee0bc2ef02b3e1da43c1d7b6d4a8a5f18269b36bbcd189b52de15112f77abb97",
+    "validation_sha256": "9932a0d1f57a243f4997fa8e16539083213969863d3d69c0ac350ce48d935737",
+    "review_board_sha256": "769275ae578cd12a5871aee8c532e3353122190926a47be89497602e3b0ba095",
+    "excel_sync_authorized": false
   }
 }
