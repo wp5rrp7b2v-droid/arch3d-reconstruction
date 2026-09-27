@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R318",
+  "state_revision": "R319",
   "last_updated": "2026-09-27",
-  "session_status": "T-040 POST-FORMALIZATION VERIFICATION AUTHORIZED D-239 / DERIVED EXCEL + T040 LATEST-HEAD + SHARED REGRESSIONS + READINESS IN PROGRESS / BRANCH 24 OF 28 = 85.7% / 331 COVERED / PR #36 DRAFT / READY+MERGE NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-040 POST-FORMALIZATION VERIFICATION PASS D-240 / DERIVED EXCEL PASS / T040 LATEST-HEAD 76 OF 76 PASS / SHARED REGRESSIONS 7 OF 7 PASS / READINESS PASS / READY+MERGE PRODUCT OWNER DECISION NEXT / BRANCH 24 OF 28 = 85.7% / 331 COVERED / PR #36 DRAFT / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED D-238 / PR #36 DRAFT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 READINESS PASS D-240 / READY+MERGE DECISION NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED D-238 / PR #36 DRAFT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED D-238 / PR #36 DRAFT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 READINESS PASS D-240 / READY+MERGE DECISION NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 READINESS PASS D-240 / READY+MERGE DECISION NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -66,15 +66,15 @@
     "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
     "name": "华栱 Master",
     "component": "华栱",
-    "status": "POST-FORMALIZATION VERIFICATION AUTHORIZED / D-239 / EXECUTION IN PROGRESS / PR #36 DRAFT",
+    "status": "POST-FORMALIZATION VERIFICATION PASS / D-240 / READY+MERGE PRODUCT OWNER DECISION NEXT",
     "branch": "codex/t040-p3-3-huagong-master-v2-v001",
     "branch_status": "ACTIVE / PR #36 DRAFT",
     "engineering_execution_authorized": true
   },
   "proposed_next_task": {
-    "id": "T-040-READINESS-DECISION",
-    "name": "T-040 PR readiness decision after Excel + regressions",
-    "status": "IN PROGRESS"
+    "id": "T-040-READY-MERGE-AUTHORIZATION",
+    "name": "T-040 华栱 PR #36 Ready + Merge authorization",
+    "status": "NEXT GATE / PRODUCT OWNER DECISION REQUIRED"
   },
   "last_completed_task": {
     "id": "T-039",
@@ -131,7 +131,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED D-238 / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 READINESS PASS D-240 / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -970,7 +970,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED / POST-FORMALIZATION NOT AUTHORIZED",
+    "status": "ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 READINESS PASS D-240 / READY+MERGE DECISION NEXT",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1217,7 +1217,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "华栱 / T-040 FORMALIZATION EXECUTION NEXT"
+    "next_master_candidate": "华栱 / T-040 READY+MERGE PRODUCT OWNER DECISION"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -2595,7 +2595,7 @@
     "closure_decision_id": "D-224"
   },
   "huagong_stage1": {
-    "status": "FORMALIZED + CATALOG/V008/CURRENT BOUND / D-238 / PR #36 DRAFT / MERGE NOT AUTHORIZED",
+    "status": "POST-FORMALIZATION VERIFICATION PASS / D-240 / READY+MERGE PRODUCT OWNER DECISION NEXT",
     "component": "华栱",
     "coverage_matrix_priority": 18,
     "registry_record_count": 56,
@@ -2827,9 +2827,36 @@
     ],
     "generic_p3_3_route_check_authorized": true,
     "readiness_review_authorized": true,
-    "readiness_review_pass": false,
+    "readiness_review_pass": true,
     "ready_transition_authorized": false,
     "merge_authorized": false,
-    "closure_authorized": false
+    "closure_authorized": false,
+    "post_formalization_result_decision_id": "D-240",
+    "post_formalization_verification_complete": true,
+    "post_formalization_run_id": 36323489326,
+    "post_formalization_artifact_id": 10933900871,
+    "post_formalization_artifact_digest": "sha256:d83dcb134ff7ed7e030055fae1e76dcabad0e2a9bb3c53f29e9b7e2b41516c1c",
+    "derived_excel_sync_status": "PASS",
+    "derived_excel_sha256": "53583e21d3d418c260b39fa7f44cb5eade02009081b494eecba0985d7d4b86aa",
+    "derived_excel_source_registry_commit": "0e0c084f42deffc068b8a8bae25bac596a74cef2",
+    "latest_head_regression_status": "PASS / 76 OF 76",
+    "latest_head_regenerated_blend_sha256": "be9e386a289a64e35d8f14f47e6d88e6ef45cc697ab8474a69392e5222b42199",
+    "latest_head_regenerated_blend_promoted_to_canonical": false,
+    "accepted_geometry_match": true,
+    "shared_regressions_status": "PASS / 7 OF 7",
+    "shared_regression_runs": {
+      "T-021": 36323689959,
+      "T-022": 36323691130,
+      "T-023": 36323692320,
+      "T-024": 36323693438,
+      "T-037": 36323694454,
+      "T-038": 36323695468,
+      "T-039": 36323696692
+    },
+    "generic_p3_3_route_check": "PASS / T-040 EXCLUDED AS INTENDED / DEDICATED ROUTE AUTHORITATIVE",
+    "readiness_status": "READY_FOR_PRODUCT_OWNER_READY_MERGE_DECISION",
+    "t039_shared_validator_lifecycle_patch": "D-239 REVIEW PATCH / OLD MERGE-CLOSE ASSERTION UPDATED / GEOMETRY UNCHANGED",
+    "prior_failed_post_formalization_run_id": 36322586643,
+    "prior_failed_run_classification": "SHARED T-039 VALIDATOR LIFECYCLE ASSERTION ONLY / T-040 LATEST-HEAD PASS / NOT GEOMETRY FAILURE"
   }
 }

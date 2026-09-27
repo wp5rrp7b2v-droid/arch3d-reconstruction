@@ -2004,3 +2004,16 @@ Do not restart T-018 by default.
 - PR #36 readiness review: AUTHORIZED.
 - Draft→Ready / merge / closure: NOT AUTHORIZED.
 - T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜T-040 Post-Formalization Verification｜D-240
+
+- Authority: D-239.
+- Final verification run: **36323489326 / SUCCESS**.
+- Artifact: **10933900871** / `sha256:d83dcb134ff7ed7e030055fae1e76dcabad0e2a9bb3c53f29e9b7e2b41516c1c`.
+- Derived Excel: **PASS / 505 rows / 24 approved / 331 covered**; Excel SHA `53583e21d3d418c260b39fa7f44cb5eade02009081b494eecba0985d7d4b86aa`.
+- T-040 latest-head rebuild/reopen/restore: **76/76 PASS**; regenerated blend SHA `be9e386a289a64e35d8f14f47e6d88e6ef45cc697ab8474a69392e5222b42199`; not promoted to canonical.
+- Shared regressions: **7/7 PASS** (T-021/T-022/T-023/T-024/T-037/T-038/T-039).
+- T-039 lifecycle Review Patch: merge/closure assertion made lifecycle-aware only; no geometry/evidence change.
+- Generic Master V2 route: **T-040 excluded as intended**.
+- Readiness: **PASS / READY FOR PRODUCT OWNER READY+MERGE DECISION**.
+- PR #36 remains **Draft**; Ready/Merge/Closure remain unauthorized. Stage2 not authorized; T-018 HOLD.

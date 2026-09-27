@@ -1296,3 +1296,15 @@ Boundary retained:
 - Generic P3.3 route check: **AUTHORIZED**.
 - PR #36 readiness review: **AUTHORIZED**.
 - Draft→Ready / merge / closure: **NOT AUTHORIZED**.
+
+### T-040 Post-Formalization Verification｜D-240
+
+- Derived Excel sync: **PASS**.
+- Registry/Excel counts: **505 / 24 approved / 331 covered**.
+- T-040 latest-head regression: **76/76 PASS**.
+- Accepted geometry signatures preserved: **PASS**.
+- Shared regressions: **7/7 PASS**.
+- Generic P3.3 route exclusion: **PASS / dedicated T-040 route authoritative**.
+- Readiness review: **PASS**.
+- Result: **READY FOR PRODUCT OWNER READY+MERGE DECISION**.
+- PR #36: **DRAFT / Ready transition NOT AUTHORIZED / merge NOT AUTHORIZED**.
