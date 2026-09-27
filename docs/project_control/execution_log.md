@@ -1724,3 +1724,18 @@ Do not restart T-018 by default.
 - Next: Master Spec V0.1 design only.
 - Engineering T-task / branch / PR / Blender: NOT AUTHORIZED.
 - T-018 HOLD; Stage2 NOT AUTHORIZED.
+
+## 2026-09-27｜令栱 Master Spec V0.1 Candidate 01｜D-211
+
+- Prepared Master Spec V0.1 Candidate 01 from D-210 Source/D-076 boundaries.
+- Proposed identity: CMP-GONG-LINGGONG-001 / CMP-GONG-LINGGONG-001_MASTER.
+- Architecture: 1 shared Master / 0 Geometry Variant / 28 instance bindings.
+- Canonical family observed-mean envelope: 897 × 217.4 × 155.6 mm.
+- All L/W/T remain DIRECT_PRIMARY / OBSERVED_MEAN / n=28; not per-instance exact; not proven 963 design.
+- Sample-to-instance mapping: UNKNOWN despite equal n=28 counts.
+- Exact profile / numeric controls / end geometry: UNRESOLVED.
+- Joinery / grooves / cavities / local cuts: DEFERRED.
+- Separate Profile Control Set gate required before engineering execution.
+- Prior gong profile-control reuse and generic-template substitution prohibited.
+- Candidate is not locked; Product Owner review required.
+- No engineering T-task / branch / PR / Blender authorized.
