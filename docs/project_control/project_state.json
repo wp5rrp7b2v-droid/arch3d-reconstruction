@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R281",
+  "state_revision": "R282",
   "last_updated": "2026-09-27",
-  "session_status": "T-038 ENGINEERING EXECUTION AUTHORIZED D-202 / FIRST ARTICLE IN PROGRESS / 21 OF 28 / T-018 HOLD",
+  "session_status": "T-038 FIRST ARTICLE MACHINE PASS D-203 / RUN 36299005477 43/43 / READY FOR PRODUCT OWNER REVIEW / PR #34 DRAFT / 21 OF 28 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": null,
+  "blocker": "Product Owner first-article review/approval required before formalization or Catalog/V008 binding.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "ENGINEERING EXECUTION AUTHORIZED / D-202 / FIRST ARTICLE IN PROGRESS"
+    "status": "FIRST ARTICLE MACHINE PASS / D-203 / READY FOR PRODUCT OWNER REVIEW"
   },
   "proposed_next_task": {
-    "id": "T-038-FIRST-ARTICLE-REVIEW",
+    "id": "T-038-FIRST-ARTICLE-PO-REVIEW",
     "name": "T-038 慢栱族 First Article Product Owner Review",
-    "status": "PENDING MACHINE EVIDENCE"
+    "status": "AWAITING PRODUCT OWNER DECISION"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "ENGINEERING EXECUTION AUTHORIZED / D-202 / FIRST ARTICLE IN PROGRESS",
+    "status": "FIRST ARTICLE MACHINE PASS / D-203 / READY FOR PRODUCT OWNER REVIEW",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2288,6 +2288,24 @@
     "first_article_acceptance_authorized": false,
     "formalization_authorized": false,
     "catalog_v008_binding_authorized": false,
-    "merge_authorized": false
+    "merge_authorized": false,
+    "first_article_machine_decision_id": "D-203",
+    "first_article_run_id": 36299005477,
+    "first_article_head_sha": "a4361a4a156448d791c2a6cd7f9b759264159003",
+    "first_article_validation": "43/43 PASS",
+    "first_article_artifact_id": 10924188411,
+    "first_article_artifact_digest": "sha256:bf279ee4b3b1bf04d8263cf12983e0124a4a39d654f7a2297a95d7a12ca47060",
+    "first_article_canonical_blend_sha256": "1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023",
+    "first_article_semantic_sha256": "a63eefe09f00c65b331f745ea3145f0ff29c8acce49309f620d5de0d537a90cc",
+    "first_article_validation_sha256": "9c9e840aec1dd61d7ceb777087c7c3f7a40d589368edaaeb1000964ea5f1b04d",
+    "first_article_review_board_sha256": "f0038fd1a6da007a4526460cd67beb3060acaf42e9185bb7a58214a606ed2531",
+    "family_semantic_signature": "ae8ad824401a75b694d404e494038a90aa19f92406e3a1def53db4153dcc0e6d",
+    "large_geometry_signature": "324fb1aab0c469010e6adaf4dc9372eafe9d165ee99c01a8764edff3a98f898a",
+    "small_geometry_signature": "6858ad94e5e89c8b8ff6059a18ece7a04949f52836b39e12052913c4b8338245",
+    "pr_number": 34,
+    "pr_draft": true,
+    "pr_mergeable": true,
+    "first_article_machine_pass": true,
+    "first_article_product_owner_approved": false
   }
 }
