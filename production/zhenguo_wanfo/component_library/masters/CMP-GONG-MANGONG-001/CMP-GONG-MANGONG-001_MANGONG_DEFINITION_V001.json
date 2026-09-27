@@ -1,7 +1,7 @@
 {
   "schema_version": "MANGONG_MASTER_DEFINITION_V001",
   "task_id": "T-038",
-  "status": "LOCKED / PROFILE_CONTROL_APPROVED D-201 / ENGINEERING_EXECUTION_NOT_AUTHORIZED",
+  "status": "LOCKED / PROFILE_CONTROL_APPROVED D-201 / ENGINEERING_EXECUTION_AUTHORIZED D-202",
   "component_family_id": "CMP-GONG-MANGONG-001",
   "component_names_zh": [
     "大型慢栱",
@@ -191,11 +191,11 @@
   ],
   "unsupported_detail_count": 0,
   "execution_boundary": {
-    "engineering_execution_authorized": false,
-    "blender_execution_authorized": false,
-    "production_builder_authorized": false,
-    "workflow_execution_authorized": false,
-    "draft_pr_authorized": false,
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "production_builder_authorized": true,
+    "workflow_execution_authorized": true,
+    "draft_pr_authorized": true,
     "first_article_acceptance_authorized": false,
     "formalization_authorized": false,
     "catalog_v008_binding_authorized": false,
@@ -208,6 +208,7 @@
     "master_spec": "D-198",
     "task_contract": "D-199",
     "profile_candidate": "D-200",
-    "profile_control_approval": "D-201"
+    "profile_control_approval": "D-201",
+    "engineering_execution": "D-202"
   }
 }
