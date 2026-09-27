@@ -1966,3 +1966,17 @@ Do not restart T-018 by default.
 - Result: **SOURCE READINESS PASS WITH BOUNDARIES / D-076 PASS WITH BOUNDARIES**.
 - Next complete step: 华栱 Master Spec V0.1 design only.
 - Engineering T-task / branch / PR / Blender / Stage2 / T-018 resume: NOT AUTHORIZED.
+
+## 2026-09-27｜华栱 Master Spec V0.1 Candidate 01｜D-226
+
+- Candidate architecture: 1 Master family / 2 independent jump-variant identities / 56 subset bindings.
+- Master: `CMP-GONG-HUAGONG-001_MASTER`.
+- Variants: `JUMP_1_HUAGONG` = 28 / `JUMP_2_HUAGONG` = 28.
+- 56 remains a V008 direction-explicit subset, not the whole-hall total.
+- Direct assembly constraint retained: first+second total projection mean 732.4 mm / n=46.
+- Individual JUMP_1/JUMP_2 full lengths: NOT LOCKED.
+- JUMP_2 1630/1464.8 mm: SECONDARY_CALCULATED only.
+- Report 48分 / 14分 / 10分: REPORT_IDEAL_MODEL only.
+- Mandatory future gates: Length/Assembly Control Set + Profile Control Set.
+- Master Spec status: CANDIDATE 01 / NOT LOCKED.
+- Engineering T-task / branch / PR / Blender: NOT AUTHORIZED.
