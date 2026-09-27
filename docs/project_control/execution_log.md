@@ -1980,3 +1980,16 @@ Do not restart T-018 by default.
 - Mandatory future gates: Length/Assembly Control Set + Profile Control Set.
 - Master Spec status: CANDIDATE 01 / NOT LOCKED.
 - Engineering T-task / branch / PR / Blender: NOT AUTHORIZED.
+
+## 2026-09-27｜T-040 Formalization + Catalog/V008/CURRENT Binding｜D-238
+
+- Authority: D-237.
+- Formalization workflow run: 36321537733.
+- Accepted Artifact: 10930899677; canonical .blend SHA-256 0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e; .blend remains not tracked in Git.
+- Formal package: Definition + Semantic + Review Board + Validation + Task Contract.
+- Geometry signatures: family=0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77; JUMP_1=565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a; JUMP_2=451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001.
+- Stage1 Catalog branch count: 24/28 = 85.7%.
+- V008/CURRENT Huagong binding: 56/56 APPROVED_MASTER_AVAILABLE; variants JUMP_1=28 / JUMP_2=28.
+- Master-covered Registry records: 331. CURRENT == V008: PASS.
+- 898.8/1630.0 remain reference-specimen-only; instance historical full lengths remain UNRESOLVED.
+- Derived Excel / post-formalization readiness / PR Ready+Merge: NOT AUTHORIZED.

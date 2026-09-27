@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-040｜P3_3_HUAGONG_MASTER_V2_V001
 
-Status: **LOCKED / PRODUCT OWNER APPROVED / D-229 / ENGINEERING EXECUTION BLOCKED**
+Status: **FORMALIZED + CATALOG/V008/CURRENT BOUND / D-238 / PR #36 DRAFT / MERGE NOT AUTHORIZED**
 Date: 2026-09-27
 Stage: P3.3 V002 Stage 1
 Locked Master Spec: D-227｜P3_3_STAGE1_HUAGONG_MASTER_SPEC_V001
@@ -497,7 +497,7 @@ The future task must not:
 6. Engineering Execution Authorization — **AUTHORIZED / D-234**
 7. First Article machine validation — **PASS / D-235 / 76 OF 76**
 8. Product Owner First Article Approval — **APPROVED / D-236**
-9. Formalization + Catalog/V008/CURRENT binding — **AUTHORIZED / D-237 / EXECUTION PENDING**
+9. Formalization + Catalog/V008/CURRENT binding — **COMPLETE / D-238**
 10. Derived Excel + latest-head/shared regressions + readiness — **NOT AUTHORIZED**
 11. D-194 combined Draft→Ready + Merge — **NOT AUTHORIZED**
 12. Formal Closure — **NOT AUTHORIZED**
@@ -650,6 +650,7 @@ This branch creation does not itself start First Article generation or expand th
 ## 23. First Article Machine Result｜D-235
 
 Final machine run:
+
 - Workflow: `T-040 Huagong Master First Article`
 - Run ID: **36317889355**
 - Run number: **3**
@@ -689,47 +690,11 @@ Run history:
 - Run #2 (36317658877): geometry/reopen/restore passed; validation patch contained a literal-newline syntax defect.
 - Run #3 (36317889355): normalization syntax corrected; **76/76 PASS**.
 
-D-235 is a machine-gate result only. Product Owner First Article acceptance remains required.
+The two earlier failures did not change the locked Gate A/Gate B geometry controls.
 
-Current status:
+D-235 is a machine-gate result only.
 
-**FIRST ARTICLE MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
-
-
-## 24. First Article Product Owner Approval｜D-236
-
-Product Owner formally approved the **actual Blender First Article artifact** after D-235 machine PASS.
-
-Accepted machine evidence:
-- Run ID: **36317889355**
-- machine result: **76 / 76 PASS**
-- execution head: `51fc6e2a506a5950dc14f52d5aac0378872a531d`
-- Artifact ID: **10930899677**
-- Artifact digest: `sha256:de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f`
-- canonical .blend SHA-256: `0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e`
-- Semantic SHA-256: `e3264826dce4d747aa4c73ddbaa2ec29a042859b9f3f611a35fca8b999ae2ef9`
-- Validation SHA-256: `ccb7baaee7e1e3e7c7f69d474bd77d97b22491998c1973152273fd4a87b3ee81`
-- Review Board SHA-256: `54d4c79bd83e23c6ac31c330323fce70e0a83f7a1c2f2d1355c2e9d3f16af2f1`
-- family semantic signature: `0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77`
-- JUMP_1 geometry signature: `565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a`
-- JUMP_2 geometry signature: `451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001`
-
-Approval applies only to the real machine-generated artifact package above. The separately generated illustrative review images are **not** part of the accepted canonical evidence chain.
-
-Accepted geometry/evidence boundaries remain:
-- exactly two canonical bodies: JUMP_1_HUAGONG / JUMP_2_HUAGONG;
-- JUMP_1 reference specimen = 898.8 × 214.2 × 153.0 mm;
-- JUMP_2 reference specimen = 1630.0 × 214.2 × 153.0 mm;
-- both independently generated from locked Gate B controls;
-- validation fixture remains non-canonical / non-Registry / non-Catalog;
-- only D0→D2 = 732.4 mm is DIRECT_PRIMARY assembly-level observed-mean evidence;
-- 56 Registry instance historical standalone full lengths remain UNRESOLVED;
-- exact historical profile/end/hidden overlap remain UNRESOLVED;
-- unsupported joinery/local cuts remain absent.
-
-D-236 approves the First Article only.
-
-It does **not** authorize:
+It does **not** constitute Product Owner First Article acceptance and does not authorize:
 - formalization;
 - Catalog/V008/CURRENT binding;
 - Derived Excel synchronization;
@@ -741,82 +706,48 @@ It does **not** authorize:
 
 Current status:
 
-**FIRST ARTICLE PRODUCT OWNER APPROVED / FORMALIZATION NEXT GATE NOT AUTHORIZED**
+**FIRST ARTICLE MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
+
+
+## 24. First Article Product Owner Approval｜D-236
+
+Product Owner formally approved the actual machine-generated T-040 First Article artifact package.
+
+Accepted evidence:
+- Run ID: 36317889355
+- Artifact ID: 10930899677
+- Artifact digest: sha256:de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f
+- canonical .blend SHA-256: 0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e
+- Semantic SHA-256: e3264826dce4d747aa4c73ddbaa2ec29a042859b9f3f611a35fca8b999ae2ef9
+- Validation SHA-256: ccb7baaee7e1e3e7c7f69d474bd77d97b22491998c1973152273fd4a87b3ee81
+- Review Board SHA-256: 54d4c79bd83e23c6ac31c330323fce70e0a83f7a1c2f2d1355c2e9d3f16af2f1
+- family semantic signature: 0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77
+- JUMP_1 geometry signature: 565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a
+- JUMP_2 geometry signature: 451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001
+
+Approval covers the real Blender artifact only; illustrative review images are excluded from the canonical evidence chain.
+
+Formalization / Catalog binding / PR Ready / merge remain NOT AUTHORIZED.
 
 
 ## 25. Formalization + Catalog/V008/CURRENT Binding Authorization｜D-237
 
-Product Owner authorized T-040 formalization after D-236 First Article approval.
+Product Owner authorized formalization and Stage1 Catalog/V008/CURRENT binding after D-236.
 
-Authorized execution scope:
+Authorization target:
+- verify accepted Artifact 10930899677 and D-236 accepted hashes;
+- materialize formal Semantic / Validation / Review Board package;
+- keep canonical .blend Actions-artifact/local-only/not-Git;
+- add one approved Master family CMP-GONG-HUAGONG-001_MASTER with JUMP_1_HUAGONG + JUMP_2_HUAGONG;
+- bind exactly 56 华栱 V008/CURRENT rows: 28 JUMP_1 + 28 JUMP_2;
+- update coverage only after successful binding: 24/28 = 85.7%, 331 covered;
+- preserve LOCKED_SUBSET / not-whole-hall and per-instance historical full-length UNRESOLVED semantics.
 
-1. Download and byte-verify the accepted D-235/D-236 artifact:
-   - Run ID: **36317889355**
-   - Artifact ID: **10930899677**
-   - Artifact digest: `sha256:de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f`
-   - accepted canonical .blend SHA-256: `0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e`
-   - accepted Semantic SHA-256: `e3264826dce4d747aa4c73ddbaa2ec29a042859b9f3f611a35fca8b999ae2ef9`
-   - accepted Validation SHA-256: `ccb7baaee7e1e3e7c7f69d474bd77d97b22491998c1973152273fd4a87b3ee81`
-   - accepted Review Board SHA-256: `54d4c79bd83e23c6ac31c330323fce70e0a83f7a1c2f2d1355c2e9d3f16af2f1`.
-
-2. Materialize the minimal sufficient formal repo package for `CMP-GONG-HUAGONG-001_MASTER`:
-   - Huagong Definition;
-   - accepted Semantic JSON;
-   - accepted Validation JSON;
-   - accepted Review Board PNG;
-   - T-040 Task Contract / lifecycle record.
-   The canonical .blend remains **ACTIONS ARTIFACT / LOCAL ONLY / NOT GIT**.
-
-3. Add one Product-Owner-approved Master family to:
-   `production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json`
-   with:
-   - master id = `CMP-GONG-HUAGONG-001_MASTER`;
-   - variant ids = `JUMP_1_HUAGONG`, `JUMP_2_HUAGONG`;
-   - geometry variant count = 2;
-   - physical Registry subset count = 56;
-   - accepted First Article hashes/signatures and locked Gate A / Gate B provenance.
-
-4. Update exactly the current **56 华栱 V008/CURRENT LOCKED_SUBSET rows**:
-   - 28 JUMP_1 rows bind to `CMP-GONG-HUAGONG-001_MASTER / JUMP_1_HUAGONG`;
-   - 28 JUMP_2 rows bind to `CMP-GONG-HUAGONG-001_MASTER / JUMP_2_HUAGONG`;
-   - `master_coverage_status`: `MASTER_REQUIRED_PENDING` → `APPROVED_MASTER_AVAILABLE`;
-   - preserve `count_status = LOCKED_SUBSET`;
-   - preserve the explicit statement that 56 is not the whole-hall 华栱 total;
-   - preserve per-instance historical standalone full length = `UNRESOLVED`;
-   - do not propagate 898.8 mm or 1630.0 mm as per-instance exact lengths.
-
-5. Require:
-   - V008 item count = 505;
-   - CURRENT item count = 505;
-   - CURRENT == V008 after binding;
-   - exactly 56 华栱 rows changed;
-   - JUMP_1/JUMP_2 binding counts = 28/28;
-   - no non-华栱 Registry row changed.
-
-6. Update Stage1 Master progress only after successful binding:
-   - approved Masters: **23 → 24 of 28**;
-   - pending Masters: **5 → 4**;
-   - completion: **82.1% → 85.7%**;
-   - master-covered Registry records: **275 → 331**.
-
-Evidence boundaries that must survive formalization:
-- 898.8 mm and 1630.0 mm remain **Master reference-specimen controls only**;
-- 732.4 mm remains `DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION`, not a member length;
-- D1=366.2 mm remains project/reconstruction fixture guidance;
-- 48分/14分/10分 remain report-inferred ideal-model values;
-- profile remains `SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT`;
-- exact historical per-instance full lengths / profile / end / hidden overlap remain unresolved;
-- unsupported joinery/local cuts remain deferred/absent.
-
-D-237 does **not** authorize:
-- Derived Excel synchronization;
-- latest-head/shared regression/readiness conclusion;
-- PR #36 Draft→Ready;
-- merge;
-- closure;
-- Stage2;
-- T-018 resume.
+Derived Excel, readiness, PR Ready/Merge and closure remain NOT AUTHORIZED.
 
 Current status:
+**FORMALIZATION AUTHORIZED / EXECUTION PENDING**
 
-**FORMALIZATION + CATALOG/V008/CURRENT BINDING AUTHORIZED / EXECUTION PENDING**
+## 26. Formalization Result｜D-238
+
+D-238 records successful formalization under D-237. Catalog branch count = 24/28 = 85.7%; all 56 Huagong V008/CURRENT LOCKED_SUBSET rows are bound to CMP-GONG-HUAGONG-001_MASTER with JUMP_1/JUMP_2 28/28; master-covered records = 331; CURRENT==V008. Accepted canonical blend remains D-236 SHA 0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e. The 898.8/1630.0 controls remain reference-specimen-only and do not close per-instance historical standalone lengths. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.

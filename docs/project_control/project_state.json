@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R316",
+  "state_revision": "R317",
   "last_updated": "2026-09-27",
-  "session_status": "T-040 HUAGONG FORMALIZATION + CATALOG/V008/CURRENT BINDING AUTHORIZED D-237 / EXECUTION PENDING / ACCEPTED FIRST ARTICLE D-236 / PR #36 DRAFT / DERIVED EXCEL NOT AUTHORIZED / READY+MERGE NOT AUTHORIZED / MAIN 23 OF 28 = 82.1% / 275 COVERED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-040 FORMALIZED + CATALOG/V008/CURRENT BOUND D-238 / BRANCH 24 OF 28 = 85.7% / 331 COVERED / MAIN 23 OF 28 UNTIL MERGE / PR #36 DRAFT / DERIVED EXCEL NOT AUTHORIZED / READINESS NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 23 OF 28 / T-040 FORMALIZATION AUTHORIZED D-237 / EXECUTION NEXT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED D-238 / PR #36 DRAFT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 FORMALIZATION AUTHORIZED D-237 / EXECUTION NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 FORMALIZATION AUTHORIZED D-237 / EXECUTION NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED D-238 / PR #36 DRAFT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED D-238 / PR #36 DRAFT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -66,15 +66,15 @@
     "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
     "name": "华栱 Master",
     "component": "华栱",
-    "status": "FORMALIZATION + CATALOG/V008/CURRENT BINDING AUTHORIZED / D-237 / EXECUTION PENDING",
+    "status": "FORMALIZED + 56 ROWS BOUND / D-238 / PR #36 DRAFT / MERGE NOT AUTHORIZED",
     "branch": "codex/t040-p3-3-huagong-master-v2-v001",
     "branch_status": "ACTIVE / PR #36 DRAFT",
     "engineering_execution_authorized": true
   },
   "proposed_next_task": {
-    "id": "T-040-FORMALIZATION-EXECUTION",
-    "name": "T-040 华栱 Formalization + Catalog/V008/CURRENT binding execution",
-    "status": "NEXT / AUTHORIZED TO EXECUTE"
+    "id": "T-040-POST-FORMALIZATION",
+    "name": "Derived Excel sync + latest-head/shared regressions + readiness review",
+    "status": "NOT AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-039",
@@ -131,7 +131,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 23 OF 28 MASTERS APPROVED / T-040 FORMALIZATION AUTHORIZED D-237 / EXECUTION NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED D-238 / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -970,7 +970,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / MAIN 23 OF 28 / T-040 FORMALIZATION AUTHORIZED D-237 / EXECUTION NEXT",
+    "status": "ACTIVE / BRANCH 24 OF 28 / MAIN 23 OF 28 / T-040 FORMALIZED / POST-FORMALIZATION NOT AUTHORIZED",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1245,16 +1245,16 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / CANONICAL MAIN / 23 OF 28 / T-039 CLOSED D-224",
+    "status": "ACTIVE / T-040 FORMALIZED ON BRANCH / 24 OF 28",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
-    "approved_master_count": 23,
-    "pending_master_object_type_count": 5,
-    "master_completion_percent": 82.1,
-    "master_covered_registry_record_count": 275,
-    "pending_source_binding_count": 5,
+    "approved_master_count": 24,
+    "pending_master_object_type_count": 4,
+    "master_completion_percent": 85.7,
+    "master_covered_registry_record_count": 331,
+    "pending_source_binding_count": 4,
     "row_fields": [
       "stage1_disposition",
       "master_coverage_status",
@@ -1265,7 +1265,7 @@
     "excel_sync_run": 36296704267,
     "excel_sync_result": "SUCCESS",
     "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure.",
-    "excel_sync_pending": false
+    "excel_sync_pending": true
   },
   "local_sync_verification_2026_09_20": {
     "status": "PASS / COMPLETE",
@@ -2595,7 +2595,7 @@
     "closure_decision_id": "D-224"
   },
   "huagong_stage1": {
-    "status": "T-040 FORMALIZATION + CATALOG/V008/CURRENT BINDING AUTHORIZED / D-237 / EXECUTION PENDING",
+    "status": "FORMALIZED + CATALOG/V008/CURRENT BOUND / D-238 / PR #36 DRAFT / MERGE NOT AUTHORIZED",
     "component": "华栱",
     "coverage_matrix_priority": 18,
     "registry_record_count": 56,
@@ -2779,7 +2779,7 @@
     "accepted_jump_1_geometry_signature": "565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a",
     "accepted_jump_2_geometry_signature": "451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001",
     "formalization_authorization_decision_id": "D-237",
-    "formalization_execution_status": "NOT STARTED / AUTHORIZED",
+    "formalization_execution_status": "COMPLETE / D-238",
     "target_post_formalization": {
       "approved_master_count": 24,
       "pending_master_count": 4,
@@ -2790,6 +2790,27 @@
       "jump_2_binding_count": 28
     },
     "derived_excel_sync_authorized": false,
-    "ready_merge_authorized": false
+    "ready_merge_authorized": false,
+    "formalization_workflow_installed": true,
+    "formalization_workflow_path": ".github/workflows/p3_3_t040_huagong_formalize.yml",
+    "formalization_workflow_trigger_status": "CONTENTS_API_TRIGGER_REQUESTED / D-237 / EXECUTION PENDING",
+    "formalization_result_decision_id": "D-238",
+    "formalization_complete": true,
+    "formalization_run_id": 36321537733,
+    "branch_approved_master_count": 24,
+    "branch_master_completion_percent": 85.7,
+    "branch_master_covered_registry_record_count": 331,
+    "huagong_registry_binding_count": 56,
+    "jump_1_binding_count": 28,
+    "jump_2_binding_count": 28,
+    "current_equals_v008": true,
+    "canonical_blend_sha256": "0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e",
+    "semantic_sha256": "b5ab09f0cb9121ab3d27887d8cff65dc92bb06f6e0b3fe8197f6980820d8b783",
+    "validation_sha256": "b5d23c5878fd25353855675d7c701924bf8d0cb179e4817513865c46147ba295",
+    "review_board_sha256": "54d4c79bd83e23c6ac31c330323fce70e0a83f7a1c2f2d1355c2e9d3f16af2f1",
+    "family_semantic_signature": "0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77",
+    "jump_1_geometry_signature": "565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a",
+    "jump_2_geometry_signature": "451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001",
+    "post_formalization_verification_authorized": false
   }
 }

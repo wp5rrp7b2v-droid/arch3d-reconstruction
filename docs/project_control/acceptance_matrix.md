@@ -1273,3 +1273,16 @@ Boundary retained:
 - Length/Assembly Control Set: **MANDATORY BEFORE ENGINEERING**.
 - Profile Control Set: **MANDATORY BEFORE ENGINEERING**.
 - Candidate lock: **PENDING PRODUCT OWNER**.
+
+### T-040 Formalization + Catalog/V008/CURRENT Binding｜D-238
+
+- **FORMALIZED / BRANCH** under D-237.
+- Stage1 Catalog: **24/28 = 85.7%** on T-040 branch.
+- Registry binding: **56/56** 华栱 records = APPROVED_MASTER_AVAILABLE / CMP-GONG-HUAGONG-001_MASTER.
+- Variant binding: **JUMP_1 28 / JUMP_2 28**.
+- Master-covered Registry records: **331**.
+- CURRENT == V008: **PASS**.
+- Accepted canonical .blend SHA-256: `0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e`.
+- Reference-specimen lengths remain non-instance-exact; historical instance full lengths remain UNRESOLVED.
+- Derived Excel / post-formalization readiness: **PENDING / NOT AUTHORIZED**.
+- PR #36: **DRAFT / MERGE NOT AUTHORIZED**.
