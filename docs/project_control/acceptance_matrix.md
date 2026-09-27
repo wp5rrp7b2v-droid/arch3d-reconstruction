@@ -1242,3 +1242,19 @@ Boundary retained:
 - Active engineering task: **NONE**.
 - Stage2: **NOT AUTHORIZED**.
 - T-018: **HOLD**.
+
+### 华栱｜Source Readiness + D-076｜D-225
+
+- Canonical primary PDF identity: **PASS / exact SHA match**.
+- V008 scope count: **56 LOCKED_SUBSET / 28 一跳 + 28 二跳**.
+- Whole-hall total claim: **PROHIBITED**.
+- Direct first+second combined out-jump evidence: **PASS / 732.4 mm mean / n=46**.
+- Standalone 一跳 length: **UNRESOLVED**.
+- Standalone 二跳 direct-measured length: **UNRESOLVED**.
+- Later 二跳 1630 mm evidence: **SECONDARY_CALCULATED / not direct**.
+- Same-building visual/form context: **PASS WITH BOUNDARIES**.
+- Exact profile/end/joinery: **UNRESOLVED / DEFERRED**.
+- Source Readiness: **PASS WITH BOUNDARIES**.
+- D-076 Visual/Form Gate: **PASS WITH BOUNDARIES**.
+- Master Spec V0.1 design: **NEXT**.
+- Engineering execution: **NOT AUTHORIZED**.
