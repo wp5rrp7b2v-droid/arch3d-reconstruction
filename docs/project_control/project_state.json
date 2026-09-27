@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R314",
+  "state_revision": "R315",
   "last_updated": "2026-09-27",
-  "session_status": "T-040 HUAGONG FIRST ARTICLE MACHINE PASS D-235 / 76 OF 76 / PRODUCT OWNER REVIEW REQUIRED / PR #36 DRAFT / FORMALIZATION NOT AUTHORIZED / MAIN 23 OF 28 = 82.1% / 275 COVERED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-040 HUAGONG FIRST ARTICLE PRODUCT OWNER APPROVED D-236 / ACCEPTED RUN 36317889355 / ARTIFACT 10930899677 / PR #36 DRAFT / FORMALIZATION NEXT GATE NOT AUTHORIZED / MAIN 23 OF 28 = 82.1% / 275 COVERED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 23 OF 28 / T-040 FIRST ARTICLE MACHINE PASS D-235 / PO REVIEW NEXT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 23 OF 28 / T-040 FIRST ARTICLE PO APPROVED D-236 / FORMALIZATION NEXT GATE / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 FIRST ARTICLE MACHINE PASS D-235 / PO REVIEW NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 FIRST ARTICLE MACHINE PASS D-235 / PO REVIEW NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 FIRST ARTICLE PO APPROVED D-236 / FORMALIZATION NEXT GATE / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 FIRST ARTICLE PO APPROVED D-236 / FORMALIZATION NEXT GATE / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -66,15 +66,15 @@
     "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
     "name": "华栱 Master",
     "component": "华栱",
-    "status": "FIRST ARTICLE MACHINE PASS / D-235 / 76 OF 76 / PRODUCT OWNER REVIEW REQUIRED",
+    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-236 / FORMALIZATION NEXT GATE NOT AUTHORIZED",
     "branch": "codex/t040-p3-3-huagong-master-v2-v001",
     "branch_status": "ACTIVE / PR #36 DRAFT",
     "engineering_execution_authorized": true
   },
   "proposed_next_task": {
-    "id": "T-040-FIRST-ARTICLE-PO-REVIEW",
-    "name": "T-040 华栱 First Article Product Owner review / approval decision",
-    "status": "AWAITING PRODUCT OWNER"
+    "id": "T-040-FORMALIZATION-AUTHORIZATION",
+    "name": "T-040 华栱 Formalization + Catalog/V008/CURRENT binding authorization",
+    "status": "NEXT GATE / NOT YET AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-039",
@@ -131,7 +131,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 23 OF 28 MASTERS APPROVED / T-040 FIRST ARTICLE MACHINE PASS D-235 / PO REVIEW NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 23 OF 28 MASTERS APPROVED / T-040 FIRST ARTICLE PO APPROVED D-236 / FORMALIZATION NEXT GATE / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -970,7 +970,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / MAIN 23 OF 28 / T-040 FIRST ARTICLE MACHINE PASS D-235 / PO REVIEW REQUIRED",
+    "status": "ACTIVE / MAIN 23 OF 28 / T-040 FIRST ARTICLE PO APPROVED D-236 / FORMALIZATION NEXT GATE",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1217,7 +1217,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "华栱 / T-040 FIRST ARTICLE PO REVIEW"
+    "next_master_candidate": "华栱 / T-040 FORMALIZATION AUTHORIZATION NEXT"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -2595,7 +2595,7 @@
     "closure_decision_id": "D-224"
   },
   "huagong_stage1": {
-    "status": "T-040 FIRST ARTICLE MACHINE PASS / D-235 / 76 OF 76 / PRODUCT OWNER REVIEW REQUIRED",
+    "status": "T-040 FIRST ARTICLE PRODUCT OWNER APPROVED / D-236 / FORMALIZATION NEXT GATE NOT AUTHORIZED",
     "component": "华栱",
     "coverage_matrix_priority": 18,
     "registry_record_count": 56,
@@ -2753,8 +2753,8 @@
     "profile_control_sha256": "f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e",
     "engineering_execution_authorization_decision_id": "D-234",
     "engineering_branch": "codex/t040-p3-3-huagong-master-v2-v001",
-    "first_article_status": "MACHINE PASS / D-235 / 76 OF 76",
-    "first_article_po_approved": false,
+    "first_article_status": "PRODUCT OWNER APPROVED / D-236",
+    "first_article_po_approved": true,
     "formalization_authorized": false,
     "engineering_branch_base_commit": "7c4dc0d88bc928ea1abe73a1109172a95a69c67a",
     "first_article_machine_decision_id": "D-235",
@@ -2766,6 +2766,17 @@
     "first_article_jump_1_geometry_signature": "565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a",
     "first_article_jump_2_geometry_signature": "451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001",
     "draft_pr_number": 36,
-    "draft_pr_status": "DRAFT / OPEN / NOT MERGED"
+    "draft_pr_status": "DRAFT / OPEN / NOT MERGED",
+    "first_article_po_approval_decision_id": "D-236",
+    "accepted_run_id": 36317889355,
+    "accepted_artifact_id": 10930899677,
+    "accepted_artifact_digest": "sha256:de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f",
+    "accepted_canonical_blend_sha256": "0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e",
+    "accepted_semantic_sha256": "e3264826dce4d747aa4c73ddbaa2ec29a042859b9f3f611a35fca8b999ae2ef9",
+    "accepted_validation_sha256": "ccb7baaee7e1e3e7c7f69d474bd77d97b22491998c1973152273fd4a87b3ee81",
+    "accepted_review_board_sha256": "54d4c79bd83e23c6ac31c330323fce70e0a83f7a1c2f2d1355c2e9d3f16af2f1",
+    "accepted_family_semantic_signature": "0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77",
+    "accepted_jump_1_geometry_signature": "565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a",
+    "accepted_jump_2_geometry_signature": "451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001"
   }
 }

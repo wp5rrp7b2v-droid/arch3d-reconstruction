@@ -496,7 +496,7 @@ The future task must not:
 5. Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-233**
 6. Engineering Execution Authorization — **AUTHORIZED / D-234**
 7. First Article machine validation — **PASS / D-235 / 76 OF 76**
-8. Product Owner First Article Approval — **AWAITING PRODUCT OWNER**
+8. Product Owner First Article Approval — **APPROVED / D-236**
 9. Formalization + Catalog/V008/CURRENT binding — **NOT AUTHORIZED**
 10. Derived Excel + latest-head/shared regressions + readiness — **NOT AUTHORIZED**
 11. D-194 combined Draft→Ready + Merge — **NOT AUTHORIZED**
@@ -694,3 +694,51 @@ D-235 is a machine-gate result only. Product Owner First Article acceptance rema
 Current status:
 
 **FIRST ARTICLE MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
+
+
+## 24. First Article Product Owner Approval｜D-236
+
+Product Owner formally approved the **actual Blender First Article artifact** after D-235 machine PASS.
+
+Accepted machine evidence:
+- Run ID: **36317889355**
+- machine result: **76 / 76 PASS**
+- execution head: `51fc6e2a506a5950dc14f52d5aac0378872a531d`
+- Artifact ID: **10930899677**
+- Artifact digest: `sha256:de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f`
+- canonical .blend SHA-256: `0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e`
+- Semantic SHA-256: `e3264826dce4d747aa4c73ddbaa2ec29a042859b9f3f611a35fca8b999ae2ef9`
+- Validation SHA-256: `ccb7baaee7e1e3e7c7f69d474bd77d97b22491998c1973152273fd4a87b3ee81`
+- Review Board SHA-256: `54d4c79bd83e23c6ac31c330323fce70e0a83f7a1c2f2d1355c2e9d3f16af2f1`
+- family semantic signature: `0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77`
+- JUMP_1 geometry signature: `565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a`
+- JUMP_2 geometry signature: `451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001`
+
+Approval applies only to the real machine-generated artifact package above. The separately generated illustrative review images are **not** part of the accepted canonical evidence chain.
+
+Accepted geometry/evidence boundaries remain:
+- exactly two canonical bodies: JUMP_1_HUAGONG / JUMP_2_HUAGONG;
+- JUMP_1 reference specimen = 898.8 × 214.2 × 153.0 mm;
+- JUMP_2 reference specimen = 1630.0 × 214.2 × 153.0 mm;
+- both independently generated from locked Gate B controls;
+- validation fixture remains non-canonical / non-Registry / non-Catalog;
+- only D0→D2 = 732.4 mm is DIRECT_PRIMARY assembly-level observed-mean evidence;
+- 56 Registry instance historical standalone full lengths remain UNRESOLVED;
+- exact historical profile/end/hidden overlap remain UNRESOLVED;
+- unsupported joinery/local cuts remain absent.
+
+D-236 approves the First Article only.
+
+It does **not** authorize:
+- formalization;
+- Catalog/V008/CURRENT binding;
+- Derived Excel synchronization;
+- PR Draft→Ready;
+- merge;
+- closure;
+- Stage2;
+- T-018 resume.
+
+Current status:
+
+**FIRST ARTICLE PRODUCT OWNER APPROVED / FORMALIZATION NEXT GATE NOT AUTHORIZED**
