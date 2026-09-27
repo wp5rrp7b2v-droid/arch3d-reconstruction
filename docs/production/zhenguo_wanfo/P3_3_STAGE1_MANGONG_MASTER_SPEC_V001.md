@@ -200,10 +200,12 @@ A future T-038 Task Contract should hard-fail at least:
 - D-196: Source Readiness + D-076 PASS WITH BOUNDARIES
 - D-197: Master Spec V0.1 DRAFT prepared / Product Owner review required
 - D-198: Master Spec V0.1 PRODUCT OWNER APPROVED / LOCKED
+- D-199: T-038 Task Contract PRODUCT OWNER AUTHORIZED / LOCKED
 
 Current gate:
 - Master Spec V0.1 = **LOCKED / PRODUCT OWNER APPROVED / D-198**
-- Task Contract = **NEXT GATE / NOT YET AUTHORIZED**
+- Task Contract = **LOCKED / D-199**
+- Profile Control Set V0.1 = **NEXT GATE / NOT YET APPROVED**
 - engineering execution = **NOT AUTHORIZED**
 - Blender generation = **NOT AUTHORIZED**
 - formalization = **NOT AUTHORIZED**
