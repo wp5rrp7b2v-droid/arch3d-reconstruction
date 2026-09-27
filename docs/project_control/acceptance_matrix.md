@@ -1045,3 +1045,19 @@ Boundary retained:
 - T-037/T-038 profile-control inheritance: **PROHIBITED WITHOUT NEW EVIDENCE**.
 - Result: **PASS WITH BOUNDARIES / MASTER SPEC V0.1 NEXT**.
 - Engineering execution: **NOT AUTHORIZED**.
+
+### 令栱 Master Spec V0.1 Candidate 01｜D-211
+
+- Source Gate D-210 carried forward: **PASS WITH BOUNDARIES**.
+- One shared Master architecture: **PROPOSED**.
+- Geometry Variant count = 0: **PROPOSED**.
+- 28 physical instance bindings: **PROPOSED**.
+- Canonical envelope 897 × 217.4 × 155.6 mm: **PROPOSED / DIRECT OBSERVED-MEAN BASIS**.
+- Per-instance exact claim: **PROHIBITED**.
+- Sample-to-instance mapping: **UNKNOWN**.
+- Exact historical profile/end geometry: **UNRESOLVED**.
+- Profile Control Set: **SEPARATE PRE-EXECUTION GATE REQUIRED**.
+- T-037/T-038 profile reuse: **PROHIBITED WITHOUT NEW EVIDENCE**.
+- Generic Song template substitution: **PROHIBITED**.
+- Master Spec status: **DRAFT / PRODUCT OWNER REVIEW REQUIRED**.
+- Engineering execution: **NOT AUTHORIZED**.
