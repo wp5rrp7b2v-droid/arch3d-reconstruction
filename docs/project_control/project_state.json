@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R274",
+  "state_revision": "R275",
   "last_updated": "2026-09-27",
-  "session_status": "T-037 CLOSED D-193 / PR #33 MERGED / MAIN 21 OF 28 = 75.0% / T-038 SOURCE READINESS ACTIVE D-195 / T-018 HOLD",
+  "session_status": "T-038 SOURCE READINESS + D-076 PASS WITH BOUNDARIES D-196 / MASTER SPEC AWAITING PRODUCT OWNER APPROVAL / 21 OF 28 / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -27,7 +27,7 @@
     }
   },
   "decision_required": false,
-  "blocker": "T-038 source attribution + visual/form evidence must be reviewed before Master Spec or modeling.",
+  "blocker": "Product Owner approval required before T-038 Master Spec V0.1 drafting.",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-038",
     "name": "P3_3_MANGONG_MASTER_V2_V001",
-    "status": "SOURCE READINESS + VISUAL/FORM EVIDENCE REVIEW ACTIVE / D-195 / NO ENGINEERING AUTHORITY"
+    "status": "SOURCE READINESS + D-076 PASS WITH BOUNDARIES / D-196 / MASTER SPEC NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "T-038-SOURCE-READINESS",
-    "name": "慢栱族 Source Readiness + D-076 visual/form evidence review",
-    "status": "ACTIVE / REVIEW REQUIRED BEFORE MASTER SPEC"
+    "id": "T-038-MASTER-SPEC-V0.1",
+    "name": "慢栱族 Master Spec V0.1",
+    "status": "AWAITING PRODUCT OWNER APPROVAL TO DRAFT"
   },
   "last_completed_task": {
     "id": "T-037",
@@ -2206,7 +2206,7 @@
     ]
   },
   "mangong_stage1": {
-    "status": "SOURCE READINESS + VISUAL/FORM EVIDENCE REVIEW ACTIVE / D-195",
+    "status": "SOURCE READINESS + D-076 PASS WITH BOUNDARIES / D-196",
     "task_id": "T-038",
     "target_components": [
       "大型慢栱",
@@ -2224,10 +2224,30 @@
       "thickness": 156.9
     },
     "evidence_boundary": "Registry dimensions are current V008 production records; direct primary source attribution and member profile/form evidence must be re-closed before Master Spec.",
-    "source_readiness_pass": false,
-    "visual_form_gate": "NOT YET REVIEWED",
+    "source_readiness_pass": true,
+    "visual_form_gate": "PASS WITH BOUNDARIES / D-196",
     "master_spec_authorized": false,
     "task_contract_authorized": false,
-    "engineering_execution_authorized": false
+    "engineering_execution_authorized": false,
+    "source_readiness_decision_id": "D-196",
+    "direct_length_evidence": {
+      "large_observed_mean_mm": 1641,
+      "large_n": 16,
+      "small_observed_mean_mm": 1607,
+      "small_n": 28,
+      "classification": "DIRECT_PRIMARY / OBSERVED_MEAN",
+      "source": "SRC-ZG-WF-001 / PDF p60 / printed p45 / §2.2.2.2 慢栱"
+    },
+    "width_thickness_evidence": {
+      "width_mm": 218.9,
+      "thickness_mm": 156.9,
+      "classification": "REPORT_INFERRED / FAMILY DESIGN CANDIDATE / REPLACEABLE",
+      "slow_gong_specific_raw_observed_mean_verified": false,
+      "per_instance_direct": false,
+      "source_note": "Report design synthesis includes these values; do not relabel as slow-gong-specific direct measurement."
+    },
+    "profile_status": "SAME_BUILDING_FORM_CONTEXT_SUPPORTED / EXACT_STANDALONE_PROFILE_UNRESOLVED",
+    "joinery_connection_details": "DEFERRED",
+    "source_readiness_review_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_MANGONG_SOURCE_READINESS_V001.md"
   }
 }
