@@ -165,13 +165,10 @@ jobs:
           assert d["execution_boundary"]["catalog_v008_binding_complete"] is True
           assert d["execution_boundary"]["merge_authorized"] is False
           assert d["profile_contract"]["control_set_sha256"]=="0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7"
-          # The locked First Article validator intentionally checks the pre-formalization
-          # execution boundary. For regression only, sanitize those two gate flags while
-          # preserving every geometry/profile/source field from the latest canonical Definition.
-          d["execution_boundary"]["formalization_authorized"]=False
-          d["execution_boundary"]["catalog_v008_binding_authorized"]=False
+          # Review Patch 01 makes the validator lifecycle-aware. The regression consumes
+          # the latest canonical formalized Definition unchanged.
           Path("/tmp/t039_regression_definition.json").write_text(json.dumps(d,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-          print("T039_REGRESSION_DEFINITION_PASS")
+          print("T039_REGRESSION_DEFINITION_PASS / CANONICAL_UNCHANGED")
           PY
 
       - name: Latest-head T-039 rebuild and reopen
@@ -210,7 +207,7 @@ jobs:
             "regenerated_blend_promoted_to_canonical":False,
             "accepted_canonical_blend_sha256":os.environ["ACCEPTED_BLEND"],
             "accepted_geometry_match":True,
-            "definition_mode":"latest canonical Definition with only pre-formalization validator gate flags sanitized in /tmp; geometry/profile/source fields unchanged"
+            "definition_mode":"latest canonical formalized Definition copied unchanged to /tmp for regression"
           }
           Path("artifacts/t039_post/t039_regression_summary.json").write_text(json.dumps(summary,indent=2)+"\n",encoding="utf-8")
           print("T039_LATEST_HEAD_REGRESSION_PASS",regen)
