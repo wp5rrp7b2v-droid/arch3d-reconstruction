@@ -1,0 +1,131 @@
+{
+  "schema_version": "P3_3_STAGE1_MANGONG_PROFILE_CONTROL_SET_V001",
+  "status": "CANDIDATE_01 / READY_FOR_PRODUCT_OWNER_REVIEW / NOT_LOCKED",
+  "date": "2026-09-27",
+  "task_id": "T-038",
+  "candidate_id": "MANGONG_PROFILE_CONTROL_SET_V001_C01",
+  "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+  "source": {
+    "source_id": "SRC-ZG-WF-001",
+    "visual_pages": [
+      73,
+      74,
+      75,
+      76
+    ],
+    "role": "QUALITATIVE_FORM_AND_ENVELOPE_AUTHORITY",
+    "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "historical_control_point_claim": false
+  },
+  "coordinate_meaning": {
+    "x": "fraction of full member length centered at 0",
+    "z": "fraction of full profile thickness centered at 0"
+  },
+  "normalized_points": [
+    [
+      -0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.5
+    ],
+    [
+      0.5,
+      0.12
+    ],
+    [
+      0.475,
+      0.02
+    ],
+    [
+      0.435,
+      -0.1
+    ],
+    [
+      0.385,
+      -0.22
+    ],
+    [
+      0.315,
+      -0.33
+    ],
+    [
+      0.235,
+      -0.41
+    ],
+    [
+      0.13,
+      -0.47
+    ],
+    [
+      0.08,
+      -0.5
+    ],
+    [
+      -0.08,
+      -0.5
+    ],
+    [
+      -0.13,
+      -0.47
+    ],
+    [
+      -0.235,
+      -0.41
+    ],
+    [
+      -0.315,
+      -0.33
+    ],
+    [
+      -0.385,
+      -0.22
+    ],
+    [
+      -0.435,
+      -0.1
+    ],
+    [
+      -0.475,
+      0.02
+    ],
+    [
+      -0.5,
+      0.12
+    ]
+  ],
+  "point_count": 18,
+  "control_set_sha256": "07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4",
+  "bilateral_symmetry": true,
+  "symmetry_classification": "STAGE1_SIMPLIFICATION / NOT_HISTORICAL_ASYMMETRY_CLAIM",
+  "independent_from_t037_guazi_control_set": true,
+  "t037_guazi_control_set_reused": false,
+  "variant_application": {
+    "LARGE_MANGONG": {
+      "length_mm": 1641,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    "SMALL_MANGONG": {
+      "length_mm": 1607,
+      "width_mm": 218.9,
+      "thickness_mm": 156.9
+    },
+    "uniform_3d_scaling": false,
+    "width_thickness_scaled_by_length_ratio": false
+  },
+  "deferred": [
+    "exact_historical_curve",
+    "exact_historical_control_point_dimensions",
+    "mortise_tenon",
+    "grooves",
+    "hidden_slots_or_cavities",
+    "local_connection_cuts",
+    "wear_damage_warp",
+    "per_instance_deformation"
+  ],
+  "product_owner_approved": false,
+  "locked": false,
+  "engineering_execution_authorized": false
+}
