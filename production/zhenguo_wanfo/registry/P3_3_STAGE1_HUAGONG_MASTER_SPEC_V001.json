@@ -170,7 +170,7 @@
   "product_owner_approved": true,
   "locked": true,
   "engineering_task_created": true,
-  "engineering_execution_authorized": false,
+  "engineering_execution_authorized": true,
   "approval_decision_id": "D-227",
   "master_spec_locked_date": "2026-09-27",
   "task_contract": {
@@ -180,7 +180,7 @@
     "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-229",
     "decision_id": "D-229",
     "engineering_task_created": true,
-    "engineering_execution_authorized": false,
+    "engineering_execution_authorized": true,
     "pre_execution_gate_sequence": [
       "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V0.1",
       "HUAGONG_PROFILE_CONTROL_SET_V0.1",
@@ -199,7 +199,7 @@
     "reference_specimen_thickness_mm": 153,
     "validation_total_projection_mm": 732.4,
     "instance_historical_full_lengths_closed": false,
-    "engineering_execution_authorized": false
+    "engineering_execution_authorized": true
   },
   "profile_control_set": {
     "control_id": "HUAGONG_PROFILE_CONTROL_SET_V001_C01",
@@ -210,6 +210,21 @@
     "point_count": 16,
     "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
     "gate_a_control_sha256": "ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b",
-    "engineering_execution_authorized": false
+    "engineering_execution_authorized": true
+  },
+  "engineering_execution_authorization_decision_id": "D-234",
+  "engineering_branch": "codex/t040-p3-3-huagong-master-v2-v001",
+  "first_article_target": {
+    "canonical_body_count": 2,
+    "canonical_bodies": [
+      "JUMP_1_HUAGONG",
+      "JUMP_2_HUAGONG"
+    ],
+    "validation_fixture": "TWO_JUMP_ASSEMBLY_FIXTURE_VALIDATION_ONLY",
+    "fixture_canonical_asset": false,
+    "blender_version": "4.5.13",
+    "draft_pr_authorized": true,
+    "product_owner_acceptance_authorized": false,
+    "formalization_authorized": false
   }
 }

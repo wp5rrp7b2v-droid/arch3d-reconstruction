@@ -107,12 +107,13 @@
   "candidate_signature_status": "LOCKED",
   "locked": true,
   "product_owner_approved": true,
-  "executable": false,
-  "engineering_execution_authorized": false,
+  "executable": true,
+  "engineering_execution_authorized": true,
   "control_set_sha256": "ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b",
   "signature_scope": "CANONICALIZED_SEMANTIC_CONTROL_PAYLOAD_EXCLUDING_GOVERNANCE_STATUS_AND_SIGNATURE_FIELDS",
   "signature_canonicalization": "UTF-8 JSON / recursively sorted object keys / compact separators",
   "approval_decision_id": "D-231",
   "locked_date": "2026-09-27",
-  "control_input_status": "LOCKED_CANONICAL / CONSUMABLE_ONLY_AFTER_SEPARATE_ENGINEERING_EXECUTION_AUTHORIZATION"
+  "control_input_status": "LOCKED_CANONICAL / AUTHORIZED_FOR_T040_ENGINEERING_EXECUTION",
+  "engineering_execution_authorization_decision_id": "D-234"
 }

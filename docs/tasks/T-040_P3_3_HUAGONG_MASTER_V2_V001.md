@@ -494,7 +494,7 @@ The future task must not:
 3. Task Contract — **LOCKED / PRODUCT OWNER APPROVED / D-229**
 4. Length/Assembly Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-231**
 5. Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-233**
-6. Engineering Execution Authorization — **NOT AUTHORIZED**
+6. Engineering Execution Authorization — **AUTHORIZED / D-234**
 7. First Article machine validation — **NOT STARTED**
 8. Product Owner First Article Approval — **NOT STARTED**
 9. Formalization + Catalog/V008/CURRENT binding — **NOT AUTHORIZED**
@@ -576,3 +576,59 @@ D-232 prepares `HUAGONG_PROFILE_CONTROL_SET_V001_C01` for Product Owner review. 
 ## 21. Profile Control Set Approval｜D-233
 
 Product Owner approved and locked `HUAGONG_PROFILE_CONTROL_SET_V001_C01` without changes to D-232 Candidate 01. Locked profile SHA-256=`f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e`; point count=16; classification remains `SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT`. JUMP_1/JUMP_2 share the same normalized controls but must be evaluated independently against D-231 Gate A envelopes; W/T remain fixed and finished-mesh uniform scaling is prohibited. Gate B is CLOSED/PASS. Engineering execution remains a separate authorization gate and is still blocked; no branch/PR/builder/Blender/First Article/formalization is authorized by D-233.
+
+## 22. Engineering Execution Authorization｜D-234
+
+Product Owner authorized isolated T-040 engineering execution after Gate A D-231 and Gate B D-233 were both locked.
+
+Authorized engineering scope:
+- create/use production branch `codex/t040-p3-3-huagong-master-v2-v001`;
+- implement one T-040 Definition consuming the locked Gate A + Gate B controls;
+- implement builder / validator / GitHub Actions workflow;
+- use Blender **4.5.13** for canonical generation;
+- generate exactly two canonical First Article bodies:
+  - `JUMP_1_HUAGONG`;
+  - `JUMP_2_HUAGONG`;
+- generate one `TWO_JUMP_ASSEMBLY_FIXTURE_VALIDATION_ONLY` non-canonical fixture;
+- validate D0→D2 = **732.4 mm** within the locked Gate A machine tolerance;
+- perform deterministic rebuild + independent reopen checks;
+- generate review evidence covering all locked Task Contract domains;
+- create a **Draft PR** for Product Owner review.
+
+Locked inputs:
+- Gate A: `HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001_C01`
+  - SHA `ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b`;
+- Gate B: `HUAGONG_PROFILE_CONTROL_SET_V001_C01`
+  - SHA `f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e`.
+
+Required canonical First Article envelopes:
+- JUMP_1 reference specimen = **898.8 × 214.2 × 153.0 mm**;
+- JUMP_2 reference specimen = **1630.0 × 214.2 × 153.0 mm**.
+
+Required profile rule:
+- both variants use the locked independent 16-point normalized 华栱 control set;
+- each body is generated independently from the locked Definition;
+- no finished-mesh uniform scaling;
+- W/T must not scale with length ratio.
+
+Required fixture rule:
+- D0 = 0.0 mm;
+- D1 = 366.2 mm, reconstruction/project-fixture guidance only;
+- D2 = 732.4 mm;
+- only D0→D2 is the DIRECT_PRIMARY assembly metric assertion;
+- the fixture is not a third canonical asset and shall not bind Registry/Catalog.
+
+D-234 does **not** authorize:
+- Product Owner First Article acceptance;
+- formalization;
+- Catalog/V008/CURRENT binding;
+- Derived Excel synchronization;
+- Draft→Ready transition;
+- merge;
+- closure;
+- Stage2;
+- T-018 resume.
+
+Current execution state:
+
+**ENGINEERING EXECUTION AUTHORIZED / FIRST ARTICLE MACHINE VALIDATION NEXT**

@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R312",
+  "state_revision": "R313",
   "last_updated": "2026-09-27",
-  "session_status": "T-040 HUAGONG PROFILE CONTROL LOCKED D-233 / GATE A+B CLOSED / ENGINEERING EXECUTION AUTHORIZATION NEXT / BRANCH NOT CREATED / MAIN 23 OF 28 = 82.1% / 275 COVERED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-040 HUAGONG ENGINEERING EXECUTION AUTHORIZED D-234 / BRANCH CREATION AUTHORIZED / FIRST ARTICLE MACHINE VALIDATION NEXT / GATE A+B LOCKED / MAIN 23 OF 28 = 82.1% / 275 COVERED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 23 OF 28 / T-040 GATE A+B CLOSED / ENGINEERING EXECUTION AUTHORIZATION NEXT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 23 OF 28 / T-040 ENGINEERING EXECUTION AUTHORIZED D-234 / FIRST ARTICLE MACHINE VALIDATION NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 GATE A+B CLOSED / ENGINEERING EXECUTION AUTHORIZATION NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 GATE A+B CLOSED / ENGINEERING EXECUTION AUTHORIZATION NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 EXECUTION AUTHORIZED D-234 / FIRST ARTICLE MACHINE VALIDATION NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / MAIN 23 OF 28 / T-040 EXECUTION AUTHORIZED D-234 / FIRST ARTICLE MACHINE VALIDATION NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -66,15 +66,15 @@
     "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
     "name": "华栱 Master",
     "component": "华栱",
-    "status": "TASK CONTRACT LOCKED D-229 / GATE A LOCKED D-231 / GATE B LOCKED D-233 / ENGINEERING EXECUTION AUTHORIZATION NEXT",
-    "branch": null,
-    "branch_status": "NOT CREATED",
-    "engineering_execution_authorized": false
+    "status": "ENGINEERING EXECUTION AUTHORIZED / D-234 / FIRST ARTICLE MACHINE VALIDATION NEXT",
+    "branch": "codex/t040-p3-3-huagong-master-v2-v001",
+    "branch_status": "AUTHORIZED / TO BE CREATED FROM D-234 MAIN",
+    "engineering_execution_authorized": true
   },
   "proposed_next_task": {
-    "id": "T-040-ENGINEERING-EXECUTION-AUTHORIZATION",
-    "name": "T-040 华栱 Engineering Execution Authorization",
-    "status": "NEXT / NOT YET AUTHORIZED"
+    "id": "T-040-FIRST-ARTICLE-MACHINE-VALIDATION",
+    "name": "T-040 华栱 Engineering Execution + First Article machine validation",
+    "status": "NEXT / AUTHORIZED TO EXECUTE"
   },
   "last_completed_task": {
     "id": "T-039",
@@ -131,7 +131,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 23 OF 28 MASTERS APPROVED / T-040 GATE A+B CLOSED / ENGINEERING EXECUTION AUTHORIZATION NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 23 OF 28 MASTERS APPROVED / T-040 EXECUTION AUTHORIZED D-234 / FIRST ARTICLE MACHINE VALIDATION NEXT / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -970,7 +970,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / MAIN 23 OF 28 / T-040 GATE A+B CLOSED / ENGINEERING EXECUTION AUTHORIZATION NEXT",
+    "status": "ACTIVE / MAIN 23 OF 28 / T-040 EXECUTION AUTHORIZED D-234 / FIRST ARTICLE MACHINE VALIDATION NEXT",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1217,7 +1217,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "华栱 / T-040 ENGINEERING EXECUTION AUTHORIZATION NEXT"
+    "next_master_candidate": "华栱 / T-040 ENGINEERING EXECUTION + FIRST ARTICLE MACHINE VALIDATION"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -2595,7 +2595,7 @@
     "closure_decision_id": "D-224"
   },
   "huagong_stage1": {
-    "status": "T-040 PROFILE CONTROL LOCKED / D-233 / GATE A+B CLOSED / ENGINEERING EXECUTION AUTHORIZATION NEXT",
+    "status": "T-040 ENGINEERING EXECUTION AUTHORIZED / D-234 / FIRST ARTICLE MACHINE VALIDATION NEXT",
     "component": "华栱",
     "coverage_matrix_priority": 18,
     "registry_record_count": 56,
@@ -2671,7 +2671,7 @@
     "master_spec_design_authorized": true,
     "master_spec_locked": true,
     "engineering_task_created": true,
-    "engineering_execution_authorized": false,
+    "engineering_execution_authorized": true,
     "length_assembly_control_gate_required": true,
     "profile_control_gate_required": true,
     "prior_gong_profile_reuse": "PROHIBITED WITHOUT NEW EVIDENCE",
@@ -2750,6 +2750,11 @@
     "profile_control_point_count": 16,
     "profile_control_product_owner_approved": true,
     "profile_control_approval_decision_id": "D-233",
-    "profile_control_sha256": "f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e"
+    "profile_control_sha256": "f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e",
+    "engineering_execution_authorization_decision_id": "D-234",
+    "engineering_branch": "codex/t040-p3-3-huagong-master-v2-v001",
+    "first_article_status": "NOT STARTED / AUTHORIZED",
+    "first_article_po_approved": false,
+    "formalization_authorized": false
   }
 }

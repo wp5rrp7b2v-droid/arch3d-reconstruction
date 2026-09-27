@@ -156,8 +156,9 @@
   ],
   "product_owner_approved": true,
   "locked": true,
-  "engineering_execution_authorized": false,
+  "engineering_execution_authorized": true,
   "approval_decision_id": "D-233",
   "locked_date": "2026-09-27",
-  "control_input_status": "LOCKED_CANONICAL / CONSUMABLE_ONLY_AFTER_SEPARATE_ENGINEERING_EXECUTION_AUTHORIZATION"
+  "control_input_status": "LOCKED_CANONICAL / AUTHORIZED_FOR_T040_ENGINEERING_EXECUTION",
+  "engineering_execution_authorization_decision_id": "D-234"
 }
