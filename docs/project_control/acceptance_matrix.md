@@ -1258,3 +1258,18 @@ Boundary retained:
 - D-076 Visual/Form Gate: **PASS WITH BOUNDARIES**.
 - Master Spec V0.1 design: **NEXT**.
 - Engineering execution: **NOT AUTHORIZED**.
+
+### 华栱｜Master Spec V0.1 Candidate 01｜D-226
+
+- Source Gate D-225: **PASS WITH BOUNDARIES**.
+- Registry scope: **56 LOCKED_SUBSET / 28 JUMP_1 + 28 JUMP_2**.
+- Proposed family count: **1**.
+- Proposed geometry-variant identities: **2**.
+- Direction/location variants: **0**.
+- Individual full lengths: **UNRESOLVED / NOT EXECUTABLE**.
+- 732.4 mm combined projection boundary: **PRESERVED**.
+- Secondary JUMP_2 1630/1464.8 evidence: **NOT UPGRADED**.
+- Profile/end/joinery: **UNRESOLVED / DEFERRED**.
+- Length/Assembly Control Set: **MANDATORY BEFORE ENGINEERING**.
+- Profile Control Set: **MANDATORY BEFORE ENGINEERING**.
+- Candidate lock: **PENDING PRODUCT OWNER**.
