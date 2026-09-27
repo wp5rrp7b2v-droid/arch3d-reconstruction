@@ -980,3 +980,11 @@ Boundary retained:
 - LARGE / SMALL geometry signatures: **MATCH D-204 accepted first article**.
 - Derived Excel / post-formalization readiness: **PENDING / NOT AUTHORIZED**.
 - PR #34: **DRAFT / MERGE NOT AUTHORIZED**.
+
+### T-038 Post-Formalization Verification Authorization｜D-206
+
+- V008/CURRENT progress-summary synchronization: **AUTHORIZED**.
+- Derived Excel sync: **AUTHORIZED**.
+- Latest-head T-038 regression: **AUTHORIZED**.
+- Shared registry regressions + PR readiness review: **AUTHORIZED**.
+- Ready / Merge / closure: **NOT AUTHORIZED**.
