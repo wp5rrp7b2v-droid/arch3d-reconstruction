@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R291",
+  "state_revision": "R292",
   "last_updated": "2026-09-27",
-  "session_status": "LINGGONG MASTER SPEC V0.1 LOCKED D-212 / TASK CONTRACT NEXT / MAIN 22 OF 28 / NO ACTIVE ENGINEERING T-TASK / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-039 LINGGONG TASK CONTRACT LOCKED D-213 / PROFILE CONTROL SET NEXT / MAIN 22 OF 28 / ENGINEERING EXECUTION NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / MAIN 22 OF 28 MASTERS APPROVED / LINGGONG MASTER SPEC LOCKED D-212 / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / 0 OF 7 STAGES PASSED / MAIN 22 OF 28 MASTERS APPROVED / T-039 CONTRACT LOCKED D-213 / PROFILE CONTROL NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / MAIN 22 OF 28 / LINGGONG MASTER SPEC V0.1 LOCKED D-212 / TASK CONTRACT NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / MAIN 22 OF 28 / LINGGONG MASTER SPEC V0.1 LOCKED D-212 / TASK CONTRACT NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / MAIN 22 OF 28 / T-039 LINGGONG CONTRACT LOCKED D-213 / PROFILE CONTROL NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / REAL-COMPONENT-DRIVEN ROUTE / MAIN 22 OF 28 / T-039 LINGGONG CONTRACT LOCKED D-213 / PROFILE CONTROL NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -62,14 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": null,
-    "name": "NONE",
-    "status": "NO ACTIVE ENGINEERING T-TASK"
+    "id": "T-039",
+    "name": "P3_3_LINGGONG_MASTER_V2_V001",
+    "status": "TASK CONTRACT LOCKED / D-213 / PROFILE CONTROL SET GATE NEXT / ENGINEERING EXECUTION BLOCKED"
   },
   "proposed_next_task": {
-    "id": "LINGGONG-TASK-CONTRACT",
-    "name": "令栱 Task Contract design and lock",
-    "status": "NEXT COMPLETE STEP / NOT YET AUTHORIZED FOR ENGINEERING EXECUTION"
+    "id": "T-039-PROFILE-CONTROL-SET-V0.1",
+    "name": "令栱 Profile Control Set V0.1 Candidate 01",
+    "status": "NEXT COMPLETE STEP / PRODUCT OWNER REVIEW REQUIRED BEFORE EXECUTION"
   },
   "last_completed_task": {
     "id": "T-038",
@@ -127,7 +127,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 22 OF 28 MASTERS APPROVED / LINGGONG MASTER SPEC LOCKED D-212 / TASK CONTRACT NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 CONTRACT LOCKED D-213 / PROFILE CONTROL NEXT / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -847,7 +847,7 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Design and lock the 令栱 Task Contract from D-212 Master Spec. Preserve the separate Profile Control Set pre-execution gate. Do not create an engineering branch/PR, run Blender, start Stage2, or resume T-018.",
+  "next_action": "Prepare T-039 令栱 Profile Control Set V0.1 Candidate 01. Do not create production branch/PR, implement builder, run Blender, start Stage2, or resume T-018.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
@@ -966,7 +966,7 @@
     "engineering_execution_authorized": false
   },
   "p3_3_stage_1_2026_09_19": {
-    "status": "ACTIVE / 22 OF 28 MASTERS APPROVED / LINGGONG MASTER SPEC LOCKED / NO ACTIVE ENGINEERING T-TASK",
+    "status": "ACTIVE / 22 OF 28 MASTERS APPROVED / T-039 CONTRACT LOCKED / ENGINEERING EXECUTION NOT AUTHORIZED",
     "decision_id": "D-067",
     "scope": [
       "rebind/review six existing approved Masters against V007",
@@ -1213,7 +1213,7 @@
         "merge_commit_sha": "56ea76ed2bfa766991d4e3f19999dc0c704a48ea"
       }
     },
-    "next_master_candidate": "令栱 / MASTER SPEC LOCKED D-212 / TASK CONTRACT NEXT / NO T-TASK"
+    "next_master_candidate": "令栱 / T-039 CONTRACT LOCKED D-213 / PROFILE CONTROL SET V0.1 NEXT"
   },
   "end_of_day_2026_09_19": {
     "status": "COMPLETE",
@@ -2373,7 +2373,7 @@
     "active_engineering_task": false
   },
   "linggong_stage1": {
-    "status": "MASTER SPEC V0.1 LOCKED / PRODUCT OWNER APPROVED / D-212 / TASK CONTRACT NEXT",
+    "status": "T-039 TASK CONTRACT LOCKED / D-213 / PROFILE CONTROL SET NEXT / ENGINEERING EXECUTION NOT AUTHORIZED",
     "component": "令栱",
     "coverage_matrix_priority": 17,
     "physical_instance_count": 28,
@@ -2427,7 +2427,7 @@
     "generic_template_substitution": "PROHIBITED",
     "master_spec_authorized_for_design": true,
     "master_spec_locked": true,
-    "engineering_task_created": false,
+    "engineering_task_created": true,
     "engineering_execution_authorized": false,
     "master_spec_draft_decision_id": "D-211",
     "master_spec_path": "docs/production/zhenguo_wanfo/P3_3_STAGE1_LINGGONG_MASTER_SPEC_V001.md",
@@ -2446,7 +2446,7 @@
     "profile_authority_candidate": "SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED / PROVISIONAL",
     "profile_control_gate_required": true,
     "master_spec_product_owner_approved": true,
-    "task_contract_authorized": false,
+    "task_contract_authorized": true,
     "master_spec_approval_decision_id": "D-212",
     "component_id": "CMP-GONG-LINGGONG-001",
     "master_id": "CMP-GONG-LINGGONG-001_MASTER",
@@ -2458,6 +2458,14 @@
       "thickness": 155.6
     },
     "task_contract_authorized_for_design": true,
-    "task_contract_locked": false
+    "task_contract_locked": true,
+    "task_id": "T-039",
+    "engineering_id": "P3_3_LINGGONG_MASTER_V2_V001",
+    "task_contract_decision_id": "D-213",
+    "task_contract_path": "docs/tasks/T-039_P3_3_LINGGONG_MASTER_V2_V001.md",
+    "profile_control_gate_id": "PROFILE_CONTROL_SET_V0.1",
+    "profile_control_status": "NOT YET PREPARED / NEXT GATE",
+    "production_branch_created": false,
+    "draft_pr_created": false
   }
 }
