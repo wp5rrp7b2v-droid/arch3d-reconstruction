@@ -1425,3 +1425,13 @@ Do not restart T-018 by default.
 - Post-pull local HEAD: `34bd36cff8205286a8c89fe52956f73ee1abe591`.
 - Result: **LOCAL SYNC PASS / LOCAL_HEAD == REMOTE_HEAD AT SYNC CHECKPOINT**.
 - Final note: D-179 Project Control recording advances main after the checkpoint, so one last fast-forward pull is required to absorb the record itself.
+
+## 2026-09-27｜T-037 瓜子栱族工程启动
+
+- D-180: Source Readiness + D-076 PASS; direct measurement bindings closed for length/width/thickness, profile remains SOURCE_DERIVED_PROFILE.
+- D-181: Master Spec V001 LOCKED; one family / two variants / 44 records.
+- D-182: T-037 Task Contract V001 LOCKED; no execution authorization at that decision.
+- D-183: Product Owner authorized engineering execution through first-article evidence.
+- Branch: codex/t037-p3-3-guazi-gong-master-v2-v001
+- Current Stage1 approved count remains 20/28; T-037 is not counted approved until formalization after Product Owner first-article acceptance.
+- T-018 remains HOLD; Stage2 remains NOT AUTHORIZED.

@@ -1,0 +1,158 @@
+# 中国古建筑3D复原｜T-037｜P3_3_GUAZI_GONG_MASTER_V2_V001
+
+Status: **TASK CONTRACT LOCKED / D-182 / ENGINEERING EXECUTION AUTHORIZED D-183**
+Stage: P3.3 V002 Stage 1
+Branch: codex/t037-p3-3-guazi-gong-master-v2-v001
+
+## 1. Objective
+
+Build and validate one reusable瓜子栱 Master family with two canonical geometry variants:
+- LARGE_GUAZI_GONG: 16 physical records
+- SMALL_GUAZI_GONG: 28 physical records
+
+Total = 44 Registry records.
+
+## 2. Identity
+
+Family component id: CMP-GONG-GUAZI-001
+Master id: CMP-GONG-GUAZI-001_MASTER
+Master version: V001
+
+Registry source component names remain:
+- 大型瓜子栱
+- 小型瓜子栱
+
+The family identity is a Stage1 Master-family identity. It does not erase the two source component labels.
+
+## 3. Dimension contract
+
+LARGE:
+- L = 1007.0 mm / OBSERVED_MEAN / n=16
+- W = 214.7 mm / FAMILY OBSERVED_MEAN / n=44
+- T = 156.5 mm / FAMILY OBSERVED_MEAN / n=16
+
+SMALL:
+- L = 895.0 mm / OBSERVED_MEAN / n=28
+- W = 214.7 mm / FAMILY OBSERVED_MEAN / n=44
+- T = 156.5 mm / FAMILY OBSERVED_MEAN / n=16
+
+Means must not be rewritten as per-instance exact values or proven 963 original-design dimensions.
+
+## 4. Profile contract
+
+PROFILE_AUTHORITY = SOURCE_DERIVED_PROFILE.
+
+The builder must use a deterministic normalized profile declared in the locked Definition. The points are reconstructed controls derived from same-building form evidence, not direct measured curve coordinates.
+
+Hard boundary:
+- exact historical curve = UNRESOLVED
+- no generic Song-template substitution
+- no aesthetic free-form adjustment
+- no unsupported joinery/detail
+
+## 5. Variant contract
+
+One Master family, two geometry variants.
+
+Forbidden:
+- SMALL produced by uniform global scale from LARGE
+- width/thickness scaled by 895/1007
+- location-specific Master duplication
+
+Required:
+- same normalized profile rule
+- variant-specific length
+- shared canonical width and thickness representative means
+- separate variant semantic signatures
+
+## 6. First article
+
+First article contains exactly two canonical variant bodies:
+- LARGE
+- SMALL
+
+No 44-instance assembly is produced before Product Owner first-article approval.
+
+## 7. Review evidence
+
+Required Review Board domains:
+1. LARGE axon
+2. SMALL axon
+3. LARGE front/profile
+4. SMALL front/profile
+5. LARGE vs SMALL overlay
+6. dimension proof
+7. source-derived profile provenance
+8. evidence classification / unknown boundary
+
+## 8. Validation domains
+
+Validate:
+- 44 = 16 large + 28 small
+- V008 registry identity and dimensions
+- one Master family / two variants
+- LARGE length 1007
+- SMALL length 895
+- width 214.7
+- thickness 156.5
+- source-derived profile classification
+- normalized profile symmetry and deterministic signature
+- exact historical control dimensions remain unresolved
+- no uniform-scale implementation
+- manifold closed mesh
+- no self-intersection by simple polygon contract
+- Blender 4.5.13
+- deterministic reopen
+- canonical binary SHA
+- no tracked .blend
+
+## 9. Hard fails
+
+- GUAZI_FAMILY_COUNT_NOT_44
+- LARGE_COUNT_NOT_16
+- SMALL_COUNT_NOT_28
+- LARGE_LENGTH_NOT_1007
+- SMALL_LENGTH_NOT_895
+- WIDTH_MEAN_LOST
+- THICKNESS_MEAN_LOST
+- WIDTH_MEAN_MARKED_PER_INSTANCE_DIRECT
+- THICKNESS_MEAN_MARKED_44_INSTANCE_DIRECT
+- OBSERVED_MEAN_MARKED_ORIGINAL_DESIGN
+- SMALL_CREATED_BY_UNIFORM_SCALE
+- UNSUPPORTED_PROFILE_INVENTION
+- PROFILE_SOURCE_NOT_RECORDED
+- PROFILE_DERIVATION_NOT_REPRODUCIBLE
+- UNSUPPORTED_JOINERY_MODELED
+- LOCATION_CREATES_FALSE_VARIANT
+- DUPLICATE_MASTER_PER_INSTANCE
+- SILENT_HISTORICIZATION
+- MODEL_BEFORE_EXECUTION_AUTHORIZATION
+
+## 10. Scope protection
+
+T-037 must not:
+- reactivate T-018 / PR #3 / PR #6
+- start Stage2
+- modify T-020 datum authority
+- rewrite A1/report direct evidence
+- broaden into complete bracket-set assembly
+- formalize Catalog/V008 binding before Product Owner first-article approval
+
+## 11. Authorization
+
+D-183 authorizes:
+- production branch
+- Draft PR
+- locked execution Definition
+- T-037 isolated builder/validator/workflow
+- Blender 4.5.13 first article
+- machine validation and Review Board generation
+
+Not authorized:
+- first-article acceptance
+- formalization
+- Catalog/V008 binding
+- PR Ready/merge
+- closure
+- Stage2
+- T-018 resume

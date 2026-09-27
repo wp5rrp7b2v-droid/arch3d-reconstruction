@@ -1,0 +1,104 @@
+{
+  "schema_version": "P3_3_STAGE1_GUAZI_GONG_MASTER_SPEC_V001",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-181",
+  "date": "2026-09-27",
+  "stage": "P3.3 V002 Stage 1",
+  "source": {
+    "source_id": "SRC-ZG-WF-001",
+    "title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告",
+    "canonical_pdf_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "direct_bindings": [
+      {
+        "pdf_page": 54,
+        "table": "2-12",
+        "field": "瓜子栱广",
+        "mean_mm": 214.7,
+        "sample_count": 44
+      },
+      {
+        "pdf_page": 56,
+        "table": "2-16",
+        "field": "瓜子栱厚",
+        "mean_mm": 156.5,
+        "sample_count": 16
+      },
+      {
+        "pdf_page": 58,
+        "table": "2-20",
+        "field": "大型瓜子栱长",
+        "mean_mm": 1007,
+        "sample_count": 16
+      },
+      {
+        "pdf_page": 58,
+        "table": "2-20",
+        "field": "小型瓜子栱长",
+        "mean_mm": 895,
+        "sample_count": 28
+      }
+    ],
+    "visual_form_pages": [
+      73,
+      74,
+      75,
+      76
+    ],
+    "visual_gate": {
+      "decision_id": "D-180",
+      "result": "PASS / PRODUCT_OWNER"
+    }
+  },
+  "architecture": {
+    "master_family_id": "CMP-GONG-GUAZI-001",
+    "master_id": "CMP-GONG-GUAZI-001_MASTER",
+    "master_family_count": 1,
+    "geometry_variant_count": 2,
+    "physical_instance_count": 44,
+    "variants": [
+      {
+        "variant_id": "LARGE_GUAZI_GONG",
+        "component_name_zh": "大型瓜子栱",
+        "count": 16,
+        "length_mm": 1007,
+        "width_mm": 214.7,
+        "thickness_mm": 156.5
+      },
+      {
+        "variant_id": "SMALL_GUAZI_GONG",
+        "component_name_zh": "小型瓜子栱",
+        "count": 28,
+        "length_mm": 895,
+        "width_mm": 214.7,
+        "thickness_mm": 156.5
+      }
+    ]
+  },
+  "evidence_semantics": {
+    "length": "OBSERVED_MEAN / VARIANT_SPECIFIC",
+    "width": "OBSERVED_MEAN / FAMILY / n=44",
+    "thickness": "OBSERVED_MEAN / FAMILY / n=16",
+    "per_instance_exact_claim": false,
+    "original_963_design_claim": false
+  },
+  "profile": {
+    "authority": "SOURCE_DERIVED_PROFILE",
+    "exact_historical_curve": "UNRESOLVED",
+    "classification": "SOURCE_DERIVED_SIMPLIFIED_PROFILE / REPLACEABLE",
+    "direct_control_point_measurements": false,
+    "shared_profile_rule": true
+  },
+  "deferred_geometry": [
+    "exact_mortise_tenon",
+    "hidden_slots_or_cavities",
+    "exact_local_curve_control_dimensions",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "unmeasured_micro_chamfers"
+  ],
+  "decisions": [
+    "D-180",
+    "D-181",
+    "D-182",
+    "D-183"
+  ]
+}
