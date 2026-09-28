@@ -118,7 +118,7 @@ Stage2 remains **NOT AUTHORIZED**. T-018 remains **HOLD**.
 
 ---
 
-# END-OF-DAY PROJECT SNAPSHOT｜2026-09-28｜D-265 Candidate
+# END-OF-DAY PROJECT SNAPSHOT｜2026-09-28｜D-265
 
 ## Canonical state at closeout checkpoint
 - Canonical base main: `4010d420b6486950dd16c515a0e37e5dffd602b4`
@@ -150,8 +150,8 @@ The single explicit question carried into the next session is:
 
 Do not silently answer this question in the daily close. It belongs to the next governance gate.
 
-## Daily-close consistency corrections in D-265 Candidate
-This candidate corrects current-state mirrors only:
+## Daily-close consistency corrections in D-265
+This approved closeout patch corrects current-state mirrors only:
 1. stale `next_action` is replaced with the Stage1 Closure Readiness Audit as the sole next action;
 2. `p3_3.engineering_execution_authorized` is reset to **false** because no engineering T-task is active;
 3. Dashboard refresh metadata is aligned to D-264 / Run 36389526921;
@@ -168,4 +168,4 @@ Only next gate:
 Do not start a new Master. Do not resume T-018. Do not authorize Stage2 before the audit conclusion and a separate Product Owner decision.
 
 ## Local synchronization boundary
-Local repository synchronization is **NOT CHECKED** in this GitHub closeout candidate.
+Local repository synchronization is **NOT CHECKED** in this GitHub daily close.
