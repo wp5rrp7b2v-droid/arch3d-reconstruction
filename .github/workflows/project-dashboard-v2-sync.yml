@@ -49,12 +49,19 @@ jobs:
 
           markers = [
               "Dashboard V2",
-              f'{progress["approved_master_count"]} / {progress["master_scope_object_type_count"]}',
+              f'{progress["covered_master_scope_object_type_count"]} / {progress["master_scope_object_type_count"]}',
               f'{pct_text}%',
               f'下一目标：{next_target}',
               "T-018 HOLD",
           ]
           missing = [marker for marker in markers if marker not in html]
+          assert progress["covered_master_scope_object_type_count"] == 28
+          assert progress["master_scope_object_type_count"] == 28
+          assert progress["approved_master_family_count"] == 25
+          assert progress["pending_master_object_type_count"] == 0
+          assert float(progress["master_completion_percent"]) == 100.0
+          assert progress["pending_source_binding_count"] == 7
+          assert next_target == "NONE"
           assert not missing, f"Dashboard current-state markers missing: {missing}"
           print("DASHBOARD_CURRENT_STATE_VALIDATION_PASS", markers)
           PY
