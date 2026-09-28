@@ -1,0 +1,487 @@
+name: T-041 Ang Formalization
+
+on:
+  push:
+    branches: [ codex/t041-p3-3-ang-master-v2-v001 ]
+    paths:
+      - '.github/workflows/p3_3_t041_ang_formalize.yml'
+      - 'docs/project_control/project_state.json'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/**'
+      - 'production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_MASTER_SPEC_V001.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  formalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      ARTIFACT_ID: "10950620532"
+      ARTIFACT_ZIP_SHA256: "a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e"
+      ACCEPTED_BLEND_SHA256: "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8"
+      ACCEPTED_SEMANTIC_SHA256: "d35c0e93eaeac35ab3b25bd60fc05d1efc91a8dfeac92c13d92f4efd15b48321"
+      ACCEPTED_VALIDATION_SHA256: "ec9048434cc1bcfdec18be4aff4d21374adf43719a4c9042ec558e66efa81dcb"
+      BOARD_SHA256: "a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65"
+      FAMILY_SIG: "a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29"
+      TOU_SIG: "61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250"
+      ER_SIG: "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678"
+      GATE_A_SIG: "6c9b8c5b6ee6715292df5b23b7d8b8d9fdaaf4be7d1558631fea5883528b7096"
+      GATE_B_SIG: "dc38ab72be1f5aef3192a48e11621a3288c422475545b56dc5e29fa0102e2ae5"
+      TOU_PROFILE_SIG: "3e45e7732cf49012cbf8b5e480e76ad2fd986c4aa717dd650e3bf3f9831f7bb5"
+      ER_PROFILE_SIG: "c4b935c9d445414831f16d949b02ff110f3e336f88c68dd68f58d514bd172778"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: One-time formalization gate
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          s=json.load(open("docs/project_control/project_state.json",encoding="utf-8"))
+          t=s["p3_3"]["t041"]
+          assert t["first_article_product_owner_approval"]["decision_id"]=="D-255"
+          assert t["first_article_product_owner_approval"]["status"]=="APPROVED"
+          assert t["formalization_authorized"] is True
+          assert t["formalization_authorization_decision_id"]=="D-256"
+          assert t["derived_excel_sync_authorized"] is False
+          assert t["ready_merge_authorized"] is False
+          if t.get("formalization_complete"):
+              print("do_formalize=false")
+          else:
+              print("do_formalize=true")
+          PY
+
+      - name: Download accepted T-041 first-article artifact
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/t041_formal
+          curl --fail --location --show-error             -H "Authorization: Bearer $GH_TOKEN"             -H "Accept: application/vnd.github+json"             -H "X-GitHub-Api-Version: 2022-11-28"             -o /tmp/t041.zip             "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/artifacts/$ARTIFACT_ID/zip"
+          test "$(sha256sum /tmp/t041.zip | awk '{print $1}')" = "$ARTIFACT_ZIP_SHA256"
+          unzip -q /tmp/t041.zip -d /tmp/t041_formal
+
+      - name: Verify approved first-article payload
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,os
+          from pathlib import Path
+          root=Path("/tmp/t041_formal")
+          def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+          blend=root/"CMP-GONG-ANG-001_MASTER_V001.blend"
+          sem=root/"CMP-GONG-ANG-001_MASTER_SEMANTIC_V001.json"
+          val=root/"CMP-GONG-ANG-001_MASTER_VALIDATION_V001.json"
+          board=root/"CMP-GONG-ANG-001_MASTER_REVIEW_BOARD_V001.png"
+          assert sha(blend)==os.environ["ACCEPTED_BLEND_SHA256"]
+          assert sha(sem)==os.environ["ACCEPTED_SEMANTIC_SHA256"]
+          assert sha(val)==os.environ["ACCEPTED_VALIDATION_SHA256"]
+          assert sha(board)==os.environ["BOARD_SHA256"]
+          s=json.loads(sem.read_text(encoding="utf-8"))
+          v=json.loads(val.read_text(encoding="utf-8"))
+          assert v["status"]=="PASS" and v["check_count"]==90
+          assert s["task_id"]=="T-041"
+          assert s["master_id"]=="CMP-GONG-ANG-001_MASTER"
+          assert s["registry_binding_count"]==32
+          assert s["binding_counts"]=={"ER_ANG":16,"TOU_ANG":16}
+          assert s["count_status"]=="LOCKED_DERIVED"
+          assert s["whole_hall_direct_inventory_claim"] is False
+          assert s["historical_full_timber_length_status"]=="UNRESOLVED"
+          assert s["family_semantic_signature"]==os.environ["FAMILY_SIG"]
+          assert s["gate_a_contract"]["semantic_signature_sha256"]==os.environ["GATE_A_SIG"]
+          assert s["gate_b_contract"]["family_semantic_control_sha256"]==os.environ["GATE_B_SIG"]
+          bodies={x["variant_id"]:x for x in s["canonical_bodies"]}
+          assert set(bodies)=={"TOU_ANG","ER_ANG"}
+          assert bodies["TOU_ANG"]["semantic_geometry_signature"]==os.environ["TOU_SIG"]
+          assert bodies["ER_ANG"]["semantic_geometry_signature"]==os.environ["ER_SIG"]
+          assert bodies["TOU_ANG"]["profile_control_points_sha256"]==os.environ["TOU_PROFILE_SIG"]
+          assert bodies["ER_ANG"]["profile_control_points_sha256"]==os.environ["ER_PROFILE_SIG"]
+          assert bodies["TOU_ANG"]["historical_full_timber_length_closed"] is False
+          assert bodies["ER_ANG"]["historical_full_timber_length_closed"] is False
+          fx=s["validation_fixture"]
+          assert fx["canonical_asset"] is False and fx["registry_binding"] is False and fx["catalog_asset"] is False
+          assert fx["member_full_length_authority"] is False
+          assert abs(fx["run_mm"]-719.1)<1e-9
+          assert abs(fx["observed_third_fourth_projection_mean_mm"]-719.5)<1e-9
+          assert abs(fx["ideal_vs_observed_delta_mm"]-0.4)<1e-9
+          print("T041_ACCEPTED_PAYLOAD_PASS")
+          PY
+
+      - name: Formalize approved package and bind Catalog/V008/CURRENT
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,os,shutil,re
+          from pathlib import Path
+
+          ROOT=Path("/tmp/t041_formal")
+          MASTER=Path("production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001")
+          DEF=MASTER/"CMP-GONG-ANG-001_ANG_DEFINITION_V001.json"
+          SEM_DST=MASTER/"CMP-GONG-ANG-001_MASTER_SEMANTIC_V001.json"
+          VAL_DST=MASTER/"CMP-GONG-ANG-001_MASTER_VALIDATION_V001.json"
+          BOARD_DST=MASTER/"CMP-GONG-ANG-001_MASTER_REVIEW_BOARD_V001.png"
+          SPEC=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_MASTER_SPEC_V001.json")
+          CATALOG=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json")
+          REG=Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json")
+          CURRENT=Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json")
+          STATE=Path("docs/project_control/project_state.json")
+          DECISION=Path("docs/project_control/decision_log.md")
+          EXECUTION=Path("docs/project_control/execution_log.md")
+          ACCEPTANCE=Path("docs/project_control/acceptance_matrix.md")
+          TASK=Path("docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md")
+          DASH=Path("docs/project_control/dashboard.html")
+
+          RUN=int(os.environ["GITHUB_RUN_ID"])
+          ART=int(os.environ["ARTIFACT_ID"])
+          ART_DIG="sha256:"+os.environ["ARTIFACT_ZIP_SHA256"]
+          BLEND=os.environ["ACCEPTED_BLEND_SHA256"]
+          FAMILY=os.environ["FAMILY_SIG"]
+          TOU=os.environ["TOU_SIG"]
+          ER=os.environ["ER_SIG"]
+          GATE_A=os.environ["GATE_A_SIG"]
+          GATE_B=os.environ["GATE_B_SIG"]
+          TOU_PROFILE=os.environ["TOU_PROFILE_SIG"]
+          ER_PROFILE=os.environ["ER_PROFILE_SIG"]
+
+          def load(p): return json.loads(Path(p).read_text(encoding="utf-8"))
+          def dump(p,o): Path(p).write_text(json.dumps(o,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+          state=load(STATE)
+          t=state["p3_3"]["t041"]
+          assert t["first_article_product_owner_approval"]["decision_id"]=="D-255"
+          assert t["formalization_authorized"] is True
+          assert t["formalization_authorization_decision_id"]=="D-256"
+          assert t["derived_excel_sync_authorized"] is False
+          assert t["ready_merge_authorized"] is False
+
+          definition=load(DEF)
+          assert definition["first_article_approval"]["decision_id"]=="D-255"
+          assert definition["formalization_authorization"]["decision_id"]=="D-256"
+          assert definition["first_article_approval"]["canonical_blend_sha256"]==BLEND
+
+          sem=load(ROOT/"CMP-GONG-ANG-001_MASTER_SEMANTIC_V001.json")
+          val=load(ROOT/"CMP-GONG-ANG-001_MASTER_VALIDATION_V001.json")
+          bodies={x["variant_id"]:x for x in sem["canonical_bodies"]}
+          assert sem["canonical_blend_sha256"]==BLEND
+          assert sem["family_semantic_signature"]==FAMILY
+          assert bodies["TOU_ANG"]["semantic_geometry_signature"]==TOU
+          assert bodies["ER_ANG"]["semantic_geometry_signature"]==ER
+          assert val["status"]=="PASS" and val["check_count"]==90
+
+          formal_meta={
+            "status":"FORMALIZED / D-257 / PR #37 DRAFT / MERGE NOT AUTHORIZED",
+            "authority":"D-256",
+            "product_owner_approval":"D-255",
+            "first_article_machine_gate":"D-254",
+            "accepted_run_id":36373958970,
+            "artifact_id":ART,
+            "artifact_zip_sha256":ART_DIG,
+            "approved_canonical_blend_sha256":BLEND,
+            "geometry_match_approved_first_article":True,
+            "formalization_run_id":RUN
+          }
+          sem["formalization"]=formal_meta
+          val["formalization"]=formal_meta
+
+          MASTER.mkdir(parents=True,exist_ok=True)
+          dump(SEM_DST,sem)
+          dump(VAL_DST,val)
+          shutil.copyfile(ROOT/"CMP-GONG-ANG-001_MASTER_REVIEW_BOARD_V001.png",BOARD_DST)
+          semantic_sha=sha(SEM_DST)
+          validation_sha=sha(VAL_DST)
+          board_sha=sha(BOARD_DST)
+          assert board_sha==os.environ["BOARD_SHA256"]
+
+          definition["status"]="FORMALIZED + CATALOG/V008/CURRENT BOUND / D-257 / PR #37 DRAFT / MERGE NOT AUTHORIZED"
+          definition["formalization"]={
+            **formal_meta,
+            "semantic_sha256":semantic_sha,
+            "validation_sha256":validation_sha,
+            "review_board_sha256":board_sha,
+            "catalog_binding_complete":True,
+            "registry_binding_count":32,
+            "tou_ang_binding_count":16,
+            "er_ang_binding_count":16,
+            "current_equals_v008":True
+          }
+          definition["execution_boundary"]["formalization_complete"]=True
+          definition["execution_boundary"]["catalog_v008_binding_complete"]=True
+          definition["execution_boundary"]["derived_excel_sync_authorized"]=False
+          definition["execution_boundary"]["ready_transition_authorized"]=False
+          definition["execution_boundary"]["merge_authorized"]=False
+          definition["execution_boundary"]["closure_authorized"]=False
+          definition["formalization_authorization"]["execution_status"]="COMPLETE / D-257"
+          dump(DEF,definition)
+
+          spec=load(SPEC)
+          spec["status"]="LOCKED / PRODUCT_OWNER APPROVED / FORMALIZED ON T-041 BRANCH D-257"
+          spec["gates"]["formalization"]="COMPLETE / D-257"
+          spec["gates"]["catalog_v008_binding"]="COMPLETE / D-257 / 32 ROWS"
+          spec["gates"]["merge"]="NOT AUTHORIZED"
+          spec["formalization_result"]={
+            "decision_id":"D-257",
+            "authority":"D-256",
+            "status":"COMPLETE / PR #37 DRAFT / MERGE NOT AUTHORIZED",
+            "formalization_run_id":RUN,
+            "artifact_id":ART,
+            "canonical_blend_sha256":BLEND,
+            "semantic_sha256":semantic_sha,
+            "validation_sha256":validation_sha,
+            "review_board_sha256":board_sha,
+            "family_semantic_signature":FAMILY,
+            "geometry_signatures":{"TOU_ANG":TOU,"ER_ANG":ER},
+            "registry_binding_count":32,
+            "current_equals_v008":True,
+            "derived_excel_sync_authorized":False,
+            "ready_merge_authorized":False
+          }
+          if "D-257" not in spec["decisions"]: spec["decisions"].append("D-257")
+          dump(SPEC,spec)
+
+          cat=load(CATALOG)
+          assert cat["approved_master_count"]==24
+          assert not any(x.get("master_id")=="CMP-GONG-ANG-001_MASTER" for x in cat["new_masters"])
+          cat["task"]="T-041 FORMALIZED / PR #37 DRAFT"
+          cat["status"]="TWENTY_FIVE_APPROVED / T041 FORMALIZED / PR #37 DRAFT / MERGE NOT AUTHORIZED"
+          cat["approved_master_count"]=25
+          cat["new_masters"].append({
+            "component_id":"CMP-GONG-ANG-001",
+            "master_id":"CMP-GONG-ANG-001_MASTER",
+            "master_version":"V001",
+            "variant_ids":["TOU_ANG","ER_ANG"],
+            "approval_status":"PRODUCT_OWNER_APPROVED",
+            "decision_id":"D-255",
+            "formalization_authority":"D-256",
+            "formalization_result":"D-257",
+            "publication_status":"FORMALIZED / PR #37 DRAFT / MERGE NOT AUTHORIZED",
+            "canonical_asset_status":"ACTIONS_ARTIFACT / PRODUCT_OWNER_APPROVED / LOCAL ONLY / NOT GIT",
+            "canonical_asset_sha256":BLEND,
+            "semantic_sha256":semantic_sha,
+            "validation_sha256":validation_sha,
+            "review_board_sha256":board_sha,
+            "family_semantic_signature":FAMILY,
+            "variant_geometry_signatures":{"TOU_ANG":TOU,"ER_ANG":ER},
+            "registry_binding_count":32,
+            "physical_instance_count_claim":False,
+            "geometry_variant_count":2,
+            "distribution":"TOU_ANG 16 / ER_ANG 16 / SOUTH,NORTH,EAST,WEST EACH 4+4 / LOCKED_DERIVED / NOT DIRECT WHOLE-HALL COUNT",
+            "dimension_policy":{
+              "tou_ang_guang_mm":"278.4 / DIRECT_PRIMARY / OBSERVED_MEAN / n=16 / FAMILY_SOURCE_VALUE",
+              "er_ang_or_tou_single_cai_guang_mm":"187.0 / DIRECT_PRIMARY / OBSERVED_MEAN / COMBINED_SOURCE_CATEGORY / n=32 / NOT ER-ONLY n=16",
+              "ang_thickness_mm":"154.0 / DIRECT_PRIMARY / OBSERVED_MEAN / ANG_FAMILY_COMMON_THICKNESS",
+              "thickness_sample_count":"SOURCE_INTERNAL_CONFLICT / narrative=34 / table=16",
+              "reference_control_span_mm":"787.6157057855 / REPORT_INFERRED / RECONSTRUCTED_DESIGN / CONTROL_SPAN_ONLY / NOT HISTORICAL FULL TIMBER LENGTH",
+              "historical_standalone_full_length_status":"UNRESOLVED"
+            },
+            "assembly_policy":{
+              "report_design_relation":"47:21 / REPORT_INFERRED / REPLACEABLE",
+              "design_run_mm":719.1,
+              "design_rise_mm":321.3,
+              "observed_third_fourth_total_projection_mean_mm":"719.5 / DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY LEVEL",
+              "ideal_vs_observed_delta_mm":0.4,
+              "member_full_length_authority":False
+            },
+            "profile_policy":{
+              "authority":"SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED",
+              "classification":"SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_PROFILE_MEASUREMENT",
+              "family_control_set_sha256":GATE_B,
+              "tou_profile_point_count":10,
+              "tou_profile_sha256":TOU_PROFILE,
+              "er_profile_point_count":6,
+              "er_profile_sha256":ER_PROFILE,
+              "metric_scale_calibration":"NOT_PERFORMED / NOT_CLAIMED",
+              "exact_historical_profiles":"UNRESOLVED"
+            },
+            "joinery_boundary":"HIDDEN OVERLAP / MORTISE-TENON / GROOVES / SLOTS / CAVITIES / HIDDEN CONNECTION CUTS DEFERRED",
+            "source_artifact":{
+              "accepted_first_article":{
+                "run_id":36373958970,
+                "artifact_id":ART,
+                "artifact_zip_sha256":os.environ["ARTIFACT_ZIP_SHA256"]
+              }
+            },
+            "minimal_sufficient_package":{
+              "policy":"ADAPTIVE / NO UNIVERSAL FILE COUNT",
+              "formal_repo_files":[
+                str(DEF),str(SEM_DST),str(BOARD_DST),str(VAL_DST),str(TASK)
+              ],
+              "canonical_blend":"ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+              "review_board_count":1,
+              "required_review_domain_count":10
+            }
+          })
+          dump(CATALOG,cat)
+
+          base=load(REG); cur=load(CURRENT)
+          assert base==cur, "CURRENT_V008_PRE_BIND_MISMATCH"
+          bound=tou=er=0
+          for item in base["items"]:
+            comp=item.get("component")
+            if comp in ("头昂","二昂"):
+              assert item.get("count_status")=="LOCKED_DERIVED"
+              assert item.get("master_coverage_status")=="MASTER_REQUIRED_PENDING"
+              variant="TOU_ANG" if comp=="头昂" else "ER_ANG"
+              item["master_coverage_status"]="APPROVED_MASTER_AVAILABLE"
+              item["master_reference"]="CMP-GONG-ANG-001_MASTER"
+              item["master_variant"]=variant
+              item["historical_standalone_full_length_status"]="UNRESOLVED"
+              item["reference_control_span_applies_to_instance"]=False
+              item["per_instance_exact_dimension_claim"]=False
+              bound+=1
+              if variant=="TOU_ANG": tou+=1
+              else: er+=1
+          assert (bound,tou,er)==(32,16,16)
+
+          summary=base["stage1_master_progress_summary"]
+          assert summary["approved_master_count"]==24
+          assert summary["master_covered_registry_record_count"]==331
+          summary["status"]="T-041 FORMALIZED ON BRANCH / D-257 / 25 OF 28 MASTERS APPROVED / PR #37 DRAFT / MERGE NOT AUTHORIZED"
+          summary["approved_master_count"]=25
+          summary["pending_master_object_type_count"]=3
+          summary["master_completion_percent"]=89.3
+          summary["pending_source_binding_count"]=3
+          summary["master_covered_registry_record_count"]=363
+          for name in ("头昂","二昂"):
+            if name not in summary["approved_master_components"]:
+              summary["approved_master_components"].append(name)
+          summary["progress_display_note"]="505 Registry records; T-041 branch Stage1 Master completion after formalization: 25 approved / 3 pending = 89.3%. 昂族 32/32 LOCKED_DERIVED rows bound to CMP-GONG-ANG-001_MASTER with TOU_ANG/ER_ANG variants 16/16. 32 is not a direct whole-hall historical count; reference control span is not a per-instance historical full length. PR #37 remains Draft; Derived Excel/readiness/merge not authorized; T-018 HOLD; Stage2 NOT AUTHORIZED."
+          base["generation_note"]=base.get("generation_note","").rstrip()+" D-256/D-257 bind the Product Owner-approved T-041 Ang Master to all 32 current LOCKED_DERIVED Ang records (头昂16→TOU_ANG / 二昂16→ER_ANG). The 32-record scope remains derived, not a direct historical whole-hall count. Historical standalone full lengths remain UNRESOLVED and the 787.6157057855mm synthetic reference control span is not propagated as a per-instance historical length."
+          dump(REG,base); dump(CURRENT,base)
+          assert load(REG)==load(CURRENT)
+          assert sum(1 for x in base["items"] if x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE")==363
+          assert sum(1 for x in base["items"] if x.get("component")=="头昂" and x.get("master_variant")=="TOU_ANG")==16
+          assert sum(1 for x in base["items"] if x.get("component")=="二昂" and x.get("master_variant")=="ER_ANG")==16
+
+          state=load(STATE)
+          state["state_revision"]="R333"
+          state["last_updated"]="2026-09-28"
+          state["session_status"]="T-041 FORMALIZED + CATALOG/V008/CURRENT BOUND D-257 / BRANCH 25 OF 28 = 89.3% / 363 COVERED / MAIN 24 OF 28 UNTIL MERGE / PR #37 DRAFT / DERIVED EXCEL NOT AUTHORIZED / READINESS NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED"
+          state["current_task"]={"id":"T-041","engineering_id":"P3_3_ANG_MASTER_V2_V001","name":"昂族 Master","component":"头昂 / 二昂","status":"FORMALIZED + 32 ROWS BOUND / D-257 / PR #37 DRAFT / MERGE NOT AUTHORIZED","branch":"codex/t041-p3-3-ang-master-v2-v001","branch_status":"ACTIVE / PR #37 DRAFT","engineering_execution_authorized":True}
+          state["proposed_next_task"]={"id":"T-041-POST-FORMALIZATION","name":"Derived Excel sync + latest-head/shared regressions + readiness review","status":"NOT AUTHORIZED"}
+          if "current_gate" in state:
+            state["current_gate"]["status"]="P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / BRANCH 25 OF 28 / MAIN 24 OF 28 / T-041 FORMALIZED D-257 / PR #37 DRAFT / T-018 HOLD"
+            state["current_gate"]["items"]["P3.3"]="V002 LOCKED / D-066 / BRANCH 25 OF 28 / MAIN 24 OF 28 / T-041 FORMALIZED D-257 / PR #37 DRAFT / T-018 HOLD"
+            state["current_gate"]["items"]["P3_3"]=state["current_gate"]["items"]["P3.3"]
+          if "p3_3" in state:
+            state["p3_3"]["status"]="V002 LOCKED / STAGE 1 ACTIVE / BRANCH 25 OF 28 / MAIN 24 OF 28 / T-041 FORMALIZED D-257 / T-018 HOLD"
+            state["p3_3"]["next_master_candidate"]="NEXT MASTER NOT SELECTED / T-041 POST-FORMALIZATION GATES PENDING"
+            t=state["p3_3"]["t041"]
+            t.update({
+              "status":"FORMALIZED + CATALOG/V008/CURRENT BOUND / D-257 / PR #37 DRAFT / MERGE NOT AUTHORIZED",
+              "formalization_result_decision_id":"D-257",
+              "formalization_complete":True,
+              "formalization_execution_status":"COMPLETE / D-257",
+              "formalization_run_id":RUN,
+              "branch_approved_master_count":25,
+              "branch_master_completion_percent":89.3,
+              "branch_master_covered_registry_record_count":363,
+              "ang_registry_binding_count":32,
+              "tou_ang_binding_count":16,
+              "er_ang_binding_count":16,
+              "current_equals_v008":True,
+              "canonical_blend_sha256":BLEND,
+              "semantic_sha256":semantic_sha,
+              "validation_sha256":validation_sha,
+              "review_board_sha256":board_sha,
+              "family_semantic_signature":FAMILY,
+              "tou_ang_geometry_signature":TOU,
+              "er_ang_geometry_signature":ER,
+              "derived_excel_sync_authorized":False,
+              "post_formalization_verification_authorized":False,
+              "ready_merge_authorized":False,
+              "formalization_authorized":True,
+              "next_gate":"POST-FORMALIZATION AUTHORIZATION"
+            })
+            if "ang_family_master_spec" in state["p3_3"]:
+              state["p3_3"]["ang_family_master_spec"]["formalization_status"]="COMPLETE / D-257 / PR #37 DRAFT"
+              state["p3_3"]["ang_family_master_spec"]["catalog_v008_binding_status"]="COMPLETE / 32 ROWS / D-257"
+              state["p3_3"]["ang_family_master_spec"]["next_gate"]="POST-FORMALIZATION AUTHORIZATION"
+          if "v008_master_progress_visibility" in state:
+            state["v008_master_progress_visibility"].update({
+              "status":"ACTIVE / T-041 FORMALIZED ON BRANCH / 25 OF 28",
+              "approved_master_count":25,
+              "pending_master_object_type_count":3,
+              "master_completion_percent":89.3,
+              "master_covered_registry_record_count":363,
+              "pending_source_binding_count":3,
+              "excel_sync_pending":True
+            })
+          dump(STATE,state)
+
+          decision=DECISION.read_text(encoding="utf-8").rstrip()+"\n"
+          if "| D-257 |" not in decision:
+            decision+=f"| D-257 | 2026-09-28 | T-041 formalization + Stage1 Catalog/V008/CURRENT binding completed under D-256. Accepted Artifact {ART} was byte-verified against D-255; formal minimal package materialized; Catalog branch count = 25/28 = 89.3%; all 32 Ang LOCKED_DERIVED rows bind to CMP-GONG-ANG-001_MASTER with 头昂→TOU_ANG 16 and 二昂→ER_ANG 16; CURRENT==V008; Master-covered Registry records = 363. Accepted canonical blend remains D-255 SHA {BLEND}; family/TOU/ER signatures remain {FAMILY} / {TOU} / {ER}. The 32 records remain a derived Registry binding scope, not a direct historical whole-hall count; historical standalone full lengths remain UNRESOLVED; the synthetic 787.6157057855mm control span is not propagated as per-instance historical length. Derived Excel sync, post-formalization regression/readiness, Ready/Merge, closure, Stage2 and T-018 resume remain unauthorized. | COMPLETE / T-041 FORMALIZED + 32 ROWS BOUND / PR #37 DRAFT / MERGE NOT AUTHORIZED |\n"
+          DECISION.write_text(decision,encoding="utf-8")
+
+          execution=EXECUTION.read_text(encoding="utf-8").rstrip()+"\n\n"
+          execution+=f"## 2026-09-28｜T-041 Formalization + Catalog/V008/CURRENT Binding｜D-257\n\n"
+          execution+=f"- Authority: D-256.\n- Formalization workflow run: {RUN}.\n"
+          execution+=f"- Accepted Artifact: {ART}; canonical .blend SHA-256 {BLEND}; .blend remains not tracked in Git.\n"
+          execution+=f"- Geometry signatures: family={FAMILY}; TOU_ANG={TOU}; ER_ANG={ER}.\n"
+          execution+=f"- Stage1 Catalog branch count: 25/28 = 89.3%.\n"
+          execution+=f"- V008/CURRENT Ang binding: 32/32 APPROVED_MASTER_AVAILABLE; TOU_ANG=16 / ER_ANG=16.\n"
+          execution+=f"- Master-covered Registry records: 363. CURRENT == V008: PASS.\n"
+          execution+=f"- Historical standalone full lengths remain UNRESOLVED; 787.6157057855mm remains control-span-only.\n"
+          execution+=f"- Derived Excel / post-formalization readiness / PR Ready+Merge: NOT AUTHORIZED.\n"
+          EXECUTION.write_text(execution,encoding="utf-8")
+
+          acceptance=ACCEPTANCE.read_text(encoding="utf-8").rstrip()+"\n\n"
+          acceptance+="### T-041 Formalization + Catalog/V008/CURRENT Binding｜D-257\n\n"
+          acceptance+="- **FORMALIZED / BRANCH** under D-256.\n"
+          acceptance+="- Stage1 Catalog: **25/28 = 89.3%** on T-041 branch.\n"
+          acceptance+="- Registry binding: **32/32** 昂族 records = APPROVED_MASTER_AVAILABLE / CMP-GONG-ANG-001_MASTER.\n"
+          acceptance+="- Variant binding: **TOU_ANG 16 / ER_ANG 16**.\n"
+          acceptance+="- Master-covered Registry records: **363**.\n"
+          acceptance+="- CURRENT == V008: **PASS**.\n"
+          acceptance+=f"- Accepted canonical .blend SHA-256: `{BLEND}`.\n"
+          acceptance+="- 32 remains LOCKED_DERIVED scope, not direct historical whole-hall count.\n"
+          acceptance+="- Historical full lengths remain UNRESOLVED; synthetic control span remains non-instance-exact.\n"
+          acceptance+="- Derived Excel / post-formalization readiness: **PENDING / NOT AUTHORIZED**.\n"
+          acceptance+="- PR #37: **DRAFT / MERGE NOT AUTHORIZED**.\n"
+          ACCEPTANCE.write_text(acceptance,encoding="utf-8")
+
+          task=TASK.read_text(encoding="utf-8")
+          task=re.sub(r"Status: \*\*.*?\*\*","Status: **FORMALIZED + CATALOG/V008/CURRENT BOUND / D-257 / PR #37 DRAFT / MERGE NOT AUTHORIZED**",task,count=1)
+          if "## 24. Formalization Result｜D-257" not in task:
+            task=task.rstrip()+"\n\n## 24. Formalization Result｜D-257\n\n"
+            task+=f"D-257 records successful formalization under D-256. Catalog branch count = 25/28 = 89.3%; all 32 Ang V008/CURRENT LOCKED_DERIVED rows are bound to CMP-GONG-ANG-001_MASTER with TOU_ANG/ER_ANG 16/16; master-covered records = 363; CURRENT==V008. Accepted canonical blend remains D-255 SHA {BLEND}. The 32-row scope remains derived and the 787.6157057855mm reference span remains reconstruction-control-only; historical standalone full lengths remain UNRESOLVED. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.\n"
+          TASK.write_text(task,encoding="utf-8")
+
+          dash=DASH.read_text(encoding="utf-8")
+          dash=re.sub(r'<div class="callout" style="margin-top:12px"><strong>当前焦点：.*?</strong><br><span class="small">.*?</span></div>',
+            '<div class="callout" style="margin-top:12px"><strong>当前焦点：T-041｜昂族</strong><br><span class="small">D-257 已完成 Formalization + Catalog/V008/CURRENT binding；branch 25/28 = 89.3%，363 covered，昂族 32/32 已按 TOU_ANG/ER_ANG=16/16 绑定。PR #37 仍 Draft；Derived Excel / readiness / merge 尚未授权。</span></div>',dash,count=1)
+          DASH.write_text(dash,encoding="utf-8")
+
+          print("T041_FORMALIZATION_PASS",semantic_sha,validation_sha,board_sha,bound,tou,er)
+          PY
+
+      - name: Commit formalization result to T-041 branch
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/CMP-GONG-ANG-001_ANG_DEFINITION_V001.json             production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/CMP-GONG-ANG-001_MASTER_SEMANTIC_V001.json             production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/CMP-GONG-ANG-001_MASTER_REVIEW_BOARD_V001.png             production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/CMP-GONG-ANG-001_MASTER_VALIDATION_V001.json             production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_MASTER_SPEC_V001.json             production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json             docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json             docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json             docs/project_control/project_state.json             docs/project_control/decision_log.md             docs/project_control/execution_log.md             docs/project_control/acceptance_matrix.md             docs/project_control/dashboard.html             docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md
+          git diff --cached --check
+          git commit -m "T-041: formalize Ang Master and bind V008"
+          git push origin "HEAD:${{ github.ref_name }}"
+
+      - name: Already formalized
+        if: steps.gate.outputs.do_formalize == 'false'
+        run: echo "T041_FORMALIZATION_ALREADY_COMPLETE"

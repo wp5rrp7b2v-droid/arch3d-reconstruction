@@ -198,7 +198,14 @@ def validate(a):
     ck("71_execution_authorized",ex["engineering_execution_authorized"] is True and ex["blender_execution_authorized"] is True and ex["production_builder_authorized"] is True and ex["validator_authorized"] is True)
     ck("72_po_acceptance_lifecycle",ex["first_article_product_owner_approved"] is True and ex["first_article_acceptance_authorized"] is True)
     ck("73_formalization_lifecycle",ex["formalization_authorized"] is True and ex["catalog_v008_binding_authorized"] is True and ex.get("formalization_complete") is True and ex.get("catalog_v008_binding_complete") is True)
-    ck("74_merge_close_not_authorized",ex["merge_authorized"] is False and ex["closure_authorized"] is False)
+    merged=bool(ex.get("merged"))
+    closed=bool(ex.get("closure_complete"))
+    lifecycle_ok = (
+        (merged and ex.get("merge_authorized") is True and ex.get("ready_transition_authorized") is True and ((closed and ex.get("closure_authorized") is True) or ((not closed) and ex.get("closure_authorized") is False)))
+        or
+        ((not merged) and ex.get("merge_authorized") is False and ex.get("closure_authorized") is False)
+    )
+    ck("74_merge_close_lifecycle_consistent",lifecycle_ok)
     ck("75_t018_stage2",ex["t018_status"]=="HOLD" and ex["stage2_authorized"] is False)
     ck("76_deferred",all(x in d["deferred_geometry"] for x in ["exact_hidden_overlap","historical_contact_datum","exact_end_notch_shoulder","mortise_tenon","grooves","slots","cavities","hidden_connection_cuts","exact_historical_profile_curve"]))
     out={"status":"PASS","task_id":"T-040","master_id":d["master_id"],"check_count":len(checks),"checks":checks,

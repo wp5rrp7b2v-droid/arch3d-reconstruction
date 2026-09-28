@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-041｜P3_3_ANG_MASTER_V2_V001
 
-Status: **ENGINEERING EXECUTION AUTHORIZED / D-253 / FIRST ARTICLE ENGINEERING ACTIVE**
+Status: **FORMALIZED + CATALOG/V008/CURRENT BOUND / D-257 / PR #37 DRAFT / MERGE NOT AUTHORIZED**
 Date: 2026-09-28
 Stage: P3.3 V002 Stage 1
 Locked Master Spec: D-246｜P3_3_STAGE1_ANG_MASTER_SPEC_V001
@@ -881,6 +881,108 @@ D-256 does NOT authorize:
 - Derived Excel synchronization;
 - post-formalization Ready/Merge;
 - merge;
+- formal closure;
+- Stage2;
+- T-018 resume.
+
+## 24. Formalization Result｜D-257
+
+D-257 records successful formalization under D-256. Catalog branch count = 25/28 = 89.3%; all 32 Ang V008/CURRENT LOCKED_DERIVED rows are bound to CMP-GONG-ANG-001_MASTER with TOU_ANG/ER_ANG 16/16; master-covered records = 363; CURRENT==V008. Accepted canonical blend remains D-255 SHA 7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8. The 32-row scope remains derived and the 787.6157057855mm reference span remains reconstruction-control-only; historical standalone full lengths remain UNRESOLVED. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.
+
+
+## 25. Post-Formalization Verification Authorization｜D-258
+
+Product Owner authorized the complete T-041 post-formalization verification sequence after D-257:
+
+- Derived Excel sync from synchronized CURRENT;
+- Excel validation against 505 rows / 25 approved Masters / 363 master-covered records;
+- latest-head T-041 deterministic rebuild / reopen / restore regression;
+- accepted family + TOU_ANG + ER_ANG geometry-signature comparison against D-255;
+- shared regressions: T-021 / T-022 / T-023 / T-024 / T-037 / T-038 / T-039 / T-040;
+- dedicated-route ownership check so generic P3.3 Master V2 does not own T-041;
+- PR #37 readiness review.
+
+Regression-only generated .blend MUST NOT replace the D-255 accepted canonical .blend.
+
+D-258 does **not** authorize:
+- PR #37 Draft→Ready;
+- merge;
+- formal closure;
+- Stage2;
+- T-018 resume.
+
+Current status:
+
+**POST-FORMALIZATION VERIFICATION AUTHORIZED / EXECUTION IN PROGRESS**
+
+
+## 26. Post-Formalization Verification Result｜D-259
+
+T-041 Post-Formalization Verification completed successfully under D-258.
+
+- Run ID: **36381322627**
+- Result: **SUCCESS**
+- Artifact: `P3_3_T041_POST_FORMALIZATION_VERIFICATION_V001`
+- Artifact ID: **10953500439**
+- Artifact digest: `sha256:405d9ab886bd3415da828c583c2579052e6159a6278c95d3dd066974972a4e89`
+- Derived Excel: **PASS**
+- Registry rows: **505**
+- approved Masters on branch: **25 / 28 = 89.3%**
+- master-covered Registry records: **363**
+- Derived Excel SHA-256: `14ddc3d610823ea2e3bf2296f05435ee85c3e19b42486d557d41697ad8c9120c`
+- latest-head T-041 rebuild/reopen/restore: **90 / 90 PASS**
+- regenerated regression blend SHA-256: `d5741f769b329739908f8c4f3c732bd4debbc84329a1b29b50ef305169bc104c`
+- regenerated blend promoted to canonical: **NO**
+- D-255 accepted canonical blend remains authoritative.
+- dedicated-route ownership: **PASS**
+- generic P3.3 Master V2 route: **SKIPPED AS INTENDED**
+- shared regressions: **8 / 8 PASS**
+  - T-021: 36381625428
+  - T-022: 36381627665
+  - T-023: 36381629663
+  - T-024: 36381631742
+  - T-037: 36381633668
+  - T-038: 36381635653
+  - T-039: 36381637574
+  - T-040: 36381640040
+
+A lifecycle-only patch was required for the T-040 validator because T-040 is already CLOSED while its historical regression assertion still required merge/closure=false. The patch changes lifecycle acceptance only; no T-040 geometry, dimensions, evidence semantics, or accepted signatures changed.
+
+Readiness result:
+
+**READY_FOR_PRODUCT_OWNER_READY_MERGE_DECISION**
+
+D-259 does **not** authorize:
+- PR #37 Draft→Ready;
+- merge;
+- formal closure;
+- Stage2;
+- T-018 resume.
+
+Next gate:
+
+`T-041 PR #37 READY+MERGE AUTHORIZATION`.
+
+
+## 27. Ready + Merge Authorization｜D-260
+
+Product Owner explicitly approved the D-259 readiness result and authorized:
+
+1. PR #37 Draft → Ready;
+2. immediate merge to `main`;
+3. post-merge `main` verification.
+
+Preconditions:
+- D-255 First Article = APPROVED;
+- D-257 Formalization + Catalog/V008/CURRENT = COMPLETE;
+- D-259 post-formalization verification = PASS;
+- Derived Excel = PASS;
+- T-041 latest-head regression = 90/90 PASS;
+- shared regressions = 8/8 PASS;
+- accepted geometry signatures unchanged;
+- PR #37 = OPEN / DRAFT / MERGEABLE before authorization.
+
+D-260 does **not** authorize:
 - formal closure;
 - Stage2;
 - T-018 resume.
