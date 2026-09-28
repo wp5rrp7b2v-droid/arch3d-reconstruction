@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-041｜P3_3_ANG_MASTER_V2_V001
 
-Status: **MERGED TO MAIN / MAIN VERIFIED / D-261 / FORMAL_CLOSURE_PENDING**
+Status: **CLOSED / D-262 / PR #37 MERGED / MAIN VERIFIED**
 Date: 2026-09-28
 Stage: P3.3 V002 Stage 1
 Locked Master Spec: D-246｜P3_3_STAGE1_ANG_MASTER_SPEC_V001
@@ -1018,3 +1018,41 @@ D-261 does **not** authorize formal closure, Stage2, or T-018 resume.
 Next gate:
 
 `T-041 FORMAL CLOSURE`.
+
+
+## 29. Formal Closure｜D-262
+
+Product Owner authorized formal closure after D-261 PR #37 merge and main verification.
+
+Final canonical state:
+- PR #37: **MERGED**
+- merge commit: `bb6873a7edb7e3222142387613851690bd18396f`
+- Stage1 Catalog: **25 / 28 = 89.3%**
+- Registry: **505**
+- Master-covered Registry records: **363**
+- 昂族 bindings: **32 / 32**
+  - TOU_ANG = **16**
+  - ER_ANG = **16**
+- CURRENT == V008: **PASS**
+- Derived Excel: **SYNCED / PASS**
+- accepted canonical .blend SHA-256: `7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8`
+- family semantic signature: `a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29`
+- TOU_ANG geometry signature: `61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250`
+- ER_ANG geometry signature: `b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678`
+- post-formalization verification: D-259 / Run 36381322627 / T-041 90 of 90 PASS / shared regressions 8 of 8 PASS.
+
+Evidence boundaries remain unchanged after closure:
+- 32 = `LOCKED_DERIVED` Registry binding scope, **not direct historical whole-hall count**;
+- historical standalone TOU_ANG / ER_ANG full timber lengths = **UNRESOLVED**;
+- 787.6157057855 mm = synthetic reconstruction control span only, **not per-instance historical full length**;
+- 昂厚 154.0 mm remains DIRECT_PRIMARY / OBSERVED_MEAN, while source-internal sample count remains **narrative 34 vs Table 2-11 16 / unresolved**;
+- 278.4 / 187.0 mm source-dimension semantics remain unchanged;
+- 47:21 remains REPORT_INFERRED / REPLACEABLE design logic;
+- exact historical profile/end/hidden overlap/joinery remain unresolved/deferred.
+
+T-041 is now **CLOSED**. No active engineering T-task remains.
+
+Next Stage1 Master candidate:
+**NOT SELECTED / 3 MASTERS PENDING / NOT STARTED.**
+
+Stage2 remains **NOT AUTHORIZED**. T-018 remains **HOLD**.
