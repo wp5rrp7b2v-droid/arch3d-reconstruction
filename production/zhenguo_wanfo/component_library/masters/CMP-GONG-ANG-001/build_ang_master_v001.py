@@ -52,11 +52,11 @@ def setup_material(bpy,name,rgb):
     m.use_nodes=True
     nodes=m.node_tree.nodes
     nodes.clear()
-    p=nodes.new("ShaderNodeBsdfPrincipled")
-    p.inputs["Base Color"].default_value=(*rgb,1.0)
-    p.inputs["Roughness"].default_value=0.72
+    e=nodes.new("ShaderNodeEmission")
+    e.inputs["Color"].default_value=(*rgb,1.0)
+    e.inputs["Strength"].default_value=0.9
     o=nodes.new("ShaderNodeOutputMaterial")
-    m.node_tree.links.new(p.outputs[0],o.inputs["Surface"])
+    m.node_tree.links.new(e.outputs[0],o.inputs["Surface"])
     return m
 
 def look_at(obj,target):
