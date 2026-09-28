@@ -1,0 +1,265 @@
+{
+  "schema_version": "ANG_MASTER_DEFINITION_V001",
+  "task_id": "T-041",
+  "status": "ENGINEERING EXECUTION AUTHORIZED / D-253 / FIRST ARTICLE ENGINEERING",
+  "component_family_id": "CMP-GONG-ANG-001",
+  "component_names_zh": [
+    "头昂",
+    "二昂"
+  ],
+  "master_id": "CMP-GONG-ANG-001_MASTER",
+  "master_version": "V001",
+  "architecture": "MASTER V2 / ONE FAMILY / TWO NON-COLLAPSIBLE VARIANTS / NONCANONICAL VALIDATION FIXTURE / MINIMAL_SUFFICIENT",
+  "authority": {
+    "source_id": "SRC-ZG-WF-001",
+    "source_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "source_title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告",
+    "source_readiness_decision": "D-244",
+    "master_spec_decision": "D-246",
+    "task_contract_decision": "D-248",
+    "gate_a_candidate_decision": "D-249",
+    "gate_a_approval_decision": "D-250",
+    "gate_b_candidate_decision": "D-251",
+    "gate_b_approval_decision": "D-252",
+    "engineering_execution_decision": "D-253"
+  },
+  "registry_boundary": {
+    "registry_schema_version_expected": "V008",
+    "registry_record_count_expected": 505,
+    "binding_count": 32,
+    "count_status": "LOCKED_DERIVED",
+    "whole_hall_direct_inventory_claim": false,
+    "tou_ang_count": 16,
+    "er_ang_count": 16,
+    "direction_distribution_each_variant": {
+      "south": 4,
+      "north": 4,
+      "east": 4,
+      "west": 4
+    },
+    "master_family_count": 1,
+    "geometry_variant_count": 2,
+    "direction_geometry_variant_count": 0,
+    "sample_to_instance_mapping": "UNKNOWN",
+    "historical_full_timber_length_status": "UNRESOLVED"
+  },
+  "gate_a_contract": {
+    "control_id": "ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001_C01",
+    "approval_decision_id": "D-250",
+    "semantic_signature_sha256": "6c9b8c5b6ee6715292df5b23b7d8b8d9fdaaf4be7d1558631fea5883528b7096",
+    "source_dimensions": {
+      "TOU_ANG_GUANG_MM": 278.4,
+      "ER_ANG_OR_TOU_SINGLE_CAI_GUANG_MM": 187,
+      "ANG_THICKNESS_MM": 154
+    },
+    "thickness_sample_count_status": "SOURCE_INTERNAL_CONFLICT / narrative=34 / table=16",
+    "axis_mapping": {
+      "U": "+U Ang longitudinal centreline",
+      "V": "+V Ang thickness",
+      "W": "+W Ang guang / profile depth perpendicular to U in Assembly X-Z plane",
+      "thickness_mapping": "154.0 -> local V / Assembly Y",
+      "guang_mapping": "278.4 / 187.0 -> local W / NOT generic Assembly Y width"
+    },
+    "report_design_triangle": {
+      "fen_mm": 15.3,
+      "horizontal_fen": 47,
+      "rise_fen": 21,
+      "run_mm": 719.1,
+      "rise_mm": 321.3,
+      "angle_deg": 24.075498255078834,
+      "centreline_span_mm": 787.6157057855055,
+      "classification": "REPORT_INFERRED / REPORT_DESIGN_LOGIC / RECONSTRUCTED_DESIGN / REPLACEABLE"
+    },
+    "reference_control_spans": {
+      "TOU_ANG": {
+        "span_mm": 787.6157057855055,
+        "classification": "CONTROL_SPAN_ONLY / NOT_HISTORICAL_FULL_TIMBER_LENGTH"
+      },
+      "ER_ANG": {
+        "span_mm": 787.6157057855055,
+        "classification": "CONTROL_SPAN_ONLY / NOT_HISTORICAL_FULL_TIMBER_LENGTH"
+      }
+    },
+    "observed_crosscheck": {
+      "third_fourth_total_projection_mean_mm": 719.5,
+      "report_design_run_mm": 719.1,
+      "delta_mm": 0.4,
+      "member_full_length_authority": false
+    },
+    "section_stack_crosscheck": {
+      "TOU_calculated_vertical_mm": 304.92589694157243,
+      "TOU_report_vertical_mm": 305.1,
+      "ER_calculated_vertical_mm": 204.81732301750733,
+      "ER_report_vertical_mm": 204.9,
+      "calculated_sum_mm": 509.74321995907974,
+      "report_sum_mm": 510,
+      "tolerance_mm": 0.5
+    },
+    "validation_fixture_id": "DOUBLE_ANG_ASSEMBLY_FIXTURE_VALIDATION_ONLY"
+  },
+  "gate_b_contract": {
+    "control_id": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001_C01",
+    "approval_decision_id": "D-252",
+    "family_semantic_control_sha256": "dc38ab72be1f5aef3192a48e11621a3288c422475545b56dc5e29fa0102e2ae5",
+    "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_PROFILE_MEASUREMENT",
+    "TOU_ANG": {
+      "point_count": 10,
+      "control_points_sha256": "3e45e7732cf49012cbf8b5e480e76ad2fd986c4aa717dd650e3bf3f9831f7bb5",
+      "semantic_profile": "SINGLE_CAI_REGION -> DEEP_HEAD_REGION -> OUTBOARD_TAPER",
+      "control_points_uw_mm": [
+        [
+          -393.80785289275275,
+          93.5
+        ],
+        [
+          -98.45196322318819,
+          93.5
+        ],
+        [
+          98.45196322318819,
+          139.2
+        ],
+        [
+          295.3558896695646,
+          139.2
+        ],
+        [
+          393.80785289275275,
+          93.5
+        ],
+        [
+          393.80785289275275,
+          -93.5
+        ],
+        [
+          295.3558896695646,
+          -139.2
+        ],
+        [
+          98.45196322318819,
+          -139.2
+        ],
+        [
+          -98.45196322318819,
+          -93.5
+        ],
+        [
+          -393.80785289275275,
+          -93.5
+        ]
+      ]
+    },
+    "ER_ANG": {
+      "point_count": 6,
+      "control_points_sha256": "c4b935c9d445414831f16d949b02ff110f3e336f88c68dd68f58d514bd172778",
+      "semantic_profile": "CONSTANT_SINGLE_CAI_BODY -> OUTBOARD_TAPER",
+      "taper_ratio": 0.6666666666666666,
+      "control_points_uw_mm": [
+        [
+          -393.80785289275275,
+          93.5
+        ],
+        [
+          295.3558896695646,
+          93.5
+        ],
+        [
+          393.80785289275275,
+          62.333333333333336
+        ],
+        [
+          393.80785289275275,
+          -62.333333333333336
+        ],
+        [
+          295.3558896695646,
+          -93.5
+        ],
+        [
+          -393.80785289275275,
+          -93.5
+        ]
+      ]
+    },
+    "independent_profiles_required": true,
+    "finished_mesh_uniform_scaling_prohibited": true,
+    "metric_source_image_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "historical_profile_exact_claim": false
+  },
+  "coordinate_contract": {
+    "canonical_geometry_frame": "member-local U/V/W mapped to Blender X/Y/Z",
+    "x_axis": "+X = U longitudinal centreline",
+    "y_axis": "+Y = V thickness",
+    "z_axis": "+Z = W guang/profile depth",
+    "assembly_slope_application": "VALIDATION_FIXTURE_ONLY / rotate member-local U axis by Gate-A design angle in Assembly X-Z plane",
+    "canonical_body_transform": {
+      "location": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    "building_world_placement_in_master": false
+  },
+  "execution_boundary": {
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "production_builder_authorized": true,
+    "validator_authorized": true,
+    "workflow_execution_authorized": true,
+    "production_branch_authorized": true,
+    "draft_pr_authorized": true,
+    "first_article_product_owner_approved": false,
+    "first_article_acceptance_authorized": false,
+    "formalization_authorized": false,
+    "catalog_v008_binding_authorized": false,
+    "derived_excel_sync_authorized": false,
+    "ready_transition_authorized": false,
+    "merge_authorized": false,
+    "closure_authorized": false,
+    "stage2_authorized": false,
+    "t018_status": "HOLD"
+  },
+  "first_article_contract": {
+    "canonical_body_count": 2,
+    "canonical_body_ids": [
+      "TOU_ANG",
+      "ER_ANG"
+    ],
+    "validation_fixture_id": "DOUBLE_ANG_ASSEMBLY_FIXTURE_VALIDATION_ONLY",
+    "validation_fixture_canonical_asset": false,
+    "registry_instance_assembly": false,
+    "product_owner_acceptance_required": true,
+    "required_review_domain_count": 10
+  },
+  "deferred_geometry": [
+    "exact_historical_tou_ang_full_timber_length",
+    "exact_historical_er_ang_full_timber_length",
+    "exact_historical_tou_ang_longitudinal_profile",
+    "exact_historical_er_ang_longitudinal_profile",
+    "exact_tou_ang_deep_head_transition_location",
+    "exact_outer_ang_head_shaping",
+    "exact_inner_end_length",
+    "historical_asymmetry",
+    "hidden_overlap",
+    "mortise_tenon",
+    "grooves",
+    "slots",
+    "cavities",
+    "hidden_connection_cuts",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "per_instance_originality_repair_state",
+    "sample_to_instance_mapping"
+  ]
+}
