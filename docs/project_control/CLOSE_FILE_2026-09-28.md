@@ -83,3 +83,34 @@
 - Next Stage1 candidate: **NOT SELECTED**
 - Stage2: **NOT AUTHORIZED**
 - T-018: **HOLD**
+
+## D-263｜Stage1 Master Scope Reconciliation Addendum
+
+T-041 closure itself remains valid. A post-closure governance audit corrected the Stage1 progress metric without changing any geometry, evidence, approvals, bindings, canonical binaries or historical claims.
+
+Corrected current Stage1 scope semantics:
+
+- Master-scope object types: **28**
+- Covered Master-scope object types: **28 / 28 = 100%**
+- Approved Master families: **25**
+- Pending Master-scope object types: **0**
+- Master-covered Registry records: **363**
+- PENDING_SOURCE_BINDING: **7**
+
+The previous display `25 / 28 = 89.3%` mixed approved Master-family count with Master-scope object-type count and is superseded.
+
+The 3-count difference is valid family consolidation:
+- 大型瓜子栱 + 小型瓜子栱 → `CMP-GONG-GUAZI-001_MASTER`
+- 大型慢栱 + 小型慢栱 → `CMP-GONG-MANGONG-001_MASTER`
+- 头昂 + 二昂 → `CMP-GONG-ANG-001_MASTER`
+
+`散斗族 / 替木测量边界 / 替木实体族` remain `UNKNOWN/参考边界` and are **outside** the 28-object Master-scope denominator.
+
+Seven predecessor-audit objects remain `PENDING_SOURCE_BINDING` outside V008:
+`板瓦 / 勾头 / 滴水 / 博风板 / 悬鱼 / 惹草 / 生头木`.
+
+Next governance gate after D-263:
+**P3.3 Stage1 Closure Readiness Audit**.
+
+Stage2 remains **NOT AUTHORIZED**. T-018 remains **HOLD**.
+
