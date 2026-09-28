@@ -1,6 +1,6 @@
 {
   "schema_version": "P3_3_STAGE1_ANG_MASTER_SPEC_V001",
-  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-246",
+  "status": "LOCKED / PRODUCT_OWNER APPROVED / FORMALIZED ON T-041 BRANCH D-257",
   "date": "2026-09-28",
   "stage": "P3.3 V002 Stage 1",
   "source_gate": "D-244 / SOURCE READINESS + D-076 PASS WITH GEOMETRY BOUNDARY",
@@ -215,8 +215,8 @@
     "length_slope_assembly_control": "LOCKED / PRODUCT_OWNER_APPROVED / D-250",
     "longitudinal_profile_control": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
     "engineering_execution": "AUTHORIZED / D-253 / FIRST ARTICLE MACHINE PASS D-254",
-    "formalization": "AUTHORIZED / D-256 / EXECUTION PENDING",
-    "catalog_v008_binding": "AUTHORIZED / D-256 / EXECUTION PENDING",
+    "formalization": "COMPLETE / D-257",
+    "catalog_v008_binding": "COMPLETE / D-257 / 32 ROWS",
     "merge": "NOT AUTHORIZED",
     "stage2": "NOT AUTHORIZED",
     "t018": "HOLD",
@@ -237,7 +237,8 @@
     "D-253",
     "D-254",
     "D-255",
-    "D-256"
+    "D-256",
+    "D-257"
   ],
   "approval": {
     "candidate_decision_id": "D-245",
@@ -364,5 +365,25 @@
     "closure_authorized": false,
     "stage2_authorized": false,
     "t018_resume_authorized": false
+  },
+  "formalization_result": {
+    "decision_id": "D-257",
+    "authority": "D-256",
+    "status": "COMPLETE / PR #37 DRAFT / MERGE NOT AUTHORIZED",
+    "formalization_run_id": 36376214515,
+    "artifact_id": 10950620532,
+    "canonical_blend_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+    "semantic_sha256": "4b1695131bf868476aca8b9760ca36b028d59dc6f8a33d9fb378aa04b7fbc084",
+    "validation_sha256": "032f7bc3f24f5a7a1f3e0e67d8e1fc9aa711aed254046daeeb4330bb26bc2753",
+    "review_board_sha256": "a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65",
+    "family_semantic_signature": "a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29",
+    "geometry_signatures": {
+      "TOU_ANG": "61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250",
+      "ER_ANG": "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678"
+    },
+    "registry_binding_count": 32,
+    "current_equals_v008": true,
+    "derived_excel_sync_authorized": false,
+    "ready_merge_authorized": false
   }
 }

@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-041｜P3_3_ANG_MASTER_V2_V001
 
-Status: **ENGINEERING EXECUTION AUTHORIZED / D-253 / FIRST ARTICLE ENGINEERING ACTIVE**
+Status: **FORMALIZED + CATALOG/V008/CURRENT BOUND / D-257 / PR #37 DRAFT / MERGE NOT AUTHORIZED**
 Date: 2026-09-28
 Stage: P3.3 V002 Stage 1
 Locked Master Spec: D-246｜P3_3_STAGE1_ANG_MASTER_SPEC_V001
@@ -884,3 +884,7 @@ D-256 does NOT authorize:
 - formal closure;
 - Stage2;
 - T-018 resume.
+
+## 24. Formalization Result｜D-257
+
+D-257 records successful formalization under D-256. Catalog branch count = 25/28 = 89.3%; all 32 Ang V008/CURRENT LOCKED_DERIVED rows are bound to CMP-GONG-ANG-001_MASTER with TOU_ANG/ER_ANG 16/16; master-covered records = 363; CURRENT==V008. Accepted canonical blend remains D-255 SHA 7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8. The 32-row scope remains derived and the 787.6157057855mm reference span remains reconstruction-control-only; historical standalone full lengths remain UNRESOLVED. Derived Excel sync, post-formalization regression/readiness, Ready/Merge and closure remain separate gates.

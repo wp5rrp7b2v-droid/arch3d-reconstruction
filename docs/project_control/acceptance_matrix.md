@@ -1322,3 +1322,17 @@ Boundary retained:
 - Derived Excel: **SYNCED / PASS**.
 - Evidence boundary preservation: **PASS**.
 - Final lifecycle state: **CLOSED**.
+
+### T-041 Formalization + Catalog/V008/CURRENT Binding｜D-257
+
+- **FORMALIZED / BRANCH** under D-256.
+- Stage1 Catalog: **25/28 = 89.3%** on T-041 branch.
+- Registry binding: **32/32** 昂族 records = APPROVED_MASTER_AVAILABLE / CMP-GONG-ANG-001_MASTER.
+- Variant binding: **TOU_ANG 16 / ER_ANG 16**.
+- Master-covered Registry records: **363**.
+- CURRENT == V008: **PASS**.
+- Accepted canonical .blend SHA-256: `7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8`.
+- 32 remains LOCKED_DERIVED scope, not direct historical whole-hall count.
+- Historical full lengths remain UNRESOLVED; synthetic control span remains non-instance-exact.
+- Derived Excel / post-formalization readiness: **PENDING / NOT AUTHORIZED**.
+- PR #37: **DRAFT / MERGE NOT AUTHORIZED**.

@@ -2,8 +2,8 @@
   "version": "V001",
   "phase": "P3.3",
   "stage": "Stage 1",
-  "task": "T-040 CLOSED / D-243 / PR #36 MERGED / MAIN VERIFIED",
-  "status": "TWENTY_FOUR_APPROVED / T040 CLOSED / MAIN VERIFIED / 24 OF 28 = 85.7%",
+  "task": "T-041 FORMALIZED / PR #37 DRAFT",
+  "status": "TWENTY_FIVE_APPROVED / T041 FORMALIZED / PR #37 DRAFT / MERGE NOT AUTHORIZED",
   "source_approved_library": "production/zhenguo_wanfo/registry/P3_1_COMPONENT_MASTER_LIBRARY_V001.json",
   "approved_master_refs": [
     "CMP-COLUMN-001_MASTER",
@@ -940,7 +940,83 @@
       "merge_commit_sha": "783d6ce89b14a07a580c0744dd63e848a152690c",
       "closure_decision_id": "D-243",
       "closed": true
+    },
+    {
+      "component_id": "CMP-GONG-ANG-001",
+      "master_id": "CMP-GONG-ANG-001_MASTER",
+      "master_version": "V001",
+      "variant_ids": [
+        "TOU_ANG",
+        "ER_ANG"
+      ],
+      "approval_status": "PRODUCT_OWNER_APPROVED",
+      "decision_id": "D-255",
+      "formalization_authority": "D-256",
+      "formalization_result": "D-257",
+      "publication_status": "FORMALIZED / PR #37 DRAFT / MERGE NOT AUTHORIZED",
+      "canonical_asset_status": "ACTIONS_ARTIFACT / PRODUCT_OWNER_APPROVED / LOCAL ONLY / NOT GIT",
+      "canonical_asset_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+      "semantic_sha256": "4b1695131bf868476aca8b9760ca36b028d59dc6f8a33d9fb378aa04b7fbc084",
+      "validation_sha256": "032f7bc3f24f5a7a1f3e0e67d8e1fc9aa711aed254046daeeb4330bb26bc2753",
+      "review_board_sha256": "a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65",
+      "family_semantic_signature": "a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29",
+      "variant_geometry_signatures": {
+        "TOU_ANG": "61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250",
+        "ER_ANG": "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678"
+      },
+      "registry_binding_count": 32,
+      "physical_instance_count_claim": false,
+      "geometry_variant_count": 2,
+      "distribution": "TOU_ANG 16 / ER_ANG 16 / SOUTH,NORTH,EAST,WEST EACH 4+4 / LOCKED_DERIVED / NOT DIRECT WHOLE-HALL COUNT",
+      "dimension_policy": {
+        "tou_ang_guang_mm": "278.4 / DIRECT_PRIMARY / OBSERVED_MEAN / n=16 / FAMILY_SOURCE_VALUE",
+        "er_ang_or_tou_single_cai_guang_mm": "187.0 / DIRECT_PRIMARY / OBSERVED_MEAN / COMBINED_SOURCE_CATEGORY / n=32 / NOT ER-ONLY n=16",
+        "ang_thickness_mm": "154.0 / DIRECT_PRIMARY / OBSERVED_MEAN / ANG_FAMILY_COMMON_THICKNESS",
+        "thickness_sample_count": "SOURCE_INTERNAL_CONFLICT / narrative=34 / table=16",
+        "reference_control_span_mm": "787.6157057855 / REPORT_INFERRED / RECONSTRUCTED_DESIGN / CONTROL_SPAN_ONLY / NOT HISTORICAL FULL TIMBER LENGTH",
+        "historical_standalone_full_length_status": "UNRESOLVED"
+      },
+      "assembly_policy": {
+        "report_design_relation": "47:21 / REPORT_INFERRED / REPLACEABLE",
+        "design_run_mm": 719.1,
+        "design_rise_mm": 321.3,
+        "observed_third_fourth_total_projection_mean_mm": "719.5 / DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY LEVEL",
+        "ideal_vs_observed_delta_mm": 0.4,
+        "member_full_length_authority": false
+      },
+      "profile_policy": {
+        "authority": "SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED",
+        "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_PROFILE_MEASUREMENT",
+        "family_control_set_sha256": "dc38ab72be1f5aef3192a48e11621a3288c422475545b56dc5e29fa0102e2ae5",
+        "tou_profile_point_count": 10,
+        "tou_profile_sha256": "3e45e7732cf49012cbf8b5e480e76ad2fd986c4aa717dd650e3bf3f9831f7bb5",
+        "er_profile_point_count": 6,
+        "er_profile_sha256": "c4b935c9d445414831f16d949b02ff110f3e336f88c68dd68f58d514bd172778",
+        "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+        "exact_historical_profiles": "UNRESOLVED"
+      },
+      "joinery_boundary": "HIDDEN OVERLAP / MORTISE-TENON / GROOVES / SLOTS / CAVITIES / HIDDEN CONNECTION CUTS DEFERRED",
+      "source_artifact": {
+        "accepted_first_article": {
+          "run_id": 36373958970,
+          "artifact_id": 10950620532,
+          "artifact_zip_sha256": "a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e"
+        }
+      },
+      "minimal_sufficient_package": {
+        "policy": "ADAPTIVE / NO UNIVERSAL FILE COUNT",
+        "formal_repo_files": [
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/CMP-GONG-ANG-001_ANG_DEFINITION_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/CMP-GONG-ANG-001_MASTER_SEMANTIC_V001.json",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/CMP-GONG-ANG-001_MASTER_REVIEW_BOARD_V001.png",
+          "production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/CMP-GONG-ANG-001_MASTER_VALIDATION_V001.json",
+          "docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md"
+        ],
+        "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
+        "review_board_count": 1,
+        "required_review_domain_count": 10
+      }
     }
   ],
-  "approved_master_count": 24
+  "approved_master_count": 25
 }

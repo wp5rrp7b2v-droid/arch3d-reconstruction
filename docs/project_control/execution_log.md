@@ -2033,3 +2033,15 @@ Do not restart T-018 by default.
 - Next candidate: **昂族（头昂 / 二昂） / Priority 19 / Source Readiness only / NOT STARTED**.
 - T-018: **HOLD**.
 - Stage2: **NOT AUTHORIZED**.
+
+## 2026-09-28｜T-041 Formalization + Catalog/V008/CURRENT Binding｜D-257
+
+- Authority: D-256.
+- Formalization workflow run: 36376214515.
+- Accepted Artifact: 10950620532; canonical .blend SHA-256 7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8; .blend remains not tracked in Git.
+- Geometry signatures: family=a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29; TOU_ANG=61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250; ER_ANG=b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678.
+- Stage1 Catalog branch count: 25/28 = 89.3%.
+- V008/CURRENT Ang binding: 32/32 APPROVED_MASTER_AVAILABLE; TOU_ANG=16 / ER_ANG=16.
+- Master-covered Registry records: 363. CURRENT == V008: PASS.
+- Historical standalone full lengths remain UNRESOLVED; 787.6157057855mm remains control-span-only.
+- Derived Excel / post-formalization readiness / PR Ready+Merge: NOT AUTHORIZED.

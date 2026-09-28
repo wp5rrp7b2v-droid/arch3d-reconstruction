@@ -1,7 +1,7 @@
 {
   "schema_version": "ANG_MASTER_DEFINITION_V001",
   "task_id": "T-041",
-  "status": "FIRST ARTICLE PO APPROVED D-255 / FORMALIZATION AUTHORIZED D-256 / EXECUTION PENDING",
+  "status": "FORMALIZED + CATALOG/V008/CURRENT BOUND / D-257 / PR #37 DRAFT / MERGE NOT AUTHORIZED",
   "component_family_id": "CMP-GONG-ANG-001",
   "component_names_zh": [
     "头昂",
@@ -228,7 +228,9 @@
     "merge_authorized": false,
     "closure_authorized": false,
     "stage2_authorized": false,
-    "t018_status": "HOLD"
+    "t018_status": "HOLD",
+    "formalization_complete": true,
+    "catalog_v008_binding_complete": true
   },
   "first_article_contract": {
     "canonical_body_count": 2,
@@ -291,6 +293,27 @@
     },
     "derived_excel_sync_authorized": false,
     "ready_merge_authorized": false,
-    "closure_authorized": false
+    "closure_authorized": false,
+    "execution_status": "COMPLETE / D-257"
+  },
+  "formalization": {
+    "status": "FORMALIZED / D-257 / PR #37 DRAFT / MERGE NOT AUTHORIZED",
+    "authority": "D-256",
+    "product_owner_approval": "D-255",
+    "first_article_machine_gate": "D-254",
+    "accepted_run_id": 36373958970,
+    "artifact_id": 10950620532,
+    "artifact_zip_sha256": "sha256:a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e",
+    "approved_canonical_blend_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+    "geometry_match_approved_first_article": true,
+    "formalization_run_id": 36376214515,
+    "semantic_sha256": "4b1695131bf868476aca8b9760ca36b028d59dc6f8a33d9fb378aa04b7fbc084",
+    "validation_sha256": "032f7bc3f24f5a7a1f3e0e67d8e1fc9aa711aed254046daeeb4330bb26bc2753",
+    "review_board_sha256": "a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65",
+    "catalog_binding_complete": true,
+    "registry_binding_count": 32,
+    "tou_ang_binding_count": 16,
+    "er_ang_binding_count": 16,
+    "current_equals_v008": true
   }
 }
