@@ -7752,17 +7752,20 @@
     "生头木"
   ],
   "stage1_master_progress_summary": {
-    "snapshot_date": "2026-09-27",
-    "status": "T-041 FORMALIZED ON BRANCH / D-257 / 25 OF 28 MASTERS APPROVED / PR #37 DRAFT / MERGE NOT AUTHORIZED",
+    "snapshot_date": "2026-09-28",
+    "status": "STAGE1 MASTER SCOPE RECONCILED / D-263 / 28 OF 28 MASTER-SCOPE OBJECT TYPES COVERED / 25 APPROVED MASTER FAMILIES",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
     "master_scope_object_type_count": 28,
+    "covered_master_scope_object_type_count": 28,
+    "approved_master_family_count": 25,
     "approved_master_count": 25,
-    "pending_master_object_type_count": 3,
-    "master_completion_percent": 89.3,
-    "pending_source_binding_count": 3,
-    "completed_definition": "PRODUCT_OWNER_APPROVED Master available in Stage1 Component Master Catalog",
-    "total_definition": "Master scope includes 需新建Master plus all 已有Master categories; not all registered object types require a Master",
+    "pending_master_object_type_count": 0,
+    "master_completion_percent": 100,
+    "pending_source_binding_count": 7,
+    "completed_definition": "Master-scope OBJECT TYPE has APPROVED_MASTER_AVAILABLE binding to a PRODUCT_OWNER_APPROVED Master family/reference",
+    "total_definition": "Master-scope denominator is OBJECT TYPES from Coverage Matrix V002. Approved Master families are a separate count because one Master family may cover multiple object types.",
+    "approved_master_count_definition": "Legacy compatibility field; equals approved_master_family_count, NOT the numerator of master-scope object-type coverage.",
     "disposition_summary": {
       "参数化补全": 23,
       "非实体装配/拓扑": 5,
@@ -7778,36 +7781,93 @@
       "master_catalog": "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json"
     },
     "approved_master_components": [
+      "补间铺作底斗",
+      "叉手",
       "剳牵",
+      "大角梁",
+      "大型瓜子栱",
+      "大型慢栱",
       "单向长开斗族",
       "丁栿",
+      "二昂",
+      "华栱",
       "交互斗族",
+      "阑额",
+      "令栱",
       "平梁",
       "乳栿",
       "上六椽栿",
+      "蜀柱",
       "四椽栿",
+      "头昂",
       "槫",
       "托脚",
       "下六椽栿",
+      "小型瓜子栱",
+      "小型慢栱",
+      "由额",
       "柱",
       "柱头栌斗",
-      "叉手",
-      "蜀柱",
-      "大角梁",
-      "子角梁",
-      "阑额",
-      "由额",
-      "补间铺作底斗",
-      "大型瓜子栱",
-      "小型瓜子栱",
-      "大型慢栱",
-      "小型慢栱",
-      "令栱",
-      "华栱",
-      "头昂",
-      "二昂"
+      "子角梁"
+    ],
+    "approved_master_family_references": [
+      "CMP-COLUMN-001_MASTER",
+      "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+      "CMP-DOU-INTERACTIVE-001_MASTER",
+      "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+      "CMP-FRAME-CHASHOU-001_MASTER",
+      "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+      "CMP-FRAME-DINGFU-001_MASTER",
+      "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "CMP-FRAME-LANE-001_MASTER",
+      "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+      "CMP-FRAME-PINGLIANG-001_MASTER",
+      "CMP-FRAME-PURLIN-001_MASTER",
+      "CMP-FRAME-RUFU-001_MASTER",
+      "CMP-FRAME-SHUZHU-001_MASTER",
+      "CMP-FRAME-TUOJIAO-001_MASTER",
+      "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "CMP-FRAME-YOUE-001_MASTER",
+      "CMP-FRAME-ZHAQIAN-001_MASTER",
+      "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
+      "CMP-GONG-ANG-001_MASTER",
+      "CMP-GONG-GUAZI-001_MASTER",
+      "CMP-GONG-HUAGONG-001_MASTER",
+      "CMP-GONG-LINGGONG-001_MASTER",
+      "CMP-GONG-MANGONG-001_MASTER",
+      "CMP-LUDOU-COLUMN-001_MASTER"
+    ],
+    "family_collapse_groups": [
+      {
+        "master_reference": "CMP-GONG-GUAZI-001_MASTER",
+        "object_types": [
+          "大型瓜子栱",
+          "小型瓜子栱"
+        ]
+      },
+      {
+        "master_reference": "CMP-GONG-MANGONG-001_MASTER",
+        "object_types": [
+          "大型慢栱",
+          "小型慢栱"
+        ]
+      },
+      {
+        "master_reference": "CMP-GONG-ANG-001_MASTER",
+        "object_types": [
+          "头昂",
+          "二昂"
+        ]
+      }
     ],
     "master_covered_registry_record_count": 363,
-    "progress_display_note": "505 Registry records; T-041 branch Stage1 Master completion after formalization: 25 approved / 3 pending = 89.3%. 昂族 32/32 LOCKED_DERIVED rows bound to CMP-GONG-ANG-001_MASTER with TOU_ANG/ER_ANG variants 16/16. 32 is not a direct whole-hall historical count; reference control span is not a per-instance historical full length. PR #37 remains Draft; Derived Excel/readiness/merge not authorized; T-018 HOLD; Stage2 NOT AUTHORIZED."
+    "progress_display_note": "505 Registry records; Stage1 Master-scope coverage is 28/28 object types = 100.0%, implemented by 25 approved Master families. Pending Master-scope object types = 0. Seven predecessor-audit items remain PENDING_SOURCE_BINDING outside V008 and are not counted as covered. T-041 is CLOSED D-262; no active engineering T-task; Stage1 Closure Readiness Audit is next; T-018 HOLD; Stage2 NOT AUTHORIZED.",
+    "reconciliation": {
+      "decision_id": "D-263",
+      "supersedes_display_metric": "25 approved Master families / 28 Master-scope object types = 89.3%",
+      "correction": "Family count and object-type count are different dimensions and must not be divided. Coverage numerator is 28 covered Master-scope object types; approved Master family count remains 25.",
+      "pending_source_binding_correction": "3 -> 7, restored from canonical Coverage Matrix V002 pending_source_binding list.",
+      "geometry_or_evidence_change": false
+    }
   }
 }

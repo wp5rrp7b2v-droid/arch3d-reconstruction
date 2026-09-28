@@ -24,7 +24,9 @@ approved = list(progress["approved_master_components"])
 approved_set = set(approved)
 scope = [row for row in matrix["rows"] if "Master" in str(row.get("disposition", ""))]
 assert len(scope) == progress["master_scope_object_type_count"]
+assert progress["approved_master_family_count"] == catalog["approved_master_count"]
 assert progress["approved_master_count"] == catalog["approved_master_count"]
+assert progress["covered_master_scope_object_type_count"] == progress["master_scope_object_type_count"] - progress["pending_master_object_type_count"]
 pending = [row for row in scope if row["component"] not in approved_set]
 pending = sorted(pending, key=lambda row: (999 if row.get("priority") is None else row["priority"], row["component"]))
 next_target = pending[0]["component"] if pending else "NONE"
@@ -35,7 +37,7 @@ def chips(values, cls):
     return "".join('<span class="chip %s">%s</span>' % (cls, escape(v)) for v in values)
 
 stages = [
-    ("01","真实构件 Master 库","ACTIVE","%s / %s · %s%%" % (progress["approved_master_count"], progress["master_scope_object_type_count"], progress["master_completion_percent"])),
+    ("01","真实构件 Master 库","ACTIVE","Scope %s / %s · %s%% · %s Master families" % (progress["covered_master_scope_object_type_count"], progress["master_scope_object_type_count"], progress["master_completion_percent"], progress["approved_master_family_count"])),
     ("02","构件变体与装配接口","NOT STARTED",""),
     ("03","代表性组合验证","NOT STARTED",""),
     ("04","整殿真实实例与拓扑","NOT STARTED",""),
@@ -94,8 +96,8 @@ h1{font-size:30px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 14px}h3{font-siz
 <div class="grid">
 <section class="card"><h2>P3.3｜七阶段总路线</h2><div class="stages">%s</div>
 <div class="note small" style="margin-top:12px"><strong>读法：</strong>%s%% 是 Stage 1 的 Master 完成度，不是整个 P3.3 的总完成率。P3.3 的 7 个 Stage 当前尚未有一个整体关闭。</div></section>
-<section class="card"><h2>当前最重要的数字</h2><div class="big">%s / %s</div><div class="muted">Stage 1 Master 已批准 · %s%%</div><div class="progress"><div style="width:%s%%"></div></div>
-<div class="grid3" style="margin-top:12px"><div class="metric"><b>%s</b><span class="small">Master 待完成</span></div><div class="metric"><b>%s</b><span class="small">已覆盖 Registry records</span></div><div class="metric"><b>%s</b><span class="small">V008 总登记 records</span></div></div>
+<section class="card"><h2>当前最重要的数字</h2><div class="big">%s / %s</div><div class="muted">Stage 1 Master-scope 类型已覆盖 · %s%%</div><div class="progress"><div style="width:%s%%"></div></div>
+<div class="grid3" style="margin-top:12px"><div class="metric"><b>%s</b><span class="small">Master-scope 类型待覆盖</span></div><div class="metric"><b>%s</b><span class="small">Approved Master families</span></div><div class="metric"><b>%s</b><span class="small">已覆盖 Registry records</span></div></div><div class="small" style="margin-top:8px">V008 总登记 records：%s</div>
 </section></div>
 
 <div class="grid">
@@ -107,7 +109,7 @@ h1{font-size:30px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 14px}h3{font-siz
 <div>Pending source binding</div><div>%s 项：%s</div><div>事实主权</div><div>V008 Component Registry JSON</div><div>Master 主权</div><div>Stage1 Component Master Catalog</div><div>Excel</div><div>DERIVED_VIEW，不可覆盖 JSON</div>
 </div></section></div>
 
-<section class="card"><h2>Stage 1｜28 个 Master Scope 的大进展</h2>
+<section class="card"><h2>Stage 1｜28 个 Master-scope Object Types</h2>
 <div class="batch"><h3>已完成｜%s</h3><div class="chips">%s</div></div>
 <div class="batch"><h3>下一批｜%s</h3><div class="chips">%s</div></div>
 <div class="batch"><h3>后续构件组｜%s</h3><div class="chips">%s</div></div>
@@ -122,8 +124,8 @@ h1{font-size:30px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 14px}h3{font-siz
 </main></body></html>
 """ % (
     escape(state["state_revision"]), escape(progress["snapshot_date"]), stage_html, pct_text,
-    progress["approved_master_count"], progress["master_scope_object_type_count"], pct_text, pct_text,
-    progress["pending_master_object_type_count"], progress["master_covered_registry_record_count"], progress["registry_record_count"],
+    progress["covered_master_scope_object_type_count"], progress["master_scope_object_type_count"], pct_text, pct_text,
+    progress["pending_master_object_type_count"], progress["approved_master_family_count"], progress["master_covered_registry_record_count"], progress["registry_record_count"],
     escape(last.get("id","NONE")), escape(last.get("component","")), escape(last.get("status","")),
     escape(next_target), len(pending_sources), escape("、".join(pending_sources)),
     len(approved), chips([x + " ✓" for x in approved], "done"),
@@ -134,4 +136,4 @@ h1{font-size:30px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 14px}h3{font-siz
 
 OUT.write_text(html, encoding="utf-8")
 print("DASHBOARD_GENERATED", OUT)
-print("STATE", state["state_revision"], "STAGE1", progress["approved_master_count"], "/", progress["master_scope_object_type_count"], "NEXT", next_target)
+print("STATE", state["state_revision"], "STAGE1_SCOPE", progress["covered_master_scope_object_type_count"], "/", progress["master_scope_object_type_count"], "MASTER_FAMILIES", progress["approved_master_family_count"], "NEXT", next_target)

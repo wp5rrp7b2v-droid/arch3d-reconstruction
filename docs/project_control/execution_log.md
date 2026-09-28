@@ -2081,3 +2081,21 @@ Do not restart T-018 by default.
 - Stage2: NOT AUTHORIZED.
 - T-018: HOLD.
 
+## 2026-09-28｜Stage1 Master Scope Reconciliation｜D-263
+
+- Governance-only reconciliation; no new engineering T-task.
+- Audited Coverage Matrix V002 against V008/CURRENT and Master Catalog.
+- Confirmed 28 Master-scope object types, all 28 APPROVED_MASTER_AVAILABLE.
+- Confirmed 25 unique approved Master family references.
+- Corrected Stage1 coverage from mixed metric `25/28 = 89.3%` to object-type coverage `28/28 = 100%`.
+- Approved Master family count remains 25 as a separate metric.
+- Pending Master-scope object types corrected to 0.
+- PENDING_SOURCE_BINDING corrected from stale 3 to canonical 7.
+- UNKNOWN/reference-boundary objects remain outside Master-scope denominator.
+- Excel generator v1.0.3 and Dashboard V2 semantics updated.
+- Validation Run 36389355533: PASS.
+- Artifact 10955895692 / digest `sha256:d76f31e04bd336445a9d6f0445abab237b83aa8984521fde0db8134add079563`.
+- No geometry, evidence classification, Master approval, Registry row binding, canonical binary or historical claim changed.
+- Next: Stage1 Closure Readiness Audit.
+- Stage2 NOT AUTHORIZED; T-018 HOLD.
+

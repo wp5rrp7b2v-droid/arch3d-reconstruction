@@ -1,0 +1,217 @@
+name: Stage1 Master Scope Reconciliation D-263
+
+on:
+  push:
+    branches:
+      - governance/stage1-master-scope-reconciliation-d263
+    paths:
+      - '.github/workflows/stage1_master_scope_reconciliation_d263.yml'
+      - 'docs/project_control/project_state.json'
+      - 'docs/project_control/decision_log.md'
+      - 'docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json'
+      - 'docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json'
+      - 'production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json'
+      - 'production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json'
+      - 'scripts/generate_wanfo_component_registry_excel.py'
+      - 'scripts/generate_project_dashboard.py'
+      - '.github/workflows/wanfo-component-registry-excel.yml'
+      - '.github/workflows/project-dashboard-v2-sync.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stage1-master-scope-reconciliation-d263
+  cancel-in-progress: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check "openpyxl==3.1.5"
+
+      - name: Validate canonical reconciliation semantics
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          regp=Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json")
+          curp=Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json")
+          matp=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json")
+          catp=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json")
+          statep=Path("docs/project_control/project_state.json")
+          reg=json.loads(regp.read_text(encoding="utf-8"))
+          cur=json.loads(curp.read_text(encoding="utf-8"))
+          matrix=json.loads(matp.read_text(encoding="utf-8"))
+          cat=json.loads(catp.read_text(encoding="utf-8"))
+          state=json.loads(statep.read_text(encoding="utf-8"))
+          assert reg==cur
+          scope=[x for x in matrix["rows"] if "Master" in str(x.get("disposition",""))]
+          assert len(scope)==28
+          refs=set()
+          covered=[]
+          for row in scope:
+              items=[x for x in reg["items"] if x.get("component")==row["component"]]
+              assert items, row["component"]
+              assert all(x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE" for x in items), row["component"]
+              rr={x.get("master_reference") for x in items if x.get("master_reference")}
+              assert len(rr)==1, (row["component"],rr)
+              refs |= rr
+              covered.append(row["component"])
+          assert len(refs)==25
+          assert cat["approved_master_count"]==25
+          p=reg["stage1_master_progress_summary"]
+          assert p["master_scope_object_type_count"]==28
+          assert p["covered_master_scope_object_type_count"]==28
+          assert p["approved_master_family_count"]==25
+          assert p["approved_master_count"]==25
+          assert p["pending_master_object_type_count"]==0
+          assert float(p["master_completion_percent"])==100.0
+          assert p["pending_source_binding_count"]==7
+          assert reg["pending_source_binding"]==matrix["pending_source_binding"]
+          assert len(reg["pending_source_binding"])==7
+          assert state["v008_master_progress_visibility"]["covered_master_scope_object_type_count"]==28
+          assert state["v008_master_progress_visibility"]["approved_master_family_count"]==25
+          assert state["v008_master_progress_visibility"]["pending_master_object_type_count"]==0
+          assert state["v008_master_progress_visibility"]["pending_source_binding_count"]==7
+          assert state["proposed_next_task"]["id"]=="STAGE1-CLOSURE-READINESS-AUDIT"
+          assert state["current_task"]["id"] is None
+          collapsed={
+             "CMP-GONG-GUAZI-001_MASTER":{"大型瓜子栱","小型瓜子栱"},
+             "CMP-GONG-MANGONG-001_MASTER":{"大型慢栱","小型慢栱"},
+             "CMP-GONG-ANG-001_MASTER":{"头昂","二昂"},
+          }
+          for master,types in collapsed.items():
+              got={row["component"] for row in scope if any(x.get("master_reference")==master for x in reg["items"] if x.get("component")==row["component"])}
+              assert got==types,(master,got)
+          unknown={x["component"] for x in matrix["rows"] if x.get("disposition")=="UNKNOWN/参考边界"}
+          assert unknown=={"散斗族","替木测量边界","替木实体族"}
+          assert unknown.isdisjoint({x["component"] for x in scope})
+          print("D263_CANONICAL_RECONCILIATION_PASS",len(scope),len(refs),len(reg["pending_source_binding"]))
+          PY
+
+      - name: Generate Derived Excel and Dashboard
+        shell: bash
+        run: |
+          set -euo pipefail
+          REGISTRY="docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json"
+          REGISTRY_COMMIT="$(git log -1 --format=%H -- "$REGISTRY")"
+          python scripts/generate_wanfo_component_registry_excel.py --input "$REGISTRY" --output-dir docs/evidence/zhenguo_wanfo/derived --source-commit "$REGISTRY_COMMIT"
+          python scripts/generate_project_dashboard.py
+
+      - name: Validate Derived Excel and Dashboard
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, hashlib
+          from pathlib import Path
+          from openpyxl import load_workbook
+          reg=json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
+          p=reg["stage1_master_progress_summary"]
+          manifest=json.loads(Path("docs/evidence/zhenguo_wanfo/derived/P3_WANFO_COMPONENT_EXCEL_SYNC_MANIFEST.json").read_text(encoding="utf-8"))
+          assert manifest["record_count"]==505
+          current=Path(manifest["current_excel"])
+          assert current.exists()
+          assert hashlib.sha256(current.read_bytes()).hexdigest()==manifest["current_excel_sha256"]
+          wb=load_workbook(current,read_only=True,data_only=False)
+          ws=wb["进度总览"]
+          assert ws["B4"].value==505
+          assert ws["B6"].value==28
+          assert ws["B7"].value==28
+          assert ws["B8"].value==0
+          assert abs(float(ws["B9"].value)-1.0)<1e-9
+          assert ws["B10"].value==25
+          assert ws["B11"].value==363
+          assert ws["B12"].value==7
+          wb.close()
+          html=Path("docs/project_control/dashboard.html").read_text(encoding="utf-8")
+          for marker in ["28 / 28","100.0%","Approved Master families","下一目标：NONE","7 项"]:
+              assert marker in html, marker
+          assert "25 / 28" not in html
+          assert "89.3%" not in html
+          print("D263_DERIVED_VIEWS_PASS",manifest["current_excel_sha256"])
+          PY
+
+      - name: Validate no false new-Master target
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          matrix=json.loads(Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json").read_text(encoding="utf-8"))
+          reg=json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
+          scope=[x for x in matrix["rows"] if "Master" in str(x.get("disposition",""))]
+          pending=[]
+          for row in scope:
+              items=[x for x in reg["items"] if x.get("component")==row["component"]]
+              if not items or not all(x.get("master_coverage_status")=="APPROVED_MASTER_AVAILABLE" for x in items):
+                  pending.append(row["component"])
+          assert pending==[]
+          print("D263_NO_NEW_MASTER_REQUIRED_PASS")
+          PY
+
+      - name: Commit reconciled derived views
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -z "$(git status --porcelain -- docs/evidence/zhenguo_wanfo/derived docs/project_control/dashboard.html)" ]; then
+            echo "Derived views already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/evidence/zhenguo_wanfo/derived docs/project_control/dashboard.html
+          git diff --cached --check
+          git commit -m "D-263: sync reconciled Stage1 derived views"
+          git push origin "HEAD:${{ github.ref_name }}"
+
+      - name: Write reconciliation evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p artifacts/d263
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          reg=json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
+          p=reg["stage1_master_progress_summary"]
+          out={
+            "status":"PASS",
+            "decision_id":"D-263",
+            "master_scope_object_type_count":p["master_scope_object_type_count"],
+            "covered_master_scope_object_type_count":p["covered_master_scope_object_type_count"],
+            "master_scope_coverage_percent":p["master_completion_percent"],
+            "approved_master_family_count":p["approved_master_family_count"],
+            "pending_master_object_type_count":p["pending_master_object_type_count"],
+            "master_covered_registry_record_count":p["master_covered_registry_record_count"],
+            "pending_source_binding_count":p["pending_source_binding_count"],
+            "pending_source_binding":reg["pending_source_binding"],
+            "geometry_or_evidence_change":False,
+            "next_gate":"STAGE1_CLOSURE_READINESS_AUDIT"
+          }
+          Path("artifacts/d263/reconciliation_evidence.json").write_text(json.dumps(out,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          print("D263_RECONCILIATION_EVIDENCE_PASS")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: D263_STAGE1_MASTER_SCOPE_RECONCILIATION
+          retention-days: 30
+          if-no-files-found: error
+          path: artifacts/d263/reconciliation_evidence.json
