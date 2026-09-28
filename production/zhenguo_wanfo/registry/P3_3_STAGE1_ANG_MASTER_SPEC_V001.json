@@ -213,8 +213,8 @@
     "master_spec": "LOCKED / PRODUCT_OWNER_APPROVED / D-246",
     "task_contract": "LOCKED / PRODUCT_OWNER_APPROVED / D-248",
     "length_slope_assembly_control": "LOCKED / PRODUCT_OWNER_APPROVED / D-250",
-    "longitudinal_profile_control": "NEXT GATE / NOT YET DESIGNED",
-    "engineering_execution": "NOT AUTHORIZED",
+    "longitudinal_profile_control": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
+    "engineering_execution": "NEXT GATE / NOT AUTHORIZED",
     "formalization": "NOT AUTHORIZED",
     "catalog_v008_binding": "NOT AUTHORIZED",
     "merge": "NOT AUTHORIZED",
@@ -228,7 +228,9 @@
     "D-247",
     "D-248",
     "D-249",
-    "D-250"
+    "D-250",
+    "D-251",
+    "D-252"
   ],
   "approval": {
     "candidate_decision_id": "D-245",
@@ -273,6 +275,19 @@
     "historical_full_lengths_closed": false,
     "observed_third_fourth_projection_mean_mm": 719.5,
     "observed_vs_design_delta_mm": 0.4,
+    "engineering_execution_authorized": false
+  },
+  "longitudinal_profile_control_set": {
+    "control_id": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001_C01",
+    "path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001.json",
+    "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
+    "approval_decision_id": "D-252",
+    "family_semantic_control_sha256": "dc38ab72be1f5aef3192a48e11621a3288c422475545b56dc5e29fa0102e2ae5",
+    "tou_profile_point_count": 10,
+    "tou_control_points_sha256": "3e45e7732cf49012cbf8b5e480e76ad2fd986c4aa717dd650e3bf3f9831f7bb5",
+    "er_profile_point_count": 6,
+    "er_control_points_sha256": "c4b935c9d445414831f16d949b02ff110f3e336f88c68dd68f58d514bd172778",
+    "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_PROFILE_MEASUREMENT",
     "engineering_execution_authorized": false
   }
 }
