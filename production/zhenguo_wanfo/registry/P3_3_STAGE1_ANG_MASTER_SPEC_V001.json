@@ -1,6 +1,6 @@
 {
   "schema_version": "P3_3_STAGE1_ANG_MASTER_SPEC_V001",
-  "status": "LOCKED / PRODUCT_OWNER APPROVED / FORMALIZED ON T-041 BRANCH D-257",
+  "status": "MERGED TO MAIN / MAIN VERIFIED / D-261 / FORMAL_CLOSURE_PENDING",
   "date": "2026-09-28",
   "stage": "P3.3 V002 Stage 1",
   "source_gate": "D-244 / SOURCE READINESS + D-076 PASS WITH GEOMETRY BOUNDARY",
@@ -217,16 +217,18 @@
     "engineering_execution": "AUTHORIZED / D-253 / FIRST ARTICLE MACHINE PASS D-254",
     "formalization": "COMPLETE / D-257",
     "catalog_v008_binding": "COMPLETE / D-257 / 32 ROWS",
-    "merge": "AUTHORIZED / D-260",
+    "merge": "COMPLETE / D-261 / PR #37",
     "stage2": "NOT AUTHORIZED",
     "t018": "HOLD",
     "first_article_machine_validation": "PASS / D-254 / 90 OF 90",
     "first_article_product_owner_review": "APPROVED / D-255",
     "formalization_authorization": "AUTHORIZED / D-256",
-    "post_formalization_verification": "AUTHORIZED / D-258 / EXECUTION ACTIVE",
+    "post_formalization_verification": "PASS / D-259",
     "derived_excel_sync": "AUTHORIZED / D-258",
     "readiness_review": "PASS / D-259",
-    "ready_merge": "AUTHORIZED / D-260"
+    "ready_merge": "COMPLETE / D-260",
+    "main_verification": "PASS / D-261",
+    "formal_closure": "NEXT GATE / NOT AUTHORIZED"
   },
   "decisions": [
     "D-244",
@@ -244,7 +246,8 @@
     "D-256",
     "D-257",
     "D-258",
-    "D-260"
+    "D-260",
+    "D-261"
   ],
   "approval": {
     "candidate_decision_id": "D-245",
@@ -422,5 +425,22 @@
     "formal_closure_authorized": false,
     "stage2_authorized": false,
     "t018_resume_authorized": false
+  },
+  "merge_result": {
+    "decision_id": "D-261",
+    "authority": "D-260",
+    "pr_number": 37,
+    "merge_commit_sha": "bb6873a7edb7e3222142387613851690bd18396f",
+    "status": "MERGED / MAIN VERIFIED",
+    "main_approved_master_count": 25,
+    "main_master_completion_percent": 89.3,
+    "main_master_covered_registry_record_count": 363,
+    "registry_record_count": 505,
+    "ang_binding_count": 32,
+    "tou_ang_binding_count": 16,
+    "er_ang_binding_count": 16,
+    "current_equals_v008": true,
+    "derived_excel_synced": true,
+    "formal_closure_authorized": false
   }
 }

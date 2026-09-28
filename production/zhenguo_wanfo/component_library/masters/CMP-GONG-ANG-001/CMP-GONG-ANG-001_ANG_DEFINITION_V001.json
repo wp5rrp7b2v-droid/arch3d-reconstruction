@@ -1,7 +1,7 @@
 {
   "schema_version": "ANG_MASTER_DEFINITION_V001",
   "task_id": "T-041",
-  "status": "FORMALIZED + CATALOG/V008/CURRENT BOUND / D-257 / READY+MERGE AUTHORIZED D-260",
+  "status": "MERGED TO MAIN / MAIN VERIFIED / D-261 / FORMAL_CLOSURE_PENDING",
   "component_family_id": "CMP-GONG-ANG-001",
   "component_names_zh": [
     "头昂",
@@ -230,7 +230,9 @@
     "stage2_authorized": false,
     "t018_status": "HOLD",
     "formalization_complete": true,
-    "catalog_v008_binding_complete": true
+    "catalog_v008_binding_complete": true,
+    "merged": true,
+    "closure_complete": false
   },
   "first_article_contract": {
     "canonical_body_count": 2,
@@ -322,6 +324,18 @@
     "pr_number": 37,
     "draft_to_ready_authorized": true,
     "merge_authorized": true,
+    "formal_closure_authorized": false
+  },
+  "merge_result": {
+    "decision_id": "D-261",
+    "authority": "D-260",
+    "pr_number": 37,
+    "merge_commit_sha": "bb6873a7edb7e3222142387613851690bd18396f",
+    "status": "MERGED / MAIN VERIFIED",
+    "main_catalog_approved_master_count": 25,
+    "main_master_covered_registry_record_count": 363,
+    "current_equals_v008": true,
+    "accepted_geometry_unchanged": true,
     "formal_closure_authorized": false
   }
 }

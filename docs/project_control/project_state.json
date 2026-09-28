@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R336",
+  "state_revision": "R337",
   "last_updated": "2026-09-28",
-  "session_status": "T-041 READY+MERGE AUTHORIZED D-260 / PR #37 DRAFT→READY+MERGE AUTHORIZED / POST-FORMALIZATION PASS D-259 / FORMAL CLOSURE NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-041 PR #37 MERGED / MAIN VERIFIED D-261 / STAGE1 25 OF 28 = 89.3% / 363 COVERED / FORMAL CLOSURE NEXT / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / BRANCH 25 OF 28 / MAIN 24 OF 28 / T-041 FORMALIZED D-257 / PR #37 DRAFT / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 25 OF 28 = 89.3% / T-041 MERGED D-261 / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / BRANCH 25 OF 28 / MAIN 24 OF 28 / T-041 FORMALIZED D-257 / PR #37 DRAFT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / BRANCH 25 OF 28 / MAIN 24 OF 28 / T-041 FORMALIZED D-257 / PR #37 DRAFT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / MAIN 25 OF 28 / T-041 MERGED D-261 / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / MAIN 25 OF 28 / T-041 MERGED D-261 / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -66,15 +66,15 @@
     "engineering_id": "P3_3_ANG_MASTER_V2_V001",
     "name": "昂族 Master",
     "component": "头昂 / 二昂",
-    "status": "READY+MERGE AUTHORIZED / D-260 / PR #37",
+    "status": "MERGED TO MAIN / MAIN VERIFIED / D-261 / FORMAL_CLOSURE_PENDING",
     "branch": "codex/t041-p3-3-ang-master-v2-v001",
-    "branch_status": "ACTIVE / PR #37 DRAFT",
+    "branch_status": "MERGED / PR #37 CLOSED",
     "engineering_execution_authorized": true
   },
   "proposed_next_task": {
-    "id": "T-041-READY-MERGE",
-    "name": "T-041 PR #37 Draft→Ready + Merge",
-    "status": "AUTHORIZED / EXECUTION NEXT"
+    "id": "T-041-FORMAL-CLOSURE",
+    "name": "T-041 Formal Closure",
+    "status": "NEXT GATE / NOT AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-040",
@@ -130,7 +130,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / BRANCH 25 OF 28 / MAIN 24 OF 28 / T-041 FORMALIZED D-257 / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 25 OF 28 MASTERS APPROVED / T-041 MERGED D-261 / FORMAL CLOSURE PENDING / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -528,7 +528,7 @@
       "connector_geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
       "stage_advance": false
     },
-    "next_master_candidate": "NEXT MASTER NOT SELECTED / T-041 POST-FORMALIZATION GATES PENDING",
+    "next_master_candidate": "NEXT MASTER NOT SELECTED / T-041 FORMAL CLOSURE PENDING",
     "t033": {
       "task_id": "T-033",
       "component": "子角梁",
@@ -851,7 +851,7 @@
       "engineering_task_created": true,
       "engineering_execution_authorized": true,
       "task_contract_path": "docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md",
-      "next_gate": "PR #37 DRAFT→READY + MERGE",
+      "next_gate": "FORMAL CLOSURE",
       "length_slope_assembly_control_status": "LOCKED / PRODUCT_OWNER_APPROVED / D-250",
       "length_slope_assembly_control_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001.json",
       "longitudinal_profile_control_status": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
@@ -867,7 +867,10 @@
       "derived_excel_sync_authorized": true,
       "ready_merge_authorized": true,
       "ready_merge_authorization_decision_id": "D-260",
-      "merge_authorized": true
+      "merge_authorized": true,
+      "merge_status": "MERGED TO MAIN / MAIN VERIFIED / D-261",
+      "merge_commit_sha": "bb6873a7edb7e3222142387613851690bd18396f",
+      "main_verified": true
     },
     "t041": {
       "task_id": "T-041",
@@ -875,7 +878,7 @@
       "component": "昂族（头昂 / 二昂）",
       "component_family_id": "CMP-GONG-ANG-001",
       "master_id": "CMP-GONG-ANG-001_MASTER",
-      "status": "READY+MERGE AUTHORIZED D-260 / PR #37",
+      "status": "MERGED TO MAIN / MAIN VERIFIED / D-261 / FORMAL_CLOSURE_PENDING",
       "task_contract": "docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md",
       "registry_binding_count": 32,
       "tou_ang_count": 16,
@@ -905,7 +908,7 @@
         "reference_control_span_mm": 787.6157057855055,
         "historical_full_lengths_closed": false
       },
-      "next_gate": "PR #37 DRAFT→READY + MERGE",
+      "next_gate": "FORMAL CLOSURE",
       "gate_b": {
         "id": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001_C01",
         "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
@@ -980,7 +983,17 @@
       "shared_regression_status": "PASS / 8 OF 8",
       "dedicated_route_ownership_status": "PASS / GENERIC MASTER V2 SKIPPED AS INTENDED",
       "readiness_status": "READY_FOR_PRODUCT_OWNER_READY_MERGE_DECISION",
-      "ready_merge_authorization_decision_id": "D-260"
+      "ready_merge_authorization_decision_id": "D-260",
+      "merge_result_decision_id": "D-261",
+      "pr_number": 37,
+      "pr_status": "MERGED / CLOSED",
+      "merge_commit_sha": "bb6873a7edb7e3222142387613851690bd18396f",
+      "merged": true,
+      "main_verified": true,
+      "main_approved_master_count": 25,
+      "main_master_completion_percent": 89.3,
+      "main_master_covered_registry_record_count": 363,
+      "closure_complete": false
     }
   },
   "roof_control_audit_2026_09_17": {
@@ -1444,7 +1457,7 @@
   },
   "v008_master_progress_visibility": {
     "rule_id": "D-087",
-    "status": "ACTIVE / T-041 FORMALIZED ON BRANCH / 25 OF 28",
+    "status": "ACTIVE / MAIN 25 OF 28 / T-041 MERGED D-261",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
@@ -1464,7 +1477,7 @@
     "excel_sync_run": 36296704267,
     "excel_sync_result": "SUCCESS",
     "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure.",
-    "excel_sync_pending": true
+    "excel_sync_pending": false
   },
   "local_sync_verification_2026_09_20": {
     "status": "PASS / COMPLETE",
