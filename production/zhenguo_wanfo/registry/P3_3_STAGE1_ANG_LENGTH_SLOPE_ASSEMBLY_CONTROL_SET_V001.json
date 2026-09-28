@@ -1,0 +1,188 @@
+{
+  "schema_version": "P3_3_STAGE1_ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-250",
+  "date": "2026-09-28",
+  "control_id": "ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001_C01",
+  "task_id": "T-041",
+  "engineering_id": "P3_3_ANG_MASTER_V2_V001",
+  "master_id": "CMP-GONG-ANG-001_MASTER",
+  "source_authority": {
+    "source_id": "SRC-ZG-WF-001",
+    "canonical_pdf_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "source_role": "A1 PRIMARY ENGINEERING AUTHORITY"
+  },
+  "registry_scope": {
+    "record_count": 32,
+    "count_status": "LOCKED_DERIVED",
+    "tou_ang_count": 16,
+    "er_ang_count": 16,
+    "whole_hall_direct_inventory_claim": false,
+    "sample_to_instance_mapping": "UNKNOWN"
+  },
+  "source_dimensions": {
+    "TOU_ANG_GUANG": {
+      "value_mm": 278.4,
+      "min_mm": 269,
+      "max_mm": 287,
+      "variance": 18.66,
+      "n": 16,
+      "classification": "DIRECT_PRIMARY / OBSERVED_MEAN / FAMILY_SOURCE_VALUE",
+      "locator": "PDF p52 / printed p37 / Table 2-10"
+    },
+    "ER_ANG_OR_TOU_SINGLE_CAI_GUANG": {
+      "value_mm": 187,
+      "min_mm": 177,
+      "max_mm": 198,
+      "variance": 21.8,
+      "n": 32,
+      "classification": "DIRECT_PRIMARY / OBSERVED_MEAN / COMBINED_SOURCE_CATEGORY",
+      "locator": "PDF p52 / printed p37 / Table 2-10",
+      "note": "187.0mm is reported for 二昂并头昂单材部分; it MUST NOT be represented as an independent 16-piece ER_ANG-only observed mean."
+    },
+    "ANG_THICKNESS": {
+      "value_mm": 154,
+      "min_mm": 141,
+      "max_mm": 165,
+      "variance": 27.3,
+      "classification": "DIRECT_PRIMARY / OBSERVED_MEAN / ANG_FAMILY_COMMON_THICKNESS",
+      "locator": "PDF p53-54 / printed p38-39 / §2.2.1.4 / Table 2-11",
+      "sample_count_status": "SOURCE_INTERNAL_CONFLICT",
+      "narrative_sample_count": 34,
+      "table_sample_count": 16,
+      "policy": "The 154.0mm observed-mean conclusion is usable; the conflicting n value MUST remain unresolved and MUST NOT be silently reconciled."
+    }
+  },
+  "source_dimension_axis_mapping": {
+    "status": "LOCKED",
+    "assembly_frame": {
+      "X": "+X horizontal out-jump",
+      "Y": "+Y transverse / thickness direction",
+      "Z": "+Z vertical"
+    },
+    "member_local_frame": {
+      "U": "+U Ang longitudinal centreline",
+      "V": "+V Ang thickness",
+      "W": "+W Ang guang / section depth perpendicular to U in the assembly X-Z plane"
+    },
+    "mappings": {
+      "ANG_THICKNESS_154": "local V -> Assembly Y",
+      "TOU_ANG_GUANG_278_4": "local W / NOT direct Assembly Y width",
+      "ER_ANG_GUANG_187_0": "local W / NOT direct Assembly Y width"
+    },
+    "registry_field_semantic_warning": "V008 width_mm for Ang records is a historical registry field-name reuse; T-041 resolver must interpret it as ANG_GUANG / LOCAL_W rather than generic Y-width."
+  },
+  "report_design_triangle": {
+    "fen_mm": 15.3,
+    "horizontal_fen": 47,
+    "rise_fen": 21,
+    "run_mm": 719.1,
+    "rise_mm": 321.3,
+    "angle_deg": 24.075498255078834,
+    "centreline_span_mm": 787.6157057855055,
+    "classification": "REPORT_INFERRED / REPORT_DESIGN_LOGIC / RECONSTRUCTED_DESIGN / REPLACEABLE",
+    "locator": "PDF p78-79 / printed p63-64",
+    "direct_per_member_slope_measurement": false,
+    "original_963_design_claim": false
+  },
+  "reference_control_spans": {
+    "TOU_ANG": {
+      "span_mm": 787.6157057855055,
+      "classification": "REPORT_INFERRED / RECONSTRUCTED_DESIGN / CONTROL_SPAN_ONLY / REPLACEABLE / NOT_HISTORICAL_FULL_TIMBER_LENGTH",
+      "endpoint_policy": "RECONSTRUCTION_CUT_PLANE / BOTH ENDS",
+      "applies_to_historical_full_timber_length": false
+    },
+    "ER_ANG": {
+      "span_mm": 787.6157057855055,
+      "classification": "REPORT_INFERRED / RECONSTRUCTED_DESIGN / CONTROL_SPAN_ONLY / REPLACEABLE / NOT_HISTORICAL_FULL_TIMBER_LENGTH",
+      "endpoint_policy": "RECONSTRUCTION_CUT_PLANE / BOTH ENDS",
+      "applies_to_historical_full_timber_length": false
+    },
+    "equal_control_span_does_not_imply_equal_historical_member_length": true
+  },
+  "observed_assembly_crosscheck": {
+    "first_second_total_projection_mean_mm": 732.4,
+    "first_second_classification": "DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION / CONTEXT_ONLY_FOR_ANG_GATE_A",
+    "third_fourth_total_projection_mean_mm": 719.5,
+    "third_fourth_n": 22,
+    "third_fourth_classification": "DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION",
+    "report_design_run_mm": 719.1,
+    "ideal_vs_observed_delta_mm": 0.4,
+    "relative_delta_percent": 0.055594162612922486,
+    "policy": "719.1 and 719.5 remain separate evidence values. No forcing, clipping or replacement is permitted.",
+    "member_full_length_authority": false
+  },
+  "section_stack_crosscheck": {
+    "formula": "vertical_equivalent = guang / cos(atan(21/47))",
+    "TOU_ANG_calculated_mm": 304.92589694157243,
+    "TOU_ANG_report_mm": 305.1,
+    "ER_ANG_OR_TOU_SINGLE_CAI_calculated_mm": 204.81732301750733,
+    "ER_ANG_OR_TOU_SINGLE_CAI_report_mm": 204.9,
+    "calculated_sum_mm": 509.74321995907974,
+    "report_sum_mm": 510,
+    "machine_tolerance_mm": 0.5,
+    "classification": "REPORT_INFERRED_GEOMETRIC_CROSSCHECK / NOT_HISTORICAL_FULL_LENGTH",
+    "locator": "PDF p79 / printed p64 / Table 2-37"
+  },
+  "local_coordinate_and_datum": {
+    "canonical_body_origin": "GEOMETRIC_CENTRE_OF_REFERENCE_CONTROL_SPAN / PROJECT_MODEL_DATUM",
+    "historical_contact_datum_claim": false,
+    "building_world_placement_in_master": false,
+    "fixture_datum": "SYNTHETIC_REFERENCE_CUT_PLANE / VALIDATION_ONLY"
+  },
+  "validation_fixture": {
+    "id": "DOUBLE_ANG_ASSEMBLY_FIXTURE_VALIDATION_ONLY",
+    "canonical_asset": false,
+    "registry_binding": false,
+    "catalog_asset": false,
+    "purposes": [
+      "validate 47:21 run/rise implementation",
+      "validate Ang source-dimension axis mapping",
+      "validate 278.4/187.0 section-stack vertical-equivalent crosscheck",
+      "compare report design run 719.1 against direct observed third/fourth total projection 719.5 without forcing equality",
+      "expose illegal conversion of assembly projection into member full length"
+    ],
+    "hidden_overlap_used": false,
+    "historical_joinery_claim": false,
+    "machine_tolerance_mm": 0.5
+  },
+  "unresolved_and_deferred": [
+    "exact_tou_ang_historical_full_timber_length",
+    "exact_er_ang_historical_full_timber_length",
+    "exact_tou_ang_deep_to_single_cai_transition_location",
+    "exact_outer_ang_head_shaping",
+    "exact_inner_end_length",
+    "hidden_overlap",
+    "mortise_tenon",
+    "grooves",
+    "slots",
+    "cavities",
+    "hidden_connection_cuts",
+    "sample_to_instance_mapping",
+    "source_internal_conflict_ang_thickness_sample_count"
+  ],
+  "hard_fails": [
+    "SOURCE_GUANG_AXIS_MAPPING_CHANGED_WITHOUT_APPROVAL",
+    "ANG_154_MARKED_NON_DIRECT_AFTER_PROVENANCE_CLOSURE",
+    "ANG_154_SAMPLE_COUNT_SILENTLY_RECONCILED",
+    "ER_ANG_187_MARKED_AS_ER_ONLY_N16_MEAN",
+    "REPORT_47_21_MARKED_DIRECT",
+    "REPORT_47_21_MARKED_PROVEN_963_DESIGN",
+    "TOU_ANG_CONTROL_SPAN_MARKED_HISTORICAL_FULL_LENGTH",
+    "ER_ANG_CONTROL_SPAN_MARKED_HISTORICAL_FULL_LENGTH",
+    "719_5_USED_AS_MEMBER_FULL_LENGTH",
+    "732_4_USED_AS_MEMBER_FULL_LENGTH",
+    "719_1_FORCED_TO_EQUAL_719_5",
+    "HIDDEN_OVERLAP_INVENTED_TO_FORCE_ASSEMBLY",
+    "VALIDATION_FIXTURE_PROMOTED_TO_CANONICAL_ASSET"
+  ],
+  "control_semantic_signature_sha256": "6c9b8c5b6ee6715292df5b23b7d8b8d9fdaaf4be7d1558631fea5883528b7096",
+  "signature_scope": "Selected semantic control payload: identity/scope, source dimensions, axis mapping, design triangle, reference control spans, observed crosscheck, section-stack crosscheck.",
+  "signature_canonicalization": "UTF-8 JSON / recursively sorted object keys / compact separators",
+  "candidate_decision_id": "D-249",
+  "approval_decision_id": "D-250",
+  "product_owner_approved": true,
+  "locked": true,
+  "executable_as_gate_input": true,
+  "engineering_execution_authorized": false,
+  "next_gate": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V0.1"
+}
