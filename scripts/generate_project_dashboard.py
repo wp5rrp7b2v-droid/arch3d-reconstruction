@@ -29,7 +29,14 @@ assert progress["approved_master_count"] == catalog["approved_master_count"]
 assert progress["covered_master_scope_object_type_count"] == progress["master_scope_object_type_count"] - progress["pending_master_object_type_count"]
 pending = [row for row in scope if row["component"] not in approved_set]
 pending = sorted(pending, key=lambda row: (999 if row.get("priority") is None else row["priority"], row["component"]))
-next_target = pending[0]["component"] if pending else "NONE"
+master_next_target = pending[0]["component"] if pending else None
+project_next = state.get("proposed_next_task", {})
+next_target = master_next_target or project_next.get("name") or "NONE"
+next_detail = (
+    "先完成 D-099 A1/A2 资料核查 + D-076 视觉/形制 Gate。通过前不创建新 T-task，不运行 Blender。"
+    if master_next_target
+    else state.get("next_action", "")
+)
 next_batch = [row["component"] for row in pending if (row.get("priority") or 999) <= 14]
 later_batch = [row["component"] for row in pending if (row.get("priority") or 999) >= 15]
 
@@ -55,6 +62,13 @@ pct = progress["master_completion_percent"]
 pct_text = f"{float(pct):.1f}"
 last = state.get("last_completed_task", {})
 pending_sources = reg.get("pending_source_binding", [])
+daily_close_keys = sorted(k for k in state if k.startswith("daily_close_"))
+latest_daily_close = state.get(daily_close_keys[-1], {}) if daily_close_keys else {}
+daily_close_status = latest_daily_close.get("status", "")
+daily_close_pill = (
+    '<span class="pill ok">Daily Close %s</span>' % escape(daily_close_status)
+    if daily_close_status else ""
+)
 
 html = """<!doctype html>
 <html lang="zh-CN">
@@ -90,7 +104,7 @@ h1{font-size:30px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 14px}h3{font-siz
 <div class="node done">P3.2<br><strong>✓ CLOSED</strong></div><div class="arrow">→</div>
 <div class="node active">P3.3 构件驱动整殿重建<br><strong>ACTIVE</strong></div>
 </div>
-<div class="statusline"><span class="pill ok">当前主线无 Blocker</span><span class="pill warn">P3.3｜Stage 1 ACTIVE</span><span class="pill hold">T-018 HOLD 至 Stage 6 再决策</span></div>
+<div class="statusline"><span class="pill ok">当前主线无 Blocker</span><span class="pill warn">P3.3｜Stage 1 ACTIVE</span><span class="pill hold">T-018 HOLD 至 Stage 6 再决策</span>%s</div>
 </section>
 
 <div class="grid">
@@ -103,7 +117,7 @@ h1{font-size:30px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 14px}h3{font-siz
 <div class="grid">
 <section class="card"><h2>当前焦点与下一里程碑</h2>
 <div class="callout okbox"><strong>刚完成：%s｜%s</strong><br><span class="small">%s</span></div>
-<div class="callout" style="margin-top:12px"><strong>下一目标：%s</strong><br><span class="small">先完成 D-099 A1/A2 资料核查 + D-076 视觉/形制 Gate。通过前不创建新 T-task，不运行 Blender。</span></div></section>
+<div class="callout" style="margin-top:12px"><strong>下一目标：%s</strong><br><span class="small">%s</span></div></section>
 <section class="card"><h2>风险 / HOLD / 待补证据</h2><div class="kv">
 <div>Active blocker</div><div><strong>NONE</strong></div><div>T-018</div><div>HOLD；Stage 6 再决定 rebaseline 或 supersede</div>
 <div>Pending source binding</div><div>%s 项：%s</div><div>事实主权</div><div>V008 Component Registry JSON</div><div>Master 主权</div><div>Stage1 Component Master Catalog</div><div>Excel</div><div>DERIVED_VIEW，不可覆盖 JSON</div>
@@ -120,16 +134,16 @@ h1{font-size:30px;margin:8px 0 4px}h2{font-size:19px;margin:0 0 14px}h3{font-siz
 <div class="metric"><h3>不再堆在首页</h3><span class="small">Run ID · SHA · PR Patch · Review Patch · validator 逐项日志</span></div>
 <div class="metric"><h3>需要追溯时</h3><span class="small">进入 Project Control · Task Lifecycle · Decision Log · Evidence / Registry</span></div>
 </div></section>
-<div class="footer">Dashboard v200 · DERIVED_VISUALIZATION · %s / D-105 · V008 · Catalog %s approved · Dashboard 本身不是事实主权源。</div>
+<div class="footer">Dashboard v201 · DERIVED_VISUALIZATION · State %s · V008 · Catalog %s approved · Dashboard 本身不是事实主权源。</div>
 </main></body></html>
 """ % (
-    escape(state["state_revision"]), escape(progress["snapshot_date"]), stage_html, pct_text,
+    escape(state["state_revision"]), escape(progress["snapshot_date"]), daily_close_pill, stage_html, pct_text,
     progress["covered_master_scope_object_type_count"], progress["master_scope_object_type_count"], pct_text, pct_text,
     progress["pending_master_object_type_count"], progress["approved_master_family_count"], progress["master_covered_registry_record_count"], progress["registry_record_count"],
     escape(last.get("id","NONE")), escape(last.get("component","")), escape(last.get("status","")),
-    escape(next_target), len(pending_sources), escape("、".join(pending_sources)),
+    escape(next_target), escape(next_detail), len(pending_sources), escape("、".join(pending_sources)),
     len(approved), chips([x + " ✓" for x in approved], "done"),
-    len(next_batch), chips(([next_target + " ← NEXT"] + [x for x in next_batch if x != next_target]), "next"),
+    len(next_batch), chips((([master_next_target + " ← NEXT"] if master_next_target else []) + [x for x in next_batch if x != master_next_target]), "next"),
     len(later_batch), chips(later_batch, "future"),
     escape(state["state_revision"]), catalog["approved_master_count"]
 )

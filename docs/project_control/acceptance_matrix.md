@@ -1379,3 +1379,37 @@ Boundary retained:
 - Derived Excel + Dashboard reconciliation CI: **PASS / Run 36389355533**.
 - Next gate: **Stage1 Closure Readiness Audit**.
 
+
+
+### D-264 Stage1 Reconciliation Main Verification
+
+- D-263 reconciliation PR #38: **MERGED / MAIN VERIFIED**.
+- Merge commit: `bf24eae4855c45fc960ccbf306bdcac9e2d34a6c`.
+- Stage1 Master-scope object types: **28 / 28 = 100%**.
+- Approved Master families: **25**.
+- Pending Master-scope object types: **0**.
+- Master-covered Registry records: **363 / 505**.
+- PENDING_SOURCE_BINDING: **7**.
+- CURRENT == V008: **PASS / byte-equivalent**.
+- Derived Excel: **SYNCED / Run 36389526819 / PASS**.
+- Dashboard reconciliation: **Run 36389526921 / PASS**.
+- Geometry/evidence/Master approval/Registry binding/canonical binary changes: **NONE**.
+- Next gate: **P3.3 Stage1 Closure Readiness Audit**.
+- Stage2: **NOT AUTHORIZED**.
+- T-018: **HOLD**.
+
+### D-266 2026-09-28 Daily Close Main Verification
+
+- PR #39: **MERGED / MAIN VERIFIED**.
+- Merge commit: `8219dba0944203cacbc5393474900d8a25820959`.
+- Project State: **R342**.
+- Stage1 Master-scope object types: **28 / 28 = 100%**.
+- Approved Master families: **25**.
+- Master-covered Registry records: **363 / 505**.
+- PENDING_SOURCE_BINDING: **7**.
+- Active engineering T-task: **NONE**.
+- Stage1 Closure Readiness Audit: **NOT STARTED / NEXT SESSION**.
+- T-018: **HOLD**.
+- Stage2: **NOT AUTHORIZED**.
+- Local sync: **NOT CHECKED**.
+- Daily Close: **COMPLETE / MAIN VERIFIED**.
