@@ -204,9 +204,9 @@
   "gates": {
     "source_readiness": "PASS WITH GEOMETRY BOUNDARY / D-244",
     "master_spec": "LOCKED / PRODUCT_OWNER_APPROVED / D-246",
-    "task_contract": "NEXT COMPLETE STEP / NOT YET DESIGNED",
-    "length_slope_assembly_control": "REQUIRED / NOT YET DESIGNED",
-    "longitudinal_profile_control": "REQUIRED / NOT YET DESIGNED",
+    "task_contract": "LOCKED / PRODUCT_OWNER_APPROVED / D-248",
+    "length_slope_assembly_control": "NEXT GATE / NOT YET DESIGNED",
+    "longitudinal_profile_control": "NOT YET DESIGNED",
     "engineering_execution": "NOT AUTHORIZED",
     "formalization": "NOT AUTHORIZED",
     "catalog_v008_binding": "NOT AUTHORIZED",
@@ -217,7 +217,9 @@
   "decisions": [
     "D-244",
     "D-245",
-    "D-246"
+    "D-246",
+    "D-247",
+    "D-248"
   ],
   "approval": {
     "candidate_decision_id": "D-245",
@@ -227,6 +229,20 @@
     "approval_date": "2026-09-28",
     "note": "V0.1 locked with one Ang Master family, two non-collapsible variants, 32 LOCKED_DERIVED V008 bindings, explicit 154mm provenance reconciliation requirement, and two mandatory independent pre-engineering control gates."
   },
-  "engineering_task_created": false,
-  "engineering_execution_authorized": false
+  "engineering_task_created": true,
+  "engineering_execution_authorized": false,
+  "task_contract": {
+    "task_id": "T-041",
+    "engineering_id": "P3_3_ANG_MASTER_V2_V001",
+    "path": "docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md",
+    "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-248",
+    "decision_id": "D-248",
+    "engineering_task_created": true,
+    "engineering_execution_authorized": false,
+    "pre_execution_gate_sequence": [
+      "ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V0.1",
+      "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V0.1",
+      "ENGINEERING_EXECUTION_AUTHORIZATION"
+    ]
+  }
 }
