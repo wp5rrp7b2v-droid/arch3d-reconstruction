@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R322",
-  "last_updated": "2026-09-27",
-  "session_status": "T-040 CLOSED D-243 / MAIN 24 OF 28 = 85.7% / 331 COVERED / NO ACTIVE ENGINEERING T-TASK / NEXT CANDIDATE 昂族 SOURCE READINESS / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "state_revision": "R323",
+  "last_updated": "2026-09-28",
+  "session_status": "ANG FAMILY SOURCE READINESS + D-076 PASS D-244 / MAIN 24 OF 28 = 85.7% / 331 COVERED / NO ACTIVE ENGINEERING T-TASK / NEXT ANG FAMILY MASTER SPEC V0.1 / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 24 OF 28 / T-040 CLOSED D-243 / NO ACTIVE ENGINEERING T-TASK / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 24 OF 28 / ANG SOURCE READINESS PASS D-244 / NO ACTIVE ENGINEERING T-TASK / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 24 OF 28 / T-040 CLOSED D-243 / NEXT CANDIDATE 昂族 / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 24 OF 28 / T-040 CLOSED D-243 / NEXT CANDIDATE 昂族 / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / MAIN 24 OF 28 / ANG SOURCE READINESS PASS D-244 / MASTER SPEC V0.1 NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / MAIN 24 OF 28 / ANG SOURCE READINESS PASS D-244 / MASTER SPEC V0.1 NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -67,28 +67,27 @@
     "status": "NO ACTIVE ENGINEERING T-TASK"
   },
   "proposed_next_task": {
-    "id": "ANG-FAMILY-SOURCE-READINESS",
-    "name": "昂族（头昂 / 二昂） Source Readiness + D-076 visual/form gate",
-    "status": "NEXT STAGE1 CANDIDATE / PRIORITY 19 / NOT STARTED / NO ENGINEERING T-TASK"
+    "id": "ANG-FAMILY-MASTER-SPEC",
+    "name": "昂族（头昂 / 二昂） Master Spec V0.1",
+    "status": "SOURCE READINESS + D-076 PASS / D-244 / DESIGN NEXT / NO ENGINEERING T-TASK"
   },
   "last_completed_task": {
-    "id": "T-039",
-    "engineering_id": "P3_3_LINGGONG_MASTER_V2_V001",
-    "component": "令栱",
-    "status": "CLOSED / PRODUCT OWNER APPROVED / D-218+D-224 / PR #35 MERGED",
-    "github_pr_number": 35,
-    "merge_commit": "e1726096e1d9bb936f24dd786d357220b52942b8",
-    "approved_actions_run": 36304085862,
-    "approved_validation": "43/43 PASS",
-    "approved_first_article_artifact_id": 10927005772,
-    "canonical_blend_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
-    "family_semantic_signature": "d72240c0857888198b800f85e8df056a4189ac893500472b32657979e46c75f7",
-    "geometry_signature": "e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61",
-    "final_regression_run": 36305841159,
-    "final_regression_result": "SUCCESS",
-    "final_regression_validation": "43/43 PASS",
-    "post_formalization_artifact_id": 10927705970,
-    "closure_decision_id": "D-224"
+    "id": "T-040",
+    "engineering_id": "P3_3_HUAGONG_MASTER_V2_V001",
+    "component": "华栱",
+    "status": "CLOSED / PRODUCT OWNER APPROVED / D-236+D-243 / PR #36 MERGED / MAIN VERIFIED",
+    "github_pr_number": 36,
+    "merge_commit": "783d6ce89b14a07a580c0744dd63e848a152690c",
+    "approved_actions_run": 36317889355,
+    "approved_validation": "76/76 PASS",
+    "approved_first_article_artifact_id": 10930899677,
+    "canonical_blend_sha256": "0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e",
+    "family_semantic_signature": "0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77",
+    "jump_1_geometry_signature": "565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a",
+    "jump_2_geometry_signature": "451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001",
+    "post_formalization_run": 36323489326,
+    "post_formalization_artifact_id": 10933900871,
+    "closure_decision_id": "D-243"
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -126,7 +125,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 24 OF 28 MASTERS APPROVED / T-040 CLOSED D-243 / NO ACTIVE ENGINEERING T-TASK / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 24 OF 28 MASTERS APPROVED / ANG SOURCE READINESS PASS D-244 / NO ACTIVE ENGINEERING T-TASK / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -524,7 +523,7 @@
       "connector_geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
       "stage_advance": false
     },
-    "next_master_candidate": "补间铺作底斗 / PRIORITY 14 / SOURCE READINESS + D-076 NEXT / NO T-TASK",
+    "next_master_candidate": "昂族（头昂 / 二昂） / PRIORITY 19 / SOURCE READINESS + D-076 PASS D-244 / MASTER SPEC V0.1 NEXT / NO T-TASK",
     "t033": {
       "task_id": "T-033",
       "component": "子角梁",
@@ -777,6 +776,32 @@
       "artifact_id": 10922436059,
       "artifact_digest": "sha256:4ec79019d67d57104a69ea139d8dee5688ff781be4f880af924b5edd14a85736",
       "review_render_fix_decision_id": "D-184"
+    },
+    "ang_family_source_readiness": {
+      "status": "PASS WITH GEOMETRY BOUNDARY / PRODUCT OWNER APPROVED / D-244",
+      "priority": 19,
+      "scope": "昂族（头昂 / 二昂）",
+      "source_authority": "SRC-ZG-WF-001 / A1 PRIMARY ENGINEERING AUTHORITY",
+      "source_path": "docs/evidence/zhenguo_wanfo/source_primary/SRC-ZG-WF-001_山西平遥镇国寺万佛殿与天王殿精细测绘报告.pdf",
+      "direct_topology": "七铺作、双杪双下昂",
+      "observed_combined_projection_mm": {
+        "first_second_jump_mean": 732.4,
+        "third_fourth_jump_mean": 719.5
+      },
+      "report_inferred_ang_triangle_fen": {
+        "horizontal": 47,
+        "rise": 21
+      },
+      "evidence_boundary": [
+        "732.4mm and 719.5mm are assembly-level combined jump projections, not individual Ang member lengths.",
+        "47fen horizontal / 21fen rise is REPORT_INFERRED design logic, not per-member direct measurement.",
+        "Individual 头昂/二昂 full timber length, exact profile/end treatment, hidden overlap and joinery remain UNRESOLVED/DEFERRED.",
+        "Unresolved geometry is non-blocking under RC-023 only when kept replaceable and explicitly non-historicized."
+      ],
+      "d076_blocker": false,
+      "next_step": "ANG FAMILY MASTER SPEC V0.1 DESIGN ONLY",
+      "engineering_task_created": false,
+      "engineering_execution_authorized": false
     }
   },
   "roof_control_audit_2026_09_17": {
