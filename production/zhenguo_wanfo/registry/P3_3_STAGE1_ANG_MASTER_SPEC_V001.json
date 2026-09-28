@@ -215,14 +215,14 @@
     "length_slope_assembly_control": "LOCKED / PRODUCT_OWNER_APPROVED / D-250",
     "longitudinal_profile_control": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
     "engineering_execution": "AUTHORIZED / D-253 / FIRST ARTICLE MACHINE PASS D-254",
-    "formalization": "NOT AUTHORIZED",
-    "catalog_v008_binding": "NOT AUTHORIZED",
+    "formalization": "AUTHORIZED / D-256 / EXECUTION PENDING",
+    "catalog_v008_binding": "AUTHORIZED / D-256 / EXECUTION PENDING",
     "merge": "NOT AUTHORIZED",
     "stage2": "NOT AUTHORIZED",
     "t018": "HOLD",
     "first_article_machine_validation": "PASS / D-254 / 90 OF 90",
     "first_article_product_owner_review": "APPROVED / D-255",
-    "formalization_authorization": "NEXT GATE / NOT AUTHORIZED"
+    "formalization_authorization": "AUTHORIZED / D-256"
   },
   "decisions": [
     "D-244",
@@ -236,7 +236,8 @@
     "D-252",
     "D-253",
     "D-254",
-    "D-255"
+    "D-255",
+    "D-256"
   ],
   "approval": {
     "candidate_decision_id": "D-245",
@@ -316,7 +317,7 @@
     "blender_version": "4.5.13 LTS",
     "check_count": 90,
     "product_owner_approved": true,
-    "formalization_authorized": false,
+    "formalization_authorized": true,
     "product_owner_approval_decision_id": "D-255"
   },
   "first_article_approval": {
@@ -333,6 +334,35 @@
       "ER_ANG": "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678"
     },
     "review_board_sha256": "a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65",
-    "formalization_authorized": false
+    "formalization_authorized": true
+  },
+  "formalization_authorization": {
+    "decision_id": "D-256",
+    "status": "AUTHORIZED / EXECUTION PENDING",
+    "product_owner_authorized": true,
+    "first_article_approval_decision_id": "D-255",
+    "accepted_run_id": 36373958970,
+    "accepted_artifact_id": 10950620532,
+    "accepted_artifact_digest": "sha256:a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e",
+    "accepted_blend_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+    "accepted_semantic_sha256": "d35c0e93eaeac35ab3b25bd60fc05d1efc91a8dfeac92c13d92f4efd15b48321",
+    "accepted_validation_sha256": "ec9048434cc1bcfdec18be4aff4d21374adf43719a4c9042ec558e66efa81dcb",
+    "accepted_review_board_sha256": "a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65",
+    "accepted_family_semantic_signature": "a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29",
+    "accepted_geometry_signatures": {
+      "TOU_ANG": "61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250",
+      "ER_ANG": "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678"
+    },
+    "authorized_registry_bindings": {
+      "TOU_ANG": 16,
+      "ER_ANG": 16,
+      "total": 32,
+      "count_status": "LOCKED_DERIVED"
+    },
+    "derived_excel_sync_authorized": false,
+    "ready_merge_authorized": false,
+    "closure_authorized": false,
+    "stage2_authorized": false,
+    "t018_resume_authorized": false
   }
 }
