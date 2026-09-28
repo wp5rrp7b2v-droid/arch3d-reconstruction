@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R341",
+  "state_revision": "R342",
   "last_updated": "2026-09-28",
-  "session_status": "2026-09-28 DAILY CLOSE D-265 APPROVED FOR MERGE / D-264 STAGE1 MASTER-SCOPE RECONCILIATION MAIN VERIFIED / 28 OF 28 MASTER-SCOPE OBJECT TYPES COVERED = 100% / 25 APPROVED MASTER FAMILIES / 363 COVERED REGISTRY RECORDS / 7 PENDING_SOURCE_BINDING / NO ACTIVE ENGINEERING T-TASK / STAGE1 CLOSURE READINESS AUDIT NOT STARTED AND DEFERRED TO NEXT SESSION / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "2026-09-28 DAILY CLOSE COMPLETE / D-266 / PR #39 MERGED / MAIN VERIFIED / STAGE1 MASTER-SCOPE 28 OF 28 = 100% / 25 APPROVED MASTER FAMILIES / 363 COVERED REGISTRY RECORDS / 7 PENDING_SOURCE_BINDING / NO ACTIVE ENGINEERING T-TASK / STAGE1 CLOSURE READINESS AUDIT NEXT SESSION / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -3095,7 +3095,7 @@
   },
   "daily_close_2026_09_28": {
     "decision_id": "D-265",
-    "status": "PRODUCT OWNER APPROVED / PR #39 READY+MERGE AUTHORIZED / MAIN VERIFICATION REQUIRED",
+    "status": "COMPLETE / PR #39 MERGED / MAIN VERIFIED",
     "canonical_main_base": "4010d420b6486950dd16c515a0e37e5dffd602b4",
     "stage1_master_scope_coverage": "28/28 = 100%",
     "approved_master_family_count": 25,
@@ -3110,6 +3110,10 @@
     "authority_change": false,
     "geometry_change": false,
     "evidence_change": false,
-    "registry_binding_change": false
+    "registry_binding_change": false,
+    "main_verification_decision_id": "D-266",
+    "pr_number": 39,
+    "merge_commit_sha": "8219dba0944203cacbc5393474900d8a25820959",
+    "main_verified": true
   }
 }
