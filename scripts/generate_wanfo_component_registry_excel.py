@@ -356,8 +356,14 @@ def main() -> int:
     progress = registry.get("stage1_master_progress_summary", {})
     if check["进度总览"]["B4"].value != progress.get("registry_record_count"):
         raise SystemExit("FAIL_CLOSED: overview registry count mismatch")
-    if check["进度总览"]["B7"].value != progress.get("approved_master_count"):
-        raise SystemExit("FAIL_CLOSED: overview approved Master count mismatch")
+    if check["进度总览"]["B7"].value != progress.get("covered_master_scope_object_type_count"):
+        raise SystemExit("FAIL_CLOSED: overview covered Master-scope type count mismatch")
+    if check["进度总览"]["B8"].value != progress.get("pending_master_object_type_count"):
+        raise SystemExit("FAIL_CLOSED: overview pending Master-scope type count mismatch")
+    if check["进度总览"]["B10"].value != progress.get("approved_master_family_count"):
+        raise SystemExit("FAIL_CLOSED: overview approved Master family count mismatch")
+    if check["进度总览"]["B12"].value != progress.get("pending_source_binding_count"):
+        raise SystemExit("FAIL_CLOSED: overview pending source binding count mismatch")
     check.close()
     if rows != len(registry.get("items", [])):
         raise SystemExit("FAIL_CLOSED: generated row count mismatch")
