@@ -98,9 +98,16 @@
   "registry_existing_dimension_reconciliation": {
     "thickness_mm": 154,
     "current_registry_presence": true,
-    "master_spec_classification": "REGISTRY_EXISTING / PROVENANCE_RECONCILIATION_REQUIRED",
-    "direct_ang_specific_source_binding_closed": false,
-    "policy": "154mm must not be promoted to DIRECT_PRIMARY for the Ang family until source lineage is explicitly reconciled."
+    "status": "PROVENANCE RECONCILED / D-250",
+    "direct_ang_specific_source_binding_closed": true,
+    "classification": "DIRECT_PRIMARY / OBSERVED_MEAN / ANG_FAMILY_COMMON_THICKNESS",
+    "source_locator": "PDF p53-54 / printed p38-39 / §2.2.1.4 / Table 2-11",
+    "source_internal_sample_count_conflict": {
+      "narrative_sample_count": 34,
+      "table_sample_count": 16,
+      "status": "UNRESOLVED / MUST NOT BE SILENTLY RECONCILED"
+    },
+    "policy": "154.0mm may be used as direct Ang-family common thickness. The source-internal n=34 versus n=16 conflict remains explicit and does not authorize inventing a reconciled sample count."
   },
   "geometry_policy": {
     "geometry_mode": "LONGITUDINAL_PROFILE_DRIVEN",
@@ -205,8 +212,8 @@
     "source_readiness": "PASS WITH GEOMETRY BOUNDARY / D-244",
     "master_spec": "LOCKED / PRODUCT_OWNER_APPROVED / D-246",
     "task_contract": "LOCKED / PRODUCT_OWNER_APPROVED / D-248",
-    "length_slope_assembly_control": "NEXT GATE / NOT YET DESIGNED",
-    "longitudinal_profile_control": "NOT YET DESIGNED",
+    "length_slope_assembly_control": "LOCKED / PRODUCT_OWNER_APPROVED / D-250",
+    "longitudinal_profile_control": "NEXT GATE / NOT YET DESIGNED",
     "engineering_execution": "NOT AUTHORIZED",
     "formalization": "NOT AUTHORIZED",
     "catalog_v008_binding": "NOT AUTHORIZED",
@@ -219,7 +226,9 @@
     "D-245",
     "D-246",
     "D-247",
-    "D-248"
+    "D-248",
+    "D-249",
+    "D-250"
   ],
   "approval": {
     "candidate_decision_id": "D-245",
@@ -244,5 +253,26 @@
       "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V0.1",
       "ENGINEERING_EXECUTION_AUTHORIZATION"
     ]
+  },
+  "length_slope_assembly_control_set": {
+    "control_id": "ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001_C01",
+    "path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001.json",
+    "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-250",
+    "approval_decision_id": "D-250",
+    "semantic_signature_sha256": "6c9b8c5b6ee6715292df5b23b7d8b8d9fdaaf4be7d1558631fea5883528b7096",
+    "tou_ang_guang_mm": 278.4,
+    "er_ang_or_tou_single_cai_guang_mm": 187,
+    "ang_thickness_mm": 154,
+    "ang_thickness_classification": "DIRECT_PRIMARY / OBSERVED_MEAN / ANG_FAMILY_COMMON_THICKNESS",
+    "thickness_sample_count_status": "SOURCE_INTERNAL_CONFLICT / narrative=34 / table=16",
+    "source_dimension_axis_mapping": "LOCKED",
+    "design_run_mm": 719.1,
+    "design_rise_mm": 321.3,
+    "design_angle_deg": 24.075498255078834,
+    "reference_control_span_mm": 787.6157057855055,
+    "historical_full_lengths_closed": false,
+    "observed_third_fourth_projection_mean_mm": 719.5,
+    "observed_vs_design_delta_mm": 0.4,
+    "engineering_execution_authorized": false
   }
 }
