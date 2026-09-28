@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R330",
+  "state_revision": "R331",
   "last_updated": "2026-09-28",
-  "session_status": "T-041 FIRST ARTICLE MACHINE PASS D-254 / 90 OF 90 / ARTIFACT 10950620532 / PRODUCT OWNER REVIEW NEXT / FORMALIZATION NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-041 FIRST ARTICLE PRODUCT OWNER APPROVED D-255 / FORMALIZATION AUTHORIZATION NEXT / CATALOG-V008 BINDING NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-041",
     "name": "P3_3_ANG_MASTER_V2_V001",
-    "status": "FIRST ARTICLE MACHINE PASS / D-254 / PRODUCT OWNER REVIEW NEXT"
+    "status": "FIRST ARTICLE PRODUCT OWNER APPROVED / D-255 / FORMALIZATION AUTHORIZATION NEXT"
   },
   "proposed_next_task": {
-    "id": "T-041-FIRST-ARTICLE-PO-REVIEW",
-    "name": "T-041 Product Owner First Article Review",
-    "status": "NEXT GATE / NOT YET APPROVED"
+    "id": "T-041-FORMALIZATION-AUTHORIZATION",
+    "name": "T-041 Formalization Authorization",
+    "status": "NEXT GATE / NOT AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-040",
@@ -125,7 +125,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 24 OF 28 MASTERS APPROVED / T-041 FIRST ARTICLE MACHINE PASS D-254 / PO REVIEW NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 24 OF 28 MASTERS APPROVED / T-041 FIRST ARTICLE PO APPROVED D-255 / FORMALIZATION AUTHORIZATION NEXT / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -860,7 +860,7 @@
       "component": "昂族（头昂 / 二昂）",
       "component_family_id": "CMP-GONG-ANG-001",
       "master_id": "CMP-GONG-ANG-001_MASTER",
-      "status": "FIRST ARTICLE MACHINE PASS D-254 / 90 OF 90 / PO REVIEW NEXT",
+      "status": "FIRST ARTICLE PRODUCT OWNER APPROVED D-255 / FORMALIZATION AUTHORIZATION NEXT",
       "task_contract": "docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md",
       "registry_binding_count": 32,
       "tou_ang_count": 16,
@@ -890,7 +890,7 @@
         "reference_control_span_mm": 787.6157057855055,
         "historical_full_lengths_closed": false
       },
-      "next_gate": "PRODUCT OWNER FIRST ARTICLE REVIEW",
+      "next_gate": "FORMALIZATION AUTHORIZATION",
       "gate_b": {
         "id": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001_C01",
         "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
@@ -916,7 +916,16 @@
         "er_geometry_signature": "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678",
         "review_board_sha256": "a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65",
         "check_count": 90,
-        "product_owner_approved": false
+        "product_owner_approved": true,
+        "product_owner_approval_decision_id": "D-255"
+      },
+      "first_article_product_owner_approval": {
+        "decision_id": "D-255",
+        "status": "APPROVED",
+        "run_id": 36373958970,
+        "artifact_id": 10950620532,
+        "canonical_blend_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+        "family_semantic_signature": "a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29"
       }
     }
   },
