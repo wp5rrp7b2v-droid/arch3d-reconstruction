@@ -16,7 +16,7 @@ def stable(value):
     return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")).hexdigest()
 
 def quantize_vertices(vertices):
-    return [[round(float(x), 6), round(float(y), 6), round(float(z), 6)] for x, y, z in vertices]
+    return [[round(float(x), 4), round(float(y), 4), round(float(z), 4)] for x, y, z in vertices]
 
 def mesh_payload(profile_uw, thickness):
     """Map member-local U/V/W => Blender X/Y/Z and extrude profile through V."""
