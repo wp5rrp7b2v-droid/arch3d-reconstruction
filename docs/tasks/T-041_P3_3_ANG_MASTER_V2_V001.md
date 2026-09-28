@@ -836,3 +836,51 @@ D-255 does **not** itself authorize:
 Next gate:
 
 `FORMALIZATION AUTHORIZATION`.
+
+
+## 23. Formalization Authorization｜D-256
+
+Product Owner locked Formalization Authorization Candidate 01 and explicitly authorized T-041 Formalization + Catalog/V008/CURRENT binding.
+
+Accepted immutable First Article inputs:
+
+- D-255 Product Owner approval;
+- Run `36373958970`;
+- Artifact `10950620532`;
+- artifact digest `sha256:a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e`;
+- canonical blend SHA-256 `7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8`;
+- semantic SHA-256 `d35c0e93eaeac35ab3b25bd60fc05d1efc91a8dfeac92c13d92f4efd15b48321`;
+- validation SHA-256 `ec9048434cc1bcfdec18be4aff4d21374adf43719a4c9042ec558e66efa81dcb`;
+- review board SHA-256 `a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65`;
+- family semantic signature `a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29`;
+- TOU_ANG geometry signature `61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250`;
+- ER_ANG geometry signature `b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678`.
+
+Authorized binding scope:
+
+- 头昂 16 current V008 `LOCKED_DERIVED` records -> `TOU_ANG`;
+- 二昂 16 current V008 `LOCKED_DERIVED` records -> `ER_ANG`;
+- total = 32;
+- all bind to `CMP-GONG-ANG-001_MASTER`;
+- `count_status` remains `LOCKED_DERIVED`;
+- 32 MUST NOT become a direct historical whole-hall count;
+- historical standalone full lengths remain `UNRESOLVED`;
+- Gate-A synthetic control span MUST NOT propagate as per-instance historical length.
+
+Authorized formal package:
+
+- Definition;
+- Semantic;
+- Validation;
+- Review Board;
+- Master Catalog entry;
+- V008 and CURRENT binding;
+- Project Control formalization result.
+
+D-256 does NOT authorize:
+- Derived Excel synchronization;
+- post-formalization Ready/Merge;
+- merge;
+- formal closure;
+- Stage2;
+- T-018 resume.
