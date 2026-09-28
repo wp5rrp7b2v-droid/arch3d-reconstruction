@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R339",
+  "state_revision": "R340",
   "last_updated": "2026-09-28",
-  "session_status": "STAGE1 MASTER SCOPE RECONCILIATION D-263 / 28 OF 28 MASTER-SCOPE OBJECT TYPES COVERED = 100% / 25 APPROVED MASTER FAMILIES / 363 COVERED REGISTRY RECORDS / 7 PENDING_SOURCE_BINDING / NO ACTIVE ENGINEERING T-TASK / STAGE1 CLOSURE READINESS AUDIT NEXT / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "STAGE1 MASTER SCOPE RECONCILED + MAIN VERIFIED D-264 / 28 OF 28 MASTER-SCOPE OBJECT TYPES COVERED = 100% / 25 APPROVED MASTER FAMILIES / 363 COVERED REGISTRY RECORDS / 7 PENDING_SOURCE_BINDING / NO ACTIVE ENGINEERING T-TASK / STAGE1 CLOSURE READINESS AUDIT NEXT / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -121,7 +121,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 MASTER-SCOPE COVERAGE COMPLETE 28 OF 28 = 100% / 25 APPROVED MASTER FAMILIES / NO ACTIVE ENGINEERING T-TASK / CLOSURE READINESS AUDIT NEXT / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 MASTER-SCOPE COVERAGE COMPLETE 28 OF 28 = 100% / 25 APPROVED MASTER FAMILIES / D-264 MAIN VERIFIED / CLOSURE READINESS AUDIT NEXT / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -1451,8 +1451,8 @@
     "no_unrecorded_merge": true
   },
   "v008_master_progress_visibility": {
-    "rule_id": "D-087 / RECONCILED D-263",
-    "status": "ACTIVE / MASTER-SCOPE COVERAGE 28 OF 28 = 100% / 25 APPROVED MASTER FAMILIES",
+    "rule_id": "D-087 / RECONCILED D-263 / MAIN VERIFIED D-264",
+    "status": "ACTIVE / MAIN VERIFIED / MASTER-SCOPE COVERAGE 28 OF 28 = 100% / 25 APPROVED MASTER FAMILIES",
     "registry_version": "V008",
     "registry_record_count": 505,
     "registered_object_type_count": 66,
@@ -1468,14 +1468,18 @@
       "master_reference when approved"
     ],
     "approval_authority": "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json",
-    "excel_generator_version": "1.0.2",
-    "excel_sync_run": 36296704267,
+    "excel_generator_version": "1.0.3",
+    "excel_sync_run": 36389526819,
     "excel_sync_result": "SUCCESS",
     "future_closure_rule": "Every newly approved Master must update V008/CURRENT + derived Excel before record closure.",
-    "excel_sync_pending": true,
+    "excel_sync_pending": false,
     "covered_master_scope_object_type_count": 28,
     "approved_master_family_count": 25,
-    "metric_semantics": "28/28 is object-type coverage; 25 is approved Master family count. Family count MUST NOT be divided by object-type scope count."
+    "metric_semantics": "28/28 is Master-scope object-type coverage; 25 is approved Master-family count. These dimensions must not be divided.",
+    "dashboard_sync_run": 36389526921,
+    "dashboard_sync_result": "SUCCESS",
+    "reconciliation_merge_pr": 38,
+    "reconciliation_merge_commit": "bf24eae4855c45fc960ccbf306bdcac9e2d34a6c"
   },
   "local_sync_verification_2026_09_20": {
     "status": "PASS / COMPLETE",
