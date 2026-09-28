@@ -914,3 +914,51 @@ D-258 does **not** authorize:
 Current status:
 
 **POST-FORMALIZATION VERIFICATION AUTHORIZED / EXECUTION IN PROGRESS**
+
+
+## 26. Post-Formalization Verification Result｜D-259
+
+T-041 Post-Formalization Verification completed successfully under D-258.
+
+- Run ID: **36381322627**
+- Result: **SUCCESS**
+- Artifact: `P3_3_T041_POST_FORMALIZATION_VERIFICATION_V001`
+- Artifact ID: **10953500439**
+- Artifact digest: `sha256:405d9ab886bd3415da828c583c2579052e6159a6278c95d3dd066974972a4e89`
+- Derived Excel: **PASS**
+- Registry rows: **505**
+- approved Masters on branch: **25 / 28 = 89.3%**
+- master-covered Registry records: **363**
+- Derived Excel SHA-256: `14ddc3d610823ea2e3bf2296f05435ee85c3e19b42486d557d41697ad8c9120c`
+- latest-head T-041 rebuild/reopen/restore: **90 / 90 PASS**
+- regenerated regression blend SHA-256: `d5741f769b329739908f8c4f3c732bd4debbc84329a1b29b50ef305169bc104c`
+- regenerated blend promoted to canonical: **NO**
+- D-255 accepted canonical blend remains authoritative.
+- dedicated-route ownership: **PASS**
+- generic P3.3 Master V2 route: **SKIPPED AS INTENDED**
+- shared regressions: **8 / 8 PASS**
+  - T-021: 36381625428
+  - T-022: 36381627665
+  - T-023: 36381629663
+  - T-024: 36381631742
+  - T-037: 36381633668
+  - T-038: 36381635653
+  - T-039: 36381637574
+  - T-040: 36381640040
+
+A lifecycle-only patch was required for the T-040 validator because T-040 is already CLOSED while its historical regression assertion still required merge/closure=false. The patch changes lifecycle acceptance only; no T-040 geometry, dimensions, evidence semantics, or accepted signatures changed.
+
+Readiness result:
+
+**READY_FOR_PRODUCT_OWNER_READY_MERGE_DECISION**
+
+D-259 does **not** authorize:
+- PR #37 Draft→Ready;
+- merge;
+- formal closure;
+- Stage2;
+- T-018 resume.
+
+Next gate:
+
+`T-041 PR #37 READY+MERGE AUTHORIZATION`.

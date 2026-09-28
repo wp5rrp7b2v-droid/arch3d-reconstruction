@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R334",
+  "state_revision": "R335",
   "last_updated": "2026-09-28",
-  "session_status": "T-041 POST-FORMALIZATION VERIFICATION AUTHORIZED D-258 / DERIVED EXCEL + T-041 LATEST-HEAD + SHARED REGRESSIONS + READINESS ACTIVE / PR #37 DRAFT / READY-MERGE NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-041 POST-FORMALIZATION VERIFICATION PASS D-259 / DERIVED EXCEL PASS / LATEST-HEAD T-041 90 OF 90 PASS / SHARED REGRESSIONS 8 OF 8 PASS / PR #37 READY FOR PRODUCT OWNER READY+MERGE DECISION / READY-MERGE NOT YET AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -66,15 +66,15 @@
     "engineering_id": "P3_3_ANG_MASTER_V2_V001",
     "name": "昂族 Master",
     "component": "头昂 / 二昂",
-    "status": "FORMALIZED D-257 / POST-FORMALIZATION VERIFICATION AUTHORIZED D-258 / EXECUTION ACTIVE / PR #37 DRAFT",
+    "status": "POST-FORMALIZATION VERIFICATION PASS / D-259 / PR #37 READY+MERGE DECISION NEXT",
     "branch": "codex/t041-p3-3-ang-master-v2-v001",
     "branch_status": "ACTIVE / PR #37 DRAFT",
     "engineering_execution_authorized": true
   },
   "proposed_next_task": {
-    "id": "T-041-POST-FORMALIZATION-VERIFICATION",
-    "name": "T-041 Derived Excel + latest-head/shared regressions + readiness review",
-    "status": "AUTHORIZED / ACTIVE"
+    "id": "T-041-READY-MERGE-AUTHORIZATION",
+    "name": "T-041 PR #37 Draft→Ready + Merge authorization",
+    "status": "NEXT GATE / NOT AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-040",
@@ -873,7 +873,7 @@
       "component": "昂族（头昂 / 二昂）",
       "component_family_id": "CMP-GONG-ANG-001",
       "master_id": "CMP-GONG-ANG-001_MASTER",
-      "status": "FORMALIZED D-257 / POST-FORMALIZATION VERIFICATION AUTHORIZED D-258 / EXECUTION ACTIVE",
+      "status": "POST-FORMALIZATION VERIFICATION PASS D-259 / READY+MERGE DECISION NEXT",
       "task_contract": "docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md",
       "registry_binding_count": 32,
       "tou_ang_count": 16,
@@ -903,7 +903,7 @@
         "reference_control_span_mm": 787.6157057855055,
         "historical_full_lengths_closed": false
       },
-      "next_gate": "POST-FORMALIZATION VERIFICATION RESULT",
+      "next_gate": "READY+MERGE AUTHORIZATION",
       "gate_b": {
         "id": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001_C01",
         "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
@@ -965,7 +965,19 @@
       "post_formalization_verification_authorized": true,
       "post_formalization_authority": "D-258",
       "merge_authorized": false,
-      "closure_authorized": false
+      "closure_authorized": false,
+      "post_formalization_result_decision_id": "D-259",
+      "post_formalization_verification_status": "PASS",
+      "post_formalization_run_id": 36381322627,
+      "post_formalization_artifact_id": 10953500439,
+      "post_formalization_artifact_digest": "sha256:405d9ab886bd3415da828c583c2579052e6159a6278c95d3dd066974972a4e89",
+      "derived_excel_sync_status": "PASS",
+      "derived_excel_current_sha256": "14ddc3d610823ea2e3bf2296f05435ee85c3e19b42486d557d41697ad8c9120c",
+      "latest_head_regression_status": "PASS / 90 OF 90 / ACCEPTED GEOMETRY MATCH",
+      "latest_head_regenerated_blend_sha256": "d5741f769b329739908f8c4f3c732bd4debbc84329a1b29b50ef305169bc104c",
+      "shared_regression_status": "PASS / 8 OF 8",
+      "dedicated_route_ownership_status": "PASS / GENERIC MASTER V2 SKIPPED AS INTENDED",
+      "readiness_status": "READY_FOR_PRODUCT_OWNER_READY_MERGE_DECISION"
     }
   },
   "roof_control_audit_2026_09_17": {
