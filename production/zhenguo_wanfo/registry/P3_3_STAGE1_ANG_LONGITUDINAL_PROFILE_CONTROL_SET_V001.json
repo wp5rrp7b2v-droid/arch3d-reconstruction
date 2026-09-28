@@ -270,6 +270,8 @@
   "product_owner_approved": true,
   "locked": true,
   "executable_as_gate_input": true,
-  "engineering_execution_authorized": false,
-  "next_gate": "ENGINEERING_EXECUTION_AUTHORIZATION"
+  "engineering_execution_authorized": true,
+  "next_gate": "ENGINEERING_EXECUTION_AUTHORIZATION",
+  "engineering_execution_authorization_decision_id": "D-253",
+  "control_input_status": "LOCKED_CANONICAL / AUTHORIZED_FOR_T041_ENGINEERING_EXECUTION"
 }
