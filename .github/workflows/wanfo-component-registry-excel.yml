@@ -91,8 +91,15 @@ jobs:
           assert wb["实例登记"].max_row - 1 == manifest["record_count"]
           assert wb["进度总览"]["B4"].value == manifest["record_count"]
           registry = json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
-          expected_approved = registry["stage1_master_progress_summary"]["approved_master_count"]
-          assert wb["进度总览"]["B7"].value == expected_approved
+          progress = registry["stage1_master_progress_summary"]
+          assert wb["进度总览"]["B7"].value == progress["covered_master_scope_object_type_count"]
+          assert progress["covered_master_scope_object_type_count"] == 28
+          assert progress["master_scope_object_type_count"] == 28
+          assert progress["pending_master_object_type_count"] == 0
+          assert float(progress["master_completion_percent"]) == 100.0
+          assert progress["approved_master_family_count"] == 25
+          assert progress["approved_master_count"] == 25
+          assert progress["pending_source_binding_count"] == 7
           wb.close()
           print("VALIDATION_PASS", manifest["registry_version"], manifest["record_count"])
           PY
