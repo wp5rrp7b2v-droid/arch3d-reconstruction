@@ -738,3 +738,68 @@ D-253 does not authorize:
 Next engineering gate:
 
 `FIRST ARTICLE MACHINE VALIDATION`.
+
+
+## 21. First Article Machine Gate｜D-254
+
+T-041 First Article machine validation completed successfully on GitHub Actions.
+
+Run ID:
+
+`36373958970`
+
+Head commit:
+
+`e8e986101c0c8a64d29ecc589d0e4c5949c1d5ac`
+
+Draft PR:
+
+`#37`
+
+Artifact:
+
+- name: `P3_3_T041_ANG_MASTER_V2_FIRST_ARTICLE_V001`
+- artifact id: `10950620532`
+- artifact digest: `sha256:a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e`
+- size: `3771783 bytes`
+
+Machine result:
+
+- `T041_VALIDATION_PASS 90`
+- `T041_FIRST_ARTICLE_MACHINE_PASS 90`
+- canonical body count = 2
+- TOU_ANG geometry signature = `61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250`
+- ER_ANG geometry signature = `b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678`
+- family semantic signature = `a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29`
+- canonical blend SHA-256 = `7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8`
+- review board SHA-256 = `a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65`
+- Blender = `4.5.13 LTS`
+
+All 90 fail-closed checks passed, including:
+- V008 identity/count/binding semantics;
+- Gate A/B signature binding;
+- 278.4 / 187 / 154 evidence semantics;
+- 47:21 and 719.1/719.5 separation;
+- TOU/ER profile independence;
+- manifold geometry;
+- unsupported joinery absence;
+- independent reopen;
+- deterministic restore;
+- nonblank review renders;
+- canonical binary not tracked in Git.
+
+D-254 records the **machine gate only**.
+
+D-254 does **not** constitute Product Owner First Article acceptance and does not authorize:
+- formalization;
+- Catalog/V008/CURRENT binding;
+- Derived Excel sync;
+- Draft→Ready;
+- merge;
+- closure;
+- Stage2;
+- T-018 resume.
+
+Next gate:
+
+`PRODUCT OWNER FIRST ARTICLE REVIEW / APPROVAL`.
