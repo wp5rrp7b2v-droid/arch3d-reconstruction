@@ -2063,3 +2063,21 @@ Do not restart T-018 by default.
 - Stage2: NOT AUTHORIZED.
 - T-018: HOLD.
 
+## 2026-09-28｜T-041 Formal Closure｜D-262
+
+- Product Owner authorized formal closure.
+- PR #37 merged; merge commit `bb6873a7edb7e3222142387613851690bd18396f`.
+- Main verification: PASS.
+- Stage1 Catalog: 25/28 = 89.3%.
+- Registry: 505; master-covered: 363.
+- Ang bindings: 32/32; TOU_ANG=16 / ER_ANG=16.
+- CURRENT == V008: PASS.
+- Derived Excel: SYNCED / PASS.
+- D-259 verification: T-041 90/90 PASS; shared regressions 8/8 PASS.
+- Accepted canonical blend and family/variant geometry signatures unchanged.
+- Evidence boundaries preserved: LOCKED_DERIVED; historical full lengths UNRESOLVED; synthetic control span not per-instance historical length; source n=34 vs n=16 conflict retained; exact historical profile/end/hidden joinery unresolved.
+- T-041 status: CLOSED.
+- Active engineering T-task: NONE.
+- Stage2: NOT AUTHORIZED.
+- T-018: HOLD.
+
