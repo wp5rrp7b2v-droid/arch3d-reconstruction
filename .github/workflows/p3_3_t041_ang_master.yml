@@ -1,0 +1,139 @@
+name: T-041 Ang Master First Article
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/p3_3_t041_ang_master.yml'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/**'
+      - 'production/zhenguo_wanfo/scripts/validate_t041_ang.py'
+      - 'production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_*'
+      - 'docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  first-article:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    env:
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      DEF: production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/CMP-GONG-ANG-001_ANG_DEFINITION_V001.json
+      WRAPPER: production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/build_ang_master_v001.py
+      VALIDATOR: production/zhenguo_wanfo/scripts/validate_t041_ang.py
+      GATE_A: production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001.json
+      GATE_B: production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001.json
+      REGISTRY: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json
+      OUT: artifacts/t041
+      REVIEW: artifacts/t041/review
+      ASSET: artifacts/t041/CMP-GONG-ANG-001_MASTER_V001.blend
+      SEM: artifacts/t041/CMP-GONG-ANG-001_MASTER_SEMANTIC_V001.json
+      BOARD: artifacts/t041/CMP-GONG-ANG-001_MASTER_REVIEW_BOARD_V001.png
+      VAL: artifacts/t041/CMP-GONG-ANG-001_MASTER_VALIDATION_V001.json
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Install Blender 4.5.13 and Pillow
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1 fonts-noto-cjk
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions T041" -o /tmp/blender.tar.xz "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+          python -m pip install --disable-pip-version-check pillow
+
+      - name: Precheck locked controls and Definition
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - "$DEF" "$GATE_A" "$GATE_B" <<'PY'
+          import hashlib,json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          a=json.load(open(sys.argv[2],encoding="utf-8"))
+          b=json.load(open(sys.argv[3],encoding="utf-8"))
+          stable=lambda v: hashlib.sha256(json.dumps(v,ensure_ascii=False,sort_keys=True,separators=(",",":")).encode("utf-8")).hexdigest()
+          assert d["task_id"]=="T-041"
+          assert d["execution_boundary"]["engineering_execution_authorized"] is True
+          assert d["registry_boundary"]["binding_count"]==32
+          assert d["registry_boundary"]["tou_ang_count"]==16
+          assert d["registry_boundary"]["er_ang_count"]==16
+          assert d["registry_boundary"]["geometry_variant_count"]==2
+          assert a["status"].startswith("LOCKED / PRODUCT_OWNER_APPROVED / D-250")
+          assert a["engineering_execution_authorized"] is True
+          assert a["control_semantic_signature_sha256"]=="6c9b8c5b6ee6715292df5b23b7d8b8d9fdaaf4be7d1558631fea5883528b7096"
+          assert b["status"].startswith("LOCKED / PRODUCT_OWNER_APPROVED / D-252")
+          assert b["engineering_execution_authorized"] is True
+          assert b["family_semantic_control_sha256"]=="dc38ab72be1f5aef3192a48e11621a3288c422475545b56dc5e29fa0102e2ae5"
+          assert len(b["TOU_ANG"]["control_points_uw_mm"])==10
+          assert len(b["ER_ANG"]["control_points_uw_mm"])==6
+          assert stable(b["TOU_ANG"]["control_points_uw_mm"])=="3e45e7732cf49012cbf8b5e480e76ad2fd986c4aa717dd650e3bf3f9831f7bb5"
+          assert stable(b["ER_ANG"]["control_points_uw_mm"])=="c4b935c9d445414831f16d949b02ff110f3e336f88c68dd68f58d514bd172778"
+          assert d["gate_a_contract"]["semantic_signature_sha256"]==a["control_semantic_signature_sha256"]
+          assert d["gate_b_contract"]["family_semantic_control_sha256"]==b["family_semantic_control_sha256"]
+          print("T041_DEFINITION_PRECHECK_PASS")
+          PY
+
+      - name: Build canonical first article
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT" "$REVIEW"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --definition "$DEF" --asset "$ASSET" --semantic "$SEM" --review-dir "$REVIEW"
+
+      - name: Independent reopen
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$ASSET" --python-exit-code 10 --python "$WRAPPER" -- --mode inspect --asset "$ASSET" --expected "$SEM" --output "$OUT/reopen.json"
+
+      - name: Deterministic restore build
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --definition "$DEF" --asset "$OUT/restore.blend" --semantic "$OUT/restore.json"
+
+      - name: Compose 10-domain Review Board
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode compose-board --definition "$DEF" --canonical "$SEM" --review-dir "$REVIEW" --board "$BOARD"
+
+      - name: Validate first article
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode validate --definition "$DEF" --canonical "$SEM" --reopen "$OUT/reopen.json" --restore "$OUT/restore.json" --registry "$REGISTRY" --gate-a "$GATE_A" --gate-b "$GATE_B" --asset "$ASSET" --review-dir "$REVIEW" --board "$BOARD" --output "$VAL"
+          python - "$VAL" <<'PY'
+          import json,sys
+          v=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert v["status"]=="PASS"
+          assert v["check_count"]==90
+          print("T041_FIRST_ARTICLE_MACHINE_PASS",v["check_count"])
+          PY
+
+      - name: Assert canonical binary is not tracked
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -z "$(git ls-files -- 'production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/*.blend' 'production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/asset/*.blend')"
+
+      - name: Upload T-041 first article
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T041_ANG_MASTER_V2_FIRST_ARTICLE_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            ${{ env.ASSET }}
+            ${{ env.SEM }}
+            ${{ env.BOARD }}
+            ${{ env.VAL }}
+            ${{ env.REVIEW }}/*.png
