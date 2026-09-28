@@ -2045,3 +2045,21 @@ Do not restart T-018 by default.
 - Master-covered Registry records: 363. CURRENT == V008: PASS.
 - Historical standalone full lengths remain UNRESOLVED; 787.6157057855mm remains control-span-only.
 - Derived Excel / post-formalization readiness / PR Ready+Merge: NOT AUTHORIZED.
+
+## 2026-09-28｜T-041 Ready+Merge + Main Verification｜D-261
+
+- Authority: D-260.
+- PR #37: Draft→Ready→Merged.
+- Merge commit: `bb6873a7edb7e3222142387613851690bd18396f`.
+- Main verification: PASS.
+- Stage1 Catalog: 25/28 = 89.3%.
+- Registry: 505 records; 363 master-covered.
+- Ang bindings: 32/32 APPROVED_MASTER_AVAILABLE; TOU_ANG=16 / ER_ANG=16.
+- CURRENT == V008: PASS.
+- Derived Excel: synchronized.
+- LOCKED_DERIVED / unresolved historical full-length boundaries preserved.
+- Accepted canonical blend and geometry signatures unchanged.
+- Formal Closure: NOT AUTHORIZED.
+- Stage2: NOT AUTHORIZED.
+- T-018: HOLD.
+
