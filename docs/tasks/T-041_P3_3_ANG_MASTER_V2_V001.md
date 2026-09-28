@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-041｜P3_3_ANG_MASTER_V2_V001
 
-Status: **FORMALIZED + CATALOG/V008/CURRENT BOUND / D-257 / PR #37 DRAFT / MERGE NOT AUTHORIZED**
+Status: **MERGED TO MAIN / MAIN VERIFIED / D-261 / FORMAL_CLOSURE_PENDING**
 Date: 2026-09-28
 Stage: P3.3 V002 Stage 1
 Locked Master Spec: D-246｜P3_3_STAGE1_ANG_MASTER_SPEC_V001
@@ -986,3 +986,35 @@ D-260 does **not** authorize:
 - formal closure;
 - Stage2;
 - T-018 resume.
+
+
+## 28. Ready + Merge Result｜D-261
+
+T-041 PR #37 Ready+Merge execution completed under D-260.
+
+- PR #37: **MERGED / CLOSED**
+- merge commit: `bb6873a7edb7e3222142387613851690bd18396f`
+- main verification: **PASS**
+- Stage1 approved Masters: **25 / 28 = 89.3%**
+- Registry records: **505**
+- master-covered Registry records: **363**
+- 昂族 binding: **32 / 32 APPROVED_MASTER_AVAILABLE**
+- TOU_ANG: **16**
+- ER_ANG: **16**
+- CURRENT == V008: **PASS**
+- Derived Excel: **SYNCED / PASS**
+- all 32 retain `LOCKED_DERIVED`
+- historical standalone full lengths remain `UNRESOLVED`
+- synthetic reference control span remains non-instance historical length.
+
+Accepted production authority remains unchanged:
+- canonical blend SHA-256: `7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8`
+- family semantic signature: `a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29`
+- TOU_ANG geometry signature: `61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250`
+- ER_ANG geometry signature: `b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678`
+
+D-261 does **not** authorize formal closure, Stage2, or T-018 resume.
+
+Next gate:
+
+`T-041 FORMAL CLOSURE`.
