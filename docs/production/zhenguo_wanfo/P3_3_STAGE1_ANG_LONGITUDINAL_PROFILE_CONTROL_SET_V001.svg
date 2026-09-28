@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="white"/>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif;fill:#111}
+    .title{font-size:30px;font-weight:700}
+    .sub{font-size:20px;font-weight:700}
+    .lab{font-size:16px}
+    .small{font-size:14px}
+    .axis{stroke:#777;stroke-width:1}
+    .poly{fill:none;stroke:#111;stroke-width:3}
+    .dash{fill:none;stroke:#777;stroke-width:1.5;stroke-dasharray:8 6}
+    .pt{fill:#111}
+  </style>
+  <text x="60" y="55" class="title">ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V0.1 — Candidate 01 / D-252</text>
+  <text x="60" y="88" class="lab">Deterministic U-W control render. NOT source trace. NOT metric source-image overlay.</text>
+
+  <g transform="translate(80,150)">
+    <text x="0" y="-30" class="sub">TOU_ANG — 10-point profile</text>
+    <line x1="0" y1="220" x2="560" y2="220" class="axis"/>
+    <line x1="280" y1="0" x2="280" y2="440" class="axis"/>
+    <polyline points="0,92 210,92 350,23 490,23 560,92 560,348 490,417 350,417 210,348 0,348 0,92" class="poly"/>
+    <line x1="210" y1="0" x2="210" y2="440" class="dash"/>
+    <line x1="350" y1="0" x2="350" y2="440" class="dash"/>
+    <line x1="490" y1="0" x2="490" y2="440" class="dash"/>
+    <text x="0" y="472" class="small">U -0.5</text>
+    <text x="185" y="472" class="small">-0.125</text>
+    <text x="338" y="472" class="small">+0.125</text>
+    <text x="478" y="472" class="small">+0.375</text>
+    <text x="535" y="472" class="small">+0.5</text>
+    <text x="10" y="72" class="small">187</text>
+    <text x="360" y="18" class="small">278.4 deep-head</text>
+    <text x="150" y="520" class="lab">SINGLE_CAI → TRANSITION → DEEP_HEAD → OUTBOARD_TAPER</text>
+  </g>
+
+  <g transform="translate(760,150)">
+    <text x="0" y="-30" class="sub">ER_ANG — 6-point profile</text>
+    <line x1="0" y1="220" x2="560" y2="220" class="axis"/>
+    <line x1="280" y1="0" x2="280" y2="440" class="axis"/>
+    <polyline points="0,92 490,92 560,139 560,301 490,348 0,348 0,92" class="poly"/>
+    <line x1="490" y1="0" x2="490" y2="440" class="dash"/>
+    <text x="0" y="472" class="small">U -0.5</text>
+    <text x="478" y="472" class="small">+0.375</text>
+    <text x="535" y="472" class="small">+0.5</text>
+    <text x="10" y="72" class="small">187 body</text>
+    <text x="458" y="520" class="lab">CONSTANT SINGLE_CAI BODY → OUTBOARD TAPER</text>
+  </g>
+
+  <text x="60" y="760" class="sub">Locked evidence vs reconstruction boundary</text>
+  <text x="60" y="795" class="lab">Direct source dimensions: TOU deep-head 278.4 mm; TOU single-cai / ER body 187.0 mm; thickness 154.0 mm.</text>
+  <text x="60" y="825" class="lab">Reconstructed/replacable: U stations, transition locations, outer taper geometry, bilateral symmetry, polygon connectivity.</text>
+  <text x="60" y="855" class="lab">Gate A span 787.615706 mm; 47:21 design relation; historical full timber lengths remain unresolved.</text>
+</svg>
