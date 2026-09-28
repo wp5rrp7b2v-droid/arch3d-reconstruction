@@ -1,11 +1,11 @@
 # 中国古建筑3D复原｜T-041｜P3_3_ANG_MASTER_V2_V001
 
-Status: **LOCKED / PRODUCT_OWNER_APPROVED / D-248 / ENGINEERING EXECUTION NOT AUTHORIZED**
+Status: **ENGINEERING EXECUTION AUTHORIZED / D-253 / FIRST ARTICLE ENGINEERING ACTIVE**
 Date: 2026-09-28
 Stage: P3.3 V002 Stage 1
 Locked Master Spec: D-246｜P3_3_STAGE1_ANG_MASTER_SPEC_V001
 Task id: `T-041｜P3_3_ANG_MASTER_V2_V001`
-Branch: `NOT CREATED / ENGINEERING EXECUTION NOT AUTHORIZED`
+Branch: `codex/t041-p3-3-ang-master-v2-v001`
 
 > Governance boundary: D-248 creates and locks the T-041 engineering task identity and this Task Contract only. Engineering execution remains blocked until Gate A and Gate B are separately Product Owner approved and a separate Engineering Execution Authorization is issued.
 
@@ -493,7 +493,7 @@ The future task must not:
 3. Task Contract — **LOCKED / PRODUCT OWNER APPROVED / D-248**
 4. Length/Slope/Assembly Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-250**
 5. Longitudinal Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-252**
-6. Engineering Execution Authorization — **NEXT GATE / NOT AUTHORIZED**
+6. Engineering Execution Authorization — **AUTHORIZED / D-253**
 7. First Article machine validation — **NOT AUTHORIZED**
 8. Product Owner First Article Approval — **NOT AUTHORIZED**
 9. Formalization + Catalog/V008/CURRENT binding — **NOT AUTHORIZED**
@@ -670,3 +670,71 @@ D-252 does **not** authorize:
 Next complete gate:
 
 `ENGINEERING_EXECUTION_AUTHORIZATION`.
+
+
+## 20. Engineering Execution Authorization｜D-253
+
+Product Owner explicitly authorized T-041 Engineering Execution after:
+
+- Task Contract D-248 = LOCKED;
+- Gate A D-250 = LOCKED;
+- Gate B D-252 = LOCKED.
+
+Authorized isolated production branch:
+
+`codex/t041-p3-3-ang-master-v2-v001`
+
+Authorized engineering scope:
+
+1. implement canonical Ang Definition payloads bound only to D-250 + D-252;
+2. implement independent TOU_ANG and ER_ANG builders;
+3. implement fail-closed validator covering the Task Contract hard-fail set;
+4. implement GitHub Actions workflow using the project-locked Blender runtime;
+5. generate exactly two canonical First Article bodies:
+   - `TOU_ANG`
+   - `ER_ANG`
+6. generate one non-canonical `DOUBLE_ANG_ASSEMBLY_FIXTURE_VALIDATION_ONLY`;
+7. produce deterministic semantic/geometry signatures;
+8. perform deterministic rebuild and independent reopen validation;
+9. produce nonblank review evidence exposing identity, dimensions, 47:21 implementation, Gate-B profile controls, evidence boundaries, and no-joinery proof;
+10. open a Draft PR after machine validation evidence is available.
+
+Locked engineering inputs:
+
+### Gate A
+`ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001_C01`
+
+Semantic signature:
+
+`6c9b8c5b6ee6715292df5b23b7d8b8d9fdaaf4be7d1558631fea5883528b7096`
+
+### Gate B
+`ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001_C01`
+
+Family semantic-control signature:
+
+`dc38ab72be1f5aef3192a48e11621a3288c422475545b56dc5e29fa0102e2ae5`
+
+TOU profile signature:
+
+`3e45e7732cf49012cbf8b5e480e76ad2fd986c4aa717dd650e3bf3f9831f7bb5`
+
+ER profile signature:
+
+`c4b935c9d445414831f16d949b02ff110f3e336f88c68dd68f58d514bd172778`
+
+D-253 does not authorize:
+
+- Product Owner First Article acceptance;
+- formalization;
+- Catalog/V008/CURRENT binding;
+- derived Excel sync;
+- Draft→Ready transition;
+- merge;
+- formal closure;
+- Stage2;
+- T-018 resume.
+
+Next engineering gate:
+
+`FIRST ARTICLE MACHINE VALIDATION`.
