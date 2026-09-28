@@ -1,0 +1,275 @@
+{
+  "schema_version": "P3_3_STAGE1_ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
+  "date": "2026-09-28",
+  "task_id": "T-041",
+  "engineering_id": "P3_3_ANG_MASTER_V2_V001",
+  "master_id": "CMP-GONG-ANG-001_MASTER",
+  "control_id": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001_C01",
+  "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_PROFILE_MEASUREMENT",
+  "source": {
+    "source_id": "SRC-ZG-WF-001",
+    "canonical_pdf_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "visual_pages_pdf": [
+      73,
+      74,
+      75,
+      79,
+      80
+    ],
+    "role": "QUALITATIVE_FORM_AND_ENVELOPE_AUTHORITY",
+    "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "historical_control_point_claim": false
+  },
+  "gate_a_dependency": {
+    "control_id": "ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001_C01",
+    "approval_decision_id": "D-250",
+    "semantic_signature_sha256": "6c9b8c5b6ee6715292df5b23b7d8b8d9fdaaf4be7d1558631fea5883528b7096",
+    "reference_control_span_mm": 787.6157057855055,
+    "thickness_mm": 154,
+    "design_run_mm": 719.1,
+    "design_rise_mm": 321.3,
+    "design_angle_deg": 24.075498255078834
+  },
+  "coordinate_meaning": {
+    "U": "fraction/position along Gate-A synthetic Ang longitudinal reference control span; +U outward",
+    "V": "Ang thickness axis / extrusion, fixed by Gate A at 154.0 mm",
+    "W": "Ang guang / longitudinal-profile depth perpendicular to U in Assembly X-Z plane",
+    "origin": "GEOMETRIC_CENTRE_OF_REFERENCE_CONTROL_SPAN / PROJECT_MODEL_DATUM",
+    "endpoint_policy": "U=-0.5 and U=+0.5 are RECONSTRUCTION_CUT_PLANE controls, not historical timber ends"
+  },
+  "TOU_ANG": {
+    "semantic_profile": "SINGLE_CAI_REGION -> DEEP_HEAD_REGION -> OUTBOARD_TAPER",
+    "point_count": 10,
+    "bilateral_w_symmetry": true,
+    "symmetry_classification": "STAGE1_SIMPLIFICATION / NOT_HISTORICAL_ASYMMETRY_CLAIM",
+    "direct_source_guang_mm": {
+      "single_cai": 187,
+      "deep_head": 278.4
+    },
+    "longitudinal_stations": [
+      {
+        "u_norm": -0.5,
+        "u_mm": -393.80785289275275,
+        "total_w_mm": 187,
+        "role": "INNER_RECONSTRUCTION_CUT / SINGLE_CAI"
+      },
+      {
+        "u_norm": -0.125,
+        "u_mm": -98.45196322318819,
+        "total_w_mm": 187,
+        "role": "SINGLE_CAI_REGION_END / RECONSTRUCTED_STATION"
+      },
+      {
+        "u_norm": 0.125,
+        "u_mm": 98.45196322318819,
+        "total_w_mm": 278.4,
+        "role": "DEEP_HEAD_TRANSITION_COMPLETED / RECONSTRUCTED_STATION"
+      },
+      {
+        "u_norm": 0.375,
+        "u_mm": 295.3558896695646,
+        "total_w_mm": 278.4,
+        "role": "DEEP_HEAD_REGION_END / RECONSTRUCTED_STATION"
+      },
+      {
+        "u_norm": 0.5,
+        "u_mm": 393.80785289275275,
+        "total_w_mm": 187,
+        "role": "OUTBOARD_RECONSTRUCTION_TAPER_CUT"
+      }
+    ],
+    "control_points_uw_mm": [
+      [
+        -393.80785289275275,
+        93.5
+      ],
+      [
+        -98.45196322318819,
+        93.5
+      ],
+      [
+        98.45196322318819,
+        139.2
+      ],
+      [
+        295.3558896695646,
+        139.2
+      ],
+      [
+        393.80785289275275,
+        93.5
+      ],
+      [
+        393.80785289275275,
+        -93.5
+      ],
+      [
+        295.3558896695646,
+        -139.2
+      ],
+      [
+        98.45196322318819,
+        -139.2
+      ],
+      [
+        -98.45196322318819,
+        -93.5
+      ],
+      [
+        -393.80785289275275,
+        -93.5
+      ]
+    ],
+    "control_points_sha256": "3e45e7732cf49012cbf8b5e480e76ad2fd986c4aa717dd650e3bf3f9831f7bb5",
+    "direct_measurement_fields": [
+      "single_cai_guang_187.0",
+      "deep_head_guang_278.4"
+    ],
+    "reconstructed_fields": [
+      "u=-0.125 transition start station",
+      "u=+0.125 deep-head transition completion station",
+      "u=+0.375 deep-head region end station",
+      "outboard taper geometry",
+      "bilateral symmetry",
+      "polygon connectivity"
+    ],
+    "exact_historical_transition_location_closed": false
+  },
+  "ER_ANG": {
+    "semantic_profile": "CONSTANT_SINGLE_CAI_BODY -> OUTBOARD_TAPER",
+    "point_count": 6,
+    "bilateral_w_symmetry": true,
+    "symmetry_classification": "STAGE1_SIMPLIFICATION / NOT_HISTORICAL_ASYMMETRY_CLAIM",
+    "direct_source_guang_mm": {
+      "body": 187
+    },
+    "longitudinal_stations": [
+      {
+        "u_norm": -0.5,
+        "u_mm": -393.80785289275275,
+        "total_w_mm": 187,
+        "role": "INNER_RECONSTRUCTION_CUT / SINGLE_CAI_BODY"
+      },
+      {
+        "u_norm": 0.375,
+        "u_mm": 295.3558896695646,
+        "total_w_mm": 187,
+        "role": "CONSTANT_BODY_END / RECONSTRUCTED_STATION"
+      },
+      {
+        "u_norm": 0.5,
+        "u_mm": 393.80785289275275,
+        "total_w_mm": 124.66666666666667,
+        "role": "OUTBOARD_RECONSTRUCTION_TAPER_CUT"
+      }
+    ],
+    "outboard_taper_ratio": 0.6666666666666666,
+    "outboard_taper_ratio_classification": "SOURCE_GUIDED_SIMPLIFIED / STAGE1_TAPER_CONTROL / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "control_points_uw_mm": [
+      [
+        -393.80785289275275,
+        93.5
+      ],
+      [
+        295.3558896695646,
+        93.5
+      ],
+      [
+        393.80785289275275,
+        62.333333333333336
+      ],
+      [
+        393.80785289275275,
+        -62.333333333333336
+      ],
+      [
+        295.3558896695646,
+        -93.5
+      ],
+      [
+        -393.80785289275275,
+        -93.5
+      ]
+    ],
+    "control_points_sha256": "c4b935c9d445414831f16d949b02ff110f3e336f88c68dd68f58d514bd172778",
+    "direct_measurement_fields": [
+      "body_guang_187.0"
+    ],
+    "reconstructed_fields": [
+      "u=+0.375 taper start station",
+      "2/3 outboard taper ratio",
+      "bilateral symmetry",
+      "polygon connectivity"
+    ],
+    "exact_historical_outer_profile_closed": false
+  },
+  "variant_separation": {
+    "identical_profile_prohibited": true,
+    "finished_mesh_uniform_scaling_prohibited": true,
+    "shared_builder_infrastructure_allowed": true,
+    "shared_coordinate_methodology_allowed": true,
+    "shared_gate_a_span_allowed": true,
+    "equal_control_span_does_not_imply_equal_historical_member_length": true,
+    "TOU_has_deep_head_region": true,
+    "ER_has_deep_head_region": false
+  },
+  "prior_control_audit": {
+    "huagong_control_sha256": "f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e",
+    "mangong_control_sha256": "07d5d9172f25758f057c4bc0200fc35aa892a9a72ef15b40735fcc5c620e80c4",
+    "linggong_control_sha256": "0a3081110d36fea812739a942eca1522a510810f5ea52ee3b4c9ebaa51c1c1a7",
+    "huagong_reused": false,
+    "mangong_reused": false,
+    "linggong_reused": false,
+    "averaged": false,
+    "morphed": false,
+    "generic_song_template_used": false
+  },
+  "visual_review_artifact": "docs/production/zhenguo_wanfo/P3_3_STAGE1_ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001.svg",
+  "visual_artifact_semantics": "DETERMINISTIC_PROFILE_CONTROL_RENDER / NOT_SOURCE_TRACE / NOT_METRIC_SOURCE_OVERLAY",
+  "hard_fails": [
+    "TOU_PROFILE_POINT_COUNT_NOT_10",
+    "ER_PROFILE_POINT_COUNT_NOT_6",
+    "TOU_DEEP_HEAD_278_4_LOST",
+    "TOU_SINGLE_CAI_187_LOST",
+    "ER_BODY_187_LOST",
+    "TOU_ER_PROFILE_IDENTICAL",
+    "ER_SCALED_FROM_TOU",
+    "TOU_SCALED_FROM_ER",
+    "PROFILE_U_STATION_CHANGED_WITHOUT_APPROVAL",
+    "RECONSTRUCTION_TAPER_MARKED_DIRECT",
+    "PROFILE_MARKED_HISTORICAL_EXACT",
+    "PRIOR_GONG_PROFILE_REUSED",
+    "GENERIC_SONG_TEMPLATE_USED",
+    "EXACT_END_SHAPE_INVENTED",
+    "JOINERY_ADDED_BY_PROFILE_GATE"
+  ],
+  "deferred": [
+    "exact_historical_tou_ang_longitudinal_profile",
+    "exact_historical_er_ang_longitudinal_profile",
+    "exact_tou_ang_deep_head_transition_location",
+    "exact_outer_ang_head_shaping",
+    "exact_inner_end_length",
+    "historical_asymmetry",
+    "metric_source_image_calibration",
+    "hidden_overlap",
+    "mortise_tenon",
+    "grooves",
+    "slots",
+    "cavities",
+    "hidden_connection_cuts",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "per_instance_originality_repair_state"
+  ],
+  "family_semantic_control_sha256": "dc38ab72be1f5aef3192a48e11621a3288c422475545b56dc5e29fa0102e2ae5",
+  "signature_scope": "Gate-A dependency + TOU/ER deterministic U-W profile controls + profile semantics + symmetry and variant-separation rules",
+  "signature_canonicalization": "UTF-8 JSON / recursively sorted object keys / compact separators",
+  "candidate_decision_id": "D-251",
+  "approval_decision_id": "D-252",
+  "product_owner_approved": true,
+  "locked": true,
+  "executable_as_gate_input": true,
+  "engineering_execution_authorized": false,
+  "next_gate": "ENGINEERING_EXECUTION_AUTHORIZATION"
+}
