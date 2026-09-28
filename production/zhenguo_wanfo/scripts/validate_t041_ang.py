@@ -248,9 +248,9 @@ def validate(args):
     # lifecycle / boundaries
     ex=d["execution_boundary"]
     ck("84_execution_authorized",ex["engineering_execution_authorized"] is True and ex["blender_execution_authorized"] is True and ex["production_builder_authorized"] is True and ex["validator_authorized"] is True)
-    ck("85_po_not_approved",ex["first_article_product_owner_approved"] is False and ex["first_article_acceptance_authorized"] is False)
-    ck("86_formalization_not_authorized",ex["formalization_authorized"] is False and ex["catalog_v008_binding_authorized"] is False)
-    ck("87_merge_close_not_authorized",ex["merge_authorized"] is False and ex["closure_authorized"] is False and ex["ready_transition_authorized"] is False)
+    ck("85_po_approved",ex["first_article_product_owner_approved"] is True and ex["first_article_acceptance_authorized"] is True and d.get("first_article_approval",{}).get("decision_id")=="D-255")
+    ck("86_formalization_authorized",ex["formalization_authorized"] is True and ex["catalog_v008_binding_authorized"] is True and d.get("formalization_authorization",{}).get("decision_id")=="D-256")
+    ck("87_merge_close_not_authorized",ex["derived_excel_sync_authorized"] is False and ex["merge_authorized"] is False and ex["closure_authorized"] is False and ex["ready_transition_authorized"] is False)
     ck("88_stage2_t018",ex["stage2_authorized"] is False and ex["t018_status"]=="HOLD")
     ck("89_first_article_contract",d["first_article_contract"]["canonical_body_count"]==2 and d["first_article_contract"]["validation_fixture_canonical_asset"] is False and d["first_article_contract"]["required_review_domain_count"]==10)
     required_deferred=["exact_historical_tou_ang_full_timber_length","exact_historical_er_ang_full_timber_length","exact_tou_ang_deep_head_transition_location","exact_outer_ang_head_shaping","hidden_overlap","mortise_tenon","grooves","slots","cavities","hidden_connection_cuts"]
