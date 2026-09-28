@@ -962,3 +962,27 @@ D-259 does **not** authorize:
 Next gate:
 
 `T-041 PR #37 READY+MERGE AUTHORIZATION`.
+
+
+## 27. Ready + Merge Authorization｜D-260
+
+Product Owner explicitly approved the D-259 readiness result and authorized:
+
+1. PR #37 Draft → Ready;
+2. immediate merge to `main`;
+3. post-merge `main` verification.
+
+Preconditions:
+- D-255 First Article = APPROVED;
+- D-257 Formalization + Catalog/V008/CURRENT = COMPLETE;
+- D-259 post-formalization verification = PASS;
+- Derived Excel = PASS;
+- T-041 latest-head regression = 90/90 PASS;
+- shared regressions = 8/8 PASS;
+- accepted geometry signatures unchanged;
+- PR #37 = OPEN / DRAFT / MERGEABLE before authorization.
+
+D-260 does **not** authorize:
+- formal closure;
+- Stage2;
+- T-018 resume.

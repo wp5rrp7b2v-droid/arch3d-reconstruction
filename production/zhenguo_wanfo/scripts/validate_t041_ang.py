@@ -250,7 +250,16 @@ def validate(args):
     ck("84_execution_authorized",ex["engineering_execution_authorized"] is True and ex["blender_execution_authorized"] is True and ex["production_builder_authorized"] is True and ex["validator_authorized"] is True)
     ck("85_po_approved",ex["first_article_product_owner_approved"] is True and ex["first_article_acceptance_authorized"] is True and d.get("first_article_approval",{}).get("decision_id")=="D-255")
     ck("86_formalization_authorized",ex["formalization_authorized"] is True and ex["catalog_v008_binding_authorized"] is True and d.get("formalization_authorization",{}).get("decision_id")=="D-256")
-    ck("87_merge_close_not_authorized",ex["derived_excel_sync_authorized"] is False and ex["merge_authorized"] is False and ex["closure_authorized"] is False and ex["ready_transition_authorized"] is False)
+    merge_authorized=bool(ex.get("merge_authorized"))
+    ready_authorized=bool(ex.get("ready_transition_authorized"))
+    closed=bool(ex.get("closure_complete"))
+    merged=bool(ex.get("merged"))
+    lifecycle_ok = (
+        (merge_authorized and ready_authorized and ex.get("derived_excel_sync_authorized") is True and ex.get("closure_authorized") is False and not closed)
+        or
+        ((not merge_authorized) and (not ready_authorized) and ex.get("closure_authorized") is False and not merged and not closed)
+    )
+    ck("87_ready_merge_lifecycle_consistent",lifecycle_ok)
     ck("88_stage2_t018",ex["stage2_authorized"] is False and ex["t018_status"]=="HOLD")
     ck("89_first_article_contract",d["first_article_contract"]["canonical_body_count"]==2 and d["first_article_contract"]["validation_fixture_canonical_asset"] is False and d["first_article_contract"]["required_review_domain_count"]==10)
     required_deferred=["exact_historical_tou_ang_full_timber_length","exact_historical_er_ang_full_timber_length","exact_tou_ang_deep_head_transition_location","exact_outer_ang_head_shaping","hidden_overlap","mortise_tenon","grooves","slots","cavities","hidden_connection_cuts"]

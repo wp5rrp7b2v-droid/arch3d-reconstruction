@@ -217,7 +217,7 @@
     "engineering_execution": "AUTHORIZED / D-253 / FIRST ARTICLE MACHINE PASS D-254",
     "formalization": "COMPLETE / D-257",
     "catalog_v008_binding": "COMPLETE / D-257 / 32 ROWS",
-    "merge": "NOT AUTHORIZED",
+    "merge": "AUTHORIZED / D-260",
     "stage2": "NOT AUTHORIZED",
     "t018": "HOLD",
     "first_article_machine_validation": "PASS / D-254 / 90 OF 90",
@@ -225,7 +225,8 @@
     "formalization_authorization": "AUTHORIZED / D-256",
     "post_formalization_verification": "AUTHORIZED / D-258 / EXECUTION ACTIVE",
     "derived_excel_sync": "AUTHORIZED / D-258",
-    "readiness_review": "AUTHORIZED / D-258 / RESULT PENDING"
+    "readiness_review": "PASS / D-259",
+    "ready_merge": "AUTHORIZED / D-260"
   },
   "decisions": [
     "D-244",
@@ -242,7 +243,8 @@
     "D-255",
     "D-256",
     "D-257",
-    "D-258"
+    "D-258",
+    "D-260"
   ],
   "approval": {
     "candidate_decision_id": "D-245",
@@ -407,6 +409,17 @@
     "ready_transition_authorized": false,
     "merge_authorized": false,
     "closure_authorized": false,
+    "stage2_authorized": false,
+    "t018_resume_authorized": false
+  },
+  "ready_merge_authorization": {
+    "decision_id": "D-260",
+    "readiness_result_decision_id": "D-259",
+    "pr_number": 37,
+    "draft_to_ready_authorized": true,
+    "merge_authorized": true,
+    "main_verification_authorized": true,
+    "formal_closure_authorized": false,
     "stage2_authorized": false,
     "t018_resume_authorized": false
   }

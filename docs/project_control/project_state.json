@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R335",
+  "state_revision": "R336",
   "last_updated": "2026-09-28",
-  "session_status": "T-041 POST-FORMALIZATION VERIFICATION PASS D-259 / DERIVED EXCEL PASS / LATEST-HEAD T-041 90 OF 90 PASS / SHARED REGRESSIONS 8 OF 8 PASS / PR #37 READY FOR PRODUCT OWNER READY+MERGE DECISION / READY-MERGE NOT YET AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-041 READY+MERGE AUTHORIZED D-260 / PR #37 DRAFT→READY+MERGE AUTHORIZED / POST-FORMALIZATION PASS D-259 / FORMAL CLOSURE NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -66,15 +66,15 @@
     "engineering_id": "P3_3_ANG_MASTER_V2_V001",
     "name": "昂族 Master",
     "component": "头昂 / 二昂",
-    "status": "POST-FORMALIZATION VERIFICATION PASS / D-259 / PR #37 READY+MERGE DECISION NEXT",
+    "status": "READY+MERGE AUTHORIZED / D-260 / PR #37",
     "branch": "codex/t041-p3-3-ang-master-v2-v001",
     "branch_status": "ACTIVE / PR #37 DRAFT",
     "engineering_execution_authorized": true
   },
   "proposed_next_task": {
-    "id": "T-041-READY-MERGE-AUTHORIZATION",
-    "name": "T-041 PR #37 Draft→Ready + Merge authorization",
-    "status": "NEXT GATE / NOT AUTHORIZED"
+    "id": "T-041-READY-MERGE",
+    "name": "T-041 PR #37 Draft→Ready + Merge",
+    "status": "AUTHORIZED / EXECUTION NEXT"
   },
   "last_completed_task": {
     "id": "T-040",
@@ -851,7 +851,7 @@
       "engineering_task_created": true,
       "engineering_execution_authorized": true,
       "task_contract_path": "docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md",
-      "next_gate": "POST-FORMALIZATION VERIFICATION RESULT",
+      "next_gate": "PR #37 DRAFT→READY + MERGE",
       "length_slope_assembly_control_status": "LOCKED / PRODUCT_OWNER_APPROVED / D-250",
       "length_slope_assembly_control_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001.json",
       "longitudinal_profile_control_status": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
@@ -865,7 +865,9 @@
       "post_formalization_authority": "D-258",
       "post_formalization_verification_authorized": true,
       "derived_excel_sync_authorized": true,
-      "ready_merge_authorized": false
+      "ready_merge_authorized": true,
+      "ready_merge_authorization_decision_id": "D-260",
+      "merge_authorized": true
     },
     "t041": {
       "task_id": "T-041",
@@ -873,7 +875,7 @@
       "component": "昂族（头昂 / 二昂）",
       "component_family_id": "CMP-GONG-ANG-001",
       "master_id": "CMP-GONG-ANG-001_MASTER",
-      "status": "POST-FORMALIZATION VERIFICATION PASS D-259 / READY+MERGE DECISION NEXT",
+      "status": "READY+MERGE AUTHORIZED D-260 / PR #37",
       "task_contract": "docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md",
       "registry_binding_count": 32,
       "tou_ang_count": 16,
@@ -903,7 +905,7 @@
         "reference_control_span_mm": 787.6157057855055,
         "historical_full_lengths_closed": false
       },
-      "next_gate": "READY+MERGE AUTHORIZATION",
+      "next_gate": "PR #37 DRAFT→READY + MERGE",
       "gate_b": {
         "id": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001_C01",
         "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
@@ -944,7 +946,7 @@
       "formalization_authorization_decision_id": "D-256",
       "formalization_complete": true,
       "derived_excel_sync_authorized": true,
-      "ready_merge_authorized": false,
+      "ready_merge_authorized": true,
       "formalization_result_decision_id": "D-257",
       "formalization_execution_status": "COMPLETE / D-257",
       "formalization_run_id": 36376214515,
@@ -964,7 +966,7 @@
       "er_ang_geometry_signature": "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678",
       "post_formalization_verification_authorized": true,
       "post_formalization_authority": "D-258",
-      "merge_authorized": false,
+      "merge_authorized": true,
       "closure_authorized": false,
       "post_formalization_result_decision_id": "D-259",
       "post_formalization_verification_status": "PASS",
@@ -977,7 +979,8 @@
       "latest_head_regenerated_blend_sha256": "d5741f769b329739908f8c4f3c732bd4debbc84329a1b29b50ef305169bc104c",
       "shared_regression_status": "PASS / 8 OF 8",
       "dedicated_route_ownership_status": "PASS / GENERIC MASTER V2 SKIPPED AS INTENDED",
-      "readiness_status": "READY_FOR_PRODUCT_OWNER_READY_MERGE_DECISION"
+      "readiness_status": "READY_FOR_PRODUCT_OWNER_READY_MERGE_DECISION",
+      "ready_merge_authorization_decision_id": "D-260"
     }
   },
   "roof_control_audit_2026_09_17": {
