@@ -1,7 +1,7 @@
 {
   "schema_version": "ANG_MASTER_DEFINITION_V001",
   "task_id": "T-041",
-  "status": "ENGINEERING EXECUTION AUTHORIZED / D-253 / FIRST ARTICLE ENGINEERING",
+  "status": "FIRST ARTICLE PO APPROVED D-255 / FORMALIZATION AUTHORIZED D-256 / EXECUTION PENDING",
   "component_family_id": "CMP-GONG-ANG-001",
   "component_names_zh": [
     "头昂",
@@ -221,8 +221,8 @@
     "draft_pr_authorized": true,
     "first_article_product_owner_approved": false,
     "first_article_acceptance_authorized": false,
-    "formalization_authorized": false,
-    "catalog_v008_binding_authorized": false,
+    "formalization_authorized": true,
+    "catalog_v008_binding_authorized": true,
     "derived_excel_sync_authorized": false,
     "ready_transition_authorized": false,
     "merge_authorized": false,
@@ -261,5 +261,36 @@
     "per_instance_deformation",
     "per_instance_originality_repair_state",
     "sample_to_instance_mapping"
-  ]
+  ],
+  "first_article_approval": {
+    "decision_id": "D-255",
+    "machine_gate_decision_id": "D-254",
+    "run_id": 36373958970,
+    "artifact_id": 10950620532,
+    "artifact_zip_sha256": "a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e",
+    "canonical_blend_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+    "semantic_sha256": "d35c0e93eaeac35ab3b25bd60fc05d1efc91a8dfeac92c13d92f4efd15b48321",
+    "validation_sha256": "ec9048434cc1bcfdec18be4aff4d21374adf43719a4c9042ec558e66efa81dcb",
+    "review_board_sha256": "a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65",
+    "family_semantic_signature": "a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29",
+    "geometry_signatures": {
+      "TOU_ANG": "61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250",
+      "ER_ANG": "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678"
+    },
+    "product_owner_approved": true
+  },
+  "formalization_authorization": {
+    "decision_id": "D-256",
+    "status": "AUTHORIZED / EXECUTION PENDING",
+    "first_article_approval_decision_id": "D-255",
+    "authorized_binding_scope": {
+      "TOU_ANG": 16,
+      "ER_ANG": 16,
+      "total": 32,
+      "count_status": "LOCKED_DERIVED"
+    },
+    "derived_excel_sync_authorized": false,
+    "ready_merge_authorized": false,
+    "closure_authorized": false
+  }
 }
