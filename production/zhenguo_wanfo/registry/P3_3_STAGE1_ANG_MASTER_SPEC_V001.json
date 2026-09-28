@@ -1,0 +1,232 @@
+{
+  "schema_version": "P3_3_STAGE1_ANG_MASTER_SPEC_V001",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-246",
+  "date": "2026-09-28",
+  "stage": "P3.3 V002 Stage 1",
+  "source_gate": "D-244 / SOURCE READINESS + D-076 PASS WITH GEOMETRY BOUNDARY",
+  "identity": {
+    "family_name_zh": "昂族",
+    "component_family_id": "CMP-GONG-ANG-001",
+    "master_id": "CMP-GONG-ANG-001_MASTER",
+    "master_version": "V001",
+    "master_family_count": 1,
+    "geometry_variant_count": 2,
+    "direction_geometry_variant_count": 0,
+    "architecture": "ONE_MASTER_FAMILY / TWO_NON_COLLAPSIBLE_VARIANTS / 32_V008_BINDINGS",
+    "variants": [
+      {
+        "variant_id": "TOU_ANG",
+        "component_name_zh": "头昂",
+        "registry_binding_count": 16,
+        "count_status": "LOCKED_DERIVED",
+        "historical_full_timber_length_mm": null,
+        "historical_full_length_status": "UNRESOLVED"
+      },
+      {
+        "variant_id": "ER_ANG",
+        "component_name_zh": "二昂",
+        "registry_binding_count": 16,
+        "count_status": "LOCKED_DERIVED",
+        "historical_full_timber_length_mm": null,
+        "historical_full_length_status": "UNRESOLVED"
+      }
+    ]
+  },
+  "registry_scope": {
+    "canonical_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json",
+    "record_count": 32,
+    "count_status": "LOCKED_DERIVED",
+    "distribution": {
+      "TOU_ANG": 16,
+      "ER_ANG": 16
+    },
+    "scope_note": "32 is the current V008 derived binding scope; it is not a directly inventoried historical whole-hall physical count.",
+    "sample_to_instance_mapping": "UNKNOWN",
+    "direction_is_instance_owned": true,
+    "placement_is_assembly_owned": true
+  },
+  "primary_source": {
+    "id": "SRC-ZG-WF-001",
+    "title": "山西平遥镇国寺万佛殿与天王殿精细测绘报告",
+    "canonical_pdf_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "source_role": "A1 PRIMARY ENGINEERING AUTHORITY"
+  },
+  "direct_component_evidence": {
+    "TOU_ANG": {
+      "width_or_guang_mean_mm": 278.4,
+      "classification": "DIRECT_PRIMARY / OBSERVED_MEAN",
+      "source_locator": "PDF p79 / printed p64 / Table 2-37",
+      "per_instance_exact_claim": false,
+      "original_963_design_claim": false
+    },
+    "ER_ANG": {
+      "width_or_guang_mm": 187,
+      "classification": "DIRECT_PRIMARY / SOURCE_TABLE_VALUE",
+      "source_locator": "PDF p79 / printed p64 / Table 2-37",
+      "semantic_note": "The same 187.0mm value is associated by the report with the 头昂单材部分 relation; this does not prove identical complete geometry between 头昂 and 二昂.",
+      "per_instance_exact_claim": false,
+      "original_963_design_claim": false
+    }
+  },
+  "assembly_design_evidence": {
+    "topology": {
+      "description": "七铺作、双杪双下昂",
+      "classification": "DIRECT_PRIMARY / SOURCE_SUPPORTED_TOPOLOGY"
+    },
+    "report_design_triangle": {
+      "horizontal_fen": 47,
+      "rise_fen": 21,
+      "classification": "REPORT_INFERRED / REPORT_DESIGN_LOGIC / REPLACEABLE",
+      "source_locator": "PDF p78-79 / printed p63-64",
+      "direct_per_member_slope_measurement": false,
+      "original_963_design_claim": false
+    },
+    "visual_form_authority": {
+      "source_pages_pdf": [
+        73,
+        74,
+        75,
+        76,
+        78,
+        79,
+        80
+      ],
+      "classification": "SAME_BUILDING_SOURCE_GUIDED / QUALITATIVE_FORM_AUTHORITY",
+      "note": "Supports two-level oblique Ang relation, broad head/body form and assembly context; does not numerically close exact standalone longitudinal profiles or hidden joints."
+    }
+  },
+  "registry_existing_dimension_reconciliation": {
+    "thickness_mm": 154,
+    "current_registry_presence": true,
+    "master_spec_classification": "REGISTRY_EXISTING / PROVENANCE_RECONCILIATION_REQUIRED",
+    "direct_ang_specific_source_binding_closed": false,
+    "policy": "154mm must not be promoted to DIRECT_PRIMARY for the Ang family until source lineage is explicitly reconciled."
+  },
+  "geometry_policy": {
+    "geometry_mode": "LONGITUDINAL_PROFILE_DRIVEN",
+    "tou_ang_required_semantic": "DEEP_HEAD_REGION -> SINGLE_CAI_REGION",
+    "er_ang_required_semantic": "INDEPENDENT_LONGITUDINAL_PROFILE",
+    "tou_er_profile_collapse_prohibited": true,
+    "uniform_scaling_between_variants_prohibited": true,
+    "rectangular_prism_only_representation_prohibited": true,
+    "exact_transition_position": "UNRESOLVED",
+    "exact_end_shaping": "UNRESOLVED",
+    "exact_hidden_overlap": "UNRESOLVED"
+  },
+  "length_policy": {
+    "TOU_ANG": {
+      "direct_historical_full_length_mm": null,
+      "status": "UNRESOLVED",
+      "stage1_reference_length_locked": false
+    },
+    "ER_ANG": {
+      "direct_historical_full_length_mm": null,
+      "status": "UNRESOLVED",
+      "stage1_reference_length_locked": false
+    },
+    "assembly_projection_values_must_not_be_used_as_member_full_lengths": true
+  },
+  "coordinate_policy": {
+    "x_axis": "+X longitudinal / out-jump axis",
+    "y_axis": "+Y member width",
+    "z_axis": "+Z vertical",
+    "local_origin": "UNRESOLVED / MUST_BE_LOCKED_BY_ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET",
+    "building_world_placement_in_master": false
+  },
+  "deferred_geometry": [
+    "exact_tou_ang_historical_full_timber_length",
+    "exact_er_ang_historical_full_timber_length",
+    "exact_tou_ang_deep_to_single_cai_transition_location",
+    "exact_tou_ang_longitudinal_profile",
+    "exact_er_ang_longitudinal_profile",
+    "exact_outer_ang_head_shaping",
+    "exact_inner_end_length",
+    "hidden_overlap",
+    "mortise_tenon",
+    "grooves",
+    "slots",
+    "cavities",
+    "hidden_connection_cuts",
+    "unmeasured_chamfers",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "per_instance_originality_repair_state",
+    "sample_to_instance_mapping"
+  ],
+  "required_pre_engineering_gates": [
+    "ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V0.1",
+    "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V0.1",
+    "ENGINEERING_EXECUTION_AUTHORIZATION"
+  ],
+  "gate_requirements": {
+    "ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V0_1": [
+      "deterministic Stage1 TOU_ANG reference length",
+      "deterministic Stage1 ER_ANG reference length",
+      "explicit evidence classification for each reference length",
+      "47:21 report-design implementation rule and tolerance",
+      "local origin and assembly datum for both variants",
+      "reconcile V008 thickness_mm=154 provenance before use as direct authority",
+      "validation relationship for the two Ang levels without converting assembly evidence into member-length claims",
+      "versioned deterministic signature",
+      "Product Owner approval"
+    ],
+    "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V0_1": [
+      "independent deterministic numeric profile control set for TOU_ANG",
+      "independent deterministic numeric profile control set for ER_ANG",
+      "TOU_ANG deep-head to single-cai semantic retained",
+      "same-building source references and reviewable diagrams",
+      "no metric source-image calibration claim unless explicitly performed",
+      "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE classification for reconstructed controls",
+      "no finished-mesh uniform scaling between variants",
+      "versioned deterministic signatures",
+      "Product Owner approval"
+    ]
+  },
+  "proposed_hard_fails": [
+    "WRONG_V008_BINDING_COUNT",
+    "LOCKED_DERIVED_COUNT_MARKED_AS_DIRECT_INVENTORY",
+    "TOU_ER_VARIANTS_COLLAPSED",
+    "ER_ANG_UNIFORM_SCALED_FROM_TOU_ANG",
+    "TOU_ANG_UNIFORM_SCALED_FROM_ER_ANG",
+    "RECTANGULAR_PRISM_ONLY_ANG_GEOMETRY",
+    "278_4_OR_187_MARKED_AS_PER_INSTANCE_EXACT",
+    "154_THICKNESS_PROMOTED_WITHOUT_PROVENANCE_RECONCILIATION",
+    "47_21_MARKED_AS_DIRECT_PER_MEMBER_MEASUREMENT",
+    "47_21_MARKED_AS_PROVEN_963_ORIGINAL_DESIGN",
+    "ASSEMBLY_PROJECTION_USED_AS_MEMBER_FULL_LENGTH",
+    "UNSUPPORTED_EXACT_PROFILE",
+    "UNSUPPORTED_END_SHAPE",
+    "UNSUPPORTED_JOINERY_OR_HIDDEN_CUTS",
+    "GENERIC_TEMPLATE_SUBSTITUTION",
+    "BUILDING_PLACEMENT_BAKED_INTO_MASTER",
+    "MODEL_BEFORE_CONTROL_GATES_AND_EXECUTION_AUTHORIZATION"
+  ],
+  "gates": {
+    "source_readiness": "PASS WITH GEOMETRY BOUNDARY / D-244",
+    "master_spec": "LOCKED / PRODUCT_OWNER_APPROVED / D-246",
+    "task_contract": "NEXT COMPLETE STEP / NOT YET DESIGNED",
+    "length_slope_assembly_control": "REQUIRED / NOT YET DESIGNED",
+    "longitudinal_profile_control": "REQUIRED / NOT YET DESIGNED",
+    "engineering_execution": "NOT AUTHORIZED",
+    "formalization": "NOT AUTHORIZED",
+    "catalog_v008_binding": "NOT AUTHORIZED",
+    "merge": "NOT AUTHORIZED",
+    "stage2": "NOT AUTHORIZED",
+    "t018": "HOLD"
+  },
+  "decisions": [
+    "D-244",
+    "D-245",
+    "D-246"
+  ],
+  "approval": {
+    "candidate_decision_id": "D-245",
+    "approval_decision_id": "D-246",
+    "product_owner_approved": true,
+    "locked": true,
+    "approval_date": "2026-09-28",
+    "note": "V0.1 locked with one Ang Master family, two non-collapsible variants, 32 LOCKED_DERIVED V008 bindings, explicit 154mm provenance reconciliation requirement, and two mandatory independent pre-engineering control gates."
+  },
+  "engineering_task_created": false,
+  "engineering_execution_authorized": false
+}
