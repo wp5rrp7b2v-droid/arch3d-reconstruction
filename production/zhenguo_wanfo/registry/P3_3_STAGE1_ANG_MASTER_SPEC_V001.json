@@ -214,12 +214,14 @@
     "task_contract": "LOCKED / PRODUCT_OWNER_APPROVED / D-248",
     "length_slope_assembly_control": "LOCKED / PRODUCT_OWNER_APPROVED / D-250",
     "longitudinal_profile_control": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
-    "engineering_execution": "AUTHORIZED / D-253",
+    "engineering_execution": "AUTHORIZED / D-253 / FIRST ARTICLE MACHINE PASS D-254",
     "formalization": "NOT AUTHORIZED",
     "catalog_v008_binding": "NOT AUTHORIZED",
     "merge": "NOT AUTHORIZED",
     "stage2": "NOT AUTHORIZED",
-    "t018": "HOLD"
+    "t018": "HOLD",
+    "first_article_machine_validation": "PASS / D-254 / 90 OF 90",
+    "first_article_product_owner_review": "NEXT GATE / NOT YET APPROVED"
   },
   "decisions": [
     "D-244",
@@ -231,7 +233,8 @@
     "D-250",
     "D-251",
     "D-252",
-    "D-253"
+    "D-253",
+    "D-254"
   ],
   "approval": {
     "candidate_decision_id": "D-245",
@@ -292,5 +295,25 @@
     "engineering_execution_authorized": true
   },
   "engineering_execution_authorization_decision_id": "D-253",
-  "engineering_branch": "codex/t041-p3-3-ang-master-v2-v001"
+  "engineering_branch": "codex/t041-p3-3-ang-master-v2-v001",
+  "first_article_machine_gate": {
+    "decision_id": "D-254",
+    "status": "PASS / 90 OF 90 / PRODUCT OWNER REVIEW NEXT",
+    "run_id": 36373958970,
+    "artifact_id": 10950620532,
+    "artifact_digest": "sha256:a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e",
+    "head_commit": "e8e986101c0c8a64d29ecc589d0e4c5949c1d5ac",
+    "draft_pr_number": 37,
+    "canonical_blend_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+    "family_semantic_signature": "a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29",
+    "geometry_signatures": {
+      "TOU_ANG": "61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250",
+      "ER_ANG": "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678"
+    },
+    "review_board_sha256": "a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65",
+    "blender_version": "4.5.13 LTS",
+    "check_count": 90,
+    "product_owner_approved": false,
+    "formalization_authorized": false
+  }
 }
