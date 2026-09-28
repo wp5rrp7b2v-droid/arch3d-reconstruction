@@ -28,7 +28,7 @@ from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.worksheet.table import Table, TableStyleInfo
 
 
-GENERATOR_VERSION = "1.0.2"
+GENERATOR_VERSION = "1.0.3"
 GENERATOR_REPO_PATH = "scripts/generate_wanfo_component_registry_excel.py"
 DEFAULT_INPUT = Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json")
 DEFAULT_OUTPUT_DIR = Path("docs/evidence/zhenguo_wanfo/derived")
@@ -126,9 +126,10 @@ def build_workbook(registry: dict[str, Any], source_path: Path, source_commit: s
         ["登记记录数", progress.get("registry_record_count", len(registry.get("items", []))), "V008登记行数；包含实体、系统、拓扑、族边界等记录，不等于整殿物理构件总件数", "INFO"],
         ["登记对象类型", progress.get("registered_object_type_count", ""), "V008当前登记的不同构件/对象类型", "INFO"],
         ["Stage1 Master范围", progress.get("master_scope_object_type_count", ""), "需要或已经具有Master的对象类型数；作为Master完成度分母", "TRACKED"],
-        ["已批准 Master", progress.get("approved_master_count", ""), "PRODUCT_OWNER_APPROVED Master available", "COMPLETE"],
-        ["待完成 Master", progress.get("pending_master_object_type_count", ""), "Master范围 - 已批准Master", "PENDING"],
-        ["Master完成度", progress.get("master_completion_percent", ""), "已批准Master / Stage1 Master范围", "PROGRESS"],
+        ["已覆盖 Master-scope 类型", progress.get("covered_master_scope_object_type_count", ""), "Master-scope对象类型中已有APPROVED_MASTER_AVAILABLE绑定的类型数", "COMPLETE"],
+        ["待完成 Master-scope 类型", progress.get("pending_master_object_type_count", ""), "Master-scope对象类型中尚未覆盖的类型数", "PENDING"],
+        ["Master-scope 覆盖率", progress.get("master_completion_percent", ""), "已覆盖Master-scope对象类型 / Stage1 Master范围；不得用Master family数量作分子", "PROGRESS"],
+        ["已批准 Master families", progress.get("approved_master_family_count", progress.get("approved_master_count", "")), "PRODUCT_OWNER_APPROVED Master family数量；与object type覆盖数是不同维度", "COMPLETE"],
         ["已绑定Master的登记记录", progress.get("master_covered_registry_record_count", ""), "仅表示V008登记行覆盖数，不等于物理构件总件数", "INFO"],
         ["PENDING_SOURCE_BINDING", progress.get("pending_source_binding_count", len(registry.get("pending_source_binding", []))), "仍在V008之外、不得静默视为已覆盖的对象", "PENDING"],
     ]
@@ -246,9 +247,10 @@ def build_workbook(registry: dict[str, Any], source_path: Path, source_commit: s
         ["记录数", len(registry.get("items", []))],
         ["登记对象类型", registry.get("stage1_master_progress_summary", {}).get("registered_object_type_count", "")],
         ["Stage1 Master范围", registry.get("stage1_master_progress_summary", {}).get("master_scope_object_type_count", "")],
-        ["已批准Master", registry.get("stage1_master_progress_summary", {}).get("approved_master_count", "")],
-        ["待完成Master", registry.get("stage1_master_progress_summary", {}).get("pending_master_object_type_count", "")],
-        ["Master完成度", str(registry.get("stage1_master_progress_summary", {}).get("master_completion_percent", "")) + "%"],
+        ["已覆盖Master-scope类型", registry.get("stage1_master_progress_summary", {}).get("covered_master_scope_object_type_count", "")],
+        ["待完成Master-scope类型", registry.get("stage1_master_progress_summary", {}).get("pending_master_object_type_count", "")],
+        ["Master-scope覆盖率", str(registry.get("stage1_master_progress_summary", {}).get("master_completion_percent", "")) + "%"],
+        ["已批准Master families", registry.get("stage1_master_progress_summary", {}).get("approved_master_family_count", registry.get("stage1_master_progress_summary", {}).get("approved_master_count", ""))],
         ["源 GitHub 提交", source_commit or "UNKNOWN"],
         ["源 JSON SHA-256", source_sha],
         ["生成器版本", GENERATOR_VERSION],
