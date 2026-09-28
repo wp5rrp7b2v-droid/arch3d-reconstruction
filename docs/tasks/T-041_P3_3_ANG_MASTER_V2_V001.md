@@ -492,8 +492,8 @@ The future task must not:
 2. Master Spec V0.1 — **LOCKED / D-246**
 3. Task Contract — **LOCKED / PRODUCT OWNER APPROVED / D-248**
 4. Length/Slope/Assembly Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-250**
-5. Longitudinal Profile Control Set V0.1 — **NEXT GATE / NOT YET DESIGNED**
-6. Engineering Execution Authorization — **NOT AUTHORIZED**
+5. Longitudinal Profile Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-252**
+6. Engineering Execution Authorization — **NEXT GATE / NOT AUTHORIZED**
 7. First Article machine validation — **NOT AUTHORIZED**
 8. Product Owner First Article Approval — **NOT AUTHORIZED**
 9. Formalization + Catalog/V008/CURRENT binding — **NOT AUTHORIZED**
@@ -590,3 +590,83 @@ D-250 does **not** authorize:
 Next complete step:
 
 `ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V0.1` design.
+
+
+## 19. Gate B Lock｜D-252
+
+Product Owner approved Gate B Candidate 01 unchanged.
+
+Canonical control:
+
+`production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001.json`
+
+Review artifact:
+
+`docs/production/zhenguo_wanfo/P3_3_STAGE1_ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001.svg`
+
+D-252 formally locks:
+
+### TOU_ANG
+- profile point count = **10**
+- semantic = `SINGLE_CAI_REGION -> DEEP_HEAD_REGION -> OUTBOARD_TAPER`
+- direct source depths retained: **187.0 mm** single-cai and **278.4 mm** deep-head
+- deterministic reconstructed stations:
+  - U=-0.500 = inner reconstruction cut / 187.0
+  - U=-0.125 = single-cai region end / 187.0
+  - U=+0.125 = deep-head transition completed / 278.4
+  - U=+0.375 = deep-head region end / 278.4
+  - U=+0.500 = outboard reconstruction taper cut / 187.0
+- control-point SHA-256 = `3e45e7732cf49012cbf8b5e480e76ad2fd986c4aa717dd650e3bf3f9831f7bb5`
+
+### ER_ANG
+- profile point count = **6**
+- semantic = `CONSTANT_SINGLE_CAI_BODY -> OUTBOARD_TAPER`
+- direct source body depth retained: **187.0 mm**
+- deterministic reconstructed taper:
+  - U=+0.375 = taper start
+  - U=+0.500 = outboard reconstruction cut
+  - taper ratio = **2/3**
+- the 2/3 taper is `SOURCE_GUIDED_SIMPLIFIED / STAGE1_TAPER_CONTROL / REPLACEABLE / NOT_DIRECT_MEASUREMENT`
+- control-point SHA-256 = `c4b935c9d445414831f16d949b02ff110f3e336f88c68dd68f58d514bd172778`
+
+Family semantic-control SHA-256:
+
+`dc38ab72be1f5aef3192a48e11621a3288c422475545b56dc5e29fa0102e2ae5`
+
+D-252 preserves:
+- Gate A reference span = **787.6157057855055 mm**
+- common thickness = **154.0 mm**
+- 47:21 design relation from Gate A
+- exact historical TOU/ER profiles = unresolved
+- exact TOU deep-head transition location = unresolved
+- exact outer Ang head shaping = unresolved
+- metric source-image calibration = not performed/not claimed
+- historical asymmetry = unresolved
+- hidden overlap/joinery = deferred
+
+Both profiles are classified:
+
+`SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_PROFILE_MEASUREMENT`
+
+D-252 prohibits:
+- TOU/ER profile collapse;
+- finished-mesh scaling between variants;
+- reuse of prior gong profile controls as Ang authority;
+- generic Song/《营造法式》 substitution;
+- reconstructed stations/taper presented as direct measurement;
+- profile-gate invention of end joinery.
+
+D-252 does **not** authorize:
+- engineering branch creation;
+- PR creation;
+- builder/validator implementation;
+- Blender execution;
+- First Article;
+- formalization;
+- Catalog/V008 binding;
+- Stage2;
+- T-018 resume.
+
+Next complete gate:
+
+`ENGINEERING_EXECUTION_AUTHORIZATION`.
