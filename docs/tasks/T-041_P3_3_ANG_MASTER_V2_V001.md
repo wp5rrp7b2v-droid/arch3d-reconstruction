@@ -491,8 +491,8 @@ The future task must not:
 1. Source Readiness + D-076 — **PASS / D-244**
 2. Master Spec V0.1 — **LOCKED / D-246**
 3. Task Contract — **LOCKED / PRODUCT OWNER APPROVED / D-248**
-4. Length/Slope/Assembly Control Set V0.1 — **NEXT GATE / NOT YET DESIGNED**
-5. Longitudinal Profile Control Set V0.1 — **NOT YET DESIGNED**
+4. Length/Slope/Assembly Control Set V0.1 — **LOCKED / PRODUCT OWNER APPROVED / D-250**
+5. Longitudinal Profile Control Set V0.1 — **NEXT GATE / NOT YET DESIGNED**
 6. Engineering Execution Authorization — **NOT AUTHORIZED**
 7. First Article machine validation — **NOT AUTHORIZED**
 8. Product Owner First Article Approval — **NOT AUTHORIZED**
@@ -539,3 +539,54 @@ D-248 does **not** authorize:
 Next complete step:
 
 `ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V0.1` design.
+
+
+## 18. Gate A Lock｜D-250
+
+Product Owner approved Gate A Candidate 01 unchanged.
+
+Canonical control:
+
+`production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001.json`
+
+D-250 formally locks:
+
+- TOU_ANG 广 = **278.4 mm** as `DIRECT_PRIMARY / OBSERVED_MEAN / FAMILY_SOURCE_VALUE`;
+- ER_ANG / 头昂单材部分广 = **187.0 mm** as the report's combined source category, not an ER-only n=16 mean;
+- 昂厚 = **154.0 mm** as `DIRECT_PRIMARY / OBSERVED_MEAN / ANG_FAMILY_COMMON_THICKNESS`;
+- source-internal thickness sample-count conflict remains explicit: narrative **34** vs Table 2-11 **16**;
+- member-local axes: U longitudinal centreline / V thickness / W guang;
+- 154 mm maps to local V / Assembly Y;
+- 278.4 / 187.0 map to local W in the Assembly X-Z plane, not generic Assembly Y width;
+- report design triangle = **47分 run / 21分 rise**;
+- design run = **719.1 mm**;
+- design rise = **321.3 mm**;
+- design angle = **24.075498255078834°**;
+- synthetic reference centreline control span = **787.6157057855055 mm** for each variant;
+- the equal synthetic control span does not establish equal historical full timber lengths;
+- direct observed third/fourth combined projection = **719.5 mm** remains separate from the report-inferred 719.1 mm design run;
+- their delta = **0.4 mm** and must not be forced to zero;
+- DOUBLE_ANG_ASSEMBLY_FIXTURE remains validation-only and non-canonical.
+
+D-250 does **not** resolve:
+- historical complete TOU_ANG timber length;
+- historical complete ER_ANG timber length;
+- exact longitudinal profiles;
+- TOU_ANG deep-head transition location;
+- outer/end shaping;
+- hidden overlap;
+- joinery.
+
+D-250 does **not** authorize:
+- engineering branch creation;
+- builder/validator implementation;
+- Blender execution;
+- First Article;
+- formalization;
+- Catalog/V008 binding;
+- Stage2;
+- T-018 resume.
+
+Next complete step:
+
+`ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V0.1` design.
