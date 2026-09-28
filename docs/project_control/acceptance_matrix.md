@@ -1413,3 +1413,27 @@ Boundary retained:
 - Stage2: **NOT AUTHORIZED**.
 - Local sync: **NOT CHECKED**.
 - Daily Close: **COMPLETE / MAIN VERIFIED**.
+
+
+### D-267 Final Current-State Mirror Sync
+
+- PR #40: **MERGED / MAIN VERIFIED**.
+- Merge commit: `cd8268e22c9a0e357874cce147375da761b76888`.
+- Project State: **R343**.
+- Dashboard: **v201 / CURRENT**.
+- Dashboard next milestone: **P3.3 Stage1 Closure Readiness Audit**.
+- Dashboard stale `下一目标：NONE`: **REMOVED**.
+- Dashboard stale hard-coded `D-105`: **REMOVED**.
+- Dashboard generator + CI: **UPDATED / GOVERNANCE-NEXT AWARE / FAIL-CLOSED**.
+- Acceptance Matrix tail: **D-264 + D-266 + D-267 CURRENT**.
+- Stage1 Master-scope: **28 / 28 = 100%**.
+- Approved Master families: **25**.
+- Master-covered Registry records: **363 / 505**.
+- PENDING_SOURCE_BINDING: **7**.
+- Registry CURRENT == V008: **PASS / unchanged**.
+- Derived Excel: **SYNCED / unchanged**.
+- Active engineering T-task: **NONE**.
+- Stage1 Closure Readiness Audit: **NOT STARTED / NEXT SESSION**.
+- T-018: **HOLD**.
+- Stage2: **NOT AUTHORIZED**.
+- Geometry/evidence/Master approvals/Registry bindings/canonical binaries: **UNCHANGED**.
