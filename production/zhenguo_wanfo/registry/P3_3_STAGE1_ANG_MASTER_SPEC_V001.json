@@ -1,6 +1,6 @@
 {
   "schema_version": "P3_3_STAGE1_ANG_MASTER_SPEC_V001",
-  "status": "MERGED TO MAIN / MAIN VERIFIED / D-261 / FORMAL_CLOSURE_PENDING",
+  "status": "CLOSED / D-262 / PR #37 MERGED / MAIN VERIFIED",
   "date": "2026-09-28",
   "stage": "P3.3 V002 Stage 1",
   "source_gate": "D-244 / SOURCE READINESS + D-076 PASS WITH GEOMETRY BOUNDARY",
@@ -228,7 +228,7 @@
     "readiness_review": "PASS / D-259",
     "ready_merge": "COMPLETE / D-260",
     "main_verification": "PASS / D-261",
-    "formal_closure": "NEXT GATE / NOT AUTHORIZED"
+    "formal_closure": "COMPLETE / D-262"
   },
   "decisions": [
     "D-244",
@@ -247,7 +247,8 @@
     "D-257",
     "D-258",
     "D-260",
-    "D-261"
+    "D-261",
+    "D-262"
   ],
   "approval": {
     "candidate_decision_id": "D-245",
@@ -442,5 +443,25 @@
     "current_equals_v008": true,
     "derived_excel_synced": true,
     "formal_closure_authorized": false
+  },
+  "formal_closure": {
+    "decision_id": "D-262",
+    "merge_result_decision_id": "D-261",
+    "status": "CLOSED / MAIN VERIFIED",
+    "pr_number": 37,
+    "merge_commit_sha": "bb6873a7edb7e3222142387613851690bd18396f",
+    "accepted_canonical_blend_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+    "family_semantic_signature": "a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29",
+    "geometry_signatures": {
+      "TOU_ANG": "61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250",
+      "ER_ANG": "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678"
+    },
+    "registry_binding_count": 32,
+    "tou_ang_binding_count": 16,
+    "er_ang_binding_count": 16,
+    "master_covered_registry_record_count": 363,
+    "evidence_boundaries_preserved": true,
+    "stage2_authorized": false,
+    "t018_status": "HOLD"
   }
 }
