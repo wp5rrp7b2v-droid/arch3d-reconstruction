@@ -221,7 +221,8 @@
     "stage2": "NOT AUTHORIZED",
     "t018": "HOLD",
     "first_article_machine_validation": "PASS / D-254 / 90 OF 90",
-    "first_article_product_owner_review": "NEXT GATE / NOT YET APPROVED"
+    "first_article_product_owner_review": "APPROVED / D-255",
+    "formalization_authorization": "NEXT GATE / NOT AUTHORIZED"
   },
   "decisions": [
     "D-244",
@@ -234,7 +235,8 @@
     "D-251",
     "D-252",
     "D-253",
-    "D-254"
+    "D-254",
+    "D-255"
   ],
   "approval": {
     "candidate_decision_id": "D-245",
@@ -298,7 +300,7 @@
   "engineering_branch": "codex/t041-p3-3-ang-master-v2-v001",
   "first_article_machine_gate": {
     "decision_id": "D-254",
-    "status": "PASS / 90 OF 90 / PRODUCT OWNER REVIEW NEXT",
+    "status": "PASS / 90 OF 90 / PRODUCT OWNER APPROVED D-255",
     "run_id": 36373958970,
     "artifact_id": 10950620532,
     "artifact_digest": "sha256:a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e",
@@ -313,7 +315,24 @@
     "review_board_sha256": "a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65",
     "blender_version": "4.5.13 LTS",
     "check_count": 90,
-    "product_owner_approved": false,
+    "product_owner_approved": true,
+    "formalization_authorized": false,
+    "product_owner_approval_decision_id": "D-255"
+  },
+  "first_article_approval": {
+    "decision_id": "D-255",
+    "product_owner_approved": true,
+    "machine_gate_decision_id": "D-254",
+    "run_id": 36373958970,
+    "artifact_id": 10950620532,
+    "artifact_digest": "sha256:a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e",
+    "canonical_blend_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+    "family_semantic_signature": "a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29",
+    "geometry_signatures": {
+      "TOU_ANG": "61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250",
+      "ER_ANG": "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678"
+    },
+    "review_board_sha256": "a76a85cba9ece9617053107772226bc790d783134faf4dd508edb0a02102ab65",
     "formalization_authorized": false
   }
 }
