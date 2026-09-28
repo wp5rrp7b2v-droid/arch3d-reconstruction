@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R340",
+  "state_revision": "R341",
   "last_updated": "2026-09-28",
-  "session_status": "STAGE1 MASTER SCOPE RECONCILED + MAIN VERIFIED D-264 / 28 OF 28 MASTER-SCOPE OBJECT TYPES COVERED = 100% / 25 APPROVED MASTER FAMILIES / 363 COVERED REGISTRY RECORDS / 7 PENDING_SOURCE_BINDING / NO ACTIVE ENGINEERING T-TASK / STAGE1 CLOSURE READINESS AUDIT NEXT / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "2026-09-28 DAILY CLOSE PREP D-265 / D-264 STAGE1 MASTER-SCOPE RECONCILIATION MAIN VERIFIED / 28 OF 28 MASTER-SCOPE OBJECT TYPES COVERED = 100% / 25 APPROVED MASTER FAMILIES / 363 COVERED REGISTRY RECORDS / 7 PENDING_SOURCE_BINDING / NO ACTIVE ENGINEERING T-TASK / STAGE1 CLOSURE READINESS AUDIT NOT STARTED AND DEFERRED TO NEXT SESSION / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -69,7 +69,7 @@
   "proposed_next_task": {
     "id": "STAGE1-CLOSURE-READINESS-AUDIT",
     "name": "P3.3 Stage1 Closure Readiness Audit",
-    "status": "NEXT GOVERNANCE GATE / NOT STARTED / NO NEW MASTER REQUIRED"
+    "status": "NEXT GOVERNANCE GATE / NOT STARTED / DEFERRED TO NEXT SESSION / NO NEW MASTER REQUIRED"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -128,7 +128,7 @@
     "dod_status": "LOCKED / PRODUCT OWNER APPROVED / D-066",
     "dod_file": "docs/production/zhenguo_wanfo/P3_3_DEFINITION_OF_DONE_V002.md",
     "engineering_planning_authorized": true,
-    "engineering_execution_authorized": true,
+    "engineering_execution_authorized": false,
     "t017": {
       "status": "CLOSED / D-050 / CANONICAL FOUNDATION CORRECTED BY T-019 D-055 / SHARED-RIDGE DATUM RULE GAP DISCOVERED"
     },
@@ -1058,14 +1058,14 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Product Owner review Candidate 01. If approved, lock the Master Spec only. Do not create an engineering T-task, control-set implementation branch, PR, or Blender execution in the same step unless separately authorized.",
+  "next_action": "Run P3.3 Stage1 Closure Readiness Audit only. Determine whether the 7 PENDING_SOURCE_BINDING items (板瓦 / 勾头 / 滴水 / 博风板 / 悬鱼 / 惹草 / 生头木) block Stage1 closure. Do not start a new Master, create a new engineering T-task, authorize Stage2, or resume T-018 unless separately approved after that audit.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v200",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / R218 / D-131 / RUN 36005017161 SUCCESS",
+    "refresh_status": "CURRENT / D-264 / RUN 36389526921 SUCCESS",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -3092,5 +3092,24 @@
     "closure_decision_id": "D-243",
     "final_stage1_disposition": "已有Master｜正式绑定完成",
     "next_authorization": "NONE / T-040 CLOSED"
+  },
+  "daily_close_2026_09_28": {
+    "decision_id": "D-265",
+    "status": "CANDIDATE / DAILY CLOSE CONSISTENCY PATCH / AWAITING PRODUCT OWNER MERGE APPROVAL",
+    "canonical_main_base": "4010d420b6486950dd16c515a0e37e5dffd602b4",
+    "stage1_master_scope_coverage": "28/28 = 100%",
+    "approved_master_family_count": 25,
+    "master_covered_registry_record_count": 363,
+    "pending_source_binding_count": 7,
+    "active_engineering_t_task": "NONE",
+    "closure_readiness_audit": "NOT STARTED / NO RUN / NO BRANCH / NO PR / NO FINDINGS / DEFERRED TO NEXT SESSION",
+    "closure_readiness_open_question": "Whether the 7 PENDING_SOURCE_BINDING items block Stage1 closure",
+    "t018": "HOLD",
+    "stage2": "NOT AUTHORIZED",
+    "local_sync": "NOT CHECKED",
+    "authority_change": false,
+    "geometry_change": false,
+    "evidence_change": false,
+    "registry_binding_change": false
   }
 }
