@@ -1349,3 +1349,19 @@ Boundary retained:
 - Evidence boundary: 32 remains LOCKED_DERIVED; historical standalone full lengths remain UNRESOLVED; synthetic control span is not per-instance historical length.
 - Formal closure: **PENDING / NOT AUTHORIZED**.
 
+### T-041 Formal Closure｜D-262
+
+- **CLOSED / MAIN VERIFIED**.
+- PR #37: **MERGED**.
+- Merge commit: `bb6873a7edb7e3222142387613851690bd18396f`.
+- Stage1: **25/28 = 89.3%**.
+- Registry: **505**.
+- Master-covered Registry: **363**.
+- Ang bindings: **32/32**; TOU_ANG 16 / ER_ANG 16.
+- CURRENT == V008: **PASS**.
+- Derived Excel: **SYNCED / PASS**.
+- Evidence boundaries: **PRESERVED**.
+- Active engineering T-task: **NONE**.
+- Stage2: **NOT AUTHORIZED**.
+- T-018: **HOLD**.
+
