@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R326",
+  "state_revision": "R327",
   "last_updated": "2026-09-28",
-  "session_status": "T-041 ANG GATE A LOCKED D-250 / MAIN 24 OF 28 = 85.7% / 331 COVERED / ACTIVE T-041 / ENGINEERING EXECUTION NOT AUTHORIZED / NEXT ANG LONGITUDINAL PROFILE CONTROL / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-041 ANG GATE B LOCKED D-252 / MAIN 24 OF 28 = 85.7% / 331 COVERED / ACTIVE T-041 / BOTH PRE-ENGINEERING CONTROLS LOCKED / ENGINEERING EXECUTION NOT AUTHORIZED / NEXT EXECUTION AUTHORIZATION GATE / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 24 OF 28 / T-041 GATE A LOCKED D-250 / GATE B NEXT / ENGINEERING EXECUTION NOT AUTHORIZED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE 1 ACTIVE / MAIN 24 OF 28 / T-041 GATE A+B LOCKED / ENGINEERING EXECUTION AUTHORIZATION NEXT / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / D-066 / MAIN 24 OF 28 / T-041 GATE A LOCKED D-250 / GATE B NEXT / T-018 HOLD",
-      "P3_3": "V002 LOCKED / D-066 / MAIN 24 OF 28 / T-041 GATE A LOCKED D-250 / GATE B NEXT / T-018 HOLD"
+      "P3.3": "V002 LOCKED / D-066 / MAIN 24 OF 28 / T-041 GATE A+B LOCKED / EXECUTION AUTHORIZATION NEXT / T-018 HOLD",
+      "P3_3": "V002 LOCKED / D-066 / MAIN 24 OF 28 / T-041 GATE A+B LOCKED / EXECUTION AUTHORIZATION NEXT / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-041",
     "name": "P3_3_ANG_MASTER_V2_V001",
-    "status": "TASK CONTRACT LOCKED D-248 / GATE A LOCKED D-250 / ENGINEERING EXECUTION NOT AUTHORIZED"
+    "status": "TASK CONTRACT LOCKED D-248 / GATE A LOCKED D-250 / GATE B LOCKED D-252 / ENGINEERING EXECUTION NOT AUTHORIZED"
   },
   "proposed_next_task": {
-    "id": "ANG-LONGITUDINAL-PROFILE-CONTROL",
-    "name": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V0.1 design",
-    "status": "NEXT PRE-ENGINEERING GATE / NOT YET DESIGNED"
+    "id": "T-041-ENGINEERING-EXECUTION-AUTHORIZATION",
+    "name": "T-041 Engineering Execution Authorization",
+    "status": "NEXT GATE / NOT AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-040",
@@ -125,7 +125,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE 1 ACTIVE / 24 OF 28 MASTERS APPROVED / T-041 GATE A LOCKED D-250 / GATE B NEXT / ENGINEERING EXECUTION NOT AUTHORIZED / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE 1 ACTIVE / 24 OF 28 MASTERS APPROVED / T-041 GATE A+B LOCKED / ENGINEERING EXECUTION NOT AUTHORIZED / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -523,7 +523,7 @@
       "connector_geometry_classification": "RECONSTRUCTED_DESIGN / PHYSICAL_CONNECTOR_PROXY / ENGINEERING_TEST_ONLY",
       "stage_advance": false
     },
-    "next_master_candidate": "昂族（头昂 / 二昂） / PRIORITY 19 / T-041 GATE A LOCKED D-250 / GATE B NEXT",
+    "next_master_candidate": "昂族（头昂 / 二昂） / PRIORITY 19 / T-041 GATE A+B LOCKED / ENGINEERING EXECUTION AUTHORIZATION NEXT",
     "t033": {
       "task_id": "T-033",
       "component": "子角梁",
@@ -846,9 +846,11 @@
       "engineering_task_created": true,
       "engineering_execution_authorized": false,
       "task_contract_path": "docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md",
-      "next_gate": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V0.1",
+      "next_gate": "ENGINEERING_EXECUTION_AUTHORIZATION",
       "length_slope_assembly_control_status": "LOCKED / PRODUCT_OWNER_APPROVED / D-250",
-      "length_slope_assembly_control_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001.json"
+      "length_slope_assembly_control_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001.json",
+      "longitudinal_profile_control_status": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
+      "longitudinal_profile_control_path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001.json"
     },
     "t041": {
       "task_id": "T-041",
@@ -856,7 +858,7 @@
       "component": "昂族（头昂 / 二昂）",
       "component_family_id": "CMP-GONG-ANG-001",
       "master_id": "CMP-GONG-ANG-001_MASTER",
-      "status": "TASK CONTRACT LOCKED D-248 / GATE A LOCKED D-250 / ENGINEERING EXECUTION NOT AUTHORIZED",
+      "status": "TASK CONTRACT LOCKED D-248 / GATE A LOCKED D-250 / GATE B LOCKED D-252 / ENGINEERING EXECUTION NOT AUTHORIZED",
       "task_contract": "docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md",
       "registry_binding_count": 32,
       "tou_ang_count": 16,
@@ -886,7 +888,18 @@
         "reference_control_span_mm": 787.6157057855055,
         "historical_full_lengths_closed": false
       },
-      "next_gate": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V0.1"
+      "next_gate": "ENGINEERING_EXECUTION_AUTHORIZATION",
+      "gate_b": {
+        "id": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001_C01",
+        "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-252",
+        "path": "production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001.json",
+        "family_semantic_control_sha256": "dc38ab72be1f5aef3192a48e11621a3288c422475545b56dc5e29fa0102e2ae5",
+        "tou_profile_point_count": 10,
+        "tou_control_points_sha256": "3e45e7732cf49012cbf8b5e480e76ad2fd986c4aa717dd650e3bf3f9831f7bb5",
+        "er_profile_point_count": 6,
+        "er_control_points_sha256": "c4b935c9d445414831f16d949b02ff110f3e336f88c68dd68f58d514bd172778",
+        "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_PROFILE_MEASUREMENT"
+      }
     }
   },
   "roof_control_audit_2026_09_17": {
