@@ -20,10 +20,10 @@ permissions:
 
 jobs:
   first-article:
-    # T-036, T-037, T-038, T-039 and T-040 use dedicated component-specific first-article pipelines.
+    # T-036, T-037, T-038, T-039, T-040 and T-041 use dedicated component-specific first-article pipelines.
     # The generic frame-oriented Master V2 schema is intentionally not applied
     # to those PRs.
-    if: ${{ github.event_name != 'pull_request' || (github.head_ref != 'codex/t036-p3-3-bujian-didou-master-v2-v001' && github.head_ref != 'codex/t037-p3-3-guazi-gong-master-v2-v001' && github.head_ref != 'codex/t038-p3-3-mangong-master-v2-v001' && github.head_ref != 'codex/t039-p3-3-linggong-master-v2-v001' && github.head_ref != 'codex/t040-p3-3-huagong-master-v2-v001') }}
+    if: ${{ github.event_name != 'pull_request' || (github.head_ref != 'codex/t036-p3-3-bujian-didou-master-v2-v001' && github.head_ref != 'codex/t037-p3-3-guazi-gong-master-v2-v001' && github.head_ref != 'codex/t038-p3-3-mangong-master-v2-v001' && github.head_ref != 'codex/t039-p3-3-linggong-master-v2-v001' && github.head_ref != 'codex/t040-p3-3-huagong-master-v2-v001' && github.head_ref != 'codex/t041-p3-3-ang-master-v2-v001') }}
     runs-on: ubuntu-latest
     timeout-minutes: 50
     env:
