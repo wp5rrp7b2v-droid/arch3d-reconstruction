@@ -1365,3 +1365,17 @@ Boundary retained:
 - Stage2: **NOT AUTHORIZED**.
 - T-018: **HOLD**.
 
+### D-263 Stage1 Master Scope Reconciliation
+
+- Canonical scope audit: **PASS**.
+- Master-scope object types: **28**.
+- Covered Master-scope object types: **28 / 28 = 100%**.
+- Approved Master families: **25**.
+- Pending Master-scope object types: **0**.
+- Master-covered Registry records: **363**.
+- PENDING_SOURCE_BINDING: **7**.
+- Prior `25/28 = 89.3%` display: **SUPERSEDED / mixed-dimension metric**.
+- Geometry/evidence/Master approvals/Registry bindings changed: **NO**.
+- Derived Excel + Dashboard reconciliation CI: **PASS / Run 36389355533**.
+- Next gate: **Stage1 Closure Readiness Audit**.
+
