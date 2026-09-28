@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R328",
+  "state_revision": "R329",
   "last_updated": "2026-09-28",
-  "session_status": "T-041 ANG ENGINEERING EXECUTION AUTHORIZED D-253 / GATE A+B LOCKED / BRANCH CREATION NEXT / FIRST ARTICLE ENGINEERING ACTIVE / PRODUCT OWNER ACCEPTANCE NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
+  "session_status": "T-041 ENGINEERING EXECUTION AUTHORIZED D-253 / PRODUCTION BRANCH CREATED / FIRST ARTICLE IMPLEMENTATION ACTIVE / PRODUCT OWNER ACCEPTANCE NOT AUTHORIZED / T-018 HOLD / STAGE2 NOT AUTHORIZED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "T-041",
     "name": "P3_3_ANG_MASTER_V2_V001",
-    "status": "ENGINEERING EXECUTION AUTHORIZED / D-253 / FIRST ARTICLE ENGINEERING ACTIVE"
+    "status": "ENGINEERING EXECUTION AUTHORIZED D-253 / BRANCH CREATED / FIRST ARTICLE IMPLEMENTATION ACTIVE"
   },
   "proposed_next_task": {
-    "id": "T-041-FIRST-ARTICLE-ENGINEERING",
+    "id": "T-041-FIRST-ARTICLE-MACHINE-VALIDATION",
     "name": "T-041 First Article Engineering + Machine Validation",
-    "status": "AUTHORIZED / ACTIVE"
+    "status": "ACTIVE"
   },
   "last_completed_task": {
     "id": "T-040",
@@ -860,7 +860,7 @@
       "component": "昂族（头昂 / 二昂）",
       "component_family_id": "CMP-GONG-ANG-001",
       "master_id": "CMP-GONG-ANG-001_MASTER",
-      "status": "ENGINEERING EXECUTION AUTHORIZED / D-253 / FIRST ARTICLE ENGINEERING ACTIVE",
+      "status": "ENGINEERING EXECUTION AUTHORIZED D-253 / BRANCH CREATED / FIRST ARTICLE IMPLEMENTATION ACTIVE",
       "task_contract": "docs/tasks/T-041_P3_3_ANG_MASTER_V2_V001.md",
       "registry_binding_count": 32,
       "tou_ang_count": 16,
@@ -874,7 +874,7 @@
         "ENGINEERING_EXECUTION_AUTHORIZATION"
       ],
       "engineering_execution_authorized": true,
-      "branch_created": false,
+      "branch_created": true,
       "gate_a": {
         "id": "ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001_C01",
         "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-250",
