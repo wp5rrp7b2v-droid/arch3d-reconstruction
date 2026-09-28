@@ -222,7 +222,10 @@
     "t018": "HOLD",
     "first_article_machine_validation": "PASS / D-254 / 90 OF 90",
     "first_article_product_owner_review": "APPROVED / D-255",
-    "formalization_authorization": "AUTHORIZED / D-256"
+    "formalization_authorization": "AUTHORIZED / D-256",
+    "post_formalization_verification": "AUTHORIZED / D-258 / EXECUTION ACTIVE",
+    "derived_excel_sync": "AUTHORIZED / D-258",
+    "readiness_review": "AUTHORIZED / D-258 / RESULT PENDING"
   },
   "decisions": [
     "D-244",
@@ -238,7 +241,8 @@
     "D-254",
     "D-255",
     "D-256",
-    "D-257"
+    "D-257",
+    "D-258"
   ],
   "approval": {
     "candidate_decision_id": "D-245",
@@ -385,5 +389,25 @@
     "current_equals_v008": true,
     "derived_excel_sync_authorized": false,
     "ready_merge_authorized": false
+  },
+  "post_formalization_authorization": {
+    "decision_id": "D-258",
+    "authority_after_formalization_result": "D-257",
+    "status": "AUTHORIZED / EXECUTION ACTIVE",
+    "scope": [
+      "Derived Excel sync from synchronized CURRENT",
+      "Derived Excel validation against 505 Registry rows / 25 approved Masters / 363 covered records",
+      "latest-head deterministic T-041 rebuild/reopen/restore regression",
+      "accepted family + TOU_ANG + ER_ANG geometry-signature comparison against D-255",
+      "shared regressions T-021/T-022/T-023/T-024/T-037/T-038/T-039/T-040",
+      "generic P3.3 route ownership exclusion check for dedicated T-041",
+      "PR #37 readiness review"
+    ],
+    "accepted_canonical_blend_must_not_be_replaced": true,
+    "ready_transition_authorized": false,
+    "merge_authorized": false,
+    "closure_authorized": false,
+    "stage2_authorized": false,
+    "t018_resume_authorized": false
   }
 }
