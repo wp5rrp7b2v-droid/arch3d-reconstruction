@@ -1500,3 +1500,29 @@ Boundary retained:
 - Stage3: **NOT AUTHORIZED**.
 - T-018: **HOLD**.
 - Next controlled design step: **Stage2-B Interface / Variant Rule Design**.
+
+
+### D-274 P3.3 Stage2-B Interface / Variant Rule Design
+
+- Candidate: **BUILT / REVIEWED**.
+- Approved Master families covered: **25 / 25**.
+- Geometry-variant families: **5**.
+- Role-label-only families: **3**.
+- No-new-geometry-variant families: **17**.
+- Coordinate authority: **MASTER_LOCAL / ASSEMBLY_LOCAL ONLY**.
+- Engineering execution: **NOT AUTHORIZED**.
+
+### D-275 Stage2-B Rule Set Lock
+
+- Product Owner review: **APPROVED**.
+- Rule Set: **LOCKED**.
+- 25/25 Master families: **PASS**.
+- New geometry variants beyond Stage1 authority: **0**.
+- World-coordinate authority: **PROHIBITED / PASS**.
+- Unsupported historical joinery/contact claims: **NONE**.
+- RC-024 Connection Layer requirement: **PRESERVED**.
+- Attachment-specific interface records: **NOT YET MATERIALIZED**.
+- Engineering execution: **NOT AUTHORIZED**.
+- Stage3: **NOT AUTHORIZED**.
+- T-018: **HOLD**.
+- Next controlled design step: **Stage2-C Attachment-Specific Interface / Connection Layer Materialization**.

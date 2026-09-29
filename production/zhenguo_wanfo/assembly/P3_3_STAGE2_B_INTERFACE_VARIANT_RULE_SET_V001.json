@@ -1,0 +1,1095 @@
+{
+  "schema_version": "P3_3_STAGE2_B_INTERFACE_VARIANT_RULE_SET_V001",
+  "date": "2026-09-29",
+  "status": "LOCKED / PRODUCT OWNER APPROVED / D-275",
+  "authority": {
+    "stage2_entry": "D-272 / DESIGN ONLY",
+    "stage2_a_lock": "D-273",
+    "source_main": "1da77c8f5cd55bfce8b99e36aa67e0f31d6b7730"
+  },
+  "global_rules": {
+    "coordinate_authority": "MASTER_LOCAL / ASSEMBLY_LOCAL ONLY",
+    "world_coordinates": "PROHIBITED AS STAGE2 AUTHORITY",
+    "new_geometry_variant": "PROHIBITED WITHOUT EXPLICIT EVIDENCE + PRODUCT OWNER APPROVAL",
+    "interface_datum_claim": "ENGINEERING DATUM ONLY / NOT HISTORICAL CONTACT OR JOINERY",
+    "attachment_completion": "MASTER A + EXPLICIT CONNECTION LAYER + MASTER B",
+    "body_contact_alone": "NOT SUFFICIENT",
+    "unknown_policy": "PRESERVE UNKNOWN / RECONSTRUCTED_DESIGN / PARAMETRIC_COMPLETION",
+    "stage5_placement_authorities": "T-020 / RZ / FV remain HOLD",
+    "engineering_execution": "NOT AUTHORIZED",
+    "stage3": "NOT AUTHORIZED",
+    "t018": "HOLD"
+  },
+  "interface_profiles": {
+    "VERTICAL_SUPPORT": [
+      "ORIGIN_DATUM:POINT",
+      "PRIMARY_AXIS:AXIS",
+      "LOWER_REFERENCE:PLANE",
+      "UPPER_REFERENCE:PLANE"
+    ],
+    "BLOCK_BEARING": [
+      "ORIGIN_DATUM:POINT",
+      "PRIMARY_AXIS:AXIS",
+      "LOWER_REFERENCE:PLANE",
+      "UPPER_REFERENCE:PLANE"
+    ],
+    "LONG_MEMBER": [
+      "ORIGIN_DATUM:POINT",
+      "PRIMARY_AXIS:AXIS",
+      "END_A:POINT",
+      "END_B:POINT",
+      "LOWER_SUPPORT_REFERENCE:PLANE_OR_LINE",
+      "UPPER_SUPPORT_REFERENCE:PLANE_OR_LINE"
+    ],
+    "DIAGONAL_MEMBER": [
+      "ORIGIN_DATUM:POINT",
+      "PRIMARY_AXIS:AXIS",
+      "END_A:POINT",
+      "END_B:POINT",
+      "SUPPORT_REFERENCE:PLANE_OR_POINT"
+    ],
+    "CORNER_MEMBER": [
+      "ORIGIN_DATUM:POINT",
+      "PRIMARY_AXIS:AXIS",
+      "INBOARD_END:POINT",
+      "OUTBOARD_END:POINT",
+      "LOWER_SUPPORT_REFERENCE:PLANE_OR_LINE"
+    ],
+    "BRACKET_MEMBER": [
+      "ORIGIN_DATUM:POINT",
+      "PRIMARY_AXIS:AXIS",
+      "INBOARD_END:POINT",
+      "OUTBOARD_END:POINT",
+      "LOWER_SUPPORT_REFERENCE:PLANE_OR_LINE",
+      "UPPER_SUPPORT_REFERENCE:PLANE_OR_LINE"
+    ]
+  },
+  "summary": {
+    "approved_master_families": 25,
+    "rules_defined": 25,
+    "p3_2_existing_interface_owners": 6,
+    "new_stage2_interface_inventory_masters": 19,
+    "geometry_variant_families": 5,
+    "role_label_only_families": 3,
+    "no_new_geometry_variant_families": 17
+  },
+  "master_rules": [
+    {
+      "master_id": "CMP-COLUMN-001_MASTER",
+      "interface_profile": "VERTICAL_SUPPORT",
+      "variant_policy": {
+        "mode": "ROLE_LABEL_ONLY",
+        "labels": [
+          "角柱",
+          "普通柱"
+        ],
+        "rule": "Labels are assembly roles/orientations only and do not create geometry variants."
+      },
+      "orientation_policy": {
+        "mode": "VERTICAL_Z",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "P3_2_RETAIN_DATUM_REBIND_LOWER",
+      "length_rule": {
+        "mode": "STAGE1_MASTER_DIMENSION",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-LUDOU-COLUMN-001_MASTER",
+      "interface_profile": "BLOCK_BEARING",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "PLAN_ROLE",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "P3_2_RETAIN_DATUM_REBIND_LOWER",
+      "length_rule": {
+        "mode": "STAGE1_MASTER_DIMENSION",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+      "interface_profile": "BLOCK_BEARING",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "PLAN_ROLE",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "P3_2_RETAIN_DATUM_REBIND_LOWER",
+      "length_rule": {
+        "mode": "STAGE1_MASTER_DIMENSION",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-DOU-INTERACTIVE-001_MASTER",
+      "interface_profile": "BLOCK_BEARING",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "PLAN_ROLE",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "P3_2_RETAIN_DATUM_REBIND_LOWER",
+      "length_rule": {
+        "mode": "STAGE1_MASTER_DIMENSION",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+      "interface_profile": "LONG_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "ASSEMBLY_AXIS",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "P3_2_RETAIN_DATUM_REBIND_LOWER",
+      "length_rule": {
+        "mode": "ASSEMBLY_ENDPOINT_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "interface_profile": "LONG_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "ASSEMBLY_AXIS",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "P3_2_RETAIN_DATUM_REBIND_LOWER",
+      "length_rule": {
+        "mode": "ASSEMBLY_ENDPOINT_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "interface_profile": "LONG_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "ASSEMBLY_AXIS",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_ENDPOINT_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "interface_profile": "LONG_MEMBER",
+      "variant_policy": {
+        "mode": "GEOMETRY_VARIANTS",
+        "labels": [
+          "EW_SEAM",
+          "GABLE"
+        ],
+        "rule": "Only Stage1-declared geometry variants are valid; no additional geometry variant may be created without separate evidence and Product Owner approval."
+      },
+      "orientation_policy": {
+        "mode": "ASSEMBLY_AXIS",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_ENDPOINT_OR_LOCKED_VARIANT_RULE",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-DINGFU-001_MASTER",
+      "interface_profile": "LONG_MEMBER",
+      "variant_policy": {
+        "mode": "ROLE_LABEL_ONLY",
+        "labels": [
+          "UPPER",
+          "LOWER"
+        ],
+        "rule": "Labels are assembly roles/orientations only and do not create geometry variants."
+      },
+      "orientation_policy": {
+        "mode": "ASSEMBLY_AXIS",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_ENDPOINT_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-RUFU-001_MASTER",
+      "interface_profile": "DIAGONAL_MEMBER",
+      "variant_policy": {
+        "mode": "ROLE_LABEL_ONLY",
+        "labels": [
+          "UPPER",
+          "LOWER",
+          "NE",
+          "SE",
+          "SW",
+          "NW"
+        ],
+        "rule": "Labels are assembly roles/orientations only and do not create geometry variants."
+      },
+      "orientation_policy": {
+        "mode": "ENDPOINT_VECTOR",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_ENDPOINT_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
+      "interface_profile": "LONG_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "ASSEMBLY_AXIS",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_ENDPOINT_OR_LOCKED_RULE",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-PURLIN-001_MASTER",
+      "interface_profile": "LONG_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "ASSEMBLY_AXIS",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_SPAN_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "interface_profile": "DIAGONAL_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "ENDPOINT_VECTOR",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_ENDPOINT_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+      "interface_profile": "DIAGONAL_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "ENDPOINT_VECTOR",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_ENDPOINT_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+      "interface_profile": "VERTICAL_SUPPORT",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "VERTICAL_Z",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_SPAN_OR_STAGE1_RULE",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+      "interface_profile": "CORNER_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "INBOARD_OUTBOARD_VECTOR",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_ENDPOINT_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
+      "interface_profile": "CORNER_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "INBOARD_OUTBOARD_VECTOR",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_ENDPOINT_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-LANE-001_MASTER",
+      "interface_profile": "LONG_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "ASSEMBLY_AXIS",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_SPAN_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-FRAME-YOUE-001_MASTER",
+      "interface_profile": "LONG_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "ASSEMBLY_AXIS",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "ASSEMBLY_SPAN_DERIVED",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+      "interface_profile": "BLOCK_BEARING",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "PLAN_ROLE",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "STAGE1_MASTER_DIMENSION",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-GONG-GUAZI-001_MASTER",
+      "interface_profile": "BRACKET_MEMBER",
+      "variant_policy": {
+        "mode": "GEOMETRY_VARIANTS",
+        "labels": [
+          "LARGE_GUAZI_GONG",
+          "SMALL_GUAZI_GONG"
+        ],
+        "rule": "Only Stage1-declared geometry variants are valid; no additional geometry variant may be created without separate evidence and Product Owner approval."
+      },
+      "orientation_policy": {
+        "mode": "PUZUO_DIRECTION",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "STAGE1_FAMILY_REFERENCE",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-GONG-MANGONG-001_MASTER",
+      "interface_profile": "BRACKET_MEMBER",
+      "variant_policy": {
+        "mode": "GEOMETRY_VARIANTS",
+        "labels": [
+          "LARGE_MANGONG",
+          "SMALL_MANGONG"
+        ],
+        "rule": "Only Stage1-declared geometry variants are valid; no additional geometry variant may be created without separate evidence and Product Owner approval."
+      },
+      "orientation_policy": {
+        "mode": "PUZUO_DIRECTION",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "STAGE1_FAMILY_REFERENCE",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-GONG-LINGGONG-001_MASTER",
+      "interface_profile": "BRACKET_MEMBER",
+      "variant_policy": {
+        "mode": "NO_NEW_VARIANT",
+        "labels": [],
+        "rule": "Use approved Master without adding geometry variants in Stage2-B."
+      },
+      "orientation_policy": {
+        "mode": "PUZUO_DIRECTION",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "STAGE1_FAMILY_REFERENCE",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-GONG-HUAGONG-001_MASTER",
+      "interface_profile": "BRACKET_MEMBER",
+      "variant_policy": {
+        "mode": "GEOMETRY_VARIANTS",
+        "labels": [
+          "JUMP_1_HUAGONG",
+          "JUMP_2_HUAGONG"
+        ],
+        "rule": "Only Stage1-declared geometry variants are valid; no additional geometry variant may be created without separate evidence and Product Owner approval."
+      },
+      "orientation_policy": {
+        "mode": "PUZUO_DIRECTION",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "STAGE1_REFERENCE_PLUS_ASSEMBLY_CONSTRAINT",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    },
+    {
+      "master_id": "CMP-GONG-ANG-001_MASTER",
+      "interface_profile": "BRACKET_MEMBER",
+      "variant_policy": {
+        "mode": "GEOMETRY_VARIANTS",
+        "labels": [
+          "TOU_ANG",
+          "ER_ANG"
+        ],
+        "rule": "Only Stage1-declared geometry variants are valid; no additional geometry variant may be created without separate evidence and Product Owner approval."
+      },
+      "orientation_policy": {
+        "mode": "PUZUO_DIRECTION",
+        "coordinate_space": "MASTER_LOCAL / ASSEMBLY_LOCAL",
+        "world_coordinate_authority": false,
+        "silent_mirror": false
+      },
+      "p3_2_interface_disposition": "NEW_INTERFACE_INVENTORY",
+      "length_rule": {
+        "mode": "STAGE1_REFERENCE_PLUS_ASSEMBLY_CONSTRAINT",
+        "instance_exact_historical_claim": false,
+        "rule": "Instance-specific length may only come from the named Stage2 rule, locked Stage1 authority, or explicit evidence; reference specimens never silently become per-instance historical lengths."
+      },
+      "allowed_relationship_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "REPEAT",
+        "BELONG"
+      ],
+      "connection_layer_policy": {
+        "required_for_any_attachment": true,
+        "allowed_kinds": [
+          "PHYSICAL_CONNECTOR",
+          "JOINERY_FEATURE",
+          "CONTACT_INTERFACE"
+        ],
+        "visual_contact_sufficient": false,
+        "unsupported_joinery": "UNKNOWN / explicit replaceable RECONSTRUCTED_DESIGN only when permitted"
+      },
+      "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
+    }
+  ],
+  "next_gate": "PRODUCT OWNER REVIEW / LOCK STAGE2-B RULE SET BEFORE INTERFACE-RECORD MATERIALIZATION",
+  "lock_decision_id": "D-275",
+  "lock_date": "2026-09-29",
+  "review_result": "PASS",
+  "lock_notes": [
+    "25/25 approved Master families covered exactly once.",
+    "5 Stage1-declared geometry-variant families retained; no additional geometry variants created.",
+    "3 role-label-only families remain non-geometric roles.",
+    "17 families explicitly add no new geometry variant.",
+    "MASTER_LOCAL / ASSEMBLY_LOCAL authority only; world-coordinate authority prohibited.",
+    "Reference interfaces remain engineering datums, not historical contact/joinery claims.",
+    "Every production attachment still requires explicit RC-024 Connection Layer materialization.",
+    "Engineering execution, Stage3, whole-building topology, T-020/RZ/FV production authority and T-018 remain unauthorized."
+  ]
+}
