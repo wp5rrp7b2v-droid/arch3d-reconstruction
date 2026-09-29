@@ -1,7 +1,7 @@
 {
   "schema_version": "P3_3_STAGE2_A_COVERAGE_REBINDING_MATRIX_V001",
   "date": "2026-09-29",
-  "status": "CANDIDATE_V0.1 / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "LOCKED / PRODUCT OWNER APPROVED / D-273",
   "authority": {
     "entry_authorization": "PRODUCT_OWNER MESSAGE 2026-09-29 / AUTHORIZE_STAGE2_DESIGN_ONLY",
     "stage1_closure": "D-271",
@@ -33,7 +33,11 @@
       "SIMPLIFIED_PROXY": 7,
       "REFERENCE_ONLY_UNKNOWN": 3
     },
-    "stage2_a_gate": "CANDIDATE_V0.1 / PRODUCT_OWNER_REVIEW_REQUIRED"
+    "stage2_a_gate": "LOCKED / PRODUCT OWNER APPROVED / D-273",
+    "legacy_p3_2_interface_count": 18,
+    "legacy_p3_2_interface_retain_count": 12,
+    "legacy_p3_2_interface_rebind_count": 6,
+    "legacy_p3_2_interface_supersede_count": 0
   },
   "object_type_matrix": [
     {
@@ -1889,5 +1893,324 @@
     "legacy_p3_2_interface_disposition": "RETAIN / REBIND / SUPERSEDE required before Stage2-A lock",
     "connection_layer_coverage": "EXPLICIT REQUIREMENT FOR EVERY IDENTIFIED PRODUCTION ATTACHMENT CLASS",
     "stage3_authority": "NOT AUTHORIZED"
+  },
+  "lock_decision_id": "D-273",
+  "lock_date": "2026-09-29",
+  "review_result": "PASS",
+  "review_notes": [
+    "66/66 V008 object types present exactly once; no missing or extra object types.",
+    "25/25 approved Master families present exactly once; no missing or extra Master families.",
+    "All 28 MASTER_BOUND_PRODUCTION object types carry approved Master refs.",
+    "No non-Master Stage2 participation row carries an approved Master ref.",
+    "P3.2 interface owner set matches exactly 6 retained owners.",
+    "18/18 legacy P3.2 interfaces are individually classified RETAIN or REBIND before lock.",
+    "No Stage3, Blender engineering, whole-building topology, T-020/RZ/FV production authority, or T-018 restart is authorized by this lock."
+  ],
+  "legacy_p3_2_interface_rebinding_matrix": [
+    {
+      "interface_id": "CMP-COLUMN-001__ORIGIN",
+      "owner_node": "CMP-COLUMN-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-COLUMN-001__AXIS",
+      "owner_node": "CMP-COLUMN-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-COLUMN-001__LOWER-PLANE",
+      "owner_node": "CMP-COLUMN-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    },
+    {
+      "interface_id": "CMP-LUDOU-COLUMN-001__ORIGIN",
+      "owner_node": "CMP-LUDOU-COLUMN-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-LUDOU-COLUMN-001__AXIS",
+      "owner_node": "CMP-LUDOU-COLUMN-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-LUDOU-COLUMN-001__LOWER-PLANE",
+      "owner_node": "CMP-LUDOU-COLUMN-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    },
+    {
+      "interface_id": "CMP-DOU-SINGLE-LONGKAI-001__ORIGIN",
+      "owner_node": "CMP-DOU-SINGLE-LONGKAI-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-DOU-SINGLE-LONGKAI-001__AXIS",
+      "owner_node": "CMP-DOU-SINGLE-LONGKAI-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-DOU-SINGLE-LONGKAI-001__LOWER-PLANE",
+      "owner_node": "CMP-DOU-SINGLE-LONGKAI-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    },
+    {
+      "interface_id": "CMP-DOU-INTERACTIVE-001__ORIGIN",
+      "owner_node": "CMP-DOU-INTERACTIVE-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-DOU-INTERACTIVE-001__AXIS",
+      "owner_node": "CMP-DOU-INTERACTIVE-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-DOU-INTERACTIVE-001__LOWER-PLANE",
+      "owner_node": "CMP-DOU-INTERACTIVE-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    },
+    {
+      "interface_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001__ORIGIN",
+      "owner_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001__AXIS",
+      "owner_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001__LOWER-PLANE",
+      "owner_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    },
+    {
+      "interface_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001__ORIGIN",
+      "owner_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001__AXIS",
+      "owner_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001__LOWER-PLANE",
+      "owner_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    }
+  ],
+  "acceptance_results": {
+    "object_types_explicit_participation": "PASS / 66/66",
+    "master_families_explicit_rebinding_status": "PASS / 25/25",
+    "legacy_p3_2_interface_disposition": "PASS / 18/18 = 12 RETAIN + 6 REBIND + 0 SUPERSEDE",
+    "connection_layer_coverage_requirement": "PASS / REQUIRED OR EXPLICITLY DEFERRED PER PARTICIPATION CLASS; T-032 PROOF RETAINED AS PRECEDENT",
+    "unknown_boundary_preservation": "PASS",
+    "legacy_proxy_promotion_check": "PASS / NONE",
+    "stage3_authority": "NOT AUTHORIZED",
+    "engineering_execution": "NOT AUTHORIZED",
+    "t018": "HOLD"
   }
 }
