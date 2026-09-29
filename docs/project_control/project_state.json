@@ -3386,16 +3386,5 @@
     "t018": "HOLD",
     "engineering_generation": "NOT AUTHORIZED",
     "main_changed": false
-  },
-  "project_control_archival_cleanup_2026_09_29": {
-    "decision_id": "D-288",
-    "status": "FIRST-ROUND LOW-RISK CLEANUP COMPLETE",
-    "cloud_mode_sources": "CONSOLIDATED TO phase_archive/CLOUD_MODE_2026-09-16_20_CLOSURE.md",
-    "stage1_closure_sources": "CONSOLIDATED TO phase_archive/P3_3_STAGE1_CLOSURE.md",
-    "stage2_entry_candidate": "ARCHIVED TO phase_archive/P3_3_STAGE2_ENTRY_HISTORY.md / SUPERSEDED BY D-272",
-    "active_project_authority_change": false,
-    "geometry_change": false,
-    "evidence_change": false,
-    "current_task_change": false
   }
 }
