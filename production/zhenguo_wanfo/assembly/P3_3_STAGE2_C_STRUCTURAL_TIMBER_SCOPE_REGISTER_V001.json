@@ -1,0 +1,3051 @@
+{
+  "schema_version": "P3_3_STAGE2_C_STRUCTURAL_TIMBER_SCOPE_REGISTER_V001",
+  "date": "2026-09-29",
+  "status": "CANDIDATE_V0.1 / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "authority": {
+    "stage1_closure": "D-271",
+    "stage2_a_lock": "D-273",
+    "stage2_b_lock": "D-275",
+    "matrix_review": "D-282 / PATCH REQUIRED",
+    "candidate_decision": "D-283",
+    "source_stage2a": "P3_3_STAGE2_A_COVERAGE_REBINDING_MATRIX_V001",
+    "source_registry": "P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT"
+  },
+  "scope_definition": "Stage2-C Structural Timber Scope includes physical timber components, indispensable timber connector roles, and timber-system handoffs required to form a continuous deterministic structural-timber assembly network. It excludes enclosure, masonry/foundation, roof covering/ornament, interior furnishing, and organizational containers. The scope stops at explicit lower/upper structural handoff boundaries rather than expanding into the whole building.",
+  "inclusion_tests": [
+    "IN if the object is an approved structural-timber Master-bound production object.",
+    "IN if it is a real timber connector/member/system whose omission would leave an unexplained break in the structural timber assembly chain.",
+    "IN as boundary handoff if Stage2-C must connect to it to terminate the timber chain deterministically.",
+    "CONTAINER if it organizes components but is not a physical object.",
+    "OUT if it belongs to enclosure, foundation/masonry, roof covering/ornament, interior furnishing, or is a non-physical reference boundary.",
+    "CONDITIONAL only when physical timber existence is known but its independent Stage2-C connection role is not yet established."
+  ],
+  "stop_boundaries": {
+    "lower": {
+      "rule": "COLUMN_LOWER_SUPPORT_INTERFACE → FOUNDATION_SUPPORT_INTERFACE / STOP",
+      "effect": "台基整体、角石 and below-foundation systems remain OUT; Stage2-C does not propagate into masonry/foundation."
+    },
+    "upper": {
+      "rule": "PURLIN → RAFTER_SYSTEM → WANGBAN_SYSTEM / STOP",
+      "effect": "瓦、正脊/垂脊/戗脊、吻兽/仙人 remain OUT."
+    },
+    "enclosure": {
+      "rule": "STRUCTURAL_TIMBER_FRAME → ENCLOSURE_INTERFACE / STOP",
+      "effect": "门木作、窗木作、墙体/墙砖 and openings remain OUT."
+    },
+    "corner_ornament": {
+      "rule": "CORNER_TIMBER_OUTBOARD_TERMINAL → ORNAMENT_HANDOFF / STOP",
+      "effect": "ornaments remain OUT even if a terminal attachment exists."
+    }
+  },
+  "summary": {
+    "v008_object_types": 66,
+    "in_scope_object_types": 33,
+    "out_of_scope_object_types": 27,
+    "organizational_containers": 5,
+    "conditional_object_types": 1,
+    "approved_master_bound_object_types": 28,
+    "approved_master_families": 25,
+    "non_master_in_scope_object_types": [
+      "椽系",
+      "襻间枋",
+      "散斗族",
+      "望板系统",
+      "隐角梁"
+    ],
+    "conditional_items": [
+      "替木实体族"
+    ],
+    "lock_gate": "CONDITIONAL item must receive final IN/OUT disposition before register lock."
+  },
+  "scope_items": [
+    {
+      "scope_item_id": "STS-01",
+      "object_type": "北门洞",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_OPENING",
+      "approved_master_ref": null,
+      "decision_reason": "Opening/enclosure scope, not structural timber skeleton.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "门洞-北-中央",
+          "location": "北立面中央",
+          "evidence": "报告直接记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-02",
+      "object_type": "北坡筒瓦",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ROOF_COVERING",
+      "approved_master_ref": null,
+      "decision_reason": "Roof covering above the wangban STOP boundary.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "北坡筒瓦-阵列",
+          "location": "北坡",
+          "evidence": "报告直接记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-03",
+      "object_type": "补间铺作",
+      "stage2a_participation_class": "TOPOLOGY_OR_ASSEMBLY_CONTAINER",
+      "stage2a_policy": "ORGANIZES_RELATIONS / NOT_A_PHYSICAL_CONNECTION",
+      "structural_timber_scope": "CONTAINER",
+      "scope_role": "ORGANIZATIONAL_TOPOLOGY_CONTAINER",
+      "approved_master_ref": null,
+      "decision_reason": "Organizes relations/instances but is not itself a physical attachment object.",
+      "stage2c_connection_policy": "NO PHYSICAL EDGE TO CONTAINER; CHILD COMPONENT EDGES ONLY",
+      "registry_evidence_summary": [
+        {
+          "id": "补间铺作-南立面-西次间",
+          "location": "南立面西次间",
+          "evidence": "补间底斗12组+四面三间"
+        },
+        {
+          "id": "补间铺作-南立面-明间",
+          "location": "南立面明间",
+          "evidence": "补间底斗12组+四面三间"
+        },
+        {
+          "id": "补间铺作-南立面-东次间",
+          "location": "南立面东次间",
+          "evidence": "补间底斗12组+四面三间"
+        },
+        {
+          "id": "补间铺作-北立面-西次间",
+          "location": "北立面西次间",
+          "evidence": "补间底斗12组+四面三间"
+        },
+        {
+          "id": "补间铺作-北立面-明间",
+          "location": "北立面明间",
+          "evidence": "补间底斗12组+四面三间"
+        },
+        {
+          "id": "补间铺作-北立面-东次间",
+          "location": "北立面东次间",
+          "evidence": "补间底斗12组+四面三间"
+        },
+        {
+          "id": "补间铺作-东山-北次间",
+          "location": "东山北次间",
+          "evidence": "补间底斗12组+四面三间"
+        },
+        {
+          "id": "补间铺作-东山-明间",
+          "location": "东山明间",
+          "evidence": "补间底斗12组+四面三间"
+        },
+        {
+          "id": "补间铺作-东山-南次间",
+          "location": "东山南次间",
+          "evidence": "补间底斗12组+四面三间"
+        },
+        {
+          "id": "补间铺作-西山-北次间",
+          "location": "西山北次间",
+          "evidence": "补间底斗12组+四面三间"
+        },
+        {
+          "id": "补间铺作-西山-明间",
+          "location": "西山明间",
+          "evidence": "补间底斗12组+四面三间"
+        },
+        {
+          "id": "补间铺作-西山-南次间",
+          "location": "西山南次间",
+          "evidence": "补间底斗12组+四面三间"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-04",
+      "object_type": "补间铺作底斗",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "底斗-南立面-西次间",
+          "location": "南立面西次间",
+          "evidence": "报告直接称12组"
+        },
+        {
+          "id": "底斗-南立面-明间",
+          "location": "南立面明间",
+          "evidence": "报告直接称12组"
+        },
+        {
+          "id": "底斗-南立面-东次间",
+          "location": "南立面东次间",
+          "evidence": "报告直接称12组"
+        },
+        {
+          "id": "底斗-北立面-西次间",
+          "location": "北立面西次间",
+          "evidence": "报告直接称12组"
+        },
+        {
+          "id": "底斗-北立面-明间",
+          "location": "北立面明间",
+          "evidence": "报告直接称12组"
+        },
+        {
+          "id": "底斗-北立面-东次间",
+          "location": "北立面东次间",
+          "evidence": "报告直接称12组"
+        },
+        {
+          "id": "底斗-东山-北次间",
+          "location": "东山北次间",
+          "evidence": "报告直接称12组"
+        },
+        {
+          "id": "底斗-东山-明间",
+          "location": "东山明间",
+          "evidence": "报告直接称12组"
+        },
+        {
+          "id": "底斗-东山-南次间",
+          "location": "东山南次间",
+          "evidence": "报告直接称12组"
+        },
+        {
+          "id": "底斗-西山-北次间",
+          "location": "西山北次间",
+          "evidence": "报告直接称12组"
+        },
+        {
+          "id": "底斗-西山-明间",
+          "location": "西山明间",
+          "evidence": "报告直接称12组"
+        },
+        {
+          "id": "底斗-西山-南次间",
+          "location": "西山南次间",
+          "evidence": "报告直接称12组"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-05",
+      "object_type": "叉手",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-CHASHOU-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "叉手-东缝-南侧",
+          "location": "东缝平梁至脊部/南侧",
+          "evidence": "总数8+每榀一对构造关系"
+        },
+        {
+          "id": "叉手-东缝-北侧",
+          "location": "东缝平梁至脊部/北侧",
+          "evidence": "总数8+每榀一对构造关系"
+        },
+        {
+          "id": "叉手-西缝-南侧",
+          "location": "西缝平梁至脊部/南侧",
+          "evidence": "总数8+每榀一对构造关系"
+        },
+        {
+          "id": "叉手-西缝-北侧",
+          "location": "西缝平梁至脊部/北侧",
+          "evidence": "总数8+每榀一对构造关系"
+        },
+        {
+          "id": "叉手-东山-南侧",
+          "location": "东山平梁至脊部/南侧",
+          "evidence": "总数8+每榀一对构造关系"
+        },
+        {
+          "id": "叉手-东山-北侧",
+          "location": "东山平梁至脊部/北侧",
+          "evidence": "总数8+每榀一对构造关系"
+        },
+        {
+          "id": "叉手-西山-南侧",
+          "location": "西山平梁至脊部/南侧",
+          "evidence": "总数8+每榀一对构造关系"
+        },
+        {
+          "id": "叉手-西山-北侧",
+          "location": "西山平梁至脊部/北侧",
+          "evidence": "总数8+每榀一对构造关系"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-06",
+      "object_type": "椽系",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "IN",
+      "scope_role": "PARAMETRIC_TIMBER_SYSTEM",
+      "approved_master_ref": null,
+      "decision_reason": "主体屋架木构链必须由槫继续闭合到椽系；Stage2-C structural timber upper chain requires this handoff.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS REQUIRED FOR STRUCTURAL CHAIN MUST CLOSE",
+      "registry_evidence_summary": [
+        {
+          "id": "椽系-参数化补全",
+          "location": "四坡及翼角",
+          "evidence": "测绘立剖面+槫位"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-07",
+      "object_type": "窗木作系统",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ENCLOSURE_TIMBER",
+      "approved_master_ref": null,
+      "decision_reason": "Timber enclosure/joinery system; intentionally deferred beyond structural timber closure.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "窗木作-南东",
+          "location": "南立面东窗",
+          "evidence": "V007南立面测绘图"
+        },
+        {
+          "id": "窗木作-南西",
+          "location": "南立面西窗",
+          "evidence": "V007南立面测绘图"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-08",
+      "object_type": "垂脊",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ROOF_COVERING",
+      "approved_master_ref": null,
+      "decision_reason": "Roof ridge covering system beyond structural timber STOP boundary.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "垂脊-01",
+          "location": "垂脊01",
+          "evidence": "四条脊+单条构造语境"
+        },
+        {
+          "id": "垂脊-02",
+          "location": "垂脊02",
+          "evidence": "四条脊+单条构造语境"
+        },
+        {
+          "id": "垂脊-03",
+          "location": "垂脊03",
+          "evidence": "四条脊+单条构造语境"
+        },
+        {
+          "id": "垂脊-04",
+          "location": "垂脊04",
+          "evidence": "四条脊+单条构造语境"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-09",
+      "object_type": "垂兽",
+      "stage2a_participation_class": "SIMPLIFIED_PROXY",
+      "stage2a_policy": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ORNAMENT",
+      "approved_master_ref": null,
+      "decision_reason": "Roof ornament beyond structural timber scope.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "垂兽-01",
+          "location": "垂脊01",
+          "evidence": "V007数量4"
+        },
+        {
+          "id": "垂兽-02",
+          "location": "垂脊02",
+          "evidence": "V007数量4"
+        },
+        {
+          "id": "垂兽-03",
+          "location": "垂脊03",
+          "evidence": "V007数量4"
+        },
+        {
+          "id": "垂兽-04",
+          "location": "垂脊04",
+          "evidence": "V007数量4"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-10",
+      "object_type": "剳牵",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-ZHAQIAN-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "剳牵-东山-01",
+          "location": "东山 / 具体端点待附图锁定",
+          "evidence": "山面数量直接确认"
+        },
+        {
+          "id": "剳牵-东山-02",
+          "location": "东山 / 具体端点待附图锁定",
+          "evidence": "山面数量直接确认"
+        },
+        {
+          "id": "剳牵-西山-01",
+          "location": "西山 / 具体端点待附图锁定",
+          "evidence": "山面数量直接确认"
+        },
+        {
+          "id": "剳牵-西山-02",
+          "location": "西山 / 具体端点待附图锁定",
+          "evidence": "山面数量直接确认"
+        },
+        {
+          "id": "剳牵-正身待定位-01",
+          "location": "正身体系 / 待定位",
+          "evidence": "剩余数量明确，位置未锁"
+        },
+        {
+          "id": "剳牵-正身待定位-02",
+          "location": "正身体系 / 待定位",
+          "evidence": "剩余数量明确，位置未锁"
+        },
+        {
+          "id": "剳牵-正身待定位-03",
+          "location": "正身体系 / 待定位",
+          "evidence": "剩余数量明确，位置未锁"
+        },
+        {
+          "id": "剳牵-正身待定位-04",
+          "location": "正身体系 / 待定位",
+          "evidence": "剩余数量明确，位置未锁"
+        },
+        {
+          "id": "剳牵-正身待定位-05",
+          "location": "正身体系 / 待定位",
+          "evidence": "剩余数量明确，位置未锁"
+        },
+        {
+          "id": "剳牵-正身待定位-06",
+          "location": "正身体系 / 待定位",
+          "evidence": "剩余数量明确，位置未锁"
+        },
+        {
+          "id": "剳牵-正身待定位-07",
+          "location": "正身体系 / 待定位",
+          "evidence": "剩余数量明确，位置未锁"
+        },
+        {
+          "id": "剳牵-正身待定位-08",
+          "location": "正身体系 / 待定位",
+          "evidence": "剩余数量明确，位置未锁"
+        },
+        {
+          "id": "剳牵-正身待定位-09",
+          "location": "正身体系 / 待定位",
+          "evidence": "剩余数量明确，位置未锁"
+        },
+        {
+          "id": "剳牵-正身待定位-10",
+          "location": "正身体系 / 待定位",
+          "evidence": "剩余数量明确，位置未锁"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-11",
+      "object_type": "大角梁",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "大角梁-东北角",
+          "location": "东北角",
+          "evidence": "直接实测/报告明确缺口"
+        },
+        {
+          "id": "大角梁-东南角",
+          "location": "东南角",
+          "evidence": "直接实测/报告明确缺口"
+        },
+        {
+          "id": "大角梁-西南角",
+          "location": "西南角",
+          "evidence": "直接实测/报告明确缺口"
+        },
+        {
+          "id": "大角梁-西北角",
+          "location": "西北角",
+          "evidence": "直接实测/报告明确缺口"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-12",
+      "object_type": "大型瓜子栱",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-GUAZI-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "大型瓜子栱-南-01-泥道",
+          "location": "西南角转角铺作南向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-南-03-泥道",
+          "location": "南立面西中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-南-05-泥道",
+          "location": "南立面东中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-南-07-泥道",
+          "location": "东南角转角铺作南向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-北-01-泥道",
+          "location": "西北角转角铺作北向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-北-03-泥道",
+          "location": "北立面西中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-北-05-泥道",
+          "location": "北立面东中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-北-07-泥道",
+          "location": "东北角转角铺作北向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-东-01-泥道",
+          "location": "东北角转角铺作东向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-东-03-泥道",
+          "location": "东山北中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-东-05-泥道",
+          "location": "东山南中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-东-07-泥道",
+          "location": "东南角转角铺作东向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-西-01-泥道",
+          "location": "西北角转角铺作西向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-西-03-泥道",
+          "location": "西山北中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-西-05-泥道",
+          "location": "西山南中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型瓜子栱-西-07-泥道",
+          "location": "西南角转角铺作西向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-13",
+      "object_type": "大型慢栱",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-MANGONG-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "大型慢栱-南-01-泥道",
+          "location": "西南角转角铺作南向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-南-03-泥道",
+          "location": "南立面西中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-南-05-泥道",
+          "location": "南立面东中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-南-07-泥道",
+          "location": "东南角转角铺作南向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-北-01-泥道",
+          "location": "西北角转角铺作北向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-北-03-泥道",
+          "location": "北立面西中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-北-05-泥道",
+          "location": "北立面东中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-北-07-泥道",
+          "location": "东北角转角铺作北向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-东-01-泥道",
+          "location": "东北角转角铺作东向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-东-03-泥道",
+          "location": "东山北中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-东-05-泥道",
+          "location": "东山南中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-东-07-泥道",
+          "location": "东南角转角铺作东向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-西-01-泥道",
+          "location": "西北角转角铺作西向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-西-03-泥道",
+          "location": "西山北中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-西-05-泥道",
+          "location": "西山南中柱柱头铺作 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        },
+        {
+          "id": "大型慢栱-西-07-泥道",
+          "location": "西南角转角铺作西向分支 / 泥道",
+          "evidence": "大型实测16+柱头类16方向单元"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-14",
+      "object_type": "单向长开斗族",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "单向长开斗族-UNKNOWN",
+          "location": "全殿斗栱体系",
+          "evidence": "V007确认存在但全殿数量未闭合"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-15",
+      "object_type": "丁栿",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-DINGFU-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "丁栿-东山-上丁栿-南",
+          "location": "东山南侧 / 上丁栿",
+          "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN"
+        },
+        {
+          "id": "丁栿-东山-上丁栿-北",
+          "location": "东山北侧 / 上丁栿",
+          "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN"
+        },
+        {
+          "id": "丁栿-东山-下丁栿-南",
+          "location": "东山南侧 / 下丁栿",
+          "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN"
+        },
+        {
+          "id": "丁栿-东山-下丁栿-北",
+          "location": "东山北侧 / 下丁栿",
+          "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN"
+        },
+        {
+          "id": "丁栿-西山-上丁栿-南",
+          "location": "西山南侧 / 上丁栿",
+          "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN"
+        },
+        {
+          "id": "丁栿-西山-上丁栿-北",
+          "location": "西山北侧 / 上丁栿",
+          "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN"
+        },
+        {
+          "id": "丁栿-西山-下丁栿-南",
+          "location": "西山南侧 / 下丁栿",
+          "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN"
+        },
+        {
+          "id": "丁栿-西山-下丁栿-北",
+          "location": "西山北侧 / 下丁栿",
+          "evidence": "数量/位置直接确认 + 构件族8组截面实测｜SRC-ZG-WF-001 PDF p81/83 / 印刷p66/68 / §2.3.1 + §2.3.1.3 / 表2-40；8组样本与8根实例逐一映射UNKNOWN"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-16",
+      "object_type": "东坡筒瓦",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ROOF_COVERING",
+      "approved_master_ref": null,
+      "decision_reason": "Roof covering above the wangban STOP boundary.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "东坡筒瓦-阵列",
+          "location": "东坡",
+          "evidence": "报告直接记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-17",
+      "object_type": "二昂",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-ANG-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "二昂-南-01",
+          "location": "西南角转角铺作南向分支 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-南-03",
+          "location": "南立面西中柱柱头铺作 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-南-05",
+          "location": "南立面东中柱柱头铺作 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-南-07",
+          "location": "东南角转角铺作南向分支 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-北-01",
+          "location": "西北角转角铺作北向分支 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-北-03",
+          "location": "北立面西中柱柱头铺作 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-北-05",
+          "location": "北立面东中柱柱头铺作 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-北-07",
+          "location": "东北角转角铺作北向分支 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-东-01",
+          "location": "东北角转角铺作东向分支 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-东-03",
+          "location": "东山北中柱柱头铺作 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-东-05",
+          "location": "东山南中柱柱头铺作 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-东-07",
+          "location": "东南角转角铺作东向分支 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-西-01",
+          "location": "西北角转角铺作西向分支 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-西-03",
+          "location": "西山北中柱柱头铺作 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-西-05",
+          "location": "西山南中柱柱头铺作 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "二昂-西-07",
+          "location": "西南角转角铺作西向分支 / 二昂",
+          "evidence": "实测16+柱头类16方向单元"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-18",
+      "object_type": "华栱",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-HUAGONG-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "华栱-南-01-一跳",
+          "location": "西南角转角铺作南向分支 / 一跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-01-二跳",
+          "location": "西南角转角铺作南向分支 / 二跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-02-一跳",
+          "location": "南西次间补间铺作 / 一跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-02-二跳",
+          "location": "南西次间补间铺作 / 二跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-03-一跳",
+          "location": "南立面西中柱柱头铺作 / 一跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-03-二跳",
+          "location": "南立面西中柱柱头铺作 / 二跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-04-一跳",
+          "location": "南明间补间铺作 / 一跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-04-二跳",
+          "location": "南明间补间铺作 / 二跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-05-一跳",
+          "location": "南立面东中柱柱头铺作 / 一跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-05-二跳",
+          "location": "南立面东中柱柱头铺作 / 二跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-06-一跳",
+          "location": "南东次间补间铺作 / 一跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-06-二跳",
+          "location": "南东次间补间铺作 / 二跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-07-一跳",
+          "location": "东南角转角铺作南向分支 / 一跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-南-07-二跳",
+          "location": "东南角转角铺作南向分支 / 二跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-北-01-一跳",
+          "location": "西北角转角铺作北向分支 / 一跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-北-01-二跳",
+          "location": "西北角转角铺作北向分支 / 二跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-北-02-一跳",
+          "location": "北西次间补间铺作 / 一跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-北-02-二跳",
+          "location": "北西次间补间铺作 / 二跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-北-03-一跳",
+          "location": "北立面西中柱柱头铺作 / 一跳",
+          "evidence": "每方向单元一、二跳各1"
+        },
+        {
+          "id": "华栱-北-03-二跳",
+          "location": "北立面西中柱柱头铺作 / 二跳",
+          "evidence": "每方向单元一、二跳各1"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-19",
+      "object_type": "交互斗族",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-DOU-INTERACTIVE-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "交互斗族-UNKNOWN",
+          "location": "全殿斗栱体系",
+          "evidence": "V007确认存在但全殿数量未闭合"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-20",
+      "object_type": "角石",
+      "stage2a_participation_class": "SIMPLIFIED_PROXY",
+      "stage2a_policy": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_FOUNDATION_STONE",
+      "approved_master_ref": null,
+      "decision_reason": "Stone/base system below the structural timber lower STOP boundary.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "台基角石-西北",
+          "location": "西北转角",
+          "evidence": "转角处施角石+矩形拓扑"
+        },
+        {
+          "id": "台基角石-东北",
+          "location": "东北转角",
+          "evidence": "转角处施角石+矩形拓扑"
+        },
+        {
+          "id": "台基角石-东南",
+          "location": "东南转角",
+          "evidence": "转角处施角石+矩形拓扑"
+        },
+        {
+          "id": "台基角石-西南",
+          "location": "西南转角",
+          "evidence": "转角处施角石+矩形拓扑"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-21",
+      "object_type": "阑额",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-LANE-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "阑额-南立面-西次间",
+          "location": "南立面西次间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        },
+        {
+          "id": "阑额-南立面-明间",
+          "location": "南立面明间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        },
+        {
+          "id": "阑额-南立面-东次间",
+          "location": "南立面东次间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        },
+        {
+          "id": "阑额-北立面-西次间",
+          "location": "北立面西次间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        },
+        {
+          "id": "阑额-北立面-明间",
+          "location": "北立面明间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        },
+        {
+          "id": "阑额-北立面-东次间",
+          "location": "北立面东次间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        },
+        {
+          "id": "阑额-东山-北次间",
+          "location": "东山北次间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        },
+        {
+          "id": "阑额-东山-明间",
+          "location": "东山明间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        },
+        {
+          "id": "阑额-东山-南次间",
+          "location": "东山南次间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        },
+        {
+          "id": "阑额-西山-北次间",
+          "location": "西山北次间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        },
+        {
+          "id": "阑额-西山-明间",
+          "location": "西山明间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        },
+        {
+          "id": "阑额-西山-南次间",
+          "location": "西山南次间",
+          "evidence": "分布规则直接说明+三间拓扑"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-22",
+      "object_type": "令栱",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-LINGGONG-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "令栱-南-01",
+          "location": "西南角转角铺作南向分支 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-南-02",
+          "location": "南西次间补间铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-南-03",
+          "location": "南立面西中柱柱头铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-南-04",
+          "location": "南明间补间铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-南-05",
+          "location": "南立面东中柱柱头铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-南-06",
+          "location": "南东次间补间铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-南-07",
+          "location": "东南角转角铺作南向分支 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-北-01",
+          "location": "西北角转角铺作北向分支 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-北-02",
+          "location": "北西次间补间铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-北-03",
+          "location": "北立面西中柱柱头铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-北-04",
+          "location": "北明间补间铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-北-05",
+          "location": "北立面东中柱柱头铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-北-06",
+          "location": "北东次间补间铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-北-07",
+          "location": "东北角转角铺作北向分支 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-东-01",
+          "location": "东北角转角铺作东向分支 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-东-02",
+          "location": "东北次间补间铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-东-03",
+          "location": "东山北中柱柱头铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-东-04",
+          "location": "东明间补间铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-东-05",
+          "location": "东山南中柱柱头铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        },
+        {
+          "id": "令栱-东-06",
+          "location": "东南次间补间铺作 / 最外跳",
+          "evidence": "实测28组+方向单元闭合"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-23",
+      "object_type": "门木作系统",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ENCLOSURE_TIMBER",
+      "approved_master_ref": null,
+      "decision_reason": "Timber enclosure/joinery system; intentionally deferred beyond structural timber closure.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "门木作-南",
+          "location": "南立面中央门洞",
+          "evidence": "V007南立面测绘图"
+        },
+        {
+          "id": "门木作-北",
+          "location": "北立面中央门洞",
+          "evidence": "V007北立面测绘图"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-24",
+      "object_type": "南立面窗洞",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_OPENING",
+      "approved_master_ref": null,
+      "decision_reason": "Opening/enclosure scope, not structural timber skeleton.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "窗洞-南-东窗",
+          "location": "南立面东窗",
+          "evidence": "报告直接记录"
+        },
+        {
+          "id": "窗洞-南-西窗",
+          "location": "南立面西窗",
+          "evidence": "报告直接记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-25",
+      "object_type": "南门洞",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_OPENING",
+      "approved_master_ref": null,
+      "decision_reason": "Opening/enclosure scope, not structural timber skeleton.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "门洞-南-中央",
+          "location": "南立面中央",
+          "evidence": "报告直接记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-26",
+      "object_type": "南坡筒瓦",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ROOF_COVERING",
+      "approved_master_ref": null,
+      "decision_reason": "Roof covering above the wangban STOP boundary.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "南坡筒瓦-阵列",
+          "location": "南坡",
+          "evidence": "报告直接记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-27",
+      "object_type": "内槽斗栱/隔架位置",
+      "stage2a_participation_class": "TOPOLOGY_OR_ASSEMBLY_CONTAINER",
+      "stage2a_policy": "ORGANIZES_RELATIONS / NOT_A_PHYSICAL_CONNECTION",
+      "structural_timber_scope": "CONTAINER",
+      "scope_role": "ORGANIZATIONAL_TOPOLOGY_CONTAINER",
+      "approved_master_ref": null,
+      "decision_reason": "Organizes relations/instances but is not itself a physical attachment object.",
+      "stage2c_connection_policy": "NO PHYSICAL EDGE TO CONTAINER; CHILD COMPONENT EDGES ONLY",
+      "registry_evidence_summary": [
+        {
+          "id": "内槽位置总表",
+          "location": "24处",
+          "evidence": "附件1-9"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-28",
+      "object_type": "襻间枋",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "IN",
+      "scope_role": "PARAMETRIC_TIMBER_MEMBER",
+      "approved_master_ref": null,
+      "decision_reason": "Current Registry records 12 physical positions under upper/lower purlins; it is a real timber framing member in the roof-frame system.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS REQUIRED FOR STRUCTURAL CHAIN MUST CLOSE",
+      "registry_evidence_summary": [
+        {
+          "id": "襻间枋-01",
+          "location": "东缝前下平槫下",
+          "evidence": "附件1-9逐位记录"
+        },
+        {
+          "id": "襻间枋-02",
+          "location": "东缝后下平槫下",
+          "evidence": "附件1-9逐位记录"
+        },
+        {
+          "id": "襻间枋-03",
+          "location": "西缝前下平槫下",
+          "evidence": "附件1-9逐位记录"
+        },
+        {
+          "id": "襻间枋-04",
+          "location": "西缝后下平槫下",
+          "evidence": "附件1-9逐位记录"
+        },
+        {
+          "id": "襻间枋-05",
+          "location": "东山南下平槫下",
+          "evidence": "附件1-9逐位记录"
+        },
+        {
+          "id": "襻间枋-06",
+          "location": "东山北下平槫下",
+          "evidence": "附件1-9逐位记录"
+        },
+        {
+          "id": "襻间枋-07",
+          "location": "西山南下平槫下",
+          "evidence": "附件1-9逐位记录"
+        },
+        {
+          "id": "襻间枋-08",
+          "location": "西山北下平槫下",
+          "evidence": "附件1-9逐位记录"
+        },
+        {
+          "id": "襻间枋-09",
+          "location": "东缝前上平槫下",
+          "evidence": "附件1-9逐位记录"
+        },
+        {
+          "id": "襻间枋-10",
+          "location": "东缝后上平槫下",
+          "evidence": "附件1-9逐位记录"
+        },
+        {
+          "id": "襻间枋-11",
+          "location": "西缝前上平槫下",
+          "evidence": "附件1-9逐位记录"
+        },
+        {
+          "id": "襻间枋-12",
+          "location": "西缝后上平槫下",
+          "evidence": "附件1-9逐位记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-29",
+      "object_type": "平梁",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "平梁-东缝",
+          "location": "东缝",
+          "evidence": "构件族直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40；样本与东/西缝逐件对应UNKNOWN"
+        },
+        {
+          "id": "平梁-西缝",
+          "location": "西缝",
+          "evidence": "构件族直接实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40；样本与东/西缝逐件对应UNKNOWN"
+        },
+        {
+          "id": "平梁-东山",
+          "location": "东山",
+          "evidence": "数量/位置直接确认 + 山面型单一样本实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40；样本与东/西山逐件对应UNKNOWN"
+        },
+        {
+          "id": "平梁-西山",
+          "location": "西山",
+          "evidence": "数量/位置直接确认 + 山面型单一样本实测｜SRC-ZG-WF-001 PDF p83 / 印刷p68 / 2.3.1.3 / 表2-40；样本与东/西山逐件对应UNKNOWN"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-30",
+      "object_type": "铺作方向单元",
+      "stage2a_participation_class": "TOPOLOGY_OR_ASSEMBLY_CONTAINER",
+      "stage2a_policy": "ORGANIZES_RELATIONS / NOT_A_PHYSICAL_CONNECTION",
+      "structural_timber_scope": "CONTAINER",
+      "scope_role": "ORGANIZATIONAL_TOPOLOGY_CONTAINER",
+      "approved_master_ref": null,
+      "decision_reason": "Organizes relations/instances but is not itself a physical attachment object.",
+      "stage2c_connection_policy": "NO PHYSICAL EDGE TO CONTAINER; CHILD COMPONENT EDGES ONLY",
+      "registry_evidence_summary": [
+        {
+          "id": "铺作方向单元-南-01",
+          "location": "西南角转角铺作南向分支",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-南-02",
+          "location": "南西次间补间铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-南-03",
+          "location": "南立面西中柱柱头铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-南-04",
+          "location": "南明间补间铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-南-05",
+          "location": "南立面东中柱柱头铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-南-06",
+          "location": "南东次间补间铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-南-07",
+          "location": "东南角转角铺作南向分支",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-北-01",
+          "location": "西北角转角铺作北向分支",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-北-02",
+          "location": "北西次间补间铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-北-03",
+          "location": "北立面西中柱柱头铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-北-04",
+          "location": "北明间补间铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-北-05",
+          "location": "北立面东中柱柱头铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-北-06",
+          "location": "北东次间补间铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-北-07",
+          "location": "东北角转角铺作北向分支",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-东-01",
+          "location": "东北角转角铺作东向分支",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-东-02",
+          "location": "东北次间补间铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-东-03",
+          "location": "东山北中柱柱头铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-东-04",
+          "location": "东明间补间铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-东-05",
+          "location": "东山南中柱柱头铺作",
+          "evidence": "四立面各显7朵"
+        },
+        {
+          "id": "铺作方向单元-东-06",
+          "location": "东南次间补间铺作",
+          "evidence": "四立面各显7朵"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-31",
+      "object_type": "嵌墙石碑",
+      "stage2a_participation_class": "SIMPLIFIED_PROXY",
+      "stage2a_policy": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_NON_TIMBER",
+      "approved_master_ref": null,
+      "decision_reason": "Wall-mounted stone element; not part of structural timber closure.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "石碑-大门西侧",
+          "location": "南立面大门西侧",
+          "evidence": "报告直接记录"
+        },
+        {
+          "id": "石碑-大门东侧",
+          "location": "南立面大门东侧",
+          "evidence": "报告直接记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-32",
+      "object_type": "戗脊",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ROOF_COVERING",
+      "approved_master_ref": null,
+      "decision_reason": "Roof ridge covering system beyond structural timber STOP boundary.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "戗脊-01",
+          "location": "戗脊01",
+          "evidence": "四条脊+单条构造语境"
+        },
+        {
+          "id": "戗脊-02",
+          "location": "戗脊02",
+          "evidence": "四条脊+单条构造语境"
+        },
+        {
+          "id": "戗脊-03",
+          "location": "戗脊03",
+          "evidence": "四条脊+单条构造语境"
+        },
+        {
+          "id": "戗脊-04",
+          "location": "戗脊04",
+          "evidence": "四条脊+单条构造语境"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-33",
+      "object_type": "戗兽",
+      "stage2a_participation_class": "SIMPLIFIED_PROXY",
+      "stage2a_policy": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ORNAMENT",
+      "approved_master_ref": null,
+      "decision_reason": "Roof ornament beyond structural timber scope.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "戗兽-01",
+          "location": "戗脊01",
+          "evidence": "V007数量4"
+        },
+        {
+          "id": "戗兽-02",
+          "location": "戗脊02",
+          "evidence": "V007数量4"
+        },
+        {
+          "id": "戗兽-03",
+          "location": "戗脊03",
+          "evidence": "V007数量4"
+        },
+        {
+          "id": "戗兽-04",
+          "location": "戗脊04",
+          "evidence": "V007数量4"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-34",
+      "object_type": "墙体",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ENCLOSURE_NON_TIMBER",
+      "approved_master_ref": null,
+      "decision_reason": "Wall/enclosure system; not part of structural timber closure.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "墙体-南立面",
+          "location": "南立面",
+          "evidence": "V007：墙体砌筑与南墙局部厚度已记录"
+        },
+        {
+          "id": "墙体-北立面",
+          "location": "北立面",
+          "evidence": "V007：四立面墙体砌筑系统"
+        },
+        {
+          "id": "墙体-东立面",
+          "location": "东立面",
+          "evidence": "V007：四立面墙体砌筑系统"
+        },
+        {
+          "id": "墙体-西立面",
+          "location": "西立面",
+          "evidence": "V007：四立面墙体砌筑系统"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-35",
+      "object_type": "墙砖族",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ENCLOSURE_NON_TIMBER",
+      "approved_master_ref": null,
+      "decision_reason": "Masonry material family; not part of structural timber closure.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "墙砖族-UNKNOWN",
+          "location": "四立面墙体",
+          "evidence": "V007墙砖样本统计"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-36",
+      "object_type": "乳栿",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-RUFU-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "乳栿-东北角-上斜乳栿",
+          "location": "东北角 / 上斜乳栿",
+          "evidence": "数量/位置直接确认 + 构件族6组完整截面实测 + 同建筑交接照片｜SRC-ZG-WF-001 PDF p83-84 / 印刷p68-69 / §2.3.1.3 / 表2-40 / 图2-42；表中8行对应8根实例的逐一映射UNKNOWN，其中2行未及"
+        },
+        {
+          "id": "乳栿-东北角-下斜乳栿",
+          "location": "东北角 / 下斜乳栿",
+          "evidence": "数量/位置直接确认 + 构件族6组完整截面实测 + 同建筑交接照片｜SRC-ZG-WF-001 PDF p83-84 / 印刷p68-69 / §2.3.1.3 / 表2-40 / 图2-42；表中8行对应8根实例的逐一映射UNKNOWN，其中2行未及"
+        },
+        {
+          "id": "乳栿-东南角-上斜乳栿",
+          "location": "东南角 / 上斜乳栿",
+          "evidence": "数量/位置直接确认 + 构件族6组完整截面实测 + 同建筑交接照片｜SRC-ZG-WF-001 PDF p83-84 / 印刷p68-69 / §2.3.1.3 / 表2-40 / 图2-42；表中8行对应8根实例的逐一映射UNKNOWN，其中2行未及"
+        },
+        {
+          "id": "乳栿-东南角-下斜乳栿",
+          "location": "东南角 / 下斜乳栿",
+          "evidence": "数量/位置直接确认 + 构件族6组完整截面实测 + 同建筑交接照片｜SRC-ZG-WF-001 PDF p83-84 / 印刷p68-69 / §2.3.1.3 / 表2-40 / 图2-42；表中8行对应8根实例的逐一映射UNKNOWN，其中2行未及"
+        },
+        {
+          "id": "乳栿-西南角-上斜乳栿",
+          "location": "西南角 / 上斜乳栿",
+          "evidence": "数量/位置直接确认 + 构件族6组完整截面实测 + 同建筑交接照片｜SRC-ZG-WF-001 PDF p83-84 / 印刷p68-69 / §2.3.1.3 / 表2-40 / 图2-42；表中8行对应8根实例的逐一映射UNKNOWN，其中2行未及"
+        },
+        {
+          "id": "乳栿-西南角-下斜乳栿",
+          "location": "西南角 / 下斜乳栿",
+          "evidence": "数量/位置直接确认 + 构件族6组完整截面实测 + 同建筑交接照片｜SRC-ZG-WF-001 PDF p83-84 / 印刷p68-69 / §2.3.1.3 / 表2-40 / 图2-42；表中8行对应8根实例的逐一映射UNKNOWN，其中2行未及"
+        },
+        {
+          "id": "乳栿-西北角-上斜乳栿",
+          "location": "西北角 / 上斜乳栿",
+          "evidence": "数量/位置直接确认 + 构件族6组完整截面实测 + 同建筑交接照片｜SRC-ZG-WF-001 PDF p83-84 / 印刷p68-69 / §2.3.1.3 / 表2-40 / 图2-42；表中8行对应8根实例的逐一映射UNKNOWN，其中2行未及"
+        },
+        {
+          "id": "乳栿-西北角-下斜乳栿",
+          "location": "西北角 / 下斜乳栿",
+          "evidence": "数量/位置直接确认 + 构件族6组完整截面实测 + 同建筑交接照片｜SRC-ZG-WF-001 PDF p83-84 / 印刷p68-69 / §2.3.1.3 / 表2-40 / 图2-42；表中8行对应8根实例的逐一映射UNKNOWN，其中2行未及"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-37",
+      "object_type": "散斗族",
+      "stage2a_participation_class": "REFERENCE_ONLY_UNKNOWN",
+      "stage2a_policy": "NONE_UNTIL_PROMOTED_FROM_UNKNOWN",
+      "structural_timber_scope": "IN",
+      "scope_role": "REQUIRED_CONNECTOR_ROLE",
+      "approved_master_ref": null,
+      "decision_reason": "Physical timber connector role already required by locked D-277 Upper6→San-Dou→Four-Chuanfu connection; exact family geometry/count may remain bounded.",
+      "stage2c_connection_policy": "ALLOW CONNECTOR-ROLE MATERIALIZATION WITHOUT INVENTING FULL FAMILY GEOMETRY/COUNT",
+      "registry_evidence_summary": [
+        {
+          "id": "散斗族-UNKNOWN",
+          "location": "全殿斗栱体系",
+          "evidence": "V007确认存在但全殿数量未闭合"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-38",
+      "object_type": "上六椽栿",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "上六椽栿-东缝",
+          "location": "东缝",
+          "evidence": "直接实测"
+        },
+        {
+          "id": "上六椽栿-西缝",
+          "location": "西缝",
+          "evidence": "直接实测"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-39",
+      "object_type": "神台",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_INTERIOR_FURNISHING",
+      "approved_master_ref": null,
+      "decision_reason": "Interior furnishing/platform, not structural timber skeleton.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "神台-01",
+          "location": "殿内中央区域",
+          "evidence": "V007神台铺砖构造记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-40",
+      "object_type": "室内地面系统",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_FLOOR_SYSTEM",
+      "approved_master_ref": null,
+      "decision_reason": "Interior floor system outside structural timber closure.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "室内地面-01",
+          "location": "万佛殿室内",
+          "evidence": "V007地面铺砖记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-41",
+      "object_type": "室内方砖族",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_FLOOR_MATERIAL",
+      "approved_master_ref": null,
+      "decision_reason": "Interior floor material outside structural timber closure.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "室内方砖-265型-UNKNOWN",
+          "location": "室内地面部分区域",
+          "evidence": "V007方砖类型记录"
+        },
+        {
+          "id": "室内方砖-315x305型-UNKNOWN",
+          "location": "室内地面部分区域",
+          "evidence": "V007方砖类型记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-42",
+      "object_type": "室内条砖族",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_FLOOR_MATERIAL",
+      "approved_master_ref": null,
+      "decision_reason": "Interior floor material outside structural timber closure.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "室内条砖族-UNKNOWN",
+          "location": "室内地面边界/区域",
+          "evidence": "V007条砖统计"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-43",
+      "object_type": "蜀柱",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-SHUZHU-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "蜀柱-东缝",
+          "location": "东缝平梁上",
+          "evidence": "附件1-7实测位置+木结构测绘图闭合"
+        },
+        {
+          "id": "蜀柱-西缝",
+          "location": "西缝平梁上",
+          "evidence": "附件1-7实测位置+木结构测绘图闭合"
+        },
+        {
+          "id": "蜀柱-东山",
+          "location": "东山平梁上",
+          "evidence": "附件1-7实测位置+木结构测绘图闭合"
+        },
+        {
+          "id": "蜀柱-西山",
+          "location": "西山平梁上",
+          "evidence": "附件1-7实测位置+木结构测绘图闭合"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-44",
+      "object_type": "四椽栿",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "四椽栿-东缝",
+          "location": "东缝",
+          "evidence": "直接实测"
+        },
+        {
+          "id": "四椽栿-西缝",
+          "location": "西缝",
+          "evidence": "直接实测"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-45",
+      "object_type": "台基整体",
+      "stage2a_participation_class": "SIMPLIFIED_PROXY",
+      "stage2a_policy": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_FOUNDATION_SYSTEM",
+      "approved_master_ref": null,
+      "decision_reason": "Foundation/platform system is outside Stage2-C; structural timber stops at column lower support handoff.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "台基-01",
+          "location": "万佛殿主体下方",
+          "evidence": "报告直接记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-46",
+      "object_type": "替木测量边界",
+      "stage2a_participation_class": "REFERENCE_ONLY_UNKNOWN",
+      "stage2a_policy": "NONE_UNTIL_PROMOTED_FROM_UNKNOWN",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_REFERENCE_ONLY",
+      "approved_master_ref": null,
+      "decision_reason": "Measurement/reference boundary, not a physical production object.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "替木-测量边界",
+          "location": "全殿多处",
+          "evidence": "附件1-8"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-47",
+      "object_type": "替木实体族",
+      "stage2a_participation_class": "REFERENCE_ONLY_UNKNOWN",
+      "stage2a_policy": "NONE_UNTIL_PROMOTED_FROM_UNKNOWN",
+      "structural_timber_scope": "CONDITIONAL",
+      "scope_role": "CONDITIONAL_TIMBER_CONNECTOR",
+      "approved_master_ref": null,
+      "decision_reason": "Physical timber family is recorded, but current project state has not yet established that it must be an independent Stage2-C production attachment object. Promotion requires explicit same-building connection-role confirmation.",
+      "stage2c_connection_policy": "NOT IN CORE DENOMINATOR UNTIL PROMOTED BY EXPLICIT EVIDENCE/DECISION",
+      "registry_evidence_summary": [
+        {
+          "id": "替木实体族-UNKNOWN",
+          "location": "全殿多处",
+          "evidence": "V007：23条测量记录不等于全殿总数"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-48",
+      "object_type": "头昂",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-ANG-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "头昂-南-01",
+          "location": "西南角转角铺作南向分支 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-南-03",
+          "location": "南立面西中柱柱头铺作 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-南-05",
+          "location": "南立面东中柱柱头铺作 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-南-07",
+          "location": "东南角转角铺作南向分支 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-北-01",
+          "location": "西北角转角铺作北向分支 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-北-03",
+          "location": "北立面西中柱柱头铺作 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-北-05",
+          "location": "北立面东中柱柱头铺作 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-北-07",
+          "location": "东北角转角铺作北向分支 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-东-01",
+          "location": "东北角转角铺作东向分支 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-东-03",
+          "location": "东山北中柱柱头铺作 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-东-05",
+          "location": "东山南中柱柱头铺作 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-东-07",
+          "location": "东南角转角铺作东向分支 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-西-01",
+          "location": "西北角转角铺作西向分支 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-西-03",
+          "location": "西山北中柱柱头铺作 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-西-05",
+          "location": "西山南中柱柱头铺作 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        },
+        {
+          "id": "头昂-西-07",
+          "location": "西南角转角铺作西向分支 / 头昂",
+          "evidence": "实测16+柱头类16方向单元"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-49",
+      "object_type": "透风孔",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_OPENING",
+      "approved_master_ref": null,
+      "decision_reason": "Opening/enclosure scope, not structural timber skeleton.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "透风孔-01",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-02",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-03",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-04",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-05",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-06",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-07",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-08",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-09",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-10",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-11",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-12",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-13",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-14",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-15",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        },
+        {
+          "id": "透风孔-16",
+          "location": "四立面柱位；具体纹样见V007证据文档",
+          "evidence": "报告直接记录+柱网展开"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-50",
+      "object_type": "槫",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-PURLIN-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "槫-正身-南撩风槫-西段",
+          "location": "正身南撩风槫 / 西段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-南撩风槫-中段",
+          "location": "正身南撩风槫 / 中段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-南撩风槫-东段",
+          "location": "正身南撩风槫 / 东段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-南下平槫-西段",
+          "location": "正身南下平槫 / 西段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-南下平槫-中段",
+          "location": "正身南下平槫 / 中段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-南下平槫-东段",
+          "location": "正身南下平槫 / 东段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-南上平槫-西段",
+          "location": "正身南上平槫 / 西段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-南上平槫-中段",
+          "location": "正身南上平槫 / 中段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-南上平槫-东段",
+          "location": "正身南上平槫 / 东段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-脊槫-西段",
+          "location": "正身脊槫 / 西段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-脊槫-中段",
+          "location": "正身脊槫 / 中段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-脊槫-东段",
+          "location": "正身脊槫 / 东段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-北上平槫-西段",
+          "location": "正身北上平槫 / 西段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-北上平槫-中段",
+          "location": "正身北上平槫 / 中段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-北上平槫-东段",
+          "location": "正身北上平槫 / 东段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-北下平槫-西段",
+          "location": "正身北下平槫 / 西段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-北下平槫-中段",
+          "location": "正身北下平槫 / 中段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-北下平槫-东段",
+          "location": "正身北下平槫 / 东段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-北撩风槫-西段",
+          "location": "正身北撩风槫 / 西段",
+          "evidence": "正身七道21根+三间拓扑"
+        },
+        {
+          "id": "槫-正身-北撩风槫-中段",
+          "location": "正身北撩风槫 / 中段",
+          "evidence": "正身七道21根+三间拓扑"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-51",
+      "object_type": "托脚",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "托脚-东缝-南上平槫",
+          "location": "东缝/南上平槫",
+          "evidence": "8根正身托脚+拓扑"
+        },
+        {
+          "id": "托脚-东缝-南下平槫",
+          "location": "东缝/南下平槫",
+          "evidence": "8根正身托脚+拓扑"
+        },
+        {
+          "id": "托脚-东缝-北上平槫",
+          "location": "东缝/北上平槫",
+          "evidence": "8根正身托脚+拓扑"
+        },
+        {
+          "id": "托脚-东缝-北下平槫",
+          "location": "东缝/北下平槫",
+          "evidence": "8根正身托脚+拓扑"
+        },
+        {
+          "id": "托脚-西缝-南上平槫",
+          "location": "西缝/南上平槫",
+          "evidence": "8根正身托脚+拓扑"
+        },
+        {
+          "id": "托脚-西缝-南下平槫",
+          "location": "西缝/南下平槫",
+          "evidence": "8根正身托脚+拓扑"
+        },
+        {
+          "id": "托脚-西缝-北上平槫",
+          "location": "西缝/北上平槫",
+          "evidence": "8根正身托脚+拓扑"
+        },
+        {
+          "id": "托脚-西缝-北下平槫",
+          "location": "西缝/北下平槫",
+          "evidence": "8根正身托脚+拓扑"
+        },
+        {
+          "id": "托脚-东山-南缝-下平槫",
+          "location": "东山南缝下平槫下",
+          "evidence": "报告直接给出山面4根"
+        },
+        {
+          "id": "托脚-东山-北缝-下平槫",
+          "location": "东山北缝下平槫下",
+          "evidence": "报告直接给出山面4根"
+        },
+        {
+          "id": "托脚-西山-南缝-下平槫",
+          "location": "西山南缝下平槫下",
+          "evidence": "报告直接给出山面4根"
+        },
+        {
+          "id": "托脚-西山-北缝-下平槫",
+          "location": "西山北缝下平槫下",
+          "evidence": "报告直接给出山面4根"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-52",
+      "object_type": "望板系统",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "IN",
+      "scope_role": "UPPER_BOUNDARY_TIMBER_SYSTEM",
+      "approved_master_ref": null,
+      "decision_reason": "Wood roof-substrate system immediately above rafters; included only through rafter→wangban attachment and used as the Stage2-C upper STOP boundary.",
+      "stage2c_connection_policy": "REQUIRE RAFTER→WANGBAN HANDOFF; STOP ABOVE WANGBAN",
+      "registry_evidence_summary": [
+        {
+          "id": "望板系统-01",
+          "location": "椽系之上/瓦面之下",
+          "evidence": "V007：椽与望板、瓦面总体关系确认"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-53",
+      "object_type": "西坡筒瓦",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ROOF_COVERING",
+      "approved_master_ref": null,
+      "decision_reason": "Roof covering above the wangban STOP boundary.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "西坡筒瓦-阵列",
+          "location": "西坡",
+          "evidence": "报告直接记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-54",
+      "object_type": "下六椽栿",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "下六椽栿-东缝",
+          "location": "东缝",
+          "evidence": "直接实测"
+        },
+        {
+          "id": "下六椽栿-西缝",
+          "location": "西缝",
+          "evidence": "直接实测"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-55",
+      "object_type": "仙人",
+      "stage2a_participation_class": "SIMPLIFIED_PROXY",
+      "stage2a_policy": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ORNAMENT",
+      "approved_master_ref": null,
+      "decision_reason": "Roof ornament beyond structural timber scope.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "仙人-01",
+          "location": "四角戗脊端部-01",
+          "evidence": "V007数量4"
+        },
+        {
+          "id": "仙人-02",
+          "location": "四角戗脊端部-02",
+          "evidence": "V007数量4"
+        },
+        {
+          "id": "仙人-03",
+          "location": "四角戗脊端部-03",
+          "evidence": "V007数量4"
+        },
+        {
+          "id": "仙人-04",
+          "location": "四角戗脊端部-04",
+          "evidence": "V007数量4"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-56",
+      "object_type": "小型瓜子栱",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-GUAZI-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "小型瓜子栱-南-01-二跳",
+          "location": "西南角转角铺作南向分支 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型瓜子栱-南-02-泥道",
+          "location": "南西次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型瓜子栱-南-03-二跳",
+          "location": "南立面西中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型瓜子栱-南-04-泥道",
+          "location": "南明间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型瓜子栱-南-05-二跳",
+          "location": "南立面东中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型瓜子栱-南-06-泥道",
+          "location": "南东次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型瓜子栱-南-07-二跳",
+          "location": "东南角转角铺作南向分支 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型瓜子栱-北-01-二跳",
+          "location": "西北角转角铺作北向分支 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型瓜子栱-北-02-泥道",
+          "location": "北西次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型瓜子栱-北-03-二跳",
+          "location": "北立面西中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型瓜子栱-北-04-泥道",
+          "location": "北明间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型瓜子栱-北-05-二跳",
+          "location": "北立面东中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型瓜子栱-北-06-泥道",
+          "location": "北东次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型瓜子栱-北-07-二跳",
+          "location": "东北角转角铺作北向分支 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型瓜子栱-东-01-二跳",
+          "location": "东北角转角铺作东向分支 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型瓜子栱-东-02-泥道",
+          "location": "东北次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型瓜子栱-东-03-二跳",
+          "location": "东山北中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型瓜子栱-东-04-泥道",
+          "location": "东明间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型瓜子栱-东-05-二跳",
+          "location": "东山南中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型瓜子栱-东-06-泥道",
+          "location": "东南次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-57",
+      "object_type": "小型慢栱",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-MANGONG-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "小型慢栱-南-01-二跳",
+          "location": "西南角转角铺作南向分支 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型慢栱-南-02-泥道",
+          "location": "南西次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型慢栱-南-03-二跳",
+          "location": "南立面西中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型慢栱-南-04-泥道",
+          "location": "南明间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型慢栱-南-05-二跳",
+          "location": "南立面东中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型慢栱-南-06-泥道",
+          "location": "南东次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型慢栱-南-07-二跳",
+          "location": "东南角转角铺作南向分支 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型慢栱-北-01-二跳",
+          "location": "西北角转角铺作北向分支 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型慢栱-北-02-泥道",
+          "location": "北西次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型慢栱-北-03-二跳",
+          "location": "北立面西中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型慢栱-北-04-泥道",
+          "location": "北明间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型慢栱-北-05-二跳",
+          "location": "北立面东中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型慢栱-北-06-泥道",
+          "location": "北东次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型慢栱-北-07-二跳",
+          "location": "东北角转角铺作北向分支 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型慢栱-东-01-二跳",
+          "location": "东北角转角铺作东向分支 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型慢栱-东-02-泥道",
+          "location": "东北次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型慢栱-东-03-二跳",
+          "location": "东山北中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型慢栱-东-04-泥道",
+          "location": "东明间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        },
+        {
+          "id": "小型慢栱-东-05-二跳",
+          "location": "东山南中柱柱头铺作 / 二跳",
+          "evidence": "小型总28中的柱头类二跳16"
+        },
+        {
+          "id": "小型慢栱-东-06-泥道",
+          "location": "东南次间补间铺作 / 泥道",
+          "evidence": "小型总28中的补间泥道12"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-58",
+      "object_type": "隐角梁",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "IN",
+      "scope_role": "PARAMETRIC_TIMBER_MEMBER",
+      "approved_master_ref": null,
+      "decision_reason": "Current Registry records four corner instances with direct measurement/report evidence; required to close the corner timber system even without a standalone approved Master.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS REQUIRED FOR STRUCTURAL CHAIN MUST CLOSE",
+      "registry_evidence_summary": [
+        {
+          "id": "隐角梁-东北角",
+          "location": "东北角",
+          "evidence": "直接实测/报告明确缺口"
+        },
+        {
+          "id": "隐角梁-东南角",
+          "location": "东南角",
+          "evidence": "直接实测/报告明确缺口"
+        },
+        {
+          "id": "隐角梁-西南角",
+          "location": "西南角",
+          "evidence": "直接实测/报告明确缺口"
+        },
+        {
+          "id": "隐角梁-西北角",
+          "location": "西北角",
+          "evidence": "直接实测/报告明确缺口"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-59",
+      "object_type": "由额",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-YOUE-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "由额-南立面-西次间",
+          "location": "南立面西次间",
+          "evidence": "报告直接说明分布"
+        },
+        {
+          "id": "由额-南立面-明间",
+          "location": "南立面明间",
+          "evidence": "报告直接说明分布"
+        },
+        {
+          "id": "由额-南立面-东次间",
+          "location": "南立面东次间",
+          "evidence": "报告直接说明分布"
+        },
+        {
+          "id": "由额-北立面-明间",
+          "location": "北立面明间",
+          "evidence": "报告直接说明分布"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-60",
+      "object_type": "正脊",
+      "stage2a_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "stage2a_policy": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ROOF_COVERING",
+      "approved_master_ref": null,
+      "decision_reason": "Roof ridge covering system beyond structural timber STOP boundary.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "正脊-01",
+          "location": "屋脊",
+          "evidence": "报告直接记录"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-61",
+      "object_type": "正吻",
+      "stage2a_participation_class": "SIMPLIFIED_PROXY",
+      "stage2a_policy": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "structural_timber_scope": "OUT",
+      "scope_role": "EXCLUDED_ORNAMENT",
+      "approved_master_ref": null,
+      "decision_reason": "Roof ornament beyond structural timber scope.",
+      "stage2c_connection_policy": "NO STAGE2-C INTERNAL EDGE; ONLY EXPLICIT STRUCTURAL TIMBER BOUNDARY HANDOFF IF NEEDED",
+      "registry_evidence_summary": [
+        {
+          "id": "正吻-01",
+          "location": "正脊一端",
+          "evidence": "V007数量2"
+        },
+        {
+          "id": "正吻-02",
+          "location": "正脊另一端",
+          "evidence": "V007数量2"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-62",
+      "object_type": "柱",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-COLUMN-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "柱-01",
+          "location": "西北角柱",
+          "evidence": "直接实测+平面拓扑"
+        },
+        {
+          "id": "柱-02",
+          "location": "北侧西中柱",
+          "evidence": "直接实测+平面拓扑"
+        },
+        {
+          "id": "柱-03",
+          "location": "北侧东中柱",
+          "evidence": "直接实测+平面拓扑"
+        },
+        {
+          "id": "柱-04",
+          "location": "东北角柱",
+          "evidence": "直接实测+平面拓扑"
+        },
+        {
+          "id": "柱-05",
+          "location": "东侧北中柱",
+          "evidence": "直接实测+平面拓扑"
+        },
+        {
+          "id": "柱-06",
+          "location": "东侧南中柱",
+          "evidence": "直接实测+平面拓扑"
+        },
+        {
+          "id": "柱-07",
+          "location": "东南角柱",
+          "evidence": "直接实测+平面拓扑"
+        },
+        {
+          "id": "柱-08",
+          "location": "南侧东中柱",
+          "evidence": "直接实测+平面拓扑"
+        },
+        {
+          "id": "柱-09",
+          "location": "南侧西中柱",
+          "evidence": "直接实测+平面拓扑"
+        },
+        {
+          "id": "柱-10",
+          "location": "西南角柱",
+          "evidence": "直接实测+平面拓扑"
+        },
+        {
+          "id": "柱-11",
+          "location": "西侧南中柱",
+          "evidence": "直接实测+平面拓扑"
+        },
+        {
+          "id": "柱-12",
+          "location": "西侧北中柱",
+          "evidence": "直接实测+平面拓扑"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-63",
+      "object_type": "柱头栌斗",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-LUDOU-COLUMN-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "柱头栌斗-西北角柱",
+          "location": "西北角柱",
+          "evidence": "报告直接确认12枚"
+        },
+        {
+          "id": "柱头栌斗-北侧西中柱",
+          "location": "北侧西中柱",
+          "evidence": "报告直接确认12枚"
+        },
+        {
+          "id": "柱头栌斗-北侧东中柱",
+          "location": "北侧东中柱",
+          "evidence": "报告直接确认12枚"
+        },
+        {
+          "id": "柱头栌斗-东北角柱",
+          "location": "东北角柱",
+          "evidence": "报告直接确认12枚"
+        },
+        {
+          "id": "柱头栌斗-东侧北中柱",
+          "location": "东侧北中柱",
+          "evidence": "报告直接确认12枚"
+        },
+        {
+          "id": "柱头栌斗-东侧南中柱",
+          "location": "东侧南中柱",
+          "evidence": "报告直接确认12枚"
+        },
+        {
+          "id": "柱头栌斗-东南角柱",
+          "location": "东南角柱",
+          "evidence": "报告直接确认12枚"
+        },
+        {
+          "id": "柱头栌斗-南侧东中柱",
+          "location": "南侧东中柱",
+          "evidence": "报告直接确认12枚"
+        },
+        {
+          "id": "柱头栌斗-南侧西中柱",
+          "location": "南侧西中柱",
+          "evidence": "报告直接确认12枚"
+        },
+        {
+          "id": "柱头栌斗-西南角柱",
+          "location": "西南角柱",
+          "evidence": "报告直接确认12枚"
+        },
+        {
+          "id": "柱头栌斗-西侧南中柱",
+          "location": "西侧南中柱",
+          "evidence": "报告直接确认12枚"
+        },
+        {
+          "id": "柱头栌斗-西侧北中柱",
+          "location": "西侧北中柱",
+          "evidence": "报告直接确认12枚"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-64",
+      "object_type": "柱头铺作",
+      "stage2a_participation_class": "TOPOLOGY_OR_ASSEMBLY_CONTAINER",
+      "stage2a_policy": "ORGANIZES_RELATIONS / NOT_A_PHYSICAL_CONNECTION",
+      "structural_timber_scope": "CONTAINER",
+      "scope_role": "ORGANIZATIONAL_TOPOLOGY_CONTAINER",
+      "approved_master_ref": null,
+      "decision_reason": "Organizes relations/instances but is not itself a physical attachment object.",
+      "stage2c_connection_policy": "NO PHYSICAL EDGE TO CONTAINER; CHILD COMPONENT EDGES ONLY",
+      "registry_evidence_summary": [
+        {
+          "id": "柱头铺作-南立面西中柱",
+          "location": "南立面西中柱",
+          "evidence": "12柱扣除4角柱"
+        },
+        {
+          "id": "柱头铺作-南立面东中柱",
+          "location": "南立面东中柱",
+          "evidence": "12柱扣除4角柱"
+        },
+        {
+          "id": "柱头铺作-北立面西中柱",
+          "location": "北立面西中柱",
+          "evidence": "12柱扣除4角柱"
+        },
+        {
+          "id": "柱头铺作-北立面东中柱",
+          "location": "北立面东中柱",
+          "evidence": "12柱扣除4角柱"
+        },
+        {
+          "id": "柱头铺作-东山北中柱",
+          "location": "东山北中柱",
+          "evidence": "12柱扣除4角柱"
+        },
+        {
+          "id": "柱头铺作-东山南中柱",
+          "location": "东山南中柱",
+          "evidence": "12柱扣除4角柱"
+        },
+        {
+          "id": "柱头铺作-西山北中柱",
+          "location": "西山北中柱",
+          "evidence": "12柱扣除4角柱"
+        },
+        {
+          "id": "柱头铺作-西山南中柱",
+          "location": "西山南中柱",
+          "evidence": "12柱扣除4角柱"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-65",
+      "object_type": "转角铺作",
+      "stage2a_participation_class": "TOPOLOGY_OR_ASSEMBLY_CONTAINER",
+      "stage2a_policy": "ORGANIZES_RELATIONS / NOT_A_PHYSICAL_CONNECTION",
+      "structural_timber_scope": "CONTAINER",
+      "scope_role": "ORGANIZATIONAL_TOPOLOGY_CONTAINER",
+      "approved_master_ref": null,
+      "decision_reason": "Organizes relations/instances but is not itself a physical attachment object.",
+      "stage2c_connection_policy": "NO PHYSICAL EDGE TO CONTAINER; CHILD COMPONENT EDGES ONLY",
+      "registry_evidence_summary": [
+        {
+          "id": "转角铺作-西南角",
+          "location": "西南角",
+          "evidence": "四角柱拓扑+报告铺作"
+        },
+        {
+          "id": "转角铺作-东南角",
+          "location": "东南角",
+          "evidence": "四角柱拓扑+报告铺作"
+        },
+        {
+          "id": "转角铺作-东北角",
+          "location": "东北角",
+          "evidence": "四角柱拓扑+报告铺作"
+        },
+        {
+          "id": "转角铺作-西北角",
+          "location": "西北角",
+          "evidence": "四角柱拓扑+报告铺作"
+        }
+      ]
+    },
+    {
+      "scope_item_id": "STS-66",
+      "object_type": "子角梁",
+      "stage2a_participation_class": "MASTER_BOUND_PRODUCTION",
+      "stage2a_policy": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "structural_timber_scope": "IN",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
+      "decision_reason": "Approved Stage1 Master-bound structural timber/component object type; required for structural timber connection closure.",
+      "stage2c_connection_policy": "ALL PHYSICAL ATTACHMENTS MUST CLOSE IN STAGE2-C",
+      "registry_evidence_summary": [
+        {
+          "id": "子角梁-东北角",
+          "location": "东北角",
+          "evidence": "直接实测/报告明确缺口"
+        },
+        {
+          "id": "子角梁-东南角",
+          "location": "东南角",
+          "evidence": "直接实测/报告明确缺口"
+        },
+        {
+          "id": "子角梁-西南角",
+          "location": "西南角",
+          "evidence": "直接实测/报告明确缺口"
+        },
+        {
+          "id": "子角梁-西北角",
+          "location": "西北角",
+          "evidence": "直接实测/报告明确缺口"
+        }
+      ]
+    }
+  ],
+  "governance_effect": {
+    "matrix_denominator_if_approved": "33 IN object types + any later-promoted CONDITIONAL item; 5 CONTAINER items are organizational only and do not create physical edges.",
+    "d282_effect": "D-282's 66-object whole-building expansion finding remains historical review context, but if this scope is approved the matrix Patch 01 denominator must rebase to the Structural Timber Scope rather than all building objects.",
+    "pr49": "HOLD",
+    "pr50": "DRAFT",
+    "batch03": "HOLD",
+    "engineering": "NOT AUTHORIZED",
+    "stage3": "NOT AUTHORIZED",
+    "t018": "HOLD"
+  }
+}
