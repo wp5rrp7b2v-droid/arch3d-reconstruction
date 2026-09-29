@@ -91,3 +91,8 @@ Explicitly deferred from Batch 02:
 - world coordinates and whole-building topology.
 
 Batch 02 is a candidate until Product Owner review/lock.
+
+
+## Batch 02 lock status
+
+Batch 02 was reviewed and **LOCKED under D-279**. The lock covers only the four family-level attachment classes listed above. Batch 03 and all deferred Dingfu/Rufu groove/contact or ridge-counterpart materialization remain NOT AUTHORIZED until separately approved.
