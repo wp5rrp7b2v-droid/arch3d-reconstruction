@@ -20,7 +20,7 @@
 | `acceptance_matrix.md` | Gate / 验收标准、状态、通过依据、限制 |
 | `governance.md` | 项目治理、角色、SSOT、记录机制、审批与版本规则 |
 | `rules_change_log.md` | 管理机制本身的变更历史与被替代规则 |
-| `phase_archive/` | Phase 关闭后的压缩总结，例如 `P0_closure.md` |
+| `phase_archive/` | 已关闭 Phase 的压缩总结，以及已退出当前工作面的历史控制包；仅作追溯，不作为当前状态源 |
 | `dashboard.html` | 从 Project Control 提取当前摘要形成的可视化驾驶舱；非正式历史档案载体 |
 
 ## 3. 即时落档机制
