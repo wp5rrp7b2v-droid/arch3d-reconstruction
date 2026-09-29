@@ -10,7 +10,7 @@ Authority rules:
 - This monthly file is the daily handoff / audit log.
 - Daily startup should read the latest section of this file, not all historical sections.
 - Historical entries below preserve the original daily-close text; consolidation does not reinterpret or overwrite prior decisions.
-- Individual source files remain in place until Product Owner approves their retirement/archive.
+- Product Owner approved retirement of the individual September daily-close source files after consolidation; the monthly log is now the retained daily-close record.
 
 ## Source files consolidated
 
@@ -3796,6 +3796,6 @@ Do not enter engineering generation before Product Owner approval of AF-01.
 - Month: 2026-09
 - Entries consolidated: 12
 - Source files: DAILY_CLOSE_2026-09-17.md, DAILY_CLOSE_2026-09-18.md, DAILY_CLOSE_2026-09-20.md, CLOSE_FILE_2026-09-21.md, CLOSE_FILE_2026-09-22.md, CLOSE_FILE_2026-09-23.md, CLOSE_FILE_2026-09-24.md, CLOSE_FILE_2026-09-25.md, CLOSE_FILE_2026-09-26.md, CLOSE_FILE_2026-09-27.md, CLOSE_FILE_2026-09-28.md, CLOSE_FILE_2026-09-29.md
-- Source files deleted: NO
+- Source files deleted: YES / 12 legacy per-day close files retired after consolidation
 - Semantic rewrite: NO
 - Next daily close should append a new dated section to this monthly log rather than create a new per-day close file.
