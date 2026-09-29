@@ -1,7 +1,7 @@
 {
   "schema_version": "P3_3_STAGE2_B_INTERFACE_VARIANT_RULE_SET_V001",
   "date": "2026-09-29",
-  "status": "CANDIDATE_V0.1 / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "LOCKED / PRODUCT OWNER APPROVED / D-275",
   "authority": {
     "stage2_entry": "D-272 / DESIGN ONLY",
     "stage2_a_lock": "D-273",
@@ -1078,5 +1078,18 @@
       "status": "DESIGN_RULE_DEFINED / ATTACHMENT_RECORDS_NOT_YET_MATERIALIZED"
     }
   ],
-  "next_gate": "PRODUCT OWNER REVIEW / LOCK STAGE2-B RULE SET BEFORE INTERFACE-RECORD MATERIALIZATION"
+  "next_gate": "PRODUCT OWNER REVIEW / LOCK STAGE2-B RULE SET BEFORE INTERFACE-RECORD MATERIALIZATION",
+  "lock_decision_id": "D-275",
+  "lock_date": "2026-09-29",
+  "review_result": "PASS",
+  "lock_notes": [
+    "25/25 approved Master families covered exactly once.",
+    "5 Stage1-declared geometry-variant families retained; no additional geometry variants created.",
+    "3 role-label-only families remain non-geometric roles.",
+    "17 families explicitly add no new geometry variant.",
+    "MASTER_LOCAL / ASSEMBLY_LOCAL authority only; world-coordinate authority prohibited.",
+    "Reference interfaces remain engineering datums, not historical contact/joinery claims.",
+    "Every production attachment still requires explicit RC-024 Connection Layer materialization.",
+    "Engineering execution, Stage3, whole-building topology, T-020/RZ/FV production authority and T-018 remain unauthorized."
+  ]
 }
