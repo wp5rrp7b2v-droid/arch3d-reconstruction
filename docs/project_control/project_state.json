@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R353",
+  "state_revision": "R354",
   "last_updated": "2026-09-29",
-  "session_status": "2026-09-29 P3.3 STAGE2-C BATCH02 CANDIDATE D-278 / PRIMARY FRAME ATTACHMENTS / 7 NEW INTERFACES + 4 CONTACT_INTERFACE FAMILY ATTACHMENT CLASSES / PINGLIANG→SHUZHU / PINGLIANG→CHASHOU / TUOJIAO→FOUR / TUOJIAO→SOURCE-SUPPORTED PURLIN ROLE / EXACT CONTACT + JOINERY + INSTANCE MAPPING + WORLD COORDINATES REMAIN UNRESOLVED / ENGINEERING NOT AUTHORIZED / STAGE3 NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-29 P3.3 STAGE2-C BATCH02 LOCKED D-279 / PRIMARY FRAME ATTACHMENT CLASSES LOCKED / 7 INTERFACES + 4 CONTACT_INTERFACE RECORDS / 12 OF 12 REQUIRED FIELDS ON ALL 4 / 8 OF 8 INTERFACE REFS RESOLVE / EXACT CONTACT + JOINERY + INSTANCE MAPPING + WORLD COORDINATES REMAIN UNRESOLVED / BATCH03 NOT AUTHORIZED / ENGINEERING NOT AUTHORIZED / STAGE3 NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 CANDIDATE D-278 / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / B03 NOT AUTHORIZED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 CANDIDATE D-278 / T-018 HOLD",
-      "P3_3": "STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 CANDIDATE D-278 / T-018 HOLD"
+      "P3.3": "STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / B03 NOT AUTHORIZED / T-018 HOLD",
+      "P3_3": "STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / B03 NOT AUTHORIZED / T-018 HOLD"
     }
   },
-  "decision_required": true,
+  "decision_required": false,
   "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
@@ -62,14 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "STAGE2-C-B02",
-    "name": "P3.3 Stage2-C Batch 02｜Primary Frame Attachment Classes",
-    "status": "CANDIDATE BUILT / PRODUCT OWNER REVIEW REQUIRED / DESIGN-MATERIALIZATION ONLY"
+    "id": null,
+    "name": "NONE",
+    "status": "NO ACTIVE ENGINEERING T-TASK"
   },
   "proposed_next_task": {
-    "id": "STAGE2-C-B02-LOCK",
-    "name": "P3.3 Stage2-C Batch 02 Lock Decision",
-    "status": "NEXT GOVERNANCE GATE / PRODUCT OWNER REVIEW REQUIRED"
+    "id": "STAGE2-C-B03",
+    "name": "P3.3 Stage2-C Batch 03｜Deferred Primary-Frame Groove / Ridge-Counterpart Attachment Classes",
+    "status": "NEXT CONTROLLED DESIGN STEP / NOT STARTED / PRODUCT OWNER AUTHORIZATION REQUIRED"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -121,7 +121,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 CANDIDATE D-278 / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / B03 NOT AUTHORIZED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -1058,14 +1058,14 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Review Stage2-C Batch 02 only. Do not start Batch 03 or materialize Dingfu/Rufu bracket-groove relations until Batch 02 is explicitly approved/locked. Engineering execution, Stage3, whole-building topology, T-020/RZ/FV production authority and T-018 remain unauthorized.",
+  "next_action": "Stage2-C Batch 02 is LOCKED under D-279. Batch 03 is not authorized automatically. Await Product Owner authorization before materializing Dingfu/Rufu bracket-groove relations or Shuzhu/Chashou upper ridge counterparts. Engineering execution, Stage3, whole-building topology, T-020/RZ/FV production authority and T-018 remain unauthorized.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v209",
+    "visualization_version": "v210",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / D-278 / STAGE2-C BATCH02 CANDIDATE",
+    "refresh_status": "CURRENT / D-279 / STAGE2-C BATCH02 LOCKED",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -3232,8 +3232,8 @@
     "new_geometry_variants_beyond_stage1": 0
   },
   "p3_3_stage2_c_2026_09_29": {
-    "decision_id": "D-278",
-    "status": "ACTIVE / BATCH01 LOCKED / BATCH02 CANDIDATE REVIEW",
+    "decision_id": "D-279",
+    "status": "ACTIVE / BATCH01 LOCKED / BATCH02 LOCKED / BATCH03 NOT AUTHORIZED",
     "plan": "P3_3_STAGE2_C_MATERIALIZATION_PLAN_V001",
     "batch01": {
       "id": "STAGE2_C_BATCH01_UPPER6_SANDOU_FOUR",
@@ -3258,7 +3258,7 @@
     "t018": "HOLD",
     "batch02": {
       "id": "STAGE2_C_BATCH02_PRIMARY_FRAME_ATTACHMENTS",
-      "status": "CANDIDATE / PRODUCT OWNER REVIEW REQUIRED",
+      "status": "LOCKED / D-279",
       "new_master_interfaces": 7,
       "connection_layer_records": 4,
       "connection_kind": "CONTACT_INTERFACE",
@@ -3272,7 +3272,11 @@
       "historical_joinery_claimed": false,
       "historical_claim": false,
       "world_coordinate_authority": false,
-      "instance_generation_authority": false
-    }
+      "instance_generation_authority": false,
+      "required_fields": "12/12 PASS ON ALL 4",
+      "interface_refs": "8/8 RESOLVE",
+      "duplicate_interface_ids": 0
+    },
+    "batch03": "NOT AUTHORIZED"
   }
 }
