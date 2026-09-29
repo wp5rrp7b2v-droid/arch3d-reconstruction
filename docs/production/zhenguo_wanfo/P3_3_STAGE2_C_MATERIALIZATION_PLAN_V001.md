@@ -66,3 +66,28 @@ Batch 01 may be locked only if:
 ## Batch 01 lock status
 
 Batch 01 was reviewed and **LOCKED under D-277**. This lock applies only to the family-level attachment class `Upper Six-Chuanfu → San-Dou → Four-Chuanfu`. Batch 02 and later batches remain NOT AUTHORIZED until separately approved.
+
+
+## Batch 02 Candidate｜Primary Frame Attachment Classes
+
+Authorized by Product Owner on 2026-09-29 for candidate materialization only.
+
+Materialized candidate classes:
+1. Pingliang → Shuzhu lower attachment.
+2. Pingliang → Chashou lower endpoint attachment.
+3. Tuojiao → Four-Chuanfu end-support attachment.
+4. Tuojiao → source-supported Purlin-role attachment.
+
+New interface records: **7**.
+New Connection Layer records: **4**, all classified as `CONTACT_INTERFACE` because the existence of the structural relationship is supported but exact historical contact/joinery geometry is not locked.
+
+Explicitly deferred from Batch 02:
+- Dingfu ↔ bracket-set groove/contact materialization;
+- Rufu ↔ bracket-set groove/contact materialization;
+- Chashou upper ridge endpoint counterpart;
+- Shuzhu upper ridge-support counterpart;
+- exact per-instance endpoint mapping;
+- exact joinery/contact-face geometry;
+- world coordinates and whole-building topology.
+
+Batch 02 is a candidate until Product Owner review/lock.
