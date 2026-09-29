@@ -1061,11 +1061,11 @@
   "next_action": "Stage2-A is LOCKED under D-273. Next controlled work is Stage2-B detailed interface / variant / orientation / length-rule design. Do not start engineering execution, Stage3, whole-building topology, T-020/RZ/FV production authority, or T-018 without separate authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v202",
+    "visualization_version": "v204",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / D-271 / STAGE1 FORMALLY CLOSED",
+    "refresh_status": "CURRENT / D-273 / STAGE2-A LOCKED",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
