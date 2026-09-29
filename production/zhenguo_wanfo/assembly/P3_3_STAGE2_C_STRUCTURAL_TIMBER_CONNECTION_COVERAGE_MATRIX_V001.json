@@ -2,7 +2,7 @@
   "schema_version": "P3_3_STAGE2_C_STRUCTURAL_TIMBER_CONNECTION_COVERAGE_MATRIX_V001",
   "patch_version": "REBASELINE_PATCH_01",
   "date": "2026-09-29",
-  "status": "CANDIDATE_PATCH01 / PRODUCT_OWNER_REVIEW_REQUIRED / NOT_LOCKED",
+  "status": "REFERENCE_DIAGNOSTIC_ONLY / NON_BLOCKING_UNDER_D286",
   "authority": {
     "scope_lock": "D-284 / P3_3_STAGE2_C_STRUCTURAL_TIMBER_SCOPE_REGISTER_V001",
     "source_matrix": "D-281 candidate + D-282 review findings",
@@ -1772,6 +1772,10 @@
     "old_whole_building_matrix": "SUPERSEDED_AS_ACTIVE_DENOMINATOR / RETAINED_FOR_HISTORY",
     "d282_all66_requirement": "SUPERSEDED_BY_D284_SCOPE_LOCK_FOR_DENOMINATOR PURPOSES",
     "future_batch_rule": "Every future Stage2-C batch must materialize a reviewed atomic edge or a bounded subset of a parent obligation from this matrix.",
-    "no_ad_hoc_batching": true
+    "no_ad_hoc_batching": true,
+    "d286_role": "REFERENCE_DIAGNOSTIC_ONLY",
+    "matrix_lock_required_before_assembly": false,
+    "atomic_network_closure_required_before_representative_assembly": false,
+    "use_rule": "Consult only when a concrete assembly step encounters a placement/orientation/length/support/visible-geometry blocker."
   }
 }

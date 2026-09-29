@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R359",
+  "state_revision": "R360",
   "last_updated": "2026-09-29",
-  "session_status": "2026-09-29 D-285 STAGE2-C CONNECTION MATRIX REBASELINE PATCH01 CANDIDATE / D-284 SCOPE DENOMINATOR 33 / 33 OF 33 PARENT-COVERED / 42 PARENT OBLIGATIONS / 18 ATOMIC+HANDOFF CANDIDATES / 6 LOCKED SEGMENTS VIA 5 D-277+D-279 RECORDS / ATOMIC NETWORK OPEN / PR #49 HOLD / PR #50 DRAFT / ENGINEERING NOT AUTHORIZED / STAGE3 NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-29 D-286 P3.3 ASSEMBLY-FIRST REBASELINE V0.1 CANDIDATE / GOAL=ASSEMBLE WANFO HALL / D-284 SCOPE RETAINED / D-285 MATRIX REFERENCE NON-BLOCKING / NEXT AF-01 MAIN-FRAME FIRST ASSEMBLY SPEC / PR #49 HOLD / ENGINEERING NOT YET AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / SCOPE LOCKED D-284 / CONNECTION MATRIX REBASELINE CANDIDATE D-285 / B01+B02 LOCKED / B03 HOLD / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / ASSEMBLY-FIRST REBASELINE D-286 CANDIDATE / D-284 SCOPE RETAINED / D-285 MATRIX NON-BLOCKING REFERENCE / NEXT AF-01 / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "SCOPE LOCKED D-284 / CONNECTION MATRIX REBASELINE CANDIDATE D-285 / B01+B02 LOCKED / B03 HOLD / T-018 HOLD",
-      "P3_3": "SCOPE LOCKED D-284 / CONNECTION MATRIX REBASELINE CANDIDATE D-285 / B01+B02 LOCKED / B03 HOLD / T-018 HOLD"
+      "P3.3": "ASSEMBLY-FIRST REBASELINE D-286 CANDIDATE / D-284 SCOPE RETAINED / D-285 MATRIX NON-BLOCKING / NEXT AF-01 / T-018 HOLD",
+      "P3_3": "ASSEMBLY-FIRST REBASELINE D-286 CANDIDATE / D-284 SCOPE RETAINED / D-285 MATRIX NON-BLOCKING / NEXT AF-01 / T-018 HOLD"
     }
   },
   "decision_required": true,
-  "blocker": "STRUCTURAL_TIMBER_CONNECTION_MATRIX_PATCH01_REVIEW_REQUIRED",
+  "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,14 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "STAGE2-C-CONNECTION-MATRIX-REBASELINE-PATCH01",
-    "name": "P3.3 Stage2-C｜Structural Timber Connection Coverage Matrix Rebaseline / Patch 01",
+    "id": "P3.3-ASSEMBLY-FIRST-REBASELINE-V001",
+    "name": "P3.3｜Assembly-First Rebaseline V0.1",
     "status": "CANDIDATE BUILT / PRODUCT OWNER REVIEW REQUIRED"
   },
   "proposed_next_task": {
-    "id": "STAGE2-C-CONNECTION-MATRIX-PATCH01-REVIEW",
-    "name": "Review D-285 rebaselined matrix architecture",
-    "status": "NEXT GOVERNANCE GATE / PRODUCT OWNER REVIEW REQUIRED"
+    "id": "AF-01",
+    "name": "正身梁架首榀｜Assembly Spec V0.1",
+    "status": "NEXT CONTROLLED STEP / NOT AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -121,7 +121,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE2-C SCOPE LOCKED D-284 / CONNECTION MATRIX REBASELINE CANDIDATE D-285 / B03 HOLD / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "ASSEMBLY-FIRST REBASELINE D-286 CANDIDATE / D-284 SCOPE RETAINED / NEXT AF-01 / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -1058,14 +1058,14 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Review D-285 rebaselined Structural Timber Connection Coverage Matrix. Do not resume Batch03 or start atomic materialization until the matrix structure is approved.",
+  "next_action": "Review/approve D-286 Assembly-First Rebaseline. After approval, start AF-01 and resolve only the placement/orientation/length/support information needed to assemble one representative main-frame slice.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v215",
+    "visualization_version": "v216",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / D-285 / CONNECTION MATRIX REBASELINE PATCH01 CANDIDATE",
+    "refresh_status": "CURRENT / D-286 / ASSEMBLY-FIRST REBASELINE CANDIDATE",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -3332,5 +3332,29 @@
       "atomic_network_closure": "OPEN",
       "matrix_lock_allowed": false
     }
+  },
+  "p3_3_assembly_first_2026_09_29": {
+    "decision_id": "D-286",
+    "status": "CANDIDATE / PRODUCT OWNER REVIEW REQUIRED",
+    "objective": "ASSEMBLE WANFO HALL",
+    "retained": [
+      "D-271 Masters",
+      "Component Registry",
+      "D-284 Scope",
+      "D-277/D-279 useful connection records",
+      "SRC-ZG-WF-001"
+    ],
+    "matrix_role": "D-285 REFERENCE / NON-BLOCKING",
+    "blocker_test": [
+      "placement",
+      "orientation",
+      "required length/scale",
+      "required support/counterpart",
+      "visible geometry",
+      "direct evidence contradiction"
+    ],
+    "next_task": "AF-01 正身梁架首榀 Assembly Spec V0.1",
+    "engineering_execution": "NOT AUTHORIZED",
+    "t018": "HOLD"
   }
 }
