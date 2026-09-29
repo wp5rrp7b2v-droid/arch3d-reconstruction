@@ -3799,3 +3799,16 @@ Do not enter engineering generation before Product Owner approval of AF-01.
 - Source files deleted: YES / 12 legacy per-day close files retired after consolidation
 - Semantic rewrite: NO
 - Next daily close should append a new dated section to this monthly log rather than create a new per-day close file.
+
+---
+
+## 2026-09-29｜D-288｜Post-close Project Control Cleanup
+
+- Product Owner authorized first-round low-risk Project Control cleanup after daily close.
+- Cloud Mode 3 source files → `phase_archive/CLOUD_MODE_2026-09-16_20_CLOSURE.md`.
+- Stage1 readiness + formal closure 2 source files → `phase_archive/P3_3_STAGE1_CLOSURE.md`.
+- Superseded Stage2 Entry Candidate → `phase_archive/P3_3_STAGE2_ENTRY_HISTORY.md` (superseded by D-272).
+- Exact source-text preservation checks: **6 / 6 PASS** before retirement.
+- Six original root-level files retired.
+- AF-01 current task and all production/authority boundaries remain unchanged.
+- Tomorrow still resumes from: **AF-01 representative main-frame slice selection (东缝 vs 西缝) → Registry instance mapping → Assembly Spec V0.1 Candidate**.
