@@ -1,7 +1,7 @@
 {
   "schema_version": "P3_3_STAGE2_C_WHOLE_BUILDING_CONNECTION_COVERAGE_MATRIX_V001",
   "date": "2026-09-29",
-  "status": "REVIEW_PATCH_01_REQUIRED / D-282 / NOT LOCKABLE",
+  "status": "SUPERSEDED_AS_ACTIVE_MATRIX_BY_D285_REBASELINE_CANDIDATE / RETAINED_HISTORY / NOT_LOCKABLE",
   "authority": {
     "canonical_main_at_start": "447f887fbb0f4b28d62d957dacf65276b85c0461",
     "stage1_closure": "D-271",
@@ -1469,5 +1469,10 @@
       "Re-run graph closure: no unexplained open node from foundation/base through column-puzuo-frame-purlin-roof and attached envelope systems.",
       "PR #49 remains HOLD; PR #50 remains Draft."
     ]
+  },
+  "supersession": {
+    "decision_id": "D-285",
+    "active_candidate": "production/zhenguo_wanfo/assembly/P3_3_STAGE2_C_STRUCTURAL_TIMBER_CONNECTION_COVERAGE_MATRIX_V001.json",
+    "reason": "D-284 locked a 33-object Structural Timber Scope; original Whole-Building candidate used the wrong denominator."
   }
 }
