@@ -1,7 +1,7 @@
 {
   "schema_version": "P3_3_STAGE2_C_ATTACHMENT_INTERFACE_REGISTRY_V001",
   "date": "2026-09-29",
-  "status": "BATCH01_LOCKED / PRODUCT OWNER APPROVED / D-277",
+  "status": "BATCH01_LOCKED / BATCH02_LOCKED / PRODUCT_OWNER_APPROVED / D-279",
   "authority": {
     "stage2_b_lock": "D-275",
     "source_main": "4aaaa1db54fb6c1e4faf8e6f4bd11c325130ac7d",
@@ -29,6 +29,90 @@
       "coordinate_space": "MASTER_LOCAL",
       "local_datum_rule": "BOUNDED_MASTER_BOTTOM_PLANE",
       "evidence_classification": "ENGINEERING_DATUM / DERIVED_FROM_APPROVED_MASTER_BODY",
+      "historical_contact_claim": false,
+      "historical_joinery_claim": false,
+      "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    },
+    {
+      "interface_id": "IF-S2C-B02-PINGLIANG-UPPER-RIDGE-SUPPORT",
+      "owner_master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "role": "UPPER_RIDGE_SUPPORT_REGION",
+      "interface_type": "REGION",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "local_datum_rule": "PINGLIANG_UPPER_REGION / PLAN ANCHOR RESOLVED BY ASSEMBLY ROLE",
+      "evidence_classification": "DIRECT_STRUCTURAL_LAYER + ENGINEERING_INTERFACE_DATUM",
+      "historical_contact_claim": false,
+      "historical_joinery_claim": false,
+      "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    },
+    {
+      "interface_id": "IF-S2C-B02-SHUZHU-LOWER",
+      "owner_master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+      "role": "LOWER_REFERENCE",
+      "interface_type": "PLANE",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum_rule": "BOUNDED_MASTER_LOWER_PLANE",
+      "evidence_classification": "ENGINEERING_DATUM / DIRECT STRUCTURAL LAYER",
+      "historical_contact_claim": false,
+      "historical_joinery_claim": false,
+      "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    },
+    {
+      "interface_id": "IF-S2C-B02-CHASHOU-LOWER-END",
+      "owner_master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+      "role": "LOWER_ENDPOINT_REFERENCE",
+      "interface_type": "POINT_OR_REGION",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "local_datum_rule": "P_LOWER / ASSEMBLY-ENDPOINT-DERIVED",
+      "evidence_classification": "DIRECT STRUCTURAL LAYER + RECONSTRUCTED_ENDPOINT_DATUM",
+      "historical_contact_claim": false,
+      "historical_joinery_claim": false,
+      "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    },
+    {
+      "interface_id": "IF-S2C-B02-TUOJIAO-FOUR-END",
+      "owner_master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "role": "FOUR_CHUANFU_SUPPORT_ENDPOINT",
+      "interface_type": "POINT_OR_REGION",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "local_datum_rule": "ONE TUOJIAO END RESOLVED BY ATTACHMENT ROLE / NO FIXED MASTER END HANDEDNESS",
+      "evidence_classification": "DIRECT SUPPORT SEMANTIC + ASSEMBLY_DATUM",
+      "historical_contact_claim": false,
+      "historical_joinery_claim": false,
+      "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    },
+    {
+      "interface_id": "IF-S2C-B02-FOUR-END-SUPPORT-REGION",
+      "owner_master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "role": "END_SUPPORT_REGION",
+      "interface_type": "REGION",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "local_datum_rule": "ACTUAL END REGION / END_A OR END_B RESOLVED PER INSTANCE",
+      "evidence_classification": "DIRECT SUPPORT SEMANTIC + ASSEMBLY_DATUM",
+      "historical_contact_claim": false,
+      "historical_joinery_claim": false,
+      "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    },
+    {
+      "interface_id": "IF-S2C-B02-TUOJIAO-PURLIN-END",
+      "owner_master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "role": "PURLIN_ATTACHMENT_ENDPOINT",
+      "interface_type": "POINT_OR_REGION",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "local_datum_rule": "OPPOSITE TUOJIAO ATTACHMENT END RESOLVED BY ASSEMBLY ROLE",
+      "evidence_classification": "DIRECT PURLIN-ROLE SEMANTIC + ASSEMBLY_DATUM",
+      "historical_contact_claim": false,
+      "historical_joinery_claim": false,
+      "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    },
+    {
+      "interface_id": "IF-S2C-B02-PURLIN-TUOJIAO-SUPPORT-REGION",
+      "owner_master_id": "CMP-FRAME-PURLIN-001_MASTER",
+      "role": "TUOJIAO_ATTACHMENT_REGION",
+      "interface_type": "REGION",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "local_datum_rule": "PURLIN ATTACHMENT REGION RESOLVED BY ROLE/LAYER; NO WORLD COORDINATE",
+      "evidence_classification": "DIRECT ROLE/DISTRIBUTION SEMANTIC + ASSEMBLY_DATUM",
       "historical_contact_claim": false,
       "historical_joinery_claim": false,
       "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
@@ -67,5 +151,15 @@
   ],
   "lock_decision_id": "D-277",
   "lock_date": "2026-09-29",
-  "review_result": "PASS"
+  "review_result": "PASS",
+  "batch02": {
+    "id": "STAGE2_C_BATCH02_PRIMARY_FRAME_ATTACHMENTS",
+    "status": "LOCKED / D-279",
+    "added_master_interfaces": 7,
+    "exact_contact_geometry_materialized": false,
+    "historical_joinery_claimed": false,
+    "world_coordinate_authority": false,
+    "lock_decision_id": "D-279",
+    "review_result": "PASS"
+  }
 }

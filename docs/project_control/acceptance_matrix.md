@@ -1552,3 +1552,27 @@ Boundary retained:
 - Instance-generation authority: **NO**.
 - Batch 02: **NOT AUTHORIZED**.
 - Engineering execution / Stage3 / T-018: **NOT AUTHORIZED / NOT AUTHORIZED / HOLD**.
+
+
+### D-278 P3.3 Stage2-C Batch 02 Candidate
+
+- Candidate: **Primary Frame Attachment Classes**.
+- New interfaces: **7**.
+- New Connection Layer records: **4 × CONTACT_INTERFACE**.
+- Engineering execution: **NOT AUTHORIZED**.
+
+### D-279 Stage2-C Batch 02 Lock
+
+- Product Owner review: **APPROVED**.
+- Batch 02: **LOCKED**.
+- New interfaces: **7 / 7 PASS**.
+- Connection Layer records: **4 / 4 PASS**.
+- Required fields: **12 / 12 on all 4 PASS**.
+- Interface references: **8 / 8 RESOLVE**.
+- Duplicate interface IDs: **0**.
+- historical_claim / world-coordinate authority / instance-generation authority: **false / false / false on all 4**.
+- Fixed historical angle claim: **NONE**.
+- Exact contact geometry: **NOT CREATED**.
+- Historical joinery: **NOT CLAIMED**.
+- Batch 03: **NOT AUTHORIZED**.
+- Engineering / Stage3 / T-018: **NOT AUTHORIZED / NOT AUTHORIZED / HOLD**.
