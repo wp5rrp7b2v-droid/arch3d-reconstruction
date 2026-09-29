@@ -1526,3 +1526,29 @@ Boundary retained:
 - Stage3: **NOT AUTHORIZED**.
 - T-018: **HOLD**.
 - Next controlled design step: **Stage2-C Attachment-Specific Interface / Connection Layer Materialization**.
+
+
+### D-276 P3.3 Stage2-C Entry + Batch 01 Candidate
+
+- Stage2-C materialization plan: **ACTIVE**.
+- Batch 01 candidate: **Upper Six-Chuanfu → San-Dou → Four-Chuanfu**.
+- Materialized candidate: **2 Master interfaces + 2 connector-role interfaces + 1 PHYSICAL_CONNECTOR family attachment class**.
+- Engineering execution: **NOT AUTHORIZED**.
+
+### D-277 Stage2-C Batch 01 Lock
+
+- Product Owner review: **APPROVED**.
+- Batch 01: **LOCKED**.
+- Master interfaces: **2 / 2 PASS**.
+- Connector-role interfaces: **2 / 2 PASS**.
+- Connection Layer records: **1 / 1 PASS**.
+- Required fields: **12 / 12 PASS**.
+- Interface references: **4 / 4 RESOLVE**.
+- Duplicate interface IDs: **0**.
+- Exact 散斗 geometry/dimensions/lateral anchor/joinery: **UNKNOWN / NOT MATERIALIZED**.
+- Whole-hall 散斗 count / physical instance identity-location: **NOT CLAIMED**.
+- T-032 proxy geometry promoted: **NO**.
+- World-coordinate authority: **NO**.
+- Instance-generation authority: **NO**.
+- Batch 02: **NOT AUTHORIZED**.
+- Engineering execution / Stage3 / T-018: **NOT AUTHORIZED / NOT AUTHORIZED / HOLD**.
