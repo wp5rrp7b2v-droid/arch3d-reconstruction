@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R360",
+  "state_revision": "R361",
   "last_updated": "2026-09-29",
-  "session_status": "2026-09-29 D-286 P3.3 ASSEMBLY-FIRST REBASELINE V0.1 CANDIDATE / GOAL=ASSEMBLE WANFO HALL / D-284 SCOPE RETAINED / D-285 MATRIX REFERENCE NON-BLOCKING / NEXT AF-01 MAIN-FRAME FIRST ASSEMBLY SPEC / PR #49 HOLD / ENGINEERING NOT YET AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-29 DAILY CLOSE / D-287 / AF-01 INPUT+EVIDENCE VERIFICATION CHECKPOINT RECORDED / REPRESENTATIVE MAIN-FRAME SLICE NOT YET SELECTED / NEXT=SELECT EAST OR WEST SEAM + DRAFT AF-01 ASSEMBLY SPEC V0.1 / PR #50 DRAFT UNMERGED / D-285 NON-BLOCKING REFERENCE / PR #49 HOLD / STAGE3 NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -62,14 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "P3.3-ASSEMBLY-FIRST-REBASELINE-V001",
-    "name": "P3.3｜Assembly-First Rebaseline V0.1",
-    "status": "CANDIDATE BUILT / PRODUCT OWNER REVIEW REQUIRED"
-  },
-  "proposed_next_task": {
     "id": "AF-01",
     "name": "正身梁架首榀｜Assembly Spec V0.1",
-    "status": "NEXT CONTROLLED STEP / NOT AUTHORIZED"
+    "status": "STARTED / SOURCE+INPUT VERIFICATION COMPLETE / REPRESENTATIVE SLICE SELECTION PENDING / NO ENGINEERING GENERATION"
+  },
+  "proposed_next_task": {
+    "id": "AF-01-SLICE-SELECTION",
+    "name": "AF-01｜代表性正身梁架首榀选择 + Registry实例映射",
+    "status": "NEXT SESSION / NOT YET EXECUTED"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -1058,7 +1058,7 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Review/approve D-286 Assembly-First Rebaseline. After approval, start AF-01 and resolve only the placement/orientation/length/support information needed to assemble one representative main-frame slice.",
+  "next_action": "Resume AF-01 from same-building measured evidence. Select one representative 正身梁架 slice (东缝 or 西缝), map only the required Registry instances, then draft AF-01 Assembly Spec V0.1 Candidate with placement/orientation/required length/support/visible-geometry fields and stop for Product Owner review.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v216",
@@ -3353,8 +3353,38 @@
       "visible geometry",
       "direct evidence contradiction"
     ],
-    "next_task": "AF-01 正身梁架首榀 Assembly Spec V0.1",
+    "next_task": "AF-01 representative slice selection + Registry instance mapping + Assembly Spec V0.1 Candidate",
     "engineering_execution": "NOT AUTHORIZED",
-    "t018": "HOLD"
+    "t018": "HOLD",
+    "af01_session_checkpoint": "D-287 / SOURCE+INPUT VERIFICATION COMPLETE / SLICE SELECTION PENDING"
+  },
+  "daily_close_2026_09_29": {
+    "decision_id": "D-287",
+    "status": "COMPLETE / WORKING-BRANCH CHECKPOINT RECORDED / MAIN UNCHANGED",
+    "canonical_main": "447f887fbb0f4b28d62d957dacf65276b85c0461",
+    "working_branch": "governance/stage2-c-whole-building-connection-coverage-matrix-v001",
+    "pre_close_branch_head": "6571e383aec2fdc0633eff76ae76e416a60ce07a",
+    "pr_50": "DRAFT / OPEN / MERGEABLE / NOT MERGED",
+    "af01_status": "STARTED / SOURCE+INPUT VERIFICATION COMPLETE / REPRESENTATIVE SLICE NOT YET SELECTED",
+    "verified_inputs": [
+      "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
+      "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json",
+      "production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json",
+      "SRC-ZG-WF-001 measured report / beam-frame evidence"
+    ],
+    "source_pages_reviewed": "PDF around p81-84, p103-107, p128",
+    "unresolved_for_next_session": [
+      "select 东缝 or 西缝 as AF-01 representative main-frame slice",
+      "lock final physical Registry instance list",
+      "lock placement anchors/orientations",
+      "derive required generated member lengths/endpoints",
+      "prepare AF-01 Assembly Spec V0.1 Candidate"
+    ],
+    "d285": "REFERENCE / NON-BLOCKING",
+    "pr49": "HOLD",
+    "stage3": "NOT AUTHORIZED",
+    "t018": "HOLD",
+    "engineering_generation": "NOT AUTHORIZED",
+    "main_changed": false
   }
 }
