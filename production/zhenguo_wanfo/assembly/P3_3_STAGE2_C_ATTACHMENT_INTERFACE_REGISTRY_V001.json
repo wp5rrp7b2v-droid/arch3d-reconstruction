@@ -1,0 +1,68 @@
+{
+  "schema_version": "P3_3_STAGE2_C_ATTACHMENT_INTERFACE_REGISTRY_V001",
+  "date": "2026-09-29",
+  "status": "BATCH01_CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "authority": {
+    "stage2_b_lock": "D-275",
+    "source_main": "4aaaa1db54fb6c1e4faf8e6f4bd11c325130ac7d",
+    "evidence_binding": "docs/evidence/zhenguo_wanfo/P3_3_FOUR_CHUANFU_DIRECT_SOURCE_BINDING_V001.md"
+  },
+  "batch_id": "STAGE2_C_BATCH01_UPPER6_SANDOU_FOUR",
+  "interfaces": [
+    {
+      "interface_id": "IF-S2C-B01-UPPER6-TOP-SUPPORT",
+      "owner_master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "role": "UPPER_SUPPORT_REFERENCE",
+      "interface_type": "PLANE",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum_rule": "BOUNDED_MASTER_TOP_PLANE",
+      "evidence_classification": "ENGINEERING_DATUM / DERIVED_FROM_APPROVED_MASTER_BODY",
+      "historical_contact_claim": false,
+      "historical_joinery_claim": false,
+      "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    },
+    {
+      "interface_id": "IF-S2C-B01-FOUR-BOTTOM-SUPPORT",
+      "owner_master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "role": "LOWER_SUPPORT_REFERENCE",
+      "interface_type": "PLANE",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum_rule": "BOUNDED_MASTER_BOTTOM_PLANE",
+      "evidence_classification": "ENGINEERING_DATUM / DERIVED_FROM_APPROVED_MASTER_BODY",
+      "historical_contact_claim": false,
+      "historical_joinery_claim": false,
+      "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    }
+  ],
+  "connector_role_interfaces": [
+    {
+      "interface_id": "IF-S2C-B01-SANDOU-BOTTOM",
+      "owner_role": "SAN_DOU_SUPPORT",
+      "connector_family": "散斗族",
+      "role": "CONNECTOR_BOTTOM_REFERENCE",
+      "interface_type": "PLANE",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "registry_physical_instance_claim": false,
+      "exact_geometry_status": "UNKNOWN / REPLACEABLE_PROXY_ALLOWED",
+      "historical_contact_claim": false
+    },
+    {
+      "interface_id": "IF-S2C-B01-SANDOU-TOP",
+      "owner_role": "SAN_DOU_SUPPORT",
+      "connector_family": "散斗族",
+      "role": "CONNECTOR_TOP_REFERENCE",
+      "interface_type": "PLANE",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "registry_physical_instance_claim": false,
+      "exact_geometry_status": "UNKNOWN / REPLACEABLE_PROXY_ALLOWED",
+      "historical_contact_claim": false
+    }
+  ],
+  "prohibited": [
+    "WORLD_COORDINATE_AUTHORITY",
+    "HISTORICAL_SAN_DOU_EXACT_DIMENSIONS",
+    "HISTORICAL_JOINERY_INFERENCE",
+    "SAN_DOU_WHOLE_HALL_COUNT_CLAIM",
+    "SAN_DOU_INSTANCE_LOCATION_CLAIM"
+  ]
+}
