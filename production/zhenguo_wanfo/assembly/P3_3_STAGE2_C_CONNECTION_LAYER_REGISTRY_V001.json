@@ -1,7 +1,7 @@
 {
   "schema_version": "P3_3_STAGE2_C_CONNECTION_LAYER_REGISTRY_V001",
   "date": "2026-09-29",
-  "status": "BATCH01_LOCKED / BATCH02_LOCKED / PRODUCT_OWNER_APPROVED / D-279",
+  "status": "BATCH01_LOCKED / BATCH02_LOCKED / BATCH03_CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
   "authority": {
     "stage2_b_lock": "D-275",
     "connection_layer_contract": "docs/production/zhenguo_wanfo/P3_3_CONNECTION_LAYER_CONTRACT_V001.md",
@@ -221,6 +221,92 @@
         "WORLD_COORDINATE_AUTHORITY"
       ],
       "status": "FAMILY_ATTACHMENT_CLASS_LOCKED / D-279"
+    },
+    {
+      "connection_id": "CONN-S2C-B03-DINGFU-BRACKET-GROOVE-FAMILY-001",
+      "connection_kind": "JOINERY_FEATURE",
+      "participants": {
+        "member_master": "CMP-FRAME-DINGFU-001_MASTER",
+        "counterpart_role": "GABLE_COLUMN_HEAD_BRACKET_SET"
+      },
+      "structural_semantic": "DINGFU_ENTERS_GABLE_COLUMN_HEAD_BRACKET_SET_WITH_DOCUMENTED_GROOVE_EXISTENCE",
+      "evidence_binding": {
+        "source_id": "SRC-ZG-WF-001",
+        "binding_record": "docs/production/zhenguo_wanfo/P3_3_STAGE1_DINGFU_MASTER_SPEC_V001.md",
+        "statement_level": "DIRECT_FEATURE_EXISTENCE + DIRECT_ASSEMBLY_SEMANTIC"
+      },
+      "geometry_classification": "DIRECT_GROOVE_EXISTENCE / EXACT_GEOMETRY_DEFERRED",
+      "historical_claim": true,
+      "historical_claim_scope": "GROOVE_EXISTENCE_ONLY / NOT DIMENSIONS OR CONTOUR",
+      "replaceable": true,
+      "interfaces": {
+        "member_interface": "IF-S2C-B03-DINGFU-BRACKET-ENTRY",
+        "counterpart_interface": "IF-S2C-B03-BRACKET-SET-DINGFU-ROLE"
+      },
+      "resolver": {
+        "coordinate_space": "ASSEMBLY_LOCAL",
+        "attachment_region_rule": "OUTBOARD END ENTERS GABLE COLUMN-HEAD BRACKET-SET ROLE",
+        "exact_groove_width_mm": null,
+        "exact_groove_depth_mm": null,
+        "exact_groove_length_mm": null,
+        "exact_contour": "UNKNOWN",
+        "exact_counterpart_master": "UNKNOWN",
+        "world_coordinate_authority": false,
+        "instance_generation_authority": false
+      },
+      "validation_tolerance_mm": 0.1,
+      "prohibited_claims": [
+        "EXACT_HISTORICAL_GROOVE_DIMENSIONS",
+        "EXACT_HISTORICAL_GROOVE_CONTOUR",
+        "ALL_8_DINGFU_IDENTICAL_GROOVE_GEOMETRY",
+        "SPECIFIC_BRACKET_MASTER_COUNTERPART_WITHOUT_EVIDENCE",
+        "HISTORICAL_MORTISE_TENON_CLOSED",
+        "WORLD_COORDINATE_AUTHORITY"
+      ]
+    },
+    {
+      "connection_id": "CONN-S2C-B03-RUFU-BRACKET-GROOVE-FAMILY-001",
+      "connection_kind": "JOINERY_FEATURE",
+      "participants": {
+        "member_master": "CMP-FRAME-RUFU-001_MASTER",
+        "counterpart_role": "BRACKET_SET_ASSEMBLY_ROLE"
+      },
+      "structural_semantic": "RUFU_INTERSECTS_BRACKET_SET_WITH_DOCUMENTED_GROOVE_EXISTENCE",
+      "evidence_binding": {
+        "source_id": "SRC-ZG-WF-001",
+        "binding_record": "docs/production/zhenguo_wanfo/P3_3_STAGE1_RUFU_MASTER_SPEC_V001.md",
+        "statement_level": "DIRECT_FEATURE_EXISTENCE + SAME_BUILDING_DIRECT_PHOTO"
+      },
+      "geometry_classification": "DIRECT_GROOVE_EXISTENCE / EXACT_GEOMETRY_DEFERRED",
+      "historical_claim": true,
+      "historical_claim_scope": "GROOVE_EXISTENCE_ONLY / NOT DIMENSIONS OR CONTOUR",
+      "replaceable": true,
+      "interfaces": {
+        "member_interface": "IF-S2C-B03-RUFU-BRACKET-ENTRY",
+        "counterpart_interface": "IF-S2C-B03-BRACKET-SET-RUFU-ROLE"
+      },
+      "resolver": {
+        "coordinate_space": "ASSEMBLY_LOCAL",
+        "attachment_region_rule": "BRACKET-END REGION INTERSECTS BRACKET-SET ROLE",
+        "exact_groove_width_mm": null,
+        "exact_groove_depth_mm": null,
+        "exact_groove_length_mm": null,
+        "exact_contour": "UNKNOWN",
+        "exact_counterpart_master": "UNKNOWN",
+        "fixed_plan_angle": false,
+        "world_coordinate_authority": false,
+        "instance_generation_authority": false
+      },
+      "validation_tolerance_mm": 0.1,
+      "prohibited_claims": [
+        "EXACT_HISTORICAL_GROOVE_DIMENSIONS",
+        "EXACT_HISTORICAL_GROOVE_CONTOUR",
+        "ALL_8_RUFU_IDENTICAL_GROOVE_GEOMETRY",
+        "SILENT_45_DEGREE_ASSUMPTION",
+        "SPECIFIC_BRACKET_MASTER_COUNTERPART_WITHOUT_EVIDENCE",
+        "HISTORICAL_MORTISE_TENON_CLOSED",
+        "WORLD_COORDINATE_AUTHORITY"
+      ]
     }
   ],
   "batch_boundary": {
@@ -251,5 +337,40 @@
     "t018": "HOLD",
     "batch02_locked": true,
     "lock_decision_id": "D-279"
-  }
+  },
+  "batch03_boundary": {
+    "id": "STAGE2_C_BATCH03_GROOVE_RIDGE_COUNTERPART",
+    "joinery_feature_records_materialized": 2,
+    "new_interfaces": 6,
+    "ridge_counterpart_requirements_recorded": 2,
+    "ridge_counterpart_connection_records_materialized": 0,
+    "exact_joinery_geometry_created": false,
+    "exact_bracket_counterpart_master_bound": false,
+    "exact_ridge_counterpart_master_bound": false,
+    "blender_geometry_created": false,
+    "whole_building_instance_mapping_created": false,
+    "world_coordinate_authority": false,
+    "instance_generation_authority": false,
+    "stage3_authorized": false,
+    "engineering_execution_authorized": false,
+    "t018": "HOLD"
+  },
+  "batch03_deferred_counterparts": [
+    {
+      "requirement_id": "REQ-S2C-B03-SHUZHU-UPPER-COUNTERPART-001",
+      "owner_interface": "IF-S2C-B03-SHUZHU-UPPER-RIDGE-REGION",
+      "structural_region": "RIDGE_SUPPORT_SYSTEM",
+      "counterpart_master_id": null,
+      "status": "DEFERRED / EVIDENCE-INCOMPLETE",
+      "reason": "Current locked evidence defines the upper ridge-support connection region but does not yet establish which approved Master is the exact historical counterpart."
+    },
+    {
+      "requirement_id": "REQ-S2C-B03-CHASHOU-UPPER-COUNTERPART-001",
+      "owner_interface": "IF-S2C-B03-CHASHOU-UPPER-RIDGE-REGION",
+      "structural_region": "RIDGE_SUPPORT_SYSTEM",
+      "counterpart_master_id": null,
+      "status": "DEFERRED / EVIDENCE-INCOMPLETE",
+      "reason": "Current evidence places Chashou from Pingliang to the ridge region but does not by itself prove the exact counterpart Master or historical contact geometry."
+    }
+  ]
 }
