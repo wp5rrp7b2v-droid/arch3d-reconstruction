@@ -1061,11 +1061,11 @@
   "next_action": "Stage 1 is formally CLOSED under D-271. Next governance gate is Product Owner decision on whether to authorize P3.3 Stage 2 planning/execution. Do not start Stage2 engineering or resume T-018 without separate authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v201",
+    "visualization_version": "v202",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / D-267 / PR #40 MERGED / MAIN VERIFIED",
+    "refresh_status": "CURRENT / D-271 / STAGE1 FORMALLY CLOSED",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
