@@ -704,10 +704,10 @@ Do not restart T-018 by default.
 ## Project Control 全目录一致性复核｜2026-09-19
 
 - Trigger：Product Owner 询问“整个 project_control 都更新了吗”。
-- Result：发现 `governance.md` 的当前 P3 Scope 仍引用 P3.3 DoD V001 / D-047，且 `CLOUD_MODE_2026-09-16_20.md` 的 R082 entry snapshot 容易被误读为当前状态。
+- Result：发现 `governance.md` 的当前 P3 Scope 仍引用 P3.3 DoD V001 / D-047，且 `phase_archive/CLOUD_MODE_2026-09-16_20_CLOSURE.md` (archived source snapshot) 的 R082 entry snapshot 容易被误读为当前状态。
 - Correction：
   - `governance.md` 已切换至 P3.3 V002 / D-066 当前路线，并明确 legacy 365、T-018、T-020/RZ/FV、六椽栿长度证据边界；
-  - `CLOUD_MODE_2026-09-16_20.md` 明确 R082 仅为进入 Cloud Mode 的起始快照，当前事实以 Project State + Sync Ledger 为准。
+  - `phase_archive/CLOUD_MODE_2026-09-16_20_CLOSURE.md` (archived source snapshot) 明确 R082 仅为进入 Cloud Mode 的起始快照，当前事实以 Project State + Sync Ledger 为准。
 - Intentionally unchanged：
   - `DAILY_CLOSE_2026-09-17.md` / `DAILY_CLOSE_2026-09-18.md`：历史日结快照，不回写；
   - `COMPONENT_REGISTRY_EXCEL_SYNC_CONTRACT_V001.md`：RC-018 专项合同，当前内容仍有效；
@@ -1015,7 +1015,7 @@ Do not restart T-018 by default.
 - Current engineering T-task：NONE。
 - Open PRs：#3 / #6 only；both T-018 HOLD / DO NOT MERGE。
 - D-076：ACTIVE for next new Master。
-- Local sync preparation：`docs/project_control/LOCAL_SYNC_PREP_2026-09-20.md`。
+- Local sync preparation：`docs/project_control/phase_archive/CLOUD_MODE_2026-09-16_20_CLOSURE.md` (Local Sync Prep source snapshot)。
 - Next immediate operation：local Mac read-only preflight + fetch; do not start next Master before local sync verification PASS。
 - T-018：HOLD。
 
