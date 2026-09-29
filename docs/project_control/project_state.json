@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R357",
+  "state_revision": "R358",
   "last_updated": "2026-09-29",
-  "session_status": "2026-09-29 D-283 STAGE2-C STRUCTURAL TIMBER SCOPE REGISTER V0.1 CANDIDATE / 66 OF 66 V008 OBJECT TYPES CLASSIFIED / 33 IN / 27 OUT / 5 CONTAINER / 1 CONDITIONAL / ALL 28 MASTER-BOUND OBJECT TYPES IN / NON-MASTER IN: RAFTER SYSTEM + PANJIANFANG + WANGBAN + HIDDEN CORNER BEAM + SAN-DOU CONNECTOR / TAIMU PHYSICAL FAMILY CONDITIONAL / PR #49 HOLD / PR #50 DRAFT / ENGINEERING NOT AUTHORIZED / STAGE3 NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-29 D-284 STRUCTURAL TIMBER SCOPE REGISTER V0.1 LOCKED / 66 OF 66 CLASSIFIED / 33 IN ACTIVE DENOMINATOR / 27 OUT / 5 CONTAINER / 1 CONDITIONAL OUTSIDE DENOMINATOR / STOP BOUNDARIES LOCKED / MATRIX PATCH01 NOT AUTHORIZED / PR #50 DRAFT / PR #49 HOLD / ENGINEERING NOT AUTHORIZED / STAGE3 NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / STRUCTURAL TIMBER SCOPE CANDIDATE D-283 / CONNECTION MATRIX PATCH01 WAITING ON SCOPE / B01+B02 LOCKED / B03 HOLD / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / STRUCTURAL TIMBER SCOPE LOCKED D-284 / CONNECTION MATRIX REBASELINE NEXT / B01+B02 LOCKED / B03 HOLD / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "STRUCTURAL TIMBER SCOPE CANDIDATE D-283 / CONNECTION MATRIX PATCH01 WAITING / B01+B02 LOCKED / B03 HOLD / T-018 HOLD",
-      "P3_3": "STRUCTURAL TIMBER SCOPE CANDIDATE D-283 / CONNECTION MATRIX PATCH01 WAITING / B01+B02 LOCKED / B03 HOLD / T-018 HOLD"
+      "P3.3": "STRUCTURAL TIMBER SCOPE LOCKED D-284 / CONNECTION MATRIX REBASELINE NEXT / B01+B02 LOCKED / B03 HOLD / T-018 HOLD",
+      "P3_3": "STRUCTURAL TIMBER SCOPE LOCKED D-284 / CONNECTION MATRIX REBASELINE NEXT / B01+B02 LOCKED / B03 HOLD / T-018 HOLD"
     }
   },
-  "decision_required": true,
-  "blocker": "STRUCTURAL_TIMBER_SCOPE_REVIEW_REQUIRED",
+  "decision_required": false,
+  "blocker": "CONNECTION_MATRIX_REBASELINE_REQUIRED_AGAINST_LOCKED_STRUCTURAL_TIMBER_SCOPE",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "STAGE2-C-STRUCTURAL-TIMBER-SCOPE-V001",
     "name": "P3.3 Stage2-C｜Structural Timber Scope Register V0.1",
-    "status": "CANDIDATE BUILT / PRODUCT OWNER REVIEW REQUIRED"
+    "status": "LOCKED / PRODUCT OWNER APPROVED / D-284"
   },
   "proposed_next_task": {
-    "id": "STAGE2-C-STRUCTURAL-TIMBER-SCOPE-LOCK",
-    "name": "P3.3 Stage2-C｜Structural Timber Scope Register V0.1 Review + Lock",
-    "status": "NEXT GOVERNANCE GATE / PRODUCT OWNER REVIEW REQUIRED"
+    "id": "STAGE2-C-CONNECTION-MATRIX-REBASELINE-PATCH01",
+    "name": "P3.3 Stage2-C｜Connection Coverage Matrix Rebaseline / Patch 01",
+    "status": "NEXT CONTROLLED STEP / NOT AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -121,7 +121,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE2-C STRUCTURAL TIMBER SCOPE CANDIDATE D-283 / MATRIX PATCH01 WAITING ON SCOPE / B03 HOLD / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE2-C STRUCTURAL TIMBER SCOPE LOCKED D-284 / MATRIX REBASELINE NEXT / B03 HOLD / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -1058,14 +1058,14 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Review the Structural Timber Scope Register V0.1. Do not modify the Connection Matrix or resume Batch03 until the scope register is explicitly approved/locked.",
+  "next_action": "Await Product Owner authorization before rebasing the Connection Coverage Matrix to the locked 33-object Structural Timber Scope. Keep PR #49 HOLD and PR #50 Draft.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v213",
+    "visualization_version": "v214",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / D-283 / STRUCTURAL TIMBER SCOPE CANDIDATE",
+    "refresh_status": "CURRENT / D-284 / STRUCTURAL TIMBER SCOPE LOCKED",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -3232,8 +3232,8 @@
     "new_geometry_variants_beyond_stage1": 0
   },
   "p3_3_stage2_c_2026_09_29": {
-    "decision_id": "D-283",
-    "status": "STRUCTURAL TIMBER SCOPE CANDIDATE / MATRIX PATCH01 WAITING / BATCH03 HOLD",
+    "decision_id": "D-284",
+    "status": "STRUCTURAL TIMBER SCOPE LOCKED / MATRIX REBASELINE NEXT / BATCH03 HOLD",
     "plan": "P3_3_STAGE2_C_MATERIALIZATION_PLAN_V001",
     "batch01": {
       "id": "STAGE2_C_BATCH01_UPPER6_SANDOU_FOUR",
@@ -3303,7 +3303,7 @@
     },
     "structural_timber_scope": {
       "id": "P3_3_STAGE2_C_STRUCTURAL_TIMBER_SCOPE_REGISTER_V001",
-      "status": "CANDIDATE / PRODUCT OWNER REVIEW REQUIRED",
+      "status": "LOCKED / PRODUCT OWNER APPROVED / D-284",
       "v008_classified": "66/66",
       "in": 33,
       "out": 27,
@@ -3311,14 +3311,16 @@
       "conditional": [
         "替木实体族"
       ],
+      "active_connection_denominator": 33,
       "non_master_in": [
         "椽系",
         "襻间枋",
         "望板系统",
         "隐角梁",
         "散斗族"
-      ]
+      ],
+      "conditional_policy": "OUTSIDE ACTIVE DENOMINATOR UNTIL SEPARATELY PROMOTED"
     },
-    "matrix_pr": "PR #50 DRAFT"
+    "matrix_pr": "PR #50 DRAFT / REBASELINE REQUIRED"
   }
 }

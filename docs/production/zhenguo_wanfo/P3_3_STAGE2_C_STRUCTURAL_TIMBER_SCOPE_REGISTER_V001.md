@@ -1,7 +1,8 @@
 # P3.3 Stage2-C｜Structural Timber Scope Register V0.1
 
-- Status: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED**
-- Decision: **D-283**
+- Status: **LOCKED / PRODUCT OWNER APPROVED / D-284**
+- Candidate decision: **D-283**
+- Lock decision: **D-284**
 - V008 objects reviewed: **66/66**
 - IN: **33**
 - OUT: **27**
@@ -26,9 +27,9 @@ It does **not** mean all V008 building objects, and it does **not** mean only th
 - **Enclosure:** Structural timber frame → enclosure interface → **STOP**
 - **Corner ornament:** Corner timber terminal → ornament handoff → **STOP**
 
-## Candidate denominator
+## Locked denominator
 
-If approved, the Stage2-C connection matrix denominator becomes:
+The Stage2-C connection matrix denominator is now locked as:
 
 - **33 IN object types**
 - plus any later-promoted CONDITIONAL item
@@ -130,3 +131,23 @@ The only CONDITIONAL item is:
 This register is the proposed scope correction after D-282. It prevents Stage2-C from expanding into all walls, floors, tiles, ridge ornaments and enclosure systems while also preventing a 25-Master-only scope from omitting real structural timber members.
 
 No Connection Coverage Matrix row is changed in this step.
+
+
+## Lock decision D-284
+
+Product Owner approved this scope on 2026-09-29.
+
+Locked Stage2-C denominator:
+- **33 IN object types**
+- **27 OUT**
+- **5 CONTAINER**
+- **1 CONDITIONAL**
+
+`替木实体族` remains **CONDITIONAL and outside the active denominator**. It may enter Stage2-C only through a separate evidence-backed promotion decision approved by Product Owner. Such promotion must trigger a Connection Matrix patch before Stage2-C closure.
+
+This lock does **not** authorize:
+- Connection Matrix Patch 01;
+- Batch 03 resumption;
+- Engineering execution;
+- Stage3;
+- T-018.

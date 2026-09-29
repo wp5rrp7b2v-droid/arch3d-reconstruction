@@ -1,7 +1,7 @@
 {
   "schema_version": "P3_3_STAGE2_C_STRUCTURAL_TIMBER_SCOPE_REGISTER_V001",
   "date": "2026-09-29",
-  "status": "CANDIDATE_V0.1 / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "LOCKED / PRODUCT_OWNER APPROVED / D-284",
   "authority": {
     "stage1_closure": "D-271",
     "stage2_a_lock": "D-273",
@@ -9,7 +9,9 @@
     "matrix_review": "D-282 / PATCH REQUIRED",
     "candidate_decision": "D-283",
     "source_stage2a": "P3_3_STAGE2_A_COVERAGE_REBINDING_MATRIX_V001",
-    "source_registry": "P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT"
+    "source_registry": "P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT",
+    "lock_decision": "D-284",
+    "lock_date": "2026-09-29"
   },
   "scope_definition": "Stage2-C Structural Timber Scope includes physical timber components, indispensable timber connector roles, and timber-system handoffs required to form a continuous deterministic structural-timber assembly network. It excludes enclosure, masonry/foundation, roof covering/ornament, interior furnishing, and organizational containers. The scope stops at explicit lower/upper structural handoff boundaries rather than expanding into the whole building.",
   "inclusion_tests": [
@@ -56,7 +58,8 @@
     "conditional_items": [
       "替木实体族"
     ],
-    "lock_gate": "CONDITIONAL item must receive final IN/OUT disposition before register lock."
+    "lock_gate": "PASS / CONDITIONAL policy explicitly approved: 替木实体族 remains outside current denominator until separately promoted by evidence + Product Owner approval.",
+    "current_connection_matrix_denominator": "33 IN object types"
   },
   "scope_items": [
     {
@@ -3039,13 +3042,21 @@
     }
   ],
   "governance_effect": {
-    "matrix_denominator_if_approved": "33 IN object types + any later-promoted CONDITIONAL item; 5 CONTAINER items are organizational only and do not create physical edges.",
-    "d282_effect": "D-282's 66-object whole-building expansion finding remains historical review context, but if this scope is approved the matrix Patch 01 denominator must rebase to the Structural Timber Scope rather than all building objects.",
+    "matrix_denominator_if_approved": "LOCKED: 33 IN object types. CONDITIONAL items remain outside denominator until separately promoted.",
+    "d282_effect": "D-282 all-66 expansion is superseded for Stage2-C denominator purposes by locked Structural Timber Scope D-284; D-282 remains historical review context.",
     "pr49": "HOLD",
     "pr50": "DRAFT",
     "batch03": "HOLD",
     "engineering": "NOT AUTHORIZED",
     "stage3": "NOT AUTHORIZED",
-    "t018": "HOLD"
+    "t018": "HOLD",
+    "scope_lock": "D-284 / PRODUCT OWNER APPROVED"
+  },
+  "conditional_policy": {
+    "rule": "CONDITIONAL items are outside the active Stage2-C connection denominator unless promoted by a separate evidence-backed Product Owner decision.",
+    "current_items": [
+      "替木实体族"
+    ],
+    "promotion_effect": "If promoted to IN, Connection Coverage Matrix denominator and affected connection obligations must be patched before Stage2-C closure."
   }
 }

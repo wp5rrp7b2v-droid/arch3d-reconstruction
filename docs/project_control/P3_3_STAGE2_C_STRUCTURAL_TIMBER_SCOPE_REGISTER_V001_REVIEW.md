@@ -1,6 +1,6 @@
 # P3.3 Stage2-C｜Structural Timber Scope Register V0.1 Review
 
-- Status: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED**
+- Status: **APPROVED / LOCKED D-284**
 - Decision: **D-283**
 
 ## Machine checks
@@ -36,3 +36,21 @@ Before this register can be locked:
 ## Decision requested
 
 Approve / revise the Structural Timber Scope Register V0.1.
+
+
+## D-284 Product Owner Decision
+
+**APPROVED / LOCKED**
+
+Accepted exactly as:
+- 33 IN
+- 27 OUT
+- 5 CONTAINER
+- 1 CONDITIONAL
+
+Special rule:
+- `替木实体族` remains CONDITIONAL and **does not enter the current Connection Matrix denominator**.
+- Promotion requires separate evidence review + Product Owner approval.
+- If promoted later, the Connection Matrix must be patched before Stage2-C closure.
+
+Next controlled step is **Connection Coverage Matrix Rebaseline / Patch 01 against the locked 33-object Structural Timber Scope**. That step is not authorized by this lock.
