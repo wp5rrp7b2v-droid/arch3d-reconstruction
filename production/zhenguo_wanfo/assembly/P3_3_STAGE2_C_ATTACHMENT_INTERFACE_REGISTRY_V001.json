@@ -1,7 +1,7 @@
 {
   "schema_version": "P3_3_STAGE2_C_ATTACHMENT_INTERFACE_REGISTRY_V001",
   "date": "2026-09-29",
-  "status": "BATCH01_LOCKED / BATCH02_CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "BATCH01_LOCKED / BATCH02_LOCKED / PRODUCT_OWNER_APPROVED / D-279",
   "authority": {
     "stage2_b_lock": "D-275",
     "source_main": "4aaaa1db54fb6c1e4faf8e6f4bd11c325130ac7d",
@@ -154,10 +154,12 @@
   "review_result": "PASS",
   "batch02": {
     "id": "STAGE2_C_BATCH02_PRIMARY_FRAME_ATTACHMENTS",
-    "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "status": "LOCKED / D-279",
     "added_master_interfaces": 7,
     "exact_contact_geometry_materialized": false,
     "historical_joinery_claimed": false,
-    "world_coordinate_authority": false
+    "world_coordinate_authority": false,
+    "lock_decision_id": "D-279",
+    "review_result": "PASS"
   }
 }
