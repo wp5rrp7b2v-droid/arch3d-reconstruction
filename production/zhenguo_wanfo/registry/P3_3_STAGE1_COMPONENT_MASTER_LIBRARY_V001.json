@@ -412,7 +412,7 @@
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-144",
       "formalization_authority": "D-143 / DELEGATED END-TO-END COMPLETION",
-      "publication_status": "FORMALIZED / PR #27 OPEN",
+      "publication_status": "CLOSED / D-146 / PR #27 MERGED / MAIN VERIFIED",
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED / LOCAL ONLY / NOT GIT",
       "canonical_asset_sha256": "104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b",
       "semantic_sha256": "28726a3483deee2c89fc460a081d56e36af3c8dd2d71f46838f63d42d05f5c92",
@@ -450,7 +450,8 @@
         "regenerated_blend_sha256": "029937842fb4650a3ae43c270af285e34a339d53b31370d0d8757a34bff550f1",
         "regenerated_blend_promoted_to_canonical": false,
         "semantic_geometry_signature": "26d3aceb319d89b117247681fdc177b6b0a0bb937709232a24476c24106be9d5"
-      }
+      },
+      "merge_commit_sha": "096c4dfb3cb3970e2836ba867ae2496cb943c5ed"
     },
     {
       "component_id": "CMP-FRAME-LANE-001",
@@ -759,7 +760,7 @@
       "approval_status": "PRODUCT_OWNER_APPROVED",
       "decision_id": "D-204",
       "formalization_authority": "D-204",
-      "publication_status": "FORMALIZED / PR #34 DRAFT / MERGE NOT AUTHORIZED",
+      "publication_status": "CLOSED / D-209 / PR #34 MERGED / MAIN VERIFIED",
       "canonical_asset_status": "ACTIONS_ARTIFACT / PRODUCT_OWNER_APPROVED / LOCAL ONLY / NOT GIT",
       "canonical_asset_sha256": "1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023",
       "semantic_sha256": "1223ad42c788e04967bc8f35f832b1e84061d1b118f2d6adc84da1d8ada19690",
@@ -806,7 +807,8 @@
         "canonical_blend": "ACTIONS_ARTIFACT + LOCAL ONLY / NOT GIT",
         "review_board_count": 1,
         "required_review_panel_count": 8
-      }
+      },
+      "merge_commit_sha": "b89458436b0338cd3bd72e7d4780ec4a134859d8"
     },
     {
       "component_id": "CMP-GONG-LINGGONG-001",
@@ -817,7 +819,7 @@
       "decision_id": "D-218",
       "formalization_authority": "D-219",
       "formalization_result": "D-220",
-      "publication_status": "FORMALIZED / PR #35 MERGED / MAIN VERIFIED / D-223",
+      "publication_status": "CLOSED / D-224 / PR #35 MERGED / MAIN VERIFIED",
       "canonical_asset_status": "ACTIONS_ARTIFACT / PRODUCT_OWNER_APPROVED / LOCAL ONLY / NOT GIT",
       "canonical_asset_sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
       "semantic_sha256": "ee0bc2ef02b3e1da43c1d7b6d4a8a5f18269b36bbcd189b52de15112f77abb97",
