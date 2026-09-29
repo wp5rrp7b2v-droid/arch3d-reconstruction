@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R355",
+  "state_revision": "R356",
   "last_updated": "2026-09-29",
-  "session_status": "2026-09-29 P3.3 STAGE2-C WHOLE-BUILDING CONNECTION COVERAGE MATRIX V0.1 CANDIDATE D-281 / 25 OF 25 MASTER FAMILIES COVERED / 39 CONNECTION CLOSURE OBLIGATIONS / 10 ATTACHMENT + 25 TOPOLOGY RESOLUTION + 4 SYSTEM HANDOFF / 5 LOCKED FROM D-277+D-279 / PR #49 D-280 PRE-MATRIX DRAFT HOLD / ENGINEERING NOT AUTHORIZED / STAGE3 NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-29 D-282 STAGE2-C WHOLE-BUILDING CONNECTION MATRIX V0.1 REVIEW COMPLETE / PATCH01 REQUIRED / 25 OF 25 MASTER COVERAGE VERIFIED BUT NOT SUFFICIENT / STAGE2-A V008=66 OBJECT TYPES / 30 NON-MASTER IF-ATTACHED DISPOSITIONS REQUIRED / 27 OF 39 ROWS AGGREGATE NOT ATOMIC / PR #49 HOLD / PR #50 DRAFT / ENGINEERING NOT AUTHORIZED / STAGE3 NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,17 +17,17 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / WHOLE-CONNECTION-MATRIX CANDIDATE D-281 / B03 HOLD / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / STAGE2-C CONNECTION MATRIX REVIEW D-282 PATCH01 REQUIRED / B01 LOCKED / B02 LOCKED / B03 HOLD / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / WHOLE-CONNECTION-MATRIX CANDIDATE D-281 / B03 HOLD / T-018 HOLD",
-      "P3_3": "STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / WHOLE-CONNECTION-MATRIX CANDIDATE D-281 / B03 HOLD / T-018 HOLD"
+      "P3.3": "STAGE2-C CONNECTION MATRIX REVIEW D-282 PATCH01 REQUIRED / B01+B02 LOCKED / B03 HOLD / T-018 HOLD",
+      "P3_3": "STAGE2-C CONNECTION MATRIX REVIEW D-282 PATCH01 REQUIRED / B01+B02 LOCKED / B03 HOLD / T-018 HOLD"
     }
   },
-  "decision_required": true,
-  "blocker": null,
+  "decision_required": false,
+  "blocker": "WHOLE_BUILDING_CONNECTION_MATRIX_REVIEW_PATCH_01_REQUIRED",
   "temporary_operating_mode": {
     "rule_id": "RC-014",
     "name": "CLOUD_MODE_2026-09-16_20",
@@ -62,14 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "STAGE2-C-WHOLE-CONNECTION-MATRIX-V001",
-    "name": "P3.3 Stage2-C｜Whole-Building Connection Coverage Matrix V0.1",
-    "status": "CANDIDATE BUILT / PRODUCT OWNER REVIEW REQUIRED"
+    "id": "STAGE2-C-WHOLE-CONNECTION-MATRIX-REVIEW-PATCH-01",
+    "name": "P3.3 Stage2-C｜Whole-Building Connection Coverage Matrix Review Patch 01",
+    "status": "REQUIRED / NOT STARTED"
   },
   "proposed_next_task": {
-    "id": "STAGE2-C-WHOLE-CONNECTION-MATRIX-LOCK",
-    "name": "P3.3 Stage2-C｜Whole-Building Connection Coverage Matrix V0.1 Lock Decision",
-    "status": "NEXT GOVERNANCE GATE / PRODUCT OWNER REVIEW REQUIRED"
+    "id": "STAGE2-C-WHOLE-CONNECTION-MATRIX-PATCH01",
+    "name": "Add V008-wide attachment disposition + atomic child-edge inventory",
+    "status": "NEXT CONTROLLED STEP / PRODUCT OWNER AUTHORIZATION REQUIRED"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -121,7 +121,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01+B02 LOCKED / CONNECTION MATRIX CANDIDATE D-281 / B03 HOLD / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE1 CLOSED / STAGE2-C MATRIX REVIEW D-282 PATCH01 REQUIRED / B03 HOLD / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -1058,14 +1058,14 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Review the Whole-Building Connection Coverage Matrix V0.1. Do not resume or lock Batch 03 until the matrix is approved. Future Stage2-C batches must be selected from locked matrix rows.",
+  "next_action": "Do not lock Matrix V0.1. Prepare Review Patch 01: add 66/66 V008 attachment disposition and expand aggregate topology rows into atomic child-edge inventories. Keep PR #49 HOLD and PR #50 Draft.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v211",
+    "visualization_version": "v212",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / D-281 / STAGE2-C WHOLE-CONNECTION-MATRIX CANDIDATE",
+    "refresh_status": "CURRENT / D-282 / CONNECTION MATRIX REVIEW PATCH01 REQUIRED",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -3232,8 +3232,8 @@
     "new_geometry_variants_beyond_stage1": 0
   },
   "p3_3_stage2_c_2026_09_29": {
-    "decision_id": "D-281",
-    "status": "ACTIVE / BATCH01 LOCKED / BATCH02 LOCKED / WHOLE-CONNECTION-MATRIX CANDIDATE / BATCH03 HOLD",
+    "decision_id": "D-282",
+    "status": "MATRIX REVIEW COMPLETE / PATCH01 REQUIRED / BATCH03 HOLD",
     "plan": "P3_3_STAGE2_C_MATERIALIZATION_PLAN_V001",
     "batch01": {
       "id": "STAGE2_C_BATCH01_UPPER6_SANDOU_FOUR",
@@ -3277,7 +3277,7 @@
       "interface_refs": "8/8 RESOLVE",
       "duplicate_interface_ids": 0
     },
-    "batch03": "HOLD / PRE-MATRIX DRAFT PR #49 / NOT AUTHORITY / NOT ELIGIBLE FOR LOCK OR MERGE",
+    "batch03": "HOLD / PR #49 / DO NOT LOCK OR MERGE",
     "whole_building_connection_coverage_matrix": {
       "id": "P3_3_STAGE2_C_WHOLE_BUILDING_CONNECTION_COVERAGE_MATRIX_V001",
       "status": "CANDIDATE / PRODUCT OWNER REVIEW REQUIRED",
@@ -3288,6 +3288,18 @@
       "system_handoff_rows": 4,
       "inherited_locked_rows": 5,
       "missing_master_families": 0
+    },
+    "matrix_review": {
+      "result": "PATCH_REQUIRED",
+      "matrix_lock_allowed": false,
+      "master_coverage": "25/25 VERIFIED",
+      "v008_object_types": 66,
+      "non_master_if_attached_disposition_required": 30,
+      "candidate_rows": 39,
+      "concrete_master_pair_or_connector_rows": 12,
+      "aggregate_rows": 27,
+      "duplicate_ids": 0,
+      "inherited_locked_records": "5/5 VERIFIED"
     }
   }
 }

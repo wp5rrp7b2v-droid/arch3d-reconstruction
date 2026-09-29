@@ -1,7 +1,7 @@
 {
   "schema_version": "P3_3_STAGE2_C_WHOLE_BUILDING_CONNECTION_COVERAGE_MATRIX_V001",
   "date": "2026-09-29",
-  "status": "CANDIDATE_V0.1 / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "REVIEW_PATCH_01_REQUIRED / D-282 / NOT LOCKABLE",
   "authority": {
     "canonical_main_at_start": "447f887fbb0f4b28d62d957dacf65276b85c0461",
     "stage1_closure": "D-271",
@@ -1415,5 +1415,59 @@
     "No topology obligation retains anonymous production counterpart.",
     "No structural chain from column/eaves base through puzuo/frame/purlin/roof substrate ends at unexplained open node.",
     "No historical detail silently invented to satisfy execution."
-  ]
+  ],
+  "review": {
+    "decision_id": "D-282",
+    "result": "PATCH_REQUIRED",
+    "findings": [
+      {
+        "id": "F-01",
+        "severity": "STRUCTURAL",
+        "title": "25/25 Master coverage is not whole-building connection coverage",
+        "detail": "Stage2-A contains 66 V008 object types. Beyond 28 MASTER_BOUND_PRODUCTION object types, 23 PARAMETRIC_SYSTEM_OR_COMPLETION and 7 SIMPLIFIED_PROXY object types require explicit attachment disposition when attached. Candidate V0.1 does not yet disposition these systematically.",
+        "required_fix": "Add V008-wide attachment-disposition coverage. Every non-Master production object must be classified ATTACHED_WITH_EXPLICIT_EDGE / NOT_ATTACHED / ORGANIZATIONAL_ONLY / REFERENCE_ONLY, with physical attachments materialized or queued."
+      },
+      {
+        "id": "F-02",
+        "severity": "STRUCTURAL",
+        "title": "Many rows are aggregate topology tasks, not atomic connection edges",
+        "detail": "27/39 rows use assembly roles, member sets or anonymous counterpart roles. These are valid investigation obligations but cannot themselves prove a complete component-to-component connection list.",
+        "required_fix": "Expand aggregate rows into atomic edge obligations after source extraction. Parent topology rows may remain as coverage groups, but lock criterion must be based on their complete child-edge inventory."
+      },
+      {
+        "id": "F-03",
+        "severity": "SCOPE",
+        "title": "Whole-building lower/upper/system handoffs are underrepresented",
+        "detail": "The matrix includes roof handoffs but does not yet systematically cover all Stage2-A objects requiring explicit attachment disposition, including base/foundation, wall/opening, roof-covering/ridge/ornament and other production systems where physically attached.",
+        "required_fix": "Create a V008 non-Master attachment-disposition table and add only evidence-supported physical handoffs as connection obligations."
+      }
+    ],
+    "numeric_audit": {
+      "candidate_connection_obligations": 39,
+      "atomic_master_to_master_or_connector_rows": 12,
+      "aggregate_or_role_based_rows": 27,
+      "stage2_a_v008_object_types": 66,
+      "stage2_a_class_counts": {
+        "PARAMETRIC_SYSTEM_OR_COMPLETION": 23,
+        "TOPOLOGY_OR_ASSEMBLY_CONTAINER": 5,
+        "MASTER_BOUND_PRODUCTION": 28,
+        "SIMPLIFIED_PROXY": 7,
+        "REFERENCE_ONLY_UNKNOWN": 3
+      },
+      "non_master_objects_with_required_if_attached_policy": 30,
+      "approved_master_coverage": "25/25",
+      "duplicate_requirement_ids": 0,
+      "inherited_locked_records_verified": "5/5"
+    },
+    "lock_allowed": false,
+    "review_patch_01_requirements": [
+      "Add explicit V008-wide attachment disposition for all 66 object types.",
+      "Keep the 5 topology/assembly containers non-physical unless source proves otherwise.",
+      "Keep the 3 REFERENCE_ONLY_UNKNOWN rows non-production unless separately promoted.",
+      "For the 30 non-Master PARAMETRIC/SIMPLIFIED objects with REQUIRED_IF_ATTACHED policy, explicitly decide attached/not-attached and add connection obligations where attached.",
+      "Expand aggregate connection groups into atomic child edges before matrix lock.",
+      "Re-run graph closure: no unexplained open node from foundation/base through column-puzuo-frame-purlin-roof and attached envelope systems.",
+      "PR #49 remains HOLD; PR #50 remains Draft."
+    ]
+  }
 }
