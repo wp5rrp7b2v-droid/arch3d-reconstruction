@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R361",
+  "state_revision": "R362",
   "last_updated": "2026-09-29",
-  "session_status": "2026-09-29 DAILY CLOSE / D-287 / AF-01 INPUT+EVIDENCE VERIFICATION CHECKPOINT RECORDED / REPRESENTATIVE MAIN-FRAME SLICE NOT YET SELECTED / NEXT=SELECT EAST OR WEST SEAM + DRAFT AF-01 ASSEMBLY SPEC V0.1 / PR #50 DRAFT UNMERGED / D-285 NON-BLOCKING REFERENCE / PR #49 HOLD / STAGE3 NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-29 FINAL CLOSE / D-289 CROSS-FILE CONSISTENCY PASS / AF-01 INPUT+EVIDENCE VERIFICATION COMPLETE / REPRESENTATIVE MAIN-FRAME SLICE NOT YET SELECTED / NEXT=SELECT EAST OR WEST SEAM + REGISTRY MAPPING + AF-01 ASSEMBLY SPEC V0.1 CANDIDATE / D-285 NON-BLOCKING REFERENCE / D-286 CANDIDATE / PR #49 HOLD / PR #50 DRAFT UNMERGED / STAGE3 NOT AUTHORIZED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -3386,5 +3386,26 @@
     "t018": "HOLD",
     "engineering_generation": "NOT AUTHORIZED",
     "main_changed": false
+  },
+  "daily_close_policy": {
+    "rule_id": "RC-025",
+    "status": "ACTIVE",
+    "path_pattern": "docs/project_control/DAILY_CLOSE_LOG_YYYY-MM.md",
+    "startup_read_rule": "Read current project_state + latest dated section of current monthly Daily Close log + latest relevant decisions + live GitHub state; historical daily sections are on-demand only.",
+    "per_day_close_files": "RETIRED"
+  },
+  "latest_cross_file_consistency_audit": {
+    "decision_id": "D-289",
+    "date": "2026-09-29",
+    "result": "PASS",
+    "state_revision": "R362",
+    "acceptance_matrix": "ALIGNED THROUGH D-289",
+    "decision_log": "ALIGNED THROUGH D-289",
+    "dashboard": "REFRESH REQUIRED TO V218 IN THIS PATCH",
+    "execution_log": "ROLE-CORRECT / NO AF-01 ENGINEERING ENTRY BECAUSE NO ENGINEERING EXECUTION",
+    "governance": "MONTHLY DAILY-CLOSE POLICY ALIGNED",
+    "rules_change_log": "RC-025 ADDED",
+    "daily_close_log": "ALIGNED THROUGH D-289",
+    "active_authority_change": false
   }
 }
