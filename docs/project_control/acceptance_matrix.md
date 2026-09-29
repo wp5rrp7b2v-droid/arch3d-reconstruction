@@ -1471,3 +1471,32 @@ Boundary retained:
 - Next governance gate: **P3.3 Stage2 Entry Decision**.
 - Stage2: **NOT AUTHORIZED**.
 - T-018: **HOLD**.
+
+
+### D-272 P3.3 Stage2 Design Entry
+
+- Entry option: **A / AUTHORIZE_STAGE2_DESIGN_ONLY**.
+- Stage2 governance/design: **ACTIVE**.
+- Stage2 engineering execution: **NOT AUTHORIZED**.
+- First work product: **Stage2-A Coverage & Rebinding Matrix V0.1**.
+- Stage3: **NOT AUTHORIZED**.
+- T-018: **HOLD**.
+
+### D-273 Stage2-A Coverage & Rebinding Matrix Lock
+
+- Product Owner review: **APPROVED**.
+- Matrix: **LOCKED**.
+- V008 object types: **66 / 66 PASS**.
+- Approved Master families: **25 / 25 PASS**.
+- MASTER_BOUND_PRODUCTION rows with Master refs: **28 / 28 PASS**.
+- Legacy P3.2 interfaces dispositioned: **18 / 18 PASS**.
+  - RETAIN: **12**.
+  - REBIND: **6**.
+  - SUPERSEDE: **0**.
+- Existing P3.2 interface owners: **6**.
+- New Stage2 interface inventories required: **19**.
+- Unsupported historical geometry/joinery introduced: **NO**.
+- Engineering execution: **NOT AUTHORIZED**.
+- Stage3: **NOT AUTHORIZED**.
+- T-018: **HOLD**.
+- Next controlled design step: **Stage2-B Interface / Variant Rule Design**.
