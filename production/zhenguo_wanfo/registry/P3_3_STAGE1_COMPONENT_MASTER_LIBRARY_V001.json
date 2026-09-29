@@ -22,7 +22,8 @@
       "canonical_asset_status": "ACTIONS_ARTIFACT / APPROVED",
       "canonical_asset_sha256": "9f1c8531ef7d76799127d18ef97b0b0885c10a548e921ec3e119ec35a8db0997",
       "decision_id": "D-072",
-      "publication_status": "CLOSED / MERGED_TO_MAIN"
+      "publication_status": "CLOSED / MERGED_TO_MAIN",
+      "merge_commit_sha": "2c2c3bc3dea63d7f8449271c47e58d468489c950"
     },
     {
       "component_id": "CMP-FRAME-PINGLIANG-001",
