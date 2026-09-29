@@ -1,6 +1,6 @@
 # P3.3 Stage2-C｜Attachment-Specific Interface / Connection Layer Materialization Plan V0.1
 
-- Status: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED**
+- Status: **ACTIVE / BATCH 01 LOCKED D-277 / LATER BATCHES NOT AUTHORIZED**
 - Authority: D-272 Stage2 design-only entry + D-273 Stage2-A lock + D-275 Stage2-B lock
 - Engineering execution: **NOT AUTHORIZED**
 - Stage3: **NOT AUTHORIZED**
@@ -61,3 +61,8 @@ Batch 01 may be locked only if:
 - exact historical connector dimensions are not claimed;
 - no world coordinates are introduced;
 - no Stage3 or engineering authorization is implied.
+
+
+## Batch 01 lock status
+
+Batch 01 was reviewed and **LOCKED under D-277**. This lock applies only to the family-level attachment class `Upper Six-Chuanfu → San-Dou → Four-Chuanfu`. Batch 02 and later batches remain NOT AUTHORIZED until separately approved.
