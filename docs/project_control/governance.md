@@ -22,6 +22,7 @@
 | `rules_change_log.md` | 管理机制本身的变更历史与被替代规则 |
 | `phase_archive/` | 已关闭 Phase 的压缩总结，以及已退出当前工作面的历史控制包；仅作追溯，不作为当前状态源 |
 | `dashboard.html` | 从 Project Control 提取当前摘要形成的可视化驾驶舱；非正式历史档案载体 |
+| `DAILY_CLOSE_LOG_YYYY-MM.md` | 月度滚动日结 / 次日交接日志；每日追加一个日期区块，启动默认只读最新区块，历史区块仅按需追溯 |
 
 ## 3. 即时落档机制
 
@@ -34,6 +35,8 @@
 - 项目管理机制变化 → `governance.md` + `rules_change_log.md`
 
 普通讨论、未形成结论的推测、一次性操作细节、重复日志不进入正式档案。
+
+每日收尾不再创建单日 `CLOSE_FILE_YYYY-MM-DD.md` / `DAILY_CLOSE_YYYY-MM-DD.md`；统一追加到当月 `DAILY_CLOSE_LOG_YYYY-MM.md`。跨月时新建下一月文件。每日启动只读取当月日志最新日期区块；历史区块按需追溯。
 
 ## 4. Project Control Synchronization Model｜TRIAL
 
