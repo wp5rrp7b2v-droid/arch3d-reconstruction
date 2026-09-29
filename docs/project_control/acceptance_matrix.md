@@ -1576,3 +1576,19 @@ Boundary retained:
 - Historical joinery: **NOT CLAIMED**.
 - Batch 03: **NOT AUTHORIZED**.
 - Engineering / Stage3 / T-018: **NOT AUTHORIZED / NOT AUTHORIZED / HOLD**.
+
+### D-289 Cross-file Consistency Alignment｜2026-09-29
+
+- Stage1: **CLOSED / D-271**.
+- Stage2: **DESIGN ACTIVE / D-272**; engineering execution remains **NOT AUTHORIZED**.
+- Locked reusable Stage2-C authorities: **D-277 / D-279 / D-284**.
+- D-285 Connection Coverage Matrix: **REFERENCE / DIAGNOSTIC ONLY / NON-BLOCKING** under D-286 Assembly-First direction.
+- D-286 Assembly-First Rebaseline: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED**; it does not itself authorize engineering generation.
+- AF-01｜正身梁架首榀: **STARTED / SOURCE+INPUT VERIFICATION COMPLETE / representative slice selection pending**.
+- AF-01 has **not** locked 东缝 vs 西缝, final Registry instance list, placement anchors, orientations, endpoint/length rules, or generated geometry.
+- PR #49: **DRAFT / OPEN / HOLD / NOT MERGED**.
+- PR #50: **DRAFT / OPEN / MERGEABLE / NOT MERGED**.
+- Stage3: **NOT AUTHORIZED**.
+- T-018: **HOLD**.
+- Project Control archive cleanup D-288 changed no geometry, evidence, Registry, Master approval, or active production authority.
+- Cross-file consistency result: **PASS after synchronization patch**.
