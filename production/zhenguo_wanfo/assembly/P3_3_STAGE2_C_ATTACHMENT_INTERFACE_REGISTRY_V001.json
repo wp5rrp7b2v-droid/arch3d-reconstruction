@@ -1,7 +1,7 @@
 {
   "schema_version": "P3_3_STAGE2_C_ATTACHMENT_INTERFACE_REGISTRY_V001",
   "date": "2026-09-29",
-  "status": "BATCH01_LOCKED / BATCH02_LOCKED / PRODUCT_OWNER_APPROVED / D-279",
+  "status": "BATCH01_LOCKED / BATCH02_LOCKED / BATCH03_CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
   "authority": {
     "stage2_b_lock": "D-275",
     "source_main": "4aaaa1db54fb6c1e4faf8e6f4bd11c325130ac7d",
@@ -116,6 +116,76 @@
       "historical_contact_claim": false,
       "historical_joinery_claim": false,
       "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    },
+    {
+      "interface_id": "IF-S2C-B03-DINGFU-BRACKET-ENTRY",
+      "owner_master_id": "CMP-FRAME-DINGFU-001_MASTER",
+      "role": "BRACKET_ENTRY_REGION",
+      "interface_type": "REGION",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum_rule": "OUTBOARD_END / BRACKET_ENTRY_REGION",
+      "evidence_classification": "DIRECT_FEATURE_EXISTENCE / GEOMETRY_DEFERRED",
+      "historical_contact_claim": true,
+      "historical_joinery_claim": "FEATURE_EXISTENCE_ONLY",
+      "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    },
+    {
+      "interface_id": "IF-S2C-B03-RUFU-BRACKET-ENTRY",
+      "owner_master_id": "CMP-FRAME-RUFU-001_MASTER",
+      "role": "BRACKET_ENTRY_REGION",
+      "interface_type": "REGION",
+      "coordinate_space": "MASTER_LOCAL",
+      "local_datum_rule": "BRACKET_END / ENTRY_REGION",
+      "evidence_classification": "DIRECT_FEATURE_EXISTENCE + SAME_BUILDING_PHOTO / GEOMETRY_DEFERRED",
+      "historical_contact_claim": true,
+      "historical_joinery_claim": "FEATURE_EXISTENCE_ONLY",
+      "attachment_authority": "VALID ONLY THROUGH EXPLICIT CONNECTION_LAYER RECORD"
+    },
+    {
+      "interface_id": "IF-S2C-B03-BRACKET-SET-DINGFU-ROLE",
+      "owner_role": "GABLE_COLUMN_HEAD_BRACKET_SET",
+      "role": "DINGFU_ENTRY_COUNTERPART_REGION",
+      "interface_type": "REGION",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "exact_owner_master_status": "UNRESOLVED / BRACKET_SET_ASSEMBLY_ROLE_ONLY",
+      "evidence_classification": "DIRECT_ASSEMBLY_SEMANTIC / COUNTERPART_MASTER_UNRESOLVED",
+      "historical_contact_claim": true,
+      "historical_joinery_claim": "COUNTERPART_ROLE_ONLY"
+    },
+    {
+      "interface_id": "IF-S2C-B03-BRACKET-SET-RUFU-ROLE",
+      "owner_role": "BRACKET_SET_ASSEMBLY_ROLE",
+      "role": "RUFU_ENTRY_COUNTERPART_REGION",
+      "interface_type": "REGION",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "exact_owner_master_status": "UNRESOLVED / BRACKET_SET_ASSEMBLY_ROLE_ONLY",
+      "evidence_classification": "DIRECT_ASSEMBLY_SEMANTIC / COUNTERPART_MASTER_UNRESOLVED",
+      "historical_contact_claim": true,
+      "historical_joinery_claim": "COUNTERPART_ROLE_ONLY"
+    },
+    {
+      "interface_id": "IF-S2C-B03-SHUZHU-UPPER-RIDGE-REGION",
+      "owner_master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+      "role": "UPPER_RIDGE_SUPPORT_ENDPOINT",
+      "interface_type": "POINT_OR_REGION",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "local_datum_rule": "P_upper / RIDGE-SUPPORT LOWER CONNECTION REGION",
+      "evidence_classification": "LOCKED_ENDPOINT_RULE / COUNTERPART_UNRESOLVED",
+      "historical_contact_claim": false,
+      "historical_joinery_claim": false,
+      "attachment_authority": "DEFERRED UNTIL COUNTERPART MASTER/ROLE IS EVIDENCE-RESOLVED"
+    },
+    {
+      "interface_id": "IF-S2C-B03-CHASHOU-UPPER-RIDGE-REGION",
+      "owner_master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+      "role": "UPPER_RIDGE_SUPPORT_ENDPOINT",
+      "interface_type": "POINT_OR_REGION",
+      "coordinate_space": "ASSEMBLY_LOCAL",
+      "local_datum_rule": "P_upper / RIDGE-SUPPORT CONNECTION REGION",
+      "evidence_classification": "DIRECT_RIDGE-SUPPORT_LAYER + LOCKED_ENDPOINT_RULE / COUNTERPART_UNRESOLVED",
+      "historical_contact_claim": false,
+      "historical_joinery_claim": false,
+      "attachment_authority": "DEFERRED UNTIL COUNTERPART MASTER/ROLE IS EVIDENCE-RESOLVED"
     }
   ],
   "connector_role_interfaces": [
@@ -161,5 +231,15 @@
     "world_coordinate_authority": false,
     "lock_decision_id": "D-279",
     "review_result": "PASS"
+  },
+  "batch03": {
+    "id": "STAGE2_C_BATCH03_GROOVE_RIDGE_COUNTERPART",
+    "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "added_interfaces": 6,
+    "materialized_joinery_feature_interfaces": 4,
+    "deferred_upper_ridge_interfaces": 2,
+    "exact_joinery_geometry_materialized": false,
+    "ridge_counterpart_master_bound": false,
+    "world_coordinate_authority": false
   }
 }

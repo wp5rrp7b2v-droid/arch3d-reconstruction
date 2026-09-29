@@ -96,3 +96,31 @@ Batch 02 is a candidate until Product Owner review/lock.
 ## Batch 02 lock status
 
 Batch 02 was reviewed and **LOCKED under D-279**. The lock covers only the four family-level attachment classes listed above. Batch 03 and all deferred Dingfu/Rufu groove/contact or ridge-counterpart materialization remain NOT AUTHORIZED until separately approved.
+
+
+## Batch 03 Candidate｜Groove / Ridge-Counterpart Boundary
+
+Product Owner authorized Batch 03 on 2026-09-29.
+
+Evidence review narrowed the batch before materialization:
+
+### Materialized as Connection Layer records
+1. Dingfu → bracket-set entry groove existence.
+2. Rufu → bracket-set entry groove existence.
+
+Both are `JOINERY_FEATURE` records with a **direct historical existence claim only**. Exact groove width/depth/length/contour and exact bracket-set Master counterpart remain unresolved.
+
+### Interfaces recorded but Connection Layer counterpart deferred
+3. Shuzhu upper ridge-support endpoint.
+4. Chashou upper ridge-support endpoint.
+
+The current evidence supports the ridge-support region / endpoint role, but does **not** yet justify silently binding either one to a specific approved Purlin/other Master. Therefore no upper-ridge Connection Layer record is created in Batch 03.
+
+This is intentional evidence preservation, not an incomplete execution error.
+
+### Batch 03 candidate totals
+- new interfaces: **6**;
+- new JOINERY_FEATURE records: **2**;
+- deferred ridge-counterpart requirements: **2**;
+- fabricated exact joinery: **0**;
+- fabricated ridge counterpart Master binding: **0**.
