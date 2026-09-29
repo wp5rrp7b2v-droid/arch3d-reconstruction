@@ -1,0 +1,2216 @@
+{
+  "schema_version": "P3_3_STAGE2_A_COVERAGE_REBINDING_MATRIX_V001",
+  "date": "2026-09-29",
+  "status": "LOCKED / PRODUCT OWNER APPROVED / D-273",
+  "authority": {
+    "entry_authorization": "PRODUCT_OWNER MESSAGE 2026-09-29 / AUTHORIZE_STAGE2_DESIGN_ONLY",
+    "stage1_closure": "D-271",
+    "canonical_main_at_start": "307f7d6b9ba8c81a2c00875aa5fcfbf090a87d1d",
+    "v008_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
+    "stage1_coverage_matrix": "production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json",
+    "stage1_master_catalog": "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json",
+    "p3_2_interface_baseline": "production/zhenguo_wanfo/assembly/P3_2_INTERFACE_REGISTRY_V001.json",
+    "connection_layer_contract": "docs/production/zhenguo_wanfo/P3_3_CONNECTION_LAYER_CONTRACT_V001.md"
+  },
+  "scope_rules": [
+    "This matrix declares Stage2 coverage/rebinding status only; it does not create final attachment geometry.",
+    "P3.2 semantics may be retained, but production data must be rebound to current V008 + 25 approved Masters.",
+    "UNKNOWN/RECONSTRUCTED_DESIGN/PARAMETRIC_COMPLETION boundaries must not be silently upgraded.",
+    "No whole-building topology, Stage3 assembly execution, Blender engineering, T-018 restart, or T-020/RZ/FV placement authority is authorized."
+  ],
+  "summary": {
+    "v008_object_type_count": 66,
+    "object_types_with_explicit_stage2_participation": 66,
+    "approved_master_family_count": 25,
+    "master_families_with_explicit_stage2_status": 25,
+    "p3_2_interface_owner_count": 6,
+    "master_families_with_p3_2_interface_owner": 6,
+    "master_families_requiring_new_interface_inventory": 19,
+    "participation_class_counts": {
+      "PARAMETRIC_SYSTEM_OR_COMPLETION": 23,
+      "TOPOLOGY_OR_ASSEMBLY_CONTAINER": 5,
+      "MASTER_BOUND_PRODUCTION": 28,
+      "SIMPLIFIED_PROXY": 7,
+      "REFERENCE_ONLY_UNKNOWN": 3
+    },
+    "stage2_a_gate": "LOCKED / PRODUCT OWNER APPROVED / D-273",
+    "legacy_p3_2_interface_count": 18,
+    "legacy_p3_2_interface_retain_count": 12,
+    "legacy_p3_2_interface_rebind_count": 6,
+    "legacy_p3_2_interface_supersede_count": 0
+  },
+  "object_type_matrix": [
+    {
+      "object_type": "北门洞",
+      "registry_records": 1,
+      "systems": [
+        "围护"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "北中央洞口；门木作另处理",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "北坡筒瓦",
+      "registry_records": 1,
+      "systems": [
+        "瓦作"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "62陇；阵列记录非逐瓦实例",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "补间铺作",
+      "registry_records": 12,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "非实体装配/拓扑",
+      "stage2_participation_class": "TOPOLOGY_OR_ASSEMBLY_CONTAINER",
+      "production_eligibility": "NON_PHYSICAL_TOPOLOGY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "NOT_APPLICABLE",
+      "orientation_rule_status": "ASSEMBLY_ROLE_ORIENTATION_ONLY",
+      "interface_status": "TOPOLOGY_INTERFACE_SEMANTICS_ONLY_IF_NEEDED",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "NOT_APPLICABLE",
+      "connection_layer_status": "ORGANIZES_RELATIONS / NOT_A_PHYSICAL_CONNECTION",
+      "evidence_boundary": "12个物理铺作位置，是装配容器，不建立单件Master",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "补间铺作底斗",
+      "registry_records": 12,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "12件；宽/高有实测，进深UNKNOWN",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "叉手",
+      "registry_records": 8,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-CHASHOU-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "ASSEMBLY_ENDPOINT_DERIVED / STAGE2_RULE_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "8件；长度由装配端点求长",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "椽系",
+      "registry_records": 1,
+      "systems": [
+        "屋面"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "总数/截面/标准间距UNKNOWN；按坡向与层位参数化生成",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "窗木作系统",
+      "registry_records": 2,
+      "systems": [
+        "围护"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "VISUAL_MODEL + PARAMETRIC_SECTION",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "垂脊",
+      "registry_records": 4,
+      "systems": [
+        "瓦作"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "4条；每条20块垂通脊为明确推导",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "垂兽",
+      "registry_records": 4,
+      "systems": [
+        "瓦作"
+      ],
+      "stage1_disposition": "简化Proxy",
+      "stage2_participation_class": "SIMPLIFIED_PROXY",
+      "production_eligibility": "ELIGIBLE_AS_EXPLICIT_SIMPLIFIED_PROXY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PROXY_RULE_REVIEW_REQUIRED",
+      "orientation_rule_status": "REQUIRED_IF_PROXY_IS_PLACED",
+      "interface_status": "DEFINE_IF_PROXY_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "SIMPLIFIED_PROXY_DIMENSION_RULE / REPLACEABLE",
+      "connection_layer_status": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "evidence_boundary": "4件；数量锁定，精确装饰几何不主张",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "剳牵",
+      "registry_records": 14,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-ZHAQIAN-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "14件；4件山面位置较明确，另10件精确位置未锁",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "大角梁",
+      "registry_records": 4,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-DAJIAOLIANG-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "4件；中等精度外包络Master",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "大型瓜子栱",
+      "registry_records": 16,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-GONG-GUAZI-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "16件；与小型瓜子栱共享参数化栱Master",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "大型慢栱",
+      "registry_records": 16,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-GONG-MANGONG-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "16件；与小型慢栱共享参数化栱Master",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "单向长开斗族",
+      "registry_records": 1,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "已有Master｜族边界UNKNOWN",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-DOU-SINGLE-LONGKAI-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "已有Master，仅作为族参考；全殿数量/位置UNKNOWN，禁止生成实体实例",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "丁栿",
+      "registry_records": 8,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-DINGFU-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "ASSEMBLY_ENDPOINT_DERIVED / STAGE2_RULE_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "8件；截面统计锁定；长度由装配端点求长",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "东坡筒瓦",
+      "registry_records": 1,
+      "systems": [
+        "瓦作"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "91陇；阵列记录非逐瓦实例",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "二昂",
+      "registry_records": 16,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-GONG-ANG-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "16件；与头昂区分尺寸口径",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "华栱",
+      "registry_records": 56,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-GONG-HUAGONG-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "56件为正身方向明确子集；Master可建但不得称全殿总数闭合",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "交互斗族",
+      "registry_records": 1,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "已有Master｜族边界UNKNOWN",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-DOU-INTERACTIVE-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "已有Master，仅作为族参考；全殿数量/位置UNKNOWN，禁止生成实体实例",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "角石",
+      "registry_records": 4,
+      "systems": [
+        "台基"
+      ],
+      "stage1_disposition": "简化Proxy",
+      "stage2_participation_class": "SIMPLIFIED_PROXY",
+      "production_eligibility": "ELIGIBLE_AS_EXPLICIT_SIMPLIFIED_PROXY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PROXY_RULE_REVIEW_REQUIRED",
+      "orientation_rule_status": "REQUIRED_IF_PROXY_IS_PLACED",
+      "interface_status": "DEFINE_IF_PROXY_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "SIMPLIFIED_PROXY_DIMENSION_RULE / REPLACEABLE",
+      "connection_layer_status": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "evidence_boundary": "4处；缺精确单件尺寸，使用可替换简化石构Proxy",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "阑额",
+      "registry_records": 12,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-LANE-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "12件；长度按柱心距离；截面按已测/参数边界处理",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "令栱",
+      "registry_records": 28,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-GONG-LINGGONG-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "28件；尺寸已锁",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "门木作系统",
+      "registry_records": 2,
+      "systems": [
+        "围护"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "VISUAL_MODEL + PARAMETRIC_SECTION",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "南立面窗洞",
+      "registry_records": 2,
+      "systems": [
+        "围护"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "2洞口；木作分格走视觉/参数化",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "南门洞",
+      "registry_records": 1,
+      "systems": [
+        "围护"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "南中央洞口；门木作另处理",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "南坡筒瓦",
+      "registry_records": 1,
+      "systems": [
+        "瓦作"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "62陇；阵列记录非逐瓦实例",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "内槽斗栱/隔架位置",
+      "registry_records": 1,
+      "systems": [
+        "内槽"
+      ],
+      "stage1_disposition": "非实体装配/拓扑",
+      "stage2_participation_class": "TOPOLOGY_OR_ASSEMBLY_CONTAINER",
+      "production_eligibility": "NON_PHYSICAL_TOPOLOGY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "NOT_APPLICABLE",
+      "orientation_rule_status": "ASSEMBLY_ROLE_ORIENTATION_ONLY",
+      "interface_status": "TOPOLOGY_INTERFACE_SEMANTICS_ONLY_IF_NEEDED",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "NOT_APPLICABLE",
+      "connection_layer_status": "ORGANIZES_RELATIONS / NOT_A_PHYSICAL_CONNECTION",
+      "evidence_boundary": "24处系统位置，不是24件同类实体",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "襻间枋",
+      "registry_records": 12,
+      "systems": [
+        "内槽"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "12处位置锁定，统一截面UNKNOWN；215×153.6mm不得使用",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "平梁",
+      "registry_records": 4,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-PINGLIANG-001_MASTER"
+      ],
+      "registry_variant_labels": [
+        "东西缝型",
+        "山面型"
+      ],
+      "variant_rule_status": "STAGE1_VARIANT_METADATA_PRESENT / REBIND_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "4件；东西缝型与山面型分证据状态；山面厚度UNKNOWN",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "铺作方向单元",
+      "registry_records": 28,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "非实体装配/拓扑",
+      "stage2_participation_class": "TOPOLOGY_OR_ASSEMBLY_CONTAINER",
+      "production_eligibility": "NON_PHYSICAL_TOPOLOGY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "NOT_APPLICABLE",
+      "orientation_rule_status": "ASSEMBLY_ROLE_ORIENTATION_ONLY",
+      "interface_status": "TOPOLOGY_INTERFACE_SEMANTICS_ONLY_IF_NEEDED",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "NOT_APPLICABLE",
+      "connection_layer_status": "ORGANIZES_RELATIONS / NOT_A_PHYSICAL_CONNECTION",
+      "evidence_boundary": "28个方向单元，不是物理构件",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "嵌墙石碑",
+      "registry_records": 2,
+      "systems": [
+        "围护"
+      ],
+      "stage1_disposition": "简化Proxy",
+      "stage2_participation_class": "SIMPLIFIED_PROXY",
+      "production_eligibility": "ELIGIBLE_AS_EXPLICIT_SIMPLIFIED_PROXY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PROXY_RULE_REVIEW_REQUIRED",
+      "orientation_rule_status": "REQUIRED_IF_PROXY_IS_PLACED",
+      "interface_status": "DEFINE_IF_PROXY_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "SIMPLIFIED_PROXY_DIMENSION_RULE / REPLACEABLE",
+      "connection_layer_status": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "evidence_boundary": "2通；位置/身份锁定，精确板尺寸未闭合",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "戗脊",
+      "registry_records": 4,
+      "systems": [
+        "瓦作"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "4条；每条5–6块+找头为明确推导",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "戗兽",
+      "registry_records": 4,
+      "systems": [
+        "瓦作"
+      ],
+      "stage1_disposition": "简化Proxy",
+      "stage2_participation_class": "SIMPLIFIED_PROXY",
+      "production_eligibility": "ELIGIBLE_AS_EXPLICIT_SIMPLIFIED_PROXY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PROXY_RULE_REVIEW_REQUIRED",
+      "orientation_rule_status": "REQUIRED_IF_PROXY_IS_PLACED",
+      "interface_status": "DEFINE_IF_PROXY_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "SIMPLIFIED_PROXY_DIMENSION_RULE / REPLACEABLE",
+      "connection_layer_status": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "evidence_boundary": "4件；数量锁定，精确装饰几何不主张",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "墙体",
+      "registry_records": 4,
+      "systems": [
+        "围护"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "四立面墙体；南墙局部厚度不能推广到全部墙体",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "墙砖族",
+      "registry_records": 1,
+      "systems": [
+        "围护"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "平均砖尺寸可用；全殿数量UNKNOWN",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "乳栿",
+      "registry_records": 8,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-RUFU-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "8件；上/下斜乳栿先作实例/变体语义",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "散斗族",
+      "registry_records": 1,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "UNKNOWN/参考边界",
+      "stage2_participation_class": "REFERENCE_ONLY_UNKNOWN",
+      "production_eligibility": "NOT_ELIGIBLE_FOR_PHYSICAL_INSTANCE_GENERATION",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "DEFERRED",
+      "orientation_rule_status": "DEFERRED",
+      "interface_status": "DEFERRED",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "UNKNOWN / NO_GENERATIVE_LENGTH",
+      "connection_layer_status": "NONE_UNTIL_PROMOTED_FROM_UNKNOWN",
+      "evidence_boundary": "存在确认；全殿总量/逐件位置UNKNOWN；暂无Master",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "上六椽栿",
+      "registry_records": 2,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "已有Master｜需长度桥",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "ASSEMBLY_ENDPOINT_DERIVED / STAGE2_RULE_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "2实例；同下六椽栿",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "神台",
+      "registry_records": 1,
+      "systems": [
+        "室内设施"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "整体尺寸UNKNOWN；按构造关系做参数化/简化装配",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "室内地面系统",
+      "registry_records": 1,
+      "systems": [
+        "室内地面"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "整体铺地走参数化区域/铺砖系统",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "室内方砖族",
+      "registry_records": 2,
+      "systems": [
+        "室内地面"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "两个尺寸型；数量UNKNOWN",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "室内条砖族",
+      "registry_records": 1,
+      "systems": [
+        "室内地面"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "数量UNKNOWN；厚度UNKNOWN",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "蜀柱",
+      "registry_records": 4,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-SHUZHU-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "4件；东/西山厚度未测，不得伪造统一截面",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "四椽栿",
+      "registry_records": 2,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-FOUR-CHUANFU-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "首个新Master候选；2件；截面426.5×302mm；长度后续由装配端点推导",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "台基整体",
+      "registry_records": 1,
+      "systems": [
+        "台基"
+      ],
+      "stage1_disposition": "简化Proxy",
+      "stage2_participation_class": "SIMPLIFIED_PROXY",
+      "production_eligibility": "ELIGIBLE_AS_EXPLICIT_SIMPLIFIED_PROXY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PROXY_RULE_REVIEW_REQUIRED",
+      "orientation_rule_status": "REQUIRED_IF_PROXY_IS_PLACED",
+      "interface_status": "DEFINE_IF_PROXY_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "SIMPLIFIED_PROXY_DIMENSION_RULE / REPLACEABLE",
+      "connection_layer_status": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "evidence_boundary": "外部体量可建；内部构造UNKNOWN",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "替木测量边界",
+      "registry_records": 1,
+      "systems": [
+        "内槽"
+      ],
+      "stage1_disposition": "UNKNOWN/参考边界",
+      "stage2_participation_class": "REFERENCE_ONLY_UNKNOWN",
+      "production_eligibility": "NOT_ELIGIBLE_FOR_PHYSICAL_INSTANCE_GENERATION",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "DEFERRED",
+      "orientation_rule_status": "DEFERRED",
+      "interface_status": "DEFERRED",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "UNKNOWN / NO_GENERATIVE_LENGTH",
+      "connection_layer_status": "NONE_UNTIL_PROMOTED_FROM_UNKNOWN",
+      "evidence_boundary": "23条测量记录不等于总数；保留统计边界",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "替木实体族",
+      "registry_records": 1,
+      "systems": [
+        "内槽"
+      ],
+      "stage1_disposition": "UNKNOWN/参考边界",
+      "stage2_participation_class": "REFERENCE_ONLY_UNKNOWN",
+      "production_eligibility": "NOT_ELIGIBLE_FOR_PHYSICAL_INSTANCE_GENERATION",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "DEFERRED",
+      "orientation_rule_status": "DEFERRED",
+      "interface_status": "DEFERRED",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "UNKNOWN / NO_GENERATIVE_LENGTH",
+      "connection_layer_status": "NONE_UNTIL_PROMOTED_FROM_UNKNOWN",
+      "evidence_boundary": "全殿真实总量/逐件位置UNKNOWN；不得生成实体实例",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "头昂",
+      "registry_records": 16,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-GONG-ANG-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "16件；截面锁定；推导几何不得冒充直接实测",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "透风孔",
+      "registry_records": 16,
+      "systems": [
+        "围护"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "16处；位置/纹样锁定，精确尺寸未闭合",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "槫",
+      "registry_records": 33,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-PURLIN-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "33件；共享Master+长度/位置变体；旧7 PURLIN不得当真实总量",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "托脚",
+      "registry_records": 12,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-TUOJIAO-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "12件；截面统计锁定",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "望板系统",
+      "registry_records": 1,
+      "systems": [
+        "屋面"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "存在/层位明确；总数、板宽厚UNKNOWN",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "西坡筒瓦",
+      "registry_records": 1,
+      "systems": [
+        "瓦作"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "90陇；阵列记录非逐瓦实例",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "下六椽栿",
+      "registry_records": 2,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "已有Master｜需长度桥",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "ASSEMBLY_ENDPOINT_DERIVED / STAGE2_RULE_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "2实例；1000mm reference 禁止进入整殿；Stage 2由装配端点推导geometry length",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "仙人",
+      "registry_records": 4,
+      "systems": [
+        "瓦作"
+      ],
+      "stage1_disposition": "简化Proxy",
+      "stage2_participation_class": "SIMPLIFIED_PROXY",
+      "production_eligibility": "ELIGIBLE_AS_EXPLICIT_SIMPLIFIED_PROXY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PROXY_RULE_REVIEW_REQUIRED",
+      "orientation_rule_status": "REQUIRED_IF_PROXY_IS_PLACED",
+      "interface_status": "DEFINE_IF_PROXY_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "SIMPLIFIED_PROXY_DIMENSION_RULE / REPLACEABLE",
+      "connection_layer_status": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "evidence_boundary": "4件；数量锁定，精确装饰几何不主张",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "小型瓜子栱",
+      "registry_records": 28,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-GONG-GUAZI-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "28件；长度变体",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "小型慢栱",
+      "registry_records": 28,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-GONG-MANGONG-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "28件；长度变体",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "隐角梁",
+      "registry_records": 4,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "4件数量锁定；几何证据不足，可替换参数化Master/Proxy",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "由额",
+      "registry_records": 4,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-YOUE-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "4件；可独立Master或共享长构件生成器",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "正脊",
+      "registry_records": 1,
+      "systems": [
+        "瓦作"
+      ],
+      "stage1_disposition": "参数化补全",
+      "stage2_participation_class": "PARAMETRIC_SYSTEM_OR_COMPLETION",
+      "production_eligibility": "ELIGIBLE_ONLY_UNDER_EXPLICIT_PARAMETRIC_RULE",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PARAMETRIC_RULE_REQUIRED / NOT_MASTER_VARIANT",
+      "orientation_rule_status": "REQUIRED_IF_RULE_EMITS_PHYSICAL_GEOMETRY",
+      "interface_status": "DEFINE_ONLY_IF_SYSTEM_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "PARAMETRIC_COMPLETION_OR_SYSTEM_RULE / PRESERVE_STAGE1_BOUNDARY",
+      "connection_layer_status": "REQUIRED_IF_ATTACHED_TO_OTHER_PRODUCTION_ENTITY",
+      "evidence_boundary": "1条；赤脚通脊17块直接记录，其余层次未完全闭合",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "正吻",
+      "registry_records": 2,
+      "systems": [
+        "瓦作"
+      ],
+      "stage1_disposition": "简化Proxy",
+      "stage2_participation_class": "SIMPLIFIED_PROXY",
+      "production_eligibility": "ELIGIBLE_AS_EXPLICIT_SIMPLIFIED_PROXY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "PROXY_RULE_REVIEW_REQUIRED",
+      "orientation_rule_status": "REQUIRED_IF_PROXY_IS_PLACED",
+      "interface_status": "DEFINE_IF_PROXY_PARTICIPATES_IN_ATTACHMENT",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "SIMPLIFIED_PROXY_DIMENSION_RULE / REPLACEABLE",
+      "connection_layer_status": "EXPLICIT_CONNECTION_REQUIRED_IF_ATTACHED",
+      "evidence_boundary": "2件；数量锁定，精确装饰几何不主张",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "柱",
+      "registry_records": 12,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "已有Master｜可直接绑定",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-COLUMN-001_MASTER"
+      ],
+      "registry_variant_labels": [
+        "角柱",
+        "普通柱"
+      ],
+      "variant_rule_status": "STAGE1_VARIANT_METADATA_PRESENT / REBIND_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "12实例绑定；角柱/普通柱先为实例角色",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "柱头栌斗",
+      "registry_records": 12,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "已有Master｜可直接绑定",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-LUDOU-COLUMN-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "12实例绑定；Stage 2补方向/承托/连接接口",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "柱头铺作",
+      "registry_records": 8,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "非实体装配/拓扑",
+      "stage2_participation_class": "TOPOLOGY_OR_ASSEMBLY_CONTAINER",
+      "production_eligibility": "NON_PHYSICAL_TOPOLOGY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "NOT_APPLICABLE",
+      "orientation_rule_status": "ASSEMBLY_ROLE_ORIENTATION_ONLY",
+      "interface_status": "TOPOLOGY_INTERFACE_SEMANTICS_ONLY_IF_NEEDED",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "NOT_APPLICABLE",
+      "connection_layer_status": "ORGANIZES_RELATIONS / NOT_A_PHYSICAL_CONNECTION",
+      "evidence_boundary": "8个非角柱头铺作位置，是装配容器",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "转角铺作",
+      "registry_records": 4,
+      "systems": [
+        "外檐斗栱"
+      ],
+      "stage1_disposition": "非实体装配/拓扑",
+      "stage2_participation_class": "TOPOLOGY_OR_ASSEMBLY_CONTAINER",
+      "production_eligibility": "NON_PHYSICAL_TOPOLOGY_ONLY",
+      "approved_master_refs": [],
+      "registry_variant_labels": [],
+      "variant_rule_status": "NOT_APPLICABLE",
+      "orientation_rule_status": "ASSEMBLY_ROLE_ORIENTATION_ONLY",
+      "interface_status": "TOPOLOGY_INTERFACE_SEMANTICS_ONLY_IF_NEEDED",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "NOT_APPLICABLE",
+      "connection_layer_status": "ORGANIZES_RELATIONS / NOT_A_PHYSICAL_CONNECTION",
+      "evidence_boundary": "4个转角铺作位置，是装配容器",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    },
+    {
+      "object_type": "子角梁",
+      "registry_records": 4,
+      "systems": [
+        "主体木构"
+      ],
+      "stage1_disposition": "需新建Master",
+      "stage2_participation_class": "MASTER_BOUND_PRODUCTION",
+      "production_eligibility": "ELIGIBLE_VIA_APPROVED_MASTER",
+      "approved_master_refs": [
+        "CMP-FRAME-ZIJIAOLIANG-001_MASTER"
+      ],
+      "registry_variant_labels": [],
+      "variant_rule_status": "EXPLICIT_VARIANT_REVIEW_REQUIRED",
+      "orientation_rule_status": "DEFINE_OR_CONFIRM_STAGE2_ORIENTATION_RULE",
+      "interface_status": "DEFINE_OR_REBIND_MASTER_LOCAL_INTERFACES",
+      "relationship_assignment_status": "REVIEW_REQUIRED_FROM_SUPPORT_CONNECT_LOCATE_REPEAT_BELONG",
+      "length_determination_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "REQUIRED_FOR_ANY_PRODUCTION_ATTACHMENT / CONNECTION_INVENTORY_PENDING",
+      "evidence_boundary": "4件；中等精度外包络Master",
+      "stage2_status": "COVERAGE_DECLARED / RULES_NOT_YET_LOCKED"
+    }
+  ],
+  "master_family_matrix": [
+    {
+      "master_id": "CMP-COLUMN-001_MASTER",
+      "source": "P3_1_RETAINED_APPROVED",
+      "covered_v008_object_types": [
+        "柱"
+      ],
+      "variant_status": "P3_1_RETAINED / VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "P3_2_INTERFACE_PRESENT / RETAIN_SEMANTICS + REBIND_TO_STAGE2",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-LUDOU-COLUMN-001_MASTER",
+      "source": "P3_1_RETAINED_APPROVED",
+      "covered_v008_object_types": [
+        "柱头栌斗"
+      ],
+      "variant_status": "P3_1_RETAINED / VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "P3_2_INTERFACE_PRESENT / RETAIN_SEMANTICS + REBIND_TO_STAGE2",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+      "source": "P3_1_RETAINED_APPROVED",
+      "covered_v008_object_types": [
+        "单向长开斗族"
+      ],
+      "variant_status": "P3_1_RETAINED / VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "P3_2_INTERFACE_PRESENT / RETAIN_SEMANTICS + REBIND_TO_STAGE2",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-DOU-INTERACTIVE-001_MASTER",
+      "source": "P3_1_RETAINED_APPROVED",
+      "covered_v008_object_types": [
+        "交互斗族"
+      ],
+      "variant_status": "P3_1_RETAINED / VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "P3_2_INTERFACE_PRESENT / RETAIN_SEMANTICS + REBIND_TO_STAGE2",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+      "source": "P3_1_RETAINED_APPROVED",
+      "covered_v008_object_types": [
+        "下六椽栿"
+      ],
+      "variant_status": "P3_1_RETAINED / VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "P3_2_INTERFACE_PRESENT / RETAIN_SEMANTICS + REBIND_TO_STAGE2",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "ASSEMBLY_ENDPOINT_DERIVED / STAGE2_RULE_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "source": "P3_1_RETAINED_APPROVED",
+      "covered_v008_object_types": [
+        "上六椽栿"
+      ],
+      "variant_status": "P3_1_RETAINED / VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "P3_2_INTERFACE_PRESENT / RETAIN_SEMANTICS + REBIND_TO_STAGE2",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "ASSEMBLY_ENDPOINT_DERIVED / STAGE2_RULE_REQUIRED",
+      "connection_layer_status": "T032_PROOF_EXISTS / PRODUCTION_REBIND_AND_COVERAGE_EXPANSION_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "四椽栿"
+      ],
+      "variant_status": "VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "T032_PROOF_EXISTS / PRODUCTION_REBIND_AND_COVERAGE_EXPANSION_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "平梁"
+      ],
+      "variant_status": "DECLARED_GEOMETRY_VARIANTS / STAGE2_REBIND_REQUIRED",
+      "declared_variants": [
+        "EW_SEAM",
+        "GABLE"
+      ],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-DINGFU-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "丁栿"
+      ],
+      "variant_status": "DECLARED_ROLE_VARIANTS / GEOMETRY_COLLAPSE_REVIEW_REQUIRED",
+      "declared_variants": [
+        "UPPER",
+        "LOWER"
+      ],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "ASSEMBLY_ENDPOINT_DERIVED / STAGE2_RULE_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-RUFU-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "乳栿"
+      ],
+      "variant_status": "DECLARED_ROLE_VARIANTS / GEOMETRY_COLLAPSE_REVIEW_REQUIRED",
+      "declared_variants": [
+        "UPPER",
+        "LOWER",
+        "NE",
+        "SE",
+        "SW",
+        "NW"
+      ],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "剳牵"
+      ],
+      "variant_status": "VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-PURLIN-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "槫"
+      ],
+      "variant_status": "VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "托脚"
+      ],
+      "variant_status": "VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "叉手"
+      ],
+      "variant_status": "NO_GEOMETRY_VARIANT_DECLARED / CONFIRM_IN_STAGE2",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "ASSEMBLY_ENDPOINT_DERIVED / STAGE2_RULE_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "蜀柱"
+      ],
+      "variant_status": "VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "大角梁"
+      ],
+      "variant_status": "VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "子角梁"
+      ],
+      "variant_status": "VARIANT_REVIEW_REQUIRED",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "PARTIAL_STAGE1_CONNECTION_INTENT / FORMAL_STAGE2_RECORD_PENDING",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-LANE-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "阑额"
+      ],
+      "variant_status": "NO_GEOMETRY_VARIANT_DECLARED / CONFIRM_IN_STAGE2",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-FRAME-YOUE-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "由额"
+      ],
+      "variant_status": "NO_GEOMETRY_VARIANT_DECLARED / CONFIRM_IN_STAGE2",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "补间铺作底斗"
+      ],
+      "variant_status": "NO_GEOMETRY_VARIANT_DECLARED / CONFIRM_IN_STAGE2",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-GONG-GUAZI-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "大型瓜子栱",
+        "小型瓜子栱"
+      ],
+      "variant_status": "DECLARED_GEOMETRY_VARIANTS / STAGE2_REBIND_REQUIRED",
+      "declared_variants": [
+        "LARGE_GUAZI_GONG",
+        "SMALL_GUAZI_GONG"
+      ],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-GONG-MANGONG-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "大型慢栱",
+        "小型慢栱"
+      ],
+      "variant_status": "DECLARED_GEOMETRY_VARIANTS / STAGE2_REBIND_REQUIRED",
+      "declared_variants": [
+        "LARGE_MANGONG",
+        "SMALL_MANGONG"
+      ],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-GONG-LINGGONG-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "令栱"
+      ],
+      "variant_status": "NO_GEOMETRY_VARIANT_DECLARED / CONFIRM_IN_STAGE2",
+      "declared_variants": [],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-GONG-HUAGONG-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "华栱"
+      ],
+      "variant_status": "DECLARED_GEOMETRY_VARIANTS / STAGE2_REBIND_REQUIRED",
+      "declared_variants": [
+        "JUMP_1_HUAGONG",
+        "JUMP_2_HUAGONG"
+      ],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    },
+    {
+      "master_id": "CMP-GONG-ANG-001_MASTER",
+      "source": "STAGE1_APPROVED",
+      "covered_v008_object_types": [
+        "二昂",
+        "头昂"
+      ],
+      "variant_status": "DECLARED_GEOMETRY_VARIANTS / STAGE2_REBIND_REQUIRED",
+      "declared_variants": [
+        "TOU_ANG",
+        "ER_ANG"
+      ],
+      "orientation_status": "STAGE2_ORIENTATION_RULE_REQUIRED",
+      "p3_2_interface_owner_status": "NO_P3_2_INTERFACE_OWNER / DEFINE_STAGE2_INTERFACE_INVENTORY",
+      "interface_status": "NOT_YET_STAGE2_LOCKED",
+      "relationship_status": "ASSIGNMENT_REVIEW_REQUIRED",
+      "length_rule_status": "STAGE1_DIMENSION_AUTHORITY / INSTANCE_LENGTH_RULE_REVIEW_REQUIRED",
+      "connection_layer_status": "NO_COMPLETE_CONNECTION_LAYER_COVERAGE / INVENTORY_REQUIRED",
+      "evidence_status": "INHERIT_STAGE1_BOUNDARIES / NO_HISTORICAL_UPGRADE",
+      "stage2_status": "COVERAGE_DECLARED / REBINDING_NOT_YET_LOCKED"
+    }
+  ],
+  "pending_source_binding_outside_v008": [
+    "板瓦",
+    "勾头",
+    "滴水",
+    "博风板",
+    "悬鱼",
+    "惹草",
+    "生头木"
+  ],
+  "acceptance_targets": {
+    "object_types_explicit_participation": "66/66",
+    "master_families_explicit_rebinding_status": "25/25",
+    "legacy_p3_2_interface_disposition": "RETAIN / REBIND / SUPERSEDE required before Stage2-A lock",
+    "connection_layer_coverage": "EXPLICIT REQUIREMENT FOR EVERY IDENTIFIED PRODUCTION ATTACHMENT CLASS",
+    "stage3_authority": "NOT AUTHORIZED"
+  },
+  "lock_decision_id": "D-273",
+  "lock_date": "2026-09-29",
+  "review_result": "PASS",
+  "review_notes": [
+    "66/66 V008 object types present exactly once; no missing or extra object types.",
+    "25/25 approved Master families present exactly once; no missing or extra Master families.",
+    "All 28 MASTER_BOUND_PRODUCTION object types carry approved Master refs.",
+    "No non-Master Stage2 participation row carries an approved Master ref.",
+    "P3.2 interface owner set matches exactly 6 retained owners.",
+    "18/18 legacy P3.2 interfaces are individually classified RETAIN or REBIND before lock.",
+    "No Stage3, Blender engineering, whole-building topology, T-020/RZ/FV production authority, or T-018 restart is authorized by this lock."
+  ],
+  "legacy_p3_2_interface_rebinding_matrix": [
+    {
+      "interface_id": "CMP-COLUMN-001__ORIGIN",
+      "owner_node": "CMP-COLUMN-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-COLUMN-001__AXIS",
+      "owner_node": "CMP-COLUMN-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-COLUMN-001__LOWER-PLANE",
+      "owner_node": "CMP-COLUMN-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    },
+    {
+      "interface_id": "CMP-LUDOU-COLUMN-001__ORIGIN",
+      "owner_node": "CMP-LUDOU-COLUMN-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-LUDOU-COLUMN-001__AXIS",
+      "owner_node": "CMP-LUDOU-COLUMN-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-LUDOU-COLUMN-001__LOWER-PLANE",
+      "owner_node": "CMP-LUDOU-COLUMN-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    },
+    {
+      "interface_id": "CMP-DOU-SINGLE-LONGKAI-001__ORIGIN",
+      "owner_node": "CMP-DOU-SINGLE-LONGKAI-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-DOU-SINGLE-LONGKAI-001__AXIS",
+      "owner_node": "CMP-DOU-SINGLE-LONGKAI-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-DOU-SINGLE-LONGKAI-001__LOWER-PLANE",
+      "owner_node": "CMP-DOU-SINGLE-LONGKAI-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    },
+    {
+      "interface_id": "CMP-DOU-INTERACTIVE-001__ORIGIN",
+      "owner_node": "CMP-DOU-INTERACTIVE-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-DOU-INTERACTIVE-001__AXIS",
+      "owner_node": "CMP-DOU-INTERACTIVE-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-DOU-INTERACTIVE-001__LOWER-PLANE",
+      "owner_node": "CMP-DOU-INTERACTIVE-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    },
+    {
+      "interface_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001__ORIGIN",
+      "owner_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001__AXIS",
+      "owner_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001__LOWER-PLANE",
+      "owner_node": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    },
+    {
+      "interface_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001__ORIGIN",
+      "owner_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "interface_type": "POINT",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001__AXIS",
+      "owner_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "interface_type": "AXIS",
+      "legacy_allowed_relation_types": [
+        "LOCATE",
+        "REPEAT"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "RETAIN",
+      "stage2_role": "RETAIN_AS_MASTER_LOCAL_ENGINEERING_DATUM / NON_CONTACT / NON_JOINERY",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "NOT_A_CONNECTION_INTERFACE_BY_ITSELF",
+      "reason": "Local origin/axis is a non-historical engineering datum and remains compatible with Stage2 MASTER_LOCAL semantics."
+    },
+    {
+      "interface_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001__LOWER-PLANE",
+      "owner_node": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+      "interface_type": "PLANE",
+      "legacy_allowed_relation_types": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE"
+      ],
+      "legacy_evidence_status": "PROJECT_RULE",
+      "historical_claim": false,
+      "stage2_disposition": "REBIND",
+      "stage2_role": "RETAIN_GENERIC_REFERENCE_PLANE_ONLY / REBIND_FOR_ANY_PRODUCTION_SUPPORT_CONNECT_OR_CONTACT_USE",
+      "production_attachment_authority": false,
+      "connection_layer_requirement": "ATTACHMENT_SPECIFIC_INTERFACE_OR_CONNECTION_LAYER_RECORD_REQUIRED_BEFORE_PRODUCTION_USE",
+      "reason": "Legacy LOWER-PLANE is explicitly only a bounded local reference plane, not a proven historical contact plane; production attachment semantics must be rebound under RC-024."
+    }
+  ],
+  "acceptance_results": {
+    "object_types_explicit_participation": "PASS / 66/66",
+    "master_families_explicit_rebinding_status": "PASS / 25/25",
+    "legacy_p3_2_interface_disposition": "PASS / 18/18 = 12 RETAIN + 6 REBIND + 0 SUPERSEDE",
+    "connection_layer_coverage_requirement": "PASS / REQUIRED OR EXPLICITLY DEFERRED PER PARTICIPATION CLASS; T-032 PROOF RETAINED AS PRECEDENT",
+    "unknown_boundary_preservation": "PASS",
+    "legacy_proxy_promotion_check": "PASS / NONE",
+    "stage3_authority": "NOT AUTHORIZED",
+    "engineering_execution": "NOT AUTHORIZED",
+    "t018": "HOLD"
+  }
+}
