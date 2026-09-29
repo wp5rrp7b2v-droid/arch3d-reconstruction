@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R349",
+  "state_revision": "R350",
   "last_updated": "2026-09-29",
-  "session_status": "2026-09-29 P3.3 STAGE2-B INTERFACE / VARIANT RULE DESIGN CANDIDATE BUILT D-274 / 25 OF 25 MASTER FAMILIES RULED / 5 STAGE1 GEOMETRY-VARIANT FAMILIES / 3 ROLE-LABEL-ONLY FAMILIES / 17 NO-NEW-VARIANT FAMILIES / MASTER_LOCAL + ASSEMBLY_LOCAL AUTHORITY ONLY / ENGINEERING NOT AUTHORIZED / STAGE3 NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-29 P3.3 STAGE2-B RULE SET LOCKED D-275 / 25 OF 25 MASTER FAMILIES RULED / 5 STAGE1 GEOMETRY-VARIANT FAMILIES / 3 ROLE-LABEL-ONLY / 17 NO-NEW-VARIANT / MASTER_LOCAL + ASSEMBLY_LOCAL ONLY / ATTACHMENT-SPECIFIC RECORDS NOT YET MATERIALIZED / ENGINEERING NOT AUTHORIZED / STAGE3 NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2 DESIGN ACTIVE D-272 / STAGE2-A LOCKED D-273 / STAGE2-B CANDIDATE D-274 / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2 DESIGN ACTIVE D-272 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B CANDIDATE D-274 / T-018 HOLD",
-      "P3_3": "V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B CANDIDATE D-274 / T-018 HOLD"
+      "P3.3": "V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / T-018 HOLD",
+      "P3_3": "V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / T-018 HOLD"
     }
   },
-  "decision_required": true,
+  "decision_required": false,
   "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
@@ -62,14 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "STAGE2-B",
-    "name": "P3.3 Stage2-B Interface / Variant Rule Design",
-    "status": "CANDIDATE BUILT / PRODUCT OWNER REVIEW REQUIRED / DESIGN ONLY"
+    "id": null,
+    "name": "NONE",
+    "status": "NO ACTIVE ENGINEERING T-TASK"
   },
   "proposed_next_task": {
-    "id": "STAGE2-B-LOCK",
-    "name": "P3.3 Stage2-B Rule Set Lock Decision",
-    "status": "NEXT GOVERNANCE GATE / PRODUCT OWNER REVIEW REQUIRED"
+    "id": "STAGE2-C",
+    "name": "P3.3 Stage2-C Attachment-Specific Interface / Connection Layer Materialization",
+    "status": "NEXT CONTROLLED DESIGN STEP / NOT STARTED"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -121,7 +121,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2 DESIGN ACTIVE / STAGE2-A LOCKED D-273 / STAGE2-B CANDIDATE D-274 / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2 DESIGN ACTIVE / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -1058,14 +1058,14 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Review Stage2-B Interface / Variant Rule Set V0.1 only. Do not materialize attachment-specific interface/Connection Layer records until the Rule Set is locked. Engineering execution, Stage3, whole-building topology, T-020/RZ/FV production authority and T-018 remain unauthorized.",
+  "next_action": "Stage2-B Rule Set is LOCKED under D-275. Next controlled work is Stage2-C attachment-specific interface / Connection Layer record materialization in bounded batches. Do not start engineering execution, Stage3, whole-building topology, T-020/RZ/FV production authority, or T-018 without separate authorization.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v205",
+    "visualization_version": "v206",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / D-274 / STAGE2-B CANDIDATE REVIEW",
+    "refresh_status": "CURRENT / D-275 / STAGE2-B LOCKED",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -3217,9 +3217,9 @@
     "t018": "HOLD"
   },
   "p3_3_stage2_b_2026_09_29": {
-    "decision_id": "D-274",
-    "status": "CANDIDATE BUILT / PRODUCT OWNER REVIEW REQUIRED",
-    "approved_master_families": "25/25 RULED",
+    "decision_id": "D-275",
+    "status": "LOCKED",
+    "approved_master_families": "25/25 PASS",
     "geometry_variant_families": 5,
     "role_label_only_families": 3,
     "no_new_geometry_variant_families": 17,
@@ -3228,6 +3228,7 @@
     "attachment_specific_records_materialized": false,
     "engineering_execution": "NOT AUTHORIZED",
     "stage3": "NOT AUTHORIZED",
-    "t018": "HOLD"
+    "t018": "HOLD",
+    "new_geometry_variants_beyond_stage1": 0
   }
 }
