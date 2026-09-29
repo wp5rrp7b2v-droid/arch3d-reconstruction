@@ -3812,3 +3812,19 @@ Do not enter engineering generation before Product Owner approval of AF-01.
 - Six original root-level files retired.
 - AF-01 current task and all production/authority boundaries remain unchanged.
 - Tomorrow still resumes from: **AF-01 representative main-frame slice selection (东缝 vs 西缝) → Registry instance mapping → Assembly Spec V0.1 Candidate**.
+
+---
+
+## 2026-09-29｜D-289｜Final Cross-file Consistency Audit
+
+- Result: **PASS**.
+- Project State advanced to **R362**.
+- Dashboard advanced to **v218**.
+- Acceptance Matrix patched to reflect D-281—D-288 and current AF-01 control state.
+- Governance + Rules Change Log now formally encode **RC-025 monthly rolling Daily Close** policy.
+- Decision Log aligned through **D-289**.
+- Execution Log intentionally remains engineering-result focused; no AF-01 engineering entry was added because no engineering execution occurred.
+- Live GitHub check: main remains `447f887fbb0f4b28d62d957dacf65276b85c0461`; PR #49 remains Draft/Open/HOLD; PR #50 remains Draft/Open/Unmerged.
+- Current work remains **AF-01｜正身梁架首榀｜Assembly Spec V0.1** at source/input verification checkpoint.
+- Tomorrow first step remains: **select 东缝 or 西缝 representative main-frame slice → map required Registry instances → draft AF-01 Assembly Spec V0.1 Candidate → stop for Product Owner review**.
+- Stage3: **NOT AUTHORIZED**; engineering generation: **NOT AUTHORIZED**; T-018: **HOLD**.
