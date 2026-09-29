@@ -1,0 +1,82 @@
+{
+  "schema_version": "P3_3_STAGE2_C_CONNECTION_LAYER_REGISTRY_V001",
+  "date": "2026-09-29",
+  "status": "BATCH01_CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "authority": {
+    "stage2_b_lock": "D-275",
+    "connection_layer_contract": "docs/production/zhenguo_wanfo/P3_3_CONNECTION_LAYER_CONTRACT_V001.md",
+    "schema_baseline": "production/zhenguo_wanfo/assembly/P3_3_CONNECTION_LAYER_SCHEMA_V001.json",
+    "t032_proof_role": "ENGINEERING PRECEDENT ONLY / TEST GEOMETRY NOT PROMOTED"
+  },
+  "batch_id": "STAGE2_C_BATCH01_UPPER6_SANDOU_FOUR",
+  "records": [
+    {
+      "connection_id": "CONN-S2C-B01-SANDOU-UPPER6-FOUR-FAMILY-001",
+      "connection_kind": "PHYSICAL_CONNECTOR",
+      "connector_family": "散斗族",
+      "participants": {
+        "lower_master": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+        "connector_role": "SAN_DOU_SUPPORT",
+        "upper_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER"
+      },
+      "structural_semantic": "FOUR_CHUANFU_SUPPORTED_BY_SAN_DOU_ABOVE_UPPER_SIX_CHUANFU",
+      "evidence_binding": {
+        "source_id": "SRC-ZG-WF-001",
+        "binding_record": "docs/evidence/zhenguo_wanfo/P3_3_FOUR_CHUANFU_DIRECT_SOURCE_BINDING_V001.md",
+        "statement_level": "DIRECT_SOURCE_SEMANTIC",
+        "direct_statement_boundary": [
+          "四椽栿位于上六椽栿之上",
+          "四椽栿与其下的上六椽栿之间设置隔架单栱一组",
+          "四椽栿下不使用栌斗",
+          "四椽栿由散斗承托"
+        ]
+      },
+      "geometry_classification": "ATTACHMENT_SEMANTIC_MATERIALIZED / CONNECTOR_GEOMETRY_UNRESOLVED",
+      "historical_claim": false,
+      "replaceable": true,
+      "registry_physical_instance_claim": false,
+      "connector_geometry": {
+        "status": "UNKNOWN / NOT MATERIALIZED IN STAGE2-C BATCH01",
+        "exact_dimensions_mm": null,
+        "exact_shape": null,
+        "exact_lateral_anchor": null,
+        "historical_geometry_claim": false,
+        "t032_proxy_geometry_promoted": false
+      },
+      "interfaces": {
+        "lower_master_interface": "IF-S2C-B01-UPPER6-TOP-SUPPORT",
+        "connector_bottom_interface": "IF-S2C-B01-SANDOU-BOTTOM",
+        "connector_top_interface": "IF-S2C-B01-SANDOU-TOP",
+        "upper_master_interface": "IF-S2C-B01-FOUR-BOTTOM-SUPPORT"
+      },
+      "resolver": {
+        "coordinate_space": "ASSEMBLY_LOCAL",
+        "vertical_order_rule": "UPPER6_TOP → SAN_DOU_ROLE → FOUR_BOTTOM",
+        "lateral_anchor_rule": "UNKNOWN / MUST BE RESOLVED BY LATER ATTACHMENT OR ASSEMBLY EVIDENCE",
+        "world_coordinate_authority": false,
+        "instance_generation_authority": false
+      },
+      "validation_tolerance_mm": 0.1,
+      "validation_tolerance_role": "ENGINEERING NUMERIC CLOSURE TOLERANCE ONLY / NOT HISTORICAL",
+      "prohibited_claims": [
+        "963_SAN_DOU_EXACT_GEOMETRY",
+        "HISTORICAL_SAN_DOU_DIMENSIONS",
+        "SAN_DOU_WHOLE_HALL_COUNT",
+        "SAN_DOU_INSTANCE_LOCATION",
+        "HISTORICAL_JOINERY_CLOSED",
+        "T032_TEST_PROXY_GEOMETRY_IS_PRODUCTION_TRUTH",
+        "WORLD_COORDINATE_AUTHORITY"
+      ],
+      "status": "FAMILY_ATTACHMENT_CLASS_MATERIALIZED / PRODUCT_OWNER_REVIEW_REQUIRED"
+    }
+  ],
+  "batch_boundary": {
+    "attachment_classes_materialized": 1,
+    "blender_geometry_created": false,
+    "physical_connector_instance_created": false,
+    "whole_building_instance_mapping_created": false,
+    "stage3_authorized": false,
+    "engineering_execution_authorized": false,
+    "t018": "HOLD"
+  }
+}
