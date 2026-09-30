@@ -7,7 +7,8 @@
     "D-290",
     "D-291",
     "D-292",
-    "D-293"
+    "D-293",
+    "D-294"
   ],
   "status": "CANDIDATE / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING NOT AUTHORIZED",
   "objective": "Define the minimum deterministic assembly specification for one representative east-seam main-frame slice without inventing historical joinery or unsupported dimensions.",
@@ -210,13 +211,6 @@
   ],
   "blockers_before_engineering_generation": [
     {
-      "id": "AF01-B02",
-      "problem": "Support-axis spans are resolved, but historical/full visible body end extents of the four horizontal beams remain unresolved.",
-      "why_blocking": "Master reference length may not leak into assembly; generated visible beam body length needs an explicit project rule.",
-      "prohibited_shortcut": "Do not label 10710/7191/3672 mm as historical full member lengths.",
-      "next_resolution": "Choose and approve a reconstructed-design body-extent rule tied to support axes and visible measured drawing evidence."
-    },
-    {
       "id": "AF01-B03",
       "problem": "Shuzhu/Chashou/Tuojiao exact instance endpoints are still regions rather than points.",
       "why_blocking": "Endpoint-driven Masters need deterministic P_lower/P_upper to generate real length and angle.",
@@ -242,12 +236,12 @@
     "candidate_complete": true,
     "engineering_ready": false,
     "product_owner_review_required": false,
-    "next_step": "AF01-B02 / VISIBLE BODY LENGTHS + END EXTENTS ONLY / REQUIRES SEPARATE AUTHORIZATION",
+    "next_step": "AF01-B03 / SHUZHU + CHASHOU + TUOJIAO ENDPOINT CLOSURE ONLY / REQUIRES SEPARATE AUTHORIZATION",
     "blender_authorized": false,
     "t018_status": "HOLD",
     "b01_status": "CLOSED",
+    "b02_status": "CLOSED",
     "remaining_blockers": [
-      "AF01-B02",
       "AF01-B03"
     ]
   },
@@ -269,6 +263,42 @@
         "four_chuanfu_support_plane_z_mm": 5658.4,
         "pingliang_support_plane_z_mm": 6406.2
       }
+    },
+    {
+      "id": "AF01-B02",
+      "status": "CLOSED / D-294",
+      "outputs": {
+        "lower_six_realization_length_mm": 10710,
+        "upper_six_realization_length_mm": 10710,
+        "four_chuanfu_realization_length_mm": 7191,
+        "pingliang_realization_length_mm": 3672
+      }
     }
-  ]
+  ],
+  "resolved_body_extents": {
+    "classification": "REPORT_INFERRED / DRAWING_DERIVED / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE",
+    "historical_full_lengths": "UNKNOWN / NULL / DO_NOT_LOCK",
+    "master_reference_length_leakage": "PROHIBITED",
+    "lower_six": {
+      "south_y_mm": -5355,
+      "north_y_mm": 5355,
+      "realization_length_mm": 10710
+    },
+    "upper_six": {
+      "south_y_mm": -5355,
+      "north_y_mm": 5355,
+      "realization_length_mm": 10710
+    },
+    "four_chuanfu": {
+      "south_y_mm": -3595.5,
+      "north_y_mm": 3595.5,
+      "realization_length_mm": 7191
+    },
+    "pingliang": {
+      "south_y_mm": -1836,
+      "north_y_mm": 1836,
+      "realization_length_mm": 3672
+    },
+    "hidden_end_geometry": "UNKNOWN / OMITTED"
+  }
 }
