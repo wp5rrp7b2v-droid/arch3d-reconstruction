@@ -2,7 +2,7 @@
 
 - Date: **2026-09-30**
 - Task: **AF01-B02**
-- Status: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED**
+- Status: **LOCKED / PRODUCT OWNER APPROVED / D-294**
 - Engineering generation: **NOT AUTHORIZED**
 - Scope: 下六椽栿 / 上六椽栿 / 四椽栿 / 平梁 visible execution body extents only
 
@@ -64,7 +64,7 @@ Support-axis endpoints:
 
 These are execution-envelope endpoints, not historical full-member endpoints.
 
-## 5. B02 candidate outputs
+## 5. B02 locked outputs
 
 ### 下六椽栿-东缝
 
@@ -161,7 +161,7 @@ Cross-check status:
 
 ## 10. Gate
 
-B02 Candidate:
+B02 Locked:
 
 - Lower Six execution length = **10710.0 mm**
 - Upper Six execution length = **10710.0 mm**
@@ -176,6 +176,16 @@ B02 Candidate:
 - B03 = NOT STARTED;
 - T-018 = HOLD.
 
-If Product Owner approves:
+**Product Owner approval received. AF01-B02 is CLOSED under D-294. AF-01 now has only B03 remaining before engineering readiness review.**
 
-**AF01-B02 closes. AF-01 will have only B03 remaining before engineering readiness review.**
+## 11. Product Owner Approval｜D-294
+
+Approved without numeric change.
+
+Locked AF-01 execution lengths:
+- Lower Six = **10710.0 mm**
+- Upper Six = **10710.0 mm**
+- Four-Chuanfu = **7191.0 mm**
+- Pingliang = **3672.0 mm**
+
+Historical full lengths remain `UNKNOWN / null`. Hidden end penetration, tenons and local end reductions remain omitted/UNKNOWN. The 1000 mm Master reference length remains prohibited from building geometry.
