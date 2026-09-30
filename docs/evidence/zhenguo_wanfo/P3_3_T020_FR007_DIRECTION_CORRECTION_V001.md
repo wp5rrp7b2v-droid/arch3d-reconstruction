@@ -1,7 +1,7 @@
 # T-020｜FR-007 Direction / Consumption Correction V001
 
 **Date:** 2026-09-30  
-**Status:** PRODUCT OWNER AUTHORIZED / PATCH IMPLEMENTED / STRUCTURAL REGRESSION 18/18 PASS / PR #51 DRAFT / MERGE NOT YET AUTHORIZED  
+**Status:** PRODUCT OWNER APPROVED / STRUCTURAL REGRESSION 18/18 PASS / PR #51 MERGED INTO PR #50 WORKING BRANCH / MAIN NOT YET UPDATED  
 **Scope:** T-020 reconstructed-design roof Y control only  
 **Historical claim:** NONE
 
@@ -83,3 +83,14 @@ Machine-readable evidence:
 `docs/evidence/zhenguo_wanfo/P3_3_T020_FR007_DIRECTION_CORRECTION_VALIDATION_V001.json`
 
 The repository Python validator was not represented as having run in GitHub Actions; this evidence is explicitly a connector-executed structural regression.
+
+## 6. Integration
+
+Product Owner approved PR #51 Ready→Merge. PR #51 merged into the PR #50 working branch at `36def19143ddddccbbc424f59a529ce7d78d99fc`.
+
+- correction integration: PASS
+- PR #50: DRAFT / UNMERGED
+- main: UNCHANGED
+- AF-01: planning unblocked on working branch
+- engineering generation: NOT AUTHORIZED
+- T-018: HOLD
