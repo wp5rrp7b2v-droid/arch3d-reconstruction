@@ -2,7 +2,7 @@
 
 - Date: **2026-09-30**
 - Task: **AF01-B01-G2**
-- Status: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED**
+- Status: **CANDIDATE / REVIEW PATCH 01 APPLIED / PRODUCT OWNER REVIEW REQUIRED**
 - Engineering generation: **NOT AUTHORIZED**
 - Scope: upper-six lower support plane → four-chuanfu lower support plane only
 
@@ -153,3 +153,18 @@ T-018 remains HOLD.
 If Product Owner approves:
 
 **G2 closes and B01 advances only to G3｜Four-Chuanfu → Pingliang support path.**
+
+## 9. Review Patch 01｜2026-09-30
+
+Joint G2/G3 review result for G2: **PASS**.
+
+Evidence checks:
+- direct Four-Chuanfu source explicitly supplies the Upper-Six → single-gong spacer → san-dou → Four-Chuanfu structural relation;
+- the report's same-building dou/gong modular analysis supports a 21-fen effective supported-cai layer as a replaceable reconstructed-design rule;
+- Upper-Six `广` is directly related by the report to the puzuo cai vertical module, so AF-01 may orient `广` into world Z.
+
+Implementation guard:
+
+After rotating the Master so local `section_width / 广` becomes world Z, a future builder MUST resolve the transformed body bottom face/bounding-plane to `UPPER_SIX_SUPPORT_PLANE_Z`. It MUST NOT simply assign the Master object origin Z to the support-plane value, because the canonical Master origin was defined in a different local orientation.
+
+This guard changes no numeric G2 result.
