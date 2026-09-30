@@ -100,11 +100,20 @@ These records provide attachment semantics/regions only. They do not provide exa
 
 ## 8. Blocking items before engineering generation
 
-### AF01-B01｜Horizontal beam Z placement
+### AF01-B01｜Horizontal beam Z placement — **CLOSED / D-292 + D-293**
 
-Exact production Z for 下六椽栿 / 上六椽栿 / 四椽栿 / 平梁 is not currently closed by a valid production authority.
+AF-01 local support-plane authority is now locked:
 
-The previous T-018 FV-B numeric tier formula may **not** be reused: its later semantic-validity review explicitly rejected promoting ROOF-004/005/006 into exact Frame-tier placement authority.
+- 下六椽栿 lower support plane Z = **4360.5 mm**
+- 上六椽栿 lower support plane Z = **5003.1 mm**
+- 四椽栿 lower support plane Z = **5658.4 mm**
+- 平梁 lower support plane Z = **6406.2 mm**
+
+Evidence status remains **REPORT_INFERRED / DRAWING_DERIVED or SAME-BUILDING MODULAR LOGIC / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE** as applicable.
+
+The previous T-018 FV-B numeric tier formula remains prohibited and was not reused.
+
+Implementation guard: after instance roll/orientation, the transformed beam-body bottom face must be aligned to the locked support-plane Z; do not map the canonical Master object origin directly to support-plane Z.
 
 ### AF01-B02｜Visible body lengths / end extents
 
@@ -148,12 +157,14 @@ AF-01 now has:
 - 11 actual Registry instances: RESOLVED;
 - plan axis and seven purlin Y targets: RESOLVED;
 - basic orientation and structural order: RESOLVED;
-- exact production 3D placement / visible body lengths / endpoint points: **3 bounded blockers remain**.
+- exact horizontal-beam Z placement: **RESOLVED / B01 CLOSED**;
+- visible body lengths / end extents: **B02 remains**;
+- Shuzhu / Chashou / Tuojiao endpoint points: **B03 remains**.
 
 Therefore:
 
-> **AF-01 Assembly Spec V0.1 Candidate is complete for Product Owner review, but Engineering Generation remains NOT READY / NOT AUTHORIZED.**
+> **AF-01 Assembly Spec V0.1 remains NOT READY for Engineering Generation because B02 and B03 remain open. B01 is CLOSED.**
 
 Next controlled step after approval:
 
-**AF-01 Minimal Placement Closure｜resolve B01-B03 only.**
+**Next controlled step after separate authorization: AF01-B02｜visible body lengths / end extents only.**
