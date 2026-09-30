@@ -1,0 +1,57 @@
+{
+  "schema_version": "P3_3_AF01_B03_R0_TUOFENG_EVIDENCE_RECONCILIATION_V001",
+  "date": "2026-09-30",
+  "task_id": "AF01-B03-R0",
+  "status": "INVESTIGATION_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "evidence": {
+    "a2_official_same_building": {
+      "source": "山西文物数字博物馆｜镇国寺·万佛殿",
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/",
+      "statements": [
+        "四椽栿上用驼峰、令栱承平梁",
+        "平梁、四椽栿、六椽栿之间由隔架铺作承托",
+        "平梁之上设驼峰、蜀柱、叉手"
+      ],
+      "classification": "DIRECT_SAME_BUILDING_OFFICIAL_STRUCTURAL_SEMANTIC"
+    },
+    "a1_measured_report": {
+      "figure_2_41": "PINGLIANG_DOUGONG_INTERFACE / VISUAL_CORROBORATION",
+      "figure_2_51": "SHUZHU_TIMU / VISIBLE_SHAPED_SUPPORT_AT_SHUZHU_BASE",
+      "hump_dimension_table_found": false,
+      "exact_hump_xyz_found": false,
+      "classification": "DIRECT_PRIMARY_VISUAL_CORROBORATION / NOT_DIMENSIONAL_AUTHORITY"
+    }
+  },
+  "roles": [
+    "FOUR_CHUANFU_TO_PINGLIANG_SUPPORT",
+    "PINGLIANG_TO_SHUZHU_RIDGE_SUPPORT"
+  ],
+  "repository_gap": {
+    "tuofeng_registry_record_found": false,
+    "tuofeng_master_found": false,
+    "search_terms": [
+      "驼峰",
+      "TUOFENG",
+      "HUMP",
+      "CAMEL_HUMP"
+    ],
+    "classification": "SOURCE_CONFIRMED_COMPONENT_COVERAGE_OMISSION"
+  },
+  "impact": {
+    "ridge_support_connection_z_mm": {
+      "value": 8056.3,
+      "status": "CANDIDATE_RETAINED / NOT_CONTRADICTED"
+    },
+    "chashou_endpoints": "CANDIDATE_NOT_DISPROVEN",
+    "shuzhu_lower_endpoint": "HOLD / MUST_RESOLVE_TO_TUOFENG_B_UPPER_SUPPORT_INTERFACE",
+    "b03_r_status": "HOLD / CURRENT CANDIDATE MUST NOT LOCK",
+    "g3_status": "LOCKED_DECISION_RECORD_RETAINED / GENERATION_USE_REVIEW_REQUIRED / NO_MUTATION_IN_R0"
+  },
+  "minimal_next_step": {
+    "id": "AF01-TF01",
+    "name": "Tuofeng Minimal Component + Two-Role Assembly Contract",
+    "reopen_stage1": false,
+    "exact_historical_dimensions_required": false,
+    "blender_authorized": false
+  }
+}
