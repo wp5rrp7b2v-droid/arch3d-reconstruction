@@ -2,7 +2,7 @@
   "schema_version": "P3_3_AF01_B01_G1_TWO_SUPPORT_PLANE_RESOLVER_V001",
   "date": "2026-09-30",
   "task_id": "AF01-B01-G1",
-  "status": "CANDIDATE / SOURCE-CLOSED_FOR_TWO_OUTPUTS / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-292",
   "inherited_datum": {
     "column_foot_design_plane_z_mm": 0,
     "column_top_ludou_bottom_z_mm": 3534.3,
@@ -68,8 +68,15 @@
   ],
   "gate": {
     "g1_candidate_complete": true,
-    "product_owner_review_required": true,
+    "product_owner_review_required": false,
+    "g1_closed": true,
     "engineering_generation_authorized": false,
-    "next_if_approved": "AF01-B01-G2"
+    "next_if_separately_authorized": "AF01-B01-G2"
+  },
+  "approval": {
+    "decision_id": "D-292",
+    "date": "2026-09-30",
+    "product_owner_approved": true,
+    "scope": "AF01_LOCAL_TWO_SUPPORT_PLANES_ONLY"
   }
 }
