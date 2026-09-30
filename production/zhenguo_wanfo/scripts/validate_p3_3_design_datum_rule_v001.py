@@ -32,10 +32,10 @@ def validate(rule: dict, docs: dict | None = None) -> list[str]:
     if frame.get("x", {}).get("datum_mm") != 0 or frame.get("y", {}).get("datum_mm") != 0 or frame.get("z", {}).get("authority") != "Z-007" or frame.get("z", {}).get("redefined_here") is not False:
         failures.append("COORDINATE_FRAME_INVALID")
     positions = roof.get("y_positions_mm", {})
-    expected = {"ROOF_PURLIN_N_00": -6808.5, "ROOF_PURLIN_N_01": -4972.5, "ROOF_PURLIN_N_02": -3213.0, "ROOF_PURLIN_N_03": 0.0, "ROOF_PURLIN_S_02": 3213.0, "ROOF_PURLIN_S_01": 4972.5, "ROOF_PURLIN_S_00": 6808.5}
+    expected = {"ROOF_PURLIN_N_00": -6808.5, "ROOF_PURLIN_N_01": -3595.5, "ROOF_PURLIN_N_02": -1836.0, "ROOF_PURLIN_N_03": 0.0, "ROOF_PURLIN_S_02": 1836.0, "ROOF_PURLIN_S_01": 3595.5, "ROOF_PURLIN_S_00": 6808.5}
     if positions != expected or roof.get("shared_ridge_terminal") != "ROOF_PURLIN_N_03" or "ROOF_PURLIN_S_03" in positions or roof.get("south_terminal_prohibited") != "ROOF_PURLIN_S_03":
         failures.append("SHARED_RIDGE_IDENTITY_OR_CHAIN_INVALID")
-    if roof.get("segment_lengths_mm") != [1836.0, 1759.5, 3213.0] or roof.get("cumulative_half_run_mm") != 6808.5 or roof.get("direction") != "EAVE_TO_RIDGE" or roof.get("ridge_y_mm") != 0 or positions.get("ROOF_PURLIN_N_03") != roof.get("ridge_y_mm"):
+    if roof.get("source_sequence_fen") != [120, 115, 210] or roof.get("source_sequence_direction") != "RIDGE_TO_EAVE" or roof.get("segment_lengths_mm") != [3213.0, 1759.5, 1836.0] or roof.get("cumulative_half_run_mm") != 6808.5 or roof.get("direction") != "EAVE_TO_RIDGE" or roof.get("ridge_y_mm") != 0 or positions.get("ROOF_PURLIN_N_03") != roof.get("ridge_y_mm"):
         failures.append("FR007_MOD002_CHAIN_INVALID")
     if set(rule.get("dependency_lineage", [])) != {"FR-007", "MOD-002"} or rule.get("rule_id") in rule.get("dependency_lineage", []):
         failures.append("DEPENDENCY_LINEAGE_INCOMPLETE")
