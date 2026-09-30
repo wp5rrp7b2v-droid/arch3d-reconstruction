@@ -2,7 +2,7 @@
   "schema_version": "P3_3_AF01_B03_R_RIDGE_ENDPOINT_RESOLVER_V001",
   "date": "2026-09-30",
   "task_id": "AF01-B03-R",
-  "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "HOLD / TUOFENG_R0_RECONCILIATION_REQUIRED / NOT_LOCKABLE",
   "classification": "REPORT_INFERRED / FIG2_73_DRAWING_DERIVED / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE",
   "inputs": {
     "slice_x_mm": 2218.5,
@@ -86,9 +86,17 @@
     "NO_TUOJIAO_ENDPOINT_CLOSURE"
   ],
   "gate": {
-    "b03_r_candidate_complete": true,
+    "b03_r_candidate_complete": false,
     "product_owner_review_required": true,
     "engineering_generation_authorized": false,
-    "next_if_approved": "AF01-B03-T"
+    "next_if_authorized": "AF01-TF01"
+  },
+  "r0_hold": {
+    "date": "2026-09-30",
+    "reason": "SOURCE_CONFIRMED_TUOFENG_ROLE_ABOVE_PINGLIANG",
+    "ridge_apex_candidate_retained": true,
+    "chashou_candidates_disproven": false,
+    "shuzhu_lower_endpoint_lockable": false,
+    "next_required_step": "AF01-TF01"
   }
 }
