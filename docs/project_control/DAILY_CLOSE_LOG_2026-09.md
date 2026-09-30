@@ -3828,3 +3828,155 @@ Do not enter engineering generation before Product Owner approval of AF-01.
 - Current work remains **AF-01｜正身梁架首榀｜Assembly Spec V0.1** at source/input verification checkpoint.
 - Tomorrow first step remains: **select 东缝 or 西缝 representative main-frame slice → map required Registry instances → draft AF-01 Assembly Spec V0.1 Candidate → stop for Product Owner review**.
 - Stage3: **NOT AUTHORIZED**; engineering generation: **NOT AUTHORIZED**; T-018: **HOLD**.
+
+---
+
+# 2026-09-30｜D-295｜Daily Close｜AF-01 First Assembly Diagnostic Freeze
+
+## 1. Canonical / branch boundary at close
+
+- Canonical repo: `wp5rrp7b2v-droid/arch3d-reconstruction`
+- Canonical `main`: `447f887fbb0f4b28d62d957dacf65276b85c0461` / **UNCHANGED**
+- Governance working branch before this close: `governance/stage2-c-whole-building-connection-coverage-matrix-v001` @ `8adaeaf67072a16143fd04103f92a40c8928106c`
+- Engineering proof branch: `engineering/af01-east-seam-first-assembly-v001` @ `78b9d4f19dd188e72750b5eec2f63ce0277acc00`
+- PR #49: **Draft / OPEN / HOLD / NOT MERGED**
+- PR #50: **Draft / OPEN / NOT MERGED**
+- PR #52: **Draft / OPEN / NOT MERGED / DIAGNOSTIC PROOF ONLY**
+- T-018: **HOLD**
+- Whole-building generation: **NOT AUTHORIZED**
+
+## 2. Stable progress completed today
+
+### T-020 correction
+
+D-290/D-291 corrected the FR-007 direction-consumption error and integrated the patch into the PR #50 working branch. The corrected roof-Y authority remains:
+
+- source FR-007 = `[120,115,210]` fen / RIDGE_TO_EAVE;
+- execution eave→ridge = `[210,115,120]` fen;
+- N00=-6808.5, N01=-3595.5, N02=-1836.0, N03=0;
+- S02=1836.0, S01=3595.5, S00=6808.5.
+
+No source FR-007 value, MOD-002, PM grid, Registry, approved Master or T-018 Z-chain authority was changed.
+
+### AF01-B01
+
+D-292/D-293 locked the AF-01 local support-plane chain:
+
+- 下六椽栿 = **4360.5 mm**
+- 上六椽栿 = **5003.1 mm**
+- 四椽栿 = **5658.4 mm**
+- 平梁 = **6406.2 mm**
+
+These remain `RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE`, not direct 963 absolute elevation claims.
+
+### AF01-B02
+
+D-294 locked execution-body envelopes:
+
+- 下六椽栿 = **10710.0 mm**
+- 上六椽栿 = **10710.0 mm**
+- 四椽栿 = **7191.0 mm**
+- 平梁 = **3672.0 mm**
+
+Historical full timber lengths remain `UNKNOWN / null`. The 1000 mm Master reference length remains prohibited from building geometry.
+
+## 3. B03 / Tuofeng findings frozen at close
+
+AF01-B03 endpoint authority audit reduced the remaining endpoint problem to:
+
+- ridge-support chain: 蜀柱 + 叉手;
+- four Tuojiao endpoint mappings.
+
+AF01-B03-R produced a ridge-support candidate, but it is **NOT LOCKED**.
+
+Subsequent R0 evidence reconciliation confirmed a source-supported 驼峰 role in two places:
+
+1. 四椽栿 → 驼峰 / 令栱 → 平梁;
+2. 平梁 → 驼峰 / 蜀柱 / 叉手 → 脊部.
+
+Current measured-source review did not find an independent Tuofeng dimensional table or production-ready historical profile. The current Registry/Master chain also has no formal Tuofeng component family.
+
+Therefore:
+
+- B03-R = **HOLD / NOT LOCKABLE**;
+- Shuzhu bare-Pingliang lower endpoint surrogate = **NOT AUTHORITY**;
+- G3 numeric Z is retained as prior locked decision history, but its generation-use interpretation requires caution because the actual support composition includes Tuofeng + Linggong;
+- no Tuofeng dimensions/profile are to be invented as historical fact.
+
+## 4. AF-01 First Assembly Proof V001
+
+Product Owner directed the project to produce a tangible first assembly rather than continue abstract analysis.
+
+A separate engineering branch and Draft PR #52 were created only for this proof.
+
+GitHub Actions:
+
+- Workflow: `AF-01 East Seam First Assembly Proof`
+- Run ID: **36713427504**
+- Conclusion: **SUCCESS**
+- Machine validation: **14/14 PASS**
+- Artifact: `AF01_EAST_SEAM_FIRST_ASSEMBLY_PROOF_V001`
+- Artifact ID: **11095611818**
+- Artifact digest: `sha256:a3068aad1aebfa1f1f1ae378a5ef8f04c7b47ae2296152335e2480709287a8e3`
+- Blender SHA-256: `6753e0f9f538cee538ab3c021f9a02220cf44ab89acba9d019bc84fc2c41a2a9`
+- Objects: **21**
+
+The proof used locked B01/B02 values plus explicit proxies for unresolved support geometry.
+
+### Product Owner visual review
+
+Result:
+
+**TECHNICAL PROOF PASS / VISUAL ARCHITECTURAL REVIEW FAIL / DIAGNOSTIC ONLY**
+
+Observed failure mode:
+
+- too many support relations represented as coarse proxy blocks;
+- the result read as stacked engineering geometry rather than a convincing Wanfo Hall timber frame;
+- real puzuo / purlin / support hierarchy and timber interlocking were not sufficiently materialized;
+- visible support, insertion, seating and joint relationships were not represented at a level suitable for architectural acceptance.
+
+V001 is therefore **not an accepted reconstruction result** and must not be promoted into canonical building geometry.
+
+## 5. Project-level process issue recorded
+
+The session exposed a project-level weakness rather than a single-component defect:
+
+- substantial research, evidence governance and parameter closure did not translate early enough into a valid assembled building;
+- provisional engineering rules were sometimes treated too close to final conclusions;
+- newly discovered evidence then forced reinterpretation of prior local decisions;
+- component-level correctness did not guarantee connection/assembly correctness.
+
+This close does not create a new methodology by itself. It freezes the issue for next-session review.
+
+## 6. Explicit holds at close
+
+Do NOT automatically continue from today's last technical step.
+
+At close:
+
+- AF01 V002: **NOT STARTED / NOT AUTHORIZED**
+- PR #52 merge: **NOT AUTHORIZED**
+- B03-R: **HOLD**
+- B03-T: **NOT STARTED**
+- Tuofeng production Master: **NOT AUTHORIZED**
+- additional Tuofeng research: **NOT AUTHORIZED BY THIS CLOSE**
+- whole-building replication: **NOT AUTHORIZED**
+- T-018: **HOLD**
+
+## 7. Next-session starting point
+
+Before any V002, new resolver, Tuofeng Master, or whole-building work, perform one project-level recovery review:
+
+**Project Recovery Review｜stable authority vs provisional assumption vs diagnostic proxy → minimum real-assembly production path.**
+
+Required outcome:
+
+- identify which existing results can be trusted without reopening;
+- identify which results are only local/provisional engineering assumptions;
+- identify which process/gates are no longer useful;
+- define one short production path whose first deliverable is a structurally and architecturally credible AF-01 assembly;
+- stop for Product Owner approval before implementation.
+
+**2026-09-30 DAILY CLOSE: COMPLETE / MAIN UNCHANGED / PR #52 DRAFT + DIAGNOSTIC ONLY / NO V002 AUTHORIZED.**
+
