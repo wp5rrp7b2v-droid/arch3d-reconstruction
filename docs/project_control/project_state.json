@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R362",
+  "state_revision": "R363",
   "last_updated": "2026-09-29",
-  "session_status": "2026-09-29 FINAL CLOSE / D-289 CROSS-FILE CONSISTENCY PASS / AF-01 INPUT+EVIDENCE VERIFICATION COMPLETE / REPRESENTATIVE MAIN-FRAME SLICE NOT YET SELECTED / NEXT=SELECT EAST OR WEST SEAM + REGISTRY MAPPING + AF-01 ASSEMBLY SPEC V0.1 CANDIDATE / D-285 NON-BLOCKING REFERENCE / D-286 CANDIDATE / PR #49 HOLD / PR #50 DRAFT UNMERGED / STAGE3 NOT AUTHORIZED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-30 AF-01 EAST-SEAM SLICE SELECTED / CORE REGISTRY SET IDENTIFIED / T-020 FR-007 DIRECTION ERROR CONFIRMED + D-290 MINIMAL CORRECTION PATCHED / STRUCTURAL REGRESSION 18/18 PASS / PR #51 DRAFT AGAINST PR #50 / AF-01 HOLD PENDING CORRECTION INTEGRATION / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -64,12 +64,12 @@
   "current_task": {
     "id": "AF-01",
     "name": "正身梁架首榀｜Assembly Spec V0.1",
-    "status": "STARTED / SOURCE+INPUT VERIFICATION COMPLETE / REPRESENTATIVE SLICE SELECTION PENDING / NO ENGINEERING GENERATION"
+    "status": "EAST-SEAM REPRESENTATIVE SLICE SELECTED / 11 CORE REGISTRY INSTANCES IDENTIFIED / ASSEMBLY SPEC HOLD PENDING T-020 CORRECTION INTEGRATION / NO ENGINEERING GENERATION"
   },
   "proposed_next_task": {
-    "id": "AF-01-SLICE-SELECTION",
-    "name": "AF-01｜代表性正身梁架首榀选择 + Registry实例映射",
-    "status": "NEXT SESSION / NOT YET EXECUTED"
+    "id": "T-020-CORRECTION-INTEGRATION",
+    "name": "T-020｜FR-007 Direction / Consumption Correction",
+    "status": "PR #51 DRAFT / STRUCTURAL REGRESSION 18/18 PASS / PRODUCT OWNER MERGE DECISION REQUIRED"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -149,7 +149,35 @@
       "reviewed_head_sha": "671283f4ffdf8162c4b39de88564264865b29a50",
       "merge_commit": "6d83ed2f9b3b9281de364ab973edce73ac6dae02",
       "canonical_rule": "production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json",
-      "machine_validation": "PASS"
+      "machine_validation": "PASS",
+      "correction_2026_09_30": {
+        "decision_id": "D-290",
+        "status": "PATCHED / STRUCTURAL REGRESSION 18/18 PASS / PR #51 DRAFT / MERGE NOT AUTHORIZED",
+        "branch": "fix/t020-fr007-direction-consumption-v001",
+        "pr_number": 51,
+        "source_sequence_fen": [
+          120,
+          115,
+          210
+        ],
+        "source_sequence_direction": "RIDGE_TO_EAVE",
+        "eave_to_ridge_segment_lengths_mm": [
+          3213,
+          1759.5,
+          1836
+        ],
+        "corrected_y_positions_mm": {
+          "N00": -6808.5,
+          "N01": -3595.5,
+          "N02": -1836,
+          "N03": 0,
+          "S02": 1836,
+          "S01": 3595.5,
+          "S00": 6808.5
+        },
+        "invariants": "FR-007 VALUE / MOD-002 / HALF-RUN / RIDGE_Y / Z-CHAIN / PM-008—012 / FR-004—006 / REGISTRY / MASTERS / P3.2 VOCAB UNCHANGED",
+        "af01_block": "HOLD UNTIL CORRECTION INTEGRATED"
+      }
     },
     "remaining_gate_work_after_t018_if_pass": [
       "DoD-09 independent final rebuild and Gate Evidence Package",
