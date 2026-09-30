@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "artifact_id": "P3_3_T020_FR007_DIRECTION_CORRECTION_VALIDATION_V001",
+  "date": "2026-09-30",
+  "task": "T-020",
+  "patch_branch": "fix/t020-fr007-direction-consumption-v001",
+  "pr_number": 51,
+  "execution_mode": "GITHUB_CONNECTOR_STRUCTURAL_REGRESSION",
+  "status": "PASS",
+  "check_count": 18,
+  "failed_check_count": 0,
+  "source_parameter_invariants": {
+    "FR-007": [
+      120,
+      115,
+      210
+    ],
+    "MOD-002_mm_per_fen": 15.3,
+    "FR-004_mm": 1759.5,
+    "FR-005_mm": 1759.5,
+    "FR-006_mm": 1836,
+    "ROOF-007_fen": 88,
+    "ROOF-008_fen": 61,
+    "ROOF-009_fen": 82,
+    "PM-011_mm": 11475,
+    "PM-012_mm": 10710
+  },
+  "corrected_rule": {
+    "source_sequence_direction": "RIDGE_TO_EAVE",
+    "source_sequence_fen": [
+      120,
+      115,
+      210
+    ],
+    "consumption_direction": "EAVE_TO_RIDGE",
+    "segment_lengths_mm": [
+      3213,
+      1759.5,
+      1836
+    ],
+    "cumulative_half_run_mm": 6808.5,
+    "ridge_y_mm": 0,
+    "shared_ridge_terminal": "ROOF_PURLIN_N_03",
+    "y_positions_mm": {
+      "ROOF_PURLIN_N_00": -6808.5,
+      "ROOF_PURLIN_N_01": -3595.5,
+      "ROOF_PURLIN_N_02": -1836,
+      "ROOF_PURLIN_N_03": 0,
+      "ROOF_PURLIN_S_02": 1836,
+      "ROOF_PURLIN_S_01": 3595.5,
+      "ROOF_PURLIN_S_00": 6808.5
+    }
+  },
+  "unchanged_sha_checks": {
+    "P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json": "94276261cdae443301b05b1cb58b29050ced9df3",
+    "P3_3_BUILDING_PARAMETER_BINDINGS_V001.json": "87fea0241229ecaed3238ca836d4ef66b6dfe0c6",
+    "P3_3_BUILDING_ASSEMBLY_GRAPH_V001.json": "ad55190fca38601b0817ca9672f8e99647532457",
+    "P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json": "9b36b4272db858e1af8648b561c950c6fe109e56",
+    "P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json": "f352043401f7a1927985d3a78da7867696e75a49",
+    "P3_2_RELATIONSHIP_TYPES_V001.json": "3d9b6022963a0f738d21575844b9fe01c7c6f30d"
+  },
+  "note": "18/18 structural regression assertions passed. This validation confirms the correction changes only T-020 roof-Y direction consumption and derived audit annotations. It does not claim that the repository Python validator was executed in GitHub Actions."
+}
