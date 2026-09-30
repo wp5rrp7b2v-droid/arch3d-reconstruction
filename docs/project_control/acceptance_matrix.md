@@ -1605,3 +1605,29 @@ Boundary retained:
 - PR #50: **DRAFT / UNMERGED**; main remains **UNCHANGED**.
 - AF-01: **planning unblocked on working branch; engineering generation NOT AUTHORIZED**.
 - T-018: **HOLD**.
+
+### D-292—D-294 AF-01 B01/B02 Closure｜2026-09-30
+
+- B01 support planes: **4360.5 / 5003.1 / 5658.4 / 6406.2 mm** for Lower Six / Upper Six / Four-Chuanfu / Pingliang.
+- Classification: **AF01_LOCAL / RECONSTRUCTED_DESIGN / REPLACEABLE**; no 963 absolute-Z claim.
+- B02 execution body extents: **10710 / 10710 / 7191 / 3672 mm**.
+- Historical full timber lengths: **UNKNOWN / NULL / DO NOT LOCK**.
+- 1000 mm Master reference length leakage into building geometry: **PROHIBITED / PASS**.
+- Master / Registry mutation: **NONE**.
+
+### D-295 AF-01 First Assembly Diagnostic Freeze｜2026-09-30
+
+- B03-R: **HOLD / NOT LOCKABLE** after Tuofeng R0 reconciliation.
+- Tuofeng source-supported structural roles: **CONFIRMED**; production-ready dimensions/profile: **NOT FOUND**.
+- AF-01 First Assembly Proof V001: **EXECUTED**.
+- Workflow Run: **36713427504 / SUCCESS**.
+- Machine validation: **14/14 PASS**.
+- Artifact: **11095611818** / `sha256:a3068aad1aebfa1f1f1ae378a5ef8f04c7b47ae2296152335e2480709287a8e3`.
+- Blender SHA-256: `6753e0f9f538cee538ab3c021f9a02220cf44ab89acba9d019bc84fc2c41a2a9`.
+- Product Owner reconstruction acceptance: **FAIL**.
+- Final classification: **TECHNICAL PROOF PASS / VISUAL ARCHITECTURAL REVIEW FAIL / DIAGNOSTIC ONLY**.
+- Canonical building geometry promotion: **NO**.
+- PR #52: **DRAFT / OPEN / NOT MERGED**.
+- V002 / B03-T / Tuofeng production Master / whole-building replication: **NOT AUTHORIZED**.
+- Next gate: **PROJECT RECOVERY REVIEW ONLY**.
+- T-018: **HOLD**.
