@@ -1,0 +1,254 @@
+{
+  "schema_version": "P3_3_AF01_EAST_SEAM_MAIN_FRAME_ASSEMBLY_SPEC_V001",
+  "date": "2026-09-30",
+  "task_id": "AF-01",
+  "decision_context": [
+    "D-286",
+    "D-290",
+    "D-291"
+  ],
+  "status": "CANDIDATE / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING NOT AUTHORIZED",
+  "objective": "Define the minimum deterministic assembly specification for one representative east-seam main-frame slice without inventing historical joinery or unsupported dimensions.",
+  "representative_slice": {
+    "name_zh": "东缝正身梁架",
+    "selection_classification": "ENGINEERING_PILOT_SELECTION / NOT_HISTORICAL_STANDARD_FRAME_CLAIM",
+    "crosscheck_slice": "西缝正身梁架",
+    "project_model_axis_role": "INNER_EAST_FRAME_AXIS",
+    "x_mm": 2218.5,
+    "x_derivation": "0.5 * PM-008(14.5 chi) * MOD-001(306 mm/chi)",
+    "x_evidence_classification": "REPORT_INFERRED / RECONSTRUCTED_DESIGN / REPLACEABLE",
+    "axis_claim_boundary": "Project-model convention only; no historical east-positive coordinate-system claim."
+  },
+  "core_registry_instances": [
+    {
+      "registry_id": "下六椽栿-东缝",
+      "master_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+      "role": "LOWER_SIX_CHUANFU"
+    },
+    {
+      "registry_id": "上六椽栿-东缝",
+      "master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "role": "UPPER_SIX_CHUANFU"
+    },
+    {
+      "registry_id": "四椽栿-东缝",
+      "master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "role": "FOUR_CHUANFU"
+    },
+    {
+      "registry_id": "平梁-东缝",
+      "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "role": "PINGLIANG"
+    },
+    {
+      "registry_id": "蜀柱-东缝",
+      "master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+      "role": "SHUZHU"
+    },
+    {
+      "registry_id": "叉手-东缝-北侧",
+      "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+      "role": "CHASHOU_N"
+    },
+    {
+      "registry_id": "叉手-东缝-南侧",
+      "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+      "role": "CHASHOU_S"
+    },
+    {
+      "registry_id": "托脚-东缝-北下平槫",
+      "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "role": "TUOJIAO_N_LOWER"
+    },
+    {
+      "registry_id": "托脚-东缝-北上平槫",
+      "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "role": "TUOJIAO_N_UPPER"
+    },
+    {
+      "registry_id": "托脚-东缝-南下平槫",
+      "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "role": "TUOJIAO_S_LOWER"
+    },
+    {
+      "registry_id": "托脚-东缝-南上平槫",
+      "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "role": "TUOJIAO_S_UPPER"
+    }
+  ],
+  "purlin_interface_targets": [
+    {
+      "id": "PURLIN_IF_N_EAVE",
+      "canonical_control": "ROOF_PURLIN_N_00",
+      "role": "北撩风槫",
+      "y_mm": -6808.5,
+      "z_design_mm": 3534.3
+    },
+    {
+      "id": "PURLIN_IF_N_LOWER",
+      "canonical_control": "ROOF_PURLIN_N_01",
+      "role": "北下平槫",
+      "y_mm": -3595.5,
+      "z_design_mm": 4880.7
+    },
+    {
+      "id": "PURLIN_IF_N_UPPER",
+      "canonical_control": "ROOF_PURLIN_N_02",
+      "role": "北上平槫",
+      "y_mm": -1836,
+      "z_design_mm": 5814
+    },
+    {
+      "id": "PURLIN_IF_RIDGE",
+      "canonical_control": "ROOF_PURLIN_N_03",
+      "role": "脊槫",
+      "y_mm": 0,
+      "z_design_mm": 7068.6
+    },
+    {
+      "id": "PURLIN_IF_S_UPPER",
+      "canonical_control": "ROOF_PURLIN_S_02",
+      "role": "南上平槫",
+      "y_mm": 1836,
+      "z_design_mm": 5814
+    },
+    {
+      "id": "PURLIN_IF_S_LOWER",
+      "canonical_control": "ROOF_PURLIN_S_01",
+      "role": "南下平槫",
+      "y_mm": 3595.5,
+      "z_design_mm": 4880.7
+    },
+    {
+      "id": "PURLIN_IF_S_EAVE",
+      "canonical_control": "ROOF_PURLIN_S_00",
+      "role": "南撩风槫",
+      "y_mm": 6808.5,
+      "z_design_mm": 3534.3
+    }
+  ],
+  "purlin_interface_policy": {
+    "x_mm": 2218.5,
+    "y_authority": "T-020 corrected datum authority / D-290+D-291",
+    "z_authority_status": "D-063 RZ LOCKED DESIGN CONTRACT / NOT YET PUBLISHED AS PRODUCTION CANONICAL RULE",
+    "z_values_use": "PLANNING / CROSS-CHECK ONLY UNTIL SEPARATE ENGINEERING PUBLICATION AUTHORIZATION",
+    "physical_purlin_registry_instance_claim": false,
+    "note": "These are slice intersection targets with longitudinal purlin roles; AF-01 does not create new east-seam purlin Registry IDs."
+  },
+  "resolved_plan_controls": {
+    "outer_column_axes_y_mm": [
+      -5355,
+      5355
+    ],
+    "lower_purlin_axes_y_mm": [
+      -3595.5,
+      3595.5
+    ],
+    "upper_purlin_axes_y_mm": [
+      -1836,
+      1836
+    ],
+    "ridge_axis_y_mm": 0,
+    "control_spans_mm": {
+      "lower_six_chuanfu_support_axis_span": 10710,
+      "upper_six_chuanfu_support_axis_span": 10710,
+      "four_chuanfu_support_axis_span": 7191,
+      "pingliang_support_axis_span": 3672
+    },
+    "classification": "RECONSTRUCTED_DESIGN CONTROL SPANS / NOT HISTORICAL FULL MEMBER LENGTHS"
+  },
+  "orientation_rules": [
+    {
+      "roles": [
+        "LOWER_SIX_CHUANFU",
+        "UPPER_SIX_CHUANFU",
+        "FOUR_CHUANFU",
+        "PINGLIANG"
+      ],
+      "rule": "Longitudinal member axis lies in AF-01 section plane and runs north↔south; center on INNER_EAST_FRAME_AXIS."
+    },
+    {
+      "roles": [
+        "SHUZHU"
+      ],
+      "rule": "Vertical ridge-support member above Pingliang; endpoint-driven; no historical height claim."
+    },
+    {
+      "roles": [
+        "CHASHOU_N",
+        "CHASHOU_S"
+      ],
+      "rule": "Paired diagonal members in AF-01 section plane from Pingliang upper connection region toward ridge-support region; angle endpoint-derived, never fixed from Master."
+    },
+    {
+      "roles": [
+        "TUOJIAO_N_LOWER",
+        "TUOJIAO_N_UPPER",
+        "TUOJIAO_S_LOWER",
+        "TUOJIAO_S_UPPER"
+      ],
+      "rule": "Diagonal support members in AF-01 section plane; side/layer identity follows Registry location; angle and exact endpoints remain endpoint-derived."
+    }
+  ],
+  "retained_connection_authorities": [
+    "D-277: UPPER_SIX_CHUANFU → SAN_DOU_SUPPORT → FOUR_CHUANFU family attachment semantic",
+    "D-279: PINGLIANG → SHUZHU lower attachment",
+    "D-279: PINGLIANG → CHASHOU lower-end attachment",
+    "D-279: TUOJIAO → FOUR_CHUANFU end-support attachment",
+    "D-279: TUOJIAO → source-supported PURLIN-role attachment"
+  ],
+  "vertical_order": [
+    "LOWER_SIX_CHUANFU",
+    "UPPER_SIX_CHUANFU",
+    "SAN_DOU / INTERMEDIATE SUPPORT ROLE (geometry unresolved)",
+    "FOUR_CHUANFU",
+    "PINGLIANG",
+    "SHUZHU + paired CHASHOU",
+    "RIDGE_SUPPORT REGION"
+  ],
+  "blockers_before_engineering_generation": [
+    {
+      "id": "AF01-B01",
+      "problem": "Exact Z placement of the four horizontal beam bodies (lower six, upper six, four-chuanfu, pingliang) is not yet supported by a valid production authority.",
+      "why_blocking": "Without numeric vertical datums the actual 3D frame cannot be deterministically generated.",
+      "prohibited_shortcut": "Do not reuse rejected T-018 FV-B tier values or legacy P2 frame transforms as authority.",
+      "next_resolution": "Resolve from same-building measured east-seam evidence or create a new narrowly scoped reconstructed-design placement rule with explicit Product Owner approval."
+    },
+    {
+      "id": "AF01-B02",
+      "problem": "Support-axis spans are resolved, but historical/full visible body end extents of the four horizontal beams remain unresolved.",
+      "why_blocking": "Master reference length may not leak into assembly; generated visible beam body length needs an explicit project rule.",
+      "prohibited_shortcut": "Do not label 10710/7191/3672 mm as historical full member lengths.",
+      "next_resolution": "Choose and approve a reconstructed-design body-extent rule tied to support axes and visible measured drawing evidence."
+    },
+    {
+      "id": "AF01-B03",
+      "problem": "Shuzhu/Chashou/Tuojiao exact instance endpoints are still regions rather than points.",
+      "why_blocking": "Endpoint-driven Masters need deterministic P_lower/P_upper to generate real length and angle.",
+      "prohibited_shortcut": "Do not invent fixed historical angles or exact hidden contact faces.",
+      "next_resolution": "Resolve minimum visible endpoint points from measured east-seam section while retaining hidden joinery as UNKNOWN."
+    }
+  ],
+  "explicitly_nonblocking_unknowns": [
+    "hidden mortise/tenon/groove geometry",
+    "exact historical contact-face machining",
+    "historical originality of the individual members",
+    "sample-to-east/west mapping where the report itself does not map samples",
+    "exact San-dou historical shape/dimensions if the beam placement can be independently resolved",
+    "whole-hall connection matrix closure"
+  ],
+  "excluded_from_core_set": [
+    "槫 physical Registry instances: longitudinal segmented records; AF-01 uses seven interface targets only",
+    "剳牵: current Registry records are not east-seam mapped",
+    "襻间枋: longitudinal linkage, outside AF-01 transverse core first-article set",
+    "斗栱 detailed bodies: not part of 11-instance AF-01 core; only retained where a connection role is necessary"
+  ],
+  "gate": {
+    "candidate_complete": true,
+    "engineering_ready": false,
+    "product_owner_review_required": true,
+    "next_step": "AF-01 Minimal Placement Closure: resolve B01-B03 only",
+    "blender_authorized": false,
+    "t018_status": "HOLD"
+  }
+}
