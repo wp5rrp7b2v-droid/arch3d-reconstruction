@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R366",
+  "state_revision": "R367",
   "last_updated": "2026-09-30",
-  "session_status": "2026-09-30 D-293 / AF01-B01 CLOSED / G1+G2+G3 LOCKED / FOUR BEAM SUPPORT PLANES RESOLVED 4360.5 / 5003.1 / 5658.4 / 6406.2 MM / B02+B03 REMAIN / PR #50 DRAFT UNMERGED / MAIN UNCHANGED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-30 D-294 / AF01-B02 PRODUCT OWNER APPROVED + CLOSED / FOUR BEAM EXECUTION LENGTHS LOCKED 10710 / 10710 / 7191 / 3672 MM / B01+B02 CLOSED / B03 ONLY REMAINING / PR #50 DRAFT UNMERGED / MAIN UNCHANGED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -64,11 +64,11 @@
   "current_task": {
     "id": "AF-01",
     "name": "正身梁架首榀｜Assembly Spec V0.1",
-    "status": "B01 CLOSED / B02+B03 OPEN / ENGINEERING NOT READY / NO BLENDER"
+    "status": "B01+B02 CLOSED / B03 OPEN / ENGINEERING NOT READY / NO BLENDER"
   },
   "proposed_next_task": {
-    "id": "AF01-B02",
-    "name": "Visible body lengths / end extents for four horizontal beams",
+    "id": "AF01-B03",
+    "name": "Shuzhu / Chashou / Tuojiao endpoint closure",
     "status": "NEXT / NOT STARTED / REQUIRES SEPARATE AUTHORIZATION"
   },
   "last_completed_task": {
@@ -3455,6 +3455,19 @@
     },
     "evidence_boundary": "AF01_LOCAL / RECONSTRUCTED_DESIGN / REPLACEABLE AS DOCUMENTED; NO 963 ABSOLUTE Z CLAIM",
     "orientation_guard": "ALIGN TRANSFORMED BODY BOTTOM FACE TO SUPPORT_PLANE_Z AFTER INSTANCE ORIENTATION",
+    "engineering_generation_authorized": false
+  },
+  "af01_b02": {
+    "decision_id": "D-294",
+    "status": "LOCKED / PRODUCT_OWNER_APPROVED / CLOSED",
+    "execution_lengths_mm": {
+      "lower_six": 10710,
+      "upper_six": 10710,
+      "four_chuanfu": 7191,
+      "pingliang": 3672
+    },
+    "historical_full_length_status": "UNKNOWN / NULL / DO_NOT_LOCK",
+    "hidden_end_geometry": "UNKNOWN / OMITTED",
     "engineering_generation_authorized": false
   }
 }
