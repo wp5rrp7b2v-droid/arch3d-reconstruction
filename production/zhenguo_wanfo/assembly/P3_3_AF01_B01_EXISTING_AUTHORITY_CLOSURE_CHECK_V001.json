@@ -1,0 +1,80 @@
+{
+  "schema_version": "P3_3_AF01_B01_EXISTING_AUTHORITY_CLOSURE_CHECK_V001",
+  "date": "2026-09-30",
+  "task_id": "AF-01-B01",
+  "status": "CHECK_COMPLETE / THREE_LOCAL_GAPS_IDENTIFIED",
+  "new_whole_building_framework_created": false,
+  "base_chain": {
+    "project_vertical_datum": {
+      "z_mm": 0,
+      "status": "EXISTING_PROJECT_MODEL_DATUM / COLUMN_FOOT_DESIGN_PLANE"
+    },
+    "column_top_support": {
+      "z_mm": 3534.3,
+      "status": "P3.2 ENGINEERING AUTHORITY / REASONABLE_COMPLETION / REPLACEABLE"
+    },
+    "ludou_lower_support": {
+      "z_mm": 3534.3,
+      "status": "P3.2 DETERMINISTIC PLACEMENT"
+    },
+    "ludou_total_height_mm": {
+      "value": 293.8,
+      "status": "DIRECT_MEASURED"
+    },
+    "ludou_geometric_top_z_mm": {
+      "value": 3828.1,
+      "status": "DERIVED_GEOMETRIC_ENVELOPE / NOT_CANONICAL_UPPER_SUPPORT_INTERFACE"
+    }
+  },
+  "gaps": [
+    {
+      "id": "G1",
+      "scope": "LUDOU_AND_COLUMN_HEAD_PUZUO_TO_LOWER_AND_UPPER_SIX_SUPPORT_PLANES",
+      "blocking_requirements": [
+        "CCM-A05",
+        "CCM-B01",
+        "CCM-B03",
+        "CCM-B05",
+        "CCM-B06",
+        "CCM-C01",
+        "CCM-C02"
+      ],
+      "result": "LOWER_SIX_SUPPORT_PLANE_Z_AND_UPPER_SIX_SUPPORT_PLANE_Z_NOT_YET_DETERMINISTIC"
+    },
+    {
+      "id": "G2",
+      "scope": "UPPER_SIX_TO_FOUR_CHUANFU_VERTICAL_INCREMENT",
+      "existing_authority": "D-277 / CONN-S2C-B01-SANDOU-UPPER6-FOUR-FAMILY-001",
+      "semantic_status": "LOCKED",
+      "geometry_status": "UNKNOWN / NOT MATERIALIZED",
+      "result": "FOUR_CHUANFU_Z_NOT_YET_DETERMINISTIC"
+    },
+    {
+      "id": "G3",
+      "scope": "FOUR_CHUANFU_TO_PINGLIANG_VERTICAL_SUPPORT_PATH",
+      "blocking_requirement": "CCM-C05",
+      "result": "PINGLIANG_Z_NOT_YET_DETERMINISTIC"
+    }
+  ],
+  "non_blockers": [
+    "FOUNDATION_ABSOLUTE_WORLD_ELEVATION",
+    "COLUMN_FOOT_DATUM",
+    "COLUMN_PLACEMENT",
+    "COLUMN_TO_LUDOU_P3_2_ENGINEERING_PLACEMENT",
+    "LUDOU_BODY_HEIGHT",
+    "UPPER6_TO_FOUR_STRUCTURAL_SEMANTIC",
+    "HIDDEN_HISTORICAL_JOINERY",
+    "MATRIX_WIDE_CLOSURE",
+    "T018_FV_B"
+  ],
+  "next_step": {
+    "id": "AF01-B01-G1",
+    "name": "Two Support-Plane Resolver",
+    "outputs": [
+      "LOWER_SIX_SUPPORT_PLANE_Z",
+      "UPPER_SIX_SUPPORT_PLANE_Z"
+    ],
+    "scope_rule": "MINIMUM_PUZUO_PATH_ONLY / DO_NOT_CLOSE_WHOLE_PUZUO_NETWORK",
+    "blender_authorized": false
+  }
+}
