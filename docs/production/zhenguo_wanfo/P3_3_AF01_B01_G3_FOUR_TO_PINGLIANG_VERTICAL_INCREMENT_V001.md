@@ -2,7 +2,7 @@
 
 - Date: **2026-09-30**
 - Task: **AF01-B01-G3**
-- Status: **CANDIDATE / REVIEW PATCH 01 APPLIED / DEPENDS ON G2 / PRODUCT OWNER REVIEW REQUIRED**
+- Status: **LOCKED / PRODUCT OWNER APPROVED / D-293**
 - Engineering generation: **NOT AUTHORIZED**
 - Scope: four-chuanfu lower support plane → pingliang lower support plane only
 
@@ -10,12 +10,12 @@
 
 G3 does not reopen G1.
 
-G3 currently depends on the unapproved G2 candidate:
+G3 depends on the now-locked G2 authority:
 
 - `FOUR_CHUANFU_SUPPORT_PLANE_Z = 5658.4 mm`
-- G2 status = `CANDIDATE / NOT YET LOCKED`
+- G2 status = `LOCKED / PRODUCT OWNER APPROVED / D-293`
 
-Therefore the absolute G3 output remains provisional until G2 is approved.
+G2 is approved under D-293; therefore the G3 absolute output may be locked.
 
 ## 2. Direct same-building source findings
 
@@ -153,7 +153,7 @@ CCM-C05 may be treated for AF-01 as a locally resolved support-path rule only af
 
 ## 9. G3 Gate
 
-Candidate outputs:
+Locked outputs:
 
 - `FOUR_CHUANFU_TOP_Z = 6084.9 mm`
 - `FOUR_TO_PINGLIANG_SPACER_RISE = 321.3 mm`
@@ -166,9 +166,7 @@ No Registry mutation.
 No Blender.
 T-018 remains HOLD.
 
-Because G2 is still Candidate, G3 cannot be independently locked before G2.
-
-If Product Owner approves both the pending G2 and this G3 candidate, B01 can close with four beam support planes:
+G2 and G3 are both approved under D-293. B01 closes with four beam support planes:
 
 - Lower Six = 4360.5 mm
 - Upper Six = 5003.1 mm
@@ -184,3 +182,14 @@ The arithmetic is unchanged. The correction removes the over-broad source claim 
 Implementation guard:
 
 After rotating the Four-Chuanfu Master so `广` becomes world Z, the transformed body bottom face—not the canonical object origin—must align with `FOUR_CHUANFU_SUPPORT_PLANE_Z`.
+
+## 11. Product Owner Approval｜D-293
+
+Approved after Review Patch 01. Numeric result unchanged; the corrected evidence boundary remains binding.
+
+- `FOUR_CHUANFU_TOP_Z = 6084.9 mm`
+- `FOUR_TO_PINGLIANG_SPACER_RISE = 321.3 mm`
+- `G3_DELTA_Z = 747.8 mm`
+- `PINGLIANG_SUPPORT_PLANE_Z = 6406.2 mm`
+
+The 21-fen spacer is an AF-01 local replaceable reconstructed-design rule, not a directly measured Four-Chuanfu→Pingliang interval.
