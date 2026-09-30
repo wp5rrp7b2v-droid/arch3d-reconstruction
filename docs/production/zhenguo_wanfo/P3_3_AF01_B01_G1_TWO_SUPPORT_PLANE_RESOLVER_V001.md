@@ -2,7 +2,7 @@
 
 - Date: **2026-09-30**
 - Task: **AF01-B01-G1**
-- Status: **CANDIDATE / SOURCE-CLOSED FOR TWO OUTPUTS / PRODUCT OWNER REVIEW REQUIRED**
+- Status: **LOCKED / PRODUCT OWNER APPROVED / D-292**
 - Engineering generation: **NOT AUTHORIZED**
 - Scope: lower-six + upper-six support planes only
 
@@ -120,14 +120,16 @@ For the AF-01 east-seam instances:
 
 ## 7. G1 Gate
 
-- `LOWER_SIX_SUPPORT_PLANE_Z`: **RESOLVED CANDIDATE = 4360.5 mm**
-- `UPPER_SIX_SUPPORT_PLANE_Z`: **RESOLVED CANDIDATE = 5003.1 mm**
+- `LOWER_SIX_SUPPORT_PLANE_Z`: **LOCKED AF-01 LOCAL AUTHORITY = 4360.5 mm**
+- `UPPER_SIX_SUPPORT_PLANE_Z`: **LOCKED AF-01 LOCAL AUTHORITY = 5003.1 mm**
 - whole puzuo network closure: **NOT REQUIRED / NOT PERFORMED**
 - Blender: **NOT AUTHORIZED**
 - Master mutation: **NONE**
 - Registry mutation: **NONE**
 - T-018: **HOLD**
 
-If Product Owner approves this candidate:
+**Product Owner approval received. G1 is CLOSED.**
 
-**G1 closes and B01 advances only to G2｜Upper-Six → San-Dou/Intermediate Support → Four-Chuanfu vertical increment.**
+Next controlled step, not started in this commit:
+
+**G2｜Upper-Six → San-Dou/Intermediate Support → Four-Chuanfu vertical increment.**
