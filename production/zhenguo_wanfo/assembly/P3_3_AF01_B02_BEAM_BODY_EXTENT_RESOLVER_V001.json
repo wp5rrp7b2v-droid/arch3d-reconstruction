@@ -2,7 +2,7 @@
   "schema_version": "P3_3_AF01_B02_BEAM_BODY_EXTENT_RESOLVER_V001",
   "date": "2026-09-30",
   "task_id": "AF01-B02",
-  "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-294",
   "classification": "REPORT_INFERRED / DRAWING_DERIVED / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE",
   "rule": "EXECUTION_BODY_ENVELOPE_TERMINATES_AT_LOCKED_SUPPORT_AXES; HIDDEN_PENETRATION_OR_PROJECTION_REMAINS_UNKNOWN_AND_OMITTED",
   "representative_slice": {
@@ -79,8 +79,15 @@
   ],
   "gate": {
     "b02_candidate_complete": true,
-    "product_owner_review_required": true,
+    "product_owner_review_required": false,
+    "b02_closed": true,
     "engineering_generation_authorized": false,
-    "next_if_approved": "AF01-B03"
+    "next_if_separately_authorized": "AF01-B03"
+  },
+  "approval": {
+    "decision_id": "D-294",
+    "date": "2026-09-30",
+    "product_owner_approved": true,
+    "scope": "AF01_B02_EXECUTION_BODY_EXTENTS_ONLY"
   }
 }
