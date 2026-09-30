@@ -2,7 +2,7 @@
 
 - Date: **2026-09-30**
 - Task: **AF01-B01-G2**
-- Status: **CANDIDATE / REVIEW PATCH 01 APPLIED / PRODUCT OWNER REVIEW REQUIRED**
+- Status: **LOCKED / PRODUCT OWNER APPROVED / D-293**
 - Engineering generation: **NOT AUTHORIZED**
 - Scope: upper-six lower support plane → four-chuanfu lower support plane only
 
@@ -138,7 +138,7 @@ D-277 connector geometry remains `UNKNOWN / NOT MATERIALIZED`.
 
 ## 8. G2 Gate
 
-Candidate outputs:
+Locked outputs:
 
 - `UPPER_SIX_TOP_Z = 5337.1 mm`
 - `INTERMEDIATE_SUPPORT_LAYER_RISE = 321.3 mm`
@@ -150,9 +150,7 @@ No Registry mutation.
 No Blender.
 T-018 remains HOLD.
 
-If Product Owner approves:
-
-**G2 closes and B01 advances only to G3｜Four-Chuanfu → Pingliang support path.**
+**Product Owner approval received. G2 is CLOSED under D-293.**
 
 ## 9. Review Patch 01｜2026-09-30
 
@@ -168,3 +166,14 @@ Implementation guard:
 After rotating the Master so local `section_width / 广` becomes world Z, a future builder MUST resolve the transformed body bottom face/bounding-plane to `UPPER_SIX_SUPPORT_PLANE_Z`. It MUST NOT simply assign the Master object origin Z to the support-plane value, because the canonical Master origin was defined in a different local orientation.
 
 This guard changes no numeric G2 result.
+
+## 10. Product Owner Approval｜D-293
+
+Approved after Review Patch 01. Numeric result unchanged.
+
+- `UPPER_SIX_TOP_Z = 5337.1 mm`
+- `INTERMEDIATE_SUPPORT_LAYER_RISE = 321.3 mm`
+- `G2_DELTA_Z = 655.3 mm`
+- `FOUR_CHUANFU_SUPPORT_PLANE_Z = 5658.4 mm`
+
+Evidence classification and implementation guard remain binding.
