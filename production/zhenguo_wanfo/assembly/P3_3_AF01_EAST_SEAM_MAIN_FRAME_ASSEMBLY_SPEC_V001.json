@@ -5,7 +5,9 @@
   "decision_context": [
     "D-286",
     "D-290",
-    "D-291"
+    "D-291",
+    "D-292",
+    "D-293"
   ],
   "status": "CANDIDATE / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING NOT AUTHORIZED",
   "objective": "Define the minimum deterministic assembly specification for one representative east-seam main-frame slice without inventing historical joinery or unsupported dimensions.",
@@ -208,13 +210,6 @@
   ],
   "blockers_before_engineering_generation": [
     {
-      "id": "AF01-B01",
-      "problem": "Exact Z placement of the four horizontal beam bodies (lower six, upper six, four-chuanfu, pingliang) is not yet supported by a valid production authority.",
-      "why_blocking": "Without numeric vertical datums the actual 3D frame cannot be deterministically generated.",
-      "prohibited_shortcut": "Do not reuse rejected T-018 FV-B tier values or legacy P2 frame transforms as authority.",
-      "next_resolution": "Resolve from same-building measured east-seam evidence or create a new narrowly scoped reconstructed-design placement rule with explicit Product Owner approval."
-    },
-    {
       "id": "AF01-B02",
       "problem": "Support-axis spans are resolved, but historical/full visible body end extents of the four horizontal beams remain unresolved.",
       "why_blocking": "Master reference length may not leak into assembly; generated visible beam body length needs an explicit project rule.",
@@ -246,9 +241,34 @@
   "gate": {
     "candidate_complete": true,
     "engineering_ready": false,
-    "product_owner_review_required": true,
-    "next_step": "AF-01 Minimal Placement Closure: resolve B01-B03 only",
+    "product_owner_review_required": false,
+    "next_step": "AF01-B02 / VISIBLE BODY LENGTHS + END EXTENTS ONLY / REQUIRES SEPARATE AUTHORIZATION",
     "blender_authorized": false,
-    "t018_status": "HOLD"
-  }
+    "t018_status": "HOLD",
+    "b01_status": "CLOSED",
+    "remaining_blockers": [
+      "AF01-B02",
+      "AF01-B03"
+    ]
+  },
+  "resolved_vertical_controls": {
+    "classification": "AF01_LOCAL / REPLACEABLE / NOT_963_ABSOLUTE_ELEVATION_CLAIM",
+    "lower_six_support_plane_z_mm": 4360.5,
+    "upper_six_support_plane_z_mm": 5003.1,
+    "four_chuanfu_support_plane_z_mm": 5658.4,
+    "pingliang_support_plane_z_mm": 6406.2,
+    "implementation_guard": "ALIGN TRANSFORMED BODY BOTTOM FACE TO SUPPORT_PLANE_Z AFTER INSTANCE ORIENTATION; DO NOT MAP CANONICAL MASTER ORIGIN DIRECTLY"
+  },
+  "closed_blockers": [
+    {
+      "id": "AF01-B01",
+      "status": "CLOSED / D-292 + D-293",
+      "outputs": {
+        "lower_six_support_plane_z_mm": 4360.5,
+        "upper_six_support_plane_z_mm": 5003.1,
+        "four_chuanfu_support_plane_z_mm": 5658.4,
+        "pingliang_support_plane_z_mm": 6406.2
+      }
+    }
+  ]
 }
