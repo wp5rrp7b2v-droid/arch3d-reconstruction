@@ -1,0 +1,86 @@
+{
+  "schema_version": "P3_3_AF01_B02_BEAM_BODY_EXTENT_RESOLVER_V001",
+  "date": "2026-09-30",
+  "task_id": "AF01-B02",
+  "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "classification": "REPORT_INFERRED / DRAWING_DERIVED / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE",
+  "rule": "EXECUTION_BODY_ENVELOPE_TERMINATES_AT_LOCKED_SUPPORT_AXES; HIDDEN_PENETRATION_OR_PROJECTION_REMAINS_UNKNOWN_AND_OMITTED",
+  "representative_slice": {
+    "x_mm": 2218.5,
+    "center_y_mm": 0
+  },
+  "orientation": {
+    "master_local_x_longitudinal_to": "WORLD_+Y",
+    "master_local_section_width_guang_to": "WORLD_+Z",
+    "master_local_thickness_to": "WORLD_+X",
+    "section_scaling_allowed": false,
+    "longitudinal_realization_length_only": true
+  },
+  "beams": [
+    {
+      "registry_id": "下六椽栿-东缝",
+      "south_end_y_mm": -5355,
+      "north_end_y_mm": 5355,
+      "realization_length_mm": 10710,
+      "support_plane_z_mm": 4360.5,
+      "source_boundary": "ENTERS_COLUMN_HEAD_PUZUO; BURIED_PENETRATION_BEYOND_EXECUTION_CUTOFF_UNKNOWN"
+    },
+    {
+      "registry_id": "上六椽栿-东缝",
+      "south_end_y_mm": -5355,
+      "north_end_y_mm": 5355,
+      "realization_length_mm": 10710,
+      "support_plane_z_mm": 5003.1,
+      "source_boundary": "REPORT_EXPLICITLY_STATES_TERMINATES_AT_COLUMN_CENTER_POSITION"
+    },
+    {
+      "registry_id": "四椽栿-东缝",
+      "south_end_y_mm": -3595.5,
+      "north_end_y_mm": 3595.5,
+      "realization_length_mm": 7191,
+      "support_plane_z_mm": 5658.4,
+      "source_boundary": "AF01_EXECUTION_ENVELOPE_CUT_AT_LOCKED_LOWER_PURLIN_SUPPORT_AXES; HIDDEN_END_TREATMENT_UNKNOWN"
+    },
+    {
+      "registry_id": "平梁-东缝",
+      "south_end_y_mm": -1836,
+      "north_end_y_mm": 1836,
+      "realization_length_mm": 3672,
+      "support_plane_z_mm": 6406.2,
+      "source_boundary": "AF01_EXECUTION_ENVELOPE_CUT_AT_LOCKED_INNER_UPPER_PURLIN_SUPPORT_AXES; HIDDEN_END_TREATMENT_UNKNOWN"
+    }
+  ],
+  "modular_crosscheck": {
+    "outer_column_pair_span_fen": 700,
+    "lower_purlin_pair_span_fen": 470,
+    "inner_upper_purlin_pair_span_fen": 240,
+    "fen_mm": 15.3,
+    "outputs_mm": [
+      10710,
+      7191,
+      3672
+    ],
+    "report_figure": "Fig.2-73 / 梁架方法示意图",
+    "result": "PASS / CONSISTENT / NOT_DIRECT_HISTORICAL_FULL_LENGTH"
+  },
+  "historical_full_length_policy": {
+    "lower_six": null,
+    "upper_six": null,
+    "four_chuanfu": null,
+    "pingliang": null,
+    "status": "UNKNOWN / DO_NOT_LOCK"
+  },
+  "prohibitions": [
+    "NO_1000MM_REFERENCE_LENGTH_LEAKAGE",
+    "NO_HISTORICAL_FULL_LENGTH_CLAIM",
+    "NO_HIDDEN_TENON_OR_PENETRATION_INFERENCE",
+    "NO_SECTION_SCALING",
+    "NO_B03_ENDPOINT_CLOSURE"
+  ],
+  "gate": {
+    "b02_candidate_complete": true,
+    "product_owner_review_required": true,
+    "engineering_generation_authorized": false,
+    "next_if_approved": "AF01-B03"
+  }
+}
