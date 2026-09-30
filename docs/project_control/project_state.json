@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R365",
+  "state_revision": "R366",
   "last_updated": "2026-09-30",
-  "session_status": "2026-09-30 D-292 / AF01-B01-G1 PRODUCT OWNER APPROVED + LOCKED / LOWER_SIX_SUPPORT_PLANE_Z 4360.5 / UPPER_SIX_SUPPORT_PLANE_Z 5003.1 / G1 CLOSED / G2 NOT STARTED / PR #50 DRAFT UNMERGED / MAIN UNCHANGED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-30 D-293 / AF01-B01 CLOSED / G1+G2+G3 LOCKED / FOUR BEAM SUPPORT PLANES RESOLVED 4360.5 / 5003.1 / 5658.4 / 6406.2 MM / B02+B03 REMAIN / PR #50 DRAFT UNMERGED / MAIN UNCHANGED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -62,14 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "AF-01-B01",
-    "name": "东缝正身梁架首榀｜Z Placement Closure",
-    "status": "G1 CLOSED / LOWER+UPPER SIX SUPPORT PLANES LOCKED / G2 NOT STARTED / NO ENGINEERING GENERATION"
+    "id": "AF-01",
+    "name": "正身梁架首榀｜Assembly Spec V0.1",
+    "status": "B01 CLOSED / B02+B03 OPEN / ENGINEERING NOT READY / NO BLENDER"
   },
   "proposed_next_task": {
-    "id": "AF01-B01-G2",
-    "name": "Upper-Six → San-Dou/Intermediate Support → Four-Chuanfu vertical increment",
-    "status": "NEXT / NOT STARTED / REQUIRES SEPARATE STEP"
+    "id": "AF01-B02",
+    "name": "Visible body lengths / end extents for four horizontal beams",
+    "status": "NEXT / NOT STARTED / REQUIRES SEPARATE AUTHORIZATION"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -3443,6 +3443,18 @@
     "lower_six_support_plane_z_mm": 4360.5,
     "upper_six_support_plane_z_mm": 5003.1,
     "classification": "REPORT_INFERRED / DRAWING_DERIVED / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE",
+    "engineering_generation_authorized": false
+  },
+  "af01_b01": {
+    "status": "CLOSED / D-292 + D-293",
+    "support_planes_mm": {
+      "lower_six": 4360.5,
+      "upper_six": 5003.1,
+      "four_chuanfu": 5658.4,
+      "pingliang": 6406.2
+    },
+    "evidence_boundary": "AF01_LOCAL / RECONSTRUCTED_DESIGN / REPLACEABLE AS DOCUMENTED; NO 963 ABSOLUTE Z CLAIM",
+    "orientation_guard": "ALIGN TRANSFORMED BODY BOTTOM FACE TO SUPPORT_PLANE_Z AFTER INSTANCE ORIENTATION",
     "engineering_generation_authorized": false
   }
 }
