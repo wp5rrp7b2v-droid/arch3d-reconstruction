@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R364",
+  "state_revision": "R365",
   "last_updated": "2026-09-30",
-  "session_status": "2026-09-30 D-291 / PR #51 MERGED INTO PR #50 WORKING BRANCH / T-020 FR-007 DIRECTION CORRECTION INTEGRATED / AF-01 EAST-SEAM REPRESENTATIVE SLICE + 11 CORE REGISTRY INSTANCES RETAINED / AF-01 PLANNING UNBLOCKED / PR #50 DRAFT UNMERGED / MAIN UNCHANGED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-30 D-292 / AF01-B01-G1 PRODUCT OWNER APPROVED + LOCKED / LOWER_SIX_SUPPORT_PLANE_Z 4360.5 / UPPER_SIX_SUPPORT_PLANE_Z 5003.1 / G1 CLOSED / G2 NOT STARTED / PR #50 DRAFT UNMERGED / MAIN UNCHANGED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -62,14 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": "AF-01",
-    "name": "正身梁架首榀｜Assembly Spec V0.1",
-    "status": "EAST-SEAM REPRESENTATIVE SLICE SELECTED / 11 CORE REGISTRY INSTANCES IDENTIFIED / T-020 CORRECTION INTEGRATED / READY TO FORMALIZE ASSEMBLY SPEC V0.1 CANDIDATE / NO ENGINEERING GENERATION"
+    "id": "AF-01-B01",
+    "name": "东缝正身梁架首榀｜Z Placement Closure",
+    "status": "G1 CLOSED / LOWER+UPPER SIX SUPPORT PLANES LOCKED / G2 NOT STARTED / NO ENGINEERING GENERATION"
   },
   "proposed_next_task": {
-    "id": "AF-01-ASSEMBLY-SPEC-V0.1",
-    "name": "AF-01｜东缝正身梁架首榀 Assembly Spec V0.1 Candidate",
-    "status": "NEXT / PLANNING ONLY / ENGINEERING NOT AUTHORIZED"
+    "id": "AF01-B01-G2",
+    "name": "Upper-Six → San-Dou/Intermediate Support → Four-Chuanfu vertical increment",
+    "status": "NEXT / NOT STARTED / REQUIRES SEPARATE STEP"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -3436,5 +3436,13 @@
     "rules_change_log": "RC-025 ADDED",
     "daily_close_log": "ALIGNED THROUGH D-289",
     "active_authority_change": false
+  },
+  "af01_b01_g1": {
+    "decision_id": "D-292",
+    "status": "LOCKED / PRODUCT_OWNER_APPROVED / CLOSED",
+    "lower_six_support_plane_z_mm": 4360.5,
+    "upper_six_support_plane_z_mm": 5003.1,
+    "classification": "REPORT_INFERRED / DRAWING_DERIVED / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE",
+    "engineering_generation_authorized": false
   }
 }
