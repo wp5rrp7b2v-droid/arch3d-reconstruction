@@ -2176,3 +2176,21 @@ Do not restart T-018 by default.
 - Local Dashboard at checkpoint: **v201 / Stage1 Closure Readiness Audit next**.
 - Result: **LOCAL SYNC PASS**.
 - One final ff-only pull remains solely to ingest D-268's own canonical record.
+
+## 2026-09-30｜AF-01 East Seam First Assembly Proof V001｜D-295
+
+- Engineering branch: `engineering/af01-east-seam-first-assembly-v001`.
+- Draft PR: #52 / OPEN / NOT MERGED.
+- Workflow Run: **36713427504** / **SUCCESS**.
+- Machine validation: **14/14 PASS**.
+- Artifact: `AF01_EAST_SEAM_FIRST_ASSEMBLY_PROOF_V001`.
+- Artifact ID: **11095611818**.
+- Artifact digest: `sha256:a3068aad1aebfa1f1f1ae378a5ef8f04c7b47ae2296152335e2480709287a8e3`.
+- Canonical-for-proof Blender SHA-256: `6753e0f9f538cee538ab3c021f9a02220cf44ab89acba9d019bc84fc2c41a2a9`.
+- Object count: **21**.
+- Proof boundary: B01/B02 locked values + explicit proxies for unresolved puzuo / Tuofeng / Tuojiao / endpoint details.
+- Product Owner architectural review: **FAIL for reconstruction acceptance**.
+- Final execution classification: **TECHNICAL PROOF PASS / VISUAL ARCHITECTURAL REVIEW FAIL / DIAGNOSTIC ONLY**.
+- No geometry from this proof is promoted to canonical building authority.
+- PR merge: **NOT AUTHORIZED**.
+- V002: **NOT AUTHORIZED**.
