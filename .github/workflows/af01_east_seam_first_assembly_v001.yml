@@ -1,0 +1,94 @@
+name: AF-01 East Seam First Assembly Proof
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/af01_east_seam_first_assembly_v001.yml'
+      - 'production/zhenguo_wanfo/scripts/build_af01_east_seam_first_assembly_v001.py'
+      - 'production/zhenguo_wanfo/assembly/P3_3_AF01_EAST_SEAM_MAIN_FRAME_ASSEMBLY_SPEC_V001.json'
+      - 'production/zhenguo_wanfo/assembly/P3_3_AF01_B02_BEAM_BODY_EXTENT_RESOLVER_V001.json'
+      - 'production/zhenguo_wanfo/assembly/P3_3_AF01_B03_R_RIDGE_ENDPOINT_RESOLVER_V001.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  first-assembly-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      BLENDER_DIR: /tmp/blender-4.5.13-linux-x64
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      SCRIPT: production/zhenguo_wanfo/scripts/build_af01_east_seam_first_assembly_v001.py
+      OUT: artifacts/af01_first_assembly
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+
+      - name: Static boundary preflight
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f "$SCRIPT"
+          grep -q 'ENGINEERING ASSEMBLY PROOF' "$SCRIPT"
+          grep -q 'historical_completeness_claim":False' "$SCRIPT"
+          grep -q 'B03_T_NOT_RESOLVED' "$SCRIPT"
+          grep -q 'VISUAL_ONLY / NOT_LOCKED' "$SCRIPT"
+          echo "AF01_STATIC_BOUNDARY_PASS"
+
+      - name: Install Blender 4.5.13
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions AF01"             -o /tmp/blender.tar.xz             "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | tee "$OUT-blender-version.txt" || true
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+
+      - name: Build AF-01 east-seam first assembly
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT/review"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" --             --mode build             --blend "$OUT/AF01_EAST_SEAM_FIRST_ASSEMBLY_V001.blend"             --semantic "$OUT/semantic.json"             --review-dir "$OUT/review"
+
+      - name: Validate assembly proof
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" --             --mode validate             --semantic "$OUT/semantic.json"             --output "$OUT/validation.json"
+          python - "$OUT/validation.json" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert d["status"]=="PASS"
+          assert d["stage_advance"] is False
+          assert d["next_gate"]=="PRODUCT_OWNER_VISUAL_REVIEW_ONLY"
+          print("AF01_FIRST_ASSEMBLY_FINAL_PASS", d["check_count"], d["object_count"])
+          PY
+
+      - name: Hash deliverables
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum             "$OUT/AF01_EAST_SEAM_FIRST_ASSEMBLY_V001.blend"             "$OUT/semantic.json"             "$OUT/validation.json"             "$OUT"/review/*.png > "$OUT/SHA256SUMS.txt"
+
+      - name: Assert no tracked Blender output
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -z "$(git status --short -- '*.blend')"
+          echo "AF01_NO_TRACKED_BLEND_PASS"
+
+      - name: Upload proof artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AF01_EAST_SEAM_FIRST_ASSEMBLY_PROOF_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            artifacts/af01_first_assembly/**
