@@ -2,7 +2,7 @@
 
 - Date: **2026-09-30**
 - Task: **AF01-B01-G3**
-- Status: **CANDIDATE / DEPENDS ON G2 CANDIDATE / PRODUCT OWNER REVIEW REQUIRED**
+- Status: **CANDIDATE / REVIEW PATCH 01 APPLIED / DEPENDS ON G2 / PRODUCT OWNER REVIEW REQUIRED**
 - Engineering generation: **NOT AUTHORIZED**
 - Scope: four-chuanfu lower support plane → pingliang lower support plane only
 
@@ -23,10 +23,18 @@ The report confirms:
 
 - Pingliang is a separate main-frame beam in the east/west seam;
 - Pingliang sits below the Shuzhu / Chashou ridge-support system;
-- the report states generally that **屋架梁栿间用隔架斗栱之垫**;
-- therefore the Four-Chuanfu → Pingliang transition is not treated as an arbitrary free gap.
+- **Fig. 2-41 directly documents “万佛殿平梁与斗栱交接关系”.**
 
-CCM-C05 remains unresolved only because the existing repository had not converted this same-building beam-to-beam spacer relation into a deterministic vertical resolver.
+Evidence boundary correction from Review Patch 01:
+
+The report does **not** directly state that the Four-Chuanfu → Pingliang interval is exactly one 21-fen spacer layer, and it does not provide a direct measured vertical offset for this pair.
+
+Therefore:
+- Pingliang↔dougong contact/support existence = **DIRECT_PRIMARY / VISUAL+CAPTION**;
+- one 21-fen effective spacer rise = **AF01_LOCAL RECONSTRUCTED_DESIGN RULE**, derived from the same-building dou/gong modular logic;
+- no claim is made that the report measured this exact Four→Pingliang offset.
+
+CCM-C05 is therefore closed only as a replaceable AF-01 local engineering rule if Product Owner approves it.
 
 ## 3. Four-Chuanfu installed vertical extent
 
@@ -52,10 +60,10 @@ Therefore:
 
 For the same Wanfo Hall report:
 
-- small dou / gong modular analysis resolves one supported cai layer at the **足材 21-fen** order;
-- the roof-frame description states that beam/fu intervals use **隔架斗栱之垫**.
+- dou/gong modular analysis shows a supported cai combination at the **足材 21-fen** order;
+- Fig. 2-41 independently confirms that Pingliang has a real dougong interface.
 
-For AF-01 G3, the minimum deterministic reconstruction is therefore one effective spacer/support layer:
+For AF-01 G3, the **minimal replaceable engineering completion** is one effective spacer/support layer:
 
 `FOUR_TO_PINGLIANG_SPACER_RISE = 21 fen`
 
@@ -166,3 +174,13 @@ If Product Owner approves both the pending G2 and this G3 candidate, B01 can clo
 - Upper Six = 5003.1 mm
 - Four-Chuanfu = 5658.4 mm
 - Pingliang = 6406.2 mm
+
+## 10. Review Patch 01｜2026-09-30
+
+Joint review result for G3: **PASS WITH EVIDENCE-BOUNDARY CORRECTION**.
+
+The arithmetic is unchanged. The correction removes the over-broad source claim and makes explicit that 21 fen is not a directly measured Four-Chuanfu→Pingliang interval; it is the smallest same-building modular reconstructed-design completion consistent with Fig. 2-41.
+
+Implementation guard:
+
+After rotating the Four-Chuanfu Master so `广` becomes world Z, the transformed body bottom face—not the canonical object origin—must align with `FOUR_CHUANFU_SUPPORT_PLANE_Z`.
