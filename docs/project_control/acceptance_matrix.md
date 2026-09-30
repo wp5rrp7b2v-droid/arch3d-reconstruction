@@ -1576,3 +1576,58 @@ Boundary retained:
 - Historical joinery: **NOT CLAIMED**.
 - Batch 03: **NOT AUTHORIZED**.
 - Engineering / Stage3 / T-018: **NOT AUTHORIZED / NOT AUTHORIZED / HOLD**.
+
+### D-289 Cross-file Consistency Alignment｜2026-09-29
+
+- Stage1: **CLOSED / D-271**.
+- Stage2: **DESIGN ACTIVE / D-272**; engineering execution remains **NOT AUTHORIZED**.
+- Locked reusable Stage2-C authorities: **D-277 / D-279 / D-284**.
+- D-285 Connection Coverage Matrix: **REFERENCE / DIAGNOSTIC ONLY / NON-BLOCKING** under D-286 Assembly-First direction.
+- D-286 Assembly-First Rebaseline: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED**; it does not itself authorize engineering generation.
+- AF-01｜正身梁架首榀: **STARTED / SOURCE+INPUT VERIFICATION COMPLETE / representative slice selection pending**.
+- AF-01 has **not** locked 东缝 vs 西缝, final Registry instance list, placement anchors, orientations, endpoint/length rules, or generated geometry.
+- PR #49: **DRAFT / OPEN / HOLD / NOT MERGED**.
+- PR #50: **DRAFT / OPEN / MERGEABLE / NOT MERGED**.
+- Stage3: **NOT AUTHORIZED**.
+- T-018: **HOLD**.
+- Project Control archive cleanup D-288 changed no geometry, evidence, Registry, Master approval, or active production authority.
+- Cross-file consistency result: **PASS after synchronization patch**.
+
+### D-290 / D-291 T-020 FR-007 Direction Correction｜2026-09-30
+
+- Source FR-007: **[120,115,210] fen UNCHANGED**.
+- Source direction: **RIDGE_TO_EAVE**.
+- Eave→ridge consumption: **[210,115,120] fen = [3213.0,1759.5,1836.0] mm**.
+- Corrected roof-Y controls: **N00=-6808.5 / N01=-3595.5 / N02=-1836.0 / N03=0 / S02=1836.0 / S01=3595.5 / S00=6808.5**.
+- Structural regression: **18/18 PASS**.
+- FR-007 value / MOD-002 / PM-008—012 / FR-004—006 / ROOF-007—009 / Registry / Masters / P3.2 vocabulary: **UNCHANGED**.
+- PR #51: **MERGED into PR #50 working branch** at `36def19143ddddccbbc424f59a529ce7d78d99fc`.
+- PR #50: **DRAFT / UNMERGED**; main remains **UNCHANGED**.
+- AF-01: **planning unblocked on working branch; engineering generation NOT AUTHORIZED**.
+- T-018: **HOLD**.
+
+### D-292—D-294 AF-01 B01/B02 Closure｜2026-09-30
+
+- B01 support planes: **4360.5 / 5003.1 / 5658.4 / 6406.2 mm** for Lower Six / Upper Six / Four-Chuanfu / Pingliang.
+- Classification: **AF01_LOCAL / RECONSTRUCTED_DESIGN / REPLACEABLE**; no 963 absolute-Z claim.
+- B02 execution body extents: **10710 / 10710 / 7191 / 3672 mm**.
+- Historical full timber lengths: **UNKNOWN / NULL / DO NOT LOCK**.
+- 1000 mm Master reference length leakage into building geometry: **PROHIBITED / PASS**.
+- Master / Registry mutation: **NONE**.
+
+### D-295 AF-01 First Assembly Diagnostic Freeze｜2026-09-30
+
+- B03-R: **HOLD / NOT LOCKABLE** after Tuofeng R0 reconciliation.
+- Tuofeng source-supported structural roles: **CONFIRMED**; production-ready dimensions/profile: **NOT FOUND**.
+- AF-01 First Assembly Proof V001: **EXECUTED**.
+- Workflow Run: **36713427504 / SUCCESS**.
+- Machine validation: **14/14 PASS**.
+- Artifact: **11095611818** / `sha256:a3068aad1aebfa1f1f1ae378a5ef8f04c7b47ae2296152335e2480709287a8e3`.
+- Blender SHA-256: `6753e0f9f538cee538ab3c021f9a02220cf44ab89acba9d019bc84fc2c41a2a9`.
+- Product Owner reconstruction acceptance: **FAIL**.
+- Final classification: **TECHNICAL PROOF PASS / VISUAL ARCHITECTURAL REVIEW FAIL / DIAGNOSTIC ONLY**.
+- Canonical building geometry promotion: **NO**.
+- PR #52: **DRAFT / OPEN / NOT MERGED**.
+- V002 / B03-T / Tuofeng production Master / whole-building replication: **NOT AUTHORIZED**.
+- Next gate: **PROJECT RECOVERY REVIEW ONLY**.
+- T-018: **HOLD**.

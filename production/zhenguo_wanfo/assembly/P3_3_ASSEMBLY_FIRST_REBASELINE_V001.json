@@ -1,0 +1,73 @@
+{
+  "schema_version": "P3_3_ASSEMBLY_FIRST_REBASELINE_V001",
+  "date": "2026-09-29",
+  "decision_id": "D-286",
+  "status": "CANDIDATE / PRODUCT OWNER REVIEW REQUIRED",
+  "objective": "Assemble the approved and necessary timber components into the measured structural form of Wanfo Hall. Research or connection formalization is performed only when it directly blocks placement, orientation, sizing, support, or deterministic generation.",
+  "controlling_principles": [
+    "The product goal is a buildable Wanfo Hall, not a complete theory of all historical connections.",
+    "Use approved Masters and the locked Structural Timber Scope D-284 as the component pool.",
+    "Use the Component Instance Registry and same-building measured drawings as placement authority.",
+    "Define only the connection/contact information required to place and generate components correctly.",
+    "Unknown historical joinery does not block assembly unless it changes visible geometry, placement, orientation, length, support, or structural closure.",
+    "No global atomic-edge closure is required before representative assembly begins."
+  ],
+  "blocker_test": {
+    "blocking_if": [
+      "component location cannot be resolved",
+      "component orientation cannot be resolved",
+      "required generated length/scale cannot be resolved",
+      "support/counterpart is unknown in a way that prevents placement",
+      "required visible component geometry is missing",
+      "direct evidence is contradictory"
+    ],
+    "non_blocking_if": [
+      "hidden historical joinery detail is unknown but placement is deterministic",
+      "mortise/tenon/groove dimensions are unknown but do not change visible assembly geometry",
+      "a complete whole-building connection ontology is not available",
+      "an unrelated OUT-of-scope enclosure/roof-covering detail is unresolved"
+    ]
+  },
+  "retained_authorities": [
+    "D-271 Stage1 closure and 25 approved Master families",
+    "P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT",
+    "D-284 Structural Timber Scope Register V0.1",
+    "D-277 and D-279 locked connection records where they directly support assembly",
+    "same-building measured report SRC-ZG-WF-001 and locked source bindings"
+  ],
+  "demoted_nonblocking_artifacts": [
+    {
+      "artifact": "P3_3_STAGE2_C_STRUCTURAL_TIMBER_CONNECTION_COVERAGE_MATRIX_V001",
+      "decision": "D-285",
+      "new_role": "REFERENCE / DIAGNOSTIC ONLY",
+      "rule": "May identify an assembly blocker, but matrix-wide closure is not a prerequisite."
+    },
+    {
+      "artifact": "PR #49 / D-280 Batch03 candidate",
+      "new_role": "OBSOLETE_AS_NEXT_STEP / HOLD",
+      "rule": "May be mined for useful evidence only if a concrete assembly step requires it."
+    }
+  ],
+  "execution_flow": [
+    "1. Select one real representative structural assembly from the hall.",
+    "2. Resolve the actual component instances needed from Registry + measured drawings.",
+    "3. For each instance resolve only: placement anchor, orientation, required length/scale, support/counterpart, and visible geometry.",
+    "4. Create a minimal assembly spec.",
+    "5. Generate the representative assembly.",
+    "6. Validate machine geometry + Product Owner visual result.",
+    "7. Reuse the proven assembly rule across repeated positions.",
+    "8. Continue by structural zone until whole-hall assembly is complete."
+  ],
+  "next_task": {
+    "id": "AF-01",
+    "name": "正身梁架首榀｜Assembly Spec V0.1",
+    "goal": "Build one real representative main-frame slice using approved/parametric components and measured placement relationships.",
+    "scope": "Design/placement specification only until Product Owner authorizes engineering execution."
+  },
+  "prohibited_scope_expansion": [
+    "No new full connection matrix",
+    "No requirement to enumerate every historical mortise/tenon before assembly",
+    "No all-66-object attachment governance",
+    "No unrelated enclosure/ornament research unless it becomes an assembly blocker"
+  ]
+}

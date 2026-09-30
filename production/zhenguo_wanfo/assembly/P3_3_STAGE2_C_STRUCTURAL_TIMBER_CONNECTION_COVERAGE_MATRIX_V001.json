@@ -1,0 +1,1781 @@
+{
+  "schema_version": "P3_3_STAGE2_C_STRUCTURAL_TIMBER_CONNECTION_COVERAGE_MATRIX_V001",
+  "patch_version": "REBASELINE_PATCH_01",
+  "date": "2026-09-29",
+  "status": "REFERENCE_DIAGNOSTIC_ONLY / NON_BLOCKING_UNDER_D286",
+  "authority": {
+    "scope_lock": "D-284 / P3_3_STAGE2_C_STRUCTURAL_TIMBER_SCOPE_REGISTER_V001",
+    "source_matrix": "D-281 candidate + D-282 review findings",
+    "patch_decision": "D-285",
+    "inherited_locked_batches": [
+      "D-277",
+      "D-279"
+    ],
+    "source_branch_head_before_patch": "62f2848e158e90e6f16927dcdde6b84f15ba4d40"
+  },
+  "denominator": {
+    "rule": "ONLY D-284 Structural Timber Scope IN objects count toward active Stage2-C connection coverage.",
+    "in_scope_object_types": 33,
+    "conditional_outside_denominator": [
+      "替木实体族"
+    ],
+    "containers_not_physical_edges": 5,
+    "out_objects_do_not_expand_matrix": true
+  },
+  "architecture": {
+    "parent_obligation_definition": "Coverage/investigation task. A parent obligation is NOT counted as a completed physical edge.",
+    "atomic_edge_definition": "Concrete component/system endpoint pair. Only MATERIALIZED_LOCKED or LOCKED_BY_PARENT_CONNECTION_RECORD counts as locked connection coverage.",
+    "boundary_handoff_definition": "Explicit STOP interface to an OUT system. It closes the Stage2-C boundary without importing that system into the denominator.",
+    "prohibition": "No role-set/member-set/anonymous counterpart may be treated as a completed connection edge."
+  },
+  "summary": {
+    "parent_obligations": 42,
+    "inherited_parent_obligations": 39,
+    "new_parent_obligations": 3,
+    "atomic_or_handoff_edges": 18,
+    "locked_atomic_segments": 6,
+    "candidate_atomic_or_handoff_edges": 12,
+    "scope_objects": 33,
+    "scope_objects_with_parent_coverage": 33,
+    "scope_objects_with_any_atomic_edge": 18,
+    "scope_objects_parent_only": 15,
+    "uncovered_scope_objects": [],
+    "active_scope_coverage": "33/33 parent-covered",
+    "atomic_network_closure": "NOT YET CLOSED",
+    "matrix_lock_allowed": false,
+    "batch03": "HOLD",
+    "engineering": "NOT AUTHORIZED",
+    "stage3": "NOT AUTHORIZED",
+    "t018": "HOLD"
+  },
+  "parent_obligations": [
+    {
+      "parent_requirement_id": "STCM-A01",
+      "legacy_requirement_id": "CCM-A01",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "obligation_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-COLUMN-001_MASTER",
+        "b_master": "CMP-LUDOU-COLUMN-001_MASTER"
+      },
+      "semantic": "柱顶承托并定位柱头栌斗",
+      "evidence_basis": [
+        "P3.2 D-043 engineering semantics",
+        "SRC-ZG-WF-001 PDF pp47-57 / column + lintel measurement section"
+      ],
+      "closure_requirement": "Materialize Stage2-C contact + coaxial locator; historical machining remains separately classified.",
+      "inherited_materialization_status": "NEEDS_STAGE2C_MATERIALIZATION",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-A02",
+      "legacy_requirement_id": "CCM-A02",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "obligation_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-COLUMN-001_MASTER",
+        "b_master": "CMP-FRAME-LANE-001_MASTER"
+      },
+      "semantic": "阑额两端与柱连接",
+      "evidence_basis": [
+        "Stage1 Lane connection_layer",
+        "SRC-ZG-WF-001 PDF pp47-57 / column + lintel measurement section"
+      ],
+      "closure_requirement": "Create left/right end contract; span derives from column-center relation; hidden tenon only explicit replaceable reconstructed design if needed.",
+      "inherited_materialization_status": "NEEDS_CONNECTION_CONTRACT",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-A03",
+      "legacy_requirement_id": "CCM-A03",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "obligation_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-COLUMN-001_MASTER",
+        "b_master": "CMP-FRAME-YOUE-001_MASTER"
+      },
+      "semantic": "由额两端与柱连接",
+      "evidence_basis": [
+        "Stage1 Youe connection_layer",
+        "SRC-ZG-WF-001 PDF pp47-57 / column + lintel measurement section"
+      ],
+      "closure_requirement": "Create left/right end connection contract and deterministic span/orientation resolver.",
+      "inherited_materialization_status": "NEEDS_CONNECTION_CONTRACT",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-A04",
+      "legacy_requirement_id": "CCM-A04",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-LANE-001_MASTER",
+        "b_master": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
+      },
+      "semantic": "补间铺作底斗与柱间承托线的直接承托/定位关系",
+      "evidence_basis": [
+        "Registry: 补间铺作底斗12组",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Verify actual bearer in same-building drawings; if Lane is bearer materialize Lane→Didou, otherwise replace participant before lock.",
+      "inherited_materialization_status": "SOURCE_TOPOLOGY_VERIFY_THEN_MATERIALIZE",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-A05",
+      "legacy_requirement_id": "CCM-A05",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-LUDOU-COLUMN-001_MASTER",
+        "b_role": "COLUMN_HEAD_PUZUO_ROOT_COMPONENT_SET",
+        "member_set": [
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER",
+          "CMP-GONG-ANG-001_MASTER",
+          "CMP-GONG-LINGGONG-001_MASTER"
+        ]
+      },
+      "semantic": "柱头栌斗向柱头/转角铺作方向单元的根部传力连接",
+      "evidence_basis": [
+        "Registry direction-unit membership",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Resolve exact first-contact component(s) and dou roles; emit concrete Master-to-Master Connection Layer records.",
+      "inherited_materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-A06",
+      "legacy_requirement_id": "CCM-A06",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+        "b_role": "BUJIAN_PUZUO_ROOT_COMPONENT_SET",
+        "member_set": [
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER",
+          "CMP-GONG-LINGGONG-001_MASTER"
+        ]
+      },
+      "semantic": "补间铺作底斗向补间铺作方向单元的根部传力连接",
+      "evidence_basis": [
+        "Registry direction-unit membership",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Resolve exact first-contact component(s) and dou roles for infill puzuo; emit concrete pairwise records.",
+      "inherited_materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-B01",
+      "legacy_requirement_id": "CCM-B01",
+      "domain": "PUZUO_INTERNAL",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "JUMP_1_TO_JUMP_2_CHAIN"
+      },
+      "semantic": "华栱一跳—中间斗位—华栱二跳连续传力链",
+      "evidence_basis": [
+        "Registry: 每方向单元一、二跳华栱各1",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Determine dou family at each jump transition and define lower/upper interfaces + projection resolver.",
+      "inherited_materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-B02",
+      "legacy_requirement_id": "CCM-B02",
+      "domain": "PUZUO_INTERNAL",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "COLUMN_HEAD_MUDAO_GONG_STACK"
+      },
+      "semantic": "柱头/转角铺作泥道位大型瓜子栱、慢栱与斗位承托链",
+      "evidence_basis": [
+        "Registry: 大型瓜子栱/慢栱泥道",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Extract exact layer order and dou type; create concrete pairwise records.",
+      "inherited_materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-B03",
+      "legacy_requirement_id": "CCM-B03",
+      "domain": "PUZUO_INTERNAL",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "COLUMN_HEAD_JUMP2_GONG_STACK"
+      },
+      "semantic": "柱头/转角铺作二跳位小型瓜子栱、慢栱与斗位承托链",
+      "evidence_basis": [
+        "Registry: 小型瓜子栱/慢栱二跳",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Extract exact second-jump layer order and dou type; materialize pairwise interfaces.",
+      "inherited_materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-B04",
+      "legacy_requirement_id": "CCM-B04",
+      "domain": "PUZUO_INTERNAL",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "BUJIAN_MUDAO_GONG_STACK"
+      },
+      "semantic": "补间铺作泥道位小型瓜子栱、慢栱与斗位承托链",
+      "evidence_basis": [
+        "Registry: 补间泥道小型瓜子栱/慢栱",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Resolve exact infill small-gong + dou stack; do not copy column-head topology silently.",
+      "inherited_materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-B05",
+      "legacy_requirement_id": "CCM-B05",
+      "domain": "PUZUO_INTERNAL",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-GONG-ANG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "DOUBLE_MIAO_DOUBLE_XIA_ANG_CHAIN"
+      },
+      "semantic": "双杪双下昂方向链：华栱体系向头昂、二昂及中间斗位连续连接",
+      "evidence_basis": [
+        "Ang Master: 七铺作、双杪双下昂",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Resolve adjacency sequence and dou family at each Ang transition; preserve locked Ang slope/profile controls.",
+      "inherited_materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-B06",
+      "legacy_requirement_id": "CCM-B06",
+      "domain": "PUZUO_INTERNAL",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-ANG-001_MASTER"
+        ],
+        "assembly_role": "TOU_ANG_ER_ANG_RELATION"
+      },
+      "semantic": "头昂与二昂层级关系",
+      "evidence_basis": [
+        "Ang Master source-supported topology",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Produce deterministic endpoint/support interfaces for both Ang variants and intervening support role(s).",
+      "inherited_materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-B07",
+      "legacy_requirement_id": "CCM-B07",
+      "domain": "PUZUO_INTERNAL",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-LINGGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER",
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-GONG-ANG-001_MASTER"
+        ],
+        "assembly_role": "OUTERMOST_JUMP_TERMINAL"
+      },
+      "semantic": "最外跳令栱与外跳承托节点连接",
+      "evidence_basis": [
+        "Registry: 令栱=最外跳",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Resolve actual supporting dou/member immediately below Linggong by unit class; materialize pairwise record(s).",
+      "inherited_materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-B08",
+      "legacy_requirement_id": "CCM-B08",
+      "domain": "PUZUO_INTERNAL",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "DOU_ROLE_ASSIGNMENT_ALL_PUZUO_NODES"
+      },
+      "semantic": "单向长开斗族/交互斗族在所有铺作节点中的角色分配",
+      "evidence_basis": [
+        "P3.2 approved dou Masters",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Every bracket node must assign one allowed dou family or explicit non-dou connector; no anonymous dou placeholder at Stage2 exit.",
+      "inherited_materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-B09",
+      "legacy_requirement_id": "CCM-B09",
+      "domain": "PUZUO_INTERNAL",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-GONG-LINGGONG-001_MASTER",
+          "CMP-GONG-ANG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "PUZUO_UNIT_CLASS_TOPOLOGY"
+      },
+      "semantic": "柱头/转角铺作与补间铺作方向单元拓扑差异",
+      "evidence_basis": [
+        "Registry member-role distribution",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Freeze explicit unit-class subgraphs so large/small gong and Ang presence are not inferred ad hoc per instance.",
+      "inherited_materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C01",
+      "legacy_requirement_id": "CCM-C01",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_role": "PUZUO_UPPER_SUPPORT",
+        "b_master": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER"
+      },
+      "semantic": "铺作上部承托下六椽栿",
+      "evidence_basis": [
+        "P3.2 frame precedent",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Resolve real supporting component/interface replacing legacy generic proxy; bind Lower6 support interfaces.",
+      "inherited_materialization_status": "REAL_COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C02",
+      "legacy_requirement_id": "CCM-C02",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_role": "PUZUO_OR_FRAME_SUPPORT",
+        "b_master": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER"
+      },
+      "semantic": "上六椽栿实际下部承托关系",
+      "evidence_basis": [
+        "P3.2 frame precedent",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Resolve actual supporter(s) from measured topology; no P3.2 control/proxy as production truth.",
+      "inherited_materialization_status": "REAL_COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C03",
+      "legacy_requirement_id": "CCM-C03",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+        "b_master": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER"
+      },
+      "semantic": "P3.2 下/上六椽栿 proxy 关系生产处分",
+      "evidence_basis": [
+        "P3.2 representative graph non-historical proxy",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis"
+      ],
+      "closure_requirement": "Decide direct attachment, indirect through real component(s), or EXPLICIT_NO_DIRECT_ATTACHMENT; remove ambiguity.",
+      "inherited_materialization_status": "DISPOSITION_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C04",
+      "legacy_requirement_id": "CCM-C04",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+        "connector_role": "SAN_DOU_SUPPORT",
+        "b_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER"
+      },
+      "semantic": "上六椽栿→散斗→四椽栿承托链",
+      "evidence_basis": [
+        "D-277 Stage2-C Batch01"
+      ],
+      "closure_requirement": "Retain locked family class; later instance resolver maps real locations without promoting proxy geometry.",
+      "inherited_materialization_status": "LOCKED_D277",
+      "prior_locked_record": "CONN-S2C-B01-SANDOU-UPPER6-FOUR-FAMILY-001",
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "LOCKED_FAMILY_CONNECTION"
+    },
+    {
+      "parent_requirement_id": "STCM-C05",
+      "legacy_requirement_id": "CCM-C05",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+        "b_master": "CMP-FRAME-PINGLIANG-001_MASTER"
+      },
+      "semantic": "四椽栿层向平梁层的实际支承/中间构件关系",
+      "evidence_basis": [
+        "Four-Chuanfu + Pingliang Stage1 Masters",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Resolve direct vs explicit intermediate component(s); close vertical frame chain with deterministic interfaces.",
+      "inherited_materialization_status": "REAL_COUNTERPART_OR_CONNECTOR_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C06",
+      "legacy_requirement_id": "CCM-C06",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-PINGLIANG-001_MASTER",
+        "b_master": "CMP-FRAME-SHUZHU-001_MASTER"
+      },
+      "semantic": "平梁→蜀柱下端",
+      "evidence_basis": [
+        "D-279 Stage2-C Batch02"
+      ],
+      "closure_requirement": "Retain locked family attachment; plan anchor handled by deterministic resolver.",
+      "inherited_materialization_status": "LOCKED_D279",
+      "prior_locked_record": "CONN-S2C-B02-PINGLIANG-SHUZHU-FAMILY-001",
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "LOCKED_FAMILY_CONNECTION"
+    },
+    {
+      "parent_requirement_id": "STCM-C07",
+      "legacy_requirement_id": "CCM-C07",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-PINGLIANG-001_MASTER",
+        "b_master": "CMP-FRAME-CHASHOU-001_MASTER"
+      },
+      "semantic": "平梁→叉手下端",
+      "evidence_basis": [
+        "D-279 Stage2-C Batch02"
+      ],
+      "closure_requirement": "Retain locked lower-end attachment; upper counterpart closes separately.",
+      "inherited_materialization_status": "LOCKED_D279",
+      "prior_locked_record": "CONN-S2C-B02-PINGLIANG-CHASHOU-FAMILY-001",
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "LOCKED_FAMILY_CONNECTION"
+    },
+    {
+      "parent_requirement_id": "STCM-C08",
+      "legacy_requirement_id": "CCM-C08",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-SHUZHU-001_MASTER",
+        "b_role": "RIDGE_SUPPORT_COUNTERPART"
+      },
+      "semantic": "蜀柱上端→脊部真实承托构件",
+      "evidence_basis": [
+        "Shuzhu Stage1 endpoint semantics",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Identify actual counterpart; exact historic joinery may use explicit replaceable reconstructed design, but counterpart/endpoint must be deterministic.",
+      "inherited_materialization_status": "COUNTERPART_AND_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C09",
+      "legacy_requirement_id": "CCM-C09",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-CHASHOU-001_MASTER",
+        "b_role": "RIDGE_SUPPORT_COUNTERPART"
+      },
+      "semantic": "叉手上端→脊部真实承托构件",
+      "evidence_basis": [
+        "Chashou Stage1 endpoint semantics",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Identify counterpart and solve P_upper deterministically; permanent null counterpart is not allowed.",
+      "inherited_materialization_status": "COUNTERPART_AND_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C10",
+      "legacy_requirement_id": "CCM-C10",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-TUOJIAO-001_MASTER",
+        "b_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER"
+      },
+      "semantic": "托脚→四椽栿端部",
+      "evidence_basis": [
+        "D-279 Stage2-C Batch02"
+      ],
+      "closure_requirement": "Retain locked family support class; per-instance side mapping belongs later instance topology.",
+      "inherited_materialization_status": "LOCKED_D279",
+      "prior_locked_record": "CONN-S2C-B02-TUOJIAO-FOUR-FAMILY-001",
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "LOCKED_FAMILY_CONNECTION"
+    },
+    {
+      "parent_requirement_id": "STCM-C11",
+      "legacy_requirement_id": "CCM-C11",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-TUOJIAO-001_MASTER",
+        "b_master": "CMP-FRAME-PURLIN-001_MASTER"
+      },
+      "semantic": "托脚→有证据支持的槫层位",
+      "evidence_basis": [
+        "D-279 Stage2-C Batch02"
+      ],
+      "closure_requirement": "Retain source-bounded purlin-role attachment; never generalize to all purlins.",
+      "inherited_materialization_status": "LOCKED_D279",
+      "prior_locked_record": "CONN-S2C-B02-TUOJIAO-PURLIN-FAMILY-001",
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "LOCKED_FAMILY_CONNECTION"
+    },
+    {
+      "parent_requirement_id": "STCM-C12",
+      "legacy_requirement_id": "CCM-C12",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-DINGFU-001_MASTER",
+        "b_role": "GABLE_COLUMN_HEAD_PUZUO"
+      },
+      "semantic": "丁栿外端→山面柱头铺作/槽口交接",
+      "evidence_basis": [
+        "Dingfu Stage1 interface semantic",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis"
+      ],
+      "closure_requirement": "Create executable entry-direction, receive-region and parametric groove contract; historical claim limited by evidence.",
+      "inherited_materialization_status": "NEEDS_DETERMINISTIC_CONNECTION_CONTRACT",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C13",
+      "legacy_requirement_id": "CCM-C13",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-DINGFU-001_MASTER",
+        "b_role": "QIFUGONG_PURLIN_INTERSECTION_REGION"
+      },
+      "semantic": "丁栿内端→骑栿栱/与槫交构区域",
+      "evidence_basis": [
+        "Dingfu Stage1 INBOARD_END semantic",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis"
+      ],
+      "closure_requirement": "Resolve exact real counterpart(s), then materialize deterministic endpoint/connection records.",
+      "inherited_materialization_status": "COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C14",
+      "legacy_requirement_id": "CCM-C14",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-RUFU-001_MASTER",
+        "b_role": "BRACKET_SET_ASSEMBLY"
+      },
+      "semantic": "乳栿斗栱端→斗栱交接/槽口",
+      "evidence_basis": [
+        "Rufu Stage1 bracket_end + same-building photo",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis"
+      ],
+      "closure_requirement": "Create endpoint orientation + receive-region + parametric groove contract; no fixed 45° assumption.",
+      "inherited_materialization_status": "NEEDS_DETERMINISTIC_CONNECTION_CONTRACT",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C15",
+      "legacy_requirement_id": "CCM-C15",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-RUFU-001_MASTER",
+        "b_role": "RUFU_OPPOSITE_FRAME_COUNTERPART"
+      },
+      "semantic": "乳栿另一端→实际梁架构件",
+      "evidence_basis": [
+        "Rufu Stage1 opposite_end=assembly endpoint",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis"
+      ],
+      "closure_requirement": "Resolve counterpart from source section and produce endpoint-derived length/orientation contract.",
+      "inherited_materialization_status": "COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C16",
+      "legacy_requirement_id": "CCM-C16",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-ZHAQIAN-001_MASTER",
+        "b_role": "ZHAQIAN_ENDPOINT_A_COUNTERPART"
+      },
+      "semantic": "剳牵端点A→实际支承/交接构件",
+      "evidence_basis": [
+        "Registry: 剳牵具体端点待附图锁定",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Resolve endpoint A counterpart; materialize interface and placement rule.",
+      "inherited_materialization_status": "COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C17",
+      "legacy_requirement_id": "CCM-C17",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-ZHAQIAN-001_MASTER",
+        "b_role": "ZHAQIAN_ENDPOINT_B_COUNTERPART"
+      },
+      "semantic": "剳牵端点B→实际支承/交接构件",
+      "evidence_basis": [
+        "Registry: 剳牵具体端点待附图锁定",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Resolve endpoint B counterpart and close deterministic span/orientation resolver.",
+      "inherited_materialization_status": "COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C18",
+      "legacy_requirement_id": "CCM-C18",
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-PURLIN-001_MASTER",
+        "b_role": "ALL_PURLIN_SUPPORTER_MAP"
+      },
+      "semantic": "33根槫各层位完整承托者映射",
+      "evidence_basis": [
+        "T-026: MAIN21/EAST6/WEST6",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Every purlin role/layer must have explicit supporter class; Tuojiao subset is locked but remaining layers must be mapped.",
+      "inherited_materialization_status": "FULL_SUPPORT_MAP_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-D01",
+      "legacy_requirement_id": "CCM-D01",
+      "domain": "CORNER_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_role": "CORNER_PUZUO_SUPPORT",
+        "b_master": "CMP-FRAME-DAJIAOLIANG-001_MASTER"
+      },
+      "semantic": "转角铺作→大角梁内端承托/定位",
+      "evidence_basis": [
+        "Dajiaoliang source binding PDF pp88-89",
+        "SRC-ZG-WF-001 PDF pp88-100 / corner beams and related members"
+      ],
+      "closure_requirement": "Resolve actual corner-puzuo receiving node(s) and deterministic inboard endpoint; do not bake 45°.",
+      "inherited_materialization_status": "COUNTERPART_AND_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-D02",
+      "legacy_requirement_id": "CCM-D02",
+      "domain": "CORNER_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+        "b_master": "CMP-FRAME-ZIJIAOLIANG-001_MASTER"
+      },
+      "semantic": "大角梁↔子角梁叠合/连接关系",
+      "evidence_basis": [
+        "Stage1 Zijiaoliang partial connection intent",
+        "SRC-ZG-WF-001 PDF pp88-100 / corner beams and related members"
+      ],
+      "closure_requirement": "Determine JOINERY_FEATURE vs CONTACT_INTERFACE and define endpoint relation + replaceable geometry.",
+      "inherited_materialization_status": "CONNECTION_KIND_AND_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-D03",
+      "legacy_requirement_id": "CCM-D03",
+      "domain": "CORNER_FRAME",
+      "obligation_type": "SYSTEM_HANDOFF",
+      "participants": {
+        "a_master": "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
+        "b_role": "OUTBOARD_TERMINAL_ORNAMENT_ROLE"
+      },
+      "semantic": "子角梁外端→套兽/外端终止构件",
+      "evidence_basis": [
+        "Stage1 Zijiaoliang outboard attachment intent",
+        "SRC-ZG-WF-001 PDF pp88-100 / corner beams and related members"
+      ],
+      "closure_requirement": "Define timber terminal handoff only; ornament remains OUT under D-284.",
+      "inherited_materialization_status": "HANDOFF_CONTRACT_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "BOUNDARY_STOP",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-D04",
+      "legacy_requirement_id": "CCM-D04",
+      "domain": "CORNER_FRAME",
+      "obligation_type": "SYSTEM_HANDOFF",
+      "participants": {
+        "member_set": [
+          "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+          "CMP-FRAME-ZIJIAOLIANG-001_MASTER"
+        ],
+        "b_role": "CORNER_RAFTER_SYSTEM"
+      },
+      "semantic": "大/子角梁→翼角椽/角部椽系",
+      "evidence_basis": [
+        "Corner-beam same-building visual evidence",
+        "SRC-ZG-WF-001 PDF pp88-100 / corner beams and related members",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Define corner-rafter datum/orientation resolver without absorbing rafters into corner-beam geometry.",
+      "inherited_materialization_status": "SYSTEM_HANDOFF_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-E01",
+      "legacy_requirement_id": "CCM-E01",
+      "domain": "ROOF_HANDOFF",
+      "obligation_type": "SYSTEM_HANDOFF",
+      "participants": {
+        "a_master": "CMP-FRAME-PURLIN-001_MASTER",
+        "b_role": "RAFTER_SYSTEM"
+      },
+      "semantic": "槫→椽系承托与定位",
+      "evidence_basis": [
+        "P3.3 DoD representative assembly #6: 槫—椽—屋面基层",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Define purlin-top support interface, rafter axis/spacing/orientation handoff and deterministic resolver.",
+      "inherited_materialization_status": "SYSTEM_HANDOFF_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL_OR_LOCKED_BOUNDARY",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-E02",
+      "legacy_requirement_id": "CCM-E02",
+      "domain": "ROOF_HANDOFF",
+      "obligation_type": "SYSTEM_HANDOFF",
+      "participants": {
+        "a_role": "RAFTER_SYSTEM",
+        "b_role": "ROOF_SHEATHING_WANGBAN_SYSTEM"
+      },
+      "semantic": "椽系→望板/屋面基层",
+      "evidence_basis": [
+        "P3.3 DoD representative assembly #6",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Define roof-substrate support/contact handoff; tile pending-source items stay outside current Master denominator.",
+      "inherited_materialization_status": "SYSTEM_HANDOFF_REQUIRED",
+      "prior_locked_record": null,
+      "scope_status": "UPPER_BOUNDARY_INTERNAL_END",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-C19",
+      "legacy_requirement_id": null,
+      "domain": "PRIMARY_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-PURLIN-001_MASTER",
+        "b_scope_object": "襻间枋"
+      },
+      "semantic": "平槫体系↔襻间枋的承托/定位关系",
+      "evidence_basis": [
+        "Current Registry: 12 襻间枋 located beneath upper/lower purlins",
+        "Structural Timber Scope D-284"
+      ],
+      "closure_requirement": "Verify direct physical counterpart/contact from same-building frame evidence, then materialize exact Purlin↔Panjianfang support/locate edge(s); do not infer a universal section from unrelated measurement rows.",
+      "inherited_materialization_status": "NEW_REBASELINE_OBLIGATION",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-D05",
+      "legacy_requirement_id": null,
+      "domain": "CORNER_FRAME",
+      "obligation_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_scope_object": "隐角梁",
+        "b_role": "CORNER_TIMBER_COUNTERPART_SET",
+        "member_set": [
+          "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+          "CMP-FRAME-ZIJIAOLIANG-001_MASTER"
+        ]
+      },
+      "semantic": "隐角梁与角部主体木构的实际连接/承托路径",
+      "evidence_basis": [
+        "Current Registry: 4 hidden-corner-beam instances / LOCKED_COUNT_PARAMETRIC_GEOMETRY",
+        "Structural Timber Scope D-284"
+      ],
+      "closure_requirement": "Resolve actual counterpart(s) and interface path from same-building corner evidence; materialize only evidence-supported edges. Parametric geometry may remain replaceable.",
+      "inherited_materialization_status": "NEW_REBASELINE_OBLIGATION",
+      "prior_locked_record": null,
+      "scope_status": "INTERNAL",
+      "closure_state": "OPEN"
+    },
+    {
+      "parent_requirement_id": "STCM-F01",
+      "legacy_requirement_id": null,
+      "domain": "LOWER_BOUNDARY",
+      "obligation_type": "BOUNDARY_HANDOFF",
+      "participants": {
+        "a_master": "CMP-COLUMN-001_MASTER",
+        "b_role": "FOUNDATION_SUPPORT_INTERFACE"
+      },
+      "semantic": "柱下端→基础支承界面｜Stage2-C lower STOP",
+      "evidence_basis": [
+        "Structural Timber Scope D-284 lower STOP boundary"
+      ],
+      "closure_requirement": "Define deterministic lower support interface/handoff only. Do not propagate Stage2-C into 台基整体、角石 or below-foundation systems.",
+      "inherited_materialization_status": "NEW_REBASELINE_BOUNDARY",
+      "prior_locked_record": null,
+      "scope_status": "BOUNDARY_STOP",
+      "closure_state": "OPEN"
+    }
+  ],
+  "atomic_edge_inventory": [
+    {
+      "id": "STCE-A01",
+      "parent": "STCM-A01",
+      "a": {
+        "object": "柱",
+        "ref": "CMP-COLUMN-001_MASTER"
+      },
+      "b": {
+        "object": "柱头栌斗",
+        "ref": "CMP-LUDOU-COLUMN-001_MASTER"
+      },
+      "kind": "CONTACT_INTERFACE",
+      "state": "CANDIDATE_NOT_MATERIALIZED",
+      "directness": "ENGINEERING_RELATION_KNOWN / STAGE2C_RECORD_REQUIRED",
+      "note": "P3.2 SUPPORT+LOCATE semantics exist; Stage2-C connection record still required."
+    },
+    {
+      "id": "STCE-A02",
+      "parent": "STCM-A02",
+      "a": {
+        "object": "柱",
+        "ref": "CMP-COLUMN-001_MASTER"
+      },
+      "b": {
+        "object": "阑额",
+        "ref": "CMP-FRAME-LANE-001_MASTER"
+      },
+      "kind": "JOINERY_FEATURE",
+      "state": "CANDIDATE_NOT_MATERIALIZED",
+      "directness": "PHYSICAL_CONNECTION_EXISTENCE_KNOWN / EXACT_JOINERY_BOUNDED",
+      "note": "Stage1 Lane left/right column connection semantics."
+    },
+    {
+      "id": "STCE-A03",
+      "parent": "STCM-A03",
+      "a": {
+        "object": "柱",
+        "ref": "CMP-COLUMN-001_MASTER"
+      },
+      "b": {
+        "object": "由额",
+        "ref": "CMP-FRAME-YOUE-001_MASTER"
+      },
+      "kind": "JOINERY_FEATURE",
+      "state": "CANDIDATE_NOT_MATERIALIZED",
+      "directness": "PHYSICAL_CONNECTION_EXISTENCE_KNOWN / EXACT_JOINERY_BOUNDED",
+      "note": "Stage1 Youe left/right column connection semantics."
+    },
+    {
+      "id": "STCE-A04",
+      "parent": "STCM-A04",
+      "a": {
+        "object": "阑额",
+        "ref": "CMP-FRAME-LANE-001_MASTER"
+      },
+      "b": {
+        "object": "补间铺作底斗",
+        "ref": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
+      },
+      "kind": "CONTACT_INTERFACE",
+      "state": "PAIR_CANDIDATE_SOURCE_VERIFY_REQUIRED",
+      "directness": "NOT_YET_PROVEN_AS_DIRECT_EDGE",
+      "note": "Keep as pair candidate only until same-building drawing confirms actual bearer."
+    },
+    {
+      "id": "STCE-C04A",
+      "parent": "STCM-C04",
+      "a": {
+        "object": "上六椽栿",
+        "ref": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER"
+      },
+      "b": {
+        "object": "散斗族",
+        "ref": "SAN_DOU_SUPPORT_ROLE"
+      },
+      "kind": "PHYSICAL_CONNECTOR",
+      "state": "LOCKED_BY_D277_PARENT_RECORD",
+      "directness": "LOCKED_FAMILY_CHAIN_SEGMENT",
+      "record": "CONN-S2C-B01-SANDOU-UPPER6-FOUR-FAMILY-001"
+    },
+    {
+      "id": "STCE-C04B",
+      "parent": "STCM-C04",
+      "a": {
+        "object": "散斗族",
+        "ref": "SAN_DOU_SUPPORT_ROLE"
+      },
+      "b": {
+        "object": "四椽栿",
+        "ref": "CMP-FRAME-FOUR-CHUANFU-001_MASTER"
+      },
+      "kind": "PHYSICAL_CONNECTOR",
+      "state": "LOCKED_BY_D277_PARENT_RECORD",
+      "directness": "LOCKED_FAMILY_CHAIN_SEGMENT",
+      "record": "CONN-S2C-B01-SANDOU-UPPER6-FOUR-FAMILY-001"
+    },
+    {
+      "id": "STCE-C06",
+      "parent": "STCM-C06",
+      "a": {
+        "object": "平梁",
+        "ref": "CMP-FRAME-PINGLIANG-001_MASTER"
+      },
+      "b": {
+        "object": "蜀柱",
+        "ref": "CMP-FRAME-SHUZHU-001_MASTER"
+      },
+      "kind": "CONTACT_INTERFACE",
+      "state": "MATERIALIZED_LOCKED",
+      "directness": "LOCKED_FAMILY_ATTACHMENT",
+      "record": "CONN-S2C-B02-PINGLIANG-SHUZHU-FAMILY-001"
+    },
+    {
+      "id": "STCE-C07",
+      "parent": "STCM-C07",
+      "a": {
+        "object": "平梁",
+        "ref": "CMP-FRAME-PINGLIANG-001_MASTER"
+      },
+      "b": {
+        "object": "叉手",
+        "ref": "CMP-FRAME-CHASHOU-001_MASTER"
+      },
+      "kind": "CONTACT_INTERFACE",
+      "state": "MATERIALIZED_LOCKED",
+      "directness": "LOCKED_FAMILY_ATTACHMENT",
+      "record": "CONN-S2C-B02-PINGLIANG-CHASHOU-FAMILY-001"
+    },
+    {
+      "id": "STCE-C10",
+      "parent": "STCM-C10",
+      "a": {
+        "object": "托脚",
+        "ref": "CMP-FRAME-TUOJIAO-001_MASTER"
+      },
+      "b": {
+        "object": "四椽栿",
+        "ref": "CMP-FRAME-FOUR-CHUANFU-001_MASTER"
+      },
+      "kind": "CONTACT_INTERFACE",
+      "state": "MATERIALIZED_LOCKED",
+      "directness": "LOCKED_FAMILY_ATTACHMENT",
+      "record": "CONN-S2C-B02-TUOJIAO-FOUR-FAMILY-001"
+    },
+    {
+      "id": "STCE-C11",
+      "parent": "STCM-C11",
+      "a": {
+        "object": "托脚",
+        "ref": "CMP-FRAME-TUOJIAO-001_MASTER"
+      },
+      "b": {
+        "object": "槫",
+        "ref": "CMP-FRAME-PURLIN-001_MASTER"
+      },
+      "kind": "CONTACT_INTERFACE",
+      "state": "MATERIALIZED_LOCKED",
+      "directness": "LOCKED_SOURCE_BOUNDED_ATTACHMENT",
+      "record": "CONN-S2C-B02-TUOJIAO-PURLIN-FAMILY-001"
+    },
+    {
+      "id": "STCE-C19",
+      "parent": "STCM-C19",
+      "a": {
+        "object": "槫",
+        "ref": "CMP-FRAME-PURLIN-001_MASTER"
+      },
+      "b": {
+        "object": "襻间枋",
+        "ref": "PARAMETRIC_TIMBER_MEMBER"
+      },
+      "kind": "RESOLVE_KIND",
+      "state": "PAIR_CANDIDATE_SOURCE_VERIFY_REQUIRED",
+      "directness": "LOCATION_RELATION_KNOWN / DIRECT_CONTACT_NOT_YET_LOCKED",
+      "note": "12 Registry positions are under upper/lower purlins; exact support/contact semantics still require source confirmation."
+    },
+    {
+      "id": "STCE-D02",
+      "parent": "STCM-D02",
+      "a": {
+        "object": "大角梁",
+        "ref": "CMP-FRAME-DAJIAOLIANG-001_MASTER"
+      },
+      "b": {
+        "object": "子角梁",
+        "ref": "CMP-FRAME-ZIJIAOLIANG-001_MASTER"
+      },
+      "kind": "RESOLVE_KIND",
+      "state": "PAIR_CANDIDATE_NOT_MATERIALIZED",
+      "directness": "STAGE1_CONNECTION_INTENT / EXACT_KIND_PENDING",
+      "note": "Do not choose JOINERY_FEATURE vs CONTACT_INTERFACE until evidence review."
+    },
+    {
+      "id": "STCE-D03",
+      "parent": "STCM-D03",
+      "a": {
+        "object": "子角梁",
+        "ref": "CMP-FRAME-ZIJIAOLIANG-001_MASTER"
+      },
+      "b": {
+        "object": "OUT_OF_SCOPE_ORNAMENT",
+        "ref": "ORNAMENT_HANDOFF_INTERFACE"
+      },
+      "kind": "BOUNDARY_HANDOFF",
+      "state": "BOUNDARY_HANDOFF_CANDIDATE",
+      "directness": "STOP_BOUNDARY_ONLY",
+      "note": "No ornament geometry enters Stage2-C."
+    },
+    {
+      "id": "STCE-D04A",
+      "parent": "STCM-D04",
+      "a": {
+        "object": "大角梁",
+        "ref": "CMP-FRAME-DAJIAOLIANG-001_MASTER"
+      },
+      "b": {
+        "object": "椽系",
+        "ref": "CORNER_RAFTER_SYSTEM"
+      },
+      "kind": "SYSTEM_HANDOFF",
+      "state": "HANDOFF_CANDIDATE_NOT_MATERIALIZED",
+      "directness": "STRUCTURAL_TIMBER_INTERNAL_HANDOFF",
+      "note": "Corner-rafter datum/orientation resolver required."
+    },
+    {
+      "id": "STCE-D04B",
+      "parent": "STCM-D04",
+      "a": {
+        "object": "子角梁",
+        "ref": "CMP-FRAME-ZIJIAOLIANG-001_MASTER"
+      },
+      "b": {
+        "object": "椽系",
+        "ref": "CORNER_RAFTER_SYSTEM"
+      },
+      "kind": "SYSTEM_HANDOFF",
+      "state": "HANDOFF_CANDIDATE_NOT_MATERIALIZED",
+      "directness": "STRUCTURAL_TIMBER_INTERNAL_HANDOFF",
+      "note": "Corner-rafter datum/orientation resolver required."
+    },
+    {
+      "id": "STCE-E01",
+      "parent": "STCM-E01",
+      "a": {
+        "object": "槫",
+        "ref": "CMP-FRAME-PURLIN-001_MASTER"
+      },
+      "b": {
+        "object": "椽系",
+        "ref": "RAFTER_SYSTEM"
+      },
+      "kind": "SYSTEM_HANDOFF",
+      "state": "HANDOFF_CANDIDATE_NOT_MATERIALIZED",
+      "directness": "STRUCTURAL_TIMBER_INTERNAL_HANDOFF",
+      "note": "Purlin-top support + rafter placement/orientation resolver required."
+    },
+    {
+      "id": "STCE-E02",
+      "parent": "STCM-E02",
+      "a": {
+        "object": "椽系",
+        "ref": "RAFTER_SYSTEM"
+      },
+      "b": {
+        "object": "望板系统",
+        "ref": "ROOF_SHEATHING_WANGBAN_SYSTEM"
+      },
+      "kind": "SYSTEM_HANDOFF",
+      "state": "HANDOFF_CANDIDATE_NOT_MATERIALIZED",
+      "directness": "UPPER_TIMBER_STOP_HANDOFF",
+      "note": "Stage2-C stops above Wangban under D-284."
+    },
+    {
+      "id": "STCE-F01",
+      "parent": "STCM-F01",
+      "a": {
+        "object": "柱",
+        "ref": "CMP-COLUMN-001_MASTER"
+      },
+      "b": {
+        "object": "OUT_OF_SCOPE_FOUNDATION",
+        "ref": "FOUNDATION_SUPPORT_INTERFACE"
+      },
+      "kind": "BOUNDARY_HANDOFF",
+      "state": "BOUNDARY_HANDOFF_CANDIDATE",
+      "directness": "LOWER_STOP_BOUNDARY_ONLY",
+      "note": "No foundation geometry enters Stage2-C."
+    }
+  ],
+  "scope_object_coverage": [
+    {
+      "object_type": "补间铺作底斗",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A04",
+        "STCM-A06"
+      ],
+      "atomic_edge_ids": [
+        "STCE-A04"
+      ],
+      "coverage_state": "HAS_ATOMIC_OR_HANDOFF_CANDIDATE"
+    },
+    {
+      "object_type": "叉手",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-CHASHOU-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-C07",
+        "STCM-C09"
+      ],
+      "atomic_edge_ids": [
+        "STCE-C07"
+      ],
+      "coverage_state": "HAS_LOCKED_ATOMIC_EDGE"
+    },
+    {
+      "object_type": "椽系",
+      "scope_role": "PARAMETRIC_TIMBER_SYSTEM",
+      "approved_master_ref": null,
+      "parent_requirement_ids": [
+        "STCM-D04",
+        "STCM-E01",
+        "STCM-E02"
+      ],
+      "atomic_edge_ids": [
+        "STCE-D04A",
+        "STCE-D04B",
+        "STCE-E01",
+        "STCE-E02"
+      ],
+      "coverage_state": "HAS_ATOMIC_OR_HANDOFF_CANDIDATE"
+    },
+    {
+      "object_type": "剳牵",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-ZHAQIAN-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-C16",
+        "STCM-C17"
+      ],
+      "atomic_edge_ids": [],
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "大角梁",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-D01",
+        "STCM-D02",
+        "STCM-D04",
+        "STCM-D05"
+      ],
+      "atomic_edge_ids": [
+        "STCE-D02",
+        "STCE-D04A"
+      ],
+      "coverage_state": "HAS_ATOMIC_OR_HANDOFF_CANDIDATE"
+    },
+    {
+      "object_type": "大型瓜子栱",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-GUAZI-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A05",
+        "STCM-A06",
+        "STCM-B02",
+        "STCM-B03",
+        "STCM-B04",
+        "STCM-B09"
+      ],
+      "atomic_edge_ids": [],
+      "shared_master_variant_object": true,
+      "variant_role_must_be_resolved_in_parent_topology": true,
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "大型慢栱",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-MANGONG-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A05",
+        "STCM-A06",
+        "STCM-B02",
+        "STCM-B03",
+        "STCM-B04",
+        "STCM-B09"
+      ],
+      "atomic_edge_ids": [],
+      "shared_master_variant_object": true,
+      "variant_role_must_be_resolved_in_parent_topology": true,
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "单向长开斗族",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A05",
+        "STCM-A06",
+        "STCM-B01",
+        "STCM-B02",
+        "STCM-B03",
+        "STCM-B04",
+        "STCM-B05",
+        "STCM-B07",
+        "STCM-B08",
+        "STCM-B09"
+      ],
+      "atomic_edge_ids": [],
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "丁栿",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-DINGFU-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-C12",
+        "STCM-C13"
+      ],
+      "atomic_edge_ids": [],
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "二昂",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-ANG-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A05",
+        "STCM-B05",
+        "STCM-B06",
+        "STCM-B07",
+        "STCM-B09"
+      ],
+      "atomic_edge_ids": [],
+      "shared_master_variant_object": true,
+      "variant_role_must_be_resolved_in_parent_topology": true,
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "华栱",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-HUAGONG-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A05",
+        "STCM-A06",
+        "STCM-B01",
+        "STCM-B05",
+        "STCM-B07",
+        "STCM-B09"
+      ],
+      "atomic_edge_ids": [],
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "交互斗族",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-DOU-INTERACTIVE-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A05",
+        "STCM-A06",
+        "STCM-B01",
+        "STCM-B02",
+        "STCM-B03",
+        "STCM-B04",
+        "STCM-B05",
+        "STCM-B07",
+        "STCM-B08",
+        "STCM-B09"
+      ],
+      "atomic_edge_ids": [],
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "阑额",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-LANE-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A02",
+        "STCM-A04"
+      ],
+      "atomic_edge_ids": [
+        "STCE-A02",
+        "STCE-A04"
+      ],
+      "coverage_state": "HAS_ATOMIC_OR_HANDOFF_CANDIDATE"
+    },
+    {
+      "object_type": "令栱",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-LINGGONG-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A05",
+        "STCM-A06",
+        "STCM-B07",
+        "STCM-B09"
+      ],
+      "atomic_edge_ids": [],
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "襻间枋",
+      "scope_role": "PARAMETRIC_TIMBER_MEMBER",
+      "approved_master_ref": null,
+      "parent_requirement_ids": [
+        "STCM-C19"
+      ],
+      "atomic_edge_ids": [
+        "STCE-C19"
+      ],
+      "coverage_state": "HAS_ATOMIC_OR_HANDOFF_CANDIDATE"
+    },
+    {
+      "object_type": "平梁",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-C05",
+        "STCM-C06",
+        "STCM-C07"
+      ],
+      "atomic_edge_ids": [
+        "STCE-C06",
+        "STCE-C07"
+      ],
+      "coverage_state": "HAS_LOCKED_ATOMIC_EDGE"
+    },
+    {
+      "object_type": "乳栿",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-RUFU-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-C14",
+        "STCM-C15"
+      ],
+      "atomic_edge_ids": [],
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "散斗族",
+      "scope_role": "REQUIRED_CONNECTOR_ROLE",
+      "approved_master_ref": null,
+      "parent_requirement_ids": [
+        "STCM-C04"
+      ],
+      "atomic_edge_ids": [
+        "STCE-C04A",
+        "STCE-C04B"
+      ],
+      "coverage_state": "HAS_LOCKED_ATOMIC_EDGE"
+    },
+    {
+      "object_type": "上六椽栿",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-C02",
+        "STCM-C03",
+        "STCM-C04"
+      ],
+      "atomic_edge_ids": [
+        "STCE-C04A"
+      ],
+      "coverage_state": "HAS_LOCKED_ATOMIC_EDGE"
+    },
+    {
+      "object_type": "蜀柱",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-SHUZHU-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-C06",
+        "STCM-C08"
+      ],
+      "atomic_edge_ids": [
+        "STCE-C06"
+      ],
+      "coverage_state": "HAS_LOCKED_ATOMIC_EDGE"
+    },
+    {
+      "object_type": "四椽栿",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-C04",
+        "STCM-C05",
+        "STCM-C10"
+      ],
+      "atomic_edge_ids": [
+        "STCE-C04B",
+        "STCE-C10"
+      ],
+      "coverage_state": "HAS_LOCKED_ATOMIC_EDGE"
+    },
+    {
+      "object_type": "头昂",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-ANG-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A05",
+        "STCM-B05",
+        "STCM-B06",
+        "STCM-B07",
+        "STCM-B09"
+      ],
+      "atomic_edge_ids": [],
+      "shared_master_variant_object": true,
+      "variant_role_must_be_resolved_in_parent_topology": true,
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "槫",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-PURLIN-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-C11",
+        "STCM-C18",
+        "STCM-E01",
+        "STCM-C19"
+      ],
+      "atomic_edge_ids": [
+        "STCE-C11",
+        "STCE-C19",
+        "STCE-E01"
+      ],
+      "coverage_state": "HAS_LOCKED_ATOMIC_EDGE"
+    },
+    {
+      "object_type": "托脚",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-C10",
+        "STCM-C11"
+      ],
+      "atomic_edge_ids": [
+        "STCE-C10",
+        "STCE-C11"
+      ],
+      "coverage_state": "HAS_LOCKED_ATOMIC_EDGE"
+    },
+    {
+      "object_type": "望板系统",
+      "scope_role": "UPPER_BOUNDARY_TIMBER_SYSTEM",
+      "approved_master_ref": null,
+      "parent_requirement_ids": [
+        "STCM-E02"
+      ],
+      "atomic_edge_ids": [
+        "STCE-E02"
+      ],
+      "coverage_state": "HAS_ATOMIC_OR_HANDOFF_CANDIDATE"
+    },
+    {
+      "object_type": "下六椽栿",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-C01",
+        "STCM-C03"
+      ],
+      "atomic_edge_ids": [],
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "小型瓜子栱",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-GUAZI-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A05",
+        "STCM-A06",
+        "STCM-B02",
+        "STCM-B03",
+        "STCM-B04",
+        "STCM-B09"
+      ],
+      "atomic_edge_ids": [],
+      "shared_master_variant_object": true,
+      "variant_role_must_be_resolved_in_parent_topology": true,
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "小型慢栱",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-GONG-MANGONG-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A05",
+        "STCM-A06",
+        "STCM-B02",
+        "STCM-B03",
+        "STCM-B04",
+        "STCM-B09"
+      ],
+      "atomic_edge_ids": [],
+      "shared_master_variant_object": true,
+      "variant_role_must_be_resolved_in_parent_topology": true,
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "隐角梁",
+      "scope_role": "PARAMETRIC_TIMBER_MEMBER",
+      "approved_master_ref": null,
+      "parent_requirement_ids": [
+        "STCM-D05"
+      ],
+      "atomic_edge_ids": [],
+      "coverage_state": "PARENT_TOPOLOGY_ONLY / ATOMIC_EXPANSION_REQUIRED"
+    },
+    {
+      "object_type": "由额",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-YOUE-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A03"
+      ],
+      "atomic_edge_ids": [
+        "STCE-A03"
+      ],
+      "coverage_state": "HAS_ATOMIC_OR_HANDOFF_CANDIDATE"
+    },
+    {
+      "object_type": "柱",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-COLUMN-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A01",
+        "STCM-A02",
+        "STCM-A03",
+        "STCM-F01"
+      ],
+      "atomic_edge_ids": [
+        "STCE-A01",
+        "STCE-A02",
+        "STCE-A03",
+        "STCE-F01"
+      ],
+      "coverage_state": "HAS_ATOMIC_OR_HANDOFF_CANDIDATE"
+    },
+    {
+      "object_type": "柱头栌斗",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-LUDOU-COLUMN-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-A01",
+        "STCM-A05"
+      ],
+      "atomic_edge_ids": [
+        "STCE-A01"
+      ],
+      "coverage_state": "HAS_ATOMIC_OR_HANDOFF_CANDIDATE"
+    },
+    {
+      "object_type": "子角梁",
+      "scope_role": "APPROVED_MASTER_OBJECT_TYPE",
+      "approved_master_ref": "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
+      "parent_requirement_ids": [
+        "STCM-D02",
+        "STCM-D03",
+        "STCM-D04",
+        "STCM-D05"
+      ],
+      "atomic_edge_ids": [
+        "STCE-D02",
+        "STCE-D03",
+        "STCE-D04B"
+      ],
+      "coverage_state": "HAS_ATOMIC_OR_HANDOFF_CANDIDATE"
+    }
+  ],
+  "closure_gates": [
+    {
+      "gate": "SCOPE_DENOMINATOR",
+      "status": "PASS",
+      "requirement": "D-284 locked 33 IN objects only."
+    },
+    {
+      "gate": "SCOPE_OBJECT_PARENT_COVERAGE",
+      "status": "PASS",
+      "requirement": "33/33 IN objects appear in at least one parent obligation."
+    },
+    {
+      "gate": "ATOMIC_EDGE_EXPANSION",
+      "status": "OPEN",
+      "requirement": "Every INTERNAL parent topology obligation must have complete atomic child-edge inventory or EXPLICIT_NO_DIRECT_ATTACHMENT path."
+    },
+    {
+      "gate": "ATOMIC_EDGE_MATERIALIZATION",
+      "status": "OPEN",
+      "requirement": "Every production physical edge must have interfaces, kind, deterministic resolver, parametric/evidence boundary and validation tolerance."
+    },
+    {
+      "gate": "NO_ANONYMOUS_PRODUCTION_COUNTERPART",
+      "status": "OPEN",
+      "requirement": "No b_role/member_set may remain as final production counterpart at Stage2-C lock."
+    },
+    {
+      "gate": "BOUNDARY_STOP_CLOSURE",
+      "status": "OPEN",
+      "requirement": "Lower, upper and corner-ornament STOP handoffs must be explicit without importing OUT systems."
+    },
+    {
+      "gate": "BATCH03",
+      "status": "HOLD",
+      "requirement": "Do not resume until this rebaselined matrix is reviewed/locked."
+    }
+  ],
+  "governance": {
+    "old_whole_building_matrix": "SUPERSEDED_AS_ACTIVE_DENOMINATOR / RETAINED_FOR_HISTORY",
+    "d282_all66_requirement": "SUPERSEDED_BY_D284_SCOPE_LOCK_FOR_DENOMINATOR PURPOSES",
+    "future_batch_rule": "Every future Stage2-C batch must materialize a reviewed atomic edge or a bounded subset of a parent obligation from this matrix.",
+    "no_ad_hoc_batching": true,
+    "d286_role": "REFERENCE_DIAGNOSTIC_ONLY",
+    "matrix_lock_required_before_assembly": false,
+    "atomic_network_closure_required_before_representative_assembly": false,
+    "use_rule": "Consult only when a concrete assembly step encounters a placement/orientation/length/support/visible-geometry blocker."
+  }
+}

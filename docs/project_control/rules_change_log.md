@@ -88,3 +88,5 @@
 `P3.3 evidence gap = UNKNOWN/RECONSTRUCTED_DESIGN as needed; missing Northern-Song/963 originals alone NEVER = blocker`
 
 `Complete Assembly PASS = Master A + explicit Connection Layer + Master B; body-to-body touching alone is insufficient`
+
+| **RC-025** | **2026-09-29** | **Daily Close 改为月度滚动日志：停止创建单日 `CLOSE_FILE_YYYY-MM-DD.md` / `DAILY_CLOSE_YYYY-MM-DD.md`；统一追加到 `DAILY_CLOSE_LOG_YYYY-MM.md`。每日启动默认只读取当月日志最新日期区块，历史日期区块仅在追溯时读取。历史单日 Close 文件已于 D-288 前后完成合并/退休。** | **减少 Project Control 文件碎片、降低每日启动读取成本，同时保留完整日结审计链。** | **ACTIVE / MONTHLY ROLLING DAILY-CLOSE LOG** |

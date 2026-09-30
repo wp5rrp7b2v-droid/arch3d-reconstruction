@@ -62,12 +62,14 @@ Canonical PURLIN control topology：
 ### 2.2 Authorized relative roof chain
 
 - `MOD-002 = 15.3 mm/fen`
-- `FR-007 = [120,115,210] fen`，方向固定为 eave→ridge
-- 对应分段水平距离：
-  - 1836.0 mm
-  - 1759.5 mm
+- `FR-007 = [120,115,210] fen` 保留报告源序列，**源序列方向为 ridge→eave**
+- T-020 以 `N00→N03 = eave→ridge` 消费该序列时，必须显式反转为 `[210,115,120] fen`
+- eave→ridge 对应分段水平距离：
   - 3213.0 mm
+  - 1759.5 mm
+  - 1836.0 mm
 - cumulative half-run = **6808.5 mm**
+- 2026-09-30 correction：本修正只更正 FR-007 的方向解释/消费顺序；不修改 FR-007 原值、MOD-002、RIDGE_Y、half-run、PURLIN identity 或任何 Z-chain。
 
 因此已授权的相对拓扑为：
 
@@ -150,11 +152,11 @@ PM-011 / PM-012 是 reconstructed-design overall width/depth candidate；PM-008 
 使用 FR-007 + MOD-002 后，roof-control depth positions 必须满足：
 
 - N00 = -6808.5 mm
-- N01 = -4972.5 mm
-- N02 = -3213.0 mm
+- N01 = -3595.5 mm
+- N02 = -1836.0 mm
 - N03 = 0 mm = shared ridge
-- S02 = +3213.0 mm
-- S01 = +4972.5 mm
+- S02 = +1836.0 mm
+- S01 = +3595.5 mm
 - S00 = +6808.5 mm
 
 允许实现采用公式派生，不要求在正式数据文件中硬编码这些数值；正式 authority 必须保留 dependency lineage 到 `FR-007 + MOD-002 + shared ridge datum`。
@@ -220,7 +222,7 @@ T-020 可以：
 7. north/south roof-control chains 都精确终止于同一 `RIDGE_Y=0`；
 8. FR-007 + MOD-002 dependency lineage 完整；
 9. cumulative half-run = 6808.5 mm；
-10. north/south segment lengths 分别保持 1836.0 / 1759.5 / 3213.0 mm；
+10. `FR-007` source sequence 保持 120 / 115 / 210 fen（ridge→eave），而 eave→ridge consumption 必须为 3213.0 / 1759.5 / 1836.0 mm；
 11. PM-003～007 不得作为 reconstructed-design placement source；
 12. PM-008～012 保持 reconstructed-design candidate 身份，不升级为 confirmed historical fact；
 13. 7/7 PURLIN 继续 DEFERRED；
