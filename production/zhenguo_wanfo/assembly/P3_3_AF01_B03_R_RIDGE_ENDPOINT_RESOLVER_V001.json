@@ -1,0 +1,94 @@
+{
+  "schema_version": "P3_3_AF01_B03_R_RIDGE_ENDPOINT_RESOLVER_V001",
+  "date": "2026-09-30",
+  "task_id": "AF01-B03-R",
+  "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "classification": "REPORT_INFERRED / FIG2_73_DRAWING_DERIVED / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE",
+  "inputs": {
+    "slice_x_mm": 2218.5,
+    "pingliang_support_plane_z_mm": 6406.2,
+    "pingliang_execution_guang_mm": 395.5,
+    "pingliang_execution_top_z_mm": 6801.7,
+    "chashou_lower_y_abs_mm": 1836,
+    "chashou_lower_y_abs_fen": 120,
+    "ridge_y_mm": 0,
+    "ridge_rise_fen": 82,
+    "fen_mm": 15.3
+  },
+  "outputs": {
+    "ridge_support_rise_mm": 1254.6,
+    "ridge_support_connection_z_mm": 8056.3,
+    "instances": [
+      {
+        "registry_id": "蜀柱-东缝",
+        "p_lower_mm": [
+          2218.5,
+          0,
+          6801.7
+        ],
+        "p_upper_mm": [
+          2218.5,
+          0,
+          8056.3
+        ],
+        "execution_length_mm": 1254.6,
+        "lower_endpoint_boundary": "SIMPLIFIED_PINGLIANG_UPPER_SUPPORT_SURROGATE / HUMP_NOT_MATERIALIZED"
+      },
+      {
+        "registry_id": "叉手-东缝-北侧",
+        "p_lower_mm": [
+          2218.5,
+          -1836,
+          6801.7
+        ],
+        "p_upper_mm": [
+          2218.5,
+          0,
+          8056.3
+        ],
+        "execution_length_mm": 2223.7,
+        "engineering_angle_from_horizontal_deg": 34.35
+      },
+      {
+        "registry_id": "叉手-东缝-南侧",
+        "p_lower_mm": [
+          2218.5,
+          1836,
+          6801.7
+        ],
+        "p_upper_mm": [
+          2218.5,
+          0,
+          8056.3
+        ],
+        "execution_length_mm": 2223.7,
+        "engineering_angle_from_horizontal_deg": 34.35
+      }
+    ]
+  },
+  "orientation_rule": {
+    "endpoint_vector_drives_local_x": true,
+    "chashou_thickness_axis_normal_to_af01_section_plane": true,
+    "shuzhu_vertical": true,
+    "historical_roll_claim": false
+  },
+  "source_boundary": {
+    "roof_009_relative_rise_used": true,
+    "t018_absolute_ridge_z_used": false,
+    "direct_historical_xyz_claim": false,
+    "hump_component_materialized": false
+  },
+  "prohibitions": [
+    "NO_T018_ABSOLUTE_RIDGE_Z_PROMOTION",
+    "NO_1000MM_REFERENCE_LENGTH_LEAKAGE",
+    "NO_FIXED_HISTORICAL_CHASHOU_ANGLE",
+    "NO_HISTORICAL_JOINERY_CLAIM",
+    "NO_TUOJIAO_ENDPOINT_CLOSURE"
+  ],
+  "gate": {
+    "b03_r_candidate_complete": true,
+    "product_owner_review_required": true,
+    "engineering_generation_authorized": false,
+    "next_if_approved": "AF01-B03-T"
+  }
+}
