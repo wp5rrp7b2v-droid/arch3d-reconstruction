@@ -1,0 +1,74 @@
+name: P3.3 T-020 FR-007 Direction Correction
+
+on:
+  pull_request:
+    paths:
+      - 'docs/tasks/T-020_P3_3_ROOF_SHARED_RIDGE_DATUM_RULE_V001.md'
+      - 'production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json'
+      - 'production/zhenguo_wanfo/scripts/validate_p3_3_design_datum_rule_v001.py'
+      - 'production/zhenguo_wanfo/tests/test_p3_3_design_datum_rule_v001.py'
+      - 'docs/evidence/zhenguo_wanfo/P3_3_T020_FR007_DIRECTION_CORRECTION_V001.md'
+      - '.github/workflows/p3_3_t020_fr007_direction_correction.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-t020-correction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Validate canonical T-020 datum rule
+        run: |
+          set -euo pipefail
+          python3 production/zhenguo_wanfo/scripts/validate_p3_3_design_datum_rule_v001.py
+
+      - name: Run T-020 unit tests
+        run: |
+          set -euo pipefail
+          python3 production/zhenguo_wanfo/tests/test_p3_3_design_datum_rule_v001.py
+
+      - name: Verify FR-007 source preservation and corrected consumption
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+
+          root = Path(".")
+          params = json.loads((root / "production/zhenguo_wanfo/params/P2_1_FORMAL_PRODUCTION_PARAMETER_SET_V001.json").read_text())
+          rule = json.loads((root / "production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json").read_text())
+
+          assert params["parameters"]["FR-007"]["value"] == [120, 115, 210]
+          assert params["parameters"]["MOD-002"]["value"] == 15.3
+
+          roof = rule["roof_control"]
+          assert roof["source_sequence_fen"] == [120, 115, 210]
+          assert roof["source_sequence_direction"] == "RIDGE_TO_EAVE"
+          assert roof["direction"] == "EAVE_TO_RIDGE"
+          assert roof["segment_lengths_mm"] == [3213.0, 1759.5, 1836.0]
+          assert roof["cumulative_half_run_mm"] == 6808.5
+          assert roof["ridge_y_mm"] == 0
+          assert roof["shared_ridge_terminal"] == "ROOF_PURLIN_N_03"
+          assert roof["south_terminal_prohibited"] == "ROOF_PURLIN_S_03"
+          assert roof["y_positions_mm"] == {
+              "ROOF_PURLIN_N_00": -6808.5,
+              "ROOF_PURLIN_N_01": -3595.5,
+              "ROOF_PURLIN_N_02": -1836.0,
+              "ROOF_PURLIN_N_03": 0.0,
+              "ROOF_PURLIN_S_00": 6808.5,
+              "ROOF_PURLIN_S_01": 3595.5,
+              "ROOF_PURLIN_S_02": 1836.0,
+          }
+
+          assert params["parameters"]["ROOF-007"]["value"] == 88
+          assert params["parameters"]["ROOF-008"]["value"] == 61
+          assert params["parameters"]["ROOF-009"]["value"] == 82
+          assert params["parameters"]["PM-011"]["value"] == 11475
+          assert params["parameters"]["PM-012"]["value"] == 10710
+          print("T020_FR007_CORRECTION_INVARIANTS_PASS")
+          PY
