@@ -2,15 +2,16 @@
   "schema_version": "P3_3_AF01_B01_G3_FOUR_TO_PINGLIANG_VERTICAL_INCREMENT_V001",
   "date": "2026-09-30",
   "task_id": "AF01-B01-G3",
-  "status": "CANDIDATE / DEPENDS_ON_G2_CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "CANDIDATE / REVIEW_PATCH_01_APPLIED / DEPENDS_ON_G2 / PRODUCT_OWNER_REVIEW_REQUIRED",
   "dependency": {
     "g2_status": "CANDIDATE / NOT_LOCKED",
     "four_chuanfu_support_plane_z_mm": 5658.4
   },
   "source_semantic": {
-    "same_building_statement": "屋架梁栿间用隔架斗栱之垫",
-    "pingliang_role": "MAIN_FRAME_BEAM_BELOW_SHUZHU_CHASHOU_RIDGE_SUPPORT_SYSTEM",
-    "matrix_requirement": "CCM-C05"
+    "direct_primary": "FIG_2_41_PINGLIANG_TO_DOUGONG_CONTACT_RELATION",
+    "matrix_requirement": "CCM-C05",
+    "direct_four_to_pingliang_21fen_measurement": false,
+    "twenty_one_fen_rule": "AF01_LOCAL / RECONSTRUCTED_DESIGN / SAME_BUILDING_MODULAR_LOGIC / REPLACEABLE"
   },
   "assembly_orientation": {
     "master_mutation": false,
@@ -60,5 +61,12 @@
     "product_owner_review_required": true,
     "g2_approval_required_before_g3_lock": true,
     "engineering_generation_authorized": false
+  },
+  "review_patch_01": {
+    "date": "2026-09-30",
+    "review_result": "PASS_WITH_EVIDENCE_BOUNDARY_CORRECTION",
+    "numeric_result_changed": false,
+    "removed_overbroad_claim": "GENERAL_BEAM_FU_INTERVAL_21FEN_SOURCE_CLAIM",
+    "implementation_guard": "AFTER INSTANCE ROLL, TRANSFORMED BODY BOTTOM FACE MUST ALIGN TO SUPPORT_PLANE_Z; DO NOT MAP CANONICAL OBJECT ORIGIN DIRECTLY TO SUPPORT Z"
   }
 }
