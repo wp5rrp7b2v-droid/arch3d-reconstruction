@@ -115,13 +115,18 @@ The previous T-018 FV-B numeric tier formula remains prohibited and was not reus
 
 Implementation guard: after instance roll/orientation, the transformed beam-body bottom face must be aligned to the locked support-plane Z; do not map the canonical Master object origin directly to support-plane Z.
 
-### AF01-B02｜Visible body lengths / end extents
+### AF01-B02｜Visible body lengths / end extents — **CLOSED / D-294**
 
-The support-axis spans are resolved, but exact visible body end extents are not.
+AF-01 execution body extents are locked to the already-approved support axes:
 
-The approved Masters explicitly prohibit reference-length leakage. Therefore 10710 / 7191 / 3672 mm must not silently become “historical full lengths.”
+- 下六椽栿: Y = -5355.0 → +5355.0 / realization length **10710.0 mm**
+- 上六椽栿: Y = -5355.0 → +5355.0 / realization length **10710.0 mm**
+- 四椽栿: Y = -3595.5 → +3595.5 / realization length **7191.0 mm**
+- 平梁: Y = -1836.0 → +1836.0 / realization length **3672.0 mm**
 
-A later minimal rule must define reconstructed-design body extent from support axes + source-supported visible end treatment.
+Classification remains **REPORT_INFERRED / DRAWING_DERIVED / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE**.
+
+These are execution-envelope lengths only. Historical full timber lengths remain UNKNOWN/null; hidden penetration, tenons, buried ends, projection beyond the support axes, and local end reductions remain UNKNOWN and omitted. The 1000 mm Master reference length remains prohibited from building geometry.
 
 ### AF01-B03｜Endpoint points for Shuzhu / Chashou / Tuojiao
 
@@ -158,13 +163,13 @@ AF-01 now has:
 - plan axis and seven purlin Y targets: RESOLVED;
 - basic orientation and structural order: RESOLVED;
 - exact horizontal-beam Z placement: **RESOLVED / B01 CLOSED**;
-- visible body lengths / end extents: **B02 remains**;
+- visible body lengths / end extents: **RESOLVED / B02 CLOSED**;
 - Shuzhu / Chashou / Tuojiao endpoint points: **B03 remains**.
 
 Therefore:
 
-> **AF-01 Assembly Spec V0.1 remains NOT READY for Engineering Generation because B02 and B03 remain open. B01 is CLOSED.**
+> **AF-01 Assembly Spec V0.1 remains NOT READY for Engineering Generation because B03 remains open. B01 and B02 are CLOSED.**
 
 Next controlled step after approval:
 
-**Next controlled step after separate authorization: AF01-B02｜visible body lengths / end extents only.**
+**Next controlled step after separate authorization: AF01-B03｜Shuzhu / Chashou / Tuojiao endpoint closure only.**
