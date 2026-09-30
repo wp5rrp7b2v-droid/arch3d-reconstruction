@@ -3,6 +3,8 @@
 ## Status
 DESIGN COMPLETE / NOT AUTHORITY / IMPLEMENTATION FROZEN
 
+> **2026-09-30 supersession notice:** the roof-Y audit values `N01=-4972.5 / N02=-3213 / S02=3213 / S01=4972.5` below are historical T-018 V002 audit outputs and are **SUPERSEDED FOR ROOF-Y PLACEMENT ONLY** by `P3_3_T020_FR007_DIRECTION_CORRECTION_V001.md`. Corrected T-020 authority is N01=-3595.5 / N02=-1836.0 / S02=1836.0 / S01=3595.5. This file remains unchanged otherwise as historical audit evidence.
+
 本文件只回答：Stage B/Stage C 关键对象的 X/Y/Z/endpoint/surface 是否都有唯一合法来源。任何 `OPEN` 项在正式补全前都禁止进入 CP-03。
 
 ## 1. 已闭合的基础坐标
