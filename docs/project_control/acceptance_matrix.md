@@ -1592,3 +1592,16 @@ Boundary retained:
 - T-018: **HOLD**.
 - Project Control archive cleanup D-288 changed no geometry, evidence, Registry, Master approval, or active production authority.
 - Cross-file consistency result: **PASS after synchronization patch**.
+
+### D-290 / D-291 T-020 FR-007 Direction Correction｜2026-09-30
+
+- Source FR-007: **[120,115,210] fen UNCHANGED**.
+- Source direction: **RIDGE_TO_EAVE**.
+- Eave→ridge consumption: **[210,115,120] fen = [3213.0,1759.5,1836.0] mm**.
+- Corrected roof-Y controls: **N00=-6808.5 / N01=-3595.5 / N02=-1836.0 / N03=0 / S02=1836.0 / S01=3595.5 / S00=6808.5**.
+- Structural regression: **18/18 PASS**.
+- FR-007 value / MOD-002 / PM-008—012 / FR-004—006 / ROOF-007—009 / Registry / Masters / P3.2 vocabulary: **UNCHANGED**.
+- PR #51: **MERGED into PR #50 working branch** at `36def19143ddddccbbc424f59a529ce7d78d99fc`.
+- PR #50: **DRAFT / UNMERGED**; main remains **UNCHANGED**.
+- AF-01: **planning unblocked on working branch; engineering generation NOT AUTHORIZED**.
+- T-018: **HOLD**.
