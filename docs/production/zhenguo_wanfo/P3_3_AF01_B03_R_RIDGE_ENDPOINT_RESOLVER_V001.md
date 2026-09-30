@@ -2,7 +2,7 @@
 
 - Date: **2026-09-30**
 - Task: **AF01-B03-R**
-- Status: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED**
+- Status: **HOLD / TUOFENG R0 EVIDENCE RECONCILIATION REQUIRED / NOT LOCKABLE**
 - Engineering generation: **NOT AUTHORIZED**
 - Scope: 蜀柱-东缝 + 叉手-东缝-北侧 + 叉手-东缝-南侧 only
 
@@ -173,3 +173,7 @@ T-018 remains HOLD.
 If Product Owner approves:
 
 **B03-R closes; AF-01 proceeds only to B03-T｜four Tuojiao endpoint mappings.**
+
+## 10. R0 Hold Notice｜2026-09-30
+
+AF01-B03-R0 confirmed a source-supported physical 驼峰 role above Pingliang. Therefore the Shuzhu lower endpoint surrogate at bare Pingliang top may not be locked. Ridge apex and Chashou candidates are not disproven, but this B03-R package is HOLD until AF01-TF01 resolves the Tuofeng-B upper support interface.
