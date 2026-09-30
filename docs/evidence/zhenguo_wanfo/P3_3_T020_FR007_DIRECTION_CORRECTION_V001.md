@@ -1,7 +1,7 @@
 # T-020｜FR-007 Direction / Consumption Correction V001
 
 **Date:** 2026-09-30  
-**Status:** PRODUCT OWNER AUTHORIZED / PATCH IMPLEMENTED / MERGE NOT YET AUTHORIZED  
+**Status:** PRODUCT OWNER AUTHORIZED / PATCH IMPLEMENTED / STRUCTURAL REGRESSION 18/18 PASS / PR #51 DRAFT / MERGE NOT YET AUTHORIZED  
 **Scope:** T-020 reconstructed-design roof Y control only  
 **Historical claim:** NONE
 
@@ -55,3 +55,31 @@ T-018 remains HOLD. AF-01 must consume the corrected T-020 authority only after 
 ## 4. Evidence boundary
 
 This is a project-engineering correction of parameter-direction interpretation. It does not introduce a new historical dimension and does not upgrade any reconstructed-design candidate to confirmed historical fact.
+
+## 5. Regression result
+
+Connector-executed structural regression: **18/18 PASS**.
+
+Verified unchanged byte identities against PR #50 base:
+- formal production parameter set
+- building parameter bindings
+- building assembly graph
+- current Component Instance Registry
+- Stage1 Master Catalog
+- P3.2 relationship vocabulary
+
+Verified corrected rule invariants:
+- FR-007 source value remains [120,115,210]
+- source direction = RIDGE_TO_EAVE
+- eave→ridge consumption = [210,115,120]
+- segment lengths = [3213.0,1759.5,1836.0] mm
+- cumulative half-run = 6808.5 mm
+- RIDGE_Y = 0
+- N03 remains the single shared ridge
+- north/south placement remains mirrored
+- Z-chain inputs and plan dimensions remain unchanged
+
+Machine-readable evidence:
+`docs/evidence/zhenguo_wanfo/P3_3_T020_FR007_DIRECTION_CORRECTION_VALIDATION_V001.json`
+
+The repository Python validator was not represented as having run in GitHub Actions; this evidence is explicitly a connector-executed structural regression.
