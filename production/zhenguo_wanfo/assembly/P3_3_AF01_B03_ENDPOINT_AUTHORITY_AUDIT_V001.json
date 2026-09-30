@@ -1,0 +1,62 @@
+{
+  "schema_version": "P3_3_AF01_B03_ENDPOINT_AUTHORITY_AUDIT_V001",
+  "date": "2026-09-30",
+  "task_id": "AF01-B03",
+  "status": "STARTED / AUTHORITY_AUDIT_COMPLETE / ENDPOINTS_NOT_YET_LOCKED",
+  "scope": [
+    "蜀柱-东缝",
+    "叉手-东缝-北侧",
+    "叉手-东缝-南侧",
+    "托脚-东缝-北下平槫",
+    "托脚-东缝-北上平槫",
+    "托脚-东缝-南下平槫",
+    "托脚-东缝-南上平槫"
+  ],
+  "locked_numeric_anchors": {
+    "slice_x_mm": 2218.5,
+    "upper_six_top_z_mm": 5337.1,
+    "four_chuanfu_support_z_mm": 5658.4,
+    "four_chuanfu_top_z_mm": 6084.9,
+    "pingliang_support_z_mm": 6406.2,
+    "pingliang_ew_production_guang_mm": 395.5,
+    "pingliang_execution_top_z_mm": 6801.7
+  },
+  "ridge_system": {
+    "lower_plan_anchors": {
+      "shuzhu_y_mm": 0,
+      "chashou_n_y_mm": -1836,
+      "chashou_s_y_mm": 1836
+    },
+    "shared_upper_y_mm": 0,
+    "lower_surface_z_mm": 6801.7,
+    "unresolved": [
+      "RIDGE_SUPPORT_CONNECTION_Z"
+    ],
+    "next_resolver": "AF01-B03-R"
+  },
+  "tuojiao_system": {
+    "semantic_authorities": [
+      "SUPPORTS_ENDS_OF_FOUR_CHUANFU",
+      "SOURCE_SUPPORTED_LOWER_AND_UPPER_PURLIN_ROLES"
+    ],
+    "unresolved": [
+      "PER_INSTANCE_FOUR_END_CONTACT_MAPPING",
+      "PER_INSTANCE_PURLIN_SUPPORT_NODE_MAPPING",
+      "WHETHER_UPPER_LOWER_PAIR_SHARE_ONE_FOUR_END_POINT_OR_USE_SEPARATE_VERTICAL_ANCHORS"
+    ],
+    "next_resolver_after_ridge": "AF01-B03-T"
+  },
+  "prohibitions": [
+    "NO_T018_FRAME_SUPPORT_PROXY_ENDPOINT_REUSE",
+    "NO_FIXED_MASTER_ANGLE",
+    "NO_1000MM_REFERENCE_LENGTH_LEAKAGE",
+    "NO_FIG2_73_DIRECT_MEASURED_ENDPOINT_CLAIM",
+    "NO_DEGENERATE_VERTICAL_TUOJIAO_FROM_NAME_ONLY"
+  ],
+  "gate": {
+    "b03_started": true,
+    "b03_closed": false,
+    "engineering_generation_authorized": false,
+    "next_step": "AF01-B03-R"
+  }
+}
