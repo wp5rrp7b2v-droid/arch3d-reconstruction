@@ -1,0 +1,64 @@
+{
+  "schema_version": "P3_3_AF01_B01_G3_FOUR_TO_PINGLIANG_VERTICAL_INCREMENT_V001",
+  "date": "2026-09-30",
+  "task_id": "AF01-B01-G3",
+  "status": "CANDIDATE / DEPENDS_ON_G2_CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "dependency": {
+    "g2_status": "CANDIDATE / NOT_LOCKED",
+    "four_chuanfu_support_plane_z_mm": 5658.4
+  },
+  "source_semantic": {
+    "same_building_statement": "屋架梁栿间用隔架斗栱之垫",
+    "pingliang_role": "MAIN_FRAME_BEAM_BELOW_SHUZHU_CHASHOU_RIDGE_SUPPORT_SYSTEM",
+    "matrix_requirement": "CCM-C05"
+  },
+  "assembly_orientation": {
+    "master_mutation": false,
+    "four_chuanfu_longitudinal_axis": "WORLD_NORTH_SOUTH",
+    "four_chuanfu_local_section_width_guang_to": "WORLD_Z",
+    "four_chuanfu_local_thickness_to": "WORLD_TRANSVERSE_HORIZONTAL"
+  },
+  "inputs": {
+    "four_chuanfu_observed_mean_guang_mm": 426.5,
+    "fen_mm": 15.3,
+    "effective_spacer_layer_fen": 21,
+    "effective_spacer_layer_rise_mm": 321.3
+  },
+  "outputs": {
+    "four_chuanfu_top_z_mm": 6084.9,
+    "g3_delta_z_mm": 747.8,
+    "pingliang_support_plane_z_mm": 6406.2,
+    "pingliang_top_z_forward_check_mm": 6801.7
+  },
+  "classification": "REPORT_INFERRED / SAME_BUILDING_BEAM_SPACER_LOGIC / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE",
+  "crosscheck": {
+    "four_chuanfu_report_design_guang_fen": 28,
+    "spacer_layer_fen": 21,
+    "ideal_total_fen": 49,
+    "ideal_total_mm": 749.7,
+    "actual_master_total_mm": 747.8,
+    "delta_mm": 1.9,
+    "relative_delta_percent": 0.2534,
+    "result": "PASS / CONSISTENT / CROSSCHECK_ONLY"
+  },
+  "pingliang_forward_check": {
+    "observed_family_mean_guang_mm": 395.5,
+    "report_rounded_design_fen": 26,
+    "sample_to_east_west_mapping": "UNKNOWN",
+    "top_z_mm": 6801.7,
+    "authority": "FORWARD_CHECK_ONLY / NOT_B03_ENDPOINT_CLOSURE"
+  },
+  "retained_unknowns": [
+    "EXACT_SPACER_COMPONENT_IDENTITY",
+    "EXACT_SPACER_COMPONENT_COUNT",
+    "EXACT_HIDDEN_JOINERY",
+    "EXACT_HISTORICAL_CONTACT_FACE",
+    "PINGLIANG_TO_RIDGE_SUPPORT_ENDPOINTS"
+  ],
+  "gate": {
+    "g3_candidate_complete": true,
+    "product_owner_review_required": true,
+    "g2_approval_required_before_g3_lock": true,
+    "engineering_generation_authorized": false
+  }
+}
