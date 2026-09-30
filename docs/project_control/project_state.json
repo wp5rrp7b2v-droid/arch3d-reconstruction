@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R367",
+  "state_revision": "R368",
   "last_updated": "2026-09-30",
-  "session_status": "2026-09-30 D-294 / AF01-B02 PRODUCT OWNER APPROVED + CLOSED / FOUR BEAM EXECUTION LENGTHS LOCKED 10710 / 10710 / 7191 / 3672 MM / B01+B02 CLOSED / B03 ONLY REMAINING / PR #50 DRAFT UNMERGED / MAIN UNCHANGED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+  "session_status": "2026-09-30 D-295 DAILY CLOSE / AF01 V001 TECHNICAL PROOF PASS + VISUAL ARCHITECTURAL REVIEW FAIL / DIAGNOSTIC ONLY / PR52 DRAFT UNMERGED / B03-R HOLD AFTER TUOFENG R0 / V002 NOT AUTHORIZED / PR50 DRAFT UNMERGED / MAIN UNCHANGED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -63,13 +63,13 @@
   },
   "current_task": {
     "id": "AF-01",
-    "name": "正身梁架首榀｜Assembly Spec V0.1",
-    "status": "B01+B02 CLOSED / B03 OPEN / ENGINEERING NOT READY / NO BLENDER"
+    "name": "正身梁架首榀｜Assembly Recovery",
+    "status": "SESSION CLOSED / V001 DIAGNOSTIC ONLY / B01+B02 RETAINED / B03-R HOLD / NO ACTIVE ENGINEERING EXECUTION"
   },
   "proposed_next_task": {
-    "id": "AF01-B03",
-    "name": "Shuzhu / Chashou / Tuojiao endpoint closure",
-    "status": "NEXT / NOT STARTED / REQUIRES SEPARATE AUTHORIZATION"
+    "id": "PROJECT-RECOVERY-REVIEW",
+    "name": "Project Recovery Review｜stable authority vs provisional assumption vs diagnostic proxy",
+    "status": "NEXT SESSION FIRST STEP / REVIEW ONLY / NO IMPLEMENTATION AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -3469,5 +3469,36 @@
     "historical_full_length_status": "UNKNOWN / NULL / DO_NOT_LOCK",
     "hidden_end_geometry": "UNKNOWN / OMITTED",
     "engineering_generation_authorized": false
+  },
+  "af01_b03": {
+    "status": "OPEN / B03-R HOLD / B03-T NOT STARTED",
+    "tuofeng_reconciliation": "SOURCE-SUPPORTED ROLES CONFIRMED / PRODUCTION DIMENSIONS+PROFILE NOT FOUND / FORMAL COMPONENT COVERAGE MISSING",
+    "b03_r_lockable": false,
+    "b03_t_started": false
+  },
+  "af01_first_assembly_v001": {
+    "status": "TECHNICAL_PROOF_PASS / VISUAL_ARCHITECTURAL_REVIEW_FAIL / DIAGNOSTIC_ONLY",
+    "branch": "engineering/af01-east-seam-first-assembly-v001",
+    "pr_number": 52,
+    "pr_status": "DRAFT / OPEN / NOT_MERGED",
+    "workflow_run_id": 36713427504,
+    "validation": "14/14 PASS",
+    "artifact_id": 11095611818,
+    "artifact_digest": "sha256:a3068aad1aebfa1f1f1ae378a5ef8f04c7b47ae2296152335e2480709287a8e3",
+    "blend_sha256": "6753e0f9f538cee538ab3c021f9a02220cf44ab89acba9d019bc84fc2c41a2a9",
+    "canonical_geometry_promotion": false,
+    "product_owner_reconstruction_acceptance": false,
+    "v002_authorized": false
+  },
+  "close_2026_09_30": {
+    "decision_id": "D-295",
+    "status": "COMPLETE",
+    "main_sha": "447f887fbb0f4b28d62d957dacf65276b85c0461",
+    "pr49": "DRAFT / HOLD",
+    "pr50": "DRAFT / UNMERGED",
+    "pr52": "DRAFT / DIAGNOSTIC_ONLY / UNMERGED",
+    "t018": "HOLD",
+    "whole_building_generation_authorized": false,
+    "next_session": "PROJECT_RECOVERY_REVIEW"
   }
 }
