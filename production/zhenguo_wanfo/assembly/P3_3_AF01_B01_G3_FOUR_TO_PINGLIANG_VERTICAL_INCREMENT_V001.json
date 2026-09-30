@@ -2,9 +2,9 @@
   "schema_version": "P3_3_AF01_B01_G3_FOUR_TO_PINGLIANG_VERTICAL_INCREMENT_V001",
   "date": "2026-09-30",
   "task_id": "AF01-B01-G3",
-  "status": "CANDIDATE / REVIEW_PATCH_01_APPLIED / DEPENDS_ON_G2 / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-293",
   "dependency": {
-    "g2_status": "CANDIDATE / NOT_LOCKED",
+    "g2_status": "LOCKED / PRODUCT_OWNER_APPROVED / D-293",
     "four_chuanfu_support_plane_z_mm": 5658.4
   },
   "source_semantic": {
@@ -58,8 +58,9 @@
   ],
   "gate": {
     "g3_candidate_complete": true,
-    "product_owner_review_required": true,
-    "g2_approval_required_before_g3_lock": true,
+    "product_owner_review_required": false,
+    "g2_approval_required_before_g3_lock": false,
+    "g3_closed": true,
     "engineering_generation_authorized": false
   },
   "review_patch_01": {
@@ -68,5 +69,11 @@
     "numeric_result_changed": false,
     "removed_overbroad_claim": "GENERAL_BEAM_FU_INTERVAL_21FEN_SOURCE_CLAIM",
     "implementation_guard": "AFTER INSTANCE ROLL, TRANSFORMED BODY BOTTOM FACE MUST ALIGN TO SUPPORT_PLANE_Z; DO NOT MAP CANONICAL OBJECT ORIGIN DIRECTLY TO SUPPORT Z"
+  },
+  "approval": {
+    "decision_id": "D-293",
+    "date": "2026-09-30",
+    "product_owner_approved": true,
+    "scope": "AF01_B01_G3_LOCAL_VERTICAL_RESOLVER_ONLY"
   }
 }
