@@ -1,0 +1,32 @@
+name: AF01 J01 A0 Column Head Local Transform Resolver
+
+on:
+  push:
+    branches:
+      - engineering/af01-j01-lower-six-column-head-joinery-pilot-v001
+    paths:
+      - ".github/workflows/af01_j01_a0_column_head_local_transform_resolver_v001.yml"
+      - "production/zhenguo_wanfo/scripts/resolve_af01_j01_a0_column_head_local_transforms_v001.py"
+      - "production/zhenguo_wanfo/assembly/P3_3_AF01_B01_G1_TWO_SUPPORT_PLANE_RESOLVER_V001.json"
+      - "production/zhenguo_wanfo/assembly/P3_3_AF01_B02_BEAM_BODY_EXTENT_RESOLVER_V001.json"
+      - "production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/CMP-GONG-HUAGONG-001_MASTER_SEMANTIC_V001.json"
+      - "production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/CMP-GONG-ANG-001_MASTER_SEMANTIC_V001.json"
+
+permissions:
+  contents: read
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve A0 transforms
+        run: python3 production/zhenguo_wanfo/scripts/resolve_af01_j01_a0_column_head_local_transforms_v001.py
+      - name: Print resolver result
+        run: cat production/zhenguo_wanfo/assembly/P3_3_AF01_J01_A0_COLUMN_HEAD_LOCAL_TRANSFORM_RESOLVER_V001.json
+      - name: Upload resolver artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AF01_J01_A0_COLUMN_HEAD_LOCAL_TRANSFORM_RESOLVER_V001
+          path: production/zhenguo_wanfo/assembly/P3_3_AF01_J01_A0_COLUMN_HEAD_LOCAL_TRANSFORM_RESOLVER_V001.json
+          retention-days: 14
