@@ -1,0 +1,33 @@
+name: AF01 J01 Stage A Preflight
+
+on:
+  push:
+    branches:
+      - engineering/af01-j01-lower-six-column-head-joinery-pilot-v001
+    paths:
+      - ".github/workflows/af01_j01_stage_a_preflight_v001.yml"
+      - "production/zhenguo_wanfo/scripts/af01_j01_stage_a_preflight_v001.py"
+      - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json"
+      - "production/zhenguo_wanfo/assembly/P3_2_INTERFACE_REGISTRY_V001.json"
+      - "production/zhenguo_wanfo/registry/P3_3_STAGE1_HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001.json"
+      - "production/zhenguo_wanfo/registry/P3_3_STAGE1_ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001.json"
+      - "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER_PARAMS_V001.json"
+
+permissions:
+  contents: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Stage A authority preflight
+        run: python3 production/zhenguo_wanfo/scripts/af01_j01_stage_a_preflight_v001.py
+      - name: Print result
+        run: cat production/zhenguo_wanfo/validation/AF01_J01_STAGE_A_PREFLIGHT_V001.json
+      - name: Upload result
+        uses: actions/upload-artifact@v4
+        with:
+          name: AF01_J01_STAGE_A_PREFLIGHT_V001
+          path: production/zhenguo_wanfo/validation/AF01_J01_STAGE_A_PREFLIGHT_V001.json
+          retention-days: 14
