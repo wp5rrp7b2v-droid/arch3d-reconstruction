@@ -1,0 +1,82 @@
+name: AF01 J01 Stage A Unmodified Collision Audit
+
+on:
+  push:
+    branches:
+      - engineering/af01-j01-lower-six-column-head-joinery-pilot-v001
+    paths:
+      - ".github/workflows/af01_j01_stage_a_collision_audit_v001.yml"
+      - "production/zhenguo_wanfo/scripts/run_af01_j01_stage_a_collision_audit_v001.py"
+      - "production/zhenguo_wanfo/assembly/P3_3_AF01_B02_BEAM_BODY_EXTENT_RESOLVER_V001.json"
+      - "production/zhenguo_wanfo/component_library/masters/CMP-COLUMN-001/**"
+      - "production/zhenguo_wanfo/component_library/masters/CMP-LUDOU-COLUMN-001/**"
+      - "production/zhenguo_wanfo/component_library/masters/CMP-GONG-HUAGONG-001/**"
+      - "production/zhenguo_wanfo/component_library/masters/CMP-GONG-ANG-001/**"
+      - "production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LOWER-SIX-CHUANFU-001/**"
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    env:
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      SCRIPT: production/zhenguo_wanfo/scripts/run_af01_j01_stage_a_collision_audit_v001.py
+      OUT: artifacts/af01_j01_stage_a
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - name: Install Blender 4.5.13
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions AF01-J01" -o /tmp/blender.tar.xz "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+
+      - name: Run unmodified collision audit
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT/review"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" -- \
+            --out-json "$OUT/AF01_J01_STAGE_A_UNMODIFIED_COLLISION_AUDIT_V001.json" \
+            --out-blend "$OUT/AF01_J01_STAGE_A_UNMODIFIED_ASSEMBLY_V001.blend" \
+            --review-dir "$OUT/review"
+
+      - name: Assert diagnostic guardrails
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - "$OUT/AF01_J01_STAGE_A_UNMODIFIED_COLLISION_AUDIT_V001.json" <<'PY'
+          import json,sys
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert d["status"]=="PASS_DIAGNOSTIC_COMPLETED"
+          assert d["pair_count"]==21
+          assert d["guardrails"]["master_mutation"] is False
+          assert d["guardrails"]["proxy_support_count"]==0
+          assert d["guardrails"]["joinery_cut_count_added"]==0
+          assert d["guardrails"]["t040_fixture_position_consumed"] is False
+          assert d["guardrails"]["t041_fixture_position_consumed"] is False
+          print("AF01_J01_STAGE_A_MACHINE_PASS",d["volume_intersection_pair_count"],d["lower_six_volume_intersection_pair_count"])
+          for p in d["lower_six_intersections"]:
+              print("LOWER_SIX_COLLISION",p["a"],p["b"],round(p["volume_mm3"],3),p.get("collision_bbox_world_mm"))
+          PY
+
+      - name: Upload Stage A diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: AF01_J01_STAGE_A_UNMODIFIED_COLLISION_AUDIT_V001
+          retention-days: 14
+          if-no-files-found: error
+          path: |
+            ${{ env.OUT }}/AF01_J01_STAGE_A_UNMODIFIED_COLLISION_AUDIT_V001.json
+            ${{ env.OUT }}/AF01_J01_STAGE_A_UNMODIFIED_ASSEMBLY_V001.blend
+            ${{ env.OUT }}/review/*.png
