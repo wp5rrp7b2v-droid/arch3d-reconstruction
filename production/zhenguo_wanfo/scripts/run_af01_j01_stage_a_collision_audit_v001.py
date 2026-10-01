@@ -168,7 +168,8 @@ def main():
     ap.add_argument("--out-json",required=True)
     ap.add_argument("--out-blend",required=True)
     ap.add_argument("--review-dir",required=True)
-    import sys\n    args=ap.parse_args(sys.argv[sys.argv.index("--")+1:] if "--" in sys.argv else None)
+    import sys
+    args=ap.parse_args(sys.argv[sys.argv.index("--")+1:] if "--" in sys.argv else None)
     import bpy,bmesh
     from mathutils import Matrix
 
