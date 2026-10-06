@@ -221,7 +221,8 @@ def main():
     ap.add_argument("--fixture-set",choices=("A","B"),default="A")
     ap.add_argument("--expected")
     ap.add_argument("--output")
-    a=ap.parse_args()
+    argv=sys.argv[sys.argv.index("--")+1:] if "--" in sys.argv else sys.argv[1:]
+    a=ap.parse_args(argv)
     if a.mode=="build":
         build(a.definition,a.asset,a.semantic,a.review_dir,a.fixture_set)
     else:
