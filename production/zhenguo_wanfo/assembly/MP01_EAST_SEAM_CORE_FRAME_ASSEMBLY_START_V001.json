@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "ASSEMBLY_DESIGN_STARTED / GATE_A_COMPLETE / ENGINEERING_BUILD_NOT_YET_AUTHORIZED",
+  "status": "ASSEMBLY_DESIGN_ACTIVE / GATE_A_B_COMPLETE / ENGINEERING_BUILD_NOT_YET_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -10,7 +10,7 @@
   "subassemblies": {
     "MP01A": {
       "name": "UPPER_RIDGE_SUPPORT",
-      "status": "READY_FOR_GATE_B / NOT_READY_FOR_BLENDER",
+      "status": "GATE_B_PASS / READY_FOR_GATE_C / NOT_READY_FOR_BLENDER",
       "participants": [
         {
           "instance_id": "平梁-东缝",
@@ -47,7 +47,7 @@
         }
       ],
       "blockers": [
-        "RIDGE_SUPPORT_TARGET_DATUM_PHYSICAL_BINDING"
+        "NUMERIC_ASSEMBLY_LOCAL_PLACEMENT_NOT_LOCKED"
       ]
     },
     "MP01B": {
@@ -76,10 +76,16 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01A_GATE_B",
-    "name": "RIDGE_SUPPORT_TARGET_DATUM_RESOLUTION",
-    "question": "What evidence/geometry owns the Shuzhu and Chashou upper endpoint target for the East Seam upper-ridge subassembly?",
-    "candidate_owner": "RELEVANT ZHENGSHEN RIDGE-PURLIN SUPPORT REGION / RIDGE-SUPPORT ASSEMBLY",
+    "id": "MP01A_GATE_C",
+    "name": "ASSEMBLY_LOCAL_NUMERIC_PLACEMENT_RESOLVER",
+    "question": "What minimum evidence-classified local numeric inputs are sufficient to place Pingliang, Tuofeng Upper, Shuzhu and the Chashou pair?",
     "blender_authorized": false
+  },
+  "gate_b": {
+    "status": "PASS",
+    "datum_id": "DATUM-MP01A-RIDGE-SUPPORT-EAST-SEAM",
+    "semantic_owner": "RIDGE_PURLIN role × EAST_SEAM frame plane",
+    "exact_global_xyz": "NOT_YET_LOCKED",
+    "exact_contact_face": "UNKNOWN"
   }
 }
