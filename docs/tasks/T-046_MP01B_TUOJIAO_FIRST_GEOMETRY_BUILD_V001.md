@@ -1,6 +1,6 @@
 # T-046｜MP-01B Tuojiao First Geometry Build V001
 
-Status: **ENGINEERING EXECUTION AUTHORIZED / BUILD PENDING**
+Status: **ENGINEERING EXECUTION COMPLETE / MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
 Date: 2026-10-06
 
 ## Goal
@@ -42,3 +42,22 @@ Add exactly two evidence-bounded Tuojiao first-article solids to the existing MP
 
 ## Product Owner authorization
 Instruction: **进入下一步的 Tuojiao First Geometry Build**
+
+## Engineering result
+
+- GitHub Actions Run: `37472462998`
+- Artifact: `MP01B_T046_TUOJIAO_FIRST_GEOMETRY_V001`
+- Artifact ID: `11416983796`
+- Artifact digest: `sha256:d7a9065d07c5109bc18d6d28c92b8142a52edbfc9cb3478caa49ba0371d80eab`
+- Validation: **41 / 41 PASS**
+- Independent reopen: PASS
+- Deterministic rebuild: PASS
+- Tuojiao Z-offset mutation 0 → 50 mm: PASS
+- Canonical assembly signature: `8001d642fa6cf67e474ef88534157ef74b46573d52c69363a64103ad9df18814`
+- Mutation assembly signature: `9d6137200e213b43fbfa759f270d48206039ae55f67b25788a9ece6cfc091d57`
+- Canonical .blend SHA-256: `1a11598ef3af8ff2b0d2c5b2ca4b861ecf3af2f02fbafbcb9f210930a9e84a03`
+- Review Board SHA-256: `2ee3e441a13d022a81ad20bc94db4f300b7e723327c303694fe8937860c142cf`
+- Product Owner acceptance: REQUIRED
+- PR #56 merge: NOT AUTHORIZED
+
+Machine PASS proves the approved T3 first-article contract was executed deterministically. It does not prove historical exact endpoints, exact Huagong–Tuojiao contact, or hidden joinery.
