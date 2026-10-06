@@ -2,7 +2,7 @@
   "schema_version": "P3_3_TUOFENG_CANDIDATE_GEOMETRY_0.1",
   "component_id": "CMP-FRAME-TUOFENG-001",
   "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
-  "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED / NOT_CANONICAL",
+  "status": "APPROVED_GEOMETRY_STRATEGY / PRODUCT_OWNER_APPROVED / NOT_YET_CANONICAL_MASTER",
   "date": "2026-10-06",
   "purpose": "Minimum buildable source-guided geometry candidates for two source-supported role variants. This is not a historical metric reconstruction.",
   "coordinate_system": {
@@ -130,5 +130,12 @@
     "Does the LOWER_SUPPORT candidate remain sufficiently neutral without implying an unsupported historical profile?",
     "Does the UPPER_RIDGE_SUPPORT candidate preserve the source-visible broad-base / raised-center character without claiming metric accuracy?",
     "Can both candidates be assembly-scaled later without changing component identity or relationship semantics?"
-  ]
+  ],
+  "approval": {
+    "approved": true,
+    "date": "2026-10-06",
+    "scope": "GEOMETRY_STRATEGY_ONLY",
+    "engineering_execution_authorized": false,
+    "historical_metric_claim": false
+  }
 }
