@@ -1,6 +1,6 @@
 # 驼峰 Candidate Geometry V0.1
 
-Status: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED / NOT CANONICAL**
+Status: **APPROVED GEOMETRY STRATEGY / PRODUCT OWNER APPROVED 2026-10-06 / NOT YET CANONICAL MASTER**
 
 ## 1. Purpose
 
@@ -89,3 +89,11 @@ Approval means:
 
 After approval, the next step is:
 > **驼峰 First Article Build Preparation｜metric envelope rules + assembly fixtures**
+
+
+## 7. Product Owner approval
+
+- Date: 2026-10-06
+- Decision: **APPROVED**
+- Approved scope: geometry strategy only; normalized candidate coordinates remain non-historical and replaceable.
+- This approval authorizes First Article Build Preparation, not yet Blender/engineering execution.
