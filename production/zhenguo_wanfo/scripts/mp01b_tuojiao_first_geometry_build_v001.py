@@ -174,7 +174,7 @@ def render(scene,cam,path,pos,target,ortho,res=(1500,950)):
     scene.render.filepath=str(Path(path).resolve())
     bpy.ops.render.render(write_still=True)
 
-def build(contract_path, asset, semantic, review_dir=None, huagong_len_override=None):
+def build(contract_path, asset, semantic, review_dir=None, huagong_len_override=None, tuojiao_z_offset_override=None):
     import bpy
     c=load(contract_path)
     clear_scene(); scene=scene_setup()
@@ -254,7 +254,7 @@ def build(contract_path, asset, semantic, review_dir=None, huagong_len_override=
     for side in ["FRONT","REAR"]:
         inst=tj[side.lower()]
         lo=list(inst["lower_xyz_mm"]); hi=list(inst["upper_xyz_mm"])
-        zoff=float(tj["z_offset"]["canonical_mm"])
+        zoff=float(tj["z_offset"]["canonical_mm"]) if tuojiao_z_offset_override is None else float(tuojiao_z_offset_override)
         lo[2]+=zoff; hi[2]+=zoff
         v,f=diagonal_prism_geom(lo,hi,sec["hou"],sec["guang"])
         p=common_props(
@@ -379,12 +379,12 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--mode",required=True,choices=("build","inspect"))
     ap.add_argument("--contract"); ap.add_argument("--asset"); ap.add_argument("--semantic")
-    ap.add_argument("--review-dir"); ap.add_argument("--huagong-length-mm",type=float)
+    ap.add_argument("--review-dir"); ap.add_argument("--huagong-length-mm",type=float); ap.add_argument("--tuojiao-z-offset-mm",type=float)
     ap.add_argument("--expected"); ap.add_argument("--output")
     args=sys.argv[sys.argv.index("--")+1:] if "--" in sys.argv else sys.argv[1:]
     a=ap.parse_args(args)
     if a.mode=="build":
-        build(a.contract,a.asset,a.semantic,a.review_dir,a.huagong_length_mm)
+        build(a.contract,a.asset,a.semantic,a.review_dir,a.huagong_length_mm,a.tuojiao_z_offset_mm)
     else:
         inspect(a.expected,a.output)
 
