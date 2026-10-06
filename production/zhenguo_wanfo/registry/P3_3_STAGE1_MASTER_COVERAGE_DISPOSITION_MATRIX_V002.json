@@ -4,15 +4,15 @@
   "gate": "P3.3 V002",
   "stage": "Stage 1｜真实构件 Master 库",
   "authorization": "D-067",
-  "status": "COVERAGE_MATRIX_PATCHED_AGAINST_V008 / TUOFENG_MASTER_FORMALIZED / 29 OF 29 MASTER-SCOPE TYPES COVERED",
+  "status": "COVERAGE_MATRIX_PATCHED_AGAINST_V008 / INTERIOR_LINGGONG_MASTER_PENDING / 29 OF 30 MASTER-SCOPE TYPES COVERED",
   "canonical_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
   "registry_version": "V008",
-  "registry_record_count": 506,
-  "distinct_registered_object_types": 67,
+  "registry_record_count": 507,
+  "distinct_registered_object_types": 68,
   "disposition_summary": {
     "参数化补全": 23,
     "非实体装配/拓扑": 5,
-    "需新建Master": 22,
+    "需新建Master": 23,
     "简化Proxy": 7,
     "已有Master｜族边界UNKNOWN": 3,
     "UNKNOWN/参考边界": 3,
@@ -317,6 +317,23 @@
       "family": "栱",
       "action": "28件；尺寸已锁",
       "priority": 17
+    },
+    {
+      "component": "令栱（梁架承托）",
+      "records": 1,
+      "statuses": [
+        "FAMILY_UNKNOWN_COUNT"
+      ],
+      "systems": [
+        "主体梁架"
+      ],
+      "disposition": "需新建Master",
+      "family": "梁架承托栱",
+      "action": "MP-01B Gate A rejected direct reuse of the 28-instance outer-eaves Linggong Master. Identity/role are directly supported; metric geometry/profile/joinery remain UNKNOWN. Register separate Master scope and build a minimum replaceable interior-role Master before MP-01B Blender assembly.",
+      "planned_master": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+      "current_priority": "MP01B_PREREQUISITE",
+      "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_INTERIOR_LINGGONG_SOURCE_BINDING_V001.md",
+      "readiness": "IDENTITY_READY / ROLE_READY / GEOMETRY_SPEC_CANDIDATE"
     },
     {
       "component": "门木作系统",
@@ -929,7 +946,7 @@
     "惹草",
     "生头木"
   ],
-  "closure_statement": "All 67 currently registered V008 object types have an explicit disposition. Stage1 Master-scope coverage is 29/29 after T-042 Tuofeng formalization. Tuofeng whole-hall count and exact historical geometry remain UNKNOWN; seven predecessor-audit items remain outside V008 as PENDING_SOURCE_BINDING.",
+  "closure_statement": "All 68 currently registered V008 object types have an explicit disposition. Stage1 Master-scope coverage is 29/30 because 梁架承托令栱 is newly admitted as MASTER_REQUIRED_PENDING. Seven predecessor-audit items remain outside V008 as PENDING_SOURCE_BINDING.",
   "first_new_master_candidate": {
     "component": "四椽栿",
     "status": "READY_FOR_SPEC_DESIGN",
@@ -937,6 +954,11 @@
   },
   "new_t_task_created": false,
   "t018_status": "HOLD",
-  "current_pending_master_candidate": null,
-  "scope_patch_authorization": "PRODUCT_OWNER_APPROVED / 2026-10-06"
+  "current_pending_master_candidate": {
+    "component": "令栱（梁架承托）",
+    "planned_master": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+    "status": "MASTER_REQUIRED_PENDING",
+    "reason": "Required for MP-01B; existing outer-eaves Linggong Master may not be silently reused."
+  },
+  "scope_patch_authorization": "MP-01B GATE A+B / 2026-10-06"
 }
