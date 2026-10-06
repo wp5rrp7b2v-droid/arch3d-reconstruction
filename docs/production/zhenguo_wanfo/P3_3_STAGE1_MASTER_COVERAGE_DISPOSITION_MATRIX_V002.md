@@ -3,7 +3,7 @@
 - Registry：V008
 - Records：507
 - 登记对象类型：68
-- Status：**PATCHED AGAINST V008 / 梁架承托令栱 MASTER PENDING / 29 OF 30 COVERED / 2026-10-06**
+- Status：**PATCHED AGAINST V008 / 梁架承托令栱 MASTER FORMALIZED / 30 OF 30 COVERED / 2026-10-06**
 - T-018：HOLD
 - New T-###：NONE
 
@@ -11,9 +11,9 @@
 
 - **参数化补全**：23类
 - **非实体装配/拓扑**：5类
-- **需新建Master**：23类
+- **需新建Master**：22类
 - **简化Proxy**：7类
-- **已有Master｜族边界UNKNOWN**：3类
+- **已有Master｜族边界UNKNOWN**：4类
 - **UNKNOWN/参考边界**：3类
 - **已有Master｜需长度桥**：2类
 - **已有Master｜可直接绑定**：2类
@@ -44,7 +44,7 @@
 | 角石 | 4 | 简化Proxy | 台基构件 | 4处；缺精确单件尺寸，使用可替换简化石构Proxy |
 | 阑额 | 12 | 需新建Master | 额枋 | 12件；长度按柱心距离；截面按已测/参数边界处理 |
 | 令栱 | 28 | 需新建Master | 栱 | 28件；尺寸已锁 |
-| 令栱（梁架承托） | 1（族边界记录） | 需新建Master | 梁架承托栱 | 与28件外檐令栱证据域分开；身份/承托角色已确认，数量/尺寸/轮廓/榫卯UNKNOWN；MP-01B前建立可替换Master |
+| 令栱（梁架承托） | 1（族边界记录） | 已有Master｜族边界UNKNOWN | CMP-FRAME-LINGGONG-INTERIOR-001_MASTER | T-043已批准并Formalize；LOWER_PINGLIANG_SUPPORT 可供MP-01B使用；数量/逐件位置/历史尺寸/轮廓/榫卯及与外檐令栱同型性仍UNKNOWN |
 | 门木作系统 | 2 | 参数化补全 | 门木作 | VISUAL_MODEL + PARAMETRIC_SECTION |
 | 南立面窗洞 | 2 | 参数化补全 | 围护开口 | 2洞口；木作分格走视觉/参数化 |
 | 南门洞 | 1 | 参数化补全 | 围护开口 | 南中央洞口；门木作另处理 |
@@ -155,3 +155,17 @@ V008 当前68类登记对象已经全部具有明确处置：
 - Master-scope coverage：**29/30 = 96.7%**
 - Approved Master families：**26**
 - This separation is a provenance/data-model boundary; it does not claim the historical term 令栱 necessarily denotes two different named types.
+
+
+## 8. 2026-10-06｜T-043 梁架承托令栱 Formalization
+
+- Master：`CMP-FRAME-LINGGONG-INTERIOR-001_MASTER`
+- Role：`LOWER_PINGLIANG_SUPPORT`
+- Gate E：Product Owner **APPROVED**
+- Run：`37424767731` / Artifact：`11394896083`
+- Validation：**28/28 PASS**
+- Master-scope coverage：**30/30 = 100.0%**
+- Approved Master families：**27**
+- whole-hall count / per-instance mapping / historical dimensions / historical profile / hidden joinery / equivalence to outer-eaves Linggong：**UNKNOWN**
+- MP-01B may now use this Master only with an explicit assembly-owned metric envelope.
+- PR #56 merge：NOT AUTHORIZED.
