@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE F PASS / LOWER ASSEMBLY NUMERIC CONTRACT RESOLVED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE G DESIGN COMPLETE / LOWER ASSEMBLY FIRST BUILD READY FOR AUTHORIZATION / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -308,3 +308,27 @@ Next:
 > MP-01B Gate G｜Lower Assembly First Build Preparation
 
 Blender execution remains NOT AUTHORIZED.
+
+
+## 18. MP-01B Gate G
+
+**DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED**
+
+Locked:
+- 6 logical assembly objects;
+- 2 control datums;
+- common +90° local-X→assembly-Y axis mapping;
+- exact canonical transforms;
+- 6 SUPPORT + 4 LOCATE records;
+- contact planes at Z=0 / 91 / 306;
+- 27 machine checks;
+- mutation test: support clearance 306 → 310 mm;
+- six-panel Review Board.
+
+Important:
+- local-axis mapping is PROJECT_ASSEMBLY_RULE / REPLACEABLE;
+- exact historical contact faces and hidden joinery remain UNKNOWN;
+- Blender execution is NOT AUTHORIZED.
+
+Next:
+> MP-01B Gate H｜Lower Assembly First Engineering Build
