@@ -1,6 +1,6 @@
 # T-047｜MP-01B Circle 1 Targeted Build V001
 
-Status: **ENGINEERING EXECUTION COMPLETE / MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
+Status: **ENGINEERING EXECUTION COMPLETE / MACHINE PASS / PRODUCT OWNER REVIEW FAIL / NOT ACCEPTED**
 Date: 2026-10-06
 
 ## Goal
@@ -67,3 +67,26 @@ Instruction: **开始 Circle 1 Targeted Build**
 - PR #56 merge: NOT AUTHORIZED
 
 Machine PASS proves only that the approved Circle 1 profile control was implemented deterministically and that the frozen T-046 geometry did not change.
+
+## Product Owner review failure
+
+Decision: **FAIL / NOT ACCEPTED**
+
+Observed failure:
+- the generated visible Huagong profile remains materially different from Drawing 11;
+- the build interpreted the approved 650 mm inward endpoint reach as a 650 mm shaped gong-head zone;
+- Drawing 11 instead shows a predominantly straight/deep Huagong body with a localized terminal gong-head treatment;
+- therefore the machine implementation is deterministic but the approved Circle-1 profile hypothesis is not visually/evidentially valid.
+
+Invalidated assumption:
+`source-visible gong-head occupies the previously locked inward 650 mm zone`
+
+Retained controls:
+- 900 mm total realization length remains a project-completion control;
+- inner endpoint at 650 mm inward remains an endpoint/placement control unless separately disproved;
+- FRONT/REAR direct section values remain valid;
+- T-046 Tuojiao approval remains valid;
+- Circle 2 / Circle 3 remain open.
+
+Next action:
+re-resolve the target Huagong visible profile by separating **endpoint reach** from **localized gong-head shaping extent** before any new Blender build.
