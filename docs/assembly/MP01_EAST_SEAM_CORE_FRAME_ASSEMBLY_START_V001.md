@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B INTERIOR LINGGONG FORMALIZED / READY FOR LOWER ASSEMBLY ENVELOPE / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE F PASS / LOWER ASSEMBLY NUMERIC CONTRACT RESOLVED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -285,3 +285,26 @@ Next:
 - Approved Master families: **27**
 - Historical dimensions/profile/joinery and whole-hall mapping remain UNKNOWN.
 - Next: MP-01B assembly-local metric envelope / placement resolution.
+
+
+## 17. MP-01B Gate F
+
+**PASS**
+
+Resolved for first lower-assembly build:
+- 四椽栿 realization length: **7192 mm**
+- 平梁 realization length: **3672 mm**
+- lower support stations: **Y = ±1836 mm**
+- clear support envelope above 四椽栿: **306 mm**
+- interior Linggong assembly candidate: **893.3 × 153.6 × 215.0 mm**
+- Tuofeng LOWER_SUPPORT residual height: **91.0 mm**
+
+Evidence boundary:
+- 893.3 × 153.6 × 215.0 mm is a same-building interior analog, not a direct target-role measurement;
+- Tuofeng metric values remain reconstructed / replaceable;
+- hidden joinery and exact contact faces remain UNKNOWN.
+
+Next:
+> MP-01B Gate G｜Lower Assembly First Build Preparation
+
+Blender execution remains NOT AUTHORIZED.
