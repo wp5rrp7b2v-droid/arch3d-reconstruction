@@ -1,6 +1,6 @@
 # T-043｜P3.3 梁架承托令栱 Master V001
 
-Status: **ENGINEERING EXECUTION COMPLETE / MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
+Status: **PRODUCT OWNER APPROVED / FORMALIZED / CATALOG+V008 BOUND / PR #56 OPEN**
 Date: 2026-10-06
 
 ## Goal
@@ -59,5 +59,17 @@ Product Owner visual review remains a separate gate before formalization.
 - Independent reopen: PASS
 - Mutation: PASS
 - Deterministic restore: PASS
-- Product Owner review: **REQUIRED**
-- Formalization: NOT AUTHORIZED
+- Product Owner review: **APPROVED**
+- Formalization: **COMPLETE**
+- Catalog/V008 binding: **COMPLETE**
+
+
+## Product Owner acceptance and formalization
+
+- Decision: **APPROVED**
+- Master catalog: bound
+- V008/CURRENT: `APPROVED_MASTER_AVAILABLE`
+- Master-scope: **30/30 = 100%**
+- Approved Master families: **27**
+- Historical evidence boundaries unchanged.
+- PR #56 merge: NOT AUTHORIZED.
