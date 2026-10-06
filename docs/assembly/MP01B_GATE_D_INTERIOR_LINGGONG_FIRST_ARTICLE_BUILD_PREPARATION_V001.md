@@ -1,6 +1,6 @@
 # MP-01B Gate D｜Interior Linggong First Article Build Preparation V001
 
-Status: **PRODUCT OWNER APPROVED / GATE E ENGINEERING EXECUTION AUTHORIZED**
+Status: **GATE E EXECUTED / MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
 Date: 2026-10-06
 
 ## 1. Objective
@@ -246,3 +246,11 @@ Not authorized:
 - V008 approved-master binding;
 - MP-01B assembly build;
 - PR #56 merge.
+
+
+## 14. Gate E result
+
+- Run `37424767731`: SUCCESS
+- Artifact `11394896083`
+- Machine validation: **28/28 PASS**
+- First Article formalization remains NOT AUTHORIZED pending Product Owner review.
