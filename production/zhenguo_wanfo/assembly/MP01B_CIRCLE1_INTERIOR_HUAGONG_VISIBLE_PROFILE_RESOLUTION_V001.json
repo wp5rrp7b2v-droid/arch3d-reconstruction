@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01B_CIRCLE1_INTERIOR_HUAGONG_VISIBLE_PROFILE_1.0",
-  "status": "PRODUCT_OWNER_APPROVED / CIRCLE_1_PROFILE_CONTROL_LOCKED / NO_BLENDER",
+  "status": "PREVIOUSLY_PO_APPROVED / ACTUAL_BUILD_FALSIFIED_PROFILE_EXTENT_ASSUMPTION / REOPENED / NO_BLENDER",
   "date": "2026-10-06",
   "scope": "CIRCLE_1_ONLY",
   "component_id": "CMP-FRAME-HUAGONG-INTERIOR-001",
@@ -85,13 +85,32 @@
   "circle_2_resolved": false,
   "circle_3_resolved": false,
   "blender_authorized": false,
-  "product_owner_approved": true,
-  "product_owner_decision": "APPROVED",
+  "product_owner_approved": false,
+  "product_owner_decision": "REOPENED_AFTER_T047_FAIL",
   "approved_scope": "CIRCLE_1_INTERIOR_HUAGONG_VISIBLE_GONGHEAD_PROFILE_ONLY",
   "next_gate": {
-    "id": "MP01B_CIRCLE1_TARGETED_BUILD_AUTHORIZATION",
-    "name": "CIRCLE_1_TARGETED_BUILD",
+    "id": "MP01B_CIRCLE1_PROFILE_RECALIBRATION",
+    "name": "SEPARATE_ENDPOINT_REACH_FROM_LOCAL_GONGHEAD_SHAPING",
     "execution_authorized": false,
-    "requires_product_owner_authorization": true
-  }
+    "requires_product_owner_authorization": false
+  },
+  "invalidated_assumption": "650 mm inward endpoint reach == visible shaped gong-head profile extent",
+  "retained_controls": {
+    "total_realization_length_mm": 900,
+    "inward_endpoint_reach_mm": 650,
+    "outward_tuojiao_reach_mm": 250,
+    "front_section_mm": [
+      221,
+      153
+    ],
+    "rear_section_mm": [
+      210,
+      156
+    ]
+  },
+  "reopened_unknowns": [
+    "localized gong-head shaping extent from inner endpoint toward station",
+    "target visible terminal-profile control",
+    "whether FRONT and REAR terminal shaping should share one normalized control"
+  ]
 }
