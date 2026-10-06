@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **ASSEMBLY EXECUTION ACTIVE / GATE A+B+C+D MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
+Status: **MP-01A APPROVED / MINIMUM PROOF PASS / MP-01B NOT STARTED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -205,3 +205,12 @@ Do not start Blender assembly before Gate B is resolved.
 
 Next decision:
 > Product Owner reviews Gate D Review Board and decides acceptance / rework.
+
+
+## 10. Product Owner decision
+
+- MP-01A Gate D: **APPROVED**
+- MP-01A Minimum Proof: **PASS**
+- Scope proven: upper ridge-support subset only
+- PR #56 merge: **NOT AUTHORIZED**
+- Next unresolved work: **MP-01B｜四椽栿 → 驼峰 / 令栱 → 平梁**
