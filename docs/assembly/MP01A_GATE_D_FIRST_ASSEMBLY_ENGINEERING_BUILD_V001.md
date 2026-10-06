@@ -1,6 +1,6 @@
 # MP-01A Gate D｜First Assembly Engineering Build V001
 
-Status: **PRODUCT OWNER AUTHORIZED / ENGINEERING EXECUTION ACTIVE**
+Status: **ENGINEERING EXECUTION COMPLETE / MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
 Date: 2026-10-06
 Branch: `assembly/mp01-east-seam-core-frame-v001`
 PR: #56
@@ -122,3 +122,49 @@ It does not prove:
 - MP-01B;
 - whole-hall scalability;
 - structural safety.
+
+
+## 8. Engineering result
+
+**PASS / PRODUCT OWNER REVIEW REQUIRED**
+
+- GitHub Actions Run: `37420838311`
+- Run conclusion: **SUCCESS**
+- Artifact: `11393212103`
+- Artifact name: `MP01A_GATE_D_FIRST_ASSEMBLY_V001`
+- Artifact digest: `sha256:906d3efeafb543c94673455fb9ffa5e69d0985fdfb6d5a1fe9dcf729cd081344`
+- Machine validation: **31 / 31 PASS**
+- Independent reopen: **PASS**
+- Deterministic rebuild: **PASS**
+- Blender: **4.5.13 LTS**
+- Assembly signature: `127477379d9f62ea81835ce56e75727d055a4e5a5609a7ac11a485cb9be322fb`
+- Canonical .blend SHA-256: `5a1460b13a0de739ef2ad675921af26a5d5d95ae85b0c3f56f7eb0630cc4b3f9`
+- Semantic SHA-256: `3db21251d366c21dfe955e57c0c7de1871e7994fe1d86de383fd46a08ebcedbf`
+- Review Board SHA-256: `170afd848661868fcc3285e1201c6da2e43c54e3d145301634a5e073cbbaa0a7`
+- Validation SHA-256: `5e5279ab6120ab7c048d93c5940d1858bee71d8f3dc94bdd945aeb2b4b0183e7`
+
+### V5-like dependency perturbation
+
+Controlled test:
+- ridge target: `885 → 935 mm`
+
+Expected and observed:
+- Shuzhu length: `685 → 735 mm` — changed;
+- both Chashou lengths changed — changed;
+- Pingliang realization — invariant;
+- Tuofeng Upper envelope — invariant.
+
+Result: **PASS**
+
+This proves dependency propagation only for the tested MP-01A subset.
+
+### Acceptance boundary
+
+Machine PASS does not authorize:
+- historical exactness claim;
+- MP-01B PASS;
+- whole-frame PASS;
+- whole-hall scaling;
+- PR merge.
+
+Product Owner visual/semantic review remains required.
