@@ -3,7 +3,7 @@
 - Registry：V008
 - Records：506
 - 登记对象类型：67
-- Status：**PATCHED AGAINST V008 / 驼峰 MASTER PENDING / 2026-10-06**
+- Status：**PATCHED AGAINST V008 / 驼峰 MASTER FORMALIZED / 29 OF 29 COVERED / 2026-10-06**
 - T-018：HOLD
 - New T-###：NONE
 
@@ -11,9 +11,9 @@
 
 - **参数化补全**：23类
 - **非实体装配/拓扑**：5类
-- **需新建Master**：23类
+- **需新建Master**：22类
 - **简化Proxy**：7类
-- **已有Master｜族边界UNKNOWN**：2类
+- **已有Master｜族边界UNKNOWN**：3类
 - **UNKNOWN/参考边界**：3类
 - **已有Master｜需长度桥**：2类
 - **已有Master｜可直接绑定**：2类
@@ -51,7 +51,7 @@
 | 内槽斗栱/隔架位置 | 1 | 非实体装配/拓扑 | 内槽装配位置 | 24处系统位置，不是24件同类实体 |
 | 襻间枋 | 12 | 参数化补全 | 内槽枋 | 12处位置锁定，统一截面UNKNOWN；215×153.6mm不得使用 |
 | 平梁 | 4 | 需新建Master | 主梁架长构件 | 4件；东西缝型与山面型分证据状态；山面厚度UNKNOWN |
-| 驼峰 | 1（族边界记录） | 需新建Master | 梁架承托/脊部支撑构件 | 构件身份与结构角色已确认；全殿总数、逐件位置、精确尺寸/轮廓及隐藏榫卯 UNKNOWN；纳入 Master scope；明间东缝 Minimum Proof 前建立最小可用 Master |
+| 驼峰 | 1（族边界记录） | 已有Master｜族边界UNKNOWN | 梁架承托/脊部支撑构件 | 构件身份与结构角色已确认；全殿总数、逐件位置、精确尺寸/轮廓及隐藏榫卯 UNKNOWN；纳入 Master scope；明间东缝 Minimum Proof 前建立最小可用 Master |
 | 铺作方向单元 | 28 | 非实体装配/拓扑 | 方向计数单元 | 28个方向单元，不是物理构件 |
 | 嵌墙石碑 | 2 | 简化Proxy | 附属构件 | 2通；位置/身份锁定，精确板尺寸未闭合 |
 | 戗脊 | 4 | 参数化补全 | 屋脊装配 | 4条；每条5–6块+找头为明确推导 |
@@ -132,3 +132,13 @@ V008 当前67类登记对象已经全部具有明确处置：
 - 本次只登记构件身份与结构角色；**不**声明全殿数量、逐件位置、精确尺寸/轮廓或隐藏榫卯已经闭合。
 - Approved Master family 数仍为 **25**；Master-scope 覆盖由 **28/28** 调整为 **28/29 = 96.6%**，直到驼峰 Master 正式建立并批准。
 - 驼峰成为当前“明间东缝 Minimum Proof”的前置 Master 缺口。
+
+
+## 6. 2026-10-06｜驼峰 Formalization
+
+- Master：`CMP-FRAME-TUOFENG-001_MASTER`
+- 1 Master family / 2 role variants：`LOWER_SUPPORT`、`UPPER_RIDGE_SUPPORT`
+- Master-scope coverage：**29/29 = 100.0%**
+- Approved Master families：**26**
+- whole-hall count / exact historical dimensions / exact profile / hidden joinery：**UNKNOWN**
+- PR #55：OPEN；merge 未授权。

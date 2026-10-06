@@ -2,7 +2,7 @@
   "schema_version": "P3_3_TUOFENG_FIRST_ARTICLE_BUILD_PREPARATION_1.0",
   "component_id": "CMP-FRAME-TUOFENG-001",
   "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
-  "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / ENGINEERING_EXECUTION_NOT_AUTHORIZED",
+  "status": "LOCKED / FIRST_ARTICLE_APPROVED / FORMALIZATION_AUTHORIZED",
   "date": "2026-10-06",
   "variants": [
     "LOWER_SUPPORT",
@@ -113,6 +113,14 @@
   ],
   "historical_dimensions": "UNKNOWN",
   "hidden_joinery": "UNKNOWN / DEFERRED",
-  "engineering_execution_authorized": false,
-  "product_owner_approval_required": true
+  "engineering_execution_authorized": true,
+  "product_owner_approval_required": false,
+  "product_owner_approval": {
+    "approved": true,
+    "date": "2026-10-06",
+    "instruction": "开始驼峰 First Article Engineering Execution"
+  },
+  "formalization_authorized": true,
+  "catalog_v008_binding_authorized": true,
+  "merge_authorized": false
 }

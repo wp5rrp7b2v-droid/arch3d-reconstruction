@@ -4,7 +4,7 @@
   "gate": "P3.3 V002",
   "stage": "Stage 1｜真实构件 Master 库",
   "authorization": "D-067",
-  "status": "COVERAGE_MATRIX_PATCHED_AGAINST_V008 / TUOFENG_MASTER_PENDING",
+  "status": "COVERAGE_MATRIX_PATCHED_AGAINST_V008 / TUOFENG_MASTER_FORMALIZED / 29 OF 29 MASTER-SCOPE TYPES COVERED",
   "canonical_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
   "registry_version": "V008",
   "registry_record_count": 506,
@@ -12,9 +12,9 @@
   "disposition_summary": {
     "参数化补全": 23,
     "非实体装配/拓扑": 5,
-    "需新建Master": 23,
+    "需新建Master": 22,
     "简化Proxy": 7,
-    "已有Master｜族边界UNKNOWN": 2,
+    "已有Master｜族边界UNKNOWN": 3,
     "UNKNOWN/参考边界": 3,
     "已有Master｜需长度桥": 2,
     "已有Master｜可直接绑定": 2
@@ -419,13 +419,14 @@
       "systems": [
         "主体木构"
       ],
-      "disposition": "需新建Master",
+      "disposition": "已有Master｜族边界UNKNOWN",
       "family": "梁架承托/脊部支撑构件",
-      "action": "Source Binding V001 completed for identity + assembly role. A2 official same-building statement directly confirms two roles: 四椽栿上用驼峰、令栱承平梁；平梁之上设驼峰、蜀柱、叉手。A1 PDF provides same-building visual cross-check, but exact dimensions/profile/count/joinery remain UNKNOWN. Next: Master Spec must decide whether two assembly roles share one geometry or require role variants.",
+      "action": "T-042 First Article approved and formalized. Bind CMP-FRAME-TUOFENG-001_MASTER with LOWER_SUPPORT / UPPER_RIDGE_SUPPORT role variants. Whole-hall count, exact per-instance mapping, historical metric dimensions/profile and hidden joinery remain UNKNOWN.",
       "planned_master": "CMP-FRAME-TUOFENG-001_MASTER",
-      "current_priority": "MINIMUM_PROOF_PREREQUISITE",
+      "current_priority": "MINIMUM_PROOF_READY",
       "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_TUOFENG_SOURCE_BINDING_V001.md",
-      "readiness": "IDENTITY_READY / ASSEMBLY_ROLE_READY / GEOMETRY_SPEC NOT YET READY"
+      "readiness": "APPROVED_MASTER_AVAILABLE / ASSEMBLY READY SUBJECT TO LOCAL METRIC ENVELOPE",
+      "master_reference": "CMP-FRAME-TUOFENG-001_MASTER"
     },
     {
       "component": "铺作方向单元",
@@ -928,7 +929,7 @@
     "惹草",
     "生头木"
   ],
-  "closure_statement": "All 67 currently registered V008 object types have an explicit disposition. 驼峰 is now a Master-scope object with MASTER_REQUIRED_PENDING, so Stage1 Master-scope coverage is 28/29 until its Master is built and approved. Seven predecessor-audit items remain outside V008 as PENDING_SOURCE_BINDING.",
+  "closure_statement": "All 67 currently registered V008 object types have an explicit disposition. Stage1 Master-scope coverage is 29/29 after T-042 Tuofeng formalization. Tuofeng whole-hall count and exact historical geometry remain UNKNOWN; seven predecessor-audit items remain outside V008 as PENDING_SOURCE_BINDING.",
   "first_new_master_candidate": {
     "component": "四椽栿",
     "status": "READY_FOR_SPEC_DESIGN",
@@ -936,11 +937,6 @@
   },
   "new_t_task_created": false,
   "t018_status": "HOLD",
-  "current_pending_master_candidate": {
-    "component": "驼峰",
-    "planned_master": "CMP-FRAME-TUOFENG-001_MASTER",
-    "status": "MASTER_REQUIRED_PENDING",
-    "reason": "Required for the approved 明间东缝 Minimum Proof; identity/role are supported but exact geometry and hidden joinery remain unresolved."
-  },
+  "current_pending_master_candidate": null,
   "scope_patch_authorization": "PRODUCT_OWNER_APPROVED / 2026-10-06"
 }
