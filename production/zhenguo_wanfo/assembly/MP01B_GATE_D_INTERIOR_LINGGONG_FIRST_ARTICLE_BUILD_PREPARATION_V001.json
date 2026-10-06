@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01B_INTERIOR_LINGGONG_FIRST_ARTICLE_BUILD_PREPARATION_1.0",
-  "status": "PRODUCT_OWNER_APPROVED / GATE_E_ENGINEERING_EXECUTION_AUTHORIZED",
+  "status": "GATE_E_EXECUTED / MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
   "date": "2026-10-06",
   "component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
   "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
@@ -80,5 +80,14 @@
     "date": "2026-10-06",
     "authority": "User instruction: 开始下一步"
   },
-  "blender_execution_authorized": true
+  "blender_execution_authorized": true,
+  "engineering_result": {
+    "run_id": 37424767731,
+    "artifact_id": 11394896083,
+    "artifact_digest": "sha256:397adf6552f3f1d9d4791cc8dbaf3ea5197ee556c673aee11ade113c3491610d",
+    "validation": "28/28 PASS",
+    "geometry_signature": "7ef466c39b08f7485da1c7e91af8882446da7f6d9546668ac28132445d19232f",
+    "blend_sha256": "82a16ddf3c3d727ddd4cb03408ade7b4ff9a25afd8a42cb7215edc2178a22301",
+    "product_owner_accepted": false
+  }
 }
