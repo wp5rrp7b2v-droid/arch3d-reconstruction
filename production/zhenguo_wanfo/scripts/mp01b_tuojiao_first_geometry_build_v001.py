@@ -134,7 +134,8 @@ def object_payload(ob):
       "local_bbox_mm":{"min":lmin,"max":lmax,"dimensions":[round(lmax[i]-lmin[i],6) for i in range(3)]},
       "world_bbox_mm":{"min":wmin,"max":wmax,"dimensions":[round(wmax[i]-wmin[i],6) for i in range(3)]},
       "local_geometry_signature":stable({"v":lv,"f":faces}),
-      "world_geometry_signature":stable({"v":wv,"f":faces})
+      "world_geometry_signature":stable({"v":wv,"f":faces}),
+      "custom_properties":props
     }
 
 def common_props(logical, role, master, basis, evidence, axis):
