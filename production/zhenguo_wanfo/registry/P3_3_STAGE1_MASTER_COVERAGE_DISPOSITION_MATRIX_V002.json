@@ -1,18 +1,18 @@
 {
   "version": "V002",
-  "date": "2026-09-19",
+  "date": "2026-10-06",
   "gate": "P3.3 V002",
   "stage": "Stage 1｜真实构件 Master 库",
   "authorization": "D-067",
-  "status": "COVERAGE_MATRIX_FINALIZED_AGAINST_V008",
+  "status": "COVERAGE_MATRIX_PATCHED_AGAINST_V008 / TUOFENG_MASTER_PENDING",
   "canonical_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
   "registry_version": "V008",
-  "registry_record_count": 505,
-  "distinct_registered_object_types": 66,
+  "registry_record_count": 506,
+  "distinct_registered_object_types": 67,
   "disposition_summary": {
     "参数化补全": 23,
     "非实体装配/拓扑": 5,
-    "需新建Master": 22,
+    "需新建Master": 23,
     "简化Proxy": 7,
     "已有Master｜族边界UNKNOWN": 2,
     "UNKNOWN/参考边界": 3,
@@ -409,6 +409,21 @@
       "family": "主梁架长构件",
       "action": "4件；东西缝型与山面型分证据状态；山面厚度UNKNOWN",
       "priority": 2
+    },
+    {
+      "component": "驼峰",
+      "records": 1,
+      "statuses": [
+        "FAMILY_UNKNOWN_COUNT"
+      ],
+      "systems": [
+        "主体木构"
+      ],
+      "disposition": "需新建Master",
+      "family": "梁架承托/脊部支撑构件",
+      "action": "构件身份与结构角色已确认；全殿总数、逐件位置、精确尺寸/轮廓及隐藏榫卯 UNKNOWN。纳入 Master scope；明间东缝 Minimum Proof 前完成证据绑定与最小可用 Master。",
+      "planned_master": "CMP-FRAME-TUOFENG-001_MASTER",
+      "current_priority": "MINIMUM_PROOF_PREREQUISITE"
     },
     {
       "component": "铺作方向单元",
@@ -911,12 +926,19 @@
     "惹草",
     "生头木"
   ],
-  "closure_statement": "All 66 currently registered V008 object types have an explicit Master/parametric/proxy/topology/unknown disposition. Seven predecessor-audit items remain outside V008 as PENDING_SOURCE_BINDING and are not silently treated as covered.",
+  "closure_statement": "All 67 currently registered V008 object types have an explicit disposition. 驼峰 is now a Master-scope object with MASTER_REQUIRED_PENDING, so Stage1 Master-scope coverage is 28/29 until its Master is built and approved. Seven predecessor-audit items remain outside V008 as PENDING_SOURCE_BINDING.",
   "first_new_master_candidate": {
     "component": "四椽栿",
     "status": "READY_FOR_SPEC_DESIGN",
     "reason": "identity/count/section are locked; suitable first missing real structural Master"
   },
   "new_t_task_created": false,
-  "t018_status": "HOLD"
+  "t018_status": "HOLD",
+  "current_pending_master_candidate": {
+    "component": "驼峰",
+    "planned_master": "CMP-FRAME-TUOFENG-001_MASTER",
+    "status": "MASTER_REQUIRED_PENDING",
+    "reason": "Required for the approved 明间东缝 Minimum Proof; identity/role are supported but exact geometry and hidden joinery remain unresolved."
+  },
+  "scope_patch_authorization": "PRODUCT_OWNER_APPROVED / 2026-10-06"
 }
