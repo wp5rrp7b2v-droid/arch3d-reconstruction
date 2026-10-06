@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_H_R2_APPROVED / GATE_H_R3_DESIGN_AUTHORIZED / CORRECTED_BUILD_NOT_AUTHORIZED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_H_R3_DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / CORRECTED_BUILD_NOT_AUTHORIZED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_H_R2_APPROVED / GATE_H_R3_DESIGN_AUTHORIZED",
+      "status": "GATE_H_R3_DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,10 +72,10 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_GATE_H_R3",
-    "name": "MISSING_GEOMETRY_CONTROLS_AND_CORRECTED_BUILD_PREPARATION",
-    "question": "Resolve Ludou bottom depth and Huagong endpoints, then prepare corrected build without executing Blender.",
-    "design_authorized": true,
+    "id": "MP01B_GATE_H_R4",
+    "name": "CORRECTED_LOWER_ASSEMBLY_ENGINEERING_BUILD",
+    "question": "Execute the corrected orthogonal lower-support assembly after Product Owner approval of Gate H-R3.",
+    "requires_product_owner_approval": true,
     "blender_authorized": false,
     "merge_authorized": false
   },
@@ -261,5 +261,25 @@
     },
     "approved_front_tuofeng_vertical_candidate_mm": 172.9,
     "approved_rear_tuofeng_vertical_candidate_mm": 196
+  },
+  "mp01b_gate_h_r3": {
+    "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / CORRECTED_BLENDER_BUILD_NOT_AUTHORIZED",
+    "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_H_R3_MISSING_GEOMETRY_CONTROLS_CORRECTED_BUILD_PREPARATION_V001.json",
+    "ludou_bottom_depth_mm": {
+      "front": 255,
+      "rear": 264
+    },
+    "ludou_bottom_depth_rule": "EQUAL_PLAN_SIDE_INSET / RECONSTRUCTED_DESIGN / REPLACEABLE",
+    "huagong_control_mm": {
+      "length": 900,
+      "inner_gonghead_reach": 650,
+      "outer_tuojiao_reach": 250,
+      "uncertainty": 50
+    },
+    "huagong_length_classification": "SOURCE_IMAGE_CALIBRATED_PROJECT_COMPLETION / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "pingliang_underside_z_mm": 521,
+    "rendered_physical_geometry_count": 10,
+    "deferred_panjian_fang_count": 2,
+    "blender_authorized": false
   }
 }
