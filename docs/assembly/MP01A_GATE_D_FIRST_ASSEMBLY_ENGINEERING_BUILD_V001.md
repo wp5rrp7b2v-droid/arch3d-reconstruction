@@ -1,6 +1,6 @@
 # MP-01A Gate D｜First Assembly Engineering Build V001
 
-Status: **ENGINEERING EXECUTION COMPLETE / MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
+Status: **PRODUCT OWNER APPROVED / MINIMUM PROOF PASS / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Branch: `assembly/mp01-east-seam-core-frame-v001`
 PR: #56
@@ -168,3 +168,29 @@ Machine PASS does not authorize:
 - PR merge.
 
 Product Owner visual/semantic review remains required.
+
+
+## 9. Product Owner Acceptance
+
+Decision: **APPROVED**
+
+Date: 2026-10-06
+
+Accepted scope:
+
+> **MP-01A Gate D = APPROVED / MINIMUM PROOF PASS**
+
+What this approval means:
+- the MP-01A upper ridge-support subset is accepted as a valid deterministic digital assembly proof;
+- component identities, Master references, relation metadata, evidence classes and rebuild behavior are accepted for this tested scope;
+- the Gate D Review Board is accepted.
+
+What this approval does **not** mean:
+- historical exactness is proven;
+- hidden joinery is known;
+- the unresolved upper 360 mm ridge-support stack is solved;
+- MP-01B is complete;
+- the whole frame or whole hall is proven;
+- structural safety is validated.
+
+Merge of PR #56 remains **NOT AUTHORIZED**.
