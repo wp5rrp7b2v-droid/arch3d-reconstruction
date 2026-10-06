@@ -93,8 +93,8 @@ jobs:
           registry = json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
           progress = registry["stage1_master_progress_summary"]
           assert wb["进度总览"]["B7"].value == progress["covered_master_scope_object_type_count"]
-          assert progress["covered_master_scope_object_type_count"] == 28
-          assert progress["master_scope_object_type_count"] == 28
+          assert progress["covered_master_scope_object_type_count"] == 29
+          assert progress["master_scope_object_type_count"] == 29
           assert progress["pending_master_object_type_count"] == 0
           assert float(progress["master_completion_percent"]) == 100.0
           assert progress["approved_master_family_count"] == 25

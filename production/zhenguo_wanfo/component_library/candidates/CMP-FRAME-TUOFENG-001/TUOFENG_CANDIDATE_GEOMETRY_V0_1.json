@@ -1,0 +1,141 @@
+{
+  "schema_version": "P3_3_TUOFENG_CANDIDATE_GEOMETRY_0.1",
+  "component_id": "CMP-FRAME-TUOFENG-001",
+  "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+  "status": "APPROVED_GEOMETRY_STRATEGY / PRODUCT_OWNER_APPROVED / NOT_YET_CANONICAL_MASTER",
+  "date": "2026-10-06",
+  "purpose": "Minimum buildable source-guided geometry candidates for two source-supported role variants. This is not a historical metric reconstruction.",
+  "coordinate_system": {
+    "x": "support-span direction in the transverse section",
+    "y": "extrusion/depth direction",
+    "z": "vertical",
+    "units": "NORMALIZED / DIMENSIONLESS",
+    "metric_claim": false
+  },
+  "scaling_policy": {
+    "rule": "Do not convert normalized dimensions into historical millimetres. At assembly time, derive a replaceable production envelope from neighboring locked components / support interfaces.",
+    "production_classification": "RECONSTRUCTED_DESIGN or SECONDARY_CALCULATED",
+    "historical_claim": false,
+    "replaceable": true
+  },
+  "variants": [
+    {
+      "variant_id": "LOWER_SUPPORT",
+      "evidence_role": "四椽栿上用驼峰、令栱承平梁",
+      "evidence_geometry_strength": "LOW / ROLE DIRECT, ISOLATED PROFILE NOT DIRECTLY LOCKED",
+      "candidate_geometry": "TWO_TIER_RAISED_SUPPORT_ENVELOPE",
+      "normalized_parameters": {
+        "total_span_x": 1,
+        "depth_y": 1,
+        "base_height_z": 0.18,
+        "upper_seat_span_x": 0.42,
+        "upper_seat_height_z": 0.18,
+        "total_height_z": 0.36
+      },
+      "modeling_note": "Conservative stacked support envelope. No curved historical profile is claimed because the lower-role 驼峰 is not isolated by a metric/source-labeled drawing.",
+      "interfaces": {
+        "lower": "FOUR_CHUANFU_UPPER_SUPPORT_REGION",
+        "upper": "LINGGONG_AND_PINGLIANG_SUPPORT_CHAIN"
+      }
+    },
+    {
+      "variant_id": "UPPER_RIDGE_SUPPORT",
+      "evidence_role": "平梁之上设驼峰、蜀柱、叉手",
+      "evidence_geometry_strength": "MEDIUM / ROLE DIRECT + SAME-BUILDING FIG 2-71 VISUAL",
+      "candidate_geometry": "SYMMETRIC_STEPPED_HUMP_ENVELOPE",
+      "normalized_profile_xz": [
+        [
+          -0.5,
+          0
+        ],
+        [
+          -0.42,
+          0.07
+        ],
+        [
+          -0.34,
+          0.07
+        ],
+        [
+          -0.34,
+          0.13
+        ],
+        [
+          -0.25,
+          0.13
+        ],
+        [
+          -0.25,
+          0.2
+        ],
+        [
+          -0.16,
+          0.2
+        ],
+        [
+          -0.12,
+          0.32
+        ],
+        [
+          0.12,
+          0.32
+        ],
+        [
+          0.16,
+          0.2
+        ],
+        [
+          0.25,
+          0.2
+        ],
+        [
+          0.25,
+          0.13
+        ],
+        [
+          0.34,
+          0.13
+        ],
+        [
+          0.34,
+          0.07
+        ],
+        [
+          0.42,
+          0.07
+        ],
+        [
+          0.5,
+          0
+        ]
+      ],
+      "normalized_depth_y": 1,
+      "modeling_note": "Profile is a deliberately simplified stepped abstraction of the low mound/raised support visible beneath the central short post in same-building Fig. 2-71. Control points are normalized reconstruction coordinates, not measured historic dimensions.",
+      "interfaces": {
+        "lower": "PINGLIANG_UPPER_SUPPORT_REGION",
+        "upper": "SHUZHU_LOWER_SUPPORT_REGION"
+      }
+    }
+  ],
+  "shared_boundaries": {
+    "exact_dimensions": "UNKNOWN",
+    "exact_profile": "UNKNOWN",
+    "whole_hall_count": "UNKNOWN",
+    "per_instance_mapping": "UNKNOWN",
+    "hidden_joinery": "UNKNOWN / DEFERRED",
+    "mortise_tenon_count": 0,
+    "groove_slot_count": 0
+  },
+  "acceptance_questions": [
+    "Does the LOWER_SUPPORT candidate remain sufficiently neutral without implying an unsupported historical profile?",
+    "Does the UPPER_RIDGE_SUPPORT candidate preserve the source-visible broad-base / raised-center character without claiming metric accuracy?",
+    "Can both candidates be assembly-scaled later without changing component identity or relationship semantics?"
+  ],
+  "approval": {
+    "approved": true,
+    "date": "2026-10-06",
+    "scope": "GEOMETRY_STRATEGY_ONLY",
+    "engineering_execution_authorized": false,
+    "historical_metric_claim": false
+  }
+}

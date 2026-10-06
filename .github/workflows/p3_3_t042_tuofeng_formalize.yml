@@ -1,0 +1,358 @@
+name: T-042 Tuofeng Formalization
+
+on:
+  push:
+    branches: [ codex/t042-p3-3-tuofeng-master-v001 ]
+    paths:
+      - '.github/workflows/p3_3_t042_tuofeng_formalize.yml'
+      - 'docs/tasks/T-042_P3_3_TUOFENG_MASTER_V001.md'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOFENG-001/**'
+      - 'production/zhenguo_wanfo/registry/P3_3_TUOFENG_FIRST_ARTICLE_BUILD_PREPARATION_V001.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  formalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      ARTIFACT_ID: "11391915287"
+      ARTIFACT_ZIP_SHA256: "f5b9940a17b8368a0d6be5df0a082b36a8d421705a2eb3a4094292577b5b820d"
+      ACCEPTED_BLEND_SHA256: "eb24ca1ad0e39df0bac3558f777f3844d2952cf2e0cbfe7b699b1d268ec60c7b"
+      ACCEPTED_SEMANTIC_SHA256: "e0169aebc0f1d89dda43f0fa224afa70a219387f7985576c03db4bd3ab2251c0"
+      ACCEPTED_VALIDATION_SHA256: "68b9383b2c6963397d85808c2f045a449a5815cd1c5d61723d319bc2b590a208"
+      BOARD_SHA256: "967d27157df85594a528ce8bdcf647f9bc78ec10d7e0342d613db08c5477b1e6"
+      FAMILY_SIG: "a6ec7f0c43f2639810e41751e9bce0b618ea4684294a54d8e21646516207415f"
+      LOWER_SIG: "a9e8170047f29f0f1d35a9d8253947d0437eba1ddd5b4d2028cda2daf9dec78d"
+      UPPER_SIG: "085ffc2e6303c490465ac6f30a59557b042b62782c5df28d51c192a88bce9f35"
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: One-time formalization gate
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          p="production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOFENG-001/CMP-FRAME-TUOFENG-001_MASTER_DEFINITION_V001.json"
+          d=json.load(open(p,encoding="utf-8"))
+          assert d["task_id"]=="T-042"
+          assert d["first_article_approval"]["approved"] is True
+          assert d["formalization_authorization"]["authorized"] is True
+          assert d["execution_boundary"]["formalization_authorized"] is True
+          assert d["execution_boundary"]["catalog_v008_binding_authorized"] is True
+          assert d["execution_boundary"]["merge_authorized"] is False
+          if d.get("formalization",{}).get("complete") is True:
+              print("do_formalize=false")
+          else:
+              print("do_formalize=true")
+          PY
+
+      - name: Download accepted T-042 artifact
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/t042_formal
+          mkdir -p /tmp/t042_formal
+          curl --fail --location --show-error             -H "Authorization: Bearer $GH_TOKEN"             -H "Accept: application/vnd.github+json"             -H "X-GitHub-Api-Version: 2022-11-28"             -o /tmp/t042.zip             "https://api.github.com/repos/$GITHUB_REPOSITORY/actions/artifacts/$ARTIFACT_ID/zip"
+          test "$(sha256sum /tmp/t042.zip | awk '{print $1}')" = "$ARTIFACT_ZIP_SHA256"
+          unzip -q /tmp/t042.zip -d /tmp/t042_formal
+
+      - name: Verify approved payload
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,os
+          from pathlib import Path
+          root=Path("/tmp/t042_formal")
+          def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+          blend=root/"CMP-FRAME-TUOFENG-001_MASTER_V001.blend"
+          sem=root/"CMP-FRAME-TUOFENG-001_MASTER_SEMANTIC_V001.json"
+          val=root/"CMP-FRAME-TUOFENG-001_MASTER_VALIDATION_V001.json"
+          board=root/"CMP-FRAME-TUOFENG-001_MASTER_REVIEW_BOARD_V001.png"
+          assert sha(blend)==os.environ["ACCEPTED_BLEND_SHA256"]
+          assert sha(sem)==os.environ["ACCEPTED_SEMANTIC_SHA256"]
+          assert sha(val)==os.environ["ACCEPTED_VALIDATION_SHA256"]
+          assert sha(board)==os.environ["BOARD_SHA256"]
+          s=json.loads(sem.read_text(encoding="utf-8"))
+          v=json.loads(val.read_text(encoding="utf-8"))
+          assert s["task_id"]=="T-042"
+          assert s["master_id"]=="CMP-FRAME-TUOFENG-001_MASTER"
+          assert s["master_family_count"]==1
+          assert s["role_variant_count"]==2
+          assert set(s["role_variants"])=={"LOWER_SUPPORT","UPPER_RIDGE_SUPPORT"}
+          assert s["fixture_historical_claim"] is False
+          assert s["fixture_building_dimension_claim"] is False
+          assert s["historical_dimensions"]=="UNKNOWN"
+          assert s["historical_joinery"]=="UNKNOWN / DEFERRED"
+          assert s["family_signature"]==os.environ["FAMILY_SIG"]
+          bodies={x["variant_id"]:x for x in s["bodies"]}
+          assert bodies["LOWER_SUPPORT"]["geometry_signature"]==os.environ["LOWER_SIG"]
+          assert bodies["UPPER_RIDGE_SUPPORT"]["geometry_signature"]==os.environ["UPPER_SIG"]
+          assert v["status"]=="PASS" and v["check_count"]==27
+          assert v["canonical_blend_sha256"]==os.environ["ACCEPTED_BLEND_SHA256"]
+          print("T042_ACCEPTED_PAYLOAD_PASS")
+          PY
+
+      - name: Formalize and bind Catalog/V008/CURRENT
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,os,shutil,re
+          from pathlib import Path
+
+          ROOT=Path("/tmp/t042_formal")
+          MASTER=Path("production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOFENG-001")
+          DEF=MASTER/"CMP-FRAME-TUOFENG-001_MASTER_DEFINITION_V001.json"
+          SEM_DST=MASTER/"CMP-FRAME-TUOFENG-001_MASTER_SEMANTIC_V001.json"
+          VAL_DST=MASTER/"CMP-FRAME-TUOFENG-001_MASTER_VALIDATION_V001.json"
+          BOARD_DST=MASTER/"CMP-FRAME-TUOFENG-001_MASTER_REVIEW_BOARD_V001.png"
+          SPEC_JSON=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_TUOFENG_MASTER_SPEC_V0_1.json")
+          SPEC_MD=Path("docs/production/zhenguo_wanfo/P3_3_STAGE1_TUOFENG_MASTER_SPEC_V0_1.md")
+          CATALOG=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json")
+          REG=Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json")
+          CURRENT=Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json")
+          MATRIX=Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json")
+          MATRIX_MD=Path("docs/production/zhenguo_wanfo/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.md")
+          TASK=Path("docs/tasks/T-042_P3_3_TUOFENG_MASTER_V001.md")
+          EXCEL_WF=Path(".github/workflows/wanfo-component-registry-excel.yml")
+
+          def load(p): return json.loads(Path(p).read_text(encoding="utf-8"))
+          def dump(p,o): Path(p).write_text(json.dumps(o,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+          def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+          d=load(DEF)
+          assert d["first_article_approval"]["approved"] is True
+          assert d["formalization_authorization"]["authorized"] is True
+          assert d["execution_boundary"]["formalization_authorized"] is True
+          assert d["execution_boundary"]["catalog_v008_binding_authorized"] is True
+          assert d["execution_boundary"]["merge_authorized"] is False
+
+          sem=load(ROOT/"CMP-FRAME-TUOFENG-001_MASTER_SEMANTIC_V001.json")
+          val=load(ROOT/"CMP-FRAME-TUOFENG-001_MASTER_VALIDATION_V001.json")
+          bodies={x["variant_id"]:x for x in sem["bodies"]}
+
+          formal_meta={
+            "complete":True,
+            "date":"2026-10-06",
+            "authority":"PRODUCT_OWNER / start next step",
+            "accepted_run_id":37416207236,
+            "artifact_id":int(os.environ["ARTIFACT_ID"]),
+            "artifact_zip_sha256":"sha256:"+os.environ["ARTIFACT_ZIP_SHA256"],
+            "accepted_blend_sha256":os.environ["ACCEPTED_BLEND_SHA256"],
+            "accepted_semantic_payload_sha256":os.environ["ACCEPTED_SEMANTIC_SHA256"],
+            "accepted_validation_payload_sha256":os.environ["ACCEPTED_VALIDATION_SHA256"],
+            "accepted_review_board_sha256":os.environ["BOARD_SHA256"],
+            "family_signature":os.environ["FAMILY_SIG"],
+            "variant_geometry_signatures":{
+              "LOWER_SUPPORT":os.environ["LOWER_SIG"],
+              "UPPER_RIDGE_SUPPORT":os.environ["UPPER_SIG"]
+            },
+            "merge_authorized":False
+          }
+
+          sem["formalization"]=formal_meta
+          val["formalization"]=formal_meta
+          MASTER.mkdir(parents=True,exist_ok=True)
+          dump(SEM_DST,sem)
+          dump(VAL_DST,val)
+          shutil.copyfile(ROOT/"CMP-FRAME-TUOFENG-001_MASTER_REVIEW_BOARD_V001.png",BOARD_DST)
+
+          d["status"]="FORMALIZED + CATALOG/V008/CURRENT BOUND / MERGE NOT AUTHORIZED"
+          d["formalization"]={
+            **formal_meta,
+            "semantic_repo_sha256":sha(SEM_DST),
+            "validation_repo_sha256":sha(VAL_DST),
+            "review_board_repo_sha256":sha(BOARD_DST),
+            "catalog_binding_complete":True,
+            "registry_binding_complete":True,
+            "coverage_reconciliation_complete":True
+          }
+          d["execution_boundary"]["formalization_complete"]=True
+          d["execution_boundary"]["catalog_v008_binding_complete"]=True
+          d["execution_boundary"]["merge_authorized"]=False
+          dump(DEF,d)
+
+          spec=load(SPEC_JSON)
+          spec["status"]="FORMALIZED / PRODUCT_OWNER APPROVED / CATALOG_V008_BOUND / MERGE_NOT_AUTHORIZED"
+          spec["formalization_result"]={
+            "complete":True,
+            "master_id":"CMP-FRAME-TUOFENG-001_MASTER",
+            "master_version":"V001",
+            "role_variants":["LOWER_SUPPORT","UPPER_RIDGE_SUPPORT"],
+            "historical_dimensions":"UNKNOWN",
+            "hidden_joinery":"UNKNOWN / DEFERRED",
+            "artifact_id":int(os.environ["ARTIFACT_ID"]),
+            "artifact_zip_sha256":"sha256:"+os.environ["ARTIFACT_ZIP_SHA256"],
+            "canonical_blend_sha256":os.environ["ACCEPTED_BLEND_SHA256"],
+            "family_signature":os.environ["FAMILY_SIG"],
+            "merge_authorized":False
+          }
+          dump(SPEC_JSON,spec)
+
+          smd=SPEC_MD.read_text(encoding="utf-8")
+          smd=smd.replace("Status: **LOCKED / PRODUCT OWNER APPROVED 2026-10-06**",
+                          "Status: **FORMALIZED / CATALOG+V008 BOUND / MERGE NOT AUTHORIZED**")
+          if "## 11. Formalization result" not in smd:
+              smd += "\n\n## 11. Formalization result\n\n- First Article: PRODUCT OWNER APPROVED\n- Master Library binding: COMPLETE\n- V008/CURRENT binding: COMPLETE\n- Exact historical dimensions: UNKNOWN\n- Hidden joinery: UNKNOWN / DEFERRED\n- Merge: NOT AUTHORIZED\n"
+          SPEC_MD.write_text(smd,encoding="utf-8")
+
+          cat=load(CATALOG)
+          assert cat["approved_master_count"]==25
+          assert not any(x.get("master_id")=="CMP-FRAME-TUOFENG-001_MASTER" for x in cat["new_masters"])
+          cat["task"]="T-042 FORMALIZED / PR #55 OPEN / MERGE NOT AUTHORIZED"
+          cat["status"]="TWENTY_SIX_APPROVED / T042 FORMALIZED / PR #55 OPEN / MERGE NOT AUTHORIZED"
+          cat["approved_master_count"]=26
+          cat["new_masters"].append({
+            "component_id":"CMP-FRAME-TUOFENG-001",
+            "master_id":"CMP-FRAME-TUOFENG-001_MASTER",
+            "master_version":"V001",
+            "variant_ids":["LOWER_SUPPORT","UPPER_RIDGE_SUPPORT"],
+            "approval_status":"PRODUCT_OWNER_APPROVED",
+            "publication_status":"FORMALIZED / PR #55 OPEN / MERGE NOT AUTHORIZED",
+            "canonical_asset_status":"ACTIONS_ARTIFACT / PRODUCT_OWNER_APPROVED / NOT_GIT",
+            "canonical_asset_sha256":os.environ["ACCEPTED_BLEND_SHA256"],
+            "semantic_sha256":sha(SEM_DST),
+            "validation_sha256":sha(VAL_DST),
+            "review_board_sha256":sha(BOARD_DST),
+            "family_signature":os.environ["FAMILY_SIG"],
+            "variant_geometry_signatures":{
+              "LOWER_SUPPORT":os.environ["LOWER_SIG"],
+              "UPPER_RIDGE_SUPPORT":os.environ["UPPER_SIG"]
+            },
+            "registry_binding_count":1,
+            "physical_instance_count_claim":False,
+            "physical_instance_count_status":"UNKNOWN",
+            "role_variant_count":2,
+            "dimension_policy":{
+              "historical_metric_dimensions":"UNKNOWN",
+              "first_article_fixture":"ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS",
+              "final_building_metric_envelope":"ASSEMBLY_OWNED",
+              "replaceable":True
+            },
+            "joinery_boundary":"UNKNOWN / DEFERRED / NO MORTISE-TENON-GROOVE CLAIM",
+            "source_artifact":{
+              "run_id":37416207236,
+              "artifact_id":int(os.environ["ARTIFACT_ID"]),
+              "artifact_zip_sha256":os.environ["ARTIFACT_ZIP_SHA256"]
+            },
+            "formal_repo_files":[str(DEF),str(SEM_DST),str(BOARD_DST),str(VAL_DST),str(TASK)]
+          })
+          dump(CATALOG,cat)
+
+          base=load(REG); cur=load(CURRENT)
+          assert base==cur, "CURRENT_V008_PRE_BIND_MISMATCH"
+          tf=[x for x in base["items"] if x.get("component")=="驼峰"]
+          assert len(tf)==1
+          item=tf[0]
+          assert item["count_status"]=="FAMILY_UNKNOWN_COUNT"
+          assert item["master_coverage_status"]=="MASTER_REQUIRED_PENDING"
+          item["stage1_disposition"]="已有Master｜族边界UNKNOWN"
+          item["master_coverage_status"]="APPROVED_MASTER_AVAILABLE"
+          item["master_reference"]="CMP-FRAME-TUOFENG-001_MASTER"
+          item["master_variants"]=["LOWER_SUPPORT","UPPER_RIDGE_SUPPORT"]
+          item["modeling_disposition"]="APPROVED_MASTER_AVAILABLE / ASSEMBLY_METRIC_ENVELOPE_OWNED / HISTORICAL_METRICS_UNKNOWN"
+          item["variant_boundary"]="ONE MASTER FAMILY / TWO ROLE VARIANTS: LOWER_SUPPORT + UPPER_RIDGE_SUPPORT"
+          item["master_readiness"]="APPROVED_MASTER_AVAILABLE / ASSEMBLY READY SUBJECT TO LOCAL METRIC ENVELOPE"
+          item["historical_metric_dimensions"]="UNKNOWN"
+          item["hidden_joinery"]="UNKNOWN / DEFERRED"
+          item["formalization"]={
+            "status":"FORMALIZED / PRODUCT_OWNER_APPROVED",
+            "artifact_id":int(os.environ["ARTIFACT_ID"]),
+            "canonical_blend_sha256":os.environ["ACCEPTED_BLEND_SHA256"],
+            "family_signature":os.environ["FAMILY_SIG"],
+            "merge_authorized":False
+          }
+
+          s=base["stage1_master_progress_summary"]
+          s["status"]="STAGE1 MASTER SCOPE RECONCILED AFTER TUOFENG / 29 OF 29 MASTER-SCOPE OBJECT TYPES COVERED / 26 APPROVED MASTER FAMILIES / PR #55 OPEN"
+          s["covered_master_scope_object_type_count"]=29
+          s["approved_master_family_count"]=26
+          s["approved_master_count"]=26
+          s["pending_master_object_type_count"]=0
+          s["master_completion_percent"]=100.0
+          s["master_covered_registry_record_count"]=364
+          if "驼峰" not in s["approved_master_components"]: s["approved_master_components"].append("驼峰")
+          if "CMP-FRAME-TUOFENG-001_MASTER" not in s["approved_master_family_references"]:
+              s["approved_master_family_references"].append("CMP-FRAME-TUOFENG-001_MASTER")
+          s["disposition_summary"]["需新建Master"]=22
+          s["disposition_summary"]["已有Master｜族边界UNKNOWN"]=3
+          s["progress_display_note"]="506 Registry records; Stage1 Master-scope coverage is 29/29 object types = 100.0%, implemented by 26 approved Master families. 驼峰 is bound to CMP-FRAME-TUOFENG-001_MASTER with two role variants while whole-hall count, exact historical dimensions and hidden joinery remain UNKNOWN. Seven predecessor-audit PENDING_SOURCE_BINDING items remain outside this Master-scope completion metric. PR #55 remains open; merge not authorized."
+          s["reconciliation"]["tuofeng_formalization"]={
+            "date":"2026-10-06",
+            "authority":"PRODUCT_OWNER_APPROVED",
+            "master_reference":"CMP-FRAME-TUOFENG-001_MASTER",
+            "role_variants":["LOWER_SUPPORT","UPPER_RIDGE_SUPPORT"],
+            "master_scope_coverage":"29/29",
+            "approved_master_family_count":26,
+            "historical_dimensions":"UNKNOWN",
+            "hidden_joinery":"UNKNOWN / DEFERRED",
+            "merge_authorized":False
+          }
+          base["generation_note"]=base.get("generation_note","").rstrip()+" T-042 formalization binds the approved Tuofeng Master to the family-level V008 record without claiming a whole-hall physical count, per-instance mapping, exact historical dimensions, exact historical profile, or hidden joinery."
+          dump(REG,base); dump(CURRENT,base)
+          assert load(REG)==load(CURRENT)
+
+          mx=load(MATRIX)
+          row=next(x for x in mx["rows"] if x.get("component")=="驼峰")
+          row["disposition"]="已有Master｜族边界UNKNOWN"
+          row["action"]="T-042 First Article approved and formalized. Bind CMP-FRAME-TUOFENG-001_MASTER with LOWER_SUPPORT / UPPER_RIDGE_SUPPORT role variants. Whole-hall count, exact per-instance mapping, historical metric dimensions/profile and hidden joinery remain UNKNOWN."
+          row["planned_master"]="CMP-FRAME-TUOFENG-001_MASTER"
+          row["master_reference"]="CMP-FRAME-TUOFENG-001_MASTER"
+          row["readiness"]="APPROVED_MASTER_AVAILABLE / ASSEMBLY READY SUBJECT TO LOCAL METRIC ENVELOPE"
+          row["current_priority"]="MINIMUM_PROOF_READY"
+          mx["status"]="COVERAGE_MATRIX_PATCHED_AGAINST_V008 / TUOFENG_MASTER_FORMALIZED / 29 OF 29 MASTER-SCOPE TYPES COVERED"
+          mx["disposition_summary"]["需新建Master"]=22
+          mx["disposition_summary"]["已有Master｜族边界UNKNOWN"]=3
+          mx["current_pending_master_candidate"]=None
+          mx["closure_statement"]="All 67 currently registered V008 object types have an explicit disposition. Stage1 Master-scope coverage is 29/29 after T-042 Tuofeng formalization. Tuofeng whole-hall count and exact historical geometry remain UNKNOWN; seven predecessor-audit items remain outside V008 as PENDING_SOURCE_BINDING."
+          dump(MATRIX,mx)
+
+          mtxt=MATRIX_MD.read_text(encoding="utf-8")
+          mtxt=mtxt.replace("Status：**PATCHED AGAINST V008 / 驼峰 MASTER PENDING / 2026-10-06**",
+                            "Status：**PATCHED AGAINST V008 / 驼峰 MASTER FORMALIZED / 29 OF 29 COVERED / 2026-10-06**")
+          mtxt=mtxt.replace("- **需新建Master**：23类","- **需新建Master**：22类")
+          mtxt=mtxt.replace("- **已有Master｜族边界UNKNOWN**：2类","- **已有Master｜族边界UNKNOWN**：3类")
+          mtxt=mtxt.replace("| 驼峰 | 1（族边界记录） | 需新建Master |",
+                            "| 驼峰 | 1（族边界记录） | 已有Master｜族边界UNKNOWN |")
+          if "## 6. 2026-10-06｜驼峰 Formalization" not in mtxt:
+              mtxt += "\n\n## 6. 2026-10-06｜驼峰 Formalization\n\n- Master：`CMP-FRAME-TUOFENG-001_MASTER`\n- 1 Master family / 2 role variants：`LOWER_SUPPORT`、`UPPER_RIDGE_SUPPORT`\n- Master-scope coverage：**29/29 = 100.0%**\n- Approved Master families：**26**\n- whole-hall count / exact historical dimensions / exact profile / hidden joinery：**UNKNOWN**\n- PR #55：OPEN；merge 未授权。\n"
+          MATRIX_MD.write_text(mtxt,encoding="utf-8")
+
+          task=TASK.read_text(encoding="utf-8")
+          task=task.replace(
+            "Status: **FIRST ARTICLE APPROVED / FORMALIZATION + CATALOG/V008 BINDING AUTHORIZED / MERGE NOT AUTHORIZED**",
+            "Status: **FORMALIZED + CATALOG/V008 BOUND / MERGE NOT AUTHORIZED**"
+          )
+          if "## 12. Formalization Result" not in task:
+              task += "\n\n## 12. Formalization Result\n\n- Status: **COMPLETE**\n- Master Library: **BOUND**\n- V008/CURRENT: **BOUND**\n- Master-scope coverage: **29/29**\n- Approved Master families: **26**\n- Historical dimensions/profile/joinery boundaries remain unchanged.\n- Merge: **NOT AUTHORIZED**\n"
+          TASK.write_text(task,encoding="utf-8")
+
+          print("T042_FORMALIZATION_PATCH_PASS")
+          PY
+
+      - name: Commit formalized package
+        if: steps.gate.outputs.do_formalize == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add             production/zhenguo_wanfo/component_library/masters/CMP-FRAME-TUOFENG-001             production/zhenguo_wanfo/registry/P3_3_STAGE1_TUOFENG_MASTER_SPEC_V0_1.json             docs/production/zhenguo_wanfo/P3_3_STAGE1_TUOFENG_MASTER_SPEC_V0_1.md             production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json             docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_V008.json             docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json             production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json             docs/production/zhenguo_wanfo/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.md             docs/tasks/T-042_P3_3_TUOFENG_MASTER_V001.md             .github/workflows/wanfo-component-registry-excel.yml
+          git diff --cached --check
+          git commit -m "T-042: formalize approved Tuofeng Master"
+          git push origin HEAD:codex/t042-p3-3-tuofeng-master-v001

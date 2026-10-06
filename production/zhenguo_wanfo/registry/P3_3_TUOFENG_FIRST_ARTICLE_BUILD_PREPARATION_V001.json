@@ -1,0 +1,126 @@
+{
+  "schema_version": "P3_3_TUOFENG_FIRST_ARTICLE_BUILD_PREPARATION_1.0",
+  "component_id": "CMP-FRAME-TUOFENG-001",
+  "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+  "status": "LOCKED / FIRST_ARTICLE_APPROVED / FORMALIZATION_AUTHORIZED",
+  "date": "2026-10-06",
+  "variants": [
+    "LOWER_SUPPORT",
+    "UPPER_RIDGE_SUPPORT"
+  ],
+  "master_owns": [
+    "shape_logic",
+    "role_semantics",
+    "normalized_profile_topology"
+  ],
+  "assembly_owns": [
+    "building_metric_envelope",
+    "placement",
+    "support_footprints",
+    "vertical_gap",
+    "final_contact_regions"
+  ],
+  "builder": {
+    "preferred_script": "production/zhenguo_wanfo/scripts/tuofeng_master_common_v001.py",
+    "reuse_long_member_v2_builder": false,
+    "reason": "Tuofeng is a compact profile/envelope support component, not a rectangular endpoint-driven long member."
+  },
+  "geometry_contract": {
+    "LOWER_SUPPORT": {
+      "strategy": "TWO_TIER_SUPPORT_ENVELOPE",
+      "params": [
+        "base_span_u",
+        "base_depth_v",
+        "base_height",
+        "seat_span_u",
+        "seat_depth_v",
+        "seat_height"
+      ],
+      "constraints": [
+        "all_positive",
+        "seat_span_u<=base_span_u",
+        "seat_depth_v<=base_depth_v"
+      ]
+    },
+    "UPPER_RIDGE_SUPPORT": {
+      "strategy": "SYMMETRIC_STEPPED_HUMP_PROFILE_EXTRUSION",
+      "params": [
+        "base_span_u",
+        "depth_v",
+        "height",
+        "approved_normalized_xz_profile"
+      ],
+      "constraints": [
+        "all_positive",
+        "profile_symmetric",
+        "flat_center_seat_retained"
+      ]
+    }
+  },
+  "building_realization": {
+    "LOWER_SUPPORT": {
+      "lower_support_region": "FOUR_CHUANFU_UPPER_SUPPORT_REGION",
+      "upper_support_region": "LINGGONG_AND_PINGLIANG_SUPPORT_CHAIN",
+      "height_rule": "derive_from_resolved_vertical_gap",
+      "footprint_rule": "base within lower support region; seat satisfies required upper support footprint",
+      "incompatible_constraints": "FAIL_ASSEMBLY"
+    },
+    "UPPER_RIDGE_SUPPORT": {
+      "lower_support_region": "PINGLIANG_UPPER_SUPPORT_REGION",
+      "upper_support_region": "SHUZHU_LOWER_SUPPORT_REGION",
+      "height_rule": "derive_from_resolved_Pingliang_top_to_Shuzhu_bottom_gap",
+      "footprint_rule": "base within Pingliang support region; seat supports resolved Shuzhu footprint",
+      "incompatible_constraints": "FAIL_ASSEMBLY"
+    }
+  },
+  "fixtures": {
+    "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS / historical_claim=false",
+    "LOWER_A": {
+      "base_span": 1000,
+      "base_depth": 500,
+      "base_height": 180,
+      "seat_span": 420,
+      "seat_depth": 320,
+      "seat_height": 180
+    },
+    "LOWER_B": {
+      "base_span": 1250,
+      "base_depth": 620,
+      "base_height": 210,
+      "seat_span": 500,
+      "seat_depth": 360,
+      "seat_height": 220
+    },
+    "UPPER_A": {
+      "base_span": 1000,
+      "depth": 500,
+      "height": 320
+    },
+    "UPPER_B": {
+      "base_span": 820,
+      "depth": 410,
+      "height": 270
+    }
+  },
+  "review_panels": [
+    "BOTH_VARIANTS_AXON",
+    "LOWER_SUPPORT_PROFILE",
+    "UPPER_RIDGE_SUPPORT_PROFILE",
+    "PARAMETRIC_MUTATION_PROOF",
+    "ROLE_AND_INTERFACE_SEMANTICS",
+    "SOURCE_VS_RECONSTRUCTED_BOUNDARY",
+    "UNKNOWN_AND_DEFERRED_GEOMETRY"
+  ],
+  "historical_dimensions": "UNKNOWN",
+  "hidden_joinery": "UNKNOWN / DEFERRED",
+  "engineering_execution_authorized": true,
+  "product_owner_approval_required": false,
+  "product_owner_approval": {
+    "approved": true,
+    "date": "2026-10-06",
+    "instruction": "开始驼峰 First Article Engineering Execution"
+  },
+  "formalization_authorized": true,
+  "catalog_v008_binding_authorized": true,
+  "merge_authorized": false
+}

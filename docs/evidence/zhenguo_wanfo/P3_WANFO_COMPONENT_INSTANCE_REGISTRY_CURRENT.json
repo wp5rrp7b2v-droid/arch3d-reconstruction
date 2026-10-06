@@ -1,10 +1,10 @@
 {
   "schema_version": "V008",
-  "date": "2026-09-22",
+  "date": "2026-10-06",
   "status": "CURRENT_BUILD_BASELINE_INSTANCE_REGISTRY",
   "source": "SRC-ZG-WF-001",
-  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility. D-103 binds the Product Owner-approved Tuojiao V2 Master to all 12 托脚 registry records and updates Stage1 Master progress visibility. D-111 approves the Chashou first article; D-112 formalizes the accepted outputs and binds all 8 叉手 records to CMP-FRAME-CHASHOU-001_MASTER on PR #16 pending merge. D-188 binds the Product Owner-approved T-037 Guazi Gong Master family to all 44 guazi records (16 large + 28 small); exact historical profile and connection-detail boundaries remain explicit. D-193 closes T-037 on main after PR #33 merge; Stage1 progress is 21/28 and 203 Registry records are Master-covered. D-195 starts T-038 slow-gong family Source Readiness only. D-204/D-205 bind the Product Owner-approved T-038 Mangong Master family to all 44 slow-gong records (16 large + 28 small); W/T remain report-inferred replaceable family candidates and exact historical profile/joinery boundaries remain explicit. D-206 synchronizes Stage1 progress summary to the D-205 formalized branch state: 22/28 approved, 247 Master-covered Registry rows, 6 pending. D-219/D-220 bind the Product Owner-approved T-039 Linggong Master to all 28 Linggong records; L/W/T remain family DIRECT_PRIMARY observed means rather than per-instance exact values, sample-to-instance mapping remains UNKNOWN, and exact historical profile/end/joinery boundaries remain explicit. D-237/D-238 bind the Product Owner-approved T-040 Huagong Master to all 56 current LOCKED_SUBSET Huagong records (JUMP_1 28 / JUMP_2 28). Reference-specimen lengths 898.8/1630.0 are not propagated as per-instance historical full lengths; those remain UNRESOLVED. 732.4mm remains assembly-level direct observed mean only. D-243 formally closes T-040 after PR #36 merge/main verification. 华栱 remains a 56-record direction-explicit LOCKED_SUBSET, not whole-hall total; per-instance historical standalone full lengths remain UNRESOLVED. D-256/D-257 bind the Product Owner-approved T-041 Ang Master to all 32 current LOCKED_DERIVED Ang records (头昂16→TOU_ANG / 二昂16→ER_ANG). The 32-record scope remains derived, not a direct historical whole-hall count. Historical standalone full lengths remain UNRESOLVED and the 787.6157057855mm synthetic reference control span is not propagated as a per-instance historical length.",
-  "item_count": 505,
+  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility. D-103 binds the Product Owner-approved Tuojiao V2 Master to all 12 托脚 registry records and updates Stage1 Master progress visibility. D-111 approves the Chashou first article; D-112 formalizes the accepted outputs and binds all 8 叉手 records to CMP-FRAME-CHASHOU-001_MASTER on PR #16 pending merge. D-188 binds the Product Owner-approved T-037 Guazi Gong Master family to all 44 guazi records (16 large + 28 small); exact historical profile and connection-detail boundaries remain explicit. D-193 closes T-037 on main after PR #33 merge; Stage1 progress is 21/28 and 203 Registry records are Master-covered. D-195 starts T-038 slow-gong family Source Readiness only. D-204/D-205 bind the Product Owner-approved T-038 Mangong Master family to all 44 slow-gong records (16 large + 28 small); W/T remain report-inferred replaceable family candidates and exact historical profile/joinery boundaries remain explicit. D-206 synchronizes Stage1 progress summary to the D-205 formalized branch state: 22/28 approved, 247 Master-covered Registry rows, 6 pending. D-219/D-220 bind the Product Owner-approved T-039 Linggong Master to all 28 Linggong records; L/W/T remain family DIRECT_PRIMARY observed means rather than per-instance exact values, sample-to-instance mapping remains UNKNOWN, and exact historical profile/end/joinery boundaries remain explicit. D-237/D-238 bind the Product Owner-approved T-040 Huagong Master to all 56 current LOCKED_SUBSET Huagong records (JUMP_1 28 / JUMP_2 28). Reference-specimen lengths 898.8/1630.0 are not propagated as per-instance historical full lengths; those remain UNRESOLVED. 732.4mm remains assembly-level direct observed mean only. D-243 formally closes T-040 after PR #36 merge/main verification. 华栱 remains a 56-record direction-explicit LOCKED_SUBSET, not whole-hall total; per-instance historical standalone full lengths remain UNRESOLVED. D-256/D-257 bind the Product Owner-approved T-041 Ang Master to all 32 current LOCKED_DERIVED Ang records (头昂16→TOU_ANG / 二昂16→ER_ANG). The 32-record scope remains derived, not a direct historical whole-hall count. Historical standalone full lengths remain UNRESOLVED and the 787.6157057855mm synthetic reference control span is not propagated as a per-instance historical length. 2026-10-06 targeted scope patch adds 驼峰 as a family-level Master-required record; no whole-hall count, exact geometry, or joinery claim is introduced. T-042 formalization binds the approved Tuofeng Master to the family-level V008 record without claiming a whole-hall physical count, per-instance mapping, exact historical dimensions, exact historical profile, or hidden joinery.",
+  "item_count": 506,
   "items": [
     {
       "system": "主体木构",
@@ -385,6 +385,68 @@
       "stage1_disposition": "需新建Master",
       "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
       "master_reference": "CMP-FRAME-PINGLIANG-001_MASTER"
+    },
+    {
+      "system": "主体木构",
+      "component": "驼峰",
+      "id": "驼峰族-UNKNOWN",
+      "location": "四椽栿—平梁承托体系 / 平梁以上脊部支撑体系；逐件位置待明间东缝证据对应",
+      "count_status": "FAMILY_UNKNOWN_COUNT",
+      "evidence": "A2同建筑官方数字专题直接说明：四椽栿上用驼峰、令栱承平梁；平梁之上设驼峰、蜀柱、叉手。A1 SRC-ZG-WF-001 PDF p83/印刷p68/图2-41、PDF p106/印刷p91/图2-71、PDF p109/印刷p94/图2-73提供同建筑梁架视觉与相对位置交叉核对；本轮未在A1相关实测表/附件中发现可独立锁定驼峰精确尺寸的条目。",
+      "record_role": "FAMILY_UNKNOWN_COUNT",
+      "total_count": "UNKNOWN",
+      "stage1_disposition": "已有Master｜族边界UNKNOWN",
+      "master_coverage_status": "APPROVED_MASTER_AVAILABLE",
+      "planned_master_reference": "CMP-FRAME-TUOFENG-001_MASTER",
+      "modeling_disposition": "APPROVED_MASTER_AVAILABLE / ASSEMBLY_METRIC_ENVELOPE_OWNED / HISTORICAL_METRICS_UNKNOWN",
+      "known_unknowns": [
+        "whole_hall_instance_count",
+        "per_instance_location_mapping",
+        "exact_dimensions",
+        "exact_profile",
+        "hidden_joinery"
+      ],
+      "note": "2026-10-06 Product Owner scope correction: 驼峰作为独立实体木构件纳入 Master scope。不得因 Master 尚未建立而降格为永久 Proxy；首轮明间东缝 Minimum Proof 前先完成证据绑定与最小可用 Master。",
+      "source_binding": {
+        "status": "BOUND_FOR_IDENTITY_AND_ASSEMBLY_ROLE / GEOMETRY_UNRESOLVED",
+        "document": "docs/evidence/zhenguo_wanfo/P3_3_TUOFENG_SOURCE_BINDING_V001.md",
+        "a1_primary_source": "SRC-ZG-WF-001",
+        "a1_locations": [
+          "PDF p83 / printed p68 / Fig. 2-41",
+          "PDF p106 / printed p91 / Fig. 2-71",
+          "PDF p109 / printed p94 / Fig. 2-73",
+          "PDF p344-345 / printed p329-330 / Appendix 1-7 to 1-9 targeted check"
+        ],
+        "a2_official_same_building": "https://szbwgvue.chwhyun.cn/wanfodian/",
+        "a2_direct_statement": "四椽栿上用驼峰、令栱承平梁；平梁之上设驼峰、蜀柱、叉手。",
+        "evidence_classification": {
+          "component_identity": "FACT / A2 DIRECT",
+          "assembly_roles": "FACT / A2 DIRECT",
+          "same_building_visual_correspondence": "FACT / A1 FIGURES",
+          "mapping_visible_hump_blocks_to_named_tuofeng": "INFERENCE / A1+A2 CROSS-CHECK",
+          "exact_dimensions": "UNKNOWN",
+          "exact_profile": "UNKNOWN",
+          "whole_hall_count": "UNKNOWN",
+          "per_instance_mapping": "UNKNOWN",
+          "hidden_joinery": "UNKNOWN"
+        }
+      },
+      "variant_boundary": "ONE MASTER FAMILY / TWO ROLE VARIANTS: LOWER_SUPPORT + UPPER_RIDGE_SUPPORT",
+      "master_readiness": "APPROVED_MASTER_AVAILABLE / ASSEMBLY READY SUBJECT TO LOCAL METRIC ENVELOPE",
+      "master_reference": "CMP-FRAME-TUOFENG-001_MASTER",
+      "master_variants": [
+        "LOWER_SUPPORT",
+        "UPPER_RIDGE_SUPPORT"
+      ],
+      "historical_metric_dimensions": "UNKNOWN",
+      "hidden_joinery": "UNKNOWN / DEFERRED",
+      "formalization": {
+        "status": "FORMALIZED / PRODUCT_OWNER_APPROVED",
+        "artifact_id": 11391915287,
+        "canonical_blend_sha256": "eb24ca1ad0e39df0bac3558f777f3844d2952cf2e0cbfe7b699b1d268ec60c7b",
+        "family_signature": "a6ec7f0c43f2639810e41751e9bce0b618ea4684294a54d8e21646516207415f",
+        "merge_authorized": false
+      }
     },
     {
       "system": "主体木构",
@@ -7741,7 +7803,7 @@
     }
   ],
   "supersedes_registry_version": "V007",
-  "patch_basis": "P3_3_STAGE1_REGISTRY_V008_TARGETED_PATCH_PROPOSAL_V001 / Product Owner approved",
+  "patch_basis": "P3_3_STAGE1_REGISTRY_V008_TARGETED_PATCH_PROPOSAL_V001 / Product Owner approved + 2026-10-06 Product Owner approved 驼峰 Master-scope correction",
   "pending_source_binding": [
     "板瓦",
     "勾头",
@@ -7752,16 +7814,16 @@
     "生头木"
   ],
   "stage1_master_progress_summary": {
-    "snapshot_date": "2026-09-28",
-    "status": "STAGE1 MASTER SCOPE RECONCILED / D-263 / 28 OF 28 MASTER-SCOPE OBJECT TYPES COVERED / 25 APPROVED MASTER FAMILIES",
-    "registry_record_count": 505,
-    "registered_object_type_count": 66,
-    "master_scope_object_type_count": 28,
-    "covered_master_scope_object_type_count": 28,
-    "approved_master_family_count": 25,
-    "approved_master_count": 25,
+    "snapshot_date": "2026-10-06",
+    "status": "STAGE1 MASTER SCOPE RECONCILED AFTER TUOFENG / 29 OF 29 MASTER-SCOPE OBJECT TYPES COVERED / 26 APPROVED MASTER FAMILIES / PR #55 OPEN",
+    "registry_record_count": 506,
+    "registered_object_type_count": 67,
+    "master_scope_object_type_count": 29,
+    "covered_master_scope_object_type_count": 29,
+    "approved_master_family_count": 26,
+    "approved_master_count": 26,
     "pending_master_object_type_count": 0,
-    "master_completion_percent": 100,
+    "master_completion_percent": 100.0,
     "pending_source_binding_count": 7,
     "completed_definition": "Master-scope OBJECT TYPE has APPROVED_MASTER_AVAILABLE binding to a PRODUCT_OWNER_APPROVED Master family/reference",
     "total_definition": "Master-scope denominator is OBJECT TYPES from Coverage Matrix V002. Approved Master families are a separate count because one Master family may cover multiple object types.",
@@ -7771,7 +7833,7 @@
       "非实体装配/拓扑": 5,
       "需新建Master": 22,
       "简化Proxy": 7,
-      "已有Master｜族边界UNKNOWN": 2,
+      "已有Master｜族边界UNKNOWN": 3,
       "UNKNOWN/参考边界": 3,
       "已有Master｜需长度桥": 2,
       "已有Master｜可直接绑定": 2
@@ -7808,7 +7870,8 @@
       "由额",
       "柱",
       "柱头栌斗",
-      "子角梁"
+      "子角梁",
+      "驼峰"
     ],
     "approved_master_family_references": [
       "CMP-COLUMN-001_MASTER",
@@ -7835,7 +7898,8 @@
       "CMP-GONG-HUAGONG-001_MASTER",
       "CMP-GONG-LINGGONG-001_MASTER",
       "CMP-GONG-MANGONG-001_MASTER",
-      "CMP-LUDOU-COLUMN-001_MASTER"
+      "CMP-LUDOU-COLUMN-001_MASTER",
+      "CMP-FRAME-TUOFENG-001_MASTER"
     ],
     "family_collapse_groups": [
       {
@@ -7860,14 +7924,37 @@
         ]
       }
     ],
-    "master_covered_registry_record_count": 363,
-    "progress_display_note": "505 Registry records; Stage1 Master-scope coverage is 28/28 object types = 100.0%, implemented by 25 approved Master families. Pending Master-scope object types = 0. Seven predecessor-audit items remain PENDING_SOURCE_BINDING outside V008 and are not counted as covered. T-041 is CLOSED D-262; no active engineering T-task; Stage1 Closure Readiness Audit is next; T-018 HOLD; Stage2 NOT AUTHORIZED.",
+    "master_covered_registry_record_count": 364,
+    "progress_display_note": "506 Registry records; Stage1 Master-scope coverage is 29/29 object types = 100.0%, implemented by 26 approved Master families. 驼峰 is bound to CMP-FRAME-TUOFENG-001_MASTER with two role variants while whole-hall count, exact historical dimensions and hidden joinery remain UNKNOWN. Seven predecessor-audit PENDING_SOURCE_BINDING items remain outside this Master-scope completion metric. PR #55 remains open; merge not authorized.",
     "reconciliation": {
       "decision_id": "D-263",
       "supersedes_display_metric": "25 approved Master families / 28 Master-scope object types = 89.3%",
       "correction": "Family count and object-type count are different dimensions and must not be divided. Coverage numerator is 28 covered Master-scope object types; approved Master family count remains 25.",
       "pending_source_binding_correction": "3 -> 7, restored from canonical Coverage Matrix V002 pending_source_binding list.",
-      "geometry_or_evidence_change": false
+      "geometry_or_evidence_change": false,
+      "tuofeng_scope_patch": {
+        "date": "2026-10-06",
+        "authority": "PRODUCT_OWNER_APPROVED",
+        "change": "Add 驼峰 as a registered Master-scope object type with FAMILY_UNKNOWN_COUNT and MASTER_REQUIRED_PENDING.",
+        "reason": "Project goal clarified: build a structured 3D digital model with clear component identity and assembly relationships; 驼峰 is an independent participating timber component and should not remain an unregistered proxy.",
+        "approved_master_family_count_changed": false,
+        "geometry_created": false,
+        "exact_joinery_claimed": false
+      },
+      "tuofeng_formalization": {
+        "date": "2026-10-06",
+        "authority": "PRODUCT_OWNER_APPROVED",
+        "master_reference": "CMP-FRAME-TUOFENG-001_MASTER",
+        "role_variants": [
+          "LOWER_SUPPORT",
+          "UPPER_RIDGE_SUPPORT"
+        ],
+        "master_scope_coverage": "29/29",
+        "approved_master_family_count": 26,
+        "historical_dimensions": "UNKNOWN",
+        "hidden_joinery": "UNKNOWN / DEFERRED",
+        "merge_authorized": false
+      }
     }
   }
 }

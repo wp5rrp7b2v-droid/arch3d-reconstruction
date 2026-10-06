@@ -1,0 +1,260 @@
+{
+  "schema_version": "TUOFENG_MASTER_DEFINITION_1.0",
+  "task_id": "T-042",
+  "component_id": "CMP-FRAME-TUOFENG-001",
+  "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+  "master_version": "V001",
+  "component_name_zh": "驼峰",
+  "component_name_en": "Tuofeng / hump-shaped timber support",
+  "status": "FORMALIZED + CATALOG/V008/CURRENT BOUND / MERGE NOT AUTHORIZED",
+  "authority": {
+    "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_TUOFENG_SOURCE_BINDING_V001.md",
+    "master_spec": "docs/production/zhenguo_wanfo/P3_3_STAGE1_TUOFENG_MASTER_SPEC_V0_1.md",
+    "candidate_geometry": "production/zhenguo_wanfo/component_library/candidates/CMP-FRAME-TUOFENG-001/TUOFENG_CANDIDATE_GEOMETRY_V0_1.json",
+    "build_preparation": "production/zhenguo_wanfo/registry/P3_3_TUOFENG_FIRST_ARTICLE_BUILD_PREPARATION_V001.json"
+  },
+  "registry_boundary": {
+    "registry_schema_version": "V008",
+    "family_record_count": 1,
+    "physical_instance_count": null,
+    "physical_instance_count_status": "UNKNOWN",
+    "exact_per_instance_mapping": "UNKNOWN",
+    "master_coverage_status_before_acceptance": "MASTER_REQUIRED_PENDING"
+  },
+  "family_architecture": {
+    "master_family_count": 1,
+    "role_variant_count": 2,
+    "role_variants": [
+      "LOWER_SUPPORT",
+      "UPPER_RIDGE_SUPPORT"
+    ],
+    "two_master_families_prohibited": true
+  },
+  "role_semantics": {
+    "LOWER_SUPPORT": {
+      "chain": "FOUR_CHUANFU -> TUOFENG / LINGGONG -> PINGLIANG",
+      "lower_interface": "FOUR_CHUANFU_UPPER_SUPPORT_REGION",
+      "upper_interface": "LINGGONG_AND_PINGLIANG_SUPPORT_CHAIN"
+    },
+    "UPPER_RIDGE_SUPPORT": {
+      "chain": "PINGLIANG -> TUOFENG -> SHUZHU / RIDGE_SUPPORT_GROUP",
+      "lower_interface": "PINGLIANG_UPPER_SUPPORT_REGION",
+      "upper_interface": "SHUZHU_LOWER_SUPPORT_REGION"
+    }
+  },
+  "canonical_first_article_fixture": {
+    "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS",
+    "historical_claim": false,
+    "building_dimension_claim": false,
+    "replaceable": true,
+    "fixture_set": "A",
+    "LOWER_SUPPORT": {
+      "base_span_mm": 1000,
+      "base_depth_mm": 500,
+      "base_height_mm": 180,
+      "seat_span_mm": 420,
+      "seat_depth_mm": 320,
+      "seat_height_mm": 180
+    },
+    "UPPER_RIDGE_SUPPORT": {
+      "base_span_mm": 1000,
+      "depth_mm": 500,
+      "height_mm": 320
+    }
+  },
+  "mutation_fixture": {
+    "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS",
+    "historical_claim": false,
+    "building_dimension_claim": false,
+    "replaceable": true,
+    "fixture_set": "B",
+    "LOWER_SUPPORT": {
+      "base_span_mm": 1250,
+      "base_depth_mm": 620,
+      "base_height_mm": 210,
+      "seat_span_mm": 500,
+      "seat_depth_mm": 360,
+      "seat_height_mm": 220
+    },
+    "UPPER_RIDGE_SUPPORT": {
+      "base_span_mm": 820,
+      "depth_mm": 410,
+      "height_mm": 270
+    }
+  },
+  "upper_normalized_profile_xz": [
+    [
+      -0.5,
+      0
+    ],
+    [
+      -0.42,
+      0.07
+    ],
+    [
+      -0.34,
+      0.07
+    ],
+    [
+      -0.34,
+      0.13
+    ],
+    [
+      -0.25,
+      0.13
+    ],
+    [
+      -0.25,
+      0.2
+    ],
+    [
+      -0.16,
+      0.2
+    ],
+    [
+      -0.12,
+      0.32
+    ],
+    [
+      0.12,
+      0.32
+    ],
+    [
+      0.16,
+      0.2
+    ],
+    [
+      0.25,
+      0.2
+    ],
+    [
+      0.25,
+      0.13
+    ],
+    [
+      0.34,
+      0.13
+    ],
+    [
+      0.34,
+      0.07
+    ],
+    [
+      0.42,
+      0.07
+    ],
+    [
+      0.5,
+      0
+    ]
+  ],
+  "geometry_contract": {
+    "LOWER_SUPPORT": {
+      "strategy": "TWO_TIER_SUPPORT_ENVELOPE",
+      "exact_historical_profile": "UNKNOWN",
+      "historical_metric_dimensions": "UNKNOWN"
+    },
+    "UPPER_RIDGE_SUPPORT": {
+      "strategy": "SYMMETRIC_STEPPED_HUMP_PROFILE_EXTRUSION",
+      "exact_historical_profile": "UNKNOWN",
+      "historical_metric_dimensions": "UNKNOWN"
+    },
+    "production_classification": "RECONSTRUCTED_DESIGN / REPLACEABLE",
+    "test_fixture_is_historical_geometry": false
+  },
+  "assembly_ownership": {
+    "final_building_metric_envelope": "ASSEMBLY_OWNED",
+    "placement": "ASSEMBLY_OWNED",
+    "support_footprints": "ASSEMBLY_OWNED",
+    "vertical_gap": "ASSEMBLY_OWNED",
+    "contact_regions": "ASSEMBLY_OWNED"
+  },
+  "joinery": {
+    "historical_joinery": "UNKNOWN / DEFERRED",
+    "mortise_count": 0,
+    "tenon_count": 0,
+    "groove_slot_count": 0,
+    "hidden_cavity_count": 0
+  },
+  "unknowns": [
+    "historical metric width/depth/height",
+    "exact historical profile",
+    "whole-hall physical instance count",
+    "exact per-instance mapping",
+    "hidden joinery",
+    "exact contact-face geometry"
+  ],
+  "review_contract": {
+    "required_panels": [
+      "BOTH_VARIANTS_AXON",
+      "LOWER_SUPPORT_PROFILE",
+      "UPPER_RIDGE_SUPPORT_PROFILE",
+      "PARAMETRIC_MUTATION_PROOF",
+      "ROLE_AND_INTERFACE_SEMANTICS",
+      "SOURCE_VS_RECONSTRUCTED_BOUNDARY",
+      "UNKNOWN_AND_DEFERRED_GEOMETRY"
+    ]
+  },
+  "execution_boundary": {
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "first_article_generation_authorized": true,
+    "first_article_machine_validation_authorized": true,
+    "first_article_product_owner_acceptance_authorized": true,
+    "formalization_authorized": true,
+    "catalog_v008_binding_authorized": true,
+    "merge_authorized": false,
+    "formalization_complete": true,
+    "catalog_v008_binding_complete": true
+  },
+  "first_article_approval": {
+    "approved": true,
+    "date": "2026-10-06",
+    "authority": "PRODUCT_OWNER",
+    "run_id": 37416207236,
+    "artifact_id": 11391915287,
+    "artifact_digest": "sha256:f5b9940a17b8368a0d6be5df0a082b36a8d421705a2eb3a4094292577b5b820d",
+    "machine_validation": "27/27 PASS",
+    "independent_reopen": "PASS",
+    "mutation_proof": "PASS",
+    "deterministic_restore": "PASS",
+    "review_board": "APPROVED"
+  },
+  "formalization_authorization": {
+    "authorized": true,
+    "date": "2026-10-06",
+    "authority": "PRODUCT_OWNER",
+    "instruction": "开始下一步",
+    "scope": [
+      "formalize accepted semantic/validation/review evidence",
+      "bind Master Library",
+      "bind V008/CURRENT Tuofeng family record",
+      "reconcile Stage1 Master-scope coverage"
+    ],
+    "merge_authorized": false
+  },
+  "formalization": {
+    "complete": true,
+    "date": "2026-10-06",
+    "authority": "PRODUCT_OWNER / start next step",
+    "accepted_run_id": 37416207236,
+    "artifact_id": 11391915287,
+    "artifact_zip_sha256": "sha256:f5b9940a17b8368a0d6be5df0a082b36a8d421705a2eb3a4094292577b5b820d",
+    "accepted_blend_sha256": "eb24ca1ad0e39df0bac3558f777f3844d2952cf2e0cbfe7b699b1d268ec60c7b",
+    "accepted_semantic_payload_sha256": "e0169aebc0f1d89dda43f0fa224afa70a219387f7985576c03db4bd3ab2251c0",
+    "accepted_validation_payload_sha256": "68b9383b2c6963397d85808c2f045a449a5815cd1c5d61723d319bc2b590a208",
+    "accepted_review_board_sha256": "967d27157df85594a528ce8bdcf647f9bc78ec10d7e0342d613db08c5477b1e6",
+    "family_signature": "a6ec7f0c43f2639810e41751e9bce0b618ea4684294a54d8e21646516207415f",
+    "variant_geometry_signatures": {
+      "LOWER_SUPPORT": "a9e8170047f29f0f1d35a9d8253947d0437eba1ddd5b4d2028cda2daf9dec78d",
+      "UPPER_RIDGE_SUPPORT": "085ffc2e6303c490465ac6f30a59557b042b62782c5df28d51c192a88bce9f35"
+    },
+    "merge_authorized": false,
+    "semantic_repo_sha256": "8a228aed55faf8f1df6f6b24dbe04c47dd8a7232bf474ba4179a90770db45059",
+    "validation_repo_sha256": "8b6dbffcf9433954d5327d34630c2daa366a53b6b7ec41f1d010653ad2822863",
+    "review_board_repo_sha256": "967d27157df85594a528ce8bdcf647f9bc78ec10d7e0342d613db08c5477b1e6",
+    "catalog_binding_complete": true,
+    "registry_binding_complete": true,
+    "coverage_reconciliation_complete": true
+  }
+}

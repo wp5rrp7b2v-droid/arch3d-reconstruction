@@ -1,0 +1,97 @@
+{
+  "assembly_metric_envelope": "ASSEMBLY_OWNED",
+  "blend_sha256": "eb24ca1ad0e39df0bac3558f777f3844d2952cf2e0cbfe7b699b1d268ec60c7b",
+  "blender_version": "4.5.13 LTS",
+  "bodies": [
+    {
+      "bbox_mm": {
+        "dimensions": [
+          1000.0,
+          500.0,
+          360.0
+        ],
+        "max": [
+          500.0,
+          250.0,
+          360.0
+        ],
+        "min": [
+          -500.0,
+          -250.0,
+          0.0
+        ]
+      },
+      "building_dimension_claim": false,
+      "face_count": 12,
+      "geometry_signature": "a9e8170047f29f0f1d35a9d8253947d0437eba1ddd5b4d2028cda2daf9dec78d",
+      "historical_metric_claim": false,
+      "joinery_cut_count": 0,
+      "variant_id": "LOWER_SUPPORT",
+      "vertex_count": 16
+    },
+    {
+      "bbox_mm": {
+        "dimensions": [
+          1000.0,
+          500.0,
+          320.0
+        ],
+        "max": [
+          500.0,
+          250.0,
+          320.0
+        ],
+        "min": [
+          -500.0,
+          -250.0,
+          0.0
+        ]
+      },
+      "building_dimension_claim": false,
+      "face_count": 18,
+      "geometry_signature": "085ffc2e6303c490465ac6f30a59557b042b62782c5df28d51c192a88bce9f35",
+      "historical_metric_claim": false,
+      "joinery_cut_count": 0,
+      "variant_id": "UPPER_RIDGE_SUPPORT",
+      "vertex_count": 32
+    }
+  ],
+  "component_id": "CMP-FRAME-TUOFENG-001",
+  "definition_sha256": "0b79684d84462fcc2b1ea86a6fb3ccd62a37ea3277e79320ceb361024003d4fb",
+  "exact_historical_profile": "UNKNOWN",
+  "family_signature": "a6ec7f0c43f2639810e41751e9bce0b618ea4684294a54d8e21646516207415f",
+  "fixture_building_dimension_claim": false,
+  "fixture_classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS",
+  "fixture_historical_claim": false,
+  "fixture_set": "A",
+  "historical_dimensions": "UNKNOWN",
+  "historical_joinery": "UNKNOWN / DEFERRED",
+  "master_family_count": 1,
+  "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+  "master_version": "V001",
+  "role_variant_count": 2,
+  "role_variants": [
+    "LOWER_SUPPORT",
+    "UPPER_RIDGE_SUPPORT"
+  ],
+  "status": "BUILT",
+  "task_id": "T-042",
+  "formalization": {
+    "complete": true,
+    "date": "2026-10-06",
+    "authority": "PRODUCT_OWNER / start next step",
+    "accepted_run_id": 37416207236,
+    "artifact_id": 11391915287,
+    "artifact_zip_sha256": "sha256:f5b9940a17b8368a0d6be5df0a082b36a8d421705a2eb3a4094292577b5b820d",
+    "accepted_blend_sha256": "eb24ca1ad0e39df0bac3558f777f3844d2952cf2e0cbfe7b699b1d268ec60c7b",
+    "accepted_semantic_payload_sha256": "e0169aebc0f1d89dda43f0fa224afa70a219387f7985576c03db4bd3ab2251c0",
+    "accepted_validation_payload_sha256": "68b9383b2c6963397d85808c2f045a449a5815cd1c5d61723d319bc2b590a208",
+    "accepted_review_board_sha256": "967d27157df85594a528ce8bdcf647f9bc78ec10d7e0342d613db08c5477b1e6",
+    "family_signature": "a6ec7f0c43f2639810e41751e9bce0b618ea4684294a54d8e21646516207415f",
+    "variant_geometry_signatures": {
+      "LOWER_SUPPORT": "a9e8170047f29f0f1d35a9d8253947d0437eba1ddd5b4d2028cda2daf9dec78d",
+      "UPPER_RIDGE_SUPPORT": "085ffc2e6303c490465ac6f30a59557b042b62782c5df28d51c192a88bce9f35"
+    },
+    "merge_authorized": false
+  }
+}
