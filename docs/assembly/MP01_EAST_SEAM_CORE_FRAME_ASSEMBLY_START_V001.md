@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MINIMUM PROOF PASS / MP-01B NOT STARTED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE A PASS / INTERIOR LINGGONG MASTER REQUIRED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -214,3 +214,15 @@ Next decision:
 - Scope proven: upper ridge-support subset only
 - PR #56 merge: **NOT AUTHORIZED**
 - Next unresolved work: **MP-01B｜四椽栿 → 驼峰 / 令栱 → 平梁**
+
+
+## 11. MP-01B Gate A
+
+**PASS**
+
+Decision:
+- existing outer-eaves `CMP-GONG-LINGGONG-001_MASTER`: **DO NOT REUSE**
+- proposed interior-role Master: `CMP-FRAME-LINGGONG-INTERIOR-001_MASTER`
+- identity/role: FACT
+- metric geometry/profile/joinery: UNKNOWN
+- next: MP-01B Gate B｜register + Master Spec V0.1
