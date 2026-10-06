@@ -1,6 +1,6 @@
 # MP-01B Gate H-R2｜Interior Huagong + Panjian Ludou Scope & Missing-Height Completion Rule V001
 
-Status: **DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED / NO BLENDER**
+Status: **PRODUCT OWNER APPROVED / GATE H-R3 DESIGN AUTHORIZED / NO BLENDER**
 Date: 2026-10-06
 
 ## 1. Objective
@@ -290,3 +290,28 @@ Recommended approval:
 - preserve REAR direct values;
 - proceed to R3;
 - do not run Blender yet.
+
+
+## 13. Product Owner decision
+
+Date: 2026-10-06
+
+Decision: **APPROVED**
+
+Approved:
+- separate interior Huagong family boundary;
+- separate Panjian/Spacer Ludou family boundary;
+- Candidate B for FRONT Ludou missing heights:
+  - total height = 225.1 mm;
+  - flat height = 45.0 mm;
+  - sloped height = 88.1 mm;
+  - classification remains PARAMETRIC_COMPLETION / SAME_FAMILY_DIRECT_MEAN / REPLACEABLE;
+- FRONT Tuofeng vertical candidate = 172.9 mm;
+- REAR direct Ludou values unchanged;
+- REAR Tuofeng vertical candidate = 196 mm;
+- proceed to Gate H-R3 design.
+
+Not authorized:
+- Blender corrected build;
+- historical exactness claim;
+- PR #56 merge.
