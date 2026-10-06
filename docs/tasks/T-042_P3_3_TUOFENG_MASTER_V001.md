@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-042｜P3_3_TUOFENG_MASTER_V001
 
-Status: **TASK CONTRACT LOCKED / PRODUCT OWNER AUTHORIZED / ENGINEERING EXECUTION ACTIVE**
+Status: **FIRST ARTICLE APPROVED / ENGINEERING EXECUTION COMPLETE / FORMALIZATION NOT AUTHORIZED**
 Date: 2026-10-06
 Stage: P3.3 V002 Stage 1 reopened for 驼峰
 Task id: `T-042｜P3_3_TUOFENG_MASTER_V001`
@@ -163,3 +163,31 @@ It does **not** pre-authorize:
 - formal Catalog/V008 approved-master binding;
 - merge to main;
 - historical metric claims.
+
+
+## 10. First Article Acceptance
+
+Product Owner decision: **APPROVED**
+
+Date: 2026-10-06
+
+Accepted evidence:
+- GitHub Actions Run: `37416207236`
+- Artifact: `11391915287`
+- Artifact digest: `sha256:f5b9940a17b8368a0d6be5df0a082b36a8d421705a2eb3a4094292577b5b820d`
+- Machine validation: **27 / 27 PASS**
+- Independent reopen: **PASS**
+- Mutation proof: **PASS**
+- Deterministic restore: **PASS**
+- Review Board: **APPROVED BY PRODUCT OWNER**
+
+Acceptance boundary:
+- geometry strategy and first-article implementation are approved;
+- test fixture dimensions remain `ENGINEERING_TEST_ONLY`;
+- historical dimensions remain `UNKNOWN`;
+- hidden joinery remains `UNKNOWN / DEFERRED`;
+- formal Catalog/V008 approved-master binding is **NOT YET AUTHORIZED**;
+- merge to main is **NOT YET AUTHORIZED**.
+
+Next gate:
+> **T-042 Formalization + Catalog/V008 Binding Authorization**
