@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE H-R4 ENGINEERING EXECUTION AUTHORIZED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE H-R4 MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -471,3 +471,17 @@ Execution scope:
 - Review Board + machine validation.
 
 PR #56 merge remains NOT AUTHORIZED.
+
+
+## 27. MP-01B Gate H-R4
+
+**MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
+
+- T-045 Final Run: `37453623798` — SUCCESS
+- Artifact: `11407787011`
+- Validation: **56/56 PASS**
+- Reopen / deterministic rebuild / Huagong 900→950 mutation: PASS
+- Corrected orthogonal Linggong-X / Huagong-Y build generated.
+- 10 rendered physical geometries + 2 deferred Panjian Fang records.
+- Hidden bracket cuts/joinery remain UNKNOWN.
+- MP-01B is not yet Product Owner accepted.
