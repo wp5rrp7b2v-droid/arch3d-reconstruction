@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE H MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE H MACHINE PASS BUT EVIDENCE FAIL / REVISION REQUIRED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -344,3 +344,15 @@ Next:
 - Reopen / deterministic rebuild / 306→310 mutation: PASS
 - Review note: support groups visibly straddle the ±1836 Pingliang end stations because of the approved replaceable Gate G axis/station rule.
 - Next: Product Owner accepts or requests a local orientation/placement revision.
+
+
+## 20. MP-01B Gate H evidence recheck
+
+Primary-source recheck invalidated the Gate F/G vertical-stack interpretation.
+
+Key correction:
+- 306 mm must not be decomposed as `Tuofeng + Linggong`.
+- Report p107/printed p92 explicitly includes `四椽栿、驼峰、襻间柱斗平欹` in the relevant 40-fen vertical padding.
+- Report p99/printed p84 directly measures an interior `襻间/隔架用柱斗` family.
+- Gate H machine proof is archived; MP-01B is **NOT APPROVED**.
+- No support-center shift or Linggong rotation is authorized merely from visual appearance.
