@@ -1,6 +1,6 @@
 # MP-01B｜Circle 1 Targeted Build Engineering Result V001
 
-Status: **MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED / CIRCLE 1 NOT YET ACCEPTED**
+Status: **MACHINE PASS / PRODUCT OWNER REVIEW FAIL / CIRCLE 1 NOT ACCEPTED**
 Date: 2026-10-06
 
 ## Scope
@@ -60,3 +60,18 @@ MACHINE PASS does not prove:
 - Circle 3 resolution;
 - MP-01B acceptance;
 - PR #56 merge authorization.
+
+## Product Owner review
+
+**FAIL**
+
+The actual build falsified a key reconstruction assumption:
+- `650 mm inward gong-head reach` was treated as the shaped gong-head-profile span.
+- Drawing 11 does not support that interpretation.
+- 650 mm remains, at most, the station-to-inner-endpoint placement reach; the visible shaped gong-head is localized near the terminal end.
+
+Therefore:
+- T-047 machine PASS remains valid as an execution result;
+- T-047 is not accepted geometrically;
+- the Circle-1 approved profile control is reopened;
+- no R5/next geometry build is authorized from the failed profile.
