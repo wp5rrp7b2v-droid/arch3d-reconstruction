@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE H-R3 DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED / CORRECTED BUILD NOT AUTHORIZED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE H-R3 APPROVED / GATE H-R4 READY / CORRECTED BUILD NOT YET STARTED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -444,3 +444,17 @@ No Blender corrected build has been run.
 
 Next after PO approval:
 > MP-01B Gate H-R4｜Corrected Lower Assembly Engineering Build
+
+
+## 25. MP-01B Gate H-R3 Product Owner approval
+
+**APPROVED**
+
+- Ludou bottom-depth completion approved: FRONT 255 mm / REAR 264 mm;
+- Huagong 900 mm + 650/250 endpoint control approved as replaceable project completion;
+- orthogonal Linggong/Huagong corrected node approved;
+- Pingliang underside Z=521 mm reconciliation approved as replaceable;
+- 10 rendered + 2 deferred object contract approved;
+- Gate H-R4 is ready as the next engineering step;
+- corrected Blender build has not yet started;
+- PR #56 merge remains NOT AUTHORIZED.
