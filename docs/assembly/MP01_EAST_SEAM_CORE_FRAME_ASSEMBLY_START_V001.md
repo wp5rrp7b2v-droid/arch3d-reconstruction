@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE H-R2 APPROVED / GATE H-R3 DESIGN AUTHORIZED / CORRECTED BUILD NOT AUTHORIZED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE H-R3 DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED / CORRECTED BUILD NOT AUTHORIZED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -352,8 +352,8 @@ Primary-source recheck invalidated the Gate F/G vertical-stack interpretation.
 
 Key correction:
 - 306 mm must not be decomposed as `Tuofeng + Linggong`.
-- Report p107/printed p92 explicitly includes `四椽栿、驼峰、襻间柱斗平欹` in the relevant 40-fen vertical padding.
-- Report p99/printed p84 directly measures an interior `襻间/隔架用柱斗` family.
+- Report p107/printed p92 explicitly includes `四椽栿、驼峰、襻间栌斗平欹` in the relevant 40-fen vertical padding.
+- Report p99/printed p84 directly measures an interior `襻间/隔架用栌斗` family.
 - Gate H machine proof is archived; MP-01B is **NOT APPROVED**.
 - No support-center shift or Linggong rotation is authorized merely from visual appearance.
 
@@ -416,3 +416,31 @@ No Blender authorization.
 - REAR Tuofeng vertical candidate 196 mm retained;
 - Gate H-R3 design authorized;
 - Blender corrected build remains NOT AUTHORIZED.
+
+
+## 24. MP-01B Gate H-R3
+
+**DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED**
+
+Resolved:
+- Panjian Ludou bottom-depth completion:
+  - FRONT 255 mm;
+  - REAR 264 mm;
+  - rule = equal plan side inset / replaceable.
+- Interior Huagong deterministic source-image control:
+  - realization length 900 mm;
+  - inner gong-head reach 650 mm;
+  - outer Tuojiao reach 250 mm;
+  - classification = SOURCE_IMAGE_CALIBRATED_PROJECT_COMPLETION / not direct.
+- corrected orthogonal node:
+  - Linggong = assembly X / 顺身;
+  - Huagong = assembly Y / 进深.
+- corrected Tuofeng/Ludou/gong vertical controls;
+- Pingliang underside reconciliation = 521 mm with ±2 mm local support tolerance.
+- 10 rendered physical objects + 2 deferred Panjian Fang participant records.
+- hidden bracket cuts remain UNKNOWN; no joinery geometry.
+
+No Blender corrected build has been run.
+
+Next after PO approval:
+> MP-01B Gate H-R4｜Corrected Lower Assembly Engineering Build
