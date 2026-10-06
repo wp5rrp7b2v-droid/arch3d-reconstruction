@@ -1,6 +1,6 @@
 # T-044｜MP-01B Lower Assembly First Engineering Build V001
 
-Status: **PRODUCT OWNER AUTHORIZED / ENGINEERING EXECUTION ACTIVE**
+Status: **ENGINEERING EXECUTION COMPLETE / MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
 Date: 2026-10-06
 
 ## Goal
@@ -51,3 +51,16 @@ Not authorized:
 - whole-frame / whole-hall extrapolation;
 - combining MP-01A + MP-01B before later authorization;
 - PR #56 merge.
+
+
+## Engineering result
+
+- Run: `37432149756` — **SUCCESS**
+- Artifact: `11397412125`
+- Validation: **51/51 PASS**
+- Independent reopen: PASS
+- Deterministic rebuild: PASS
+- 306→310 dependency mutation: PASS
+- Product Owner acceptance: REQUIRED
+- Combine with MP-01A: NOT AUTHORIZED
+- PR #56 merge: NOT AUTHORIZED
