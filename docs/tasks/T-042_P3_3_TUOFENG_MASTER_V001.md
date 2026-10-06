@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-042｜P3_3_TUOFENG_MASTER_V001
 
-Status: **FIRST ARTICLE APPROVED / ENGINEERING EXECUTION COMPLETE / FORMALIZATION NOT AUTHORIZED**
+Status: **FIRST ARTICLE APPROVED / FORMALIZATION + CATALOG/V008 BINDING AUTHORIZED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Stage: P3.3 V002 Stage 1 reopened for 驼峰
 Task id: `T-042｜P3_3_TUOFENG_MASTER_V001`
@@ -191,3 +191,23 @@ Acceptance boundary:
 
 Next gate:
 > **T-042 Formalization + Catalog/V008 Binding Authorization**
+
+
+## 11. Formalization Authorization
+
+Product Owner instruction: **开始下一步**
+
+Date: 2026-10-06
+
+Authorized:
+- formalize the accepted T-042 first-article package;
+- bind `CMP-FRAME-TUOFENG-001_MASTER` into Master Library;
+- bind the 驼峰 V008/CURRENT family record to the approved Master;
+- update Master-scope coverage from 28/29 to 29/29 on this branch;
+- store semantic / validation / Review Board evidence in Git.
+
+Not authorized:
+- merge PR #55;
+- merge PR #54;
+- historical metric claims;
+- whole-hall instance count or per-instance placement claims.
