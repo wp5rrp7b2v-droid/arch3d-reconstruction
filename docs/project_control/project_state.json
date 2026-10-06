@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R354",
-  "last_updated": "2026-09-29",
-  "session_status": "2026-09-29 P3.3 STAGE2-C BATCH02 LOCKED D-279 / PRIMARY FRAME ATTACHMENT CLASSES LOCKED / 7 INTERFACES + 4 CONTACT_INTERFACE RECORDS / 12 OF 12 REQUIRED FIELDS ON ALL 4 / 8 OF 8 INTERFACE REFS RESOLVE / EXACT CONTACT + JOINERY + INSTANCE MAPPING + WORLD COORDINATES REMAIN UNRESOLVED / BATCH03 NOT AUTHORIZED / ENGINEERING NOT AUTHORIZED / STAGE3 NOT AUTHORIZED / T-018 HOLD",
+  "state_revision": "R368",
+  "last_updated": "2026-09-30",
+  "session_status": "2026-09-30 D-295 DAILY CLOSE / AF01 V001 TECHNICAL PROOF PASS + VISUAL ARCHITECTURAL REVIEW FAIL / DIAGNOSTIC ONLY / PR52 DRAFT UNMERGED / B03-R HOLD AFTER TUOFENG R0 / V002 NOT AUTHORIZED / PR50 DRAFT UNMERGED / MAIN UNCHANGED / T-018 HOLD",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,16 +17,16 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / B03 NOT AUTHORIZED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / ASSEMBLY-FIRST REBASELINE D-286 CANDIDATE / D-284 SCOPE RETAINED / D-285 MATRIX NON-BLOCKING REFERENCE / NEXT AF-01 / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / B03 NOT AUTHORIZED / T-018 HOLD",
-      "P3_3": "STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / B03 NOT AUTHORIZED / T-018 HOLD"
+      "P3.3": "ASSEMBLY-FIRST REBASELINE D-286 CANDIDATE / D-284 SCOPE RETAINED / D-285 MATRIX NON-BLOCKING / NEXT AF-01 / T-018 HOLD",
+      "P3_3": "ASSEMBLY-FIRST REBASELINE D-286 CANDIDATE / D-284 SCOPE RETAINED / D-285 MATRIX NON-BLOCKING / NEXT AF-01 / T-018 HOLD"
     }
   },
-  "decision_required": false,
+  "decision_required": true,
   "blocker": null,
   "temporary_operating_mode": {
     "rule_id": "RC-014",
@@ -49,7 +49,7 @@
       "excludes": "INTERACTIVE LOCAL_MAC_REQUIRED OR LOCAL-ONLY EVIDENCE"
     },
     "sync_ledger": {
-      "path": "docs/project_control/CLOUD_MODE_SYNC_LEDGER_2026-09-16_20.md",
+      "path": "docs/project_control/phase_archive/CLOUD_MODE_2026-09-16_20_CLOSURE.md",
       "status": "DAY 5 COMPLETE / CLOUD PRODUCTION CLOSED / LOCAL_SYNC_VERIFICATION PASS",
       "target_local_sync_date": "2026-09-20 evening",
       "day_1_register": "COMPLETE / 2026-09-16",
@@ -62,14 +62,14 @@
     "active_window_note": "2026-09-20 cloud production window CLOSED. Local main fast-forwarded to verified GitHub main, R161/V008/Excel checks passed, and the five approved T-021—T-024 canonical .blend binaries were restored to the local Master library with exact SHA matches. Stage 1 remains ACTIVE / not passed; no active engineering T-task; T-018 remains HOLD."
   },
   "current_task": {
-    "id": null,
-    "name": "NONE",
-    "status": "NO ACTIVE ENGINEERING T-TASK"
+    "id": "AF-01",
+    "name": "正身梁架首榀｜Assembly Recovery",
+    "status": "SESSION CLOSED / V001 DIAGNOSTIC ONLY / B01+B02 RETAINED / B03-R HOLD / NO ACTIVE ENGINEERING EXECUTION"
   },
   "proposed_next_task": {
-    "id": "STAGE2-C-B03",
-    "name": "P3.3 Stage2-C Batch 03｜Deferred Primary-Frame Groove / Ridge-Counterpart Attachment Classes",
-    "status": "NEXT CONTROLLED DESIGN STEP / NOT STARTED / PRODUCT OWNER AUTHORIZATION REQUIRED"
+    "id": "PROJECT-RECOVERY-REVIEW",
+    "name": "Project Recovery Review｜stable authority vs provisional assumption vs diagnostic proxy",
+    "status": "NEXT SESSION FIRST STEP / REVIEW ONLY / NO IMPLEMENTATION AUTHORIZED"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -121,7 +121,7 @@
     "note": "P3.2 closure is not reopened by the new P3.3 building-level datum omission; T-020 is a P3.3 upstream engineering-rule completion."
   },
   "p3_3": {
-    "status": "V002 LOCKED / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / B03 NOT AUTHORIZED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "ASSEMBLY-FIRST REBASELINE D-286 CANDIDATE / D-284 SCOPE RETAINED / NEXT AF-01 / T-018 HOLD",
     "gate_name": "构件驱动整殿重建",
     "engineering_subtitle": "Component-driven Building Reconstruction",
     "dod_version": "V002",
@@ -149,7 +149,36 @@
       "reviewed_head_sha": "671283f4ffdf8162c4b39de88564264865b29a50",
       "merge_commit": "6d83ed2f9b3b9281de364ab973edce73ac6dae02",
       "canonical_rule": "production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json",
-      "machine_validation": "PASS"
+      "machine_validation": "PASS",
+      "correction_2026_09_30": {
+        "decision_id": "D-290",
+        "status": "INTEGRATED INTO PR #50 WORKING BRANCH / D-291 / STRUCTURAL REGRESSION 18/18 PASS / MAIN NOT YET UPDATED",
+        "branch": "fix/t020-fr007-direction-consumption-v001",
+        "pr_number": 51,
+        "source_sequence_fen": [
+          120,
+          115,
+          210
+        ],
+        "source_sequence_direction": "RIDGE_TO_EAVE",
+        "eave_to_ridge_segment_lengths_mm": [
+          3213,
+          1759.5,
+          1836
+        ],
+        "corrected_y_positions_mm": {
+          "N00": -6808.5,
+          "N01": -3595.5,
+          "N02": -1836,
+          "N03": 0,
+          "S02": 1836,
+          "S01": 3595.5,
+          "S00": 6808.5
+        },
+        "invariants": "FR-007 VALUE / MOD-002 / HALF-RUN / RIDGE_Y / Z-CHAIN / PM-008—012 / FR-004—006 / REGISTRY / MASTERS / P3.2 VOCAB UNCHANGED",
+        "af01_block": "CLEARED FOR PLANNING ON WORKING BRANCH / ENGINEERING GENERATION STILL NOT AUTHORIZED",
+        "pr_51_merge_commit": "36def19143ddddccbbc424f59a529ce7d78d99fc"
+      }
     },
     "remaining_gate_work_after_t018_if_pass": [
       "DoD-09 independent final rebuild and Gate Evidence Package",
@@ -1058,14 +1087,14 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Stage2-C Batch 02 is LOCKED under D-279. Batch 03 is not authorized automatically. Await Product Owner authorization before materializing Dingfu/Rufu bracket-groove relations or Shuzhu/Chashou upper ridge counterparts. Engineering execution, Stage3, whole-building topology, T-020/RZ/FV production authority and T-018 remain unauthorized.",
+  "next_action": "Resume AF-01 from same-building measured evidence. Select one representative 正身梁架 slice (东缝 or 西缝), map only the required Registry instances, then draft AF-01 Assembly Spec V0.1 Candidate with placement/orientation/required length/support/visible-geometry fields and stop for Product Owner review.",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v210",
+    "visualization_version": "v216",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / D-279 / STAGE2-C BATCH02 LOCKED",
+    "refresh_status": "CURRENT / D-286 / ASSEMBLY-FIRST REBASELINE CANDIDATE",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -3232,8 +3261,8 @@
     "new_geometry_variants_beyond_stage1": 0
   },
   "p3_3_stage2_c_2026_09_29": {
-    "decision_id": "D-279",
-    "status": "ACTIVE / BATCH01 LOCKED / BATCH02 LOCKED / BATCH03 NOT AUTHORIZED",
+    "decision_id": "D-285",
+    "status": "CONNECTION MATRIX REBASELINE PATCH01 CANDIDATE / BATCH03 HOLD",
     "plan": "P3_3_STAGE2_C_MATERIALIZATION_PLAN_V001",
     "batch01": {
       "id": "STAGE2_C_BATCH01_UPPER6_SANDOU_FOUR",
@@ -3277,6 +3306,199 @@
       "interface_refs": "8/8 RESOLVE",
       "duplicate_interface_ids": 0
     },
-    "batch03": "NOT AUTHORIZED"
+    "batch03": "HOLD / PR #49",
+    "whole_building_connection_coverage_matrix": {
+      "id": "P3_3_STAGE2_C_WHOLE_BUILDING_CONNECTION_COVERAGE_MATRIX_V001",
+      "status": "CANDIDATE / PRODUCT OWNER REVIEW REQUIRED",
+      "approved_master_coverage": "25/25",
+      "connection_obligations": 39,
+      "attachment_class_rows": 10,
+      "topology_resolution_rows": 25,
+      "system_handoff_rows": 4,
+      "inherited_locked_rows": 5,
+      "missing_master_families": 0
+    },
+    "matrix_review": {
+      "result": "PATCH_REQUIRED",
+      "matrix_lock_allowed": false,
+      "master_coverage": "25/25 VERIFIED",
+      "v008_object_types": 66,
+      "non_master_if_attached_disposition_required": 30,
+      "candidate_rows": 39,
+      "concrete_master_pair_or_connector_rows": 12,
+      "aggregate_rows": 27,
+      "duplicate_ids": 0,
+      "inherited_locked_records": "5/5 VERIFIED"
+    },
+    "structural_timber_scope": {
+      "id": "P3_3_STAGE2_C_STRUCTURAL_TIMBER_SCOPE_REGISTER_V001",
+      "status": "LOCKED / D-284",
+      "v008_classified": "66/66",
+      "in": 33,
+      "out": 27,
+      "container": 5,
+      "conditional": [
+        "替木实体族"
+      ],
+      "active_connection_denominator": 33,
+      "non_master_in": [
+        "椽系",
+        "襻间枋",
+        "望板系统",
+        "隐角梁",
+        "散斗族"
+      ],
+      "conditional_policy": "OUTSIDE ACTIVE DENOMINATOR UNTIL SEPARATELY PROMOTED"
+    },
+    "matrix_pr": "PR #50 DRAFT",
+    "connection_matrix_rebaseline": {
+      "id": "P3_3_STAGE2_C_STRUCTURAL_TIMBER_CONNECTION_COVERAGE_MATRIX_V001",
+      "status": "CANDIDATE PATCH01 / PRODUCT OWNER REVIEW REQUIRED",
+      "parent_coverage": "33/33",
+      "parent_obligations": 42,
+      "atomic_handoff_candidates": 18,
+      "locked_atomic_segments": 6,
+      "atomic_network_closure": "OPEN",
+      "matrix_lock_allowed": false
+    }
+  },
+  "p3_3_assembly_first_2026_09_29": {
+    "decision_id": "D-286",
+    "status": "CANDIDATE / PRODUCT OWNER REVIEW REQUIRED",
+    "objective": "ASSEMBLE WANFO HALL",
+    "retained": [
+      "D-271 Masters",
+      "Component Registry",
+      "D-284 Scope",
+      "D-277/D-279 useful connection records",
+      "SRC-ZG-WF-001"
+    ],
+    "matrix_role": "D-285 REFERENCE / NON-BLOCKING",
+    "blocker_test": [
+      "placement",
+      "orientation",
+      "required length/scale",
+      "required support/counterpart",
+      "visible geometry",
+      "direct evidence contradiction"
+    ],
+    "next_task": "AF-01 representative slice selection + Registry instance mapping + Assembly Spec V0.1 Candidate",
+    "engineering_execution": "NOT AUTHORIZED",
+    "t018": "HOLD",
+    "af01_session_checkpoint": "D-287 / SOURCE+INPUT VERIFICATION COMPLETE / SLICE SELECTION PENDING"
+  },
+  "daily_close_2026_09_29": {
+    "decision_id": "D-287",
+    "status": "COMPLETE / WORKING-BRANCH CHECKPOINT RECORDED / MAIN UNCHANGED",
+    "canonical_main": "447f887fbb0f4b28d62d957dacf65276b85c0461",
+    "working_branch": "governance/stage2-c-whole-building-connection-coverage-matrix-v001",
+    "pre_close_branch_head": "6571e383aec2fdc0633eff76ae76e416a60ce07a",
+    "pr_50": "DRAFT / OPEN / MERGEABLE / NOT MERGED",
+    "af01_status": "STARTED / SOURCE+INPUT VERIFICATION COMPLETE / REPRESENTATIVE SLICE NOT YET SELECTED",
+    "verified_inputs": [
+      "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
+      "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json",
+      "production/zhenguo_wanfo/build/P3_3_RECONSTRUCTED_DESIGN_DATUM_RULE_V001.json",
+      "SRC-ZG-WF-001 measured report / beam-frame evidence"
+    ],
+    "source_pages_reviewed": "PDF around p81-84, p103-107, p128",
+    "unresolved_for_next_session": [
+      "select 东缝 or 西缝 as AF-01 representative main-frame slice",
+      "lock final physical Registry instance list",
+      "lock placement anchors/orientations",
+      "derive required generated member lengths/endpoints",
+      "prepare AF-01 Assembly Spec V0.1 Candidate"
+    ],
+    "d285": "REFERENCE / NON-BLOCKING",
+    "pr49": "HOLD",
+    "stage3": "NOT AUTHORIZED",
+    "t018": "HOLD",
+    "engineering_generation": "NOT AUTHORIZED",
+    "main_changed": false
+  },
+  "daily_close_policy": {
+    "rule_id": "RC-025",
+    "status": "ACTIVE",
+    "path_pattern": "docs/project_control/DAILY_CLOSE_LOG_YYYY-MM.md",
+    "startup_read_rule": "Read current project_state + latest dated section of current monthly Daily Close log + latest relevant decisions + live GitHub state; historical daily sections are on-demand only.",
+    "per_day_close_files": "RETIRED"
+  },
+  "latest_cross_file_consistency_audit": {
+    "decision_id": "D-289",
+    "date": "2026-09-29",
+    "result": "PASS",
+    "state_revision": "R362",
+    "acceptance_matrix": "ALIGNED THROUGH D-289",
+    "decision_log": "ALIGNED THROUGH D-289",
+    "dashboard": "REFRESH REQUIRED TO V218 IN THIS PATCH",
+    "execution_log": "ROLE-CORRECT / NO AF-01 ENGINEERING ENTRY BECAUSE NO ENGINEERING EXECUTION",
+    "governance": "MONTHLY DAILY-CLOSE POLICY ALIGNED",
+    "rules_change_log": "RC-025 ADDED",
+    "daily_close_log": "ALIGNED THROUGH D-289",
+    "active_authority_change": false
+  },
+  "af01_b01_g1": {
+    "decision_id": "D-292",
+    "status": "LOCKED / PRODUCT_OWNER_APPROVED / CLOSED",
+    "lower_six_support_plane_z_mm": 4360.5,
+    "upper_six_support_plane_z_mm": 5003.1,
+    "classification": "REPORT_INFERRED / DRAWING_DERIVED / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE",
+    "engineering_generation_authorized": false
+  },
+  "af01_b01": {
+    "status": "CLOSED / D-292 + D-293",
+    "support_planes_mm": {
+      "lower_six": 4360.5,
+      "upper_six": 5003.1,
+      "four_chuanfu": 5658.4,
+      "pingliang": 6406.2
+    },
+    "evidence_boundary": "AF01_LOCAL / RECONSTRUCTED_DESIGN / REPLACEABLE AS DOCUMENTED; NO 963 ABSOLUTE Z CLAIM",
+    "orientation_guard": "ALIGN TRANSFORMED BODY BOTTOM FACE TO SUPPORT_PLANE_Z AFTER INSTANCE ORIENTATION",
+    "engineering_generation_authorized": false
+  },
+  "af01_b02": {
+    "decision_id": "D-294",
+    "status": "LOCKED / PRODUCT_OWNER_APPROVED / CLOSED",
+    "execution_lengths_mm": {
+      "lower_six": 10710,
+      "upper_six": 10710,
+      "four_chuanfu": 7191,
+      "pingliang": 3672
+    },
+    "historical_full_length_status": "UNKNOWN / NULL / DO_NOT_LOCK",
+    "hidden_end_geometry": "UNKNOWN / OMITTED",
+    "engineering_generation_authorized": false
+  },
+  "af01_b03": {
+    "status": "OPEN / B03-R HOLD / B03-T NOT STARTED",
+    "tuofeng_reconciliation": "SOURCE-SUPPORTED ROLES CONFIRMED / PRODUCTION DIMENSIONS+PROFILE NOT FOUND / FORMAL COMPONENT COVERAGE MISSING",
+    "b03_r_lockable": false,
+    "b03_t_started": false
+  },
+  "af01_first_assembly_v001": {
+    "status": "TECHNICAL_PROOF_PASS / VISUAL_ARCHITECTURAL_REVIEW_FAIL / DIAGNOSTIC_ONLY",
+    "branch": "engineering/af01-east-seam-first-assembly-v001",
+    "pr_number": 52,
+    "pr_status": "DRAFT / OPEN / NOT_MERGED",
+    "workflow_run_id": 36713427504,
+    "validation": "14/14 PASS",
+    "artifact_id": 11095611818,
+    "artifact_digest": "sha256:a3068aad1aebfa1f1f1ae378a5ef8f04c7b47ae2296152335e2480709287a8e3",
+    "blend_sha256": "6753e0f9f538cee538ab3c021f9a02220cf44ab89acba9d019bc84fc2c41a2a9",
+    "canonical_geometry_promotion": false,
+    "product_owner_reconstruction_acceptance": false,
+    "v002_authorized": false
+  },
+  "close_2026_09_30": {
+    "decision_id": "D-295",
+    "status": "COMPLETE",
+    "main_sha": "447f887fbb0f4b28d62d957dacf65276b85c0461",
+    "pr49": "DRAFT / HOLD",
+    "pr50": "DRAFT / UNMERGED",
+    "pr52": "DRAFT / DIAGNOSTIC_ONLY / UNMERGED",
+    "t018": "HOLD",
+    "whole_building_generation_authorized": false,
+    "next_session": "PROJECT_RECOVERY_REVIEW"
   }
 }

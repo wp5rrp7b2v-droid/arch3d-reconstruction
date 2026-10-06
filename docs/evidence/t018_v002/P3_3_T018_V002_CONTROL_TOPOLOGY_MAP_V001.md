@@ -3,6 +3,8 @@
 ## Status
 DESIGN COMPLETE / NOT AUTHORITY / IMPLEMENTATION FROZEN
 
+> **2026-09-30 supersession notice:** topology identities and adjacency remain valid, but the roof-Y numeric values recorded below are **SUPERSEDED FOR PLACEMENT ONLY** by `P3_3_T020_FR007_DIRECTION_CORRECTION_V001.md`. Corrected T-020 values are N00=-6808.5, N01=-3595.5, N02=-1836.0, N03=0, S02=1836.0, S01=3595.5, S00=6808.5. No topology identity changes.
+
 本文件只锁定“谁连谁”的拓扑，不决定尚未获批的 Z 数值。
 
 ## 1. Roof control topology

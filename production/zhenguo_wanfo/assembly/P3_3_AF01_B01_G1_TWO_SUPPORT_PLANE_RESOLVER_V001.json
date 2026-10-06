@@ -1,0 +1,82 @@
+{
+  "schema_version": "P3_3_AF01_B01_G1_TWO_SUPPORT_PLANE_RESOLVER_V001",
+  "date": "2026-09-30",
+  "task_id": "AF01-B01-G1",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-292",
+  "inherited_datum": {
+    "column_foot_design_plane_z_mm": 0,
+    "column_top_ludou_bottom_z_mm": 3534.3,
+    "authority": "P3.2 / Z-006-RC-01",
+    "classification": "REASONABLE_COMPLETION / REPLACEABLE / NOT_CONFIRMED_HISTORICAL"
+  },
+  "source_controls": {
+    "fen_mm": 15.3,
+    "vertical_ladder_fen": [
+      0,
+      33,
+      54,
+      75,
+      96,
+      106,
+      120
+    ],
+    "lower_six_support_mapping": {
+      "source_role": "SECOND_JUMP_HUAGONG_UPPER_SUPPORT",
+      "level_fen": 54,
+      "classification": "REPORT_INFERRED / DRAWING_DERIVED / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE"
+    },
+    "upper_six_support_mapping": {
+      "source_role": "SECOND_LOWER_ANG_COLUMN_CENTER_UPPER_SUPPORT",
+      "level_fen": 96,
+      "classification": "REPORT_INFERRED / DRAWING_DERIVED / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE"
+    }
+  },
+  "outputs": {
+    "LOWER_SIX_SUPPORT_PLANE_Z": {
+      "value_mm": 4360.5,
+      "formula": "3534.3 + 54 * 15.3",
+      "applies_to": [
+        "下六椽栿-东缝 / north support",
+        "下六椽栿-东缝 / south support"
+      ]
+    },
+    "UPPER_SIX_SUPPORT_PLANE_Z": {
+      "value_mm": 5003.1,
+      "formula": "3534.3 + 96 * 15.3",
+      "applies_to": [
+        "上六椽栿-东缝 / north support",
+        "上六椽栿-东缝 / south support"
+      ]
+    }
+  },
+  "crosscheck": {
+    "support_plane_delta_mm": 642.6,
+    "lower_six_observed_mean_guang_mm": 493.5,
+    "residual_mm": 149.1,
+    "residual_fen": 9.7450980392,
+    "report_small_dou_order_fen": 10,
+    "result": "PASS / CONSISTENT / CROSSCHECK_ONLY"
+  },
+  "prohibitions": [
+    "NO_963_ABSOLUTE_ELEVATION_CLAIM",
+    "NO_CURRENT_DEFORMED_Z_CLAIM",
+    "NO_WHOLE_PUZUO_TOPOLOGY_CLOSURE",
+    "NO_HIDDEN_JOINERY_INFERENCE",
+    "NO_MASTER_MUTATION",
+    "NO_REGISTRY_MUTATION",
+    "NO_T018_FV_B_REUSE"
+  ],
+  "gate": {
+    "g1_candidate_complete": true,
+    "product_owner_review_required": false,
+    "g1_closed": true,
+    "engineering_generation_authorized": false,
+    "next_if_separately_authorized": "AF01-B01-G2"
+  },
+  "approval": {
+    "decision_id": "D-292",
+    "date": "2026-09-30",
+    "product_owner_approved": true,
+    "scope": "AF01_LOCAL_TWO_SUPPORT_PLANES_ONLY"
+  }
+}

@@ -225,5 +225,21 @@
     }
   ],
   "blockers": [],
-  "conclusion": "No unresolved canonical contradiction or Stage-B-critical authority gap found. CP-01 PASS."
+  "conclusion": "No unresolved canonical contradiction or Stage-B-critical authority gap found. CP-01 PASS.",
+  "supersession": {
+    "date": "2026-09-30",
+    "scope": "ROOF_Y_PLACEMENT_VALUES_ONLY",
+    "superseded_by": "docs/evidence/zhenguo_wanfo/P3_3_T020_FR007_DIRECTION_CORRECTION_V001.md",
+    "preserved_as_historical_audit": true,
+    "topology_identity_unchanged": true,
+    "corrected_y_positions_mm": {
+      "ROOF_PURLIN_N_00": -6808.5,
+      "ROOF_PURLIN_N_01": -3595.5,
+      "ROOF_PURLIN_N_02": -1836,
+      "ROOF_PURLIN_N_03": 0,
+      "ROOF_PURLIN_S_02": 1836,
+      "ROOF_PURLIN_S_01": 3595.5,
+      "ROOF_PURLIN_S_00": 6808.5
+    }
+  }
 }

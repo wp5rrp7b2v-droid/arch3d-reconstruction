@@ -1,0 +1,1478 @@
+{
+  "schema_version": "P3_3_STAGE2_C_WHOLE_BUILDING_CONNECTION_COVERAGE_MATRIX_V001",
+  "date": "2026-09-29",
+  "status": "SUPERSEDED_AS_ACTIVE_MATRIX_BY_D285_REBASELINE_CANDIDATE / RETAINED_HISTORY / NOT_LOCKABLE",
+  "authority": {
+    "canonical_main_at_start": "447f887fbb0f4b28d62d957dacf65276b85c0461",
+    "stage1_closure": "D-271",
+    "stage2_entry": "D-272 DESIGN ONLY",
+    "stage2_a_lock": "D-273",
+    "stage2_b_lock": "D-275",
+    "stage2_c_locked_batches": [
+      "D-277",
+      "D-279"
+    ],
+    "batch03_pre_matrix_pr": "PR #49 / DRAFT / HOLD / NOT AUTHORITY"
+  },
+  "purpose": "Complete execution coverage contract for component-to-component / system attachment closure before further Stage2-C batching.",
+  "scope_rules": [
+    "25/25 approved Master families must be represented.",
+    "Rows are confirmed attachment classes, topology-resolution obligations, or system handoffs.",
+    "Topology rows must end as explicit real participants or EXPLICIT_NO_DIRECT_ATTACHMENT with actual intermediate path.",
+    "Historical joinery detail may remain unresolved; production counterpart, endpoints, placement/orientation resolver and parametric completion may not remain unresolved at Stage2 exit.",
+    "No world-coordinate authority in Stage2-C.",
+    "P3.2 CONTROL/PROXY objects cannot become production truth.",
+    "No generic historical template may substitute for same-building evidence without explicit RECONSTRUCTED_DESIGN classification and PO approval."
+  ],
+  "source_basis": {
+    "primary_source": "SRC-ZG-WF-001",
+    "sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "key_page_ranges": {
+      "columns_lintels": "47-57",
+      "puzuo": "58-80",
+      "primary_frame": "81-109",
+      "ideal_model_layered": "121-129"
+    },
+    "project_sources": [
+      "Stage2-A Coverage Matrix",
+      "Stage2-B Rule Set",
+      "Stage2-C Interface Registry",
+      "Stage2-C Connection Layer Registry",
+      "Current Component Instance Registry",
+      "Stage1 Master Specs/direct bindings"
+    ]
+  },
+  "summary": {
+    "approved_master_family_count": 25,
+    "approved_master_family_coverage_count": 25,
+    "connection_requirement_count": 39,
+    "locked_attachment_requirement_count": 5,
+    "row_type_counts": {
+      "ATTACHMENT_CLASS": 10,
+      "TOPOLOGY_RESOLUTION": 25,
+      "SYSTEM_HANDOFF": 4
+    },
+    "uncovered_master_families": [],
+    "current_matrix_gate": "CANDIDATE / NOT LOCKED",
+    "engineering_execution": "NOT AUTHORIZED",
+    "stage3": "NOT AUTHORIZED",
+    "t018": "HOLD"
+  },
+  "master_coverage": [
+    {
+      "master_id": "CMP-COLUMN-001_MASTER",
+      "requirement_count": 3,
+      "requirement_ids": [
+        "CCM-A01",
+        "CCM-A02",
+        "CCM-A03"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-LUDOU-COLUMN-001_MASTER",
+      "requirement_count": 2,
+      "requirement_ids": [
+        "CCM-A01",
+        "CCM-A05"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+      "requirement_count": 10,
+      "requirement_ids": [
+        "CCM-A05",
+        "CCM-A06",
+        "CCM-B01",
+        "CCM-B02",
+        "CCM-B03",
+        "CCM-B04",
+        "CCM-B05",
+        "CCM-B07",
+        "CCM-B08",
+        "CCM-B09"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-DOU-INTERACTIVE-001_MASTER",
+      "requirement_count": 10,
+      "requirement_ids": [
+        "CCM-A05",
+        "CCM-A06",
+        "CCM-B01",
+        "CCM-B02",
+        "CCM-B03",
+        "CCM-B04",
+        "CCM-B05",
+        "CCM-B07",
+        "CCM-B08",
+        "CCM-B09"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+      "requirement_count": 2,
+      "requirement_ids": [
+        "CCM-C01",
+        "CCM-C03"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+      "requirement_count": 3,
+      "requirement_ids": [
+        "CCM-C02",
+        "CCM-C03",
+        "CCM-C04"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "requirement_count": 3,
+      "requirement_ids": [
+        "CCM-C04",
+        "CCM-C05",
+        "CCM-C10"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "requirement_count": 3,
+      "requirement_ids": [
+        "CCM-C05",
+        "CCM-C06",
+        "CCM-C07"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-DINGFU-001_MASTER",
+      "requirement_count": 2,
+      "requirement_ids": [
+        "CCM-C12",
+        "CCM-C13"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-RUFU-001_MASTER",
+      "requirement_count": 2,
+      "requirement_ids": [
+        "CCM-C14",
+        "CCM-C15"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-ZHAQIAN-001_MASTER",
+      "requirement_count": 2,
+      "requirement_ids": [
+        "CCM-C16",
+        "CCM-C17"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-PURLIN-001_MASTER",
+      "requirement_count": 3,
+      "requirement_ids": [
+        "CCM-C11",
+        "CCM-C18",
+        "CCM-E01"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-TUOJIAO-001_MASTER",
+      "requirement_count": 2,
+      "requirement_ids": [
+        "CCM-C10",
+        "CCM-C11"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+      "requirement_count": 2,
+      "requirement_ids": [
+        "CCM-C07",
+        "CCM-C09"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+      "requirement_count": 2,
+      "requirement_ids": [
+        "CCM-C06",
+        "CCM-C08"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+      "requirement_count": 3,
+      "requirement_ids": [
+        "CCM-D01",
+        "CCM-D02",
+        "CCM-D04"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
+      "requirement_count": 3,
+      "requirement_ids": [
+        "CCM-D02",
+        "CCM-D03",
+        "CCM-D04"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-LANE-001_MASTER",
+      "requirement_count": 2,
+      "requirement_ids": [
+        "CCM-A02",
+        "CCM-A04"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-FRAME-YOUE-001_MASTER",
+      "requirement_count": 1,
+      "requirement_ids": [
+        "CCM-A03"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+      "requirement_count": 2,
+      "requirement_ids": [
+        "CCM-A04",
+        "CCM-A06"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-GONG-GUAZI-001_MASTER",
+      "requirement_count": 6,
+      "requirement_ids": [
+        "CCM-A05",
+        "CCM-A06",
+        "CCM-B02",
+        "CCM-B03",
+        "CCM-B04",
+        "CCM-B09"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-GONG-MANGONG-001_MASTER",
+      "requirement_count": 6,
+      "requirement_ids": [
+        "CCM-A05",
+        "CCM-A06",
+        "CCM-B02",
+        "CCM-B03",
+        "CCM-B04",
+        "CCM-B09"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-GONG-LINGGONG-001_MASTER",
+      "requirement_count": 4,
+      "requirement_ids": [
+        "CCM-A05",
+        "CCM-A06",
+        "CCM-B07",
+        "CCM-B09"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-GONG-HUAGONG-001_MASTER",
+      "requirement_count": 6,
+      "requirement_ids": [
+        "CCM-A05",
+        "CCM-A06",
+        "CCM-B01",
+        "CCM-B05",
+        "CCM-B07",
+        "CCM-B09"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    },
+    {
+      "master_id": "CMP-GONG-ANG-001_MASTER",
+      "requirement_count": 5,
+      "requirement_ids": [
+        "CCM-A05",
+        "CCM-B05",
+        "CCM-B06",
+        "CCM-B07",
+        "CCM-B09"
+      ],
+      "coverage_status": "COVERED_IN_MATRIX"
+    }
+  ],
+  "connection_requirements": [
+    {
+      "connection_requirement_id": "CCM-A01",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "row_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-COLUMN-001_MASTER",
+        "b_master": "CMP-LUDOU-COLUMN-001_MASTER"
+      },
+      "connection_semantic": "柱顶承托并定位柱头栌斗",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "CONTACT_INTERFACE",
+      "evidence_basis": [
+        "P3.2 D-043 engineering semantics",
+        "SRC-ZG-WF-001 PDF pp47-57 / column + lintel measurement section"
+      ],
+      "closure_requirement": "Materialize Stage2-C contact + coaxial locator; historical machining remains separately classified.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "NEEDS_STAGE2C_MATERIALIZATION",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-A02",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "row_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-COLUMN-001_MASTER",
+        "b_master": "CMP-FRAME-LANE-001_MASTER"
+      },
+      "connection_semantic": "阑额两端与柱连接",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "JOINERY_FEATURE",
+      "evidence_basis": [
+        "Stage1 Lane connection_layer",
+        "SRC-ZG-WF-001 PDF pp47-57 / column + lintel measurement section"
+      ],
+      "closure_requirement": "Create left/right end contract; span derives from column-center relation; hidden tenon only explicit replaceable reconstructed design if needed.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "NEEDS_CONNECTION_CONTRACT",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-A03",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "row_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-COLUMN-001_MASTER",
+        "b_master": "CMP-FRAME-YOUE-001_MASTER"
+      },
+      "connection_semantic": "由额两端与柱连接",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "JOINERY_FEATURE",
+      "evidence_basis": [
+        "Stage1 Youe connection_layer",
+        "SRC-ZG-WF-001 PDF pp47-57 / column + lintel measurement section"
+      ],
+      "closure_requirement": "Create left/right end connection contract and deterministic span/orientation resolver.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "NEEDS_CONNECTION_CONTRACT",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-A04",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-LANE-001_MASTER",
+        "b_master": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER"
+      },
+      "connection_semantic": "补间铺作底斗与柱间承托线的直接承托/定位关系",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Registry: 补间铺作底斗12组",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Verify actual bearer in same-building drawings; if Lane is bearer materialize Lane→Didou, otherwise replace participant before lock.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "SOURCE_TOPOLOGY_VERIFY_THEN_MATERIALIZE",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-A05",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-LUDOU-COLUMN-001_MASTER",
+        "b_role": "COLUMN_HEAD_PUZUO_ROOT_COMPONENT_SET",
+        "member_set": [
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER",
+          "CMP-GONG-ANG-001_MASTER",
+          "CMP-GONG-LINGGONG-001_MASTER"
+        ]
+      },
+      "connection_semantic": "柱头栌斗向柱头/转角铺作方向单元的根部传力连接",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Registry direction-unit membership",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Resolve exact first-contact component(s) and dou roles; emit concrete Master-to-Master Connection Layer records.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-A06",
+      "domain": "COLUMN_LINTEL_PUZUO_BASE",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-DOU-BOTTOM-LONGKAI-001_MASTER",
+        "b_role": "BUJIAN_PUZUO_ROOT_COMPONENT_SET",
+        "member_set": [
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER",
+          "CMP-GONG-LINGGONG-001_MASTER"
+        ]
+      },
+      "connection_semantic": "补间铺作底斗向补间铺作方向单元的根部传力连接",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Registry direction-unit membership",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Resolve exact first-contact component(s) and dou roles for infill puzuo; emit concrete pairwise records.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-B01",
+      "domain": "PUZUO_INTERNAL",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "JUMP_1_TO_JUMP_2_CHAIN"
+      },
+      "connection_semantic": "华栱一跳—中间斗位—华栱二跳连续传力链",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Registry: 每方向单元一、二跳华栱各1",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Determine dou family at each jump transition and define lower/upper interfaces + projection resolver.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-B02",
+      "domain": "PUZUO_INTERNAL",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "COLUMN_HEAD_MUDAO_GONG_STACK"
+      },
+      "connection_semantic": "柱头/转角铺作泥道位大型瓜子栱、慢栱与斗位承托链",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Registry: 大型瓜子栱/慢栱泥道",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Extract exact layer order and dou type; create concrete pairwise records.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-B03",
+      "domain": "PUZUO_INTERNAL",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "COLUMN_HEAD_JUMP2_GONG_STACK"
+      },
+      "connection_semantic": "柱头/转角铺作二跳位小型瓜子栱、慢栱与斗位承托链",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Registry: 小型瓜子栱/慢栱二跳",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Extract exact second-jump layer order and dou type; materialize pairwise interfaces.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-B04",
+      "domain": "PUZUO_INTERNAL",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "BUJIAN_MUDAO_GONG_STACK"
+      },
+      "connection_semantic": "补间铺作泥道位小型瓜子栱、慢栱与斗位承托链",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Registry: 补间泥道小型瓜子栱/慢栱",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Resolve exact infill small-gong + dou stack; do not copy column-head topology silently.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-B05",
+      "domain": "PUZUO_INTERNAL",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-GONG-ANG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "DOUBLE_MIAO_DOUBLE_XIA_ANG_CHAIN"
+      },
+      "connection_semantic": "双杪双下昂方向链：华栱体系向头昂、二昂及中间斗位连续连接",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Ang Master: 七铺作、双杪双下昂",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Resolve adjacency sequence and dou family at each Ang transition; preserve locked Ang slope/profile controls.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-B06",
+      "domain": "PUZUO_INTERNAL",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-ANG-001_MASTER"
+        ],
+        "assembly_role": "TOU_ANG_ER_ANG_RELATION"
+      },
+      "connection_semantic": "头昂与二昂层级关系",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Ang Master source-supported topology",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Produce deterministic endpoint/support interfaces for both Ang variants and intervening support role(s).",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-B07",
+      "domain": "PUZUO_INTERNAL",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-LINGGONG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER",
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-GONG-ANG-001_MASTER"
+        ],
+        "assembly_role": "OUTERMOST_JUMP_TERMINAL"
+      },
+      "connection_semantic": "最外跳令栱与外跳承托节点连接",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Registry: 令栱=最外跳",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Resolve actual supporting dou/member immediately below Linggong by unit class; materialize pairwise record(s).",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-B08",
+      "domain": "PUZUO_INTERNAL",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "DOU_ROLE_ASSIGNMENT_ALL_PUZUO_NODES"
+      },
+      "connection_semantic": "单向长开斗族/交互斗族在所有铺作节点中的角色分配",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "P3.2 approved dou Masters",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Every bracket node must assign one allowed dou family or explicit non-dou connector; no anonymous dou placeholder at Stage2 exit.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-B09",
+      "domain": "PUZUO_INTERNAL",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "member_set": [
+          "CMP-GONG-HUAGONG-001_MASTER",
+          "CMP-GONG-GUAZI-001_MASTER",
+          "CMP-GONG-MANGONG-001_MASTER",
+          "CMP-GONG-LINGGONG-001_MASTER",
+          "CMP-GONG-ANG-001_MASTER",
+          "CMP-DOU-SINGLE-LONGKAI-001_MASTER",
+          "CMP-DOU-INTERACTIVE-001_MASTER"
+        ],
+        "assembly_role": "PUZUO_UNIT_CLASS_TOPOLOGY"
+      },
+      "connection_semantic": "柱头/转角铺作与补间铺作方向单元拓扑差异",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Registry member-role distribution",
+        "SRC-ZG-WF-001 PDF pp58-80 / exterior puzuo measurement, topology and Fig 2-27—2-38"
+      ],
+      "closure_requirement": "Freeze explicit unit-class subgraphs so large/small gong and Ang presence are not inferred ad hoc per instance.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "ROLE_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C01",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_role": "PUZUO_UPPER_SUPPORT",
+        "b_master": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER"
+      },
+      "connection_semantic": "铺作上部承托下六椽栿",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "P3.2 frame precedent",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Resolve real supporting component/interface replacing legacy generic proxy; bind Lower6 support interfaces.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "REAL_COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C02",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_role": "PUZUO_OR_FRAME_SUPPORT",
+        "b_master": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER"
+      },
+      "connection_semantic": "上六椽栿实际下部承托关系",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "P3.2 frame precedent",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Resolve actual supporter(s) from measured topology; no P3.2 control/proxy as production truth.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "REAL_COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C03",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-LOWER-SIX-CHUANFU-001_MASTER",
+        "b_master": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER"
+      },
+      "connection_semantic": "P3.2 下/上六椽栿 proxy 关系生产处分",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "P3.2 representative graph non-historical proxy",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis"
+      ],
+      "closure_requirement": "Decide direct attachment, indirect through real component(s), or EXPLICIT_NO_DIRECT_ATTACHMENT; remove ambiguity.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "DISPOSITION_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C04",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+        "connector_role": "SAN_DOU_SUPPORT",
+        "b_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER"
+      },
+      "connection_semantic": "上六椽栿→散斗→四椽栿承托链",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "PHYSICAL_CONNECTOR",
+      "evidence_basis": [
+        "D-277 Stage2-C Batch01"
+      ],
+      "closure_requirement": "Retain locked family class; later instance resolver maps real locations without promoting proxy geometry.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "LOCKED_D277",
+      "prior_locked_record": "CONN-S2C-B01-SANDOU-UPPER6-FOUR-FAMILY-001",
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C05",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+        "b_master": "CMP-FRAME-PINGLIANG-001_MASTER"
+      },
+      "connection_semantic": "四椽栿层向平梁层的实际支承/中间构件关系",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Four-Chuanfu + Pingliang Stage1 Masters",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Resolve direct vs explicit intermediate component(s); close vertical frame chain with deterministic interfaces.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "REAL_COUNTERPART_OR_CONNECTOR_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C06",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-PINGLIANG-001_MASTER",
+        "b_master": "CMP-FRAME-SHUZHU-001_MASTER"
+      },
+      "connection_semantic": "平梁→蜀柱下端",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "CONTACT_INTERFACE",
+      "evidence_basis": [
+        "D-279 Stage2-C Batch02"
+      ],
+      "closure_requirement": "Retain locked family attachment; plan anchor handled by deterministic resolver.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "LOCKED_D279",
+      "prior_locked_record": "CONN-S2C-B02-PINGLIANG-SHUZHU-FAMILY-001",
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C07",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-PINGLIANG-001_MASTER",
+        "b_master": "CMP-FRAME-CHASHOU-001_MASTER"
+      },
+      "connection_semantic": "平梁→叉手下端",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "CONTACT_INTERFACE",
+      "evidence_basis": [
+        "D-279 Stage2-C Batch02"
+      ],
+      "closure_requirement": "Retain locked lower-end attachment; upper counterpart closes separately.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "LOCKED_D279",
+      "prior_locked_record": "CONN-S2C-B02-PINGLIANG-CHASHOU-FAMILY-001",
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C08",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-SHUZHU-001_MASTER",
+        "b_role": "RIDGE_SUPPORT_COUNTERPART"
+      },
+      "connection_semantic": "蜀柱上端→脊部真实承托构件",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Shuzhu Stage1 endpoint semantics",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Identify actual counterpart; exact historic joinery may use explicit replaceable reconstructed design, but counterpart/endpoint must be deterministic.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "COUNTERPART_AND_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C09",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-CHASHOU-001_MASTER",
+        "b_role": "RIDGE_SUPPORT_COUNTERPART"
+      },
+      "connection_semantic": "叉手上端→脊部真实承托构件",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Chashou Stage1 endpoint semantics",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Identify counterpart and solve P_upper deterministically; permanent null counterpart is not allowed.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "COUNTERPART_AND_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C10",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-TUOJIAO-001_MASTER",
+        "b_master": "CMP-FRAME-FOUR-CHUANFU-001_MASTER"
+      },
+      "connection_semantic": "托脚→四椽栿端部",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "CONTACT_INTERFACE",
+      "evidence_basis": [
+        "D-279 Stage2-C Batch02"
+      ],
+      "closure_requirement": "Retain locked family support class; per-instance side mapping belongs later instance topology.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "LOCKED_D279",
+      "prior_locked_record": "CONN-S2C-B02-TUOJIAO-FOUR-FAMILY-001",
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C11",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-TUOJIAO-001_MASTER",
+        "b_master": "CMP-FRAME-PURLIN-001_MASTER"
+      },
+      "connection_semantic": "托脚→有证据支持的槫层位",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "CONTACT_INTERFACE",
+      "evidence_basis": [
+        "D-279 Stage2-C Batch02"
+      ],
+      "closure_requirement": "Retain source-bounded purlin-role attachment; never generalize to all purlins.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "LOCKED_D279",
+      "prior_locked_record": "CONN-S2C-B02-TUOJIAO-PURLIN-FAMILY-001",
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C12",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-DINGFU-001_MASTER",
+        "b_role": "GABLE_COLUMN_HEAD_PUZUO"
+      },
+      "connection_semantic": "丁栿外端→山面柱头铺作/槽口交接",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "JOINERY_FEATURE",
+      "evidence_basis": [
+        "Dingfu Stage1 interface semantic",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis"
+      ],
+      "closure_requirement": "Create executable entry-direction, receive-region and parametric groove contract; historical claim limited by evidence.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "NEEDS_DETERMINISTIC_CONNECTION_CONTRACT",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C13",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-DINGFU-001_MASTER",
+        "b_role": "QIFUGONG_PURLIN_INTERSECTION_REGION"
+      },
+      "connection_semantic": "丁栿内端→骑栿栱/与槫交构区域",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Dingfu Stage1 INBOARD_END semantic",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis"
+      ],
+      "closure_requirement": "Resolve exact real counterpart(s), then materialize deterministic endpoint/connection records.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C14",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "ATTACHMENT_CLASS",
+      "participants": {
+        "a_master": "CMP-FRAME-RUFU-001_MASTER",
+        "b_role": "BRACKET_SET_ASSEMBLY"
+      },
+      "connection_semantic": "乳栿斗栱端→斗栱交接/槽口",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "JOINERY_FEATURE",
+      "evidence_basis": [
+        "Rufu Stage1 bracket_end + same-building photo",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis"
+      ],
+      "closure_requirement": "Create endpoint orientation + receive-region + parametric groove contract; no fixed 45° assumption.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "NEEDS_DETERMINISTIC_CONNECTION_CONTRACT",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C15",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-RUFU-001_MASTER",
+        "b_role": "RUFU_OPPOSITE_FRAME_COUNTERPART"
+      },
+      "connection_semantic": "乳栿另一端→实际梁架构件",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Rufu Stage1 opposite_end=assembly endpoint",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis"
+      ],
+      "closure_requirement": "Resolve counterpart from source section and produce endpoint-derived length/orientation contract.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C16",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-ZHAQIAN-001_MASTER",
+        "b_role": "ZHAQIAN_ENDPOINT_A_COUNTERPART"
+      },
+      "connection_semantic": "剳牵端点A→实际支承/交接构件",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Registry: 剳牵具体端点待附图锁定",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Resolve endpoint A counterpart; materialize interface and placement rule.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C17",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-ZHAQIAN-001_MASTER",
+        "b_role": "ZHAQIAN_ENDPOINT_B_COUNTERPART"
+      },
+      "connection_semantic": "剳牵端点B→实际支承/交接构件",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Registry: 剳牵具体端点待附图锁定",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Resolve endpoint B counterpart and close deterministic span/orientation resolver.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "COUNTERPART_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-C18",
+      "domain": "PRIMARY_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-PURLIN-001_MASTER",
+        "b_role": "ALL_PURLIN_SUPPORTER_MAP"
+      },
+      "connection_semantic": "33根槫各层位完整承托者映射",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "T-026: MAIN21/EAST6/WEST6",
+        "SRC-ZG-WF-001 PDF pp81-109 / roof-frame measurement + structural analysis",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Every purlin role/layer must have explicit supporter class; Tuojiao subset is locked but remaining layers must be mapped.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "FULL_SUPPORT_MAP_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-D01",
+      "domain": "CORNER_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_role": "CORNER_PUZUO_SUPPORT",
+        "b_master": "CMP-FRAME-DAJIAOLIANG-001_MASTER"
+      },
+      "connection_semantic": "转角铺作→大角梁内端承托/定位",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Dajiaoliang source binding PDF pp88-89",
+        "SRC-ZG-WF-001 PDF pp88-100 / corner beams and related members"
+      ],
+      "closure_requirement": "Resolve actual corner-puzuo receiving node(s) and deterministic inboard endpoint; do not bake 45°.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "COUNTERPART_AND_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-D02",
+      "domain": "CORNER_FRAME",
+      "row_type": "TOPOLOGY_RESOLUTION",
+      "participants": {
+        "a_master": "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+        "b_master": "CMP-FRAME-ZIJIAOLIANG-001_MASTER"
+      },
+      "connection_semantic": "大角梁↔子角梁叠合/连接关系",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Stage1 Zijiaoliang partial connection intent",
+        "SRC-ZG-WF-001 PDF pp88-100 / corner beams and related members"
+      ],
+      "closure_requirement": "Determine JOINERY_FEATURE vs CONTACT_INTERFACE and define endpoint relation + replaceable geometry.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "CONNECTION_KIND_AND_RESOLVER_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-D03",
+      "domain": "CORNER_FRAME",
+      "row_type": "SYSTEM_HANDOFF",
+      "participants": {
+        "a_master": "CMP-FRAME-ZIJIAOLIANG-001_MASTER",
+        "b_role": "OUTBOARD_TERMINAL_ORNAMENT_ROLE"
+      },
+      "connection_semantic": "子角梁外端→套兽/外端终止构件",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Stage1 Zijiaoliang outboard attachment intent",
+        "SRC-ZG-WF-001 PDF pp88-100 / corner beams and related members"
+      ],
+      "closure_requirement": "Define explicit terminal interface and handoff; ornament geometry stays separate scope.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "HANDOFF_CONTRACT_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-D04",
+      "domain": "CORNER_FRAME",
+      "row_type": "SYSTEM_HANDOFF",
+      "participants": {
+        "member_set": [
+          "CMP-FRAME-DAJIAOLIANG-001_MASTER",
+          "CMP-FRAME-ZIJIAOLIANG-001_MASTER"
+        ],
+        "b_role": "CORNER_RAFTER_SYSTEM"
+      },
+      "connection_semantic": "大/子角梁→翼角椽/角部椽系",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "Corner-beam same-building visual evidence",
+        "SRC-ZG-WF-001 PDF pp88-100 / corner beams and related members",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Define corner-rafter datum/orientation resolver without absorbing rafters into corner-beam geometry.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "SYSTEM_HANDOFF_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-E01",
+      "domain": "ROOF_HANDOFF",
+      "row_type": "SYSTEM_HANDOFF",
+      "participants": {
+        "a_master": "CMP-FRAME-PURLIN-001_MASTER",
+        "b_role": "RAFTER_SYSTEM"
+      },
+      "connection_semantic": "槫→椽系承托与定位",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "P3.3 DoD representative assembly #6: 槫—椽—屋面基层",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Define purlin-top support interface, rafter axis/spacing/orientation handoff and deterministic resolver.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "SYSTEM_HANDOFF_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    },
+    {
+      "connection_requirement_id": "CCM-E02",
+      "domain": "ROOF_HANDOFF",
+      "row_type": "SYSTEM_HANDOFF",
+      "participants": {
+        "a_role": "RAFTER_SYSTEM",
+        "b_role": "ROOF_SHEATHING_WANGBAN_SYSTEM"
+      },
+      "connection_semantic": "椽系→望板/屋面基层",
+      "relationship_vocabulary": [
+        "SUPPORT",
+        "CONNECT",
+        "LOCATE",
+        "BELONG"
+      ],
+      "connection_layer_kind_target": "RESOLVE_BEFORE_MATERIALIZATION",
+      "evidence_basis": [
+        "P3.3 DoD representative assembly #6",
+        "SRC-ZG-WF-001 PDF pp121-129 / ideal model + layered structural reading"
+      ],
+      "closure_requirement": "Define roof-substrate support/contact handoff; tile pending-source items stay outside current Master denominator.",
+      "executable_exit_condition": "Deterministic machine-readable resolver required; manual drag/placement cannot be canonical.",
+      "materialization_status": "SYSTEM_HANDOFF_REQUIRED",
+      "prior_locked_record": null,
+      "proposed_batch": "UNASSIGNED_UNTIL_MATRIX_REVIEW_AND_LOCK"
+    }
+  ],
+  "matrix_exit_criteria": [
+    "25/25 Master families covered.",
+    "Every row final disposition = MATERIALIZED_LOCKED, EXPLICIT_NO_DIRECT_ATTACHMENT, or SYSTEM_HANDOFF_LOCKED.",
+    "Every materialized row has explicit participants, interfaces, connection kind, evidence classification, placement/orientation resolver, parametric completion boundary, validation tolerance.",
+    "No topology obligation retains anonymous production counterpart.",
+    "No structural chain from column/eaves base through puzuo/frame/purlin/roof substrate ends at unexplained open node.",
+    "No historical detail silently invented to satisfy execution."
+  ],
+  "review": {
+    "decision_id": "D-282",
+    "result": "PATCH_REQUIRED",
+    "findings": [
+      {
+        "id": "F-01",
+        "severity": "STRUCTURAL",
+        "title": "25/25 Master coverage is not whole-building connection coverage",
+        "detail": "Stage2-A contains 66 V008 object types. Beyond 28 MASTER_BOUND_PRODUCTION object types, 23 PARAMETRIC_SYSTEM_OR_COMPLETION and 7 SIMPLIFIED_PROXY object types require explicit attachment disposition when attached. Candidate V0.1 does not yet disposition these systematically.",
+        "required_fix": "Add V008-wide attachment-disposition coverage. Every non-Master production object must be classified ATTACHED_WITH_EXPLICIT_EDGE / NOT_ATTACHED / ORGANIZATIONAL_ONLY / REFERENCE_ONLY, with physical attachments materialized or queued."
+      },
+      {
+        "id": "F-02",
+        "severity": "STRUCTURAL",
+        "title": "Many rows are aggregate topology tasks, not atomic connection edges",
+        "detail": "27/39 rows use assembly roles, member sets or anonymous counterpart roles. These are valid investigation obligations but cannot themselves prove a complete component-to-component connection list.",
+        "required_fix": "Expand aggregate rows into atomic edge obligations after source extraction. Parent topology rows may remain as coverage groups, but lock criterion must be based on their complete child-edge inventory."
+      },
+      {
+        "id": "F-03",
+        "severity": "SCOPE",
+        "title": "Whole-building lower/upper/system handoffs are underrepresented",
+        "detail": "The matrix includes roof handoffs but does not yet systematically cover all Stage2-A objects requiring explicit attachment disposition, including base/foundation, wall/opening, roof-covering/ridge/ornament and other production systems where physically attached.",
+        "required_fix": "Create a V008 non-Master attachment-disposition table and add only evidence-supported physical handoffs as connection obligations."
+      }
+    ],
+    "numeric_audit": {
+      "candidate_connection_obligations": 39,
+      "atomic_master_to_master_or_connector_rows": 12,
+      "aggregate_or_role_based_rows": 27,
+      "stage2_a_v008_object_types": 66,
+      "stage2_a_class_counts": {
+        "PARAMETRIC_SYSTEM_OR_COMPLETION": 23,
+        "TOPOLOGY_OR_ASSEMBLY_CONTAINER": 5,
+        "MASTER_BOUND_PRODUCTION": 28,
+        "SIMPLIFIED_PROXY": 7,
+        "REFERENCE_ONLY_UNKNOWN": 3
+      },
+      "non_master_objects_with_required_if_attached_policy": 30,
+      "approved_master_coverage": "25/25",
+      "duplicate_requirement_ids": 0,
+      "inherited_locked_records_verified": "5/5"
+    },
+    "lock_allowed": false,
+    "review_patch_01_requirements": [
+      "Add explicit V008-wide attachment disposition for all 66 object types.",
+      "Keep the 5 topology/assembly containers non-physical unless source proves otherwise.",
+      "Keep the 3 REFERENCE_ONLY_UNKNOWN rows non-production unless separately promoted.",
+      "For the 30 non-Master PARAMETRIC/SIMPLIFIED objects with REQUIRED_IF_ATTACHED policy, explicitly decide attached/not-attached and add connection obligations where attached.",
+      "Expand aggregate connection groups into atomic child edges before matrix lock.",
+      "Re-run graph closure: no unexplained open node from foundation/base through column-puzuo-frame-purlin-roof and attached envelope systems.",
+      "PR #49 remains HOLD; PR #50 remains Draft."
+    ]
+  },
+  "supersession": {
+    "decision_id": "D-285",
+    "active_candidate": "production/zhenguo_wanfo/assembly/P3_3_STAGE2_C_STRUCTURAL_TIMBER_CONNECTION_COVERAGE_MATRIX_V001.json",
+    "reason": "D-284 locked a 33-object Structural Timber Scope; original Whole-Building candidate used the wrong denominator."
+  }
+}

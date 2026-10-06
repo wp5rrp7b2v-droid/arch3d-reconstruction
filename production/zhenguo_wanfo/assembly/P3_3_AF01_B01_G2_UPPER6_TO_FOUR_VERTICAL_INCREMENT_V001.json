@@ -1,0 +1,76 @@
+{
+  "schema_version": "P3_3_AF01_B01_G2_UPPER6_TO_FOUR_VERTICAL_INCREMENT_V001",
+  "date": "2026-09-30",
+  "task_id": "AF01-B01-G2",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / D-293",
+  "inherited_g1": {
+    "decision_id": "D-292",
+    "upper_six_support_plane_z_mm": 5003.1
+  },
+  "source_semantic": {
+    "locked_connection": "CONN-S2C-B01-SANDOU-UPPER6-FOUR-FAMILY-001",
+    "vertical_order": "UPPER6_TOP → SAN_DOU_ROLE / SINGLE_GONG_INTERMEDIATE_LAYER → FOUR_BOTTOM",
+    "direct_source_statements": [
+      "四椽栿位于上六椽栿之上",
+      "四椽栿与其下的上六椽栿之间设置隔架单栱一组",
+      "四椽栿下不用栌斗",
+      "四椽栿由散斗承托"
+    ]
+  },
+  "assembly_orientation_clarification": {
+    "master_mutation": false,
+    "upper_six_longitudinal_axis": "WORLD_NORTH_SOUTH",
+    "upper_six_local_section_width_guang_to": "WORLD_Z",
+    "upper_six_local_max_thickness_to": "WORLD_TRANSVERSE_HORIZONTAL",
+    "basis": "REPORT STATES SIX-CHUANFU GUANG DIRECTLY RELATES TO PUZUO CAI VERTICAL MODULE"
+  },
+  "inputs": {
+    "upper_six_observed_mean_guang_mm": 334,
+    "fen_mm": 15.3,
+    "intermediate_support_layer_fen": 21,
+    "intermediate_support_layer_rise_mm": 321.3
+  },
+  "outputs": {
+    "upper_six_top_z_mm": 5337.1,
+    "g2_delta_z_mm": 655.3,
+    "four_chuanfu_support_plane_z_mm": 5658.4
+  },
+  "classification": "REPORT_INFERRED / SAME_BUILDING_MODULAR_LOGIC / RECONSTRUCTED_DESIGN / AF01_LOCAL / REPLACEABLE",
+  "crosscheck": {
+    "upper_six_report_design_guang_fen": 22,
+    "support_layer_fen": 21,
+    "ideal_total_fen": 43,
+    "ideal_total_mm": 657.9,
+    "af01_actual_master_total_mm": 655.3,
+    "delta_mm": 2.6,
+    "relative_delta_percent": 0.3952,
+    "result": "PASS / CONSISTENT / CROSSCHECK_ONLY"
+  },
+  "retained_unknowns": [
+    "SAN_DOU_EXACT_GEOMETRY",
+    "SAN_DOU_EXACT_DIMENSIONS",
+    "SPACER_SINGLE_GONG_EXACT_BODY",
+    "HIDDEN_OVERLAP_AND_NOTCH",
+    "HISTORICAL_CONTACT_FACE",
+    "WHOLE_PUZUO_TOPOLOGY"
+  ],
+  "gate": {
+    "g2_candidate_complete": true,
+    "product_owner_review_required": false,
+    "g2_closed": true,
+    "engineering_generation_authorized": false,
+    "next_if_separately_authorized": "AF01-B01-G3"
+  },
+  "review_patch_01": {
+    "date": "2026-09-30",
+    "review_result": "PASS",
+    "numeric_result_changed": false,
+    "implementation_guard": "AFTER INSTANCE ROLL, TRANSFORMED BODY BOTTOM FACE MUST ALIGN TO SUPPORT_PLANE_Z; DO NOT MAP CANONICAL OBJECT ORIGIN DIRECTLY TO SUPPORT Z"
+  },
+  "approval": {
+    "decision_id": "D-293",
+    "date": "2026-09-30",
+    "product_owner_approved": true,
+    "scope": "AF01_B01_G2_LOCAL_VERTICAL_RESOLVER_ONLY"
+  }
+}

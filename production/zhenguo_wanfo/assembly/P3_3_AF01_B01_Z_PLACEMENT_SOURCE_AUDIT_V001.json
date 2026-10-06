@@ -1,0 +1,39 @@
+{
+  "schema_version": "P3_3_AF01_B01_Z_PLACEMENT_SOURCE_AUDIT_V001",
+  "date": "2026-09-30",
+  "task_id": "AF-01-B01",
+  "status": "SOURCE_AUDIT_COMPLETE / NUMERIC_Z_CLOSURE_NOT_YET_LOCKED",
+  "scope": [
+    "下六椽栿-东缝",
+    "上六椽栿-东缝",
+    "四椽栿-东缝",
+    "平梁-东缝"
+  ],
+  "direct_source_findings": {
+    "lower_six": "ENTERS_COLUMN_HEAD_BRACKET / ABOVE_SECOND_JUMP_HUAGONG",
+    "upper_six": "SUPPORTED_AT_COLUMN_CENTER / ASSOCIATED_WITH_SECOND_LOWER_ANG",
+    "four_chuanfu": "ABOVE_UPPER_SIX / INTERMEDIATE_GONG_SET / NO_LUDOU / SAN_DOU_SUPPORT",
+    "pingliang": "ABOVE_FOUR_CHUANFU / RIDGE_SUPPORT_SYSTEM",
+    "common_absolute_z_table_in_report": false
+  },
+  "prohibited_substitutions": [
+    "PURLIN_CONTROL_Z_AS_BEAM_BODY_Z",
+    "FIGURE_2_99_PLUS_DEFORMATION_VALUES_AS_ABSOLUTE_Z",
+    "T018_FV_B_NUMERIC_TIERS",
+    "LEGACY_P2_FRAME_Z",
+    "MASTER_REFERENCE_GEOMETRY_AS_WORLD_PLACEMENT"
+  ],
+  "required_resolver_type": "SUPPORT_CONTACT_DRIVEN_Z",
+  "unresolved": [
+    "LOWER_SIX_COLUMN_HEAD_SUPPORT_PLANE_Z",
+    "UPPER_SIX_COLUMN_HEAD_SUPPORT_PLANE_Z",
+    "UPPER_SIX_TO_FOUR_CHUANFU_INTERMEDIATE_SUPPORT_HEIGHT",
+    "FOUR_CHUANFU_TO_PINGLIANG_SUPPORT_STACK_HEIGHT"
+  ],
+  "next_step": {
+    "id": "AF01-B01-1",
+    "name": "Lower + Upper Six-Chuanfu Support-Plane Closure",
+    "scope": "TWO COLUMN-HEAD SUPPORT PLANES ONLY",
+    "blender_authorized": false
+  }
+}

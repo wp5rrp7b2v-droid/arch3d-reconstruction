@@ -1,0 +1,79 @@
+{
+  "schema_version": "P3_3_AF01_B02_VISIBLE_BODY_EXTENT_V001",
+  "date": "2026-09-30",
+  "task_id": "AF01-B02",
+  "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "scope": [
+    "下六椽栿-东缝",
+    "上六椽栿-东缝",
+    "四椽栿-东缝",
+    "平梁-东缝"
+  ],
+  "rule": {
+    "id": "AF01_B02_MINIMUM_VISIBLE_BODY_EXTENT",
+    "classification": "RECONSTRUCTED_DESIGN / AF01_LOCAL / MINIMUM_VISIBLE_BODY_EXTENT / REPLACEABLE",
+    "statement": "VISIBLE MAIN-BODY END PLANES EQUAL LOCKED FUNCTIONAL SUPPORT AXES",
+    "historical_full_length_claim": false,
+    "historical_full_length_remains_null": true,
+    "omitted_end_projection_semantics": "UNKNOWN / NOT_MATERIALIZED / NOT_HISTORICALLY_ABSENT"
+  },
+  "controls": {
+    "slice_x_mm": 2218.5,
+    "fen_mm": 15.3,
+    "instances": [
+      {
+        "registry_id": "下六椽栿-东缝",
+        "north_end_y_mm": -5355,
+        "south_end_y_mm": 5355,
+        "support_plane_z_mm": 4360.5,
+        "realization_length_mm": 10710,
+        "span_fen": 700
+      },
+      {
+        "registry_id": "上六椽栿-东缝",
+        "north_end_y_mm": -5355,
+        "south_end_y_mm": 5355,
+        "support_plane_z_mm": 5003.1,
+        "realization_length_mm": 10710,
+        "span_fen": 700
+      },
+      {
+        "registry_id": "四椽栿-东缝",
+        "north_end_y_mm": -3595.5,
+        "south_end_y_mm": 3595.5,
+        "support_plane_z_mm": 5658.4,
+        "realization_length_mm": 7191,
+        "span_fen": 470
+      },
+      {
+        "registry_id": "平梁-东缝",
+        "north_end_y_mm": -1836,
+        "south_end_y_mm": 1836,
+        "support_plane_z_mm": 6406.2,
+        "realization_length_mm": 3672,
+        "span_fen": 240
+      }
+    ]
+  },
+  "prohibited": [
+    "MASTER_1000MM_REFERENCE_LENGTH_AS_INSTANCE_LENGTH",
+    "HISTORICAL_FULL_LENGTH_CLAIM",
+    "RASTER_MEASURED_UNDIMENSIONED_END_PROJECTION",
+    "INVENTED_TENON_OR_INSERTION_DEPTH",
+    "INVENTED_END_PROFILE"
+  ],
+  "implementation_guard": [
+    "APPLY_AF01_INSTANCE_ORIENTATION",
+    "SET_LONGITUDINAL_REALIZATION_LENGTH_FROM_B02",
+    "CENTER_BODY_BETWEEN_EXPLICIT_Y_END_PLANES",
+    "ALIGN_TRANSFORMED_BODY_BOTTOM_FACE_TO_B01_SUPPORT_PLANE_Z",
+    "KEEP_REFERENCE_LENGTH_LEAK_HARD_FAIL_ACTIVE"
+  ],
+  "gate": {
+    "b02_candidate_complete": true,
+    "product_owner_review_required": true,
+    "engineering_generation_authorized": false,
+    "remaining_blocker_after_approval": "AF01-B03",
+    "t018_status": "HOLD"
+  }
+}

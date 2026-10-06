@@ -1,3 +1,18 @@
+# P3.3 Stage2 Entry History｜2026-09-29
+
+- Project: ARCH3D-001｜中国古建筑3D复原
+- Historical record type: SUPERSEDED CANDIDATE / ARCHIVED
+- Candidate source reviewed main: `8789f7b0aa796e76ed0a75be8703245e82193e1b`
+- Superseding authority: D-272 / Stage2 design-only entry authorized
+- Current authority: use `project_state.json`, `decision_log.md`, and current Stage2 records.
+- Consolidation method: original candidate text preserved verbatim below; no semantic rewrite.
+- Retired source file:
+  - `docs/project_control/P3_3_STAGE2_ENTRY_DECISION_CANDIDATE_V001.md`
+
+---
+
+# SOURCE SNAPSHOT｜P3_3_STAGE2_ENTRY_DECISION_CANDIDATE_V001.md
+
 # P3.3 Stage2 Entry Decision｜Candidate V0.1
 
 - Project: ARCH3D-001｜中国古建筑3D复原
