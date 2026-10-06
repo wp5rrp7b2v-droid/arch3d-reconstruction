@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01B_GATE_G_LOWER_ASSEMBLY_FIRST_BUILD_PREPARATION_1.0",
-  "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / BLENDER_EXECUTION_NOT_AUTHORIZED",
+  "status": "PRODUCT_OWNER_APPROVED / GATE_H_ENGINEERING_EXECUTION_AUTHORIZED",
   "date": "2026-10-06",
   "authority_input": "production/zhenguo_wanfo/assembly/MP01B_GATE_F_LOWER_ASSEMBLY_LOCAL_METRIC_ENVELOPE_V001.json",
   "coordinate_system": {
@@ -440,8 +440,8 @@
     "REVIEW_BOARD_MISSING_OR_EMPTY"
   ],
   "boundaries": {
-    "blender_execution_authorized": false,
-    "gate_h_engineering_build_authorized": false,
+    "blender_execution_authorized": true,
+    "gate_h_engineering_build_authorized": true,
     "mp01b_product_owner_acceptance_authorized": false,
     "combine_with_mp01a_authorized": false,
     "merge_authorized": false
@@ -450,5 +450,10 @@
     "id": "MP01B_GATE_H",
     "name": "LOWER_ASSEMBLY_FIRST_ENGINEERING_BUILD",
     "requires_product_owner_authorization": true
+  },
+  "product_owner_authorization": {
+    "approved": true,
+    "date": "2026-10-06",
+    "instruction": "下一步：MP-01B Gate H"
   }
 }
