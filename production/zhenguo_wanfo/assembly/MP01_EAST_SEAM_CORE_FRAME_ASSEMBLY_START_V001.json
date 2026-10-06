@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_A_B_COMPLETE / MASTER_SPEC_APPROVED / GATE_C_CANDIDATE_REVIEW / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_A_B_C_APPROVED / GATE_D_BUILD_PREP_COMPLETE / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "MASTER_SPEC_APPROVED / GATE_C_CANDIDATE_GEOMETRY_REVIEW",
+      "status": "GATE_A_B_C_APPROVED / GATE_D_BUILD_PREP_COMPLETE / ENGINEERING_EXECUTION_NOT_AUTHORIZED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,9 +72,9 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_GATE_C_PO_REVIEW",
-    "name": "INTERIOR_LINGGONG_CANDIDATE_GEOMETRY_REVIEW",
-    "question": "Approve/reject the neutral two-zone Candidate Geometry before First Article Build Preparation.",
+    "id": "MP01B_GATE_E",
+    "name": "INTERIOR_LINGGONG_FIRST_ARTICLE_ENGINEERING_EXECUTION",
+    "question": "Execute and machine-validate the Interior Linggong first article.",
     "blender_authorized": false
   },
   "gate_b": {
@@ -136,11 +136,17 @@
     "blender_authorized": false
   },
   "mp01b_gate_c": {
-    "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "status": "APPROVED / PRODUCT_OWNER",
     "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
     "role_variant": "LOWER_PINGLIANG_SUPPORT",
     "geometry": "NORMALIZED_NEUTRAL_TWO_ZONE_SUPPORT_ENVELOPE",
     "outer_eaves_geometry_inherited": false,
-    "blender_assembly_authorized": false
+    "blender_assembly_authorized": false,
+    "product_owner_approved": true
+  },
+  "mp01b_gate_d": {
+    "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_D_INTERIOR_LINGGONG_FIRST_ARTICLE_BUILD_PREPARATION_V001.json",
+    "engineering_execution_authorized": false
   }
 }
