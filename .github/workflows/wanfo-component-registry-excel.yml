@@ -94,11 +94,11 @@ jobs:
           progress = registry["stage1_master_progress_summary"]
           assert wb["进度总览"]["B7"].value == progress["covered_master_scope_object_type_count"]
           assert progress["covered_master_scope_object_type_count"] == 29
-          assert progress["master_scope_object_type_count"] == 29
-          assert progress["pending_master_object_type_count"] == 0
-          assert float(progress["master_completion_percent"]) == 100.0
-          assert progress["approved_master_family_count"] == 25
-          assert progress["approved_master_count"] == 25
+          assert progress["master_scope_object_type_count"] == 30
+          assert progress["pending_master_object_type_count"] == 1
+          assert float(progress["master_completion_percent"]) == 96.7
+          assert progress["approved_master_family_count"] == 26
+          assert progress["approved_master_count"] == 26
           assert progress["pending_source_binding_count"] == 7
           wb.close()
           print("VALIDATION_PASS", manifest["registry_version"], manifest["record_count"])
