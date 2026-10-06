@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE H-R2 DESIGN COMPLETE / PO REVIEW REQUIRED / CORRECTED BUILD NOT AUTHORIZED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE H-R2 APPROVED / GATE H-R3 DESIGN AUTHORIZED / CORRECTED BUILD NOT AUTHORIZED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -403,3 +403,16 @@ Still unresolved before deterministic rebuild:
 - interior Huagong numeric full length / endpoint coordinates.
 
 No Blender authorization.
+
+
+## 23. MP-01B Gate H-R2 Product Owner approval
+
+**APPROVED**
+
+- interior Huagong family boundary approved;
+- Panjian/Spacer Ludou family boundary approved;
+- FRONT missing-height completion approved at 225.1 / 45.0 / 88.1 mm;
+- FRONT Tuofeng vertical candidate 172.9 mm approved as replaceable;
+- REAR Tuofeng vertical candidate 196 mm retained;
+- Gate H-R3 design authorized;
+- Blender corrected build remains NOT AUTHORIZED.
