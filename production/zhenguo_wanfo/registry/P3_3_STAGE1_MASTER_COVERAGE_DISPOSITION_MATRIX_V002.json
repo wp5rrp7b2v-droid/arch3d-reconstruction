@@ -421,9 +421,11 @@
       ],
       "disposition": "需新建Master",
       "family": "梁架承托/脊部支撑构件",
-      "action": "构件身份与结构角色已确认；全殿总数、逐件位置、精确尺寸/轮廓及隐藏榫卯 UNKNOWN。纳入 Master scope；明间东缝 Minimum Proof 前完成证据绑定与最小可用 Master。",
+      "action": "Source Binding V001 completed for identity + assembly role. A2 official same-building statement directly confirms two roles: 四椽栿上用驼峰、令栱承平梁；平梁之上设驼峰、蜀柱、叉手。A1 PDF provides same-building visual cross-check, but exact dimensions/profile/count/joinery remain UNKNOWN. Next: Master Spec must decide whether two assembly roles share one geometry or require role variants.",
       "planned_master": "CMP-FRAME-TUOFENG-001_MASTER",
-      "current_priority": "MINIMUM_PROOF_PREREQUISITE"
+      "current_priority": "MINIMUM_PROOF_PREREQUISITE",
+      "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_TUOFENG_SOURCE_BINDING_V001.md",
+      "readiness": "IDENTITY_READY / ASSEMBLY_ROLE_READY / GEOMETRY_SPEC NOT YET READY"
     },
     {
       "component": "铺作方向单元",
