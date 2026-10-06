@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01B_CIRCLE1_INTERIOR_HUAGONG_VISIBLE_PROFILE_1.0",
-  "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / NO_BLENDER",
+  "status": "PRODUCT_OWNER_APPROVED / CIRCLE_1_PROFILE_CONTROL_LOCKED / NO_BLENDER",
   "date": "2026-10-06",
   "scope": "CIRCLE_1_ONLY",
   "component_id": "CMP-FRAME-HUAGONG-INTERIOR-001",
@@ -84,5 +84,14 @@
   "joinery_cut_count": 0,
   "circle_2_resolved": false,
   "circle_3_resolved": false,
-  "blender_authorized": false
+  "blender_authorized": false,
+  "product_owner_approved": true,
+  "product_owner_decision": "APPROVED",
+  "approved_scope": "CIRCLE_1_INTERIOR_HUAGONG_VISIBLE_GONGHEAD_PROFILE_ONLY",
+  "next_gate": {
+    "id": "MP01B_CIRCLE1_TARGETED_BUILD_AUTHORIZATION",
+    "name": "CIRCLE_1_TARGETED_BUILD",
+    "execution_authorized": false,
+    "requires_product_owner_authorization": true
+  }
 }
