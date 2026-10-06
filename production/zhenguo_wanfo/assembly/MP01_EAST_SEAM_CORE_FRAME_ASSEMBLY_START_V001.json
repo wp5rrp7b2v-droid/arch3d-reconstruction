@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MINIMUM_PROOF_PASS / MP01B_NOT_STARTED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_A_PASS / INTERIOR_LINGGONG_MASTER_REQUIRED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "LOCAL_BLOCKER / DOES_NOT_BLOCK_MP01A",
+      "status": "GATE_A_PASS / MASTER_SCOPE_REGISTRATION_REQUIRED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -58,12 +58,10 @@
         "平梁-东缝"
       ],
       "blocker": {
-        "id": "LINGGONG_SCOPE_MISMATCH",
-        "current_master": "CMP-GONG-LINGGONG-001_MASTER",
-        "current_master_scope": "28 OUTER-EAVES DOUGONG INSTANCES",
-        "required_role": "INTERIOR CORE-FRAME FOUR_CHUANFU_TO_PINGLIANG SUPPORT",
-        "equivalence_status": "NOT_ESTABLISHED",
-        "silent_reuse_prohibited": true
+        "id": "INTERIOR_LINGGONG_MASTER_MISSING",
+        "resolved_identity": true,
+        "existing_outer_eaves_master_reuse": false,
+        "proposed_master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER"
       }
     }
   },
@@ -74,10 +72,9 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_START",
-    "name": "LOWER_PINGLIANG_SUPPORT",
-    "question": "Resolve the interior-frame Linggong family/scope issue, then build 四椽栿 -> 驼峰/令栱 -> 平梁.",
-    "merge_authorized": false
+    "id": "MP01B_GATE_B",
+    "name": "REGISTER_INTERIOR_LINGGONG_AND_MASTER_SPEC_V0_1",
+    "blender_authorized": false
   },
   "gate_b": {
     "status": "PASS",
@@ -119,5 +116,12 @@
     "historical_exactness_claim": false,
     "whole_frame_claim": false,
     "whole_hall_claim": false
+  },
+  "mp01b_gate_a": {
+    "status": "PASS",
+    "existing_master_reuse": "REJECTED",
+    "new_master_required": true,
+    "proposed_component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
+    "proposed_master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER"
   }
 }
