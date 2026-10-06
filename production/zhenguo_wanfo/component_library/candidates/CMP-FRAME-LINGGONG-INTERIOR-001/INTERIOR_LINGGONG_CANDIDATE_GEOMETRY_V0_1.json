@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01B_INTERIOR_LINGGONG_CANDIDATE_GEOMETRY_0.1",
-  "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED / NOT_CANONICAL",
+  "status": "APPROVED_GEOMETRY_STRATEGY / PRODUCT_OWNER_APPROVED / NOT_YET_CANONICAL_MASTER",
   "date": "2026-10-06",
   "component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
   "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
@@ -63,5 +63,13 @@
     "Does it preserve a distinct upper bearing zone needed by the Pingliang support role?",
     "Can final metric dimensions remain assembly-owned and replaceable?"
   ],
-  "blender_assembly_authorized": false
+  "blender_assembly_authorized": false,
+  "approval": {
+    "approved": true,
+    "date": "2026-10-06",
+    "authority": "PRODUCT_OWNER",
+    "scope": "GEOMETRY_STRATEGY_ONLY",
+    "engineering_execution_authorized": false,
+    "historical_metric_claim": false
+  }
 }
