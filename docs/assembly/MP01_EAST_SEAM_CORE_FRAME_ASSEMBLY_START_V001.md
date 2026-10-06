@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE H MACHINE PASS BUT EVIDENCE FAIL / REVISION REQUIRED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE H-R1 PARTIAL PASS / TARGET DIRECTION RESOLVED / CORRECTED BUILD NOT AUTHORIZED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -356,3 +356,26 @@ Key correction:
 - Report p99/printed p84 directly measures an interior `襻间/隔架用柱斗` family.
 - Gate H machine proof is archived; MP-01B is **NOT APPROVED**.
 - No support-center shift or Linggong rotation is authorized merely from visual appearance.
+
+
+## 21. MP-01B Gate H-R1
+
+**PARTIAL PASS**
+
+Direct Appendix 1-9 / 1-10 review resolved:
+- target nodes = East-Seam front/rear 上平槫下襻间;
+- target Linggong = 顺身令栱, so long axis is out-of-section / assembly X;
+- target Huagong = 进深华栱;
+- target Linggong direct dimensions:
+  - front 1016 × 213 × 149 mm;
+  - rear 995 × 217 × 150 mm;
+- target support includes 襻间栌斗 and 襻间枋;
+- 306 mm residual is not Linggong full height;
+- rear upper-purlin Ludou flat+sloped = 45+65=110 mm, giving a replaceable rear Tuofeng vertical contribution candidate of 196 mm under the report modular decomposition.
+
+Still unresolved:
+- front Ludou heights;
+- front Tuofeng vertical contribution;
+- exact hidden joinery/contact geometry.
+
+Next: Gate H-R2. No Blender rebuild yet.
