@@ -1,6 +1,6 @@
 # T-047｜MP-01B Circle 1 Targeted Build V001
 
-Status: **ENGINEERING EXECUTION AUTHORIZED / BUILD PENDING**
+Status: **ENGINEERING EXECUTION COMPLETE / MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
 Date: 2026-10-06
 
 ## Goal
@@ -43,3 +43,27 @@ Approved T-046:
 
 ## Product Owner authorization
 Instruction: **开始 Circle 1 Targeted Build**
+
+## Engineering result
+
+- GitHub Actions Run: `37476995027`
+- Artifact: `MP01B_T047_CIRCLE1_TARGETED_BUILD_V001`
+- Artifact ID: `11418594641`
+- Artifact digest: `sha256:5843070ebcafadc9c60cfa92d040f87a4d07fb52bf9141ad6bd251853a4d7567`
+- Validation: **51 / 51 PASS**
+- Independent reopen: PASS
+- Deterministic rebuild: PASS
+- Profile-tip mutation 0.15 → 0.25: PASS
+- All non-Huagong T-046 geometry signatures frozen: PASS
+- T-046 Tuojiao FRONT/REAR geometry frozen: PASS
+- Canonical assembly signature: `6ce17c0a7af5b4ae7e5ae7b0ea33bee0656046383e060c48644bc1f5ed767786`
+- Mutation assembly signature: `a1c333943d4e47b21914e12a649d7bc38a10d0fff99505c7224e1903cc94d303`
+- Canonical .blend SHA-256: `f3138fd874ab316da1114fe4ad18de115be212fff362209d31b68ede277dfa0e`
+- Review Board SHA-256: `03d50888181b48560df72ff0596bc8e180c8c87018e953a97e1fc4753f0d8889`
+- Product Owner acceptance: REQUIRED
+- Circle 2: OPEN
+- Circle 3: OPEN
+- MP-01B overall: NOT APPROVED
+- PR #56 merge: NOT AUTHORIZED
+
+Machine PASS proves only that the approved Circle 1 profile control was implemented deterministically and that the frozen T-046 geometry did not change.
