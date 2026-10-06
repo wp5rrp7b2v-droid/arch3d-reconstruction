@@ -392,7 +392,7 @@
       "id": "驼峰族-UNKNOWN",
       "location": "四椽栿—平梁承托体系 / 平梁以上脊部支撑体系；逐件位置待明间东缝证据对应",
       "count_status": "FAMILY_UNKNOWN_COUNT",
-      "evidence": "同建筑结构说明明确：四椽栿上用驼峰、令栱承平梁；平梁之上设驼峰、蜀柱、叉手。当前仅锁定构件身份与结构角色；精确原页 source-binding、全殿数量、逐件位置、尺寸与轮廓待补。",
+      "evidence": "A2同建筑官方数字专题直接说明：四椽栿上用驼峰、令栱承平梁；平梁之上设驼峰、蜀柱、叉手。A1 SRC-ZG-WF-001 PDF p83/印刷p68/图2-41、PDF p106/印刷p91/图2-71、PDF p109/印刷p94/图2-73提供同建筑梁架视觉与相对位置交叉核对；本轮未在A1相关实测表/附件中发现可独立锁定驼峰精确尺寸的条目。",
       "record_role": "FAMILY_UNKNOWN_COUNT",
       "total_count": "UNKNOWN",
       "stage1_disposition": "需新建Master",
@@ -406,7 +406,33 @@
         "exact_profile",
         "hidden_joinery"
       ],
-      "note": "2026-10-06 Product Owner scope correction: 驼峰作为独立实体木构件纳入 Master scope。不得因 Master 尚未建立而降格为永久 Proxy；首轮明间东缝 Minimum Proof 前先完成证据绑定与最小可用 Master。"
+      "note": "2026-10-06 Product Owner scope correction: 驼峰作为独立实体木构件纳入 Master scope。不得因 Master 尚未建立而降格为永久 Proxy；首轮明间东缝 Minimum Proof 前先完成证据绑定与最小可用 Master。",
+      "source_binding": {
+        "status": "BOUND_FOR_IDENTITY_AND_ASSEMBLY_ROLE / GEOMETRY_UNRESOLVED",
+        "document": "docs/evidence/zhenguo_wanfo/P3_3_TUOFENG_SOURCE_BINDING_V001.md",
+        "a1_primary_source": "SRC-ZG-WF-001",
+        "a1_locations": [
+          "PDF p83 / printed p68 / Fig. 2-41",
+          "PDF p106 / printed p91 / Fig. 2-71",
+          "PDF p109 / printed p94 / Fig. 2-73",
+          "PDF p344-345 / printed p329-330 / Appendix 1-7 to 1-9 targeted check"
+        ],
+        "a2_official_same_building": "https://szbwgvue.chwhyun.cn/wanfodian/",
+        "a2_direct_statement": "四椽栿上用驼峰、令栱承平梁；平梁之上设驼峰、蜀柱、叉手。",
+        "evidence_classification": {
+          "component_identity": "FACT / A2 DIRECT",
+          "assembly_roles": "FACT / A2 DIRECT",
+          "same_building_visual_correspondence": "FACT / A1 FIGURES",
+          "mapping_visible_hump_blocks_to_named_tuofeng": "INFERENCE / A1+A2 CROSS-CHECK",
+          "exact_dimensions": "UNKNOWN",
+          "exact_profile": "UNKNOWN",
+          "whole_hall_count": "UNKNOWN",
+          "per_instance_mapping": "UNKNOWN",
+          "hidden_joinery": "UNKNOWN"
+        }
+      },
+      "variant_boundary": "AT_LEAST_TWO_ASSEMBLY_ROLES OBSERVED IN A2 STATEMENT: FOUR_CHUANFU_TO_PINGLIANG_SUPPORT and PINGLIANG_TO_RIDGE_SUPPORT. WHETHER ONE GEOMETRY FAMILY OR ROLE VARIANTS IS UNRESOLVED.",
+      "master_readiness": "IDENTITY_READY / ASSEMBLY_ROLE_READY / GEOMETRY_SPEC NOT YET READY"
     },
     {
       "system": "主体木构",
