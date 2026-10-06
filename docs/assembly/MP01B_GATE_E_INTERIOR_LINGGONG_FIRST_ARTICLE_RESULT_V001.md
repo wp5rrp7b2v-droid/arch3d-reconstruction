@@ -1,6 +1,6 @@
 # MP-01B Gate E｜Interior Linggong First Article Engineering Result V001
 
-Status: **MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED / NOT FORMALIZED**
+Status: **PRODUCT OWNER APPROVED / FORMALIZED / CATALOG+V008 BOUND**
 Date: 2026-10-06
 
 ## 1. Accepted engineering run
@@ -91,3 +91,15 @@ If approved:
 - after formalization, MP-01B may proceed to resolve the actual assembly envelope for `四椽栿 → 驼峰 / 令栱 → 平梁`.
 
 PR #56 merge remains not authorized.
+
+
+## 7. Product Owner approval / formalization
+
+- First Article: **APPROVED**
+- Formalization: **COMPLETE**
+- Catalog binding: **COMPLETE**
+- V008/CURRENT binding: **COMPLETE**
+- Master-scope: **30/30 = 100%**
+- Approved Master families: **27**
+
+Next: resolve the actual MP-01B assembly-owned metric envelope and placement for `四椽栿 → 驼峰 / 令栱 → 平梁`.
