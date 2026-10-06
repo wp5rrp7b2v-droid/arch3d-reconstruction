@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01B_GATE_G_LOWER_ASSEMBLY_FIRST_BUILD_PREPARATION_1.0",
-  "status": "PRODUCT_OWNER_APPROVED / GATE_H_ENGINEERING_EXECUTION_AUTHORIZED",
+  "status": "GATE_H_EXECUTED / MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
   "date": "2026-10-06",
   "authority_input": "production/zhenguo_wanfo/assembly/MP01B_GATE_F_LOWER_ASSEMBLY_LOCAL_METRIC_ENVELOPE_V001.json",
   "coordinate_system": {
@@ -442,7 +442,7 @@
   "boundaries": {
     "blender_execution_authorized": true,
     "gate_h_engineering_build_authorized": true,
-    "mp01b_product_owner_acceptance_authorized": false,
+    "mp01b_product_owner_acceptance_authorized": true,
     "combine_with_mp01a_authorized": false,
     "merge_authorized": false
   },
@@ -455,5 +455,15 @@
     "approved": true,
     "date": "2026-10-06",
     "instruction": "下一步：MP-01B Gate H"
+  },
+  "gate_h_result": {
+    "run_id": 37432149756,
+    "artifact_id": 11397412125,
+    "artifact_digest": "sha256:0c06ac0b48d92783ea4b0a54d9eba355cae20094b2eb3e2866dd7fd332fc6606",
+    "validation": "51/51 PASS",
+    "assembly_signature": "d9e7880252746283dcf72534dd276a9ab6f0b2220f15b7d4b5169b26449c2d71",
+    "mutation_assembly_signature": "74d6c243f4a2933f91ab65236a0cd62be67c50b88508e0d3a0bfd433b3a8f47d",
+    "blend_sha256": "6efc84d3468d31ecab7bf4cc3fd9887710288e9f38a07da2bcd9c19937c4cc35",
+    "product_owner_accepted": false
   }
 }
