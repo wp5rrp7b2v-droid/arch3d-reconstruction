@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE A+B+C APPROVED / GATE D BUILD PREP COMPLETE / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE E MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -261,3 +261,16 @@ Next:
 - Outer-eaves dimensions/profile leakage: machine-fail condition
 - Engineering / Blender execution: **NOT AUTHORIZED**
 - Next: MP-01B Gate E｜Interior Linggong First Article Engineering Execution
+
+
+## 15. MP-01B Gate E
+
+**MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
+
+- T-043 Run: `37424767731` — SUCCESS
+- Artifact: `11394896083`
+- Validation: **28/28 PASS**
+- Independent reopen / mutation / deterministic restore: PASS
+- Outer-eaves geometry inheritance: NONE
+- Historical dimensions/profile/joinery: remain UNKNOWN
+- Next: Product Owner First Article review
