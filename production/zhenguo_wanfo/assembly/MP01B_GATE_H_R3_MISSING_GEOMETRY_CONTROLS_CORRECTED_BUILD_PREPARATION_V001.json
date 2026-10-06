@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01B_GATE_H_R3_1.0",
-  "status": "PRODUCT_OWNER_APPROVED / GATE_H_R4_READY / CORRECTED_BLENDER_BUILD_NOT_YET_STARTED",
+  "status": "PRODUCT_OWNER_APPROVED / GATE_H_R4_ENGINEERING_EXECUTION_AUTHORIZED",
   "date": "2026-10-06",
   "coordinate_system": {
     "x": "顺身 / East-Seam line / out-of-section",
@@ -316,12 +316,13 @@
       "evidence classifications"
     ]
   },
-  "blender_authorized": false,
+  "blender_authorized": true,
   "next_gate": {
     "id": "MP01B_GATE_H_R4",
     "name": "CORRECTED_LOWER_ASSEMBLY_ENGINEERING_BUILD",
     "requires_product_owner_approval": false,
-    "ready_for_execution": true
+    "ready_for_execution": true,
+    "execution_authorized": true
   },
   "product_owner_decision": {
     "approved": true,
@@ -335,5 +336,10 @@
       "Pingliang underside Z=521 mm with ±2 mm reconciliation tolerance",
       "10 rendered + 2 deferred Panjian Fang contract"
     ]
+  },
+  "gate_h_r4_execution_authorization": {
+    "authorized": true,
+    "date": "2026-10-06",
+    "instruction": "开始 R4"
   }
 }
