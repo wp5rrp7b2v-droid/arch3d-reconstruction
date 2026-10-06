@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_H_MACHINE_PASS_BUT_EVIDENCE_FAIL / REVISION_REQUIRED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_H_R1_PARTIAL_PASS / TARGET_DIRECTION_RESOLVED / CORRECTED_BUILD_NOT_AUTHORIZED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_H_MACHINE_PASS / EVIDENCE_REVIEW_FAIL / ENGINEERING_REVISION_REQUIRED",
+      "status": "GATE_H_R1_PARTIAL_PASS / TARGET_COMPONENT_SET_AND_DIRECTION_RESOLVED / MISSING_FRONT_HEIGHT_RULE",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,11 +72,10 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_GATE_H_R1_EVIDENCE_RESOLUTION",
-    "name": "TARGET_NODE_COLUMN_DOU_AND_SUPPORT_STACK_RESOLUTION",
-    "question": "Resolve the target interior column-dou identity and the non-additive Tuofeng/Dou/Linggong vertical relationship before any rebuild.",
+    "id": "MP01B_GATE_H_R2",
+    "name": "INTERIOR_HUAGONG_AND_PANJIAN_LUDOU_SCOPE_AND_MISSING_HEIGHT_COMPLETION_RULE",
+    "question": "Define interior Huagong/Ludou family boundaries and an explicit front missing-height completion rule before corrected build preparation.",
     "blender_authorized": false,
-    "combine_with_mp01a_authorized": false,
     "merge_authorized": false
   },
   "gate_b": {
@@ -218,5 +217,23 @@
       "South/North symmetry",
       "Linggong axis not changed merely for visual appearance"
     ]
+  },
+  "mp01b_gate_h_r1": {
+    "status": "PARTIAL_PASS / TARGET_COMPONENT_SET_AND_LINGGONG_DIRECTION_RESOLVED / CORRECTED_BUILD_NOT_YET_AUTHORIZED",
+    "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_H_R1_TARGET_NODE_EVIDENCE_RESOLUTION_V001.json",
+    "target_linggong_axis": "assembly_x / 顺身",
+    "front_linggong_mm": [
+      1016,
+      213,
+      149
+    ],
+    "rear_linggong_mm": [
+      995,
+      217,
+      150
+    ],
+    "target_dou_term": "襻间栌斗",
+    "rear_tuofeng_vertical_candidate_mm": 196,
+    "blender_authorized": false
   }
 }
