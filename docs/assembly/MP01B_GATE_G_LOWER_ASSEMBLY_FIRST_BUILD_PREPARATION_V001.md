@@ -1,6 +1,6 @@
 # MP-01B Gate G｜Lower Assembly First Build Preparation V001
 
-Status: **DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED / BLENDER EXECUTION NOT AUTHORIZED**
+Status: **PRODUCT OWNER APPROVED / GATE H ENGINEERING EXECUTION AUTHORIZED**
 Date: 2026-10-06
 
 ## 1. Objective
@@ -393,3 +393,25 @@ Next decision:
 After approval:
 
 > **MP-01B Gate H｜Lower Assembly First Engineering Build**
+
+
+## 16. Product Owner authorization
+
+Instruction: **下一步：MP-01B Gate H**
+
+Date: 2026-10-06
+
+Authorized:
+- Gate H Blender first build;
+- canonical build;
+- 306 → 310 mm dependency mutation;
+- independent reopen;
+- deterministic rebuild;
+- Review Board;
+- machine validation;
+- Actions Artifact publication.
+
+Not authorized:
+- MP-01B Product Owner acceptance before review;
+- combining MP-01A + MP-01B;
+- PR #56 merge.
