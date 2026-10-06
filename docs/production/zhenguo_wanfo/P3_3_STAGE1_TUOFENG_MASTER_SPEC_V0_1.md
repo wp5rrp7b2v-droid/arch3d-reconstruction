@@ -1,6 +1,6 @@
 # P3.3 Stage1 驼峰 Master Spec V0.1
 
-Status: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED**
+Status: **LOCKED / PRODUCT OWNER APPROVED 2026-10-06**
 
 ## 1. Master identity
 
@@ -204,9 +204,9 @@ V0.1 may be approved if Product Owner accepts all of the following:
 7. hidden joinery stays UNKNOWN;
 8. whole-hall count and per-instance mapping stay UNKNOWN.
 
-## 10. Next step after approval
+## 10. Approved next step
 
-Only after Product Owner approval:
+Product Owner approved proceeding on 2026-10-06 by instruction to start the next step.
 
 > **驼峰 Candidate Geometry V0.1｜two role variants / source-guided simplified**
 
