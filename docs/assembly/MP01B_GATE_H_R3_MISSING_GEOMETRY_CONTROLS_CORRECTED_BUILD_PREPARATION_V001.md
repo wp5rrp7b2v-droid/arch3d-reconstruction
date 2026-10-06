@@ -1,6 +1,6 @@
 # MP-01B Gate H-R3｜Missing Geometry Controls + Corrected Build Preparation V001
 
-Status: **PRODUCT OWNER APPROVED / GATE H-R4 READY / CORRECTED BLENDER BUILD NOT YET STARTED**  
+Status: **PRODUCT OWNER APPROVED / GATE H-R4 ENGINEERING EXECUTION AUTHORIZED**  
 Date: 2026-10-06
 
 ## 1. Objective
@@ -520,3 +520,25 @@ Not approved:
 
 Current execution state:
 **R4 ready; Blender corrected build not yet started in this approval turn.**
+
+
+## 19. Gate H-R4 execution authorization
+
+Product Owner instruction: **开始 R4**
+
+Date: 2026-10-06
+
+Authorized:
+- corrected deterministic Blender build;
+- corrected semantic relation package;
+- 900→950 mm Huagong dependency mutation;
+- independent reopen;
+- deterministic rebuild;
+- Review Board generation;
+- machine validation;
+- Actions Artifact publication.
+
+Not authorized:
+- MP-01B Product Owner acceptance before review;
+- MP-01A + MP-01B combination;
+- PR #56 merge.
