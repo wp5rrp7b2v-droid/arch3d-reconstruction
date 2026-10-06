@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01B_GATE_H_R2_1.0",
-  "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / NO_BLENDER",
+  "status": "PRODUCT_OWNER_APPROVED / GATE_H_R3_DESIGN_AUTHORIZED / NO_BLENDER",
   "date": "2026-10-06",
   "families": {
     "interior_huagong": {
@@ -86,6 +86,18 @@
   "next_gate": {
     "id": "MP01B_GATE_H_R3",
     "name": "MISSING_GEOMETRY_CONTROLS_AND_CORRECTED_BUILD_PREPARATION",
-    "requires_product_owner_approval": true
+    "requires_product_owner_approval": false,
+    "design_authorized": true
+  },
+  "product_owner_decision": {
+    "approved": true,
+    "date": "2026-10-06",
+    "approved_front_completion_mm": {
+      "total_height_mm": 225.1,
+      "flat_height_mm": 45,
+      "sloped_height_mm": 88.1
+    },
+    "approved_front_tuofeng_vertical_candidate_mm": 172.9,
+    "approved_rear_tuofeng_vertical_candidate_mm": 196
   }
 }
