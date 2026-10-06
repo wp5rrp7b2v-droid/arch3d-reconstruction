@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_H_R4_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_TARGETED_REWORK_IN_PROGRESS / T046_TUOJIAO_APPROVED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_H_R4_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+      "status": "R4_MACHINE_PASS / VISUAL_EVIDENCE_AUDIT_FAIL / T046_TUOJIAO_FIRST_ARTICLE_APPROVED / MP01B_NOT_APPROVED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,9 +72,10 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_GATE_H_R4_PO_REVIEW",
-    "name": "CORRECTED_LOWER_ASSEMBLY_PRODUCT_OWNER_REVIEW",
-    "question": "Approve the corrected MP-01B Minimum Proof or request targeted rework.",
+    "id": "MP01B_VISUAL_EVIDENCE_REWORK_CONTINUE",
+    "name": "RETURN_TO_ORIGINAL_THREE_CIRCLED_VISUAL_ISSUES",
+    "execution_authorized": false,
+    "note": "Tuojiao is approved. Circle 1 Huagong visible profile, Circle 2 remaining node incompleteness including Panjian Fang / bracket-form expression, and Circle 3 Tuofeng-Ludou visible-form gap remain open.",
     "combine_with_mp01a_authorized": false,
     "merge_authorized": false
   },
@@ -292,5 +293,26 @@
     "assembly_signature": "a3dfdf40d98fb376df05d84f75f79bfdd675e2eb96c57ef994a07865e194c9b9",
     "blend_sha256": "49095581eccbbe5020cf79945812511485535373d2b053b2e02c5ffe17391fb4",
     "product_owner_accepted": false
+  },
+  "mp01b_t046_tuojiao_first_geometry": {
+    "status": "MACHINE_PASS / PRODUCT_OWNER_APPROVED / FIRST_ARTICLE_ACCEPTED",
+    "task_id": "T-046",
+    "run_id": 37472462998,
+    "artifact_id": 11416983796,
+    "artifact_digest": "sha256:d7a9065d07c5109bc18d6d28c92b8142a52edbfc9cb3478caa49ba0371d80eab",
+    "validation": "41/41 PASS",
+    "canonical_assembly_signature": "8001d642fa6cf67e474ef88534157ef74b46573d52c69363a64103ad9df18814",
+    "mutation_assembly_signature": "9d6137200e213b43fbfa759f270d48206039ae55f67b25788a9ece6cfc091d57",
+    "blend_sha256": "1a11598ef3af8ff2b0d2c5b2ca4b861ecf3af2f02fbafbcb9f210930a9e84a03",
+    "review_board_sha256": "2ee3e441a13d022a81ad20bc94db4f300b7e723327c303694fe8937860c142cf",
+    "product_owner_accepted": true,
+    "product_owner_decision": "APPROVED",
+    "acceptance_scope": "TUOJIAO_FIRST_ARTICLE_FRONT_AND_REAR_ONLY",
+    "exact_historical_endpoints_claim": false,
+    "exact_huagong_tuojiao_contact_claim": false,
+    "hidden_joinery_claim": false,
+    "mp01b_overall_accepted": false,
+    "original_three_circled_visual_issues_resolved": false,
+    "merge_authorized": false
   }
 }
