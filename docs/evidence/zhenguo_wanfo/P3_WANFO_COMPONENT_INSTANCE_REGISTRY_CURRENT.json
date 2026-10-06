@@ -3,8 +3,8 @@
   "date": "2026-10-06",
   "status": "CURRENT_BUILD_BASELINE_INSTANCE_REGISTRY",
   "source": "SRC-ZG-WF-001",
-  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility. D-103 binds the Product Owner-approved Tuojiao V2 Master to all 12 托脚 registry records and updates Stage1 Master progress visibility. D-111 approves the Chashou first article; D-112 formalizes the accepted outputs and binds all 8 叉手 records to CMP-FRAME-CHASHOU-001_MASTER on PR #16 pending merge. D-188 binds the Product Owner-approved T-037 Guazi Gong Master family to all 44 guazi records (16 large + 28 small); exact historical profile and connection-detail boundaries remain explicit. D-193 closes T-037 on main after PR #33 merge; Stage1 progress is 21/28 and 203 Registry records are Master-covered. D-195 starts T-038 slow-gong family Source Readiness only. D-204/D-205 bind the Product Owner-approved T-038 Mangong Master family to all 44 slow-gong records (16 large + 28 small); W/T remain report-inferred replaceable family candidates and exact historical profile/joinery boundaries remain explicit. D-206 synchronizes Stage1 progress summary to the D-205 formalized branch state: 22/28 approved, 247 Master-covered Registry rows, 6 pending. D-219/D-220 bind the Product Owner-approved T-039 Linggong Master to all 28 Linggong records; L/W/T remain family DIRECT_PRIMARY observed means rather than per-instance exact values, sample-to-instance mapping remains UNKNOWN, and exact historical profile/end/joinery boundaries remain explicit. D-237/D-238 bind the Product Owner-approved T-040 Huagong Master to all 56 current LOCKED_SUBSET Huagong records (JUMP_1 28 / JUMP_2 28). Reference-specimen lengths 898.8/1630.0 are not propagated as per-instance historical full lengths; those remain UNRESOLVED. 732.4mm remains assembly-level direct observed mean only. D-243 formally closes T-040 after PR #36 merge/main verification. 华栱 remains a 56-record direction-explicit LOCKED_SUBSET, not whole-hall total; per-instance historical standalone full lengths remain UNRESOLVED. D-256/D-257 bind the Product Owner-approved T-041 Ang Master to all 32 current LOCKED_DERIVED Ang records (头昂16→TOU_ANG / 二昂16→ER_ANG). The 32-record scope remains derived, not a direct historical whole-hall count. Historical standalone full lengths remain UNRESOLVED and the 787.6157057855mm synthetic reference control span is not propagated as a per-instance historical length. 2026-10-06 targeted scope patch adds 驼峰 as a family-level Master-required record; no whole-hall count, exact geometry, or joinery claim is introduced. T-042 formalization binds the approved Tuofeng Master to the family-level V008 record without claiming a whole-hall physical count, per-instance mapping, exact historical dimensions, exact historical profile, or hidden joinery.",
-  "item_count": 506,
+  "generation_note": "V008 preserves all V007 records and adds 33 targeted system/family/entity records approved by Product Owner on 2026-09-19. Different record roles must not be summed as physical component totals. Pending-source-binding items remain excluded. D-091 binds the approved Zhaqian V2 Master to all 14 Zhaqian registry records and updates Stage1 Master progress visibility. D-095 binds the approved Purlin V2 Master to all 33 槫 registry records and updates Stage1 Master progress visibility. D-103 binds the Product Owner-approved Tuojiao V2 Master to all 12 托脚 registry records and updates Stage1 Master progress visibility. D-111 approves the Chashou first article; D-112 formalizes the accepted outputs and binds all 8 叉手 records to CMP-FRAME-CHASHOU-001_MASTER on PR #16 pending merge. D-188 binds the Product Owner-approved T-037 Guazi Gong Master family to all 44 guazi records (16 large + 28 small); exact historical profile and connection-detail boundaries remain explicit. D-193 closes T-037 on main after PR #33 merge; Stage1 progress is 21/28 and 203 Registry records are Master-covered. D-195 starts T-038 slow-gong family Source Readiness only. D-204/D-205 bind the Product Owner-approved T-038 Mangong Master family to all 44 slow-gong records (16 large + 28 small); W/T remain report-inferred replaceable family candidates and exact historical profile/joinery boundaries remain explicit. D-206 synchronizes Stage1 progress summary to the D-205 formalized branch state: 22/28 approved, 247 Master-covered Registry rows, 6 pending. D-219/D-220 bind the Product Owner-approved T-039 Linggong Master to all 28 Linggong records; L/W/T remain family DIRECT_PRIMARY observed means rather than per-instance exact values, sample-to-instance mapping remains UNKNOWN, and exact historical profile/end/joinery boundaries remain explicit. D-237/D-238 bind the Product Owner-approved T-040 Huagong Master to all 56 current LOCKED_SUBSET Huagong records (JUMP_1 28 / JUMP_2 28). Reference-specimen lengths 898.8/1630.0 are not propagated as per-instance historical full lengths; those remain UNRESOLVED. 732.4mm remains assembly-level direct observed mean only. D-243 formally closes T-040 after PR #36 merge/main verification. 华栱 remains a 56-record direction-explicit LOCKED_SUBSET, not whole-hall total; per-instance historical standalone full lengths remain UNRESOLVED. D-256/D-257 bind the Product Owner-approved T-041 Ang Master to all 32 current LOCKED_DERIVED Ang records (头昂16→TOU_ANG / 二昂16→ER_ANG). The 32-record scope remains derived, not a direct historical whole-hall count. Historical standalone full lengths remain UNRESOLVED and the 787.6157057855mm synthetic reference control span is not propagated as a per-instance historical length. 2026-10-06 targeted scope patch adds 驼峰 as a family-level Master-required record; no whole-hall count, exact geometry, or joinery claim is introduced. T-042 formalization binds the approved Tuofeng Master to the family-level V008 record without claiming a whole-hall physical count, per-instance mapping, exact historical dimensions, exact historical profile, or hidden joinery. MP-01B Gate B adds a family-level interior Linggong record without inheriting outer-eaves dimensions/profile or claiming whole-hall count, per-instance mapping, exact geometry, or hidden joinery.",
+  "item_count": 507,
   "items": [
     {
       "system": "主体木构",
@@ -6719,6 +6719,31 @@
       "master_reference": "CMP-GONG-LINGGONG-001_MASTER"
     },
     {
+      "system": "主体梁架",
+      "component": "令栱（梁架承托）",
+      "id": "令栱（梁架承托）-族边界UNKNOWN",
+      "location": "四椽栿—平梁承托体系；东缝 Minimum Proof 先行，whole-hall mapping 未闭合",
+      "count_status": "FAMILY_UNKNOWN_COUNT",
+      "evidence": "A2同建筑官方数字专题直接说明“ 四椽栿上用驼峰、令栱承平梁 ”，足以锁定构件身份与承托角色。现有 CMP-GONG-LINGGONG-001_MASTER 的 897×217.4×155.6 mm 及14点轮廓来自28个外檐斗栱令栱样本，不得静默继承到梁架内部角色。当前 bound evidence 未隔离出梁架承托令栱的独立历史尺寸、精确轮廓或隐藏榫卯。",
+      "record_role": "FAMILY_UNKNOWN_COUNT",
+      "total_count": "UNKNOWN",
+      "stage1_disposition": "需新建Master",
+      "master_coverage_status": "MASTER_REQUIRED_PENDING",
+      "planned_master_reference": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+      "modeling_disposition": "SOURCE_GUIDED_SIMPLIFIED / ASSEMBLY_ENVELOPE_OWNED / REPLACEABLE",
+      "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_INTERIOR_LINGGONG_SOURCE_BINDING_V001.md",
+      "known_unknowns": [
+        "whole_hall_instance_count",
+        "exact_per_instance_mapping",
+        "exact_length",
+        "exact_width_depth",
+        "exact_profile",
+        "hidden_joinery",
+        "equivalence_to_outer_eaves_linggong"
+      ],
+      "note": "MP-01B Gate A/B: 与外檐令栱分开管理是证据/数据模型边界，不主张历史上一定属于不同命名构件类型。若后续直接证据证明同型，可在保留 provenance 的前提下 reconciliation。"
+    },
+    {
       "system": "外檐斗栱",
       "component": "大型瓜子栱",
       "id": "大型瓜子栱-西-07-泥道",
@@ -7815,15 +7840,15 @@
   ],
   "stage1_master_progress_summary": {
     "snapshot_date": "2026-10-06",
-    "status": "STAGE1 MASTER SCOPE RECONCILED AFTER TUOFENG / 29 OF 29 MASTER-SCOPE OBJECT TYPES COVERED / 26 APPROVED MASTER FAMILIES / PR #55 OPEN",
-    "registry_record_count": 506,
-    "registered_object_type_count": 67,
-    "master_scope_object_type_count": 29,
+    "status": "STAGE1 MASTER SCOPE REOPENED FOR INTERIOR LINGGONG / 29 OF 30 MASTER-SCOPE OBJECT TYPES COVERED / 26 APPROVED MASTER FAMILIES / 1 PENDING",
+    "registry_record_count": 507,
+    "registered_object_type_count": 68,
+    "master_scope_object_type_count": 30,
     "covered_master_scope_object_type_count": 29,
     "approved_master_family_count": 26,
     "approved_master_count": 26,
-    "pending_master_object_type_count": 0,
-    "master_completion_percent": 100.0,
+    "pending_master_object_type_count": 1,
+    "master_completion_percent": 96.7,
     "pending_source_binding_count": 7,
     "completed_definition": "Master-scope OBJECT TYPE has APPROVED_MASTER_AVAILABLE binding to a PRODUCT_OWNER_APPROVED Master family/reference",
     "total_definition": "Master-scope denominator is OBJECT TYPES from Coverage Matrix V002. Approved Master families are a separate count because one Master family may cover multiple object types.",
@@ -7831,7 +7856,7 @@
     "disposition_summary": {
       "参数化补全": 23,
       "非实体装配/拓扑": 5,
-      "需新建Master": 22,
+      "需新建Master": 23,
       "简化Proxy": 7,
       "已有Master｜族边界UNKNOWN": 3,
       "UNKNOWN/参考边界": 3,
@@ -7925,7 +7950,7 @@
       }
     ],
     "master_covered_registry_record_count": 364,
-    "progress_display_note": "506 Registry records; Stage1 Master-scope coverage is 29/29 object types = 100.0%, implemented by 26 approved Master families. 驼峰 is bound to CMP-FRAME-TUOFENG-001_MASTER with two role variants while whole-hall count, exact historical dimensions and hidden joinery remain UNKNOWN. Seven predecessor-audit PENDING_SOURCE_BINDING items remain outside this Master-scope completion metric. PR #55 remains open; merge not authorized.",
+    "progress_display_note": "507 Registry records; Stage1 Master-scope coverage is 29/30 object types = 96.7%, implemented by 26 approved Master families. 梁架承托令栱 is newly admitted to Master scope as MASTER_REQUIRED_PENDING; its whole-hall count, per-instance mapping, dimensions, profile and hidden joinery remain UNKNOWN. Seven predecessor-audit PENDING_SOURCE_BINDING items remain outside this Master-scope completion metric.",
     "reconciliation": {
       "decision_id": "D-263",
       "supersedes_display_metric": "25 approved Master families / 28 Master-scope object types = 89.3%",
@@ -7954,6 +7979,17 @@
         "historical_dimensions": "UNKNOWN",
         "hidden_joinery": "UNKNOWN / DEFERRED",
         "merge_authorized": false
+      },
+      "interior_linggong_scope_patch": {
+        "date": "2026-10-06",
+        "authority": "MP-01B GATE A+B / PRODUCT_OWNER PROCEED",
+        "change": "Add 梁架承托令栱 as a separate family-level Master-scope object with MASTER_REQUIRED_PENDING.",
+        "reason": "Existing approved Linggong Master is evidence-bounded to 28 outer-eaves dougong instances; equivalence to the interior Four-Chuanfu-to-Pingliang support role is not established.",
+        "existing_outer_eaves_master_reused": false,
+        "proposed_master_reference": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+        "geometry_created": false,
+        "exact_metric_claimed": false,
+        "exact_joinery_claimed": false
       }
     }
   }
