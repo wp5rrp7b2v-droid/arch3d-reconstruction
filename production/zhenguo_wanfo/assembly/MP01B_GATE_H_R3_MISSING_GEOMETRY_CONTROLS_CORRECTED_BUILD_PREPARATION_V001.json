@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01B_GATE_H_R3_1.0",
-  "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / CORRECTED_BLENDER_BUILD_NOT_AUTHORIZED",
+  "status": "PRODUCT_OWNER_APPROVED / GATE_H_R4_READY / CORRECTED_BLENDER_BUILD_NOT_YET_STARTED",
   "date": "2026-10-06",
   "coordinate_system": {
     "x": "顺身 / East-Seam line / out-of-section",
@@ -320,6 +320,20 @@
   "next_gate": {
     "id": "MP01B_GATE_H_R4",
     "name": "CORRECTED_LOWER_ASSEMBLY_ENGINEERING_BUILD",
-    "requires_product_owner_approval": true
+    "requires_product_owner_approval": false,
+    "ready_for_execution": true
+  },
+  "product_owner_decision": {
+    "approved": true,
+    "date": "2026-10-06",
+    "approved_scope": [
+      "Panjian Ludou bottom-depth completion FRONT 255 / REAR 264",
+      "Huagong 900 mm source-image-calibrated project completion",
+      "Huagong 650/250 endpoint control",
+      "Orthogonal Linggong-X / Huagong-Y node",
+      "Tuofeng 172.9 / 196 mm candidates",
+      "Pingliang underside Z=521 mm with ±2 mm reconciliation tolerance",
+      "10 rendered + 2 deferred Panjian Fang contract"
+    ]
   }
 }
