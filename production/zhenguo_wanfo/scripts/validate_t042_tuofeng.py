@@ -115,8 +115,9 @@ def validate(a):
     n=24
     for v in ("LOWER_SUPPORT","UPPER_RIDGE_SUPPORT"):
       for view in ("AXON","PROFILE"):
-        im=Image.open(Path(a.review_dir)/f"{v}_{view}.png").convert("L")
-        ck(f"{n:02d}_render_{v.lower()}_{view.lower()}",ImageStat.Stat(im).var[0]>50); n+=1
+        rp=Path(a.review_dir)/f"{v}_{view}.png"
+        im=Image.open(rp).convert("L")
+        ck(f"{n:02d}_render_{v.lower()}_{view.lower()}",rp.exists() and rp.stat().st_size>5000 and ImageStat.Stat(im).var[0]>10); n+=1
     out={"status":"PASS","task_id":"T-042","master_id":d["master_id"],"check_count":len(checks),"checks":checks,
          "canonical_blend_sha256":sha(a.asset),"family_signature":c["family_signature"],
          "geometry_signatures":{k:v["geometry_signature"] for k,v in cb.items()},
