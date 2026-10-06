@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "ASSEMBLY_DESIGN_ACTIVE / GATE_A_B_C_COMPLETE / FIRST_BUILD_READY_FOR_AUTHORIZATION",
+  "status": "ASSEMBLY_EXECUTION_ACTIVE / GATE_A_B_C_D_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -10,7 +10,7 @@
   "subassemblies": {
     "MP01A": {
       "name": "UPPER_RIDGE_SUPPORT",
-      "status": "GATE_C_PASS / FIRST_BUILD_READY_FOR_AUTHORIZATION",
+      "status": "GATE_D_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
       "participants": [
         {
           "instance_id": "平梁-东缝",
@@ -74,10 +74,10 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01A_GATE_D",
-    "name": "FIRST_ASSEMBLY_ENGINEERING_BUILD",
-    "question": "Build and validate the first actual MP-01A assembly from the Gate C contract.",
-    "blender_authorized": false
+    "id": "MP01A_GATE_D_PO_REVIEW",
+    "name": "PRODUCT_OWNER_REVIEW",
+    "question": "Accept or reject the first actual MP-01A assembly Review Board.",
+    "merge_authorized": false
   },
   "gate_b": {
     "status": "PASS",
@@ -101,5 +101,18 @@
     "ridge_target_z_mm": 885,
     "ridge_reference_z_mm": 1245,
     "blender_authorized": false
+  },
+  "gate_d": {
+    "status": "MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "run_id": 37420838311,
+    "artifact_id": 11393212103,
+    "artifact_digest": "sha256:906d3efeafb543c94673455fb9ffa5e69d0985fdfb6d5a1fe9dcf729cd081344",
+    "validation": "31/31 PASS",
+    "independent_reopen": "PASS",
+    "deterministic_rebuild": "PASS",
+    "dependency_perturbation": "PASS",
+    "assembly_signature": "127477379d9f62ea81835ce56e75727d055a4e5a5609a7ac11a485cb9be322fb",
+    "blend_sha256": "5a1460b13a0de739ef2ad675921af26a5d5d95ae85b0c3f56f7eb0630cc4b3f9",
+    "product_owner_accepted": false
   }
 }
