@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **ASSEMBLY DESIGN ACTIVE / GATE A+B+C COMPLETE / FIRST BUILD READY FOR AUTHORIZATION**
+Status: **ASSEMBLY EXECUTION ACTIVE / GATE A+B+C+D MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -187,3 +187,21 @@ Candidate owner to test:
 - the relevant 正身脊槫 support region / ridge-support assembly geometry.
 
 Do not start Blender assembly before Gate B is resolved.
+
+
+## 9. Gate D result
+
+**MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
+
+- Run: `37420838311`
+- Artifact: `11393212103`
+- Validation: **31/31 PASS**
+- First actual 3D assembly generated: 平梁 + 上部驼峰 + 蜀柱 + 南/北叉手
+- Independent reopen: PASS
+- Deterministic rebuild: PASS
+- Controlled dependency perturbation: PASS
+- Historical joinery: remains UNKNOWN / NOT MODELED
+- MP-01B: not included; Linggong scope blocker remains
+
+Next decision:
+> Product Owner reviews Gate D Review Board and decides acceptance / rework.
