@@ -1,6 +1,6 @@
 # MP-01B Gate H-R3｜Missing Geometry Controls + Corrected Build Preparation V001
 
-Status: **DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED / CORRECTED BLENDER BUILD NOT AUTHORIZED**  
+Status: **PRODUCT OWNER APPROVED / GATE H-R4 READY / CORRECTED BLENDER BUILD NOT YET STARTED**  
 Date: 2026-10-06
 
 ## 1. Objective
@@ -493,3 +493,30 @@ Not authorized:
 After Product Owner approval:
 
 > **MP-01B Gate H-R4｜Corrected Lower Assembly Engineering Build**
+
+
+## 18. Product Owner decision
+
+Date: 2026-10-06
+
+Decision: **APPROVED**
+
+Approved:
+- Panjian Ludou bottom-depth completion: FRONT 255 mm / REAR 264 mm;
+- Huagong 900 mm source-image-calibrated project realization;
+- 650 mm inward + 250 mm outward endpoint control;
+- corrected orthogonal node: Linggong = assembly X / Huagong = assembly Y;
+- FRONT/REAR Tuofeng candidates 172.9 / 196 mm;
+- Panjian Ludou placement and gong-seat reference;
+- Pingliang underside reconciliation Z=521 mm with ±2 mm tolerance;
+- 10 rendered physical objects + 2 deferred Panjian Fang records;
+- R4 corrected engineering build may be prepared/executed as the next gate.
+
+Not approved:
+- historical exactness upgrade;
+- hidden joinery geometry;
+- whole-frame/whole-hall extrapolation;
+- PR #56 merge.
+
+Current execution state:
+**R4 ready; Blender corrected build not yet started in this approval turn.**
