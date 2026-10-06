@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE G DESIGN COMPLETE / LOWER ASSEMBLY FIRST BUILD READY FOR AUTHORIZATION / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE H MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -332,3 +332,15 @@ Important:
 
 Next:
 > MP-01B Gate H｜Lower Assembly First Engineering Build
+
+
+## 19. MP-01B Gate H
+
+**MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
+
+- T-044 Run: `37432149756` — SUCCESS
+- Artifact: `11397412125`
+- Validation: **51/51 PASS**
+- Reopen / deterministic rebuild / 306→310 mutation: PASS
+- Review note: support groups visibly straddle the ±1836 Pingliang end stations because of the approved replaceable Gate G axis/station rule.
+- Next: Product Owner accepts or requests a local orientation/placement revision.
