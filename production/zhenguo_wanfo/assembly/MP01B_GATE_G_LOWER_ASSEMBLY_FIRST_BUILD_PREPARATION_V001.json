@@ -1,0 +1,454 @@
+{
+  "schema_version": "MP01B_GATE_G_LOWER_ASSEMBLY_FIRST_BUILD_PREPARATION_1.0",
+  "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / BLENDER_EXECUTION_NOT_AUTHORIZED",
+  "date": "2026-10-06",
+  "authority_input": "production/zhenguo_wanfo/assembly/MP01B_GATE_F_LOWER_ASSEMBLY_LOCAL_METRIC_ENVELOPE_V001.json",
+  "coordinate_system": {
+    "name": "MP01B_ASSEMBLY_LOCAL",
+    "origin": "FOUR_CHUANFU_UPPER_FACE_CENTER",
+    "x": "EAST_SEAM_FRAME_LINE_OUT_OF_SECTION",
+    "y": "TRANSVERSE_SECTION / SOUTH_POSITIVE NORTH_NEGATIVE",
+    "z": "VERTICAL_UP",
+    "survey_datum_claim": false
+  },
+  "logical_objects": [
+    {
+      "id": "四椽栿-东缝",
+      "class": "V008_PHYSICAL_INSTANCE",
+      "master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER"
+    },
+    {
+      "id": "平梁-东缝",
+      "class": "V008_PHYSICAL_INSTANCE",
+      "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "variant": "EW_SEAM"
+    },
+    {
+      "id": "ASM-MP01B-TUOFENG-LOWER-SOUTH-01",
+      "class": "RECONSTRUCTED_ASSEMBLY_INSTANCE",
+      "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+      "variant": "LOWER_SUPPORT",
+      "whole_hall_count_claim": false
+    },
+    {
+      "id": "ASM-MP01B-TUOFENG-LOWER-NORTH-01",
+      "class": "RECONSTRUCTED_ASSEMBLY_INSTANCE",
+      "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+      "variant": "LOWER_SUPPORT",
+      "whole_hall_count_claim": false
+    },
+    {
+      "id": "ASM-MP01B-LINGGONG-SOUTH-01",
+      "class": "RECONSTRUCTED_ASSEMBLY_INSTANCE",
+      "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+      "role_variant": "LOWER_PINGLIANG_SUPPORT",
+      "whole_hall_count_claim": false
+    },
+    {
+      "id": "ASM-MP01B-LINGGONG-NORTH-01",
+      "class": "RECONSTRUCTED_ASSEMBLY_INSTANCE",
+      "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+      "role_variant": "LOWER_PINGLIANG_SUPPORT",
+      "whole_hall_count_claim": false
+    }
+  ],
+  "controls": [
+    {
+      "id": "DATUM-MP01B-SUPPORT-SOUTH",
+      "xyz_mm": [
+        0,
+        1836,
+        0
+      ],
+      "physical": false
+    },
+    {
+      "id": "DATUM-MP01B-SUPPORT-NORTH",
+      "xyz_mm": [
+        0,
+        -1836,
+        0
+      ],
+      "physical": false
+    }
+  ],
+  "transform_rule": {
+    "local_length_or_span_axis": "+X",
+    "assembly_target_axis": "+Y",
+    "rotation_euler_deg": [
+      0,
+      0,
+      90
+    ],
+    "classification": "PROJECT_ASSEMBLY_RULE / REPLACEABLE",
+    "historical_orientation_claim": false
+  },
+  "transforms": {
+    "four_chuanfu": {
+      "object_id": "四椽栿-东缝",
+      "translation_mm": [
+        0,
+        0,
+        -302
+      ],
+      "rotation_euler_deg": [
+        0,
+        0,
+        90
+      ],
+      "world_envelope_mm": {
+        "x": [
+          -213.25,
+          213.25
+        ],
+        "y": [
+          -3596,
+          3596
+        ],
+        "z": [
+          -302,
+          0
+        ]
+      }
+    },
+    "pingliang": {
+      "object_id": "平梁-东缝",
+      "translation_mm": [
+        0,
+        0,
+        306
+      ],
+      "rotation_euler_deg": [
+        0,
+        0,
+        90
+      ],
+      "world_envelope_mm": {
+        "x": [
+          -197.75,
+          197.75
+        ],
+        "y": [
+          -1836,
+          1836
+        ],
+        "z": [
+          306,
+          586.5
+        ]
+      }
+    },
+    "tuofeng_south": {
+      "object_id": "ASM-MP01B-TUOFENG-LOWER-SOUTH-01",
+      "translation_mm": [
+        0,
+        1836,
+        0
+      ],
+      "rotation_euler_deg": [
+        0,
+        0,
+        90
+      ],
+      "bottom_z_mm": 0,
+      "top_z_mm": 91
+    },
+    "tuofeng_north": {
+      "object_id": "ASM-MP01B-TUOFENG-LOWER-NORTH-01",
+      "translation_mm": [
+        0,
+        -1836,
+        0
+      ],
+      "rotation_euler_deg": [
+        0,
+        0,
+        90
+      ],
+      "bottom_z_mm": 0,
+      "top_z_mm": 91
+    },
+    "linggong_south": {
+      "object_id": "ASM-MP01B-LINGGONG-SOUTH-01",
+      "translation_mm": [
+        0,
+        1836,
+        91
+      ],
+      "rotation_euler_deg": [
+        0,
+        0,
+        90
+      ],
+      "bottom_z_mm": 91,
+      "top_z_mm": 306
+    },
+    "linggong_north": {
+      "object_id": "ASM-MP01B-LINGGONG-NORTH-01",
+      "translation_mm": [
+        0,
+        -1836,
+        91
+      ],
+      "rotation_euler_deg": [
+        0,
+        0,
+        90
+      ],
+      "bottom_z_mm": 91,
+      "top_z_mm": 306
+    }
+  },
+  "geometry_inputs": {
+    "four_chuanfu": {
+      "length_mm": 7192,
+      "width_mm": 426.5,
+      "height_mm": 302,
+      "historical_full_length_claim": false
+    },
+    "pingliang": {
+      "length_mm": 3672,
+      "width_mm": 395.5,
+      "height_mm": 280.5,
+      "historical_full_length_claim": false
+    },
+    "interior_linggong": {
+      "length_mm": 893.3,
+      "depth_mm": 153.6,
+      "total_height_mm": 215,
+      "body_zone_height_mm": 129,
+      "upper_bearing_zone_height_mm": 86,
+      "upper_bearing_length_mm": 491.315,
+      "classification": "SAME_BUILDING_INTERIOR_ANALOG / RECONSTRUCTED_ASSEMBLY_CANDIDATE / REPLACEABLE",
+      "historical_target_metric_claim": false
+    },
+    "tuofeng_lower": {
+      "total_height_mm": 91,
+      "base_height_mm": 45.5,
+      "upper_seat_height_mm": 45.5,
+      "base_span_mm": 893.3,
+      "base_depth_mm": 426.5,
+      "upper_seat_span_mm": 375.186,
+      "upper_seat_depth_mm": 153.6,
+      "historical_metric_claim": false
+    }
+  },
+  "contact_planes": {
+    "tolerance_mm": 0.1,
+    "south": [
+      {
+        "lower": "四椽栿-东缝",
+        "upper": "ASM-MP01B-TUOFENG-LOWER-SOUTH-01",
+        "z_mm": 0
+      },
+      {
+        "lower": "ASM-MP01B-TUOFENG-LOWER-SOUTH-01",
+        "upper": "ASM-MP01B-LINGGONG-SOUTH-01",
+        "z_mm": 91
+      },
+      {
+        "lower": "ASM-MP01B-LINGGONG-SOUTH-01",
+        "upper": "平梁-东缝",
+        "z_mm": 306
+      }
+    ],
+    "north": [
+      {
+        "lower": "四椽栿-东缝",
+        "upper": "ASM-MP01B-TUOFENG-LOWER-NORTH-01",
+        "z_mm": 0
+      },
+      {
+        "lower": "ASM-MP01B-TUOFENG-LOWER-NORTH-01",
+        "upper": "ASM-MP01B-LINGGONG-NORTH-01",
+        "z_mm": 91
+      },
+      {
+        "lower": "ASM-MP01B-LINGGONG-NORTH-01",
+        "upper": "平梁-东缝",
+        "z_mm": 306
+      }
+    ],
+    "exact_historical_contact_face_claim": false
+  },
+  "relationships": [
+    {
+      "id": "REL-MP01B-S-FC-TF-001",
+      "type": "SUPPORT",
+      "source": "四椽栿-东缝",
+      "target": "ASM-MP01B-TUOFENG-LOWER-SOUTH-01",
+      "evidence": "FACT structural chain + reconstructed metric realization"
+    },
+    {
+      "id": "REL-MP01B-S-TF-LG-001",
+      "type": "SUPPORT",
+      "source": "ASM-MP01B-TUOFENG-LOWER-SOUTH-01",
+      "target": "ASM-MP01B-LINGGONG-SOUTH-01",
+      "evidence": "RECONSTRUCTED production decomposition / historical topology not claimed"
+    },
+    {
+      "id": "REL-MP01B-S-LG-PL-001",
+      "type": "SUPPORT",
+      "source": "ASM-MP01B-LINGGONG-SOUTH-01",
+      "target": "平梁-东缝",
+      "evidence": "FACT target support role + reconstructed contact realization"
+    },
+    {
+      "id": "REL-MP01B-N-FC-TF-001",
+      "type": "SUPPORT",
+      "source": "四椽栿-东缝",
+      "target": "ASM-MP01B-TUOFENG-LOWER-NORTH-01",
+      "evidence": "FACT structural chain + reconstructed metric realization"
+    },
+    {
+      "id": "REL-MP01B-N-TF-LG-001",
+      "type": "SUPPORT",
+      "source": "ASM-MP01B-TUOFENG-LOWER-NORTH-01",
+      "target": "ASM-MP01B-LINGGONG-NORTH-01",
+      "evidence": "RECONSTRUCTED production decomposition / historical topology not claimed"
+    },
+    {
+      "id": "REL-MP01B-N-LG-PL-001",
+      "type": "SUPPORT",
+      "source": "ASM-MP01B-LINGGONG-NORTH-01",
+      "target": "平梁-东缝",
+      "evidence": "FACT target support role + reconstructed contact realization"
+    },
+    {
+      "id": "LOC-MP01B-S-TF-001",
+      "type": "LOCATE",
+      "source": "DATUM-MP01B-SUPPORT-SOUTH",
+      "target": "ASM-MP01B-TUOFENG-LOWER-SOUTH-01"
+    },
+    {
+      "id": "LOC-MP01B-S-LG-001",
+      "type": "LOCATE",
+      "source": "DATUM-MP01B-SUPPORT-SOUTH",
+      "target": "ASM-MP01B-LINGGONG-SOUTH-01"
+    },
+    {
+      "id": "LOC-MP01B-N-TF-001",
+      "type": "LOCATE",
+      "source": "DATUM-MP01B-SUPPORT-NORTH",
+      "target": "ASM-MP01B-TUOFENG-LOWER-NORTH-01"
+    },
+    {
+      "id": "LOC-MP01B-N-LG-001",
+      "type": "LOCATE",
+      "source": "DATUM-MP01B-SUPPORT-NORTH",
+      "target": "ASM-MP01B-LINGGONG-NORTH-01"
+    }
+  ],
+  "mutation_test": {
+    "parameter": "support_clearance_mm",
+    "canonical_mm": 306,
+    "mutation_mm": 310,
+    "purpose": "dependency propagation only / not alternate historical truth",
+    "expected_changes": {
+      "tuofeng_total_height_mm": [
+        91,
+        95
+      ],
+      "linggong_bottom_top_z_mm": [
+        [
+          91,
+          306
+        ],
+        [
+          95,
+          310
+        ]
+      ],
+      "pingliang_bottom_top_z_mm": [
+        [
+          306,
+          586.5
+        ],
+        [
+          310,
+          590.5
+        ]
+      ]
+    },
+    "expected_invariants": [
+      "Four-Chuanfu geometry and placement",
+      "Four-Chuanfu realization length",
+      "Pingliang realization length",
+      "support station Y values",
+      "Linggong envelope",
+      "Tuofeng plan footprint",
+      "Master IDs and instance IDs",
+      "evidence classifications",
+      "historical joinery UNKNOWN state"
+    ]
+  },
+  "review_board_panels": [
+    "LOWER_ASSEMBLY_FRONT_ELEVATION",
+    "LOWER_ASSEMBLY_AXONOMETRIC",
+    "SOUTH_SUPPORT_DETAIL",
+    "MUTATION_306_TO_310",
+    "OBJECT_RELATION_EVIDENCE_TABLE",
+    "UNKNOWN_AND_RECONSTRUCTION_BOUNDARY"
+  ],
+  "machine_checks": [
+    "LOGICAL_OBJECT_COUNT_6",
+    "PRESERVE_V008_BEAM_IDENTITIES",
+    "TWO_TUOFENG_RECONSTRUCTED_INSTANCES",
+    "TWO_INTERIOR_LINGGONG_RECONSTRUCTED_INSTANCES",
+    "NO_WHOLE_HALL_COUNT_CLAIM",
+    "FOUR_CHUANFU_ENVELOPE_MATCH",
+    "PINGLIANG_ENVELOPE_MATCH",
+    "SUPPORT_STATIONS_PM1836",
+    "MIRROR_SYMMETRY",
+    "AXIS_MAPPING_RZ90",
+    "CONTACT_PLANES_SOUTH",
+    "CONTACT_PLANES_NORTH",
+    "NO_UNINTENDED_PENETRATION",
+    "LINGGONG_ANALOG_ENVELOPE_MATCH",
+    "TUOFENG_HEIGHT_91",
+    "NO_OUTER_EAVES_LINGGONG_GEOMETRY_LEAK",
+    "NO_FIRST_ARTICLE_FIXTURE_LEAK",
+    "NO_HISTORICAL_CLAIM_ON_RECONSTRUCTED_METRICS",
+    "NO_HISTORICAL_FULL_LENGTH_CLAIM",
+    "HISTORICAL_JOINERY_UNKNOWN",
+    "JOINERY_CUT_COUNT_0",
+    "SUPPORT_RELATION_COUNT_6",
+    "LOCATE_RELATION_COUNT_4",
+    "RELATION_EVIDENCE_EXPLICIT",
+    "INDEPENDENT_REOPEN_SIGNATURE_MATCH",
+    "DETERMINISTIC_REBUILD_SIGNATURE_MATCH",
+    "REVIEW_BOARD_NONEMPTY"
+  ],
+  "hard_fails": [
+    "WRONG_LOGICAL_OBJECT_COUNT",
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING",
+    "OUTER_EAVES_LINGGONG_GEOMETRY_LEAK",
+    "FIRST_ARTICLE_FIXTURE_LEAKS_INTO_BUILDING",
+    "SUPPORT_STATION_MISMATCH",
+    "MIRROR_SYMMETRY_FAIL",
+    "AXIS_MAPPING_MISMATCH",
+    "CONTACT_PLANE_GAP",
+    "UNINTENDED_PENETRATION",
+    "TARGET_ANALOG_MARKED_DIRECT_MEASUREMENT",
+    "TUOFENG_RECONSTRUCTION_MARKED_HISTORICAL",
+    "HISTORICAL_FULL_LENGTH_FALSE_CLAIM",
+    "UNSUPPORTED_JOINERY_CLAIM",
+    "WHOLE_HALL_COUNT_FALSE_CLAIM",
+    "MUTATION_DEPENDENCY_FAIL",
+    "REOPEN_SIGNATURE_MISMATCH",
+    "REBUILD_NONDETERMINISTIC",
+    "REVIEW_BOARD_MISSING_OR_EMPTY"
+  ],
+  "boundaries": {
+    "blender_execution_authorized": false,
+    "gate_h_engineering_build_authorized": false,
+    "mp01b_product_owner_acceptance_authorized": false,
+    "combine_with_mp01a_authorized": false,
+    "merge_authorized": false
+  },
+  "next_gate": {
+    "id": "MP01B_GATE_H",
+    "name": "LOWER_ASSEMBLY_FIRST_ENGINEERING_BUILD",
+    "requires_product_owner_authorization": true
+  }
+}
