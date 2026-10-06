@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_E_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_INTERIOR_LINGGONG_FORMALIZED / READY_FOR_LOWER_ASSEMBLY_ENVELOPE / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_E_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+      "status": "INTERIOR_LINGGONG_FORMALIZED / READY_FOR_ASSEMBLY_ENVELOPE_RESOLUTION",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -59,9 +59,9 @@
       ],
       "blocker": {
         "id": "INTERIOR_LINGGONG_MASTER_MISSING",
-        "resolved_identity": true,
-        "existing_outer_eaves_master_reuse": false,
-        "proposed_master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER"
+        "resolved": true,
+        "resolved_by": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+        "existing_outer_eaves_master_reuse": false
       }
     }
   },
@@ -72,9 +72,10 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_GATE_E_PO_REVIEW",
-    "name": "INTERIOR_LINGGONG_FIRST_ARTICLE_REVIEW",
-    "question": "Approve/reject the T-043 Interior Linggong First Article before formalization.",
+    "id": "MP01B_GATE_F",
+    "name": "LOWER_ASSEMBLY_LOCAL_METRIC_ENVELOPE_AND_PLACEMENT_RESOLUTION",
+    "question": "Resolve the minimum assembly-owned dimensions and placement for 四椽栿 -> 驼峰 LOWER_SUPPORT / Interior Linggong -> 平梁 without promoting reconstructed values to historical fact.",
+    "blender_authorized": false,
     "merge_authorized": false
   },
   "gate_b": {
@@ -150,14 +151,18 @@
     "engineering_execution_authorized": false
   },
   "mp01b_gate_e": {
-    "status": "MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "status": "PRODUCT_OWNER_APPROVED / FORMALIZED / CATALOG_V008_BOUND",
     "task_id": "T-043",
     "run_id": 37424767731,
     "artifact_id": 11394896083,
     "artifact_digest": "sha256:397adf6552f3f1d9d4791cc8dbaf3ea5197ee556c673aee11ade113c3491610d",
     "validation": "28/28 PASS",
     "geometry_signature": "7ef466c39b08f7485da1c7e91af8882446da7f6d9546668ac28132445d19232f",
-    "product_owner_accepted": false,
-    "formalization_authorized": false
+    "product_owner_accepted": true,
+    "formalization_authorized": true,
+    "formalization_complete": true,
+    "master_reference": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+    "master_scope_coverage": "30/30",
+    "approved_master_families": 27
   }
 }
