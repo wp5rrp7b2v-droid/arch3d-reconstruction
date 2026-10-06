@@ -1,6 +1,6 @@
 {
   "schema_version": "P3_3_INTERIOR_LINGGONG_MASTER_SPEC_0.1",
-  "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / 2026-10-06",
   "date": "2026-10-06",
   "component_name_zh": "令栱（梁架承托）",
   "component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
@@ -49,8 +49,10 @@
   "per_instance_mapping": "UNKNOWN",
   "equality_to_outer_eaves_master": "UNKNOWN / NOT_ESTABLISHED",
   "approval": {
-    "product_owner_approval_required": true,
-    "approved": false
+    "product_owner_approval_required": false,
+    "approved": true,
+    "approval_date": "2026-10-06",
+    "approval_basis": "User response: ok"
   },
   "blender_assembly_authorized": false
 }
