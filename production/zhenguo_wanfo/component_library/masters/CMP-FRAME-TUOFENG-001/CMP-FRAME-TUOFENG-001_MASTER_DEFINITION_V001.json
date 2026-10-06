@@ -6,7 +6,7 @@
   "master_version": "V001",
   "component_name_zh": "驼峰",
   "component_name_en": "Tuofeng / hump-shaped timber support",
-  "status": "FIRST_ARTICLE_APPROVED / ENGINEERING_EXECUTION_COMPLETE / FORMALIZATION_NOT_AUTHORIZED",
+  "status": "FIRST_ARTICLE_APPROVED / FORMALIZATION_AND_CATALOG_V008_BINDING_AUTHORIZED / MERGE_NOT_AUTHORIZED",
   "authority": {
     "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_TUOFENG_SOURCE_BINDING_V001.md",
     "master_spec": "docs/production/zhenguo_wanfo/P3_3_STAGE1_TUOFENG_MASTER_SPEC_V0_1.md",
@@ -201,8 +201,8 @@
     "first_article_generation_authorized": true,
     "first_article_machine_validation_authorized": true,
     "first_article_product_owner_acceptance_authorized": true,
-    "formalization_authorized": false,
-    "catalog_v008_binding_authorized": false,
+    "formalization_authorized": true,
+    "catalog_v008_binding_authorized": true,
     "merge_authorized": false
   },
   "first_article_approval": {
@@ -217,5 +217,18 @@
     "mutation_proof": "PASS",
     "deterministic_restore": "PASS",
     "review_board": "APPROVED"
+  },
+  "formalization_authorization": {
+    "authorized": true,
+    "date": "2026-10-06",
+    "authority": "PRODUCT_OWNER",
+    "instruction": "开始下一步",
+    "scope": [
+      "formalize accepted semantic/validation/review evidence",
+      "bind Master Library",
+      "bind V008/CURRENT Tuofeng family record",
+      "reconcile Stage1 Master-scope coverage"
+    ],
+    "merge_authorized": false
   }
 }
