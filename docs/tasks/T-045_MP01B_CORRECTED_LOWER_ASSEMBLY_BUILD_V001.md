@@ -1,6 +1,6 @@
 # T-045｜MP-01B Corrected Lower Assembly Engineering Build V001
 
-Status: **PRODUCT OWNER AUTHORIZED / ENGINEERING EXECUTION ACTIVE**
+Status: **ENGINEERING EXECUTION COMPLETE / MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
 Date: 2026-10-06
 
 ## Goal
@@ -59,3 +59,16 @@ It does not prove:
 - whole-hall scalability.
 
 PR #56 merge remains NOT AUTHORIZED.
+
+
+## Engineering result
+
+- Final Run: `37453623798` — SUCCESS
+- Artifact: `11407787011`
+- Validation: **56/56 PASS**
+- Independent reopen: PASS
+- Deterministic rebuild: PASS
+- Huagong 900→950 dependency mutation: PASS
+- Product Owner acceptance: REQUIRED
+- MP-01A + MP-01B combination: NOT AUTHORIZED
+- PR #56 merge: NOT AUTHORIZED
