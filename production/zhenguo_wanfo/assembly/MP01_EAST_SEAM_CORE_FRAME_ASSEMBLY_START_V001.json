@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_A_PASS / INTERIOR_LINGGONG_MASTER_REQUIRED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_A_B_COMPLETE / INTERIOR_LINGGONG_MASTER_SPEC_CANDIDATE / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_A_PASS / MASTER_SCOPE_REGISTRATION_REQUIRED",
+      "status": "GATE_A_B_COMPLETE / MASTER_SPEC_CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,8 +72,9 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_GATE_B",
-    "name": "REGISTER_INTERIOR_LINGGONG_AND_MASTER_SPEC_V0_1",
+    "id": "MP01B_MASTER_SPEC_PO_REVIEW",
+    "name": "INTERIOR_LINGGONG_MASTER_SPEC_V0_1_REVIEW",
+    "question": "Approve/amend/reject the separate interior-role Linggong Master Spec before Candidate Geometry.",
     "blender_authorized": false
   },
   "gate_b": {
@@ -123,5 +124,15 @@
     "new_master_required": true,
     "proposed_component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
     "proposed_master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER"
+  },
+  "mp01b_gate_b": {
+    "status": "COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "registry_record": "令栱（梁架承托）-族边界UNKNOWN",
+    "proposed_master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+    "source_binding": "PASS_FOR_IDENTITY_AND_ROLE",
+    "master_spec": "CANDIDATE",
+    "master_scope_coverage": "29/30",
+    "approved_master_families": 26,
+    "blender_authorized": false
   }
 }
