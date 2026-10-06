@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_TARGETED_REWORK_IN_PROGRESS / T046_TUOJIAO_APPROVED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_TARGETED_REWORK_IN_PROGRESS / T046_TUOJIAO_APPROVED / CIRCLE1_PROFILE_APPROVED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "R4_MACHINE_PASS / VISUAL_EVIDENCE_AUDIT_FAIL / T046_TUOJIAO_FIRST_ARTICLE_APPROVED / MP01B_NOT_APPROVED",
+      "status": "R4_MACHINE_PASS / VISUAL_EVIDENCE_AUDIT_FAIL / T046_TUOJIAO_APPROVED / CIRCLE1_PROFILE_APPROVED / MP01B_NOT_APPROVED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,10 +72,10 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_VISUAL_EVIDENCE_REWORK_CONTINUE",
-    "name": "RETURN_TO_ORIGINAL_THREE_CIRCLED_VISUAL_ISSUES",
+    "id": "MP01B_CIRCLE1_TARGETED_BUILD_AUTHORIZATION",
+    "name": "CIRCLE_1_TARGETED_BUILD",
     "execution_authorized": false,
-    "note": "Tuojiao is approved. Circle 1 Huagong visible profile, Circle 2 remaining node incompleteness including Panjian Fang / bracket-form expression, and Circle 3 Tuofeng-Ludou visible-form gap remain open.",
+    "note": "Circle 1 profile control is approved. Blender build is a separate authorization. Circle 2 and Circle 3 remain open.",
     "combine_with_mp01a_authorized": false,
     "merge_authorized": false
   },
@@ -313,6 +313,19 @@
     "hidden_joinery_claim": false,
     "mp01b_overall_accepted": false,
     "original_three_circled_visual_issues_resolved": false,
+    "merge_authorized": false
+  },
+  "mp01b_circle1_huagong_visible_profile": {
+    "status": "PRODUCT_OWNER_APPROVED / PROFILE_CONTROL_LOCKED / TARGETED_BUILD_NOT_YET_AUTHORIZED",
+    "candidate_id": "MP01B_INTERIOR_HUAGONG_VISIBLE_PROFILE_V001_C01",
+    "classification": "TARGET_DRAWING_GUIDED_SIMPLIFIED / SOURCE_IMAGE_CALIBRATED_PROJECT_COMPLETION / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "product_owner_accepted": true,
+    "blender_authorized": false,
+    "circle_1_resolved_at_design_level": true,
+    "circle_1_resolved_in_geometry": false,
+    "circle_2_resolved": false,
+    "circle_3_resolved": false,
+    "mp01b_overall_accepted": false,
     "merge_authorized": false
   }
 }
