@@ -1,6 +1,6 @@
 # MP-01B Gate D｜Interior Linggong First Article Build Preparation V001
 
-Status: **DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING EXECUTION NOT AUTHORIZED**
+Status: **PRODUCT OWNER APPROVED / GATE E ENGINEERING EXECUTION AUTHORIZED**
 Date: 2026-10-06
 
 ## 1. Objective
@@ -223,3 +223,26 @@ Next decision:
 
 After approval:
 > **MP-01B Gate E｜Interior Linggong First Article Engineering Execution**
+
+
+## 13. Gate E authorization
+
+Product Owner instruction: **开始下一步**
+
+Date: 2026-10-06
+
+Authorized:
+- T-043 first-article engineering execution;
+- Blender canonical build;
+- mutation build;
+- independent reopen;
+- deterministic restore;
+- Review Board generation;
+- machine validation;
+- Actions Artifact publication.
+
+Not authorized:
+- Master formalization;
+- V008 approved-master binding;
+- MP-01B assembly build;
+- PR #56 merge.
