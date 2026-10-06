@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE A PASS / INTERIOR LINGGONG MASTER REQUIRED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE A+B COMPLETE / INTERIOR LINGGONG MASTER SPEC CANDIDATE / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -226,3 +226,19 @@ Decision:
 - identity/role: FACT
 - metric geometry/profile/joinery: UNKNOWN
 - next: MP-01B Gate B｜register + Master Spec V0.1
+
+
+## 12. MP-01B Gate B
+
+**COMPLETE / PRODUCT OWNER REVIEW REQUIRED**
+
+- V008/CURRENT：added `令栱（梁架承托）-族边界UNKNOWN`
+- Proposed Master：`CMP-FRAME-LINGGONG-INTERIOR-001_MASTER`
+- Source Binding：PASS for identity + role
+- Master Spec V0.1：CANDIDATE
+- Master-scope coverage：29/30 = 96.7%
+- Approved Master families：26
+- Blender assembly：NOT AUTHORIZED
+
+Next:
+> Product Owner review of Interior Linggong Master Spec V0.1.
