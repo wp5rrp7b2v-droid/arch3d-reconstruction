@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE A+B COMPLETE / MASTER SPEC APPROVED / GATE C CANDIDATE REVIEW / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE A+B+C APPROVED / GATE D BUILD PREP COMPLETE / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -251,3 +251,13 @@ Next:
 - Geometry: neutral normalized two-zone support envelope
 - Outer-eaves dimensions/profile: not inherited
 - MP-01B Blender assembly: NOT AUTHORIZED
+
+
+## 14. MP-01B Gate D
+
+- Candidate Geometry V0.1: **PRODUCT OWNER APPROVED**
+- First Article Build Preparation V001: **DESIGN COMPLETE**
+- Engineering test fixtures: defined, non-historical
+- Outer-eaves dimensions/profile leakage: machine-fail condition
+- Engineering / Blender execution: **NOT AUTHORIZED**
+- Next: MP-01B Gate E｜Interior Linggong First Article Engineering Execution
