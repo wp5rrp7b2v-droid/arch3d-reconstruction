@@ -1,6 +1,6 @@
 # MP-01B Gate C｜Interior Linggong Candidate Geometry V0.1
 
-Status: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED / NOT CANONICAL**
+Status: **APPROVED GEOMETRY STRATEGY / PRODUCT OWNER APPROVED 2026-10-06 / NOT YET CANONICAL MASTER**
 Date: 2026-10-06
 
 ## 1. Purpose
@@ -95,3 +95,13 @@ Approval does not assert historical shape accuracy.
 > **MP-01B Gate D｜Interior Linggong First Article Build Preparation**
 
 No MP-01B Blender assembly is authorized yet.
+
+
+## 8. Product Owner approval
+
+- Date: 2026-10-06
+- Decision: **APPROVED**
+- Approved scope: neutral two-zone geometry strategy only.
+- Historical dimensions/profile/joinery remain UNKNOWN.
+- Outer-eaves Linggong dimensions/profile remain prohibited as evidence for this Master.
+- Approval authorizes Gate D Build Preparation only; engineering/Blender execution is not yet authorized.
