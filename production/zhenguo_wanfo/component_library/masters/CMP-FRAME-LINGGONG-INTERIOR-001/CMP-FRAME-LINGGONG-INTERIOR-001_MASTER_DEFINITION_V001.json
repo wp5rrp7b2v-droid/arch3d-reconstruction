@@ -1,0 +1,109 @@
+{
+  "schema_version": "INTERIOR_LINGGONG_MASTER_DEFINITION_1.0",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / ENGINEERING_EXECUTION_AUTHORIZED / NOT_FORMALIZED",
+  "date": "2026-10-06",
+  "task_id": "T-043",
+  "component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
+  "component_name_zh": "令栱（梁架承托）",
+  "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+  "master_version": "V001",
+  "family_architecture": {
+    "master_family_count": 1,
+    "role_variant_count": 1,
+    "role_variants": [
+      "LOWER_PINGLIANG_SUPPORT"
+    ]
+  },
+  "geometry_strategy": "NORMALIZED_NEUTRAL_TWO_ZONE_SUPPORT_ENVELOPE",
+  "geometry_authority": {
+    "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_INTERIOR_LINGGONG_SOURCE_BINDING_V001.md",
+    "approved_candidate": "production/zhenguo_wanfo/component_library/candidates/CMP-FRAME-LINGGONG-INTERIOR-001/INTERIOR_LINGGONG_CANDIDATE_GEOMETRY_V0_1.json",
+    "outer_eaves_master_geometry_authority": false,
+    "historical_metric_geometry_authority": false
+  },
+  "canonical_first_article_fixture": {
+    "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS",
+    "historical_claim": false,
+    "building_dimension_claim": false,
+    "body_length": 1000,
+    "body_depth": 500,
+    "body_height": 180,
+    "seat_length": 550,
+    "seat_depth": 500,
+    "seat_height": 120
+  },
+  "mutation_fixture": {
+    "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS",
+    "historical_claim": false,
+    "building_dimension_claim": false,
+    "body_length": 1260,
+    "body_depth": 620,
+    "body_height": 210,
+    "seat_length": 660,
+    "seat_depth": 620,
+    "seat_height": 140
+  },
+  "topology": {
+    "body_zone": {
+      "type": "BOX",
+      "centered_xy": true,
+      "z0": 0,
+      "z1_rule": "body_height"
+    },
+    "upper_bearing_zone": {
+      "type": "BOX",
+      "centered_xy": true,
+      "z0_rule": "body_height",
+      "z1_rule": "body_height + seat_height"
+    }
+  },
+  "constraints": [
+    "body_length > 0",
+    "body_depth > 0",
+    "body_height > 0",
+    "seat_length > 0",
+    "seat_depth > 0",
+    "seat_height > 0",
+    "seat_length <= body_length",
+    "seat_depth <= body_depth"
+  ],
+  "evidence_boundary": {
+    "identity": "FACT",
+    "support_role": "FACT",
+    "historical_dimensions": "UNKNOWN",
+    "historical_profile": "UNKNOWN",
+    "hidden_joinery": "UNKNOWN / DEFERRED",
+    "equivalence_to_outer_eaves": "UNKNOWN / NOT_ESTABLISHED"
+  },
+  "prohibited_sources": {
+    "outer_eaves_dimensions_mm": [
+      897,
+      217.4,
+      155.6
+    ],
+    "outer_eaves_14_point_profile": true,
+    "scaled_or_morphed_outer_eaves_profile": true,
+    "historical_equivalence_claim": true
+  },
+  "building_realization_owned_by_assembly": [
+    "FOUR_CHUANFU_UPPER_SUPPORT_FOOTPRINT",
+    "TUOFENG_LOWER_SUPPORT_ENVELOPE",
+    "PINGLIANG_REQUIRED_LOWER_SUPPORT_FOOTPRINT",
+    "FOUR_CHUANFU_TO_PINGLIANG_VERTICAL_GAP"
+  ],
+  "joinery": {
+    "historical_joinery": "UNKNOWN / DEFERRED",
+    "mortise_count": 0,
+    "tenon_count": 0,
+    "groove_slot_count": 0,
+    "hidden_cut_count": 0
+  },
+  "execution_boundary": {
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "formalization_authorized": false,
+    "catalog_v008_binding_authorized": false,
+    "mp01b_assembly_authorized": false,
+    "merge_authorized": false
+  }
+}
