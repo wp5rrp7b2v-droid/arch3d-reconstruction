@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE H-R1 PARTIAL PASS / TARGET DIRECTION RESOLVED / CORRECTED BUILD NOT AUTHORIZED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE H-R2 DESIGN COMPLETE / PO REVIEW REQUIRED / CORRECTED BUILD NOT AUTHORIZED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -379,3 +379,27 @@ Still unresolved:
 - exact hidden joinery/contact geometry.
 
 Next: Gate H-R2. No Blender rebuild yet.
+
+
+## 22. MP-01B Gate H-R2
+
+**DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED**
+
+Resolved for review:
+- separate interior `进深华栱` family boundary;
+- separate `襻间/隔架用栌斗` family boundary;
+- no direct geometry inheritance from outer-eaves Huagong or column-head Ludou;
+- FRONT missing Ludou height recommendation = Table 2-49 same-family direct mean:
+  - total 225.1 mm;
+  - flat 45.0 mm;
+  - sloped 88.1 mm;
+  - classification: PARAMETRIC_COMPLETION / REPLACEABLE;
+- FRONT Tuofeng vertical candidate = 172.9 mm;
+- REAR direct Ludou retained unchanged; REAR Tuofeng vertical candidate = 196 mm;
+- target Linggong direct dimensions and out-of-section axis retained from R1.
+
+Still unresolved before deterministic rebuild:
+- Panjian Ludou bottom depth;
+- interior Huagong numeric full length / endpoint coordinates.
+
+No Blender authorization.
