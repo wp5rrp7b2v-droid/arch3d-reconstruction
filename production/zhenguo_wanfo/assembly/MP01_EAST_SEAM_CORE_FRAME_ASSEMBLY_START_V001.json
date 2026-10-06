@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_H_R3_APPROVED / GATE_H_R4_READY / CORRECTED_BUILD_NOT_YET_STARTED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_H_R4_ENGINEERING_EXECUTION_AUTHORIZED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_H_R3_APPROVED / GATE_H_R4_READY",
+      "status": "GATE_H_R4_ENGINEERING_EXECUTION_AUTHORIZED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -74,9 +74,8 @@
   "next_gate": {
     "id": "MP01B_GATE_H_R4",
     "name": "CORRECTED_LOWER_ASSEMBLY_ENGINEERING_BUILD",
-    "question": "Execute the corrected orthogonal lower-support assembly.",
-    "ready_for_execution": true,
-    "blender_authorized": false,
+    "execution_authorized": true,
+    "blender_authorized": true,
     "merge_authorized": false
   },
   "gate_b": {
@@ -263,7 +262,7 @@
     "approved_rear_tuofeng_vertical_candidate_mm": 196
   },
   "mp01b_gate_h_r3": {
-    "status": "PRODUCT_OWNER_APPROVED / GATE_H_R4_READY / CORRECTED_BUILD_NOT_YET_STARTED",
+    "status": "PRODUCT_OWNER_APPROVED / GATE_H_R4_ENGINEERING_EXECUTION_AUTHORIZED",
     "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_H_R3_MISSING_GEOMETRY_CONTROLS_CORRECTED_BUILD_PREPARATION_V001.json",
     "ludou_bottom_depth_mm": {
       "front": 255,
