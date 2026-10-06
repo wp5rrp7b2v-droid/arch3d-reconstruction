@@ -10,7 +10,7 @@ Product Owner questioned why the left/right support connections in the Gate H Re
 The recheck compares:
 - SRC-ZG-WF-001 detailed survey report;
 - Drawing 11 East-Seam section / point-cloud comparison;
-- Table 2-49 interior column-dou measurements;
+- Table 2-49 interior ludou measurements;
 - Table 2-52 vertical decomposition;
 - SRC-ZG-WF-002 / S15 as a secondary cross-check;
 - A2 official same-building description.
@@ -20,13 +20,13 @@ The recheck compares:
 SRC-ZG-WF-001, PDF p107 / printed p92, immediately below Table 2-52 states:
 
 - 下平槫与上平槫之高差 = 61分；
-- 其中 **四椽栿、驼峰、襻间柱斗平欹共垫高40分**.
+- 其中 **四椽栿、驼峰、襻间栌斗平欹共垫高40分**.
 
 This directly invalidates the Gate F/G/H interpretation:
 
 `306 mm = Tuofeng height + Interior Linggong total height`
 
-The 20-fen remainder after the Four-Chuanfu is not identified by the source as “Tuofeng + Linggong height”. The report explicitly includes the **襻间柱斗平欹** in that vertical decomposition.
+The 20-fen remainder after the Four-Chuanfu is not identified by the source as “Tuofeng + Linggong height”. The report explicitly includes the **襻间栌斗平欹** in that vertical decomposition.
 
 Therefore these Gate H derived values are not evidence-supported:
 - Tuofeng residual height = 91 mm;
@@ -34,13 +34,13 @@ Therefore these Gate H derived values are not evidence-supported:
 - direct additive chain `Tuofeng 91 + Linggong 215 = 306`;
 - direct contact planes `Tuofeng→Linggong Z=91` and `Linggong→Pingliang Z=306`.
 
-## 3. Primary-source finding B — an interior column-dou family is directly measured
+## 3. Primary-source finding B — an interior ludou family is directly measured
 
 SRC-ZG-WF-001, PDF p99 / printed p84, Table 2-49:
 
-`万佛殿襻间/隔架用柱斗实测与分析表`
+`万佛殿襻间/隔架用栌斗实测与分析表`
 
-directly measures the interior `柱斗` used in purlin/spacer bracket contexts.
+directly measures the interior `栌斗` used in purlin/spacer bracket contexts.
 
 Reported means include:
 - 总宽 = 332.1 mm;
@@ -55,7 +55,7 @@ This does **not** yet prove that the exact East-Seam Four-Chuanfu→Pingliang no
 It does prove that the prior Gate H six-object stack cannot claim the directly documented interior support system contains only:
 `Four-Chuanfu + Tuofeng + Linggong + Pingliang`.
 
-The column-dou role must be resolved before the next build.
+The ludou role must be resolved before the next build.
 
 ## 4. Primary-source finding C — do not rotate the Linggong just because Gate H looked odd
 
@@ -142,7 +142,7 @@ No Blender rebuild is authorized in this recheck.
 
 Exactly four questions:
 
-1. What is the target-node `柱斗` identity: the Table 2-49 purlin/spacer column-dou family or another specific dou family?
+1. What is the target-node `栌斗` identity: the Table 2-49 purlin/spacer ludou family or another specific dou family?
 2. What part of the 20-fen remainder belongs to Tuofeng versus the relevant Dou geometry?
 3. How does the Linggong seat in/over the Dou, i.e. what vertical overlap replaces the false additive `91 + 215` stack?
 4. Does Drawing 11 plus the target photographs establish the Linggong long axis and center placement strongly enough to lock them, or must they remain reconstructed/replaceable?
@@ -153,3 +153,8 @@ Until these are answered:
 - Gate H remains an archived machine-proof artifact only;
 - MP-01A is unaffected;
 - PR #56 remains open / merge not authorized.
+
+
+## Terminology correction notice
+
+Gate H-R1 direct-page review confirmed that the report term is **襻间/隔架用栌斗**, not 柱斗. Any earlier wording in this recheck referring to 柱斗 is superseded by `MP01B_GATE_H_R1_TARGET_NODE_EVIDENCE_RESOLUTION_V001.md`.
