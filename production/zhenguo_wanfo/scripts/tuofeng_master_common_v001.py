@@ -25,7 +25,7 @@ def setup_scene():
     s.unit_settings.system="METRIC"
     s.unit_settings.scale_length=0.001
     s.unit_settings.length_unit="MILLIMETERS"
-    s.render.engine="BLENDER_EEVEE_NEXT"
+    s.render.engine="BLENDER_WORKBENCH"
     s.render.resolution_percentage=100
     s.world.use_nodes=True
     bg=next(n for n in s.world.node_tree.nodes if n.type=="BACKGROUND")
@@ -136,11 +136,10 @@ def render_variant(obj,other,review_dir,prefix):
     target=(0,0,float(dims.z)/2.0)
     cam=bpy.context.scene.camera
     s=bpy.context.scene
-    s.render.resolution_x=1000; s.render.resolution_y=700
+    s.render.resolution_x=700; s.render.resolution_y=500
     views={
       "PROFILE":((0,-ext*3,float(dims.z)/2.0),max(float(dims.x),float(dims.z))*1.35),
-      "AXON":((ext*2.2,-ext*2.4,ext*1.7),ext*1.7),
-      "TOP":((0,0,ext*3),max(float(dims.x),float(dims.y))*1.35)
+      "AXON":((ext*2.2,-ext*2.4,ext*1.7),ext*1.7)
     }
     for name,(pos,scale) in views.items():
         cam.location=pos
