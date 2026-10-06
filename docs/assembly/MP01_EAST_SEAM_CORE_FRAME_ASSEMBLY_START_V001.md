@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE H-R3 APPROVED / GATE H-R4 READY / CORRECTED BUILD NOT YET STARTED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE H-R4 ENGINEERING EXECUTION AUTHORIZED / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -458,3 +458,16 @@ Next after PO approval:
 - Gate H-R4 is ready as the next engineering step;
 - corrected Blender build has not yet started;
 - PR #56 merge remains NOT AUTHORIZED.
+
+
+## 26. MP-01B Gate H-R4 authorization
+
+Product Owner authorized the corrected lower-assembly engineering build.
+
+Execution scope:
+- corrected orthogonal 10-object geometry build;
+- 2 deferred Panjian Fang records;
+- reopen / deterministic rebuild / Huagong 900→950 mutation;
+- Review Board + machine validation.
+
+PR #56 merge remains NOT AUTHORIZED.
