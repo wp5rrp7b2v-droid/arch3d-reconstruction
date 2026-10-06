@@ -1,6 +1,6 @@
 # T-046｜MP-01B Tuojiao First Geometry Build V001
 
-Status: **ENGINEERING EXECUTION COMPLETE / MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED**
+Status: **ENGINEERING EXECUTION COMPLETE / MACHINE PASS / PRODUCT OWNER APPROVED / FIRST-ARTICLE ACCEPTED**
 Date: 2026-10-06
 
 ## Goal
@@ -57,7 +57,27 @@ Instruction: **进入下一步的 Tuojiao First Geometry Build**
 - Mutation assembly signature: `9d6137200e213b43fbfa759f270d48206039ae55f67b25788a9ece6cfc091d57`
 - Canonical .blend SHA-256: `1a11598ef3af8ff2b0d2c5b2ca4b861ecf3af2f02fbafbcb9f210930a9e84a03`
 - Review Board SHA-256: `2ee3e441a13d022a81ad20bc94db4f300b7e723327c303694fe8937860c142cf`
-- Product Owner acceptance: REQUIRED
+- Product Owner acceptance: **APPROVED — TUOJIAO FIRST-ARTICLE ONLY**
 - PR #56 merge: NOT AUTHORIZED
 
 Machine PASS proves the approved T3 first-article contract was executed deterministically. It does not prove historical exact endpoints, exact Huagong–Tuojiao contact, or hidden joinery.
+
+## Product Owner acceptance
+
+Decision: **APPROVED**
+
+Acceptance scope:
+- FRONT Tuojiao first-article solid;
+- REAR Tuojiao first-article solid;
+- T3 evidence-bounded section / centerline / mirror controls;
+- replaceable `TUOJIAO_Z_OFFSET` first-article datum;
+- current explicit UNKNOWN boundary for exact endpoints, Huagong–Tuojiao contact, and hidden joinery.
+
+This approval does **not** approve:
+- MP-01B as a whole;
+- Gate H-R4 visual completeness;
+- the previously identified Circle 1 / Circle 2 / Circle 3 issues;
+- Panjian Fang geometry;
+- historical exact joinery;
+- MP-01A + MP-01B combination;
+- PR #56 merge.
