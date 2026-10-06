@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_H_R2_DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / CORRECTED_BUILD_NOT_AUTHORIZED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_H_R2_APPROVED / GATE_H_R3_DESIGN_AUTHORIZED / CORRECTED_BUILD_NOT_AUTHORIZED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_H_R2_DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
+      "status": "GATE_H_R2_APPROVED / GATE_H_R3_DESIGN_AUTHORIZED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -74,7 +74,8 @@
   "next_gate": {
     "id": "MP01B_GATE_H_R3",
     "name": "MISSING_GEOMETRY_CONTROLS_AND_CORRECTED_BUILD_PREPARATION",
-    "question": "After PO approval of R2, resolve Ludou bottom depth and Huagong endpoints, then prepare corrected build without executing Blender.",
+    "question": "Resolve Ludou bottom depth and Huagong endpoints, then prepare corrected build without executing Blender.",
+    "design_authorized": true,
     "blender_authorized": false,
     "merge_authorized": false
   },
@@ -237,7 +238,7 @@
     "blender_authorized": false
   },
   "mp01b_gate_h_r2": {
-    "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / NO_BLENDER",
+    "status": "PRODUCT_OWNER_APPROVED / GATE_H_R3_DESIGN_AUTHORIZED / NO_BLENDER",
     "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_H_R2_INTERIOR_HUAGONG_LUDOU_SCOPE_COMPLETION_V001.json",
     "front_ludou_completion_mm": {
       "total": 225.1,
@@ -251,6 +252,14 @@
       "Panjian Ludou bottom depth",
       "Interior Huagong numeric full length / endpoint coordinates"
     ],
-    "blender_authorized": false
+    "blender_authorized": false,
+    "product_owner_approved": true,
+    "approved_front_completion_mm": {
+      "total": 225.1,
+      "flat": 45,
+      "sloped": 88.1
+    },
+    "approved_front_tuofeng_vertical_candidate_mm": 172.9,
+    "approved_rear_tuofeng_vertical_candidate_mm": 196
   }
 }
