@@ -1,6 +1,6 @@
 # MP-01B｜Tuojiao First Geometry Engineering Result V001
 
-Status: **MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED / NOT ACCEPTED**
+Status: **MACHINE PASS / PRODUCT OWNER APPROVED / TUOJIAO FIRST-ARTICLE ACCEPTED**
 Date: 2026-10-06
 
 ## Run
@@ -51,3 +51,27 @@ It does not establish:
 - historical FRONT/REAR symmetry;
 - MP-01B acceptance;
 - PR #56 merge authorization.
+
+## Product Owner decision
+
+**APPROVED — Tuojiao first article only.**
+
+Approved baseline:
+- `ASM-MP01B-TUOJIAO-FRONT-01`
+- `ASM-MP01B-TUOJIAO-REAR-01`
+- current evidence-bounded rectangular diagonal-envelope realization
+- 237.1 × 153.7 mm family-mean section completion
+- 1759.5 mm horizontal projection
+- 933.3 mm relative rise
+- 1991.7050835904395 mm centerline control
+- 27.943034423382937° slope control
+
+Still unresolved / not accepted:
+- exact historical endpoints;
+- exact Huagong–Tuojiao contact coordinates;
+- hidden joinery;
+- Circle 1 Huagong visible gong-head profile;
+- Circle 2 remaining node incompleteness including deferred Panjian Fang / visible bracket-form issue;
+- Circle 3 Tuofeng–Ludou visible-form gap;
+- MP-01B overall acceptance;
+- PR #56 merge.
