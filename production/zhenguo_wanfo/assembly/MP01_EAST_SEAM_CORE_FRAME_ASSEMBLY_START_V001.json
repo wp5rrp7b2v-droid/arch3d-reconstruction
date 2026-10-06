@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_INTERIOR_LINGGONG_FORMALIZED / READY_FOR_LOWER_ASSEMBLY_ENVELOPE / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_F_PASS / LOWER_ASSEMBLY_NUMERIC_CONTRACT_RESOLVED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "INTERIOR_LINGGONG_FORMALIZED / READY_FOR_ASSEMBLY_ENVELOPE_RESOLUTION",
+      "status": "GATE_F_PASS / READY_FOR_FIRST_BUILD_PREPARATION",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,9 +72,9 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_GATE_F",
-    "name": "LOWER_ASSEMBLY_LOCAL_METRIC_ENVELOPE_AND_PLACEMENT_RESOLUTION",
-    "question": "Resolve the minimum assembly-owned dimensions and placement for 四椽栿 -> 驼峰 LOWER_SUPPORT / Interior Linggong -> 平梁 without promoting reconstructed values to historical fact.",
+    "id": "MP01B_GATE_G",
+    "name": "LOWER_ASSEMBLY_FIRST_BUILD_PREPARATION",
+    "question": "Lock exact object list, transforms, relation metadata, validation and perturbation tests before first lower-assembly Blender build.",
     "blender_authorized": false,
     "merge_authorized": false
   },
@@ -164,5 +164,23 @@
     "master_reference": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
     "master_scope_coverage": "30/30",
     "approved_master_families": 27
+  },
+  "mp01b_gate_f": {
+    "status": "PASS",
+    "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_F_LOWER_ASSEMBLY_LOCAL_METRIC_ENVELOPE_V001.json",
+    "four_chuanfu_length_mm": 7192,
+    "pingliang_length_mm": 3672,
+    "support_clearance_mm": 306,
+    "support_stations_y_mm": [
+      1836,
+      -1836
+    ],
+    "linggong_candidate_mm": {
+      "length": 893.3,
+      "depth": 153.6,
+      "height": 215
+    },
+    "tuofeng_lower_height_mm": 91,
+    "blender_authorized": false
   }
 }
