@@ -1,0 +1,60 @@
+{
+  "schema_version": "MP01B_CIRCLE1_TARGETED_BUILD_PREPARATION_1.0",
+  "status": "PRODUCT_OWNER_AUTHORIZED / CIRCLE1_TARGETED_BUILD / MP01B_NOT_APPROVED / MERGE_NOT_AUTHORIZED",
+  "date": "2026-10-06",
+  "task_id": "T-047",
+  "scope": "CIRCLE_1_INTERIOR_HUAGONG_VISIBLE_PROFILE_ONLY",
+  "base_tuojiao_contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_T3_TUOJIAO_FIRST_GEOMETRY_BUILD_PREPARATION_V001.json",
+  "profile_control": "production/zhenguo_wanfo/assembly/MP01B_CIRCLE1_INTERIOR_HUAGONG_VISIBLE_PROFILE_RESOLUTION_V001.json",
+  "base_t046": {
+    "run_id": 37472462998,
+    "artifact_id": 11416983796,
+    "assembly_signature": "8001d642fa6cf67e474ef88534157ef74b46573d52c69363a64103ad9df18814",
+    "approved_tuojiao": true
+  },
+  "frozen_object_signatures": {
+    "ASM-MP01B-LINGGONG-FRONT-01": "d1608682a203b2410de51497e4e88c523eeec9bc06a888ba5e8c8b7b8cac9565",
+    "ASM-MP01B-LINGGONG-REAR-01": "095539957101c1fb8267bb98dc486b472f81412c50fa6258c104a19560def7e1",
+    "ASM-MP01B-PANJIAN-LUDOU-FRONT-01": "c173b50d0858e61bd8b588bd6e541d2d634b69be64cd7b46985dfd47dc3f418f",
+    "ASM-MP01B-PANJIAN-LUDOU-REAR-01": "03accabce245daefa9fbe46effae3623c9e13404619ad02c60b8736e999d28ad",
+    "ASM-MP01B-TUOFENG-FRONT-01": "449abe1937663c0fff98470ab2e94cb2ef47c777cb4d8de28558267eced5d340",
+    "ASM-MP01B-TUOFENG-REAR-01": "64a2c76171e4e6e1c1f8d0e6a17aeb1d010b1117ea7c75f7cea01fbdb46cedfc",
+    "ASM-MP01B-TUOJIAO-FRONT-01": "8821b51fcaf121729f8d92a2b809215ed886788b0b7a8d387a75da69b429e712",
+    "ASM-MP01B-TUOJIAO-REAR-01": "df14a86b3ddaccf9090022fd16f1a79d6ae7a50bed0b5c1e11b79e36625971b3",
+    "四椽栿-东缝": "dbfc8e67ea11aeda55a7e50d6a6ce82b934484a462fcaac56e69cd5dfadd895d",
+    "平梁-东缝": "63fff2abf47f1b678b4d390113e2677578d0c8a0077534e6a4969ca37fb00236"
+  },
+  "huagong_baseline_signatures": {
+    "ASM-MP01B-HUAGONG-FRONT-01": "639364def098c7d7341ae66b2ec255b36bae3763d39d4bfbdcd5a4b17ed76a2f",
+    "ASM-MP01B-HUAGONG-REAR-01": "e79ff80700c7f0bb62bf330a9b51214c69c7705f276899c5279642ee1d794a25"
+  },
+  "required_changes": [
+    "Only FRONT/REAR interior Huagong mesh profile changes from rectangular envelope to approved Circle1 gong-head profile."
+  ],
+  "required_invariants": [
+    "Huagong total realization length 900 mm",
+    "Huagong inward gong-head zone 650 mm",
+    "Huagong outward Tuojiao zone 250 mm",
+    "FRONT Huagong section authority 221 × 153 mm",
+    "REAR Huagong section authority 210 × 156 mm",
+    "all non-Huagong T046 world geometry signatures unchanged",
+    "T046 Tuojiao geometry unchanged",
+    "Panjian Fang remains deferred",
+    "joinery_cut_count = 0",
+    "Circle2 remains open",
+    "Circle3 remains open"
+  ],
+  "perturbation": {
+    "parameter": "gonghead_tip_depth_fraction",
+    "canonical": 0.15,
+    "mutation": 0.25,
+    "expected_change": "Huagong visible gong-head mesh only",
+    "expected_invariants": "all non-Huagong geometry"
+  },
+  "product_owner_authorization": {
+    "authorized": true,
+    "instruction": "开始 Circle 1 Targeted Build"
+  },
+  "blender_authorized": true,
+  "merge_authorized": false
+}
