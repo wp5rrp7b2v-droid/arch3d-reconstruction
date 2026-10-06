@@ -1,6 +1,6 @@
 # 驼峰 First Article Build Preparation V001
 
-Status: **DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED / ENGINEERING EXECUTION NOT AUTHORIZED**
+Status: **LOCKED / PRODUCT OWNER APPROVED / ENGINEERING EXECUTION AUTHORIZED**
 
 ## 1. Objective
 
@@ -236,8 +236,8 @@ Current state:
 - Source Binding: PASS
 - Master Spec V0.1: APPROVED
 - Candidate Geometry V0.1: APPROVED
-- First Article Build Preparation: **DESIGN COMPLETE**
-- Engineering / Blender execution: **NOT YET AUTHORIZED**
+- First Article Build Preparation: **LOCKED / PRODUCT OWNER APPROVED**
+- Engineering / Blender execution: **AUTHORIZED / T-042**
 - Canonical Master: NOT CREATED
 - Catalog/V008 approved-master binding: NOT AUTHORIZED
 
@@ -246,3 +246,11 @@ Next decision:
 > Product Owner approves / amends / rejects this Build Preparation.
 
 After approval, create and run the first-article engineering task.
+
+
+## 11. Execution authorization
+
+- Date: 2026-10-06
+- Product Owner instruction: **开始驼峰 First Article Engineering Execution**
+- T-042 engineering + Blender first-article execution is authorized.
+- First-article acceptance, formalization, Catalog/V008 approved-master binding, and merge remain separate gates.
