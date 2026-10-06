@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "ASSEMBLY_EXECUTION_ACTIVE / GATE_A_B_C_D_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "MP01A_APPROVED / MINIMUM_PROOF_PASS / MP01B_NOT_STARTED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -10,7 +10,7 @@
   "subassemblies": {
     "MP01A": {
       "name": "UPPER_RIDGE_SUPPORT",
-      "status": "GATE_D_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+      "status": "APPROVED / MINIMUM_PROOF_PASS",
       "participants": [
         {
           "instance_id": "平梁-东缝",
@@ -74,9 +74,9 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01A_GATE_D_PO_REVIEW",
-    "name": "PRODUCT_OWNER_REVIEW",
-    "question": "Accept or reject the first actual MP-01A assembly Review Board.",
+    "id": "MP01B_START",
+    "name": "LOWER_PINGLIANG_SUPPORT",
+    "question": "Resolve the interior-frame Linggong family/scope issue, then build 四椽栿 -> 驼峰/令栱 -> 平梁.",
     "merge_authorized": false
   },
   "gate_b": {
@@ -113,6 +113,11 @@
     "dependency_perturbation": "PASS",
     "assembly_signature": "127477379d9f62ea81835ce56e75727d055a4e5a5609a7ac11a485cb9be322fb",
     "blend_sha256": "5a1460b13a0de739ef2ad675921af26a5d5d95ae85b0c3f56f7eb0630cc4b3f9",
-    "product_owner_accepted": false
+    "product_owner_accepted": true,
+    "product_owner_decision": "APPROVED",
+    "acceptance_scope": "MP01A_UPPER_RIDGE_SUPPORT_SUBSET_ONLY",
+    "historical_exactness_claim": false,
+    "whole_frame_claim": false,
+    "whole_hall_claim": false
   }
 }
