@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE A+B COMPLETE / INTERIOR LINGGONG MASTER SPEC CANDIDATE / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B GATE A+B COMPLETE / MASTER SPEC APPROVED / GATE C CANDIDATE REVIEW / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -242,3 +242,12 @@ Decision:
 
 Next:
 > Product Owner review of Interior Linggong Master Spec V0.1.
+
+
+## 13. MP-01B Gate C
+
+- Interior Linggong Master Spec V0.1: **PRODUCT OWNER APPROVED**
+- Candidate Geometry V0.1: **GENERATED / PRODUCT OWNER REVIEW REQUIRED**
+- Geometry: neutral normalized two-zone support envelope
+- Outer-eaves dimensions/profile: not inherited
+- MP-01B Blender assembly: NOT AUTHORIZED
