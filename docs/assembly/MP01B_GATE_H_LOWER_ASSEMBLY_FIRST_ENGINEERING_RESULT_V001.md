@@ -1,6 +1,6 @@
 # MP-01B Gate H｜Lower Assembly First Engineering Result V001
 
-Status: **MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED / NOT YET ACCEPTED**
+Status: **MACHINE PASS / EVIDENCE REVIEW FAIL / ENGINEERING REVISION REQUIRED / NOT ACCEPTED**
 Date: 2026-10-06
 
 ## 1. Engineering run
@@ -126,3 +126,18 @@ Product Owner reviews the Gate H Review Board and chooses:
 - or request local orientation/placement revision.
 
 Combining MP-01A + MP-01B and PR #56 merge remain NOT AUTHORIZED.
+
+
+## 9. Evidence Recheck supersession notice
+
+Product Owner review triggered a primary-source recheck.
+
+Result:
+- Machine validation remains **51/51 PASS**.
+- MP-01B evidence validation is **FAIL**.
+- The Gate F/G assumption `306 = Tuofeng 91 + Linggong 215` is invalidated by SRC-ZG-WF-001 PDF p107 / printed p92, which states that the 40-fen vertical padding includes **Four-Chuanfu + Tuofeng + Purlin/Spacer Column-Dou flat-and-slope portions**.
+- SRC-ZG-WF-001 PDF p99 / printed p84 directly measures the interior `襻间/隔架用柱斗` family.
+- No Blender correction has been run.
+
+Canonical recheck:
+`docs/assembly/MP01B_GATE_H_EVIDENCE_RECHECK_V001.md`
