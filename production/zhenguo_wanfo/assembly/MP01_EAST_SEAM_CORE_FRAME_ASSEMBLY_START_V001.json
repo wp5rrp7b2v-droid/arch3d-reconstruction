@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_TARGETED_REWORK_IN_PROGRESS / T046_TUOJIAO_APPROVED / CIRCLE1_MACHINE_PASS_REVIEW_REQUIRED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_TARGETED_REWORK_IN_PROGRESS / T046_TUOJIAO_APPROVED / CIRCLE1_T047_REVIEW_FAIL / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "R4_MACHINE_PASS / VISUAL_EVIDENCE_AUDIT_FAIL / T046_TUOJIAO_APPROVED / CIRCLE1_MACHINE_PASS_PO_REVIEW_REQUIRED / MP01B_NOT_APPROVED",
+      "status": "R4_MACHINE_PASS / VISUAL_EVIDENCE_AUDIT_FAIL / T046_TUOJIAO_APPROVED / CIRCLE1_T047_PO_FAIL / MP01B_NOT_APPROVED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,10 +72,10 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_CIRCLE1_PRODUCT_OWNER_REVIEW",
-    "name": "CIRCLE_1_TARGETED_BUILD_PRODUCT_OWNER_REVIEW",
+    "id": "MP01B_CIRCLE1_PROFILE_RECALIBRATION",
+    "name": "SEPARATE_ENDPOINT_REACH_FROM_LOCAL_GONGHEAD_SHAPING",
     "execution_authorized": false,
-    "note": "T-047 is machine-pass. Product Owner must accept or request targeted correction. Circle 2 and Circle 3 remain open.",
+    "note": "T047 falsified the prior profile-extent assumption. Recalibrate localized terminal gong-head extent from Drawing 11. Circle 2 and 3 remain open.",
     "combine_with_mp01a_authorized": false,
     "merge_authorized": false
   },
@@ -316,12 +316,12 @@
     "merge_authorized": false
   },
   "mp01b_circle1_huagong_visible_profile": {
-    "status": "PRODUCT_OWNER_APPROVED / PROFILE_CONTROL_LOCKED / TARGETED_BUILD_NOT_YET_AUTHORIZED",
+    "status": "REOPENED AFTER T047 ACTUAL-BUILD FAIL / NO BLENDER",
     "candidate_id": "MP01B_INTERIOR_HUAGONG_VISIBLE_PROFILE_V001_C01",
     "classification": "TARGET_DRAWING_GUIDED_SIMPLIFIED / SOURCE_IMAGE_CALIBRATED_PROJECT_COMPLETION / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
-    "product_owner_accepted": true,
+    "product_owner_accepted": false,
     "blender_authorized": false,
-    "circle_1_resolved_at_design_level": true,
+    "circle_1_resolved_at_design_level": false,
     "circle_1_resolved_in_geometry": false,
     "circle_2_resolved": false,
     "circle_3_resolved": false,
@@ -329,7 +329,7 @@
     "merge_authorized": false
   },
   "mp01b_circle1_targeted_build": {
-    "status": "MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED / NOT_ACCEPTED",
+    "status": "MACHINE_PASS / PRODUCT_OWNER REVIEW FAIL / NOT ACCEPTED",
     "task_id": "T-047",
     "run_id": 37476995027,
     "artifact_id": 11418594641,
@@ -342,11 +342,12 @@
     "frozen_non_huagong_geometry": true,
     "frozen_tuojiao_geometry": true,
     "product_owner_accepted": false,
-    "circle_1_resolved_in_geometry": true,
+    "circle_1_resolved_in_geometry": false,
     "circle_1_accepted": false,
     "circle_2_resolved": false,
     "circle_3_resolved": false,
     "mp01b_overall_accepted": false,
-    "merge_authorized": false
+    "merge_authorized": false,
+    "failure_reason": "650 mm inward endpoint reach incorrectly treated as 650 mm shaped gong-head zone"
   }
 }
