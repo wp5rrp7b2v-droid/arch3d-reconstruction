@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_H_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_H_MACHINE_PASS_BUT_EVIDENCE_FAIL / REVISION_REQUIRED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_H_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+      "status": "GATE_H_MACHINE_PASS / EVIDENCE_REVIEW_FAIL / ENGINEERING_REVISION_REQUIRED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,9 +72,10 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_GATE_H_PO_REVIEW",
-    "name": "LOWER_ASSEMBLY_PRODUCT_OWNER_REVIEW",
-    "question": "Approve the MP-01B Minimum Proof or request local orientation/placement revision.",
+    "id": "MP01B_GATE_H_R1_EVIDENCE_RESOLUTION",
+    "name": "TARGET_NODE_COLUMN_DOU_AND_SUPPORT_STACK_RESOLUTION",
+    "question": "Resolve the target interior column-dou identity and the non-additive Tuofeng/Dou/Linggong vertical relationship before any rebuild.",
+    "blender_authorized": false,
     "combine_with_mp01a_authorized": false,
     "merge_authorized": false
   },
@@ -202,6 +203,20 @@
     "assembly_signature": "d9e7880252746283dcf72534dd276a9ab6f0b2220f15b7d4b5169b26449c2d71",
     "blend_sha256": "6efc84d3468d31ecab7bf4cc3fd9887710288e9f38a07da2bcd9c19937c4cc35",
     "product_owner_accepted": false,
-    "review_note": "Support groups straddle the ±1836 Pingliang end stations under the approved replaceable Gate G axis/station rule."
+    "review_note": "Support groups straddle the ±1836 Pingliang end stations under the approved replaceable Gate G axis/station rule.",
+    "evidence_review": "FAIL",
+    "recheck_path": "docs/assembly/MP01B_GATE_H_EVIDENCE_RECHECK_V001.md",
+    "invalidated_build_assumptions": [
+      "306mm = Tuofeng height + Interior Linggong total height",
+      "Tuofeng residual height = 91mm",
+      "Direct Tuofeng->Linggong contact at Z=91",
+      "Direct Linggong->Pingliang contact at Z=306",
+      "Six-object support stack complete enough for MP-01B acceptance"
+    ],
+    "retained_candidates": [
+      "support stations ±1836mm pending target-node confirmation",
+      "South/North symmetry",
+      "Linggong axis not changed merely for visual appearance"
+    ]
   }
 }
