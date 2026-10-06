@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_F_PASS / LOWER_ASSEMBLY_NUMERIC_CONTRACT_RESOLVED / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_G_DESIGN_COMPLETE / LOWER_ASSEMBLY_FIRST_BUILD_READY_FOR_AUTHORIZATION / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_F_PASS / READY_FOR_FIRST_BUILD_PREPARATION",
+      "status": "GATE_G_DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,9 +72,9 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_GATE_G",
-    "name": "LOWER_ASSEMBLY_FIRST_BUILD_PREPARATION",
-    "question": "Lock exact object list, transforms, relation metadata, validation and perturbation tests before first lower-assembly Blender build.",
+    "id": "MP01B_GATE_H",
+    "name": "LOWER_ASSEMBLY_FIRST_ENGINEERING_BUILD",
+    "question": "Execute the first deterministic lower assembly after Product Owner approval of Gate G.",
     "blender_authorized": false,
     "merge_authorized": false
   },
@@ -181,6 +181,15 @@
       "height": 215
     },
     "tuofeng_lower_height_mm": 91,
+    "blender_authorized": false
+  },
+  "mp01b_gate_g": {
+    "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_G_LOWER_ASSEMBLY_FIRST_BUILD_PREPARATION_V001.json",
+    "logical_object_count": 6,
+    "support_relation_count": 6,
+    "locate_relation_count": 4,
+    "mutation": "support_clearance 306 -> 310 mm",
     "blender_authorized": false
   }
 }
