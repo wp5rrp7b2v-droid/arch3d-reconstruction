@@ -1,0 +1,130 @@
+{
+  "schema_version": "MP01B_GATE_H_R1_TARGET_NODE_EVIDENCE_RESOLUTION_1.0",
+  "status": "PARTIAL_PASS / TARGET_COMPONENT_SET_AND_LINGGONG_DIRECTION_RESOLVED / CORRECTED_BUILD_NOT_YET_AUTHORIZED",
+  "date": "2026-10-06",
+  "source_authority": [
+    "SRC-ZG-WF-001",
+    "SRC-ZG-WF-002_CROSSCHECK_ONLY",
+    "A2_ROLE_ONLY"
+  ],
+  "terminology_correction": {
+    "incorrect": "柱斗",
+    "correct": "襻间栌斗"
+  },
+  "target_nodes": [
+    {
+      "id": "EAST_SEAM_FRONT_UPPER_PURLIN_PANJIAN",
+      "source_label": "东缝前上平槫下襻间",
+      "support_station_candidate_y_mm": 1836,
+      "huagong": {
+        "direction": "进深",
+        "width_mm": 221,
+        "thickness_mm": 153,
+        "length_status": "ENDPOINT_SEMANTICS_ONLY",
+        "length_note": "一端栱头，一端至托脚"
+      },
+      "linggong": {
+        "direction": "顺身",
+        "length_mm": 1016,
+        "width_mm": 213,
+        "thickness_mm": 149,
+        "evidence": "DIRECT_PRIMARY / POSITION_SPECIFIC"
+      },
+      "panjian_fang": {
+        "width_mm": 210,
+        "thickness_mm": 152,
+        "end_form": "隐刻翼形"
+      },
+      "ludou": {
+        "top_width_mm": 321,
+        "bottom_width_mm": 221,
+        "top_depth_mm": 355,
+        "bottom_depth_mm": null,
+        "total_height_mm": null,
+        "flat_height_mm": null,
+        "sloped_height_mm": null
+      },
+      "tuofeng_vertical_contribution_mm": null
+    },
+    {
+      "id": "EAST_SEAM_REAR_UPPER_PURLIN_PANJIAN",
+      "source_label": "东缝后上平槫下襻间",
+      "support_station_candidate_y_mm": -1836,
+      "huagong": {
+        "direction": "进深",
+        "width_mm": 210,
+        "thickness_mm": 156,
+        "length_status": "ENDPOINT_SEMANTICS_ONLY",
+        "length_note": "一端栱头，一端至托脚"
+      },
+      "linggong": {
+        "direction": "顺身",
+        "length_mm": 995,
+        "width_mm": 217,
+        "thickness_mm": 150,
+        "evidence": "DIRECT_PRIMARY / POSITION_SPECIFIC"
+      },
+      "panjian_fang": {
+        "width_mm": null,
+        "thickness_mm": null,
+        "end_form": "隐刻翼形"
+      },
+      "ludou": {
+        "top_width_mm": 320,
+        "bottom_width_mm": 227,
+        "top_depth_mm": 357,
+        "bottom_depth_mm": null,
+        "total_height_mm": 219,
+        "flat_height_mm": 45,
+        "sloped_height_mm": 65
+      },
+      "tuofeng_vertical_contribution_mm": 196,
+      "tuofeng_vertical_classification": "SECONDARY_CALCULATED / REPORT_MODULAR_DECOMPOSITION + DIRECT_LOCATION_LUDOU / REPLACEABLE"
+    }
+  ],
+  "axis_resolution": {
+    "assembly_y": "进深 / front-back / in-section",
+    "assembly_x": "顺身 / East-Seam-line / out-of-section",
+    "target_linggong_long_axis": "assembly_x",
+    "prior_gate_h_rule": "local +X -> assembly +Y / Rz +90",
+    "corrected_rule": "local +X -> assembly +X / Rz 0",
+    "evidence": "DIRECT_PRIMARY / APPENDIX_1_9 POSITION LABEL"
+  },
+  "vertical_decomposition": {
+    "report_rule": "40 fen = Four-Chuanfu + Tuofeng + Panjian Ludou flat/sloped contribution",
+    "fen_mm": 15.3,
+    "total_40fen_mm": 612,
+    "four_chuanfu_20fen_mm": 306,
+    "residual_above_four_chuanfu_mm": 306,
+    "linggong_full_height_is_additive": false
+  },
+  "target_component_set": [
+    "四椽栿-东缝",
+    "驼峰",
+    "襻间栌斗",
+    "进深华栱",
+    "顺身令栱",
+    "襻间枋",
+    "平梁-东缝"
+  ],
+  "reuse_decisions": {
+    "exterior_huagong_master_direct_reuse": false,
+    "column_head_ludou_master_direct_reuse": false,
+    "interior_linggong_master_family_identity_reusable": true,
+    "gate_f_linggong_analog_controls_target_instances": false
+  },
+  "unresolved": [
+    "FRONT target Ludou total/flat/sloped height",
+    "FRONT Tuofeng vertical contribution",
+    "exact Tuofeng historical profile/dimensions",
+    "hidden joinery/contact faces",
+    "numeric full length of target depth-direction Huagong",
+    "exact hidden Panjian Fang relationship",
+    "front missing-height completion rule"
+  ],
+  "next_gate": {
+    "id": "MP01B_GATE_H_R2",
+    "name": "INTERIOR_HUAGONG_AND_PANJIAN_LUDOU_SCOPE_AND_MISSING_HEIGHT_COMPLETION_RULE",
+    "blender_authorized": false
+  }
+}
