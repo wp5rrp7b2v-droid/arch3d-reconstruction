@@ -6,7 +6,7 @@
   "master_version": "V001",
   "component_name_zh": "驼峰",
   "component_name_en": "Tuofeng / hump-shaped timber support",
-  "status": "LOCKED / PRODUCT_OWNER_APPROVED / ENGINEERING_EXECUTION_AUTHORIZED",
+  "status": "FIRST_ARTICLE_APPROVED / ENGINEERING_EXECUTION_COMPLETE / FORMALIZATION_NOT_AUTHORIZED",
   "authority": {
     "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_TUOFENG_SOURCE_BINDING_V001.md",
     "master_spec": "docs/production/zhenguo_wanfo/P3_3_STAGE1_TUOFENG_MASTER_SPEC_V0_1.md",
@@ -200,9 +200,22 @@
     "blender_execution_authorized": true,
     "first_article_generation_authorized": true,
     "first_article_machine_validation_authorized": true,
-    "first_article_product_owner_acceptance_authorized": false,
+    "first_article_product_owner_acceptance_authorized": true,
     "formalization_authorized": false,
     "catalog_v008_binding_authorized": false,
     "merge_authorized": false
+  },
+  "first_article_approval": {
+    "approved": true,
+    "date": "2026-10-06",
+    "authority": "PRODUCT_OWNER",
+    "run_id": 37416207236,
+    "artifact_id": 11391915287,
+    "artifact_digest": "sha256:f5b9940a17b8368a0d6be5df0a082b36a8d421705a2eb3a4094292577b5b820d",
+    "machine_validation": "27/27 PASS",
+    "independent_reopen": "PASS",
+    "mutation_proof": "PASS",
+    "deterministic_restore": "PASS",
+    "review_board": "APPROVED"
   }
 }
