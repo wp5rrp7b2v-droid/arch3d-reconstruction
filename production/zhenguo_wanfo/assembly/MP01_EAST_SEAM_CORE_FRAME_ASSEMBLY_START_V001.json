@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_G_DESIGN_COMPLETE / LOWER_ASSEMBLY_FIRST_BUILD_READY_FOR_AUTHORIZATION / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_H_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_G_DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
+      "status": "GATE_H_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,10 +72,10 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_GATE_H",
-    "name": "LOWER_ASSEMBLY_FIRST_ENGINEERING_BUILD",
-    "question": "Execute the first deterministic lower assembly after Product Owner approval of Gate G.",
-    "blender_authorized": false,
+    "id": "MP01B_GATE_H_PO_REVIEW",
+    "name": "LOWER_ASSEMBLY_PRODUCT_OWNER_REVIEW",
+    "question": "Approve the MP-01B Minimum Proof or request local orientation/placement revision.",
+    "combine_with_mp01a_authorized": false,
     "merge_authorized": false
   },
   "gate_b": {
@@ -191,5 +191,17 @@
     "locate_relation_count": 4,
     "mutation": "support_clearance 306 -> 310 mm",
     "blender_authorized": false
+  },
+  "mp01b_gate_h": {
+    "status": "MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "task_id": "T-044",
+    "run_id": 37432149756,
+    "artifact_id": 11397412125,
+    "artifact_digest": "sha256:0c06ac0b48d92783ea4b0a54d9eba355cae20094b2eb3e2866dd7fd332fc6606",
+    "validation": "51/51 PASS",
+    "assembly_signature": "d9e7880252746283dcf72534dd276a9ab6f0b2220f15b7d4b5169b26449c2d71",
+    "blend_sha256": "6efc84d3468d31ecab7bf4cc3fd9887710288e9f38a07da2bcd9c19937c4cc35",
+    "product_owner_accepted": false,
+    "review_note": "Support groups straddle the ±1836 Pingliang end stations under the approved replaceable Gate G axis/station rule."
   }
 }
