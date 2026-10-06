@@ -1,0 +1,78 @@
+{
+  "schema_version": "MP01B_INTERIOR_LINGGONG_FIRST_ARTICLE_BUILD_PREPARATION_1.0",
+  "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED / ENGINEERING_EXECUTION_NOT_AUTHORIZED",
+  "date": "2026-10-06",
+  "component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
+  "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+  "role_variant": "LOWER_PINGLIANG_SUPPORT",
+  "geometry_strategy": "NORMALIZED_NEUTRAL_TWO_ZONE_SUPPORT_ENVELOPE",
+  "evidence_boundary": {
+    "identity": "FACT",
+    "support_role": "FACT",
+    "historical_dimensions": "UNKNOWN",
+    "historical_profile": "UNKNOWN",
+    "hidden_joinery": "UNKNOWN / DEFERRED",
+    "equivalence_to_outer_eaves": "UNKNOWN / NOT_ESTABLISHED"
+  },
+  "builder": {
+    "preferred_script": "production/zhenguo_wanfo/scripts/interior_linggong_master_common_v001.py",
+    "outer_eaves_builder_as_geometry_authority": false
+  },
+  "fixture_A": {
+    "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS",
+    "historical_claim": false,
+    "building_dimension_claim": false,
+    "body_length": 1000,
+    "body_depth": 500,
+    "body_height": 180,
+    "seat_length": 550,
+    "seat_depth": 500,
+    "seat_height": 120
+  },
+  "fixture_B": {
+    "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS",
+    "historical_claim": false,
+    "building_dimension_claim": false,
+    "body_length": 1260,
+    "body_depth": 620,
+    "body_height": 210,
+    "seat_length": 660,
+    "seat_depth": 620,
+    "seat_height": 140
+  },
+  "prohibited_sources": {
+    "outer_eaves_dimensions_mm": [
+      897,
+      217.4,
+      155.6
+    ],
+    "outer_eaves_14_point_profile": true,
+    "scaled_or_morphed_outer_eaves_profile": true,
+    "historical_equivalence_claim": true
+  },
+  "building_realization_owned_by_assembly": [
+    "FOUR_CHUANFU_UPPER_SUPPORT_FOOTPRINT",
+    "TUOFENG_LOWER_SUPPORT_ENVELOPE",
+    "PINGLIANG_REQUIRED_LOWER_SUPPORT_FOOTPRINT",
+    "FOUR_CHUANFU_TO_PINGLIANG_VERTICAL_GAP"
+  ],
+  "joinery": {
+    "historical_joinery": "UNKNOWN / DEFERRED",
+    "mortise_count": 0,
+    "tenon_count": 0,
+    "groove_slot_count": 0,
+    "hidden_cut_count": 0
+  },
+  "review_panels": [
+    "CANONICAL_AXON",
+    "CANONICAL_PROFILE",
+    "MUTATION_PROOF",
+    "ROLE_SEMANTICS",
+    "OUTER_EAVES_NON_INHERITANCE",
+    "UNKNOWN_BOUNDARY"
+  ],
+  "engineering_execution_authorized": false,
+  "formalization_authorized": false,
+  "catalog_v008_binding_authorized": false,
+  "merge_authorized": false
+}
