@@ -1,6 +1,6 @@
 # P3.3 Stage1 驼峰 Master Spec V0.1
 
-Status: **LOCKED / PRODUCT OWNER APPROVED 2026-10-06**
+Status: **FORMALIZED / CATALOG+V008 BOUND / MERGE NOT AUTHORIZED**
 
 ## 1. Master identity
 
@@ -211,3 +211,13 @@ Product Owner approved proceeding on 2026-10-06 by instruction to start the next
 > **驼峰 Candidate Geometry V0.1｜two role variants / source-guided simplified**
 
 The next step will create the minimum buildable geometry for the two role variants and show the geometry/evidence boundary before any formal Master lock.
+
+
+## 11. Formalization result
+
+- First Article: PRODUCT OWNER APPROVED
+- Master Library binding: COMPLETE
+- V008/CURRENT binding: COMPLETE
+- Exact historical dimensions: UNKNOWN
+- Hidden joinery: UNKNOWN / DEFERRED
+- Merge: NOT AUTHORIZED

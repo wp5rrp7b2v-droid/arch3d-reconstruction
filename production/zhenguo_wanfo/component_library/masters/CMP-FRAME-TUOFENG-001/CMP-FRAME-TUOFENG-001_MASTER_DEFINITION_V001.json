@@ -6,7 +6,7 @@
   "master_version": "V001",
   "component_name_zh": "驼峰",
   "component_name_en": "Tuofeng / hump-shaped timber support",
-  "status": "FIRST_ARTICLE_APPROVED / FORMALIZATION_AND_CATALOG_V008_BINDING_AUTHORIZED / MERGE_NOT_AUTHORIZED",
+  "status": "FORMALIZED + CATALOG/V008/CURRENT BOUND / MERGE NOT AUTHORIZED",
   "authority": {
     "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_TUOFENG_SOURCE_BINDING_V001.md",
     "master_spec": "docs/production/zhenguo_wanfo/P3_3_STAGE1_TUOFENG_MASTER_SPEC_V0_1.md",
@@ -203,7 +203,9 @@
     "first_article_product_owner_acceptance_authorized": true,
     "formalization_authorized": true,
     "catalog_v008_binding_authorized": true,
-    "merge_authorized": false
+    "merge_authorized": false,
+    "formalization_complete": true,
+    "catalog_v008_binding_complete": true
   },
   "first_article_approval": {
     "approved": true,
@@ -230,5 +232,29 @@
       "reconcile Stage1 Master-scope coverage"
     ],
     "merge_authorized": false
+  },
+  "formalization": {
+    "complete": true,
+    "date": "2026-10-06",
+    "authority": "PRODUCT_OWNER / start next step",
+    "accepted_run_id": 37416207236,
+    "artifact_id": 11391915287,
+    "artifact_zip_sha256": "sha256:f5b9940a17b8368a0d6be5df0a082b36a8d421705a2eb3a4094292577b5b820d",
+    "accepted_blend_sha256": "eb24ca1ad0e39df0bac3558f777f3844d2952cf2e0cbfe7b699b1d268ec60c7b",
+    "accepted_semantic_payload_sha256": "e0169aebc0f1d89dda43f0fa224afa70a219387f7985576c03db4bd3ab2251c0",
+    "accepted_validation_payload_sha256": "68b9383b2c6963397d85808c2f045a449a5815cd1c5d61723d319bc2b590a208",
+    "accepted_review_board_sha256": "967d27157df85594a528ce8bdcf647f9bc78ec10d7e0342d613db08c5477b1e6",
+    "family_signature": "a6ec7f0c43f2639810e41751e9bce0b618ea4684294a54d8e21646516207415f",
+    "variant_geometry_signatures": {
+      "LOWER_SUPPORT": "a9e8170047f29f0f1d35a9d8253947d0437eba1ddd5b4d2028cda2daf9dec78d",
+      "UPPER_RIDGE_SUPPORT": "085ffc2e6303c490465ac6f30a59557b042b62782c5df28d51c192a88bce9f35"
+    },
+    "merge_authorized": false,
+    "semantic_repo_sha256": "8a228aed55faf8f1df6f6b24dbe04c47dd8a7232bf474ba4179a90770db45059",
+    "validation_repo_sha256": "8b6dbffcf9433954d5327d34630c2daa366a53b6b7ec41f1d010653ad2822863",
+    "review_board_repo_sha256": "967d27157df85594a528ce8bdcf647f9bc78ec10d7e0342d613db08c5477b1e6",
+    "catalog_binding_complete": true,
+    "registry_binding_complete": true,
+    "coverage_reconciliation_complete": true
   }
 }

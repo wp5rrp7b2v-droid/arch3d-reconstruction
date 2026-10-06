@@ -1,0 +1,63 @@
+{
+  "canonical_blend_sha256": "eb24ca1ad0e39df0bac3558f777f3844d2952cf2e0cbfe7b699b1d268ec60c7b",
+  "check_count": 27,
+  "checks": {
+    "01_task": "PASS",
+    "02_authorized": "PASS",
+    "03_family_architecture": "PASS",
+    "04_semantic_architecture": "PASS",
+    "05_fixture_test_only": "PASS",
+    "06_unknown_dimensions": "PASS",
+    "07_joinery_unknown": "PASS",
+    "08_two_distinct_geometry": "PASS",
+    "09_mutation_lower": "PASS",
+    "10_mutation_upper": "PASS",
+    "11_mutation_identity": "PASS",
+    "12_reopen": "PASS",
+    "13_restore_lower": "PASS",
+    "14_restore_upper": "PASS",
+    "15_lower_seat_span": "PASS",
+    "16_upper_profile_symmetric": "PASS",
+    "17_assembly_owned": "PASS",
+    "18_registry_family_record": "PASS",
+    "19_registry_pending": "PASS",
+    "20_no_historical_flags": "PASS",
+    "21_blender": "PASS",
+    "22_binary_sha": "PASS",
+    "23_board": "PASS",
+    "24_render_lower_support_axon": "PASS",
+    "25_render_lower_support_profile": "PASS",
+    "26_render_upper_ridge_support_axon": "PASS",
+    "27_render_upper_ridge_support_profile": "PASS"
+  },
+  "family_signature": "a6ec7f0c43f2639810e41751e9bce0b618ea4684294a54d8e21646516207415f",
+  "geometry_signatures": {
+    "LOWER_SUPPORT": "a9e8170047f29f0f1d35a9d8253947d0437eba1ddd5b4d2028cda2daf9dec78d",
+    "UPPER_RIDGE_SUPPORT": "085ffc2e6303c490465ac6f30a59557b042b62782c5df28d51c192a88bce9f35"
+  },
+  "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+  "mutation_signatures": {
+    "LOWER_SUPPORT": "5bb5224c682a90b83850d59816e8d0e9ef41e15e447f73cb2bf8a428d1d9ce6c",
+    "UPPER_RIDGE_SUPPORT": "43ab01fbf3eb047b44f9f0af835f29b7fe2328ff32364ff84cbf66f944e9beb7"
+  },
+  "status": "PASS",
+  "task_id": "T-042",
+  "formalization": {
+    "complete": true,
+    "date": "2026-10-06",
+    "authority": "PRODUCT_OWNER / start next step",
+    "accepted_run_id": 37416207236,
+    "artifact_id": 11391915287,
+    "artifact_zip_sha256": "sha256:f5b9940a17b8368a0d6be5df0a082b36a8d421705a2eb3a4094292577b5b820d",
+    "accepted_blend_sha256": "eb24ca1ad0e39df0bac3558f777f3844d2952cf2e0cbfe7b699b1d268ec60c7b",
+    "accepted_semantic_payload_sha256": "e0169aebc0f1d89dda43f0fa224afa70a219387f7985576c03db4bd3ab2251c0",
+    "accepted_validation_payload_sha256": "68b9383b2c6963397d85808c2f045a449a5815cd1c5d61723d319bc2b590a208",
+    "accepted_review_board_sha256": "967d27157df85594a528ce8bdcf647f9bc78ec10d7e0342d613db08c5477b1e6",
+    "family_signature": "a6ec7f0c43f2639810e41751e9bce0b618ea4684294a54d8e21646516207415f",
+    "variant_geometry_signatures": {
+      "LOWER_SUPPORT": "a9e8170047f29f0f1d35a9d8253947d0437eba1ddd5b4d2028cda2daf9dec78d",
+      "UPPER_RIDGE_SUPPORT": "085ffc2e6303c490465ac6f30a59557b042b62782c5df28d51c192a88bce9f35"
+    },
+    "merge_authorized": false
+  }
+}

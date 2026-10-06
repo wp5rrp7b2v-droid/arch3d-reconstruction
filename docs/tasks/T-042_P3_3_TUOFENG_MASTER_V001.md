@@ -1,6 +1,6 @@
 # 中国古建筑3D复原｜T-042｜P3_3_TUOFENG_MASTER_V001
 
-Status: **FIRST ARTICLE APPROVED / FORMALIZATION + CATALOG/V008 BINDING AUTHORIZED / MERGE NOT AUTHORIZED**
+Status: **FORMALIZED + CATALOG/V008 BOUND / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Stage: P3.3 V002 Stage 1 reopened for 驼峰
 Task id: `T-042｜P3_3_TUOFENG_MASTER_V001`
@@ -211,3 +211,14 @@ Not authorized:
 - merge PR #54;
 - historical metric claims;
 - whole-hall instance count or per-instance placement claims.
+
+
+## 12. Formalization Result
+
+- Status: **COMPLETE**
+- Master Library: **BOUND**
+- V008/CURRENT: **BOUND**
+- Master-scope coverage: **29/29**
+- Approved Master families: **26**
+- Historical dimensions/profile/joinery boundaries remain unchanged.
+- Merge: **NOT AUTHORIZED**

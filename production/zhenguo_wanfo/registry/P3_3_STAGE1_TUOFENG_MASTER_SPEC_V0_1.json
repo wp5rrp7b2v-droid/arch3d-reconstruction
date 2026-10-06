@@ -4,7 +4,7 @@
   "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
   "master_version": "V0.1_CANDIDATE",
   "component_name_zh": "驼峰",
-  "status": "LOCKED / PRODUCT_OWNER_APPROVED / 2026-10-06",
+  "status": "FORMALIZED / PRODUCT_OWNER APPROVED / CATALOG_V008_BOUND / MERGE_NOT_AUTHORIZED",
   "evidence": {
     "a1": {
       "source_id": "SRC-ZG-WF-001",
@@ -78,5 +78,21 @@
     "approved": true,
     "approval_date": "2026-10-06",
     "approval_basis": "User instruction: 开始下一步"
+  },
+  "formalization_result": {
+    "complete": true,
+    "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+    "master_version": "V001",
+    "role_variants": [
+      "LOWER_SUPPORT",
+      "UPPER_RIDGE_SUPPORT"
+    ],
+    "historical_dimensions": "UNKNOWN",
+    "hidden_joinery": "UNKNOWN / DEFERRED",
+    "artifact_id": 11391915287,
+    "artifact_zip_sha256": "sha256:f5b9940a17b8368a0d6be5df0a082b36a8d421705a2eb3a4094292577b5b820d",
+    "canonical_blend_sha256": "eb24ca1ad0e39df0bac3558f777f3844d2952cf2e0cbfe7b699b1d268ec60c7b",
+    "family_signature": "a6ec7f0c43f2639810e41751e9bce0b618ea4684294a54d8e21646516207415f",
+    "merge_authorized": false
   }
 }
