@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **ASSEMBLY DESIGN STARTED / GATE A COMPLETE / ENGINEERING BUILD NOT YET AUTHORIZED**
+Status: **ASSEMBLY DESIGN ACTIVE / GATE A+B COMPLETE / ENGINEERING BUILD NOT YET AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -165,9 +165,15 @@ Hard FAIL:
 - using the outer-eaves Linggong Master for MP-01B without a scope decision;
 - treating surface contact as proof of historical joinery.
 
-## 6. Next complete step
+## 6. Gate B result
 
-**MP-01A Gate B｜Ridge Support Target Datum Resolution**
+**PASS** — upper endpoint owner resolved as `DATUM-MP01A-RIDGE-SUPPORT-EAST-SEAM`, semantically owned by `RIDGE_PURLIN role × EAST_SEAM frame plane`.
+
+Exact global XYZ/contact face remain unresolved.
+
+## 7. Next complete step
+
+**MP-01A Gate C｜Assembly-Local Numeric Placement Resolver**
 
 Only this question is next:
 
