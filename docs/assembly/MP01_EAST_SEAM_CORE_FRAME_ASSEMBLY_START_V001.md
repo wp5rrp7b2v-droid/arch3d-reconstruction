@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **MP-01A APPROVED / MP-01B GATE E MACHINE PASS / PRODUCT OWNER REVIEW REQUIRED / MERGE NOT AUTHORIZED**
+Status: **MP-01A APPROVED / MP-01B INTERIOR LINGGONG FORMALIZED / READY FOR LOWER ASSEMBLY ENVELOPE / MERGE NOT AUTHORIZED**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -274,3 +274,14 @@ Next:
 - Outer-eaves geometry inheritance: NONE
 - Historical dimensions/profile/joinery: remain UNKNOWN
 - Next: Product Owner First Article review
+
+
+## 16. T-043 Formalization
+
+- Product Owner: **APPROVED**
+- `CMP-FRAME-LINGGONG-INTERIOR-001_MASTER`: **FORMALIZED**
+- V008/CURRENT: **APPROVED_MASTER_AVAILABLE**
+- Master-scope coverage: **30/30 = 100%**
+- Approved Master families: **27**
+- Historical dimensions/profile/joinery and whole-hall mapping remain UNKNOWN.
+- Next: MP-01B assembly-local metric envelope / placement resolution.
