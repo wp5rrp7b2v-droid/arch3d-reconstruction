@@ -1,6 +1,6 @@
 # MP-01B｜Circle 1 Interior Huagong Visible Gong-Head Profile Resolution V001
 
-Status: **PRODUCT OWNER APPROVED / CIRCLE 1 PROFILE CONTROL LOCKED / NO BLENDER**
+Status: **PREVIOUSLY PRODUCT OWNER APPROVED / T-047 ACTUAL BUILD FALSIFIED PROFILE-EXTENT ASSUMPTION / REOPENED / NO BLENDER**
 Date: 2026-10-06
 
 ## 1. Scope
@@ -211,3 +211,41 @@ Not approved by this decision:
 
 Next gate:
 **Circle 1 Targeted Build Authorization**
+
+
+## 11. T-047 actual-build falsification / reopened status
+
+T-047 executed the approved Candidate deterministically (51/51 MACHINE PASS) but Product Owner visual review **FAILED**.
+
+Invalidated assumption:
+- `650 mm inward endpoint reach == 650 mm shaped gong-head extent`.
+
+The 650 mm value is retained only as an endpoint/placement reach unless later evidence disproves it.
+
+The visible gong-head shaping extent is reopened and must be localized near the terminal end rather than spread across the full 650 mm.
+
+### New Product Owner visual observations to carry into the next evidence check
+
+1. Drawing 11 shows multiple gong heads with a repeated/localized terminal form.  
+   This suggests a same-building repeated visible-form rule may exist, but exact metric equivalence is not yet established.
+
+2. A distinct small dou-shaped physical element is visible above multiple gong-head terminals.  
+   Working identification: **possibly 散斗**.
+
+Evidence boundary:
+- existence of a separate small dou-like physical participant at the visible gong-head location = **visual FACT candidate requiring target-location source confirmation**;
+- identification as `散斗` = **INFERENCE / NOT YET LOCKED**;
+- it must not be silently substituted with 齐心斗, 交互斗, generic small-dou geometry, or the old BRACKET_CONTACT proxy;
+- DG-114 unified-small-dou rule remains UNKNOWN / DO_NOT_LOCK.
+
+### Next work, not authorized tonight
+
+**MP-01B｜Gonghead Repetition + Small-Dou Identity Check**
+
+Scope only:
+- compare multiple same-building gong-head terminals in Drawing 11 / relevant photographs;
+- estimate only the localized shaping extent if source resolution permits;
+- identify the small dou above the target gong head from primary source terminology/position;
+- determine whether it must become a new independent physical participant.
+
+No new Blender build is authorized until this check closes.
