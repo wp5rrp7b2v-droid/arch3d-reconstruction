@@ -277,7 +277,7 @@ def build(contract_path, asset, semantic, review_dir=None, huagong_len_override=
         "BELONG":sum(1 for r in relationships if r["type"]=="BELONG"),
         "CONNECT":sum(1 for r in relationships if r["type"]=="CONNECT")
       },
-      "bracket_interlock":"HUAGONG_LINGGONG_ORTHOGONAL_OVERLAP / HIDDEN_CUT_GEOMETRY_UNKNOWN",
+      "bracket_interlock":c["gongs"]["overlap_classification"],
       "historical_joinery":"UNKNOWN / DEFERRED / NOT_MODELED",
       "joinery_cut_count":0,
       "whole_hall_claim":False,
