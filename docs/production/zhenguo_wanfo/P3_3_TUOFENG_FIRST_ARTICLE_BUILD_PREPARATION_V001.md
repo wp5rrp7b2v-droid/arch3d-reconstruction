@@ -254,3 +254,10 @@ After approval, create and run the first-article engineering task.
 - Product Owner instruction: **开始驼峰 First Article Engineering Execution**
 - T-042 engineering + Blender first-article execution is authorized.
 - First-article acceptance, formalization, Catalog/V008 approved-master binding, and merge remain separate gates.
+
+
+## 12. Formalization gate
+
+- Product Owner authorization: **GRANTED / 2026-10-06**
+- Formalization + Catalog/V008 binding: **AUTHORIZED**
+- Merge: **NOT AUTHORIZED**
