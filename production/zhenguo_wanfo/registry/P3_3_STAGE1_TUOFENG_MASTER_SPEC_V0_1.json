@@ -1,0 +1,80 @@
+{
+  "schema_version": "P3_3_STAGE1_MASTER_SPEC_0.1",
+  "component_id": "CMP-FRAME-TUOFENG-001",
+  "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+  "master_version": "V0.1_CANDIDATE",
+  "component_name_zh": "驼峰",
+  "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "evidence": {
+    "a1": {
+      "source_id": "SRC-ZG-WF-001",
+      "locators": [
+        "PDF p83 / printed p68 / §2.3.1.3 / Fig. 2-41",
+        "PDF p106 / printed p91 / Fig. 2-71",
+        "PDF p107 / printed p92 / Table 2-52",
+        "PDF p109 / printed p94 / Fig. 2-73"
+      ],
+      "geometry_authority": "SAME_BUILDING_VISUAL_AND_RELATIVE_POSITION_ONLY",
+      "isolated_metric_authority": false
+    },
+    "a2": {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/",
+      "direct_statements": [
+        "四椽栿上用驼峰、令栱承平梁。",
+        "平梁之上设驼峰、蜀柱、叉手。"
+      ],
+      "identity_authority": true,
+      "assembly_role_authority": true,
+      "metric_authority": false
+    }
+  },
+  "physical_instance_count": null,
+  "physical_instance_count_status": "UNKNOWN",
+  "geometry_variant_policy": {
+    "family_count": 1,
+    "role_variant_count": 2,
+    "decision": "ONE_MASTER_FAMILY_WITH_TWO_ROLE_VARIANTS",
+    "rationale": "Two directly supported assembly roles have different interface topology; evidence does not prove identical geometry."
+  },
+  "role_variants": [
+    {
+      "variant_id": "LOWER_SUPPORT",
+      "semantic_chain": "FOUR_CHUANFU -> TUOFENG / LINGGONG -> PINGLIANG",
+      "lower_support": "FOUR_CHUANFU_UPPER_SUPPORT_REGION",
+      "upper_supported_chain": "LINGGONG_AND_PINGLIANG_SUPPORT_CHAIN",
+      "exact_geometry": "UNKNOWN"
+    },
+    {
+      "variant_id": "UPPER_RIDGE_SUPPORT",
+      "semantic_chain": "PINGLIANG -> TUOFENG -> SHUZHU / RIDGE_SUPPORT_GROUP",
+      "lower_support": "PINGLIANG_UPPER_SUPPORT_REGION",
+      "upper_supported_chain": "SHUZHU_LOWER_SUPPORT_REGION",
+      "exact_geometry": "UNKNOWN"
+    }
+  ],
+  "geometry": {
+    "mode": "SOURCE_GUIDED_SIMPLIFIED / PARAMETRIC_ENVELOPE / REPLACEABLE",
+    "metric_dimensions_locked": false,
+    "canonical_dimensions_mm": null,
+    "visual_constraints": [
+      "broad base on supporting beam",
+      "raised central upper support/seat region",
+      "simplified hump/raised-support side silhouette permitted"
+    ],
+    "exact_profile": "UNKNOWN",
+    "production_envelope_policy": "ASSEMBLY_BOUNDED / RECONSTRUCTED_DESIGN_OR_SECONDARY_CALCULATED / REPLACEABLE"
+  },
+  "axes": {
+    "z": "VERTICAL_UP",
+    "base_plane": "Z0",
+    "top_support_region": "+Z",
+    "plan_center_rule": "ALIGN_TO_SUPPORT_CHAIN_CENTERLINE_UNLESS_LATER_EVIDENCE_PROVES_OFFSET",
+    "historical_eccentricity": "UNKNOWN"
+  },
+  "historical_joinery": "UNKNOWN / DEFERRED",
+  "whole_hall_mapping": "UNKNOWN",
+  "approval": {
+    "product_owner_approval_required": true,
+    "approved": false
+  }
+}
