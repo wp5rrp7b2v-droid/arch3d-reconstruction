@@ -1,0 +1,208 @@
+{
+  "schema_version": "TUOFENG_MASTER_DEFINITION_1.0",
+  "task_id": "T-042",
+  "component_id": "CMP-FRAME-TUOFENG-001",
+  "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+  "master_version": "V001",
+  "component_name_zh": "驼峰",
+  "component_name_en": "Tuofeng / hump-shaped timber support",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / ENGINEERING_EXECUTION_AUTHORIZED",
+  "authority": {
+    "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_TUOFENG_SOURCE_BINDING_V001.md",
+    "master_spec": "docs/production/zhenguo_wanfo/P3_3_STAGE1_TUOFENG_MASTER_SPEC_V0_1.md",
+    "candidate_geometry": "production/zhenguo_wanfo/component_library/candidates/CMP-FRAME-TUOFENG-001/TUOFENG_CANDIDATE_GEOMETRY_V0_1.json",
+    "build_preparation": "production/zhenguo_wanfo/registry/P3_3_TUOFENG_FIRST_ARTICLE_BUILD_PREPARATION_V001.json"
+  },
+  "registry_boundary": {
+    "registry_schema_version": "V008",
+    "family_record_count": 1,
+    "physical_instance_count": null,
+    "physical_instance_count_status": "UNKNOWN",
+    "exact_per_instance_mapping": "UNKNOWN",
+    "master_coverage_status_before_acceptance": "MASTER_REQUIRED_PENDING"
+  },
+  "family_architecture": {
+    "master_family_count": 1,
+    "role_variant_count": 2,
+    "role_variants": [
+      "LOWER_SUPPORT",
+      "UPPER_RIDGE_SUPPORT"
+    ],
+    "two_master_families_prohibited": true
+  },
+  "role_semantics": {
+    "LOWER_SUPPORT": {
+      "chain": "FOUR_CHUANFU -> TUOFENG / LINGGONG -> PINGLIANG",
+      "lower_interface": "FOUR_CHUANFU_UPPER_SUPPORT_REGION",
+      "upper_interface": "LINGGONG_AND_PINGLIANG_SUPPORT_CHAIN"
+    },
+    "UPPER_RIDGE_SUPPORT": {
+      "chain": "PINGLIANG -> TUOFENG -> SHUZHU / RIDGE_SUPPORT_GROUP",
+      "lower_interface": "PINGLIANG_UPPER_SUPPORT_REGION",
+      "upper_interface": "SHUZHU_LOWER_SUPPORT_REGION"
+    }
+  },
+  "canonical_first_article_fixture": {
+    "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS",
+    "historical_claim": false,
+    "building_dimension_claim": false,
+    "replaceable": true,
+    "fixture_set": "A",
+    "LOWER_SUPPORT": {
+      "base_span_mm": 1000,
+      "base_depth_mm": 500,
+      "base_height_mm": 180,
+      "seat_span_mm": 420,
+      "seat_depth_mm": 320,
+      "seat_height_mm": 180
+    },
+    "UPPER_RIDGE_SUPPORT": {
+      "base_span_mm": 1000,
+      "depth_mm": 500,
+      "height_mm": 320
+    }
+  },
+  "mutation_fixture": {
+    "classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS",
+    "historical_claim": false,
+    "building_dimension_claim": false,
+    "replaceable": true,
+    "fixture_set": "B",
+    "LOWER_SUPPORT": {
+      "base_span_mm": 1250,
+      "base_depth_mm": 620,
+      "base_height_mm": 210,
+      "seat_span_mm": 500,
+      "seat_depth_mm": 360,
+      "seat_height_mm": 220
+    },
+    "UPPER_RIDGE_SUPPORT": {
+      "base_span_mm": 820,
+      "depth_mm": 410,
+      "height_mm": 270
+    }
+  },
+  "upper_normalized_profile_xz": [
+    [
+      -0.5,
+      0
+    ],
+    [
+      -0.42,
+      0.07
+    ],
+    [
+      -0.34,
+      0.07
+    ],
+    [
+      -0.34,
+      0.13
+    ],
+    [
+      -0.25,
+      0.13
+    ],
+    [
+      -0.25,
+      0.2
+    ],
+    [
+      -0.16,
+      0.2
+    ],
+    [
+      -0.12,
+      0.32
+    ],
+    [
+      0.12,
+      0.32
+    ],
+    [
+      0.16,
+      0.2
+    ],
+    [
+      0.25,
+      0.2
+    ],
+    [
+      0.25,
+      0.13
+    ],
+    [
+      0.34,
+      0.13
+    ],
+    [
+      0.34,
+      0.07
+    ],
+    [
+      0.42,
+      0.07
+    ],
+    [
+      0.5,
+      0
+    ]
+  ],
+  "geometry_contract": {
+    "LOWER_SUPPORT": {
+      "strategy": "TWO_TIER_SUPPORT_ENVELOPE",
+      "exact_historical_profile": "UNKNOWN",
+      "historical_metric_dimensions": "UNKNOWN"
+    },
+    "UPPER_RIDGE_SUPPORT": {
+      "strategy": "SYMMETRIC_STEPPED_HUMP_PROFILE_EXTRUSION",
+      "exact_historical_profile": "UNKNOWN",
+      "historical_metric_dimensions": "UNKNOWN"
+    },
+    "production_classification": "RECONSTRUCTED_DESIGN / REPLACEABLE",
+    "test_fixture_is_historical_geometry": false
+  },
+  "assembly_ownership": {
+    "final_building_metric_envelope": "ASSEMBLY_OWNED",
+    "placement": "ASSEMBLY_OWNED",
+    "support_footprints": "ASSEMBLY_OWNED",
+    "vertical_gap": "ASSEMBLY_OWNED",
+    "contact_regions": "ASSEMBLY_OWNED"
+  },
+  "joinery": {
+    "historical_joinery": "UNKNOWN / DEFERRED",
+    "mortise_count": 0,
+    "tenon_count": 0,
+    "groove_slot_count": 0,
+    "hidden_cavity_count": 0
+  },
+  "unknowns": [
+    "historical metric width/depth/height",
+    "exact historical profile",
+    "whole-hall physical instance count",
+    "exact per-instance mapping",
+    "hidden joinery",
+    "exact contact-face geometry"
+  ],
+  "review_contract": {
+    "required_panels": [
+      "BOTH_VARIANTS_AXON",
+      "LOWER_SUPPORT_PROFILE",
+      "UPPER_RIDGE_SUPPORT_PROFILE",
+      "PARAMETRIC_MUTATION_PROOF",
+      "ROLE_AND_INTERFACE_SEMANTICS",
+      "SOURCE_VS_RECONSTRUCTED_BOUNDARY",
+      "UNKNOWN_AND_DEFERRED_GEOMETRY"
+    ]
+  },
+  "execution_boundary": {
+    "engineering_execution_authorized": true,
+    "blender_execution_authorized": true,
+    "first_article_generation_authorized": true,
+    "first_article_machine_validation_authorized": true,
+    "first_article_product_owner_acceptance_authorized": false,
+    "formalization_authorized": false,
+    "catalog_v008_binding_authorized": false,
+    "merge_authorized": false
+  }
+}
