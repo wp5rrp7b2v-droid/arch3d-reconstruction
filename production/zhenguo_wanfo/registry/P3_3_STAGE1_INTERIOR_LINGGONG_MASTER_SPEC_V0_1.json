@@ -1,0 +1,56 @@
+{
+  "schema_version": "P3_3_INTERIOR_LINGGONG_MASTER_SPEC_0.1",
+  "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "date": "2026-10-06",
+  "component_name_zh": "令栱（梁架承托）",
+  "component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
+  "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+  "master_version": "V0.1_CANDIDATE",
+  "system": "主体梁架 / 梁架承托",
+  "role_variant_count": 1,
+  "role_variants": [
+    "LOWER_PINGLIANG_SUPPORT"
+  ],
+  "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_INTERIOR_LINGGONG_SOURCE_BINDING_V001.md",
+  "geometry": {
+    "mode": "NORMALIZED_NEUTRAL_HORIZONTAL_SUPPORT_ENVELOPE / ASSEMBLY_OWNED / REPLACEABLE",
+    "historical_metric_dimensions_locked": false,
+    "canonical_historical_dimensions_mm": null,
+    "candidate_topology": {
+      "body_zone": {
+        "length_ratio": 1,
+        "depth_ratio": 1,
+        "height_ratio": 0.6
+      },
+      "upper_bearing_zone": {
+        "length_ratio": 0.55,
+        "depth_ratio": 1,
+        "height_ratio": 0.4
+      }
+    },
+    "historical_profile": "UNKNOWN",
+    "outer_eaves_profile_reuse_prohibited": true,
+    "outer_eaves_dimensions_reuse_as_historical_prohibited": true
+  },
+  "assembly_inputs": [
+    "FOUR_CHUANFU_UPPER_SUPPORT_FOOTPRINT",
+    "TUOFENG_LOWER_SUPPORT_ENVELOPE",
+    "PINGLIANG_REQUIRED_LOWER_SUPPORT_FOOTPRINT",
+    "FOUR_CHUANFU_TO_PINGLIANG_VERTICAL_GAP"
+  ],
+  "assembly_dimension_classification": "RECONSTRUCTED_DESIGN or SECONDARY_CALCULATED / REPLACEABLE",
+  "axes": {
+    "x": "HORIZONTAL_MEMBER_LENGTH",
+    "y": "DEPTH_EXTRUSION",
+    "z": "VERTICAL_UP"
+  },
+  "historical_joinery": "UNKNOWN / DEFERRED",
+  "whole_hall_count": "UNKNOWN",
+  "per_instance_mapping": "UNKNOWN",
+  "equality_to_outer_eaves_master": "UNKNOWN / NOT_ESTABLISHED",
+  "approval": {
+    "product_owner_approval_required": true,
+    "approved": false
+  },
+  "blender_assembly_authorized": false
+}
