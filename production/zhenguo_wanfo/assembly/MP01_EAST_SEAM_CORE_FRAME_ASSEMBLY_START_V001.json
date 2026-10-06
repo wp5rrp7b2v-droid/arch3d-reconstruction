@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_A_B_C_APPROVED / GATE_D_BUILD_PREP_COMPLETE / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_E_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_A_B_C_APPROVED / GATE_D_BUILD_PREP_COMPLETE / ENGINEERING_EXECUTION_NOT_AUTHORIZED",
+      "status": "GATE_E_MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,10 +72,10 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_GATE_E",
-    "name": "INTERIOR_LINGGONG_FIRST_ARTICLE_ENGINEERING_EXECUTION",
-    "question": "Execute and machine-validate the Interior Linggong first article.",
-    "blender_authorized": false
+    "id": "MP01B_GATE_E_PO_REVIEW",
+    "name": "INTERIOR_LINGGONG_FIRST_ARTICLE_REVIEW",
+    "question": "Approve/reject the T-043 Interior Linggong First Article before formalization.",
+    "merge_authorized": false
   },
   "gate_b": {
     "status": "PASS",
@@ -148,5 +148,16 @@
     "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
     "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_D_INTERIOR_LINGGONG_FIRST_ARTICLE_BUILD_PREPARATION_V001.json",
     "engineering_execution_authorized": false
+  },
+  "mp01b_gate_e": {
+    "status": "MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "task_id": "T-043",
+    "run_id": 37424767731,
+    "artifact_id": 11394896083,
+    "artifact_digest": "sha256:397adf6552f3f1d9d4791cc8dbaf3ea5197ee556c673aee11ade113c3491610d",
+    "validation": "28/28 PASS",
+    "geometry_signature": "7ef466c39b08f7485da1c7e91af8882446da7f6d9546668ac28132445d19232f",
+    "product_owner_accepted": false,
+    "formalization_authorized": false
   }
 }
