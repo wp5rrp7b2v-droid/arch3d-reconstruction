@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_TARGETED_REWORK_IN_PROGRESS / T046_TUOJIAO_APPROVED / CIRCLE1_T047_REVIEW_FAIL / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_TARGETED_REWORK_IN_PROGRESS / T046_TUOJIAO_APPROVED / CIRCLE1_T047_FAIL_REOPENED / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "R4_MACHINE_PASS / VISUAL_EVIDENCE_AUDIT_FAIL / T046_TUOJIAO_APPROVED / CIRCLE1_T047_PO_FAIL / MP01B_NOT_APPROVED",
+      "status": "R4_MACHINE_PASS_VISUAL_FAIL / T046_TUOJIAO_APPROVED / T047_CIRCLE1_MACHINE_PASS_PO_FAIL / CIRCLE1_REOPENED / CIRCLE2_OPEN / CIRCLE3_OPEN / MP01B_NOT_APPROVED",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,10 +72,10 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_CIRCLE1_PROFILE_RECALIBRATION",
-    "name": "SEPARATE_ENDPOINT_REACH_FROM_LOCAL_GONGHEAD_SHAPING",
+    "id": "MP01B_GONGHEAD_REPETITION_SMALL_DOU_IDENTITY_CHECK",
+    "name": "GONGHEAD_REPETITION_AND_SMALL_DOU_IDENTITY_CHECK",
     "execution_authorized": false,
-    "note": "T047 falsified the prior profile-extent assumption. Recalibrate localized terminal gong-head extent from Drawing 11. Circle 2 and 3 remain open.",
+    "note": "Next session: first compare repeated same-building gong-head terminal forms and verify the independent small dou-like participant above the target gong head. 散斗 is an inference until target-position primary-source identity is confirmed. No Blender.",
     "combine_with_mp01a_authorized": false,
     "merge_authorized": false
   },
@@ -349,5 +349,36 @@
     "mp01b_overall_accepted": false,
     "merge_authorized": false,
     "failure_reason": "650 mm inward endpoint reach incorrectly treated as 650 mm shaped gong-head zone"
+  },
+  "closeout_2026_10_06": {
+    "status": "DAY_CLOSED / NO_FURTHER_EXECUTION_AUTHORIZED",
+    "proven_today": [
+      "MP01A remains APPROVED / MINIMUM_PROOF_PASS",
+      "T046 Tuojiao FRONT/REAR first article MACHINE PASS and Product Owner APPROVED",
+      "T047 Circle1 implementation MACHINE PASS but Product Owner REVIEW FAIL",
+      "T047 falsified the assumption that 650 mm endpoint reach equals shaped gong-head extent"
+    ],
+    "open_blockers": [
+      "Circle1A localized repeated gong-head terminal form",
+      "Circle1B small dou-like participant above gong head; probable 散斗 identity not yet confirmed",
+      "Circle2 remaining node incompleteness including deferred Panjian Fang and visible bracket-form issue",
+      "Circle3 Tuofeng-Ludou visible-form gap"
+    ],
+    "frozen_baselines": [
+      "Approved T046 Tuojiao geometry",
+      "900 mm Huagong project-completion total length control remains provisional/replaceable",
+      "650 mm inward endpoint reach remains endpoint placement control only",
+      "250 mm outward Tuojiao reach remains project-completion control",
+      "FRONT Huagong section 221 x 153 mm direct target observation",
+      "REAR Huagong section 210 x 156 mm direct target observation"
+    ],
+    "not_authorized": [
+      "new Blender build",
+      "MP01B overall approval",
+      "MP01A+MP01B combination",
+      "PR56 merge",
+      "whole-frame expansion",
+      "whole-hall expansion"
+    ]
   }
 }
