@@ -1,0 +1,85 @@
+{
+  "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
+  "status": "ASSEMBLY_DESIGN_STARTED / GATE_A_COMPLETE / ENGINEERING_BUILD_NOT_YET_AUTHORIZED",
+  "date": "2026-10-06",
+  "canonical_location_label": "东缝",
+  "chat_working_label": "明间东缝",
+  "chat_label_is_registry_fact": false,
+  "goal": "Evidence-bounded queryable regenerable core-frame assembly",
+  "target_chain": "FOUR_CHUANFU -> TUOFENG / LINGGONG -> PINGLIANG -> TUOFENG -> SHUZHU / CHASHOU",
+  "subassemblies": {
+    "MP01A": {
+      "name": "UPPER_RIDGE_SUPPORT",
+      "status": "READY_FOR_GATE_B / NOT_READY_FOR_BLENDER",
+      "participants": [
+        {
+          "instance_id": "平梁-东缝",
+          "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+          "variant": "EW_SEAM",
+          "record_type": "V008_PHYSICAL_INSTANCE"
+        },
+        {
+          "instance_id": "ASM-MP01A-TUOFENG-UPPER-01",
+          "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+          "variant": "UPPER_RIDGE_SUPPORT",
+          "record_type": "RECONSTRUCTED_ASSEMBLY_INSTANCE",
+          "whole_hall_count_claim": false
+        },
+        {
+          "instance_id": "蜀柱-东缝",
+          "master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+          "record_type": "V008_PHYSICAL_INSTANCE"
+        },
+        {
+          "instance_id": "叉手-东缝-南侧",
+          "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+          "record_type": "V008_PHYSICAL_INSTANCE"
+        },
+        {
+          "instance_id": "叉手-东缝-北侧",
+          "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+          "record_type": "V008_PHYSICAL_INSTANCE"
+        },
+        {
+          "instance_id": "RIDGE_SUPPORT_TARGET_DATUM",
+          "record_type": "NON_PHYSICAL_ASSEMBLY_DATUM",
+          "physical_owner": "UNRESOLVED"
+        }
+      ],
+      "blockers": [
+        "RIDGE_SUPPORT_TARGET_DATUM_PHYSICAL_BINDING"
+      ]
+    },
+    "MP01B": {
+      "name": "LOWER_PINGLIANG_SUPPORT",
+      "status": "LOCAL_BLOCKER / DOES_NOT_BLOCK_MP01A",
+      "intended_participants": [
+        "四椽栿-东缝",
+        "TUOFENG::LOWER_SUPPORT",
+        "LINGGONG_INTERIOR_ROLE",
+        "平梁-东缝"
+      ],
+      "blocker": {
+        "id": "LINGGONG_SCOPE_MISMATCH",
+        "current_master": "CMP-GONG-LINGGONG-001_MASTER",
+        "current_master_scope": "28 OUTER-EAVES DOUGONG INSTANCES",
+        "required_role": "INTERIOR CORE-FRAME FOUR_CHUANFU_TO_PINGLIANG SUPPORT",
+        "equivalence_status": "NOT_ESTABLISHED",
+        "silent_reuse_prohibited": true
+      }
+    }
+  },
+  "relation_boundary": {
+    "historical_joinery": "UNKNOWN / NOT MODELED",
+    "exact_contact_faces": "UNKNOWN",
+    "exact_chashou_angle": "ENDPOINT_DERIVED / NOT FIXED",
+    "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
+  },
+  "next_gate": {
+    "id": "MP01A_GATE_B",
+    "name": "RIDGE_SUPPORT_TARGET_DATUM_RESOLUTION",
+    "question": "What evidence/geometry owns the Shuzhu and Chashou upper endpoint target for the East Seam upper-ridge subassembly?",
+    "candidate_owner": "RELEVANT ZHENGSHEN RIDGE-PURLIN SUPPORT REGION / RIDGE-SUPPORT ASSEMBLY",
+    "blender_authorized": false
+  }
+}
