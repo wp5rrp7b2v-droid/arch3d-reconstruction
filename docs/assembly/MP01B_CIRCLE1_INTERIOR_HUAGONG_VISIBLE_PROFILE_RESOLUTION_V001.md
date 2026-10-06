@@ -1,6 +1,6 @@
 # MP-01B｜Circle 1 Interior Huagong Visible Gong-Head Profile Resolution V001
 
-Status: **DESIGN COMPLETE / PRODUCT OWNER REVIEW REQUIRED / NO BLENDER**
+Status: **PRODUCT OWNER APPROVED / CIRCLE 1 PROFILE CONTROL LOCKED / NO BLENDER**
 Date: 2026-10-06
 
 ## 1. Scope
@@ -186,3 +186,28 @@ UNKNOWN / DEFERRED:
 Circle 1 evidence resolution is sufficient for a targeted build **if Product Owner approves this candidate**.
 
 No Blender execution is authorized by this document.
+
+## 10. Product Owner decision
+
+Decision: **APPROVED**
+
+Approved scope:
+- Candidate `MP01B_INTERIOR_HUAGONG_VISIBLE_PROFILE_V001_C01`;
+- target-specific asymmetric visible gong-head treatment;
+- existing 900 mm total realization length retained;
+- inward 650 mm gong-head zone retained;
+- outward 250 mm Tuojiao zone retained;
+- FRONT 221 × 153 mm and REAR 210 × 156 mm direct target sections retained;
+- six-point target Drawing-11-guided visible-profile control;
+- exact historical curve / shoulder / hidden contact / joinery remain UNKNOWN / DEFERRED.
+
+Not approved by this decision:
+- Blender execution;
+- Circle 2;
+- Circle 3;
+- MP-01B overall acceptance;
+- MP-01A + MP-01B combination;
+- PR #56 merge.
+
+Next gate:
+**Circle 1 Targeted Build Authorization**
