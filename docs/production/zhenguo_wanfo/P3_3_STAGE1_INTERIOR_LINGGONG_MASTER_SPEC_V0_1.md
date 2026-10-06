@@ -1,6 +1,6 @@
 # P3.3 梁架承托令栱 Master Spec V0.1
 
-Status: **CANDIDATE / PRODUCT OWNER REVIEW REQUIRED**
+Status: **LOCKED / PRODUCT OWNER APPROVED 2026-10-06**
 Date: 2026-10-06
 
 ## 1. Master identity
@@ -150,3 +150,11 @@ After approval:
 > **MP-01B Gate C｜Interior Linggong Candidate Geometry V0.1**
 
 No Blender assembly is authorized by this Spec alone.
+
+
+## 11. Product Owner approval
+
+- Date: 2026-10-06
+- Decision: **APPROVED**
+- Approved scope: separate interior-role Master family + neutral normalized geometry strategy.
+- This approval authorizes Candidate Geometry V0.1 only; Blender assembly remains not authorized.
