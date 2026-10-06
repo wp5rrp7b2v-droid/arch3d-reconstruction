@@ -1,6 +1,6 @@
 # MP-01｜东缝核心梁架 Minimum Proof｜Assembly Start V001
 
-Status: **ASSEMBLY DESIGN ACTIVE / GATE A+B COMPLETE / ENGINEERING BUILD NOT YET AUTHORIZED**
+Status: **ASSEMBLY DESIGN ACTIVE / GATE A+B+C COMPLETE / FIRST BUILD READY FOR AUTHORIZATION**
 Date: 2026-10-06
 Base: main @ `57bacb9ecdf8fa20371b5cb7f2f32bf04dd79763`
 
@@ -171,9 +171,13 @@ Hard FAIL:
 
 Exact global XYZ/contact face remain unresolved.
 
-## 7. Next complete step
+## 7. Gate C result
 
-**MP-01A Gate C｜Assembly-Local Numeric Placement Resolver**
+**PASS** — minimum deterministic local numeric inputs are locked with explicit evidence classes. No historical UNKNOWN has been silently filled.
+
+## 8. Next complete step
+
+**MP-01A Gate D｜First Assembly Engineering Build**
 
 Only this question is next:
 
