@@ -342,15 +342,6 @@ jobs:
               task += "\n\n## 12. Formalization Result\n\n- Status: **COMPLETE**\n- Master Library: **BOUND**\n- V008/CURRENT: **BOUND**\n- Master-scope coverage: **29/29**\n- Approved Master families: **26**\n- Historical dimensions/profile/joinery boundaries remain unchanged.\n- Merge: **NOT AUTHORIZED**\n"
           TASK.write_text(task,encoding="utf-8")
 
-          ew=EXCEL_WF.read_text(encoding="utf-8")
-          ew=ew.replace('assert progress["covered_master_scope_object_type_count"] == 28',
-                        'assert progress["covered_master_scope_object_type_count"] == 29')
-          ew=ew.replace('assert progress["pending_master_object_type_count"] == 1',
-                        'assert progress["pending_master_object_type_count"] == 0')
-          ew=ew.replace('assert float(progress["master_completion_percent"]) == 96.6',
-                        'assert float(progress["master_completion_percent"]) == 100.0')
-          EXCEL_WF.write_text(ew,encoding="utf-8")
-
           print("T042_FORMALIZATION_PATCH_PASS")
           PY
 
