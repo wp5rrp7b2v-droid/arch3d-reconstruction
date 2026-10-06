@@ -4,7 +4,7 @@
   "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
   "master_version": "V0.1_CANDIDATE",
   "component_name_zh": "驼峰",
-  "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "status": "LOCKED / PRODUCT_OWNER_APPROVED / 2026-10-06",
   "evidence": {
     "a1": {
       "source_id": "SRC-ZG-WF-001",
@@ -74,7 +74,9 @@
   "historical_joinery": "UNKNOWN / DEFERRED",
   "whole_hall_mapping": "UNKNOWN",
   "approval": {
-    "product_owner_approval_required": true,
-    "approved": false
+    "product_owner_approval_required": false,
+    "approved": true,
+    "approval_date": "2026-10-06",
+    "approval_basis": "User instruction: 开始下一步"
   }
 }
