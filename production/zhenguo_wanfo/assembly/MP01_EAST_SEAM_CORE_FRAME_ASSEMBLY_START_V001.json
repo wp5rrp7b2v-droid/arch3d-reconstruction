@@ -1,6 +1,6 @@
 {
   "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
-  "status": "MP01A_APPROVED / MP01B_GATE_A_B_COMPLETE / INTERIOR_LINGGONG_MASTER_SPEC_CANDIDATE / MERGE_NOT_AUTHORIZED",
+  "status": "MP01A_APPROVED / MP01B_GATE_A_B_COMPLETE / MASTER_SPEC_APPROVED / GATE_C_CANDIDATE_REVIEW / MERGE_NOT_AUTHORIZED",
   "date": "2026-10-06",
   "canonical_location_label": "东缝",
   "chat_working_label": "明间东缝",
@@ -50,7 +50,7 @@
     },
     "MP01B": {
       "name": "LOWER_PINGLIANG_SUPPORT",
-      "status": "GATE_A_B_COMPLETE / MASTER_SPEC_CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+      "status": "MASTER_SPEC_APPROVED / GATE_C_CANDIDATE_GEOMETRY_REVIEW",
       "intended_participants": [
         "四椽栿-东缝",
         "TUOFENG::LOWER_SUPPORT",
@@ -72,9 +72,9 @@
     "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
   },
   "next_gate": {
-    "id": "MP01B_MASTER_SPEC_PO_REVIEW",
-    "name": "INTERIOR_LINGGONG_MASTER_SPEC_V0_1_REVIEW",
-    "question": "Approve/amend/reject the separate interior-role Linggong Master Spec before Candidate Geometry.",
+    "id": "MP01B_GATE_C_PO_REVIEW",
+    "name": "INTERIOR_LINGGONG_CANDIDATE_GEOMETRY_REVIEW",
+    "question": "Approve/reject the neutral two-zone Candidate Geometry before First Article Build Preparation.",
     "blender_authorized": false
   },
   "gate_b": {
@@ -134,5 +134,13 @@
     "master_scope_coverage": "29/30",
     "approved_master_families": 26,
     "blender_authorized": false
+  },
+  "mp01b_gate_c": {
+    "status": "CANDIDATE / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+    "role_variant": "LOWER_PINGLIANG_SUPPORT",
+    "geometry": "NORMALIZED_NEUTRAL_TWO_ZONE_SUPPORT_ENVELOPE",
+    "outer_eaves_geometry_inherited": false,
+    "blender_assembly_authorized": false
   }
 }
