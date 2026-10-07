@@ -1592,3 +1592,10 @@ Boundary retained:
 | 本地Mac同步 / 完整确定性构建 / 变异测试 | NOT EXECUTED / NOT CLAIMED | 不伪造通过；下次本地开工前同步 |
 
 今日工程停止；不扩大装配，不改Master，不合并或关闭PR56。收尾记录待独立PR批准发布。
+
+### D-283｜收尾发布及本地同步补证
+
+- PR58合并：PO于2026-10-07 21:12:28明确批准；PR56仍不合并。
+- Mac同步：PASS_AT_PR57_CHECKPOINT（main=f30767e479f61bc6d2d0e3f440f692971f658dba；无已跟踪改动；original sources保留）。
+- PR58收尾提交的本地同步：PENDING_FINAL_PULL；不得把检查点同步误报为之后新提交也已同步。
+- D-282几何及哈希审计结论与已知例外保持；今日工作停止，无新工程。

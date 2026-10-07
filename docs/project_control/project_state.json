@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R357",
+  "state_revision": "R358",
   "last_updated": "2026-10-07",
-  "session_status": "2026-10-07 WORK STOPPED / D-282 DAILY AUDIT PASS WITH KNOWN EXCEPTIONS / EAST V011 + WEST V002 REGISTERED VIA PR57 / CLOSEOUT RECORD PENDING PUBLICATION / PR56 UNMERGED",
+  "session_status": "2026-10-07 WORK STOPPED / D-283 CLOSEOUT PUBLICATION APPROVED PR58 / DAILY AUDIT PASS WITH KNOWN EXCEPTIONS / LOCAL SYNC VERIFIED AT PR57 COMMIT / PR56 UNMERGED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -1013,9 +1013,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-282",
+    "id": "D-283",
     "date": "2026-10-07",
-    "decision": "PO requested end-of-day audit and archival at 21:00:11 Asia/Shanghai. Read-only approved final geometry and hash audits PASS. Stop engineering for today; retain explicit local-sync, archive-pipeline and historical-dashboard limitations. No new geometry, Master promotion or PR56 disposition authorized."
+    "decision": "PO approved merging closeout PR58 at 21:12:28 Asia/Shanghai. User-supplied terminal output confirms local main fast-forward to f30767e479f61bc6d2d0e3f440f692971f658dba, equal to fetched origin/main with no tracked changes; untracked original sources retained. Closeout metadata published through PR58; final local pull remains to ingest this closeout commit. No PR56 disposition or new engineering authorized."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -1072,8 +1072,8 @@
     "known_exceptions": [
       {
         "id": "LOCAL_SYNC",
-        "status": "NOT_EXECUTED",
-        "detail": "No access to the user's Mac working copy; do not claim local/remote equality. Sync before next local work."
+        "status": "PR57_CHECKPOINT_VERIFIED / PR58_PULL_PENDING",
+        "detail": "Mac main synchronized to f30767e via --ff-only; tracked working tree clean, original sources untracked directory retained. A final pull is required after PR58 merge."
       },
       {
         "id": "LEGACY_DASHBOARD_OVERVIEW",
@@ -1093,16 +1093,32 @@
     ],
     "next_action": "明日先完成本地main同步；新工程范围需PO确认。建议先核对两榀互联所需间距、纵向构件及接口资料；不自动执行。",
     "record": "docs/assembly/daily_close/2026-10-07/DAILY_CLOSEOUT_ZH.md",
-    "publication_status": "CLOSEOUT_REVIEW_BRANCH / PENDING_MERGE_APPROVAL"
+    "publication_status": "CANONICAL_CLOSEOUT / PR58",
+    "merge_approval": {
+      "decision_id": "D-283",
+      "time": "2026-10-07T21:12:28+08:00",
+      "pr_number": 58
+    },
+    "local_sync": {
+      "status": "PASS_AT_PR57_CHECKPOINT / FINAL_CLOSEOUT_PULL_PENDING",
+      "evidence": "User-provided terminal output 粘贴的文本 (1)(4).txt, reviewed 2026-10-07T21:11:16+08:00",
+      "branch": "main",
+      "head": "f30767e479f61bc6d2d0e3f440f692971f658dba",
+      "matches_fetched_origin_main": true,
+      "tracked_changes": false,
+      "untracked_directory": "docs/evidence/zhenguo_wanfo/original sources/",
+      "untracked_directory_action": "RETAINED / NOT DELETED",
+      "note": "This verifies the PR57 checkpoint, not synchronization to the later PR58 closeout merge."
+    }
   },
-  "next_action": "完成本次收尾记录的PR审批；明日本地开工前同步main并核对工作树。下一工程范围另行确认；不自动互联两榀，也不合并或关闭PR56。",
+  "next_action": "今日正式收尾经PR58发布；本地main已同步PR57登记提交，合并后补一次--ff-only pull取得收尾记录。明日新工程范围另行确认；PR56保持OPEN/NOT AUTHORIZED TO MERGE。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v212",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CLOSEOUT SUMMARY / D-282; old R354 overview explicitly historical",
+    "refresh_status": "DAILY CLOSEOUT / D-283 / PR58; local PR57 checkpoint verified; older global overview historical",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
