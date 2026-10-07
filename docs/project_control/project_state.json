@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R356",
+  "state_revision": "R358",
   "last_updated": "2026-10-07",
-  "session_status": "D-281 / EAST V011 + WEST V002 APPROVED FINAL SNAPSHOTS / PR57 CANONICAL PUBLICATION APPROVED / PR56 NOT AUTHORIZED TO MERGE",
+  "session_status": "2026-10-07 WORK STOPPED / D-283 CLOSEOUT PUBLICATION APPROVED PR58 / DAILY AUDIT PASS WITH KNOWN EXCEPTIONS / LOCAL SYNC VERIFIED AT PR57 COMMIT / PR56 UNMERGED",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -64,7 +64,7 @@
   "current_task": {
     "id": null,
     "name": "NONE",
-    "status": "NO ACTIVE ENGINEERING T-TASK / APPROVED LOCAL SNAPSHOTS REGISTERED"
+    "status": "WORK STOPPED FOR DAY / NO ACTIVE ENGINEERING T-TASK"
   },
   "proposed_next_task": {
     "id": null,
@@ -1013,9 +1013,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-281",
+    "id": "D-283",
     "date": "2026-10-07",
-    "decision": "Product Owner explicitly approved merging registration PR57 at 20:51:46 Asia/Shanghai. Publish approved final East V011 / West V002 snapshots and bounded registration records to canonical main; PR56 merge and broader assembly expansion remain unauthorized."
+    "decision": "PO approved merging closeout PR58 at 21:12:28 Asia/Shanghai. User-supplied terminal output confirms local main fast-forward to f30767e479f61bc6d2d0e3f440f692971f658dba, equal to fetched origin/main with no tracked changes; untracked original sources retained. Closeout metadata published through PR58; final local pull remains to ingest this closeout commit. No PR56 disposition or new engineering authorized."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -1024,48 +1024,101 @@
     "decision_required": "NONE / WAIT FOR PRODUCT OWNER NEXT SESSION"
   },
   "daily_closing_audit": {
-    "date": "2026-09-26",
-    "status": "PASS / GITHUB CANONICAL / CROSS-FILE MIRRORS ALIGNED / LOCAL SYNC COMPLETE",
-    "decisions_checked": "D-148..D-177 relevant daily chain",
-    "tasks_checked": [
-      "T-034",
-      "T-035",
-      "T-036"
+    "date": "2026-10-07",
+    "timezone": "Asia/Shanghai",
+    "authorization": "2026-10-07T21:00:11+08:00 / 今天工作结束，开始收尾检查和落档工作",
+    "status": "PASS_WITH_KNOWN_EXCEPTIONS",
+    "audited_main_commit": "f30767e479f61bc6d2d0e3f440f692971f658dba",
+    "checked_files": [
+      "project_state.json",
+      "decision_log.md",
+      "execution_log.md",
+      "acceptance_matrix.md",
+      "governance.md",
+      "rules_change_log.md",
+      "dashboard.html"
     ],
-    "merged_prs_checked": [
-      30,
-      31,
-      32
+    "phase_archive": "NOT_APPLICABLE / no phase closed",
+    "approved_snapshots": [
+      "EAST_V011",
+      "WEST_V002"
     ],
-    "catalog_approved_masters": 20,
-    "pending_masters": 8,
-    "master_completion_percent": 71.4,
-    "registry_records": 505,
-    "approved_master_bound_rows": 159,
-    "current_equals_v008": true,
-    "excel_sync": "PASS / closure source d2147e2f1dfbf9a122fcb56a73b8f9c385dd7394",
-    "dashboard": "PASS / T-036 CLOSED / 20 OF 28 / NEXT 瓜子栱族",
-    "open_prs": [
-      3,
-      6
+    "approved_artifact_hashes": "25/25 PASS",
+    "geometry_recheck": {
+      "east": {
+        "entities": 33,
+        "planar_contacts": 42,
+        "curved_contacts": 3,
+        "pairs": 528,
+        "intersections_above_1mm3": 0
+      },
+      "west": {
+        "entities": 33,
+        "planar_contacts": 42,
+        "curved_contacts": 3,
+        "pairs": 528,
+        "intersections_above_1mm3": 0
+      },
+      "recorded_contact_areas_match": true,
+      "scope": "READ_ONLY_ARCHIVED_EXPORTED_MESH_RECHECK / NOT_FRESH_BLEND_REOPEN"
+    },
+    "pr57": "MERGED / f30767e479f61bc6d2d0e3f440f692971f658dba",
+    "pr56": "OPEN / NOT MERGED / NOT AUTHORIZED TO MERGE",
+    "models_modified": false,
+    "masters_modified": false,
+    "governance_modified": false,
+    "rules_changed": false,
+    "new_engineering_started": false,
+    "known_exceptions": [
+      {
+        "id": "LOCAL_SYNC",
+        "status": "PR57_CHECKPOINT_VERIFIED / PR58_PULL_PENDING",
+        "detail": "Mac main synchronized to f30767e via --ff-only; tracked working tree clean, original sources untracked directory retained. A final pull is required after PR58 merge."
+      },
+      {
+        "id": "LEGACY_DASHBOARD_OVERVIEW",
+        "status": "EXPLICITLY_HISTORICAL / GLOBAL_RECONCILIATION_DEFERRED",
+        "detail": "Lower overview remains the old R354 snapshot. Do not re-label its old counts as current; the top summary follows current local assembly records."
+      },
+      {
+        "id": "BUILD_INPUTS",
+        "status": "KNOWN_ARCHIVE_LIMIT",
+        "detail": "Intermediate inputs and dependent builders were excluded by automatic approval review. Final geometry and recorded checks are retained; independent deterministic regeneration and mutation certification remain unclaimed."
+      },
+      {
+        "id": "NUMERICAL_WARNINGS",
+        "status": "RECORDED / NO_NONFINITE_TEST_VOLUMES",
+        "detail": "Trimesh emitted mass-property RuntimeWarnings during boolean calculations. Warnings retained in GEOMETRY_RECHECK.json; tested intersection volumes explicitly finite, final solid and contact checks PASS."
+      }
     ],
-    "active_stage1_engineering_prs": 0,
-    "omission_audit_missing_items": [],
-    "local_sync": "PASS / LOCAL_HEAD == REMOTE_HEAD AT D-179 SYNC CHECKPOINT",
-    "caution": "Do not start priority 15 engineering before Source Readiness + D-076 + Master Spec approval + Task Contract + explicit engineering execution authorization.",
-    "execution_log_aligned": true,
-    "acceptance_matrix_aligned": true,
-    "governance_change_required": false,
-    "rules_change_log_change_required": false
+    "next_action": "明日先完成本地main同步；新工程范围需PO确认。建议先核对两榀互联所需间距、纵向构件及接口资料；不自动执行。",
+    "record": "docs/assembly/daily_close/2026-10-07/DAILY_CLOSEOUT_ZH.md",
+    "publication_status": "CANONICAL_CLOSEOUT / PR58",
+    "merge_approval": {
+      "decision_id": "D-283",
+      "time": "2026-10-07T21:12:28+08:00",
+      "pr_number": 58
+    },
+    "local_sync": {
+      "status": "PASS_AT_PR57_CHECKPOINT / FINAL_CLOSEOUT_PULL_PENDING",
+      "evidence": "User-provided terminal output 粘贴的文本 (1)(4).txt, reviewed 2026-10-07T21:11:16+08:00",
+      "branch": "main",
+      "head": "f30767e479f61bc6d2d0e3f440f692971f658dba",
+      "matches_fetched_origin_main": true,
+      "tracked_changes": false,
+      "untracked_directory": "docs/evidence/zhenguo_wanfo/original sources/",
+      "untracked_directory_action": "RETAINED / NOT DELETED",
+      "note": "This verifies the PR57 checkpoint, not synchronization to the later PR58 closeout merge."
+    }
   },
-  "next_action": "东缝V011、西缝V002批准登记经PR57发布；下一步需决定两榀互联范围并核对间距、纵向构件与接口，尚未授权扩展装配。PR56不得合并。",
+  "next_action": "今日正式收尾经PR58发布；本地main已同步PR57登记提交，合并后补一次--ff-only pull取得收尾记录。明日新工程范围另行确认；PR56保持OPEN/NOT AUTHORIZED TO MERGE。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v211",
+    "visualization_version": "v212",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT LOCAL ASSEMBLY REGISTRATION / D-281 / PR57; prior global metrics preserved",
+    "refresh_status": "DAILY CLOSEOUT / D-283 / PR58; local PR57 checkpoint verified; older global overview historical",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [

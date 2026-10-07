@@ -2180,3 +2180,15 @@ Do not restart T-018 by default.
 | 2026-10-07 | D-280登记 | 原样归档东缝V011、西缝V002模型、导出网格、检查、证据说明、中文复核图及重开导出脚本；中间输入被自动审批审核拒绝，未纳入main。核验东缝批准SHA256、两份33实体/45指定接触/528对检查摘要；西缝5实体修改、其余28不变。同步Project Control与派生Dashboard；不合并PR56。 | REGISTERED APPROVED LOCAL SNAPSHOTS; historical/structural certification not claimed |
 
 | 2026-10-07 | D-281 / PR57批准发布 | 根据PO明确合并授权，将登记记录由待发布更新为PR57正式发布状态，保存批准时间；模型二进制与已核验哈希不变；只合并PR57，随后回读main及PR状态验证。 | APPROVED REGISTRATION PUBLICATION / PR56 NOT MERGED |
+
+## 2026-10-07 收尾核验｜D-282
+
+核验基点main：f30767e479f61bc6d2d0e3f440f692971f658dba。PR57 CLOSED/MERGED，PR56 OPEN/UNMERGED。两份批准清单所列25文件的SHA256、大小与远端Git blob逐项一致；两份导出网格只读重检，各33实体闭合、正体积、单连通，42平面＋3曲面接触成立，528实体对无超过1 mm³交叠，接触面积与原记录匹配。保留数值RuntimeWarning，并显式确认被测试交叠体积为有限数。
+
+结果：PASS_WITH_KNOWN_EXCEPTIONS。没有修改模型，没有新的视觉或原始资料审核，没有重新打开BLEND，没有完成Mac同步；完整重建/变异认证未执行。详细报告：docs/assembly/daily_close/2026-10-07/DAILY_CLOSEOUT_ZH.md。收尾记录准备于独立PR；canonical main发布需批准。
+
+## D-283｜本地同步核验与收尾发布
+
+用户提供的终端输出：从447f887快进至f30767e；HEAD=f30767e479f61bc6d2d0e3f440f692971f658dba，状态main...origin/main，无已跟踪改动；仅保留未跟踪original sources目录。先前在试装分支pull main被--ff-only拒绝，未覆盖文件；随后切至main同步成功。本地同步结论为PR57登记检查点PASS，不冒充已取得尚未合并的PR58收尾提交。
+
+21:12:28 PO批准仅合并PR58；更新待发布标识及本地同步事实，无几何、Master、实例主登记或规则变化。合并后回读main与PR状态，再交付一次补拉命令。
