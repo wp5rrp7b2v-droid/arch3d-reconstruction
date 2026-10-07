@@ -2178,3 +2178,5 @@ Do not restart T-018 by default.
 - One final ff-only pull remains solely to ingest D-268's own canonical record.
 
 | 2026-10-07 | D-280登记 | 原样归档东缝V011、西缝V002模型、导出网格、检查、证据说明、中文复核图及重开导出脚本；中间输入被自动审批审核拒绝，未纳入main。核验东缝批准SHA256、两份33实体/45指定接触/528对检查摘要；西缝5实体修改、其余28不变。同步Project Control与派生Dashboard；不合并PR56。 | REGISTERED APPROVED LOCAL SNAPSHOTS; historical/structural certification not claimed |
+
+| 2026-10-07 | D-281 / PR57批准发布 | 根据PO明确合并授权，将登记记录由待发布更新为PR57正式发布状态，保存批准时间；模型二进制与已核验哈希不变；只合并PR57，随后回读main及PR状态验证。 | APPROVED REGISTRATION PUBLICATION / PR56 NOT MERGED |

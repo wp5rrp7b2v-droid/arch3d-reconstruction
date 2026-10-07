@@ -32,3 +32,7 @@
 PR #56 OPEN / NOT AUTHORIZED TO MERGE。旧分支中实验记录不随本次全部晋升。
 
 自动审批审核拒绝直接推进main，认为本次登记授权未明确覆盖默认分支更新；已停止该动作，改为独立登记PR供审核。main仍以此前正式提交为准。
+
+## 正式发布批准｜D-281
+
+Product Owner于2026-10-07 20:51:46（Asia/Shanghai）明确批准仅合并PR #57。上述“main待批准”为登记准备阶段记录，由本条正式发布授权接续。PR57合入main后，本文件、两份批准快照、Project Control与局部Dashboard摘要即为canonical登记成果；PR56仍不合并。工程几何不变。
