@@ -1,0 +1,156 @@
+{
+  "audited_main": "f30767e479f61bc6d2d0e3f440f692971f658dba",
+  "status": "PASS",
+  "files": [
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/EAST_SEAM_CENTRAL_NODE_TRIAL_V011.blend",
+      "sha256": "e1ba5fae9df356a31e9a76306ef059fbb1de194156f8ff9cc947b79ea5dda205",
+      "remote_blob_sha": "525a45231d4de89a49659306540fe001b1939e95",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/EAST_SEAM_CENTRAL_NODE_TRIAL_V011.glb",
+      "sha256": "e8b740131dd033e201682145e44c33d9ece9190bfefa0544e05f2f92b1472292",
+      "remote_blob_sha": "af6da0e645c4813fa1e4ba07bb24a7159c602f7c",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/EAST_SEAM_V11_MESHES.json",
+      "sha256": "dc6366e9f94e22c85bb076d3d29e79bd28a390547420aaef354003814b631a7e",
+      "remote_blob_sha": "85e3333201d2548cb1197c07183029d41cc1aad6",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/REOPENED_V11_MESHES.json",
+      "sha256": "c754ea8ec959c586cd33875b5c86b30467b3903d6071e8a9d238ada7391dfe7b",
+      "remote_blob_sha": "be489ad1c867a038a70f62fa7aa53ba611093cd1",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/V011_APPROVAL_BINDING.json",
+      "sha256": "36f16a16f48e075a00dd5bde91c6a955b4490f57862d52150707a5c2217d37d0",
+      "remote_blob_sha": "927e8f10c993486c97b31dce3abe44d4a90b70d7",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/V011_APPROVAL_CLOSEOUT_ZH.md",
+      "sha256": "8d63027895e07401e28439f47638921947ec3b64ea9a9f7e8133cc7475c93c6f",
+      "remote_blob_sha": "8fdf14b90c26a3bdb8b84150a8df51141d73b3d7",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/V011_FORK_CORRECTION_REVIEW_ZH.png",
+      "sha256": "1bd5e206e3cb5f2d2ee42979ca2ead440978debb54a7e7bd8fcb89b94dd294e7",
+      "remote_blob_sha": "dd28ce72893f3a5a48468abc4cbd5cfdade07949",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/V011_GAP_CORRECTION_REPORT_ZH.md",
+      "sha256": "378a337abd0fbd697d3a0b9ad1389c10e3dd0db7e7a785bb75429b4527647a7b",
+      "remote_blob_sha": "a3149b1447f39e5317d4ccb8523d17638c12232b",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/V011_GEOMETRY_CHECKS.json",
+      "sha256": "3a89f1758459fae4dbb0415ee0f2044527ce6abc8a4a270b16a6a6435aafac62",
+      "remote_blob_sha": "982259ec20ac609af6c02121fdb8528b1c72e41f",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/reopen_export.py",
+      "sha256": "f07a5d526917fbcbb25317b1eec7560a6b337a8cd5aa20dba5786c8e05f89966",
+      "remote_blob_sha": "7f7915d9391471b2df645c9f33b16504181c0378",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/CHANGE_SCOPE_VERIFICATION.json",
+      "sha256": "c8744e8f0d315296eead421d724e74afcf68427bad7d67c859b180d36d157688",
+      "remote_blob_sha": "222c6202e59eb7a28b5c189777ce91c6d114acbd",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/REOPENED_WEST_V002_MESHES.json",
+      "sha256": "1807d1cde958ad49bd37706cabddfd4fd9bd6d165a0ee65966e369122b08623b",
+      "remote_blob_sha": "9c21dc4aad319829c5a3903994cc60870f6088f4",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/SOURCE_A1_DRAWING12_UPRIGHT.png",
+      "sha256": "79472003f8c563f3f789c5022f5d2e1b3b7de8aa464f066fc23d6b17c363bd5e",
+      "remote_blob_sha": "d680440b7cd10190541e63b27ded5191fa991491",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/WEST_SEAM_SAME_SCOPE_TRIAL_V002.blend",
+      "sha256": "038dc8dc87524a3ef7143150881f0298cd852f55f14d4e0b633e1ebb8dc4cac2",
+      "remote_blob_sha": "bd6cbd8f41209dbdad8ec9ac370789528cf610e1",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/WEST_SEAM_SAME_SCOPE_TRIAL_V002.glb",
+      "sha256": "02360cff0ae88b379ee978a296bf7e62b256f0547ce29d6824e26426781185d5",
+      "remote_blob_sha": "9fef8ba525af627ef7addcab82d4b11ce84fbfb5",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/WEST_SEAM_V002_MESHES.json",
+      "sha256": "4dd80c0e98855682ff4459244aa9f4b978110de558913461434088244456692f",
+      "remote_blob_sha": "8ed6a81f2c253a732634b5c14b7c6fe889c9cedf",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/WEST_V002_CORRECTION_REPORT_ZH.md",
+      "sha256": "758885985223ba2a7d6eee082926435565bf0d6aed0a1924a1032bf2dbb2c504",
+      "remote_blob_sha": "98afdc5be79130277928272a4c8a050d7ba618d9",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/WEST_V002_GEOMETRY_CHECKS.json",
+      "sha256": "18931a9b5654e5fe54a08109d7e2f7a96c1b34d97c4f772397d7290090b9be20",
+      "remote_blob_sha": "f1693dd70ff82bb6388ba86de46879f15f42fe02",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/WEST_V002_SOURCE_MODEL_REVIEW_ZH.png",
+      "sha256": "54a24c3a24cf8fb797838ff7d6e006b80e3a4971fcf8b09f9376b8d739aba7c1",
+      "remote_blob_sha": "00c975e2b6b9cfd4890bb97cc4b6716e78e4c7db",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/WEST_V002_TWO_CHANGES_REVIEW_ZH.png",
+      "sha256": "1a057f37e47c8dd6c5cb143f9d70c22fba4937100995ff8f8b7aebdec0407d40",
+      "remote_blob_sha": "d0564ec4b6089eba6679098961b507137a85a9c7",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/east_baseline/EAST_SEAM_CENTRAL_NODE_TRIAL_V011.blend",
+      "sha256": "e1ba5fae9df356a31e9a76306ef059fbb1de194156f8ff9cc947b79ea5dda205",
+      "remote_blob_sha": "525a45231d4de89a49659306540fe001b1939e95",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/east_baseline/REOPENED_V11_MESHES.json",
+      "sha256": "c754ea8ec959c586cd33875b5c86b30467b3903d6071e8a9d238ada7391dfe7b",
+      "remote_blob_sha": "be489ad1c867a038a70f62fa7aa53ba611093cd1",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/east_baseline/V011_APPROVAL_BINDING.json",
+      "sha256": "36f16a16f48e075a00dd5bde91c6a955b4490f57862d52150707a5c2217d37d0",
+      "remote_blob_sha": "927e8f10c993486c97b31dce3abe44d4a90b70d7",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/east_baseline/V011_GEOMETRY_CHECKS.json",
+      "sha256": "3a89f1758459fae4dbb0415ee0f2044527ce6abc8a4a270b16a6a6435aafac62",
+      "remote_blob_sha": "982259ec20ac609af6c02121fdb8528b1c72e41f",
+      "status": "PASS"
+    },
+    {
+      "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/reopen_export.py",
+      "sha256": "051b4ed45958687b71af98b812cef300a6078d4b91483fd90b1dc41880380585",
+      "remote_blob_sha": "c080149a1672a2be5c8f533b88b15afdc307ff90",
+      "status": "PASS"
+    }
+  ]
+}
