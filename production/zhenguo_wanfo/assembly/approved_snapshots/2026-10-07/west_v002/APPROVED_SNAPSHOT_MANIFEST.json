@@ -1,0 +1,95 @@
+{
+  "assembly_id": "WEST_V002",
+  "status": "APPROVED_RECONSTRUCTED_LOCAL_ASSEMBLY_REGISTERED",
+  "approval_by": "Product Owner",
+  "approval_time": "2026-10-07T20:02:35+08:00",
+  "registration_authorization": "开始登记落档",
+  "decision_id": "D-280",
+  "coordinate_scope": "ASSEMBLY_LOCAL_MM; each seam independent; no hall-wide coordinate binding",
+  "entity_count": 33,
+  "artifacts": {
+    "CHANGE_SCOPE_VERIFICATION.json": {
+      "sha256": "c8744e8f0d315296eead421d724e74afcf68427bad7d67c859b180d36d157688",
+      "bytes": 182
+    },
+    "REOPENED_WEST_V002_MESHES.json": {
+      "sha256": "1807d1cde958ad49bd37706cabddfd4fd9bd6d165a0ee65966e369122b08623b",
+      "bytes": 539003
+    },
+    "SOURCE_A1_DRAWING12_UPRIGHT.png": {
+      "sha256": "79472003f8c563f3f789c5022f5d2e1b3b7de8aa464f066fc23d6b17c363bd5e",
+      "bytes": 857975
+    },
+    "WEST_SEAM_SAME_SCOPE_TRIAL_V002.blend": {
+      "sha256": "038dc8dc87524a3ef7143150881f0298cd852f55f14d4e0b633e1ebb8dc4cac2",
+      "bytes": 862990
+    },
+    "WEST_SEAM_SAME_SCOPE_TRIAL_V002.glb": {
+      "sha256": "02360cff0ae88b379ee978a296bf7e62b256f0547ce29d6824e26426781185d5",
+      "bytes": 91240
+    },
+    "WEST_SEAM_V002_MESHES.json": {
+      "sha256": "4dd80c0e98855682ff4459244aa9f4b978110de558913461434088244456692f",
+      "bytes": 540073
+    },
+    "WEST_V002_CORRECTION_REPORT_ZH.md": {
+      "sha256": "758885985223ba2a7d6eee082926435565bf0d6aed0a1924a1032bf2dbb2c504",
+      "bytes": 3447
+    },
+    "WEST_V002_GEOMETRY_CHECKS.json": {
+      "sha256": "18931a9b5654e5fe54a08109d7e2f7a96c1b34d97c4f772397d7290090b9be20",
+      "bytes": 14716
+    },
+    "WEST_V002_SOURCE_MODEL_REVIEW_ZH.png": {
+      "sha256": "54a24c3a24cf8fb797838ff7d6e006b80e3a4971fcf8b09f9376b8d739aba7c1",
+      "bytes": 537056
+    },
+    "WEST_V002_TWO_CHANGES_REVIEW_ZH.png": {
+      "sha256": "1a057f37e47c8dd6c5cb143f9d70c22fba4937100995ff8f8b7aebdec0407d40",
+      "bytes": 403421
+    },
+    "east_baseline/EAST_SEAM_CENTRAL_NODE_TRIAL_V011.blend": {
+      "sha256": "e1ba5fae9df356a31e9a76306ef059fbb1de194156f8ff9cc947b79ea5dda205",
+      "bytes": 879446
+    },
+    "east_baseline/REOPENED_V11_MESHES.json": {
+      "sha256": "c754ea8ec959c586cd33875b5c86b30467b3903d6071e8a9d238ada7391dfe7b",
+      "bytes": 576350
+    },
+    "east_baseline/V011_APPROVAL_BINDING.json": {
+      "sha256": "36f16a16f48e075a00dd5bde91c6a955b4490f57862d52150707a5c2217d37d0",
+      "bytes": 469
+    },
+    "east_baseline/V011_GEOMETRY_CHECKS.json": {
+      "sha256": "3a89f1758459fae4dbb0415ee0f2044527ce6abc8a4a270b16a6a6435aafac62",
+      "bytes": 14826
+    },
+    "reopen_export.py": {
+      "sha256": "051b4ed45958687b71af98b812cef300a6078d4b91483fd90b1dc41880380585",
+      "bytes": 739
+    }
+  },
+  "checks": {
+    "saved_blend_reopened": true,
+    "planar_contacts": 42,
+    "curved_contacts": 3,
+    "entity_pairs_checked": 528,
+    "intersection_threshold_mm3": 1,
+    "intersections_above_threshold": 0
+  },
+  "evidence_classes": [
+    "FACT / DIRECT",
+    "PERIOD-COMPARATIVE SUPPORT",
+    "RECONSTRUCTED_DESIGN",
+    "UNKNOWN"
+  ],
+  "limitations": [
+    "Geometry PASS is limited to recorded checks, not historical exactness or structural strength.",
+    "No formal deterministic regeneration or mutation test is claimed.",
+    "No Component Master promotion/rebinding or whole-building topology approval.",
+    "Archived build-time pending labels and prior git_mutation_authorized=false describe earlier stages; this manifest records subsequent approval and registration authorization.",
+    "PR #56 merge remains NOT AUTHORIZED.",
+    "Intermediate build inputs and dependent build/check scripts are excluded from this registration. V008 intermediate input upload was rejected by automatic approval review as outside retained final-snapshot registration scope. This archive preserves approved final geometry and recorded checks; it does not certify an independently rerunnable pipeline."
+  ],
+  "source_report": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/WEST_V002_CORRECTION_REPORT_ZH.md"
+}

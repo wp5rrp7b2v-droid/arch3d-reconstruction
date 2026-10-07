@@ -1,0 +1,10 @@
+{
+  "status": "APPROVED_LOCAL_STAGE_CLOSED",
+  "approval_local_time": "2026-10-07T19:31:55+08:00",
+  "git_mutation_authorized": false,
+  "sha256": {
+    "EAST_SEAM_CENTRAL_NODE_TRIAL_V011.blend": "e1ba5fae9df356a31e9a76306ef059fbb1de194156f8ff9cc947b79ea5dda205",
+    "REOPENED_V11_MESHES.json": "c754ea8ec959c586cd33875b5c86b30467b3903d6071e8a9d238ada7391dfe7b",
+    "V011_GEOMETRY_CHECKS.json": "3a89f1758459fae4dbb0415ee0f2044527ce6abc8a4a270b16a6a6435aafac62"
+  }
+}

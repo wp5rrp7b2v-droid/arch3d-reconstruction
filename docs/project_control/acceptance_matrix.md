@@ -1576,3 +1576,5 @@ Boundary retained:
 - Historical joinery: **NOT CLAIMED**.
 - Batch 03: **NOT AUTHORIZED**.
 - Engineering / Stage3 / T-018: **NOT AUTHORIZED / NOT AUTHORIZED / HOLD**.
+
+| D-280 / EAST_V011 + WEST_V002 | 2026-10-07 | 已批准局部复原装配快照 | PO APPROVED：东19:31:55、西20:02:35；各33实体闭合正体积单连通；42平面加3曲面接触通过；528对无超过1 mm³交叠；批准manifest绑定文件SHA256。 | ACCEPTED LOCAL SCOPE ONLY; formal deterministic/mutation/whole-building certification NOT CLAIMED; PR56 merge NOT AUTHORIZED |
