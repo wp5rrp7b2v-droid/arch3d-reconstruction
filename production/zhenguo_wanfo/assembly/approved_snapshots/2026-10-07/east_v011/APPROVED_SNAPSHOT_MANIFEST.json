@@ -1,0 +1,81 @@
+{
+  "assembly_id": "EAST_V011",
+  "status": "APPROVED_RECONSTRUCTED_LOCAL_ASSEMBLY_REGISTERED",
+  "approval_by": "Product Owner",
+  "approval_time": "2026-10-07T19:31:55+08:00",
+  "registration_authorization": "开始登记落档",
+  "decision_id": "D-280",
+  "coordinate_scope": "ASSEMBLY_LOCAL_MM; each seam independent; no hall-wide coordinate binding",
+  "entity_count": 33,
+  "artifacts": {
+    "EAST_SEAM_CENTRAL_NODE_TRIAL_V011.blend": {
+      "sha256": "e1ba5fae9df356a31e9a76306ef059fbb1de194156f8ff9cc947b79ea5dda205",
+      "bytes": 879446
+    },
+    "EAST_SEAM_CENTRAL_NODE_TRIAL_V011.glb": {
+      "sha256": "e8b740131dd033e201682145e44c33d9ece9190bfefa0544e05f2f92b1472292",
+      "bytes": 99020
+    },
+    "EAST_SEAM_V11_MESHES.json": {
+      "sha256": "dc6366e9f94e22c85bb076d3d29e79bd28a390547420aaef354003814b631a7e",
+      "bytes": 576672
+    },
+    "REOPENED_V11_MESHES.json": {
+      "sha256": "c754ea8ec959c586cd33875b5c86b30467b3903d6071e8a9d238ada7391dfe7b",
+      "bytes": 576350
+    },
+    "V011_APPROVAL_BINDING.json": {
+      "sha256": "36f16a16f48e075a00dd5bde91c6a955b4490f57862d52150707a5c2217d37d0",
+      "bytes": 469
+    },
+    "V011_APPROVAL_CLOSEOUT_ZH.md": {
+      "sha256": "8d63027895e07401e28439f47638921947ec3b64ea9a9f7e8133cc7475c93c6f",
+      "bytes": 1086
+    },
+    "V011_FORK_CORRECTION_REVIEW_ZH.png": {
+      "sha256": "1bd5e206e3cb5f2d2ee42979ca2ead440978debb54a7e7bd8fcb89b94dd294e7",
+      "bytes": 411799
+    },
+    "V011_GAP_CORRECTION_REPORT_ZH.md": {
+      "sha256": "378a337abd0fbd697d3a0b9ad1389c10e3dd0db7e7a785bb75429b4527647a7b",
+      "bytes": 1652
+    },
+    "V011_GEOMETRY_CHECKS.json": {
+      "sha256": "3a89f1758459fae4dbb0415ee0f2044527ce6abc8a4a270b16a6a6435aafac62",
+      "bytes": 14826
+    },
+    "reopen_export.py": {
+      "sha256": "f07a5d526917fbcbb25317b1eec7560a6b337a8cd5aa20dba5786c8e05f89966",
+      "bytes": 732
+    }
+  },
+  "checks": {
+    "saved_blend_reopened": true,
+    "planar_contacts": 42,
+    "curved_contacts": 3,
+    "entity_pairs_checked": 528,
+    "intersection_threshold_mm3": 1,
+    "intersections_above_threshold": 0
+  },
+  "evidence_classes": [
+    "FACT / DIRECT",
+    "PERIOD-COMPARATIVE SUPPORT",
+    "RECONSTRUCTED_DESIGN",
+    "UNKNOWN"
+  ],
+  "limitations": [
+    "Geometry PASS is limited to recorded checks, not historical exactness or structural strength.",
+    "No formal deterministic regeneration or mutation test is claimed.",
+    "No Component Master promotion/rebinding or whole-building topology approval.",
+    "Archived build-time pending labels and prior git_mutation_authorized=false describe earlier stages; this manifest records subsequent approval and registration authorization.",
+    "PR #56 merge remains NOT AUTHORIZED.",
+    "Intermediate build inputs and dependent build/check scripts are excluded from this registration. V008 intermediate input upload was rejected by automatic approval review as outside retained final-snapshot registration scope. This archive preserves approved final geometry and recorded checks; it does not certify an independently rerunnable pipeline."
+  ],
+  "source_report": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/V011_GAP_CORRECTION_REPORT_ZH.md",
+  "publication_status": "CANONICAL_MAIN_REGISTRATION / PR57",
+  "merge_approval": {
+    "decision_id": "D-281",
+    "time": "2026-10-07T20:51:46+08:00",
+    "pr_number": 57
+  }
+}

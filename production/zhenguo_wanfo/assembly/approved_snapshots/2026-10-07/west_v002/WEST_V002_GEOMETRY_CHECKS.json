@@ -1,0 +1,795 @@
+{
+  "status": "PASS",
+  "model_source": "REOPENED_WEST_V002_MESHES.json",
+  "approved_east_v011_digest_unchanged": true,
+  "solid_count": 33,
+  "pairs_checked": 528,
+  "contacts": [
+    {
+      "a": "FOUR_BEAM",
+      "b": "TUOFENG_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1836,
+        0
+      ],
+      "label": "beam-tuofeng",
+      "actual_contact_area_mm2": 200850.0,
+      "status": "PASS"
+    },
+    {
+      "a": "TUOFENG_FRONT",
+      "b": "LUDOU_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1836,
+        95
+      ],
+      "label": "tuofeng-ludou",
+      "actual_contact_area_mm2": 56355.0,
+      "status": "PASS"
+    },
+    {
+      "a": "LUDOU_FRONT",
+      "b": "HUAGONG_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1836,
+        225
+      ],
+      "label": "dou-huagong seat",
+      "actual_contact_area_mm2": 54315.0,
+      "status": "PASS"
+    },
+    {
+      "a": "LUDOU_FRONT",
+      "b": "LINGGONG_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1836,
+        225
+      ],
+      "label": "dou-linggong seat outside half-lap",
+      "actual_contact_area_mm2": 25536.0,
+      "status": "PASS"
+    },
+    {
+      "a": "HUAGONG_FRONT",
+      "b": "LINGGONG_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1836,
+        331.0
+      ],
+      "label": "gong half-lap",
+      "actual_contact_area_mm2": 23256.0,
+      "status": "PASS"
+    },
+    {
+      "a": "HUAGONG_FRONT",
+      "b": "HEAD_DOU_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1506,
+        446
+      ],
+      "label": "head-small-dou",
+      "actual_contact_area_mm2": 22500.0,
+      "status": "PASS"
+    },
+    {
+      "a": "HEAD_DOU_FRONT",
+      "b": "PINGLIANG",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1506,
+        521
+      ],
+      "label": "small-dou-pingliang",
+      "actual_contact_area_mm2": 67440.0,
+      "status": "PASS"
+    },
+    {
+      "a": "HUAGONG_FRONT",
+      "b": "TUOJIAO_FRONT",
+      "normal": [
+        0,
+        0.5304347826086956,
+        1
+      ],
+      "point": [
+        0,
+        2185.7131147540986,
+        335.5
+      ],
+      "label": "sloped tail-foot bearing",
+      "actual_contact_area_mm2": 70271.991,
+      "status": "PASS"
+    },
+    {
+      "a": "FOUR_BEAM",
+      "b": "TUOJIAO_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        3500,
+        0
+      ],
+      "label": "foot-beam lower horizontal seat",
+      "actual_contact_area_mm2": 77585.384,
+      "status": "PASS"
+    },
+    {
+      "a": "FOUR_BEAM",
+      "b": "TUOFENG_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1836,
+        0
+      ],
+      "label": "beam-tuofeng",
+      "actual_contact_area_mm2": 200850.0,
+      "status": "PASS"
+    },
+    {
+      "a": "TUOFENG_REAR",
+      "b": "LUDOU_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1836,
+        109
+      ],
+      "label": "tuofeng-ludou",
+      "actual_contact_area_mm2": 63360.0,
+      "status": "PASS"
+    },
+    {
+      "a": "LUDOU_REAR",
+      "b": "HUAGONG_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1836,
+        239
+      ],
+      "label": "dou-huagong seat",
+      "actual_contact_area_mm2": 54444.0,
+      "status": "PASS"
+    },
+    {
+      "a": "LUDOU_REAR",
+      "b": "LINGGONG_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1836,
+        239
+      ],
+      "label": "dou-linggong seat outside half-lap",
+      "actual_contact_area_mm2": 26100.0,
+      "status": "PASS"
+    },
+    {
+      "a": "HUAGONG_REAR",
+      "b": "LINGGONG_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1836,
+        344.0
+      ],
+      "label": "gong half-lap",
+      "actual_contact_area_mm2": 23400.0,
+      "status": "PASS"
+    },
+    {
+      "a": "HUAGONG_REAR",
+      "b": "HEAD_DOU_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1506,
+        449
+      ],
+      "label": "head-small-dou",
+      "actual_contact_area_mm2": 22500.0,
+      "status": "PASS"
+    },
+    {
+      "a": "HEAD_DOU_REAR",
+      "b": "PINGLIANG",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1506,
+        521
+      ],
+      "label": "small-dou-pingliang",
+      "actual_contact_area_mm2": 67440.0,
+      "status": "PASS"
+    },
+    {
+      "a": "HUAGONG_REAR",
+      "b": "TUOJIAO_REAR",
+      "normal": [
+        0,
+        -0.5304347826086956,
+        1
+      ],
+      "point": [
+        0,
+        -2169.688524590164,
+        344.0
+      ],
+      "label": "sloped tail-foot bearing",
+      "actual_contact_area_mm2": 67670.61,
+      "status": "PASS"
+    },
+    {
+      "a": "FOUR_BEAM",
+      "b": "TUOJIAO_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -3500,
+        0
+      ],
+      "label": "foot-beam lower horizontal seat",
+      "actual_contact_area_mm2": 80560.233,
+      "status": "PASS"
+    },
+    {
+      "a": "LINGGONG_FRONT",
+      "b": "CENTRE_DOU_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1836,
+        437
+      ],
+      "label": "central-gong-dou",
+      "actual_contact_area_mm2": 17500.0,
+      "status": "PASS"
+    },
+    {
+      "a": "CENTRE_DOU_FRONT",
+      "b": "PANJIAN_FANG_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1836,
+        535
+      ],
+      "label": "central-dou-cross-tie",
+      "actual_contact_area_mm2": 53380.0,
+      "status": "PASS"
+    },
+    {
+      "a": "PANJIAN_FANG_FRONT",
+      "b": "UPPER_DOU_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1836,
+        746
+      ],
+      "label": "cross-tie-upper-dou",
+      "actual_contact_area_mm2": 17500.0,
+      "status": "PASS"
+    },
+    {
+      "a": "UPPER_DOU_FRONT",
+      "b": "TIEMU_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1836,
+        846
+      ],
+      "label": "upper-dou-tiemu",
+      "actual_contact_area_mm2": 50320.0,
+      "status": "PASS"
+    },
+    {
+      "a": "TUOJIAO_FRONT",
+      "b": "PANJIAN_FANG_FRONT",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "point": [
+        0,
+        1914.5,
+        650
+      ],
+      "label": "foot-cross-tie-side",
+      "actual_contact_area_mm2": 21754.0,
+      "status": "PASS"
+    },
+    {
+      "a": "PANJIAN_FANG_FRONT",
+      "b": "PINGLIANG",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1796.75,
+        746
+      ],
+      "label": "tie-pl-housing",
+      "actual_contact_area_mm2": 13308.5,
+      "status": "PASS"
+    },
+    {
+      "a": "LINGGONG_REAR",
+      "b": "CENTRE_DOU_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1836,
+        456
+      ],
+      "label": "central-gong-dou",
+      "actual_contact_area_mm2": 17500.0,
+      "status": "PASS"
+    },
+    {
+      "a": "CENTRE_DOU_REAR",
+      "b": "PANJIAN_FANG_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1836,
+        535
+      ],
+      "label": "central-dou-cross-tie",
+      "actual_contact_area_mm2": 53380.0,
+      "status": "PASS"
+    },
+    {
+      "a": "PANJIAN_FANG_REAR",
+      "b": "UPPER_DOU_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1836,
+        746
+      ],
+      "label": "cross-tie-upper-dou",
+      "actual_contact_area_mm2": 17500.0,
+      "status": "PASS"
+    },
+    {
+      "a": "UPPER_DOU_REAR",
+      "b": "TIEMU_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1836,
+        846
+      ],
+      "label": "upper-dou-tiemu",
+      "actual_contact_area_mm2": 50320.0,
+      "status": "PASS"
+    },
+    {
+      "a": "TUOJIAO_REAR",
+      "b": "PANJIAN_FANG_REAR",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "point": [
+        0,
+        -1914.5,
+        650
+      ],
+      "label": "foot-cross-tie-side",
+      "actual_contact_area_mm2": 22046.0,
+      "status": "PASS"
+    },
+    {
+      "a": "PANJIAN_FANG_REAR",
+      "b": "PINGLIANG",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1796.75,
+        746
+      ],
+      "label": "tie-pl-housing",
+      "actual_contact_area_mm2": 13308.5,
+      "status": "PASS"
+    },
+    {
+      "a": "PINGLIANG",
+      "b": "CHASHOU_FRONT",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        1450,
+        922
+      ],
+      "label": "pingliang-fork-flat-foot",
+      "actual_contact_area_mm2": 35296.27,
+      "status": "PASS"
+    },
+    {
+      "a": "RIDGE_SINGLE_GONG",
+      "b": "CHASHOU_FRONT",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "point": [
+        0,
+        77.0,
+        1900
+      ],
+      "label": "fork-gong-side-reconstructed-abutment",
+      "actual_contact_area_mm2": 13783.834,
+      "status": "PASS"
+    },
+    {
+      "a": "RIDGE_UPPER_DOU",
+      "b": "CHASHOU_FRONT",
+      "normal": [
+        0,
+        1,
+        0
+      ],
+      "point": [
+        0,
+        77.0,
+        2060
+      ],
+      "label": "fork-upper-dou-reconstructed-socket",
+      "actual_contact_area_mm2": 6404.125,
+      "status": "PASS"
+    },
+    {
+      "a": "PINGLIANG",
+      "b": "CHASHOU_REAR",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        -1450,
+        922
+      ],
+      "label": "pingliang-fork-flat-foot",
+      "actual_contact_area_mm2": 34520.527,
+      "status": "PASS"
+    },
+    {
+      "a": "RIDGE_SINGLE_GONG",
+      "b": "CHASHOU_REAR",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "point": [
+        0,
+        -77.0,
+        1900
+      ],
+      "label": "fork-gong-side-reconstructed-abutment",
+      "actual_contact_area_mm2": 13480.893,
+      "status": "PASS"
+    },
+    {
+      "a": "RIDGE_UPPER_DOU",
+      "b": "CHASHOU_REAR",
+      "normal": [
+        0,
+        -1,
+        0
+      ],
+      "point": [
+        0,
+        -77.0,
+        2060
+      ],
+      "label": "fork-upper-dou-reconstructed-socket",
+      "actual_contact_area_mm2": 6263.375,
+      "status": "PASS"
+    },
+    {
+      "a": "PINGLIANG",
+      "b": "SHUZHU_FOOT_PAD",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        0,
+        922
+      ],
+      "label": "pl-column-pad",
+      "actual_contact_area_mm2": 130000.0,
+      "status": "PASS"
+    },
+    {
+      "a": "SHUZHU_FOOT_PAD",
+      "b": "SHUZHU",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        0,
+        1002
+      ],
+      "label": "pad-column",
+      "actual_contact_area_mm2": 34540.0,
+      "status": "PASS"
+    },
+    {
+      "a": "SHUZHU",
+      "b": "RIDGE_LOWER_DOU",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        0,
+        1711
+      ],
+      "label": "column-head-dou",
+      "actual_contact_area_mm2": 17500.0,
+      "status": "PASS"
+    },
+    {
+      "a": "RIDGE_LOWER_DOU",
+      "b": "RIDGE_SINGLE_GONG",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        0,
+        1781
+      ],
+      "label": "dou-ridge-single-gong",
+      "actual_contact_area_mm2": 52360.0,
+      "status": "PASS"
+    },
+    {
+      "a": "RIDGE_SINGLE_GONG",
+      "b": "RIDGE_UPPER_DOU",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        0,
+        2000
+      ],
+      "label": "ridge-gong-upper-dou",
+      "actual_contact_area_mm2": 17500.0,
+      "status": "PASS"
+    },
+    {
+      "a": "RIDGE_UPPER_DOU",
+      "b": "RIDGE_TIEMU",
+      "normal": [
+        0,
+        0,
+        1
+      ],
+      "point": [
+        0,
+        0,
+        2100
+      ],
+      "label": "ridge-dou-tiemu",
+      "actual_contact_area_mm2": 51000.0,
+      "status": "PASS"
+    }
+  ],
+  "curved_contacts": [
+    {
+      "a": "TIEMU_FRONT",
+      "b": "UPPER_PURLIN_FRONT",
+      "area_mm2": 239508.6836723307,
+      "status": "PASS"
+    },
+    {
+      "a": "TIEMU_REAR",
+      "b": "UPPER_PURLIN_REAR",
+      "area_mm2": 239508.6836723307,
+      "status": "PASS"
+    },
+    {
+      "a": "RIDGE_TIEMU",
+      "b": "RIDGE_PURLIN",
+      "area_mm2": 274466.4058493511,
+      "status": "PASS"
+    }
+  ],
+  "collisions": [],
+  "closed_single_connected": {
+    "FOUR_BEAM": true,
+    "PINGLIANG": true,
+    "TUOFENG_FRONT": true,
+    "LUDOU_FRONT": true,
+    "HUAGONG_FRONT": true,
+    "LINGGONG_FRONT": true,
+    "HEAD_DOU_FRONT": true,
+    "TUOJIAO_FRONT": true,
+    "TUOFENG_REAR": true,
+    "LUDOU_REAR": true,
+    "HUAGONG_REAR": true,
+    "LINGGONG_REAR": true,
+    "HEAD_DOU_REAR": true,
+    "TUOJIAO_REAR": true,
+    "PANJIAN_FANG_FRONT": true,
+    "CENTRE_DOU_FRONT": true,
+    "UPPER_DOU_FRONT": true,
+    "TIEMU_FRONT": true,
+    "UPPER_PURLIN_FRONT": true,
+    "PANJIAN_FANG_REAR": true,
+    "CENTRE_DOU_REAR": true,
+    "UPPER_DOU_REAR": true,
+    "TIEMU_REAR": true,
+    "UPPER_PURLIN_REAR": true,
+    "SHUZHU_FOOT_PAD": true,
+    "SHUZHU": true,
+    "RIDGE_SINGLE_GONG": true,
+    "RIDGE_UPPER_DOU": true,
+    "CHASHOU_FRONT": true,
+    "CHASHOU_REAR": true,
+    "RIDGE_LOWER_DOU": true,
+    "RIDGE_TIEMU": true,
+    "RIDGE_PURLIN": true
+  },
+  "dimension_checks": {
+    "four_beam_direct": true,
+    "pingliang_section_direct": true,
+    "column_xy_direct": true,
+    "ridge_gong_direct": true,
+    "front_linggong_direct": true,
+    "front_fang_section_direct": true,
+    "front_tiemu_direct": true,
+    "ridge_tiemu_direct": true,
+    "height_datum_1254_conditional": true,
+    "fork_FRONT_normal_section_direct": true,
+    "fork_REAR_normal_section_direct": true,
+    "foot_FRONT_normal_section_direct": true,
+    "foot_REAR_normal_section_direct": true
+  },
+  "limits": "GEOMETRIC_TRIAL_ONLY; no historical exact joint or structural strength proof; source interpretation and appearance pending PO review"
+}

@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R354",
-  "last_updated": "2026-09-29",
-  "session_status": "2026-09-29 P3.3 STAGE2-C BATCH02 LOCKED D-279 / PRIMARY FRAME ATTACHMENT CLASSES LOCKED / 7 INTERFACES + 4 CONTACT_INTERFACE RECORDS / 12 OF 12 REQUIRED FIELDS ON ALL 4 / 8 OF 8 INTERFACE REFS RESOLVE / EXACT CONTACT + JOINERY + INSTANCE MAPPING + WORLD COORDINATES REMAIN UNRESOLVED / BATCH03 NOT AUTHORIZED / ENGINEERING NOT AUTHORIZED / STAGE3 NOT AUTHORIZED / T-018 HOLD",
+  "state_revision": "R356",
+  "last_updated": "2026-10-07",
+  "session_status": "D-281 / EAST V011 + WEST V002 APPROVED FINAL SNAPSHOTS / PR57 CANONICAL PUBLICATION APPROVED / PR56 NOT AUTHORIZED TO MERGE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -17,13 +17,13 @@
     "id": "P3.3",
     "name": "构件驱动整殿重建",
     "english_name": "Component-driven Building Reconstruction",
-    "status": "P3.3 ACTIVE / STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / B03 NOT AUTHORIZED / ENGINEERING NOT AUTHORIZED / T-018 HOLD",
+    "status": "P3.3 ACTIVE / STAGE1 CLOSED D-271 / STAGE2 BOUNDED LOCKS RETAINED / EAST V011 + WEST V002 LOCAL SNAPSHOTS APPROVED D-280 / FORMAL STAGE3 NOT CLOSED / T-018 HOLD",
     "items": {
       "P3.0": "PASS / APPROVED / CLOSED",
       "P3.1": "PASS / APPROVED / CLOSED / D-040",
       "P3.2": "PASS / APPROVED / CLOSED / D-046",
-      "P3.3": "STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / B03 NOT AUTHORIZED / T-018 HOLD",
-      "P3_3": "STAGE1 CLOSED D-271 / STAGE2-A LOCKED D-273 / STAGE2-B LOCKED D-275 / STAGE2-C B01 LOCKED D-277 / B02 LOCKED D-279 / B03 NOT AUTHORIZED / T-018 HOLD"
+      "P3.3": "P3.3 ACTIVE / STAGE1 CLOSED D-271 / STAGE2 BOUNDED LOCKS RETAINED / EAST V011 + WEST V002 LOCAL SNAPSHOTS APPROVED D-280 / FORMAL STAGE3 NOT CLOSED / T-018 HOLD",
+      "P3_3": "P3.3 ACTIVE / STAGE1 CLOSED D-271 / STAGE2 BOUNDED LOCKS RETAINED / EAST V011 + WEST V002 LOCAL SNAPSHOTS APPROVED D-280 / FORMAL STAGE3 NOT CLOSED / T-018 HOLD"
     }
   },
   "decision_required": false,
@@ -64,12 +64,12 @@
   "current_task": {
     "id": null,
     "name": "NONE",
-    "status": "NO ACTIVE ENGINEERING T-TASK"
+    "status": "NO ACTIVE ENGINEERING T-TASK / APPROVED LOCAL SNAPSHOTS REGISTERED"
   },
   "proposed_next_task": {
-    "id": "STAGE2-C-B03",
-    "name": "P3.3 Stage2-C Batch 03｜Deferred Primary-Frame Groove / Ridge-Counterpart Attachment Classes",
-    "status": "NEXT CONTROLLED DESIGN STEP / NOT STARTED / PRODUCT OWNER AUTHORIZATION REQUIRED"
+    "id": null,
+    "name": "两榀互联范围与证据核对",
+    "status": "PROPOSED / NOT AUTHORIZED TO EXECUTE"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -1013,9 +1013,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-147",
-    "date": "2026-09-25",
-    "decision": "Daily close PASS. T-031 placement proof and T-032 Connection-Layer complete assembly proof remain closed; RC-024 remains active. T-033 子角梁 is fully closed at 17/28 = 60.7%. Local Mac synchronized to main 29b934a6881b93fac127cce8565a181fd9c6be97 and T-033 canonical .blend restored with exact SHA 104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b. Legacy Draft PR #22 was closed as SUPERSEDED / DO NOT MERGE. PR #3/#6 remain intentionally HOLD for T-018. No next component, Stage2, or T-018 execution is authorized."
+    "id": "D-281",
+    "date": "2026-10-07",
+    "decision": "Product Owner explicitly approved merging registration PR57 at 20:51:46 Asia/Shanghai. Publish approved final East V011 / West V002 snapshots and bounded registration records to canonical main; PR56 merge and broader assembly expansion remain unauthorized."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -1058,14 +1058,14 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "Stage2-C Batch 02 is LOCKED under D-279. Batch 03 is not authorized automatically. Await Product Owner authorization before materializing Dingfu/Rufu bracket-groove relations or Shuzhu/Chashou upper ridge counterparts. Engineering execution, Stage3, whole-building topology, T-020/RZ/FV production authority and T-018 remain unauthorized.",
+  "next_action": "东缝V011、西缝V002批准登记经PR57发布；下一步需决定两榀互联范围并核对间距、纵向构件与接口，尚未授权扩展装配。PR56不得合并。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v210",
+    "visualization_version": "v211",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT / D-279 / STAGE2-C BATCH02 LOCKED",
+    "refresh_status": "CURRENT LOCAL ASSEMBLY REGISTRATION / D-281 / PR57; prior global metrics preserved",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -3278,5 +3278,58 @@
       "duplicate_interface_ids": 0
     },
     "batch03": "NOT AUTHORIZED"
+  },
+  "approved_local_assemblies": {
+    "decision_id": "D-280",
+    "date": "2026-10-07",
+    "registration_record": "docs/assembly/MP01_EAST_V011_WEST_V002_APPROVED_REGISTRATION_2026_10_07.md",
+    "assemblies": [
+      {
+        "id": "EAST_V011",
+        "status": "APPROVED_RECONSTRUCTED_LOCAL_ASSEMBLY_REGISTERED",
+        "approval_time": "2026-10-07T19:31:55+08:00",
+        "entity_count": 33,
+        "snapshot_manifest": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/east_v011/APPROVED_SNAPSHOT_MANIFEST.json",
+        "checks": {
+          "saved_blend_reopened": true,
+          "planar_contacts": 42,
+          "curved_contacts": 3,
+          "entity_pairs_checked": 528,
+          "intersection_threshold_mm3": 1,
+          "intersections_above_threshold": 0
+        }
+      },
+      {
+        "id": "WEST_V002",
+        "status": "APPROVED_RECONSTRUCTED_LOCAL_ASSEMBLY_REGISTERED",
+        "approval_time": "2026-10-07T20:02:35+08:00",
+        "entity_count": 33,
+        "snapshot_manifest": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/APPROVED_SNAPSHOT_MANIFEST.json",
+        "checks": {
+          "saved_blend_reopened": true,
+          "planar_contacts": 42,
+          "curved_contacts": 3,
+          "entity_pairs_checked": 528,
+          "intersection_threshold_mm3": 1,
+          "intersections_above_threshold": 0
+        }
+      }
+    ],
+    "whole_building_approval": false,
+    "formal_stage3_closed": false,
+    "pr56_merge_authorized": false,
+    "publication_status": "CANONICAL_MAIN_REGISTRATION / PR57",
+    "merge_approval": {
+      "decision_id": "D-281",
+      "time": "2026-10-07T20:51:46+08:00",
+      "pr_number": 57,
+      "pr56_merge_authorized": false
+    }
+  },
+  "last_completed_local_assembly": {
+    "id": "D-280",
+    "component": "东缝 V011 / 西缝 V002",
+    "status": "APPROVED / REGISTERED IN MAIN VIA PR57",
+    "record": "docs/assembly/MP01_EAST_V011_WEST_V002_APPROVED_REGISTRATION_2026_10_07.md"
   }
 }
