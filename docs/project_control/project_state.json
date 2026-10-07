@@ -5,7 +5,7 @@
   "project_name": "中国古建筑3D复原",
   "state_revision": "R355",
   "last_updated": "2026-10-07",
-  "session_status": "D-280 / EAST V011 + WEST V002 APPROVED LOCAL ASSEMBLY SNAPSHOTS REGISTERED / PR56 OPEN NOT AUTHORIZED TO MERGE",
+  "session_status": "D-280 / EAST V011 + WEST V002 APPROVED / REGISTRATION REVIEW BRANCH READY / MAIN PUBLICATION PENDING / PR56 NOT AUTHORIZED TO MERGE",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -1015,7 +1015,7 @@
   "latest_material_decision": {
     "id": "D-280",
     "date": "2026-10-07",
-    "decision": "PO approved East V011 and West V002 and authorized registration. Approved local reconstructed assembly snapshots archived; no Master promotion, whole-building expansion, formal Stage3 closure or PR56 merge."
+    "decision": "PO approved East V011 and West V002 and authorized registration. Approved final snapshots prepared on a review branch. Automatic approval review rejected direct main advancement; canonical publication awaits explicit registration-PR merge approval. No Master promotion, formal Stage3 closure or PR56 merge."
   },
   "latest_material_review": {
     "date": "2026-09-24",
@@ -1058,14 +1058,14 @@
     "governance_change_required": false,
     "rules_change_log_change_required": false
   },
-  "next_action": "东缝V011与西缝V002已批准登记。下一步先决定两榀互联范围并核对间距、纵向构件及接口资料；尚未授权扩展装配。PR56不得合并；既有广范围Stage2/Stage3与T-018授权限制保持。",
+  "next_action": "本次登记分支已齐备；先审核并批准独立登记PR发布main，再决定两榀互联的范围。PR56合并仍未授权。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
     "visualization_version": "v211",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CURRENT LOCAL ASSEMBLY SUMMARY / D-280; prior global metrics preserved without recomputation",
+    "refresh_status": "REGISTRATION REVIEW BRANCH SUMMARY / D-280 / MAIN PENDING; prior global metrics preserved",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -3317,12 +3317,13 @@
     ],
     "whole_building_approval": false,
     "formal_stage3_closed": false,
-    "pr56_merge_authorized": false
+    "pr56_merge_authorized": false,
+    "publication_status": "REVIEW_BRANCH_READY / MAIN_PUBLICATION_PENDING_APPROVAL"
   },
   "last_completed_local_assembly": {
     "id": "D-280",
     "component": "东缝 V011 / 西缝 V002",
-    "status": "APPROVED / REGISTERED",
+    "status": "APPROVED / REGISTRATION REVIEW BRANCH READY / MAIN PENDING",
     "record": "docs/assembly/MP01_EAST_V011_WEST_V002_APPROVED_REGISTRATION_2026_10_07.md"
   }
 }

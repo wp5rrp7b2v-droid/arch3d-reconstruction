@@ -91,5 +91,6 @@
     "PR #56 merge remains NOT AUTHORIZED.",
     "Intermediate build inputs and dependent build/check scripts are excluded from this registration. V008 intermediate input upload was rejected by automatic approval review as outside retained final-snapshot registration scope. This archive preserves approved final geometry and recorded checks; it does not certify an independently rerunnable pipeline."
   ],
-  "source_report": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/WEST_V002_CORRECTION_REPORT_ZH.md"
+  "source_report": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-07/west_v002/WEST_V002_CORRECTION_REPORT_ZH.md",
+  "publication_status": "REGISTRATION_REVIEW_BRANCH / MAIN_PENDING_APPROVAL"
 }
