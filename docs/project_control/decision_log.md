@@ -460,3 +460,8 @@
 | ID | 日期 | 决策 | 状态 / 影响 |
 |---|---|---|---|
 | D-284 | 2026-10-08 | PO批准三道槫、六个替木接口的条件性几何复原方案V001，并于14:50:15（Asia/Shanghai）明确授权向本仓库写入批准记录、创建登记草稿PR。锁定PRIMARY：4437 mm设计层轴距、共同Z=0工作假设、原梁架主体及朝向保持、槫原截面刚性微倾斜、六槽由假设毛坯重建。63实体；主候选522新增对及GLB重开六接口通过，四组2088对通过。共同历史标高、历史槽形、真实木料长度/拼接和承载能力仍未验证，不外推整殿。详情见docs/assembly/WANFO_THREE_PURLINS_SCHEME_APPROVAL_V001_2026_10_08.md。 | SCHEME APPROVED / DRAFT REGISTRATION AUTHORIZED / MAIN PUBLICATION PENDING / NO MASTER PROMOTION / NO STAGE3 CLOSURE / PR56 UNMERGED |
+
+
+### D-284｜2026-10-09 登记发布状态补证（不新增决策）
+
+回读GitHub确认PR59已合并，main=47e684d1644fcae2fe6f3f9a65114e09926ff9e9包含D-284批准记录；上表MAIN PUBLICATION PENDING为合并前历史状态。当前为CANONICAL APPROVAL RECORD PUBLISHED；批准范围和工程边界保持。本轮同步Project State、执行/验收汇总和Dashboard，不宣称本轮重验几何。PO要求本地同步延至今晚一次完成，当前未执行。
