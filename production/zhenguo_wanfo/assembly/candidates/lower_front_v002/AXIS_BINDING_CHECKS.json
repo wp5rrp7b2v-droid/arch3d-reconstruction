@@ -404,9 +404,14 @@
   "formal_candidate_exported": false,
   "source_review": {
     "PDF82": "four beam above upper six beam; gap single gong with scattered dou, no ludou",
-    "PDF287_292_293": "cross-sections place shorter upper beam at upper purlin group; lower purlin group at outer upper-six region; visual topology only, not scaled precise endpoints",
+    "PDF287_292_293": "CORRECTED: short upper beam is PINGLIANG; FOUR_BEAM is below it near lower purlin node; lower six-beam tiers beneath. Do not infer FOUR_BEAM shortening from the PINGLIANG span.",
     "PDF342": "four-beam measured sections, no total length",
     "PDF105_106": "B is relative level difference, not independent model absolute elevation"
   },
-  "boundary": "Reduction of these five known collisions by clipping only isolates length sensitivity; it does not validate a shorter beam, preserve all other brace contacts, or authorize changing approved geometry."
+  "boundary": "Reduction of these five known collisions by clipping only isolates length sensitivity; it does not validate a shorter beam, preserve all other brace contacts, or authorize changing approved geometry.",
+  "source_interpretation_correction": {
+    "status": "RETRACTED_SHORT_UPPER_BEAM_AS_FOUR_BEAM",
+    "fact": "PDF83 Fig2-41 identifies the short upper beam as PINGLIANG, not FOUR_BEAM. No source-driven beam shortening proposal is validated. Earlier sensitivity values retained only as mathematical diagnostics.",
+    "source_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472"
+  }
 }
