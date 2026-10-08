@@ -1,0 +1,20 @@
+{
+  "scope": "front lower purlin, two reconstructed local support chains terminating at approved four-beam top; not historical proof or lower-six-beam closure",
+  "hypotheses": {
+    "axis_spacing_mm": 4437.0,
+    "common_four_beam_Z": 0.0,
+    "Y_mm": 3596.0,
+    "east_tiemu_mm": [
+      1740,
+      148,
+      151
+    ],
+    "east_tiemu_class": "borrowed west measured envelope, reconstructed design",
+    "west_tiemu_class": "PDF345 measured envelope",
+    "panjian_dimensions_class": "borrowed upper seat display envelope; lower panjian dimensions missing",
+    "dou_envelope_class": "PDF347 overall top widths and heights; other dimensions/profile borrowed upper dou; new slots reconstructed",
+    "purlin_class": "east upper purlin profile borrowed, lower instance not measured; diagnostic length only"
+  },
+  "pass": "8 support contacts, each finite area>0, one contiguous patch; tiemu/purlin full length minus1mm; overlap<=1mm3; positive closed one-piece solids; approved63 exact unchanged; reopened checks",
+  "historical_support_mapping": "four-beam top directly supports slotted new panjian is an exploratory candidate, not independently evidenced; no full-chain historical PASS"
+}

@@ -1,0 +1,452 @@
+{
+  "status": "SINGLE_BEAM_LENGTH_CHANGE_NOT_VALIDATED",
+  "scope": "32 diagnostic horizontal foot bearing checks and 10 boundary collision tests; no revised assembly exported",
+  "bearing_geometry": [
+    {
+      "side": "east",
+      "end": "FRONT",
+      "actual_bearing_bounds_mm": [
+        [
+          -76.0,
+          2818.213134765625,
+          0.0
+        ],
+        [
+          76.0,
+          3349.590576171875,
+          0.0
+        ]
+      ],
+      "actual_bearing_area_mm2": 80769.37109375,
+      "upper_axis_Y_mm": 1836.0,
+      "four_beam_end_Y_mm": 3596.0
+    },
+    {
+      "side": "east",
+      "end": "REAR",
+      "actual_bearing_bounds_mm": [
+        [
+          -76.0,
+          -3349.590576171875,
+          0.0
+        ],
+        [
+          76.0,
+          -2818.213134765625,
+          0.0
+        ]
+      ],
+      "actual_bearing_area_mm2": 80769.37109375,
+      "upper_axis_Y_mm": -1836.0,
+      "four_beam_end_Y_mm": -3596.0
+    },
+    {
+      "side": "west",
+      "end": "FRONT",
+      "actual_bearing_bounds_mm": [
+        [
+          -74.5,
+          2818.213134765625,
+          0.0
+        ],
+        [
+          74.5,
+          3338.92041015625,
+          0.0
+        ]
+      ],
+      "actual_bearing_area_mm2": 77585.38403320312,
+      "upper_axis_Y_mm": 1836.0,
+      "four_beam_end_Y_mm": 3596.0
+    },
+    {
+      "side": "west",
+      "end": "REAR",
+      "actual_bearing_bounds_mm": [
+        [
+          -75.5,
+          -3351.724609375,
+          0.0
+        ],
+        [
+          75.5,
+          -2818.213134765625,
+          0.0
+        ]
+      ],
+      "actual_bearing_area_mm2": 80560.23266601562,
+      "upper_axis_Y_mm": -1836.0,
+      "four_beam_end_Y_mm": -3596.0
+    }
+  ],
+  "nominal_interface_audit": [
+    {
+      "side": "east",
+      "end": "FRONT",
+      "nominal_point_mm": [
+        0,
+        3500,
+        0
+      ],
+      "distance_to_actual_foot_surface_mm": 150.409423828125,
+      "point_on_foot_surface": false
+    },
+    {
+      "side": "east",
+      "end": "REAR",
+      "nominal_point_mm": [
+        0,
+        -3500,
+        0
+      ],
+      "distance_to_actual_foot_surface_mm": 150.409423828125,
+      "point_on_foot_surface": false
+    },
+    {
+      "side": "west",
+      "end": "FRONT",
+      "nominal_point_mm": [
+        0,
+        3500,
+        0
+      ],
+      "distance_to_actual_foot_surface_mm": 161.07958984375,
+      "point_on_foot_surface": false
+    },
+    {
+      "side": "west",
+      "end": "REAR",
+      "nominal_point_mm": [
+        0,
+        -3500,
+        0
+      ],
+      "distance_to_actual_foot_surface_mm": 148.275390625,
+      "point_on_foot_surface": false
+    }
+  ],
+  "cases": [
+    {
+      "side": "east",
+      "end": "FRONT",
+      "diagnostic_length_mm": 7192.0,
+      "retained_area_mm2": 80769.37109375,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "east",
+      "end": "FRONT",
+      "diagnostic_length_mm": 7000.0,
+      "retained_area_mm2": 80769.37109375,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "east",
+      "end": "FRONT",
+      "diagnostic_length_mm": 6703.44921875,
+      "retained_area_mm2": 80769.37109375,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "east",
+      "end": "FRONT",
+      "diagnostic_length_mm": 6600.0,
+      "retained_area_mm2": 73231.603515625,
+      "retained_fraction": 0.9066754206941166,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "east",
+      "end": "FRONT",
+      "diagnostic_length_mm": 6000.0,
+      "retained_area_mm2": 27631.603515625,
+      "retained_fraction": 0.34210497297982745,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "east",
+      "end": "FRONT",
+      "diagnostic_length_mm": 5000.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "east",
+      "end": "FRONT",
+      "diagnostic_length_mm": 4400.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "east",
+      "end": "FRONT",
+      "diagnostic_length_mm": 4200.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "east",
+      "end": "REAR",
+      "diagnostic_length_mm": 7192.0,
+      "retained_area_mm2": 80769.37109375,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "east",
+      "end": "REAR",
+      "diagnostic_length_mm": 7000.0,
+      "retained_area_mm2": 80769.37109375,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "east",
+      "end": "REAR",
+      "diagnostic_length_mm": 6703.44921875,
+      "retained_area_mm2": 80769.37109375,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "east",
+      "end": "REAR",
+      "diagnostic_length_mm": 6600.0,
+      "retained_area_mm2": 73231.60351562501,
+      "retained_fraction": 0.9066754206941168,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "east",
+      "end": "REAR",
+      "diagnostic_length_mm": 6000.0,
+      "retained_area_mm2": 27631.603515625,
+      "retained_fraction": 0.34210497297982745,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "east",
+      "end": "REAR",
+      "diagnostic_length_mm": 5000.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "east",
+      "end": "REAR",
+      "diagnostic_length_mm": 4400.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "east",
+      "end": "REAR",
+      "diagnostic_length_mm": 4200.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "west",
+      "end": "FRONT",
+      "diagnostic_length_mm": 7192.0,
+      "retained_area_mm2": 77585.38403320312,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "west",
+      "end": "FRONT",
+      "diagnostic_length_mm": 7000.0,
+      "retained_area_mm2": 77585.38403320312,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "west",
+      "end": "FRONT",
+      "diagnostic_length_mm": 6703.44921875,
+      "retained_area_mm2": 77585.38403320312,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "west",
+      "end": "FRONT",
+      "diagnostic_length_mm": 6600.0,
+      "retained_area_mm2": 71786.24291992185,
+      "retained_fraction": 0.925254721806887,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "west",
+      "end": "FRONT",
+      "diagnostic_length_mm": 6000.0,
+      "retained_area_mm2": 27086.242919921875,
+      "retained_fraction": 0.34911527805714226,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "west",
+      "end": "FRONT",
+      "diagnostic_length_mm": 5000.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "west",
+      "end": "FRONT",
+      "diagnostic_length_mm": 4400.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "west",
+      "end": "FRONT",
+      "diagnostic_length_mm": 4200.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "west",
+      "end": "REAR",
+      "diagnostic_length_mm": 7192.0,
+      "retained_area_mm2": 80560.23266601562,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "west",
+      "end": "REAR",
+      "diagnostic_length_mm": 7000.0,
+      "retained_area_mm2": 80560.23266601562,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "west",
+      "end": "REAR",
+      "diagnostic_length_mm": 6703.44921875,
+      "retained_area_mm2": 80560.23266601562,
+      "retained_fraction": 1.0,
+      "full_original_patch_retained": true
+    },
+    {
+      "side": "west",
+      "end": "REAR",
+      "diagnostic_length_mm": 6600.0,
+      "retained_area_mm2": 72749.81665039061,
+      "retained_fraction": 0.9030487405863732,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "west",
+      "end": "REAR",
+      "diagnostic_length_mm": 6000.0,
+      "retained_area_mm2": 27449.816650390654,
+      "retained_fraction": 0.3407365612285573,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "west",
+      "end": "REAR",
+      "diagnostic_length_mm": 5000.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "west",
+      "end": "REAR",
+      "diagnostic_length_mm": 4400.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    },
+    {
+      "side": "west",
+      "end": "REAR",
+      "diagnostic_length_mm": 4200.0,
+      "retained_area_mm2": 0.0,
+      "retained_fraction": 0.0,
+      "full_original_patch_retained": false
+    }
+  ],
+  "minimum_centered_length_preserving_all_original_foot_patches_mm": 6703.44921875,
+  "collision_tests_at_preservation_boundary": [
+    {
+      "a": "east:PANJIAN",
+      "b": "east:FOUR_BEAM",
+      "length_mm": 6703.44921875,
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LUDOU",
+      "b": "east:FOUR_BEAM",
+      "length_mm": 6703.44921875,
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:HUAGONG",
+      "b": "east:FOUR_BEAM",
+      "length_mm": 6703.44921875,
+      "overlap_mm3": 5146385.227599787
+    },
+    {
+      "a": "east:LINGGONG",
+      "b": "east:FOUR_BEAM",
+      "length_mm": 6703.44921875,
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:CENTRE_DOU",
+      "b": "east:FOUR_BEAM",
+      "length_mm": 6703.44921875,
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:PANJIAN",
+      "b": "west:FOUR_BEAM",
+      "length_mm": 6703.44921875,
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LUDOU",
+      "b": "west:FOUR_BEAM",
+      "length_mm": 6703.44921875,
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:HUAGONG",
+      "b": "west:FOUR_BEAM",
+      "length_mm": 6703.44921875,
+      "overlap_mm3": 4829691.561777544
+    },
+    {
+      "a": "west:LINGGONG",
+      "b": "west:FOUR_BEAM",
+      "length_mm": 6703.44921875,
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:CENTRE_DOU",
+      "b": "west:FOUR_BEAM",
+      "length_mm": 6703.44921875,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "failed_at_boundary": 2,
+  "approved_files_unchanged": true,
+  "conclusion": "6000mm clipping removes the ten known V002 overlaps but retains only about34-35percent of each original foot bearing patch;5000mm removes all. Preserving all original foot patches requires at least6703.449mm centered beam length and still leaves collisions. NominalY=+/-3500 markers are not actual foot-surface locations. No centered single-length solution preserves all original patches and eliminates known collisions, with all other geometry held fixed. This is not a capacity judgement or a historical endpoint claim."
+}

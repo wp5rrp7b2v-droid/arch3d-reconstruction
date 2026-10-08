@@ -1,0 +1,18 @@
+{
+  "version": "V002",
+  "scope": "front lower purlin two-end full role-presence candidate, not historical shape or structural proof",
+  "pass": "all required role objects; positive closed single solids; every proposed support interface area>0; no new overlaps>1mm3; approved63 unchanged; reopened interference gate repeated",
+  "hypotheses": {
+    "common_four_beam_top_Z": 0,
+    "frame_spacing_mm": 4437,
+    "lower_axis_Y_mm": 3596,
+    "east_tiemu_envelope": "borrow west1740x148x151",
+    "purlin_profile": "borrow east upper purlin",
+    "small_dou_shape": "borrow approved upper dou, three inferred candidate positions",
+    "panjian_envelope": "borrow upper panjian; lower dimensions missing",
+    "upper_six_beam": "measured sections PDF342; test length10710, no historical full length claim",
+    "san_dou": "new test pads, no historical dimensions claim",
+    "gongs": "PDF346 sections and linggong lengths; huagong incomplete length borrowed upper display; new crossing slots reconstructed"
+  },
+  "hard_stop": "do not automatically carve approved four-beam; failed placement cannot be historicized; no expansion after FAIL"
+}

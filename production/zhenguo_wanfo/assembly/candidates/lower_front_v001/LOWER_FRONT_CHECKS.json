@@ -1,0 +1,3122 @@
+{
+  "status": "EXPLORATORY_LOCAL_GEOMETRY_PASS",
+  "historical_support_chain_validated": false,
+  "production_expansion_allowed": false,
+  "raw_translation_intersections": [
+    {
+      "side": "east",
+      "translated_upper_object": "CENTRE_DOU_FRONT",
+      "beam_overlap_mm3": 3088256.2108843536
+    },
+    {
+      "side": "east",
+      "translated_upper_object": "PANJIAN_FANG_FRONT",
+      "beam_overlap_mm3": 1950540.0
+    },
+    {
+      "side": "west",
+      "translated_upper_object": "CENTRE_DOU_FRONT",
+      "beam_overlap_mm3": 2938640.8072916665
+    },
+    {
+      "side": "west",
+      "translated_upper_object": "PANJIAN_FANG_FRONT",
+      "beam_overlap_mm3": 1770724.5
+    }
+  ],
+  "contacts": [
+    {
+      "side": "east",
+      "interface": "槫—替木",
+      "status": "PASS",
+      "contact": {
+        "area_mm2": 238791.95671327412,
+        "upward_area_mm2": 236666.18015871968,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 3848.0540305,
+            "projected_contact_width_mm": 122.00245671794164
+          },
+          {
+            "x_mm": 4599.359448,
+            "projected_contact_width_mm": 129.5178222680497
+          },
+          {
+            "x_mm": 5188.1127705,
+            "projected_contact_width_mm": 135.05892500263144
+          },
+          {
+            "x_mm": 5306.614935,
+            "projected_contact_width_mm": 130.56897729665798
+          },
+          {
+            "x_mm": 5306.6158510000005,
+            "projected_contact_width_mm": 119.53749894332304
+          },
+          {
+            "x_mm": 5306.6176805,
+            "projected_contact_width_mm": 108.54936174342947
+          },
+          {
+            "x_mm": 5306.6204185,
+            "projected_contact_width_mm": 97.6300555445514
+          },
+          {
+            "x_mm": 5306.624059,
+            "projected_contact_width_mm": 86.80248072884024
+          },
+          {
+            "x_mm": 5306.6285935,
+            "projected_contact_width_mm": 76.09296869166792
+          },
+          {
+            "x_mm": 5306.6340105,
+            "projected_contact_width_mm": 65.52863043705838
+          },
+          {
+            "x_mm": 5306.640297,
+            "projected_contact_width_mm": 55.134270668354475
+          },
+          {
+            "x_mm": 5306.6474385,
+            "projected_contact_width_mm": 44.93439743903309
+          },
+          {
+            "x_mm": 5306.6554175,
+            "projected_contact_width_mm": 34.95406863529115
+          },
+          {
+            "x_mm": 5306.6642145000005,
+            "projected_contact_width_mm": 25.217572359094447
+          },
+          {
+            "x_mm": 5306.6738085,
+            "projected_contact_width_mm": 15.747935574948315
+          },
+          {
+            "x_mm": 5306.684176500001,
+            "projected_contact_width_mm": 6.568258441632679
+          },
+          {
+            "x_mm": 5306.6909055,
+            "projected_contact_width_mm": 1.0270112831403821
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 1.0270112831403821,
+        "horizontal_projection_mm2": 222403.29110044803,
+        "triangles": 83,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 9.112693272687351e-13,
+        "upward_contact_bounds_mm": [
+          [
+            3567.0,
+            3527.9568523147777,
+            351.05948320541535
+          ],
+          [
+            5306.692260257043,
+            3664.0431476852223,
+            374.0
+          ]
+        ]
+      },
+      "span_X_mm": 1739.692260257043,
+      "overlap_mm3": 3.104408582051595e-10
+    },
+    {
+      "side": "east",
+      "interface": "替木—斗",
+      "status": "PASS",
+      "contact": {
+        "area_mm2": 122143.9140208468,
+        "upward_area_mm2": 42626.3716697441,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 4437.0,
+            "projected_contact_width_mm": 148.0
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 148.0,
+        "horizontal_projection_mm2": 42626.3716697441,
+        "triangles": 14,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 5.541868946059527e-12,
+        "upward_contact_bounds_mm": [
+          [
+            4292.991987602216,
+            3522.0,
+            223.0
+          ],
+          [
+            4581.008012397784,
+            3670.0,
+            223.0
+          ]
+        ]
+      },
+      "span_X_mm": 288.0160247955682,
+      "overlap_mm3": 0.0
+    },
+    {
+      "side": "east",
+      "interface": "斗—襻间枋",
+      "status": "PASS",
+      "contact": {
+        "area_mm2": 16933.823529411675,
+        "upward_area_mm2": 16933.823529411675,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 4437.0,
+            "projected_contact_width_mm": 140.0
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 140.0,
+        "horizontal_projection_mm2": -16933.823529411675,
+        "triangles": 2,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 4.637531231849411e-12,
+        "upward_contact_bounds_mm": [
+          [
+            4376.52205882353,
+            3526.0,
+            123.0
+          ],
+          [
+            4497.47794117647,
+            3666.0,
+            123.0
+          ]
+        ]
+      },
+      "span_X_mm": 120.95588235294053,
+      "overlap_mm3": 0.0
+    },
+    {
+      "side": "east",
+      "interface": "襻间枋—四椽栿",
+      "status": "PASS",
+      "contact": {
+        "area_mm2": 61309.0,
+        "upward_area_mm2": 22420.0,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 4437.0,
+            "projected_contact_width_mm": 76.0
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 76.0,
+        "horizontal_projection_mm2": -22420.0,
+        "triangles": 8,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 9.094947017729282e-13,
+        "upward_contact_bounds_mm": [
+          [
+            4289.5,
+            3520.0,
+            0.0
+          ],
+          [
+            4584.5,
+            3596.0,
+            0.0
+          ]
+        ]
+      },
+      "span_X_mm": 295.0,
+      "overlap_mm3": 3.8805107275644936e-11
+    },
+    {
+      "side": "west",
+      "interface": "槫—替木",
+      "status": "PASS",
+      "contact": {
+        "area_mm2": 236718.66018877906,
+        "upward_area_mm2": 236718.66018877906,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": -588.9459695,
+            "projected_contact_width_mm": 122.00245671794164
+          },
+          {
+            "x_mm": 162.359448,
+            "projected_contact_width_mm": 129.5178222680497
+          },
+          {
+            "x_mm": 751.3054175,
+            "projected_contact_width_mm": 135.06059409245154
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 122.00245671794164,
+        "horizontal_projection_mm2": 222452.35716450933,
+        "triangles": 56,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 4.547473508864641e-13,
+        "upward_contact_bounds_mm": [
+          [
+            -870.0,
+            3527.9555191892364,
+            366.05818065676647
+          ],
+          [
+            870.0,
+            3664.0444808107636,
+            389.0
+          ]
+        ]
+      },
+      "span_X_mm": 1740.0,
+      "overlap_mm3": 4.244308608273665e-11
+    },
+    {
+      "side": "west",
+      "interface": "替木—斗",
+      "status": "PASS",
+      "contact": {
+        "area_mm2": 121366.66666666666,
+        "upward_area_mm2": 43224.705882352944,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 0.0,
+            "projected_contact_width_mm": 148.0
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 148.0,
+        "horizontal_projection_mm2": 43224.705882352944,
+        "triangles": 10,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 3.41759237937685e-12,
+        "upward_contact_bounds_mm": [
+          [
+            -146.02941176470588,
+            3522.0,
+            238.0
+          ],
+          [
+            146.02941176470588,
+            3670.0,
+            238.0
+          ]
+        ]
+      },
+      "span_X_mm": 292.05882352941177,
+      "overlap_mm3": 0.0
+    },
+    {
+      "side": "west",
+      "interface": "斗—襻间枋",
+      "status": "PASS",
+      "contact": {
+        "area_mm2": 17036.764705882353,
+        "upward_area_mm2": 17036.764705882353,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 0.0,
+            "projected_contact_width_mm": 140.0
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 140.0,
+        "horizontal_projection_mm2": -17036.764705882353,
+        "triangles": 2,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 3.2832918162872134e-12,
+        "upward_contact_bounds_mm": [
+          [
+            -60.845588235294116,
+            3526.0,
+            138.0
+          ],
+          [
+            60.845588235294116,
+            3666.0,
+            138.0
+          ]
+        ]
+      },
+      "span_X_mm": 121.69117647058823,
+      "overlap_mm3": 0.0
+    },
+    {
+      "side": "west",
+      "interface": "襻间枋—四椽栿",
+      "status": "PASS",
+      "contact": {
+        "area_mm2": 58274.5,
+        "upward_area_mm2": 24256.5,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 0.0,
+            "projected_contact_width_mm": 78.5
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 78.5,
+        "horizontal_projection_mm2": -24256.5,
+        "triangles": 8,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 9.18944950375695e-13,
+        "upward_contact_bounds_mm": [
+          [
+            -154.5,
+            3517.5,
+            0.0
+          ],
+          [
+            154.5,
+            3596.0,
+            0.0
+          ]
+        ]
+      },
+      "span_X_mm": 309.0,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "new_pairs_checked": 462,
+  "bad_pairs": [],
+  "all_pairs": [
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:FOUR_BEAM",
+      "overlap_mm3": 3.8805107275644936e-11
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "UPPER_PURLIN_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "UPPER_PURLIN_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "RIDGE_PURLIN",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "UPPER_PURLIN_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "UPPER_PURLIN_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "RIDGE_PURLIN",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "UPPER_PURLIN_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "UPPER_PURLIN_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "RIDGE_PURLIN",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "UPPER_PURLIN_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "UPPER_PURLIN_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "RIDGE_PURLIN",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "UPPER_PURLIN_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "UPPER_PURLIN_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "RIDGE_PURLIN",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "UPPER_PURLIN_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "UPPER_PURLIN_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "RIDGE_PURLIN",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "east:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:FOUR_BEAM",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:PINGLIANG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:TUOFENG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:LUDOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:HUAGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:LINGGONG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:HEAD_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:TUOJIAO_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:TUOFENG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:LUDOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:HUAGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:LINGGONG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:HEAD_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:TUOJIAO_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:PANJIAN_FANG_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:CENTRE_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:UPPER_DOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:PANJIAN_FANG_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:CENTRE_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:UPPER_DOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:SHUZHU_FOOT_PAD",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:SHUZHU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:RIDGE_SINGLE_GONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:RIDGE_UPPER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:CHASHOU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:CHASHOU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:RIDGE_LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "UPPER_PURLIN_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "UPPER_PURLIN_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "RIDGE_PURLIN",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:TIEMU_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:TIEMU_REAR",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "east:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_TIEMU",
+      "b": "west:RIDGE_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:LOWER_PANJIAN",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "LOWER_PURLIN_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "east:LOWER_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_PANJIAN",
+      "b": "west:LOWER_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:LOWER_PANJIAN",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "LOWER_PURLIN_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "east:LOWER_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:LOWER_DOU",
+      "b": "west:LOWER_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:LOWER_DOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "LOWER_PURLIN_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "east:LOWER_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_PANJIAN",
+      "b": "west:LOWER_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "LOWER_PURLIN_FRONT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "east:LOWER_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "west:LOWER_DOU",
+      "b": "west:LOWER_TIEMU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "east:LOWER_TIEMU",
+      "overlap_mm3": 3.104408582051595e-10
+    },
+    {
+      "a": "LOWER_PURLIN_FRONT",
+      "b": "west:LOWER_TIEMU",
+      "overlap_mm3": 7.275957614183426e-11
+    },
+    {
+      "a": "east:LOWER_TIEMU",
+      "b": "west:LOWER_TIEMU",
+      "overlap_mm3": 0.0
+    }
+  ],
+  "new_solids": [
+    {
+      "id": "east:LOWER_PANJIAN",
+      "is_volume": true,
+      "components": 1
+    },
+    {
+      "id": "east:LOWER_DOU",
+      "is_volume": true,
+      "components": 1
+    },
+    {
+      "id": "west:LOWER_PANJIAN",
+      "is_volume": true,
+      "components": 1
+    },
+    {
+      "id": "west:LOWER_DOU",
+      "is_volume": true,
+      "components": 1
+    },
+    {
+      "id": "LOWER_PURLIN_FRONT",
+      "is_volume": true,
+      "components": 1
+    },
+    {
+      "id": "east:LOWER_TIEMU",
+      "is_volume": true,
+      "components": 1
+    },
+    {
+      "id": "west:LOWER_TIEMU",
+      "is_volume": true,
+      "components": 1
+    }
+  ],
+  "conservation": [
+    {
+      "side": "east",
+      "error_mm3": 2.3283064365386963e-09
+    },
+    {
+      "side": "west",
+      "error_mm3": 9.778887033462524e-09
+    }
+  ],
+  "reopen_contacts": [
+    {
+      "side": "east",
+      "interface": "槫—替木",
+      "status": "PASS",
+      "overlap_mm3": 0.2199963655633231,
+      "contact": {
+        "area_mm2": 238791.95647419215,
+        "upward_area_mm2": 236666.1798996798,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 3848.0540315,
+            "projected_contact_width_mm": 122.00245666640512
+          },
+          {
+            "x_mm": 4599.3594515,
+            "projected_contact_width_mm": 129.51782226760315
+          },
+          {
+            "x_mm": 5188.1127625,
+            "projected_contact_width_mm": 135.05892145177404
+          },
+          {
+            "x_mm": 5306.614928999999,
+            "projected_contact_width_mm": 130.569981301418
+          },
+          {
+            "x_mm": 5306.6158445,
+            "projected_contact_width_mm": 119.540365550969
+          },
+          {
+            "x_mm": 5306.6176755,
+            "projected_contact_width_mm": 108.55279166194941
+          },
+          {
+            "x_mm": 5306.620422,
+            "projected_contact_width_mm": 97.63207750044148
+          },
+          {
+            "x_mm": 5306.624054,
+            "projected_contact_width_mm": 86.80262015970584
+          },
+          {
+            "x_mm": 5306.6286015000005,
+            "projected_contact_width_mm": 76.092521879993
+          },
+          {
+            "x_mm": 5306.6340335,
+            "projected_contact_width_mm": 65.52812375982467
+          },
+          {
+            "x_mm": 5306.64032,
+            "projected_contact_width_mm": 55.133542308745746
+          },
+          {
+            "x_mm": 5306.6474610000005,
+            "projected_contact_width_mm": 44.93396146497798
+          },
+          {
+            "x_mm": 5306.655425999999,
+            "projected_contact_width_mm": 34.95391919315807
+          },
+          {
+            "x_mm": 5306.664215,
+            "projected_contact_width_mm": 25.217484756093654
+          },
+          {
+            "x_mm": 5306.6737975,
+            "projected_contact_width_mm": 15.747972396504338
+          },
+          {
+            "x_mm": 5306.6841735,
+            "projected_contact_width_mm": 6.5684663092652045
+          },
+          {
+            "x_mm": 5306.690918,
+            "projected_contact_width_mm": 1.0269954093782871
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 1.0269954093782871,
+        "horizontal_projection_mm2": 222403.29078142112,
+        "triangles": 83,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 0.0001120610512159247,
+        "upward_contact_bounds_mm": [
+          [
+            3567.0,
+            3527.956855773926,
+            351.0594825744629
+          ],
+          [
+            5306.6922607421875,
+            3664.043144226074,
+            374.0
+          ]
+        ]
+      },
+      "span_X_mm": 1739.6922607421875
+    },
+    {
+      "side": "east",
+      "interface": "替木—斗",
+      "status": "PASS",
+      "overlap_mm3": 0.0,
+      "contact": {
+        "area_mm2": 122143.91392424738,
+        "upward_area_mm2": 42626.37121582031,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 4437.0,
+            "projected_contact_width_mm": 148.0
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 148.0,
+        "horizontal_projection_mm2": 42626.37121582031,
+        "triangles": 14,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 6.423306331271306e-12,
+        "upward_contact_bounds_mm": [
+          [
+            4292.991989135742,
+            3522.0,
+            223.0
+          ],
+          [
+            4581.008010864258,
+            3670.0,
+            223.0
+          ]
+        ]
+      },
+      "span_X_mm": 288.0160217285156
+    },
+    {
+      "side": "east",
+      "interface": "斗—襻间枋",
+      "status": "PASS",
+      "overlap_mm3": 0.0,
+      "contact": {
+        "area_mm2": 16933.82308959961,
+        "upward_area_mm2": 16933.82308959961,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 4437.0,
+            "projected_contact_width_mm": 140.0
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 140.0,
+        "horizontal_projection_mm2": -16933.82308959961,
+        "triangles": 2,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 9.094947017729282e-13,
+        "upward_contact_bounds_mm": [
+          [
+            4376.522060394287,
+            3526.0,
+            123.0
+          ],
+          [
+            4497.477939605713,
+            3666.0,
+            123.0
+          ]
+        ]
+      },
+      "span_X_mm": 120.95587921142578
+    },
+    {
+      "side": "east",
+      "interface": "襻间枋—四椽栿",
+      "status": "PASS",
+      "overlap_mm3": 3.8805107275644936e-11,
+      "contact": {
+        "area_mm2": 61309.0,
+        "upward_area_mm2": 22420.0,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 4437.0,
+            "projected_contact_width_mm": 76.0
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 76.0,
+        "horizontal_projection_mm2": -22420.0,
+        "triangles": 8,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 9.094947017729282e-13,
+        "upward_contact_bounds_mm": [
+          [
+            4289.5,
+            3520.0,
+            0.0
+          ],
+          [
+            4584.5,
+            3596.0,
+            0.0
+          ]
+        ]
+      },
+      "span_X_mm": 295.0
+    },
+    {
+      "side": "west",
+      "interface": "槫—替木",
+      "status": "PASS",
+      "overlap_mm3": 0.20993405652491978,
+      "contact": {
+        "area_mm2": 236718.65864431977,
+        "upward_area_mm2": 236718.65864431977,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": -588.9459684999999,
+            "projected_contact_width_mm": 122.00245666640512
+          },
+          {
+            "x_mm": 162.35945150000003,
+            "projected_contact_width_mm": 129.51782226760315
+          },
+          {
+            "x_mm": 751.30542,
+            "projected_contact_width_mm": 135.06059265204385
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 122.00245666640512,
+        "horizontal_projection_mm2": 222452.35675043846,
+        "triangles": 56,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 2.522229988226522e-06,
+        "upward_contact_bounds_mm": [
+          [
+            -870.0,
+            3527.955520629883,
+            366.0581817626953
+          ],
+          [
+            870.0,
+            3664.044479370117,
+            389.0
+          ]
+        ]
+      },
+      "span_X_mm": 1740.0
+    },
+    {
+      "side": "west",
+      "interface": "替木—斗",
+      "status": "PASS",
+      "overlap_mm3": 0.0,
+      "contact": {
+        "area_mm2": 121366.66924607521,
+        "upward_area_mm2": 43224.7080078125,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 0.0,
+            "projected_contact_width_mm": 148.0
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 148.0,
+        "horizontal_projection_mm2": 43224.70800781249,
+        "triangles": 10,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 9.108537096327822e-13,
+        "upward_contact_bounds_mm": [
+          [
+            -146.0294189453125,
+            3522.0,
+            238.0
+          ],
+          [
+            146.0294189453125,
+            3670.0,
+            238.0
+          ]
+        ]
+      },
+      "span_X_mm": 292.058837890625
+    },
+    {
+      "side": "west",
+      "interface": "斗—襻间枋",
+      "status": "PASS",
+      "overlap_mm3": 0.0,
+      "contact": {
+        "area_mm2": 17036.76483154297,
+        "upward_area_mm2": 17036.76483154297,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 0.0,
+            "projected_contact_width_mm": 140.0
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 140.0,
+        "horizontal_projection_mm2": -17036.76483154297,
+        "triangles": 2,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 2.307746657338209e-12,
+        "upward_contact_bounds_mm": [
+          [
+            -60.84558868408203,
+            3526.0,
+            138.0
+          ],
+          [
+            60.84558868408203,
+            3666.0,
+            138.0
+          ]
+        ]
+      },
+      "span_X_mm": 121.69117736816406
+    },
+    {
+      "side": "west",
+      "interface": "襻间枋—四椽栿",
+      "status": "PASS",
+      "overlap_mm3": 0.0,
+      "contact": {
+        "area_mm2": 58274.5,
+        "upward_area_mm2": 24256.5,
+        "connected_upward_patch_count": 1,
+        "projected_interval_checks": [
+          {
+            "x_mm": 0.0,
+            "projected_contact_width_mm": 78.5
+          }
+        ],
+        "minimum_midinterval_projected_width_mm": 78.5,
+        "horizontal_projection_mm2": -24256.5,
+        "triangles": 8,
+        "tolerance_mm": 0.001,
+        "max_boundary_distance_mm": 9.18944950375695e-13,
+        "upward_contact_bounds_mm": [
+          [
+            -154.5,
+            3517.5,
+            0.0
+          ],
+          [
+            154.5,
+            3596.0,
+            0.0
+          ]
+        ]
+      },
+      "span_X_mm": 309.0
+    }
+  ],
+  "reopened_entities": 70,
+  "approved_63_exact_shape_unchanged": true,
+  "purlin_diagnostic_length_mm": 6177.02535489713,
+  "purlin_angle_deg": 0.19369696159248026,
+  "warnings": [
+    "divide by zero encountered in divide",
+    "invalid value encountered in divide"
+  ],
+  "source_completeness_status": "FAIL_INCOMPLETE_SUPPORT_GROUP",
+  "overall_adoption_status": "NOT_READY_FOR_ADOPTION",
+  "independent_source_review": {
+    "pdf_pages": [
+      90,
+      91,
+      92
+    ],
+    "fact": "原报告说明替木下有小斗；槫下襻间斗栱由进深及顺身方向构件组成，底部用栌斗，上下六椽栿之间隔架为例外。",
+    "finding": "试验直接以四椽栿顶承托新襻间枋，遗漏完整下平槫斗栱组。表中襻间枋斗总尺寸不能单独证明把借形斗放在襻间枋上方正确。",
+    "missing_representation": [
+      "底部栌斗",
+      "顺身令栱",
+      "进深华栱",
+      "替木下小斗"
+    ],
+    "interpretation": "构件表达不完整使候选不能采用；没有进行承载能力判断。已批准三道槫方案不受影响。"
+  }
+}
