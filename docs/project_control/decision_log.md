@@ -453,3 +453,10 @@
 | D-282 | 2026-10-07 | Product Owner于21:00:11（Asia/Shanghai）要求结束今日工作、收尾检查与落档。核对PR57已合并、PR56未合并，25个归档文件哈希一致；重新计算两份归档网格的接触、闭合及交叠结果通过。停止工程；保留本地同步未执行、旧Dashboard汇总为历史快照及不承诺完整构建链等例外。 | WORK STOPPED / DAILY AUDIT PASS WITH KNOWN EXCEPTIONS; closeout publication pending; no new engineering or PR56 disposition |
 
 | D-283 | 2026-10-07 | Product Owner于21:12:28（Asia/Shanghai）明确批准合并收尾PR58。用户终端输出确认本地main已快进至f30767e479f61bc6d2d0e3f440f692971f658dba，与本次获取的origin/main一致；无已跟踪改动，original sources未跟踪目录保留。批准发布收尾记录，不修改模型；PR58合并后仍需本地补拉收尾提交。 | CLOSEOUT PUBLICATION APPROVED / PR58 ONLY; LOCAL SYNC PR57 CHECKPOINT PASS; PR56 UNMERGED; WORK STOPPED |
+
+
+## 2026-10-08｜两榀三道槫六替木接口方案批准
+
+| ID | 日期 | 决策 | 状态 / 影响 |
+|---|---|---|---|
+| D-284 | 2026-10-08 | PO批准三道槫、六个替木接口的条件性几何复原方案V001，并于14:50:15（Asia/Shanghai）明确授权向本仓库写入批准记录、创建登记草稿PR。锁定PRIMARY：4437 mm设计层轴距、共同Z=0工作假设、原梁架主体及朝向保持、槫原截面刚性微倾斜、六槽由假设毛坯重建。63实体；主候选522新增对及GLB重开六接口通过，四组2088对通过。共同历史标高、历史槽形、真实木料长度/拼接和承载能力仍未验证，不外推整殿。详情见docs/assembly/WANFO_THREE_PURLINS_SCHEME_APPROVAL_V001_2026_10_08.md。 | SCHEME APPROVED / DRAFT REGISTRATION AUTHORIZED / MAIN PUBLICATION PENDING / NO MASTER PROMOTION / NO STAGE3 CLOSURE / PR56 UNMERGED |
