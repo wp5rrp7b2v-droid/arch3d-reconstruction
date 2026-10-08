@@ -1599,3 +1599,14 @@ Boundary retained:
 - Mac同步：PASS_AT_PR57_CHECKPOINT（main=f30767e479f61bc6d2d0e3f440f692971f658dba；无已跟踪改动；original sources保留）。
 - PR58收尾提交的本地同步：PENDING_FINAL_PULL；不得把检查点同步误报为之后新提交也已同步。
 - D-282几何及哈希审计结论与已知例外保持；今日工作停止，无新工程。
+
+
+## 2026-10-09｜D-284批准状态镜像核对
+
+| 项目 | 结果 | 边界 |
+|---|---|---|
+| D-284批准登记 / PR59 | main存在批准记录；PR59 MERGED | 47e684d；登记发布不等于新增模型或整殿批准 |
+| 三道槫六替木方案 | PO APPROVED / 63实体 | 522新增对、6接口重开、2088敏感性对结果引用原批准记录，本轮未重跑 |
+| 共同Z=0 / 历史槽形 / 长度拼接 / 承载能力 | 工作假设 / 未验证 | 不提升历史证据等级，不宣称整殿闭合 |
+| Project State / Dashboard / 执行汇总 | R359 / v213 同步补丁 | 原Master、Registry、局部快照与既有规则保持 |
+| 本地同步 | TONIGHT DEFERRED / NOT EXECUTED | 按PO2026-10-09 07:32:56指令，今晚收尾一次完成 |
