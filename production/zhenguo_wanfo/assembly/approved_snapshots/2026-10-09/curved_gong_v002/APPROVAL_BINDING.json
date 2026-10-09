@@ -1,0 +1,102 @@
+{
+  "decision_id": "D-285",
+  "approved_at": "2026-10-09T12:28:41+08:00",
+  "user_instruction": "批准这版本",
+  "status": "PO_APPROVED / BLEND_FINALIZED / SAVE_REOPEN_PASS",
+  "version": "CURVED_GONG_V002",
+  "baseline": "D-284 PRIMARY / EAST V011 + WEST V002",
+  "changed_entities": [
+    "east:LINGGONG_FRONT",
+    "east:LINGGONG_REAR",
+    "west:LINGGONG_FRONT",
+    "west:LINGGONG_REAR"
+  ],
+  "entity_count": 63,
+  "unchanged_entities": 59,
+  "retained_original_entities": 50,
+  "profile_corrected_entities": 4,
+  "cross_frame_purlins": 3,
+  "reconstructed_seats": 6,
+  "geometry_classification": "SOURCE_GUIDED_RECONSTRUCTED_DESIGN / NOT_HISTORICAL_EXACT",
+  "validation": {
+    "all_pairs_checked": 1953,
+    "intersection_threshold_mm3": 1,
+    "max_overlap_mm3": 0.2704765540042749,
+    "above_threshold": 0,
+    "glb_reopened_entities": 63,
+    "max_glb_coordinate_delta_mm": 0.00011825561557543551,
+    "blender_saved_reopened": true,
+    "blend_roundtrip": {
+      "blender_version": "4.5.13 LTS",
+      "entity_count": 63,
+      "groups": {
+        "RETAINED_50": 50,
+        "PROFILE_CORRECTED_4": 4,
+        "PURLINS_3": 3,
+        "RECONSTRUCTED_SEATS_6": 6
+      },
+      "max_coordinate_difference_mm": 1.5251338481903076e-05,
+      "coordinate_tolerance_mm": 0.001,
+      "entity_pairs_checked": 1953,
+      "max_pair_overlap_mm3": 0.27047655402566306,
+      "intersection_threshold_mm3": 1
+    },
+    "six_interfaces_passed": 6
+  },
+  "artifacts": [
+    {
+      "filename": "WANFO_TWO_FRAMES_CURVED_GONG_CANDIDATE_V002.glb",
+      "sha256": "8b9081752f77612041d652203e6b822b38393a2bf31c91af6f990106b1ef1613",
+      "bytes": 216804,
+      "library_file_id": "libfile_33bd23fab0bc819185468980c256ff5d"
+    },
+    {
+      "filename": "Wanfo_Curved_Gong_Candidate_V002_Review_ZH.png",
+      "sha256": "716ee1dd873339dd29cfef4dada6d14b8ae4e2ebe073030e59210ef84951e862",
+      "bytes": 740059,
+      "library_file_id": "libfile_fb19434b65648191b57fe18812d11362"
+    },
+    {
+      "filename": "Wanfo_Curved_Gong_Candidate_V002_Repro_Package.zip",
+      "sha256": "7c14ded2162fddf8f787d65e1081ba6e326de4467aa17440ccd6a700efe514e9",
+      "bytes": 15354652,
+      "library_file_id": "libfile_97bf412bd5b8819195246f2443c57496"
+    },
+    {
+      "filename": "WANFO_TWO_FRAMES_THREE_PURLINS_APPROVED_V002.blend",
+      "sha256": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+      "bytes": 208003
+    },
+    {
+      "filename": "SAVE_REOPEN_V002_VALIDATION.json",
+      "sha256": "cbd2d32beaad631a44b068de7bba002144a489ee34ca04cff45b2f3d73a15d5d",
+      "bytes": 228883
+    },
+    {
+      "filename": "REOPENED_V002_MESHES.json.gz",
+      "sha256": "96a0401f182ff143fbb5387d4e632293377afe0324642176fd76e67a5c966b22",
+      "bytes": 122700
+    }
+  ],
+  "original_approved_snapshots_overwritten": false,
+  "physical_registry_mapping": "NOT_PROMOTED / NO_505_ROW_COUNT_CHANGE",
+  "master_promotion": false,
+  "formal_stage3_closed": false,
+  "main_publication": "CANONICAL_WHEN_PR62_MERGED",
+  "notes": "Existing candidate filenames and embedded pre-approval statuses remain unchanged for exact binary binding; this record supplies subsequent PO approval.",
+  "publication_authorization": {
+    "decision_id": "D-286",
+    "authorized_at": "2026-10-09T12:42:29+08:00",
+    "user_instruction": "将已批准 V002 固化为新 BLEND，保存后重新打开，复核网格与接口；合入登记 PR，完成正式记录与最终交付核对",
+    "pr_number": 62,
+    "explicit_public_metadata_approval_at": "2026-10-09T13:13:42+08:00"
+  },
+  "actions_evidence": {
+    "run_id": 37885670509,
+    "head_sha": "c0e6ec439840630752284b890526707992fb927c",
+    "artifact_id": 11596013492,
+    "artifact_sha256": "dc2271f2cc1006d45e57f75c6daf6dd81e2c1672bdd6943ff94012e4548df671"
+  },
+  "delivery_location": "FINAL_DELIVERY_PACKAGE / EXACT_SHA256_BINDING",
+  "public_repository_payload": "REGISTRATION_METADATA_AND_VALIDATION_SUMMARY_ONLY"
+}
