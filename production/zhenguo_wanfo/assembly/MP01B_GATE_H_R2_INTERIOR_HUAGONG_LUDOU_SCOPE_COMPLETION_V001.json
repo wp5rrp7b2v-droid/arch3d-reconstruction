@@ -1,0 +1,103 @@
+{
+  "schema_version": "MP01B_GATE_H_R2_1.0",
+  "status": "PRODUCT_OWNER_APPROVED / GATE_H_R3_DESIGN_AUTHORIZED / NO_BLENDER",
+  "date": "2026-10-06",
+  "families": {
+    "interior_huagong": {
+      "component_id": "CMP-FRAME-HUAGONG-INTERIOR-001",
+      "master_id": "CMP-FRAME-HUAGONG-INTERIOR-001_MASTER",
+      "name_zh": "华栱（梁架襻间进深）",
+      "role": "PANJIAN_DEPTHWISE_SUPPORT",
+      "direction": "assembly_y / 进深",
+      "target_subset": [
+        "东缝前上平槫下襻间",
+        "东缝后上平槫下襻间"
+      ],
+      "whole_hall_count": "UNKNOWN",
+      "direct_outer_eaves_master_reuse": false,
+      "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_INTERIOR_HUAGONG_TARGET_SOURCE_BINDING_V001.md"
+    },
+    "panjian_ludou": {
+      "component_id": "CMP-FRAME-LUDOU-PANJIAN-001",
+      "master_id": "CMP-FRAME-LUDOU-PANJIAN-001_MASTER",
+      "name_zh": "襻间/隔架用栌斗",
+      "whole_hall_count": "UNKNOWN",
+      "direct_column_head_master_reuse": false,
+      "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_PANJIAN_LUDOU_TARGET_SOURCE_BINDING_V001.md"
+    }
+  },
+  "front_ludou": {
+    "direct": {
+      "top_width_mm": 321,
+      "bottom_width_mm": 221,
+      "top_depth_mm": 355,
+      "bottom_depth_mm": null
+    },
+    "completed": {
+      "total_height_mm": 225.1,
+      "flat_height_mm": 45,
+      "sloped_height_mm": 88.1,
+      "classification": "PARAMETRIC_COMPLETION / SAME_FAMILY_DIRECT_MEAN / REPLACEABLE",
+      "target_direct_measurement_claim": false
+    },
+    "tuofeng_vertical_contribution_mm": 172.9,
+    "tuofeng_classification": "SECONDARY_CALCULATED / REPORT_MODULAR_DECOMPOSITION + PARAMETRIC_COMPLETION / REPLACEABLE"
+  },
+  "rear_ludou": {
+    "direct": {
+      "top_width_mm": 320,
+      "bottom_width_mm": 227,
+      "top_depth_mm": 357,
+      "bottom_depth_mm": null,
+      "total_height_mm": 219,
+      "flat_height_mm": 45,
+      "sloped_height_mm": 65
+    },
+    "tuofeng_vertical_contribution_mm": 196,
+    "tuofeng_classification": "SECONDARY_CALCULATED / REPORT_MODULAR_DECOMPOSITION + DIRECT_POSITION_LUDOU / REPLACEABLE"
+  },
+  "target_linggong": {
+    "front": {
+      "length_mm": 1016,
+      "width_mm": 213,
+      "thickness_mm": 149,
+      "axis": "assembly_x / 顺身",
+      "classification": "DIRECT_PRIMARY / POSITION_SPECIFIC"
+    },
+    "rear": {
+      "length_mm": 995,
+      "width_mm": 217,
+      "thickness_mm": 150,
+      "axis": "assembly_x / 顺身",
+      "classification": "DIRECT_PRIMARY / POSITION_SPECIFIC"
+    }
+  },
+  "rejected_completion_candidates": {
+    "paired_rear_copy": "REJECTED_AS_DEFAULT / would silently assert FRONT=REAR for missing heights",
+    "fen_ideal_model": "REJECTED_FOR_CURRENT_PRODUCTION / different evidence-time layer"
+  },
+  "unresolved": [
+    "Panjian Ludou bottom depth",
+    "Interior Huagong numeric full length / endpoint coordinates",
+    "exact hidden notches / slots / mortise-tenon",
+    "exact historical Tuofeng profile and dimensions"
+  ],
+  "blender_authorized": false,
+  "next_gate": {
+    "id": "MP01B_GATE_H_R3",
+    "name": "MISSING_GEOMETRY_CONTROLS_AND_CORRECTED_BUILD_PREPARATION",
+    "requires_product_owner_approval": false,
+    "design_authorized": true
+  },
+  "product_owner_decision": {
+    "approved": true,
+    "date": "2026-10-06",
+    "approved_front_completion_mm": {
+      "total_height_mm": 225.1,
+      "flat_height_mm": 45,
+      "sloped_height_mm": 88.1
+    },
+    "approved_front_tuofeng_vertical_candidate_mm": 172.9,
+    "approved_rear_tuofeng_vertical_candidate_mm": 196
+  }
+}

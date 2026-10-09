@@ -1,0 +1,97 @@
+{
+  "schema_version": "MP01A_GATE_B_RIDGE_SUPPORT_TARGET_DATUM_1.0",
+  "status": "PASS / TARGET_OWNER_RESOLVED / NUMERIC_PLACEMENT_NOT_YET_LOCKED",
+  "date": "2026-10-06",
+  "datum": {
+    "datum_id": "DATUM-MP01A-RIDGE-SUPPORT-EAST-SEAM",
+    "record_type": "NON_PHYSICAL_ASSEMBLY_DATUM",
+    "historical_component_claim": false,
+    "coordinate_space": "MP01A_ASSEMBLY_LOCAL",
+    "semantic_owner": {
+      "frame_plane": "EAST_SEAM",
+      "purlin_role": "RIDGE_PURLIN"
+    },
+    "physical_segment_binding": "UNRESOLVED / DO_NOT SILENTLY CHOOSE CENTER OR EAST SEGMENT",
+    "exact_global_xyz": "NOT_YET_LOCKED",
+    "exact_contact_face": "UNKNOWN",
+    "historical_joint": "UNKNOWN"
+  },
+  "evidence": {
+    "a1": [
+      {
+        "locator": "PDF p106 / printed p91 / Fig. 2-71",
+        "supports": [
+          "ridge-purlin central level",
+          "Shuzhu vertical alignment",
+          "Chashou convergence into central ridge-support zone"
+        ],
+        "exact_contact_geometry": false
+      },
+      {
+        "locator": "PDF p107 / printed p92 / Table 2-52",
+        "east_seam_front_C_mm": 1245,
+        "east_seam_rear_C_mm": null,
+        "east_seam_rear_status": "未及",
+        "measured_C_mean_mm": 1249.5,
+        "report_rounded_C_fen": 82,
+        "warning": "C is purlin-level height difference, not Shuzhu length."
+      },
+      {
+        "locator": "PDF p109 / printed p94 / Fig. 2-73",
+        "supports": [
+          "whole-frame ridge-support context"
+        ],
+        "exact_contact_geometry": false
+      }
+    ],
+    "a2": {
+      "source": "https://szbwgvue.chwhyun.cn/wanfodian/",
+      "statement": "平梁之上设驼峰、蜀柱、叉手。",
+      "supports": "ridge-support system membership",
+      "endpoint_xyz_authority": false
+    }
+  },
+  "endpoint_ownership": {
+    "蜀柱-东缝": {
+      "lower": "PINGLIANG_UPPER_RIDGE_SUPPORT_CHAIN",
+      "upper": "DATUM-MP01A-RIDGE-SUPPORT-EAST-SEAM",
+      "realization": "ENDPOINT_DERIVED"
+    },
+    "叉手-东缝-南侧": {
+      "lower": "PINGLIANG_UPPER_CONNECTION_REGION",
+      "upper": "DATUM-MP01A-RIDGE-SUPPORT-EAST-SEAM",
+      "realization": "ENDPOINT_DERIVED"
+    },
+    "叉手-东缝-北侧": {
+      "lower": "PINGLIANG_UPPER_CONNECTION_REGION",
+      "upper": "DATUM-MP01A-RIDGE-SUPPORT-EAST-SEAM",
+      "realization": "ENDPOINT_DERIVED"
+    }
+  },
+  "classifications": {
+    "central_ridge_purlin_above_support_group": "FACT / A1",
+    "shuzhu_alignment": "FACT / A1_VISUAL",
+    "chashou_convergence": "FACT / A1_VISUAL",
+    "exact_contact_face": "UNKNOWN",
+    "intermediate_block_geometry": "UNKNOWN",
+    "east_seam_segment_end_owner": "UNKNOWN",
+    "shared_target_datum": "RECONSTRUCTED_DESIGN / PROJECT_ASSEMBLY_RULE"
+  },
+  "gate_c": {
+    "name": "MP-01A Gate C / Assembly-Local Numeric Placement Resolver",
+    "blender_authorized": false,
+    "required_outputs": [
+      "Pingliang local baseline",
+      "ridge target elevation/offset",
+      "Tuofeng UPPER_RIDGE_SUPPORT envelope",
+      "Shuzhu endpoint height",
+      "South/North Chashou endpoint lengths and angles"
+    ],
+    "rules": [
+      "prefer East-Seam direct values",
+      "source-image calibrated values must be RECONSTRUCTED_DESIGN / SOURCE_IMAGE_CALIBRATED",
+      "东缝后 C=未及 remains UNKNOWN",
+      "1249.5mm mean must not be labeled East-Seam exact"
+    ]
+  }
+}

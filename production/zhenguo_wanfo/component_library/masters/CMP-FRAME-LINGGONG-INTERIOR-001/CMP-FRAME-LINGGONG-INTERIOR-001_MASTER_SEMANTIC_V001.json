@@ -1,0 +1,66 @@
+{
+  "blend_sha256": "82a16ddf3c3d727ddd4cb03408ade7b4ff9a25afd8a42cb7215edc2178a22301",
+  "blender_version": "4.5.13 LTS",
+  "building_metric_envelope": "ASSEMBLY_OWNED",
+  "component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
+  "definition_sha256": "4249aec56a83c387ee471bee7c1d1bfa8ec937ffa891bba220ceaf0cbbea2afa",
+  "fixture_building_dimension_claim": false,
+  "fixture_classification": "ENGINEERING_TEST_ONLY / NOT_BUILDING_DIMENSIONS",
+  "fixture_historical_claim": false,
+  "fixture_set": "A",
+  "geometry_inputs": {
+    "body_depth": 500,
+    "body_height": 180,
+    "body_length": 1000,
+    "seat_depth": 500,
+    "seat_height": 120,
+    "seat_length": 550
+  },
+  "geometry_signature": "7ef466c39b08f7485da1c7e91af8882446da7f6d9546668ac28132445d19232f",
+  "geometry_strategy": "NORMALIZED_NEUTRAL_TWO_ZONE_SUPPORT_ENVELOPE",
+  "historical_dimensions": "UNKNOWN",
+  "historical_joinery": "UNKNOWN / DEFERRED",
+  "historical_profile": "UNKNOWN",
+  "joinery_cut_count": 0,
+  "master_family_count": 1,
+  "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+  "master_version": "V001",
+  "outer_eaves_geometry_inherited": false,
+  "outer_eaves_profile_used": false,
+  "role_variant": "LOWER_PINGLIANG_SUPPORT",
+  "role_variant_count": 1,
+  "status": "BUILT",
+  "task_id": "T-043",
+  "zones": [
+    {
+      "bbox_mm": {
+        "dimensions": [1000.0, 500.0, 180.0],
+        "max": [500.0, 250.0, 180.0],
+        "min": [-500.0, -250.0, 0.0]
+      },
+      "building_dimension_claim": false,
+      "face_count": 6,
+      "geometry_signature": "64301c76435a9cea55c886126b213d41c2f8ac4b618bcf6f4352cb89179eba02",
+      "historical_metric_claim": false,
+      "joinery_cut_count": 0,
+      "outer_eaves_profile_used": false,
+      "vertex_count": 8,
+      "zone_id": "BODY_ZONE"
+    },
+    {
+      "bbox_mm": {
+        "dimensions": [550.0, 500.0, 120.0],
+        "max": [275.0, 250.0, 300.0],
+        "min": [-275.0, -250.0, 180.0]
+      },
+      "building_dimension_claim": false,
+      "face_count": 6,
+      "geometry_signature": "210ff6afdf0d288bba360ea9e3d7555c988c74254b0bde71bd2f33bdaa3403f4",
+      "historical_metric_claim": false,
+      "joinery_cut_count": 0,
+      "outer_eaves_profile_used": false,
+      "vertex_count": 8,
+      "zone_id": "UPPER_BEARING_ZONE"
+    }
+  ]
+}

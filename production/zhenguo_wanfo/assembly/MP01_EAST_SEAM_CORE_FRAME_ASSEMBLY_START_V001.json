@@ -1,0 +1,384 @@
+{
+  "schema_version": "MP01_EAST_SEAM_CORE_FRAME_ASSEMBLY_START_1.0",
+  "status": "MP01A_APPROVED / MP01B_TARGETED_REWORK_IN_PROGRESS / T046_TUOJIAO_APPROVED / CIRCLE1_T047_FAIL_REOPENED / MERGE_NOT_AUTHORIZED",
+  "date": "2026-10-06",
+  "canonical_location_label": "东缝",
+  "chat_working_label": "明间东缝",
+  "chat_label_is_registry_fact": false,
+  "goal": "Evidence-bounded queryable regenerable core-frame assembly",
+  "target_chain": "FOUR_CHUANFU -> TUOFENG / LINGGONG -> PINGLIANG -> TUOFENG -> SHUZHU / CHASHOU",
+  "subassemblies": {
+    "MP01A": {
+      "name": "UPPER_RIDGE_SUPPORT",
+      "status": "APPROVED / MINIMUM_PROOF_PASS",
+      "participants": [
+        {
+          "instance_id": "平梁-东缝",
+          "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+          "variant": "EW_SEAM",
+          "record_type": "V008_PHYSICAL_INSTANCE"
+        },
+        {
+          "instance_id": "ASM-MP01A-TUOFENG-UPPER-01",
+          "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+          "variant": "UPPER_RIDGE_SUPPORT",
+          "record_type": "RECONSTRUCTED_ASSEMBLY_INSTANCE",
+          "whole_hall_count_claim": false
+        },
+        {
+          "instance_id": "蜀柱-东缝",
+          "master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+          "record_type": "V008_PHYSICAL_INSTANCE"
+        },
+        {
+          "instance_id": "叉手-东缝-南侧",
+          "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+          "record_type": "V008_PHYSICAL_INSTANCE"
+        },
+        {
+          "instance_id": "叉手-东缝-北侧",
+          "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+          "record_type": "V008_PHYSICAL_INSTANCE"
+        },
+        {
+          "instance_id": "RIDGE_SUPPORT_TARGET_DATUM",
+          "record_type": "NON_PHYSICAL_ASSEMBLY_DATUM",
+          "physical_owner": "UNRESOLVED"
+        }
+      ],
+      "blockers": []
+    },
+    "MP01B": {
+      "name": "LOWER_PINGLIANG_SUPPORT",
+      "status": "R4_MACHINE_PASS_VISUAL_FAIL / T046_TUOJIAO_APPROVED / T047_CIRCLE1_MACHINE_PASS_PO_FAIL / CIRCLE1_REOPENED / CIRCLE2_OPEN / CIRCLE3_OPEN / MP01B_NOT_APPROVED",
+      "intended_participants": [
+        "四椽栿-东缝",
+        "TUOFENG::LOWER_SUPPORT",
+        "LINGGONG_INTERIOR_ROLE",
+        "平梁-东缝"
+      ],
+      "blocker": {
+        "id": "INTERIOR_LINGGONG_MASTER_MISSING",
+        "resolved": true,
+        "resolved_by": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+        "existing_outer_eaves_master_reuse": false
+      }
+    }
+  },
+  "relation_boundary": {
+    "historical_joinery": "UNKNOWN / NOT MODELED",
+    "exact_contact_faces": "UNKNOWN",
+    "exact_chashou_angle": "ENDPOINT_DERIVED / NOT FIXED",
+    "tuofeng_metric_geometry": "ASSEMBLY_OWNED / RECONSTRUCTED_DESIGN / REPLACEABLE"
+  },
+  "next_gate": {
+    "id": "MP01B_GONGHEAD_REPETITION_SMALL_DOU_IDENTITY_CHECK",
+    "name": "GONGHEAD_REPETITION_AND_SMALL_DOU_IDENTITY_CHECK",
+    "execution_authorized": false,
+    "note": "Next session: first compare repeated same-building gong-head terminal forms and verify the independent small dou-like participant above the target gong head. 散斗 is an inference until target-position primary-source identity is confirmed. No Blender.",
+    "combine_with_mp01a_authorized": false,
+    "merge_authorized": false
+  },
+  "gate_b": {
+    "status": "PASS",
+    "datum_id": "DATUM-MP01A-RIDGE-SUPPORT-EAST-SEAM",
+    "semantic_owner": "RIDGE_PURLIN role × EAST_SEAM frame plane",
+    "exact_global_xyz": "NOT_YET_LOCKED",
+    "exact_contact_face": "UNKNOWN"
+  },
+  "gate_c": {
+    "status": "PASS",
+    "contract": "production/zhenguo_wanfo/assembly/MP01A_GATE_C_ASSEMBLY_LOCAL_NUMERIC_PLACEMENT_V001.json",
+    "pingliang_length_mm": 3672,
+    "tuofeng_upper_envelope_mm": {
+      "span": 1325,
+      "depth": 395.5,
+      "height": 200
+    },
+    "shuzhu_length_mm": 685,
+    "chashou_length_mm": 2038.16608744,
+    "chashou_angle_deg": 25.73528223,
+    "ridge_target_z_mm": 885,
+    "ridge_reference_z_mm": 1245,
+    "blender_authorized": false
+  },
+  "gate_d": {
+    "status": "MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "run_id": 37420838311,
+    "artifact_id": 11393212103,
+    "artifact_digest": "sha256:906d3efeafb543c94673455fb9ffa5e69d0985fdfb6d5a1fe9dcf729cd081344",
+    "validation": "31/31 PASS",
+    "independent_reopen": "PASS",
+    "deterministic_rebuild": "PASS",
+    "dependency_perturbation": "PASS",
+    "assembly_signature": "127477379d9f62ea81835ce56e75727d055a4e5a5609a7ac11a485cb9be322fb",
+    "blend_sha256": "5a1460b13a0de739ef2ad675921af26a5d5d95ae85b0c3f56f7eb0630cc4b3f9",
+    "product_owner_accepted": true,
+    "product_owner_decision": "APPROVED",
+    "acceptance_scope": "MP01A_UPPER_RIDGE_SUPPORT_SUBSET_ONLY",
+    "historical_exactness_claim": false,
+    "whole_frame_claim": false,
+    "whole_hall_claim": false
+  },
+  "mp01b_gate_a": {
+    "status": "PASS",
+    "existing_master_reuse": "REJECTED",
+    "new_master_required": true,
+    "proposed_component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
+    "proposed_master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER"
+  },
+  "mp01b_gate_b": {
+    "status": "COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "registry_record": "令栱（梁架承托）-族边界UNKNOWN",
+    "proposed_master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+    "source_binding": "PASS_FOR_IDENTITY_AND_ROLE",
+    "master_spec": "CANDIDATE",
+    "master_scope_coverage": "29/30",
+    "approved_master_families": 26,
+    "blender_authorized": false
+  },
+  "mp01b_gate_c": {
+    "status": "APPROVED / PRODUCT_OWNER",
+    "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+    "role_variant": "LOWER_PINGLIANG_SUPPORT",
+    "geometry": "NORMALIZED_NEUTRAL_TWO_ZONE_SUPPORT_ENVELOPE",
+    "outer_eaves_geometry_inherited": false,
+    "blender_assembly_authorized": false,
+    "product_owner_approved": true
+  },
+  "mp01b_gate_d": {
+    "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_D_INTERIOR_LINGGONG_FIRST_ARTICLE_BUILD_PREPARATION_V001.json",
+    "engineering_execution_authorized": false
+  },
+  "mp01b_gate_e": {
+    "status": "PRODUCT_OWNER_APPROVED / FORMALIZED / CATALOG_V008_BOUND",
+    "task_id": "T-043",
+    "run_id": 37424767731,
+    "artifact_id": 11394896083,
+    "artifact_digest": "sha256:397adf6552f3f1d9d4791cc8dbaf3ea5197ee556c673aee11ade113c3491610d",
+    "validation": "28/28 PASS",
+    "geometry_signature": "7ef466c39b08f7485da1c7e91af8882446da7f6d9546668ac28132445d19232f",
+    "product_owner_accepted": true,
+    "formalization_authorized": true,
+    "formalization_complete": true,
+    "master_reference": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+    "master_scope_coverage": "30/30",
+    "approved_master_families": 27
+  },
+  "mp01b_gate_f": {
+    "status": "PASS",
+    "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_F_LOWER_ASSEMBLY_LOCAL_METRIC_ENVELOPE_V001.json",
+    "four_chuanfu_length_mm": 7192,
+    "pingliang_length_mm": 3672,
+    "support_clearance_mm": 306,
+    "support_stations_y_mm": [
+      1836,
+      -1836
+    ],
+    "linggong_candidate_mm": {
+      "length": 893.3,
+      "depth": 153.6,
+      "height": 215
+    },
+    "tuofeng_lower_height_mm": 91,
+    "blender_authorized": false
+  },
+  "mp01b_gate_g": {
+    "status": "DESIGN_COMPLETE / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_G_LOWER_ASSEMBLY_FIRST_BUILD_PREPARATION_V001.json",
+    "logical_object_count": 6,
+    "support_relation_count": 6,
+    "locate_relation_count": 4,
+    "mutation": "support_clearance 306 -> 310 mm",
+    "blender_authorized": false
+  },
+  "mp01b_gate_h": {
+    "status": "MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "task_id": "T-044",
+    "run_id": 37432149756,
+    "artifact_id": 11397412125,
+    "artifact_digest": "sha256:0c06ac0b48d92783ea4b0a54d9eba355cae20094b2eb3e2866dd7fd332fc6606",
+    "validation": "51/51 PASS",
+    "assembly_signature": "d9e7880252746283dcf72534dd276a9ab6f0b2220f15b7d4b5169b26449c2d71",
+    "blend_sha256": "6efc84d3468d31ecab7bf4cc3fd9887710288e9f38a07da2bcd9c19937c4cc35",
+    "product_owner_accepted": false,
+    "review_note": "Support groups straddle the ±1836 Pingliang end stations under the approved replaceable Gate G axis/station rule.",
+    "evidence_review": "FAIL",
+    "recheck_path": "docs/assembly/MP01B_GATE_H_EVIDENCE_RECHECK_V001.md",
+    "invalidated_build_assumptions": [
+      "306mm = Tuofeng height + Interior Linggong total height",
+      "Tuofeng residual height = 91mm",
+      "Direct Tuofeng->Linggong contact at Z=91",
+      "Direct Linggong->Pingliang contact at Z=306",
+      "Six-object support stack complete enough for MP-01B acceptance"
+    ],
+    "retained_candidates": [
+      "support stations ±1836mm pending target-node confirmation",
+      "South/North symmetry",
+      "Linggong axis not changed merely for visual appearance"
+    ]
+  },
+  "mp01b_gate_h_r1": {
+    "status": "PARTIAL_PASS / TARGET_COMPONENT_SET_AND_LINGGONG_DIRECTION_RESOLVED / CORRECTED_BUILD_NOT_YET_AUTHORIZED",
+    "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_H_R1_TARGET_NODE_EVIDENCE_RESOLUTION_V001.json",
+    "target_linggong_axis": "assembly_x / 顺身",
+    "front_linggong_mm": [
+      1016,
+      213,
+      149
+    ],
+    "rear_linggong_mm": [
+      995,
+      217,
+      150
+    ],
+    "target_dou_term": "襻间栌斗",
+    "rear_tuofeng_vertical_candidate_mm": 196,
+    "blender_authorized": false
+  },
+  "mp01b_gate_h_r2": {
+    "status": "PRODUCT_OWNER_APPROVED / GATE_H_R3_DESIGN_AUTHORIZED / NO_BLENDER",
+    "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_H_R2_INTERIOR_HUAGONG_LUDOU_SCOPE_COMPLETION_V001.json",
+    "front_ludou_completion_mm": {
+      "total": 225.1,
+      "flat": 45,
+      "sloped": 88.1
+    },
+    "front_completion_classification": "PARAMETRIC_COMPLETION / SAME_FAMILY_DIRECT_MEAN / REPLACEABLE",
+    "front_tuofeng_vertical_candidate_mm": 172.9,
+    "rear_tuofeng_vertical_candidate_mm": 196,
+    "unresolved": [
+      "Panjian Ludou bottom depth",
+      "Interior Huagong numeric full length / endpoint coordinates"
+    ],
+    "blender_authorized": false,
+    "product_owner_approved": true,
+    "approved_front_completion_mm": {
+      "total": 225.1,
+      "flat": 45,
+      "sloped": 88.1
+    },
+    "approved_front_tuofeng_vertical_candidate_mm": 172.9,
+    "approved_rear_tuofeng_vertical_candidate_mm": 196
+  },
+  "mp01b_gate_h_r3": {
+    "status": "PRODUCT_OWNER_APPROVED / GATE_H_R4_ENGINEERING_EXECUTION_AUTHORIZED",
+    "contract": "production/zhenguo_wanfo/assembly/MP01B_GATE_H_R3_MISSING_GEOMETRY_CONTROLS_CORRECTED_BUILD_PREPARATION_V001.json",
+    "ludou_bottom_depth_mm": {
+      "front": 255,
+      "rear": 264
+    },
+    "ludou_bottom_depth_rule": "EQUAL_PLAN_SIDE_INSET / RECONSTRUCTED_DESIGN / REPLACEABLE",
+    "huagong_control_mm": {
+      "length": 900,
+      "inner_gonghead_reach": 650,
+      "outer_tuojiao_reach": 250,
+      "uncertainty": 50
+    },
+    "huagong_length_classification": "SOURCE_IMAGE_CALIBRATED_PROJECT_COMPLETION / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "pingliang_underside_z_mm": 521,
+    "rendered_physical_geometry_count": 10,
+    "deferred_panjian_fang_count": 2,
+    "blender_authorized": false,
+    "product_owner_approved": true
+  },
+  "mp01b_gate_h_r4": {
+    "status": "MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+    "task_id": "T-045",
+    "run_id": 37453623798,
+    "artifact_id": 11407787011,
+    "artifact_digest": "sha256:c5126228683f9c396f5cf3580022b97a4ef979be23e8af44ee2e802d308019ee",
+    "validation": "56/56 PASS",
+    "assembly_signature": "a3dfdf40d98fb376df05d84f75f79bfdd675e2eb96c57ef994a07865e194c9b9",
+    "blend_sha256": "49095581eccbbe5020cf79945812511485535373d2b053b2e02c5ffe17391fb4",
+    "product_owner_accepted": false
+  },
+  "mp01b_t046_tuojiao_first_geometry": {
+    "status": "MACHINE_PASS / PRODUCT_OWNER_APPROVED / FIRST_ARTICLE_ACCEPTED",
+    "task_id": "T-046",
+    "run_id": 37472462998,
+    "artifact_id": 11416983796,
+    "artifact_digest": "sha256:d7a9065d07c5109bc18d6d28c92b8142a52edbfc9cb3478caa49ba0371d80eab",
+    "validation": "41/41 PASS",
+    "canonical_assembly_signature": "8001d642fa6cf67e474ef88534157ef74b46573d52c69363a64103ad9df18814",
+    "mutation_assembly_signature": "9d6137200e213b43fbfa759f270d48206039ae55f67b25788a9ece6cfc091d57",
+    "blend_sha256": "1a11598ef3af8ff2b0d2c5b2ca4b861ecf3af2f02fbafbcb9f210930a9e84a03",
+    "review_board_sha256": "2ee3e441a13d022a81ad20bc94db4f300b7e723327c303694fe8937860c142cf",
+    "product_owner_accepted": true,
+    "product_owner_decision": "APPROVED",
+    "acceptance_scope": "TUOJIAO_FIRST_ARTICLE_FRONT_AND_REAR_ONLY",
+    "exact_historical_endpoints_claim": false,
+    "exact_huagong_tuojiao_contact_claim": false,
+    "hidden_joinery_claim": false,
+    "mp01b_overall_accepted": false,
+    "original_three_circled_visual_issues_resolved": false,
+    "merge_authorized": false
+  },
+  "mp01b_circle1_huagong_visible_profile": {
+    "status": "REOPENED AFTER T047 ACTUAL-BUILD FAIL / NO BLENDER",
+    "candidate_id": "MP01B_INTERIOR_HUAGONG_VISIBLE_PROFILE_V001_C01",
+    "classification": "TARGET_DRAWING_GUIDED_SIMPLIFIED / SOURCE_IMAGE_CALIBRATED_PROJECT_COMPLETION / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "product_owner_accepted": false,
+    "blender_authorized": false,
+    "circle_1_resolved_at_design_level": false,
+    "circle_1_resolved_in_geometry": false,
+    "circle_2_resolved": false,
+    "circle_3_resolved": false,
+    "mp01b_overall_accepted": false,
+    "merge_authorized": false
+  },
+  "mp01b_circle1_targeted_build": {
+    "status": "MACHINE_PASS / PRODUCT_OWNER REVIEW FAIL / NOT ACCEPTED",
+    "task_id": "T-047",
+    "run_id": 37476995027,
+    "artifact_id": 11418594641,
+    "artifact_digest": "sha256:5843070ebcafadc9c60cfa92d040f87a4d07fb52bf9141ad6bd251853a4d7567",
+    "validation": "51/51 PASS",
+    "canonical_assembly_signature": "6ce17c0a7af5b4ae7e5ae7b0ea33bee0656046383e060c48644bc1f5ed767786",
+    "mutation_assembly_signature": "a1c333943d4e47b21914e12a649d7bc38a10d0fff99505c7224e1903cc94d303",
+    "blend_sha256": "f3138fd874ab316da1114fe4ad18de115be212fff362209d31b68ede277dfa0e",
+    "review_board_sha256": "03d50888181b48560df72ff0596bc8e180c8c87018e953a97e1fc4753f0d8889",
+    "frozen_non_huagong_geometry": true,
+    "frozen_tuojiao_geometry": true,
+    "product_owner_accepted": false,
+    "circle_1_resolved_in_geometry": false,
+    "circle_1_accepted": false,
+    "circle_2_resolved": false,
+    "circle_3_resolved": false,
+    "mp01b_overall_accepted": false,
+    "merge_authorized": false,
+    "failure_reason": "650 mm inward endpoint reach incorrectly treated as 650 mm shaped gong-head zone"
+  },
+  "closeout_2026_10_06": {
+    "status": "DAY_CLOSED / NO_FURTHER_EXECUTION_AUTHORIZED",
+    "proven_today": [
+      "MP01A remains APPROVED / MINIMUM_PROOF_PASS",
+      "T046 Tuojiao FRONT/REAR first article MACHINE PASS and Product Owner APPROVED",
+      "T047 Circle1 implementation MACHINE PASS but Product Owner REVIEW FAIL",
+      "T047 falsified the assumption that 650 mm endpoint reach equals shaped gong-head extent"
+    ],
+    "open_blockers": [
+      "Circle1A localized repeated gong-head terminal form",
+      "Circle1B small dou-like participant above gong head; probable 散斗 identity not yet confirmed",
+      "Circle2 remaining node incompleteness including deferred Panjian Fang and visible bracket-form issue",
+      "Circle3 Tuofeng-Ludou visible-form gap"
+    ],
+    "frozen_baselines": [
+      "Approved T046 Tuojiao geometry",
+      "900 mm Huagong project-completion total length control remains provisional/replaceable",
+      "650 mm inward endpoint reach remains endpoint placement control only",
+      "250 mm outward Tuojiao reach remains project-completion control",
+      "FRONT Huagong section 221 x 153 mm direct target observation",
+      "REAR Huagong section 210 x 156 mm direct target observation"
+    ],
+    "not_authorized": [
+      "new Blender build",
+      "MP01B overall approval",
+      "MP01A+MP01B combination",
+      "PR56 merge",
+      "whole-frame expansion",
+      "whole-hall expansion"
+    ]
+  }
+}

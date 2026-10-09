@@ -1,0 +1,126 @@
+name: MP-01B Gate H Lower Assembly First Build
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/mp01b_gate_h_lower_assembly.yml'
+      - 'docs/tasks/T-044_MP01B_LOWER_ASSEMBLY_FIRST_BUILD_V001.md'
+      - 'docs/assembly/MP01B_GATE_G_LOWER_ASSEMBLY_FIRST_BUILD_PREPARATION_V001.md'
+      - 'production/zhenguo_wanfo/assembly/MP01B_GATE_G_LOWER_ASSEMBLY_FIRST_BUILD_PREPARATION_V001.json'
+      - 'production/zhenguo_wanfo/assembly/MP01B_GATE_F_LOWER_ASSEMBLY_LOCAL_METRIC_ENVELOPE_V001.json'
+      - 'production/zhenguo_wanfo/scripts/mp01b_gate_h_lower_assembly_build_v001.py'
+      - 'production/zhenguo_wanfo/scripts/validate_mp01b_gate_h_v001.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      CONTRACT: production/zhenguo_wanfo/assembly/MP01B_GATE_G_LOWER_ASSEMBLY_FIRST_BUILD_PREPARATION_V001.json
+      BUILDER: production/zhenguo_wanfo/scripts/mp01b_gate_h_lower_assembly_build_v001.py
+      VALIDATOR: production/zhenguo_wanfo/scripts/validate_mp01b_gate_h_v001.py
+      OUT: artifacts/mp01b_gate_h
+      REVIEW: artifacts/mp01b_gate_h/review
+      MUT_REVIEW: artifacts/mp01b_gate_h/mutation_review
+      ASSET: artifacts/mp01b_gate_h/MP01B_EAST_SEAM_LOWER_SUPPORT_ASSEMBLY_V001.blend
+      SEM: artifacts/mp01b_gate_h/MP01B_EAST_SEAM_LOWER_SUPPORT_ASSEMBLY_SEMANTIC_V001.json
+      BOARD: artifacts/mp01b_gate_h/MP01B_GATE_H_REVIEW_BOARD_V001.png
+      VAL: artifacts/mp01b_gate_h/MP01B_GATE_H_VALIDATION_V001.json
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Install Blender 4.5.13 + Pillow
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1 fonts-noto-cjk
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions MP01B" -o /tmp/blender.tar.xz "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+          python -m pip install --disable-pip-version-check pillow
+
+      - name: Gate G contract precheck
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - "$CONTRACT" <<'PY'
+          import json,sys
+          c=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert c["status"].startswith("PRODUCT_OWNER_APPROVED / GATE_H_ENGINEERING_EXECUTION_AUTHORIZED")
+          assert c["boundaries"]["blender_execution_authorized"] is True
+          assert c["boundaries"]["gate_h_engineering_build_authorized"] is True
+          assert len(c["logical_objects"])==6
+          assert sum(1 for r in c["relationships"] if r["type"]=="SUPPORT")==6
+          assert sum(1 for r in c["relationships"] if r["type"]=="LOCATE")==4
+          assert c["mutation_test"]["canonical_mm"]==306
+          assert c["mutation_test"]["mutation_mm"]==310
+          print("MP01B_GATE_G_PRECHECK_PASS")
+          PY
+
+      - name: Canonical lower assembly build
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT" "$REVIEW" "$MUT_REVIEW"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$BUILDER" -- --mode build --contract "$CONTRACT" --asset "$ASSET" --semantic "$SEM" --review-dir "$REVIEW"
+
+      - name: Independent reopen
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$ASSET" --python-exit-code 10 --python "$BUILDER" -- --mode inspect --expected "$SEM" --output "$OUT/reopen.json"
+
+      - name: Dependency mutation 306 to 310
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$BUILDER" -- --mode build --contract "$CONTRACT" --clearance-mm 310 --asset "$OUT/mutation.blend" --semantic "$OUT/mutation.json" --review-dir "$MUT_REVIEW"
+
+      - name: Deterministic canonical rebuild
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$BUILDER" -- --mode build --contract "$CONTRACT" --asset "$OUT/rebuild.blend" --semantic "$OUT/rebuild.json"
+
+      - name: Compose Review Board
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode compose-board --contract "$CONTRACT" --canonical "$SEM" --mutation "$OUT/mutation.json" --review-dir "$REVIEW" --mutation-review-dir "$MUT_REVIEW" --board "$BOARD"
+
+      - name: Validate Gate H
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode validate --contract "$CONTRACT" --canonical "$SEM" --mutation "$OUT/mutation.json" --reopen "$OUT/reopen.json" --rebuild "$OUT/rebuild.json" --asset "$ASSET" --review-dir "$REVIEW" --mutation-review-dir "$MUT_REVIEW" --board "$BOARD" --output "$VAL"
+          python - "$VAL" <<'PY'
+          import json,sys
+          v=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert v["status"]=="PASS"
+          print("MP01B_GATE_H_MACHINE_PASS",v["check_count"])
+          PY
+
+      - name: Upload Gate H Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MP01B_GATE_H_LOWER_ASSEMBLY_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            ${{ env.ASSET }}
+            ${{ env.SEM }}
+            ${{ env.BOARD }}
+            ${{ env.VAL }}
+            ${{ env.REVIEW }}/*.png
+            ${{ env.MUT_REVIEW }}/MUTATION_306_TO_310.png

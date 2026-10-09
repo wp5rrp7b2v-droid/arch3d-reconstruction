@@ -1,0 +1,142 @@
+name: T-043 Interior Linggong Master First Article
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/p3_3_t043_interior_linggong_master.yml'
+      - 'docs/tasks/T-043_P3_3_INTERIOR_LINGGONG_MASTER_V001.md'
+      - 'docs/assembly/MP01B_GATE_D_INTERIOR_LINGGONG_FIRST_ARTICLE_BUILD_PREPARATION_V001.md'
+      - 'production/zhenguo_wanfo/assembly/MP01B_GATE_D_INTERIOR_LINGGONG_FIRST_ARTICLE_BUILD_PREPARATION_V001.json'
+      - 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LINGGONG-INTERIOR-001/**'
+      - 'production/zhenguo_wanfo/component_library/candidates/CMP-FRAME-LINGGONG-INTERIOR-001/**'
+      - 'production/zhenguo_wanfo/scripts/interior_linggong_master_common_v001.py'
+      - 'production/zhenguo_wanfo/scripts/validate_t043_interior_linggong.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  first-article:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      DEF: production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LINGGONG-INTERIOR-001/CMP-FRAME-LINGGONG-INTERIOR-001_MASTER_DEFINITION_V001.json
+      WRAPPER: production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LINGGONG-INTERIOR-001/build_interior_linggong_master_v001.py
+      VALIDATOR: production/zhenguo_wanfo/scripts/validate_t043_interior_linggong.py
+      REGISTRY: docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json
+      CANDIDATE: production/zhenguo_wanfo/component_library/candidates/CMP-FRAME-LINGGONG-INTERIOR-001/INTERIOR_LINGGONG_CANDIDATE_GEOMETRY_V0_1.json
+      SOURCE_BINDING: docs/evidence/zhenguo_wanfo/P3_3_INTERIOR_LINGGONG_SOURCE_BINDING_V001.md
+      OUT: artifacts/t043
+      REVIEW: artifacts/t043/review
+      MUT_REVIEW: artifacts/t043/mutation_review
+      ASSET: artifacts/t043/CMP-FRAME-LINGGONG-INTERIOR-001_MASTER_V001.blend
+      SEM: artifacts/t043/CMP-FRAME-LINGGONG-INTERIOR-001_MASTER_SEMANTIC_V001.json
+      BOARD: artifacts/t043/CMP-FRAME-LINGGONG-INTERIOR-001_MASTER_REVIEW_BOARD_V001.png
+      VAL: artifacts/t043/CMP-FRAME-LINGGONG-INTERIOR-001_MASTER_VALIDATION_V001.json
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Install Blender 4.5.13 + Pillow
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1 fonts-noto-cjk
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions T043" -o /tmp/blender.tar.xz "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+          python -m pip install --disable-pip-version-check pillow
+
+      - name: Precheck locked execution definition
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - "$DEF" "$REGISTRY" "$CANDIDATE" "$SOURCE_BINDING" <<'PY'
+          import json,sys
+          from pathlib import Path
+          d=json.load(open(sys.argv[1],encoding="utf-8"))
+          r=json.load(open(sys.argv[2],encoding="utf-8"))
+          c=json.load(open(sys.argv[3],encoding="utf-8"))
+          assert d["task_id"]=="T-043"
+          assert d["status"].startswith("LOCKED / PRODUCT_OWNER_APPROVED / ENGINEERING_EXECUTION_AUTHORIZED")
+          assert d["execution_boundary"]["blender_execution_authorized"] is True
+          assert d["family_architecture"]["master_family_count"]==1
+          assert d["family_architecture"]["role_variant_count"]==1
+          assert d["family_architecture"]["role_variants"]==["LOWER_PINGLIANG_SUPPORT"]
+          assert d["geometry_authority"]["outer_eaves_master_geometry_authority"] is False
+          assert c["approval"]["approved"] is True
+          rows=[x for x in r["items"] if x.get("component")=="令栱（梁架承托）"]
+          assert len(rows)==1 and rows[0]["master_coverage_status"]=="MASTER_REQUIRED_PENDING"
+          assert Path(sys.argv[4]).exists()
+          print("T043_PRECHECK_PASS")
+          PY
+
+      - name: Build canonical first article
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT" "$REVIEW" "$MUT_REVIEW"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --definition "$DEF" --fixture-set A --asset "$ASSET" --semantic "$SEM" --review-dir "$REVIEW"
+
+      - name: Independent reopen
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$ASSET" --python-exit-code 10 --python "$WRAPPER" -- --mode inspect --expected "$SEM" --output "$OUT/reopen.json"
+
+      - name: Mutation build
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --definition "$DEF" --fixture-set B --asset "$OUT/mutation.blend" --semantic "$OUT/mutation.json" --review-dir "$MUT_REVIEW"
+
+      - name: Deterministic restore
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$WRAPPER" -- --mode build --definition "$DEF" --fixture-set A --asset "$OUT/restore.blend" --semantic "$OUT/restore.json"
+
+      - name: Compose Review Board
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode compose-board --definition "$DEF" --canonical "$SEM" --mutation "$OUT/mutation.json" --review-dir "$REVIEW" --mutation-review-dir "$MUT_REVIEW" --board "$BOARD"
+
+      - name: Validate first article
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode validate --definition "$DEF" --canonical "$SEM" --mutation "$OUT/mutation.json" --reopen "$OUT/reopen.json" --restore "$OUT/restore.json" --registry "$REGISTRY" --candidate "$CANDIDATE" --source-binding "$SOURCE_BINDING" --asset "$ASSET" --review-dir "$REVIEW" --mutation-review-dir "$MUT_REVIEW" --board "$BOARD" --output "$VAL"
+          python - "$VAL" <<'PY'
+          import json,sys
+          v=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert v["status"]=="PASS"
+          print("T043_FIRST_ARTICLE_MACHINE_PASS",v["check_count"])
+          PY
+
+      - name: Assert blend binary not tracked
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -z "$(git ls-files -- 'production/zhenguo_wanfo/component_library/masters/CMP-FRAME-LINGGONG-INTERIOR-001/*.blend')"
+
+      - name: Upload T-043 first article
+        uses: actions/upload-artifact@v4
+        with:
+          name: P3_3_T043_INTERIOR_LINGGONG_MASTER_FIRST_ARTICLE_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            ${{ env.ASSET }}
+            ${{ env.SEM }}
+            ${{ env.BOARD }}
+            ${{ env.VAL }}
+            ${{ env.REVIEW }}/*.png
+            ${{ env.MUT_REVIEW }}/FIXTURE_B_AXON.png

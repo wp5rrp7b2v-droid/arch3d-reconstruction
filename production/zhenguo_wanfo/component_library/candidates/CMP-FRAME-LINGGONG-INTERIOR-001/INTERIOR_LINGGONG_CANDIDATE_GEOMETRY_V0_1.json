@@ -1,0 +1,75 @@
+{
+  "schema_version": "MP01B_INTERIOR_LINGGONG_CANDIDATE_GEOMETRY_0.1",
+  "status": "APPROVED_GEOMETRY_STRATEGY / PRODUCT_OWNER_APPROVED / NOT_YET_CANONICAL_MASTER",
+  "date": "2026-10-06",
+  "component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
+  "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+  "role_variant": "LOWER_PINGLIANG_SUPPORT",
+  "purpose": "Provide the minimum neutral buildable body for the interior beam-frame Linggong without inheriting outer-eaves metric/profile claims.",
+  "coordinate_system": {
+    "x": "HORIZONTAL_MEMBER_LENGTH",
+    "y": "DEPTH_EXTRUSION",
+    "z": "VERTICAL_UP",
+    "units": "NORMALIZED / DIMENSIONLESS",
+    "metric_claim": false
+  },
+  "geometry_class": "NORMALIZED_NEUTRAL_TWO_ZONE_SUPPORT_ENVELOPE / ASSEMBLY_OWNED / REPLACEABLE",
+  "normalized_parameters": {
+    "total_length_x": 1,
+    "total_depth_y": 1,
+    "total_height_z": 1,
+    "body_zone": {
+      "length_x": 1,
+      "depth_y": 1,
+      "height_z": 0.6,
+      "z0": 0,
+      "z1": 0.6
+    },
+    "upper_bearing_zone": {
+      "length_x": 0.55,
+      "depth_y": 1,
+      "height_z": 0.4,
+      "z0": 0.6,
+      "z1": 1
+    }
+  },
+  "semantics": {
+    "lower_interface": "FOUR_CHUANFU_UPPER_SUPPORT_REGION / exact split with Tuofeng LOWER_SUPPORT unresolved",
+    "upper_interface": "PINGLIANG_REQUIRED_LOWER_SUPPORT_FOOTPRINT",
+    "relation_role": "FOUR_CHUANFU_TO_PINGLIANG_SUPPORT"
+  },
+  "prohibited_inheritance": {
+    "outer_eaves_reference_dimensions_mm": [
+      897,
+      217.4,
+      155.6
+    ],
+    "outer_eaves_14_point_profile": true,
+    "scaled_outer_eaves_profile": true,
+    "historical_equivalence_claim": true
+  },
+  "unknowns": [
+    "whole_hall_instance_count",
+    "exact_per_instance_mapping",
+    "historical_length",
+    "historical_section",
+    "historical_profile",
+    "exact_contact_faces",
+    "hidden_joinery",
+    "equivalence_to_outer_eaves_linggong"
+  ],
+  "acceptance_questions": [
+    "Is the two-zone body neutral enough to avoid implying an unsupported historical gong profile?",
+    "Does it preserve a distinct upper bearing zone needed by the Pingliang support role?",
+    "Can final metric dimensions remain assembly-owned and replaceable?"
+  ],
+  "blender_assembly_authorized": false,
+  "approval": {
+    "approved": true,
+    "date": "2026-10-06",
+    "authority": "PRODUCT_OWNER",
+    "scope": "GEOMETRY_STRATEGY_ONLY",
+    "engineering_execution_authorized": false,
+    "historical_metric_claim": false
+  }
+}
