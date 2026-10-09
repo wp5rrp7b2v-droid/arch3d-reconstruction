@@ -1,0 +1,36 @@
+name: Master section direction candidates
+on:
+  push:
+    branches: [engineering/master-section-direction-candidates-2026-10-09]
+    paths: [.github/workflows/master_section_candidate.yml]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Generate from unchanged existing Master sources
+        run: python scripts/master_section_candidates/revise_masters.py generate .
+      - name: Install Blender
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 3 -o /tmp/blender.tar.xz https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Save three candidate BLEND files
+        run: /tmp/blender-4.5.13-linux-x64/blender --background --factory-startup --python-exit-code 10 --python scripts/master_section_candidates/revise_masters.py -- build
+      - name: Independently reopen and verify
+        run: /tmp/blender-4.5.13-linux-x64/blender --background --factory-startup --python-exit-code 10 --python scripts/master_section_candidates/revise_masters.py -- reopen
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MASTER_SECTION_DIRECTION_CANDIDATES_V002
+          path: |
+            scripts/master_section_candidates/output/
+            scripts/master_section_candidates/MASTER_SECTION_DIRECTION_CANDIDATE_V002.json
+          if-no-files-found: error
+          retention-days: 90
