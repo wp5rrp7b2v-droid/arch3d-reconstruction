@@ -1,0 +1,87 @@
+[
+  {
+    "master_id": "CMP-GONG-HUAGONG-001_MASTER",
+    "status": "PASS_SAVE_INDEPENDENT_REOPEN",
+    "body_count": 2,
+    "checks": [
+      {
+        "id": "JUMP_1_HUAGONG",
+        "max_coordinate_delta_mm": 1.2485504157666583e-05,
+        "dimensions_xyz_mm": [
+          898.8000154495239,
+          152.99999713897705,
+          214.2000049352646
+        ],
+        "closed_single_body_euler2": true,
+        "triangulated_volume_mm3": 22056663.062499993,
+        "analytic_volume_mm3": 22056662.444544,
+        "properties_reopened": true
+      },
+      {
+        "id": "JUMP_2_HUAGONG",
+        "max_coordinate_delta_mm": 1.049041748046875e-05,
+        "dimensions_xyz_mm": [
+          1629.9999952316284,
+          152.99999713897705,
+          214.2000049352646
+        ],
+        "closed_single_body_euler2": true,
+        "triangulated_volume_mm3": 40000401.65364582,
+        "analytic_volume_mm3": 40000400.2944,
+        "properties_reopened": true
+      }
+    ],
+    "blend_file": "CMP-GONG-HUAGONG-001_MASTER_SECTION_CANDIDATE_V002.blend",
+    "blend_sha256": "3ed5dd29c5218aff2183e1882c9dc7910553374d4ec120050d47b26b51657dd6",
+    "blender_version": "4.5.13 LTS",
+    "approved": false
+  },
+  {
+    "master_id": "CMP-GONG-LINGGONG-001_MASTER",
+    "status": "PASS_SAVE_INDEPENDENT_REOPEN",
+    "body_count": 1,
+    "checks": [
+      {
+        "id": "LINGGONG",
+        "max_coordinate_delta_mm": 1.4209747348559176e-05,
+        "dimensions_xyz_mm": [
+          897.0000147819519,
+          155.59999644756317,
+          217.39999949932098
+        ],
+        "closed_single_body_euler2": true,
+        "triangulated_volume_mm3": 22199093.00520833,
+        "analytic_volume_mm3": 22199095.128288005,
+        "properties_reopened": true
+      }
+    ],
+    "blend_file": "CMP-GONG-LINGGONG-001_MASTER_SECTION_CANDIDATE_V002.blend",
+    "blend_sha256": "c3e25035a13f13003d254c2a359ef881209c058398f6b294aaa2be2a247629db",
+    "blender_version": "4.5.13 LTS",
+    "approved": false
+  },
+  {
+    "master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER",
+    "status": "PASS_SAVE_INDEPENDENT_REOPEN",
+    "body_count": 1,
+    "checks": [
+      {
+        "id": "UPPER6_REFERENCE_ONLY",
+        "max_coordinate_delta_mm": 8.58306884765625e-06,
+        "dimensions_xyz_mm": [
+          1000.0,
+          240.50000309944153,
+          333.99999141693115
+        ],
+        "closed_single_body_euler2": true,
+        "triangulated_volume_mm3": 80327000.0,
+        "analytic_volume_mm3": 80327000.0,
+        "properties_reopened": true
+      }
+    ],
+    "blend_file": "CMP-FRAME-UPPER-SIX-CHUANFU-001_MASTER_SECTION_CANDIDATE_V002.blend",
+    "blend_sha256": "258f8cac339917fdf5d115bcad9526e802d0b3ddcea7d7d5e332d63a8b10f934",
+    "blender_version": "4.5.13 LTS",
+    "approved": false
+  }
+]
