@@ -1,4 +1,4 @@
-name: Project Dashboard V2 Sync
+name: Dashboard / Project State Consistency
 
 on:
   push:
@@ -6,87 +6,24 @@ on:
       - main
     paths:
       - "docs/project_control/project_state.json"
-      - "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json"
-      - "production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json"
-      - "production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json"
-      - "scripts/generate_project_dashboard.py"
+      - "docs/project_control/dashboard.html"
+      - "scripts/check_dashboard_project_state.py"
+      - ".github/workflows/project-dashboard-v2-sync.yml"
+  pull_request:
+    paths:
+      - "docs/project_control/project_state.json"
+      - "docs/project_control/dashboard.html"
+      - "scripts/check_dashboard_project_state.py"
+      - ".github/workflows/project-dashboard-v2-sync.yml"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  sync-dashboard:
+  dashboard-consistency:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Generate Dashboard V2 from canonical sources
-        run: python scripts/generate_project_dashboard.py
-
-      - name: Validate current-state markers
-        shell: bash
-        run: |
-          set -euo pipefail
-          python - <<'PY'
-          import json
-          from pathlib import Path
-
-          html = Path("docs/project_control/dashboard.html").read_text(encoding="utf-8")
-          state = json.loads(Path("docs/project_control/project_state.json").read_text(encoding="utf-8"))
-          reg = json.loads(Path("docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json").read_text(encoding="utf-8"))
-          matrix = json.loads(Path("production/zhenguo_wanfo/registry/P3_3_STAGE1_MASTER_COVERAGE_DISPOSITION_MATRIX_V002.json").read_text(encoding="utf-8"))
-
-          progress = reg["stage1_master_progress_summary"]
-          approved = set(progress["approved_master_components"])
-          scope = [row for row in matrix["rows"] if "Master" in str(row.get("disposition", ""))]
-          pending = [row for row in scope if row["component"] not in approved]
-          pending = sorted(pending, key=lambda row: (999 if row.get("priority") is None else row["priority"], row["component"]))
-          master_next_target = pending[0]["component"] if pending else None
-          next_target = master_next_target or state.get("proposed_next_task", {}).get("name") or "NONE"
-          pct_text = f'{float(progress["master_completion_percent"]):.1f}'
-
-          markers = [
-              "Dashboard V2",
-              f'{progress["covered_master_scope_object_type_count"]} / {progress["master_scope_object_type_count"]}',
-              f'{pct_text}%',
-              f'下一目标：{next_target}',
-              "T-018 HOLD",
-              f'{progress["pending_source_binding_count"]} 项：',
-              "Daily Close COMPLETE / PR #39 MERGED / MAIN VERIFIED",
-          ]
-          missing = [marker for marker in markers if marker not in html]
-          assert progress["covered_master_scope_object_type_count"] == 28
-          assert progress["master_scope_object_type_count"] == 28
-          assert progress["approved_master_family_count"] == 25
-          assert progress["pending_master_object_type_count"] == 0
-          assert float(progress["master_completion_percent"]) == 100.0
-          assert progress["pending_source_binding_count"] == 7
-          assert master_next_target is None
-          assert next_target == "P3.3 Stage1 Closure Readiness Audit"
-          assert state["current_task"]["id"] is None
-          assert state["p3_3"]["engineering_execution_authorized"] is False
-          assert "T-018 HOLD" in state["session_status"]
-          assert "STAGE2 NOT AUTHORIZED" in state["session_status"]
-          assert "下一目标：NONE" not in html
-          assert "D-105" not in html
-          assert not missing, f"Dashboard current-state markers missing: {missing}"
-          print("DASHBOARD_CURRENT_STATE_VALIDATION_PASS", markers)
-          PY
-
-      - name: Commit derived Dashboard only when changed
-        shell: bash
-        run: |
-          set -euo pipefail
-          if git diff --quiet -- docs/project_control/dashboard.html; then
-            echo "Dashboard already current."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/project_control/dashboard.html
-          git commit -m "derived: sync Project Dashboard V2"
-          git push origin main
+      - name: Check dashboard against canonical Project State (read only)
+        run: python scripts/check_dashboard_project_state.py --self-test
