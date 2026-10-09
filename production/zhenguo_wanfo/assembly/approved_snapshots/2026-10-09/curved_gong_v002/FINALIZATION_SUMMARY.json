@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "approval": "D-285",
+  "blender_version": "4.5.13 LTS",
+  "blend_sha256": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+  "input_sha256": "8610941031861c0b34db89bbbb4a3e6947fd1e9f6005b63d85d7ccd97c3f7c1f",
+  "approved_glb_sha256": "8b9081752f77612041d652203e6b822b38393a2bf31c91af6f990106b1ef1613",
+  "independent_reopen": true,
+  "entity_count": 63,
+  "groups": {
+    "RETAINED_50": 50,
+    "PROFILE_CORRECTED_4": 4,
+    "PURLINS_3": 3,
+    "RECONSTRUCTED_SEATS_6": 6
+  },
+  "max_coordinate_difference_mm": 1.5251338481903076e-05,
+  "coordinate_tolerance_mm": 0.001,
+  "entity_pairs_checked": 1953,
+  "max_pair_overlap_mm3": 0.27047655402566306,
+  "intersection_threshold_mm3": 1,
+  "historical_geometry": "NOT_VERIFIED",
+  "structural_capacity": "NOT_TESTED",
+  "whole_building_closed": false,
+  "physical_registry_binding": "UNRESOLVED",
+  "six_interfaces_passed": 6,
+  "above_threshold_count": 0,
+  "actions_run_id": 37885670509,
+  "full_evidence": "Final delivery package; no full geometry in this publication"
+}
