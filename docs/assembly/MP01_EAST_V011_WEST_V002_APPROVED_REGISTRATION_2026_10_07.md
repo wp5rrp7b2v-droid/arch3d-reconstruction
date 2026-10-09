@@ -36,3 +36,19 @@ PR #56 OPEN / NOT AUTHORIZED TO MERGE。旧分支中实验记录不随本次全�
 ## 正式发布批准｜D-281
 
 Product Owner于2026-10-07 20:51:46（Asia/Shanghai）明确批准仅合并PR #57。上述“main待批准”为登记准备阶段记录，由本条正式发布授权接续。PR57合入main后，本文件、两份批准快照、Project Control与局部Dashboard摘要即为canonical登记成果；PR56仍不合并。工程几何不变。
+
+
+## V002令栱弧线工作版本批准登记｜D-285（2026-10-09）
+
+PO于2026-10-09 12:28:41（Asia/Shanghai）明确“批准这版本”：批准CURVED_GONG_V002的可见弧线与63实体GLB工作版本。仅4个令栱底部曲线修正，其余59实体逐顶点逐面保持；目标包络、定位、中央半搭和承托区保持。1953对几何交叠检查通过、GLB重开63实体通过。弧线仍为资料引导的RECONSTRUCTED_DESIGN，不认定精确历史曲线。新BLEND生成保存重开未执行；当前无可运行Blender，安装bpy未找到可用分发包。旧批准快照与D-284其余方案边界保持。登记提交准备于独立PR，不宣称已发布main、不改505实例统计、不晋升Master、不关闭Stage3、不处置PR56。
+
+| 装配实体ID | 沿用来源 | 本轮变化 | 几何分类 |
+|---|---|---|---|
+| east:LINGGONG_FRONT | EAST_V011 / LINGGONG_FRONT | 可见底部两端弧线；中央接口保持 | SOURCE_GUIDED_RECONSTRUCTED_DESIGN |
+| east:LINGGONG_REAR | EAST_V011 / LINGGONG_REAR | 同上 | SOURCE_GUIDED_RECONSTRUCTED_DESIGN |
+| west:LINGGONG_FRONT | WEST_V002 / LINGGONG_FRONT | 同上 | SOURCE_GUIDED_RECONSTRUCTED_DESIGN |
+| west:LINGGONG_REAR | WEST_V002 / LINGGONG_REAR | 同上，缺测借用边界保留 | SOURCE_GUIDED_RECONSTRUCTED_DESIGN |
+
+V002计数为50原保留实体＋4轮廓修正实体＋3跨榀槫＋6重建替木＝63。相对联合V001，59实体完全保持。它不改写D-284原方案“54保留”的历史计数，不覆盖EAST_V011/WEST_V002原快照。
+
+批准绑定见 `production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-09/curved_gong_v002/APPROVAL_BINDING.json`。本条在既有装配登记中记录替代关系，不伪造目标实体与505主实例记录的精确映射。候选GLB、复核PNG与复现包二进制保持批准时摘要；正式新BLEND及其重开证据仍待完成。

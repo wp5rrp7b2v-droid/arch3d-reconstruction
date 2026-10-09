@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R359",
+  "state_revision": "R360",
   "last_updated": "2026-10-09",
-  "session_status": "2026-10-09 CLOUD WORK RESUMED / D-284 SCHEME REGISTERED VIA MERGED PR59 / PROJECT CONTROL MIRROR RECONCILIATION / LOCAL SYNC DEFERRED TO TONIGHT",
+  "session_status": "D-285 V002 VISUAL+GLB APPROVED / REGISTRATION BRANCH / BLEND_FINALIZATION_PENDING / LOCAL_SYNC_TONIGHT",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -63,13 +63,13 @@
   },
   "current_task": {
     "id": null,
-    "name": "D-284批准记录与Project Control汇总同步",
-    "status": "DOCUMENTATION RECONCILIATION / NO ACTIVE ENGINEERING T-TASK"
+    "name": "V002批准登记及BLEND固化待验证",
+    "status": "PO_VISUAL_GLB_APPROVED / REGISTRATION_BRANCH / BLEND_PENDING"
   },
   "proposed_next_task": {
     "id": null,
-    "name": "核对三道槫批准交付与后续装配输入",
-    "status": "READ_ONLY READINESS PROPOSAL / NO MODEL EXPANSION AUTHORIZED"
+    "name": "按已批准V002网格固化BLEND并保存重开验证",
+    "status": "WITHIN_APPROVED_LOCAL_SCOPE / ENVIRONMENT_BLOCKED_NO_BLENDER"
   },
   "last_completed_task": {
     "id": "T-041",
@@ -3431,5 +3431,62 @@
     "instruction": "今晚一次性做本地同步 现在先不做",
     "last_verified_checkpoint": "f30767e479f61bc6d2d0e3f440f692971f658dba",
     "current_main_sync_claim": false
+  },
+  "approved_curved_gong_v002": {
+    "decision_id": "D-285",
+    "approved_at": "2026-10-09T12:28:41+08:00",
+    "user_instruction": "批准这版本",
+    "status": "PO_APPROVED_VISUAL_AND_GLB_WORK_VERSION / BLEND_FINALIZATION_PENDING",
+    "version": "CURVED_GONG_V002",
+    "baseline": "D-284 PRIMARY / EAST V011 + WEST V002",
+    "changed_entities": [
+      "east:LINGGONG_FRONT",
+      "east:LINGGONG_REAR",
+      "west:LINGGONG_FRONT",
+      "west:LINGGONG_REAR"
+    ],
+    "entity_count": 63,
+    "unchanged_entities": 59,
+    "retained_original_entities": 50,
+    "profile_corrected_entities": 4,
+    "cross_frame_purlins": 3,
+    "reconstructed_seats": 6,
+    "geometry_classification": "SOURCE_GUIDED_RECONSTRUCTED_DESIGN / NOT_HISTORICAL_EXACT",
+    "validation": {
+      "all_pairs_checked": 1953,
+      "intersection_threshold_mm3": 1,
+      "max_overlap_mm3": 0.2704765540042749,
+      "above_threshold": 0,
+      "glb_reopened_entities": 63,
+      "max_glb_coordinate_delta_mm": 0.00011825561557543551,
+      "blender_saved_reopened": false
+    },
+    "artifacts": [
+      {
+        "filename": "WANFO_TWO_FRAMES_CURVED_GONG_CANDIDATE_V002.glb",
+        "sha256": "8b9081752f77612041d652203e6b822b38393a2bf31c91af6f990106b1ef1613",
+        "bytes": 216804,
+        "library_file_id": "libfile_33bd23fab0bc819185468980c256ff5d"
+      },
+      {
+        "filename": "Wanfo_Curved_Gong_Candidate_V002_Review_ZH.png",
+        "sha256": "716ee1dd873339dd29cfef4dada6d14b8ae4e2ebe073030e59210ef84951e862",
+        "bytes": 740059,
+        "library_file_id": "libfile_fb19434b65648191b57fe18812d11362"
+      },
+      {
+        "filename": "Wanfo_Curved_Gong_Candidate_V002_Repro_Package.zip",
+        "sha256": "7c14ded2162fddf8f787d65e1081ba6e326de4467aa17440ccd6a700efe514e9",
+        "bytes": 15354652,
+        "library_file_id": "libfile_97bf412bd5b8819195246f2443c57496"
+      }
+    ],
+    "original_approved_snapshots_overwritten": false,
+    "physical_registry_mapping": "NOT_PROMOTED / NO_505_ROW_COUNT_CHANGE",
+    "master_promotion": false,
+    "formal_stage3_closed": false,
+    "main_publication": "PENDING_REGISTRATION_PR / NOT_MERGED",
+    "notes": "Existing candidate filenames and embedded pre-approval statuses remain unchanged for exact binary binding; this record supplies subsequent PO approval.",
+    "record": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-09/curved_gong_v002/APPROVAL_BINDING.json"
   }
 }

@@ -1,0 +1,56 @@
+{
+  "decision_id": "D-285",
+  "approved_at": "2026-10-09T12:28:41+08:00",
+  "user_instruction": "批准这版本",
+  "status": "PO_APPROVED_VISUAL_AND_GLB_WORK_VERSION / BLEND_FINALIZATION_PENDING",
+  "version": "CURVED_GONG_V002",
+  "baseline": "D-284 PRIMARY / EAST V011 + WEST V002",
+  "changed_entities": [
+    "east:LINGGONG_FRONT",
+    "east:LINGGONG_REAR",
+    "west:LINGGONG_FRONT",
+    "west:LINGGONG_REAR"
+  ],
+  "entity_count": 63,
+  "unchanged_entities": 59,
+  "retained_original_entities": 50,
+  "profile_corrected_entities": 4,
+  "cross_frame_purlins": 3,
+  "reconstructed_seats": 6,
+  "geometry_classification": "SOURCE_GUIDED_RECONSTRUCTED_DESIGN / NOT_HISTORICAL_EXACT",
+  "validation": {
+    "all_pairs_checked": 1953,
+    "intersection_threshold_mm3": 1,
+    "max_overlap_mm3": 0.2704765540042749,
+    "above_threshold": 0,
+    "glb_reopened_entities": 63,
+    "max_glb_coordinate_delta_mm": 0.00011825561557543551,
+    "blender_saved_reopened": false
+  },
+  "artifacts": [
+    {
+      "filename": "WANFO_TWO_FRAMES_CURVED_GONG_CANDIDATE_V002.glb",
+      "sha256": "8b9081752f77612041d652203e6b822b38393a2bf31c91af6f990106b1ef1613",
+      "bytes": 216804,
+      "library_file_id": "libfile_33bd23fab0bc819185468980c256ff5d"
+    },
+    {
+      "filename": "Wanfo_Curved_Gong_Candidate_V002_Review_ZH.png",
+      "sha256": "716ee1dd873339dd29cfef4dada6d14b8ae4e2ebe073030e59210ef84951e862",
+      "bytes": 740059,
+      "library_file_id": "libfile_fb19434b65648191b57fe18812d11362"
+    },
+    {
+      "filename": "Wanfo_Curved_Gong_Candidate_V002_Repro_Package.zip",
+      "sha256": "7c14ded2162fddf8f787d65e1081ba6e326de4467aa17440ccd6a700efe514e9",
+      "bytes": 15354652,
+      "library_file_id": "libfile_97bf412bd5b8819195246f2443c57496"
+    }
+  ],
+  "original_approved_snapshots_overwritten": false,
+  "physical_registry_mapping": "NOT_PROMOTED / NO_505_ROW_COUNT_CHANGE",
+  "master_promotion": false,
+  "formal_stage3_closed": false,
+  "main_publication": "PENDING_REGISTRATION_PR / NOT_MERGED",
+  "notes": "Existing candidate filenames and embedded pre-approval statuses remain unchanged for exact binary binding; this record supplies subsequent PO approval."
+}

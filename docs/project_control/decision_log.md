@@ -465,3 +465,10 @@
 ### D-284｜2026-10-09 登记发布状态补证（不新增决策）
 
 回读GitHub确认PR59已合并，main=47e684d1644fcae2fe6f3f9a65114e09926ff9e9包含D-284批准记录；上表MAIN PUBLICATION PENDING为合并前历史状态。当前为CANONICAL APPROVAL RECORD PUBLISHED；批准范围和工程边界保持。本轮同步Project State、执行/验收汇总和Dashboard，不宣称本轮重验几何。PO要求本地同步延至今晚一次完成，当前未执行。
+
+
+## 2026-10-09｜V002令栱弧线与GLB版本批准
+
+| ID | 日期 | 决策 | 状态 / 影响 |
+|---|---|---|---|
+| D-285 | 2026-10-09 | PO于2026-10-09 12:28:41（Asia/Shanghai）明确“批准这版本”：批准CURVED_GONG_V002的可见弧线与63实体GLB工作版本。仅4个令栱底部曲线修正，其余59实体逐顶点逐面保持；目标包络、定位、中央半搭和承托区保持。1953对几何交叠检查通过、GLB重开63实体通过。弧线仍为资料引导的RECONSTRUCTED_DESIGN，不认定精确历史曲线。新BLEND生成保存重开未执行；当前无可运行Blender，安装bpy未找到可用分发包。旧批准快照与D-284其余方案边界保持。登记提交准备于独立PR，不宣称已发布main、不改505实例统计、不晋升Master、不关闭Stage3、不处置PR56。 | PO APPROVED VISUAL+GLB / REGISTRATION BRANCH / BLEND FINALIZATION PENDING |

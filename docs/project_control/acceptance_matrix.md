@@ -1610,3 +1610,13 @@ Boundary retained:
 | 共同Z=0 / 历史槽形 / 长度拼接 / 承载能力 | 工作假设 / 未验证 | 不提升历史证据等级，不宣称整殿闭合 |
 | Project State / Dashboard / 执行汇总 | R359 / v213 同步补丁 | 原Master、Registry、局部快照与既有规则保持 |
 | 本地同步 | TONIGHT DEFERRED / NOT EXECUTED | 按PO2026-10-09 07:32:56指令，今晚收尾一次完成 |
+
+
+## D-285｜V002可见弧线及GLB批准
+
+| 项目 | 状态 | 边界 |
+|---|---|---|
+| PO外观审核 / GLB工作版本 | APPROVED / 2026-10-09 12:28:41 | 4个令栱轮廓修正；华栱保留策略随版本批准，不认定历史精确 |
+| 63实体 / 59实体保持 / 1953对碰撞 / GLB重开 | PASS，引用V002既有结果 | 未在登记时重跑，最大交叠0.270476554mm³ |
+| 新BLEND保存重开 | NOT EXECUTED / PENDING | 无可运行Blender；不能以GLB验证替代 |
+| 主登记、Master、Stage3、main | 505实例统计不变；无Master晋升；Stage3未关闭；main未发布 | 独立登记PR准备中；PR56不处置 |
