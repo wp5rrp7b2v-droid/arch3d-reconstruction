@@ -1,0 +1,56 @@
+name: Wanfo bay lower support first article
+on:
+  push:
+    branches: [engineering/wanfo-bay-lower-support-first-article-2026-10-09]
+    paths: [.github/workflows/wanfo_bay_first_article.yml]
+permissions:
+  contents: read
+  actions: read
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install geometry tools
+        run: python -m pip install numpy==2.5.3 trimesh==5.1.1 manifold3d==3.5.4 networkx==3.4.2
+      - name: Resolve fixed approved baseline from existing artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/approved_baseline blend_finalize/output deliverables bay_trial
+          curl --fail --location --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H 'Accept: application/vnd.github+json' -o /tmp/approved.zip https://api.github.com/repos/wp5rrp7b2v-droid/arch3d-reconstruction/actions/artifacts/11596013492/zip
+          unzip -q /tmp/approved.zip -d /tmp/approved_baseline
+          find /tmp/approved_baseline -name REOPENED_V002_MESHES.json -exec cp '{}' blend_finalize/output/REOPENED_V002_MESHES.json \;
+          echo '775f2ddf6baa2ac258c8b1d5ef5661e0fe77480ff02dbfd924a65dbf91017a58  blend_finalize/output/REOPENED_V002_MESHES.json' | sha256sum -c -
+          cp scripts/wanfo_bay_lower_support_first_article.py bay_trial/build_pilot.py
+          cp scripts/wanfo_bay_lower_support_blender.py bay_trial/blender_pilot.py
+          cp scripts/wanfo_bay_lower_support_contact_areas.py bay_trial/check_contact_areas.py
+      - name: Build and check isolated trial
+        run: |
+          python bay_trial/build_pilot.py
+          python bay_trial/check_contact_areas.py
+      - name: Install Blender executor
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 3 -o /tmp/blender.tar.xz https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Save and independently reopen first article BLEND
+        run: |
+          /tmp/blender-4.5.13-linux-x64/blender --background --factory-startup --python-exit-code 10 --python bay_trial/blender_pilot.py -- build bay_trial
+          /tmp/blender-4.5.13-linux-x64/blender --background --factory-startup --python-exit-code 10 --python bay_trial/blender_pilot.py -- reopen bay_trial
+      - uses: actions/upload-artifact@v4
+        with:
+          name: WANFO_BAY_LOWER_SUPPORT_FIRST_ARTICLE_V001
+          path: |
+            bay_trial/output/
+            bay_trial/PILOT_GEOMETRY.json
+            bay_trial/PILOT_VALIDATION.json
+            bay_trial/PREDECLARED_RULES.json
+            deliverables/WANFO_BAY_LOWER_SUPPORT_FIRST_ARTICLE_V001.glb
+          if-no-files-found: error
+          retention-days: 90
