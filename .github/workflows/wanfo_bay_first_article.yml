@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install geometry tools
-        run: python -m pip install numpy==2.5.3 trimesh==5.1.1 manifold3d==3.5.4 networkx==3.4.2
+        run: python -m pip install numpy==2.5.3 trimesh==5.1.1 manifold3d==3.5.4 networkx==3.4.2 scipy
       - name: Resolve fixed approved baseline from existing artifact
         env:
           GH_TOKEN: ${{ github.token }}
