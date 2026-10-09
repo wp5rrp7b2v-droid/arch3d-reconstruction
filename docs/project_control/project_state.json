@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R360",
+  "state_revision": "R361",
   "last_updated": "2026-10-09",
-  "session_status": "D-285 V002 VISUAL+GLB APPROVED / REGISTRATION BRANCH / BLEND_FINALIZATION_PENDING / LOCAL_SYNC_TONIGHT",
+  "session_status": "WORK_STOPPED / DAILY_CLOSE_PASS_WITH_KNOWN_EXCEPTIONS / V002_BLEND_FINALIZED / THREE_MEMBER_FORM_REVIEW_PENDING / MAC_SYNC_PENDING",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -63,27 +63,19 @@
   },
   "current_task": {
     "id": null,
-    "name": "V002批准登记及BLEND固化待验证",
-    "status": "PO_VISUAL_GLB_APPROVED / REGISTRATION_BRANCH / BLEND_PENDING"
+    "name": "2026-10-09整体收尾、登记与同步",
+    "status": "ENGINEERING_STOPPED / PROJECT_CONTROL_CLOSEOUT"
   },
   "proposed_next_task": {
     "id": null,
-    "name": "按已批准V002网格固化BLEND并保存重开验证",
-    "status": "WITHIN_APPROVED_LOCAL_SCOPE / ENVIRONMENT_BLOCKED_NO_BLENDER"
+    "name": "上六椽栿与隔架两栱同位置、同视角、同尺度原图—网格核对",
+    "status": "PROPOSED / NOT_STARTED / FORM_NOT_APPROVED"
   },
   "last_completed_task": {
-    "id": "T-041",
-    "engineering_id": "P3_3_ANG_MASTER_V2_V001",
-    "component": "昂族（头昂 / 二昂）",
-    "status": "CLOSED / D-262 / PR #37 MERGED / MAIN VERIFIED",
-    "github_pr_number": 37,
-    "merge_commit": "bb6873a7edb7e3222142387613851690bd18396f",
-    "approved_actions_run": 36373958970,
-    "approved_validation": "90/90 PASS",
-    "approved_first_article_artifact_id": 10950620532,
-    "canonical_blend_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
-    "family_semantic_signature": "a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29",
-    "closure_decision_id": "D-262"
+    "id": null,
+    "name": "已批准V002 BLEND固化与最终交付登记",
+    "status": "PASS / D-286 / PR62 MERGED / cf5ff09",
+    "record": "docs/project_control/V002_FINAL_DELIVERY_CLOSEOUT_2026_10_09.md"
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -1013,22 +1005,22 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-285",
+    "id": "D-287",
     "date": "2026-10-09",
-    "decision": "V002令栱可见弧线与GLB工作版本获PO批准；四实体修正，其他59实体保持。独立登记PR62未合入main，新BLEND固化与保存重开待验证；旧批准快照与历史证据边界保持。"
+    "decision": "PO要求今日停止工程，整体收尾、登记与同步；本次仅登记已完成工作、纠正状态镜像及登记未决项，不批准候选外形。"
   },
   "latest_material_review": {
     "date": "2026-10-09",
-    "result": "PO_APPROVED_VISUAL_AND_GLB_V002 / BLEND_PENDING",
-    "evidence": "63实体；4令栱弧线修改；59实体保持；1953对碰撞及GLB重开PASS。详见D-285批准绑定。",
-    "decision_required": "NONE_FOR_APPROVED_LOCAL_SCOPE / PR62_MAIN_PUBLICATION_NOT_EXECUTED"
+    "result": "V002_BLEND_FINALIZED / THREE_MEMBER_FULL_FORM_NOT_ESTABLISHED",
+    "evidence": "PR62已合并；独立保存重开63实体通过。追加来源与实际网格核对未证明三类构件完整外形正确，隔架进深构件名称与既有别名存在待核映射。",
+    "decision_required": "NONE_FOR_CLOSEOUT / CANDIDATE_APPROVAL_NOT_GRANTED"
   },
   "daily_closing_audit": {
-    "date": "2026-10-07",
+    "date": "2026-10-09",
     "timezone": "Asia/Shanghai",
-    "authorization": "2026-10-07T21:00:11+08:00 / 今天工作结束，开始收尾检查和落档工作",
+    "authorization": "好吧，今天先到这边，开始今天工作的整体收尾、登记和同步任务",
     "status": "PASS_WITH_KNOWN_EXCEPTIONS",
-    "audited_main_commit": "f30767e479f61bc6d2d0e3f440f692971f658dba",
+    "audited_main_commit": "cf5ff09f8c1190286f4833edc48e11b589969f50",
     "checked_files": [
       "project_state.json",
       "decision_log.md",
@@ -1039,31 +1031,7 @@
       "dashboard.html"
     ],
     "phase_archive": "NOT_APPLICABLE / no phase closed",
-    "approved_snapshots": [
-      "EAST_V011",
-      "WEST_V002"
-    ],
-    "approved_artifact_hashes": "25/25 PASS",
-    "geometry_recheck": {
-      "east": {
-        "entities": 33,
-        "planar_contacts": 42,
-        "curved_contacts": 3,
-        "pairs": 528,
-        "intersections_above_1mm3": 0
-      },
-      "west": {
-        "entities": 33,
-        "planar_contacts": 42,
-        "curved_contacts": 3,
-        "pairs": 528,
-        "intersections_above_1mm3": 0
-      },
-      "recorded_contact_areas_match": true,
-      "scope": "READ_ONLY_ARCHIVED_EXPORTED_MESH_RECHECK / NOT_FRESH_BLEND_REOPEN"
-    },
-    "pr57": "MERGED / f30767e479f61bc6d2d0e3f440f692971f658dba",
-    "pr56": "OPEN / NOT MERGED / NOT AUTHORIZED TO MERGE",
+    "record": "docs/assembly/daily_close/2026-10-09/DAILY_CLOSEOUT_ZH.md",
     "models_modified": false,
     "masters_modified": false,
     "governance_modified": false,
@@ -1071,55 +1039,46 @@
     "new_engineering_started": false,
     "known_exceptions": [
       {
-        "id": "LOCAL_SYNC",
-        "status": "PR57_CHECKPOINT_VERIFIED / PR58_PULL_PENDING",
-        "detail": "Mac main synchronized to f30767e via --ff-only; tracked working tree clean, original sources untracked directory retained. A final pull is required after PR58 merge."
+        "id": "LOCAL_MAC_SYNC",
+        "status": "PENDING / NOT_EXECUTED",
+        "detail": "当前环境无法执行用户Mac终端操作；最后已验证检查点f30767e，不能宣称同步到收尾提交。"
       },
       {
-        "id": "LEGACY_DASHBOARD_OVERVIEW",
-        "status": "EXPLICITLY_HISTORICAL / GLOBAL_RECONCILIATION_DEFERRED",
-        "detail": "Lower overview remains the old R354 snapshot. Do not re-label its old counts as current; the top summary follows current local assembly records."
+        "id": "THREE_MEMBER_FORM",
+        "status": "NOT_ESTABLISHED / CANDIDATES_ONLY",
+        "detail": "上六椽栿、华栱、令栱完整外形与接口尚未获逐处图形证明；截面方向候选和67实体试装未批准。"
       },
       {
-        "id": "BUILD_INPUTS",
-        "status": "KNOWN_ARCHIVE_LIMIT",
-        "detail": "Intermediate inputs and dependent builders were excluded by automatic approval review. Final geometry and recorded checks are retained; independent deterministic regeneration and mutation certification remain unclaimed."
+        "id": "SOURCE_COVERAGE",
+        "status": "PARTIAL_GRAPHICAL_REVIEW",
+        "detail": "A1关键页与A2相关部分补查；A3原始图像、官方GIF逐帧和营造法式本轮未完成图形审查。"
       },
       {
-        "id": "NUMERICAL_WARNINGS",
-        "status": "RECORDED / NO_NONFINITE_TEST_VOLUMES",
-        "detail": "Trimesh emitted mass-property RuntimeWarnings during boolean calculations. Warnings retained in GEOMETRY_RECHECK.json; tested intersection volumes explicitly finite, final solid and contact checks PASS."
+        "id": "LEGACY_DASHBOARD",
+        "status": "HISTORICAL_SECTION_RETAINED",
+        "detail": "旧统计与旧派生生成器未整体重构；当前摘要取R361，下方折叠内容显式历史。"
+      },
+      {
+        "id": "EXISTING_CI",
+        "status": "PREEXISTING_ASSERTION",
+        "detail": "PR62记录T-039旧merge_authorized=False断言与main既有True矛盾；收尾不改变该字段，不宣称全部CI通过。"
       }
     ],
-    "next_action": "明日先完成本地main同步；新工程范围需PO确认。建议先核对两榀互联所需间距、纵向构件及接口资料；不自动执行。",
-    "record": "docs/assembly/daily_close/2026-10-07/DAILY_CLOSEOUT_ZH.md",
-    "publication_status": "CANONICAL_CLOSEOUT / PR58",
-    "merge_approval": {
-      "decision_id": "D-283",
-      "time": "2026-10-07T21:12:28+08:00",
-      "pr_number": 58
-    },
-    "local_sync": {
-      "status": "PASS_AT_PR57_CHECKPOINT / FINAL_CLOSEOUT_PULL_PENDING",
-      "evidence": "User-provided terminal output 粘贴的文本 (1)(4).txt, reviewed 2026-10-07T21:11:16+08:00",
-      "branch": "main",
-      "head": "f30767e479f61bc6d2d0e3f440f692971f658dba",
-      "matches_fetched_origin_main": true,
-      "tracked_changes": false,
-      "untracked_directory": "docs/evidence/zhenguo_wanfo/original sources/",
-      "untracked_directory_action": "RETAINED / NOT DELETED",
-      "note": "This verifies the PR57 checkpoint, not synchronization to the later PR58 closeout merge."
-    }
+    "next_action": "今日工程停止。收尾发布后一次性同步Mac main并回报HEAD及工作区状态；下次从上六椽栿、隔架进深构件与顺身令栱的对象身份、外轮廓和接口图形核对继续，不自动晋升Master或扩建。"
   },
-  "next_action": "在已批准V002范围内完成新BLEND固化及保存重开验证；当前环境无可运行Blender。PR62登记提交待main发布；本地同步今晚一次完成，不扩大整殿生产。",
+  "next_action": "今日工程停止。收尾发布后一次性同步Mac main并回报HEAD及工作区状态；下次从上六椽栿、隔架进深构件与顺身令栱的对象身份、外轮廓和接口图形核对继续，不自动晋升Master或扩建。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v214",
+    "visualization_version": "v215",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "D285 VISUAL+GLB APPROVAL MIRRORED / R360 REGISTRATION_PR62 / BLEND_PENDING / LOCAL_SYNC_TONIGHT",
-    "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
+    "refresh_status": "R361 / DAILY_CLOSE / V002_BLEND_FINALIZED / FULL_FORM_NOT_ESTABLISHED / MAC_SYNC_PENDING",
+    "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard.",
+    "visualization_snapshot": "v215",
+    "state_revision": "R361",
+    "current_summary": "2026-10-09整体收尾",
+    "historical_section": "COLLAPSED / NOT_CURRENT"
   },
   "superseded_prs": [
     {
@@ -1957,41 +1916,66 @@
     "next_stage1_action": "子角梁 D-076 Visual/Form Gate"
   },
   "daily_close": {
-    "date": "2026-09-26",
-    "status": "PASS / GITHUB CANONICAL CLOSE + RC-013 CONSISTENCY + LOCAL SYNC COMPLETE",
-    "close_file": "docs/project_control/CLOSE_FILE_2026-09-26.md",
-    "completed_today": [
-      "T-034 / 阑额 / CLOSED / PR #30 MERGED",
-      "T-035 / 由额 / CLOSED / PR #31 MERGED",
-      "T-036 / 补间铺作底斗 / CLOSED / PR #32 MERGED"
+    "date": "2026-10-09",
+    "timezone": "Asia/Shanghai",
+    "authorization": "好吧，今天先到这边，开始今天工作的整体收尾、登记和同步任务",
+    "status": "PASS_WITH_KNOWN_EXCEPTIONS",
+    "audited_main_commit": "cf5ff09f8c1190286f4833edc48e11b589969f50",
+    "checked_files": [
+      "project_state.json",
+      "decision_log.md",
+      "execution_log.md",
+      "acceptance_matrix.md",
+      "governance.md",
+      "rules_change_log.md",
+      "dashboard.html"
     ],
-    "stage1": {
-      "approved_masters": 20,
-      "pending_masters": 8,
-      "completion_percent": 71.4,
-      "master_covered_registry_records": 159,
-      "registry_records": 505,
-      "current_equals_v008": true
-    },
-    "open_pr_policy": {
-      "pr3": "OPEN / T-018 ORIGINAL / SUPERSEDED / READ-ONLY / DO NOT MERGE",
-      "pr6": "OPEN / T-018 REPLACEMENT / HOLD / DO NOT MERGE"
-    },
-    "active_stage1_engineering_task": "NONE",
-    "next_candidate": "瓜子栱族 / priority 15 / Source Readiness + D-076 only",
-    "t018": "HOLD",
-    "stage2": "NOT AUTHORIZED",
+    "phase_archive": "NOT_APPLICABLE / no phase closed",
+    "record": "docs/assembly/daily_close/2026-10-09/DAILY_CLOSEOUT_ZH.md",
+    "models_modified": false,
+    "masters_modified": false,
+    "governance_modified": false,
+    "rules_changed": false,
+    "new_engineering_started": false,
+    "known_exceptions": [
+      {
+        "id": "LOCAL_MAC_SYNC",
+        "status": "PENDING / NOT_EXECUTED",
+        "detail": "当前环境无法执行用户Mac终端操作；最后已验证检查点f30767e，不能宣称同步到收尾提交。"
+      },
+      {
+        "id": "THREE_MEMBER_FORM",
+        "status": "NOT_ESTABLISHED / CANDIDATES_ONLY",
+        "detail": "上六椽栿、华栱、令栱完整外形与接口尚未获逐处图形证明；截面方向候选和67实体试装未批准。"
+      },
+      {
+        "id": "SOURCE_COVERAGE",
+        "status": "PARTIAL_GRAPHICAL_REVIEW",
+        "detail": "A1关键页与A2相关部分补查；A3原始图像、官方GIF逐帧和营造法式本轮未完成图形审查。"
+      },
+      {
+        "id": "LEGACY_DASHBOARD",
+        "status": "HISTORICAL_SECTION_RETAINED",
+        "detail": "旧统计与旧派生生成器未整体重构；当前摘要取R361，下方折叠内容显式历史。"
+      },
+      {
+        "id": "EXISTING_CI",
+        "status": "PREEXISTING_ASSERTION",
+        "detail": "PR62记录T-039旧merge_authorized=False断言与main既有True矛盾；收尾不改变该字段，不宣称全部CI通过。"
+      }
+    ],
+    "next_action": "今日工程停止。收尾发布后一次性同步Mac main并回报HEAD及工作区状态；下次从上六椽栿、隔架进深构件与顺身令栱的对象身份、外轮廓和接口图形核对继续，不自动晋升Master或扩建。",
+    "completed_today": [
+      "V002 BLEND固化及PR62正式登记",
+      "三Master截面方向候选检查（未批准）",
+      "67实体下部支承试装（未批准）",
+      "已登记来源补查与上六椽栿、华栱、令栱实际网格核对"
+    ],
     "local_sync": {
-      "status": "PASS",
-      "repository": "wp5rrp7b2v-droid/arch3d-reconstruction",
-      "local_path": "/Users/caroline/中国古建筑3D复原",
-      "pre_sync_head": "d0bde4808195b671ba7a990107abf19ca4328b72",
-      "synced_head": "34bd36cff8205286a8c89fe52956f73ee1abe591",
-      "remote_head_at_sync": "34bd36cff8205286a8c89fe52956f73ee1abe591",
-      "branch_status": "main...origin/main",
-      "method": "git-proxy-auto fetch origin + git-proxy-auto pull --ff-only origin main",
-      "result": "FAST_FORWARD / LOCAL_HEAD == REMOTE_HEAD"
-    }
+      "status": "PENDING_MAC_EXECUTION / NOT_VERIFIED"
+    },
+    "registry_records": 505,
+    "approved_master_count": 25
   },
   "lane_stage1": {
     "status": "SPEC_V001_LOCKED",
@@ -3426,17 +3410,18 @@
     "formal_stage3_closed": false
   },
   "local_sync_2026_10_09": {
-    "status": "DEFERRED_TO_TONIGHT / NOT_EXECUTED_THIS_SESSION",
+    "status": "READY_FOR_SINGLE_END_OF_DAY_SYNC / MAC_EXECUTION_PENDING",
     "user_instruction_time": "2026-10-09T07:32:56+08:00",
     "instruction": "今晚一次性做本地同步 现在先不做",
     "last_verified_checkpoint": "f30767e479f61bc6d2d0e3f440f692971f658dba",
-    "current_main_sync_claim": false
+    "current_main_sync_claim": false,
+    "closeout_record": "docs/assembly/daily_close/2026-10-09/DAILY_CLOSEOUT_ZH.md"
   },
   "approved_curved_gong_v002": {
     "decision_id": "D-285",
     "approved_at": "2026-10-09T12:28:41+08:00",
     "user_instruction": "批准这版本",
-    "status": "PO_APPROVED_VISUAL_AND_GLB_WORK_VERSION / BLEND_FINALIZATION_PENDING",
+    "status": "PO_APPROVED / BLEND_FINALIZED / SAVE_REOPEN_PASS",
     "version": "CURVED_GONG_V002",
     "baseline": "D-284 PRIMARY / EAST V011 + WEST V002",
     "changed_entities": [
@@ -3459,7 +3444,23 @@
       "above_threshold": 0,
       "glb_reopened_entities": 63,
       "max_glb_coordinate_delta_mm": 0.00011825561557543551,
-      "blender_saved_reopened": false
+      "blender_saved_reopened": true,
+      "blend_roundtrip": {
+        "blender_version": "4.5.13 LTS",
+        "entity_count": 63,
+        "groups": {
+          "RETAINED_50": 50,
+          "PROFILE_CORRECTED_4": 4,
+          "PURLINS_3": 3,
+          "RECONSTRUCTED_SEATS_6": 6
+        },
+        "max_coordinate_difference_mm": 0.000015251338481903076,
+        "coordinate_tolerance_mm": 0.001,
+        "entity_pairs_checked": 1953,
+        "max_pair_overlap_mm3": 0.27047655402566306,
+        "intersection_threshold_mm3": 1
+      },
+      "six_interfaces_passed": 6
     },
     "artifacts": [
       {
@@ -3479,15 +3480,142 @@
         "sha256": "7c14ded2162fddf8f787d65e1081ba6e326de4467aa17440ccd6a700efe514e9",
         "bytes": 15354652,
         "library_file_id": "libfile_97bf412bd5b8819195246f2443c57496"
+      },
+      {
+        "filename": "WANFO_TWO_FRAMES_THREE_PURLINS_APPROVED_V002.blend",
+        "sha256": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+        "bytes": 208003
+      },
+      {
+        "filename": "SAVE_REOPEN_V002_VALIDATION.json",
+        "sha256": "cbd2d32beaad631a44b068de7bba002144a489ee34ca04cff45b2f3d73a15d5d",
+        "bytes": 228883
+      },
+      {
+        "filename": "REOPENED_V002_MESHES.json.gz",
+        "sha256": "96a0401f182ff143fbb5387d4e632293377afe0324642176fd76e67a5c966b22",
+        "bytes": 122700
       }
     ],
     "original_approved_snapshots_overwritten": false,
     "physical_registry_mapping": "NOT_PROMOTED / NO_505_ROW_COUNT_CHANGE",
     "master_promotion": false,
     "formal_stage3_closed": false,
-    "main_publication": "PENDING_REGISTRATION_PR / NOT_MERGED",
+    "main_publication": "CANONICAL / PR62_MERGED",
     "notes": "Existing candidate filenames and embedded pre-approval statuses remain unchanged for exact binary binding; this record supplies subsequent PO approval.",
+    "publication_authorization": {
+      "decision_id": "D-286",
+      "authorized_at": "2026-10-09T12:42:29+08:00",
+      "user_instruction": "将已批准 V002 固化为新 BLEND，保存后重新打开，复核网格与接口；合入登记 PR，完成正式记录与最终交付核对",
+      "pr_number": 62,
+      "explicit_public_metadata_approval_at": "2026-10-09T13:13:42+08:00"
+    },
+    "actions_evidence": {
+      "run_id": 37885670509,
+      "head_sha": "c0e6ec439840630752284b890526707992fb927c",
+      "artifact_id": 11596013492,
+      "artifact_sha256": "dc2271f2cc1006d45e57f75c6daf6dd81e2c1672bdd6943ff94012e4548df671"
+    },
+    "delivery_location": "FINAL_DELIVERY_PACKAGE / EXACT_SHA256_BINDING",
+    "public_repository_payload": "REGISTRATION_METADATA_AND_VALIDATION_SUMMARY_ONLY",
+    "registration_pr": 62,
     "record": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-09/curved_gong_v002/APPROVAL_BINDING.json",
-    "registration_pr": 62
+    "publication_commit": "cf5ff09f8c1190286f4833edc48e11b589969f50"
+  },
+  "daily_close_2026_10_09": {
+    "date": "2026-10-09",
+    "timezone": "Asia/Shanghai",
+    "authorization": "好吧，今天先到这边，开始今天工作的整体收尾、登记和同步任务",
+    "status": "PASS_WITH_KNOWN_EXCEPTIONS",
+    "audited_main_commit": "cf5ff09f8c1190286f4833edc48e11b589969f50",
+    "checked_files": [
+      "project_state.json",
+      "decision_log.md",
+      "execution_log.md",
+      "acceptance_matrix.md",
+      "governance.md",
+      "rules_change_log.md",
+      "dashboard.html"
+    ],
+    "phase_archive": "NOT_APPLICABLE / no phase closed",
+    "record": "docs/assembly/daily_close/2026-10-09/DAILY_CLOSEOUT_ZH.md",
+    "models_modified": false,
+    "masters_modified": false,
+    "governance_modified": false,
+    "rules_changed": false,
+    "new_engineering_started": false,
+    "known_exceptions": [
+      {
+        "id": "LOCAL_MAC_SYNC",
+        "status": "PENDING / NOT_EXECUTED",
+        "detail": "当前环境无法执行用户Mac终端操作；最后已验证检查点f30767e，不能宣称同步到收尾提交。"
+      },
+      {
+        "id": "THREE_MEMBER_FORM",
+        "status": "NOT_ESTABLISHED / CANDIDATES_ONLY",
+        "detail": "上六椽栿、华栱、令栱完整外形与接口尚未获逐处图形证明；截面方向候选和67实体试装未批准。"
+      },
+      {
+        "id": "SOURCE_COVERAGE",
+        "status": "PARTIAL_GRAPHICAL_REVIEW",
+        "detail": "A1关键页与A2相关部分补查；A3原始图像、官方GIF逐帧和营造法式本轮未完成图形审查。"
+      },
+      {
+        "id": "LEGACY_DASHBOARD",
+        "status": "HISTORICAL_SECTION_RETAINED",
+        "detail": "旧统计与旧派生生成器未整体重构；当前摘要取R361，下方折叠内容显式历史。"
+      },
+      {
+        "id": "EXISTING_CI",
+        "status": "PREEXISTING_ASSERTION",
+        "detail": "PR62记录T-039旧merge_authorized=False断言与main既有True矛盾；收尾不改变该字段，不宣称全部CI通过。"
+      }
+    ],
+    "next_action": "今日工程停止。收尾发布后一次性同步Mac main并回报HEAD及工作区状态；下次从上六椽栿、隔架进深构件与顺身令栱的对象身份、外轮廓和接口图形核对继续，不自动晋升Master或扩建。",
+    "completed_today": [
+      "V002 BLEND固化及PR62正式登记",
+      "三Master截面方向候选检查（未批准）",
+      "67实体下部支承试装（未批准）",
+      "已登记来源补查与上六椽栿、华栱、令栱实际网格核对"
+    ],
+    "local_sync": {
+      "status": "PENDING_MAC_EXECUTION / NOT_VERIFIED"
+    },
+    "registry_records": 505,
+    "approved_master_count": 25
+  },
+  "three_member_form_review_2026_10_09": {
+    "status": "FULL_FORM_NOT_ESTABLISHED / NO_MASTER_PROMOTION",
+    "upper6": {
+      "reference_length_mm": 1000,
+      "trial_length_mm": 1800,
+      "full_length": "UNDETERMINED",
+      "mean_height_mm": 334,
+      "mean_tenon_thickness_mm": 209,
+      "mean_max_thickness_mm": 240.5,
+      "shape": "EQUAL_SECTION_REFERENCE_NOT_FULL_BEAM"
+    },
+    "target_depth_member": {
+      "source_name": "进深令栱",
+      "existing_trial_alias": "进深华栱",
+      "dimensions_H_T_L_mm": [
+        220,
+        155,
+        894
+      ],
+      "identity": "MAPPING_PENDING / DO_NOT_SILENTLY_RENAME"
+    },
+    "target_longitudinal_linggong": {
+      "H_T_mm": [
+        210,
+        153
+      ],
+      "source_length": "一端隐刻，一端异形",
+      "trial_length_mm": 900,
+      "length_authority": "RECONSTRUCTED_DESIGN",
+      "contour": "NOT_SOURCE_FITTED"
+    },
+    "section_direction_candidate": "3 Masters / 4 reference bodies / REOPEN_PASS / NOT_APPROVED",
+    "lower_support_trial": "67 entities / NOT_APPROVED / NOT_FORMAL_INSTANCE_BINDING"
   }
 }

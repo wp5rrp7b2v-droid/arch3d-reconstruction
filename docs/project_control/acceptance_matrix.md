@@ -1620,3 +1620,18 @@ Boundary retained:
 | 63实体 / 59实体保持 / 1953对碰撞 / GLB重开 | PASS，引用V002既有结果 | 未在登记时重跑，最大交叠0.270476554mm³ |
 | 新BLEND保存重开 | NOT EXECUTED / PENDING | 无可运行Blender；不能以GLB验证替代 |
 | 主登记、Master、Stage3、main | 505实例统计不变；无Master晋升；Stage3未关闭；main未发布 | 独立登记PR准备中；PR56不处置 |
+
+
+## 2026-10-09收尾验收｜D-286补证 / D-287 / R361
+
+| 检查项 | 结果 | 解释 |
+|---|---|---|
+| 已批准V002 BLEND固化及PR62发布 | PASS / MAIN VERIFIED | 引用独立重开63实体、六接口及1953对原验证；本轮不重跑 |
+| 本地BLEND哈希与正式绑定 | PASS | fbcc8f4e…70802，完整登记清单含13份交付/审核文件 |
+| 截面方向候选 / 67实体试装 | NOT APPROVED | 机器检查不代替PO批准或正式实例绑定 |
+| 上六椽栿、华栱、令栱完整外形 | NOT ESTABLISHED | 需同对象原图—网格核对；名称映射冲突待核 |
+| Project Control当前摘要一致性 | PASS WITH KNOWN EXCEPTIONS | 当前状态R361；历史记录保留；旧看板生成器例外明确 |
+| Mac最终同步 | PENDING / NOT EXECUTED | 需本地终端HEAD和工作区结果，不推断完成 |
+| Stage3 / 整殿 / 历史精确外形 / 承载能力 | NOT CLOSED / NOT VERIFIED | 不扩展局部批准含义 |
+
+D-285表“BLEND待固化、main未发布”为历史状态，由D-286及本表接续。收尾详情：docs/assembly/daily_close/2026-10-09/DAILY_CLOSEOUT_ZH.md。

@@ -472,3 +472,11 @@
 | ID | 日期 | 决策 | 状态 / 影响 |
 |---|---|---|---|
 | D-285 | 2026-10-09 | PO于2026-10-09 12:28:41（Asia/Shanghai）明确“批准这版本”：批准CURVED_GONG_V002的可见弧线与63实体GLB工作版本。仅4个令栱底部曲线修正，其余59实体逐顶点逐面保持；目标包络、定位、中央半搭和承托区保持。1953对几何交叠检查通过、GLB重开63实体通过。弧线仍为资料引导的RECONSTRUCTED_DESIGN，不认定精确历史曲线。新BLEND生成保存重开未执行；当前无可运行Blender，安装bpy未找到可用分发包。旧批准快照与D-284其余方案边界保持。登记提交准备于独立PR，不宣称已发布main、不改505实例统计、不晋升Master、不关闭Stage3、不处置PR56。 | PO APPROVED VISUAL+GLB / REGISTRATION BRANCH / BLEND FINALIZATION PENDING |
+
+
+## 2026-10-09｜最终固化补证与每日收尾
+
+| ID | 日期 | 决策 | 状态 / 影响 |
+|---|---|---|---|
+| D-286 | 2026-10-09 | 补登记既有授权：PO于12:42:29要求已批准V002固化为新BLEND、独立重开并合入PR62；13:13:42明确批准公开仓库仅登记、文件哈希与验证摘要。PR62已于05:18:13 UTC合并，commit cf5ff09f8c1190286f4833edc48e11b589969f50；63实体独立保存重开与六接口通过。此条接续D-285的历史待固化状态，不新增外形批准。 | BLEND FINALIZED / PR62 MERGED / LOCAL_SCOPE_ONLY / MAC_SYNC_PENDING |
+| D-287 | 2026-10-09 | PO要求“好吧，今天先到这边，开始今天工作的整体收尾、登记和同步任务”。停止工程，核对并登记今日正式交付、候选、资料复查及未决项，同步Project Control和派生摘要。上六椽栿与两栱完整外形尚未证实；截面候选和67实体试装未获批准；隔架进深令栱与既有别名身份映射待核。 | DAILY CLOSE / NO_NEW_FORM_APPROVAL / NO_MASTER_PROMOTION / MAC_SYNC_PENDING |
