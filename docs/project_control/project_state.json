@@ -1013,15 +1013,15 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-284",
-    "date": "2026-10-08",
-    "decision": "三道槫六替木接口方案V001获PO批准；PR59已合并，登记记录存在于main 47e684d1644fcae2fe6f3f9a65114e09926ff9e9。批准仅限条件性几何复原交付；共同历史标高、历史槽形、真实木料长度/拼接、隐藏榫卯与承载能力未验证；原Master与局部快照保持，正式Stage3未关闭。"
+    "id": "D-285",
+    "date": "2026-10-09",
+    "decision": "V002令栱可见弧线与GLB工作版本获PO批准；四实体修正，其他59实体保持。独立登记PR62未合入main，新BLEND固化与保存重开待验证；旧批准快照与历史证据边界保持。"
   },
   "latest_material_review": {
-    "date": "2026-09-24",
-    "result": "DAILY CLOSE PASS / CLOUD CLOSED",
-    "evidence": "T-030 D-133 CLOSED; PR #18 merged; Catalog=16; CURRENT==V008; Stage1=16/28=57.1%; final regression 36000242504 SUCCESS/97/97; Excel 36003187429 SUCCESS; Dashboard 36009374319 SUCCESS; only open PRs #3/#6 are T-018 HOLD.",
-    "decision_required": "NONE / WAIT FOR PRODUCT OWNER NEXT SESSION"
+    "date": "2026-10-09",
+    "result": "PO_APPROVED_VISUAL_AND_GLB_V002 / BLEND_PENDING",
+    "evidence": "63实体；4令栱弧线修改；59实体保持；1953对碰撞及GLB重开PASS。详见D-285批准绑定。",
+    "decision_required": "NONE_FOR_APPROVED_LOCAL_SCOPE / PR62_MAIN_PUBLICATION_NOT_EXECUTED"
   },
   "daily_closing_audit": {
     "date": "2026-10-07",
@@ -1111,14 +1111,14 @@
       "note": "This verifies the PR57 checkpoint, not synchronization to the later PR58 closeout merge."
     }
   },
-  "next_action": "完成D-284状态同步后，先只读核对批准交付包与后续装配输入；新工程范围单独确认。本地同步按PO要求延至2026-10-09晚间收尾一次完成。",
+  "next_action": "在已批准V002范围内完成新BLEND固化及保存重开验证；当前环境无可运行Blender。PR62登记提交待main发布；本地同步今晚一次完成，不扩大整殿生产。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v213",
+    "visualization_version": "v214",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "D-284 APPROVAL RECORD MIRRORED / R359 / LOCAL SYNC DEFERRED TO TONIGHT / LEGACY GLOBAL OVERVIEW HISTORICAL",
+    "refresh_status": "D285 VISUAL+GLB APPROVAL MIRRORED / R360 REGISTRATION_PR62 / BLEND_PENDING / LOCAL_SYNC_TONIGHT",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard."
   },
   "superseded_prs": [
@@ -3487,6 +3487,7 @@
     "formal_stage3_closed": false,
     "main_publication": "PENDING_REGISTRATION_PR / NOT_MERGED",
     "notes": "Existing candidate filenames and embedded pre-approval statuses remain unchanged for exact binary binding; this record supplies subsequent PO approval.",
-    "record": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-09/curved_gong_v002/APPROVAL_BINDING.json"
+    "record": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-09/curved_gong_v002/APPROVAL_BINDING.json",
+    "registration_pr": 62
   }
 }
