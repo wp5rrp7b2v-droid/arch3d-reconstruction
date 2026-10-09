@@ -1,0 +1,6324 @@
+{
+  "canonical_failures": [],
+  "canonical_hard_fail_count": 0,
+  "clean_state_generation": "PASS",
+  "evidence_boundary": "PASS",
+  "identity_integrity": "PASS",
+  "mode": "mutation",
+  "mutation_validation": {
+    "all_changed_objects_declare_pm005": true,
+    "canonical_value_mm": 3505.7,
+    "delta_mm": 100.0,
+    "dependent_objects_changed": 365,
+    "evidence_classification_unchanged": true,
+    "mutated_value_mm": 3605.7,
+    "non_dependent_drift": 0,
+    "parameter_id": "PM-005",
+    "runtime_copy_only": true
+  },
+  "negative_fixtures": [
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/REFERENCE_LENGTH_LEAKS_INTO_BUILDING.json",
+      "hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/SILENT_HISTORICIZATION.json",
+      "hard_fail": "SILENT_HISTORICIZATION"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/BAKED_MANUAL_BUILDING.json",
+      "hard_fail": "BAKED_MANUAL_BUILDING"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/SILENT_BUILDING_OMISSION.json",
+      "hard_fail": "SILENT_BUILDING_OMISSION"
+    },
+    {
+      "actual": "EXPECTED_REJECTION",
+      "expected": "REJECT",
+      "fixture": "production/zhenguo_wanfo/tests/fixtures/p3_3/BROKEN_COMPONENT_IDENTITY.json",
+      "hard_fail": "BROKEN_COMPONENT_IDENTITY"
+    }
+  ],
+  "normalized_snapshot_comparison": "PASS",
+  "p2_transform_scan": {
+    "authoritative_usage_count": 0,
+    "status": "PASS"
+  },
+  "p3_2_traceability": "PASS",
+  "parameter_rule_provenance": "PASS",
+  "protected_inputs": "PASS",
+  "representation_validation": {
+    "errors": [],
+    "formal_count": 12,
+    "generic_octahedron_count": 0,
+    "geometry_class_counts": {
+      "BRACKET_CONTACT_GLYPH": 88,
+      "DEFERRED_PURLIN_DATUM": 7,
+      "FRAME_CONTROL_SEGMENT": 54,
+      "FRAME_SUPPORT_CONNECTOR": 54,
+      "GABLE_CONTROL_POLYLINE": 4,
+      "GRID_AXIS_LINE": 8,
+      "PRIMARY_FRAME_SEMANTIC_AXIS": 8,
+      "RAFTER_PROXY_SLOPE_SEGMENT": 36,
+      "ROOF_ENVELOPE_CONTROL_SURFACE": 6,
+      "UNKNOWN_BRACKET_WIRE_CROSS": 88
+    },
+    "status": "PASS",
+    "technical_count": 353
+  },
+  "runtime_accounting": {
+    "anonymous_formal_mesh": 0,
+    "broken_identity": 0,
+    "input_count": 365,
+    "not_realized_no_approved_placement_rule": 0,
+    "outcome_count": 365,
+    "outcome_counts": {
+      "DEFERRED": 7,
+      "GENERATED_CONTROL": 66,
+      "GENERATED_ENVELOPE": 6,
+      "GENERATED_FORMAL_GEOMETRY": 12,
+      "GENERATED_PROXY": 178,
+      "UNKNOWN_BLOCKED": 96
+    },
+    "rule_derived": 365,
+    "unexplained_runtime_omission": 0
+  },
+  "save_reopen": {
+    "executed": false,
+    "status": "PENDING_GITHUB_ACTIONS"
+  },
+  "spatial_validation": {
+    "errors": [],
+    "expected_count": 365,
+    "linear_tolerance_mm": 0.01,
+    "not_realized_no_approved_placement_rule": 0,
+    "per_family": {
+      "BRACKET_ARM": {
+        "assembly_refs": [
+          "AU-COLUMN-LUDOU-001"
+        ],
+        "expected_count": 88,
+        "failures": 0,
+        "interface_ids": [
+          "CMP-COLUMN-001__TOP-SUPPORT-PLANE"
+        ],
+        "measurements": [
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y00_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y00_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y00_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y00_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y00_A1_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y00_A1_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y00_A1_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y00_A1_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3605.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3605.7,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y01_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3605.7,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3605.7,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y01_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3605.7,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3605.7,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y01_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3605.7,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3605.7,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y01_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7282.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7282.5,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y02_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7282.5,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7282.5,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y02_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7282.5,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7282.5,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y02_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7282.5,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7282.5,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y02_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y03_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y03_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y03_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y03_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y03_A1_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y03_A1_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y03_A1_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X00_Y03_A1_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X01_Y00_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X01_Y00_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X01_Y00_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X01_Y00_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X01_Y03_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X01_Y03_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X01_Y03_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X01_Y03_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X02_Y00_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X02_Y00_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X02_Y00_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X02_Y00_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X02_Y03_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X02_Y03_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X02_Y03_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X02_Y03_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y00_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y00_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y00_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y00_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y00_A1_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y00_A1_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y00_A1_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y00_A1_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y01_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y01_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y01_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3605.7,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3605.7,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y01_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y02_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y02_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y02_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7282.5,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7282.5,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y02_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y03_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y03_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y03_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y03_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y03_A1_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y03_A1_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y03_A1_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "BRACKET_HEAD_X03_Y03_A1_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              1802.85,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              1802.85,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_X00_B00_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              1802.85,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              1802.85,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_X00_B00_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5444.1,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5444.1,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_X00_B01_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5444.1,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5444.1,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_X00_B01_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              9085.35,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              9085.35,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_X00_B02_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              9085.35,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              9085.35,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_X00_B02_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              1802.85,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              1802.85,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_X03_B00_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              1802.85,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              1802.85,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_X03_B00_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5444.1,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5444.1,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_X03_B01_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5444.1,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5444.1,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_X03_B01_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              9085.35,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              9085.35,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_X03_B02_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              9085.35,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              9085.35,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_X03_B02_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              1802.85,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              1802.85,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_Y00_B00_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              1802.85,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              1802.85,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_Y00_B00_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_Y00_B01_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_Y00_B01_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9889.85,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              9889.85,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_Y00_B02_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9889.85,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              9889.85,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_Y00_B02_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              1802.85,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              1802.85,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_Y03_B00_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              1802.85,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              1802.85,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_Y03_B00_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_Y03_B01_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_Y03_B01_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9889.85,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              9889.85,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "BRACKET_INTER_Y03_B02_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9889.85,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              9889.85,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "BRACKET_INTER_Y03_B02_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          }
+        ],
+        "parameter_ids": [
+          "DG-001",
+          "DG-002",
+          "DG-110",
+          "DG-111",
+          "DG-112",
+          "DG-113",
+          "MOD-002",
+          "MOD-003",
+          "MOD-004",
+          "PM-003",
+          "PM-004",
+          "PM-005",
+          "Z-006-RC-01"
+        ],
+        "realized_count": 88,
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY",
+          "RULE-COLUMN-GRID",
+          "RULE-MAJOR-ELEVATIONS"
+        ],
+        "semantic_marker_count": 88,
+        "status": "PASS"
+      },
+      "BRACKET_CONTACT": {
+        "assembly_refs": [
+          "AU-COLUMN-LUDOU-001"
+        ],
+        "expected_count": 88,
+        "failures": 0,
+        "interface_ids": [
+          "CMP-COLUMN-001__TOP-SUPPORT-PLANE"
+        ],
+        "measurements": [
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y00_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y00_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y00_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y00_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y00_A1_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y00_A1_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y00_A1_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y00_A1_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3605.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3605.7,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y01_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3605.7,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3605.7,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y01_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3605.7,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3605.7,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y01_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3605.7,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3605.7,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y01_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7282.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7282.5,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y02_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7282.5,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7282.5,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y02_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7282.5,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7282.5,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y02_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7282.5,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7282.5,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y02_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y03_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y03_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y03_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y03_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y03_A1_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y03_A1_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y03_A1_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X00_Y03_A1_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X01_Y00_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X01_Y00_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X01_Y00_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X01_Y00_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X01_Y03_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X01_Y03_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X01_Y03_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X01_Y03_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X02_Y00_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X02_Y00_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X02_Y00_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X02_Y00_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X02_Y03_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X02_Y03_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X02_Y03_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X02_Y03_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y00_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y00_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y00_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y00_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y00_A1_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y00_A1_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y00_A1_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y00_A1_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y01_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y01_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3605.7,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y01_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3605.7,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3605.7,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y01_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y02_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y02_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7282.5,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y02_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7282.5,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7282.5,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y02_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y03_A0_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y03_A0_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y03_A0_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y03_A0_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y03_A1_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3717.9
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3717.9
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y03_A1_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y03_A1_J03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              4085.1
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              4085.1
+            ],
+            "instance_id": "CONTACT_HEAD_X03_Y03_A1_J04",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              1802.85,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              1802.85,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_X00_B00_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              1802.85,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              1802.85,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_X00_B00_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5444.1,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5444.1,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_X00_B01_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5444.1,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5444.1,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_X00_B01_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              9085.35,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              9085.35,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_X00_B02_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              9085.35,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              9085.35,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_X00_B02_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              1802.85,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              1802.85,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_X03_B00_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              1802.85,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              1802.85,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_X03_B00_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5444.1,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5444.1,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_X03_B01_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5444.1,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5444.1,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_X03_B01_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              9085.35,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              9085.35,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_X03_B02_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              9085.35,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              9085.35,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_X03_B02_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              1802.85,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              1802.85,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_Y00_B00_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              1802.85,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              1802.85,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_Y00_B00_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_Y00_B01_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_Y00_B01_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9889.85,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              9889.85,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_Y00_B02_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9889.85,
+              0.0,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              9889.85,
+              0.0,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_Y00_B02_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              1802.85,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              1802.85,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_Y03_B00_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              1802.85,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              1802.85,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_Y03_B00_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_Y03_B01_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_Y03_B01_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9889.85,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              9889.85,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "CONTACT_INTER_Y03_B02_J01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9889.85,
+              10888.2,
+              3901.5
+            ],
+            "expected_coordinate_mm": [
+              9889.85,
+              10888.2,
+              3901.5
+            ],
+            "instance_id": "CONTACT_INTER_Y03_B02_J02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          }
+        ],
+        "parameter_ids": [
+          "DG-001",
+          "DG-002",
+          "DG-110",
+          "DG-111",
+          "MOD-002",
+          "MOD-003",
+          "MOD-004",
+          "MOD-005",
+          "PM-003",
+          "PM-004",
+          "PM-005",
+          "Z-006-RC-01"
+        ],
+        "realized_count": 88,
+        "rule_ids": [
+          "RULE-BRACKET-TOPOLOGY",
+          "RULE-COLUMN-GRID",
+          "RULE-MAJOR-ELEVATIONS"
+        ],
+        "semantic_marker_count": 0,
+        "status": "PASS"
+      },
+      "COLUMN": {
+        "assembly_refs": [
+          "AU-COLUMN-GRID-001"
+        ],
+        "expected_count": 12,
+        "failures": 0,
+        "interface_ids": [
+          "CMP-COLUMN-001__ORIGIN",
+          "CTL-GRID-001__X-AXIS"
+        ],
+        "measurements": [
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0.0,
+              61.2
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0.0,
+              61.2
+            ],
+            "instance_id": "COLUMN_X00_Y00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3605.7,
+              0.0
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3605.7,
+              0.0
+            ],
+            "instance_id": "COLUMN_X00_Y01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7282.5,
+              0.0
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7282.5,
+              0.0
+            ],
+            "instance_id": "COLUMN_X00_Y02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              10888.2,
+              61.2
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              10888.2,
+              61.2
+            ],
+            "instance_id": "COLUMN_X00_Y03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              0.0,
+              0.0
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              0.0,
+              0.0
+            ],
+            "instance_id": "COLUMN_X01_Y00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              10888.2,
+              0.0
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              10888.2,
+              0.0
+            ],
+            "instance_id": "COLUMN_X01_Y03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              0.0,
+              0.0
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              0.0,
+              0.0
+            ],
+            "instance_id": "COLUMN_X02_Y00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              10888.2,
+              0.0
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              10888.2,
+              0.0
+            ],
+            "instance_id": "COLUMN_X02_Y03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0.0,
+              61.2
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0.0,
+              61.2
+            ],
+            "instance_id": "COLUMN_X03_Y00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3605.7,
+              0.0
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3605.7,
+              0.0
+            ],
+            "instance_id": "COLUMN_X03_Y01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7282.5,
+              0.0
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7282.5,
+              0.0
+            ],
+            "instance_id": "COLUMN_X03_Y02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              10888.2,
+              61.2
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              10888.2,
+              61.2
+            ],
+            "instance_id": "COLUMN_X03_Y03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          }
+        ],
+        "parameter_ids": [
+          "PM-003",
+          "PM-004",
+          "PM-005",
+          "PM-013",
+          "PM-014",
+          "Z-002",
+          "Z-005",
+          "Z-006-RC-01"
+        ],
+        "realized_count": 12,
+        "rule_ids": [
+          "RULE-COLUMN-GRID",
+          "RULE-MAJOR-ELEVATIONS"
+        ],
+        "semantic_marker_count": 0,
+        "status": "PASS"
+      },
+      "FRAME_CONTROL": {
+        "assembly_refs": [
+          "AU-FRAME-TIER-001"
+        ],
+        "expected_count": 54,
+        "failures": 0,
+        "interface_ids": [
+          "CTL-FRAME-001__LOWER-TIER-DATUM",
+          "CTL-FRAME-001__UPPER-TIER-DATUM"
+        ],
+        "measurements": [
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              1759.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              1759.5,
+              3534.3
+            ],
+            "instance_id": "FRAME_POST_N_01_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              1759.5,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              1759.5,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_N_01_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              1759.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              1759.5,
+              3534.3
+            ],
+            "instance_id": "FRAME_POST_N_01_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              1759.5,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              1759.5,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_N_01_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              1759.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              1759.5,
+              3534.3
+            ],
+            "instance_id": "FRAME_POST_N_01_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              1759.5,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              1759.5,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_N_01_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              1759.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              1759.5,
+              3534.3
+            ],
+            "instance_id": "FRAME_POST_N_01_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              1759.5,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              1759.5,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_N_01_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3519.0,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3519.0,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_N_02_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3519.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3519.0,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_N_02_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              3519.0,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              3519.0,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_N_02_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              3519.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              3519.0,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_N_02_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              3519.0,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              3519.0,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_N_02_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              3519.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              3519.0,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_N_02_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3519.0,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3519.0,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_N_02_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3519.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3519.0,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_N_02_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5355.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5355.0,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_N_03_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5355.0,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5355.0,
+              5783.4
+            ],
+            "instance_id": "FRAME_POST_N_03_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              5355.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              5355.0,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_N_03_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              5355.0,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              5355.0,
+              5783.4
+            ],
+            "instance_id": "FRAME_POST_N_03_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              5355.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              5355.0,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_N_03_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              5355.0,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              5355.0,
+              5783.4
+            ],
+            "instance_id": "FRAME_POST_N_03_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5355.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5355.0,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_N_03_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5355.0,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5355.0,
+              5783.4
+            ],
+            "instance_id": "FRAME_POST_N_03_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              9128.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              9128.7,
+              3534.3
+            ],
+            "instance_id": "FRAME_POST_S_01_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              9128.7,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              9128.7,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_S_01_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              9128.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              9128.7,
+              3534.3
+            ],
+            "instance_id": "FRAME_POST_S_01_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              9128.7,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              9128.7,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_S_01_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              9128.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              9128.7,
+              3534.3
+            ],
+            "instance_id": "FRAME_POST_S_01_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              9128.7,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              9128.7,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_S_01_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              9128.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              9128.7,
+              3534.3
+            ],
+            "instance_id": "FRAME_POST_S_01_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              9128.7,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              9128.7,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_S_01_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7369.2,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7369.2,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_S_02_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7369.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7369.2,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_S_02_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              7369.2,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              7369.2,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_S_02_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              7369.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              7369.2,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_S_02_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              7369.2,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              7369.2,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_S_02_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              7369.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              7369.2,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_S_02_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7369.2,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7369.2,
+              3916.8
+            ],
+            "instance_id": "FRAME_POST_S_02_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7369.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7369.2,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_S_02_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5533.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5533.2,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_S_03_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5533.2,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5533.2,
+              5783.4
+            ],
+            "instance_id": "FRAME_POST_S_03_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              5533.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              5533.2,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_S_03_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              5533.2,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              5533.2,
+              5783.4
+            ],
+            "instance_id": "FRAME_POST_S_03_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              5533.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              5533.2,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_S_03_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              5533.2,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              5533.2,
+              5783.4
+            ],
+            "instance_id": "FRAME_POST_S_03_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5533.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5533.2,
+              4528.8
+            ],
+            "instance_id": "FRAME_POST_S_03_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5533.2,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5533.2,
+              5783.4
+            ],
+            "instance_id": "FRAME_POST_S_03_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              1759.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              1759.5,
+              3534.3
+            ],
+            "instance_id": "FRAME_TIER_N_01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              3519.0,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              3519.0,
+              3916.8
+            ],
+            "instance_id": "FRAME_TIER_N_02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              5355.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              5355.0,
+              4528.8
+            ],
+            "instance_id": "FRAME_TIER_N_03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              9128.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              9128.7,
+              3534.3
+            ],
+            "instance_id": "FRAME_TIER_S_01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              7369.2,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              7369.2,
+              3916.8
+            ],
+            "instance_id": "FRAME_TIER_S_02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              5533.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              5533.2,
+              4528.8
+            ],
+            "instance_id": "FRAME_TIER_S_03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          }
+        ],
+        "parameter_ids": [
+          "FR-004",
+          "FR-005",
+          "FR-006",
+          "FR-007",
+          "MOD-002",
+          "MOD-003",
+          "MOD-004",
+          "PM-003",
+          "PM-004",
+          "PM-005",
+          "PM-012",
+          "ROOF-004",
+          "ROOF-005",
+          "ROOF-006",
+          "ROOF-007",
+          "ROOF-008",
+          "ROOF-009",
+          "Z-006-RC-01"
+        ],
+        "realized_count": 54,
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS",
+          "RULE-FRAME-SEMANTICS",
+          "RULE-ROOF-ELEVATIONS"
+        ],
+        "semantic_marker_count": 0,
+        "status": "PASS"
+      },
+      "FRAME_SUPPORT": {
+        "assembly_refs": [
+          "AU-FRAME-TIER-001"
+        ],
+        "expected_count": 54,
+        "failures": 0,
+        "interface_ids": [
+          "PRX-FRAME-CONNECTOR-001__LOWER-ENDPOINT",
+          "PRX-FRAME-CONNECTOR-001__UPPER-ENDPOINT"
+        ],
+        "measurements": [
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              1759.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              1759.5,
+              3534.3
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_01_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              1759.5,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              1759.5,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_01_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              1759.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              1759.5,
+              3534.3
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_01_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              1759.5,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              1759.5,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_01_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              1759.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              1759.5,
+              3534.3
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_01_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              1759.5,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              1759.5,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_01_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              1759.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              1759.5,
+              3534.3
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_01_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              1759.5,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              1759.5,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_01_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3519.0,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3519.0,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_02_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              3519.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              3519.0,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_02_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              3519.0,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              3519.0,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_02_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              3519.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              3519.0,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_02_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              3519.0,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              3519.0,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_02_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              3519.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              3519.0,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_02_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3519.0,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3519.0,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_02_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              3519.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              3519.0,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_02_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5355.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5355.0,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_03_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5355.0,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5355.0,
+              5783.4
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_03_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              5355.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              5355.0,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_03_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              5355.0,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              5355.0,
+              5783.4
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_03_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              5355.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              5355.0,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_03_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              5355.0,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              5355.0,
+              5783.4
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_03_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5355.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5355.0,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_03_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5355.0,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5355.0,
+              5783.4
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_N_03_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              9128.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              9128.7,
+              3534.3
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_01_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              9128.7,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              9128.7,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_01_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              9128.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              9128.7,
+              3534.3
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_01_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              9128.7,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              9128.7,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_01_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              9128.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              9128.7,
+              3534.3
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_01_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              9128.7,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              9128.7,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_01_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              9128.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              9128.7,
+              3534.3
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_01_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              9128.7,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              9128.7,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_01_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7369.2,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7369.2,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_02_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              7369.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              7369.2,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_02_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              7369.2,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              7369.2,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_02_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              7369.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              7369.2,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_02_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              7369.2,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              7369.2,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_02_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              7369.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              7369.2,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_02_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7369.2,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7369.2,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_02_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              7369.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              7369.2,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_02_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5533.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5533.2,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_03_X00_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5533.2,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5533.2,
+              5783.4
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_03_X00_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              5533.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              5533.2,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_03_X01_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              5533.2,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              5533.2,
+              5783.4
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_03_X01_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              5533.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              5533.2,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_03_X02_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              5533.2,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              5533.2,
+              5783.4
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_03_X02_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5533.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5533.2,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_03_X03_LOW",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5533.2,
+              5783.4
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5533.2,
+              5783.4
+            ],
+            "instance_id": "SUPPORT_FRAME_POST_S_03_X03_UP",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              1759.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              1759.5,
+              3534.3
+            ],
+            "instance_id": "SUPPORT_FRAME_TIER_N_01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              3519.0,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              3519.0,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_TIER_N_02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              5355.0,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              5355.0,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_TIER_N_03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              9128.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              9128.7,
+              3534.3
+            ],
+            "instance_id": "SUPPORT_FRAME_TIER_S_01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              7369.2,
+              3916.8
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              7369.2,
+              3916.8
+            ],
+            "instance_id": "SUPPORT_FRAME_TIER_S_02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              5533.2,
+              4528.8
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              5533.2,
+              4528.8
+            ],
+            "instance_id": "SUPPORT_FRAME_TIER_S_03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          }
+        ],
+        "parameter_ids": [
+          "FR-004",
+          "FR-005",
+          "FR-006",
+          "FR-007",
+          "MOD-002",
+          "MOD-003",
+          "MOD-004",
+          "PM-003",
+          "PM-004",
+          "PM-005",
+          "PM-012",
+          "ROOF-004",
+          "ROOF-005",
+          "ROOF-006",
+          "ROOF-007",
+          "ROOF-008",
+          "ROOF-009",
+          "Z-006-RC-01"
+        ],
+        "realized_count": 54,
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS",
+          "RULE-FRAME-SEMANTICS",
+          "RULE-ROOF-ELEVATIONS"
+        ],
+        "semantic_marker_count": 0,
+        "status": "PASS"
+      },
+      "GABLE_CONTROL": {
+        "assembly_refs": [],
+        "expected_count": 4,
+        "failures": 0,
+        "interface_ids": [],
+        "measurements": [
+          {
+            "actual_coordinate_mm": [
+              13100.3,
+              0,
+              7068.6
+            ],
+            "expected_coordinate_mm": [
+              13100.3,
+              0,
+              7068.6
+            ],
+            "instance_id": "GABLE_E_N",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              13100.3,
+              10888.2,
+              7068.6
+            ],
+            "expected_coordinate_mm": [
+              13100.3,
+              10888.2,
+              7068.6
+            ],
+            "instance_id": "GABLE_E_S",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              -1407.6,
+              0,
+              7068.6
+            ],
+            "expected_coordinate_mm": [
+              -1407.6,
+              0,
+              7068.6
+            ],
+            "instance_id": "GABLE_W_N",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              -1407.6,
+              10888.2,
+              7068.6
+            ],
+            "expected_coordinate_mm": [
+              -1407.6,
+              10888.2,
+              7068.6
+            ],
+            "instance_id": "GABLE_W_S",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          }
+        ],
+        "parameter_ids": [
+          "FR-007",
+          "MOD-002",
+          "OUT-003",
+          "PM-003",
+          "PM-004",
+          "PM-005",
+          "ROOF-010",
+          "ROOF-011",
+          "Z-006-RC-01"
+        ],
+        "realized_count": 4,
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS",
+          "RULE-ROOF-OUTLINE"
+        ],
+        "semantic_marker_count": 0,
+        "status": "PASS"
+      },
+      "GRID_CONTROL": {
+        "assembly_refs": [
+          "AU-COLUMN-GRID-001"
+        ],
+        "expected_count": 8,
+        "failures": 0,
+        "interface_ids": [
+          "CTL-GRID-001__SIDEBAY-START",
+          "CTL-GRID-001__X-AXIS"
+        ],
+        "measurements": [
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              0,
+              0
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              0,
+              0
+            ],
+            "instance_id": "GRID_X00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              0,
+              0
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              0,
+              0
+            ],
+            "instance_id": "GRID_X01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              0,
+              0
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              0,
+              0
+            ],
+            "instance_id": "GRID_X02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              0,
+              0
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              0,
+              0
+            ],
+            "instance_id": "GRID_X03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0,
+              0.0,
+              0
+            ],
+            "expected_coordinate_mm": [
+              0,
+              0.0,
+              0
+            ],
+            "instance_id": "GRID_Y00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0,
+              3605.7,
+              0
+            ],
+            "expected_coordinate_mm": [
+              0,
+              3605.7,
+              0
+            ],
+            "instance_id": "GRID_Y01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0,
+              7282.5,
+              0
+            ],
+            "expected_coordinate_mm": [
+              0,
+              7282.5,
+              0
+            ],
+            "instance_id": "GRID_Y02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0,
+              10888.2,
+              0
+            ],
+            "expected_coordinate_mm": [
+              0,
+              10888.2,
+              0
+            ],
+            "instance_id": "GRID_Y03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          }
+        ],
+        "parameter_ids": [
+          "MOD-001",
+          "PM-001",
+          "PM-002",
+          "PM-003",
+          "PM-004",
+          "PM-005",
+          "PM-008",
+          "PM-009",
+          "PM-010",
+          "Z-007"
+        ],
+        "realized_count": 8,
+        "rule_ids": [
+          "RULE-COLUMN-GRID"
+        ],
+        "semantic_marker_count": 0,
+        "status": "PASS"
+      },
+      "PRIMARY_FRAME": {
+        "assembly_refs": [
+          "AU-FRAME-TIER-001"
+        ],
+        "expected_count": 8,
+        "failures": 0,
+        "interface_ids": [
+          "CTL-FRAME-001__LOWER-TIER-DATUM",
+          "CTL-FRAME-001__UPPER-TIER-DATUM"
+        ],
+        "measurements": [
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5444.1,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5444.1,
+              3534.3
+            ],
+            "instance_id": "FRAME_DEPTH_X00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              3605.7,
+              5444.1,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              3605.7,
+              5444.1,
+              3534.3
+            ],
+            "instance_id": "FRAME_DEPTH_X01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              8087.0,
+              5444.1,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              8087.0,
+              5444.1,
+              3534.3
+            ],
+            "instance_id": "FRAME_DEPTH_X02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5444.1,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5444.1,
+              3534.3
+            ],
+            "instance_id": "FRAME_DEPTH_X03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              0.0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              0.0,
+              3534.3
+            ],
+            "instance_id": "FRAME_WIDTH_Y00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              3605.7,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              3605.7,
+              3534.3
+            ],
+            "instance_id": "FRAME_WIDTH_Y01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              7282.5,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              7282.5,
+              3534.3
+            ],
+            "instance_id": "FRAME_WIDTH_Y02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "FRAME_WIDTH_Y03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          }
+        ],
+        "parameter_ids": [
+          "DG-113",
+          "MOD-002",
+          "MOD-003",
+          "MOD-004",
+          "MOD-005",
+          "PM-003",
+          "PM-004",
+          "PM-005",
+          "PM-011",
+          "PM-012",
+          "RF-001",
+          "Z-006-RC-01"
+        ],
+        "realized_count": 8,
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS",
+          "RULE-FRAME-SEMANTICS"
+        ],
+        "semantic_marker_count": 8,
+        "status": "PASS"
+      },
+      "PURLIN": {
+        "assembly_refs": [
+          "AU-FRAME-TIER-001"
+        ],
+        "expected_count": 7,
+        "failures": 0,
+        "interface_ids": [
+          "CTL-FRAME-001__UPPER-TIER-DATUM"
+        ],
+        "measurements": [
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              0,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              0,
+              3534.3
+            ],
+            "instance_id": "ROOF_PURLIN_N_00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              1836.0,
+              4880.7
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              1836.0,
+              4880.7
+            ],
+            "instance_id": "ROOF_PURLIN_N_01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              3595.5,
+              5814.0
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              3595.5,
+              5814.0
+            ],
+            "instance_id": "ROOF_PURLIN_N_02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              6808.5,
+              7068.6
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              6808.5,
+              7068.6
+            ],
+            "instance_id": "ROOF_PURLIN_N_03",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3534.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              10888.2,
+              3534.3
+            ],
+            "instance_id": "ROOF_PURLIN_S_00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              9052.2,
+              4880.7
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              9052.2,
+              4880.7
+            ],
+            "instance_id": "ROOF_PURLIN_S_01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              7292.7,
+              5814.0
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              7292.7,
+              5814.0
+            ],
+            "instance_id": "ROOF_PURLIN_S_02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          }
+        ],
+        "parameter_ids": [
+          "FR-007",
+          "MOD-002",
+          "OUT-003",
+          "PM-003",
+          "PM-004",
+          "PM-005",
+          "ROOF-007",
+          "ROOF-008",
+          "ROOF-009",
+          "ROOF-010",
+          "ROOF-011",
+          "Z-006-RC-01"
+        ],
+        "realized_count": 7,
+        "rule_ids": [
+          "RULE-FRAME-DEPTHS",
+          "RULE-ROOF-ELEVATIONS",
+          "RULE-ROOF-OUTLINE"
+        ],
+        "semantic_marker_count": 7,
+        "status": "PASS"
+      },
+      "RAFTER": {
+        "assembly_refs": [],
+        "expected_count": 36,
+        "failures": 0,
+        "interface_ids": [],
+        "measurements": [
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              918.0,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              918.0,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_N_X00_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              2715.75,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              2715.75,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_N_X00_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5202.0,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5202.0,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_N_X00_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              2338.54,
+              918.0,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              2338.54,
+              918.0,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_N_X01_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              2338.54,
+              2715.75,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              2338.54,
+              2715.75,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_N_X01_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              2338.54,
+              5202.0,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              2338.54,
+              5202.0,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_N_X01_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              4677.08,
+              918.0,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              4677.08,
+              918.0,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_N_X02_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              4677.08,
+              2715.75,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              4677.08,
+              2715.75,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_N_X02_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              4677.08,
+              5202.0,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              4677.08,
+              5202.0,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_N_X02_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              7015.62,
+              918.0,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              7015.62,
+              918.0,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_N_X03_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              7015.62,
+              2715.75,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              7015.62,
+              2715.75,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_N_X03_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              7015.62,
+              5202.0,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              7015.62,
+              5202.0,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_N_X03_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9354.16,
+              918.0,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              9354.16,
+              918.0,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_N_X04_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9354.16,
+              2715.75,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              9354.16,
+              2715.75,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_N_X04_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9354.16,
+              5202.0,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              9354.16,
+              5202.0,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_N_X04_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              918.0,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              918.0,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_N_X05_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              2715.75,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              2715.75,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_N_X05_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5202.0,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5202.0,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_N_X05_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              9970.2,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              9970.2,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_S_X00_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              8172.45,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              8172.45,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_S_X00_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              0.0,
+              5686.2,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              0.0,
+              5686.2,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_S_X00_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              2338.54,
+              9970.2,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              2338.54,
+              9970.2,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_S_X01_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              2338.54,
+              8172.45,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              2338.54,
+              8172.45,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_S_X01_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              2338.54,
+              5686.2,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              2338.54,
+              5686.2,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_S_X01_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              4677.08,
+              9970.2,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              4677.08,
+              9970.2,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_S_X02_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              4677.08,
+              8172.45,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              4677.08,
+              8172.45,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_S_X02_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              4677.08,
+              5686.2,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              4677.08,
+              5686.2,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_S_X02_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              7015.62,
+              9970.2,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              7015.62,
+              9970.2,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_S_X03_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              7015.62,
+              8172.45,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              7015.62,
+              8172.45,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_S_X03_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              7015.62,
+              5686.2,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              7015.62,
+              5686.2,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_S_X03_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9354.16,
+              9970.2,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              9354.16,
+              9970.2,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_S_X04_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9354.16,
+              8172.45,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              9354.16,
+              8172.45,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_S_X04_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              9354.16,
+              5686.2,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              9354.16,
+              5686.2,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_S_X04_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              9970.2,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              9970.2,
+              4207.5
+            ],
+            "instance_id": "ROOF_RAFTER_S_X05_S00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              8172.45,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              8172.45,
+              5347.35
+            ],
+            "instance_id": "ROOF_RAFTER_S_X05_S01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              11692.7,
+              5686.2,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              11692.7,
+              5686.2,
+              6441.3
+            ],
+            "instance_id": "ROOF_RAFTER_S_X05_S02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          }
+        ],
+        "parameter_ids": [
+          "FR-007",
+          "MOD-002",
+          "OUT-003",
+          "PM-003",
+          "PM-004",
+          "PM-005",
+          "ROOF-007",
+          "ROOF-008",
+          "ROOF-009",
+          "Z-006-RC-01"
+        ],
+        "realized_count": 36,
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS",
+          "RULE-ROOF-OUTLINE"
+        ],
+        "semantic_marker_count": 0,
+        "status": "PASS"
+      },
+      "ROOF_ENVELOPE": {
+        "assembly_refs": [],
+        "expected_count": 6,
+        "failures": 0,
+        "interface_ids": [],
+        "measurements": [
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              918.0,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              918.0,
+              4207.5
+            ],
+            "instance_id": "ROOF_SURFACE_N_00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              2715.75,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              2715.75,
+              5347.35
+            ],
+            "instance_id": "ROOF_SURFACE_N_01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              5202.0,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              5202.0,
+              6441.3
+            ],
+            "instance_id": "ROOF_SURFACE_N_02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              9970.2,
+              4207.5
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              9970.2,
+              4207.5
+            ],
+            "instance_id": "ROOF_SURFACE_S_00",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              8172.45,
+              5347.35
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              8172.45,
+              5347.35
+            ],
+            "instance_id": "ROOF_SURFACE_S_01",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          },
+          {
+            "actual_coordinate_mm": [
+              5846.35,
+              5686.2,
+              6441.3
+            ],
+            "expected_coordinate_mm": [
+              5846.35,
+              5686.2,
+              6441.3
+            ],
+            "instance_id": "ROOF_SURFACE_S_02",
+            "max_delta_mm": 0.0,
+            "status": "PASS",
+            "tolerance_mm": 0.01
+          }
+        ],
+        "parameter_ids": [
+          "FR-007",
+          "MOD-002",
+          "OUT-003",
+          "PM-003",
+          "PM-004",
+          "PM-005",
+          "ROOF-007",
+          "ROOF-008",
+          "ROOF-009",
+          "ROOF-010",
+          "ROOF-011",
+          "Z-006-RC-01"
+        ],
+        "realized_count": 6,
+        "rule_ids": [
+          "RULE-ROOF-ELEVATIONS",
+          "RULE-ROOF-OUTLINE"
+        ],
+        "semantic_marker_count": 0,
+        "status": "PASS"
+      }
+    },
+    "realized_count": 365,
+    "rule_id_coverage": [
+      "RULE-BRACKET-TOPOLOGY",
+      "RULE-COLUMN-GRID",
+      "RULE-FRAME-DEPTHS",
+      "RULE-FRAME-SEMANTICS",
+      "RULE-MAJOR-ELEVATIONS",
+      "RULE-ROOF-ELEVATIONS",
+      "RULE-ROOF-OUTLINE"
+    ],
+    "semantic_marker_count": 103,
+    "status": "PASS"
+  },
+  "status": "PASS",
+  "task": "T-018",
+  "version": "V001"
+}
