@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-09",
+  "scope": "REGISTRATION_METADATA_ONLY",
+  "files": [
+    {
+      "filename": "Wanfo_Approved_V002_Final_Delivery.zip",
+      "bytes": 1206355,
+      "sha256": "541b910f2cb285ef21500babbe12787f88f68aca40132d5e6ebd8615da9c61b3",
+      "classification": "APPROVED_V002_DELIVERY",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "WANFO_TWO_FRAMES_THREE_PURLINS_APPROVED_V002.blend",
+      "bytes": 208003,
+      "sha256": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+      "classification": "APPROVED_V002_DELIVERY",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "SAVE_REOPEN_V002_VALIDATION.json",
+      "bytes": 228883,
+      "sha256": "cbd2d32beaad631a44b068de7bba002144a489ee34ca04cff45b2f3d73a15d5d",
+      "classification": "APPROVED_V002_DELIVERY",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "Wanfo_Curved_Gong_Candidate_V002_Repro_Package.zip",
+      "bytes": 15354652,
+      "sha256": "7c14ded2162fddf8f787d65e1081ba6e326de4467aa17440ccd6a700efe514e9",
+      "classification": "APPROVED_V002_DELIVERY",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "Wanfo_Master_Section_Direction_Candidates_V002.zip",
+      "bytes": 538646,
+      "sha256": "735ab25debf5d57ab94120e5069a2b1ac3e0c3b74761605b0a657d930aa05ca1",
+      "classification": "CANDIDATE_OR_AUDIT / NOT_FORM_APPROVAL",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "Wanfo_Bay_Lower_Support_First_Article_V001.zip",
+      "bytes": 1288614,
+      "sha256": "ee9ebf214ce72ff7c9c1d334bb2f14205bd99955173095a800f143d79d377ca8",
+      "classification": "CANDIDATE_OR_AUDIT / NOT_FORM_APPROVAL",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "Wanfo_First_Article_Master_Reuse_Audit_V001_ZH.md",
+      "bytes": 10142,
+      "sha256": "fe6e8c7e4808ca4785bcde33baffc4ec4483d629f29cb78dfe89a2693768e1a7",
+      "classification": "CANDIDATE_OR_AUDIT / NOT_FORM_APPROVAL",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "Wanfo_Three_Masters_Additional_Source_Review_V001_ZH.md",
+      "bytes": 6088,
+      "sha256": "f4d9d4e4da7d96217f026639f7b609554fc0d88ceda68ab609ee8f747506124c",
+      "classification": "CANDIDATE_OR_AUDIT / NOT_FORM_APPROVAL",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "Wanfo_Upper6_Location_Mesh_Audit_V001_ZH.md",
+      "bytes": 5615,
+      "sha256": "81253cb5936950fcd4551bfd09abbac6d42e2ff0dac37a9ad5c1e3091171388e",
+      "classification": "CANDIDATE_OR_AUDIT / NOT_FORM_APPROVAL",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "Wanfo_Upper6_Location_Mesh_Audit_V001_ZH.png",
+      "bytes": 1551571,
+      "sha256": "a16eb03722717dca2ab064723b6c1e799a946f07c62d1d5b3579d21e9a4c35ef",
+      "classification": "CANDIDATE_OR_AUDIT / NOT_FORM_APPROVAL",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "Wanfo_Huagong_Linggong_Combined_Audit_V001_ZH.md",
+      "bytes": 9452,
+      "sha256": "b85e47b7190e8f85bd515532ad1dc34e95bedf41e5e7d26d692e9b427f0f4259",
+      "classification": "CANDIDATE_OR_AUDIT / NOT_FORM_APPROVAL",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "Wanfo_Huagong_Source_Mesh_Audit_V001_ZH.png",
+      "bytes": 797655,
+      "sha256": "acaf193f0e4cdff3b07a3eba5ef1dd222720c70fb4045448bf58296831179ca9",
+      "classification": "CANDIDATE_OR_AUDIT / NOT_FORM_APPROVAL",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    },
+    {
+      "filename": "Wanfo_Linggong_Source_Mesh_Audit_V001_ZH.png",
+      "bytes": 867579,
+      "sha256": "171016f6a2b60f99427c3a3f729bf25538ea42efe5f6f9cb552c524dcb7c3ec5",
+      "classification": "CANDIDATE_OR_AUDIT / NOT_FORM_APPROVAL",
+      "publication": "METADATA_ONLY / FULL_FILE_RETAINED_IN_DELIVERY"
+    }
+  ]
+}
