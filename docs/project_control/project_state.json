@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R362",
+  "state_revision": "R363",
   "last_updated": "2026-10-12",
   "session_status": "WORK_STOPPED / DAILY_CLOSE_PASS_WITH_KNOWN_EXCEPTIONS / EAST_LOCAL_APPROVALS_REGISTERED / FULL_UPPER6_PENDING / MAC_SYNC_PENDING",
   "phase": {
@@ -1074,10 +1074,10 @@
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R362 / DAILY_CLOSE / EAST_LOCAL_APPROVALS / FULL_UPPER6_PENDING / MAC_SYNC_PENDING",
+    "refresh_status": "R363 / DAILY_CLOSE / EAST_LOCAL_APPROVALS / FULL_UPPER6_PENDING / MAC_SYNC_PENDING",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard.",
     "visualization_snapshot": "v216",
-    "state_revision": "R362",
+    "state_revision": "R363",
     "current_summary": "2026-10-12整体收尾",
     "historical_section": "COLLAPSED / NOT_CURRENT"
   },
@@ -3526,10 +3526,12 @@
       "artifact_sha256": "dc2271f2cc1006d45e57f75c6daf6dd81e2c1672bdd6943ff94012e4548df671"
     },
     "delivery_location": "FINAL_DELIVERY_PACKAGE / EXACT_SHA256_BINDING",
-    "public_repository_payload": "REGISTRATION_METADATA_AND_VALIDATION_SUMMARY_ONLY",
+    "public_repository_payload": "REGISTRATION_METADATA_AND_EXACT_APPROVED_V002_BLEND",
     "registration_pr": 62,
     "record": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-09/curved_gong_v002/APPROVAL_BINDING.json",
-    "publication_commit": "cf5ff09f8c1190286f4833edc48e11b589969f50"
+    "publication_commit": "cf5ff09f8c1190286f4833edc48e11b589969f50",
+    "binary_archived_in_repo": true,
+    "binary_repository_path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-09/curved_gong_v002/WANFO_TWO_FRAMES_THREE_PURLINS_APPROVED_V002.blend"
   },
   "daily_close_2026_10_09": {
     "date": "2026-10-09",
