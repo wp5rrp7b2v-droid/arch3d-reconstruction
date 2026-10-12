@@ -1,0 +1,58 @@
+{
+  "status": "VERIFIED_REPAIRED_JOINT_WORK_SNAPSHOT / NOT_WHOLE_MODEL_APPROVAL",
+  "entity_count": 82,
+  "approved_entity_count": 76,
+  "pending_entity_count": 6,
+  "pending_ids": [
+    "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+    "trial:EAST_FRONT_ER_ANG_LOCAL",
+    "trial:EAST_FRONT_TOU_ANG_LOCAL",
+    "trial:EAST_FRONT_HUA2_LOCAL",
+    "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+    "trial:EAST_FRONT_LOWER6_END_SEGMENT"
+  ],
+  "approval_groups": {
+    "PO_APPROVED_BASE_V002": 59,
+    "PO_APPROVED_LOCAL_FORK_FIX": 4,
+    "PO_APPROVED_LOCAL_FRONT_NODE": 3,
+    "PO_APPROVED_LOCAL_REAR_NODE": 3,
+    "PENDING_PO_APPROVAL": 6,
+    "PO_APPROVED_V004_LOCAL_CORRECTION": 7
+  },
+  "filename": "WANFO_TWO_FRAMES_THREE_PURLINS_REPAIRED_WORK_V003.blend",
+  "bytes": 242265,
+  "sha256": "52bb4966e8c844aa1f62754e21c46ae3b414f96f3284208a12e5670f11e381bd",
+  "original_approved_v002_sha256": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+  "source_v004_sha256": "890c18079d014534154d6bc3ed692b88ba05d7815a438ed7a7e4a93d77dc8ded",
+  "source_geometry_sha256": "53932723d670ab76b3145fc935cb2370710aa12bf7870fb113f70159f1a51883",
+  "authorizations": [
+    "合入新的联合BLEND",
+    "2026-10-12T22:17:47+08:00 批准上传输入、脚本、工作流，运行验证后归档"
+  ],
+  "workflow_run_id": 38262322696,
+  "workflow_head_sha": "e26eb1aa7c54b39502cd7962a8d07e569e0f64d8",
+  "artifact_id": 11752992396,
+  "artifact_sha256": "3f3826c2e8e9e0b391835c76763eae27655c17f58f2042a425d32df5f23e85f7",
+  "validation": {
+    "blender_version": "4.5.13 LTS",
+    "saved_and_independently_reopened": true,
+    "unchanged_original59_mesh_and_transform_exact": true,
+    "all82_closed_positive_single_connected": true,
+    "entity_pairs": 3321,
+    "max_overlap_mm3": 0.7532755588978135,
+    "intersection_threshold_mm3": 1,
+    "registered_interfaces": 43,
+    "all_registered_interfaces_pass": true,
+    "max_coordinate_delta_mm": 5.158024578122422e-05,
+    "coordinate_tolerance_mm": 0.001,
+    "faces_preserved": true
+  },
+  "boundary": [
+    "76个对象沿用各自局部批准，不把全工作模型升级为全部批准",
+    "通长上六椽栿及其余5个柱头候选保留待审",
+    "完整铺作、完整外形、昂长、历史槽口及承载力未验证",
+    "无Master晋升，无505记录变更，无Stage3关闭"
+  ],
+  "failure_recovery": "初次运行已生成并重开BLEND，报告写出因numpy bool序列化失败；仅显式转为Python bool，几何和阈值未改；第二次云端运行全部通过",
+  "path": "production/zhenguo_wanfo/assembly/working_snapshots/2026-10-12/repaired_joint_v003/WANFO_TWO_FRAMES_THREE_PURLINS_REPAIRED_WORK_V003.blend"
+}

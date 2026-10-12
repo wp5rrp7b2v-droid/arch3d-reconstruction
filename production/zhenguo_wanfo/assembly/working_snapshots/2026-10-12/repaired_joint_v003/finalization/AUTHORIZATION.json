@@ -1,0 +1,5 @@
+{
+  "authorized_at": "2026-10-12T22:17:47+08:00",
+  "user_instruction": "批准",
+  "approved_scope": "Upload the two compressed geometry inputs, generation/validation scripts and task workflow to wp5rrp7b2v-droid/arch3d-reconstruction; run save/reopen and validations; archive new joint BLEND if PASS. Keep prior approvals and pending components distinct."
+}

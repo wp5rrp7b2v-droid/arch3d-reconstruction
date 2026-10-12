@@ -1,0 +1,364 @@
+{
+  "status": "PASS_LOCAL_REPAIRED_WORK_MODEL_WITH_PENDING_CANDIDATES",
+  "blender_version": "4.5.13 LTS",
+  "blend_sha256": "52bb4966e8c844aa1f62754e21c46ae3b414f96f3284208a12e5670f11e381bd",
+  "entity_count": 82,
+  "unchanged_original_count": 59,
+  "unchanged_original_local_mesh_and_transform_exact": true,
+  "max_coordinate_delta_mm": 5.158024578122422e-05,
+  "coordinate_tolerance_mm": 0.001,
+  "pair_count": 3321,
+  "max_overlap_mm3": 0.7532755588978135,
+  "intersection_threshold_mm3": 1,
+  "failed_pairs": [],
+  "contacts": [
+    {
+      "a": "east:CHASHOU_FRONT",
+      "b": "east:PINGLIANG",
+      "area_mm2": 37182.14758300781,
+      "source_area_mm2": 37182.146541804075,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "east:CHASHOU_FRONT",
+      "b": "east:RIDGE_SINGLE_GONG",
+      "area_mm2": 16866.5244140625,
+      "source_area_mm2": 16866.524322211742,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "east:CHASHOU_FRONT",
+      "b": "east:RIDGE_UPPER_DOU",
+      "area_mm2": 12786.894730325062,
+      "source_area_mm2": 12786.89451703123,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "east:CHASHOU_REAR",
+      "b": "east:PINGLIANG",
+      "area_mm2": 36687.406311035156,
+      "source_area_mm2": 36687.40658596158,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "east:CHASHOU_REAR",
+      "b": "east:RIDGE_SINGLE_GONG",
+      "area_mm2": 16719.68627929687,
+      "source_area_mm2": 16719.6871355921,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "east:CHASHOU_REAR",
+      "b": "east:RIDGE_UPPER_DOU",
+      "area_mm2": 12561.789605688013,
+      "source_area_mm2": 12561.789373207952,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "east:SHUZHU",
+      "b": "east:RIDGE_LOWER_DOU",
+      "area_mm2": 17500.0,
+      "source_area_mm2": 17500.0,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "east:RIDGE_LOWER_DOU",
+      "b": "east:RIDGE_SINGLE_GONG",
+      "area_mm2": 89933.78861999512,
+      "source_area_mm2": 89933.78854219615,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "east:RIDGE_SINGLE_GONG",
+      "b": "east:RIDGE_UPPER_DOU",
+      "area_mm2": 17500.0,
+      "source_area_mm2": 17500.0,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "east:RIDGE_UPPER_DOU",
+      "b": "east:RIDGE_TIEMU",
+      "area_mm2": 95200.00000000001,
+      "source_area_mm2": 95200.00000000001,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "b": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "area_mm2": 44949.99999999976,
+      "source_area_mm2": 44949.99999999976,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "b": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "area_mm2": 13005.000000000002,
+      "source_area_mm2": 13005.000000000002,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "area_mm2": 88394.99999999999,
+      "source_area_mm2": 88395.0,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_SANDOU",
+      "area_mm2": 16800.0,
+      "source_area_mm2": 16800.0,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "east:FOUR_BEAM",
+      "area_mm2": 73700.0,
+      "source_area_mm2": 73700.0,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "b": "trial:EAST_REAR_SPACER_DEPTH_LINGGONG",
+      "area_mm2": 46110.0,
+      "source_area_mm2": 46110.0,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "b": "trial:EAST_REAR_SPACER_LONGITUDINAL_LINGGONG",
+      "area_mm2": 12474.0,
+      "source_area_mm2": 12474.0,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_REAR_SPACER_DEPTH_LINGGONG",
+      "b": "trial:EAST_REAR_SPACER_LONGITUDINAL_LINGGONG",
+      "area_mm2": 91453.0,
+      "source_area_mm2": 91453.0,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_REAR_SPACER_LONGITUDINAL_LINGGONG",
+      "b": "trial:EAST_REAR_SANDOU",
+      "area_mm2": 16800.0,
+      "source_area_mm2": 16800.0,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_REAR_SANDOU",
+      "b": "east:FOUR_BEAM",
+      "area_mm2": 73699.99999999999,
+      "source_area_mm2": 73699.99999999999,
+      "downward_mm2": null,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "b": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "area_mm2": 34179.08935546875,
+      "source_area_mm2": 34179.08703855954,
+      "downward_mm2": 34179.08935546875,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "area_mm2": 30323.20815337071,
+      "source_area_mm2": 30323.204672843174,
+      "downward_mm2": 27685.353460836624,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_HUA2_LOCAL",
+      "area_mm2": 17469.72679080419,
+      "source_area_mm2": 17469.73116111025,
+      "downward_mm2": 14043.501066918187,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "area_mm2": 15976.379738989719,
+      "source_area_mm2": 15976.377515206234,
+      "downward_mm2": 8709.193954467773,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "area_mm2": 1315.8009338378902,
+      "source_area_mm2": 1315.8000000000554,
+      "downward_mm2": 1315.8009338378897,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA1_LOCAL",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "area_mm2": 24752.95147705078,
+      "source_area_mm2": 24752.95199914276,
+      "downward_mm2": 24752.95147705078,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "b": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "area_mm2": 99929.05186462404,
+      "source_area_mm2": 99929.05000000012,
+      "downward_mm2": 99929.05186462404,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "area_mm2": 88197.3409947753,
+      "source_area_mm2": 88197.3407552817,
+      "downward_mm2": 23944.5,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "area_mm2": 27737.241206726037,
+      "source_area_mm2": 27737.24176748201,
+      "downward_mm2": 27616.92745608052,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "b": "trial:EAST_FRONT_HUA2_LOCAL",
+      "area_mm2": 114391.97587147998,
+      "source_area_mm2": 114391.98000092327,
+      "downward_mm2": 24005.699066162106,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "area_mm2": 46619.54150325938,
+      "source_area_mm2": 46619.54154945865,
+      "downward_mm2": 35316.55201666522,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "area_mm2": 54357.13734096287,
+      "source_area_mm2": 54357.14193300132,
+      "downward_mm2": 36991.94792878482,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "area_mm2": 54357.13734096288,
+      "source_area_mm2": 54357.1419330013,
+      "downward_mm2": 36991.94792878483,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU_LEFT",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "area_mm2": 27622.25,
+      "source_area_mm2": 27622.250000000004,
+      "downward_mm2": 27622.25,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "area_mm2": 27622.25,
+      "source_area_mm2": 27622.249999999996,
+      "downward_mm2": 27622.25,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "b": "trial:EAST_FRONT_HUA2_LOCAL",
+      "area_mm2": 187130.49029159546,
+      "source_area_mm2": 187130.48834901903,
+      "downward_mm2": 187130.49029159546,
+      "pass": true
+    },
+    {
+      "a": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "area_mm2": 70291.197265625,
+      "source_area_mm2": 70291.19999999984,
+      "downward_mm2": 70291.197265625,
+      "pass": true
+    },
+    {
+      "a": "UPPER_PURLIN_FRONT",
+      "b": "east:TIEMU_FRONT",
+      "area_mm2": 241153.0639487737,
+      "source_area_mm2": 241153.0639487737,
+      "downward_mm2": 224997.5758798625,
+      "pass": true
+    },
+    {
+      "a": "UPPER_PURLIN_FRONT",
+      "b": "west:TIEMU_FRONT",
+      "area_mm2": 239462.66795821965,
+      "source_area_mm2": 239462.66795821965,
+      "downward_mm2": 225037.74176810225,
+      "pass": true
+    },
+    {
+      "a": "UPPER_PURLIN_REAR",
+      "b": "east:TIEMU_REAR",
+      "area_mm2": 241153.0639487737,
+      "source_area_mm2": 241153.0639487737,
+      "downward_mm2": 224997.5758798625,
+      "pass": true
+    },
+    {
+      "a": "UPPER_PURLIN_REAR",
+      "b": "west:TIEMU_REAR",
+      "area_mm2": 239462.66795821965,
+      "source_area_mm2": 239462.66795821965,
+      "downward_mm2": 225037.74176810225,
+      "pass": true
+    },
+    {
+      "a": "RIDGE_PURLIN",
+      "b": "east:RIDGE_TIEMU",
+      "area_mm2": 270749.88712494046,
+      "source_area_mm2": 270749.88712494046,
+      "downward_mm2": 257172.67790497578,
+      "pass": true
+    },
+    {
+      "a": "RIDGE_PURLIN",
+      "b": "west:RIDGE_TIEMU",
+      "area_mm2": 268205.2483095874,
+      "source_area_mm2": 268205.2483095874,
+      "downward_mm2": 256523.16618019732,
+      "pass": true
+    }
+  ],
+  "approved_and_pending_separate": true,
+  "whole_model_approved": false,
+  "strength": "NOT_TESTED",
+  "historic_joinery": "NOT_PROVEN"
+}
