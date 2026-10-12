@@ -1,0 +1,39 @@
+{
+  "record_type": "PO_APPROVAL_BINDING",
+  "approved_at_user_message": "2026-10-12T21:30:24+08:00",
+  "approval_text": "批准",
+  "status": "PO_APPROVED_LOCAL_CANDIDATE_CORRECTION",
+  "candidate": "EAST_FRONT_COLUMN_HEAD_OVERALL_REVIEW_V004",
+  "model_filename": "WANFO_EAST_FRONT_COLUMN_HEAD_REVIEW_CORRECTION_V004.glb",
+  "model_library_file_id": "libfile_aaf0f6a195a48191af779ed8779aff1d",
+  "model_sha256": "890c18079d014534154d6bc3ed692b88ba05d7815a438ed7a7e4a93d77dc8ded",
+  "model_bytes": 254980,
+  "review_image_library_file_id": "libfile_f3f79bbe1e6481919027d8ccd261d7bd",
+  "report_library_file_id": "libfile_8b85288ffe588191a5a9ff22aa9f5b57",
+  "verification_library_file_id": "libfile_584585a3e88081918a329f50a412ea06",
+  "approved_scope": "一端局部V004字段解读纠正及7个未批准候选修正；两跳华栱上皮间距310.8mm",
+  "validation": {
+    "entities": 82,
+    "pairs": 3321,
+    "interfaces": 17,
+    "maximum_overlap_mm3": 0.27047662058865585,
+    "original70_source_geometry_unchanged": true
+  },
+  "working_hypothesis": "交互斗余耳51.9mm为总高148.5减平高35.5减欹高61.1的均值差推算，候选槽深尚未实测",
+  "not_approved_or_proven": [
+    "历史真实槽口",
+    "完整外形",
+    "完整昂长",
+    "整套铺作",
+    "承载力",
+    "另一端复制",
+    "整殿扩展"
+  ],
+  "preserved": "此前叉手局部批准和其他既有批准模型保持；不覆盖Master",
+  "github_publication_status": "NOT_PUBLISHED_IN_THIS_APPROVAL_RECORD",
+  "next_proposed_unit": "核对斗体外轮廓及梁—昂接入形态，与本建筑照片或节点图比对；尚未启动",
+  "decision_id": "D-291",
+  "registration_status": "CANONICAL_METADATA_REGISTRATION",
+  "registration_date": "2026-10-12",
+  "historical_internal_publication_labels": "Original NOT_PUBLISHED labels record pre-registration status; exact binaries unchanged."
+}

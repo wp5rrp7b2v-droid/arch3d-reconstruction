@@ -1,0 +1,62 @@
+{
+  "status": "PO_APPROVED_LOCAL_RECONSTRUCTED_DESIGN",
+  "approval_at": "2026-10-12T10:01:47+08:00",
+  "user_instruction": "批准",
+  "scope": "东前隔架局部候选V002：上六椽栿诊断片段、两栱造型、交叉半搭方式及散斗形态；连同原批准63实体保持的67实体GLB工作版本",
+  "classification": "EVIDENCE_CONSTRAINED_RECONSTRUCTED_DESIGN",
+  "artifacts": [
+    {
+      "filename": "WANFO_EAST_FRONT_NODE_RECONSTRUCTED_CANDIDATE_V002.glb",
+      "bytes": 223972,
+      "sha256": "9aaf7d4312d88ccb4027cdbe4e4dd463b2aba2b84c266fa525867671854b8251"
+    },
+    {
+      "filename": "Wanfo_East_Front_Node_Candidate_V002_Review_ZH.png",
+      "bytes": 505133,
+      "sha256": "c7dc21db61f3b296a8c10ba84f8df7d03540d17948a9f281c9711214efc32194"
+    },
+    {
+      "filename": "CANDIDATE_GEOMETRY.json",
+      "bytes": 732195,
+      "sha256": "a64595743c4334ebfa7fc951062d9f3de4bd2e98b94d03e5f8ad6c25b7a06e09"
+    },
+    {
+      "filename": "CANDIDATE_VALIDATION.json",
+      "bytes": 22468,
+      "sha256": "b521e3c2ff7df4e7914bbf05d013d0fe72a4fef86bcd36e6f548da45b7f9da84"
+    }
+  ],
+  "entity_count": 67,
+  "baseline_entities_retained": 63,
+  "changed_since_prior_candidate": "上六椽栿片段东缝截面高335/最厚240mm；其他66实体网格保持",
+  "checks": {
+    "five_positive_contact_areas_mm2": [
+      44950.0,
+      13005.0,
+      23715.0,
+      16800.0,
+      64900.0
+    ],
+    "changed_body_pairs_no_positive_intersection": 66,
+    "glb_reopen_max_delta_mm": 0.00011825561557543551,
+    "faces_match": true
+  },
+  "boundaries": [
+    "上六椽栿仍是1800mm诊断片段，不是完整梁",
+    "端部、半搭槽、散斗尺寸与节点位置为可替换复原设计",
+    "图纸前后侧与实物位置唯一对应仍未独立证实",
+    "新V002未执行Blender保存重开；承载力及精确历史榫卯未验证",
+    "不晋升Master、不改变505实例统计、不关闭Stage3"
+  ],
+  "github_publication": "NOT_PUBLISHED / THIS_APPROVAL_BINDING_IS_DELIVERY_RECORD",
+  "next_unit": "东后对应节点：复用造型规则、采用东后实测尺寸、五接口及新增几何检查；PROPOSED_NOT_STARTED",
+  "library_identities": {
+    "glb": "libfile_2e856601bb008191ab09f46c1f07717a",
+    "review_image": "libfile_a17915cdce5c81918a861f1384689cd2",
+    "delivery": "libfile_e5485f1cf7188191ba7f61f9cb8e3e4d"
+  },
+  "decision_id": "D-288",
+  "registration_status": "CANONICAL_METADATA_REGISTRATION",
+  "registration_date": "2026-10-12",
+  "historical_internal_publication_labels": "Original NOT_PUBLISHED labels record pre-registration status; exact binaries unchanged."
+}

@@ -1,0 +1,68 @@
+{
+  "status": "PO_APPROVED_EAST_REAR_LOCAL_RECONSTRUCTED_DESIGN",
+  "approval_at": "2026-10-12T10:27:58+08:00",
+  "user_instruction": "批准",
+  "scope": "东后节点V001：新增4实体的造型、镜像端部、单件尺寸适配、交叉半搭及散斗承托设计；包含保留67实体的71实体GLB工作版本",
+  "classification": "EVIDENCE_CONSTRAINED_RECONSTRUCTED_DESIGN",
+  "artifacts": [
+    {
+      "filename": "WANFO_EAST_FRONT_REAR_NODES_CANDIDATE_V001.glb",
+      "bytes": 235760,
+      "sha256": "b3701e721e55e7aec0b1bd2fb4f802fb1973878a1792c369131ef5cf3b6efdd9"
+    },
+    {
+      "filename": "Wanfo_East_Rear_Node_Candidate_V001_Review_ZH.png",
+      "bytes": 456235,
+      "sha256": "b1a38c7c4d0858e3bfbf9c887bb0405c865c06436b168e3e6f9af6089b4f43a5"
+    },
+    {
+      "filename": "CANDIDATE_GEOMETRY.json",
+      "bytes": 751698,
+      "sha256": "16bc0f80bf2d807838f20571f419f81e5ebec6913369defa6500e2cde96cdbbf"
+    },
+    {
+      "filename": "CANDIDATE_VALIDATION.json",
+      "bytes": 37706,
+      "sha256": "95b0a9f8a85d6909c52cd51bb09c514e62e767119d635acff505fc2a23952251"
+    }
+  ],
+  "entity_count": 71,
+  "retained_approved_entities": 67,
+  "newly_approved_entities": 4,
+  "validation": {
+    "affected_pairs_checked": 274,
+    "max_new_intersection_mm3": 0.0,
+    "five_interface_areas_mm2": [
+      46110.0,
+      12474.0,
+      24486.0,
+      16800.0,
+      64900.0
+    ],
+    "glb_reopen_entities": 71,
+    "glb_max_delta_mm": 0.00011825561557543551,
+    "faces_exact_match": true
+  },
+  "boundaries": [
+    "东前、东后上六椽栿均为诊断片段，完整梁尚未生成；不得计作两根历史梁",
+    "造型规则复用与单件实测尺寸分别表达；顺身栱900mm长为设计值",
+    "端部、半搭槽、散斗参数和节点位置为可替换复原设计",
+    "没有新Blender保存重开或承载验证，不认定精确历史榫卯",
+    "不晋升Master、不改变505实例统计、不关闭Stage3"
+  ],
+  "canonical_github_registration": "NOT_PUBLISHED / DELIVERY_APPROVAL_RECORD_ONLY",
+  "next_unit": {
+    "name": "完整东缝上六椽栿贯通候选",
+    "status": "PROPOSED_NOT_STARTED",
+    "acceptance": "单根梁实体；两端已批准节点接口保持；保留构件不被静默修改；相关交叠和GLB重读通过"
+  },
+  "library_identities": {
+    "glb": "libfile_44122533124c819185b6065a3312a26d",
+    "review_image": "libfile_dc81f17782148191bf8ff41952f00543",
+    "delivery": "libfile_dd357794cf7c8191a90f41d672ba2ec4"
+  },
+  "decision_id": "D-289",
+  "registration_status": "CANONICAL_METADATA_REGISTRATION",
+  "registration_date": "2026-10-12",
+  "historical_internal_publication_labels": "Original NOT_PUBLISHED labels record pre-registration status; exact binaries unchanged."
+}

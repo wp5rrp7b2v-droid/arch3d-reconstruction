@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R361",
-  "last_updated": "2026-10-09",
-  "session_status": "WORK_STOPPED / DAILY_CLOSE_PASS_WITH_KNOWN_EXCEPTIONS / V002_BLEND_FINALIZED / THREE_MEMBER_FORM_REVIEW_PENDING / MAC_SYNC_PENDING",
+  "state_revision": "R362",
+  "last_updated": "2026-10-12",
+  "session_status": "WORK_STOPPED / DAILY_CLOSE_PASS_WITH_KNOWN_EXCEPTIONS / EAST_LOCAL_APPROVALS_REGISTERED / FULL_UPPER6_PENDING / MAC_SYNC_PENDING",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -63,19 +63,20 @@
   },
   "current_task": {
     "id": null,
-    "name": "2026-10-09整体收尾、登记与同步",
+    "name": "2026-10-12整体收尾、批准登记与同步",
     "status": "ENGINEERING_STOPPED / PROJECT_CONTROL_CLOSEOUT"
   },
   "proposed_next_task": {
     "id": null,
-    "name": "上六椽栿与隔架两栱同位置、同视角、同尺度原图—网格核对",
-    "status": "PROPOSED / NOT_STARTED / FORM_NOT_APPROVED"
+    "name": "斗体外轮廓及梁—昂接入形态的同建筑原图核对",
+    "status": "PROPOSED / NOT_STARTED",
+    "acceptance": "可见形态与本建筑照片或节点图相符；不能辨认部分保留明确可替换假设；不凭几何PASS复制后端"
   },
   "last_completed_task": {
     "id": null,
-    "name": "已批准V002 BLEND固化与最终交付登记",
-    "status": "PASS / D-286 / PR62 MERGED / cf5ff09",
-    "record": "docs/project_control/V002_FINAL_DELIVERY_CLOSEOUT_2026_10_09.md"
+    "name": "东缝一端柱头铺作V004局部候选修正批准及读回验证",
+    "status": "PO_APPROVED_LOCAL_CANDIDATE_CORRECTION / GEOMETRY_PASS",
+    "record": "docs/assembly/daily_close/2026-10-12/DAILY_CLOSEOUT_ZH.md"
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -1005,9 +1006,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-287",
-    "date": "2026-10-09",
-    "decision": "PO要求今日停止工程，整体收尾、登记与同步；本次仅登记已完成工作、纠正状态镜像及登记未决项，不批准候选外形。"
+    "id": "D-292",
+    "date": "2026-10-12",
+    "decision": "PO要求停止今日工程，完成收尾登记和本地同步准备；不授权新工程单元。"
   },
   "latest_material_review": {
     "date": "2026-10-09",
@@ -1069,15 +1070,15 @@
   "next_action": "今日工程停止。收尾发布后一次性同步Mac main并回报HEAD及工作区状态；下次从上六椽栿、隔架进深构件与顺身令栱的对象身份、外轮廓和接口图形核对继续，不自动晋升Master或扩建。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v215",
+    "visualization_version": "v216",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R361 / DAILY_CLOSE / V002_BLEND_FINALIZED / FULL_FORM_NOT_ESTABLISHED / MAC_SYNC_PENDING",
+    "refresh_status": "R362 / DAILY_CLOSE / EAST_LOCAL_APPROVALS / FULL_UPPER6_PENDING / MAC_SYNC_PENDING",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard.",
-    "visualization_snapshot": "v215",
-    "state_revision": "R361",
-    "current_summary": "2026-10-09整体收尾",
+    "visualization_snapshot": "v216",
+    "state_revision": "R362",
+    "current_summary": "2026-10-12整体收尾",
     "historical_section": "COLLAPSED / NOT_CURRENT"
   },
   "superseded_prs": [
@@ -1916,11 +1917,11 @@
     "next_stage1_action": "子角梁 D-076 Visual/Form Gate"
   },
   "daily_close": {
-    "date": "2026-10-09",
+    "date": "2026-10-12",
     "timezone": "Asia/Shanghai",
-    "authorization": "好吧，今天先到这边，开始今天工作的整体收尾、登记和同步任务",
+    "authorization": "今天就到这边，开始今天的收尾登记和本地同步工作",
     "status": "PASS_WITH_KNOWN_EXCEPTIONS",
-    "audited_main_commit": "cf5ff09f8c1190286f4833edc48e11b589969f50",
+    "audited_main_commit": "20fb7468ddc41375d20866e7a6939f2b7fa31be3",
     "checked_files": [
       "project_state.json",
       "decision_log.md",
@@ -1931,7 +1932,7 @@
       "dashboard.html"
     ],
     "phase_archive": "NOT_APPLICABLE / no phase closed",
-    "record": "docs/assembly/daily_close/2026-10-09/DAILY_CLOSEOUT_ZH.md",
+    "record": "docs/assembly/daily_close/2026-10-12/DAILY_CLOSEOUT_ZH.md",
     "models_modified": false,
     "masters_modified": false,
     "governance_modified": false,
@@ -1941,41 +1942,49 @@
       {
         "id": "LOCAL_MAC_SYNC",
         "status": "PENDING / NOT_EXECUTED",
-        "detail": "当前环境无法执行用户Mac终端操作；最后已验证检查点f30767e，不能宣称同步到收尾提交。"
+        "detail": "需用户Mac终端执行并回报HEAD和工作区；云端发布不等于本地完成。"
       },
       {
-        "id": "THREE_MEMBER_FORM",
-        "status": "NOT_ESTABLISHED / CANDIDATES_ONLY",
-        "detail": "上六椽栿、华栱、令栱完整外形与接口尚未获逐处图形证明；截面方向候选和67实体试装未批准。"
+        "id": "FULL_UPPER6",
+        "status": "CANDIDATE_PENDING",
+        "detail": "10710mm通长上六椽栿仍待独立批准；被后续候选包含不等于批准。"
+      },
+      {
+        "id": "LOCAL_FORM_AND_JOINERY",
+        "status": "NOT_HISTORICALLY_PROVEN",
+        "detail": "完整轮廓、昂长、精确跳距、槽口、隐蔽榫卯和承载力未证实；V004余耳51.9mm及槽深仍属工作假设。"
       },
       {
         "id": "SOURCE_COVERAGE",
         "status": "PARTIAL_GRAPHICAL_REVIEW",
-        "detail": "A1关键页与A2相关部分补查；A3原始图像、官方GIF逐帧和营造法式本轮未完成图形审查。"
-      },
-      {
-        "id": "LEGACY_DASHBOARD",
-        "status": "HISTORICAL_SECTION_RETAINED",
-        "detail": "旧统计与旧派生生成器未整体重构；当前摘要取R361，下方折叠内容显式历史。"
+        "detail": "今日资料核对引用已交付报告；本次收尾未重新查阅A1/A2/A3原文，不声称独立来源复核。"
       },
       {
         "id": "EXISTING_CI",
         "status": "PREEXISTING_ASSERTION",
-        "detail": "PR62记录T-039旧merge_authorized=False断言与main既有True矛盾；收尾不改变该字段，不宣称全部CI通过。"
+        "detail": "继承D-287记录的T-039历史CI断言问题；本次不修改旧工程断言。"
       }
-    ],
-    "next_action": "今日工程停止。收尾发布后一次性同步Mac main并回报HEAD及工作区状态；下次从上六椽栿、隔架进深构件与顺身令栱的对象身份、外轮廓和接口图形核对继续，不自动晋升Master或扩建。",
-    "completed_today": [
-      "V002 BLEND固化及PR62正式登记",
-      "三Master截面方向候选检查（未批准）",
-      "67实体下部支承试装（未批准）",
-      "已登记来源补查与上六椽栿、华栱、令栱实际网格核对"
     ],
     "local_sync": {
       "status": "PENDING_MAC_EXECUTION / NOT_VERIFIED"
     },
     "registry_records": 505,
-    "approved_master_count": 25
+    "approved_master_count": 25,
+    "completed_today": [
+      "三构件原图—网格有界核对",
+      "东前V002与东后V001局部设计批准",
+      "通长上六椽栿候选生成（仍待审）",
+      "叉手脚端与脊部局部修正批准",
+      "柱头承托V001失败、V002/V003候选及V004字段纠正",
+      "V004独立GLB读回复核及局部修正批准"
+    ],
+    "next_action": "先核验本地同步；下次续做斗体外轮廓及梁—昂接入形态核对，不自动扩建或复制后端。",
+    "publication_status": "AUTHORIZED_CANONICAL_METADATA_PUBLICATION",
+    "publication_authorization": {
+      "authorized_at": "2026-10-12T21:39:57+08:00",
+      "instruction": "批准：将包中的收尾登记、Project Control、Dashboard及哈希／验证摘要发布到 wp5rrp7b2v-droid/arch3d-reconstruction",
+      "scope": "registration,Project Control,Dashboard,hashes and validation summaries only; no full model binaries"
+    }
   },
   "lane_stage1": {
     "status": "SPEC_V001_LOCKED",
@@ -3454,7 +3463,7 @@
           "PURLINS_3": 3,
           "RECONSTRUCTED_SEATS_6": 6
         },
-        "max_coordinate_difference_mm": 0.000015251338481903076,
+        "max_coordinate_difference_mm": 1.5251338481903076e-05,
         "coordinate_tolerance_mm": 0.001,
         "entity_pairs_checked": 1953,
         "max_pair_overlap_mm3": 0.27047655402566306,
@@ -3617,5 +3626,95 @@
     },
     "section_direction_candidate": "3 Masters / 4 reference bodies / REOPEN_PASS / NOT_APPROVED",
     "lower_support_trial": "67 entities / NOT_APPROVED / NOT_FORMAL_INSTANCE_BINDING"
+  },
+  "east_local_approvals_2026_10_12": {
+    "status": "PO_APPROVED_BOUNDED_LOCAL_DESIGNS / CANONICAL_METADATA_REGISTRATION",
+    "records": {
+      "EAST_FRONT_V002": "docs/assembly/daily_close/2026-10-12/EAST_FRONT_V002_APPROVAL_BINDING.json",
+      "EAST_REAR_V001": "docs/assembly/daily_close/2026-10-12/EAST_REAR_V001_APPROVAL_BINDING.json",
+      "EAST_FORK_FOOT_FIX_V001": "docs/assembly/daily_close/2026-10-12/EAST_FORK_FOOT_FIX_V001_APPROVAL_BINDING.json",
+      "EAST_FRONT_COLUMN_HEAD_V004": "docs/assembly/daily_close/2026-10-12/EAST_FRONT_COLUMN_HEAD_V004_APPROVAL_BINDING.json"
+    },
+    "full_upper6": "CANDIDATE_PENDING / NO_STANDALONE_APPROVAL",
+    "v004_contains_upper6": "Approval limited to 7 corrected local candidates; embedded full upper6 remains separately pending",
+    "models_promoted_to_master": false,
+    "formal_stage3_closed": false,
+    "physical_registry_count_changed": false
+  },
+  "daily_close_2026_10_12": {
+    "date": "2026-10-12",
+    "timezone": "Asia/Shanghai",
+    "authorization": "今天就到这边，开始今天的收尾登记和本地同步工作",
+    "status": "PASS_WITH_KNOWN_EXCEPTIONS",
+    "audited_main_commit": "20fb7468ddc41375d20866e7a6939f2b7fa31be3",
+    "checked_files": [
+      "project_state.json",
+      "decision_log.md",
+      "execution_log.md",
+      "acceptance_matrix.md",
+      "governance.md",
+      "rules_change_log.md",
+      "dashboard.html"
+    ],
+    "phase_archive": "NOT_APPLICABLE / no phase closed",
+    "record": "docs/assembly/daily_close/2026-10-12/DAILY_CLOSEOUT_ZH.md",
+    "models_modified": false,
+    "masters_modified": false,
+    "governance_modified": false,
+    "rules_changed": false,
+    "new_engineering_started": false,
+    "known_exceptions": [
+      {
+        "id": "LOCAL_MAC_SYNC",
+        "status": "PENDING / NOT_EXECUTED",
+        "detail": "需用户Mac终端执行并回报HEAD和工作区；云端发布不等于本地完成。"
+      },
+      {
+        "id": "FULL_UPPER6",
+        "status": "CANDIDATE_PENDING",
+        "detail": "10710mm通长上六椽栿仍待独立批准；被后续候选包含不等于批准。"
+      },
+      {
+        "id": "LOCAL_FORM_AND_JOINERY",
+        "status": "NOT_HISTORICALLY_PROVEN",
+        "detail": "完整轮廓、昂长、精确跳距、槽口、隐蔽榫卯和承载力未证实；V004余耳51.9mm及槽深仍属工作假设。"
+      },
+      {
+        "id": "SOURCE_COVERAGE",
+        "status": "PARTIAL_GRAPHICAL_REVIEW",
+        "detail": "今日资料核对引用已交付报告；本次收尾未重新查阅A1/A2/A3原文，不声称独立来源复核。"
+      },
+      {
+        "id": "EXISTING_CI",
+        "status": "PREEXISTING_ASSERTION",
+        "detail": "继承D-287记录的T-039历史CI断言问题；本次不修改旧工程断言。"
+      }
+    ],
+    "local_sync": {
+      "status": "PENDING_MAC_EXECUTION / NOT_VERIFIED"
+    },
+    "registry_records": 505,
+    "approved_master_count": 25,
+    "completed_today": [
+      "三构件原图—网格有界核对",
+      "东前V002与东后V001局部设计批准",
+      "通长上六椽栿候选生成（仍待审）",
+      "叉手脚端与脊部局部修正批准",
+      "柱头承托V001失败、V002/V003候选及V004字段纠正",
+      "V004独立GLB读回复核及局部修正批准"
+    ],
+    "next_action": "先核验本地同步；下次续做斗体外轮廓及梁—昂接入形态核对，不自动扩建或复制后端。",
+    "publication_status": "AUTHORIZED_CANONICAL_METADATA_PUBLICATION",
+    "publication_authorization": {
+      "authorized_at": "2026-10-12T21:39:57+08:00",
+      "instruction": "批准：将包中的收尾登记、Project Control、Dashboard及哈希／验证摘要发布到 wp5rrp7b2v-droid/arch3d-reconstruction",
+      "scope": "registration,Project Control,Dashboard,hashes and validation summaries only; no full model binaries"
+    }
+  },
+  "local_sync_2026_10_12": {
+    "status": "PENDING_MAC_EXECUTION / NOT_VERIFIED",
+    "scope": "main登记与Project Control快进同步；完整交付二进制由今日交付包另行下载",
+    "last_verified_checkpoint": "f30767e479f61bc6d2d0e3f440f692971f658dba",
+    "current_main_sync_claim": false
   }
 }
