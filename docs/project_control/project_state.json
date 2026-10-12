@@ -3,7 +3,7 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R364",
+  "state_revision": "R365",
   "last_updated": "2026-10-12",
   "session_status": "WORK_STOPPED / REPAIRED_JOINT_V003_BLEND_SAVE_REOPEN_PASS / MIXED_APPROVAL_WORK_SNAPSHOT / MAC_FINAL_PULL_PENDING",
   "phase": {
@@ -1006,9 +1006,9 @@
     "building_hard_fail": "REFERENCE_LENGTH_LEAKS_INTO_BUILDING"
   },
   "latest_material_decision": {
-    "id": "D-293",
+    "id": "D-294",
     "date": "2026-10-12",
-    "decision": "PO授权合入新联合BLEND，并明确批准上传两份网格输入、生成验证脚本及工作流；验证通过后归档工作快照，原局部批准和待审范围保持。"
+    "decision": "本项目脚本化Blender直接采用GitHub Actions；不在会话环境或Mac尝试下载/安装Blender。云端既有工作流内部固定版本依赖准备保留。"
   },
   "latest_material_review": {
     "date": "2026-10-09",
@@ -1070,14 +1070,14 @@
   "next_action": "今日工程停止。收尾发布后一次性同步Mac main并回报HEAD及工作区状态；下次从上六椽栿、隔架进深构件与顺身令栱的对象身份、外轮廓和接口图形核对继续，不自动晋升Master或扩建。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v217",
+    "visualization_version": "v218",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "R364 / REPAIRED_JOINT_V003_BLEND_PASS / 6_PENDING_CANDIDATES / MAC_SYNC_PENDING",
+    "refresh_status": "R365 / RC025_ACTIONS_DIRECT / MODEL_V003_UNCHANGED / MAC_RULE_SYNC_PENDING",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard.",
-    "visualization_snapshot": "v217",
-    "state_revision": "R364",
+    "visualization_snapshot": "v218",
+    "state_revision": "R365",
     "current_summary": "2026-10-12整体收尾",
     "historical_section": "COLLAPSED / NOT_CURRENT"
   },
@@ -3893,5 +3893,15 @@
     ],
     "failure_recovery": "初次运行已生成并重开BLEND，报告写出因numpy bool序列化失败；仅显式转为Python bool，几何和阈值未改；第二次云端运行全部通过",
     "path": "production/zhenguo_wanfo/assembly/working_snapshots/2026-10-12/repaired_joint_v003/WANFO_TWO_FRAMES_THREE_PURLINS_REPAIRED_WORK_V003.blend"
+  },
+  "blender_execution_policy": {
+    "rule_id": "RC-025",
+    "decision_id": "D-294",
+    "status": "ACTIVE",
+    "executor": "GITHUB_ACTIONS_HEADLESS_DIRECT",
+    "local_runtime_download_or_install": "DO_NOT_ATTEMPT",
+    "cloud_workflow_internal_runtime_setup": "ALLOWED_EXISTING_APPROVED_VERSION",
+    "local_existing_blender_manual_review": "RETAINED",
+    "rule_source": "docs/project_control/governance.md#416-github-actions-only-for-scripted-blender脚本化blender直接云端执行"
   }
 }

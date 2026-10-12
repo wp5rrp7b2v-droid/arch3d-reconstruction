@@ -508,3 +508,8 @@ PO要求“合入新的联合BLEND”，并于22:17:47明确批准上传两份�
 Blender4.5.13云端独立保存重开通过；3321对最大交叠0.753275558898mm³≤1mm³；43登记接口通过；源坐标最大差0.000051580246mm<0.001mm，面索引保持。编码原点调整不改源几何、尺寸或设计；原V002不覆盖。运行38262322696 / Artifact11752992396。首轮仅报告numpy bool JSON序列化错误，显式bool转换后第二轮全部通过。
 
 R364/v217；无Master晋升、无505记录变化、无Stage3关闭、历史榫卯与承载力未认证。Mac已核验至PR66/757eda4，V003归档后仍需补拉。详见production/zhenguo_wanfo/assembly/working_snapshots/2026-10-12/repaired_joint_v003/WORK_SNAPSHOT_BINDING.json。
+
+
+## D-294｜2026-10-12｜Blender直接云端执行
+
+PO于2026-10-12 22:34:46（Asia/Shanghai）明确要求本项目之后直接采用GitHub Actions云端Blender，不再尝试下载。锁定RC-025：不在Work/Codex会话执行环境或用户Mac下载/安装Blender作为前置或备用路径；已批准云端工作流内部运行依赖准备保留。既有Mac程序人工查看、本地Git同步继续允许。云端阻塞时按RC-022立即披露，不自动回退本地安装。规则适用于后续已授权脚本化生成、保存、重开及验证，不新增工程授权，不改变模型批准、版本或验证标准。Governance 4.16、Rules Change Log同步；R364模型状态保持。
