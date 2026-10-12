@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "checked_files": 24,
+  "checks": [
+    {
+      "file": "Wanfo_East_Front_Node_Candidate_V002_Delivery/WANFO_EAST_FRONT_NODE_RECONSTRUCTED_CANDIDATE_V002.glb",
+      "pass": true
+    },
+    {
+      "file": "Wanfo_East_Front_Node_Candidate_V002_Delivery/Wanfo_East_Front_Node_Candidate_V002_Review_ZH.png",
+      "pass": true
+    },
+    {
+      "file": "Wanfo_East_Front_Node_Candidate_V002_Delivery/CANDIDATE_GEOMETRY.json",
+      "pass": true
+    },
+    {
+      "file": "Wanfo_East_Front_Node_Candidate_V002_Delivery/CANDIDATE_VALIDATION.json",
+      "pass": true
+    },
+    {
+      "file": "Wanfo_East_Rear_Node_Candidate_V001_Delivery/WANFO_EAST_FRONT_REAR_NODES_CANDIDATE_V001.glb",
+      "pass": true
+    },
+    {
+      "file": "Wanfo_East_Rear_Node_Candidate_V001_Delivery/Wanfo_East_Rear_Node_Candidate_V001_Review_ZH.png",
+      "pass": true
+    },
+    {
+      "file": "Wanfo_East_Rear_Node_Candidate_V001_Delivery/CANDIDATE_GEOMETRY.json",
+      "pass": true
+    },
+    {
+      "file": "Wanfo_East_Rear_Node_Candidate_V001_Delivery/CANDIDATE_VALIDATION.json",
+      "pass": true
+    },
+    {
+      "file": "WANFO_EAST_FORK_FOOT_FIX_CANDIDATE_V001.glb",
+      "pass": true
+    },
+    {
+      "file": "Wanfo_East_Fork_Foot_Fix_Candidate_V001_Review_ZH.png",
+      "pass": true
+    },
+    {
+      "file": "V004/WANFO_EAST_FRONT_COLUMN_HEAD_REVIEW_CORRECTION_V004.glb",
+      "sha256": "890c18079d014534154d6bc3ed692b88ba05d7815a438ed7a7e4a93d77dc8ded",
+      "bytes": 254980,
+      "pass": true
+    },
+    {
+      "file": "V004/CANDIDATE_GEOMETRY.json",
+      "sha256": "53932723d670ab76b3145fc935cb2370710aa12bf7870fb113f70159f1a51883",
+      "bytes": 788392,
+      "pass": true
+    },
+    {
+      "file": "V004/PREDECLARED_RULES.json",
+      "sha256": "cdb6915a423b4effdb7fd5f1953f14c4a0ee5ae8533d0b48cb9da52a924b88dc",
+      "bytes": 1607,
+      "pass": true
+    },
+    {
+      "file": "V004/VALIDATION.json",
+      "sha256": "7b70cb4048db5515379b90cadfcfa7075c0fe9a4e500b0f0a7b8370fe593def1",
+      "bytes": 363015,
+      "pass": true
+    },
+    {
+      "file": "V004/INDEPENDENT_VALIDATION.json",
+      "sha256": "4ef14ec62fdc8d854f09159b6b7f1d33740ba0b49f4a5c4061aaf546b7be329f",
+      "bytes": 4992,
+      "pass": true
+    },
+    {
+      "file": "V004/OVERALL_SOURCE_REVIEW.json",
+      "sha256": "523317ef66628876e11b9b3f87b086dcfb289e8c5546deea466966b9682cea9d",
+      "bytes": 1981,
+      "pass": true
+    },
+    {
+      "file": "V004/EAST_FRONT_COLUMN_HEAD_OVERALL_REVIEW_V004_ZH.md",
+      "sha256": "8819247e95a67e42188f52b15449f6ca6dd06e91efbd8038f5e72ff26670045b",
+      "bytes": 5143,
+      "pass": true
+    },
+    {
+      "file": "V004/EAST_FRONT_COLUMN_HEAD_OVERALL_REVIEW_V004_ZH.png",
+      "sha256": "780ecc526dc8160e1ac4f467ed4baafe35effeccd211aee6daec885418bec4c3",
+      "bytes": 494350,
+      "pass": true
+    },
+    {
+      "file": "V004/build_corrected_core.py",
+      "sha256": "d932e7683758c045b4f6020fdb69115d3dc63c191cbf8b4e2f59cbabc1fa9655",
+      "bytes": 8570,
+      "pass": true
+    },
+    {
+      "file": "V004/build.py",
+      "sha256": "72ddb47a57c806a69563e7a3d56f30ff2252d26204b70900381ca4c8518b5f2a",
+      "bytes": 8705,
+      "pass": true
+    },
+    {
+      "file": "V004/independent_verify.py",
+      "sha256": "275af6151833d46ac817b10df5f27bb6ab698b4bef644c9a7691fc949d81ac6d",
+      "bytes": 4545,
+      "pass": true
+    },
+    {
+      "file": "V004/report.py",
+      "sha256": "c78982041c67363de24035e36c4bb53f8f03128b0e4dbff2f04d4a6122942910",
+      "bytes": 12196,
+      "pass": true
+    },
+    {
+      "file": "V004/core/CANDIDATE_GEOMETRY.json",
+      "sha256": "c4f6541c6e617c5f03ef9355272700a83aea27d99345b659a35cf84a4b6402c3",
+      "bytes": 773888,
+      "pass": true
+    },
+    {
+      "file": "V004/core/VALIDATION.json",
+      "sha256": "5138a0672cdfe258e165335520ff81e97a41f89fc57d5964e3749079cb352a2c",
+      "bytes": 62399,
+      "pass": true
+    }
+  ],
+  "scope": "binary identity; not historic form proof"
+}

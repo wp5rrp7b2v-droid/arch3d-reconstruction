@@ -1,0 +1,304 @@
+{
+  "date": "2026-10-12",
+  "records": [
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_LOCAL_V002_REPORT_ZH.md",
+      "library_file_id": "libfile_d33a2647cc1c8191924190f2682e2b9d",
+      "file_id": "file_0000000095ec81f6838234b52d655c44",
+      "size_bytes": 5800,
+      "path": "/EAST_FRONT_COLUMN_HEAD_LOCAL_V002_REPORT_ZH.md",
+      "sha256": "706f363e3a55d8ef165b36348b31b8332404dc4cae1df86ebe29c72a53dc6d7d",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_EXTENSION_V003_REPORT_ZH.md",
+      "library_file_id": "libfile_17b019ad6a1c819186d4b167346ec817",
+      "file_id": "file_00000000abf081f89e480f67973f17a6",
+      "size_bytes": 6268,
+      "path": "/EAST_FRONT_COLUMN_HEAD_EXTENSION_V003_REPORT_ZH.md",
+      "sha256": "20a4388b4fcc7c881006ee043c48160586a5a5d1f1827a4cfcf1bb3421c18704",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_OVERALL_REVIEW_V004_ZH.md",
+      "library_file_id": "libfile_8b85288ffe588191a5a9ff22aa9f5b57",
+      "file_id": "file_00000000766881f5ad34c978dcd4c6c9",
+      "size_bytes": 5143,
+      "path": "/EAST_FRONT_COLUMN_HEAD_OVERALL_REVIEW_V004_ZH.md",
+      "sha256": "8819247e95a67e42188f52b15449f6ca6dd06e91efbd8038f5e72ff26670045b",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_LOCAL_V002_DELIVERY.zip",
+      "library_file_id": "libfile_b1ed02768e948191a248ffa55398eba8",
+      "file_id": "file_00000000cbdc81fb8dacb07137b9cb82",
+      "size_bytes": 869028,
+      "path": "/EAST_FRONT_COLUMN_HEAD_LOCAL_V002_DELIVERY.zip",
+      "sha256": "0edb34330b42fb3313368d7ae0d5e35a7f15b128f1a70ed2a18f0908a2627f0f",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_EXTENSION_V003_DELIVERY.zip",
+      "library_file_id": "libfile_fdd524b7de54819198e09d04d9578309",
+      "file_id": "file_00000000cbdc82308a319ad4f2a5e5e4",
+      "size_bytes": 963072,
+      "path": "/EAST_FRONT_COLUMN_HEAD_EXTENSION_V003_DELIVERY.zip",
+      "sha256": "a02f9186220c3b1491a520b4c8acab54b3b24c4c227c6f7ebd2ea5b9d5a7520d",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "WANFO_EAST_FRONT_COLUMN_HEAD_REVIEW_CORRECTION_V004.glb",
+      "library_file_id": "libfile_aaf0f6a195a48191af779ed8779aff1d",
+      "file_id": "file_00000000a53c8230815bd7d2ad059b47",
+      "size_bytes": 254980,
+      "path": "/WANFO_EAST_FRONT_COLUMN_HEAD_REVIEW_CORRECTION_V004.glb",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_OVERALL_REVIEW_V004_DELIVERY.zip",
+      "library_file_id": "libfile_777539342a0c8191903cc628acf4a361",
+      "file_id": "file_00000000c94c8230b3aac420c7ad66d9",
+      "size_bytes": 882964,
+      "path": "/EAST_FRONT_COLUMN_HEAD_OVERALL_REVIEW_V004_DELIVERY.zip",
+      "sha256": "30ae71139cadae527310d07c0136a7d3f74dfb16a32d08969917505bf9cfdf4b",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_OVERALL_REVIEW_V004_ZH.png",
+      "library_file_id": "libfile_f3f79bbe1e6481919027d8ccd261d7bd",
+      "file_id": "file_00000000172882309869911c7a899d55",
+      "size_bytes": 494350,
+      "path": "/EAST_FRONT_COLUMN_HEAD_OVERALL_REVIEW_V004_ZH.png",
+      "sha256": "780ecc526dc8160e1ac4f467ed4baafe35effeccd211aee6daec885418bec4c3",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_EXTENSION_V003_REVIEW_ZH.png",
+      "library_file_id": "libfile_ec770960f1188191b6eaab48f281f56a",
+      "file_id": "file_00000000410881f7af176b22f23f1ebd",
+      "size_bytes": 742886,
+      "path": "/EAST_FRONT_COLUMN_HEAD_EXTENSION_V003_REVIEW_ZH.png",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "WANFO_EAST_FRONT_COLUMN_HEAD_EXTENSION_V003.glb",
+      "library_file_id": "libfile_6accc1208ed08191af51c1bc85c728c7",
+      "file_id": "file_000000004d6481fd9efc7bbf64875e46",
+      "size_bytes": 254980,
+      "path": "/WANFO_EAST_FRONT_COLUMN_HEAD_EXTENSION_V003.glb",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "WANFO_EAST_FRONT_COLUMN_HEAD_LOCAL_TRIAL_V002.glb",
+      "library_file_id": "libfile_132285bdfd588191b820d22a170382eb",
+      "file_id": "file_00000000aa94820ea4f4c99a3856525c",
+      "size_bytes": 244688,
+      "path": "/WANFO_EAST_FRONT_COLUMN_HEAD_LOCAL_TRIAL_V002.glb",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_LOCAL_V002_REVIEW_ZH.png",
+      "library_file_id": "libfile_c6035ae80e00819186142408bfe3625d",
+      "file_id": "file_00000000071c820e9c2835a3f45472a8",
+      "size_bytes": 659397,
+      "path": "/EAST_FRONT_COLUMN_HEAD_LOCAL_V002_REVIEW_ZH.png",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_FAILED_TRIAL_V001.zip",
+      "library_file_id": "libfile_556c86a997088191bbf65039a1e02c30",
+      "file_id": "file_00000000c00081f6bb02e3af10d2fbea",
+      "size_bytes": 727110,
+      "path": "/EAST_FRONT_COLUMN_HEAD_FAILED_TRIAL_V001.zip",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_TRIAL_FAIL_REVIEW_ZH.png",
+      "library_file_id": "libfile_46fbadae7df88191b578fd7e93b99f42",
+      "file_id": "file_000000004f2081f6a6825f03b4267772",
+      "size_bytes": 518997,
+      "path": "/EAST_FRONT_COLUMN_HEAD_TRIAL_FAIL_REVIEW_ZH.png",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "EAST_FRONT_COLUMN_HEAD_TRIAL_FAIL_REPORT_ZH.md",
+      "library_file_id": "libfile_8c2f6fff2f708191a7a03239b9ab6632",
+      "file_id": "file_00000000804c822f95faa85532cfb496",
+      "size_bytes": 3792,
+      "path": "/EAST_FRONT_COLUMN_HEAD_TRIAL_FAIL_REPORT_ZH.md",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "EAST_BEAM_END_SUPPORT_VERIFICATION.zip",
+      "library_file_id": "libfile_730538946f5881919f9e6007639ce5be",
+      "file_id": "file_00000000cdb4820c92159b3a1a357b49",
+      "size_bytes": 451863,
+      "path": "/EAST_BEAM_END_SUPPORT_VERIFICATION.zip",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "EAST_BEAM_END_SUPPORT_REVIEW_ZH.png",
+      "library_file_id": "libfile_1f0c1953f3148191be511778298af089",
+      "file_id": "file_00000000bfdc81f79f9c828e021cc0e6",
+      "size_bytes": 473555,
+      "path": "/EAST_BEAM_END_SUPPORT_REVIEW_ZH.png",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "EAST_BEAM_END_SUPPORT_VERIFICATION_ZH.md",
+      "library_file_id": "libfile_530c8b4106988191b68afd6576248cc2",
+      "file_id": "file_00000000461481f6a01b2a580e9f8a6b",
+      "size_bytes": 2214,
+      "path": "/EAST_BEAM_END_SUPPORT_VERIFICATION_ZH.md",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "EAST_FORK_V001_INDEPENDENT_VERIFICATION_ZH.md",
+      "library_file_id": "libfile_3afccbc1dba48191a15939c7281336d2",
+      "file_id": "file_000000009ae4820ab578375bf34017f8",
+      "size_bytes": 2677,
+      "path": "/EAST_FORK_V001_INDEPENDENT_VERIFICATION_ZH.md",
+      "sha256": "250910baa828156432d8f24e590039c2caafd994f48fb8da8c68976620b27a18",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "Wanfo_East_Fork_Foot_Fix_Candidate_V001_Delivery.zip",
+      "library_file_id": "libfile_96d5ee6f34108191b88813fb9e37439b",
+      "file_id": "file_000000008d3481f59b9c2986c2ab26c9",
+      "size_bytes": 742197,
+      "path": "/Wanfo_East_Fork_Foot_Fix_Candidate_V001_Delivery.zip",
+      "sha256": "cfdc86ef4dbdccf2c70c161adeb57ba88e291d1d534daa470111b14d0d5ee9b8",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "WANFO_EAST_FORK_FOOT_FIX_CANDIDATE_V001.glb",
+      "library_file_id": "libfile_7015ff0a1970819190a10ea5b682e68d",
+      "file_id": "file_000000000a6481fdb1f072f0cc396c45",
+      "size_bytes": 229208,
+      "path": "/WANFO_EAST_FORK_FOOT_FIX_CANDIDATE_V001.glb",
+      "sha256": "51ab3328b44dd8c1badc848f75910185da01891f0c4628e068816dac78db264c",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "Wanfo_East_Fork_Foot_Fix_Candidate_V001_Review_ZH.png",
+      "library_file_id": "libfile_88130c2aca30819195fb1f0d6ecf3642",
+      "file_id": "file_00000000bffc8230b8408bc8d7042529",
+      "size_bytes": 538736,
+      "path": "/Wanfo_East_Fork_Foot_Fix_Candidate_V001_Review_ZH.png",
+      "sha256": "27d13a89fcc10ea2cfaa26bbf3510b75e48b92cb98cee6e0601d82016e22eb16",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "Wanfo_East_Full_Upper6_Candidate_V001_Review_ZH.png",
+      "library_file_id": "libfile_288a9e86bfa081918728bc6362bdb602",
+      "file_id": "file_00000000ae6481f59b5b97c52e0ee8a5",
+      "size_bytes": 524666,
+      "path": "/Wanfo_East_Full_Upper6_Candidate_V001_Review_ZH.png",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "WANFO_EAST_FULL_UPPER6_CANDIDATE_V001.glb",
+      "library_file_id": "libfile_ff625ff56f548191aad3178e07ebc5c1",
+      "file_id": "file_000000001cf481f580137b3c2bbc6166",
+      "size_bytes": 234140,
+      "path": "/WANFO_EAST_FULL_UPPER6_CANDIDATE_V001.glb",
+      "sha256": "fd63438551c43ab06b06646af917b86edb161a7eb509130a5e90273651c1d465",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "Wanfo_East_Full_Upper6_Candidate_V001_Delivery.zip",
+      "library_file_id": "libfile_f82fc0723164819194899aba364c3609",
+      "file_id": "file_00000000ae84822f80ee00cee095e838",
+      "size_bytes": 716925,
+      "path": "/Wanfo_East_Full_Upper6_Candidate_V001_Delivery.zip",
+      "sha256": "0581fc2f95570ff02ce05f4a8f0582afd396345c774b25e536176d5fa1a7e5c0",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "Wanfo_East_Rear_Node_Candidate_V001_Delivery.zip",
+      "library_file_id": "libfile_dd357794cf7c8191a90f41d672ba2ec4",
+      "file_id": "file_00000000015c81f48bd4334e97a08caa",
+      "size_bytes": 657220,
+      "path": "/Wanfo_East_Rear_Node_Candidate_V001_Delivery.zip",
+      "sha256": "4b4c0f6c4cdb5201287faf6cc9a7c83b21faf17d1f0bbc13dff70e0fc598ba48",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "EAST_REAR_V001_APPROVAL_BINDING.json",
+      "library_file_id": "libfile_810a82445f088191b0ab58a01993c245",
+      "file_id": "file_0000000050fc822f9586f7c9cfe2acde",
+      "size_bytes": 2514,
+      "path": "/EAST_REAR_V001_APPROVAL_BINDING.json",
+      "sha256": "5411d3bd698f08483c4bdabb81133949ccc28112d322b48c5e6e0852e38b12ed",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "WANFO_EAST_FRONT_REAR_NODES_CANDIDATE_V001.glb",
+      "library_file_id": "libfile_44122533124c819185b6065a3312a26d",
+      "file_id": "file_00000000005081f7b6a58accd6686490",
+      "size_bytes": 235760,
+      "path": "/WANFO_EAST_FRONT_REAR_NODES_CANDIDATE_V001.glb",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "Wanfo_East_Rear_Node_Candidate_V001_Review_ZH.png",
+      "library_file_id": "libfile_dc81f17782148191bf8ff41952f00543",
+      "file_id": "file_0000000048b881f59bcee41a4119329f",
+      "size_bytes": 456235,
+      "path": "/Wanfo_East_Rear_Node_Candidate_V001_Review_ZH.png",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "Wanfo_East_Front_Node_Candidate_V002_Delivery.zip",
+      "library_file_id": "libfile_e5485f1cf7188191ba7f61f9cb8e3e4d",
+      "file_id": "file_000000007ef482308b11521904e828ee",
+      "size_bytes": 694006,
+      "path": "/Wanfo_East_Front_Node_Candidate_V002_Delivery.zip",
+      "sha256": "df08b166f7503f0c26b089a19a0de742e90e6885eeb872a5306f58c5a6f0e257",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "EAST_FRONT_V002_APPROVAL_BINDING.json",
+      "library_file_id": "libfile_7a8a51ceb6d881918ccfa103b07bdf88",
+      "file_id": "file_00000000cae481f89ce2e16411bb2d33",
+      "size_bytes": 2382,
+      "path": "/EAST_FRONT_V002_APPROVAL_BINDING.json",
+      "sha256": "c85a0b4bfcd7992561ac373059d42bd895c59b97c3f7a3440f165d18784d652c",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "WANFO_EAST_FRONT_NODE_RECONSTRUCTED_CANDIDATE_V002.glb",
+      "library_file_id": "libfile_2e856601bb008191ab09f46c1f07717a",
+      "file_id": "file_00000000e084823089b735fd0e8a5ad8",
+      "size_bytes": 223972,
+      "path": "/WANFO_EAST_FRONT_NODE_RECONSTRUCTED_CANDIDATE_V002.glb",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "Wanfo_East_Front_Node_Candidate_V002_Review_ZH.png",
+      "library_file_id": "libfile_a17915cdce5c81918a861f1384689cd2",
+      "file_id": "file_00000000c174820ca979a061ae0c5cc7",
+      "size_bytes": 505133,
+      "path": "/Wanfo_East_Front_Node_Candidate_V002_Review_ZH.png",
+      "hash_verified_this_close": false
+    },
+    {
+      "name": "Wanfo_Three_Member_Form_Review_V002.zip",
+      "library_file_id": "libfile_f7b4193eafbc81919e6a8a38e0043dd3",
+      "file_id": "file_00000000af0c81f5878b901f6a0132e1",
+      "size_bytes": 1806939,
+      "path": "/Wanfo_Three_Member_Form_Review_V002.zip",
+      "sha256": "e58374383667bd14dcaad895a7734ea03e27eec2e6a45a8a6a907f9829337a39",
+      "hash_verified_this_close": true
+    },
+    {
+      "name": "Wanfo_Three_Member_Source_Location_Review_V002_ZH.png",
+      "library_file_id": "libfile_7269363062108191b7f2bccf77d11ee4",
+      "file_id": "file_000000001b88820c811e9a39e2385e40",
+      "size_bytes": 1017826,
+      "path": "/Wanfo_Three_Member_Source_Location_Review_V002_ZH.png",
+      "hash_verified_this_close": false
+    }
+  ],
+  "status_authority": "approval binding and daily close; filename is not approval"
+}

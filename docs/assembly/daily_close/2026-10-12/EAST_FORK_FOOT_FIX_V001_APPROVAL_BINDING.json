@@ -1,0 +1,27 @@
+{
+  "decision": "PO_APPROVED_LOCAL_EAST_FORK_FOOT_FIX_V001",
+  "approved_at": "2026-10-12T15:00:58+08:00",
+  "user_message": "批准",
+  "scope": [
+    "east:CHASHOU_FRONT",
+    "east:CHASHOU_REAR",
+    "east:RIDGE_LOWER_DOU",
+    "east:RIDGE_UPPER_DOU"
+  ],
+  "approval_kind": "可见外观与局部复原设计批准",
+  "glb_file": "WANFO_EAST_FORK_FOOT_FIX_CANDIDATE_V001.glb",
+  "glb_sha256": "51ab3328b44dd8c1badc848f75910185da01891f0c4628e068816dac78db264c",
+  "review_image": "Wanfo_East_Fork_Foot_Fix_Candidate_V001_Review_ZH.png",
+  "review_sha256": "27d13a89fcc10ea2cfaa26bbf3510b75e48b92cb98cee6e0601d82016e22eb16",
+  "geometry_validation": "PASS:70实体、2415对交叠≤1mm3、20处接口",
+  "source_geometry_sha256": "cbe5c4342632c567b3e7bb977a4b80b97e8d4929a2433115c7dc77d56af33c40",
+  "other_66_entities": "unchanged",
+  "full_upper6_candidate": "STILL_PENDING_NOT_APPROVED_BY_THIS_DECISION",
+  "historic_joinery_and_strength": "NOT_VERIFIED",
+  "canonical_publication": "NOT_PUBLISHED_TO_GITHUB_MAIN",
+  "original_approved_snapshots": "PRESERVED",
+  "decision_id": "D-290",
+  "registration_status": "CANONICAL_METADATA_REGISTRATION",
+  "registration_date": "2026-10-12",
+  "historical_internal_publication_labels": "Original NOT_PUBLISHED labels record pre-registration status; exact binaries unchanged."
+}
