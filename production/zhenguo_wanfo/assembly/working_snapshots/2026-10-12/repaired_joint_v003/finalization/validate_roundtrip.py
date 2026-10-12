@@ -29,7 +29,7 @@ def surface(ma,mb,down=False):
  return total
 contacts=[]
 for c in source['contacts']:
- a,b=c['a'],c['b'];area=surface(meshes[a],meshes[b]);ref=surface(sm[a],sm[b]);dp=surface(meshes[a],meshes[b],True) if c['downward_required'] else None;passed=area>100 and area>=ref*.99 and (dp is None or dp>100);contacts.append({'a':a,'b':b,'area_mm2':area,'source_area_mm2':ref,'downward_mm2':dp,'pass':passed})
+ a,b=c['a'],c['b'];area=surface(meshes[a],meshes[b]);ref=surface(sm[a],sm[b]);dp=surface(meshes[a],meshes[b],True) if c['downward_required'] else None;passed=area>100 and area>=ref*.99 and (dp is None or dp>100);contacts.append({'a':a,'b':b,'area_mm2':area,'source_area_mm2':ref,'downward_mm2':dp,'pass':bool(passed)})
 status='PASS_LOCAL_REPAIRED_WORK_MODEL_WITH_PENDING_CANDIDATES' if not fails and all(c['pass'] for c in contacts) else 'FAIL_DO_NOT_PUBLISH'
 result={'status':status,'blender_version':actual['blender_version'],'blend_sha256':actual['blend_sha256'],'entity_count':82,'unchanged_original_count':len(source['unchanged_original_ids']),'unchanged_original_local_mesh_and_transform_exact':True,'max_coordinate_delta_mm':maxdelta,'coordinate_tolerance_mm':.001,'pair_count':pair_count,'max_overlap_mm3':maximum,'intersection_threshold_mm3':1,'failed_pairs':fails,'contacts':contacts,'approved_and_pending_separate':True,'whole_model_approved':False,'strength':'NOT_TESTED','historic_joinery':'NOT_PROVEN'}
 (out/'SAVE_REOPEN_V003_VALIDATION.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print(json.dumps(result,ensure_ascii=False));assert status.startswith('PASS'),result
