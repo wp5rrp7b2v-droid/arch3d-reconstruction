@@ -329,3 +329,14 @@ Decision authority: **D-139 / RC-024**.
 8. **T-032 precedent**：T-032 以 `上六椽栿 → 散斗 connector proxy → 四椽栿` 首次证明 Connection Layer 完整装配架构可行；散斗精确形制仍为可替换重建设计，不构成963历史原貌声明。
 9. **Future Masters**：Stage 1 继续完成剩余 Master，不因 Connection Matrix 单独停线；每个后续 Master 在生产/验收时增量登记已知接口与 Connection Layer 类型，完整 Matrix 在 Master 库成熟后由这些记录派生。
 
+
+### 4.16 GitHub Actions Only for Scripted Blender｜脚本化Blender直接云端执行
+
+Decision authority：Product Owner 2026-10-12 22:34:46（Asia/Shanghai）明确指令；RC-025 / D-294。
+
+1. 本项目后续Blender生成、保存、独立重开和机器验证直接采用GitHub Actions云端headless执行，不先探测或尝试在Work/Codex会话执行环境下载、安装Blender。
+2. 不尝试在用户Mac下载、安装或切换Blender作为替代执行路径；本地保留Git同步、下载已生成模型，以及确有需要时使用既有Blender进行人工查看。
+3. GitHub Actions任务内部按已批准版本准备Blender运行程序属于云端执行本身，继续由既有工作流承担；不把这解释为禁止云端任务取得运行依赖。
+4. 优先复用既有已验证工作流与固定版本。本条不自动授权任何新工程任务、运行版本变更或扩大模型范围。
+5. 云端路径不可用时立即披露BLOCKED，不回退到当前会话或Mac下载/安装，不绕过独立重开、几何检查或证据边界；提出最小恢复方案，按既有权限处理。
+6. 本规则将4.8中的“默认云端”收紧为“直接云端”；原生成、保存重开、接口/交叠验证、文件身份绑定与PO批准规则保持。

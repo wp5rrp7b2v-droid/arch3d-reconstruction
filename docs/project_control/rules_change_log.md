@@ -88,3 +88,6 @@
 `P3.3 evidence gap = UNKNOWN/RECONSTRUCTED_DESIGN as needed; missing Northern-Song/963 originals alone NEVER = blocker`
 
 `Complete Assembly PASS = Master A + explicit Connection Layer + Master B; body-to-body touching alone is insufficient`
+
+
+| **RC-025** | **2026-10-12** | **本项目脚本化Blender直接采用GitHub Actions云端执行；不再先尝试在Work/Codex会话环境或用户Mac下载、安装Blender。云端工作流内部按已批准版本准备运行依赖继续有效；本地只同步模型/资料、使用既有程序人工查看。云端受阻时披露BLOCKED，不自动下载本地替代程序。** | **PO于22:34:46明确要求“之后本项目直接使用 GitHub Actions 云端 Blender 执行方式，不要去尝试下载”。** | **ACTIVE / GITHUB_ACTIONS_DIRECT_EXECUTION / D-294** |
