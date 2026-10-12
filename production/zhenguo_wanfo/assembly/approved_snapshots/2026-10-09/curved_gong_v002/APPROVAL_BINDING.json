@@ -35,7 +35,7 @@
         "PURLINS_3": 3,
         "RECONSTRUCTED_SEATS_6": 6
       },
-      "max_coordinate_difference_mm": 1.5251338481903076e-05,
+      "max_coordinate_difference_mm": 0.000015251338481903076,
       "coordinate_tolerance_mm": 0.001,
       "entity_pairs_checked": 1953,
       "max_pair_overlap_mm3": 0.27047655402566306,
@@ -82,7 +82,7 @@
   "physical_registry_mapping": "NOT_PROMOTED / NO_505_ROW_COUNT_CHANGE",
   "master_promotion": false,
   "formal_stage3_closed": false,
-  "main_publication": "CANONICAL_WHEN_PR62_MERGED",
+  "main_publication": "CANONICAL / PR62_MERGED",
   "notes": "Existing candidate filenames and embedded pre-approval statuses remain unchanged for exact binary binding; this record supplies subsequent PO approval.",
   "publication_authorization": {
     "decision_id": "D-286",
@@ -97,6 +97,21 @@
     "artifact_id": 11596013492,
     "artifact_sha256": "dc2271f2cc1006d45e57f75c6daf6dd81e2c1672bdd6943ff94012e4548df671"
   },
-  "delivery_location": "FINAL_DELIVERY_PACKAGE / EXACT_SHA256_BINDING",
-  "public_repository_payload": "REGISTRATION_METADATA_AND_VALIDATION_SUMMARY_ONLY"
+  "delivery_location": "FINAL_DELIVERY_PACKAGE_AND_GITHUB_APPROVED_SNAPSHOT",
+  "public_repository_payload": "REGISTRATION_METADATA_AND_EXACT_APPROVED_V002_BLEND",
+  "binary_archive": {
+    "status": "EXACT_APPROVED_BINARY_ARCHIVED",
+    "authorization_at": "2026-10-12T21:57:29+08:00",
+    "user_instruction": "把两榀三道槫 V002 的BLEND二进制也保存在GitHub仓库中",
+    "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-09/curved_gong_v002/WANFO_TWO_FRAMES_THREE_PURLINS_APPROVED_V002.blend",
+    "bytes": 208003,
+    "sha256": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+    "git_blob_sha": "efa8002c243c7185b7c0965d8c5473cfc27d94e1",
+    "source_artifact": 11596013492,
+    "source_artifact_sha256": "dc2271f2cc1006d45e57f75c6daf6dd81e2c1672bdd6943ff94012e4548df671",
+    "model_regenerated": false,
+    "geometry_retested_this_archive": false,
+    "validation_authority": "D-286 save/reopen PASS retained; archival identity check only",
+    "scope": "original 63-entity approved V002, no new approval, no whole building or strength certification"
+  }
 }

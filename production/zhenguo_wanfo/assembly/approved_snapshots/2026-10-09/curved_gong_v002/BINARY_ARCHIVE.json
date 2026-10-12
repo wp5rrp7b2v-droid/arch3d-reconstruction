@@ -1,0 +1,15 @@
+{
+  "status": "EXACT_APPROVED_BINARY_ARCHIVED",
+  "authorization_at": "2026-10-12T21:57:29+08:00",
+  "user_instruction": "把两榀三道槫 V002 的BLEND二进制也保存在GitHub仓库中",
+  "path": "production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-09/curved_gong_v002/WANFO_TWO_FRAMES_THREE_PURLINS_APPROVED_V002.blend",
+  "bytes": 208003,
+  "sha256": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+  "git_blob_sha": "efa8002c243c7185b7c0965d8c5473cfc27d94e1",
+  "source_artifact": 11596013492,
+  "source_artifact_sha256": "dc2271f2cc1006d45e57f75c6daf6dd81e2c1672bdd6943ff94012e4548df671",
+  "model_regenerated": false,
+  "geometry_retested_this_archive": false,
+  "validation_authority": "D-286 save/reopen PASS retained; archival identity check only",
+  "scope": "original 63-entity approved V002, no new approval, no whole building or strength certification"
+}
