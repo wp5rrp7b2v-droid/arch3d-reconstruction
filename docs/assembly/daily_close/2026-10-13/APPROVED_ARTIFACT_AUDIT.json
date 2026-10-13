@@ -1,0 +1,16 @@
+[
+  {
+    "item": "C02",
+    "local_blend_sha256": "e7fffabdcab88a0262df773aabf9a4482351cd8c062ed335afcc0c4fb7a76fc8",
+    "public_branch_binding_match": true,
+    "run_id": 38381657859,
+    "artifact_id": 11803840918
+  },
+  {
+    "item": "UPPER6_FRONT_C01",
+    "local_blend_sha256": "baf43fc29fd9a769c89a0edc5cd4137d107133bf20239677105dde9baaa06e54",
+    "public_branch_binding_match": true,
+    "run_id": 38388606922,
+    "artifact_id": 11806969526
+  }
+]
