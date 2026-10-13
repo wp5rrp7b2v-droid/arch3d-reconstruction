@@ -8,12 +8,19 @@
   "blend_sha256": "baf43fc29fd9a769c89a0edc5cd4137d107133bf20239677105dde9baaa06e54",
   "status": "PASS_CLOUD_SAVE_REOPEN_SINGLE_FRONT_END",
   "baseline_C02_six_local_form_approved": true,
-  "current_candidate_form_approval": "PENDING_NOT_INFERRED_FROM_UPLOAD_AUTHORIZATION",
+  "current_candidate_form_approval": "PO_APPROVED_FRONT_END_LOCAL_DESIGN",
   "other81_C02_local_mesh_faces_and_transforms_exact": true,
   "main_merged": false,
   "scope": "single upper6 front end only; rear unchanged",
   "source_tenon_thickness_mm": 210,
   "candidate_segment_length_mm": 261.29239581522415,
   "segment_length_centering_square_shoulder": "WORKING_HYPOTHESIS_NOT_HISTORICAL_MEASUREMENT",
-  "public_upload_authorization": "PO explicit 2026-10-13T19:08:30+08:00 permits complete geometry, comparison hashes/dimensions/contact areas, scripts, generated BLEND, validation JSON and run records; no main merge"
+  "public_upload_authorization": "PO explicit 2026-10-13T19:08:30+08:00 permits complete geometry, comparison hashes/dimensions/contact areas, scripts, generated BLEND, validation JSON and run records; no main merge",
+  "form_approval": {
+    "instruction": "批准上六椽栿前端候选 C01",
+    "time": "2026-10-13T19:25:20+08:00",
+    "scope": "front-end local design only; same cloud-verified BLEND geometry; rear and complete historical beam form not approved by this decision",
+    "historical_hypotheses_retained": true
+  },
+  "locked_single_glb_sha256": "09d811d986cfa7669ea5fcb9f1d5e9691d3f5bd009267b6b46fde9fa05f703db"
 }
