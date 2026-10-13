@@ -15,7 +15,8 @@ def digest(o):return hashlib.sha256(json.dumps(o,sort_keys=True,separators=(',',
 assert set(comparison['unchanged_object_sha256'])==set(ss)-changed
 for k in set(ss)-changed:
  assert digest(ss[k])==comparison['unchanged_object_sha256'][k],('CHANGED_OUTSIDE_SIX',k)
- assert ss[k]['local_vertices']==aa[k]['local_vertices'] and ss[k]['faces']==aa[k]['faces'],('UNMODIFIED_SOURCE_LOCAL_MESH',k)
+ if k not in source['unchanged_original_ids']:assert ss[k]['local_vertices']==aa[k]['local_vertices'] and ss[k]['faces']==aa[k]['faces'],('UNMODIFIED_SOURCE_LOCAL_MESH',k)
+ # Retained originals have null local fields in source; exact local mesh/transform was checked against approved BASE above.
 for k in changed:
  if k not in {'trial:EAST_FRONT_HUA1_LOCAL','trial:EAST_FRONT_NIDAO_GUAZI'}:assert np.max(abs(meshes[k].bounds-np.array(comparison['changed_parent_bounds_mm'][k])))<.001,(k,'BOUNDS_CHANGED')
  assert aa[k]['effective_status']=='PENDING_C02_DESIGN_REVIEW'
