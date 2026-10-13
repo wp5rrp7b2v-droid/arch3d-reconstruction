@@ -1,0 +1,19 @@
+{
+  "repository": "wp5rrp7b2v-droid/arch3d-reconstruction",
+  "branch": "engineering/upper6-front-tenon-c01-20261013",
+  "validated_commit": "b1ecb0152fd854be99f0596432362549419079fb",
+  "run_id": 38388606922,
+  "artifact_id": 11806969526,
+  "artifact_sha256": "4a8034e49ff062590f2011cb3f37234fabbe04c292b54a4a1ee1df0f951728b9",
+  "blend_sha256": "baf43fc29fd9a769c89a0edc5cd4137d107133bf20239677105dde9baaa06e54",
+  "status": "PASS_CLOUD_SAVE_REOPEN_SINGLE_FRONT_END",
+  "baseline_C02_six_local_form_approved": true,
+  "current_candidate_form_approval": "PENDING_NOT_INFERRED_FROM_UPLOAD_AUTHORIZATION",
+  "other81_C02_local_mesh_faces_and_transforms_exact": true,
+  "main_merged": false,
+  "scope": "single upper6 front end only; rear unchanged",
+  "source_tenon_thickness_mm": 210,
+  "candidate_segment_length_mm": 261.29239581522415,
+  "segment_length_centering_square_shoulder": "WORKING_HYPOTHESIS_NOT_HISTORICAL_MEASUREMENT",
+  "public_upload_authorization": "PO explicit 2026-10-13T19:08:30+08:00 permits complete geometry, comparison hashes/dimensions/contact areas, scripts, generated BLEND, validation JSON and run records; no main merge"
+}
