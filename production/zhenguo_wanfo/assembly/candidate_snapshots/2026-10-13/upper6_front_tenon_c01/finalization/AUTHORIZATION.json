@@ -1,0 +1,8 @@
+{
+  "time": "2026-10-13T19:08:30+08:00",
+  "user_instruction": "将候选完整几何输入、对照哈希/尺寸/接触面积、脚本及生成的 BLEND、验证 JSON 和运行记录公开上传至万佛殿 GitHub 工作分支，执行云端验证；不合并 main",
+  "repository": "wp5rrp7b2v-droid/arch3d-reconstruction",
+  "scope": "UPPER6_FRONT_TENON_C01 single front-end candidate; upload complete geometry, comparisons, scripts, generated BLEND, validation JSON and run records publicly; no main merge",
+  "input_sha256": "e424d90a8ccc3192a723f1906335eb9aace44b2a919d74f1f945e2b7b7ab1010",
+  "form_approval": "NOT_EXPLICITLY_GRANTED; CANDIDATE_PENDING"
+}

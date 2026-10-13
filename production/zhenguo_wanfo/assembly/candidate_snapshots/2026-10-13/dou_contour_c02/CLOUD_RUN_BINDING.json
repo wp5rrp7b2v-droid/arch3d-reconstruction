@@ -1,0 +1,30 @@
+{
+  "repository": "wp5rrp7b2v-droid/arch3d-reconstruction",
+  "branch": "engineering/dou-contour-c02-20261013",
+  "validated_commit": "3d8e382e9f94c8871fbf15d6a4419bf152392cd6",
+  "run_id": 38381657859,
+  "artifact_id": 11803840918,
+  "artifact_sha256": "e2893a1f7b67f50dd38ffc560e2d7d3a4d67e12799688b5e5fa58a920183a6b6",
+  "blend_sha256": "e7fffabdcab88a0262df773aabf9a4482351cd8c062ed335afcc0c4fb7a76fc8",
+  "status": "PASS_C02_CLOUD_SAVE_REOPEN",
+  "C02_six_local_form_approved": true,
+  "approval_time": "2026-10-13T16:22:54+08:00",
+  "approval_status_note": "Locked input contains 70 inherited approved object flags and 12 pending flags (6 C02 changed objects plus 6 pre-existing pending objects). PO has approved all six C02 changed objects; combined approval interpretation is 76 local approved and 6 other pending. Raw validation output hardcoded 72/10 incorrectly; this metadata error does not alter geometry checks. Formal registry/main unchanged.",
+  "main_merged": false,
+  "historical_joinery": "NOT_PROVEN",
+  "strength": "NOT_TESTED",
+  "source_geometry_changed_for_retry": false,
+  "retry_reason": "retained-original local input fields are null; corrected redundant assertion to rely on existing exact approved-base check",
+  "first_failed_run": 38381361411,
+  "public_archive_authorization": {
+    "instruction": "pizhun（批准完整C02 BLEND、验证JSON和运行记录公开归档至工作分支，不合并main）",
+    "time": "2026-10-13T18:28:38+08:00"
+  },
+  "corrected_source_status_counts": {
+    "inherited_approved": 70,
+    "input_pending": 12,
+    "approved_C02_changed": 6,
+    "combined_local_approved": 76,
+    "other_pending": 6
+  }
+}

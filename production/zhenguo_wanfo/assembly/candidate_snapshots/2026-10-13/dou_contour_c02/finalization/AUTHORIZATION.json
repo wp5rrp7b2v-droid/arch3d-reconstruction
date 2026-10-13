@@ -1,0 +1,35 @@
+{
+  "user_instruction": "批准C02",
+  "approval_time": "2026-10-13T16:22:54+08:00",
+  "scope": "C02 six-local candidate design / form approval; historical truth not certified; cloud roundtrip pending; no main merge authorized",
+  "approved_candidate_ids": [
+    "trial:EAST_FRONT_COLUMN_LUDOU",
+    "trial:EAST_FRONT_HUA1_LOCAL",
+    "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+    "trial:EAST_FRONT_NIDAO_GUAZI",
+    "trial:EAST_FRONT_SANDOU_LEFT",
+    "trial:EAST_FRONT_SANDOU_RIGHT"
+  ],
+  "geometry_precheck": "PASS",
+  "cloud_blend_save_reopen": "NOT_RUN",
+  "formal_baseline_replaced": false,
+  "github_content_upload_authorization": "EXPLICIT_USER_APPROVAL_2026-10-13T16:58:57+08:00",
+  "locked_sha256": {
+    "INPUT_GEOMETRY.json": "baaa1c22e3ad4ec6a2c8d71341b30dbcc676b7d8640bd7c8743789e79e826076",
+    "WANFO_DOU_CONTOUR_CANDIDATE_C02.glb": "f27513bb12459cff3292b46a0820dc9b8206e741de10ff13328e703d96169732",
+    "WANFO_FOUR_DOU_ONLY_C02.glb": "f250f80a8935fcbd478267d1ff869ead49b0b22652185f68c3c47a270d365e6e",
+    "WANFO_FOUR_DOU_C02_REVIEW_PACKAGE.zip": "37267743e1571a402c2457e8d63b10bd16c61c9c3c96afa5f20aadaa1476451e"
+  },
+  "hypotheses_retained": [
+    "10mm slot depth",
+    "fitted curvature",
+    "two lower local entering segments",
+    "scatter group choice and left/right symmetry"
+  ],
+  "upload_scope": "C02 input, parent comparison input, authorization and verification scripts to wp5rrp7b2v-droid/arch3d-reconstruction public working branch; GitHub Actions permitted; no main merge",
+  "comparison_public_upload_authorization": {
+    "instruction": "批准将 PARENT_C01_COMPARISON.json 中的对象哈希、包络尺寸和原接触面积公开上传至万佛殿 GitHub 工作分支，并运行云端验证；不合并 main。",
+    "time": "2026-10-13T18:07:44+08:00",
+    "comparison_sha256": "ec9c94400d523f5eebe4569f5e4b1e35afc7226dcb0fa32b38cf8844bdfbd954"
+  }
+}
