@@ -1,0 +1,43 @@
+name: Wanfo upper6 front tenon C01 candidate
+on:
+  push:
+    branches: [engineering/upper6-front-tenon-c01-20261013]
+    paths:
+      - .github/workflows/wanfo_upper6_front_tenon_c01.yml
+      - production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-13/upper6_front_tenon_c01/finalization/**
+permissions:
+  contents: read
+jobs:
+  roundtrip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install geometry dependencies
+        run: python -m pip install numpy==2.5.3 trimesh==5.1.1 manifold3d==3.5.4 networkx==3.4.2 shapely==2.1.2
+      - name: Install approved Blender 4.5.13
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 3 -o /tmp/blender.tar.xz https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Build, independently reopen and verify
+        env:
+          TASK_ROOT: production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-13/upper6_front_tenon_c01/finalization
+        run: |
+          gzip -dk "$TASK_ROOT/INPUT_GEOMETRY.json.gz"
+          cp production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-13/dou_contour_c02/WANFO_DOU_CONTOUR_CANDIDATE_C02.blend "$TASK_ROOT/BASE_C02.blend"
+          /tmp/blender-4.5.13-linux-x64/blender --background --factory-startup --python-exit-code 10 --python "$TASK_ROOT/blender_roundtrip.py" -- baseline "$TASK_ROOT"
+          /tmp/blender-4.5.13-linux-x64/blender --background --factory-startup --python-exit-code 10 --python "$TASK_ROOT/blender_roundtrip.py" -- build "$TASK_ROOT"
+          /tmp/blender-4.5.13-linux-x64/blender --background --factory-startup --python-exit-code 10 --python "$TASK_ROOT/blender_roundtrip.py" -- reopen "$TASK_ROOT"
+          python "$TASK_ROOT/validate_roundtrip.py" "$TASK_ROOT"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_UPPER6_FRONT_TENON_C01_ROUNDTRIP
+          path: production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-13/upper6_front_tenon_c01/finalization/output/
+          if-no-files-found: error
+          retention-days: 90
