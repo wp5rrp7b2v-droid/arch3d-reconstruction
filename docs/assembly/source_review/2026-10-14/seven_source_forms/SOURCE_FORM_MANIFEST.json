@@ -1,0 +1,113 @@
+{
+  "source_web": "https://szbwgvue.chwhyun.cn/wanfodian/",
+  "gltf": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf?v=21",
+  "bin": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.bin",
+  "gltf_sha256": "ac0687694715029a7b906bfdaa13578c578a01640e5cfeba1dbd29749dae6f1b",
+  "bin_sha256": "940224e259dfcce31f2a11aa58780422a38bcf0de869a2b1c72762321f0abc32",
+  "node_name_authority": "anonymous polySurface names; semantic names are inferred from vertical order/orientation and official presentation, not embedded source labels",
+  "scope": "shape reference only; no scale assertion, no imported project production geometry",
+  "cards": [
+    {
+      "number": "01",
+      "name": "柱",
+      "nodes": [
+        {
+          "index": 1001,
+          "source_name": "zhuti:polySurface28"
+        }
+      ]
+    },
+    {
+      "number": "02",
+      "name": "栌斗",
+      "nodes": [
+        {
+          "index": 38,
+          "source_name": "polySurface9941"
+        }
+      ]
+    },
+    {
+      "number": "03",
+      "name": "第一跳华栱",
+      "nodes": [
+        {
+          "index": 2,
+          "source_name": "polySurface9905"
+        },
+        {
+          "index": 83,
+          "source_name": "polySurface9986"
+        }
+      ]
+    },
+    {
+      "number": "04",
+      "name": "交互斗",
+      "nodes": [
+        {
+          "index": 80,
+          "source_name": "polySurface9983"
+        }
+      ]
+    },
+    {
+      "number": "05",
+      "name": "第二跳华栱",
+      "nodes": [
+        {
+          "index": 1,
+          "source_name": "polySurface9904"
+        },
+        {
+          "index": 87,
+          "source_name": "polySurface9990"
+        }
+      ]
+    },
+    {
+      "number": "06",
+      "name": "头昂（第一根下昂）",
+      "nodes": [
+        {
+          "index": 27,
+          "source_name": "polySurface9930"
+        }
+      ]
+    },
+    {
+      "number": "07",
+      "name": "二昂（第二根下昂）",
+      "nodes": [
+        {
+          "index": 25,
+          "source_name": "polySurface9928"
+        }
+      ]
+    }
+  ],
+  "record_status": "SOURCE_SHAPE_REFERENCE_ONLY_NOT_APPROVED_REAR_MEMBERS",
+  "unassigned_adjacent_nodes": [
+    {
+      "node": 86,
+      "source_name": "polySurface9989",
+      "membership": "UNKNOWN_NOT_MERGED_INTO_HUAGONG"
+    },
+    {
+      "node": 81,
+      "source_name": "polySurface9984",
+      "membership": "UNKNOWN_NOT_MERGED_INTO_HUAGONG"
+    }
+  ],
+  "column_source": {
+    "web": "https://szbwgvue.chwhyun.cn/wanfodian/3d/wfd/wfd.gltf?v=21",
+    "source_node": 766,
+    "source_parent": "zhuwang",
+    "decoded_file": "SOURCE_SHAPE_GEOMETRY.json: column_node",
+    "original_wfd_gltf_sha256": "0b1db0c18be6e1598d84193d646a22b2af2cc99f2d0b085cef82f18567b3c224",
+    "original_wfd_bin_sha256": "74763e4180f1aa8ef290448e7dd530117fb3c262b3fd6bfe4ed48110241eeb87",
+    "archive_scope": "extracted original column coordinates only; full hall bin not copied"
+  },
+  "archived_geometry": "SOURCE_SHAPE_GEOMETRY.json: selected original nodes only",
+  "full_official_model_copied": false
+}

@@ -1,0 +1,58 @@
+{
+  "scope": "archive integrity, exact mirror and extents only; no new contact/strength/Blender tests",
+  "package_sha256": "29521128f314994409a0e56645afe1f8766025855f41cfecdb1f02700e2daa45",
+  "package_bytes": 533397,
+  "original_manifest_checks": 13,
+  "original_manifest_mismatches": [],
+  "exact_Y_mirror_checked_ids": [
+    "COLUMN_CANDIDATE",
+    "COLUMN_LUDOU",
+    "HUA1_LOCAL",
+    "INTERACTIVE_DOU_LOCAL",
+    "HUA2_LOCAL",
+    "TOU_ANG_LOCAL",
+    "ER_ANG_LOCAL"
+  ],
+  "mesh_extents": [
+    {
+      "id": "trial:EAST_FRONT_HUA2_LOCAL",
+      "bounding_extent_xyz_mm": [
+        153.0,
+        1586.76270685509,
+        214.20000000298023
+      ],
+      "geometry_sha256": "11004effa6b4509f0f798a14c5cb6001ed10689a7c8f27da081817b517f2e9a6"
+    },
+    {
+      "id": "trial:EAST_FRONT_HUA1_LOCAL",
+      "bounding_extent_xyz_mm": [
+        153.0,
+        898.7999999970198,
+        224.20000000149003
+      ],
+      "geometry_sha256": "006efc59a6b8de1235d41ccadedbd8aa4f0ae93d15c716459e2225571f8a7398"
+    },
+    {
+      "id": "trial:EAST_REAR_HUA1_LOCAL",
+      "bounding_extent_xyz_mm": [
+        153.0,
+        898.7999999970198,
+        224.20000000149003
+      ],
+      "geometry_sha256": "0b8586e8dcb3c2dabf6b46f3dbf008b5a12f3b72889885336ca65303e09536b9"
+    },
+    {
+      "id": "trial:EAST_REAR_HUA2_LOCAL",
+      "bounding_extent_xyz_mm": [
+        153.0,
+        1586.76270685509,
+        214.20000000298023
+      ],
+      "geometry_sha256": "9c450a373971bf9a8502fca75e40473157fc41d38e4719a60243fa0339e55475"
+    }
+  ],
+  "source_A1_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+  "source_A3_sha256": "d5782b216a4c4b5ad2c88ab034aa4e271c9c964e31bcbe21e0a9bb13c47bd643",
+  "status": "PASS_FOR_BOUNDED_READ_ONLY_AUDIT",
+  "source_identity_and_complete_profile_gate": "PARTIAL_NOT_CLOSED"
+}
