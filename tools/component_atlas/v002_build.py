@@ -89,9 +89,18 @@ def model_image(c,m):
     pos=[(.50,.48),(.84,.55)]
     if c['id'] in ['F026','F069','F070']:pos=[(.50,.65),(.50,.20)]
     if c['id'] in ['F001','F002','F021']:pos=[(.50,.50),(.50,.08)]
+    # Existing review boards sometimes leave large white margins. Keep subject
+    # numbers on the visible brown render, never on that whitespace. Model
+    # pixels remain entirely unchanged by this marker placement adjustment.
+    rgb=np.asarray(im).astype(float)
+    wood=(rgb.max(axis=2)-rgb.min(axis=2)>15)&(rgb[:,:,0]-rgb[:,:,2]>10)
+    wy,wx=np.where(wood)
     for num,(x,y) in enumerate(pos,1):
         state=S[c['id']]['features'][num-1][0]
-        dot(dr,(max(22,min(ann.width-22,ann.width*x)),max(22,min(ann.height-22,ann.height*y))),num,COL[state])
+        px=max(1,min(ann.width-2,round(ann.width*x)));py=max(1,min(ann.height-2,round(ann.height*y)))
+        if len(wx)>30 and not wood[py,px]:
+            near=np.argmin((wx-px)**2+(wy-py)**2);px=int(wx[near]);py=int(wy[near])
+        dot(dr,(px,py),num,COL[state])
     decorated=save_image(ann,c['id']+'-model.jpg',raw,'EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS',model_id=c['cid'],render_label=m['label'],display_rotation_deg=90 if c['id']=='F021' else 0)
     assert sha(raw)==before
     return decorated,plain
