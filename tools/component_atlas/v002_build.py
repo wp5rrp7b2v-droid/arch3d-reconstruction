@@ -66,7 +66,7 @@ def source_images(c,s):
     annotated=save_image(crop,c['id']+'-source.jpg',raw,'CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES',crop=s['crop'],traces=s['traces'],parts=s['parts'])
     return annotated,loc,clear
 def selected_model(c):
-    if not c['models']:return None
+    if not c['models']:return next(iter(c.get('local_models',[])),None)
     return next((m for m in c['models'] if m.get('label','').endswith('front')),c['models'][0])
 def model_image(c,m):
     if not m:return None
@@ -157,13 +157,21 @@ def build():
             source_figure=source_figure.replace('class="source-panel"','class="source-panel wide-source"').replace('</figure>','<div class="source-inset"><img src="../'+inset+'" alt="端区原图放大，遮挡部分保留未知" loading="lazy"><small>端区放大 · '+('同族参考，山面身份未知' if c['id']=='F007' else '遮挡保持，不补齐隐藏轮廓')+'</small></div></figure>')
         body+=source_figure
         rotation_note=' · 原渲染仅旋转90°以便辨认竖材，模型未变' if c['id']=='F021' else ''
-        body+=fig(model[0] if model else None,'现有 Master · '+('原模型只读图' if model else '缺口'),e(c['cid'] or '尚未绑定独立Master')+e(rotation_note)+'<small>数字标记主题部位，不代表视角或像素已经配准。</small>',cls='model-panel',clear=model[1] if model else None)
+        model_title='现有 Master · 原模型只读图' if c['models'] else '现有局部工作件 · 非独立批准Master' if m else '独立模型缺口' if c['kind']=='实体构件族' else '系统／位置可视化 · 不定义虚构单体'
+        model_caption=e(c['cid'] or (m['label'] if m else '此项没有独立单件Master'))+e(rotation_note)
+        if m and not c['models']:model_caption+='<small>'+e(m.get('boundary','保持局部工作模型原批准边界。'))+'</small>'
+        model_caption+='<small>数字标记主题部位，不代表视角或像素已经配准。</small>'
+        model_figure=fig(model[0] if model else None,model_title,model_caption,cls='model-panel',clear=model[1] if model else None)
+        if not m and c['kind']!='实体构件族':
+            model_figure=model_figure.replace('没有可对应的独立模型','本项为'+e(c['kind'])+'，不定义单体形状').replace('未以占位长方体、组合图或推测模型代替。','资料图展示系统或安装位置；具体木构件分别在对应页面浏览。')
+        body+=model_figure
         body+='</div>'+feature_html(s,bool(m))+'<p class="view-limit">定性对照：两侧未做比例归一或像素叠加。'+('绿色只描原图可辨线段，推算图线仍属推断；' if s['traces'] else '')+'橙色虚框只表示原图查找范围。</p></section>'
         local=c.get('local_models',[])
         body+='<section id="details"><div class="section-title"><span>02 / 形态细节</span><h2>其他角度、截面与现有局部版本</h2></div><div class="gallery">'+extra_figs(c,s)+'</div>'
         if local:
             body+='<h3>现有局部工作模型 · 与 Master 分开看</h3><div class="gallery local-models">'
             for lm in local:
+                if not c['models'] and lm is m:continue
                 raw=path_display(lm['image'])
                 body+=fig(str(raw.relative_to(OUT)),lm['label'],e(lm.get('boundary',''))+'<small>'+e(lm.get('caption',''))+'</small>')
             body+='</div>'
