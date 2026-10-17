@@ -34,6 +34,7 @@ for job in jobs:
     scene.display.shading.show_cavity=True
     scene.display.shading.cavity_type='BOTH'
     scene.display.shading.background_type='WORLD'
+    if scene.world is None: scene.world=bpy.data.worlds.new("ATLAS_TEMP_WORLD")
     scene.world.color=(0.85,0.84,0.80)
     scene.render.resolution_x=1200;scene.render.resolution_y=850;scene.render.resolution_percentage=100
     scene.render.image_settings.file_format='PNG'

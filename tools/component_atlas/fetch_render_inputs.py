@@ -3,6 +3,12 @@ import os,json,pathlib,hashlib,urllib.request,zipfile,io
 root=pathlib.Path.cwd();tmp=pathlib.Path('/tmp/wanfo-atlas-inputs');tmp.mkdir(exist_ok=True)
 library=json.loads((root/'production/zhenguo_wanfo/registry/P3_3_STAGE1_COMPONENT_MASTER_LIBRARY_V001.json').read_text())
 token=os.environ['GH_TOKEN'];jobs=[];fetch_log=[]
+class StripRedirectAuthorization(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        redirected=super().redirect_request(req,fp,code,msg,headers,newurl)
+        if redirected is not None: redirected.remove_header('Authorization')
+        return redirected
+opener=urllib.request.build_opener(StripRedirectAuthorization())
 def bodies(v):
     if isinstance(v,dict):
         if 'geometry_vertices_mm' in v and 'name' in v:yield v['name']
@@ -17,7 +23,7 @@ for m in library['new_masters']:
     expected=m['canonical_asset_sha256']
     try:
         req=urllib.request.Request(f'https://api.github.com/repos/wp5rrp7b2v-droid/arch3d-reconstruction/actions/artifacts/{aid}/zip',headers={'Authorization':'Bearer '+token,'Accept':'application/vnd.github+json'})
-        blob=urllib.request.urlopen(req,timeout=120).read()
+        blob=opener.open(req,timeout=120).read()
         archive_sha=hashlib.sha256(blob).hexdigest()
         if a.get('artifact_zip_sha256') and archive_sha!=a['artifact_zip_sha256']:raise RuntimeError('archive hash mismatch')
         z=zipfile.ZipFile(io.BytesIO(blob));found=False
