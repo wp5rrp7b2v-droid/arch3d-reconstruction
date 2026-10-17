@@ -82,12 +82,17 @@ def model_image(c,m):
     ys,xs=np.where(mask)
     if len(xs)>60:
         b=(max(0,int(xs.min())-22),max(0,int(ys.min())-22),min(im.width,int(xs.max())+23),min(im.height,int(ys.max())+23));im=im.crop(b)
+    if c['id']=='F021':im=im.transpose(Image.Transpose.ROTATE_90)
     im.thumbnail((1200,750),Image.Resampling.LANCZOS)
-    plain=save_image(im,c['id']+'-model-clear.jpg',raw,'EXISTING_RENDER_CROP_RESAMPLE_ONLY',model_id=c['cid'],render_label=m['label'])
+    plain=save_image(im,c['id']+'-model-clear.jpg',raw,'EXISTING_RENDER_CROP_RESAMPLE_ONLY',model_id=c['cid'],render_label=m['label'],display_rotation_deg=90 if c['id']=='F021' else 0)
     ann=im.copy();dr=ImageDraw.Draw(ann)
-    dot(dr,(max(22,ann.width*.50),max(22,min(ann.height-22,ann.height*.48))),1,'#43576b')
-    if ann.width>130 and ann.height>45:dot(dr,(min(ann.width-22,ann.width*.84),max(22,min(ann.height-22,ann.height*.55))),2,'#43576b')
-    decorated=save_image(ann,c['id']+'-model.jpg',raw,'EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS',model_id=c['cid'],render_label=m['label'])
+    pos=[(.50,.48),(.84,.55)]
+    if c['id'] in ['F026','F069','F070']:pos=[(.50,.65),(.50,.20)]
+    if c['id'] in ['F001','F002','F021']:pos=[(.50,.50),(.50,.08)]
+    for num,(x,y) in enumerate(pos,1):
+        state=S[c['id']]['features'][num-1][0]
+        dot(dr,(max(22,min(ann.width-22,ann.width*x)),max(22,min(ann.height-22,ann.height*y))),num,COL[state])
+    decorated=save_image(ann,c['id']+'-model.jpg',raw,'EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS',model_id=c['cid'],render_label=m['label'],display_rotation_deg=90 if c['id']=='F021' else 0)
     assert sha(raw)==before
     return decorated,plain
 def label_source(path):
@@ -111,7 +116,7 @@ def shell(title,body,pre=''):
 def header(c):
     return '<header class="page-head"><div><a class="brand" href="../index.html">镇国寺 · 万佛殿</a><span class="edition">构件图库 V001 / 审核整改 V002</span></div><nav><a href="../index.html">全部构件</a><a href="#details">形态细节</a><a href="#location">原图定位</a><a href="#refs">出处与边界</a></nav><h1>'+e(c['title'])+'</h1><div class="meta">'+e(c['system'])+' · '+e(c['kind'])+' · '+c['id']+' <span class="status">原登记：'+e(c['status'])+'</span></div></header>'
 def feature_html(s,model_exists):
-    return '<div class="differences">'+''.join(f'<article class="difference {state}"><span class="state">{NAMES[state]}</span><b>{e(src)}</b><p>{e(model)}</p></article>' for state,src,model in s['features'])+'</div>'
+    return '<div class="differences">'+''.join(f'<article class="difference {state}"><span class="state">{["①","②"][i]} {NAMES[state]}</span><b>{e(src)}</b><p>{e(model)}</p></article>' for i,(state,src,model) in enumerate(s['features']))+'</div>'
 def extra_figs(c,s):
     out=[];used={s['source']}
     for j,(path,box,label) in enumerate(s['extra']):
@@ -133,8 +138,16 @@ def build():
         if s['inferred']:cap+='<em>框选含身份或位置推断，不能当作已确认的完整单件。</em>'
         subparts='　'.join(f'{i} {e(v[2])}' for i,v in enumerate(s['parts'],1))
         body=header(c)+'<main><section class="first-screen" aria-label="形态及差异对照"><div class="compare-head"><h2>先看形，再看差异</h2><button class="annotations" type="button" aria-pressed="true">隐藏数字／描线</button></div><div class="comparison">'
-        body+=fig(source,s['label'],cap+'<small>'+subparts+'</small>',cls='source-panel',clear=clear)
-        body+=fig(model[0] if model else None,'现有 Master · '+('原模型只读图' if model else '缺口'),e(c['cid'] or '尚未绑定独立Master')+'<small>数字标记主题部位，不代表视角或像素已经配准。</small>',cls='model-panel',clear=model[1] if model else None)
+        source_figure=fig(source,s['label'],cap+'<small>'+subparts+'</small>',cls='source-panel',clear=clear)
+        if c['id'] in ['F003','F004','F005','F006','F007']:
+            x,y,_=s['parts'][1];raw=OUT/s['source'];im=Image.open(raw).convert('RGB')
+            inset_box=[max(0,x-.065),max(0,s['crop'][1]-.01),min(1,x+.065),min(1,s['crop'][3]+.01)]
+            im=im.crop(rect_px(im,inset_box));im.thumbnail((1000,550),Image.Resampling.LANCZOS)
+            inset=save_image(im,c['id']+'-endpoint-inset.jpg',raw,'END_REGION_CROP_ONLY_NO_HIDDEN_EDGE_COMPLETION',crop=inset_box)
+            source_figure=source_figure.replace('class="source-panel"','class="source-panel wide-source"').replace('</figure>','<div class="source-inset"><img src="../'+inset+'" alt="端区原图放大，遮挡部分保留未知" loading="lazy"><small>端区放大 · '+('同族参考，山面身份未知' if c['id']=='F007' else '遮挡保持，不补齐隐藏轮廓')+'</small></div></figure>')
+        body+=source_figure
+        rotation_note=' · 原渲染仅旋转90°以便辨认竖材，模型未变' if c['id']=='F021' else ''
+        body+=fig(model[0] if model else None,'现有 Master · '+('原模型只读图' if model else '缺口'),e(c['cid'] or '尚未绑定独立Master')+e(rotation_note)+'<small>数字标记主题部位，不代表视角或像素已经配准。</small>',cls='model-panel',clear=model[1] if model else None)
         body+='</div>'+feature_html(s,bool(m))+'<p class="view-limit">定性对照：两侧未做比例归一或像素叠加。'+('绿色实线只描原图可辨边缘；' if s['traces'] else '')+'橙色虚框只表示原图查找范围。</p></section>'
         local=c.get('local_models',[])
         body+='<section id="details"><div class="section-title"><span>02 / 形态细节</span><h2>其他角度、截面与现有局部版本</h2></div><div class="gallery">'+extra_figs(c,s)+'</div>'

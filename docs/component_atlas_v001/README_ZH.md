@@ -1,17 +1,33 @@
-# 万佛殿可参考可视化构件库 V001
+# 万佛殿可参考可视化构件库 V001｜审核整改 V002
 
-在线入口：https://wanfo-component-atlas-v001.tartchair128.chatgpt.site
+浏览入口：`docs/component_atlas_v001/index.html`，使用 Chrome 直接打开，无须服务器或 ZIP。
 
-离线入口：[index.html](index.html)。HTML、CSS、脚本及图片在同一目录，离线亦可浏览，无需后端服务。
+79 个原详情页全部保留，覆盖 58 个实体构件族页面及 21 个组合、系统或边界页面，关联原有 26 个 Master 家族。首页资料图、模型图、差异卡和原图定位均以静态文件随 GitHub 分支保存。
 
-本库为派生可视化审核材料，覆盖现行 Registry 的全部名称条目、待绑定来源项目及必要变体。包含组合、测量边界与洞口的页面，不把这些概念等同独立物理木件。
+## Mac 从 GitHub 更新并打开
 
-每页展示资料原图、现有 Master 或模型缺口、形态差异、位置、复用范围和来源。已有局部装配视图与 Master 基准分开；C02、前端 C01 和后端 R01 的批准/退回边界不变。A1、A2、A3及官方展示之间的来源关系见 [sources.html](sources.html)。
+在现有项目终端执行（工作目录按实际位置调整）：
 
-模型来自已存在的 BLEND 或已保存的审核渲染；本轮不调用构件生成器、不修改形态、不保存改动到原 BLEND。云端渲染对输入二进制、网格和变换进行不变校验。PNG 为原始渲染，WebP 为网页显示副本。
+```bash
+cd "/Users/caroline/中国古建筑3D复原"
+git-proxy-auto fetch origin visualization/wanfo-component-atlas-v001-20261017
+git show FETCH_HEAD:tools/component_atlas/open_atlas_chrome.sh | bash
+```
 
-验证结果见 [VALIDATION.json](VALIDATION.json)。静态检查覆盖所有详情页、目标名称、26个 Master、全部本地图像引用及解码、来源哈希和只读渲染结果。当前环境没有支持的浏览器插件，因此不声称完成浏览器人工观感审核。
+程序复用或新建相邻的“万佛殿构件图库-V001”审核目录，并用 Chrome 打开。原项目目录及 main 不切换；审核目录若有未提交修改则停止，不覆盖。
 
-重建页面：`python tools/component_atlas/build_atlas.py`；验证：`python tools/component_atlas/validate_atlas.py`。提取资料图需原始 A1/A2/A3 PDF：`python tools/component_atlas/extract_sources.py /path/to/pdfs`。
+## 图片怎么读
 
-此 Draft PR 不合并 main，不改变工程事实源、批准 Master、Registry、正式工程结论或整殿装配。
+- 图上数字指示本页讨论的可见部位；两侧数字不是已配准的同名像素。
+- 绿色线只描原图可辨边缘；橙色虚框只是原图查找范围，不能作为完整外轮廓。
+- 实物照片、测绘剖面、报告解释示意及官方展示提取分别标明。后两者不等于独立实测真值。
+- 无法分离的单件、被遮挡的端部、身份或尺寸型未确认的个体，直接标为未知，不补成历史形状。
+- Master、C02、前端C01和其他局部工作版本分别展示，批准范围不相互扩大。
+
+## 验证与范围
+
+实际 Chrome 截图和逐页结果：`qa/index.html`。静态资源、来源哈希和模型身份核对：`assets/v002/STATIC_VALIDATION.json`。裁切、描线、显示旋转及原图对应：`assets/v002/DERIVATION_PROVENANCE.json`。
+
+Chrome 在 GitHub Actions 的 Linux 环境中实际测试 `file://` 入口、79个详情页、桌面和窄屏布局、图片加载、放大及标注切换。该测试不宣称用户 Mac 的浏览器版本已被远程控制，也不证明此前受限的 chatgpt.site 入口可访问。
+
+本轮仅修改图库页面、派生标注图和验证代码；不修改 Master、批准 BLEND、Registry、正式状态或工程审批结论，不合并 main。
