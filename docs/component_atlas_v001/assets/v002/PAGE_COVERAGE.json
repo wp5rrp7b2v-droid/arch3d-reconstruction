@@ -309,10 +309,10 @@
     "kind": "实体构件族",
     "source": "assets/sources/A1-p290.jpg",
     "source_crop": [
-      0.035,
-      0.105,
-      0.33,
-      0.4
+      0.075,
+      0.255,
+      0.37,
+      0.5
     ],
     "identity_inference": true,
     "visible_edge_trace_count": 0,
@@ -353,7 +353,7 @@
       0.439
     ],
     "identity_inference": false,
-    "visible_edge_trace_count": 0,
+    "visible_edge_trace_count": 1,
     "model_id": "CMP-FRAME-TUOJIAO-001",
     "model": "assets/models/CMP-FRAME-TUOJIAO-001--0--front.png",
     "source_panel": "assets/v002/F019-source.jpg",

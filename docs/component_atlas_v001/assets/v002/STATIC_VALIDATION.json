@@ -3,9 +3,9 @@
   "pages": 79,
   "entity_pages": 58,
   "master_families": 26,
-  "local_references": 2131,
-  "decoded_referenced_images": 345,
-  "derivatives": 372,
+  "local_references": 2136,
+  "decoded_referenced_images": 350,
+  "derivatives": 377,
   "source_hashes_verified": 86,
   "model_identity_checks": 132,
   "model_identity_details": [
@@ -671,6 +671,6 @@
     ]
   ],
   "original_engineering_state": "PASS_NO_PROTECTED_PATH_CHANGED",
-  "browser": "PENDING_SEPARATE_CHROME_RUN",
+  "browser": "PASS_GOOGLE_CHROME_FILE_AND_HTTP",
   "original_source_pixels": "UNMODIFIED; DERIVATIVES_ARE_CROP_RESAMPLE_AND_ANNOTATION_ONLY"
 }
