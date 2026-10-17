@@ -697,10 +697,10 @@
     "identity_inference": true,
     "visible_edge_trace_count": 0,
     "model_id": null,
-    "model": null,
+    "model": "assets/models/ASSEMBLY_WORK_V003--14--axon.png",
     "source_panel": "assets/v002/F037-source.jpg",
     "locator": "assets/v002/F037-locator.jpg",
-    "model_panel": null
+    "model_panel": "assets/v002/F037-model.jpg"
   },
   {
     "id": "F038",
@@ -735,10 +735,10 @@
     "identity_inference": false,
     "visible_edge_trace_count": 0,
     "model_id": null,
-    "model": null,
+    "model": "assets/models/ASSEMBLY_WORK_V003--18--axon.png",
     "source_panel": "assets/v002/F039-source.jpg",
     "locator": "assets/v002/F039-locator.jpg",
-    "model_panel": null
+    "model_panel": "assets/v002/F039-model.jpg"
   },
   {
     "id": "F040",
@@ -1343,10 +1343,10 @@
     "identity_inference": true,
     "visible_edge_trace_count": 0,
     "model_id": null,
-    "model": null,
+    "model": "assets/models/LOCAL_C02--4--axon.png",
     "source_panel": "assets/v002/F071-source.jpg",
     "locator": "assets/v002/F071-locator.jpg",
-    "model_panel": null
+    "model_panel": "assets/v002/F071-model.jpg"
   },
   {
     "id": "F072",
@@ -1362,10 +1362,10 @@
     "identity_inference": false,
     "visible_edge_trace_count": 0,
     "model_id": null,
-    "model": null,
+    "model": "assets/models/ASSEMBLY_WORK_V003--18--axon.png",
     "source_panel": "assets/v002/F072-source.jpg",
     "locator": "assets/v002/F072-locator.jpg",
-    "model_panel": null
+    "model_panel": "assets/v002/F072-model.jpg"
   },
   {
     "id": "F073",

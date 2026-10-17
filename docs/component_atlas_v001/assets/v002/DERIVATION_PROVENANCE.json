@@ -3529,6 +3529,26 @@
     ]
   },
   {
+    "file": "assets/v002/F037-model-clear.jpg",
+    "source": "assets/models/ASSEMBLY_WORK_V003--14--axon.webp",
+    "source_sha256": "cbcf7197a5e79aa9411e967c2ab6ff07f452c983db36e4983053391213abc6ea",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "cbd76c4c94376b2e317f08d84b39eb14e02b8502c9d5746481c477b042f9a2af",
+    "model_id": null,
+    "render_label": "east:PANJIAN_FANG_FRONT",
+    "display_rotation_deg": 0
+  },
+  {
+    "file": "assets/v002/F037-model.jpg",
+    "source": "assets/models/ASSEMBLY_WORK_V003--14--axon.webp",
+    "source_sha256": "cbcf7197a5e79aa9411e967c2ab6ff07f452c983db36e4983053391213abc6ea",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "ed25db3e50c0b3214b17a7716f4c676b0966396f8fd322776b6f7bbe553a0f13",
+    "model_id": null,
+    "render_label": "east:PANJIAN_FANG_FRONT",
+    "display_rotation_deg": 0
+  },
+  {
     "file": "assets/v002/F037-detail-1.jpg",
     "source": "assets/sources/A1-p345.jpg",
     "source_sha256": "0f3d515e97e71f539e0e9a54e162ef20ae2e8997876eae83d11f9ae66ebdde6e",
@@ -3636,6 +3656,26 @@
         "槫下承托区"
       ]
     ]
+  },
+  {
+    "file": "assets/v002/F039-model-clear.jpg",
+    "source": "assets/models/ASSEMBLY_WORK_V003--18--axon.webp",
+    "source_sha256": "0c85a5f4d732cff9095f3ca577e8439850baf673f71e439b65897a5173b1ad13",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "79fb90bbe8597b93770d9a966c599ecc786810383a30ca3359e3cf98320b31f9",
+    "model_id": null,
+    "render_label": "east:RIDGE_TIEMU",
+    "display_rotation_deg": 0
+  },
+  {
+    "file": "assets/v002/F039-model.jpg",
+    "source": "assets/models/ASSEMBLY_WORK_V003--18--axon.webp",
+    "source_sha256": "0c85a5f4d732cff9095f3ca577e8439850baf673f71e439b65897a5173b1ad13",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "9b44326262e6013011d430d3daa2ef32b11c76f0955f0c1d4db89a2f665e1d86",
+    "model_id": null,
+    "render_label": "east:RIDGE_TIEMU",
+    "display_rotation_deg": 0
   },
   {
     "file": "assets/v002/F039-detail-1.jpg",
@@ -5542,6 +5582,26 @@
     ]
   },
   {
+    "file": "assets/v002/F071-model-clear.jpg",
+    "source": "assets/models/LOCAL_C02--4--axon.webp",
+    "source_sha256": "66788433ddc4bd79d034c79fa5af14a0a8501debf3d63dcc930dd21a1e32b441",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "59de7505a37d86c3fbc659a5b411188c2ba822ce1cc01709bb50d7e73513926f",
+    "model_id": null,
+    "render_label": "trial:EAST_FRONT_SANDOU_LEFT",
+    "display_rotation_deg": 0
+  },
+  {
+    "file": "assets/v002/F071-model.jpg",
+    "source": "assets/models/LOCAL_C02--4--axon.webp",
+    "source_sha256": "66788433ddc4bd79d034c79fa5af14a0a8501debf3d63dcc930dd21a1e32b441",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "ed7b99c13271168a45c8a8c64c9b52e57a26b84e34e620beca6f4b8e6f14eb72",
+    "model_id": null,
+    "render_label": "trial:EAST_FRONT_SANDOU_LEFT",
+    "display_rotation_deg": 0
+  },
+  {
     "file": "assets/v002/F072-locator.jpg",
     "source": "assets/sources/A1-p085.jpg",
     "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
@@ -5593,6 +5653,26 @@
         "端部下缘"
       ]
     ]
+  },
+  {
+    "file": "assets/v002/F072-model-clear.jpg",
+    "source": "assets/models/ASSEMBLY_WORK_V003--18--axon.webp",
+    "source_sha256": "0c85a5f4d732cff9095f3ca577e8439850baf673f71e439b65897a5173b1ad13",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "79fb90bbe8597b93770d9a966c599ecc786810383a30ca3359e3cf98320b31f9",
+    "model_id": null,
+    "render_label": "east:RIDGE_TIEMU",
+    "display_rotation_deg": 0
+  },
+  {
+    "file": "assets/v002/F072-model.jpg",
+    "source": "assets/models/ASSEMBLY_WORK_V003--18--axon.webp",
+    "source_sha256": "0c85a5f4d732cff9095f3ca577e8439850baf673f71e439b65897a5173b1ad13",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "9b44326262e6013011d430d3daa2ef32b11c76f0955f0c1d4db89a2f665e1d86",
+    "model_id": null,
+    "render_label": "east:RIDGE_TIEMU",
+    "display_rotation_deg": 0
   },
   {
     "file": "assets/v002/F072-detail-1.jpg",
