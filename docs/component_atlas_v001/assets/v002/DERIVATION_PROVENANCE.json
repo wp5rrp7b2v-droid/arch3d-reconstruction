@@ -234,7 +234,7 @@
     "source": "assets/approved/554f8da45c-AXON.png",
     "source_sha256": "289e6b1f6915aa24d911d9b346c9f29c3912f9aff9e8da1bde8f861b48242174",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "9d7e52da7c388ffa039509370700e2003c630c0461d885e85111b1c634b8dce5",
+    "sha256": "da1744a3b74b78c257bf7e063b098fb0bc7d1f245db2059c5c12d9db6ff3d56f",
     "model_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -367,7 +367,7 @@
     "source": "assets/approved/4b482432f0-AXON.png",
     "source_sha256": "03c68c56d8f07ad6709a866206fa5e7a82c614fd8d7f56698debffc9079a05a6",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "42c397e362a984bc79f9eef429c096d3472872d88ff78b242528e1fb447c66c3",
+    "sha256": "c51f1ff857b6ae6bc93796fbc37a9c46cdcf58abe8cfe92ab6d4ad3ce0a419a8",
     "model_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -500,7 +500,7 @@
     "source": "assets/approved/959a2167ac-AXON.png",
     "source_sha256": "a7466623bea4816f4561afb53ae27acc10c94182bfd969a3b27d548157ce9a85",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "7a43c9b838861f1b3a0a7c2e850fdd129fa5a8bf6f39a4d5dd57e7ac7d3ca0af",
+    "sha256": "84cad542fabb3e0f36b664897a1768fe8b65f403ff3195b191446876411dfa3d",
     "model_id": "CMP-FRAME-FOUR-CHUANFU-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -641,7 +641,7 @@
     "source": "assets/approved/d6023251ab-EW_SEAM_AXON.png",
     "source_sha256": "96f703650f42de4052856d4e521a34df7653f06e54cf755fc72904312946a25c",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "6f8c642cc7cc5a6466b07ac501a600554d24f85b5b90af0ca13afcbca1e31d39",
+    "sha256": "29c2409b088927fd1ad4262d53a40c51e2500bb15037caf2c8e442c949ddf0ae",
     "model_id": "CMP-FRAME-PINGLIANG-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -740,7 +740,7 @@
     "source": "assets/approved/907f6c234d-GABLE_AXON.png",
     "source_sha256": "d330330058d48fdaf71d45c0f11582eaa2df0aec45ba473b0002b3e4f87a5616",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "9adec6cff7184252df02b26be5fec7eaac77880ca3508b2741060b4f9ef466ad",
+    "sha256": "141b4b0e57aa3201efdb5b49abb7ce7fd273383d704b180527c13097738f1425",
     "model_id": "CMP-FRAME-PINGLIANG-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -852,7 +852,7 @@
     "source": "assets/models/CMP-FRAME-TUOFENG-001--0--front.webp",
     "source_sha256": "310c7d53825e7671ec5da497ee8a915db7d04ce00d08f30403c42b1aea99912d",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "67b41c70d4a6faeef687a4931a0084b8fab89ec30ad4e221e17f7368d340fa01",
+    "sha256": "85a40b9f7a241c7973f24f578bed09279b2ce590d5e2561504c7327e5a500a07",
     "model_id": "CMP-FRAME-TUOFENG-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -938,7 +938,7 @@
     "source": "assets/models/CMP-FRAME-TUOFENG-001--1--front.webp",
     "source_sha256": "aa4fe0b6d688eebc452da84dec1562007ebd6474c0fa5de7ef42127c0134571d",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "aba8440efeb91b00b73cd867566f4a02b60fd850af00ddb4b5051bb55f2e3941",
+    "sha256": "220303792ec37f31e066d93d48892d81e83b9b2a4b10ebb9608d39cacfa632e4",
     "model_id": "CMP-FRAME-TUOFENG-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -1024,7 +1024,7 @@
     "source": "assets/approved/489bd4fc50-AXON.png",
     "source_sha256": "ba128f33f00e6630e8b1a104e27148452ef429c01b0eb21b5e7fcf93a06066fb",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "903e0bc112aae0726cabdc74e6165fd0bfd1d805863aba9cc567521c774fbf8e",
+    "sha256": "4607e3e85776329e57657e1fb940a8281aff1d469ac6f66495a7b136d4e889a7",
     "model_id": "CMP-FRAME-DINGFU-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -1152,7 +1152,7 @@
     "source": "assets/approved/251dc54fb1-AXON.png",
     "source_sha256": "9ce1e5d16aaa0ea431608b3735722b7a021ab76bd944e296d03cb261e4d4cab3",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "f83e545ccf34f997e60545ee8ed15e8b01d82146551d2e0eb44563912428a891",
+    "sha256": "c84046b0a38d454ef0ac575e36cb32b1e00b7ce8bbef84bd1fe4454236ab3659",
     "model_id": "CMP-FRAME-RUFU-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -1267,7 +1267,7 @@
     "source": "assets/models/CMP-FRAME-ZHAQIAN-001--0--front.webp",
     "source_sha256": "ab9b0f40c596a9ff7b70cabaf861b9f81616c145e5c139c1f45d777aeb76f729",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "32615de515709f5813317ac1279d283f513f231771bccb4ef77aead500025cd1",
+    "sha256": "7c568154e6ec6c940370bea66db7c42957b0bfdc1cd40731d3dd727ab931088c",
     "model_id": "CMP-FRAME-ZHAQIAN-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -1353,7 +1353,7 @@
     "source": "assets/models/CMP-FRAME-PURLIN-001--0--front.webp",
     "source_sha256": "9b5b4a14c09b25b159ba1a12a0bff75938d4f5a3045c4fa0a05eebc9671689f7",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "a3dfca9711c522631317d00962829b4238c6e890091918d286eaa3c1f7198f6f",
+    "sha256": "c9bf63fba39a74c307acd1713edf4f77e6eedd3a12d1cb7b983c66aea1cfd2c1",
     "model_id": "CMP-FRAME-PURLIN-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -1481,7 +1481,7 @@
     "source": "assets/models/CMP-FRAME-LANE-001--0--front.webp",
     "source_sha256": "6d9e411edb9a179cc5912804655f256b683795039385eeb0df1e432da6e3a258",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "3f4c48ecc792af7c804c363940afa969863739517052147c2ae491ef048e9276",
+    "sha256": "ffc063fb49bf13e51e3c78ee240a98f8035005c52075af6539a8ec0f663ed72c",
     "model_id": "CMP-FRAME-LANE-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -1583,7 +1583,7 @@
     "source": "assets/models/CMP-FRAME-YOUE-001--0--front.webp",
     "source_sha256": "6d9e411edb9a179cc5912804655f256b683795039385eeb0df1e432da6e3a258",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "3f4c48ecc792af7c804c363940afa969863739517052147c2ae491ef048e9276",
+    "sha256": "ffc063fb49bf13e51e3c78ee240a98f8035005c52075af6539a8ec0f663ed72c",
     "model_id": "CMP-FRAME-YOUE-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -1671,7 +1671,7 @@
     "source": "assets/models/CMP-FRAME-DAJIAOLIANG-001--0--front.webp",
     "source_sha256": "abf4960bfd958690cbd6719730b1357bad40c2e4066a37c3c998312d00a19746",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "efd7782997a9c39215e38b4b4a4f6ca8efe892028d21e6be4def399935b921fa",
+    "sha256": "9a60bab71ee12a61b35ea9dd6e99231bb6df7d769ac2c96793b610cdffd3601d",
     "model_id": "CMP-FRAME-DAJIAOLIANG-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -1765,7 +1765,7 @@
     "source": "assets/models/CMP-FRAME-ZIJIAOLIANG-001--0--front.webp",
     "source_sha256": "726d5de8d6e01209f6c21c6c9f8dfdfb6536650dbdf09bb796599bcdfc92156e",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "17ac8324a230b036a89e94275c5dbeaf79a9d20e792e85268d85dd95d9f1fbd0",
+    "sha256": "eb2fb3256f7a2e105da48f5e7dfe1d4006989ac1cd8aa92f00329b2c426803e3",
     "model_id": "CMP-FRAME-ZIJIAOLIANG-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -1941,7 +1941,7 @@
     "source": "assets/models/CMP-FRAME-TUOJIAO-001--0--front.webp",
     "source_sha256": "79573a90de0c0b86c6c68f38de43fce195f1f057531a9b058410f3b0513f8270",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "8fae21d53b925d0e916985061767247f283c9c92befb894dd0bbebcdfea53847",
+    "sha256": "b57ce90a4fde1a8589f03234e429624f26fe3bf60468b304a773a720e72be5fa",
     "model_id": "CMP-FRAME-TUOJIAO-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -2069,7 +2069,7 @@
     "source": "assets/models/CMP-FRAME-CHASHOU-001--0--front.webp",
     "source_sha256": "0e504566cca8389fdd2adf3c85c9766a2dc157dae417212554c7e75f3c9a8465",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "4ab78ada0a0cefac7f15092851efb77c3be8210055c489ba092f0c7a5b777853",
+    "sha256": "db3f8080472f476c17cd61c7b0942e43580ecc53ae022c8d16682c0546b3d0f4",
     "model_id": "CMP-FRAME-CHASHOU-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -2176,7 +2176,7 @@
     "source": "assets/models/CMP-FRAME-SHUZHU-001--0--front.webp",
     "source_sha256": "65f36fbaf01044d99bbc78c474479f3fe51cecfb429dacc550c1bb2c060e4fb5",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "66577007a237e6f0c52f1170551acb10010e1a715b7c7241e26f3fc2cb91acd6",
+    "sha256": "67b8949a13541a9c69414f293cf295dcd482ad09c4cb5bf274493ed2a538c02b",
     "model_id": "CMP-FRAME-SHUZHU-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 90
@@ -2521,7 +2521,7 @@
     "source": "assets/approved/cdb53a5ec2-AXON.png",
     "source_sha256": "f3b32ffa35b09a9928f5efd88f4410249d5ed5cb2fbe017ecb4000da9c4746de",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "f17a39cc2814bfbfb5f15e793198d9e3b6132ed19e95b8abc5a303c98e94a50c",
+    "sha256": "65ef8475b54094dae18cc0e5b5c1daf00641932121f3e0dcd96884db07cf0666",
     "model_id": "CMP-LUDOU-COLUMN-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -2615,7 +2615,7 @@
     "source": "assets/models/CMP-DOU-BOTTOM-LONGKAI-001--0--front.webp",
     "source_sha256": "475d3f804cfc277bcf16b35ad31bde40e8ee32619ab9b976dbcf64085c446dbf",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "a9f5b0860434519da6a39d0c4567ce15cb8c39f4a4a20b5aca64c7e78e6b96be",
+    "sha256": "a14aaefe3384cc4edd3104a40b03d47ebbc5eae79acb9f7326998835bb5427a3",
     "model_id": "CMP-DOU-BOTTOM-LONGKAI-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -2714,7 +2714,7 @@
     "source": "assets/models/CMP-GONG-HUAGONG-001--0--front.webp",
     "source_sha256": "1c42b910abf86d3db324fefc4f87751c817e0c49b34c9541203ca1f9adeaa31f",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "c42f1a4c3dd9b32a2008509fb4c6df03b06f84d942709d279bffb976e86e982b",
+    "sha256": "976dff433842ad2012506d3ca7c7f3d31e7a71b5b64c7df174a17d21130db3df",
     "model_id": "CMP-GONG-HUAGONG-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -2813,7 +2813,7 @@
     "source": "assets/models/CMP-GONG-HUAGONG-001--1--front.webp",
     "source_sha256": "e750a9c56d118db2826c2714adf4cc29482018b3f719668ced164f76898ea6da",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "5faafb479e7b6b08d86611a3039e38a63c6056d06e3acd080a4f85c28c80c8c7",
+    "sha256": "9172ebf34698e5b8eac2aa4989d494fa4109abb1e5d4e9762d3f2e48caa554ba",
     "model_id": "CMP-GONG-HUAGONG-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -2907,7 +2907,7 @@
     "source": "assets/models/CMP-GONG-LINGGONG-001--0--front.webp",
     "source_sha256": "8a0879a097efdf5383b9f8d90f80fdb0c339b29434abcbc1fefc792201f8dfce",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "3a9f4895638da786f35183987070bce993a5519d90c136342ea83f5905117163",
+    "sha256": "2bd1fe9c5c089f25588762be23f7db05a8429ee610bf9ccfcefe82fcfb0204d8",
     "model_id": "CMP-GONG-LINGGONG-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -3006,7 +3006,7 @@
     "source": "assets/approved/d3713ab53c-CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png",
     "source_sha256": "9f621af4f27831c4b2fb0e8cd4f08767117dece7604e3a40ba8918fce1d7543f",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "b96e25384a3b3aadba0e3f4d37748822be0275ea02b7beaddc4cafb33fb91899",
+    "sha256": "edb64ddd0a3bd0ba788292ed7596c4edc7a811d44d84376798516df47f8882b1",
     "model_id": "CMP-GONG-GUAZI-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -3092,7 +3092,7 @@
     "source": "assets/models/CMP-GONG-MANGONG-001--0--front.webp",
     "source_sha256": "6000602ec04db4187bc1c35316d33f0a0224fea2ccaaf5e1e54d00a0747418d0",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "0c76d5efc6c3730c3d231371aa8937d4b94b543a3313cee36e01a81b72eb22bb",
+    "sha256": "690a7c4c72c71a0f02afef0e1489e24b0fa54bff0f5f1774798a1798304865f8",
     "model_id": "CMP-GONG-MANGONG-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -3178,7 +3178,7 @@
     "source": "assets/approved/d3713ab53c-CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png",
     "source_sha256": "9f621af4f27831c4b2fb0e8cd4f08767117dece7604e3a40ba8918fce1d7543f",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "b96e25384a3b3aadba0e3f4d37748822be0275ea02b7beaddc4cafb33fb91899",
+    "sha256": "edb64ddd0a3bd0ba788292ed7596c4edc7a811d44d84376798516df47f8882b1",
     "model_id": "CMP-GONG-GUAZI-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -3264,7 +3264,7 @@
     "source": "assets/models/CMP-GONG-MANGONG-001--1--front.webp",
     "source_sha256": "b14944a6ef195c131065e59b60b64e592b8686716539923ae7656b3eb41b3097",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "92f9a7895639da11bff22be8c918df5dae847490c9ac7b3a3d453efd44766783",
+    "sha256": "a666c0891ad39348dbffd0098ae896908c695cfdf813bc4549308daaff6738df",
     "model_id": "CMP-GONG-MANGONG-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -3350,7 +3350,7 @@
     "source": "assets/models/CMP-GONG-ANG-001--0--front.webp",
     "source_sha256": "93663732b33eadfe1d5e23eeb8358d05b9c63dc2603310c0f9a48028f5c2a0e9",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "46f8453359167adcbf9e3aee2db5b33ad9c5013a81f4f89841954ad5248f75bc",
+    "sha256": "0fc1c49c93a4193473ff4cebe4188f19b84b3ff58608226920b8722d8fe58a61",
     "model_id": "CMP-GONG-ANG-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -3449,7 +3449,7 @@
     "source": "assets/models/CMP-GONG-ANG-001--1--front.webp",
     "source_sha256": "4eb34e79f4f2d21ba9851ac208fca19d2fcd09f92bc5ee527aace42e5905e259",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "a9dbde8c0ac86f9f19fe3250729d9ec3411f253c5598802516d64d6b924428ae",
+    "sha256": "a00ed742b7d1560c53d386f7b2eaa16c93bf5b97ee02a35066f7d59a57b07b9a",
     "model_id": "CMP-GONG-ANG-001",
     "render_label": "现有 BLEND · front",
     "display_rotation_deg": 0
@@ -4125,7 +4125,7 @@
     "source": "assets/sources/A1-p285.jpg",
     "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
     "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
-    "sha256": "c8d1226a2160bcc9889cc8d221ec56dc5cc44df8bff0b143d7ebadf7598197d1",
+    "sha256": "206e976e8b263c97f32fe087482e6b93a483365e1535765a784f75214180f435",
     "crop": [
       0.49,
       0.18,
@@ -4136,8 +4136,8 @@
     "parts": [
       [
         0.68,
-        0.32,
-        "戗脊曲线"
+        0.36,
+        "戗脊曲线所在区"
       ],
       [
         0.79,
@@ -5025,7 +5025,7 @@
     "source": "assets/sources/A1-p141.jpg",
     "source_sha256": "dc0eb83b76f2459011c663a20f931729055e6d31541477e20003d389d13ca868",
     "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
-    "sha256": "f5b1cb8ae1a78350117b561885b2c8f292a8ce306d6d770ef4fb5af9d8b8bdb6",
+    "sha256": "4a4824f94880fca3e267e873adeb843896b7679893d17ed2570e08504ff5839f",
     "crop": [
       0.43,
       0.18,
@@ -5037,12 +5037,12 @@
       [
         0.51,
         0.26,
-        "垂兽首"
+        "垂兽躯干"
       ],
       [
         0.51,
-        0.33,
-        "兽座"
+        0.308,
+        "与脊线交接"
       ]
     ]
   },
@@ -5091,7 +5091,7 @@
     "source": "assets/sources/A1-p142.jpg",
     "source_sha256": "43b2959b0ad0875556859e5c560d08e3c0774614a11e0c55ad654cbd667a97b5",
     "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
-    "sha256": "e601a5934869af20a4fb0ecf4650094b6d7e1b1691eed8193717ca797e2c996b",
+    "sha256": "940074da2dab6877bd5b5d21768aa6a4c75836c66fcbec1d21673671db91eac6",
     "crop": [
       0.51,
       0.14,
@@ -5101,8 +5101,8 @@
     "traces": [],
     "parts": [
       [
-        0.59,
-        0.2,
+        0.61,
+        0.225,
         "戗兽兽首"
       ],
       [
@@ -5376,7 +5376,7 @@
     "source": "assets/approved/4ca0ff8c16-AXON.png",
     "source_sha256": "633cd6b2d90e2c2cb3cbf4a2522eab522461ad3b88fa6ccb94b75c1fab1a5913",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "1ed5ee1b159b0c094e86f0df7e92be78b07bebf2cd48b6182ce8c59dded42617",
+    "sha256": "8346efab0052f155f12a3fd9aaa34832aca5be956473ea8fe410463bc5b43c79",
     "model_id": "CMP-DOU-SINGLE-LONGKAI-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -5462,7 +5462,7 @@
     "source": "assets/approved/e243cb92cd-AXON.png",
     "source_sha256": "92141223dd51cacc3740f7968fe9a5681d71f61f087b1105c4049611e9791ede",
     "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
-    "sha256": "4c48e6e27f60a0561526e0d0fa85976a9070aea4d344bb67c78f32ef1bacbb4a",
+    "sha256": "44e5265c4dcfc5f7b2ee4b2ddd8efdadbfbd79d7a6e22e97536499eb3cacd865",
     "model_id": "CMP-DOU-INTERACTIVE-001",
     "render_label": "GitHub 已有审核渲染",
     "display_rotation_deg": 0
@@ -5845,7 +5845,7 @@
     "source": "assets/sources/A1-p285.jpg",
     "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
     "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
-    "sha256": "d5eaa46d588c4a1dfdd2010f4b426f521d09da5f2593413487f6a0c152853a13",
+    "sha256": "6aec7a73b37582c2097b95013ee2ad5ac5a9768466cef49f28ba643ff7ed075b",
     "crop": [
       0.455,
       0.19,
@@ -5856,8 +5856,8 @@
     "parts": [
       [
         0.61,
-        0.29,
-        "斜向带状构件位置"
+        0.335,
+        "斜向带状构件位置（身份推断）"
       ]
     ]
   },
