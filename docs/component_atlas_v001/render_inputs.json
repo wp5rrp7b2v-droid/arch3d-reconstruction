@@ -160,5 +160,32 @@
     "sha256": "52bb4966e8c844aa1f62754e21c46ae3b414f96f3284208a12e5670f11e381bd",
     "body_names": [],
     "individual": true
+  },
+  {
+    "id": "LOCAL_C02",
+    "path": "/tmp/wanfo-atlas-inputs/LOCAL_C02.blend",
+    "sha256": "e7fffabdcab88a0262df773aabf9a4482351cd8c062ed335afcc0c4fb7a76fc8",
+    "source_commit": "f061ccfeaeab1b51288d523df98393ad11ec0945",
+    "source_path": "production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-13/dou_contour_c02/WANFO_DOU_CONTOUR_CANDIDATE_C02.blend",
+    "body_names": [
+      "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "trial:EAST_FRONT_HUA1_LOCAL",
+      "trial:EAST_FRONT_COLUMN_LUDOU",
+      "trial:EAST_FRONT_NIDAO_GUAZI",
+      "trial:EAST_FRONT_SANDOU_LEFT",
+      "trial:EAST_FRONT_SANDOU_RIGHT"
+    ],
+    "individual": true
+  },
+  {
+    "id": "LOCAL_UPPER6_C01",
+    "path": "/tmp/wanfo-atlas-inputs/LOCAL_UPPER6_C01.blend",
+    "sha256": "baf43fc29fd9a769c89a0edc5cd4137d107133bf20239677105dde9baaa06e54",
+    "source_commit": "0187eb716d2432cf5d7b3502fb4eae11ba89ec5c",
+    "source_path": "production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-13/upper6_front_tenon_c01/WANFO_UPPER6_FRONT_TENON_C01.blend",
+    "body_names": [
+      "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE"
+    ],
+    "individual": true
   }
 ]
