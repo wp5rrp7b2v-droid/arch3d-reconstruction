@@ -21,6 +21,7 @@ def main():
             url=(OUT/'pages'/f'{c["id"]}.html').as_uri();page.goto(url,wait_until='load');check=ready(page)
             assert not check['broken'],(c['id'],check)
             assert not check['overflow'],(c['id'],'desktop overflow')
+            assert page.locator('.source-panel>img').bounding_box()['height']>=90,(c['id'],'source collapsed')
             assert page.locator('h1').inner_text()==c['title'];assert page.locator('.comparison figure').count()==2
             # Search locator links and headers exist in the actual rendered DOM.
             assert page.locator('#location figure img').count()==1
