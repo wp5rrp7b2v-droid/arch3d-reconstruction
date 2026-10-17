@@ -1,0 +1,5871 @@
+[
+  {
+    "file": "assets/v002/F001-locator.jpg",
+    "source": "assets/official/fe92a50f93-01_SOURCE_柱.png",
+    "source_sha256": "490acd37eb0c1659c644aecbbfb4ddbbec1de6f136963ad38b80aac0591472ad",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "ddd5704545e929e179940c27d170855b95d01d2bda112d431af2fc7230111859",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F001-source-clear.jpg",
+    "source": "assets/official/fe92a50f93-01_SOURCE_柱.png",
+    "source_sha256": "490acd37eb0c1659c644aecbbfb4ddbbec1de6f136963ad38b80aac0591472ad",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "fd70234ca87af93353eb9a612d58569e5dc3209ff0ac8804b979bdf5f16e13c2",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F001-source.jpg",
+    "source": "assets/official/fe92a50f93-01_SOURCE_柱.png",
+    "source_sha256": "490acd37eb0c1659c644aecbbfb4ddbbec1de6f136963ad38b80aac0591472ad",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "226c089128b96fc7de5aea791a57a5d6c1eeaeb299404a5989f2f76cbbeac639",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.35,
+        0.43,
+        "柱身"
+      ],
+      [
+        0.35,
+        0.25,
+        "柱头"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F001-model-clear.jpg",
+    "source": "assets/approved/b37afd4838-AXON.png",
+    "source_sha256": "9466c862f347958f15b5ced25175e46ed8c9aa158a388bbe1a35ded0ea8c20f1",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "8ea3ba81042d06c7d8ed3ac64c51c68306fcc5ce230961fd48a4dd591292baf3",
+    "model_id": "CMP-COLUMN-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F001-model.jpg",
+    "source": "assets/approved/b37afd4838-AXON.png",
+    "source_sha256": "9466c862f347958f15b5ced25175e46ed8c9aa158a388bbe1a35ded0ea8c20f1",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "afb630fb1589f910c148b315f28d8ea93107fb0af7093f6d2afd00383d069467",
+    "model_id": "CMP-COLUMN-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F002-locator.jpg",
+    "source": "assets/official/fe92a50f93-01_SOURCE_柱.png",
+    "source_sha256": "490acd37eb0c1659c644aecbbfb4ddbbec1de6f136963ad38b80aac0591472ad",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "ddd5704545e929e179940c27d170855b95d01d2bda112d431af2fc7230111859",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F002-source-clear.jpg",
+    "source": "assets/official/fe92a50f93-01_SOURCE_柱.png",
+    "source_sha256": "490acd37eb0c1659c644aecbbfb4ddbbec1de6f136963ad38b80aac0591472ad",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "fd70234ca87af93353eb9a612d58569e5dc3209ff0ac8804b979bdf5f16e13c2",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F002-source.jpg",
+    "source": "assets/official/fe92a50f93-01_SOURCE_柱.png",
+    "source_sha256": "490acd37eb0c1659c644aecbbfb4ddbbec1de6f136963ad38b80aac0591472ad",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "226c089128b96fc7de5aea791a57a5d6c1eeaeb299404a5989f2f76cbbeac639",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.35,
+        0.43,
+        "柱身"
+      ],
+      [
+        0.35,
+        0.25,
+        "柱头"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F002-model-clear.jpg",
+    "source": "assets/approved/b37afd4838-AXON.png",
+    "source_sha256": "9466c862f347958f15b5ced25175e46ed8c9aa158a388bbe1a35ded0ea8c20f1",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "8ea3ba81042d06c7d8ed3ac64c51c68306fcc5ce230961fd48a4dd591292baf3",
+    "model_id": "CMP-COLUMN-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F002-model.jpg",
+    "source": "assets/approved/b37afd4838-AXON.png",
+    "source_sha256": "9466c862f347958f15b5ced25175e46ed8c9aa158a388bbe1a35ded0ea8c20f1",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "afb630fb1589f910c148b315f28d8ea93107fb0af7093f6d2afd00383d069467",
+    "model_id": "CMP-COLUMN-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F003-locator.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "47e885406237d01b792ffab92008604d7d029bb85b9f9ec1dc5d79cfe708adbd",
+    "crop": [
+      0.17,
+      0.47,
+      0.83,
+      0.575
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F003-source-clear.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "8d331ba453fb9a6e23f577f514706400f089d9101f93d9e4184bb76398fdc2b6",
+    "crop": [
+      0.17,
+      0.47,
+      0.83,
+      0.575
+    ]
+  },
+  {
+    "file": "assets/v002/F003-source.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "726d2d9f34c24362542acf80ba5fa5965f55fef7ce685018f97b20324050fe4e",
+    "crop": [
+      0.17,
+      0.47,
+      0.83,
+      0.575
+    ],
+    "traces": [
+      [
+        [
+          0.31,
+          0.494
+        ],
+        [
+          0.69,
+          0.494
+        ]
+      ],
+      [
+        [
+          0.31,
+          0.53
+        ],
+        [
+          0.69,
+          0.53
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.5,
+        0.512,
+        "下层梁身"
+      ],
+      [
+        0.22,
+        0.516,
+        "柱头端区"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F003-model-clear.jpg",
+    "source": "assets/approved/554f8da45c-AXON.png",
+    "source_sha256": "289e6b1f6915aa24d911d9b346c9f29c3912f9aff9e8da1bde8f861b48242174",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "ed0f77b210288dda19d05df0008d93f2d143ec01bcc990a150064ef0d3277fc5",
+    "model_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F003-model.jpg",
+    "source": "assets/approved/554f8da45c-AXON.png",
+    "source_sha256": "289e6b1f6915aa24d911d9b346c9f29c3912f9aff9e8da1bde8f861b48242174",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "98a5fa71439ee3535c3baed1d10c56d6f83c9bbb65fc312b77065ebfd96f46bd",
+    "model_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F003-detail-1.jpg",
+    "source": "assets/sources/A1-p082.jpg",
+    "source_sha256": "7c9708fbc4645fd856a069a8200a19c6b45d02b03dda08b43ab7d157e51bb8d9",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "115add3ffeb17487dafed9d673a065ebc4b41639e12b21742ad3621f1cf1b075",
+    "crop": [
+      0.2,
+      0.07,
+      0.85,
+      0.34
+    ]
+  },
+  {
+    "file": "assets/v002/F003-detail-2.jpg",
+    "source": "assets/sources/A1-p081.jpg",
+    "source_sha256": "ddac4dd352daadcc841db3a9b38067abdd9917f8a16788c8a7f906590872f799",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "cac83a2e9326e6eef62c3478cf2540966e9d376c0f86c00aa0bd0dae93658e06",
+    "crop": [
+      0.18,
+      0.58,
+      0.92,
+      0.76
+    ]
+  },
+  {
+    "file": "assets/v002/F004-locator.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "6821418b2ccbf56e8dc25bf860cf35db9f5a6bd58235b897f7e5c98f1fd21ad8",
+    "crop": [
+      0.21,
+      0.415,
+      0.79,
+      0.49
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F004-source-clear.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "d1f11253b49f2c925642075144233ed84585a2abe025e6aff4fa9088d6650801",
+    "crop": [
+      0.21,
+      0.415,
+      0.79,
+      0.49
+    ]
+  },
+  {
+    "file": "assets/v002/F004-source.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "07c872796c1385b87f1eb72f1775730c7cee3588b69153e755032028b1a80f0f",
+    "crop": [
+      0.21,
+      0.415,
+      0.79,
+      0.49
+    ],
+    "traces": [
+      [
+        [
+          0.34,
+          0.43
+        ],
+        [
+          0.67,
+          0.43
+        ]
+      ],
+      [
+        [
+          0.34,
+          0.458
+        ],
+        [
+          0.67,
+          0.458
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.5,
+        0.447,
+        "上层梁身"
+      ],
+      [
+        0.253,
+        0.447,
+        "柱头承托端"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F004-model-clear.jpg",
+    "source": "assets/approved/4b482432f0-AXON.png",
+    "source_sha256": "03c68c56d8f07ad6709a866206fa5e7a82c614fd8d7f56698debffc9079a05a6",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "cde5e878d1effadfc8511cbfd841bffff7a6ec895fc17ab00e029ca9e2cc0b33",
+    "model_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F004-model.jpg",
+    "source": "assets/approved/4b482432f0-AXON.png",
+    "source_sha256": "03c68c56d8f07ad6709a866206fa5e7a82c614fd8d7f56698debffc9079a05a6",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "e3f397703da761bc987f73d5fb902f01973fda5245c7fa850dffc190abac88cc",
+    "model_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F004-detail-1.jpg",
+    "source": "assets/sources/A1-p082.jpg",
+    "source_sha256": "7c9708fbc4645fd856a069a8200a19c6b45d02b03dda08b43ab7d157e51bb8d9",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "115add3ffeb17487dafed9d673a065ebc4b41639e12b21742ad3621f1cf1b075",
+    "crop": [
+      0.2,
+      0.07,
+      0.85,
+      0.34
+    ]
+  },
+  {
+    "file": "assets/v002/F004-detail-2.jpg",
+    "source": "assets/sources/A1-p081.jpg",
+    "source_sha256": "ddac4dd352daadcc841db3a9b38067abdd9917f8a16788c8a7f906590872f799",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "cac83a2e9326e6eef62c3478cf2540966e9d376c0f86c00aa0bd0dae93658e06",
+    "crop": [
+      0.18,
+      0.58,
+      0.92,
+      0.76
+    ]
+  },
+  {
+    "file": "assets/v002/F005-locator.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "b9a4058bd95263d645bb6492a834e846ba16385ac02a53f0c1c45ce21d5532e1",
+    "crop": [
+      0.28,
+      0.345,
+      0.72,
+      0.43
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F005-source-clear.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "bb2de5b99ed1ac343b930df90d24f839229d42d68ba970b8d45e688382c67870",
+    "crop": [
+      0.28,
+      0.345,
+      0.72,
+      0.43
+    ]
+  },
+  {
+    "file": "assets/v002/F005-source.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "ba18e225be559c20cfcc0d15980600c3fe754011e84c7ee264ee30956fa98bab",
+    "crop": [
+      0.28,
+      0.345,
+      0.72,
+      0.43
+    ],
+    "traces": [
+      [
+        [
+          0.326,
+          0.369
+        ],
+        [
+          0.685,
+          0.369
+        ]
+      ],
+      [
+        [
+          0.326,
+          0.403
+        ],
+        [
+          0.685,
+          0.403
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.5,
+        0.387,
+        "梁身"
+      ],
+      [
+        0.31,
+        0.386,
+        "梁端与承托"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F005-model-clear.jpg",
+    "source": "assets/approved/959a2167ac-AXON.png",
+    "source_sha256": "a7466623bea4816f4561afb53ae27acc10c94182bfd969a3b27d548157ce9a85",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "43129b180dd9a8300bc9309e9ac8bcb0a0a9dc73cde6cd6f53fc4af5403cbeb0",
+    "model_id": "CMP-FRAME-FOUR-CHUANFU-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F005-model.jpg",
+    "source": "assets/approved/959a2167ac-AXON.png",
+    "source_sha256": "a7466623bea4816f4561afb53ae27acc10c94182bfd969a3b27d548157ce9a85",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "0db63888c6b2018bd8f307ea31166663a28d8f5f6d9ddf3bd6f91c8cb280ff72",
+    "model_id": "CMP-FRAME-FOUR-CHUANFU-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F005-detail-1.jpg",
+    "source": "assets/sources/A1-p082.jpg",
+    "source_sha256": "7c9708fbc4645fd856a069a8200a19c6b45d02b03dda08b43ab7d157e51bb8d9",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "84b94f90b2bb8b769696cfcef72ced345984604267b959071958e4e478184231",
+    "crop": [
+      0.2,
+      0.71,
+      0.85,
+      0.94
+    ]
+  },
+  {
+    "file": "assets/v002/F005-detail-2.jpg",
+    "source": "assets/sources/A1-p082.jpg",
+    "source_sha256": "7c9708fbc4645fd856a069a8200a19c6b45d02b03dda08b43ab7d157e51bb8d9",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "8c88d2fb064b25727638df13f64c5debc7a1ac29bb0112ae511a2f79e34c400d",
+    "crop": [
+      0.2,
+      0.49,
+      0.85,
+      0.69
+    ]
+  },
+  {
+    "file": "assets/v002/F006-locator.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "8b85aeeda7a986067f1d2676fc775ddecc54d997b55b216a04af2079a13494f4",
+    "crop": [
+      0.23,
+      0.79,
+      0.81,
+      0.855
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F006-source-clear.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "74b3d8b025e28cd58aa9256181bb6b4038afc2b50eb4fe4f39b11dd41badc133",
+    "crop": [
+      0.23,
+      0.79,
+      0.81,
+      0.855
+    ]
+  },
+  {
+    "file": "assets/v002/F006-source.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "19d2a8ebb672a579ea1a3ef6c9e5eba5ff19363b40e6af36a2209774a11d7a79",
+    "crop": [
+      0.23,
+      0.79,
+      0.81,
+      0.855
+    ],
+    "traces": [
+      [
+        [
+          0.29,
+          0.821
+        ],
+        [
+          0.49,
+          0.817
+        ],
+        [
+          0.7,
+          0.818
+        ]
+      ],
+      [
+        [
+          0.29,
+          0.847
+        ],
+        [
+          0.49,
+          0.847
+        ],
+        [
+          0.72,
+          0.844
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.55,
+        0.833,
+        "平梁梁身"
+      ],
+      [
+        0.75,
+        0.83,
+        "端部交接"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F006-model-clear.jpg",
+    "source": "assets/approved/d6023251ab-EW_SEAM_AXON.png",
+    "source_sha256": "96f703650f42de4052856d4e521a34df7653f06e54cf755fc72904312946a25c",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "29fa7a8f14f430f8823c205f7e6a4a223b6ecc2f969a698d879682d68e1bb46c",
+    "model_id": "CMP-FRAME-PINGLIANG-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F006-model.jpg",
+    "source": "assets/approved/d6023251ab-EW_SEAM_AXON.png",
+    "source_sha256": "96f703650f42de4052856d4e521a34df7653f06e54cf755fc72904312946a25c",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "0a97b2abd9f9c7c9c224487994c62259071703dcf1e5d4f6b055a06a98728c5b",
+    "model_id": "CMP-FRAME-PINGLIANG-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F006-detail-1.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "bcc94346944edc29b6d304b7604dfc9a7c1fd240b08a8e3d5d2b5d60935f3237",
+    "crop": [
+      0.39,
+      0.282,
+      0.61,
+      0.34
+    ]
+  },
+  {
+    "file": "assets/v002/F007-locator.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "8b85aeeda7a986067f1d2676fc775ddecc54d997b55b216a04af2079a13494f4",
+    "crop": [
+      0.23,
+      0.79,
+      0.81,
+      0.855
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F007-source-clear.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "74b3d8b025e28cd58aa9256181bb6b4038afc2b50eb4fe4f39b11dd41badc133",
+    "crop": [
+      0.23,
+      0.79,
+      0.81,
+      0.855
+    ]
+  },
+  {
+    "file": "assets/v002/F007-source.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "4f7793396f7cb3cf80c2e11b60e7a5ae5e720fe0b1a429abb359f395d98282f6",
+    "crop": [
+      0.23,
+      0.79,
+      0.81,
+      0.855
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.55,
+        0.833,
+        "同族梁身"
+      ],
+      [
+        0.75,
+        0.83,
+        "山面对应未知"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F007-model-clear.jpg",
+    "source": "assets/approved/907f6c234d-GABLE_AXON.png",
+    "source_sha256": "d330330058d48fdaf71d45c0f11582eaa2df0aec45ba473b0002b3e4f87a5616",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "6dd1dd9b50265f1a758ce163d88252a41df0463616061ac61920d8441169004a",
+    "model_id": "CMP-FRAME-PINGLIANG-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F007-model.jpg",
+    "source": "assets/approved/907f6c234d-GABLE_AXON.png",
+    "source_sha256": "d330330058d48fdaf71d45c0f11582eaa2df0aec45ba473b0002b3e4f87a5616",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "aac9c266e793e370d309792808a4ed905bf1ab7bcf6fc3f10ef8b0e23e5a9996",
+    "model_id": "CMP-FRAME-PINGLIANG-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F007-detail-1.jpg",
+    "source": "assets/sources/A1-p294.jpg",
+    "source_sha256": "e89c2d0ee1eb3b4b638967de3d5414848ad49b769eb97f489af239c73feb23c9",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "4371f9ab4e60a4d9bc6bff009f03a57bcd5b33fd5b4c713c066f9ce2f632e79b",
+    "crop": [
+      0.28,
+      0.16,
+      0.78,
+      0.3
+    ]
+  },
+  {
+    "file": "assets/v002/F007-detail-2.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "d4e3cc0088e7571d509a5e9e746454c3556cf90452782d48a566650803e9e491",
+    "crop": [
+      0.18,
+      0.2,
+      0.89,
+      0.51
+    ]
+  },
+  {
+    "file": "assets/v002/F008-locator.jpg",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "22c5ee97a66daf671d49dde6502a11b5dd3717c79f0a8a757b3fa44f8c177365",
+    "crop": [
+      0.2,
+      0.735,
+      0.38,
+      0.772
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F008-source-clear.jpg",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "89addb3079ae6cc356b3eb5a6b439b067b0270def4a27c755900795eb9068fff",
+    "crop": [
+      0.2,
+      0.735,
+      0.38,
+      0.772
+    ]
+  },
+  {
+    "file": "assets/v002/F008-source.jpg",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "e0dffeba040037f3e6995683c56ff7ff9c1614d77ab0547a24cf295875140258",
+    "crop": [
+      0.2,
+      0.735,
+      0.38,
+      0.772
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.29,
+        0.76,
+        "承托座"
+      ],
+      [
+        0.255,
+        0.754,
+        "阶状边缘"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F008-model-clear.jpg",
+    "source": "assets/models/CMP-FRAME-TUOFENG-001--0--front.webp",
+    "source_sha256": "310c7d53825e7671ec5da497ee8a915db7d04ce00d08f30403c42b1aea99912d",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "945744cf4785583e27afa1295cfea0dce26328f94fe42c3f0976872cf65be9da",
+    "model_id": "CMP-FRAME-TUOFENG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F008-model.jpg",
+    "source": "assets/models/CMP-FRAME-TUOFENG-001--0--front.webp",
+    "source_sha256": "310c7d53825e7671ec5da497ee8a915db7d04ce00d08f30403c42b1aea99912d",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "9e01b42b2148e1da48e92facd6322ba7936abeb9446d21e9949a57543dd143be",
+    "model_id": "CMP-FRAME-TUOFENG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F008-detail-1.jpg",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "d7451752b1ddd8a3a90981f0e0b68741b2ca90d8dfb3e93a0852fc0de7e95866",
+    "crop": [
+      0.14,
+      0.56,
+      0.8,
+      0.84
+    ]
+  },
+  {
+    "file": "assets/v002/F009-locator.jpg",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "01f80a81d94c871c54edff4c5068b57df46d9abb134e13cabcef671239b40649",
+    "crop": [
+      0.42,
+      0.672,
+      0.54,
+      0.694
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F009-source-clear.jpg",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "ae372742870aaf728562cfc917b2f91cea09a9f08f648a69d4c0732b8d3450ad",
+    "crop": [
+      0.42,
+      0.672,
+      0.54,
+      0.694
+    ]
+  },
+  {
+    "file": "assets/v002/F009-source.jpg",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "e8aee74812c760e9662f6c816abaddd6819a6d80b5f7a68813149ffd92a9fa0c",
+    "crop": [
+      0.42,
+      0.672,
+      0.54,
+      0.694
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.48,
+        0.685,
+        "脊部座"
+      ],
+      [
+        0.45,
+        0.685,
+        "阶状肩部"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F009-model-clear.jpg",
+    "source": "assets/models/CMP-FRAME-TUOFENG-001--1--front.webp",
+    "source_sha256": "aa4fe0b6d688eebc452da84dec1562007ebd6474c0fa5de7ef42127c0134571d",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "66f4656cf499550c8494b6f3d5fae386293f9b849a36ad4a476396d2e6a436c2",
+    "model_id": "CMP-FRAME-TUOFENG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F009-model.jpg",
+    "source": "assets/models/CMP-FRAME-TUOFENG-001--1--front.webp",
+    "source_sha256": "aa4fe0b6d688eebc452da84dec1562007ebd6474c0fa5de7ef42127c0134571d",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "cfb5a0da3c7ecab716903b081858c2b71506f2c33e9c1a6aa900c1c2cea3e5c0",
+    "model_id": "CMP-FRAME-TUOFENG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F009-detail-1.jpg",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "d7451752b1ddd8a3a90981f0e0b68741b2ca90d8dfb3e93a0852fc0de7e95866",
+    "crop": [
+      0.14,
+      0.56,
+      0.8,
+      0.84
+    ]
+  },
+  {
+    "file": "assets/v002/F010-locator.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "a5bf2160387d9af143a6cb74ac50aa76b223150730f982d1646e38404a8292e1",
+    "crop": [
+      0.21,
+      0.09,
+      0.835,
+      0.329
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F010-source-clear.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "81f21be29ed20e3926ebbb404e9ba127d4dcf6b4e6d362856f722842880e75eb",
+    "crop": [
+      0.21,
+      0.09,
+      0.835,
+      0.329
+    ]
+  },
+  {
+    "file": "assets/v002/F010-source.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "2017f7f81971f4ab16c5a445079271f9840e19f756bbdde92a18fa89774a7cfe",
+    "crop": [
+      0.21,
+      0.09,
+      0.835,
+      0.329
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.38,
+        0.19,
+        "丁栿交接端区域"
+      ],
+      [
+        0.54,
+        0.225,
+        "骑搭、隐刻区域"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F010-model-clear.jpg",
+    "source": "assets/approved/489bd4fc50-AXON.png",
+    "source_sha256": "ba128f33f00e6630e8b1a104e27148452ef429c01b0eb21b5e7fcf93a06066fb",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "545ec6bb8a17e363b96a58b910effbeedcf775d9b54dde8278561aa8277fb6d2",
+    "model_id": "CMP-FRAME-DINGFU-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F010-model.jpg",
+    "source": "assets/approved/489bd4fc50-AXON.png",
+    "source_sha256": "ba128f33f00e6630e8b1a104e27148452ef429c01b0eb21b5e7fcf93a06066fb",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "affba66d4750049fb6864ce4fa8f1bbe99ba6a7b0b718a8bf1c6a68b1c4a307f",
+    "model_id": "CMP-FRAME-DINGFU-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F010-detail-1.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "ab24d222496a7a7d602d7575bdf04794fdff0da3972fb7829cb075f48ebeda66",
+    "crop": [
+      0.17,
+      0.2,
+      0.9,
+      0.51
+    ]
+  },
+  {
+    "file": "assets/v002/F010-detail-2.jpg",
+    "source": "assets/sources/A2-p046.jpg",
+    "source_sha256": "1c744a174d922fb25eff991bd74a0621b60fef386f4ed1f76b4c7840388c954a",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "403edba8b0b993a1076c542edc95d37f0c2cb70ec91c0ea19a1db1c2ba5b77d7",
+    "crop": [
+      0.18,
+      0.09,
+      0.86,
+      0.45
+    ]
+  },
+  {
+    "file": "assets/v002/F011-locator.jpg",
+    "source": "assets/sources/A1-p084.jpg",
+    "source_sha256": "1b13ef3e5c1c3cd31d64d1df6eafb73f49cc3e802b5326a915651e7f7078629e",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "acc09ae4b5dc3f4fe4434b5c2d183ea406f3c9a011ff0cf2e69c46936ebfec99",
+    "crop": [
+      0.13,
+      0.078,
+      0.79,
+      0.367
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F011-source-clear.jpg",
+    "source": "assets/sources/A1-p084.jpg",
+    "source_sha256": "1b13ef3e5c1c3cd31d64d1df6eafb73f49cc3e802b5326a915651e7f7078629e",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "fbed4d6c6ec017b75f1dd77821df976285bb59ca8cbd6e73e7fea0b3b6b60ee1",
+    "crop": [
+      0.13,
+      0.078,
+      0.79,
+      0.367
+    ]
+  },
+  {
+    "file": "assets/v002/F011-source.jpg",
+    "source": "assets/sources/A1-p084.jpg",
+    "source_sha256": "1b13ef3e5c1c3cd31d64d1df6eafb73f49cc3e802b5326a915651e7f7078629e",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "0f5eb1d26569c014cc03730bff2927e38426d23cd7b141389c30788d18f76c9a",
+    "crop": [
+      0.13,
+      0.078,
+      0.79,
+      0.367
+    ],
+    "traces": [
+      [
+        [
+          0.48,
+          0.164
+        ],
+        [
+          0.61,
+          0.169
+        ],
+        [
+          0.77,
+          0.191
+        ]
+      ],
+      [
+        [
+          0.51,
+          0.245
+        ],
+        [
+          0.65,
+          0.286
+        ],
+        [
+          0.77,
+          0.337
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.61,
+        0.239,
+        "斜乳栿可见侧面"
+      ],
+      [
+        0.44,
+        0.209,
+        "入栱交接"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F011-model-clear.jpg",
+    "source": "assets/approved/251dc54fb1-AXON.png",
+    "source_sha256": "9ce1e5d16aaa0ea431608b3735722b7a021ab76bd944e296d03cb261e4d4cab3",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "ab605ae9e941ee8cc695509ee35f1b823fcef76274700316127017f444a36380",
+    "model_id": "CMP-FRAME-RUFU-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F011-model.jpg",
+    "source": "assets/approved/251dc54fb1-AXON.png",
+    "source_sha256": "9ce1e5d16aaa0ea431608b3735722b7a021ab76bd944e296d03cb261e4d4cab3",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "c77a0650f99ae7bb51a1cc3530bbbc89da78759e25a5adbfc142be421521738d",
+    "model_id": "CMP-FRAME-RUFU-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F011-detail-1.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "d4e3cc0088e7571d509a5e9e746454c3556cf90452782d48a566650803e9e491",
+    "crop": [
+      0.18,
+      0.2,
+      0.89,
+      0.51
+    ]
+  },
+  {
+    "file": "assets/v002/F012-locator.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "ebea11f3402d21cdcb55eb3c51e878aa461274679b2ffc3d590bc860265c69e2",
+    "crop": [
+      0.37,
+      0.105,
+      0.83,
+      0.255
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F012-source-clear.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "9af3761dea8a05129cf9056fc535e3dca8fad9dae65dc1a3ea0b268e99633269",
+    "crop": [
+      0.37,
+      0.105,
+      0.83,
+      0.255
+    ]
+  },
+  {
+    "file": "assets/v002/F012-source.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "3653ddeaa504b42a2d9a910185389b48e015c35736dd663aba7f9380f70a6059",
+    "crop": [
+      0.37,
+      0.105,
+      0.83,
+      0.255
+    ],
+    "traces": [
+      [
+        [
+          0.4,
+          0.119
+        ],
+        [
+          0.43,
+          0.114
+        ],
+        [
+          0.44,
+          0.117
+        ],
+        [
+          0.81,
+          0.149
+        ]
+      ],
+      [
+        [
+          0.51,
+          0.196
+        ],
+        [
+          0.71,
+          0.224
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.66,
+        0.172,
+        "剳牵梁身"
+      ],
+      [
+        0.4,
+        0.142,
+        "交接端曲折"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F012-model-clear.jpg",
+    "source": "assets/models/CMP-FRAME-ZHAQIAN-001--0--front.webp",
+    "source_sha256": "ab9b0f40c596a9ff7b70cabaf861b9f81616c145e5c139c1f45d777aeb76f729",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "bb8108570b371d36453f25e27b593d3aae92f12e2d1ad53069f00e8af89537bf",
+    "model_id": "CMP-FRAME-ZHAQIAN-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F012-model.jpg",
+    "source": "assets/models/CMP-FRAME-ZHAQIAN-001--0--front.webp",
+    "source_sha256": "ab9b0f40c596a9ff7b70cabaf861b9f81616c145e5c139c1f45d777aeb76f729",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "7f593632c19f618b44e4b733c59456ddac37e9683ee8776561e271908a544bd2",
+    "model_id": "CMP-FRAME-ZHAQIAN-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F012-detail-1.jpg",
+    "source": "assets/sources/A1-p084.jpg",
+    "source_sha256": "1b13ef3e5c1c3cd31d64d1df6eafb73f49cc3e802b5326a915651e7f7078629e",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "0e703008d0a93022791dd7029fdb75d9ec72348c3ede795844997102de4ef9ce",
+    "crop": [
+      0.13,
+      0.405,
+      0.8,
+      0.711
+    ]
+  },
+  {
+    "file": "assets/v002/F012-detail-2.jpg",
+    "source": "assets/sources/A2-p049.jpg",
+    "source_sha256": "8bd621cd69113147dee7ae533d624a12bbab5e1bebb73aace7f8657a13e2252c",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "d8e808211ab83eded9b436c93574f3a51210ed29027ca35b5b7b88b5a1c6dd27",
+    "crop": [
+      0.16,
+      0.66,
+      0.87,
+      0.87
+    ]
+  },
+  {
+    "file": "assets/v002/F013-locator.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "f4bf67ec0a3728d3f0014e4cd7ce59a2f0afbb5af220a480fe4bd80ff145134e",
+    "crop": [
+      0.31,
+      0.745,
+      0.82,
+      0.926
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F013-source-clear.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "e3260e357336675f6b6026222edf4c21a3c26ec2f0b741c62e82dbeb174a38e5",
+    "crop": [
+      0.31,
+      0.745,
+      0.82,
+      0.926
+    ]
+  },
+  {
+    "file": "assets/v002/F013-source.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "c61cfc735ffcb76001ba9b8ec9b3b80b3586e9f86bb9706fdc5c7eeee93ded1c",
+    "crop": [
+      0.31,
+      0.745,
+      0.82,
+      0.926
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.47,
+        0.831,
+        "槫端可见面"
+      ],
+      [
+        0.63,
+        0.865,
+        "下部承托切削"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F013-model-clear.jpg",
+    "source": "assets/models/CMP-FRAME-PURLIN-001--0--front.webp",
+    "source_sha256": "9b5b4a14c09b25b159ba1a12a0bff75938d4f5a3045c4fa0a05eebc9671689f7",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "4886fd4ba2e17c2ccdfce51356e96666ae43fdca3f079e1b2a982dc92c768314",
+    "model_id": "CMP-FRAME-PURLIN-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F013-model.jpg",
+    "source": "assets/models/CMP-FRAME-PURLIN-001--0--front.webp",
+    "source_sha256": "9b5b4a14c09b25b159ba1a12a0bff75938d4f5a3045c4fa0a05eebc9671689f7",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "091f4dffa48479ab987ca90727651f89baaf225629eda983e91716a933dae169",
+    "model_id": "CMP-FRAME-PURLIN-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F013-detail-1.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "0b1f1cabbcee9d9a0622aeaf937ef53097473d500fe17aac7b28cb0df1868cc7",
+    "crop": [
+      0.21,
+      0.497,
+      0.83,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F013-detail-2.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "a17676c1db4bfe981162b8c724cbe28effff230aacfe88b7df7922f8d6a55d5a",
+    "crop": [
+      0.13,
+      0.355,
+      0.92,
+      0.48
+    ]
+  },
+  {
+    "file": "assets/v002/F014-locator.jpg",
+    "source": "assets/sources/A1-p088.jpg",
+    "source_sha256": "c299229248be50164ac902dedc6d895f974c7bede40ac4928b95b5211f363d6e",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "5bf0f17c5710c1700441e4b1a57b0a5bb1e89e91c08700f8a13d5996158bf09e",
+    "crop": [
+      0.17,
+      0.08,
+      0.805,
+      0.375
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F014-source-clear.jpg",
+    "source": "assets/sources/A1-p088.jpg",
+    "source_sha256": "c299229248be50164ac902dedc6d895f974c7bede40ac4928b95b5211f363d6e",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "92ec48760be62729f272bc19c951b081f324e46990ab68bf978ad911c90081f0",
+    "crop": [
+      0.17,
+      0.08,
+      0.805,
+      0.375
+    ]
+  },
+  {
+    "file": "assets/v002/F014-source.jpg",
+    "source": "assets/sources/A1-p088.jpg",
+    "source_sha256": "c299229248be50164ac902dedc6d895f974c7bede40ac4928b95b5211f363d6e",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "02f8536e9a836f2e074bd00f94f91d61816f05a9cfda8b7a27e4cea7113b1bd0",
+    "crop": [
+      0.17,
+      0.08,
+      0.805,
+      0.375
+    ],
+    "traces": [
+      [
+        [
+          0.48,
+          0.217
+        ],
+        [
+          0.66,
+          0.164
+        ],
+        [
+          0.77,
+          0.141
+        ]
+      ],
+      [
+        [
+          0.49,
+          0.277
+        ],
+        [
+          0.66,
+          0.222
+        ],
+        [
+          0.77,
+          0.181
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.6,
+        0.223,
+        "阑额侧面"
+      ],
+      [
+        0.42,
+        0.271,
+        "转角接头区域"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F014-model-clear.jpg",
+    "source": "assets/models/CMP-FRAME-LANE-001--0--front.webp",
+    "source_sha256": "6d9e411edb9a179cc5912804655f256b683795039385eeb0df1e432da6e3a258",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "b5f62b46c8903070738246a82d91485eb30b3d083e7197c78cf8de92c45b7863",
+    "model_id": "CMP-FRAME-LANE-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F014-model.jpg",
+    "source": "assets/models/CMP-FRAME-LANE-001--0--front.webp",
+    "source_sha256": "6d9e411edb9a179cc5912804655f256b683795039385eeb0df1e432da6e3a258",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "32cf492635c6969918b615d08da09bb9e5c1acf100158975cc8b2bfc042f5001",
+    "model_id": "CMP-FRAME-LANE-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F015-locator.jpg",
+    "source": "assets/sources/A1-p088.jpg",
+    "source_sha256": "c299229248be50164ac902dedc6d895f974c7bede40ac4928b95b5211f363d6e",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "8eab54712bd48614eab6e62276dc606cf278b6bd104d1d6799b469f46122a436",
+    "crop": [
+      0.17,
+      0.52,
+      0.805,
+      0.65
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F015-source-clear.jpg",
+    "source": "assets/sources/A1-p088.jpg",
+    "source_sha256": "c299229248be50164ac902dedc6d895f974c7bede40ac4928b95b5211f363d6e",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "815d5652ed467a8518ce974bfe001f072e50ce5ae61614fd81fc97447d33e0b0",
+    "crop": [
+      0.17,
+      0.52,
+      0.805,
+      0.65
+    ]
+  },
+  {
+    "file": "assets/v002/F015-source.jpg",
+    "source": "assets/sources/A1-p088.jpg",
+    "source_sha256": "c299229248be50164ac902dedc6d895f974c7bede40ac4928b95b5211f363d6e",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "56ba097aa07c9a4ccca4e07028eca03c7ef9f2dcc6e052a54c43db0d3bedd811",
+    "crop": [
+      0.17,
+      0.52,
+      0.805,
+      0.65
+    ],
+    "traces": [
+      [
+        [
+          0.19,
+          0.551
+        ],
+        [
+          0.45,
+          0.552
+        ],
+        [
+          0.7,
+          0.55
+        ]
+      ],
+      [
+        [
+          0.3,
+          0.594
+        ],
+        [
+          0.51,
+          0.592
+        ],
+        [
+          0.66,
+          0.591
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.48,
+        0.563,
+        "由额上表面"
+      ],
+      [
+        0.71,
+        0.586,
+        "与柱头交接"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F015-model-clear.jpg",
+    "source": "assets/models/CMP-FRAME-YOUE-001--0--front.webp",
+    "source_sha256": "6d9e411edb9a179cc5912804655f256b683795039385eeb0df1e432da6e3a258",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "b5f62b46c8903070738246a82d91485eb30b3d083e7197c78cf8de92c45b7863",
+    "model_id": "CMP-FRAME-YOUE-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F015-model.jpg",
+    "source": "assets/models/CMP-FRAME-YOUE-001--0--front.webp",
+    "source_sha256": "6d9e411edb9a179cc5912804655f256b683795039385eeb0df1e432da6e3a258",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "32cf492635c6969918b615d08da09bb9e5c1acf100158975cc8b2bfc042f5001",
+    "model_id": "CMP-FRAME-YOUE-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F016-locator.jpg",
+    "source": "assets/sources/A1-p089.jpg",
+    "source_sha256": "ad379c61ba5ca70c449b32d10191041dfbabb6e5cc8b30d86634b6ccf5927e47",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "3a0e3c5d385c55d17d3cbb385e4b858e12b3993d1dcfd883b9eed35e1f78b340",
+    "crop": [
+      0.33,
+      0.1,
+      0.855,
+      0.305
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F016-source-clear.jpg",
+    "source": "assets/sources/A1-p089.jpg",
+    "source_sha256": "ad379c61ba5ca70c449b32d10191041dfbabb6e5cc8b30d86634b6ccf5927e47",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "3f65d9dc916168655fdb6f08717b0bc950b80d43cfc835589167db65f9f884bd",
+    "crop": [
+      0.33,
+      0.1,
+      0.855,
+      0.305
+    ]
+  },
+  {
+    "file": "assets/v002/F016-source.jpg",
+    "source": "assets/sources/A1-p089.jpg",
+    "source_sha256": "ad379c61ba5ca70c449b32d10191041dfbabb6e5cc8b30d86634b6ccf5927e47",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "a048d03b63c4390feeddb07c5dfc379ee37bd852245817e174ec271ebc8fcce4",
+    "crop": [
+      0.33,
+      0.1,
+      0.855,
+      0.305
+    ],
+    "traces": [
+      [
+        [
+          0.368,
+          0.281
+        ],
+        [
+          0.5,
+          0.227
+        ],
+        [
+          0.568,
+          0.192
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.5,
+        0.224,
+        "大角梁尾可见斜材"
+      ],
+      [
+        0.67,
+        0.172,
+        "交叉遮挡处"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F016-model-clear.jpg",
+    "source": "assets/models/CMP-FRAME-DAJIAOLIANG-001--0--front.webp",
+    "source_sha256": "abf4960bfd958690cbd6719730b1357bad40c2e4066a37c3c998312d00a19746",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "fcc72976b0adaa0d30f6f5cdc1c7567f82759710e9437684ff16d7106aedb237",
+    "model_id": "CMP-FRAME-DAJIAOLIANG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F016-model.jpg",
+    "source": "assets/models/CMP-FRAME-DAJIAOLIANG-001--0--front.webp",
+    "source_sha256": "abf4960bfd958690cbd6719730b1357bad40c2e4066a37c3c998312d00a19746",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "b79ce84f6d7db83c0a1c922df2c06c18552c3d0eeb4a94d8f17f947e04e6d49a",
+    "model_id": "CMP-FRAME-DAJIAOLIANG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F016-detail-1.jpg",
+    "source": "assets/sources/A1-p290.jpg",
+    "source_sha256": "380f82dbc4b864368f711004b47750e2e9e7a2d0c8b194816337a62233cac581",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "b09b4d007c50207348a386b4756e1c1e1a09a5f697c16990849cd24e926f3933",
+    "crop": [
+      0.05,
+      0.12,
+      0.42,
+      0.52
+    ]
+  },
+  {
+    "file": "assets/v002/F016-detail-2.jpg",
+    "source": "assets/sources/A1-p089.jpg",
+    "source_sha256": "ad379c61ba5ca70c449b32d10191041dfbabb6e5cc8b30d86634b6ccf5927e47",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "7ed081ea8a0e918cea573ed66b04d44f2b9358ff2083c0094f84afe24f57d231",
+    "crop": [
+      0.2,
+      0.44,
+      0.86,
+      0.66
+    ]
+  },
+  {
+    "file": "assets/v002/F017-locator.jpg",
+    "source": "assets/sources/A1-p290.jpg",
+    "source_sha256": "380f82dbc4b864368f711004b47750e2e9e7a2d0c8b194816337a62233cac581",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "14a4f4c7bcd15439d9a5802ed8c27f6f6a6bdb327eebc8287ff8f880a011cfbf",
+    "crop": [
+      0.035,
+      0.105,
+      0.33,
+      0.4
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F017-source-clear.jpg",
+    "source": "assets/sources/A1-p290.jpg",
+    "source_sha256": "380f82dbc4b864368f711004b47750e2e9e7a2d0c8b194816337a62233cac581",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "b14f540e72b5ae4e8a62fc079ffe1cb4960ddb8955147c24410651424fe78ca4",
+    "crop": [
+      0.035,
+      0.105,
+      0.33,
+      0.4
+    ]
+  },
+  {
+    "file": "assets/v002/F017-source.jpg",
+    "source": "assets/sources/A1-p290.jpg",
+    "source_sha256": "380f82dbc4b864368f711004b47750e2e9e7a2d0c8b194816337a62233cac581",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "8f2b26458a8daf0103af2e38fadc30adc58ac6890f70ccc3acf38a7ceaab1b32",
+    "crop": [
+      0.035,
+      0.105,
+      0.33,
+      0.4
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.2,
+        0.22,
+        "翼角对角位置"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F017-model-clear.jpg",
+    "source": "assets/models/CMP-FRAME-ZIJIAOLIANG-001--0--front.webp",
+    "source_sha256": "726d5de8d6e01209f6c21c6c9f8dfdfb6536650dbdf09bb796599bcdfc92156e",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "b60289fff202b84807f61f5a27898e018ea97844dc878b32e6dd1c29e8147678",
+    "model_id": "CMP-FRAME-ZIJIAOLIANG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F017-model.jpg",
+    "source": "assets/models/CMP-FRAME-ZIJIAOLIANG-001--0--front.webp",
+    "source_sha256": "726d5de8d6e01209f6c21c6c9f8dfdfb6536650dbdf09bb796599bcdfc92156e",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "84f2b5f58ee214f6d4e8e9ef829badd535b7255bfbbb83d0df3c1d568300cef1",
+    "model_id": "CMP-FRAME-ZIJIAOLIANG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F017-detail-1.jpg",
+    "source": "assets/sources/A1-p089.jpg",
+    "source_sha256": "ad379c61ba5ca70c449b32d10191041dfbabb6e5cc8b30d86634b6ccf5927e47",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "7ed081ea8a0e918cea573ed66b04d44f2b9358ff2083c0094f84afe24f57d231",
+    "crop": [
+      0.2,
+      0.44,
+      0.86,
+      0.66
+    ]
+  },
+  {
+    "file": "assets/v002/F017-detail-2.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "2448dfc52fd28f067cdcb1c0bc54b95b6a62d21dc730536e6eaad4e74955586d",
+    "crop": [
+      0.2,
+      0.105,
+      0.76,
+      0.363
+    ]
+  },
+  {
+    "file": "assets/v002/F018-locator.jpg",
+    "source": "assets/sources/A1-p089.jpg",
+    "source_sha256": "ad379c61ba5ca70c449b32d10191041dfbabb6e5cc8b30d86634b6ccf5927e47",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "6ea21c266f5c8cfbbfa25b3572b76e9ccabc4f8b1ec7d1a20255acc73807f223",
+    "crop": [
+      0.23,
+      0.095,
+      0.855,
+      0.39
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F018-source-clear.jpg",
+    "source": "assets/sources/A1-p089.jpg",
+    "source_sha256": "ad379c61ba5ca70c449b32d10191041dfbabb6e5cc8b30d86634b6ccf5927e47",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "69139376c01e8575f07113899e30f88175d61b092f05075ea1cb50f4c04ebc5a",
+    "crop": [
+      0.23,
+      0.095,
+      0.855,
+      0.39
+    ]
+  },
+  {
+    "file": "assets/v002/F018-source.jpg",
+    "source": "assets/sources/A1-p089.jpg",
+    "source_sha256": "ad379c61ba5ca70c449b32d10191041dfbabb6e5cc8b30d86634b6ccf5927e47",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "d3b7d10cbe4ce8bc170aed22f327dd18a53f24b897c4998905a513d3fc69cd72",
+    "crop": [
+      0.23,
+      0.095,
+      0.855,
+      0.39
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.46,
+        0.22,
+        "隐角梁所在斜交区"
+      ],
+      [
+        0.65,
+        0.18,
+        "遮挡区域"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F018-detail-1.jpg",
+    "source": "assets/sources/A1-p088.jpg",
+    "source_sha256": "c299229248be50164ac902dedc6d895f974c7bede40ac4928b95b5211f363d6e",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "8b99598e4d287f88d2f9a8eb2f14aec160785f32b358b99dacdc2a7b2b842e36",
+    "crop": [
+      0.14,
+      0.8,
+      0.93,
+      0.9
+    ]
+  },
+  {
+    "file": "assets/v002/F019-locator.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "f2ecffa59dcfd91127f4b08f7be1a8937f79ed7f1729ecf73cd36da0a326a712",
+    "crop": [
+      0.245,
+      0.305,
+      0.407,
+      0.439
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F019-source-clear.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "98ca8e1c6107420c1690c4a0065b0454bc885532d415ff9923de7c6c75b375ec",
+    "crop": [
+      0.245,
+      0.305,
+      0.407,
+      0.439
+    ]
+  },
+  {
+    "file": "assets/v002/F019-source.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "07f1797badd001c92bcac083e5e576e3471e1dca2d06df73ac4446f5836f911d",
+    "crop": [
+      0.245,
+      0.305,
+      0.407,
+      0.439
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.33,
+        0.372,
+        "托脚斜身"
+      ],
+      [
+        0.395,
+        0.333,
+        "上端承托"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F019-model-clear.jpg",
+    "source": "assets/models/CMP-FRAME-TUOJIAO-001--0--front.webp",
+    "source_sha256": "79573a90de0c0b86c6c68f38de43fce195f1f057531a9b058410f3b0513f8270",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "3e3ad7799967a76bddb1b80d47a8f219fef0b885d9c84a0c388c8343ca7f5ba1",
+    "model_id": "CMP-FRAME-TUOJIAO-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F019-model.jpg",
+    "source": "assets/models/CMP-FRAME-TUOJIAO-001--0--front.webp",
+    "source_sha256": "79573a90de0c0b86c6c68f38de43fce195f1f057531a9b058410f3b0513f8270",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "d86f864a59a786ac344b0a65377c66094374b8dab5b8bf2860f079c5961443fc",
+    "model_id": "CMP-FRAME-TUOJIAO-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F019-detail-1.jpg",
+    "source": "assets/sources/A1-p089.jpg",
+    "source_sha256": "ad379c61ba5ca70c449b32d10191041dfbabb6e5cc8b30d86634b6ccf5927e47",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "d9f2efb6d40e7319b46e40141a1ad54f242a05258f21b89c900f10d17979dc5b",
+    "crop": [
+      0.13,
+      0.69,
+      0.92,
+      0.96
+    ]
+  },
+  {
+    "file": "assets/v002/F019-detail-2.jpg",
+    "source": "assets/sources/A1-p090.jpg",
+    "source_sha256": "12c462f2fbbc20ab087cc4886cd4c20ed88c6ac011a433d6ed442e9b61cca4bc",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "e174411d00660d46392ccaa72fb89e29502e6eb021cc6a62b93168426c306556",
+    "crop": [
+      0.15,
+      0.07,
+      0.83,
+      0.24
+    ]
+  },
+  {
+    "file": "assets/v002/F020-locator.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "b101264dbe0ebb441ea2f8d2b678bf73bf8ff586c7b3879dda42180f24a4c635",
+    "crop": [
+      0.405,
+      0.713,
+      0.777,
+      0.832
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F020-source-clear.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "a94e554b9b36aecfec875cfaa507888528bdc79c01afed67427f83b9c10be9c1",
+    "crop": [
+      0.405,
+      0.713,
+      0.777,
+      0.832
+    ]
+  },
+  {
+    "file": "assets/v002/F020-source.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "8a16d0a0001ca3e10434e46679f827956c32e49ca0e5f44f5ed4f71eb976069e",
+    "crop": [
+      0.405,
+      0.713,
+      0.777,
+      0.832
+    ],
+    "traces": [
+      [
+        [
+          0.572,
+          0.737
+        ],
+        [
+          0.67,
+          0.79
+        ],
+        [
+          0.716,
+          0.814
+        ]
+      ],
+      [
+        [
+          0.599,
+          0.733
+        ],
+        [
+          0.706,
+          0.787
+        ],
+        [
+          0.746,
+          0.806
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.69,
+        0.779,
+        "右侧叉手斜身"
+      ],
+      [
+        0.555,
+        0.727,
+        "脊部上端"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F020-model-clear.jpg",
+    "source": "assets/models/CMP-FRAME-CHASHOU-001--0--front.webp",
+    "source_sha256": "0e504566cca8389fdd2adf3c85c9766a2dc157dae417212554c7e75f3c9a8465",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "4f2fadb88c7318b0bc721686420bd09625f3c34806e7902f6ccd862a550a9502",
+    "model_id": "CMP-FRAME-CHASHOU-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F020-model.jpg",
+    "source": "assets/models/CMP-FRAME-CHASHOU-001--0--front.webp",
+    "source_sha256": "0e504566cca8389fdd2adf3c85c9766a2dc157dae417212554c7e75f3c9a8465",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "7fac1ed5328499441021aad1ea43a1e4379ad6796b68198374ad2277e4a4a405",
+    "model_id": "CMP-FRAME-CHASHOU-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F020-detail-1.jpg",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "2ea295d88166f5e6b426f71cda05026872dda452c41c8f3710005dff0f900a1b",
+    "crop": [
+      0.25,
+      0.58,
+      0.7,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F021-locator.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "b2a5d187d89276a1c90bcf5cfb1313639495f64bfff73bf0fb4b420d467b4a56",
+    "crop": [
+      0.515,
+      0.725,
+      0.587,
+      0.823
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F021-source-clear.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "a3f1db39539d03b0966a0d000e254b1e515c4efe309a1d57a7ba06267bc713c2",
+    "crop": [
+      0.515,
+      0.725,
+      0.587,
+      0.823
+    ]
+  },
+  {
+    "file": "assets/v002/F021-source.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "7c3186c82856c1a0496fd449df06e3494420ea2366a051bb14d5661299494910",
+    "crop": [
+      0.515,
+      0.725,
+      0.587,
+      0.823
+    ],
+    "traces": [
+      [
+        [
+          0.541,
+          0.755
+        ],
+        [
+          0.542,
+          0.806
+        ]
+      ],
+      [
+        [
+          0.563,
+          0.755
+        ],
+        [
+          0.565,
+          0.807
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.555,
+        0.784,
+        "蜀柱柱身"
+      ],
+      [
+        0.56,
+        0.816,
+        "柱脚遮挡处"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F021-model-clear.jpg",
+    "source": "assets/models/CMP-FRAME-SHUZHU-001--0--front.webp",
+    "source_sha256": "65f36fbaf01044d99bbc78c474479f3fe51cecfb429dacc550c1bb2c060e4fb5",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "bc3edf99ccf97245be173452a7bbecb7e48bd4de9a0e04900811382f12931424",
+    "model_id": "CMP-FRAME-SHUZHU-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F021-model.jpg",
+    "source": "assets/models/CMP-FRAME-SHUZHU-001--0--front.webp",
+    "source_sha256": "65f36fbaf01044d99bbc78c474479f3fe51cecfb429dacc550c1bb2c060e4fb5",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "3a8fc6fb54c6307f2516ceaff559024e01c53a93155892fc601153e0eb43710a",
+    "model_id": "CMP-FRAME-SHUZHU-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F021-detail-1.jpg",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "10d464c81c3eaf1a55bb62cead1fef53da4b4172c89b580175f991a749d8369b",
+    "crop": [
+      0.455,
+      0.6,
+      0.505,
+      0.695
+    ]
+  },
+  {
+    "file": "assets/v002/F021-detail-2.jpg",
+    "source": "assets/sources/A1-p344.jpg",
+    "source_sha256": "dad31d770923ba4f8b5d1f4bcca65ecd74edc1005b556471f5c4f7aa51b1a777",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "0f7c0d0ec1acf02664f17636a325ffb54eeb1d0ec1d8a0e8685ae209b369ae7f",
+    "crop": [
+      0.14,
+      0.36,
+      0.88,
+      0.55
+    ]
+  },
+  {
+    "file": "assets/v002/F022-locator.jpg",
+    "source": "assets/sources/A1-crop-corner.jpg",
+    "source_sha256": "e4c7d19ce7e37d5faae44fa5974bec94d19a2b9133ffb462ba9df28751e49c71",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "47477c93a89d1664f814582cfc0ba2d9af902d440df88b8e18a98f284278cd1e",
+    "crop": [
+      0.01,
+      0.01,
+      0.98,
+      0.97
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F022-source-clear.jpg",
+    "source": "assets/sources/A1-crop-corner.jpg",
+    "source_sha256": "e4c7d19ce7e37d5faae44fa5974bec94d19a2b9133ffb462ba9df28751e49c71",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "03d0f8ab658a49b5e23a16989c32982838d88f62d23ea37e5f58fcea33e31f31",
+    "crop": [
+      0.01,
+      0.01,
+      0.98,
+      0.97
+    ]
+  },
+  {
+    "file": "assets/v002/F022-source.jpg",
+    "source": "assets/sources/A1-crop-corner.jpg",
+    "source_sha256": "e4c7d19ce7e37d5faae44fa5974bec94d19a2b9133ffb462ba9df28751e49c71",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "619e10e4377493134fbf030295f8a6bacd12d040b9ac05a59db638317699abd0",
+    "crop": [
+      0.01,
+      0.01,
+      0.98,
+      0.97
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.5,
+        0.49,
+        "交叠栱与斜材"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F022-detail-1.jpg",
+    "source": "assets/sources/A1-p300.jpg",
+    "source_sha256": "573ff6142c280268d4d43032b61b23e2249d6a876ffc425c1a65987474e48d54",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "92a72204e92fb962fae6f462205a7c56194f8fb945f8e4561e518b3c40901e59",
+    "crop": [
+      0.06,
+      0.05,
+      0.8,
+      0.91
+    ]
+  },
+  {
+    "file": "assets/v002/F023-locator.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "66a6f7b433bb65509e658300f077cfc97377b937419240177ba886b4d7ca77a2",
+    "crop": [
+      0.2,
+      0.38,
+      0.985,
+      0.7
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F023-source-clear.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "d5224e4125bd1522ce5d559ad2791026d38fb0fd99781d9d90a0ea1d798d3aab",
+    "crop": [
+      0.2,
+      0.38,
+      0.985,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F023-source.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "3186d148bdf807c06cfc8c2f9ef420f3956ff02328c1413f4014ff4bf5a3071a",
+    "crop": [
+      0.2,
+      0.38,
+      0.985,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.446,
+        0.594,
+        "柱头栌斗"
+      ],
+      [
+        0.56,
+        0.48,
+        "上方出跳组合"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F023-detail-1.jpg",
+    "source": "assets/sources/A1-p296.jpg",
+    "source_sha256": "5c4b53e486f1d851fe453b57754dcc8b74e0e22d6ac9806c02e29db4b6753e79",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "b998434439b25552cecda1d284b8af2710daa6858e4a70b962cbe102a951ef30",
+    "crop": [
+      0.01,
+      0.36,
+      0.85,
+      0.68
+    ]
+  },
+  {
+    "file": "assets/v002/F024-locator.jpg",
+    "source": "assets/sources/A1-p297.jpg",
+    "source_sha256": "af5bf3c4c39041453ca575ad8cfdd9ec6d0b8c265fec7a23fe072ab3f12866c7",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "3670cdc7525508cb5c53fa660376e92188f928c1900ad349a8fd88ebf482037e",
+    "crop": [
+      0.2,
+      0.39,
+      0.985,
+      0.7
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F024-source-clear.jpg",
+    "source": "assets/sources/A1-p297.jpg",
+    "source_sha256": "af5bf3c4c39041453ca575ad8cfdd9ec6d0b8c265fec7a23fe072ab3f12866c7",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "2d13d6655577578d171aa1ea61e13b11e5b4b63db39a2485e74cde8d6d4d4f15",
+    "crop": [
+      0.2,
+      0.39,
+      0.985,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F024-source.jpg",
+    "source": "assets/sources/A1-p297.jpg",
+    "source_sha256": "af5bf3c4c39041453ca575ad8cfdd9ec6d0b8c265fec7a23fe072ab3f12866c7",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "5cacf412523ca041014ab9b5b1389f270a28f3126a2eb248ce82e63c12453f2d",
+    "crop": [
+      0.2,
+      0.39,
+      0.985,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.5,
+        0.615,
+        "补间底斗"
+      ],
+      [
+        0.63,
+        0.48,
+        "上方出跳"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F024-detail-1.jpg",
+    "source": "assets/sources/A1-p298.jpg",
+    "source_sha256": "1a949e54efc886da163205fc86c331fba38233329cdc52c9e1c55a7030c9eee7",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "7b3effc983aadd99856a76a6bae8dbd9dad7e7ad28f343d479b3630c325420f5",
+    "crop": [
+      0.01,
+      0.37,
+      0.84,
+      0.68
+    ]
+  },
+  {
+    "file": "assets/v002/F025-locator.jpg",
+    "source": "assets/sources/A1-p289.jpg",
+    "source_sha256": "2561d32dd7a5afc97de318f8b8b1b738eea0fb88a02bb09b3ec268e28529ca8f",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "e9691822be8355eb99e8ae30096e4142c07602b6fcef729a541b36528fd1df71",
+    "crop": [
+      0.06,
+      0.08,
+      0.94,
+      0.88
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F025-source-clear.jpg",
+    "source": "assets/sources/A1-p289.jpg",
+    "source_sha256": "2561d32dd7a5afc97de318f8b8b1b738eea0fb88a02bb09b3ec268e28529ca8f",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "bf00f3f29d126c1ce900bb46a445df00267365149411bbc495d5048409007829",
+    "crop": [
+      0.06,
+      0.08,
+      0.94,
+      0.88
+    ]
+  },
+  {
+    "file": "assets/v002/F025-source.jpg",
+    "source": "assets/sources/A1-p289.jpg",
+    "source_sha256": "2561d32dd7a5afc97de318f8b8b1b738eea0fb88a02bb09b3ec268e28529ca8f",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "45f72b257ef14ba72d131b7ca2c572b0054d3d65c3878a85191ac28581c39cc8",
+    "crop": [
+      0.06,
+      0.08,
+      0.94,
+      0.88
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.5,
+        0.31,
+        "檐面方向"
+      ],
+      [
+        0.25,
+        0.54,
+        "侧面方向"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F026-locator.jpg",
+    "source": "assets/official/71f50ad723-02_SOURCE_栌斗.png",
+    "source_sha256": "5b919d5a3367369234877c2f3a56d0daf68d795b40034a389ca69780e4b31954",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "ca1e0979f0f86e238a2ad7ad630f9dcb3a0fef2fe84efa72de41452a7a46fe43",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F026-source-clear.jpg",
+    "source": "assets/official/71f50ad723-02_SOURCE_栌斗.png",
+    "source_sha256": "5b919d5a3367369234877c2f3a56d0daf68d795b40034a389ca69780e4b31954",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "995447614ab002b4fef5998c496df8b9f2c576d843bf42f2862d7b2fea523927",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F026-source.jpg",
+    "source": "assets/official/71f50ad723-02_SOURCE_栌斗.png",
+    "source_sha256": "5b919d5a3367369234877c2f3a56d0daf68d795b40034a389ca69780e4b31954",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "2007ce948612a589869ac91727891294741300a5726d9aad14ba8684b612bf36",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.39,
+        0.31,
+        "顶部耳与开口"
+      ],
+      [
+        0.4,
+        0.54,
+        "下部收分"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F026-model-clear.jpg",
+    "source": "assets/approved/cdb53a5ec2-AXON.png",
+    "source_sha256": "f3b32ffa35b09a9928f5efd88f4410249d5ed5cb2fbe017ecb4000da9c4746de",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "2f6792e292cf6fb2736b7d2a9fd14cb8636a8fb0acb0a008ee8e10c756d44cde",
+    "model_id": "CMP-LUDOU-COLUMN-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F026-model.jpg",
+    "source": "assets/approved/cdb53a5ec2-AXON.png",
+    "source_sha256": "f3b32ffa35b09a9928f5efd88f4410249d5ed5cb2fbe017ecb4000da9c4746de",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "217b3b0142d7b0b40a61938101148a2abb6794f1f6c8755b5291dcd77b5e50bc",
+    "model_id": "CMP-LUDOU-COLUMN-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F026-detail-1.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "34ffdd4fc22f36703cc2b18b863254ae8d0e05b298040d3af5b3593b0aa5ffe0",
+    "crop": [
+      0.355,
+      0.545,
+      0.535,
+      0.64
+    ]
+  },
+  {
+    "file": "assets/v002/F026-detail-2.jpg",
+    "source": "assets/sources/A1-p062.jpg",
+    "source_sha256": "089f7f718073c6d77bc365455a40af7c686f11c82b03dfb6bed5e8c0e7125c42",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "35b2af2fe7082925cbf253948b48073659016297cd860158aa79333031a7418b",
+    "crop": [
+      0.14,
+      0.17,
+      0.87,
+      0.5
+    ]
+  },
+  {
+    "file": "assets/v002/F027-locator.jpg",
+    "source": "assets/sources/A1-p297.jpg",
+    "source_sha256": "af5bf3c4c39041453ca575ad8cfdd9ec6d0b8c265fec7a23fe072ab3f12866c7",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "626edfcf38b9f486c9ce5720daf3a840fa8811b94071da44f4b30ed78cd010e9",
+    "crop": [
+      0.4,
+      0.565,
+      0.6,
+      0.65
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F027-source-clear.jpg",
+    "source": "assets/sources/A1-p297.jpg",
+    "source_sha256": "af5bf3c4c39041453ca575ad8cfdd9ec6d0b8c265fec7a23fe072ab3f12866c7",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "691ac4113ac5ddf6381206f5f1ad9c5c5eda956e266a9295ef18b471f3bdb7f8",
+    "crop": [
+      0.4,
+      0.565,
+      0.6,
+      0.65
+    ]
+  },
+  {
+    "file": "assets/v002/F027-source.jpg",
+    "source": "assets/sources/A1-p297.jpg",
+    "source_sha256": "af5bf3c4c39041453ca575ad8cfdd9ec6d0b8c265fec7a23fe072ab3f12866c7",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "5d12a010b114c1a334a5edb0f4c113b7554eaba55705221cd317ffc8d4177e41",
+    "crop": [
+      0.4,
+      0.565,
+      0.6,
+      0.65
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.5,
+        0.611,
+        "底斗可见投影"
+      ],
+      [
+        0.5,
+        0.579,
+        "上部交叠区"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F027-model-clear.jpg",
+    "source": "assets/models/CMP-DOU-BOTTOM-LONGKAI-001--0--front.webp",
+    "source_sha256": "475d3f804cfc277bcf16b35ad31bde40e8ee32619ab9b976dbcf64085c446dbf",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "0230bec7caf5f86d5d288f388c90c3019a75014c1b49547b6394b003b518f616",
+    "model_id": "CMP-DOU-BOTTOM-LONGKAI-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F027-model.jpg",
+    "source": "assets/models/CMP-DOU-BOTTOM-LONGKAI-001--0--front.webp",
+    "source_sha256": "475d3f804cfc277bcf16b35ad31bde40e8ee32619ab9b976dbcf64085c446dbf",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "102e396d7970a9db144d771f0f6afbce24daa5bf87760dd9e37f9b4a87ef09ef",
+    "model_id": "CMP-DOU-BOTTOM-LONGKAI-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F027-detail-1.jpg",
+    "source": "assets/sources/A1-p064.jpg",
+    "source_sha256": "ace92fa868e6bb2f49010e062e88db90861325adfc61458e1c4d347d28d745cc",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "a85d4952785315df4fa68eafb21fbe9947a634cf2507d97e69bd45036f5a34fd",
+    "crop": [
+      0.12,
+      0.08,
+      0.86,
+      0.36
+    ]
+  },
+  {
+    "file": "assets/v002/F028-locator.jpg",
+    "source": "assets/official/c3abcd44c2-03_SOURCE_第一跳华栱.png",
+    "source_sha256": "d09bbf7c74c07b613c0b9a24a41bc82a91759b261acd5c7a60af40d8c6b9b8c9",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "b8fdfda0ec6e684d2f360a51447b236337b32576e2410adc9dbebdd3e1484629",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F028-source-clear.jpg",
+    "source": "assets/official/c3abcd44c2-03_SOURCE_第一跳华栱.png",
+    "source_sha256": "d09bbf7c74c07b613c0b9a24a41bc82a91759b261acd5c7a60af40d8c6b9b8c9",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "3e99bb3c0b86e60f8dbc6a98da6f417713f40784d460d0d34c46d0455edab66e",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F028-source.jpg",
+    "source": "assets/official/c3abcd44c2-03_SOURCE_第一跳华栱.png",
+    "source_sha256": "d09bbf7c74c07b613c0b9a24a41bc82a91759b261acd5c7a60af40d8c6b9b8c9",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "ff54df8e21add9389d37537d357b3b52a2e308d6093ebfe4919044b650a1e7f5",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.39,
+        0.45,
+        "可见栱身"
+      ],
+      [
+        0.45,
+        0.36,
+        "上部交接边缘"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F028-model-clear.jpg",
+    "source": "assets/models/CMP-GONG-HUAGONG-001--0--front.webp",
+    "source_sha256": "1c42b910abf86d3db324fefc4f87751c817e0c49b34c9541203ca1f9adeaa31f",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "5ed599c0abb10c72ff467af0df36166d601d92b140810421dfaf962daabb83f7",
+    "model_id": "CMP-GONG-HUAGONG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F028-model.jpg",
+    "source": "assets/models/CMP-GONG-HUAGONG-001--0--front.webp",
+    "source_sha256": "1c42b910abf86d3db324fefc4f87751c817e0c49b34c9541203ca1f9adeaa31f",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "99950ff964b36da5f80dfe06145daf05871cc94e842f07bac6a9da9dd092814d",
+    "model_id": "CMP-GONG-HUAGONG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F028-detail-1.jpg",
+    "source": "assets/sources/A1-p336.jpg",
+    "source_sha256": "05dda5e34b1746dd130a7cdb5b634ae703439515c11fe72e5e7d64f24b79baba",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "33f0ec216265ebdb64d32e83e07dcae2014c92ee6df32f5be330813d1f58e993",
+    "crop": [
+      0.22,
+      0.05,
+      0.87,
+      0.33
+    ]
+  },
+  {
+    "file": "assets/v002/F028-detail-2.jpg",
+    "source": "assets/sources/A2-p041.jpg",
+    "source_sha256": "a8a39d010fb76b08ae19b047435998da3039f834340fd9941e60e6be46715005",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "01f7efda4c3dc4ec33070a8e33e9296a12587dc86e0841f1d4259d7eb336b832",
+    "crop": [
+      0.15,
+      0.55,
+      0.52,
+      0.8
+    ]
+  },
+  {
+    "file": "assets/v002/F029-locator.jpg",
+    "source": "assets/official/6fd13f56b4-05_SOURCE_第二跳华栱.png",
+    "source_sha256": "4e318d51b447aa2a948a08333e38c754b283617a5d558ae7a6d18da972412049",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "6146a60b0dba7d6553967d0a6423321e366596774fe70d7c990a0a29fb110f53",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F029-source-clear.jpg",
+    "source": "assets/official/6fd13f56b4-05_SOURCE_第二跳华栱.png",
+    "source_sha256": "4e318d51b447aa2a948a08333e38c754b283617a5d558ae7a6d18da972412049",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "735e50701e4f3ffc3ae6d8bdddf60f83255a2f3fef0e7de3c853e932d6769f03",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F029-source.jpg",
+    "source": "assets/official/6fd13f56b4-05_SOURCE_第二跳华栱.png",
+    "source_sha256": "4e318d51b447aa2a948a08333e38c754b283617a5d558ae7a6d18da972412049",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "5f521f3cbabd07849ab565bc7898684f609761e3b80cf7b76f0c1885519364f6",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.39,
+        0.45,
+        "可见栱身"
+      ],
+      [
+        0.45,
+        0.36,
+        "上部交接边缘"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F029-model-clear.jpg",
+    "source": "assets/models/CMP-GONG-HUAGONG-001--1--front.webp",
+    "source_sha256": "e750a9c56d118db2826c2714adf4cc29482018b3f719668ced164f76898ea6da",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "d9b44ac035aacced22466d382cdfa40444cb3cf0ffc07fa739a5cec379c56a31",
+    "model_id": "CMP-GONG-HUAGONG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F029-model.jpg",
+    "source": "assets/models/CMP-GONG-HUAGONG-001--1--front.webp",
+    "source_sha256": "e750a9c56d118db2826c2714adf4cc29482018b3f719668ced164f76898ea6da",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "8fdf50f5aa281fe822dbb23fc59ad6c96c59370d01b3d50a8729801f20292123",
+    "model_id": "CMP-GONG-HUAGONG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F029-detail-1.jpg",
+    "source": "assets/sources/A1-p336.jpg",
+    "source_sha256": "05dda5e34b1746dd130a7cdb5b634ae703439515c11fe72e5e7d64f24b79baba",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "33f0ec216265ebdb64d32e83e07dcae2014c92ee6df32f5be330813d1f58e993",
+    "crop": [
+      0.22,
+      0.05,
+      0.87,
+      0.33
+    ]
+  },
+  {
+    "file": "assets/v002/F029-detail-2.jpg",
+    "source": "assets/sources/A2-p041.jpg",
+    "source_sha256": "a8a39d010fb76b08ae19b047435998da3039f834340fd9941e60e6be46715005",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "01f7efda4c3dc4ec33070a8e33e9296a12587dc86e0841f1d4259d7eb336b832",
+    "crop": [
+      0.15,
+      0.55,
+      0.52,
+      0.8
+    ]
+  },
+  {
+    "file": "assets/v002/F030-locator.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "dcb126b1b86ab2e6afe35c3c9a2020e20b2608f6f5d4f32ac909fcf5bcb4f829",
+    "crop": [
+      0.205,
+      0.475,
+      0.305,
+      0.535
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F030-source-clear.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "e33a58de1c7dd2676c575ebe8e6a837b534b0e8a1d9d5a4531815a2a8afa21d8",
+    "crop": [
+      0.205,
+      0.475,
+      0.305,
+      0.535
+    ]
+  },
+  {
+    "file": "assets/v002/F030-source.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "c09ca397b76e0003d85982328142e40b8bc07de4e028832adaad7915b879a094",
+    "crop": [
+      0.205,
+      0.475,
+      0.305,
+      0.535
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.277,
+        0.513,
+        "最外跳下的令栱剖面区"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F030-model-clear.jpg",
+    "source": "assets/models/CMP-GONG-LINGGONG-001--0--front.webp",
+    "source_sha256": "8a0879a097efdf5383b9f8d90f80fdb0c339b29434abcbc1fefc792201f8dfce",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "4891bd11a49b7e0ea183f946ac0b0aedc41b7603116f5c29926ce7e40388b473",
+    "model_id": "CMP-GONG-LINGGONG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F030-model.jpg",
+    "source": "assets/models/CMP-GONG-LINGGONG-001--0--front.webp",
+    "source_sha256": "8a0879a097efdf5383b9f8d90f80fdb0c339b29434abcbc1fefc792201f8dfce",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "41440f94809beb4b57ac5de8fbba07751d14298874969265bd8c6d5480b1b15e",
+    "model_id": "CMP-GONG-LINGGONG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F030-detail-1.jpg",
+    "source": "assets/sources/A1-p060.jpg",
+    "source_sha256": "452731e3638a896d8ce1f2561ff5b98ce0612f327114f5cf20c0811e22e89d3b",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "bb6bfd4415e141a971c84fd08119ad13fb713ded71913b60279599915660aa04",
+    "crop": [
+      0.11,
+      0.52,
+      0.91,
+      0.59
+    ]
+  },
+  {
+    "file": "assets/v002/F030-detail-2.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "2cf0073ece1f6a194a59969e19a7bd325c24a3baddfec4e08c2fb27fcc84fe47",
+    "crop": [
+      0.2,
+      0.42,
+      0.84,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F031-locator.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "e812b1a4aa41f76c0e8c4525f1025bb2bfa2704a1531b6ef948da6c42d94c327",
+    "crop": [
+      0.345,
+      0.475,
+      0.635,
+      0.544
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F031-source-clear.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "8c5c7c30c4c9793d7da4bf5cbe24ea73b3b311d5c2d6626987ebfcfa332271d6",
+    "crop": [
+      0.345,
+      0.475,
+      0.635,
+      0.544
+    ]
+  },
+  {
+    "file": "assets/v002/F031-source.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "258fb2ffd1db50bb7e76b52056c5e4b977f6257c3c468c9cbfc9a7fca7e6f5e9",
+    "crop": [
+      0.345,
+      0.475,
+      0.635,
+      0.544
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.445,
+        0.517,
+        "横向栱下缘"
+      ],
+      [
+        0.565,
+        0.508,
+        "前后叠置"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F031-model-clear.jpg",
+    "source": "assets/approved/d3713ab53c-CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png",
+    "source_sha256": "9f621af4f27831c4b2fb0e8cd4f08767117dece7604e3a40ba8918fce1d7543f",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "238f8e35c3cd53bd5cc73a5b09e607bb843d48fd551db4da4fb36ee90c9a8f19",
+    "model_id": "CMP-GONG-GUAZI-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F031-model.jpg",
+    "source": "assets/approved/d3713ab53c-CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png",
+    "source_sha256": "9f621af4f27831c4b2fb0e8cd4f08767117dece7604e3a40ba8918fce1d7543f",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "bf148601d45c2c42fc72b32acab2f3e70973969463dbf8172ea45994d354b2f3",
+    "model_id": "CMP-GONG-GUAZI-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F031-detail-1.jpg",
+    "source": "assets/sources/A1-p058.jpg",
+    "source_sha256": "714ad8a9bf65d9a87c8307f67498383356eebc760e5321e22e51034f8687c311",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "e81ddfeb2092e8ffc5aa2f52a7364b72e57963e01526378160edba8eb6542f46",
+    "crop": [
+      0.12,
+      0.835,
+      0.9,
+      0.92
+    ]
+  },
+  {
+    "file": "assets/v002/F032-locator.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "5f78eab8297db87de968343d1516c07f3a26ccac45f2f3ccb4d84298211aa1d2",
+    "crop": [
+      0.34,
+      0.423,
+      0.645,
+      0.482
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F032-source-clear.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "4f90a878960ca44b380a553517e060d4f5a0bc79ef141ce6e730f938a92bbe1b",
+    "crop": [
+      0.34,
+      0.423,
+      0.645,
+      0.482
+    ]
+  },
+  {
+    "file": "assets/v002/F032-source.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "753757dc5b010a146a9da4b7b79f35cb069fb60a67080baecd1287d3e4946bc5",
+    "crop": [
+      0.34,
+      0.423,
+      0.645,
+      0.482
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.445,
+        0.462,
+        "较长横栱下缘"
+      ],
+      [
+        0.57,
+        0.452,
+        "前后叠置"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F032-model-clear.jpg",
+    "source": "assets/models/CMP-GONG-MANGONG-001--0--front.webp",
+    "source_sha256": "6000602ec04db4187bc1c35316d33f0a0224fea2ccaaf5e1e54d00a0747418d0",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "085b034e7efdf914424eacc98fc78447f9ec653526f6eb8a756c371ad85b016c",
+    "model_id": "CMP-GONG-MANGONG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F032-model.jpg",
+    "source": "assets/models/CMP-GONG-MANGONG-001--0--front.webp",
+    "source_sha256": "6000602ec04db4187bc1c35316d33f0a0224fea2ccaaf5e1e54d00a0747418d0",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "c12e3c4c1631bee8ad8e83e2cf92b5d70f1cb398c4129e4f245c2cbb5a97f8a3",
+    "model_id": "CMP-GONG-MANGONG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F032-detail-1.jpg",
+    "source": "assets/sources/A1-p060.jpg",
+    "source_sha256": "452731e3638a896d8ce1f2561ff5b98ce0612f327114f5cf20c0811e22e89d3b",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "7b59449676f2c2502e79daee234e9263ed7c6ecc302c40ada66fccbf2604734d",
+    "crop": [
+      0.12,
+      0.19,
+      0.84,
+      0.26
+    ]
+  },
+  {
+    "file": "assets/v002/F033-locator.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "e812b1a4aa41f76c0e8c4525f1025bb2bfa2704a1531b6ef948da6c42d94c327",
+    "crop": [
+      0.345,
+      0.475,
+      0.635,
+      0.544
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F033-source-clear.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "8c5c7c30c4c9793d7da4bf5cbe24ea73b3b311d5c2d6626987ebfcfa332271d6",
+    "crop": [
+      0.345,
+      0.475,
+      0.635,
+      0.544
+    ]
+  },
+  {
+    "file": "assets/v002/F033-source.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "258fb2ffd1db50bb7e76b52056c5e4b977f6257c3c468c9cbfc9a7fca7e6f5e9",
+    "crop": [
+      0.345,
+      0.475,
+      0.635,
+      0.544
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.445,
+        0.517,
+        "横向栱下缘"
+      ],
+      [
+        0.565,
+        0.508,
+        "前后叠置"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F033-model-clear.jpg",
+    "source": "assets/approved/d3713ab53c-CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png",
+    "source_sha256": "9f621af4f27831c4b2fb0e8cd4f08767117dece7604e3a40ba8918fce1d7543f",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "238f8e35c3cd53bd5cc73a5b09e607bb843d48fd551db4da4fb36ee90c9a8f19",
+    "model_id": "CMP-GONG-GUAZI-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F033-model.jpg",
+    "source": "assets/approved/d3713ab53c-CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png",
+    "source_sha256": "9f621af4f27831c4b2fb0e8cd4f08767117dece7604e3a40ba8918fce1d7543f",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "bf148601d45c2c42fc72b32acab2f3e70973969463dbf8172ea45994d354b2f3",
+    "model_id": "CMP-GONG-GUAZI-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F033-detail-1.jpg",
+    "source": "assets/sources/A1-p058.jpg",
+    "source_sha256": "714ad8a9bf65d9a87c8307f67498383356eebc760e5321e22e51034f8687c311",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "e81ddfeb2092e8ffc5aa2f52a7364b72e57963e01526378160edba8eb6542f46",
+    "crop": [
+      0.12,
+      0.835,
+      0.9,
+      0.92
+    ]
+  },
+  {
+    "file": "assets/v002/F034-locator.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "5f78eab8297db87de968343d1516c07f3a26ccac45f2f3ccb4d84298211aa1d2",
+    "crop": [
+      0.34,
+      0.423,
+      0.645,
+      0.482
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F034-source-clear.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "4f90a878960ca44b380a553517e060d4f5a0bc79ef141ce6e730f938a92bbe1b",
+    "crop": [
+      0.34,
+      0.423,
+      0.645,
+      0.482
+    ]
+  },
+  {
+    "file": "assets/v002/F034-source.jpg",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "753757dc5b010a146a9da4b7b79f35cb069fb60a67080baecd1287d3e4946bc5",
+    "crop": [
+      0.34,
+      0.423,
+      0.645,
+      0.482
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.445,
+        0.462,
+        "较长横栱下缘"
+      ],
+      [
+        0.57,
+        0.452,
+        "前后叠置"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F034-model-clear.jpg",
+    "source": "assets/models/CMP-GONG-MANGONG-001--1--front.webp",
+    "source_sha256": "b14944a6ef195c131065e59b60b64e592b8686716539923ae7656b3eb41b3097",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "bd5df5262fdf99732e46169a343c72aad734dca4d53d7e6e110ea7d00e55c94f",
+    "model_id": "CMP-GONG-MANGONG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F034-model.jpg",
+    "source": "assets/models/CMP-GONG-MANGONG-001--1--front.webp",
+    "source_sha256": "b14944a6ef195c131065e59b60b64e592b8686716539923ae7656b3eb41b3097",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "cf4a7123b3347c906ee110352f4c519300d7d3a819ef09ea152200adf2470335",
+    "model_id": "CMP-GONG-MANGONG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F034-detail-1.jpg",
+    "source": "assets/sources/A1-p060.jpg",
+    "source_sha256": "452731e3638a896d8ce1f2561ff5b98ce0612f327114f5cf20c0811e22e89d3b",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "7b59449676f2c2502e79daee234e9263ed7c6ecc302c40ada66fccbf2604734d",
+    "crop": [
+      0.12,
+      0.19,
+      0.84,
+      0.26
+    ]
+  },
+  {
+    "file": "assets/v002/F035-locator.jpg",
+    "source": "assets/official/0d6e55efe9-06_SOURCE_头昂.png",
+    "source_sha256": "a6fc35f730889bed674411ebaf3ea8213585006b03e7233684f8e2588f7d42e7",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "44fa5ea3e2211a0bf122695c4e97348f6213cf24cc740824aede5bd5ae1f12fc",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F035-source-clear.jpg",
+    "source": "assets/official/0d6e55efe9-06_SOURCE_头昂.png",
+    "source_sha256": "a6fc35f730889bed674411ebaf3ea8213585006b03e7233684f8e2588f7d42e7",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "a317fc00cb619b844cd8579cfba451ac6b6971c5b7eacad73aca42bd4e864830",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F035-source.jpg",
+    "source": "assets/official/0d6e55efe9-06_SOURCE_头昂.png",
+    "source_sha256": "a6fc35f730889bed674411ebaf3ea8213585006b03e7233684f8e2588f7d42e7",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "39b8eef68caff8449a93f5949e0e7e474fdcafeeb6bcf49a318944585f570904",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.615,
+        0.55,
+        "昂头可见端"
+      ],
+      [
+        0.35,
+        0.405,
+        "昂身／后尾方向"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F035-model-clear.jpg",
+    "source": "assets/models/CMP-GONG-ANG-001--0--front.webp",
+    "source_sha256": "93663732b33eadfe1d5e23eeb8358d05b9c63dc2603310c0f9a48028f5c2a0e9",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "289ba99c3d5ada9c8a7c1fe4650702ae62fbae9750bd33785187c4819f2e32a8",
+    "model_id": "CMP-GONG-ANG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F035-model.jpg",
+    "source": "assets/models/CMP-GONG-ANG-001--0--front.webp",
+    "source_sha256": "93663732b33eadfe1d5e23eeb8358d05b9c63dc2603310c0f9a48028f5c2a0e9",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "acdb89f8d308b63596efccc6a64508e35611b7a1ecc2660b96c7e7b93c4aa8ab",
+    "model_id": "CMP-GONG-ANG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F035-detail-1.jpg",
+    "source": "assets/sources/A1-p336.jpg",
+    "source_sha256": "05dda5e34b1746dd130a7cdb5b634ae703439515c11fe72e5e7d64f24b79baba",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "33f0ec216265ebdb64d32e83e07dcae2014c92ee6df32f5be330813d1f58e993",
+    "crop": [
+      0.22,
+      0.05,
+      0.87,
+      0.33
+    ]
+  },
+  {
+    "file": "assets/v002/F035-detail-2.jpg",
+    "source": "assets/sources/A2-p041.jpg",
+    "source_sha256": "a8a39d010fb76b08ae19b047435998da3039f834340fd9941e60e6be46715005",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "01f7efda4c3dc4ec33070a8e33e9296a12587dc86e0841f1d4259d7eb336b832",
+    "crop": [
+      0.15,
+      0.55,
+      0.52,
+      0.8
+    ]
+  },
+  {
+    "file": "assets/v002/F036-locator.jpg",
+    "source": "assets/official/2a94b0e852-07_SOURCE_二昂.png",
+    "source_sha256": "fac316b3a1b6290c7a6cdaaefd077d409e0d18333628eecf117540499dee0f44",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "76703392ea4d97aa219dac87bade3caf2599677f1fcb644c1210388eddef7ed0",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F036-source-clear.jpg",
+    "source": "assets/official/2a94b0e852-07_SOURCE_二昂.png",
+    "source_sha256": "fac316b3a1b6290c7a6cdaaefd077d409e0d18333628eecf117540499dee0f44",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "f03a81dec0099bee3322694ca2d93bd98b3957e8340ad7fa9ff7e388ef175407",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F036-source.jpg",
+    "source": "assets/official/2a94b0e852-07_SOURCE_二昂.png",
+    "source_sha256": "fac316b3a1b6290c7a6cdaaefd077d409e0d18333628eecf117540499dee0f44",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "6051d39b2c051cb45da44d8b41eaa79fee3a04f850398dbf4b7f08431e62c78b",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.615,
+        0.55,
+        "昂头可见端"
+      ],
+      [
+        0.35,
+        0.405,
+        "昂身／后尾方向"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F036-model-clear.jpg",
+    "source": "assets/models/CMP-GONG-ANG-001--1--front.webp",
+    "source_sha256": "4eb34e79f4f2d21ba9851ac208fca19d2fcd09f92bc5ee527aace42e5905e259",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "280e39c5e4244ed7832a56b5a303f0088cd3f5c3fb5188e1664423ff5b61505c",
+    "model_id": "CMP-GONG-ANG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F036-model.jpg",
+    "source": "assets/models/CMP-GONG-ANG-001--1--front.webp",
+    "source_sha256": "4eb34e79f4f2d21ba9851ac208fca19d2fcd09f92bc5ee527aace42e5905e259",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "eb5f3a8802bbe9551bada44bdedb55711b1c8ccee3b1110acb2f6dd16681aed2",
+    "model_id": "CMP-GONG-ANG-001",
+    "render_label": "现有 BLEND · front"
+  },
+  {
+    "file": "assets/v002/F036-detail-1.jpg",
+    "source": "assets/sources/A1-p336.jpg",
+    "source_sha256": "05dda5e34b1746dd130a7cdb5b634ae703439515c11fe72e5e7d64f24b79baba",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "33f0ec216265ebdb64d32e83e07dcae2014c92ee6df32f5be330813d1f58e993",
+    "crop": [
+      0.22,
+      0.05,
+      0.87,
+      0.33
+    ]
+  },
+  {
+    "file": "assets/v002/F036-detail-2.jpg",
+    "source": "assets/sources/A2-p041.jpg",
+    "source_sha256": "a8a39d010fb76b08ae19b047435998da3039f834340fd9941e60e6be46715005",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "01f7efda4c3dc4ec33070a8e33e9296a12587dc86e0841f1d4259d7eb336b832",
+    "crop": [
+      0.15,
+      0.55,
+      0.52,
+      0.8
+    ]
+  },
+  {
+    "file": "assets/v002/F037-locator.jpg",
+    "source": "assets/sources/A1-p094.jpg",
+    "source_sha256": "f219f6c22967ba943bf4481428afa97e5e03b9a96eba7ded50f57573b25bba0b",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "eee098590d9ae54ca25f77d2a81f0ad2da6eff8856e7768adaaf2a86ce67605b",
+    "crop": [
+      0.2,
+      0.28,
+      0.86,
+      0.55
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F037-source-clear.jpg",
+    "source": "assets/sources/A1-p094.jpg",
+    "source_sha256": "f219f6c22967ba943bf4481428afa97e5e03b9a96eba7ded50f57573b25bba0b",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "dfb03e6f447ea940c5a93120dd9a08e3a998e0346f1d342b25cfdb94c6916b13",
+    "crop": [
+      0.2,
+      0.28,
+      0.86,
+      0.55
+    ]
+  },
+  {
+    "file": "assets/v002/F037-source.jpg",
+    "source": "assets/sources/A1-p094.jpg",
+    "source_sha256": "f219f6c22967ba943bf4481428afa97e5e03b9a96eba7ded50f57573b25bba0b",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "f7fd3a0020e5305a2f328bb46eaee97bcf1ed8bbfd9074af3ff26144681cf929",
+    "crop": [
+      0.2,
+      0.28,
+      0.86,
+      0.55
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.575,
+        0.4,
+        "襻间承托区（个体未分离）"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F037-detail-1.jpg",
+    "source": "assets/sources/A1-p345.jpg",
+    "source_sha256": "0f3d515e97e71f539e0e9a54e162ef20ae2e8997876eae83d11f9ae66ebdde6e",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "9ff0fba112ba80cef76cbeb445b9283324c19389e833c9ae9268e4bb9e9952a5",
+    "crop": [
+      0.15,
+      0.68,
+      0.87,
+      0.94
+    ]
+  },
+  {
+    "file": "assets/v002/F038-locator.jpg",
+    "source": "assets/sources/A1-p094.jpg",
+    "source_sha256": "f219f6c22967ba943bf4481428afa97e5e03b9a96eba7ded50f57573b25bba0b",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "eee098590d9ae54ca25f77d2a81f0ad2da6eff8856e7768adaaf2a86ce67605b",
+    "crop": [
+      0.2,
+      0.28,
+      0.86,
+      0.55
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F038-source-clear.jpg",
+    "source": "assets/sources/A1-p094.jpg",
+    "source_sha256": "f219f6c22967ba943bf4481428afa97e5e03b9a96eba7ded50f57573b25bba0b",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "dfb03e6f447ea940c5a93120dd9a08e3a998e0346f1d342b25cfdb94c6916b13",
+    "crop": [
+      0.2,
+      0.28,
+      0.86,
+      0.55
+    ]
+  },
+  {
+    "file": "assets/v002/F038-source.jpg",
+    "source": "assets/sources/A1-p094.jpg",
+    "source_sha256": "f219f6c22967ba943bf4481428afa97e5e03b9a96eba7ded50f57573b25bba0b",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "7c3f5e80f078bf144c33c990a18bf896ca80feee1b7c6b06b3550dda148b9036",
+    "crop": [
+      0.2,
+      0.28,
+      0.86,
+      0.55
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.575,
+        0.4,
+        "襻间承托区（个体未分离）"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F039-locator.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "ea8b87ac5634da4d573de555ab2ca303c14d8d2353bbf318c99e1efadb545cc4",
+    "crop": [
+      0.21,
+      0.497,
+      0.83,
+      0.7
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F039-source-clear.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "9cb62a5335a926cb7c107ce5477567d540870a9c0fd3d524df21f36704f4b958",
+    "crop": [
+      0.21,
+      0.497,
+      0.83,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F039-source.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "9df33701cbdf53209bad34df53359fcbc36812ecab77ad3ed0c802af039a6ff8",
+    "crop": [
+      0.21,
+      0.497,
+      0.83,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.59,
+        0.58,
+        "槫下承托区"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F039-detail-1.jpg",
+    "source": "assets/sources/A1-p344.jpg",
+    "source_sha256": "dad31d770923ba4f8b5d1f4bcca65ecd74edc1005b556471f5c4f7aa51b1a777",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "4ff88f6708df50e014520e50705c347a9d485c2cec166345f31d3adb73f928a4",
+    "crop": [
+      0.15,
+      0.69,
+      0.88,
+      0.94
+    ]
+  },
+  {
+    "file": "assets/v002/F040-locator.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "e6b9234bda4895d0dfec7839a1c9fa467af19c70abbf5ff9637036f975c2e3df",
+    "crop": [
+      0.21,
+      0.69,
+      0.85,
+      0.81
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F040-source-clear.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "b8261c27c8c2d4fe1600192615ce394ce6c763f5439f15545aaf617bae56b4c7",
+    "crop": [
+      0.21,
+      0.69,
+      0.85,
+      0.81
+    ]
+  },
+  {
+    "file": "assets/v002/F040-source.jpg",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_sha256": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "59366b9f664b96bf72f1d0584ed97288dc277b51edf234b6ed2c8371beac1244",
+    "crop": [
+      0.21,
+      0.69,
+      0.85,
+      0.81
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.34,
+        0.735,
+        "并列椽材"
+      ],
+      [
+        0.72,
+        0.735,
+        "另一坡椽材"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F041-locator.jpg",
+    "source": "assets/sources/A1-p145.jpg",
+    "source_sha256": "0aed36458cc2c644a9b839c8dbb8734fe0ac1dbbefb7e624979c029391a38adb",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "d1b3166ad764f3e3e3c5009f0e931f8a28a9cb95fd80353b574ab87474de118c",
+    "crop": [
+      0.13,
+      0.31,
+      0.52,
+      0.4
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F041-source-clear.jpg",
+    "source": "assets/sources/A1-p145.jpg",
+    "source_sha256": "0aed36458cc2c644a9b839c8dbb8734fe0ac1dbbefb7e624979c029391a38adb",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "ff5de764e8218edd4d89534c4cdaab18eab80dae40d28f5f135958501821ad46",
+    "crop": [
+      0.13,
+      0.31,
+      0.52,
+      0.4
+    ]
+  },
+  {
+    "file": "assets/v002/F041-source.jpg",
+    "source": "assets/sources/A1-p145.jpg",
+    "source_sha256": "0aed36458cc2c644a9b839c8dbb8734fe0ac1dbbefb7e624979c029391a38adb",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "a0941ddd6a8a685cca0a29cf0b85cfe5ff41c38c7e21a55618216f3aadd6a2a0",
+    "crop": [
+      0.13,
+      0.31,
+      0.52,
+      0.4
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.25,
+        0.355,
+        "筒瓦凸起断面"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F041-detail-1.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "0ac55c9163a8d24f382558d5642face23e1fce0113e25c65504d2c0048933020",
+    "crop": [
+      0.2,
+      0.745,
+      0.76,
+      0.903
+    ]
+  },
+  {
+    "file": "assets/v002/F042-locator.jpg",
+    "source": "assets/sources/A1-p145.jpg",
+    "source_sha256": "0aed36458cc2c644a9b839c8dbb8734fe0ac1dbbefb7e624979c029391a38adb",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "a55404e6b06f3bc2734bffdcf25b13f6899f256741008babbc987c8cb7a82d22",
+    "crop": [
+      0.13,
+      0.785,
+      0.52,
+      0.87
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F042-source-clear.jpg",
+    "source": "assets/sources/A1-p145.jpg",
+    "source_sha256": "0aed36458cc2c644a9b839c8dbb8734fe0ac1dbbefb7e624979c029391a38adb",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "bd06a89c201c4e78789b5587a2ad94a50106af417e8bad771126ae8f678c1679",
+    "crop": [
+      0.13,
+      0.785,
+      0.52,
+      0.87
+    ]
+  },
+  {
+    "file": "assets/v002/F042-source.jpg",
+    "source": "assets/sources/A1-p145.jpg",
+    "source_sha256": "0aed36458cc2c644a9b839c8dbb8734fe0ac1dbbefb7e624979c029391a38adb",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "1d9983320cd4de9b9f4a9544284e932896760765144a34fffcb3abf03dbdc4bd",
+    "crop": [
+      0.13,
+      0.785,
+      0.52,
+      0.87
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.25,
+        0.8275,
+        "筒瓦凸起断面"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F042-detail-1.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "0ac55c9163a8d24f382558d5642face23e1fce0113e25c65504d2c0048933020",
+    "crop": [
+      0.2,
+      0.745,
+      0.76,
+      0.903
+    ]
+  },
+  {
+    "file": "assets/v002/F043-locator.jpg",
+    "source": "assets/sources/A1-p146.jpg",
+    "source_sha256": "4659b72dd08636b93de480cce2fe398a15967dfb8ec57344a007a43e39978143",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "2acde547ccc760fa00f249929f409fbf1518a7957833fa33b623b6e64fe32b2b",
+    "crop": [
+      0.1,
+      0.32,
+      0.45,
+      0.4
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F043-source-clear.jpg",
+    "source": "assets/sources/A1-p146.jpg",
+    "source_sha256": "4659b72dd08636b93de480cce2fe398a15967dfb8ec57344a007a43e39978143",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "1d366c9f37e023c4526676fdc0b9a044d4c7460912d36f43f8b7036f1f39b837",
+    "crop": [
+      0.1,
+      0.32,
+      0.45,
+      0.4
+    ]
+  },
+  {
+    "file": "assets/v002/F043-source.jpg",
+    "source": "assets/sources/A1-p146.jpg",
+    "source_sha256": "4659b72dd08636b93de480cce2fe398a15967dfb8ec57344a007a43e39978143",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "61731094d7776a5e31fe8874ab07923d0b25d23ac738eddcdf6ef35babdad977",
+    "crop": [
+      0.1,
+      0.32,
+      0.45,
+      0.4
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.22,
+        0.36,
+        "筒瓦凸起断面"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F043-detail-1.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "0ac55c9163a8d24f382558d5642face23e1fce0113e25c65504d2c0048933020",
+    "crop": [
+      0.2,
+      0.745,
+      0.76,
+      0.903
+    ]
+  },
+  {
+    "file": "assets/v002/F044-locator.jpg",
+    "source": "assets/sources/A1-p146.jpg",
+    "source_sha256": "4659b72dd08636b93de480cce2fe398a15967dfb8ec57344a007a43e39978143",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "7f14d763d895855d9f589fac7f977beec1f9db8424d42d10e1cc6fe6fcefb976",
+    "crop": [
+      0.1,
+      0.795,
+      0.45,
+      0.88
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F044-source-clear.jpg",
+    "source": "assets/sources/A1-p146.jpg",
+    "source_sha256": "4659b72dd08636b93de480cce2fe398a15967dfb8ec57344a007a43e39978143",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "652ff7fbfb2cc650bd5e7e9b70d5abd31b4d6a1b2d46d5fbf31449e77d534e32",
+    "crop": [
+      0.1,
+      0.795,
+      0.45,
+      0.88
+    ]
+  },
+  {
+    "file": "assets/v002/F044-source.jpg",
+    "source": "assets/sources/A1-p146.jpg",
+    "source_sha256": "4659b72dd08636b93de480cce2fe398a15967dfb8ec57344a007a43e39978143",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "b85cbc84dcd415ff02dc9ac2b3778e08caeba5535bdef7834080400613e9564f",
+    "crop": [
+      0.1,
+      0.795,
+      0.45,
+      0.88
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.22,
+        0.8375,
+        "筒瓦凸起断面"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F044-detail-1.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "0ac55c9163a8d24f382558d5642face23e1fce0113e25c65504d2c0048933020",
+    "crop": [
+      0.2,
+      0.745,
+      0.76,
+      0.903
+    ]
+  },
+  {
+    "file": "assets/v002/F045-locator.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "ecb285ef7dc11edcbccb16b49fadcc66dbb159948158cbe68cc7082d0a540710",
+    "crop": [
+      0.27,
+      0.14,
+      0.72,
+      0.255
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F045-source-clear.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "ce9c16c8fd414629375ec8af2a85db3b42f29f5d9bf0bcf18054e54ea616a82a",
+    "crop": [
+      0.27,
+      0.14,
+      0.72,
+      0.255
+    ]
+  },
+  {
+    "file": "assets/v002/F045-source.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "af90a895311cad43285f8bc28de64a465d9fe09b3fef8e3833ef117301e309ef",
+    "crop": [
+      0.27,
+      0.14,
+      0.72,
+      0.255
+    ],
+    "traces": [
+      [
+        [
+          0.32,
+          0.222
+        ],
+        [
+          0.65,
+          0.222
+        ]
+      ],
+      [
+        [
+          0.32,
+          0.244
+        ],
+        [
+          0.65,
+          0.244
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.48,
+        0.23,
+        "正脊中段"
+      ],
+      [
+        0.3,
+        0.205,
+        "与正吻交接"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F046-locator.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "5a32866cbb5578c8acbfe78c555c8433bb00dafca7e88937d32d5bcdc7ed5d81",
+    "crop": [
+      0.27,
+      0.23,
+      0.34,
+      0.41
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F046-source-clear.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "d0a19a9446938e2c5678ad8eb0f246ac970ee1b410ccd10c4aacf8516452ed7e",
+    "crop": [
+      0.27,
+      0.23,
+      0.34,
+      0.41
+    ]
+  },
+  {
+    "file": "assets/v002/F046-source.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "ab9f4bcc016ae6e24715fe93ab9d14c1c774e001438c92053ca2e7c3ef1c492d",
+    "crop": [
+      0.27,
+      0.23,
+      0.34,
+      0.41
+    ],
+    "traces": [
+      [
+        [
+          0.294,
+          0.25
+        ],
+        [
+          0.295,
+          0.388
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.3,
+        0.32,
+        "斜坡上的垂脊"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F046-detail-1.jpg",
+    "source": "assets/sources/A1-p141.jpg",
+    "source_sha256": "dc0eb83b76f2459011c663a20f931729055e6d31541477e20003d389d13ca868",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "247bb951dd74742c74b449e1e07b0d45c6543a449a60bd3bd9dea9697f056c40",
+    "crop": [
+      0.22,
+      0.13,
+      0.8,
+      0.39
+    ]
+  },
+  {
+    "file": "assets/v002/F047-locator.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "ec814e035e434de00a12afe4d63aeec8cdafe0f8e8d7c3ce176ba4476742d0f8",
+    "crop": [
+      0.49,
+      0.18,
+      0.84,
+      0.45
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F047-source-clear.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "af63bf567f6b5411c8ff133756212ad9613eafc2e4eb6a58b5625efeacb3eee2",
+    "crop": [
+      0.49,
+      0.18,
+      0.84,
+      0.45
+    ]
+  },
+  {
+    "file": "assets/v002/F047-source.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "c8d1226a2160bcc9889cc8d221ec56dc5cc44df8bff0b143d7ebadf7598197d1",
+    "crop": [
+      0.49,
+      0.18,
+      0.84,
+      0.45
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.68,
+        0.32,
+        "戗脊曲线"
+      ],
+      [
+        0.79,
+        0.423,
+        "下端脊兽区"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F048-locator.jpg",
+    "source": "assets/sources/A1-crop-platform.jpg",
+    "source_sha256": "4edff227d02a38ad1c7d85d409fb5801b7eec1b2c92a112b99d6f7178f0aa6cf",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "a9e0f274aacc79045e690db2669101a81b8e72feeffaf16124f5a1bcbe49dab2",
+    "crop": [
+      0.01,
+      0.01,
+      0.51,
+      0.98
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F048-source-clear.jpg",
+    "source": "assets/sources/A1-crop-platform.jpg",
+    "source_sha256": "4edff227d02a38ad1c7d85d409fb5801b7eec1b2c92a112b99d6f7178f0aa6cf",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "b33bee40cbfc6eb1886bc9090c42b6c5bd66d8e54a5d906230a61778704fdb48",
+    "crop": [
+      0.01,
+      0.01,
+      0.51,
+      0.98
+    ]
+  },
+  {
+    "file": "assets/v002/F048-source.jpg",
+    "source": "assets/sources/A1-crop-platform.jpg",
+    "source_sha256": "4edff227d02a38ad1c7d85d409fb5801b7eec1b2c92a112b99d6f7178f0aa6cf",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "964ff625d2130905dbd9c781f929f014339fecdc8a609fcbcf1cc7eae63147a4",
+    "crop": [
+      0.01,
+      0.01,
+      0.51,
+      0.98
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.32,
+        0.53,
+        "台基边缘"
+      ],
+      [
+        0.4,
+        0.72,
+        "角部外露石面"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F049-locator.jpg",
+    "source": "assets/sources/A1-crop-platform.jpg",
+    "source_sha256": "4edff227d02a38ad1c7d85d409fb5801b7eec1b2c92a112b99d6f7178f0aa6cf",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "7950194e91217b0d26796143b14335835a0e2c3a832c6c9bb8d5c11b84466abe",
+    "crop": [
+      0.24,
+      0.48,
+      0.51,
+      0.94
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F049-source-clear.jpg",
+    "source": "assets/sources/A1-crop-platform.jpg",
+    "source_sha256": "4edff227d02a38ad1c7d85d409fb5801b7eec1b2c92a112b99d6f7178f0aa6cf",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "ef4edcc92be0a6a58abfa8857e05a6d91a268ecb962616333caf03d4300f1601",
+    "crop": [
+      0.24,
+      0.48,
+      0.51,
+      0.94
+    ]
+  },
+  {
+    "file": "assets/v002/F049-source.jpg",
+    "source": "assets/sources/A1-crop-platform.jpg",
+    "source_sha256": "4edff227d02a38ad1c7d85d409fb5801b7eec1b2c92a112b99d6f7178f0aa6cf",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "b2fed51a773b6d35648c7f6ba3e0d59e0f64018783a1f925cec6e18d371487b3",
+    "crop": [
+      0.24,
+      0.48,
+      0.51,
+      0.94
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.4,
+        0.72,
+        "角石外露面"
+      ],
+      [
+        0.4,
+        0.56,
+        "顶面与相邻铺地"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F050-locator.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "86aa30e5323cd040659fb784bdeb193f52529ba7939344a436b0987af6a5aa85",
+    "crop": [
+      0.43,
+      0.56,
+      0.535,
+      0.735
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F050-source-clear.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "193204a02d3acf1635ad2943ae323850b38a377ec275ee62738c24c22848cd72",
+    "crop": [
+      0.43,
+      0.56,
+      0.535,
+      0.735
+    ]
+  },
+  {
+    "file": "assets/v002/F050-source.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "8aac2eab90dc765f3d9f55e53ef5922852614e404b8d714eb42e61ac18e73be5",
+    "crop": [
+      0.43,
+      0.56,
+      0.535,
+      0.735
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.48,
+        0.65,
+        "南门洞"
+      ],
+      [
+        0.48,
+        0.73,
+        "门槛位置"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F051-locator.jpg",
+    "source": "assets/sources/A1-p284.jpg",
+    "source_sha256": "d81eaa90d1b5b823b11faf1b65af612a573f8c39868dd2115452b09d2e226373",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "c9a4bd6636178dc9e07b8d32bec0dec17b2347e96356b546f4b7665b3f44028d",
+    "crop": [
+      0.4,
+      0.52,
+      0.59,
+      0.75
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F051-source-clear.jpg",
+    "source": "assets/sources/A1-p284.jpg",
+    "source_sha256": "d81eaa90d1b5b823b11faf1b65af612a573f8c39868dd2115452b09d2e226373",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "8315786c5575baac587de1f338c7aca874730ed67100bac33834596e11f500b5",
+    "crop": [
+      0.4,
+      0.52,
+      0.59,
+      0.75
+    ]
+  },
+  {
+    "file": "assets/v002/F051-source.jpg",
+    "source": "assets/sources/A1-p284.jpg",
+    "source_sha256": "d81eaa90d1b5b823b11faf1b65af612a573f8c39868dd2115452b09d2e226373",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "6d154531e70e31e6ae522afdf72527bb7d7065111216f27307bfe29b577894ed",
+    "crop": [
+      0.4,
+      0.52,
+      0.59,
+      0.75
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.5,
+        0.64,
+        "北门洞查找区"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F052-locator.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "449fbc687d3d7e6e9253aa57889c54c5c8ed9a6b5f227455551c968294a0f8d5",
+    "crop": [
+      0.285,
+      0.565,
+      0.405,
+      0.684
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F052-source-clear.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "c3d628baf66bbfd5defc6d864aaa3d77868c638264e7e83289d07a5ecc80b493",
+    "crop": [
+      0.285,
+      0.565,
+      0.405,
+      0.684
+    ]
+  },
+  {
+    "file": "assets/v002/F052-source.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "96ff654573e61c80b13b3125c6295bdcb10060b5552a08669c04189461c4978d",
+    "crop": [
+      0.285,
+      0.565,
+      0.405,
+      0.684
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.34,
+        0.62,
+        "窗洞"
+      ],
+      [
+        0.34,
+        0.675,
+        "窗台"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F053-locator.jpg",
+    "source": "assets/sources/A1-p137.jpg",
+    "source_sha256": "a46e187d4c864df7d3e6c87bddbeff5962a3f6bbffa59124104811ce43c54a1c",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "51fc3ab58c2adeec818162baa0a06d07d2af031ff94279d6385b6b2939cd2aa7",
+    "crop": [
+      0.14,
+      0.735,
+      0.42,
+      0.835
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F053-source-clear.jpg",
+    "source": "assets/sources/A1-p137.jpg",
+    "source_sha256": "a46e187d4c864df7d3e6c87bddbeff5962a3f6bbffa59124104811ce43c54a1c",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "7770f28bbcbab24b8bfcec704d1efb38c9d051e5c0ccf7398299317e750db8c4",
+    "crop": [
+      0.14,
+      0.735,
+      0.42,
+      0.835
+    ]
+  },
+  {
+    "file": "assets/v002/F053-source.jpg",
+    "source": "assets/sources/A1-p137.jpg",
+    "source_sha256": "a46e187d4c864df7d3e6c87bddbeff5962a3f6bbffa59124104811ce43c54a1c",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "c2c8bebf347599179c2358f7a9e6fe7b393871b430137d1586d03465dc2facb4",
+    "crop": [
+      0.14,
+      0.735,
+      0.42,
+      0.835
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.18,
+        0.785,
+        "拱形透风孔"
+      ],
+      [
+        0.363,
+        0.782,
+        "方形透风孔"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F054-locator.jpg",
+    "source": "assets/sources/A1-crop-door.jpg",
+    "source_sha256": "c03a7357041bfbcc229b33d434441c2d068e21761e66a81696d7796f69af3f33",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "fd9438e342a036ad4bc9f54054d3e611cb6d7b3cdd5db7bc1933ba79512b284c",
+    "crop": [
+      0.27,
+      0.14,
+      0.42,
+      0.43
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F054-source-clear.jpg",
+    "source": "assets/sources/A1-crop-door.jpg",
+    "source_sha256": "c03a7357041bfbcc229b33d434441c2d068e21761e66a81696d7796f69af3f33",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "a683e2aa365f99ca8bc5bf413f75b1c24d7b54a1da823e7dff9dcde1b3fd90f4",
+    "crop": [
+      0.27,
+      0.14,
+      0.42,
+      0.43
+    ]
+  },
+  {
+    "file": "assets/v002/F054-source.jpg",
+    "source": "assets/sources/A1-crop-door.jpg",
+    "source_sha256": "c03a7357041bfbcc229b33d434441c2d068e21761e66a81696d7796f69af3f33",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "a1bc312ecbdd5da2b76ce0e5570eea43bed3a09956b90091886928185b48ba01",
+    "crop": [
+      0.27,
+      0.14,
+      0.42,
+      0.43
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.345,
+        0.285,
+        "碑面"
+      ],
+      [
+        0.345,
+        0.18,
+        "上边框"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F055-locator.jpg",
+    "source": "assets/sources/A1-crop-wall.jpg",
+    "source_sha256": "c03a7357041bfbcc229b33d434441c2d068e21761e66a81696d7796f69af3f33",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "8bcc4f36b96271af8d6da3207c8117b16fd60ba8b601b53cc5461508946554f4",
+    "crop": [
+      0.03,
+      0.06,
+      0.94,
+      0.44
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F055-source-clear.jpg",
+    "source": "assets/sources/A1-crop-wall.jpg",
+    "source_sha256": "c03a7357041bfbcc229b33d434441c2d068e21761e66a81696d7796f69af3f33",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "707cf8091bb27a206e7524bd9f413ede45836454b3a4ef3163d1bc3453def010",
+    "crop": [
+      0.03,
+      0.06,
+      0.94,
+      0.44
+    ]
+  },
+  {
+    "file": "assets/v002/F055-source.jpg",
+    "source": "assets/sources/A1-crop-wall.jpg",
+    "source_sha256": "c03a7357041bfbcc229b33d434441c2d068e21761e66a81696d7796f69af3f33",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "1d35bdc3c45562bdb24fcc4e1a4ba5110f27b193b09006c0dd71289642cc0632",
+    "crop": [
+      0.03,
+      0.06,
+      0.94,
+      0.44
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.49,
+        0.34,
+        "砖墙面"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F056-locator.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "1e9ac1735f65a900361d942b124e6fd5ab250cdd621ccddda97d3b73bb488c16",
+    "crop": [
+      0.385,
+      0.68,
+      0.437,
+      0.716
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F056-source-clear.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "0128e5b62bc2f348ca069defec81762c8869b7776f5518e5404289fdb6bd0a86",
+    "crop": [
+      0.385,
+      0.68,
+      0.437,
+      0.716
+    ]
+  },
+  {
+    "file": "assets/v002/F056-source.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "f3833b653d0bdf9958f1c0248abb4bd8ff30b0306738f8f221f05962ac3638d4",
+    "crop": [
+      0.385,
+      0.68,
+      0.437,
+      0.716
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.409,
+        0.698,
+        "墙砖与错缝"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F057-locator.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "c94d9cbec9ddca3fd8e3cd868521f62677b035f4b94a49e9731c95dbe39a952f",
+    "crop": [
+      0.32,
+      0.69,
+      0.7,
+      0.92
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F057-source-clear.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "6670c153795fb93021259345fa5325c7feb4141cb686ca8541036f262c914907",
+    "crop": [
+      0.32,
+      0.69,
+      0.7,
+      0.92
+    ]
+  },
+  {
+    "file": "assets/v002/F057-source.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "f3b6f0bd0fccaa5be418526b58ee5067eb23527e8bee2a4631027e3b90754ba8",
+    "crop": [
+      0.32,
+      0.69,
+      0.7,
+      0.92
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.51,
+        0.83,
+        "室内砖地面"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F058-locator.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "da8f8e0b4a7fbc12bfb1fa4ad492b466d126923af552e41bfd1346129916f777",
+    "crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F058-source-clear.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "d6b6af04d3a0e9363501e882b955521ce5fcf82b8a704c877c94d46aaad9d28c",
+    "crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ]
+  },
+  {
+    "file": "assets/v002/F058-source.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "38f19bc56858352aeefc785f9eb45799bd7afdc514bc0be0dcac7479fd7b92a1",
+    "crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.48,
+        0.855,
+        "条状外露砖面"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F059-locator.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "da8f8e0b4a7fbc12bfb1fa4ad492b466d126923af552e41bfd1346129916f777",
+    "crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F059-source-clear.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "d6b6af04d3a0e9363501e882b955521ce5fcf82b8a704c877c94d46aaad9d28c",
+    "crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ]
+  },
+  {
+    "file": "assets/v002/F059-source.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "757702680de9237d2b7e3c5d7872fa629296874fd6e3665e3f8b6443eb34ecc7",
+    "crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.55,
+        0.83,
+        "地面砖与砖缝"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F059-detail-1.jpg",
+    "source": "assets/sources/A1-p134.jpg",
+    "source_sha256": "b03ea74117f66eb016911f5419d88a08a11c5fecb9f019cd3b9d63e303fdb521",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "0fe347b4afffd7ca1030f98585d453803db5b99faf426b2bfe188d73ff150bf2",
+    "crop": [
+      0.12,
+      0.1,
+      0.92,
+      0.31
+    ]
+  },
+  {
+    "file": "assets/v002/F060-locator.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "da8f8e0b4a7fbc12bfb1fa4ad492b466d126923af552e41bfd1346129916f777",
+    "crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F060-source-clear.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "d6b6af04d3a0e9363501e882b955521ce5fcf82b8a704c877c94d46aaad9d28c",
+    "crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ]
+  },
+  {
+    "file": "assets/v002/F060-source.jpg",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_sha256": "4c0e2afbdafd442dac030eb3835bd6c7db1e46f5867d58aa9acd1d3136dde0ee",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "757702680de9237d2b7e3c5d7872fa629296874fd6e3665e3f8b6443eb34ecc7",
+    "crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.55,
+        0.83,
+        "地面砖与砖缝"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F060-detail-1.jpg",
+    "source": "assets/sources/A1-p134.jpg",
+    "source_sha256": "b03ea74117f66eb016911f5419d88a08a11c5fecb9f019cd3b9d63e303fdb521",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "0fe347b4afffd7ca1030f98585d453803db5b99faf426b2bfe188d73ff150bf2",
+    "crop": [
+      0.12,
+      0.1,
+      0.92,
+      0.31
+    ]
+  },
+  {
+    "file": "assets/v002/F061-locator.jpg",
+    "source": "assets/sources/A1-p134.jpg",
+    "source_sha256": "b03ea74117f66eb016911f5419d88a08a11c5fecb9f019cd3b9d63e303fdb521",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "6a0df4f148dbeca76f8248cd9660e125544bbeb4105c6ce313ce29075a1366d2",
+    "crop": [
+      0.14,
+      0.04,
+      0.83,
+      0.28
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F061-source-clear.jpg",
+    "source": "assets/sources/A1-p134.jpg",
+    "source_sha256": "b03ea74117f66eb016911f5419d88a08a11c5fecb9f019cd3b9d63e303fdb521",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "c2bcb59fd5e81573269c83d505c22865ac658984ec9467ead1eea913c16bf7e0",
+    "crop": [
+      0.14,
+      0.04,
+      0.83,
+      0.28
+    ]
+  },
+  {
+    "file": "assets/v002/F061-source.jpg",
+    "source": "assets/sources/A1-p134.jpg",
+    "source_sha256": "b03ea74117f66eb016911f5419d88a08a11c5fecb9f019cd3b9d63e303fdb521",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "f65abac4610ee0841cd52b6c6df8f00cc515ba3652eba878dc63f9d0585e38b1",
+    "crop": [
+      0.14,
+      0.04,
+      0.83,
+      0.28
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.4,
+        0.18,
+        "座台可见表面"
+      ],
+      [
+        0.68,
+        0.18,
+        "另一座台局部"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F062-locator.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "5bd24516830d278c36970b2c3408043c31bed1ee6bbab360ccefd2055477ecab",
+    "crop": [
+      0.24,
+      0.25,
+      0.43,
+      0.43
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F062-source-clear.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "9063aed0240f71de67041dd8861b19754ef9ec0071a9a3f610e516918d82b76b",
+    "crop": [
+      0.24,
+      0.25,
+      0.43,
+      0.43
+    ]
+  },
+  {
+    "file": "assets/v002/F062-source.jpg",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_sha256": "28157054d08717108fee7474c6889b4f206c678045b85c424fd70b1b89aaeb8c",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "4dfaee6e2ce8b49e1fcc0b7cef63f59d6d68b7e77b8e19a444fa2b7cf570305e",
+    "crop": [
+      0.24,
+      0.25,
+      0.43,
+      0.43
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.35,
+        0.32,
+        "屋面连续薄层位置"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F063-locator.jpg",
+    "source": "assets/sources/A1-p140.jpg",
+    "source_sha256": "6eb3be84d59b50fbd563de924a1281289d012086b511828c93a288a66a952d54",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "b1c3f7b759362acd01f79ca65b4cfc2fb41ad9c4745597ab8c8324a3c32567d4",
+    "crop": [
+      0.34,
+      0.6,
+      0.64,
+      0.885
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F063-source-clear.jpg",
+    "source": "assets/sources/A1-p140.jpg",
+    "source_sha256": "6eb3be84d59b50fbd563de924a1281289d012086b511828c93a288a66a952d54",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "b9e12048bc6f47f7c4915ececb00840df27a313ce038bf2c806c5c49a6e7580b",
+    "crop": [
+      0.34,
+      0.6,
+      0.64,
+      0.885
+    ]
+  },
+  {
+    "file": "assets/v002/F063-source.jpg",
+    "source": "assets/sources/A1-p140.jpg",
+    "source_sha256": "6eb3be84d59b50fbd563de924a1281289d012086b511828c93a288a66a952d54",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "0791f6b7539fd88637cd5a4fa2edfc01726352e432aefc87a024c0aa84dbb0bc",
+    "crop": [
+      0.34,
+      0.6,
+      0.64,
+      0.885
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.45,
+        0.674,
+        "正吻兽首"
+      ],
+      [
+        0.51,
+        0.81,
+        "正吻下部"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F063-detail-1.jpg",
+    "source": "assets/sources/A1-p140.jpg",
+    "source_sha256": "6eb3be84d59b50fbd563de924a1281289d012086b511828c93a288a66a952d54",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "f4fc9c862ebce548b8e50dfd288ae7b087ce4a75cec1c2c87fdd9afad81ad9e7",
+    "crop": [
+      0.62,
+      0.13,
+      0.75,
+      0.36
+    ]
+  },
+  {
+    "file": "assets/v002/F064-locator.jpg",
+    "source": "assets/sources/A1-p141.jpg",
+    "source_sha256": "dc0eb83b76f2459011c663a20f931729055e6d31541477e20003d389d13ca868",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "ebb842554d376da4fc511aa633f5308ff5db9e1405a47d92f5379bca6dbf1fed",
+    "crop": [
+      0.43,
+      0.18,
+      0.59,
+      0.35
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F064-source-clear.jpg",
+    "source": "assets/sources/A1-p141.jpg",
+    "source_sha256": "dc0eb83b76f2459011c663a20f931729055e6d31541477e20003d389d13ca868",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "b02ce42404ad0e176cd69a4a3e1e6bf8c4277680b2fdefaab6fbd4e555e76c4a",
+    "crop": [
+      0.43,
+      0.18,
+      0.59,
+      0.35
+    ]
+  },
+  {
+    "file": "assets/v002/F064-source.jpg",
+    "source": "assets/sources/A1-p141.jpg",
+    "source_sha256": "dc0eb83b76f2459011c663a20f931729055e6d31541477e20003d389d13ca868",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "f5b1cb8ae1a78350117b561885b2c8f292a8ce306d6d770ef4fb5af9d8b8bdb6",
+    "crop": [
+      0.43,
+      0.18,
+      0.59,
+      0.35
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.51,
+        0.26,
+        "垂兽首"
+      ],
+      [
+        0.51,
+        0.33,
+        "兽座"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F064-detail-1.jpg",
+    "source": "assets/sources/A1-p141.jpg",
+    "source_sha256": "dc0eb83b76f2459011c663a20f931729055e6d31541477e20003d389d13ca868",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "6f933ffd70196aeeaad52d55c77717ab56713f0d14b18b5693cb526935f36df6",
+    "crop": [
+      0.24,
+      0.68,
+      0.79,
+      0.9
+    ]
+  },
+  {
+    "file": "assets/v002/F065-locator.jpg",
+    "source": "assets/sources/A1-p142.jpg",
+    "source_sha256": "43b2959b0ad0875556859e5c560d08e3c0774614a11e0c55ad654cbd667a97b5",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "b4afcc2e29f0feabfd233eb29f981fc57afbd03260daf5a4c81a6f24249a6b25",
+    "crop": [
+      0.51,
+      0.14,
+      0.68,
+      0.32
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F065-source-clear.jpg",
+    "source": "assets/sources/A1-p142.jpg",
+    "source_sha256": "43b2959b0ad0875556859e5c560d08e3c0774614a11e0c55ad654cbd667a97b5",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "2f695dcf0944c1e862d8176ab731bbcd0a4969e60262af0edb960a8b1218a158",
+    "crop": [
+      0.51,
+      0.14,
+      0.68,
+      0.32
+    ]
+  },
+  {
+    "file": "assets/v002/F065-source.jpg",
+    "source": "assets/sources/A1-p142.jpg",
+    "source_sha256": "43b2959b0ad0875556859e5c560d08e3c0774614a11e0c55ad654cbd667a97b5",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "e601a5934869af20a4fb0ecf4650094b6d7e1b1691eed8193717ca797e2c996b",
+    "crop": [
+      0.51,
+      0.14,
+      0.68,
+      0.32
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.59,
+        0.2,
+        "戗兽兽首"
+      ],
+      [
+        0.58,
+        0.29,
+        "下部座"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F065-detail-1.jpg",
+    "source": "assets/sources/A1-p142.jpg",
+    "source_sha256": "43b2959b0ad0875556859e5c560d08e3c0774614a11e0c55ad654cbd667a97b5",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "4d556b2f85aa9e52c880f68c878fbaf438ba8c799a838de4e38627115991523b",
+    "crop": [
+      0.15,
+      0.69,
+      0.77,
+      0.91
+    ]
+  },
+  {
+    "file": "assets/v002/F066-locator.jpg",
+    "source": "assets/sources/A1-p143.jpg",
+    "source_sha256": "7cad010778d2c818f61aefb5c649dfccd2734f5dbb0453f7acf699ea0d4adf70",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "4763138173fe13979c427c887d40553c1b79035fc5699d4896fd6a255c300daa",
+    "crop": [
+      0.27,
+      0.59,
+      0.53,
+      0.89
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F066-source-clear.jpg",
+    "source": "assets/sources/A1-p143.jpg",
+    "source_sha256": "7cad010778d2c818f61aefb5c649dfccd2734f5dbb0453f7acf699ea0d4adf70",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "aabec26b628f42d304cada94116e7ed99617d736e9c427d6a6558d33cb3c9193",
+    "crop": [
+      0.27,
+      0.59,
+      0.53,
+      0.89
+    ]
+  },
+  {
+    "file": "assets/v002/F066-source.jpg",
+    "source": "assets/sources/A1-p143.jpg",
+    "source_sha256": "7cad010778d2c818f61aefb5c649dfccd2734f5dbb0453f7acf699ea0d4adf70",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "42b82f3c001e8cff392e2bfaaf8ec56aad8f9dd9502e1f04f9d657563f2e18af",
+    "crop": [
+      0.27,
+      0.59,
+      0.53,
+      0.89
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.39,
+        0.64,
+        "冠帽与仙人正面"
+      ],
+      [
+        0.4,
+        0.815,
+        "前部圆饰"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F066-detail-1.jpg",
+    "source": "assets/sources/A1-p143.jpg",
+    "source_sha256": "7cad010778d2c818f61aefb5c649dfccd2734f5dbb0453f7acf699ea0d4adf70",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "fa766103c6c01dd4f84b3af046248b4757141ecb051a305a9261f1a09a59c221",
+    "crop": [
+      0.23,
+      0.23,
+      0.42,
+      0.48
+    ]
+  },
+  {
+    "file": "assets/v002/F067-locator.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "86aa30e5323cd040659fb784bdeb193f52529ba7939344a436b0987af6a5aa85",
+    "crop": [
+      0.43,
+      0.56,
+      0.535,
+      0.735
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F067-source-clear.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "193204a02d3acf1635ad2943ae323850b38a377ec275ee62738c24c22848cd72",
+    "crop": [
+      0.43,
+      0.56,
+      0.535,
+      0.735
+    ]
+  },
+  {
+    "file": "assets/v002/F067-source.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "e7d690e05f32ae92c02190b510aa06c0091c51b9d544b95956e826c7a1489988",
+    "crop": [
+      0.43,
+      0.56,
+      0.535,
+      0.735
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.48,
+        0.65,
+        "门扇与门框"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F067-detail-1.jpg",
+    "source": "assets/sources/A1-crop-door.jpg",
+    "source_sha256": "c03a7357041bfbcc229b33d434441c2d068e21761e66a81696d7796f69af3f33",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "018472db03648d98ff62dd1287cfe127c280d17bd9451adb31a3a06565d5ed4b",
+    "crop": [
+      0.01,
+      0.01,
+      0.96,
+      0.45
+    ]
+  },
+  {
+    "file": "assets/v002/F068-locator.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "449fbc687d3d7e6e9253aa57889c54c5c8ed9a6b5f227455551c968294a0f8d5",
+    "crop": [
+      0.285,
+      0.565,
+      0.405,
+      0.684
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F068-source-clear.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "c3d628baf66bbfd5defc6d864aaa3d77868c638264e7e83289d07a5ecc80b493",
+    "crop": [
+      0.285,
+      0.565,
+      0.405,
+      0.684
+    ]
+  },
+  {
+    "file": "assets/v002/F068-source.jpg",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_sha256": "4c7f3826dab3c936933f5137c471ada7f3f2bce9ab60424dfb5e83f567e95d6a",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "6486dd0d02a5ec74943df149b682586f3011e3b830d6302c342f104ef9e45a3a",
+    "crop": [
+      0.285,
+      0.565,
+      0.405,
+      0.684
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.34,
+        0.62,
+        "格心与窗框"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F068-detail-1.jpg",
+    "source": "assets/sources/A1-crop-door.jpg",
+    "source_sha256": "c03a7357041bfbcc229b33d434441c2d068e21761e66a81696d7796f69af3f33",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "58e3b53d6d5657e20368a6d67fdc39e954776915b280edf0b047c356d6ace28c",
+    "crop": [
+      0.03,
+      0.01,
+      0.26,
+      0.43
+    ]
+  },
+  {
+    "file": "assets/v002/F069-locator.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "00df2cd190e5a88aa7f3cef7cf4a2a060a3b79106da51651cf966444bc949b9a",
+    "crop": [
+      0.669,
+      0.31,
+      0.714,
+      0.34
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F069-source-clear.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "f602162dff79aa0189fbb68f1498f48004cf0fc0de4362fa53b2f46f9e27b889",
+    "crop": [
+      0.669,
+      0.31,
+      0.714,
+      0.34
+    ]
+  },
+  {
+    "file": "assets/v002/F069-source.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "fc484b416d092fe4fd987e1fbe45dbe18f9a7f46c0115045777910c9c0750f44",
+    "crop": [
+      0.669,
+      0.31,
+      0.714,
+      0.34
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.694,
+        0.324,
+        "栱端小斗（型号未确认）"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F069-model-clear.jpg",
+    "source": "assets/approved/4ca0ff8c16-AXON.png",
+    "source_sha256": "633cd6b2d90e2c2cb3cbf4a2522eab522461ad3b88fa6ccb94b75c1fab1a5913",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "58edfe3ed1c789bed03098e31ce30193780019ba0ba4ff89bd5ceb6e6b0c824c",
+    "model_id": "CMP-DOU-SINGLE-LONGKAI-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F069-model.jpg",
+    "source": "assets/approved/4ca0ff8c16-AXON.png",
+    "source_sha256": "633cd6b2d90e2c2cb3cbf4a2522eab522461ad3b88fa6ccb94b75c1fab1a5913",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "cf2f7a91bcead9a5fc89b9f7d88a140f1cdc30f4ca21141c5fbf4ca729d0a818",
+    "model_id": "CMP-DOU-SINGLE-LONGKAI-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F069-detail-1.jpg",
+    "source": "assets/sources/A1-p064.jpg",
+    "source_sha256": "ace92fa868e6bb2f49010e062e88db90861325adfc61458e1c4d347d28d745cc",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "efbee27823d4cb49f40cc04e955abd22fc1f03cd7c28488bcdfd6b373b58ee78",
+    "crop": [
+      0.12,
+      0.4,
+      0.91,
+      0.5
+    ]
+  },
+  {
+    "file": "assets/v002/F070-locator.jpg",
+    "source": "assets/official/c9956e9f0c-04_SOURCE_交互斗.png",
+    "source_sha256": "0efefa4a8109ff7568c0f93d067010e11fd666d527efdff0b313f24605ca4a03",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "b5fd743ce6cac06fa35b22caa195b1a1e28000437ecc773f72637a87d7b99404",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F070-source-clear.jpg",
+    "source": "assets/official/c9956e9f0c-04_SOURCE_交互斗.png",
+    "source_sha256": "0efefa4a8109ff7568c0f93d067010e11fd666d527efdff0b313f24605ca4a03",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "ebd951a364077589a8422bb2c13fe27623a0b210be93a85bca5e68b058c95e2b",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F070-source.jpg",
+    "source": "assets/official/c9956e9f0c-04_SOURCE_交互斗.png",
+    "source_sha256": "0efefa4a8109ff7568c0f93d067010e11fd666d527efdff0b313f24605ca4a03",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "99e10b368325412e6dd77d1e42ac35c7478abf844d040773cc9378127f9ba4a0",
+    "crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.39,
+        0.31,
+        "交叉开口与斗耳"
+      ],
+      [
+        0.4,
+        0.54,
+        "收分斗身"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F070-model-clear.jpg",
+    "source": "assets/approved/e243cb92cd-AXON.png",
+    "source_sha256": "92141223dd51cacc3740f7968fe9a5681d71f61f087b1105c4049611e9791ede",
+    "operation": "EXISTING_RENDER_CROP_RESAMPLE_ONLY",
+    "sha256": "0d46aaf1f2d2945e9611590ba7b98e0cc89a7686fe59e55dbe54aaf6331a4617",
+    "model_id": "CMP-DOU-INTERACTIVE-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F070-model.jpg",
+    "source": "assets/approved/e243cb92cd-AXON.png",
+    "source_sha256": "92141223dd51cacc3740f7968fe9a5681d71f61f087b1105c4049611e9791ede",
+    "operation": "EXISTING_RENDER_CROP_WITH_SUBJECT_NUMBERS_NOT_REGISTERED_PIXELS",
+    "sha256": "5e09218048aa80138921c59136c6679f5a47b2d69f0238e9bd5a7cd6eddfd092",
+    "model_id": "CMP-DOU-INTERACTIVE-001",
+    "render_label": "GitHub 已有审核渲染"
+  },
+  {
+    "file": "assets/v002/F070-detail-1.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "ae58ce1dfb582af09fb784548d7fe21545db88518f2afe6aa5466a0f89f609e0",
+    "crop": [
+      0.625,
+      0.398,
+      0.668,
+      0.433
+    ]
+  },
+  {
+    "file": "assets/v002/F070-detail-2.jpg",
+    "source": "assets/sources/A1-p064.jpg",
+    "source_sha256": "ace92fa868e6bb2f49010e062e88db90861325adfc61458e1c4d347d28d745cc",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "3bd659bad6b3419733698d49f5252480032b450101ef356bffe18981ae391ac3",
+    "crop": [
+      0.12,
+      0.83,
+      0.91,
+      0.92
+    ]
+  },
+  {
+    "file": "assets/v002/F071-locator.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "f05ef2dd9fc71e828a08bd6b0231b707aada9f859b5223810ced319a847f91ea",
+    "crop": [
+      0.214,
+      0.49,
+      0.258,
+      0.525
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F071-source-clear.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "92099a415b36b75c67cbd3b5abcd0db700cdc9ddbf340fb62786cad79c0426ae",
+    "crop": [
+      0.214,
+      0.49,
+      0.258,
+      0.525
+    ]
+  },
+  {
+    "file": "assets/v002/F071-source.jpg",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_sha256": "37b44286531f44ee8677b5dad5673bab939c36d90a28d2aabb92b7b6970a2a0b",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "0ddfdcb95f4fe85c3d8b33f9663bfb37ba701b07754a4006caeb92f2f532a3fc",
+    "crop": [
+      0.214,
+      0.49,
+      0.258,
+      0.525
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.236,
+        0.505,
+        "栱端小斗（型号未确认）"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F072-locator.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "ea8b87ac5634da4d573de555ab2ca303c14d8d2353bbf318c99e1efadb545cc4",
+    "crop": [
+      0.21,
+      0.497,
+      0.83,
+      0.7
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F072-source-clear.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "9cb62a5335a926cb7c107ce5477567d540870a9c0fd3d524df21f36704f4b958",
+    "crop": [
+      0.21,
+      0.497,
+      0.83,
+      0.7
+    ]
+  },
+  {
+    "file": "assets/v002/F072-source.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "1d4f3acb6342d02772fc1a7b322e7a012dd1dcc346206945e5d6f0537ad35104",
+    "crop": [
+      0.21,
+      0.497,
+      0.83,
+      0.7
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.6,
+        0.61,
+        "槫下替木"
+      ],
+      [
+        0.7,
+        0.615,
+        "端部下缘"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F072-detail-1.jpg",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_sha256": "5a8049770efc996caae2a90d862a42f4a1102a52cb1d8602672e4688463b89e7",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "af519ad35c7c70510b5ba2a11c1b4cb50479fe2d7c323e560360aac7ca898b02",
+    "crop": [
+      0.31,
+      0.745,
+      0.82,
+      0.926
+    ]
+  },
+  {
+    "file": "assets/v002/F072-detail-2.jpg",
+    "source": "assets/sources/A1-p344.jpg",
+    "source_sha256": "dad31d770923ba4f8b5d1f4bcca65ecd74edc1005b556471f5c4f7aa51b1a777",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "4ff88f6708df50e014520e50705c347a9d485c2cec166345f31d3adb73f928a4",
+    "crop": [
+      0.15,
+      0.69,
+      0.88,
+      0.94
+    ]
+  },
+  {
+    "file": "assets/v002/F073-locator.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "be676ef5e6de805895da5aec978c410590b0ad9a54eae0d0ed33f0851c1e986e",
+    "crop": [
+      0.37,
+      0.83,
+      0.49,
+      0.89
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F073-source-clear.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "2df159c1a5bf9c0e8b2a4197a363d75955c5f9f05bc32ef87135053b0ff9294b",
+    "crop": [
+      0.37,
+      0.83,
+      0.49,
+      0.89
+    ]
+  },
+  {
+    "file": "assets/v002/F073-source.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "607abdfeb88c11e1a918a4dcad5edd7bf254c5be58ed2f691e682afd268eb88a",
+    "crop": [
+      0.37,
+      0.83,
+      0.49,
+      0.89
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.43,
+        0.855,
+        "凹形瓦陇檐端"
+      ],
+      [
+        0.43,
+        0.881,
+        "檐端滴水"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F073-detail-1.jpg",
+    "source": "assets/sources/A1-p145.jpg",
+    "source_sha256": "0aed36458cc2c644a9b839c8dbb8734fe0ac1dbbefb7e624979c029391a38adb",
+    "operation": "SOURCE_DETAIL_CROP_RESAMPLE_ONLY",
+    "sha256": "7a64e4bd87ea59a0596675a0a0d890d87c6d4aeef3c50df3271acd7f8ecd1fa9",
+    "crop": [
+      0.13,
+      0.3,
+      0.87,
+      0.4
+    ]
+  },
+  {
+    "file": "assets/v002/F074-locator.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "ed92dfad3fa2116f6e19f66db9c197e9412a0886826e4e3c9bc0e03133575a0c",
+    "crop": [
+      0.32,
+      0.77,
+      0.45,
+      0.85
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F074-source-clear.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "3915648413530aeace26ec1b634041741478f73394a0eddc34ac7fd5840c1161",
+    "crop": [
+      0.32,
+      0.77,
+      0.45,
+      0.85
+    ]
+  },
+  {
+    "file": "assets/v002/F074-source.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "9a3782d9e8cdae3c79319021ab4563a4e502d34337c016338e4dcbd4e22171a7",
+    "crop": [
+      0.32,
+      0.77,
+      0.45,
+      0.85
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.385,
+        0.814,
+        "圆形勾头饰面"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F075-locator.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "cf208ff5b764acaac8361fb4a8cc9ac46683941ae5694f32ef6584fb32c501f9",
+    "crop": [
+      0.373,
+      0.83,
+      0.492,
+      0.892
+    ],
+    "identity_inference": false
+  },
+  {
+    "file": "assets/v002/F075-source-clear.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "683d3b06c9f1a02b3c9e8a21b69737911102938a52f6e4e5609d679393884fd8",
+    "crop": [
+      0.373,
+      0.83,
+      0.492,
+      0.892
+    ]
+  },
+  {
+    "file": "assets/v002/F075-source.jpg",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_sha256": "de0655ca3ee48fb6a55908eb85ac11070b97ee5704ebe674c0e281472cdb622b",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "977dcbf95aa5ef2e9047b8abe88433dcdc8c209750e0cc82ef6f748ea19cfb18",
+    "crop": [
+      0.373,
+      0.83,
+      0.492,
+      0.892
+    ],
+    "traces": [
+      [
+        [
+          0.383,
+          0.849
+        ],
+        [
+          0.391,
+          0.866
+        ],
+        [
+          0.416,
+          0.876
+        ],
+        [
+          0.438,
+          0.889
+        ],
+        [
+          0.454,
+          0.878
+        ],
+        [
+          0.48,
+          0.865
+        ],
+        [
+          0.487,
+          0.846
+        ]
+      ]
+    ],
+    "parts": [
+      [
+        0.438,
+        0.865,
+        "莲花纹与下垂尖端"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F076-locator.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "61e2cdb5f2f89d49bb1c826f3fe75c367cc4ed0ec16c83b0178e3f7f048ff402",
+    "crop": [
+      0.455,
+      0.19,
+      0.75,
+      0.37
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F076-source-clear.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "023de4bbce4615e260a8a0d2c338cc53b2e57002b8009f2f097803cc7dbc8a16",
+    "crop": [
+      0.455,
+      0.19,
+      0.75,
+      0.37
+    ]
+  },
+  {
+    "file": "assets/v002/F076-source.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "d5eaa46d588c4a1dfdd2010f4b426f521d09da5f2593413487f6a0c152853a13",
+    "crop": [
+      0.455,
+      0.19,
+      0.75,
+      0.37
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.61,
+        0.29,
+        "斜向带状构件位置"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F077-locator.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "1e4de44077fb5625fa02d60cf8b7d867282a5f971e9997263fe733f1c74f36c9",
+    "crop": [
+      0.46,
+      0.285,
+      0.5,
+      0.367
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F077-source-clear.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "ce7a8380d99ffdcea72bbd9f5b3df7c5b302552be11f40d31f524387e30b1931",
+    "crop": [
+      0.46,
+      0.285,
+      0.5,
+      0.367
+    ]
+  },
+  {
+    "file": "assets/v002/F077-source.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "a021c2a429c3b2820589d142ff63a13d308d62e8f8380c3d36d4357b742be2a4",
+    "crop": [
+      0.46,
+      0.285,
+      0.5,
+      0.367
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.48,
+        0.332,
+        "中央垂饰"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F078-locator.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "f0673191ec53d00c96d59d106ae98f910829e4cf030ecdd10f9da02717db4143",
+    "crop": [
+      0.38,
+      0.342,
+      0.416,
+      0.39
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F078-source-clear.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "d85d6aee879586b632fabfa5d614e859c4f999d54c3d2942ee8804a41dcfae93",
+    "crop": [
+      0.38,
+      0.342,
+      0.416,
+      0.39
+    ]
+  },
+  {
+    "file": "assets/v002/F078-source.jpg",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_sha256": "b6bbc6944417b24336bec80dad160786f26a8b83f6522d8cf669c8e9486b5b80",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "2debbc96f30100f4d8c7786f69094d8cafdef184d44c8e447996ed127732c979",
+    "crop": [
+      0.38,
+      0.342,
+      0.416,
+      0.39
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.399,
+        0.368,
+        "侧端垂饰"
+      ]
+    ]
+  },
+  {
+    "file": "assets/v002/F079-locator.jpg",
+    "source": "assets/sources/A1-p291.jpg",
+    "source_sha256": "e459b814e8dcb65d0487fffc26316b3831071876aea7dfff070b900a35765ade",
+    "operation": "ORIGINAL_WITH_DASHED_SEARCH_REGION",
+    "sha256": "0e27c12ff28534716d68a26b2c2621a27230a076c56770086961c6ea2602b1ee",
+    "crop": [
+      0.26,
+      0.405,
+      0.43,
+      0.49
+    ],
+    "identity_inference": true
+  },
+  {
+    "file": "assets/v002/F079-source-clear.jpg",
+    "source": "assets/sources/A1-p291.jpg",
+    "source_sha256": "e459b814e8dcb65d0487fffc26316b3831071876aea7dfff070b900a35765ade",
+    "operation": "CROP_RESAMPLE_ONLY",
+    "sha256": "a1820b9d8f61d52845db2258e3d58b8963a9ceececf8f8b47102a9662e01f137",
+    "crop": [
+      0.26,
+      0.405,
+      0.43,
+      0.49
+    ]
+  },
+  {
+    "file": "assets/v002/F079-source.jpg",
+    "source": "assets/sources/A1-p291.jpg",
+    "source_sha256": "e459b814e8dcb65d0487fffc26316b3831071876aea7dfff070b900a35765ade",
+    "operation": "CROP_WITH_NUMBERED_VISIBLE_FEATURES_AND_OPEN_EDGE_TRACES",
+    "sha256": "9dce39e6700a089a2ec5056a20bb170d104ad8eefc9007751320673ce8848449",
+    "crop": [
+      0.26,
+      0.405,
+      0.43,
+      0.49
+    ],
+    "traces": [],
+    "parts": [
+      [
+        0.345,
+        0.45,
+        "檐部屋面起翘区"
+      ]
+    ]
+  }
+]

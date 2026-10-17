@@ -1,0 +1,974 @@
+{
+  "status": "PASS",
+  "engine": "Google Chrome",
+  "scope": 79,
+  "pages": [
+    {
+      "id": "F001",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 4
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F002",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 4
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F003",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 6
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F004",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 6
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F005",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 7
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F006",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 6
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F007",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 7
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F008",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 10
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F009",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 10
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F010",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 5
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F011",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 4
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F012",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 7
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F013",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 10
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F014",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 5
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F015",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 5
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F016",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 7
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F017",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 7
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F018",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F019",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 9
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F020",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 8
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F021",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 11
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F022",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F023",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F024",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F025",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F026",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 8
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F027",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 6
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F028",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 8
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F029",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 8
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F030",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 9
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F031",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 5
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F032",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 6
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F033",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 5
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F034",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 6
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F035",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 8
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F036",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 8
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F037",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 7
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F038",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F039",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 9
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F040",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F041",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F042",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F043",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F044",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F045",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F046",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F047",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F048",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F049",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F050",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F051",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F052",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F053",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F054",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F055",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F056",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F057",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F058",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F059",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F060",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F061",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F062",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F063",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F064",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F065",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F066",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F067",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F068",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F069",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 4
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F070",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 6
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F071",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 6
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F072",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 10
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F073",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 3
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F074",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F075",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F076",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F077",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F078",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    },
+    {
+      "id": "F079",
+      "file_mode": "PASS",
+      "desktop": {
+        "broken": [],
+        "overflow": false,
+        "images": 2
+      },
+      "annotations_toggle": "PASS",
+      "lightbox_and_escape": "PASS",
+      "mobile": "PASS"
+    }
+  ],
+  "errors": [],
+  "version": "155.0.8059.39",
+  "executable": "/usr/bin/google-chrome",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "executed_at_utc": "2026-10-17T08:42:58Z",
+  "index_search_and_system_filter": "PASS",
+  "http_index": "PASS",
+  "tested_viewports": [
+    [
+      1440,
+      1000
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "local_view_method": "file://docs/component_atlas_v001/index.html",
+  "limitations": "Linux Google Chrome verified. User macOS Chrome version/session not directly controlled. This does not verify chatgpt.site access or the historical truth of inferred identities."
+}
