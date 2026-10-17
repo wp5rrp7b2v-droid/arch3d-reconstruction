@@ -114,4 +114,23 @@ S['F019'].update(label='托脚｜槫下斜向承托',parts=[(.36,.350,'托脚可
 for n in [26,70]:
     S[f'F{n:03d}']['parts']=[(.40,.54,'斗身收分'),(.39,.31,'顶部耳与开口')]
 S['F017'].update(crop=[.075,.255,.37,.50],parts=[(.22,.325,'翼角对角位置（上下层未分离）')])
+# Full original figure captions explicitly call these structural inferences.
+for n in [3,4,5,19,62]:
+    S[f'F{n:03d}']['kind']='报告结构推算＋点云对照｜图线不是实物完整真值'
+    S[f'F{n:03d}']['inferred']=True
+    S[f'F{n:03d}']['unknown']+=' 绿色描线只追踪报告可辨图线，不能将推算线当作实物边缘实测。'
+for n in [23,30,69,71]:
+    S[f'F{n:03d}']['kind']='报告前缝结构推算＋点云对照'
+    S[f'F{n:03d}']['inferred']=True
+# The archived p297/298 are the rear column frame, not an isolated intercolumn
+# bracket set. Use the building's actual between-column photograph instead.
+S['F024'].update(source=p(87),crop=[.395,.727,.625,.835],label='后檐柱间铺作位置照片｜个体边界未全分离',parts=[(.515,.775,'柱间承托组合'),(.515,.815,'下部与匾额交叠')],kind='实物照片｜按柱间位置对应',inferred=True,extra=[(p(283),(.44,.47,.535,.57),'南立面柱间铺作位置（对应另一檐面）')],features=[('partial','照片能看见后檐柱间的承托组合','没有已批准的完整补间铺作模型'),('unknown','底部和邻材有遮挡，未分离每一件木材','不再用后缝柱头剖面冒充补间单件')],unknown='本页只高亮柱间组合；没有清晰去遮挡的完整补间单件图。')
+S['F027'].update(source=p(87),crop=[.44,.775,.585,.835],label='补间底斗查找区｜下部被匾额等遮挡',parts=[(.515,.807,'补间下部查找范围')],kind='实物照片｜底斗单件边界未知',inferred=True,traces=[],extra=[(p(64),(.12,.08,.87,.36),'补间底斗实测数据（不是轮廓图）'),(p(87),(.395,.727,.625,.835),'后檐柱间铺作整体环境')],features=[('partial','测量资料确认该族的外包络口径','Master已有分段收分表达'),('unknown','照片不能分离底斗单件轮廓和开口','无法依据这张照片判定Master细部是否相符')],unknown='补间底斗的完整轮廓与槽口没有从现有归档图中清楚分离；不以柱头栌斗或后缝柱头图替代。')
+# A2 p41 and p46 contain comparison buildings. They are not Wanfo specimens.
+S['F010']['extra']=[(p(83),(.17,.20,.90,.51),'丁栿实测截面'),(p(294),(.27,.16,.79,.46),'万佛殿山面纵剖层位参照')]
+S['F012']['extra']=[(p(84),(.13,.405,.80,.711),'剳牵正文与截面统计')]
+for n in [28,29,35,36]:
+    S[f'F{n:03d}']['extra']=[(p(336),(.22,.05,.87,.33),'同建筑原始点云切片，个体切割边界仍未知'),(p(73),(.16,.17,.81,.42),'图2-27 万佛殿华栱与昂交接，完整单件被遮挡')]
+S['F023']['extra']=[(p(296),(.01,.36,.85,.68),'图纸14前缝剖面续页（同源，非独立实测）')]
+S['F016']['parts']=[(.50,.224,'可见斜材（两类角梁尾身份未全分离）'),(.67,.172,'交叉遮挡处')]
 assert set(S)=={f'F{i:03d}' for i in range(1,80)}

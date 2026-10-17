@@ -97,7 +97,8 @@ def model_image(c,m):
     return decorated,plain
 def label_source(path):
     pm=PM.get(Path(path).name)
-    if pm:return f"{pm['source']} · PDF第{pm['pdf_page']}页"+(f" / 印刷第{pm['printed_page']}页" if pm.get('printed_page') else '')
+    special={'A1-p077.jpg':'保国寺、少林寺构造类比，非万佛殿原物','A2-p041.jpg':'佛光寺、独乐寺构造类比，非万佛殿原物','A2-p044.jpg':'少林寺初祖庵构造类比，非万佛殿原物','A2-p046.jpg':'奉国寺、梅庵构造类比，非万佛殿原物','A1-p292.jpg':'结构横剖面推算—点云对比','A1-p295.jpg':'前缝结构纵剖面推算—点云对比','A1-p296.jpg':'前缝结构纵剖面推算—点云对比','A1-p297.jpg':'后缝结构纵剖面推算—点云对比，非补间单体图','A1-p298.jpg':'后缝结构纵剖面推算—点云对比，非补间单体图'}
+    if pm:return f"{pm['source']} · PDF第{pm['pdf_page']}页"+(f" / 印刷第{pm['printed_page']}页" if pm.get('printed_page') else '')+(' · '+special[Path(path).name] if Path(path).name in special else '')
     if '/official/' in path:return '10月14日归档的官方展示模型提取图｜不是独立实测'
     return '现有归档原始资料'
 def url_source(path):
@@ -148,7 +149,7 @@ def build():
         body+=source_figure
         rotation_note=' · 原渲染仅旋转90°以便辨认竖材，模型未变' if c['id']=='F021' else ''
         body+=fig(model[0] if model else None,'现有 Master · '+('原模型只读图' if model else '缺口'),e(c['cid'] or '尚未绑定独立Master')+e(rotation_note)+'<small>数字标记主题部位，不代表视角或像素已经配准。</small>',cls='model-panel',clear=model[1] if model else None)
-        body+='</div>'+feature_html(s,bool(m))+'<p class="view-limit">定性对照：两侧未做比例归一或像素叠加。'+('绿色实线只描原图可辨边缘；' if s['traces'] else '')+'橙色虚框只表示原图查找范围。</p></section>'
+        body+='</div>'+feature_html(s,bool(m))+'<p class="view-limit">定性对照：两侧未做比例归一或像素叠加。'+('绿色只描原图可辨线段，推算图线仍属推断；' if s['traces'] else '')+'橙色虚框只表示原图查找范围。</p></section>'
         local=c.get('local_models',[])
         body+='<section id="details"><div class="section-title"><span>02 / 形态细节</span><h2>其他角度、截面与现有局部版本</h2></div><div class="gallery">'+extra_figs(c,s)+'</div>'
         if local:
@@ -181,7 +182,7 @@ def build():
     for c in D:
         s=S[c['id']];img='assets/v002/'+c['id']+'-source.jpg'
         cards.append('<a class="card" href="pages/'+c['id']+'.html" data-system="'+e(c['system'])+'" data-search="'+e((c['title']+' '+str(c['masters'])).lower())+'" data-status="'+e(c['status'])+'"><img src="'+img+'" alt="'+e(c['title'])+'资料局部" loading="lazy"><div><small>'+e(c['system'])+' · '+c['id']+'</small><h2>'+e(c['title'])+'</h2><p>'+e(s['kind'])+'</p><span class="card-status">'+e('无独立Master' if not c['models'] else 'Master＋局部版本' if c.get('local_models') else '有现有Master')+'</span></div></a>')
-    body='<header class="index-head"><a class="brand" href="index.html">镇国寺 · 万佛殿</a><span class="edition">构件图库 V001 / 审核整改 V002</span><h1>看清每一种构件</h1><p>资料中的可见形态，现有模型的具体表达。<br>点击图片进入：目标高亮、可辨边缘、模型差异和未知部分。</p><div class="counts"><span><b>79</b>个浏览页</span><span><b>58</b>个实体构件族页面</span><span><b>26</b>个Master家族</span></div></header><main><div class="index-nav"><a href="sources.html">来源与独立性</a><a href="qa/index.html">浏览验证</a><a href="'+REPO+'/pull/72">Draft PR #72</a><span>仅视觉整改 · 正式模型未改动</span></div><div class="controls"><label>查找构件<input id="search" placeholder="例如：六椽栿、华栱、滴水" type="search"></label><label>建筑系统<select id="system"><option value="">全部系统</option>'+''.join('<option>'+e(s)+'</option>' for s in systems)+'</select></label><label>原登记状态<select id="status"><option value="">全部状态</option>'+''.join('<option>'+e(s)+'</option>' for s in dict.fromkeys(c['status'] for c in D))+'</select></label><output id="resultcount">79 个页面</output></div><div class="legend"><span>绿线：仅描可辨边缘</span><span>橙框：原图查找范围</span><span>灰色：遮挡或未知</span></div><div class="grid">'+''.join(cards)+'</div><p class="view-limit">范围条目含系统、洞口和测量边界，数量不等于实际物理件数。大型／小型、一跳／二跳及其他必要变体分别保留。</p></main>'
+    body='<header class="index-head"><a class="brand" href="index.html">镇国寺 · 万佛殿</a><span class="edition">构件图库 V001 / 审核整改 V002</span><h1>看清每一种构件</h1><p>资料中的可见形态，现有模型的具体表达。<br>点击图片进入：目标高亮、可辨边缘、模型差异和未知部分。</p><div class="counts"><span><b>79</b>个浏览页</span><span><b>58</b>个实体构件族页面</span><span><b>26</b>个Master家族</span></div></header><main><div class="index-nav"><a href="sources.html">来源与独立性</a><a href="qa/index.html">浏览验证</a><a href="'+REPO+'/pull/72">Draft PR #72</a><span>仅视觉整改 · 正式模型未改动</span></div><div class="controls"><label>查找构件<input id="search" placeholder="例如：六椽栿、华栱、滴水" type="search"></label><label>建筑系统<select id="system"><option value="">全部系统</option>'+''.join('<option>'+e(s)+'</option>' for s in systems)+'</select></label><label>原登记状态<select id="status"><option value="">全部状态</option>'+''.join('<option>'+e(s)+'</option>' for s in dict.fromkeys(c['status'] for c in D))+'</select></label><output id="resultcount">79 个页面</output></div><div class="legend"><span>绿线：仅描原图线段（推算另标）</span><span>橙框：原图查找范围</span><span>灰色：遮挡或未知</span></div><div class="grid">'+''.join(cards)+'</div><p class="view-limit">范围条目含系统、洞口和测量边界，数量不等于实际物理件数。大型／小型、一跳／二跳及其他必要变体分别保留。</p></main>'
     (OUT/'index.html').write_text(shell('构件浏览',body))
     (DER/'DERIVATION_PROVENANCE.json').write_text(json.dumps(DERIV,ensure_ascii=False,indent=2))
     (DER/'PAGE_COVERAGE.json').write_text(json.dumps(coverage,ensure_ascii=False,indent=2))
