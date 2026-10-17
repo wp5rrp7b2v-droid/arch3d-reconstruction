@@ -1,0 +1,357 @@
+{
+  "schema_version": "MP01B_GATE_H_R3_1.0",
+  "status": "GATE_H_R4_EXECUTED / MACHINE_PASS / PRODUCT_OWNER_REVIEW_REQUIRED",
+  "date": "2026-10-06",
+  "coordinate_system": {
+    "x": "顺身 / East-Seam line / out-of-section",
+    "y": "进深 / transverse section / FRONT+",
+    "z": "up",
+    "support_stations_y_mm": {
+      "front": 1836,
+      "rear": -1836
+    }
+  },
+  "ludou_bottom_depth_completion": {
+    "rule": "top_depth - bottom_depth = top_width - bottom_width",
+    "classification": "RECONSTRUCTED_DESIGN / EQUAL_PLAN_SIDE_INSET / REPLACEABLE / NOT_HISTORICAL_MEASUREMENT",
+    "front": {
+      "top_width_mm": 321,
+      "bottom_width_mm": 221,
+      "top_depth_mm": 355,
+      "bottom_depth_mm": 255
+    },
+    "rear": {
+      "top_width_mm": 320,
+      "bottom_width_mm": 227,
+      "top_depth_mm": 357,
+      "bottom_depth_mm": 264
+    },
+    "family_mean_crosscheck_mm": {
+      "top_width": 332.1,
+      "bottom_width": 230,
+      "top_depth": 353.6,
+      "bottom_depth_candidate": 251.5
+    }
+  },
+  "huagong_image_calibration": {
+    "source": "SRC-ZG-WF-001 / Drawing 11",
+    "station_spacing_px_approx": 530,
+    "station_spacing_mm": 3672,
+    "scale_mm_per_px_approx": 6.93,
+    "visible_span_px_approx": 130,
+    "visible_span_mm_approx": 901,
+    "inward_px_approx": 94,
+    "outward_px_approx": 36,
+    "deterministic_control": {
+      "realization_length_mm": 900,
+      "inward_gonghead_reach_mm": 650,
+      "outward_tuojiao_reach_mm": 250,
+      "uncertainty_mm": 50,
+      "classification": "SOURCE_IMAGE_CALIBRATED_PROJECT_COMPLETION / REPLACEABLE / NOT_DIRECT_MEASUREMENT / NOT_HISTORICAL_FULL_LENGTH"
+    }
+  },
+  "huagong_endpoints": {
+    "front": {
+      "station_y_mm": 1836,
+      "gonghead_inner_y_mm": 1186,
+      "tuojiao_outer_y_mm": 2086,
+      "midpoint_y_mm": 1636,
+      "rotation_z_deg": -90,
+      "local_x_maps_to": "assembly -Y"
+    },
+    "rear": {
+      "station_y_mm": -1836,
+      "gonghead_inner_y_mm": -1186,
+      "tuojiao_outer_y_mm": -2086,
+      "midpoint_y_mm": -1636,
+      "rotation_z_deg": 90,
+      "local_x_maps_to": "assembly +Y"
+    }
+  },
+  "tuofeng": {
+    "front": {
+      "height_mm": 172.9,
+      "base_footprint_mm": {
+        "x": 426.5,
+        "y": 355
+      },
+      "upper_seat_footprint_mm": {
+        "x": 221,
+        "y": 255
+      },
+      "tier_heights_mm": [
+        86.45,
+        86.45
+      ]
+    },
+    "rear": {
+      "height_mm": 196,
+      "base_footprint_mm": {
+        "x": 426.5,
+        "y": 357
+      },
+      "upper_seat_footprint_mm": {
+        "x": 227,
+        "y": 264
+      },
+      "tier_heights_mm": [
+        98,
+        98
+      ]
+    },
+    "classification": "ASSEMBLY_FOOTPRINT_MATCH / RECONSTRUCTED_DESIGN / REPLACEABLE"
+  },
+  "ludou": {
+    "front": {
+      "center_xy_mm": [
+        0,
+        1836
+      ],
+      "bottom_z_mm": 172.9,
+      "total_height_mm": 225.1,
+      "physical_top_z_mm": 398,
+      "flat_height_mm": 45,
+      "sloped_height_mm": 88.1,
+      "gong_seat_z_mm": 306,
+      "top_plan_mm": [
+        321,
+        355
+      ],
+      "bottom_plan_mm": [
+        221,
+        255
+      ]
+    },
+    "rear": {
+      "center_xy_mm": [
+        0,
+        -1836
+      ],
+      "bottom_z_mm": 196,
+      "total_height_mm": 219,
+      "physical_top_z_mm": 415,
+      "flat_height_mm": 45,
+      "sloped_height_mm": 65,
+      "gong_seat_z_mm": 306,
+      "top_plan_mm": [
+        320,
+        357
+      ],
+      "bottom_plan_mm": [
+        227,
+        264
+      ]
+    }
+  },
+  "gongs": {
+    "front_linggong": {
+      "length_mm": 1016,
+      "height_guang_mm": 213,
+      "thickness_mm": 149,
+      "axis": "assembly X / 顺身",
+      "center_xy_mm": [
+        0,
+        1836
+      ],
+      "rotation_z_deg": 0,
+      "z_min_mm": 306,
+      "z_max_mm": 519,
+      "classification": "DIRECT_PRIMARY / POSITION_SPECIFIC"
+    },
+    "rear_linggong": {
+      "length_mm": 995,
+      "height_guang_mm": 217,
+      "thickness_mm": 150,
+      "axis": "assembly X / 顺身",
+      "center_xy_mm": [
+        0,
+        -1836
+      ],
+      "rotation_z_deg": 0,
+      "z_min_mm": 306,
+      "z_max_mm": 523,
+      "classification": "DIRECT_PRIMARY / POSITION_SPECIFIC"
+    },
+    "front_huagong": {
+      "length_mm": 900,
+      "height_guang_mm": 221,
+      "thickness_mm": 153,
+      "axis": "assembly Y / 进深",
+      "center_xy_mm": [
+        0,
+        1636
+      ],
+      "rotation_z_deg": -90,
+      "z_min_mm": 306,
+      "z_max_mm": 527,
+      "length_classification": "SOURCE_IMAGE_CALIBRATED_PROJECT_COMPLETION / REPLACEABLE"
+    },
+    "rear_huagong": {
+      "length_mm": 900,
+      "height_guang_mm": 210,
+      "thickness_mm": 156,
+      "axis": "assembly Y / 进深",
+      "center_xy_mm": [
+        0,
+        -1636
+      ],
+      "rotation_z_deg": 90,
+      "z_min_mm": 306,
+      "z_max_mm": 516,
+      "length_classification": "SOURCE_IMAGE_CALIBRATED_PROJECT_COMPLETION / REPLACEABLE"
+    },
+    "overlap_classification": "BRACKET_INTERLOCK_ZONE / HIDDEN_CUT_GEOMETRY_UNKNOWN"
+  },
+  "pingliang": {
+    "length_mm": 3672,
+    "width_mm": 395.5,
+    "thickness_mm": 280.5,
+    "y_extent_mm": [
+      -1836,
+      1836
+    ],
+    "underside_z_mm": 521,
+    "top_z_mm": 801.5,
+    "bearing_reconciliation": {
+      "front_difference_mm": 2,
+      "rear_difference_mm": -2,
+      "tolerance_mm": 2,
+      "classification": "RECONSTRUCTED_ASSEMBLY_RECONCILIATION / OBSERVED_POSITION_VARIATION / REPLACEABLE"
+    },
+    "historical_full_length_claim": false
+  },
+  "four_chuanfu": {
+    "length_mm": 7192,
+    "width_mm": 426.5,
+    "thickness_mm": 302,
+    "y_extent_mm": [
+      -3596,
+      3596
+    ],
+    "z_extent_mm": [
+      -302,
+      0
+    ],
+    "historical_full_length_claim": false
+  },
+  "object_contract": {
+    "rendered_physical_geometry_count": 10,
+    "rendered": [
+      "四椽栿-东缝",
+      "平梁-东缝",
+      "FRONT_TUOFENG",
+      "REAR_TUOFENG",
+      "FRONT_PANJIAN_LUDOU",
+      "REAR_PANJIAN_LUDOU",
+      "FRONT_INTERIOR_HUAGONG",
+      "REAR_INTERIOR_HUAGONG",
+      "FRONT_TARGET_LINGGONG",
+      "REAR_TARGET_LINGGONG"
+    ],
+    "deferred_physical_participant_count": 2,
+    "deferred": [
+      "FRONT_PANJIAN_FANG",
+      "REAR_PANJIAN_FANG"
+    ]
+  },
+  "controls": [
+    {
+      "id": "DATUM-MP01B-FRONT-SUPPORT",
+      "xyz_mm": [
+        0,
+        1836,
+        0
+      ]
+    },
+    {
+      "id": "DATUM-MP01B-REAR-SUPPORT",
+      "xyz_mm": [
+        0,
+        -1836,
+        0
+      ]
+    },
+    {
+      "id": "DATUM-MP01B-FRONT-HUAGONG-TUOJIAO-CONTACT",
+      "xyz_mm": [
+        0,
+        2086,
+        306
+      ]
+    },
+    {
+      "id": "DATUM-MP01B-REAR-HUAGONG-TUOJIAO-CONTACT",
+      "xyz_mm": [
+        0,
+        -2086,
+        306
+      ]
+    }
+  ],
+  "relationship_counts": {
+    "support": 6,
+    "locate": 8,
+    "belong": 2,
+    "connect": 0
+  },
+  "relationship_boundary": {
+    "hidden_joinery": "UNKNOWN / DEFERRED",
+    "joinery_cut_count": 0,
+    "huagong_linggong_overlap": "INTENTIONAL BRACKET_INTERLOCK_ZONE / exact cuts unknown",
+    "panjian_fang_geometry": "DEFERRED"
+  },
+  "perturbation": {
+    "parameter": "huagong_realization_length_mm",
+    "canonical": 900,
+    "mutation": 950,
+    "hold_fixed": "outer Tuojiao-contact endpoint",
+    "expected_change": "inner gong-head endpoint moves 50 mm toward center; midpoint moves 25 mm inward",
+    "expected_invariants": [
+      "sections",
+      "Ludou",
+      "Linggong",
+      "Tuofeng",
+      "Pingliang",
+      "Four-Chuanfu",
+      "evidence classifications"
+    ]
+  },
+  "blender_authorized": false,
+  "next_gate": {
+    "id": "MP01B_GATE_H_R4",
+    "name": "CORRECTED_LOWER_ASSEMBLY_ENGINEERING_BUILD",
+    "requires_product_owner_approval": false,
+    "ready_for_execution": true,
+    "execution_authorized": true
+  },
+  "product_owner_decision": {
+    "approved": true,
+    "date": "2026-10-06",
+    "approved_scope": [
+      "Panjian Ludou bottom-depth completion FRONT 255 / REAR 264",
+      "Huagong 900 mm source-image-calibrated project completion",
+      "Huagong 650/250 endpoint control",
+      "Orthogonal Linggong-X / Huagong-Y node",
+      "Tuofeng 172.9 / 196 mm candidates",
+      "Pingliang underside Z=521 mm with ±2 mm reconciliation tolerance",
+      "10 rendered + 2 deferred Panjian Fang contract"
+    ]
+  },
+  "gate_h_r4_execution_authorization": {
+    "authorized": true,
+    "date": "2026-10-06",
+    "instruction": "开始 R4"
+  },
+  "gate_h_r4_result": {
+    "run_id": 37453623798,
+    "artifact_id": 11407787011,
+    "artifact_digest": "sha256:c5126228683f9c396f5cf3580022b97a4ef979be23e8af44ee2e802d308019ee",
+    "validation": "56/56 PASS",
+    "assembly_signature": "a3dfdf40d98fb376df05d84f75f79bfdd675e2eb96c57ef994a07865e194c9b9",
+    "mutation_assembly_signature": "8b37647d927a3d0183c966327a5facbbe39b179dd47bc17d0a7428a40fb63499",
+    "blend_sha256": "49095581eccbbe5020cf79945812511485535373d2b053b2e02c5ffe17391fb4",
+    "review_board_sha256": "2d71f6f8ead9d6ab862d728de04d7a20a76e9e5f2460eca1f76a5eaf1a4c6d6b",
+    "product_owner_accepted": false,
+    "initial_run_note": "Run 37453391634 failed validator semantics label only; geometry/reopen/mutation/rebuild/review all passed; patch changed semantic binding only."
+  }
+}

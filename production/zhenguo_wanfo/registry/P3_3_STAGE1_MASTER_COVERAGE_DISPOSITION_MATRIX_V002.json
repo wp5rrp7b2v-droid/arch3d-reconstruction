@@ -4,17 +4,17 @@
   "gate": "P3.3 V002",
   "stage": "Stage 1｜真实构件 Master 库",
   "authorization": "D-067",
-  "status": "COVERAGE_MATRIX_PATCHED_AGAINST_V008 / TUOFENG_MASTER_FORMALIZED / 29 OF 29 MASTER-SCOPE TYPES COVERED",
+  "status": "COVERAGE_MATRIX_PATCHED_AGAINST_V008 / INTERIOR_LINGGONG_MASTER_FORMALIZED / 30 OF 30 MASTER-SCOPE TYPES COVERED",
   "canonical_registry": "docs/evidence/zhenguo_wanfo/P3_WANFO_COMPONENT_INSTANCE_REGISTRY_CURRENT.json",
   "registry_version": "V008",
-  "registry_record_count": 506,
-  "distinct_registered_object_types": 67,
+  "registry_record_count": 507,
+  "distinct_registered_object_types": 68,
   "disposition_summary": {
     "参数化补全": 23,
     "非实体装配/拓扑": 5,
     "需新建Master": 22,
     "简化Proxy": 7,
-    "已有Master｜族边界UNKNOWN": 3,
+    "已有Master｜族边界UNKNOWN": 4,
     "UNKNOWN/参考边界": 3,
     "已有Master｜需长度桥": 2,
     "已有Master｜可直接绑定": 2
@@ -317,6 +317,24 @@
       "family": "栱",
       "action": "28件；尺寸已锁",
       "priority": 17
+    },
+    {
+      "component": "令栱（梁架承托）",
+      "records": 1,
+      "statuses": [
+        "FAMILY_UNKNOWN_COUNT"
+      ],
+      "systems": [
+        "主体梁架"
+      ],
+      "disposition": "已有Master｜族边界UNKNOWN",
+      "family": "梁架承托栱",
+      "action": "T-043 First Article approved and formalized. Bind CMP-FRAME-LINGGONG-INTERIOR-001_MASTER / LOWER_PINGLIANG_SUPPORT. Whole-hall count, per-instance mapping, historical dimensions/profile, equivalence to outer-eaves Linggong and hidden joinery remain UNKNOWN.",
+      "planned_master": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+      "current_priority": "MP01B_ASSEMBLY_READY",
+      "source_binding": "docs/evidence/zhenguo_wanfo/P3_3_INTERIOR_LINGGONG_SOURCE_BINDING_V001.md",
+      "readiness": "APPROVED_MASTER_AVAILABLE / ASSEMBLY READY SUBJECT TO LOCAL METRIC ENVELOPE",
+      "master_reference": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER"
     },
     {
       "component": "门木作系统",
@@ -929,7 +947,7 @@
     "惹草",
     "生头木"
   ],
-  "closure_statement": "All 67 currently registered V008 object types have an explicit disposition. Stage1 Master-scope coverage is 29/29 after T-042 Tuofeng formalization. Tuofeng whole-hall count and exact historical geometry remain UNKNOWN; seven predecessor-audit items remain outside V008 as PENDING_SOURCE_BINDING.",
+  "closure_statement": "All 68 currently registered V008 object types have an explicit disposition. Stage1 Master-scope coverage is 30/30 after T-043 interior Linggong formalization. Seven predecessor-audit items remain outside V008 as PENDING_SOURCE_BINDING.",
   "first_new_master_candidate": {
     "component": "四椽栿",
     "status": "READY_FOR_SPEC_DESIGN",
@@ -937,6 +955,12 @@
   },
   "new_t_task_created": false,
   "t018_status": "HOLD",
-  "current_pending_master_candidate": null,
-  "scope_patch_authorization": "PRODUCT_OWNER_APPROVED / 2026-10-06"
+  "scope_patch_authorization": "MP-01B GATE A+B / 2026-10-06",
+  "interior_linggong_formalization": {
+    "date": "2026-10-06",
+    "master_reference": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+    "coverage": "30/30",
+    "approved_master_families": 27,
+    "merge_authorized": false
+  }
 }

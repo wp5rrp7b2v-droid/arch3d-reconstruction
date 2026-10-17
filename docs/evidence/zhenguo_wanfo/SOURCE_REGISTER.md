@@ -32,3 +32,25 @@ Case: 山西平遥镇国寺万佛殿
 ## Immediate effect
 
 此前 `P1.2_DIRECT_REPORT_ACCESS_REQUIRED` 来源访问阻塞已解除；下一步可以直接对关键原页执行核读，并升级 `P1_2_PARAMETER_CANDIDATE_MATRIX_V001.md` 为 V002。
+
+
+## SRC-ZG-WF-002｜肖旻《镇国寺大殿尺度规律研究》
+
+- 作者：肖旻
+- 刊物：《建筑史学刊》
+- 年卷期：2024，5(2)
+- 页码：53–68
+- DOI：`10.12329/20969368.2024.02006`
+- 来源性质：`SECONDARY_SCHOLARLY_SAME_BUILDING / INTERPRETIVE / CROSS-CHECK SOURCE`
+- 与 SRC-ZG-WF-001 的关系：使用万佛殿精细测绘报告数据开展足材模数与栱长/斗方向解释；不得覆盖 A1 直接测绘证据。
+- 关键项目价值：区分 `横栱方向` 与 `华栱方向`；Section 3.6 对小斗及交互斗方向作专门讨论；可用于 MP-01B 令栱方向复核。
+- Canonical extract：`docs/evidence/zhenguo_wanfo/source_secondary/SRC-ZG-WF-002_S15_镇国寺大殿尺度规律研究_证据提取_V001.md`
+- 原刊入口：`https://www.jgcm.ac.cn/jah/article/2024/2`
+- 官方 PDF：`https://www.jgcm.ac.cn/jah/cn/article/pdf/preview/10.12329/20969368.2024.02006.pdf`
+- 二进制保存策略：不在 repo 镜像全文 PDF；保留官方 DOI/PDF 地址 + 项目结构化证据提取。精确图版判断时必须回到原刊核图。
+
+### Evidence rule
+
+- S15 可作为同建筑学术解释与竞争性假说来源。
+- S15 中的足材模数、栱长序列、斗方向规则不得自动升级为万佛殿目标节点的 DIRECT_PRIMARY。
+- 对 MP-01B 的直接工程修改必须继续由 SRC-ZG-WF-001 图纸/照片/位置表闭合，S15 仅用于复核和提出可检验替代解释。

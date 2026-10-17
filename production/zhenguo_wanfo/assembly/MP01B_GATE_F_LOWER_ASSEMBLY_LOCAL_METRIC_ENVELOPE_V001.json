@@ -1,0 +1,152 @@
+{
+  "schema_version": "MP01B_GATE_F_LOWER_ASSEMBLY_LOCAL_METRIC_ENVELOPE_1.0",
+  "status": "PASS / FIRST_LOWER_ASSEMBLY_NUMERIC_CONTRACT_RESOLVED / BLENDER_NOT_YET_AUTHORIZED",
+  "date": "2026-10-06",
+  "coordinate_system": {
+    "name": "MP01B_ASSEMBLY_LOCAL",
+    "origin": "FOUR_CHUANFU_UPPER_FACE_CENTER",
+    "x": "EAST_SEAM_FRAME_LINE_OUT_OF_SECTION",
+    "y": "TRANSVERSE / SOUTH_POSITIVE NORTH_NEGATIVE",
+    "z": "VERTICAL_UP",
+    "survey_datum_claim": false
+  },
+  "sources": {
+    "drawing_10": {
+      "locator": "PDF p291 / printed p276 / Drawing 10",
+      "classification": "REPORT_INFERRED / SOURCE_DRAWING_TOPOLOGY"
+    },
+    "table_2_52": {
+      "east_seam_front_B_mm": 612,
+      "mean_B_mm": 602.3,
+      "report_rounded_B_fen": 40,
+      "classification": "DIRECT_PRIMARY measurement table + REPORT_INFERRED rounded design"
+    },
+    "four_chuanfu_design_thickness_fen": 20,
+    "fen_mm": 15.3,
+    "interior_linggong_analog": {
+      "locator": "PDF p98 / printed p83 / Table 2-48",
+      "length_mm": 893.3,
+      "length_n": 3,
+      "interior_gong_width_mm": 215,
+      "interior_gong_width_n": 42,
+      "interior_gong_thickness_mm": 153.6,
+      "interior_gong_thickness_n": 48,
+      "classification": "DIRECT_PRIMARY / SAME_BUILDING_INTERIOR_ANALOG / NOT_TARGET_ROLE_EXACT"
+    }
+  },
+  "derivations": {
+    "support_clearance_candidate_mm": 306,
+    "formula": "(40 fen - 20 fen) * 15.3 mm/fen",
+    "classification": "REPORT_INFERRED / MODULAR_DECOMPOSITION / REPLACEABLE",
+    "observed_crosscheck_mm": 310,
+    "observed_crosscheck_formula": "East-Seam-front B 612 - Four-Chuanfu observed family mean thickness 302",
+    "crosscheck_delta_mm": 4,
+    "target_instance_exact_claim": false
+  },
+  "beam_realizations": {
+    "four_chuanfu": {
+      "instance_id": "四椽栿-东缝",
+      "master_id": "CMP-FRAME-FOUR-CHUANFU-001_MASTER",
+      "length_mm": 7192,
+      "half_span_mm": 3596,
+      "width_mm": 426.5,
+      "thickness_mm": 302,
+      "top_z_mm": 0,
+      "bottom_z_mm": -302,
+      "length_classification": "REPORT_INFERRED / SOURCE_DRAWING_TOPOLOGY / REPLACEABLE",
+      "historical_full_length_claim": false
+    },
+    "pingliang": {
+      "instance_id": "平梁-东缝",
+      "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "variant": "EW_SEAM",
+      "length_mm": 3672,
+      "half_span_mm": 1836,
+      "width_mm": 395.5,
+      "thickness_mm": 280.5,
+      "underside_z_mm": 306,
+      "top_z_mm": 586.5,
+      "length_classification": "RECONSTRUCTED_DESIGN / MINIMUM_SUPPORT_SPAN / REPLACEABLE",
+      "vertical_classification": "REPORT_INFERRED / MODULAR_DECOMPOSITION / REPLACEABLE",
+      "historical_full_length_claim": false
+    }
+  },
+  "support_stations": [
+    {
+      "id": "SUPPORT_SOUTH",
+      "y_mm": 1836,
+      "classification": "REPORT_INFERRED / SOURCE_DRAWING_TOPOLOGY"
+    },
+    {
+      "id": "SUPPORT_NORTH",
+      "y_mm": -1836,
+      "classification": "REPORT_INFERRED / SOURCE_DRAWING_TOPOLOGY"
+    }
+  ],
+  "linggong_realization": {
+    "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+    "role_variant": "LOWER_PINGLIANG_SUPPORT",
+    "instances": [
+      "ASM-MP01B-LINGGONG-SOUTH-01",
+      "ASM-MP01B-LINGGONG-NORTH-01"
+    ],
+    "body_length_mm": 893.3,
+    "body_depth_mm": 153.6,
+    "total_height_mm": 215,
+    "body_zone_height_mm": 129,
+    "upper_bearing_zone_height_mm": 86,
+    "upper_bearing_length_mm": 491.315,
+    "upper_bearing_depth_mm": 153.6,
+    "classification": "SAME_BUILDING_INTERIOR_ANALOG / RECONSTRUCTED_ASSEMBLY_CANDIDATE / REPLACEABLE",
+    "target_role_direct_metric_claim": false,
+    "whole_hall_count_claim": false
+  },
+  "tuofeng_lower_realization": {
+    "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+    "role_variant": "LOWER_SUPPORT",
+    "instances": [
+      "ASM-MP01B-TUOFENG-LOWER-SOUTH-01",
+      "ASM-MP01B-TUOFENG-LOWER-NORTH-01"
+    ],
+    "total_height_mm": 91,
+    "base_height_mm": 45.5,
+    "upper_seat_height_mm": 45.5,
+    "base_span_mm": 893.3,
+    "base_depth_mm": 426.5,
+    "upper_seat_span_mm": 375.186,
+    "upper_seat_depth_mm": 153.6,
+    "classification": {
+      "height": "SECONDARY_CALCULATED / RESIDUAL_WITHIN_20_FEN_SUPPORT_ENVELOPE / REPLACEABLE",
+      "base_span": "SECONDARY_CALCULATED / ASSEMBLY_FOOTPRINT_MATCH",
+      "base_depth": "SECONDARY_CALCULATED / FOUR_CHUANFU_FOOTPRINT_MATCH",
+      "upper_seat": "RECONSTRUCTED_DESIGN / MASTER_NORMALIZED_TOPOLOGY + LINGGONG_FOOTPRINT"
+    },
+    "historical_metric_claim": false,
+    "whole_hall_count_claim": false
+  },
+  "vertical_stack_mm": {
+    "four_chuanfu_top": 0,
+    "tuofeng_top": 91,
+    "linggong_top": 306,
+    "pingliang_underside": 306,
+    "pingliang_top": 586.5
+  },
+  "retained_unknowns": [
+    "exact East-Seam target Linggong dimensions",
+    "target Linggong historical profile",
+    "exact asymmetric end shape",
+    "exact support center/contact face",
+    "Tuofeng historical dimensions/profile",
+    "exact Tuofeng-Linggong contact",
+    "exact Linggong-Pingliang contact",
+    "hidden mortise-tenon-groove geometry",
+    "whole-hall physical counts",
+    "per-instance mapping outside Minimum Proof"
+  ],
+  "next_gate": {
+    "id": "MP01B_GATE_G",
+    "name": "LOWER_ASSEMBLY_FIRST_BUILD_PREPARATION",
+    "blender_authorized": false,
+    "merge_authorized": false
+  }
+}

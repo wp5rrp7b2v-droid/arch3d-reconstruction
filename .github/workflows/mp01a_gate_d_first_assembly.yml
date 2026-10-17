@@ -1,0 +1,114 @@
+name: MP-01A Gate D First Assembly
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/mp01a_gate_d_first_assembly.yml'
+      - 'docs/assembly/MP01A_GATE_D_FIRST_ASSEMBLY_ENGINEERING_BUILD_V001.md'
+      - 'production/zhenguo_wanfo/assembly/MP01A_GATE_C_ASSEMBLY_LOCAL_NUMERIC_PLACEMENT_V001.json'
+      - 'production/zhenguo_wanfo/scripts/mp01a_gate_d_build_v001.py'
+      - 'production/zhenguo_wanfo/scripts/validate_mp01a_gate_d_v001.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      BLENDER: /tmp/blender-4.5.13-linux-x64/blender
+      CONTRACT: production/zhenguo_wanfo/assembly/MP01A_GATE_C_ASSEMBLY_LOCAL_NUMERIC_PLACEMENT_V001.json
+      BUILDER: production/zhenguo_wanfo/scripts/mp01a_gate_d_build_v001.py
+      VALIDATOR: production/zhenguo_wanfo/scripts/validate_mp01a_gate_d_v001.py
+      OUT: artifacts/mp01a_gate_d
+      REVIEW: artifacts/mp01a_gate_d/review
+      ASSET: artifacts/mp01a_gate_d/MP01A_EAST_SEAM_UPPER_RIDGE_SUPPORT_V001.blend
+      SEM: artifacts/mp01a_gate_d/MP01A_EAST_SEAM_UPPER_RIDGE_SUPPORT_SEMANTIC_V001.json
+      BOARD: artifacts/mp01a_gate_d/MP01A_GATE_D_REVIEW_BOARD_V001.png
+      VAL: artifacts/mp01a_gate_d/MP01A_GATE_D_VALIDATION_V001.json
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Install Blender 4.5.13 + Pillow
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1 fonts-noto-cjk
+          curl --fail --location --show-error --retry 3 --user-agent "Mozilla/5.0 GitHubActions MP01A" -o /tmp/blender.tar.xz "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar -xf /tmp/blender.tar.xz -C /tmp
+          "$BLENDER" --version | grep -Eq '^Blender 4\.5\.13( LTS)?$'
+          python -m pip install --disable-pip-version-check pillow
+
+      - name: Gate C contract precheck
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - "$CONTRACT" <<'PY'
+          import json,sys
+          c=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert c["status"].startswith("PASS / MINIMUM_NUMERIC_INPUTS_LOCKED")
+          assert c["next_gate"]["id"]=="MP01A_GATE_D"
+          assert c["building_realization"]["ridge_target_datum"]["xyz_mm"]==[0,0,885]
+          assert c["building_realization"]["ridge_purlin_reference"]["z_mm"]==1245
+          assert c["building_realization"]["pingliang"]["historical_full_length_claim"] is False
+          assert c["building_realization"]["tuofeng_upper"]["historical_metric_claim"] is False
+          print("MP01A_GATE_C_PRECHECK_PASS")
+          PY
+
+      - name: Build first assembly
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUT" "$REVIEW"
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$BUILDER" -- --mode build --contract "$CONTRACT" --asset "$ASSET" --semantic "$SEM" --review-dir "$REVIEW"
+
+      - name: Independent reopen
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$ASSET" --python-exit-code 10 --python "$BUILDER" -- --mode inspect --asset "$ASSET" --expected "$SEM" --output "$OUT/reopen.json"
+
+      - name: Deterministic rebuild
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$BUILDER" -- --mode build --contract "$CONTRACT" --asset "$OUT/rebuild.blend" --semantic "$OUT/rebuild.json" --review-dir "$OUT/rebuild_review"
+
+      - name: Compose Review Board
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode compose-board --contract "$CONTRACT" --semantic "$SEM" --review-dir "$REVIEW" --board "$BOARD"
+
+      - name: Validate Gate D
+        shell: bash
+        run: |
+          set -euo pipefail
+          python "$VALIDATOR" --mode validate --contract "$CONTRACT" --semantic "$SEM" --reopen "$OUT/reopen.json" --rebuild "$OUT/rebuild.json" --asset "$ASSET" --review-dir "$REVIEW" --board "$BOARD" --output "$VAL"
+          python - "$VAL" <<'PY'
+          import json,sys
+          v=json.load(open(sys.argv[1],encoding="utf-8"))
+          assert v["status"]=="PASS"
+          print("MP01A_GATE_D_MACHINE_PASS",v["check_count"])
+          PY
+
+      - name: Upload Gate D Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MP01A_GATE_D_FIRST_ASSEMBLY_V001
+          retention-days: 30
+          if-no-files-found: error
+          path: |
+            ${{ env.ASSET }}
+            ${{ env.SEM }}
+            ${{ env.BOARD }}
+            ${{ env.VAL }}
+            ${{ env.REVIEW }}/*.png

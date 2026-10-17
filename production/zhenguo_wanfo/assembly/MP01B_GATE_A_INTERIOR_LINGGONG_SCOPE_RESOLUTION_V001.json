@@ -1,0 +1,46 @@
+{
+  "schema_version": "MP01B_GATE_A_INTERIOR_LINGGONG_SCOPE_RESOLUTION_1.0",
+  "status": "PASS / EXISTING_OUTER_EAVES_MASTER_REUSE_REJECTED / NEW_INTERIOR_ROLE_MASTER_REQUIRED",
+  "date": "2026-10-06",
+  "question": "Can CMP-GONG-LINGGONG-001_MASTER be directly reused for the Linggong in 四椽栿 -> 驼峰 / 令栱 -> 平梁?",
+  "decision": "NO",
+  "existing_master": {
+    "master_id": "CMP-GONG-LINGGONG-001_MASTER",
+    "system": "外檐斗栱",
+    "physical_instance_count": 28,
+    "reference_envelope_mm": [
+      897,
+      217.4,
+      155.6
+    ],
+    "source_scope": "28 measured outer-eaves Linggong samples",
+    "direct_reuse_for_mp01b": false
+  },
+  "interior_role_evidence": {
+    "component_name_zh": "令栱",
+    "direct_statement": "四椽栿上用驼峰、令栱承平梁。",
+    "identity_classification": "FACT / A2 DIRECT",
+    "role_classification": "FACT / A2 DIRECT",
+    "metric_geometry": "UNKNOWN",
+    "exact_profile": "UNKNOWN",
+    "exact_joinery": "UNKNOWN",
+    "equality_to_outer_eaves_family": "UNKNOWN / NOT_ESTABLISHED"
+  },
+  "proposed_master": {
+    "component_name_zh": "令栱（梁架承托）",
+    "component_id": "CMP-FRAME-LINGGONG-INTERIOR-001",
+    "master_id": "CMP-FRAME-LINGGONG-INTERIOR-001_MASTER",
+    "system": "主体梁架 / 梁架承托",
+    "role": "FOUR_CHUANFU_TO_PINGLIANG_SUPPORT",
+    "geometry_class": "SOURCE_GUIDED_SIMPLIFIED / ASSEMBLY_ENVELOPE_OWNED / REPLACEABLE",
+    "whole_hall_count": "UNKNOWN",
+    "per_instance_mapping": "UNKNOWN",
+    "copy_outer_eaves_dimensions_prohibited": true,
+    "copy_outer_eaves_profile_prohibited": true
+  },
+  "next_gate": {
+    "id": "MP01B_GATE_B",
+    "name": "REGISTER_INTERIOR_LINGGONG_AND_MASTER_SPEC_V0_1",
+    "blender_authorized": false
+  }
+}

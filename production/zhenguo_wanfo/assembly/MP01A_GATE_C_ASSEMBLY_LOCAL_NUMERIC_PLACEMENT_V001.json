@@ -1,0 +1,188 @@
+{
+  "schema_version": "MP01A_GATE_C_ASSEMBLY_LOCAL_NUMERIC_PLACEMENT_1.0",
+  "status": "PASS / MINIMUM_NUMERIC_INPUTS_LOCKED_FOR_FIRST_BUILD / BLENDER_BUILD_REQUIRES_NEXT_AUTHORIZATION",
+  "date": "2026-10-06",
+  "coordinate_system": {
+    "name": "MP01A_ASSEMBLY_LOCAL",
+    "origin": "PINGLIANG_UPPER_CONNECTION_PLANE_CENTER",
+    "x": "EAST_SEAM_FRAME_LINE_LONGITUDINAL_OUT_OF_SECTION",
+    "y": "TRANSVERSE_SECTION / SOUTH_POSITIVE NORTH_NEGATIVE",
+    "z": "VERTICAL_UP",
+    "historical_survey_coordinate_claim": false
+  },
+  "direct_component_envelopes": {
+    "pingliang": {
+      "width_mm": 395.5,
+      "thickness_mm": 280.5,
+      "classification": "DIRECT_PRIMARY / CONFIRMED_FAMILY_MEAN",
+      "historical_full_length_mm": null
+    },
+    "shuzhu": {
+      "width_mm": 218.75,
+      "thickness_mm": 157.5,
+      "classification": "DIRECT_MEASURED_REPORT_MEAN_WITH_MATCHING_RECOMPUTE",
+      "east_seam_source_sample_mm": {
+        "width": 218,
+        "thickness": 158
+      }
+    },
+    "chashou": {
+      "width_mm": 230.5,
+      "thickness_mm": 90.5,
+      "classification": "DIRECT_MEASURED_REPORT_MEAN_WITH_MATCHING_RECOMPUTE"
+    }
+  },
+  "source_vertical_calibration": {
+    "source": "PDF p106/printed p91 Fig 2-71 + PDF p107/printed p92 Table 2-52",
+    "east_seam_front_C_mm": 1245,
+    "east_seam_rear_C_mm": null,
+    "east_seam_rear_status": "未及",
+    "c_semantics": "PURLIN_LEVEL_RISE / NOT_SHUZHU_LENGTH",
+    "image_rows": {
+      "lower_reference": 293,
+      "upper_reference": 155,
+      "tuofeng_seat": 271,
+      "upper_convergence": 195
+    },
+    "image_span_px": 138,
+    "scale_mm_per_px": 9.0217391304,
+    "classification": "RECONSTRUCTED_DESIGN / SOURCE_IMAGE_CALIBRATED / REPLACEABLE",
+    "derived": {
+      "tuofeng_height_unrounded_mm": 198.47826087,
+      "tuofeng_height_locked_mm": 200,
+      "upper_convergence_unrounded_mm": 884.13043478,
+      "upper_convergence_locked_mm": 885,
+      "ridge_reference_level_mm": 1245,
+      "unresolved_upper_stack_mm": 360
+    }
+  },
+  "transverse_resolution": {
+    "adopted_half_span_mm": 1836,
+    "parameter_id": "FR-006",
+    "parameter_classification": "HIGH_CONFIDENCE_INFERENCE / REPORT_INFERRED / REPLACEABLE",
+    "source_image_crosscheck_mm_approx": "1820-1840",
+    "gate_c_classification": "RECONSTRUCTED_DESIGN / CROSS_CONSTRAINED_BY_REPORT_INFERENCE_AND_SOURCE_IMAGE"
+  },
+  "building_realization": {
+    "pingliang": {
+      "instance_id": "平梁-东缝",
+      "master_id": "CMP-FRAME-PINGLIANG-001_MASTER",
+      "variant": "EW_SEAM",
+      "length_mm": 3672,
+      "width_mm": 395.5,
+      "thickness_mm": 280.5,
+      "top_z_mm": 0,
+      "bottom_z_mm": -280.5,
+      "length_classification": "RECONSTRUCTED_DESIGN / MINIMUM_SUPPORT_SPAN / REPLACEABLE",
+      "historical_full_length_claim": false
+    },
+    "tuofeng_upper": {
+      "instance_id": "ASM-MP01A-TUOFENG-UPPER-01",
+      "master_id": "CMP-FRAME-TUOFENG-001_MASTER",
+      "variant": "UPPER_RIDGE_SUPPORT",
+      "base_span_y_mm": 1325,
+      "depth_x_mm": 395.5,
+      "height_z_mm": 200,
+      "center_y_mm": 0,
+      "base_z_mm": 0,
+      "top_z_mm": 200,
+      "classification": {
+        "base_span_height": "RECONSTRUCTED_DESIGN / SOURCE_IMAGE_CALIBRATED / REPLACEABLE",
+        "depth": "SECONDARY_CALCULATED / ASSEMBLY_FOOTPRINT_MATCH / REPLACEABLE"
+      },
+      "historical_metric_claim": false,
+      "first_article_fixture_reused_as_building_dimension": false
+    },
+    "shuzhu": {
+      "instance_id": "蜀柱-东缝",
+      "master_id": "CMP-FRAME-SHUZHU-001_MASTER",
+      "lower_endpoint_mm": [
+        0,
+        0,
+        200
+      ],
+      "upper_endpoint_mm": [
+        0,
+        0,
+        885
+      ],
+      "resolved_length_mm": 685,
+      "classification": "RECONSTRUCTED_DESIGN / ENDPOINT_DERIVED",
+      "historical_length_claim": false
+    },
+    "chashou_south": {
+      "instance_id": "叉手-东缝-南侧",
+      "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+      "lower_endpoint_mm": [
+        0,
+        1836,
+        0
+      ],
+      "upper_endpoint_mm": [
+        0,
+        0,
+        885
+      ],
+      "resolved_length_mm": 2038.16608744,
+      "rise_angle_deg": 25.73528223,
+      "classification": "RECONSTRUCTED_DESIGN / ENDPOINT_DERIVED / REPLACEABLE",
+      "historical_angle_claim": false
+    },
+    "chashou_north": {
+      "instance_id": "叉手-东缝-北侧",
+      "master_id": "CMP-FRAME-CHASHOU-001_MASTER",
+      "lower_endpoint_mm": [
+        0,
+        -1836,
+        0
+      ],
+      "upper_endpoint_mm": [
+        0,
+        0,
+        885
+      ],
+      "resolved_length_mm": 2038.16608744,
+      "rise_angle_deg": 25.73528223,
+      "classification": "RECONSTRUCTED_DESIGN / ENDPOINT_DERIVED / REPLACEABLE",
+      "historical_angle_claim": false
+    },
+    "ridge_target_datum": {
+      "datum_id": "DATUM-MP01A-RIDGE-SUPPORT-EAST-SEAM",
+      "xyz_mm": [
+        0,
+        0,
+        885
+      ],
+      "classification": "RECONSTRUCTED_DESIGN / PROJECT_ASSEMBLY_RULE",
+      "physical_component": false
+    },
+    "ridge_purlin_reference": {
+      "z_mm": 1245,
+      "classification": "DIRECT_EAST_SEAM_FRONT_C_USED_AS_REFERENCE_CALIBRATION",
+      "physical_contact_claim": false
+    }
+  },
+  "retained_unknowns": [
+    "historical Pingliang full length",
+    "exact historical Tuofeng dimensions/profile",
+    "exact Shuzhu historical full height",
+    "exact historical Chashou angle/full length",
+    "East-Seam rear C",
+    "exact ridge-purlin segment-end owner",
+    "exact intermediate support blocks above Shuzhu/Chashou convergence",
+    "hidden joinery",
+    "exact contact faces"
+  ],
+  "next_gate": {
+    "id": "MP01A_GATE_D",
+    "name": "FIRST_ASSEMBLY_ENGINEERING_BUILD",
+    "blender_authorized": false,
+    "required_outputs": [
+      "deterministic assembly .blend artifact",
+      "object-level metadata",
+      "assembly semantic JSON",
+      "assembly review board",
+      "machine validation"
+    ]
+  }
+}
