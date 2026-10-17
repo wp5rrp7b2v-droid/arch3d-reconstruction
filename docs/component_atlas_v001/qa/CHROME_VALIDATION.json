@@ -141,7 +141,7 @@
       "desktop": {
         "broken": [],
         "overflow": false,
-        "images": 7
+        "images": 6
       },
       "annotations_toggle": "PASS",
       "lightbox_and_escape": "PASS",
@@ -321,7 +321,7 @@
       "desktop": {
         "broken": [],
         "overflow": false,
-        "images": 6
+        "images": 7
       },
       "annotations_toggle": "PASS",
       "lightbox_and_escape": "PASS",
@@ -956,7 +956,7 @@
   "version": "155.0.8059.39",
   "executable": "/usr/bin/google-chrome",
   "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
-  "executed_at_utc": "2026-10-17T08:48:30Z",
+  "executed_at_utc": "2026-10-17T13:19:08Z",
   "index_search_and_system_filter": "PASS",
   "http_index": "PASS",
   "tested_viewports": [
