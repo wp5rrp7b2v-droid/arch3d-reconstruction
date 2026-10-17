@@ -5,13 +5,16 @@ ROOT=pathlib.Path.cwd()
 OUT=ROOT/'docs/component_atlas_v001/assets/models'
 OUT.mkdir(parents=True,exist_ok=True)
 jobs=json.loads((ROOT/'docs/component_atlas_v001/render_inputs.json').read_text())
-report=[]
+provenance_file=OUT/'RENDER_PROVENANCE.json'
+report=json.loads(provenance_file.read_text()) if provenance_file.exists() else []
 def mesh_digest(objects):
     payload=[]
     for o in sorted(objects,key=lambda x:x.name):
         payload.append([o.name,[list(v.co) for v in o.data.vertices],[list(p.vertices) for p in o.data.polygons],[list(r) for r in o.matrix_world]])
     return hashlib.sha256(json.dumps(payload).encode()).hexdigest()
 for job in jobs:
+    prior=next((x for x in report if x['id']==job['id'] and x.get('sha256')==job['sha256'] and x.get('status')=='PASS_READONLY'),None)
+    if prior and all((OUT/x['file']).exists() for x in prior['images']):continue
     path=ROOT/job['path']
     if not path.exists():
         report.append(dict(job,status='BINARY_UNAVAILABLE'));continue
@@ -58,5 +61,6 @@ for job in jobs:
     after=mesh_digest(all_mesh)
     assert before==after
     assert hashlib.sha256(path.read_bytes()).hexdigest()==original
+    report=[x for x in report if x['id']!=job['id']]
     report.append(dict(job,status='PASS_READONLY',blender=bpy.app.version_string,mesh_transform_unchanged=True,binary_unchanged=True,images=images))
 (OUT/'RENDER_PROVENANCE.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))

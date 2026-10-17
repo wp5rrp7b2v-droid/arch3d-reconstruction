@@ -42,6 +42,16 @@ for m in library['new_masters']:
 # Existing main work BLEND: inspect each mesh without changing approved/pending scope.
 p=root/'production/zhenguo_wanfo/assembly/working_snapshots/2026-10-12/repaired_joint_v003/WANFO_TWO_FRAMES_THREE_PURLINS_REPAIRED_WORK_V003.blend'
 jobs.append(dict(id='ASSEMBLY_WORK_V003',path=str(p),sha256=hashlib.sha256(p.read_bytes()).hexdigest(),body_names=[],individual=True))
+local_refs=[
+  ('LOCAL_C02','f061ccfeaeab1b51288d523df98393ad11ec0945','dou_contour_c02/WANFO_DOU_CONTOUR_CANDIDATE_C02.blend','e7fffabdcab88a0262df773aabf9a4482351cd8c062ed335afcc0c4fb7a76fc8', ['trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL','trial:EAST_FRONT_HUA1_LOCAL','trial:EAST_FRONT_COLUMN_LUDOU','trial:EAST_FRONT_NIDAO_GUAZI','trial:EAST_FRONT_SANDOU_LEFT','trial:EAST_FRONT_SANDOU_RIGHT']),
+  ('LOCAL_UPPER6_C01','0187eb716d2432cf5d7b3502fb4eae11ba89ec5c','upper6_front_tenon_c01/WANFO_UPPER6_FRONT_TENON_C01.blend','baf43fc29fd9a769c89a0edc5cd4137d107133bf20239677105dde9baaa06e54',['trial:EAST_UPPER6_FULL_BEAM_CANDIDATE'])]
+for jid,ref,subpath,expected,names in local_refs:
+    source_path='production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-13/'+subpath
+    url='https://raw.githubusercontent.com/wp5rrp7b2v-droid/arch3d-reconstruction/'+ref+'/'+source_path
+    binary=urllib.request.urlopen(url,timeout=90).read()
+    assert hashlib.sha256(binary).hexdigest()==expected
+    p=tmp/(jid+'.blend');p.write_bytes(binary)
+    jobs.append(dict(id=jid,path=str(p),sha256=expected,source_commit=ref,source_path=source_path,body_names=names,individual=True))
 (root/'docs/component_atlas_v001/render_inputs.json').write_text(json.dumps(jobs,ensure_ascii=False,indent=2))
 (root/'docs/component_atlas_v001/BINARY_RECOVERY.json').write_text(json.dumps(fetch_log,ensure_ascii=False,indent=2))
 print('Recovered',len(jobs)-1,'registered Master binaries; one existing assembly work BLEND')
