@@ -1,0 +1,49 @@
+name: Wanfo component atlas read-only renders
+on:
+  push:
+    branches: [visualization/wanfo-component-atlas-v001-20261017]
+    paths:
+      - tools/component_atlas/render_existing.py
+      - tools/component_atlas/fetch_render_inputs.py
+      - .github/workflows/wanfo_component_atlas_readonly.yml
+permissions:
+  contents: write
+  actions: read
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Recover byte-verified existing BLENDs
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p docs/component_atlas_v001
+          python tools/component_atlas/fetch_render_inputs.py
+      - name: Install approved cloud Blender
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 2 -o /tmp/blender.tar.xz https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Render without saving models
+        run: xvfb-run -a /tmp/blender-4.5.13-linux-x64/blender --background --disable-autoexec --factory-startup --python-exit-code 10 --python tools/component_atlas/render_existing.py
+      - name: Save visual assets to this work branch only
+        run: |
+          test "${GITHUB_REF_NAME}" = "visualization/wanfo-component-atlas-v001-20261017"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs/component_atlas_v001/assets/models docs/component_atlas_v001/BINARY_RECOVERY.json docs/component_atlas_v001/render_inputs.json
+          git commit -m "保存构件库只读模型渲染与哈希证据" || test -z "$(git status --porcelain)"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin "HEAD:$GITHUB_REF_NAME"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_COMPONENT_ATLAS_READONLY
+          path: docs/component_atlas_v001/
+          retention-days: 90
