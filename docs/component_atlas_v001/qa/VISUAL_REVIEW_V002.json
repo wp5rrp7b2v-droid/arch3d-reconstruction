@@ -1,0 +1,50 @@
+{
+  "version": "V002",
+  "scope": 79,
+  "result": "VISUAL_REVIEW_COMPLETED_WITH_EXPLICIT_EVIDENCE_LIMITS",
+  "reviewed_at_utc": "2026-10-17T13:31:59.690Z",
+  "tested_generated_commit": "8686a06496b2294bedc28d8cb6d2a05c541a1cc0",
+  "actions_run": 39036784587,
+  "chrome": "155.0.8059.39",
+  "first_screen_review": {
+    "all_79_pages": "Actual Chrome contact sheets F001–F079 inspected; final beam layout correction re-inspected at full screenshot scale.",
+    "contact_snapshot_before_layout_fix": "00bc61d06714e3a3401e92337bfaea995f33fceb",
+    "final_layout_snapshot": "8686a06496b2294bedc28d8cb6d2a05c541a1cc0",
+    "enlarged_screenshots": [
+      "F003-desktop",
+      "F004-desktop",
+      "F026-desktop",
+      "F027-desktop",
+      "F036-desktop",
+      "F071-desktop",
+      "F021-mobile"
+    ],
+    "full_page_screenshots_available": 32,
+    "limit": "Contact-sheet review covers first screens; it is not a claim that every full-length screenshot was manually read at full resolution."
+  },
+  "source_corrections": [
+    "A1 p292 and p295–298 are structural inference/point-cloud comparisons, not independently established complete member boundaries.",
+    "A1 p297–298 rear column-frame sections are not evidence of a detached intercolumn bracket set.",
+    "Intercolumn bracket/bottom dou use A1 p087 actual rear-eave location with obstruction and identity uncertainty retained.",
+    "Other-building A2 examples removed from Wanfo visual evidence and labelled as analogies where retained as links.",
+    "Existing dou Masters have taper; missing ears/openings are distinguished from a rectangular box claim.",
+    "Purlin shaved-flat section, unknown hidden tails, unidentified size variants and official model semantic inference remain explicitly limited."
+  ],
+  "layout_defect_fixed": "F003–F007 main source image collapsed by flex sizing. Fixed explicit flex basis and actual DOM height assertion; final Chrome rerun PASS.",
+  "checks": {
+    "status": "PASS_STATIC",
+    "pages": 79,
+    "entity_pages": 58,
+    "master_families": 26,
+    "local_references": 2141,
+    "decoded_referenced_images": 351,
+    "derivatives": 385,
+    "source_hashes_verified": 85,
+    "model_identity_checks": 132,
+    "original_engineering_state": "PASS_NO_PROTECTED_PATH_CHANGED",
+    "browser": "PASS_GOOGLE_CHROME_FILE_AND_HTTP",
+    "original_source_pixels": "UNMODIFIED; DERIVATIVES_ARE_CROP_RESAMPLE_AND_ANNOTATION_ONLY"
+  },
+  "historical_boundary": "Visual annotations derive from archived sources. Unknown/obscured edges are not completed; official display geometry is not promoted to measured truth. No formal Master, approved BLEND, Registry, engineering conclusion or main merge changed.",
+  "viewing": "README_ZH.md: GitHub branch + independent local review worktree + Chrome file://. Linux Chrome tested; user Mac session and chatgpt.site access not claimed."
+}
