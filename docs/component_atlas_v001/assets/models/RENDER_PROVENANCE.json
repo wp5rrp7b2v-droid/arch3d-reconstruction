@@ -1,0 +1,2588 @@
+[
+  {
+    "id": "CMP-FRAME-ZHAQIAN-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-FRAME-ZHAQIAN-001.blend",
+    "sha256": "d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6",
+    "artifact_id": 10626941998,
+    "archive_sha256": "86d7defe94d64deddc2eb4020f69dffbec352e56bf2f49ec66d222cf853a325a",
+    "body_names": [
+      "MASTER__CMP_FRAME_ZHAQIAN_001__BODY"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-FRAME-ZHAQIAN-001--0--axon.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_ZHAQIAN_001__BODY"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-FRAME-ZHAQIAN-001--0--front.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_ZHAQIAN_001__BODY"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-FRAME-ZHAQIAN-001--0--side.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_ZHAQIAN_001__BODY"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-FRAME-PURLIN-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-FRAME-PURLIN-001.blend",
+    "sha256": "5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4",
+    "artifact_id": 10632275014,
+    "archive_sha256": "62a4282003644745827a1cad2697d24bf36cb3847ac98a44c7ecac8fe41b83eb",
+    "body_names": [
+      "MASTER__CMP_FRAME_PURLIN_001__BODY"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-FRAME-PURLIN-001--0--axon.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_PURLIN_001__BODY"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-FRAME-PURLIN-001--0--front.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_PURLIN_001__BODY"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-FRAME-PURLIN-001--0--side.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_PURLIN_001__BODY"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-FRAME-TUOJIAO-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-FRAME-TUOJIAO-001.blend",
+    "sha256": "23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f",
+    "artifact_id": 10689220649,
+    "archive_sha256": "f255355b915c6c842b8d7e2d9a3090fce1787670d545f3d432ed8aa46f875749",
+    "body_names": [
+      "MASTER__CMP_FRAME_TUOJIAO_001__BODY"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-FRAME-TUOJIAO-001--0--axon.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_TUOJIAO_001__BODY"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-FRAME-TUOJIAO-001--0--front.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_TUOJIAO_001__BODY"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-FRAME-TUOJIAO-001--0--side.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_TUOJIAO_001__BODY"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-FRAME-CHASHOU-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-FRAME-CHASHOU-001.blend",
+    "sha256": "25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25",
+    "artifact_id": 10735946772,
+    "archive_sha256": "5c4a77a41291433b590911d4b1c6aa806a1b2dff579d2cecc80ca1bbd28b4151",
+    "body_names": [
+      "MASTER__CMP_FRAME_CHASHOU_001__BODY"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-FRAME-CHASHOU-001--0--axon.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_CHASHOU_001__BODY"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-FRAME-CHASHOU-001--0--front.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_CHASHOU_001__BODY"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-FRAME-CHASHOU-001--0--side.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_CHASHOU_001__BODY"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-FRAME-SHUZHU-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-FRAME-SHUZHU-001.blend",
+    "sha256": "becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6",
+    "artifact_id": 10744639697,
+    "archive_sha256": "741c2cf2119c646304cabd0110111717f115a0fea26959d7e97ec065a69b5588",
+    "body_names": [
+      "MASTER__CMP_FRAME_SHUZHU_001__BODY"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-FRAME-SHUZHU-001--0--axon.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_SHUZHU_001__BODY"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-FRAME-SHUZHU-001--0--front.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_SHUZHU_001__BODY"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-FRAME-SHUZHU-001--0--side.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_SHUZHU_001__BODY"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-FRAME-DAJIAOLIANG-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-FRAME-DAJIAOLIANG-001.blend",
+    "sha256": "199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91",
+    "artifact_id": 10800439343,
+    "archive_sha256": "934a593489c44f3756389654df8dab4bf296f11ef00769fac4c761da603f1b99",
+    "body_names": [
+      "MASTER__CMP_FRAME_DAJIAOLIANG_001__BODY"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-FRAME-DAJIAOLIANG-001--0--axon.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_DAJIAOLIANG_001__BODY"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-FRAME-DAJIAOLIANG-001--0--front.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_DAJIAOLIANG_001__BODY"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-FRAME-DAJIAOLIANG-001--0--side.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_DAJIAOLIANG_001__BODY"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-FRAME-ZIJIAOLIANG-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-FRAME-ZIJIAOLIANG-001.blend",
+    "sha256": "104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b",
+    "artifact_id": 10858207870,
+    "archive_sha256": "c1b0f227ed55c00529e5ac722a2195bff59282c428a84de0743a4124f52fc466",
+    "body_names": [
+      "MASTER__CMP_FRAME_ZIJIAOLIANG_001__BODY"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-FRAME-ZIJIAOLIANG-001--0--axon.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_ZIJIAOLIANG_001__BODY"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-FRAME-ZIJIAOLIANG-001--0--front.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_ZIJIAOLIANG_001__BODY"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-FRAME-ZIJIAOLIANG-001--0--side.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_ZIJIAOLIANG_001__BODY"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-FRAME-LANE-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-FRAME-LANE-001.blend",
+    "sha256": "b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d",
+    "artifact_id": 10899808683,
+    "archive_sha256": "8034aec4b79740d52b68b162bcf04c0a1ce0b81e2ddeff9cd352e32e11985e88",
+    "body_names": [
+      "MASTER__CMP_FRAME_LANE_001__BODY"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-FRAME-LANE-001--0--axon.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_LANE_001__BODY"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-FRAME-LANE-001--0--front.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_LANE_001__BODY"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-FRAME-LANE-001--0--side.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_LANE_001__BODY"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-FRAME-YOUE-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-FRAME-YOUE-001.blend",
+    "sha256": "6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16",
+    "artifact_id": 10903011230,
+    "archive_sha256": "d664456279065be2d7db01f373dbd60c9744f957e04d0f90636fb23d6731deb7",
+    "body_names": [
+      "MASTER__CMP_FRAME_YOUE_001__BODY"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-FRAME-YOUE-001--0--axon.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_YOUE_001__BODY"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-FRAME-YOUE-001--0--front.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_YOUE_001__BODY"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-FRAME-YOUE-001--0--side.png",
+        "object_names": [
+          "MASTER__CMP_FRAME_YOUE_001__BODY"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-DOU-BOTTOM-LONGKAI-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-DOU-BOTTOM-LONGKAI-001.blend",
+    "sha256": "7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66",
+    "artifact_id": 10908700631,
+    "archive_sha256": "648cf7d99d8c71bf8cdaa4aa9025e03869d77d9c5914f300122a888285825d07",
+    "body_names": [
+      "MASTER__CMP_DOU_BOTTOM_LONGKAI_001__BODY"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-DOU-BOTTOM-LONGKAI-001--0--axon.png",
+        "object_names": [
+          "MASTER__CMP_DOU_BOTTOM_LONGKAI_001__BODY"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-DOU-BOTTOM-LONGKAI-001--0--front.png",
+        "object_names": [
+          "MASTER__CMP_DOU_BOTTOM_LONGKAI_001__BODY"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-DOU-BOTTOM-LONGKAI-001--0--side.png",
+        "object_names": [
+          "MASTER__CMP_DOU_BOTTOM_LONGKAI_001__BODY"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-GONG-MANGONG-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-GONG-MANGONG-001.blend",
+    "sha256": "1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023",
+    "artifact_id": 10924188411,
+    "archive_sha256": "bf279ee4b3b1bf04d8263cf12983e0124a4a39d654f7a2297a95d7a12ca47060",
+    "body_names": [],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-GONG-MANGONG-001--0--axon.png",
+        "object_names": [
+          "LARGE_MANGONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-GONG-MANGONG-001--0--front.png",
+        "object_names": [
+          "LARGE_MANGONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-GONG-MANGONG-001--0--side.png",
+        "object_names": [
+          "LARGE_MANGONG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "CMP-GONG-MANGONG-001--1--axon.png",
+        "object_names": [
+          "SMALL_MANGONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-GONG-MANGONG-001--1--front.png",
+        "object_names": [
+          "SMALL_MANGONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-GONG-MANGONG-001--1--side.png",
+        "object_names": [
+          "SMALL_MANGONG"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-GONG-LINGGONG-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-GONG-LINGGONG-001.blend",
+    "sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7",
+    "artifact_id": 10927005772,
+    "archive_sha256": "db181f3392acab1504f118236cec32d9e3e043ba4cf84ff944834c28ce9a0ede",
+    "body_names": [],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-GONG-LINGGONG-001--0--axon.png",
+        "object_names": [
+          "LINGGONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-GONG-LINGGONG-001--0--front.png",
+        "object_names": [
+          "LINGGONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-GONG-LINGGONG-001--0--side.png",
+        "object_names": [
+          "LINGGONG"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-GONG-HUAGONG-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-GONG-HUAGONG-001.blend",
+    "sha256": "0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e",
+    "artifact_id": 10930899677,
+    "archive_sha256": "de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f",
+    "body_names": [],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-GONG-HUAGONG-001--0--axon.png",
+        "object_names": [
+          "JUMP_1_HUAGONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-GONG-HUAGONG-001--0--front.png",
+        "object_names": [
+          "JUMP_1_HUAGONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-GONG-HUAGONG-001--0--side.png",
+        "object_names": [
+          "JUMP_1_HUAGONG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "CMP-GONG-HUAGONG-001--1--axon.png",
+        "object_names": [
+          "JUMP_2_HUAGONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-GONG-HUAGONG-001--1--front.png",
+        "object_names": [
+          "JUMP_2_HUAGONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-GONG-HUAGONG-001--1--side.png",
+        "object_names": [
+          "JUMP_2_HUAGONG"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-GONG-ANG-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-GONG-ANG-001.blend",
+    "sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+    "artifact_id": 10950620532,
+    "archive_sha256": "a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e",
+    "body_names": [],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-GONG-ANG-001--0--axon.png",
+        "object_names": [
+          "TOU_ANG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-GONG-ANG-001--0--front.png",
+        "object_names": [
+          "TOU_ANG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-GONG-ANG-001--0--side.png",
+        "object_names": [
+          "TOU_ANG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "CMP-GONG-ANG-001--1--axon.png",
+        "object_names": [
+          "ER_ANG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-GONG-ANG-001--1--front.png",
+        "object_names": [
+          "ER_ANG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-GONG-ANG-001--1--side.png",
+        "object_names": [
+          "ER_ANG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "CMP-GONG-ANG-001--2--axon.png",
+        "object_names": [
+          "FIXTURE_47_21_GUIDE"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-GONG-ANG-001--2--front.png",
+        "object_names": [
+          "FIXTURE_47_21_GUIDE"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-GONG-ANG-001--2--side.png",
+        "object_names": [
+          "FIXTURE_47_21_GUIDE"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "CMP-FRAME-TUOFENG-001",
+    "path": "/tmp/wanfo-atlas-inputs/CMP-FRAME-TUOFENG-001.blend",
+    "sha256": "eb24ca1ad0e39df0bac3558f777f3844d2952cf2e0cbfe7b699b1d268ec60c7b",
+    "artifact_id": 11391915287,
+    "archive_sha256": "f5b9940a17b8368a0d6be5df0a082b36a8d421705a2eb3a4094292577b5b820d",
+    "body_names": [],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "CMP-FRAME-TUOFENG-001--0--axon.png",
+        "object_names": [
+          "TUOFENG_LOWER_SUPPORT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-FRAME-TUOFENG-001--0--front.png",
+        "object_names": [
+          "TUOFENG_LOWER_SUPPORT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-FRAME-TUOFENG-001--0--side.png",
+        "object_names": [
+          "TUOFENG_LOWER_SUPPORT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "CMP-FRAME-TUOFENG-001--1--axon.png",
+        "object_names": [
+          "TUOFENG_UPPER_RIDGE_SUPPORT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "CMP-FRAME-TUOFENG-001--1--front.png",
+        "object_names": [
+          "TUOFENG_UPPER_RIDGE_SUPPORT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "CMP-FRAME-TUOFENG-001--1--side.png",
+        "object_names": [
+          "TUOFENG_UPPER_RIDGE_SUPPORT"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "ASSEMBLY_WORK_V003",
+    "path": "/home/runner/work/arch3d-reconstruction/arch3d-reconstruction/production/zhenguo_wanfo/assembly/working_snapshots/2026-10-12/repaired_joint_v003/WANFO_TWO_FRAMES_THREE_PURLINS_REPAIRED_WORK_V003.blend",
+    "sha256": "52bb4966e8c844aa1f62754e21c46ae3b414f96f3284208a12e5670f11e381bd",
+    "body_names": [],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "ASSEMBLY_WORK_V003--0--axon.png",
+        "object_names": [
+          "RIDGE_PURLIN"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--0--front.png",
+        "object_names": [
+          "RIDGE_PURLIN"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--0--side.png",
+        "object_names": [
+          "RIDGE_PURLIN"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--1--axon.png",
+        "object_names": [
+          "UPPER_PURLIN_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--1--front.png",
+        "object_names": [
+          "UPPER_PURLIN_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--1--side.png",
+        "object_names": [
+          "UPPER_PURLIN_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--2--axon.png",
+        "object_names": [
+          "UPPER_PURLIN_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--2--front.png",
+        "object_names": [
+          "UPPER_PURLIN_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--2--side.png",
+        "object_names": [
+          "UPPER_PURLIN_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--3--axon.png",
+        "object_names": [
+          "east:CENTRE_DOU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--3--front.png",
+        "object_names": [
+          "east:CENTRE_DOU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--3--side.png",
+        "object_names": [
+          "east:CENTRE_DOU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--4--axon.png",
+        "object_names": [
+          "east:CENTRE_DOU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--4--front.png",
+        "object_names": [
+          "east:CENTRE_DOU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--4--side.png",
+        "object_names": [
+          "east:CENTRE_DOU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--5--axon.png",
+        "object_names": [
+          "east:FOUR_BEAM"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--5--front.png",
+        "object_names": [
+          "east:FOUR_BEAM"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--5--side.png",
+        "object_names": [
+          "east:FOUR_BEAM"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--6--axon.png",
+        "object_names": [
+          "east:HEAD_DOU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--6--front.png",
+        "object_names": [
+          "east:HEAD_DOU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--6--side.png",
+        "object_names": [
+          "east:HEAD_DOU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--7--axon.png",
+        "object_names": [
+          "east:HEAD_DOU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--7--front.png",
+        "object_names": [
+          "east:HEAD_DOU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--7--side.png",
+        "object_names": [
+          "east:HEAD_DOU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--8--axon.png",
+        "object_names": [
+          "east:HUAGONG_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--8--front.png",
+        "object_names": [
+          "east:HUAGONG_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--8--side.png",
+        "object_names": [
+          "east:HUAGONG_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--9--axon.png",
+        "object_names": [
+          "east:HUAGONG_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--9--front.png",
+        "object_names": [
+          "east:HUAGONG_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--9--side.png",
+        "object_names": [
+          "east:HUAGONG_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--10--axon.png",
+        "object_names": [
+          "east:LINGGONG_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--10--front.png",
+        "object_names": [
+          "east:LINGGONG_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--10--side.png",
+        "object_names": [
+          "east:LINGGONG_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--11--axon.png",
+        "object_names": [
+          "east:LINGGONG_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--11--front.png",
+        "object_names": [
+          "east:LINGGONG_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--11--side.png",
+        "object_names": [
+          "east:LINGGONG_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--12--axon.png",
+        "object_names": [
+          "east:LUDOU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--12--front.png",
+        "object_names": [
+          "east:LUDOU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--12--side.png",
+        "object_names": [
+          "east:LUDOU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--13--axon.png",
+        "object_names": [
+          "east:LUDOU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--13--front.png",
+        "object_names": [
+          "east:LUDOU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--13--side.png",
+        "object_names": [
+          "east:LUDOU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--14--axon.png",
+        "object_names": [
+          "east:PANJIAN_FANG_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--14--front.png",
+        "object_names": [
+          "east:PANJIAN_FANG_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--14--side.png",
+        "object_names": [
+          "east:PANJIAN_FANG_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--15--axon.png",
+        "object_names": [
+          "east:PANJIAN_FANG_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--15--front.png",
+        "object_names": [
+          "east:PANJIAN_FANG_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--15--side.png",
+        "object_names": [
+          "east:PANJIAN_FANG_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--16--axon.png",
+        "object_names": [
+          "east:PINGLIANG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--16--front.png",
+        "object_names": [
+          "east:PINGLIANG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--16--side.png",
+        "object_names": [
+          "east:PINGLIANG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--17--axon.png",
+        "object_names": [
+          "east:RIDGE_SINGLE_GONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--17--front.png",
+        "object_names": [
+          "east:RIDGE_SINGLE_GONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--17--side.png",
+        "object_names": [
+          "east:RIDGE_SINGLE_GONG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--18--axon.png",
+        "object_names": [
+          "east:RIDGE_TIEMU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--18--front.png",
+        "object_names": [
+          "east:RIDGE_TIEMU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--18--side.png",
+        "object_names": [
+          "east:RIDGE_TIEMU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--19--axon.png",
+        "object_names": [
+          "east:SHUZHU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--19--front.png",
+        "object_names": [
+          "east:SHUZHU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--19--side.png",
+        "object_names": [
+          "east:SHUZHU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--20--axon.png",
+        "object_names": [
+          "east:SHUZHU_FOOT_PAD"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--20--front.png",
+        "object_names": [
+          "east:SHUZHU_FOOT_PAD"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--20--side.png",
+        "object_names": [
+          "east:SHUZHU_FOOT_PAD"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--21--axon.png",
+        "object_names": [
+          "east:TIEMU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--21--front.png",
+        "object_names": [
+          "east:TIEMU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--21--side.png",
+        "object_names": [
+          "east:TIEMU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--22--axon.png",
+        "object_names": [
+          "east:TIEMU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--22--front.png",
+        "object_names": [
+          "east:TIEMU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--22--side.png",
+        "object_names": [
+          "east:TIEMU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--23--axon.png",
+        "object_names": [
+          "east:TUOFENG_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--23--front.png",
+        "object_names": [
+          "east:TUOFENG_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--23--side.png",
+        "object_names": [
+          "east:TUOFENG_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--24--axon.png",
+        "object_names": [
+          "east:TUOFENG_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--24--front.png",
+        "object_names": [
+          "east:TUOFENG_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--24--side.png",
+        "object_names": [
+          "east:TUOFENG_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--25--axon.png",
+        "object_names": [
+          "east:TUOJIAO_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--25--front.png",
+        "object_names": [
+          "east:TUOJIAO_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--25--side.png",
+        "object_names": [
+          "east:TUOJIAO_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--26--axon.png",
+        "object_names": [
+          "east:TUOJIAO_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--26--front.png",
+        "object_names": [
+          "east:TUOJIAO_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--26--side.png",
+        "object_names": [
+          "east:TUOJIAO_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--27--axon.png",
+        "object_names": [
+          "east:UPPER_DOU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--27--front.png",
+        "object_names": [
+          "east:UPPER_DOU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--27--side.png",
+        "object_names": [
+          "east:UPPER_DOU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--28--axon.png",
+        "object_names": [
+          "east:UPPER_DOU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--28--front.png",
+        "object_names": [
+          "east:UPPER_DOU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--28--side.png",
+        "object_names": [
+          "east:UPPER_DOU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--29--axon.png",
+        "object_names": [
+          "west:CENTRE_DOU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--29--front.png",
+        "object_names": [
+          "west:CENTRE_DOU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--29--side.png",
+        "object_names": [
+          "west:CENTRE_DOU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--30--axon.png",
+        "object_names": [
+          "west:CENTRE_DOU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--30--front.png",
+        "object_names": [
+          "west:CENTRE_DOU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--30--side.png",
+        "object_names": [
+          "west:CENTRE_DOU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--31--axon.png",
+        "object_names": [
+          "west:CHASHOU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--31--front.png",
+        "object_names": [
+          "west:CHASHOU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--31--side.png",
+        "object_names": [
+          "west:CHASHOU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--32--axon.png",
+        "object_names": [
+          "west:CHASHOU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--32--front.png",
+        "object_names": [
+          "west:CHASHOU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--32--side.png",
+        "object_names": [
+          "west:CHASHOU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--33--axon.png",
+        "object_names": [
+          "west:FOUR_BEAM"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--33--front.png",
+        "object_names": [
+          "west:FOUR_BEAM"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--33--side.png",
+        "object_names": [
+          "west:FOUR_BEAM"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--34--axon.png",
+        "object_names": [
+          "west:HEAD_DOU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--34--front.png",
+        "object_names": [
+          "west:HEAD_DOU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--34--side.png",
+        "object_names": [
+          "west:HEAD_DOU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--35--axon.png",
+        "object_names": [
+          "west:HEAD_DOU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--35--front.png",
+        "object_names": [
+          "west:HEAD_DOU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--35--side.png",
+        "object_names": [
+          "west:HEAD_DOU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--36--axon.png",
+        "object_names": [
+          "west:HUAGONG_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--36--front.png",
+        "object_names": [
+          "west:HUAGONG_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--36--side.png",
+        "object_names": [
+          "west:HUAGONG_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--37--axon.png",
+        "object_names": [
+          "west:HUAGONG_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--37--front.png",
+        "object_names": [
+          "west:HUAGONG_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--37--side.png",
+        "object_names": [
+          "west:HUAGONG_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--38--axon.png",
+        "object_names": [
+          "west:LINGGONG_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--38--front.png",
+        "object_names": [
+          "west:LINGGONG_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--38--side.png",
+        "object_names": [
+          "west:LINGGONG_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--39--axon.png",
+        "object_names": [
+          "west:LINGGONG_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--39--front.png",
+        "object_names": [
+          "west:LINGGONG_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--39--side.png",
+        "object_names": [
+          "west:LINGGONG_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--40--axon.png",
+        "object_names": [
+          "west:LUDOU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--40--front.png",
+        "object_names": [
+          "west:LUDOU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--40--side.png",
+        "object_names": [
+          "west:LUDOU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--41--axon.png",
+        "object_names": [
+          "west:LUDOU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--41--front.png",
+        "object_names": [
+          "west:LUDOU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--41--side.png",
+        "object_names": [
+          "west:LUDOU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--42--axon.png",
+        "object_names": [
+          "west:PANJIAN_FANG_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--42--front.png",
+        "object_names": [
+          "west:PANJIAN_FANG_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--42--side.png",
+        "object_names": [
+          "west:PANJIAN_FANG_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--43--axon.png",
+        "object_names": [
+          "west:PANJIAN_FANG_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--43--front.png",
+        "object_names": [
+          "west:PANJIAN_FANG_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--43--side.png",
+        "object_names": [
+          "west:PANJIAN_FANG_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--44--axon.png",
+        "object_names": [
+          "west:PINGLIANG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--44--front.png",
+        "object_names": [
+          "west:PINGLIANG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--44--side.png",
+        "object_names": [
+          "west:PINGLIANG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--45--axon.png",
+        "object_names": [
+          "west:RIDGE_LOWER_DOU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--45--front.png",
+        "object_names": [
+          "west:RIDGE_LOWER_DOU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--45--side.png",
+        "object_names": [
+          "west:RIDGE_LOWER_DOU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--46--axon.png",
+        "object_names": [
+          "west:RIDGE_SINGLE_GONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--46--front.png",
+        "object_names": [
+          "west:RIDGE_SINGLE_GONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--46--side.png",
+        "object_names": [
+          "west:RIDGE_SINGLE_GONG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--47--axon.png",
+        "object_names": [
+          "west:RIDGE_TIEMU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--47--front.png",
+        "object_names": [
+          "west:RIDGE_TIEMU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--47--side.png",
+        "object_names": [
+          "west:RIDGE_TIEMU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--48--axon.png",
+        "object_names": [
+          "west:RIDGE_UPPER_DOU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--48--front.png",
+        "object_names": [
+          "west:RIDGE_UPPER_DOU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--48--side.png",
+        "object_names": [
+          "west:RIDGE_UPPER_DOU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--49--axon.png",
+        "object_names": [
+          "west:SHUZHU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--49--front.png",
+        "object_names": [
+          "west:SHUZHU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--49--side.png",
+        "object_names": [
+          "west:SHUZHU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--50--axon.png",
+        "object_names": [
+          "west:SHUZHU_FOOT_PAD"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--50--front.png",
+        "object_names": [
+          "west:SHUZHU_FOOT_PAD"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--50--side.png",
+        "object_names": [
+          "west:SHUZHU_FOOT_PAD"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--51--axon.png",
+        "object_names": [
+          "west:TIEMU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--51--front.png",
+        "object_names": [
+          "west:TIEMU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--51--side.png",
+        "object_names": [
+          "west:TIEMU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--52--axon.png",
+        "object_names": [
+          "west:TIEMU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--52--front.png",
+        "object_names": [
+          "west:TIEMU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--52--side.png",
+        "object_names": [
+          "west:TIEMU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--53--axon.png",
+        "object_names": [
+          "west:TUOFENG_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--53--front.png",
+        "object_names": [
+          "west:TUOFENG_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--53--side.png",
+        "object_names": [
+          "west:TUOFENG_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--54--axon.png",
+        "object_names": [
+          "west:TUOFENG_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--54--front.png",
+        "object_names": [
+          "west:TUOFENG_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--54--side.png",
+        "object_names": [
+          "west:TUOFENG_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--55--axon.png",
+        "object_names": [
+          "west:TUOJIAO_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--55--front.png",
+        "object_names": [
+          "west:TUOJIAO_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--55--side.png",
+        "object_names": [
+          "west:TUOJIAO_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--56--axon.png",
+        "object_names": [
+          "west:TUOJIAO_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--56--front.png",
+        "object_names": [
+          "west:TUOJIAO_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--56--side.png",
+        "object_names": [
+          "west:TUOJIAO_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--57--axon.png",
+        "object_names": [
+          "west:UPPER_DOU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--57--front.png",
+        "object_names": [
+          "west:UPPER_DOU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--57--side.png",
+        "object_names": [
+          "west:UPPER_DOU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--58--axon.png",
+        "object_names": [
+          "west:UPPER_DOU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--58--front.png",
+        "object_names": [
+          "west:UPPER_DOU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--58--side.png",
+        "object_names": [
+          "west:UPPER_DOU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--59--axon.png",
+        "object_names": [
+          "east:CHASHOU_FRONT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--59--front.png",
+        "object_names": [
+          "east:CHASHOU_FRONT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--59--side.png",
+        "object_names": [
+          "east:CHASHOU_FRONT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--60--axon.png",
+        "object_names": [
+          "east:CHASHOU_REAR"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--60--front.png",
+        "object_names": [
+          "east:CHASHOU_REAR"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--60--side.png",
+        "object_names": [
+          "east:CHASHOU_REAR"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--61--axon.png",
+        "object_names": [
+          "east:RIDGE_LOWER_DOU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--61--front.png",
+        "object_names": [
+          "east:RIDGE_LOWER_DOU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--61--side.png",
+        "object_names": [
+          "east:RIDGE_LOWER_DOU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--62--axon.png",
+        "object_names": [
+          "east:RIDGE_UPPER_DOU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--62--front.png",
+        "object_names": [
+          "east:RIDGE_UPPER_DOU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--62--side.png",
+        "object_names": [
+          "east:RIDGE_UPPER_DOU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--63--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_SPACER_HUAGONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--63--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_SPACER_HUAGONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--63--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_SPACER_HUAGONG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--64--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_SPACER_LINGGONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--64--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_SPACER_LINGGONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--64--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_SPACER_LINGGONG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--65--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--65--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--65--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--66--axon.png",
+        "object_names": [
+          "trial:EAST_REAR_SPACER_DEPTH_LINGGONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--66--front.png",
+        "object_names": [
+          "trial:EAST_REAR_SPACER_DEPTH_LINGGONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--66--side.png",
+        "object_names": [
+          "trial:EAST_REAR_SPACER_DEPTH_LINGGONG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--67--axon.png",
+        "object_names": [
+          "trial:EAST_REAR_SPACER_LONGITUDINAL_LINGGONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--67--front.png",
+        "object_names": [
+          "trial:EAST_REAR_SPACER_LONGITUDINAL_LINGGONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--67--side.png",
+        "object_names": [
+          "trial:EAST_REAR_SPACER_LONGITUDINAL_LINGGONG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--68--axon.png",
+        "object_names": [
+          "trial:EAST_REAR_SANDOU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--68--front.png",
+        "object_names": [
+          "trial:EAST_REAR_SANDOU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--68--side.png",
+        "object_names": [
+          "trial:EAST_REAR_SANDOU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--69--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--69--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--69--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--70--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_HUA1_LOCAL"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--70--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_HUA1_LOCAL"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--70--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_HUA1_LOCAL"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--71--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_COLUMN_LUDOU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--71--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_COLUMN_LUDOU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--71--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_COLUMN_LUDOU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--72--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_COLUMN_CANDIDATE"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--72--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_COLUMN_CANDIDATE"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--72--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_COLUMN_CANDIDATE"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--73--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_NIDAO_GUAZI"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--73--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_NIDAO_GUAZI"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--73--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_NIDAO_GUAZI"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--74--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_LEFT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--74--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_LEFT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--74--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_LEFT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--75--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_RIGHT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--75--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_RIGHT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--75--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_RIGHT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--76--axon.png",
+        "object_names": [
+          "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--76--front.png",
+        "object_names": [
+          "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--76--side.png",
+        "object_names": [
+          "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--77--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_ER_ANG_LOCAL"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--77--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_ER_ANG_LOCAL"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--77--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_ER_ANG_LOCAL"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--78--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_TOU_ANG_LOCAL"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--78--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_TOU_ANG_LOCAL"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--78--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_TOU_ANG_LOCAL"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--79--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_HUA2_LOCAL"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--79--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_HUA2_LOCAL"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--79--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_HUA2_LOCAL"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--80--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_TRANSVERSE_MANGONG"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--80--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_TRANSVERSE_MANGONG"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--80--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_TRANSVERSE_MANGONG"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--81--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_LOWER6_END_SEGMENT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--81--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_LOWER6_END_SEGMENT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "ASSEMBLY_WORK_V003--81--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_LOWER6_END_SEGMENT"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "LOCAL_C02",
+    "path": "/tmp/wanfo-atlas-inputs/LOCAL_C02.blend",
+    "sha256": "e7fffabdcab88a0262df773aabf9a4482351cd8c062ed335afcc0c4fb7a76fc8",
+    "source_commit": "f061ccfeaeab1b51288d523df98393ad11ec0945",
+    "source_path": "production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-13/dou_contour_c02/WANFO_DOU_CONTOUR_CANDIDATE_C02.blend",
+    "body_names": [
+      "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "trial:EAST_FRONT_HUA1_LOCAL",
+      "trial:EAST_FRONT_COLUMN_LUDOU",
+      "trial:EAST_FRONT_NIDAO_GUAZI",
+      "trial:EAST_FRONT_SANDOU_LEFT",
+      "trial:EAST_FRONT_SANDOU_RIGHT"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "LOCAL_C02--0--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "LOCAL_C02--0--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "LOCAL_C02--0--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "LOCAL_C02--1--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_HUA1_LOCAL"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "LOCAL_C02--1--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_HUA1_LOCAL"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "LOCAL_C02--1--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_HUA1_LOCAL"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "LOCAL_C02--2--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_COLUMN_LUDOU"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "LOCAL_C02--2--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_COLUMN_LUDOU"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "LOCAL_C02--2--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_COLUMN_LUDOU"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "LOCAL_C02--3--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_NIDAO_GUAZI"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "LOCAL_C02--3--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_NIDAO_GUAZI"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "LOCAL_C02--3--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_NIDAO_GUAZI"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "LOCAL_C02--4--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_LEFT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "LOCAL_C02--4--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_LEFT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "LOCAL_C02--4--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_LEFT"
+        ],
+        "view": "side"
+      },
+      {
+        "file": "LOCAL_C02--5--axon.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_RIGHT"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "LOCAL_C02--5--front.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_RIGHT"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "LOCAL_C02--5--side.png",
+        "object_names": [
+          "trial:EAST_FRONT_SANDOU_RIGHT"
+        ],
+        "view": "side"
+      }
+    ]
+  },
+  {
+    "id": "LOCAL_UPPER6_C01",
+    "path": "/tmp/wanfo-atlas-inputs/LOCAL_UPPER6_C01.blend",
+    "sha256": "baf43fc29fd9a769c89a0edc5cd4137d107133bf20239677105dde9baaa06e54",
+    "source_commit": "0187eb716d2432cf5d7b3502fb4eae11ba89ec5c",
+    "source_path": "production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-13/upper6_front_tenon_c01/WANFO_UPPER6_FRONT_TENON_C01.blend",
+    "body_names": [
+      "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE"
+    ],
+    "individual": true,
+    "status": "PASS_READONLY",
+    "blender": "4.5.13 LTS",
+    "mesh_transform_unchanged": true,
+    "binary_unchanged": true,
+    "images": [
+      {
+        "file": "LOCAL_UPPER6_C01--0--axon.png",
+        "object_names": [
+          "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE"
+        ],
+        "view": "axon"
+      },
+      {
+        "file": "LOCAL_UPPER6_C01--0--front.png",
+        "object_names": [
+          "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE"
+        ],
+        "view": "front"
+      },
+      {
+        "file": "LOCAL_UPPER6_C01--0--side.png",
+        "object_names": [
+          "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE"
+        ],
+        "view": "side"
+      }
+    ]
+  }
+]

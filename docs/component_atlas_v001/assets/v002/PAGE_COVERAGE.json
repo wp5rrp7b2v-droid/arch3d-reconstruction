@@ -1,0 +1,1503 @@
+[
+  {
+    "id": "F001",
+    "title": "柱 · 普通柱",
+    "kind": "实体构件族",
+    "source": "assets/official/fe92a50f93-01_SOURCE_柱.png",
+    "source_crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-COLUMN-001",
+    "model": "assets/approved/b37afd4838-AXON.png",
+    "source_panel": "assets/v002/F001-source.jpg",
+    "locator": "assets/v002/F001-locator.jpg",
+    "model_panel": "assets/v002/F001-model.jpg"
+  },
+  {
+    "id": "F002",
+    "title": "柱 · 角柱",
+    "kind": "实体构件族",
+    "source": "assets/official/fe92a50f93-01_SOURCE_柱.png",
+    "source_crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-COLUMN-001",
+    "model": "assets/approved/b37afd4838-AXON.png",
+    "source_panel": "assets/v002/F002-source.jpg",
+    "locator": "assets/v002/F002-locator.jpg",
+    "model_panel": "assets/v002/F002-model.jpg"
+  },
+  {
+    "id": "F003",
+    "title": "下六椽栿",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_crop": [
+      0.17,
+      0.47,
+      0.83,
+      0.575
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 2,
+    "model_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
+    "model": "assets/approved/554f8da45c-AXON.png",
+    "source_panel": "assets/v002/F003-source.jpg",
+    "locator": "assets/v002/F003-locator.jpg",
+    "model_panel": "assets/v002/F003-model.jpg"
+  },
+  {
+    "id": "F004",
+    "title": "上六椽栿",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_crop": [
+      0.21,
+      0.415,
+      0.79,
+      0.49
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 2,
+    "model_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
+    "model": "assets/approved/4b482432f0-AXON.png",
+    "source_panel": "assets/v002/F004-source.jpg",
+    "locator": "assets/v002/F004-locator.jpg",
+    "model_panel": "assets/v002/F004-model.jpg"
+  },
+  {
+    "id": "F005",
+    "title": "四椽栿",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_crop": [
+      0.28,
+      0.345,
+      0.72,
+      0.43
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 2,
+    "model_id": "CMP-FRAME-FOUR-CHUANFU-001",
+    "model": "assets/approved/959a2167ac-AXON.png",
+    "source_panel": "assets/v002/F005-source.jpg",
+    "locator": "assets/v002/F005-locator.jpg",
+    "model_panel": "assets/v002/F005-model.jpg"
+  },
+  {
+    "id": "F006",
+    "title": "平梁 · 东西缝型",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_crop": [
+      0.23,
+      0.79,
+      0.81,
+      0.855
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 2,
+    "model_id": "CMP-FRAME-PINGLIANG-001",
+    "model": "assets/approved/d6023251ab-EW_SEAM_AXON.png",
+    "source_panel": "assets/v002/F006-source.jpg",
+    "locator": "assets/v002/F006-locator.jpg",
+    "model_panel": "assets/v002/F006-model.jpg"
+  },
+  {
+    "id": "F007",
+    "title": "平梁 · 山面型",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_crop": [
+      0.23,
+      0.79,
+      0.81,
+      0.855
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-FRAME-PINGLIANG-001",
+    "model": "assets/approved/907f6c234d-GABLE_AXON.png",
+    "source_panel": "assets/v002/F007-source.jpg",
+    "locator": "assets/v002/F007-locator.jpg",
+    "model_panel": "assets/v002/F007-model.jpg"
+  },
+  {
+    "id": "F008",
+    "title": "驼峰 · 下层承托角色",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_crop": [
+      0.2,
+      0.735,
+      0.38,
+      0.772
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-FRAME-TUOFENG-001",
+    "model": "assets/models/CMP-FRAME-TUOFENG-001--0--front.png",
+    "source_panel": "assets/v002/F008-source.jpg",
+    "locator": "assets/v002/F008-locator.jpg",
+    "model_panel": "assets/v002/F008-model.jpg"
+  },
+  {
+    "id": "F009",
+    "title": "驼峰 · 脊部承托角色",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p106.jpg",
+    "source_crop": [
+      0.42,
+      0.672,
+      0.54,
+      0.694
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-FRAME-TUOFENG-001",
+    "model": "assets/models/CMP-FRAME-TUOFENG-001--1--front.png",
+    "source_panel": "assets/v002/F009-source.jpg",
+    "locator": "assets/v002/F009-locator.jpg",
+    "model_panel": "assets/v002/F009-model.jpg"
+  },
+  {
+    "id": "F010",
+    "title": "丁栿",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_crop": [
+      0.21,
+      0.09,
+      0.835,
+      0.329
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-FRAME-DINGFU-001",
+    "model": "assets/approved/489bd4fc50-AXON.png",
+    "source_panel": "assets/v002/F010-source.jpg",
+    "locator": "assets/v002/F010-locator.jpg",
+    "model_panel": "assets/v002/F010-model.jpg"
+  },
+  {
+    "id": "F011",
+    "title": "乳栿",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p084.jpg",
+    "source_crop": [
+      0.13,
+      0.078,
+      0.79,
+      0.367
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 2,
+    "model_id": "CMP-FRAME-RUFU-001",
+    "model": "assets/approved/251dc54fb1-AXON.png",
+    "source_panel": "assets/v002/F011-source.jpg",
+    "locator": "assets/v002/F011-locator.jpg",
+    "model_panel": "assets/v002/F011-model.jpg"
+  },
+  {
+    "id": "F012",
+    "title": "剳牵",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_crop": [
+      0.37,
+      0.105,
+      0.83,
+      0.255
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 2,
+    "model_id": "CMP-FRAME-ZHAQIAN-001",
+    "model": "assets/models/CMP-FRAME-ZHAQIAN-001--0--front.png",
+    "source_panel": "assets/v002/F012-source.jpg",
+    "locator": "assets/v002/F012-locator.jpg",
+    "model_panel": "assets/v002/F012-model.jpg"
+  },
+  {
+    "id": "F013",
+    "title": "槫",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_crop": [
+      0.31,
+      0.745,
+      0.82,
+      0.926
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-FRAME-PURLIN-001",
+    "model": "assets/models/CMP-FRAME-PURLIN-001--0--front.png",
+    "source_panel": "assets/v002/F013-source.jpg",
+    "locator": "assets/v002/F013-locator.jpg",
+    "model_panel": "assets/v002/F013-model.jpg"
+  },
+  {
+    "id": "F014",
+    "title": "阑额",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p088.jpg",
+    "source_crop": [
+      0.17,
+      0.08,
+      0.805,
+      0.375
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 2,
+    "model_id": "CMP-FRAME-LANE-001",
+    "model": "assets/models/CMP-FRAME-LANE-001--0--front.png",
+    "source_panel": "assets/v002/F014-source.jpg",
+    "locator": "assets/v002/F014-locator.jpg",
+    "model_panel": "assets/v002/F014-model.jpg"
+  },
+  {
+    "id": "F015",
+    "title": "由额",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p088.jpg",
+    "source_crop": [
+      0.17,
+      0.52,
+      0.805,
+      0.65
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 2,
+    "model_id": "CMP-FRAME-YOUE-001",
+    "model": "assets/models/CMP-FRAME-YOUE-001--0--front.png",
+    "source_panel": "assets/v002/F015-source.jpg",
+    "locator": "assets/v002/F015-locator.jpg",
+    "model_panel": "assets/v002/F015-model.jpg"
+  },
+  {
+    "id": "F016",
+    "title": "大角梁",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p089.jpg",
+    "source_crop": [
+      0.33,
+      0.1,
+      0.855,
+      0.305
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 1,
+    "model_id": "CMP-FRAME-DAJIAOLIANG-001",
+    "model": "assets/models/CMP-FRAME-DAJIAOLIANG-001--0--front.png",
+    "source_panel": "assets/v002/F016-source.jpg",
+    "locator": "assets/v002/F016-locator.jpg",
+    "model_panel": "assets/v002/F016-model.jpg"
+  },
+  {
+    "id": "F017",
+    "title": "子角梁",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p290.jpg",
+    "source_crop": [
+      0.075,
+      0.255,
+      0.37,
+      0.5
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-FRAME-ZIJIAOLIANG-001",
+    "model": "assets/models/CMP-FRAME-ZIJIAOLIANG-001--0--front.png",
+    "source_panel": "assets/v002/F017-source.jpg",
+    "locator": "assets/v002/F017-locator.jpg",
+    "model_panel": "assets/v002/F017-model.jpg"
+  },
+  {
+    "id": "F018",
+    "title": "隐角梁",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p089.jpg",
+    "source_crop": [
+      0.23,
+      0.095,
+      0.855,
+      0.39
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F018-source.jpg",
+    "locator": "assets/v002/F018-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F019",
+    "title": "托脚",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_crop": [
+      0.245,
+      0.305,
+      0.407,
+      0.439
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 1,
+    "model_id": "CMP-FRAME-TUOJIAO-001",
+    "model": "assets/models/CMP-FRAME-TUOJIAO-001--0--front.png",
+    "source_panel": "assets/v002/F019-source.jpg",
+    "locator": "assets/v002/F019-locator.jpg",
+    "model_panel": "assets/v002/F019-model.jpg"
+  },
+  {
+    "id": "F020",
+    "title": "叉手",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_crop": [
+      0.405,
+      0.713,
+      0.777,
+      0.832
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 2,
+    "model_id": "CMP-FRAME-CHASHOU-001",
+    "model": "assets/models/CMP-FRAME-CHASHOU-001--0--front.png",
+    "source_panel": "assets/v002/F020-source.jpg",
+    "locator": "assets/v002/F020-locator.jpg",
+    "model_panel": "assets/v002/F020-model.jpg"
+  },
+  {
+    "id": "F021",
+    "title": "蜀柱",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_crop": [
+      0.515,
+      0.725,
+      0.587,
+      0.823
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 2,
+    "model_id": "CMP-FRAME-SHUZHU-001",
+    "model": "assets/models/CMP-FRAME-SHUZHU-001--0--front.png",
+    "source_panel": "assets/v002/F021-source.jpg",
+    "locator": "assets/v002/F021-locator.jpg",
+    "model_panel": "assets/v002/F021-model.jpg"
+  },
+  {
+    "id": "F022",
+    "title": "转角铺作",
+    "kind": "装配组合",
+    "source": "assets/sources/A1-crop-corner.jpg",
+    "source_crop": [
+      0.01,
+      0.01,
+      0.98,
+      0.97
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F022-source.jpg",
+    "locator": "assets/v002/F022-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F023",
+    "title": "柱头铺作",
+    "kind": "装配组合",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_crop": [
+      0.2,
+      0.38,
+      0.985,
+      0.7
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F023-source.jpg",
+    "locator": "assets/v002/F023-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F024",
+    "title": "补间铺作",
+    "kind": "装配组合",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_crop": [
+      0.395,
+      0.727,
+      0.625,
+      0.835
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F024-source.jpg",
+    "locator": "assets/v002/F024-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F025",
+    "title": "铺作方向单元",
+    "kind": "方向计数",
+    "source": "assets/sources/A1-p289.jpg",
+    "source_crop": [
+      0.06,
+      0.08,
+      0.94,
+      0.88
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F025-source.jpg",
+    "locator": "assets/v002/F025-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F026",
+    "title": "柱头栌斗",
+    "kind": "实体构件族",
+    "source": "assets/official/71f50ad723-02_SOURCE_栌斗.png",
+    "source_crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-LUDOU-COLUMN-001",
+    "model": "assets/approved/cdb53a5ec2-AXON.png",
+    "source_panel": "assets/v002/F026-source.jpg",
+    "locator": "assets/v002/F026-locator.jpg",
+    "model_panel": "assets/v002/F026-model.jpg"
+  },
+  {
+    "id": "F027",
+    "title": "补间铺作底斗",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_crop": [
+      0.44,
+      0.775,
+      0.585,
+      0.835
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-DOU-BOTTOM-LONGKAI-001",
+    "model": "assets/models/CMP-DOU-BOTTOM-LONGKAI-001--0--front.png",
+    "source_panel": "assets/v002/F027-source.jpg",
+    "locator": "assets/v002/F027-locator.jpg",
+    "model_panel": "assets/v002/F027-model.jpg"
+  },
+  {
+    "id": "F028",
+    "title": "华栱 · 一跳",
+    "kind": "实体构件族",
+    "source": "assets/official/c3abcd44c2-03_SOURCE_第一跳华栱.png",
+    "source_crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-GONG-HUAGONG-001",
+    "model": "assets/models/CMP-GONG-HUAGONG-001--0--front.png",
+    "source_panel": "assets/v002/F028-source.jpg",
+    "locator": "assets/v002/F028-locator.jpg",
+    "model_panel": "assets/v002/F028-model.jpg"
+  },
+  {
+    "id": "F029",
+    "title": "华栱 · 二跳",
+    "kind": "实体构件族",
+    "source": "assets/official/6fd13f56b4-05_SOURCE_第二跳华栱.png",
+    "source_crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-GONG-HUAGONG-001",
+    "model": "assets/models/CMP-GONG-HUAGONG-001--1--front.png",
+    "source_panel": "assets/v002/F029-source.jpg",
+    "locator": "assets/v002/F029-locator.jpg",
+    "model_panel": "assets/v002/F029-model.jpg"
+  },
+  {
+    "id": "F030",
+    "title": "令栱",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_crop": [
+      0.205,
+      0.475,
+      0.305,
+      0.535
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-GONG-LINGGONG-001",
+    "model": "assets/models/CMP-GONG-LINGGONG-001--0--front.png",
+    "source_panel": "assets/v002/F030-source.jpg",
+    "locator": "assets/v002/F030-locator.jpg",
+    "model_panel": "assets/v002/F030-model.jpg"
+  },
+  {
+    "id": "F031",
+    "title": "大型瓜子栱",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_crop": [
+      0.345,
+      0.475,
+      0.635,
+      0.544
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-GONG-GUAZI-001",
+    "model": "assets/approved/d3713ab53c-CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png",
+    "source_panel": "assets/v002/F031-source.jpg",
+    "locator": "assets/v002/F031-locator.jpg",
+    "model_panel": "assets/v002/F031-model.jpg"
+  },
+  {
+    "id": "F032",
+    "title": "大型慢栱",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_crop": [
+      0.34,
+      0.423,
+      0.645,
+      0.482
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-GONG-MANGONG-001",
+    "model": "assets/models/CMP-GONG-MANGONG-001--0--front.png",
+    "source_panel": "assets/v002/F032-source.jpg",
+    "locator": "assets/v002/F032-locator.jpg",
+    "model_panel": "assets/v002/F032-model.jpg"
+  },
+  {
+    "id": "F033",
+    "title": "小型瓜子栱",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_crop": [
+      0.345,
+      0.475,
+      0.635,
+      0.544
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-GONG-GUAZI-001",
+    "model": "assets/approved/d3713ab53c-CMP-GONG-GUAZI-001_MASTER_REVIEW_BOARD_V001.png",
+    "source_panel": "assets/v002/F033-source.jpg",
+    "locator": "assets/v002/F033-locator.jpg",
+    "model_panel": "assets/v002/F033-model.jpg"
+  },
+  {
+    "id": "F034",
+    "title": "小型慢栱",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p087.jpg",
+    "source_crop": [
+      0.34,
+      0.423,
+      0.645,
+      0.482
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-GONG-MANGONG-001",
+    "model": "assets/models/CMP-GONG-MANGONG-001--1--front.png",
+    "source_panel": "assets/v002/F034-source.jpg",
+    "locator": "assets/v002/F034-locator.jpg",
+    "model_panel": "assets/v002/F034-model.jpg"
+  },
+  {
+    "id": "F035",
+    "title": "头昂",
+    "kind": "实体构件族",
+    "source": "assets/official/0d6e55efe9-06_SOURCE_头昂.png",
+    "source_crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-GONG-ANG-001",
+    "model": "assets/models/CMP-GONG-ANG-001--0--front.png",
+    "source_panel": "assets/v002/F035-source.jpg",
+    "locator": "assets/v002/F035-locator.jpg",
+    "model_panel": "assets/v002/F035-model.jpg"
+  },
+  {
+    "id": "F036",
+    "title": "二昂",
+    "kind": "实体构件族",
+    "source": "assets/official/2a94b0e852-07_SOURCE_二昂.png",
+    "source_crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-GONG-ANG-001",
+    "model": "assets/models/CMP-GONG-ANG-001--1--front.png",
+    "source_panel": "assets/v002/F036-source.jpg",
+    "locator": "assets/v002/F036-locator.jpg",
+    "model_panel": "assets/v002/F036-model.jpg"
+  },
+  {
+    "id": "F037",
+    "title": "襻间枋",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p094.jpg",
+    "source_crop": [
+      0.2,
+      0.28,
+      0.86,
+      0.55
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": "assets/models/ASSEMBLY_WORK_V003--14--axon.png",
+    "source_panel": "assets/v002/F037-source.jpg",
+    "locator": "assets/v002/F037-locator.jpg",
+    "model_panel": "assets/v002/F037-model.jpg"
+  },
+  {
+    "id": "F038",
+    "title": "内槽斗栱/隔架位置",
+    "kind": "组合位置",
+    "source": "assets/sources/A1-p094.jpg",
+    "source_crop": [
+      0.2,
+      0.28,
+      0.86,
+      0.55
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F038-source.jpg",
+    "locator": "assets/v002/F038-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F039",
+    "title": "替木测量边界",
+    "kind": "测量样本边界",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_crop": [
+      0.21,
+      0.497,
+      0.83,
+      0.7
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": "assets/models/ASSEMBLY_WORK_V003--18--axon.png",
+    "source_panel": "assets/v002/F039-source.jpg",
+    "locator": "assets/v002/F039-locator.jpg",
+    "model_panel": "assets/v002/F039-model.jpg"
+  },
+  {
+    "id": "F040",
+    "title": "椽系",
+    "kind": "木构系统",
+    "source": "assets/sources/A1-p083.jpg",
+    "source_crop": [
+      0.21,
+      0.69,
+      0.85,
+      0.81
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F040-source.jpg",
+    "locator": "assets/v002/F040-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F041",
+    "title": "南坡筒瓦",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p145.jpg",
+    "source_crop": [
+      0.13,
+      0.31,
+      0.52,
+      0.4
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F041-source.jpg",
+    "locator": "assets/v002/F041-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F042",
+    "title": "北坡筒瓦",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p145.jpg",
+    "source_crop": [
+      0.13,
+      0.785,
+      0.52,
+      0.87
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F042-source.jpg",
+    "locator": "assets/v002/F042-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F043",
+    "title": "东坡筒瓦",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p146.jpg",
+    "source_crop": [
+      0.1,
+      0.32,
+      0.45,
+      0.4
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F043-source.jpg",
+    "locator": "assets/v002/F043-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F044",
+    "title": "西坡筒瓦",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p146.jpg",
+    "source_crop": [
+      0.1,
+      0.795,
+      0.45,
+      0.88
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F044-source.jpg",
+    "locator": "assets/v002/F044-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F045",
+    "title": "正脊",
+    "kind": "瓦作组合",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_crop": [
+      0.27,
+      0.14,
+      0.72,
+      0.255
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 2,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F045-source.jpg",
+    "locator": "assets/v002/F045-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F046",
+    "title": "垂脊",
+    "kind": "瓦作组合",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_crop": [
+      0.27,
+      0.23,
+      0.34,
+      0.41
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 1,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F046-source.jpg",
+    "locator": "assets/v002/F046-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F047",
+    "title": "戗脊",
+    "kind": "瓦作组合",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_crop": [
+      0.49,
+      0.18,
+      0.84,
+      0.45
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F047-source.jpg",
+    "locator": "assets/v002/F047-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F048",
+    "title": "台基整体",
+    "kind": "整体系统",
+    "source": "assets/sources/A1-crop-platform.jpg",
+    "source_crop": [
+      0.01,
+      0.01,
+      0.51,
+      0.98
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F048-source.jpg",
+    "locator": "assets/v002/F048-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F049",
+    "title": "角石",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-crop-platform.jpg",
+    "source_crop": [
+      0.24,
+      0.48,
+      0.51,
+      0.94
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F049-source.jpg",
+    "locator": "assets/v002/F049-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F050",
+    "title": "南门洞",
+    "kind": "洞口",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_crop": [
+      0.43,
+      0.56,
+      0.535,
+      0.735
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F050-source.jpg",
+    "locator": "assets/v002/F050-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F051",
+    "title": "北门洞",
+    "kind": "洞口",
+    "source": "assets/sources/A1-p284.jpg",
+    "source_crop": [
+      0.4,
+      0.52,
+      0.59,
+      0.75
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F051-source.jpg",
+    "locator": "assets/v002/F051-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F052",
+    "title": "南立面窗洞",
+    "kind": "洞口",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_crop": [
+      0.285,
+      0.565,
+      0.405,
+      0.684
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F052-source.jpg",
+    "locator": "assets/v002/F052-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F053",
+    "title": "透风孔",
+    "kind": "洞口/纹样",
+    "source": "assets/sources/A1-p137.jpg",
+    "source_crop": [
+      0.14,
+      0.735,
+      0.42,
+      0.835
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F053-source.jpg",
+    "locator": "assets/v002/F053-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F054",
+    "title": "嵌墙石碑",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-crop-door.jpg",
+    "source_crop": [
+      0.27,
+      0.14,
+      0.42,
+      0.43
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F054-source.jpg",
+    "locator": "assets/v002/F054-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F055",
+    "title": "墙体",
+    "kind": "整体系统",
+    "source": "assets/sources/A1-crop-wall.jpg",
+    "source_crop": [
+      0.03,
+      0.06,
+      0.94,
+      0.44
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F055-source.jpg",
+    "locator": "assets/v002/F055-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F056",
+    "title": "墙砖族",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_crop": [
+      0.385,
+      0.68,
+      0.437,
+      0.716
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F056-source.jpg",
+    "locator": "assets/v002/F056-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F057",
+    "title": "室内地面系统",
+    "kind": "铺地系统",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_crop": [
+      0.32,
+      0.69,
+      0.7,
+      0.92
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F057-source.jpg",
+    "locator": "assets/v002/F057-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F058",
+    "title": "室内条砖族",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F058-source.jpg",
+    "locator": "assets/v002/F058-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F059",
+    "title": "室内方砖族 · 约265mm见方型",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F059-source.jpg",
+    "locator": "assets/v002/F059-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F060",
+    "title": "室内方砖族 · 约315×305mm型",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p133.jpg",
+    "source_crop": [
+      0.35,
+      0.76,
+      0.66,
+      0.91
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F060-source.jpg",
+    "locator": "assets/v002/F060-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F061",
+    "title": "神台",
+    "kind": "设施组合",
+    "source": "assets/sources/A1-p134.jpg",
+    "source_crop": [
+      0.14,
+      0.04,
+      0.83,
+      0.28
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F061-source.jpg",
+    "locator": "assets/v002/F061-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F062",
+    "title": "望板系统",
+    "kind": "木构系统",
+    "source": "assets/sources/A1-p292.jpg",
+    "source_crop": [
+      0.24,
+      0.25,
+      0.43,
+      0.43
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F062-source.jpg",
+    "locator": "assets/v002/F062-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F063",
+    "title": "正吻",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p140.jpg",
+    "source_crop": [
+      0.34,
+      0.6,
+      0.64,
+      0.885
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F063-source.jpg",
+    "locator": "assets/v002/F063-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F064",
+    "title": "垂兽",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p141.jpg",
+    "source_crop": [
+      0.43,
+      0.18,
+      0.59,
+      0.35
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F064-source.jpg",
+    "locator": "assets/v002/F064-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F065",
+    "title": "戗兽",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p142.jpg",
+    "source_crop": [
+      0.51,
+      0.14,
+      0.68,
+      0.32
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F065-source.jpg",
+    "locator": "assets/v002/F065-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F066",
+    "title": "仙人",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p143.jpg",
+    "source_crop": [
+      0.27,
+      0.59,
+      0.53,
+      0.89
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F066-source.jpg",
+    "locator": "assets/v002/F066-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F067",
+    "title": "门木作系统",
+    "kind": "木作组合",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_crop": [
+      0.43,
+      0.56,
+      0.535,
+      0.735
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F067-source.jpg",
+    "locator": "assets/v002/F067-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F068",
+    "title": "窗木作系统",
+    "kind": "木作组合",
+    "source": "assets/sources/A1-p283.jpg",
+    "source_crop": [
+      0.285,
+      0.565,
+      0.405,
+      0.684
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F068-source.jpg",
+    "locator": "assets/v002/F068-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F069",
+    "title": "单向长开斗族",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_crop": [
+      0.669,
+      0.31,
+      0.714,
+      0.34
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-DOU-SINGLE-LONGKAI-001",
+    "model": "assets/approved/4ca0ff8c16-AXON.png",
+    "source_panel": "assets/v002/F069-source.jpg",
+    "locator": "assets/v002/F069-locator.jpg",
+    "model_panel": "assets/v002/F069-model.jpg"
+  },
+  {
+    "id": "F070",
+    "title": "交互斗族",
+    "kind": "实体构件族",
+    "source": "assets/official/c9956e9f0c-04_SOURCE_交互斗.png",
+    "source_crop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": "CMP-DOU-INTERACTIVE-001",
+    "model": "assets/approved/e243cb92cd-AXON.png",
+    "source_panel": "assets/v002/F070-source.jpg",
+    "locator": "assets/v002/F070-locator.jpg",
+    "model_panel": "assets/v002/F070-model.jpg"
+  },
+  {
+    "id": "F071",
+    "title": "散斗族",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p295.jpg",
+    "source_crop": [
+      0.214,
+      0.49,
+      0.258,
+      0.525
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": "assets/models/LOCAL_C02--4--axon.png",
+    "source_panel": "assets/v002/F071-source.jpg",
+    "locator": "assets/v002/F071-locator.jpg",
+    "model_panel": "assets/v002/F071-model.jpg"
+  },
+  {
+    "id": "F072",
+    "title": "替木实体族",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p085.jpg",
+    "source_crop": [
+      0.21,
+      0.497,
+      0.83,
+      0.7
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": "assets/models/ASSEMBLY_WORK_V003--18--axon.png",
+    "source_panel": "assets/v002/F072-source.jpg",
+    "locator": "assets/v002/F072-locator.jpg",
+    "model_panel": "assets/v002/F072-model.jpg"
+  },
+  {
+    "id": "F073",
+    "title": "板瓦",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_crop": [
+      0.37,
+      0.83,
+      0.49,
+      0.89
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F073-source.jpg",
+    "locator": "assets/v002/F073-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F074",
+    "title": "勾头",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_crop": [
+      0.32,
+      0.77,
+      0.45,
+      0.85
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F074-source.jpg",
+    "locator": "assets/v002/F074-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F075",
+    "title": "滴水",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p144.jpg",
+    "source_crop": [
+      0.373,
+      0.83,
+      0.492,
+      0.892
+    ],
+    "identity_inference": false,
+    "visible_edge_trace_count": 1,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F075-source.jpg",
+    "locator": "assets/v002/F075-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F076",
+    "title": "博风板",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_crop": [
+      0.455,
+      0.19,
+      0.75,
+      0.37
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F076-source.jpg",
+    "locator": "assets/v002/F076-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F077",
+    "title": "悬鱼",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_crop": [
+      0.46,
+      0.285,
+      0.5,
+      0.367
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F077-source.jpg",
+    "locator": "assets/v002/F077-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F078",
+    "title": "惹草",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p285.jpg",
+    "source_crop": [
+      0.38,
+      0.342,
+      0.416,
+      0.39
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F078-source.jpg",
+    "locator": "assets/v002/F078-locator.jpg",
+    "model_panel": null
+  },
+  {
+    "id": "F079",
+    "title": "生头木",
+    "kind": "实体构件族",
+    "source": "assets/sources/A1-p291.jpg",
+    "source_crop": [
+      0.26,
+      0.405,
+      0.43,
+      0.49
+    ],
+    "identity_inference": true,
+    "visible_edge_trace_count": 0,
+    "model_id": null,
+    "model": null,
+    "source_panel": "assets/v002/F079-source.jpg",
+    "locator": "assets/v002/F079-locator.jpg",
+    "model_panel": null
+  }
+]

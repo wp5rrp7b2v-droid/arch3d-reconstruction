@@ -1,0 +1,21 @@
+{
+  "status": "PASS_STATIC_DELIVERY_CHECKS",
+  "detail_pages": 79,
+  "covered_scope_entries": 74,
+  "linked_master_families": 26,
+  "registry_records": 506,
+  "registry_records_are_physical_count": false,
+  "source_images": 120,
+  "model_binary_jobs": 18,
+  "model_render_views": 327,
+  "checked_local_references": 1863,
+  "decoded_referenced_images": 296,
+  "missing_links": 0,
+  "missing_target_families": 0,
+  "all_master_pages_have_existing_model_views": true,
+  "all_binary_and_mesh_checks_pass": true,
+  "source_hash_checks_pass": true,
+  "browser_visual_qa": "NOT_RUN_NO_SUPPORTED_BROWSER_PLUGIN",
+  "formal_models_modified": false,
+  "main_merged": false
+}

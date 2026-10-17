@@ -1,0 +1,92 @@
+[
+  {
+    "id": "CMP-FRAME-ZHAQIAN-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10626941998,
+    "sha256": "d8636ae910d286f3629b3ab0b087a18f6e70dbbc8f967ef30d79c4454f4e4cd6"
+  },
+  {
+    "id": "CMP-FRAME-PURLIN-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10632275014,
+    "sha256": "5b14625130f57a744c3654c060ff2e06b2520df973fee5cf2974f39b13e663f4"
+  },
+  {
+    "id": "CMP-FRAME-TUOJIAO-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10689220649,
+    "sha256": "23ed48fba3bf63f58a690ab7b5f236435ffd5ce069e3b5d115f4b7bdaf6e6c3f"
+  },
+  {
+    "id": "CMP-FRAME-CHASHOU-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10735946772,
+    "sha256": "25da16f9e69c930ff4b37523c23bb19ac7ef1f3c5dcf2ffcc7dcaf17f35eff25"
+  },
+  {
+    "id": "CMP-FRAME-SHUZHU-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10744639697,
+    "sha256": "becf3323c0ff02606abdbb04e15be550f7c5d4dd74a8d5b9f4bd9adef53c10b6"
+  },
+  {
+    "id": "CMP-FRAME-DAJIAOLIANG-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10800439343,
+    "sha256": "199e1dcf7274d732e26e430e80e171f9a2a4d0c55162fb6bb100fe51b681aa91"
+  },
+  {
+    "id": "CMP-FRAME-ZIJIAOLIANG-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10858207870,
+    "sha256": "104e62ad7737d70b1d2fae7b7fbdbef7ee048b327ca372a7ec7ca72553982d1b"
+  },
+  {
+    "id": "CMP-FRAME-LANE-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10899808683,
+    "sha256": "b3facc02fdef388f90ee38281b4bdc5f8d493dc71505b2de8b4308557f8e759d"
+  },
+  {
+    "id": "CMP-FRAME-YOUE-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10903011230,
+    "sha256": "6d368d5f67a47c819b13a7f90e30515bee6ec640a9a1d570e68886e9be829e16"
+  },
+  {
+    "id": "CMP-DOU-BOTTOM-LONGKAI-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10908700631,
+    "sha256": "7a5b6a0145efc3b2ca7d828032af6e61a093c07258d4da2bbb50ab9ca0f13e66"
+  },
+  {
+    "id": "CMP-GONG-MANGONG-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10924188411,
+    "sha256": "1f34bcd235f3cb035b3f4f241b7826e8aa8749abf2e40b63234ecd298eee4023"
+  },
+  {
+    "id": "CMP-GONG-LINGGONG-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10927005772,
+    "sha256": "4d260cf0fb29b348bac63bda7aae9a63856a69cd79e07a8b333de033415375a7"
+  },
+  {
+    "id": "CMP-GONG-HUAGONG-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10930899677,
+    "sha256": "0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e"
+  },
+  {
+    "id": "CMP-GONG-ANG-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 10950620532,
+    "sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8"
+  },
+  {
+    "id": "CMP-FRAME-TUOFENG-001",
+    "status": "RECOVERED_EXACT",
+    "artifact_id": 11391915287,
+    "sha256": "eb24ca1ad0e39df0bac3558f777f3844d2952cf2e0cbfe7b699b1d268ec60c7b"
+  }
+]
