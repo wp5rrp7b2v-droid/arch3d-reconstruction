@@ -70,10 +70,13 @@ def main():
 def finish():
  (QA/'CHROME_VALIDATION.json').write_text(json.dumps(RESULT,ensure_ascii=False,indent=2))
  h='<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../style.css"><nav><a href="../index.html">← 返回图库</a><span>实际Chrome浏览验证</span></nav><main><header><h1>浏览器验证与截图</h1><p>状态：'+RESULT['status']+' · Google Chrome '+RESULT.get('version','')+'</p><p>全部内容页面分别以本地文件及HTTP打开；桌面与390px窄屏检查图片解码、布局、搜索筛选和放大。截图是真实Chrome输出。</p><p><a href="CHROME_VALIDATION.json">逐页机器结果</a> · <a href="STATIC_VALIDATION.json">来源／范围自动验证</a> · <a href="VISUAL_REVIEW.json">人工视觉检查范围与限制</a></p></header><div class="qa-grid">'
- for k in range(1,5):h+=f'<a href="contact-{k}.jpg"><img src="contact-{k}.jpg" alt="第{k}组实际截图"><span>第{k}组：4个详情页首屏</span></a>'
+ for k in range(1,5):
+  if (QA/f'contact-{k}.jpg').exists():h+=f'<a href="contact-{k}.jpg"><img src="contact-{k}.jpg" alt="第{k}组实际截图"><span>第{k}组：4个详情页首屏</span></a>'
  h+='</div><h2>逐页完整截图</h2><p>'
  for row in RESULT['pages']:
-  stem=row.get('screenshot_stem',Path(row['file']).stem);h+=f'<a href="screenshots/{stem}-desktop.jpg">{stem} 桌面</a> / <a href="screenshots/{stem}-mobile.jpg">窄屏</a>　'
+  stem=row.get('screenshot_stem',Path(row['file']).stem)
+  if (QA/f'screenshots/{stem}-desktop.jpg').exists():h+=f'<a href="screenshots/{stem}-desktop.jpg">{stem} 桌面</a>　'
+  if (QA/f'screenshots/{stem}-mobile.jpg').exists():h+=f'<a href="screenshots/{stem}-mobile.jpg">{stem} 窄屏</a>　'
  h+='</p></main></html>'; (QA/'index.html').write_text(h)
 if __name__=='__main__':
  try:main()
