@@ -1,4 +1,8 @@
-"""Actual installed Google Chrome, every HTML page via file:// and HTTP."""
+"""Actual installed Google Chrome, every HTML page via file:// and HTTP.
+
+Failure reports link only screenshots already produced, so a partial run does
+not create broken links that prevent the next full validation run.
+"""
 from pathlib import Path
 import json, shutil, time, traceback, platform, http.server, functools, threading
 from PIL import Image, ImageDraw
