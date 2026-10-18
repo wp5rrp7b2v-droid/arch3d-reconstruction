@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>万佛殿构件速览｜简明版 V001</title>
+<style>
+:root{--paper:#f8f7f3;--ink:#202f36;--sub:#58666a;--line:#dde1de;--accent:#20615a;--card:#fff;--faint:#edf1ee}*{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"PingFang SC","Noto Sans CJK SC",Arial,sans-serif}header{padding:34px 5vw 23px;max-width:1600px;margin:auto}h1{font-size:clamp(26px,3.3vw,37px);letter-spacing:.025em;margin:8px 0}header p{color:var(--sub);max-width:950px;line-height:1.7;font-size:14px}header .eyebrow{color:var(--accent);font-size:12px;letter-spacing:.14em;font-weight:700}.tools{position:sticky;top:0;z-index:5;background:rgba(248,247,243,.97);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 5vw;backdrop-filter:blur(14px)}.toolbar{max-width:1600px;margin:auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center}.toolbar input,.toolbar select{font:inherit;background:white;border:1px solid #cbd4d0;border-radius:9px;padding:10px 12px;color:var(--ink);height:42px}.toolbar input{width:min(360px,100%);flex:1 1 235px}.toolbar output{margin-left:auto;font-size:13px;color:var(--accent);font-weight:600}.toolbar button{cursor:pointer;border:1px solid #cbd4d0;border-radius:8px;background:#fff;color:var(--ink);padding:10px 13px}.frame{max-width:1600px;margin:auto;padding:19px 5vw 70px}.info{font-size:12px;line-height:1.7;color:var(--sub);padding-bottom:13px}.head,.line{display:grid;grid-template-columns:100px minmax(126px,1fr) minmax(130px,1.1fr) 103px minmax(155px,1.45fr) minmax(155px,1.45fr);gap:13px;align-items:start}.head{position:relative;background:#e9eee9;color:#41534e;font-weight:700;letter-spacing:.04em;font-size:12px;padding:13px 14px;border-radius:10px;margin-bottom:10px}.line{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:0 0 12px;padding:15px 14px;box-shadow:0 3px 15px #22352e08}.family{display:inline-block;padding:6px 10px;border-radius:7px;background:var(--faint);color:#2c655c;font-size:12px;font-weight:650}.title a{font-weight:750;color:var(--ink);text-decoration:none;font-size:15px}.title a:hover{color:var(--accent);text-decoration:underline}.sub{font-size:11px;color:var(--sub);line-height:1.45;margin-top:6px}.location{font-size:13px;line-height:1.7;word-wrap:break-word}.location details{margin-top:7px}.location summary{color:var(--accent);cursor:pointer;font-size:12px}.location .all{padding-top:7px;font-size:12px;color:var(--sub)}.count{font-size:16px;font-weight:700}.count small{display:block;color:var(--sub);font-size:10px;line-height:1.5;font-weight:400;margin-top:7px}.visual{display:block;background:#f3f5f4;border:1px solid #e1e6e3;border-radius:8px;overflow:hidden;min-height:122px;width:100%;position:relative;cursor:zoom-in;padding:0}.visual img{display:block;width:100%;height:164px;object-fit:contain}.visual .empty{display:grid;place-items:center;min-height:164px;color:#7d8b86;font-size:13px;text-align:center;padding:10px}.visual:focus-visible,.toolbar input:focus-visible,.toolbar select:focus-visible{outline:3px solid #8ebab2;outline-offset:2px}.visual:hover{border-color:var(--accent)}.visualtext{font-size:11px;color:var(--sub);line-height:1.5;margin-top:7px}.visualtext.good{color:var(--accent)}.emptytext{color:#926844}.bottom{padding-top:15px;color:var(--sub);font-size:12px;line-height:1.8}.bottom a{color:var(--accent)}.modal{position:fixed;inset:0;background:rgba(10,19,20,.94);display:flex;align-items:center;justify-content:center;z-index:100;padding:56px 3vw 24px}.modal img{max-width:100%;max-height:87vh;object-fit:contain}.modal .close{position:absolute;right:20px;top:13px;background:#fff;border:0;border-radius:7px;padding:8px 13px;cursor:pointer}.modal .label{position:absolute;left:22px;top:19px;color:white;font-size:13px}.modal[hidden]{display:none!important}@media(max-width:1100px){.head,.line{grid-template-columns:85px minmax(105px,1fr) minmax(110px,1fr) 80px minmax(120px,1.15fr) minmax(120px,1.15fr);gap:9px}.line{padding:10px}.visual img,.visual .empty{height:135px;min-height:135px}}@media(max-width:760px){header{padding:26px 16px 13px}.tools{padding:10px 16px}.frame{padding:14px 16px 50px}.head{display:none}.line{grid-template-columns:1fr 1fr;gap:11px}.line .kind,.line .title,.line .location,.line .count{grid-column:1 / -1}.line .kind{grid-row:1}.line .title{grid-row:2}.line .location{grid-row:3}.line .count{grid-row:4}.line .reference{grid-column:1}.line .model{grid-column:2}.line .reference:before{content:"参考外形";font-size:12px;font-weight:700;display:block;margin-bottom:7px}.line .model:before{content:"现有3D模型";font-size:12px;font-weight:700;display:block;margin-bottom:7px}.visual img,.visual .empty{height:150px;min-height:150px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head>
+<body><header><div class="eyebrow">平遥镇国寺 · 万佛殿 · 五代（963年）</div><h1>构件速览 <span style="font-weight:400;color:#688179">V001</span></h1>
+<p>只看六件事：<b>家族 / 构件 / 位置 / 个数 / 参考外形 / 现有模型</b>。图片点击可放大，构件名点击进入 V002 详细证据页。已有结构推算图、实物照片或官方数字展示图分别保持原有身份；它们不一定给出完整单体。时代典型形制尚未独立补齐时，不冒充已核定原貌。</p></header>
+<div class="tools"><div class="toolbar"><input id="q" type="search" placeholder="搜索构件或位置，例如：华栱、东缝" aria-label="搜索构件或位置"><select id="family" aria-label="筛选家族"><option value="">全部家族</option><option>木柱</option><option>梁架</option><option>斗栱</option><option>枋材</option><option>瓦作</option><option>台基石作</option><option>石碑</option><option>砖作</option><option>脊饰</option><option>屋面木作</option></select><select id="model" aria-label="筛选模型"><option value="">全部模型状态</option><option value="yes">有模型</option><option value="no">尚无模型</option></select><button id="reset" type="button">清除筛选</button><output id="total" aria-live="polite">58 种构件</output></div></div>
+<main class="frame"><div class="info">数量仅按已有登记显示：明确登记的记“件”；推导或位置登记分别标注，未知不填零。家族为便于浏览的归类，不修改正式 Master 家族。此为 PR #72 衍生的待审简版，不表示模型批准。</div>
+<div class="head"><div>家族</div><div>构件</div><div>位置</div><div>个数</div><div>长什么样</div><div>模型的样子</div></div>
+<div id="rows">
+<article class="line" data-family="木柱" data-model="yes" data-search="柱 · 普通柱 木柱 北侧西中柱 北侧东中柱 东侧北中柱 东侧南中柱 南侧东中柱 南侧西中柱 西侧南中柱 西侧北中柱">
+<div class="kind"><span class="family">木柱</span></div>
+<div class="title"><a href="pages/F001.html" title="打开柱 · 普通柱详细资料">柱 · 普通柱</a><div class="sub">类型 F001</div></div>
+<div class="location">北侧西中柱、北侧东中柱等 8 处<details><summary>展开全部位置</summary><div class="all">北侧西中柱、北侧东中柱、东侧北中柱、东侧南中柱、南侧东中柱、南侧西中柱、西侧南中柱、西侧北中柱</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">8 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F001-source.jpg" data-label="柱 · 普通柱 · 现有资料参考" aria-label="放大柱 · 普通柱资料图"><img loading="lazy" src="assets/v002/F001-source.jpg" alt="柱 · 普通柱参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">官方数字展示参考（身份可能推断）</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F001-model.jpg" data-label="柱 · 普通柱 · 当前 Master" aria-label="放大柱 · 普通柱模型图"><img loading="lazy" src="assets/v002/F001-model.jpg" alt="柱 · 普通柱现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="木柱" data-model="yes" data-search="柱 · 角柱 木柱 西北角柱 东北角柱 东南角柱 西南角柱">
+<div class="kind"><span class="family">木柱</span></div>
+<div class="title"><a href="pages/F002.html" title="打开柱 · 角柱详细资料">柱 · 角柱</a><div class="sub">类型 F002</div></div>
+<div class="location">西北角柱、东北角柱等 4 处<details><summary>展开全部位置</summary><div class="all">西北角柱、东北角柱、东南角柱、西南角柱</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">4 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F002-source.jpg" data-label="柱 · 角柱 · 现有资料参考" aria-label="放大柱 · 角柱资料图"><img loading="lazy" src="assets/v002/F002-source.jpg" alt="柱 · 角柱参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">官方数字展示参考（身份可能推断）</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F002-model.jpg" data-label="柱 · 角柱 · 当前 Master" aria-label="放大柱 · 角柱模型图"><img loading="lazy" src="assets/v002/F002-model.jpg" alt="柱 · 角柱现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="下六椽栿 梁架 东缝 西缝">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F003.html" title="打开下六椽栿详细资料">下六椽栿</a><div class="sub">类型 F003</div></div>
+<div class="location">东缝、西缝</div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">2 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F003-source.jpg" data-label="下六椽栿 · 现有资料参考" aria-label="放大下六椽栿资料图"><img loading="lazy" src="assets/v002/F003-source.jpg" alt="下六椽栿参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F003-model.jpg" data-label="下六椽栿 · 当前 Master" aria-label="放大下六椽栿模型图"><img loading="lazy" src="assets/v002/F003-model.jpg" alt="下六椽栿现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="上六椽栿 梁架 东缝 西缝">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F004.html" title="打开上六椽栿详细资料">上六椽栿</a><div class="sub">类型 F004</div></div>
+<div class="location">东缝、西缝</div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">2 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F004-source.jpg" data-label="上六椽栿 · 现有资料参考" aria-label="放大上六椽栿资料图"><img loading="lazy" src="assets/v002/F004-source.jpg" alt="上六椽栿参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F004-model.jpg" data-label="上六椽栿 · 当前 Master" aria-label="放大上六椽栿模型图"><img loading="lazy" src="assets/v002/F004-model.jpg" alt="上六椽栿现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="四椽栿 梁架 东缝 西缝">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F005.html" title="打开四椽栿详细资料">四椽栿</a><div class="sub">类型 F005</div></div>
+<div class="location">东缝、西缝</div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">2 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F005-source.jpg" data-label="四椽栿 · 现有资料参考" aria-label="放大四椽栿资料图"><img loading="lazy" src="assets/v002/F005-source.jpg" alt="四椽栿参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F005-model.jpg" data-label="四椽栿 · 当前 Master" aria-label="放大四椽栿模型图"><img loading="lazy" src="assets/v002/F005-model.jpg" alt="四椽栿现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="平梁 · 东西缝型 梁架 东缝 西缝">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F006.html" title="打开平梁 · 东西缝型详细资料">平梁 · 东西缝型</a><div class="sub">类型 F006</div></div>
+<div class="location">东缝、西缝</div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">2 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F006-source.jpg" data-label="平梁 · 东西缝型 · 现有资料参考" aria-label="放大平梁 · 东西缝型资料图"><img loading="lazy" src="assets/v002/F006-source.jpg" alt="平梁 · 东西缝型参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F006-model.jpg" data-label="平梁 · 东西缝型 · 当前 Master" aria-label="放大平梁 · 东西缝型模型图"><img loading="lazy" src="assets/v002/F006-model.jpg" alt="平梁 · 东西缝型现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="平梁 · 山面型 梁架 东山 西山">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F007.html" title="打开平梁 · 山面型详细资料">平梁 · 山面型</a><div class="sub">类型 F007</div></div>
+<div class="location">东山、西山</div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">2 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F007-source.jpg" data-label="平梁 · 山面型 · 现有资料参考" aria-label="放大平梁 · 山面型资料图"><img loading="lazy" src="assets/v002/F007-source.jpg" alt="平梁 · 山面型参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F007-model.jpg" data-label="平梁 · 山面型 · 当前 Master" aria-label="放大平梁 · 山面型模型图"><img loading="lazy" src="assets/v002/F007-model.jpg" alt="平梁 · 山面型现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="驼峰 · 下层承托角色 梁架 四椽栿—平梁承托体系 / 平梁以上脊部支撑体系；逐件位置待明间东缝证据对应">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F008.html" title="打开驼峰 · 下层承托角色详细资料">驼峰 · 下层承托角色</a><div class="sub">类型 F008</div></div>
+<div class="location">四椽栿—平梁承托体系 / 平梁以上脊部支撑体系；逐件位置待明间东缝证据对应</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F008-source.jpg" data-label="驼峰 · 下层承托角色 · 现有资料参考" aria-label="放大驼峰 · 下层承托角色资料图"><img loading="lazy" src="assets/v002/F008-source.jpg" alt="驼峰 · 下层承托角色参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F008-model.jpg" data-label="驼峰 · 下层承托角色 · 当前 Master" aria-label="放大驼峰 · 下层承托角色模型图"><img loading="lazy" src="assets/v002/F008-model.jpg" alt="驼峰 · 下层承托角色现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="驼峰 · 脊部承托角色 梁架 四椽栿—平梁承托体系 / 平梁以上脊部支撑体系；逐件位置待明间东缝证据对应">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F009.html" title="打开驼峰 · 脊部承托角色详细资料">驼峰 · 脊部承托角色</a><div class="sub">类型 F009</div></div>
+<div class="location">四椽栿—平梁承托体系 / 平梁以上脊部支撑体系；逐件位置待明间东缝证据对应</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F009-source.jpg" data-label="驼峰 · 脊部承托角色 · 现有资料参考" aria-label="放大驼峰 · 脊部承托角色资料图"><img loading="lazy" src="assets/v002/F009-source.jpg" alt="驼峰 · 脊部承托角色参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F009-model.jpg" data-label="驼峰 · 脊部承托角色 · 当前 Master" aria-label="放大驼峰 · 脊部承托角色模型图"><img loading="lazy" src="assets/v002/F009-model.jpg" alt="驼峰 · 脊部承托角色现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="丁栿 梁架 东山南侧 / 上丁栿 东山北侧 / 上丁栿 东山南侧 / 下丁栿 东山北侧 / 下丁栿 西山南侧 / 上丁栿 西山北侧 / 上丁栿 西山南侧 / 下丁栿 西山北侧 / 下丁栿">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F010.html" title="打开丁栿详细资料">丁栿</a><div class="sub">类型 F010</div></div>
+<div class="location">东山南侧 / 上丁栿、东山北侧 / 上丁栿等 8 处<details><summary>展开全部位置</summary><div class="all">东山南侧 / 上丁栿、东山北侧 / 上丁栿、东山南侧 / 下丁栿、东山北侧 / 下丁栿、西山南侧 / 上丁栿、西山北侧 / 上丁栿、西山南侧 / 下丁栿、西山北侧 / 下丁栿</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">8 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F010-source.jpg" data-label="丁栿 · 现有资料参考" aria-label="放大丁栿资料图"><img loading="lazy" src="assets/v002/F010-source.jpg" alt="丁栿参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F010-model.jpg" data-label="丁栿 · 当前 Master" aria-label="放大丁栿模型图"><img loading="lazy" src="assets/v002/F010-model.jpg" alt="丁栿现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="乳栿 梁架 东北角 / 上斜乳栿 东北角 / 下斜乳栿 东南角 / 上斜乳栿 东南角 / 下斜乳栿 西南角 / 上斜乳栿 西南角 / 下斜乳栿 西北角 / 上斜乳栿 西北角 / 下斜乳栿">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F011.html" title="打开乳栿详细资料">乳栿</a><div class="sub">类型 F011</div></div>
+<div class="location">东北角 / 上斜乳栿、东北角 / 下斜乳栿等 8 处<details><summary>展开全部位置</summary><div class="all">东北角 / 上斜乳栿、东北角 / 下斜乳栿、东南角 / 上斜乳栿、东南角 / 下斜乳栿、西南角 / 上斜乳栿、西南角 / 下斜乳栿、西北角 / 上斜乳栿、西北角 / 下斜乳栿</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">8 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F011-source.jpg" data-label="乳栿 · 现有资料参考" aria-label="放大乳栿资料图"><img loading="lazy" src="assets/v002/F011-source.jpg" alt="乳栿参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F011-model.jpg" data-label="乳栿 · 当前 Master" aria-label="放大乳栿模型图"><img loading="lazy" src="assets/v002/F011-model.jpg" alt="乳栿现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="剳牵 梁架 东山 / 具体端点待附图锁定 西山 / 具体端点待附图锁定 正身体系 / 待定位">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F012.html" title="打开剳牵详细资料">剳牵</a><div class="sub">类型 F012</div></div>
+<div class="location">东山 / 具体端点待附图锁定、西山 / 具体端点待附图锁定、正身体系 / 待定位</div>
+<div class="count" title="现有记录数，实物件数待核实">14 条<small>现有记录数，实物件数待核实</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F012-source.jpg" data-label="剳牵 · 现有资料参考" aria-label="放大剳牵资料图"><img loading="lazy" src="assets/v002/F012-source.jpg" alt="剳牵参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F012-model.jpg" data-label="剳牵 · 当前 Master" aria-label="放大剳牵模型图"><img loading="lazy" src="assets/v002/F012-model.jpg" alt="剳牵现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="槫 梁架 正身南撩风槫 / 西段 正身南撩风槫 / 中段 正身南撩风槫 / 东段 正身南下平槫 / 西段 正身南下平槫 / 中段 正身南下平槫 / 东段 正身南上平槫 / 西段 正身南上平槫 / 中段 正身南上平槫 / 东段 正身脊槫 / 西段 正身脊槫 / 中段 正身脊槫 / 东段 正身北上平槫 / 西段 正身北上平槫 / 中段 正身北上平槫 / 东段 正身北下平槫 / 西段 正身北下平槫 / 中段 正身北下平槫 / 东段 正身北撩风槫 / 西段 正身北撩风槫 / 中段 正身北撩风槫 / 东段 东山第1道 / 南段 东山第1道 / 中段 东山第1道 / 北段 东山第2道 / 南段 东山第2道 / 中段 东山第2道 / 北段 西山第1道 / 南段 西山第1道 / 中段 西山第1道 / 北段 西山第2道 / 南段 西山第2道 / 中段 西山第2道 / 北段">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F013.html" title="打开槫详细资料">槫</a><div class="sub">类型 F013</div></div>
+<div class="location">正身南撩风槫 / 西段、正身南撩风槫 / 中段等 33 处<details><summary>展开全部位置</summary><div class="all">正身南撩风槫 / 西段、正身南撩风槫 / 中段、正身南撩风槫 / 东段、正身南下平槫 / 西段、正身南下平槫 / 中段、正身南下平槫 / 东段、正身南上平槫 / 西段、正身南上平槫 / 中段、正身南上平槫 / 东段、正身脊槫 / 西段、正身脊槫 / 中段、正身脊槫 / 东段、正身北上平槫 / 西段、正身北上平槫 / 中段、正身北上平槫 / 东段、正身北下平槫 / 西段、正身北下平槫 / 中段、正身北下平槫 / 东段、正身北撩风槫 / 西段、正身北撩风槫 / 中段、正身北撩风槫 / 东段、东山第1道 / 南段、东山第1道 / 中段、东山第1道 / 北段、东山第2道 / 南段、东山第2道 / 中段、东山第2道 / 北段、西山第1道 / 南段、西山第1道 / 中段、西山第1道 / 北段、西山第2道 / 南段、西山第2道 / 中段、西山第2道 / 北段</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">33 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F013-source.jpg" data-label="槫 · 现有资料参考" aria-label="放大槫资料图"><img loading="lazy" src="assets/v002/F013-source.jpg" alt="槫参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F013-model.jpg" data-label="槫 · 当前 Master" aria-label="放大槫模型图"><img loading="lazy" src="assets/v002/F013-model.jpg" alt="槫现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="阑额 梁架 南立面西次间 南立面明间 南立面东次间 北立面西次间 北立面明间 北立面东次间 东山北次间 东山明间 东山南次间 西山北次间 西山明间 西山南次间">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F014.html" title="打开阑额详细资料">阑额</a><div class="sub">类型 F014</div></div>
+<div class="location">南立面西次间、南立面明间等 12 处<details><summary>展开全部位置</summary><div class="all">南立面西次间、南立面明间、南立面东次间、北立面西次间、北立面明间、北立面东次间、东山北次间、东山明间、东山南次间、西山北次间、西山明间、西山南次间</div></details></div>
+<div class="count" title="仅已登记位置数；不是已核实实物数">12 处<small>仅已登记位置数；不是已核实实物数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F014-source.jpg" data-label="阑额 · 现有资料参考" aria-label="放大阑额资料图"><img loading="lazy" src="assets/v002/F014-source.jpg" alt="阑额参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F014-model.jpg" data-label="阑额 · 当前 Master" aria-label="放大阑额模型图"><img loading="lazy" src="assets/v002/F014-model.jpg" alt="阑额现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="由额 梁架 南立面西次间 南立面明间 南立面东次间 北立面明间">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F015.html" title="打开由额详细资料">由额</a><div class="sub">类型 F015</div></div>
+<div class="location">南立面西次间、南立面明间等 4 处<details><summary>展开全部位置</summary><div class="all">南立面西次间、南立面明间、南立面东次间、北立面明间</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">4 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F015-source.jpg" data-label="由额 · 现有资料参考" aria-label="放大由额资料图"><img loading="lazy" src="assets/v002/F015-source.jpg" alt="由额参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F015-model.jpg" data-label="由额 · 当前 Master" aria-label="放大由额模型图"><img loading="lazy" src="assets/v002/F015-model.jpg" alt="由额现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="大角梁 梁架 东北角 东南角 西南角 西北角">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F016.html" title="打开大角梁详细资料">大角梁</a><div class="sub">类型 F016</div></div>
+<div class="location">东北角、东南角等 4 处<details><summary>展开全部位置</summary><div class="all">东北角、东南角、西南角、西北角</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">4 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F016-source.jpg" data-label="大角梁 · 现有资料参考" aria-label="放大大角梁资料图"><img loading="lazy" src="assets/v002/F016-source.jpg" alt="大角梁参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F016-model.jpg" data-label="大角梁 · 当前 Master" aria-label="放大大角梁模型图"><img loading="lazy" src="assets/v002/F016-model.jpg" alt="大角梁现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="子角梁 梁架 东北角 东南角 西南角 西北角">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F017.html" title="打开子角梁详细资料">子角梁</a><div class="sub">类型 F017</div></div>
+<div class="location">东北角、东南角等 4 处<details><summary>展开全部位置</summary><div class="all">东北角、东南角、西南角、西北角</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">4 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F017-source.jpg" data-label="子角梁 · 现有资料参考" aria-label="放大子角梁资料图"><img loading="lazy" src="assets/v002/F017-source.jpg" alt="子角梁参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F017-model.jpg" data-label="子角梁 · 当前 Master" aria-label="放大子角梁模型图"><img loading="lazy" src="assets/v002/F017-model.jpg" alt="子角梁现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="no" data-search="隐角梁 梁架 东北角 东南角 西南角 西北角">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F018.html" title="打开隐角梁详细资料">隐角梁</a><div class="sub">类型 F018</div></div>
+<div class="location">东北角、东南角等 4 处<details><summary>展开全部位置</summary><div class="all">东北角、东南角、西南角、西北角</div></details></div>
+<div class="count" title="按既有布局推导，待按物理件核验">4 件*<small>按既有布局推导，待按物理件核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F018-source.jpg" data-label="隐角梁 · 现有资料参考" aria-label="放大隐角梁资料图"><img loading="lazy" src="assets/v002/F018-source.jpg" alt="隐角梁参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="托脚 梁架 东缝/南上平槫 东缝/南下平槫 东缝/北上平槫 东缝/北下平槫 西缝/南上平槫 西缝/南下平槫 西缝/北上平槫 西缝/北下平槫 东山南缝下平槫下 东山北缝下平槫下 西山南缝下平槫下 西山北缝下平槫下">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F019.html" title="打开托脚详细资料">托脚</a><div class="sub">类型 F019</div></div>
+<div class="location">东缝/南上平槫、东缝/南下平槫等 12 处<details><summary>展开全部位置</summary><div class="all">东缝/南上平槫、东缝/南下平槫、东缝/北上平槫、东缝/北下平槫、西缝/南上平槫、西缝/南下平槫、西缝/北上平槫、西缝/北下平槫、东山南缝下平槫下、东山北缝下平槫下、西山南缝下平槫下、西山北缝下平槫下</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">12 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F019-source.jpg" data-label="托脚 · 现有资料参考" aria-label="放大托脚资料图"><img loading="lazy" src="assets/v002/F019-source.jpg" alt="托脚参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F019-model.jpg" data-label="托脚 · 当前 Master" aria-label="放大托脚模型图"><img loading="lazy" src="assets/v002/F019-model.jpg" alt="托脚现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="叉手 梁架 东缝平梁至脊部/南侧 东缝平梁至脊部/北侧 西缝平梁至脊部/南侧 西缝平梁至脊部/北侧 东山平梁至脊部/南侧 东山平梁至脊部/北侧 西山平梁至脊部/南侧 西山平梁至脊部/北侧">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F020.html" title="打开叉手详细资料">叉手</a><div class="sub">类型 F020</div></div>
+<div class="location">东缝平梁至脊部/南侧、东缝平梁至脊部/北侧等 8 处<details><summary>展开全部位置</summary><div class="all">东缝平梁至脊部/南侧、东缝平梁至脊部/北侧、西缝平梁至脊部/南侧、西缝平梁至脊部/北侧、东山平梁至脊部/南侧、东山平梁至脊部/北侧、西山平梁至脊部/南侧、西山平梁至脊部/北侧</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">8 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F020-source.jpg" data-label="叉手 · 现有资料参考" aria-label="放大叉手资料图"><img loading="lazy" src="assets/v002/F020-source.jpg" alt="叉手参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F020-model.jpg" data-label="叉手 · 当前 Master" aria-label="放大叉手模型图"><img loading="lazy" src="assets/v002/F020-model.jpg" alt="叉手现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="梁架" data-model="yes" data-search="蜀柱 梁架 东缝平梁上 西缝平梁上 东山平梁上 西山平梁上">
+<div class="kind"><span class="family">梁架</span></div>
+<div class="title"><a href="pages/F021.html" title="打开蜀柱详细资料">蜀柱</a><div class="sub">类型 F021</div></div>
+<div class="location">东缝平梁上、西缝平梁上等 4 处<details><summary>展开全部位置</summary><div class="all">东缝平梁上、西缝平梁上、东山平梁上、西山平梁上</div></details></div>
+<div class="count" title="按既有布局推导，待按物理件核验">4 件*<small>按既有布局推导，待按物理件核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F021-source.jpg" data-label="蜀柱 · 现有资料参考" aria-label="放大蜀柱资料图"><img loading="lazy" src="assets/v002/F021-source.jpg" alt="蜀柱参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F021-model.jpg" data-label="蜀柱 · 当前 Master" aria-label="放大蜀柱模型图"><img loading="lazy" src="assets/v002/F021-model.jpg" alt="蜀柱现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="柱头栌斗 斗栱 西北角柱 北侧西中柱 北侧东中柱 东北角柱 东侧北中柱 东侧南中柱 东南角柱 南侧东中柱 南侧西中柱 西南角柱 西侧南中柱 西侧北中柱">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F026.html" title="打开柱头栌斗详细资料">柱头栌斗</a><div class="sub">类型 F026</div></div>
+<div class="location">西北角柱、北侧西中柱等 12 处<details><summary>展开全部位置</summary><div class="all">西北角柱、北侧西中柱、北侧东中柱、东北角柱、东侧北中柱、东侧南中柱、东南角柱、南侧东中柱、南侧西中柱、西南角柱、西侧南中柱、西侧北中柱</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">12 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F026-source.jpg" data-label="柱头栌斗 · 现有资料参考" aria-label="放大柱头栌斗资料图"><img loading="lazy" src="assets/v002/F026-source.jpg" alt="柱头栌斗参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">官方数字展示参考（身份可能推断）</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F026-model.jpg" data-label="柱头栌斗 · 当前 Master" aria-label="放大柱头栌斗模型图"><img loading="lazy" src="assets/v002/F026-model.jpg" alt="柱头栌斗现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="补间铺作底斗 斗栱 南立面西次间 南立面明间 南立面东次间 北立面西次间 北立面明间 北立面东次间 东山北次间 东山明间 东山南次间 西山北次间 西山明间 西山南次间">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F027.html" title="打开补间铺作底斗详细资料">补间铺作底斗</a><div class="sub">类型 F027</div></div>
+<div class="location">南立面西次间、南立面明间等 12 处<details><summary>展开全部位置</summary><div class="all">南立面西次间、南立面明间、南立面东次间、北立面西次间、北立面明间、北立面东次间、东山北次间、东山明间、东山南次间、西山北次间、西山明间、西山南次间</div></details></div>
+<div class="count" title="仅已登记位置数；不是已核实实物数">12 处<small>仅已登记位置数；不是已核实实物数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F027-source.jpg" data-label="补间铺作底斗 · 现有资料参考" aria-label="放大补间铺作底斗资料图"><img loading="lazy" src="assets/v002/F027-source.jpg" alt="补间铺作底斗参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F027-model.jpg" data-label="补间铺作底斗 · 当前 Master" aria-label="放大补间铺作底斗模型图"><img loading="lazy" src="assets/v002/F027-model.jpg" alt="补间铺作底斗现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="华栱 · 一跳 斗栱 西南角转角铺作南向分支 / 一跳 南西次间补间铺作 / 一跳 南立面西中柱柱头铺作 / 一跳 南明间补间铺作 / 一跳 南立面东中柱柱头铺作 / 一跳 南东次间补间铺作 / 一跳 东南角转角铺作南向分支 / 一跳 西北角转角铺作北向分支 / 一跳 北西次间补间铺作 / 一跳 北立面西中柱柱头铺作 / 一跳 北明间补间铺作 / 一跳 北立面东中柱柱头铺作 / 一跳 北东次间补间铺作 / 一跳 东北角转角铺作北向分支 / 一跳 东北角转角铺作东向分支 / 一跳 东北次间补间铺作 / 一跳 东山北中柱柱头铺作 / 一跳 东明间补间铺作 / 一跳 东山南中柱柱头铺作 / 一跳 东南次间补间铺作 / 一跳 东南角转角铺作东向分支 / 一跳 西北角转角铺作西向分支 / 一跳 西北次间补间铺作 / 一跳 西山北中柱柱头铺作 / 一跳 西明间补间铺作 / 一跳 西山南中柱柱头铺作 / 一跳 西南次间补间铺作 / 一跳 西南角转角铺作西向分支 / 一跳">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F028.html" title="打开华栱 · 一跳详细资料">华栱 · 一跳</a><div class="sub">类型 F028</div></div>
+<div class="location">西南角转角铺作南向分支 / 一跳、南西次间补间铺作 / 一跳等 28 处<details><summary>展开全部位置</summary><div class="all">西南角转角铺作南向分支 / 一跳、南西次间补间铺作 / 一跳、南立面西中柱柱头铺作 / 一跳、南明间补间铺作 / 一跳、南立面东中柱柱头铺作 / 一跳、南东次间补间铺作 / 一跳、东南角转角铺作南向分支 / 一跳、西北角转角铺作北向分支 / 一跳、北西次间补间铺作 / 一跳、北立面西中柱柱头铺作 / 一跳、北明间补间铺作 / 一跳、北立面东中柱柱头铺作 / 一跳、北东次间补间铺作 / 一跳、东北角转角铺作北向分支 / 一跳、东北角转角铺作东向分支 / 一跳、东北次间补间铺作 / 一跳、东山北中柱柱头铺作 / 一跳、东明间补间铺作 / 一跳、东山南中柱柱头铺作 / 一跳、东南次间补间铺作 / 一跳、东南角转角铺作东向分支 / 一跳、西北角转角铺作西向分支 / 一跳、西北次间补间铺作 / 一跳、西山北中柱柱头铺作 / 一跳、西明间补间铺作 / 一跳、西山南中柱柱头铺作 / 一跳、西南次间补间铺作 / 一跳、西南角转角铺作西向分支 / 一跳</div></details></div>
+<div class="count" title="局部位置登记，不能直接当作整殿实物件数">28 处<small>局部位置登记，不能直接当作整殿实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F028-source.jpg" data-label="华栱 · 一跳 · 现有资料参考" aria-label="放大华栱 · 一跳资料图"><img loading="lazy" src="assets/v002/F028-source.jpg" alt="华栱 · 一跳参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">官方数字展示参考（身份可能推断）</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F028-model.jpg" data-label="华栱 · 一跳 · 当前 Master" aria-label="放大华栱 · 一跳模型图"><img loading="lazy" src="assets/v002/F028-model.jpg" alt="华栱 · 一跳现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="华栱 · 二跳 斗栱 西南角转角铺作南向分支 / 二跳 南西次间补间铺作 / 二跳 南立面西中柱柱头铺作 / 二跳 南明间补间铺作 / 二跳 南立面东中柱柱头铺作 / 二跳 南东次间补间铺作 / 二跳 东南角转角铺作南向分支 / 二跳 西北角转角铺作北向分支 / 二跳 北西次间补间铺作 / 二跳 北立面西中柱柱头铺作 / 二跳 北明间补间铺作 / 二跳 北立面东中柱柱头铺作 / 二跳 北东次间补间铺作 / 二跳 东北角转角铺作北向分支 / 二跳 东北角转角铺作东向分支 / 二跳 东北次间补间铺作 / 二跳 东山北中柱柱头铺作 / 二跳 东明间补间铺作 / 二跳 东山南中柱柱头铺作 / 二跳 东南次间补间铺作 / 二跳 东南角转角铺作东向分支 / 二跳 西北角转角铺作西向分支 / 二跳 西北次间补间铺作 / 二跳 西山北中柱柱头铺作 / 二跳 西明间补间铺作 / 二跳 西山南中柱柱头铺作 / 二跳 西南次间补间铺作 / 二跳 西南角转角铺作西向分支 / 二跳">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F029.html" title="打开华栱 · 二跳详细资料">华栱 · 二跳</a><div class="sub">类型 F029</div></div>
+<div class="location">西南角转角铺作南向分支 / 二跳、南西次间补间铺作 / 二跳等 28 处<details><summary>展开全部位置</summary><div class="all">西南角转角铺作南向分支 / 二跳、南西次间补间铺作 / 二跳、南立面西中柱柱头铺作 / 二跳、南明间补间铺作 / 二跳、南立面东中柱柱头铺作 / 二跳、南东次间补间铺作 / 二跳、东南角转角铺作南向分支 / 二跳、西北角转角铺作北向分支 / 二跳、北西次间补间铺作 / 二跳、北立面西中柱柱头铺作 / 二跳、北明间补间铺作 / 二跳、北立面东中柱柱头铺作 / 二跳、北东次间补间铺作 / 二跳、东北角转角铺作北向分支 / 二跳、东北角转角铺作东向分支 / 二跳、东北次间补间铺作 / 二跳、东山北中柱柱头铺作 / 二跳、东明间补间铺作 / 二跳、东山南中柱柱头铺作 / 二跳、东南次间补间铺作 / 二跳、东南角转角铺作东向分支 / 二跳、西北角转角铺作西向分支 / 二跳、西北次间补间铺作 / 二跳、西山北中柱柱头铺作 / 二跳、西明间补间铺作 / 二跳、西山南中柱柱头铺作 / 二跳、西南次间补间铺作 / 二跳、西南角转角铺作西向分支 / 二跳</div></details></div>
+<div class="count" title="局部位置登记，不能直接当作整殿实物件数">28 处<small>局部位置登记，不能直接当作整殿实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F029-source.jpg" data-label="华栱 · 二跳 · 现有资料参考" aria-label="放大华栱 · 二跳资料图"><img loading="lazy" src="assets/v002/F029-source.jpg" alt="华栱 · 二跳参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">官方数字展示参考（身份可能推断）</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F029-model.jpg" data-label="华栱 · 二跳 · 当前 Master" aria-label="放大华栱 · 二跳模型图"><img loading="lazy" src="assets/v002/F029-model.jpg" alt="华栱 · 二跳现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="令栱 斗栱 西南角转角铺作南向分支 / 最外跳 南西次间补间铺作 / 最外跳 南立面西中柱柱头铺作 / 最外跳 南明间补间铺作 / 最外跳 南立面东中柱柱头铺作 / 最外跳 南东次间补间铺作 / 最外跳 东南角转角铺作南向分支 / 最外跳 西北角转角铺作北向分支 / 最外跳 北西次间补间铺作 / 最外跳 北立面西中柱柱头铺作 / 最外跳 北明间补间铺作 / 最外跳 北立面东中柱柱头铺作 / 最外跳 北东次间补间铺作 / 最外跳 东北角转角铺作北向分支 / 最外跳 东北角转角铺作东向分支 / 最外跳 东北次间补间铺作 / 最外跳 东山北中柱柱头铺作 / 最外跳 东明间补间铺作 / 最外跳 东山南中柱柱头铺作 / 最外跳 东南次间补间铺作 / 最外跳 东南角转角铺作东向分支 / 最外跳 西北角转角铺作西向分支 / 最外跳 西北次间补间铺作 / 最外跳 西山北中柱柱头铺作 / 最外跳 西明间补间铺作 / 最外跳 西山南中柱柱头铺作 / 最外跳 西南次间补间铺作 / 最外跳 西南角转角铺作西向分支 / 最外跳">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F030.html" title="打开令栱详细资料">令栱</a><div class="sub">类型 F030</div></div>
+<div class="location">西南角转角铺作南向分支 / 最外跳、南西次间补间铺作 / 最外跳等 28 处<details><summary>展开全部位置</summary><div class="all">西南角转角铺作南向分支 / 最外跳、南西次间补间铺作 / 最外跳、南立面西中柱柱头铺作 / 最外跳、南明间补间铺作 / 最外跳、南立面东中柱柱头铺作 / 最外跳、南东次间补间铺作 / 最外跳、东南角转角铺作南向分支 / 最外跳、西北角转角铺作北向分支 / 最外跳、北西次间补间铺作 / 最外跳、北立面西中柱柱头铺作 / 最外跳、北明间补间铺作 / 最外跳、北立面东中柱柱头铺作 / 最外跳、北东次间补间铺作 / 最外跳、东北角转角铺作北向分支 / 最外跳、东北角转角铺作东向分支 / 最外跳、东北次间补间铺作 / 最外跳、东山北中柱柱头铺作 / 最外跳、东明间补间铺作 / 最外跳、东山南中柱柱头铺作 / 最外跳、东南次间补间铺作 / 最外跳、东南角转角铺作东向分支 / 最外跳、西北角转角铺作西向分支 / 最外跳、西北次间补间铺作 / 最外跳、西山北中柱柱头铺作 / 最外跳、西明间补间铺作 / 最外跳、西山南中柱柱头铺作 / 最外跳、西南次间补间铺作 / 最外跳、西南角转角铺作西向分支 / 最外跳</div></details></div>
+<div class="count" title="按既有布局推导，待按物理件核验">28 件*<small>按既有布局推导，待按物理件核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F030-source.jpg" data-label="令栱 · 现有资料参考" aria-label="放大令栱资料图"><img loading="lazy" src="assets/v002/F030-source.jpg" alt="令栱参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F030-model.jpg" data-label="令栱 · 当前 Master" aria-label="放大令栱模型图"><img loading="lazy" src="assets/v002/F030-model.jpg" alt="令栱现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="大型瓜子栱 斗栱 西南角转角铺作南向分支 / 泥道 南立面西中柱柱头铺作 / 泥道 南立面东中柱柱头铺作 / 泥道 东南角转角铺作南向分支 / 泥道 西北角转角铺作北向分支 / 泥道 北立面西中柱柱头铺作 / 泥道 北立面东中柱柱头铺作 / 泥道 东北角转角铺作北向分支 / 泥道 东北角转角铺作东向分支 / 泥道 东山北中柱柱头铺作 / 泥道 东山南中柱柱头铺作 / 泥道 东南角转角铺作东向分支 / 泥道 西北角转角铺作西向分支 / 泥道 西山北中柱柱头铺作 / 泥道 西山南中柱柱头铺作 / 泥道 西南角转角铺作西向分支 / 泥道">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F031.html" title="打开大型瓜子栱详细资料">大型瓜子栱</a><div class="sub">类型 F031</div></div>
+<div class="location">西南角转角铺作南向分支 / 泥道、南立面西中柱柱头铺作 / 泥道等 16 处<details><summary>展开全部位置</summary><div class="all">西南角转角铺作南向分支 / 泥道、南立面西中柱柱头铺作 / 泥道、南立面东中柱柱头铺作 / 泥道、东南角转角铺作南向分支 / 泥道、西北角转角铺作北向分支 / 泥道、北立面西中柱柱头铺作 / 泥道、北立面东中柱柱头铺作 / 泥道、东北角转角铺作北向分支 / 泥道、东北角转角铺作东向分支 / 泥道、东山北中柱柱头铺作 / 泥道、东山南中柱柱头铺作 / 泥道、东南角转角铺作东向分支 / 泥道、西北角转角铺作西向分支 / 泥道、西山北中柱柱头铺作 / 泥道、西山南中柱柱头铺作 / 泥道、西南角转角铺作西向分支 / 泥道</div></details></div>
+<div class="count" title="按既有布局推导，待按物理件核验">16 件*<small>按既有布局推导，待按物理件核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F031-source.jpg" data-label="大型瓜子栱 · 现有资料参考" aria-label="放大大型瓜子栱资料图"><img loading="lazy" src="assets/v002/F031-source.jpg" alt="大型瓜子栱参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F031-model.jpg" data-label="大型瓜子栱 · 当前 Master" aria-label="放大大型瓜子栱模型图"><img loading="lazy" src="assets/v002/F031-model.jpg" alt="大型瓜子栱现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="大型慢栱 斗栱 西南角转角铺作南向分支 / 泥道 南立面西中柱柱头铺作 / 泥道 南立面东中柱柱头铺作 / 泥道 东南角转角铺作南向分支 / 泥道 西北角转角铺作北向分支 / 泥道 北立面西中柱柱头铺作 / 泥道 北立面东中柱柱头铺作 / 泥道 东北角转角铺作北向分支 / 泥道 东北角转角铺作东向分支 / 泥道 东山北中柱柱头铺作 / 泥道 东山南中柱柱头铺作 / 泥道 东南角转角铺作东向分支 / 泥道 西北角转角铺作西向分支 / 泥道 西山北中柱柱头铺作 / 泥道 西山南中柱柱头铺作 / 泥道 西南角转角铺作西向分支 / 泥道">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F032.html" title="打开大型慢栱详细资料">大型慢栱</a><div class="sub">类型 F032</div></div>
+<div class="location">西南角转角铺作南向分支 / 泥道、南立面西中柱柱头铺作 / 泥道等 16 处<details><summary>展开全部位置</summary><div class="all">西南角转角铺作南向分支 / 泥道、南立面西中柱柱头铺作 / 泥道、南立面东中柱柱头铺作 / 泥道、东南角转角铺作南向分支 / 泥道、西北角转角铺作北向分支 / 泥道、北立面西中柱柱头铺作 / 泥道、北立面东中柱柱头铺作 / 泥道、东北角转角铺作北向分支 / 泥道、东北角转角铺作东向分支 / 泥道、东山北中柱柱头铺作 / 泥道、东山南中柱柱头铺作 / 泥道、东南角转角铺作东向分支 / 泥道、西北角转角铺作西向分支 / 泥道、西山北中柱柱头铺作 / 泥道、西山南中柱柱头铺作 / 泥道、西南角转角铺作西向分支 / 泥道</div></details></div>
+<div class="count" title="按既有布局推导，待按物理件核验">16 件*<small>按既有布局推导，待按物理件核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F032-source.jpg" data-label="大型慢栱 · 现有资料参考" aria-label="放大大型慢栱资料图"><img loading="lazy" src="assets/v002/F032-source.jpg" alt="大型慢栱参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F032-model.jpg" data-label="大型慢栱 · 当前 Master" aria-label="放大大型慢栱模型图"><img loading="lazy" src="assets/v002/F032-model.jpg" alt="大型慢栱现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="小型瓜子栱 斗栱 西南角转角铺作南向分支 / 二跳 南西次间补间铺作 / 泥道 南立面西中柱柱头铺作 / 二跳 南明间补间铺作 / 泥道 南立面东中柱柱头铺作 / 二跳 南东次间补间铺作 / 泥道 东南角转角铺作南向分支 / 二跳 西北角转角铺作北向分支 / 二跳 北西次间补间铺作 / 泥道 北立面西中柱柱头铺作 / 二跳 北明间补间铺作 / 泥道 北立面东中柱柱头铺作 / 二跳 北东次间补间铺作 / 泥道 东北角转角铺作北向分支 / 二跳 东北角转角铺作东向分支 / 二跳 东北次间补间铺作 / 泥道 东山北中柱柱头铺作 / 二跳 东明间补间铺作 / 泥道 东山南中柱柱头铺作 / 二跳 东南次间补间铺作 / 泥道 东南角转角铺作东向分支 / 二跳 西北角转角铺作西向分支 / 二跳 西北次间补间铺作 / 泥道 西山北中柱柱头铺作 / 二跳 西明间补间铺作 / 泥道 西山南中柱柱头铺作 / 二跳 西南次间补间铺作 / 泥道 西南角转角铺作西向分支 / 二跳">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F033.html" title="打开小型瓜子栱详细资料">小型瓜子栱</a><div class="sub">类型 F033</div></div>
+<div class="location">西南角转角铺作南向分支 / 二跳、南西次间补间铺作 / 泥道等 28 处<details><summary>展开全部位置</summary><div class="all">西南角转角铺作南向分支 / 二跳、南西次间补间铺作 / 泥道、南立面西中柱柱头铺作 / 二跳、南明间补间铺作 / 泥道、南立面东中柱柱头铺作 / 二跳、南东次间补间铺作 / 泥道、东南角转角铺作南向分支 / 二跳、西北角转角铺作北向分支 / 二跳、北西次间补间铺作 / 泥道、北立面西中柱柱头铺作 / 二跳、北明间补间铺作 / 泥道、北立面东中柱柱头铺作 / 二跳、北东次间补间铺作 / 泥道、东北角转角铺作北向分支 / 二跳、东北角转角铺作东向分支 / 二跳、东北次间补间铺作 / 泥道、东山北中柱柱头铺作 / 二跳、东明间补间铺作 / 泥道、东山南中柱柱头铺作 / 二跳、东南次间补间铺作 / 泥道、东南角转角铺作东向分支 / 二跳、西北角转角铺作西向分支 / 二跳、西北次间补间铺作 / 泥道、西山北中柱柱头铺作 / 二跳、西明间补间铺作 / 泥道、西山南中柱柱头铺作 / 二跳、西南次间补间铺作 / 泥道、西南角转角铺作西向分支 / 二跳</div></details></div>
+<div class="count" title="按既有布局推导，待按物理件核验">28 件*<small>按既有布局推导，待按物理件核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F033-source.jpg" data-label="小型瓜子栱 · 现有资料参考" aria-label="放大小型瓜子栱资料图"><img loading="lazy" src="assets/v002/F033-source.jpg" alt="小型瓜子栱参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F033-model.jpg" data-label="小型瓜子栱 · 当前 Master" aria-label="放大小型瓜子栱模型图"><img loading="lazy" src="assets/v002/F033-model.jpg" alt="小型瓜子栱现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="小型慢栱 斗栱 西南角转角铺作南向分支 / 二跳 南西次间补间铺作 / 泥道 南立面西中柱柱头铺作 / 二跳 南明间补间铺作 / 泥道 南立面东中柱柱头铺作 / 二跳 南东次间补间铺作 / 泥道 东南角转角铺作南向分支 / 二跳 西北角转角铺作北向分支 / 二跳 北西次间补间铺作 / 泥道 北立面西中柱柱头铺作 / 二跳 北明间补间铺作 / 泥道 北立面东中柱柱头铺作 / 二跳 北东次间补间铺作 / 泥道 东北角转角铺作北向分支 / 二跳 东北角转角铺作东向分支 / 二跳 东北次间补间铺作 / 泥道 东山北中柱柱头铺作 / 二跳 东明间补间铺作 / 泥道 东山南中柱柱头铺作 / 二跳 东南次间补间铺作 / 泥道 东南角转角铺作东向分支 / 二跳 西北角转角铺作西向分支 / 二跳 西北次间补间铺作 / 泥道 西山北中柱柱头铺作 / 二跳 西明间补间铺作 / 泥道 西山南中柱柱头铺作 / 二跳 西南次间补间铺作 / 泥道 西南角转角铺作西向分支 / 二跳">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F034.html" title="打开小型慢栱详细资料">小型慢栱</a><div class="sub">类型 F034</div></div>
+<div class="location">西南角转角铺作南向分支 / 二跳、南西次间补间铺作 / 泥道等 28 处<details><summary>展开全部位置</summary><div class="all">西南角转角铺作南向分支 / 二跳、南西次间补间铺作 / 泥道、南立面西中柱柱头铺作 / 二跳、南明间补间铺作 / 泥道、南立面东中柱柱头铺作 / 二跳、南东次间补间铺作 / 泥道、东南角转角铺作南向分支 / 二跳、西北角转角铺作北向分支 / 二跳、北西次间补间铺作 / 泥道、北立面西中柱柱头铺作 / 二跳、北明间补间铺作 / 泥道、北立面东中柱柱头铺作 / 二跳、北东次间补间铺作 / 泥道、东北角转角铺作北向分支 / 二跳、东北角转角铺作东向分支 / 二跳、东北次间补间铺作 / 泥道、东山北中柱柱头铺作 / 二跳、东明间补间铺作 / 泥道、东山南中柱柱头铺作 / 二跳、东南次间补间铺作 / 泥道、东南角转角铺作东向分支 / 二跳、西北角转角铺作西向分支 / 二跳、西北次间补间铺作 / 泥道、西山北中柱柱头铺作 / 二跳、西明间补间铺作 / 泥道、西山南中柱柱头铺作 / 二跳、西南次间补间铺作 / 泥道、西南角转角铺作西向分支 / 二跳</div></details></div>
+<div class="count" title="按既有布局推导，待按物理件核验">28 件*<small>按既有布局推导，待按物理件核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F034-source.jpg" data-label="小型慢栱 · 现有资料参考" aria-label="放大小型慢栱资料图"><img loading="lazy" src="assets/v002/F034-source.jpg" alt="小型慢栱参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F034-model.jpg" data-label="小型慢栱 · 当前 Master" aria-label="放大小型慢栱模型图"><img loading="lazy" src="assets/v002/F034-model.jpg" alt="小型慢栱现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="头昂 斗栱 西南角转角铺作南向分支 / 头昂 南立面西中柱柱头铺作 / 头昂 南立面东中柱柱头铺作 / 头昂 东南角转角铺作南向分支 / 头昂 西北角转角铺作北向分支 / 头昂 北立面西中柱柱头铺作 / 头昂 北立面东中柱柱头铺作 / 头昂 东北角转角铺作北向分支 / 头昂 东北角转角铺作东向分支 / 头昂 东山北中柱柱头铺作 / 头昂 东山南中柱柱头铺作 / 头昂 东南角转角铺作东向分支 / 头昂 西北角转角铺作西向分支 / 头昂 西山北中柱柱头铺作 / 头昂 西山南中柱柱头铺作 / 头昂 西南角转角铺作西向分支 / 头昂">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F035.html" title="打开头昂详细资料">头昂</a><div class="sub">类型 F035</div></div>
+<div class="location">西南角转角铺作南向分支 / 头昂、南立面西中柱柱头铺作 / 头昂等 16 处<details><summary>展开全部位置</summary><div class="all">西南角转角铺作南向分支 / 头昂、南立面西中柱柱头铺作 / 头昂、南立面东中柱柱头铺作 / 头昂、东南角转角铺作南向分支 / 头昂、西北角转角铺作北向分支 / 头昂、北立面西中柱柱头铺作 / 头昂、北立面东中柱柱头铺作 / 头昂、东北角转角铺作北向分支 / 头昂、东北角转角铺作东向分支 / 头昂、东山北中柱柱头铺作 / 头昂、东山南中柱柱头铺作 / 头昂、东南角转角铺作东向分支 / 头昂、西北角转角铺作西向分支 / 头昂、西山北中柱柱头铺作 / 头昂、西山南中柱柱头铺作 / 头昂、西南角转角铺作西向分支 / 头昂</div></details></div>
+<div class="count" title="按既有布局推导，待按物理件核验">16 件*<small>按既有布局推导，待按物理件核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F035-source.jpg" data-label="头昂 · 现有资料参考" aria-label="放大头昂资料图"><img loading="lazy" src="assets/v002/F035-source.jpg" alt="头昂参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">官方数字展示参考（身份可能推断）</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F035-model.jpg" data-label="头昂 · 当前 Master" aria-label="放大头昂模型图"><img loading="lazy" src="assets/v002/F035-model.jpg" alt="头昂现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="二昂 斗栱 西南角转角铺作南向分支 / 二昂 南立面西中柱柱头铺作 / 二昂 南立面东中柱柱头铺作 / 二昂 东南角转角铺作南向分支 / 二昂 西北角转角铺作北向分支 / 二昂 北立面西中柱柱头铺作 / 二昂 北立面东中柱柱头铺作 / 二昂 东北角转角铺作北向分支 / 二昂 东北角转角铺作东向分支 / 二昂 东山北中柱柱头铺作 / 二昂 东山南中柱柱头铺作 / 二昂 东南角转角铺作东向分支 / 二昂 西北角转角铺作西向分支 / 二昂 西山北中柱柱头铺作 / 二昂 西山南中柱柱头铺作 / 二昂 西南角转角铺作西向分支 / 二昂">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F036.html" title="打开二昂详细资料">二昂</a><div class="sub">类型 F036</div></div>
+<div class="location">西南角转角铺作南向分支 / 二昂、南立面西中柱柱头铺作 / 二昂等 16 处<details><summary>展开全部位置</summary><div class="all">西南角转角铺作南向分支 / 二昂、南立面西中柱柱头铺作 / 二昂、南立面东中柱柱头铺作 / 二昂、东南角转角铺作南向分支 / 二昂、西北角转角铺作北向分支 / 二昂、北立面西中柱柱头铺作 / 二昂、北立面东中柱柱头铺作 / 二昂、东北角转角铺作北向分支 / 二昂、东北角转角铺作东向分支 / 二昂、东山北中柱柱头铺作 / 二昂、东山南中柱柱头铺作 / 二昂、东南角转角铺作东向分支 / 二昂、西北角转角铺作西向分支 / 二昂、西山北中柱柱头铺作 / 二昂、西山南中柱柱头铺作 / 二昂、西南角转角铺作西向分支 / 二昂</div></details></div>
+<div class="count" title="按既有布局推导，待按物理件核验">16 件*<small>按既有布局推导，待按物理件核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F036-source.jpg" data-label="二昂 · 现有资料参考" aria-label="放大二昂资料图"><img loading="lazy" src="assets/v002/F036-source.jpg" alt="二昂参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">官方数字展示参考（身份可能推断）</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F036-model.jpg" data-label="二昂 · 当前 Master" aria-label="放大二昂模型图"><img loading="lazy" src="assets/v002/F036-model.jpg" alt="二昂现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="枋材" data-model="yes" data-search="襻间枋 枋材 东缝前下平槫下 东缝后下平槫下 西缝前下平槫下 西缝后下平槫下 东山南下平槫下 东山北下平槫下 西山南下平槫下 西山北下平槫下 东缝前上平槫下 东缝后上平槫下 西缝前上平槫下 西缝后上平槫下">
+<div class="kind"><span class="family">枋材</span></div>
+<div class="title"><a href="pages/F037.html" title="打开襻间枋详细资料">襻间枋</a><div class="sub">类型 F037</div></div>
+<div class="location">东缝前下平槫下、东缝后下平槫下等 12 处<details><summary>展开全部位置</summary><div class="all">东缝前下平槫下、东缝后下平槫下、西缝前下平槫下、西缝后下平槫下、东山南下平槫下、东山北下平槫下、西山南下平槫下、西山北下平槫下、东缝前上平槫下、东缝后上平槫下、西缝前上平槫下、西缝后上平槫下</div></details></div>
+<div class="count" title="仅已登记位置数；不是已核实实物数">12 处<small>仅已登记位置数；不是已核实实物数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F037-source.jpg" data-label="襻间枋 · 现有资料参考" aria-label="放大襻间枋资料图"><img loading="lazy" src="assets/v002/F037-source.jpg" alt="襻间枋参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F037-model.jpg" data-label="襻间枋 · 局部工作模型" aria-label="放大襻间枋模型图"><img loading="lazy" src="assets/v002/F037-model.jpg" alt="襻间枋现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">局部工作模型</div></div>
+</article>
+<article class="line" data-family="瓦作" data-model="no" data-search="南坡筒瓦 瓦作 南坡">
+<div class="kind"><span class="family">瓦作</span></div>
+<div class="title"><a href="pages/F041.html" title="打开南坡筒瓦详细资料">南坡筒瓦</a><div class="sub">类型 F041</div></div>
+<div class="location">南坡</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F041-source.jpg" data-label="南坡筒瓦 · 现有资料参考" aria-label="放大南坡筒瓦资料图"><img loading="lazy" src="assets/v002/F041-source.jpg" alt="南坡筒瓦参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="瓦作" data-model="no" data-search="北坡筒瓦 瓦作 北坡">
+<div class="kind"><span class="family">瓦作</span></div>
+<div class="title"><a href="pages/F042.html" title="打开北坡筒瓦详细资料">北坡筒瓦</a><div class="sub">类型 F042</div></div>
+<div class="location">北坡</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F042-source.jpg" data-label="北坡筒瓦 · 现有资料参考" aria-label="放大北坡筒瓦资料图"><img loading="lazy" src="assets/v002/F042-source.jpg" alt="北坡筒瓦参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="瓦作" data-model="no" data-search="东坡筒瓦 瓦作 东坡">
+<div class="kind"><span class="family">瓦作</span></div>
+<div class="title"><a href="pages/F043.html" title="打开东坡筒瓦详细资料">东坡筒瓦</a><div class="sub">类型 F043</div></div>
+<div class="location">东坡</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F043-source.jpg" data-label="东坡筒瓦 · 现有资料参考" aria-label="放大东坡筒瓦资料图"><img loading="lazy" src="assets/v002/F043-source.jpg" alt="东坡筒瓦参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="瓦作" data-model="no" data-search="西坡筒瓦 瓦作 西坡">
+<div class="kind"><span class="family">瓦作</span></div>
+<div class="title"><a href="pages/F044.html" title="打开西坡筒瓦详细资料">西坡筒瓦</a><div class="sub">类型 F044</div></div>
+<div class="location">西坡</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F044-source.jpg" data-label="西坡筒瓦 · 现有资料参考" aria-label="放大西坡筒瓦资料图"><img loading="lazy" src="assets/v002/F044-source.jpg" alt="西坡筒瓦参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="台基石作" data-model="no" data-search="角石 台基石作 西北转角 东北转角 东南转角 西南转角">
+<div class="kind"><span class="family">台基石作</span></div>
+<div class="title"><a href="pages/F049.html" title="打开角石详细资料">角石</a><div class="sub">类型 F049</div></div>
+<div class="location">西北转角、东北转角等 4 处<details><summary>展开全部位置</summary><div class="all">西北转角、东北转角、东南转角、西南转角</div></details></div>
+<div class="count" title="按既有布局推导，待按物理件核验">4 件*<small>按既有布局推导，待按物理件核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F049-source.jpg" data-label="角石 · 现有资料参考" aria-label="放大角石资料图"><img loading="lazy" src="assets/v002/F049-source.jpg" alt="角石参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="石碑" data-model="no" data-search="嵌墙石碑 石碑 南立面大门西侧 南立面大门东侧">
+<div class="kind"><span class="family">石碑</span></div>
+<div class="title"><a href="pages/F054.html" title="打开嵌墙石碑详细资料">嵌墙石碑</a><div class="sub">类型 F054</div></div>
+<div class="location">南立面大门西侧、南立面大门东侧</div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">2 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F054-source.jpg" data-label="嵌墙石碑 · 现有资料参考" aria-label="放大嵌墙石碑资料图"><img loading="lazy" src="assets/v002/F054-source.jpg" alt="嵌墙石碑参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="砖作" data-model="no" data-search="墙砖族 砖作 四立面墙体">
+<div class="kind"><span class="family">砖作</span></div>
+<div class="title"><a href="pages/F056.html" title="打开墙砖族详细资料">墙砖族</a><div class="sub">类型 F056</div></div>
+<div class="location">四立面墙体</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F056-source.jpg" data-label="墙砖族 · 现有资料参考" aria-label="放大墙砖族资料图"><img loading="lazy" src="assets/v002/F056-source.jpg" alt="墙砖族参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="砖作" data-model="no" data-search="室内条砖族 砖作 室内地面边界/区域">
+<div class="kind"><span class="family">砖作</span></div>
+<div class="title"><a href="pages/F058.html" title="打开室内条砖族详细资料">室内条砖族</a><div class="sub">类型 F058</div></div>
+<div class="location">室内地面边界/区域</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F058-source.jpg" data-label="室内条砖族 · 现有资料参考" aria-label="放大室内条砖族资料图"><img loading="lazy" src="assets/v002/F058-source.jpg" alt="室内条砖族参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="砖作" data-model="no" data-search="室内方砖族 · 约265mm见方型 砖作 室内地面部分区域">
+<div class="kind"><span class="family">砖作</span></div>
+<div class="title"><a href="pages/F059.html" title="打开室内方砖族 · 约265mm见方型详细资料">室内方砖族 · 约265mm见方型</a><div class="sub">类型 F059</div></div>
+<div class="location">室内地面部分区域</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F059-source.jpg" data-label="室内方砖族 · 约265mm见方型 · 现有资料参考" aria-label="放大室内方砖族 · 约265mm见方型资料图"><img loading="lazy" src="assets/v002/F059-source.jpg" alt="室内方砖族 · 约265mm见方型参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="砖作" data-model="no" data-search="室内方砖族 · 约315×305mm型 砖作 室内地面部分区域">
+<div class="kind"><span class="family">砖作</span></div>
+<div class="title"><a href="pages/F060.html" title="打开室内方砖族 · 约315×305mm型详细资料">室内方砖族 · 约315×305mm型</a><div class="sub">类型 F060</div></div>
+<div class="location">室内地面部分区域</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F060-source.jpg" data-label="室内方砖族 · 约315×305mm型 · 现有资料参考" aria-label="放大室内方砖族 · 约315×305mm型资料图"><img loading="lazy" src="assets/v002/F060-source.jpg" alt="室内方砖族 · 约315×305mm型参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="脊饰" data-model="no" data-search="正吻 脊饰 正脊一端 正脊另一端">
+<div class="kind"><span class="family">脊饰</span></div>
+<div class="title"><a href="pages/F063.html" title="打开正吻详细资料">正吻</a><div class="sub">类型 F063</div></div>
+<div class="location">正脊一端、正脊另一端</div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">2 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F063-source.jpg" data-label="正吻 · 现有资料参考" aria-label="放大正吻资料图"><img loading="lazy" src="assets/v002/F063-source.jpg" alt="正吻参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="脊饰" data-model="no" data-search="垂兽 脊饰 垂脊01 垂脊02 垂脊03 垂脊04">
+<div class="kind"><span class="family">脊饰</span></div>
+<div class="title"><a href="pages/F064.html" title="打开垂兽详细资料">垂兽</a><div class="sub">类型 F064</div></div>
+<div class="location">垂脊01、垂脊02等 4 处<details><summary>展开全部位置</summary><div class="all">垂脊01、垂脊02、垂脊03、垂脊04</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">4 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F064-source.jpg" data-label="垂兽 · 现有资料参考" aria-label="放大垂兽资料图"><img loading="lazy" src="assets/v002/F064-source.jpg" alt="垂兽参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="脊饰" data-model="no" data-search="戗兽 脊饰 戗脊01 戗脊02 戗脊03 戗脊04">
+<div class="kind"><span class="family">脊饰</span></div>
+<div class="title"><a href="pages/F065.html" title="打开戗兽详细资料">戗兽</a><div class="sub">类型 F065</div></div>
+<div class="location">戗脊01、戗脊02等 4 处<details><summary>展开全部位置</summary><div class="all">戗脊01、戗脊02、戗脊03、戗脊04</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">4 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F065-source.jpg" data-label="戗兽 · 现有资料参考" aria-label="放大戗兽资料图"><img loading="lazy" src="assets/v002/F065-source.jpg" alt="戗兽参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="脊饰" data-model="no" data-search="仙人 脊饰 四角戗脊端部-01 四角戗脊端部-02 四角戗脊端部-03 四角戗脊端部-04">
+<div class="kind"><span class="family">脊饰</span></div>
+<div class="title"><a href="pages/F066.html" title="打开仙人详细资料">仙人</a><div class="sub">类型 F066</div></div>
+<div class="location">四角戗脊端部-01、四角戗脊端部-02等 4 处<details><summary>展开全部位置</summary><div class="all">四角戗脊端部-01、四角戗脊端部-02、四角戗脊端部-03、四角戗脊端部-04</div></details></div>
+<div class="count" title="依据现有逐件登记；未新增实测核验">4 件<small>依据现有逐件登记；未新增实测核验</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F066-source.jpg" data-label="仙人 · 现有资料参考" aria-label="放大仙人资料图"><img loading="lazy" src="assets/v002/F066-source.jpg" alt="仙人参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="单向长开斗族 斗栱 全殿斗栱体系">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F069.html" title="打开单向长开斗族详细资料">单向长开斗族</a><div class="sub">类型 F069</div></div>
+<div class="location">全殿斗栱体系</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F069-source.jpg" data-label="单向长开斗族 · 现有资料参考" aria-label="放大单向长开斗族资料图"><img loading="lazy" src="assets/v002/F069-source.jpg" alt="单向长开斗族参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F069-model.jpg" data-label="单向长开斗族 · 当前 Master" aria-label="放大单向长开斗族模型图"><img loading="lazy" src="assets/v002/F069-model.jpg" alt="单向长开斗族现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="交互斗族 斗栱 全殿斗栱体系">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F070.html" title="打开交互斗族详细资料">交互斗族</a><div class="sub">类型 F070</div></div>
+<div class="location">全殿斗栱体系</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F070-source.jpg" data-label="交互斗族 · 现有资料参考" aria-label="放大交互斗族资料图"><img loading="lazy" src="assets/v002/F070-source.jpg" alt="交互斗族参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">官方数字展示参考（身份可能推断）</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F070-model.jpg" data-label="交互斗族 · 当前 Master" aria-label="放大交互斗族模型图"><img loading="lazy" src="assets/v002/F070-model.jpg" alt="交互斗族现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">当前 Master</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="散斗族 斗栱 全殿斗栱体系">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F071.html" title="打开散斗族详细资料">散斗族</a><div class="sub">类型 F071</div></div>
+<div class="location">全殿斗栱体系</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F071-source.jpg" data-label="散斗族 · 现有资料参考" aria-label="放大散斗族资料图"><img loading="lazy" src="assets/v002/F071-source.jpg" alt="散斗族参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F071-model.jpg" data-label="散斗族 · 局部工作模型" aria-label="放大散斗族模型图"><img loading="lazy" src="assets/v002/F071-model.jpg" alt="散斗族现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">局部工作模型</div></div>
+</article>
+<article class="line" data-family="斗栱" data-model="yes" data-search="替木实体族 斗栱 全殿多处">
+<div class="kind"><span class="family">斗栱</span></div>
+<div class="title"><a href="pages/F072.html" title="打开替木实体族详细资料">替木实体族</a><div class="sub">类型 F072</div></div>
+<div class="location">全殿多处</div>
+<div class="count" title="现有登记不能直接换算为实物件数">待核实<small>现有登记不能直接换算为实物件数</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F072-source.jpg" data-label="替木实体族 · 现有资料参考" aria-label="放大替木实体族资料图"><img loading="lazy" src="assets/v002/F072-source.jpg" alt="替木实体族参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><button class="visual" type="button" data-image="assets/v002/F072-model.jpg" data-label="替木实体族 · 局部工作模型" aria-label="放大替木实体族模型图"><img loading="lazy" src="assets/v002/F072-model.jpg" alt="替木实体族现有模型" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>模型图尚不可用</span></button><div class="visualtext good">局部工作模型</div></div>
+</article>
+<article class="line" data-family="瓦作" data-model="no" data-search="板瓦 瓦作">
+<div class="kind"><span class="family">瓦作</span></div>
+<div class="title"><a href="pages/F073.html" title="打开板瓦详细资料">板瓦</a><div class="sub">类型 F073</div></div>
+<div class="location">位置待核实</div>
+<div class="count" title="尚无逐件登记">待核实<small>尚无逐件登记</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F073-source.jpg" data-label="板瓦 · 现有资料参考" aria-label="放大板瓦资料图"><img loading="lazy" src="assets/v002/F073-source.jpg" alt="板瓦参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="瓦作" data-model="no" data-search="勾头 瓦作">
+<div class="kind"><span class="family">瓦作</span></div>
+<div class="title"><a href="pages/F074.html" title="打开勾头详细资料">勾头</a><div class="sub">类型 F074</div></div>
+<div class="location">位置待核实</div>
+<div class="count" title="尚无逐件登记">待核实<small>尚无逐件登记</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F074-source.jpg" data-label="勾头 · 现有资料参考" aria-label="放大勾头资料图"><img loading="lazy" src="assets/v002/F074-source.jpg" alt="勾头参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="瓦作" data-model="no" data-search="滴水 瓦作">
+<div class="kind"><span class="family">瓦作</span></div>
+<div class="title"><a href="pages/F075.html" title="打开滴水详细资料">滴水</a><div class="sub">类型 F075</div></div>
+<div class="location">位置待核实</div>
+<div class="count" title="尚无逐件登记">待核实<small>尚无逐件登记</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F075-source.jpg" data-label="滴水 · 现有资料参考" aria-label="放大滴水资料图"><img loading="lazy" src="assets/v002/F075-source.jpg" alt="滴水参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="屋面木作" data-model="no" data-search="博风板 屋面木作">
+<div class="kind"><span class="family">屋面木作</span></div>
+<div class="title"><a href="pages/F076.html" title="打开博风板详细资料">博风板</a><div class="sub">类型 F076</div></div>
+<div class="location">位置待核实</div>
+<div class="count" title="尚无逐件登记">待核实<small>尚无逐件登记</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F076-source.jpg" data-label="博风板 · 现有资料参考" aria-label="放大博风板资料图"><img loading="lazy" src="assets/v002/F076-source.jpg" alt="博风板参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="屋面木作" data-model="no" data-search="悬鱼 屋面木作">
+<div class="kind"><span class="family">屋面木作</span></div>
+<div class="title"><a href="pages/F077.html" title="打开悬鱼详细资料">悬鱼</a><div class="sub">类型 F077</div></div>
+<div class="location">位置待核实</div>
+<div class="count" title="尚无逐件登记">待核实<small>尚无逐件登记</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F077-source.jpg" data-label="悬鱼 · 现有资料参考" aria-label="放大悬鱼资料图"><img loading="lazy" src="assets/v002/F077-source.jpg" alt="悬鱼参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="屋面木作" data-model="no" data-search="惹草 屋面木作">
+<div class="kind"><span class="family">屋面木作</span></div>
+<div class="title"><a href="pages/F078.html" title="打开惹草详细资料">惹草</a><div class="sub">类型 F078</div></div>
+<div class="location">位置待核实</div>
+<div class="count" title="尚无逐件登记">待核实<small>尚无逐件登记</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F078-source.jpg" data-label="惹草 · 现有资料参考" aria-label="放大惹草资料图"><img loading="lazy" src="assets/v002/F078-source.jpg" alt="惹草参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+<article class="line" data-family="屋面木作" data-model="no" data-search="生头木 屋面木作">
+<div class="kind"><span class="family">屋面木作</span></div>
+<div class="title"><a href="pages/F079.html" title="打开生头木详细资料">生头木</a><div class="sub">类型 F079</div></div>
+<div class="location">位置待核实</div>
+<div class="count" title="尚无逐件登记">待核实<small>尚无逐件登记</small></div>
+<div class="reference"><button class="visual" type="button" data-image="assets/v002/F079-source.jpg" data-label="生头木 · 现有资料参考" aria-label="放大生头木资料图"><img loading="lazy" src="assets/v002/F079-source.jpg" alt="生头木参考外形" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="empty" hidden>资料缩略图不可用</span></button><div class="visualtext">本殿已有测绘／照片参考</div></div>
+<div class="model"><div class="visual"><span class="empty">暂无独立构件模型</span></div><div class="visualtext emptytext">暂无独立模型</div></div>
+</article>
+</div><p id="empty" style="display:none;color:#5b6b67;padding:18px">没有匹配的构件。</p>
+<div class="bottom">本页沿用详细图库的静态图片与登记快照，没有新增历史形制、构件、审批或变更主模型。仅覆盖 58 个实体类型，组合、洞口与系统条目在 <a href="index.html">V002 完整图库</a> 查看。图片来源和证明边界以各构件详情页为准。当前资料图优先展示已有本殿资料；下一轮若引入同代通式，必须写明对比建筑、年代和具体构件身份，不得把类比图写成万佛殿原物。</div>
+</main><div id="modal" class="modal" role="dialog" aria-label="图片放大" aria-modal="true" hidden><button class="close" id="close">关闭 ×</button><span class="label" id="modalLabel"></span><img id="big" alt="放大图片"></div>
+<script>
+const q=document.getElementById("q"),f=document.getElementById("family"),m=document.getElementById("model"),out=document.getElementById("total"),rows=[...document.querySelectorAll(".line")];function filter(){const term=q.value.toLocaleLowerCase("zh-CN").trim();let n=0;rows.forEach(r=>{const good=r.dataset.search.includes(term)&&(!f.value||r.dataset.family===f.value)&&(!m.value||r.dataset.model===m.value);r.hidden=!good;if(good)n++});out.textContent=n+" 种构件";document.getElementById("empty").style.display=n?"none":"block"}[q,f,m].forEach(x=>x.addEventListener("input",filter));document.getElementById("reset").addEventListener("click",()=>{q.value="";f.value="";m.value="";filter();q.focus()});
+const modal=document.getElementById("modal"),big=document.getElementById("big"),close=document.getElementById("close");let previous=null;document.querySelectorAll("button[data-image]").forEach(btn=>btn.addEventListener("click",()=>{previous=document.activeElement;big.src=btn.dataset.image;big.alt=btn.dataset.label;document.getElementById("modalLabel").textContent=btn.dataset.label;modal.hidden=false;close.focus()}));function shut(){modal.hidden=true;big.removeAttribute("src");previous?.focus()}close.addEventListener("click",shut);modal.addEventListener("click",e=>{if(e.target===modal)shut()});document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!modal.hidden)shut()});filter();
+</script></body></html>
