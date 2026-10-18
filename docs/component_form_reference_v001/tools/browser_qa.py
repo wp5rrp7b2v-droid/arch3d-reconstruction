@@ -58,8 +58,13 @@ def main():
   for fid in ['F003','F004','F005','F007','F008','F009','F030']:
    vector=OUT/'assets/v002'/f'{fid}-form.svg'
    if vector.exists():
-    p.goto(vector.as_uri());p.evaluate('async()=>await document.fonts.ready')
-    p.screenshot(path=str(QA/'screenshots'/f'{fid}-form.png'),full_page=True)
+    # Chrome's full-page capture of a standalone SVG document can stall.
+    # Exercise the same <img> rendering path as the gallery, in a fixed HTML
+    # viewport, instead of treating the SVG document as an HTML page.
+    p.goto((OUT/'index.html').as_uri())
+    p.set_content(f'<html lang="zh-CN"><body style="margin:0"><img src="{vector.as_uri()}" style="display:block;width:1600px;height:1000px" alt="{fid} candidate form"></body></html>')
+    p.locator('img').evaluate('(i)=>i.decode()')
+    p.screenshot(path=str(QA/'screenshots'/f'{fid}-form.png'),full_page=False)
   browser.close()
  assert not RESULT['errors'],RESULT['errors']
  for start in range(0,len(ids),4):
