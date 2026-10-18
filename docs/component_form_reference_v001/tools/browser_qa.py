@@ -35,7 +35,8 @@ def main():
    RESULT['pages'].append(dict(file=str(file.relative_to(OUT)),desktop=d,file_scheme='PASS',lightbox='PASS' if file.parent.name=='pages' else 'N/A'))
   p.goto((OUT/'index.html').as_uri());ready(p);assert p.locator('.gallery tbody tr').count()==16
   assert p.locator('thead th').all_text_contents()==['家族','构件','位置','个数','应有形制','当前模型']
-  p.locator('#search').fill('华栱');assert p.locator('.gallery tbody tr:visible').count()==2
+  p.locator('#search').fill('华栱');assert p.locator('.gallery tbody tr:visible').count()==3
+  assert p.locator('.gallery tbody tr:visible .name').all_text_contents()==['华栱 · 一跳 ↗','华栱 · 二跳 ↗','令栱 ↗']
   p.locator('#search').fill('');p.locator('#group').select_option('斗栱');assert p.locator('.gallery tbody tr:visible').count()==6
   p.locator('#group').select_option('gap');assert p.locator('.gallery tbody tr:visible').count()==3
   p.locator('#group').select_option('');RESULT['search_and_filters']='PASS'
