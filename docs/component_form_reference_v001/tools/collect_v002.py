@@ -17,11 +17,12 @@ def get(key,url,ext):
 html=get('DAYUN2011','https://blog.sina.com.cn/s/blog_4a877d4d0102e10e.html','html')
 if html:
  s=html.decode('utf-8','replace');urls=[]
- for u in re.findall(r'(?:real_src|src)=["\']([^"\']+)',s):
+ for u in re.findall(r'(?:real_src|src)\s*=\s*["\']([^"\']+)',s):
   if ('sinaimg.cn' in u or 'sinajs.cn' in u) and ('mw690' in u or 'orignal' in u or 'bmiddle' in u or 'middle' in u):
-   u=u.replace('&amp;','&');u=('https:'+u) if u.startswith('//') else u
+   u=u.replace('&amp;','&').replace('http:','https:');u=('https:'+u) if u.startswith('//') else u
    if u not in urls:urls.append(u)
  for i,u in enumerate(urls[:40]):
+  if not any(k in u for k in ['gb36cbae00222','gb36cba93b619','gb36cbb1cff85']):continue
   b=get(f'DAYUN2011-{i+1:02}',u,'jpg')
   if b:
    try:Image.open(OUT/f'DAYUN2011-{i+1:02}.jpg').verify()
