@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "baseline": "83cee5522b6f468677b2b42ced9f1f821500b9db",
+  "changed_detail_pages": [
+    "F003",
+    "F004",
+    "F005",
+    "F007",
+    "F008",
+    "F009",
+    "F030"
+  ],
+  "nine_other_pages": "BYTE_IDENTICAL",
+  "nine_data_rows": "IDENTICAL",
+  "all_16_model_and_quantity_records": "IDENTICAL",
+  "candidate_derivations": "7_HASH_AND_SOURCE_CHAINS_PASS",
+  "protected_paths": "NO_CHANGES",
+  "limitations": "Preservation and traceability tests; not an independent historical-form judgment."
+}

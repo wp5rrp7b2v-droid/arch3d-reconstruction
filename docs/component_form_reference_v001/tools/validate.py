@@ -3,6 +3,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote
 import json, hashlib, subprocess
+import xml.etree.ElementTree as ET
 from PIL import Image
 
 OUT=Path(__file__).resolve().parents[1];ROOT=OUT.parents[1]
@@ -18,7 +19,7 @@ def main():
  data=json.loads((OUT/'data.json').read_text());prov=json.loads((OUT/'assets/PROVENANCE.json').read_text())
  assert len(data)==16 and len({r['category'] for r in data})==12
  assert len({r['id'] for r in data})==16
- checked=0;images=set();htmlfiles=list(OUT.rglob('*.html'))
+ checked=0;images=set();htmlfiles=[p for p in OUT.rglob('*.html') if not p.is_relative_to(OUT/'assets')]
  for p in htmlfiles:
   q=Links();q.feed(p.read_text())
   for v in q.links:
@@ -28,7 +29,11 @@ def main():
    assert target.exists(),('BROKEN_LOCAL_LINK',str(p),v);checked+=1
   images.update((p.parent/unquote(v)).resolve() for v in q.images if not urlsplit(v).scheme)
  for im in images:
-  with Image.open(im) as img:img.verify()
+  if im.suffix=='.svg':
+   root=ET.parse(im).getroot();assert root.tag.endswith('svg') and root.attrib.get('viewBox')
+   assert not root.findall('.//{http://www.w3.org/2000/svg}script')
+  else:
+   with Image.open(im) as img:img.verify()
  all_asset_images=[p for p in (OUT/'assets').rglob('*') if p.suffix.lower() in ['.jpg','.png','.webp']]
  for im in all_asset_images:
   with Image.open(im) as img:img.verify()

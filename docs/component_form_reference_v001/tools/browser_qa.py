@@ -52,7 +52,15 @@ def main():
   handler=functools.partial(http.server.SimpleHTTPRequestHandler,directory=str(OUT));server=http.server.ThreadingHTTPServer(('127.0.0.1',0),handler);threading.Thread(target=server.serve_forever,daemon=True).start()
   for file in pages:
    p.goto(f'http://127.0.0.1:{server.server_port}/'+str(file.relative_to(OUT)));d=ready(p);assert not d['broken'];RESULT['pages'][pages.index(file)]['HTTP']='PASS'
-  server.shutdown();browser.close()
+  server.shutdown()
+  # Inspectable, actual Chrome rasterization of the seven vector drawings.
+  p.set_viewport_size({'width':1600,'height':1000})
+  for fid in ['F003','F004','F005','F007','F008','F009','F030']:
+   vector=OUT/'assets/v002'/f'{fid}-form.svg'
+   if vector.exists():
+    p.goto(vector.as_uri());p.evaluate('async()=>await document.fonts.ready')
+    p.screenshot(path=str(QA/'screenshots'/f'{fid}-form.png'),full_page=True)
+  browser.close()
  assert not RESULT['errors'],RESULT['errors']
  for start in range(0,len(ids),4):
   sheet=Image.new('RGB',(1800,1460),'#e5e5df');dr=ImageDraw.Draw(sheet)

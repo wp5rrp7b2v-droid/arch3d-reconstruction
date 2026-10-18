@@ -1,0 +1,170 @@
+[
+  {
+    "id": "F003",
+    "file": "assets/v002/F003-form.svg",
+    "sha256": "ba1489c76d5bef99f52fc607edbfb3ac9f37a64fd5b72e7ca777f6dd8abb0fcc",
+    "operation": "CODE_DRAWN_CANDIDATE_TYPE_AXON_SIDE_DETAIL",
+    "coordinates": "arbitrary illustration units; NOT measured geometry",
+    "source_refs": [
+      "assets/original/A1-p081.jpg",
+      "assets/original/A1-p082.jpg",
+      "assets/research/FG2021-p016.png",
+      "assets/research/DU1932-p054.png",
+      "assets/research/DU1932-p055.png"
+    ],
+    "source_citation": "A1 PDF81表2-38、PDF82图2-39；FG2022 PDF16明／草栿；DU1932 PDF54—55梁端卷杀。",
+    "supported": "本殿下梁可见曲面，榫厚与最厚统计不同；图2-39两端有遮挡。",
+    "analogy": "佛光寺东大殿（857）明栿的加工轮廓、独乐寺山门（984）卷杀梁头支持类型比较；不复制月梁曲率。",
+    "unknown": "整形为工程候选。端区长度、完整上下缘和隐蔽接口未知；本图非测绘坐标，不与图C同尺度比较。",
+    "not_approved": true,
+    "source_sha256": {
+      "assets/original/A1-p081.jpg": "ddac4dd352daadcc841db3a9b38067abdd9917f8a16788c8a7f906590872f799",
+      "assets/original/A1-p082.jpg": "7c9708fbc4645fd856a069a8200a19c6b45d02b03dda08b43ab7d157e51bb8d9",
+      "assets/research/FG2021-p016.png": "a37aecdf417ac8d2b9addb141babe6beff8716d7365fc074312b8527a7a7350e",
+      "assets/research/DU1932-p054.png": "a96e5b9a5ff0e1e4b647b9086251f21ea9456602ffb595353f61f3eadacebdbb",
+      "assets/research/DU1932-p055.png": "96093a05ba941e16d6e6c01becc9c5ec07dd4d362ce38bec57d90525cc00fd61"
+    }
+  },
+  {
+    "id": "F004",
+    "file": "assets/v002/F004-form.svg",
+    "sha256": "8d996283c12d2f1254bc53d3eb7f74538f01f59e0c26064e3b029ff13efe9950",
+    "operation": "CODE_DRAWN_CANDIDATE_TYPE_AXON_SIDE_DETAIL",
+    "coordinates": "arbitrary illustration units; NOT measured geometry",
+    "source_refs": [
+      "assets/original/A1-p081.jpg",
+      "assets/original/A1-p082.jpg",
+      "assets/research/FG2021-p016.png"
+    ],
+    "source_citation": "A1 PDF81—82文字、表2-38及图2-39；FG2022 PDF16明／草栿比较。",
+    "supported": "本殿上梁与下梁叠置、断面不同；端区压二下昂且停于柱心附近。",
+    "analogy": "佛光寺东大殿（857）明栿与草栿的加工区别，支持上梁采用较素平候选，不证明本殿逐段曲线。",
+    "unknown": "整形为工程候选。厚度是进深方向，不等于侧面材高；后端及全长未定，10710mm候选不作历史实测。",
+    "not_approved": true,
+    "source_sha256": {
+      "assets/original/A1-p081.jpg": "ddac4dd352daadcc841db3a9b38067abdd9917f8a16788c8a7f906590872f799",
+      "assets/original/A1-p082.jpg": "7c9708fbc4645fd856a069a8200a19c6b45d02b03dda08b43ab7d157e51bb8d9",
+      "assets/research/FG2021-p016.png": "a37aecdf417ac8d2b9addb141babe6beff8716d7365fc074312b8527a7a7350e"
+    }
+  },
+  {
+    "id": "F005",
+    "file": "assets/v002/F005-form.svg",
+    "sha256": "b6f78bc6deb71a44c10454dd698b800c1cbe6203df232cbcb51c0ec1895bbdc5",
+    "operation": "CODE_DRAWN_CANDIDATE_TYPE_AXON_SIDE_DETAIL",
+    "coordinates": "arbitrary illustration units; NOT measured geometry",
+    "source_refs": [
+      "assets/original/A1-p082.jpg",
+      "assets/research/FG2021-p016.png",
+      "assets/research/DU1932-p055.png"
+    ],
+    "source_citation": "A1 PDF82图2-40及表2-39；FG2022 PDF16；DU1932 PDF55同名四椽栿比较。",
+    "supported": "本殿图2-40可辨较短梁身和端部承托；下方隔架单栱之下仅一散斗（A1正文）。",
+    "analogy": "佛光寺东大殿（857）明四椽栿与独乐寺山门（984）四椽栿可比较梁端加工；不复制别殿强烈月梁曲率。",
+    "unknown": "端头部分遮挡，所画轻度收削是候选，非本殿实测闭合曲线；端榫、托脚切口与全长待核。",
+    "not_approved": true,
+    "source_sha256": {
+      "assets/original/A1-p082.jpg": "7c9708fbc4645fd856a069a8200a19c6b45d02b03dda08b43ab7d157e51bb8d9",
+      "assets/research/FG2021-p016.png": "a37aecdf417ac8d2b9addb141babe6beff8716d7365fc074312b8527a7a7350e",
+      "assets/research/DU1932-p055.png": "96093a05ba941e16d6e6c01becc9c5ec07dd4d362ce38bec57d90525cc00fd61"
+    }
+  },
+  {
+    "id": "F007",
+    "file": "assets/v002/F007-form.svg",
+    "sha256": "1f40cdeda122d0f9e801f524e545449be23875f09ad4b174c577c8343fcc7444",
+    "operation": "CODE_DRAWN_CANDIDATE_TYPE_AXON_SIDE_DETAIL",
+    "coordinates": "arbitrary illustration units; NOT measured geometry",
+    "source_refs": [
+      "assets/original/A1-p081.jpg",
+      "assets/original/A1-p083.jpg",
+      "assets/research/DU1932-p055.png",
+      "assets/research/DU1932-p056.png"
+    ],
+    "source_citation": "A1 PDF81山面构架、PDF83表2-40；DU1932 PDF55—56独乐寺山门平梁；本殿图2-41仅同殿家族比较。",
+    "supported": "本殿正文说明山面太平梁上构造与平梁上相同；表2-40山面材广346mm，厚度未及。",
+    "analogy": "独乐寺山门（984）短平梁承脊部直立及斜向构件，支持短梁类型；不是与本殿山面位置完全同构的测量。",
+    "unknown": "本殿山面完整单体仍未证明。图示为同类短梁候选，轻微曲线和端区是工作假设；厚度、全长及隐蔽接口未知。",
+    "not_approved": true,
+    "source_sha256": {
+      "assets/original/A1-p081.jpg": "ddac4dd352daadcc841db3a9b38067abdd9917f8a16788c8a7f906590872f799",
+      "assets/original/A1-p083.jpg": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+      "assets/research/DU1932-p055.png": "96093a05ba941e16d6e6c01becc9c5ec07dd4d362ce38bec57d90525cc00fd61",
+      "assets/research/DU1932-p056.png": "38397750b013068dbe15938ede06ff42163be03e46c08bdae05416150f4d92cd"
+    }
+  },
+  {
+    "id": "F008",
+    "file": "assets/v002/F008-form.svg",
+    "sha256": "ab033f34753e92c74df7d64d2164267b2bb8f59f4b4643cf3f7949a7e58813f6",
+    "operation": "CODE_DRAWN_CANDIDATE_TYPE_AXON_SIDE_DETAIL",
+    "coordinates": "arbitrary illustration units; NOT measured geometry",
+    "source_refs": [
+      "assets/original/A1-p083.jpg",
+      "assets/original/A1-p106.jpg",
+      "assets/research/DU1932-p055.png",
+      "assets/research/DU1932-p056.png"
+    ],
+    "source_citation": "官方万佛殿梁架说明；A1 PDF83图2-41、PDF106图2-70；时代类比见页下单列来源。",
+    "supported": "官方明确四椽栿上有驼峰、令栱承平梁；A1该层有承托组合，但照片没有单独标名。",
+    "analogy": "独乐寺山门（984）的脊部展开承托仅支持承托块类型，层位不同；下层候选需另有同作用图像核验。",
+    "unknown": "官方文字证明名称与作用，但本殿下层单体未清晰分离；曲线、厚度、个数及接口未知，整形只作候选范围。",
+    "not_approved": true,
+    "source_sha256": {
+      "assets/original/A1-p083.jpg": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+      "assets/original/A1-p106.jpg": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+      "assets/research/DU1932-p055.png": "96093a05ba941e16d6e6c01becc9c5ec07dd4d362ce38bec57d90525cc00fd61",
+      "assets/research/DU1932-p056.png": "38397750b013068dbe15938ede06ff42163be03e46c08bdae05416150f4d92cd"
+    }
+  },
+  {
+    "id": "F009",
+    "file": "assets/v002/F009-form.svg",
+    "sha256": "2af9bc3ede665f67315b367d3157fc84f0cea4ea3d5bdd74f9bdadfc3adfe752",
+    "operation": "CODE_DRAWN_CANDIDATE_TYPE_AXON_SIDE_DETAIL",
+    "coordinates": "arbitrary illustration units; NOT measured geometry",
+    "source_refs": [
+      "assets/original/A1-p083.jpg",
+      "assets/original/A1-p090.jpg",
+      "assets/original/A1-p106.jpg",
+      "assets/research/DU1932-p055.png",
+      "assets/research/DU1932-p056.png"
+    ],
+    "source_citation": "A1 PDF83图2-41、PDF90图2-51、PDF106图2-71；DU1932 PDF55—56山门脊部。",
+    "supported": "本殿图2-51右侧短柱脚下有展开起伏肩部；图2-41也见同层承托，官方说明该层有驼峰。",
+    "analogy": "独乐寺山门（984）原调查脊部有展开式承托及直立短材；只比较类型，不搬其曲线和尺寸。",
+    "unknown": "A1图2-51补足一侧较清楚展肩，不能据此镜像证明背面；具体命名对应仍为推断，曲线为非量测提炼。",
+    "not_approved": true,
+    "source_sha256": {
+      "assets/original/A1-p083.jpg": "a460fe8b2af50fa70071dcffdc083e6c5361960bf84a0ca222bebc8948bfd978",
+      "assets/original/A1-p090.jpg": "12c462f2fbbc20ab087cc4886cd4c20ed88c6ac011a433d6ed442e9b61cca4bc",
+      "assets/original/A1-p106.jpg": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af",
+      "assets/research/DU1932-p055.png": "96093a05ba941e16d6e6c01becc9c5ec07dd4d362ce38bec57d90525cc00fd61",
+      "assets/research/DU1932-p056.png": "38397750b013068dbe15938ede06ff42163be03e46c08bdae05416150f4d92cd"
+    }
+  },
+  {
+    "id": "F030",
+    "file": "assets/v002/F030-form.svg",
+    "sha256": "655b36a69bbc0048020fb1856cf5f6795b64b94093b66e413de69ba72b4d627d",
+    "operation": "CODE_DRAWN_CANDIDATE_TYPE_AXON_SIDE_DETAIL",
+    "coordinates": "arbitrary illustration units; NOT measured geometry",
+    "source_refs": [
+      "assets/original/A1-p060.jpg",
+      "assets/original/A1-p087.jpg",
+      "assets/research/FG2021-p017.png",
+      "assets/research/DU1932-p049.png"
+    ],
+    "source_citation": "A1 PDF60及PDF87图2-46；FG2022 PDF17标名令栱；DU1932 PDF49山门铺作。",
+    "supported": "本殿外檐最外跳横栱可见两端卷杀；内界面照片只辅助位置识别，不替代外檐单件。",
+    "analogy": "佛光寺东大殿（857）标名令栱图和独乐寺山门（984）外端横栱，支持朴素横栱与卷杀类型。",
+    "unknown": "整件为时代形制参考示意，卷杀曲线非逐点实测；顶面开口与背面未知，图B与图C未配准。",
+    "not_approved": true,
+    "source_sha256": {
+      "assets/original/A1-p060.jpg": "452731e3638a896d8ce1f2561ff5b98ce0612f327114f5cf20c0811e22e89d3b",
+      "assets/original/A1-p087.jpg": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03",
+      "assets/research/FG2021-p017.png": "7092c76e62da3b18c55f44285242f9a27f97475fb857047a043dae6482b4ce6d",
+      "assets/research/DU1932-p049.png": "d4c487a8f5f3d21a52c61d97390bf5427702c9b965f1724a94de240225bd74b4"
+    }
+  }
+]

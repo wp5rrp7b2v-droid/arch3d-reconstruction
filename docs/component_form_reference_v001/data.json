@@ -6,12 +6,12 @@
     "position": "东缝、西缝，下层通长梁",
     "count": "2根",
     "count_kind": "实测确认",
-    "level": "可见段可参考",
-    "form": "粗大长梁；可见梁身有曲面与厚薄变化，不能用等截面方条代表全形。",
-    "difference": "现Master为8顶点直棱参考体，未表达照片中的梁身起伏及端部交接。",
-    "keep": "保留独立下层梁身份及493.5mm材广统计；1000mm只作参考长度。",
-    "change": "建议先补可见梁身曲面，再核对两端收削；不按照片透视直接定尺寸。",
-    "unknown": "全梁两端、完整上缘与逐段厚度未被单体测绘闭合；不推荐完整生产外形。",
+    "level": "基本形制参考 · 候选",
+    "form": "深而长的梁身，肩部有收削和厚薄变化；榫区与梁身分开表达。",
+    "difference": "Master为8顶点直棱参考段；尚未表达梁身肩部、曲面及榫区收窄。",
+    "keep": "保留下层身份、493.5mm材广均值；1000mm参考段不当作全梁长度。",
+    "change": "候选方向：补肩部与梁身曲面，榫区按375mm与最厚444mm的统计分别约束；不凭示意锁定过渡长度。",
+    "unknown": "整形为工程候选。端区长度、完整上下缘和隐蔽接口未知；本图非测绘坐标，不与图C同尺度比较。",
     "bsource": "A1-p082.jpg",
     "bcrop": [
       0.32,
@@ -19,9 +19,9 @@
       0.85,
       0.286
     ],
-    "bcite": "A1 PDF82／印刷67，图2-39：下层曲面梁身；两端被遮挡。",
+    "bcite": "A1 PDF81表2-38、PDF82图2-39；FG2022 PDF16明／草栿；DU1932 PDF54—55梁端卷杀。 图B为时代形制参考示意。",
     "analog": "FG2022：佛光寺857年的明栿、草栿须分辨；不把明栿月梁形统一套到所有梁。",
-    "bkind": "本殿实证",
+    "bkind": "工程候选",
     "araw": "A1-p292.jpg",
     "acrop": [
       0.14,
@@ -37,10 +37,10 @@
       ]
     ],
     "a": "assets/views/F003-A.webp",
-    "b": "assets/views/F003-B.webp",
+    "b": "assets/v002/F003-form.svg",
     "c": "assets/views/F003-C.webp",
     "a_original": "assets/original/A1-p292.jpg",
-    "b_original": "assets/original/A1-p082.jpg",
+    "b_original": "assets/v002/F003-form.svg",
     "c_original": "assets/original/F003-model-clear.jpg",
     "master_id": "CMP-FRAME-LOWER-SIX-CHUANFU-001",
     "model_identity": "Master V001",
@@ -95,7 +95,19 @@
         "faces": 6,
         "body": "MASTER__CMP_FRAME_LOWER_SIX_CHUANFU_001__BODY"
       }
-    ]
+    ],
+    "v002": {
+      "same_building": "本殿下梁可见曲面，榫厚与最厚统计不同；图2-39两端有遮挡。",
+      "analogy": "佛光寺东大殿（857）明栿的加工轮廓、独乐寺山门（984）卷杀梁头支持类型比较；不复制月梁曲率。",
+      "reuse": "可共用“长梁身＋局部端区收削”的绘图原型；上下梁的高度、曲线和接口不能共用。",
+      "source_refs": [
+        "assets/original/A1-p081.jpg",
+        "assets/original/A1-p082.jpg",
+        "assets/research/FG2021-p016.png",
+        "assets/research/DU1932-p054.png",
+        "assets/research/DU1932-p055.png"
+      ]
+    }
   },
   {
     "id": "F004",
@@ -104,12 +116,12 @@
     "position": "东缝、西缝，下六椽栿之上",
     "count": "2根",
     "count_kind": "实测确认",
-    "level": "可见段可参考",
-    "form": "上层通长梁身较平直；端区压昂并参与铺作交接，与下层梁分开辨认。",
-    "difference": "Master仅为直棱参考体；C01只批准前端局部，不能证明全梁及后端。",
-    "keep": "保留334mm材广及209／240.5mm榫厚、最厚统计口径。",
-    "change": "建议补足梁身与端部的截面过渡，前端沿用已批准范围；后端另行核证。",
-    "unknown": "完整全长、后端及原始曲线仍缺；不将10710mm工作候选当成历史实测。",
+    "level": "基本形制参考 · 候选",
+    "form": "较浅、较素平的上层通长梁，保留木材边缘及端区厚度过渡。",
+    "difference": "Master仅为直棱参考段；全梁端区过渡不足，C01仅代表已批准前端局部。",
+    "keep": "保留334mm材广、209mm榫厚与240.5mm最厚统计；C01原批准边界保持。",
+    "change": "以素平梁身为候选，另核端区厚度和压昂接触；不套下梁弧肩，不改已批准C01。",
+    "unknown": "整形为工程候选。厚度是进深方向，不等于侧面材高；后端及全长未定，10710mm候选不作历史实测。",
     "bsource": "A1-p082.jpg",
     "bcrop": [
       0.26,
@@ -117,9 +129,9 @@
       0.85,
       0.214
     ],
-    "bcite": "A1 PDF82／印刷67，图2-39：上层梁可见段，独立于下层梁裁切。",
+    "bcite": "A1 PDF81—82文字、表2-38及图2-39；FG2022 PDF16明／草栿比较。 图B为时代形制参考示意。",
     "analog": "FG2022：佛光寺明／草栿有不同加工方式；可比较梁身与端区关系，不能移用其尺寸。",
-    "bkind": "本殿实证",
+    "bkind": "工程候选",
     "araw": "A1-p292.jpg",
     "acrop": [
       0.14,
@@ -135,10 +147,10 @@
       ]
     ],
     "a": "assets/views/F004-A.webp",
-    "b": "assets/views/F004-B.webp",
+    "b": "assets/v002/F004-form.svg",
     "c": "assets/views/F004-C.webp",
     "a_original": "assets/original/A1-p292.jpg",
-    "b_original": "assets/original/A1-p082.jpg",
+    "b_original": "assets/v002/F004-form.svg",
     "c_original": "assets/original/F004-model-clear.jpg",
     "master_id": "CMP-FRAME-UPPER-SIX-CHUANFU-001",
     "model_identity": "Master V001",
@@ -193,7 +205,17 @@
         "faces": 6,
         "body": "MASTER__CMP_FRAME_UPPER_SIX_CHUANFU_001__BODY"
       }
-    ]
+    ],
+    "v002": {
+      "same_building": "本殿上梁与下梁叠置、断面不同；端区压二下昂且停于柱心附近。",
+      "analogy": "佛光寺东大殿（857）明栿与草栿的加工区别，支持上梁采用较素平候选，不证明本殿逐段曲线。",
+      "reuse": "与下梁共用长梁表达方法；上梁单独确定断面、端区宽度和承托层位。",
+      "source_refs": [
+        "assets/original/A1-p081.jpg",
+        "assets/original/A1-p082.jpg",
+        "assets/research/FG2021-p016.png"
+      ]
+    }
   },
   {
     "id": "F005",
@@ -202,12 +224,12 @@
     "position": "东缝、西缝，上六椽栿之上",
     "count": "2根",
     "count_kind": "实测确认",
-    "level": "可见段可参考",
-    "form": "较短而深的横向梁；端区与散斗、隔架栱交接，可见侧面并非完整规整方条。",
-    "difference": "现Master为8顶点等截面包络，缺梁端细化及真实侧面变化。",
-    "keep": "保留426.5×302mm族均值；不把两个样本擅自指派给东西缝。",
-    "change": "先依据本殿图2-40补可见侧面与端区过渡，不直接复制别殿的月梁曲率。",
-    "unknown": "端头被承托组合遮挡，完整轮廓及上下表面待补；当前只推荐可见段。",
+    "level": "基本形制参考 · 候选",
+    "form": "较短而深的梁身，边缘有变化，两端落在隔架承托上；不加华丽月梁装饰。",
+    "difference": "Master为8顶点包络；未表达侧缘变化、梁端收削和承托区。",
+    "keep": "保留426.5×302mm族均值；两个测量样本不擅自分配给东西缝。",
+    "change": "候选增加朴素梁身轮廓和端区过渡；隔架栱、散斗和托脚保持独立，不刻成梁身。",
+    "unknown": "端头部分遮挡，所画轻度收削是候选，非本殿实测闭合曲线；端榫、托脚切口与全长待核。",
     "bsource": "A1-p082.jpg",
     "bcrop": [
       0.28,
@@ -215,9 +237,9 @@
       0.79,
       0.854
     ],
-    "bcite": "A1 PDF82／印刷67，图2-40：四椽栿侧面与下部承托，端部仍有遮挡。",
+    "bcite": "A1 PDF82图2-40及表2-39；FG2022 PDF16；DU1932 PDF55同名四椽栿比较。 图B为时代形制参考示意。",
     "analog": "FG2022 PDF16：佛光寺四椽明栿呈月梁式；只说明早期并非全是矩形方梁。",
-    "bkind": "本殿实证",
+    "bkind": "工程候选",
     "araw": "A1-p292.jpg",
     "acrop": [
       0.23,
@@ -233,10 +255,10 @@
       ]
     ],
     "a": "assets/views/F005-A.webp",
-    "b": "assets/views/F005-B.webp",
+    "b": "assets/v002/F005-form.svg",
     "c": "assets/views/F005-C.webp",
     "a_original": "assets/original/A1-p292.jpg",
-    "b_original": "assets/original/A1-p082.jpg",
+    "b_original": "assets/v002/F005-form.svg",
     "c_original": "assets/original/F005-model-clear.jpg",
     "master_id": "CMP-FRAME-FOUR-CHUANFU-001",
     "model_identity": "Master V001",
@@ -297,7 +319,17 @@
         "faces": 6,
         "body": "MASTER__CMP_FRAME_FOUR_CHUANFU_001__BODY"
       }
-    ]
+    ],
+    "v002": {
+      "same_building": "本殿图2-40可辨较短梁身和端部承托；下方隔架单栱之下仅一散斗（A1正文）。",
+      "analogy": "佛光寺东大殿（857）明四椽栿与独乐寺山门（984）四椽栿可比较梁端加工；不复制别殿强烈月梁曲率。",
+      "reuse": "与六椽栿共用朴素梁身原型；跨度、深度及支承位置独立，不能直接整体缩放。",
+      "source_refs": [
+        "assets/original/A1-p082.jpg",
+        "assets/research/FG2021-p016.png",
+        "assets/research/DU1932-p055.png"
+      ]
+    }
   },
   {
     "id": "F006",
@@ -444,12 +476,12 @@
     "position": "东山、西山",
     "count": "2根",
     "count_kind": "件数／位置确认",
-    "level": "完整形制待确认",
-    "form": "山面型另列；已知材广样本346mm，实测厚度未及。",
-    "difference": "山面Master是单独的较小截面包络；245.4mm厚为参数补全，非实测。",
-    "keep": "保留山面身份、独立截面与UNKNOWN字段。",
-    "change": "先找可明确对应山面平梁的照片或单件图，再确定外轮廓及厚度。",
-    "unknown": "图B只有结构纵剖的上部横材定位线索；不是已核定的山面平梁完整单体。",
+    "level": "类型候选 · 细节待确认",
+    "form": "提出朴素短梁候选：较平直梁身、局部边缘起伏，两端承托，上部支承脊部组合。",
+    "difference": "山面Master仅有断面包络；245.4mm厚为参数补全，不能作为原物厚度。",
+    "keep": "保留山面独立身份、346mm材广样本；厚度UNKNOWN继续保留。",
+    "change": "可先按朴素短梁方向审核外形；长度、厚度、梁端与山面承托分别约束，不复制东西缝全几何。",
+    "unknown": "本殿山面完整单体仍未证明。图示为同类短梁候选，轻微曲线和端区是工作假设；厚度、全长及隐蔽接口未知。",
     "bsource": "A1-p294.jpg",
     "bcrop": [
       0.27,
@@ -457,9 +489,9 @@
       0.79,
       0.31
     ],
-    "bcite": "A1 PDF294／印刷279，图纸13：山面方向层位参照，个体形态未分离。",
+    "bcite": "A1 PDF81山面构架、PDF83表2-40；DU1932 PDF55—56独乐寺山门平梁；本殿图2-41仅同殿家族比较。 图B为时代形制参考示意。",
     "analog": "DU1932独乐寺只支持平梁家族比较；不能补出本殿山面型厚度或完整外形。",
-    "bkind": "待确认",
+    "bkind": "工程候选",
     "araw": "A1-p294.jpg",
     "acrop": [
       0.12,
@@ -475,10 +507,10 @@
       ]
     ],
     "a": "assets/views/F007-A.webp",
-    "b": "assets/views/F007-B.webp",
+    "b": "assets/v002/F007-form.svg",
     "c": "assets/views/F007-C.webp",
     "a_original": "assets/original/A1-p294.jpg",
-    "b_original": "assets/original/A1-p294.jpg",
+    "b_original": "assets/v002/F007-form.svg",
     "c_original": "assets/original/F007-model-clear.jpg",
     "master_id": "CMP-FRAME-PINGLIANG-001",
     "model_identity": "Master V001 · GABLE（厚度参数补全）",
@@ -596,7 +628,18 @@
         "faces": 6,
         "body": "MASTER__CMP_FRAME_PINGLIANG_001__GABLE__BODY"
       }
-    ]
+    ],
+    "v002": {
+      "same_building": "本殿正文说明山面太平梁上构造与平梁上相同；表2-40山面材广346mm，厚度未及。",
+      "analogy": "独乐寺山门（984）短平梁承脊部直立及斜向构件，支持短梁类型；不是与本殿山面位置完全同构的测量。",
+      "reuse": "可与东西缝平梁共用“朴素短梁＋独立脊部垫座”类型；山面断面、全长、端区仍独立。",
+      "source_refs": [
+        "assets/original/A1-p081.jpg",
+        "assets/original/A1-p083.jpg",
+        "assets/research/DU1932-p055.png",
+        "assets/research/DU1932-p056.png"
+      ]
+    }
   },
   {
     "id": "F008",
@@ -605,12 +648,12 @@
     "position": "四椽栿—平梁之间",
     "count": "未知",
     "count_kind": "仅1条家族登记；非1件",
-    "level": "完整形制待确认",
-    "form": "应是梁上承托短块，与令栱共同承梁；当前只能确认作用与层位。",
-    "difference": "现Master是两层台座包络；台阶和比例都是可替换工程表达。",
-    "keep": "保留独立实体家族与下层承托角色。",
-    "change": "取得下层驼峰清晰侧面后再选择曲线；暂不把台座认定为历史外形。",
-    "unknown": "独立全形、尺寸及个数均不足。图B为查找范围，不是推荐标准形制。",
+    "level": "类型候选 · 细节待确认",
+    "form": "低矮展开的承托块候选，中部承斗栱，再托平梁；不再以两层台座当作历史外形。",
+    "difference": "现Master是两层台座包络；台阶、比例及轮廓尚无本殿实测支持。",
+    "keep": "保留下层承托角色、独立家族和数量未知；不假定与脊部共用一个实体。",
+    "change": "候选采用低矮展开、中央承托面的块体；须先核清本殿单体与斗栱边界，再选具体肩部曲线。",
+    "unknown": "官方文字证明名称与作用，但本殿下层单体未清晰分离；曲线、厚度、个数及接口未知，整形只作候选范围。",
     "bsource": "A1-p083.jpg",
     "bcrop": [
       0.205,
@@ -618,9 +661,9 @@
       0.356,
       0.875
     ],
-    "bcite": "A1图2-41下层承托范围；结合官方文字推断角色，单件边界未分离。",
+    "bcite": "官方万佛殿梁架说明；A1 PDF83图2-41、PDF106图2-70；时代类比见页下单列来源。 图B为时代形制参考示意。",
     "analog": "DU1932 PDF56：独乐寺脊部驼峰可见肩部曲线，但角色不同，不移作本殿下层单件。",
-    "bkind": "待确认",
+    "bkind": "工程候选",
     "araw": "A1-p106.jpg",
     "acrop": [
       0.13,
@@ -636,10 +679,10 @@
       ]
     ],
     "a": "assets/views/F008-A.webp",
-    "b": "assets/views/F008-B.webp",
+    "b": "assets/v002/F008-form.svg",
     "c": "assets/views/F008-C.webp",
     "a_original": "assets/original/A1-p106.jpg",
-    "b_original": "assets/original/A1-p083.jpg",
+    "b_original": "assets/v002/F008-form.svg",
     "c_original": "assets/original/CMP-FRAME-TUOFENG-001--0--axon.webp",
     "master_id": "CMP-FRAME-TUOFENG-001",
     "model_identity": "Master V001 · LOWER_SUPPORT",
@@ -729,7 +772,18 @@
         }
       }
     ],
-    "geometry": []
+    "geometry": [],
+    "v002": {
+      "same_building": "官方明确四椽栿上有驼峰、令栱承平梁；A1该层有承托组合，但照片没有单独标名。",
+      "analogy": "独乐寺山门（984）的脊部展开承托仅支持承托块类型，层位不同；下层候选需另有同作用图像核验。",
+      "reuse": "只能共用“展开底座＋中央承托”的概念；下层上承斗栱，脊部上承蜀柱，不能共用全部几何。",
+      "source_refs": [
+        "assets/original/A1-p083.jpg",
+        "assets/original/A1-p106.jpg",
+        "assets/research/DU1932-p055.png",
+        "assets/research/DU1932-p056.png"
+      ]
+    }
   },
   {
     "id": "F009",
@@ -738,12 +792,12 @@
     "position": "平梁—蜀柱之间",
     "count": "未知",
     "count_kind": "与下层共用1条家族登记",
-    "level": "完整形制待确认",
-    "form": "蜀柱脚下可见向两侧展开的低矮承托轮廓，与蜀柱本身分开。",
-    "difference": "现Master为对称阶状挤出体；照片可见肩部起伏，尚无实测曲线可逐点对应。",
-    "keep": "保留脊部角色；与下层分开，不假定两者同形。",
-    "change": "建议以本殿可见肩部为候选方向；完整深度和背面先保留未知。",
-    "unknown": "可见承托座与“驼峰”的命名对应仍属推断；不能据此锁定完整标准形制。",
+    "level": "基本形制参考 · 候选",
+    "form": "低矮、向两侧展开的肩部，中央承蜀柱；肩部轮廓独立于下层承托。",
+    "difference": "Master是对称阶状挤出体；可见肩部起伏未细化，深度和背面仍是未知。",
+    "keep": "保留脊部身份及数量未知；蜀柱与脚下驼峰分为独立构件。",
+    "change": "以本殿可见展肩作基本方向；细化曲折与过渡，柱脚接口、深度和背面另核。",
+    "unknown": "A1图2-51补足一侧较清楚展肩，不能据此镜像证明背面；具体命名对应仍为推断，曲线为非量测提炼。",
     "bsource": "A1-p083.jpg",
     "bcrop": [
       0.475,
@@ -751,9 +805,9 @@
       0.627,
       0.834
     ],
-    "bcite": "A1图2-41：蜀柱脚下肩部可见；名称由官方说明交叉推断。",
+    "bcite": "A1 PDF83图2-41、PDF90图2-51、PDF106图2-71；DU1932 PDF55—56山门脊部。 图B为时代形制参考示意。",
     "analog": "DU1932 PDF56：独乐寺山门984年蜀柱下有展开式承托；说明不必一律是方块。",
-    "bkind": "待确认",
+    "bkind": "工程候选",
     "araw": "A1-p083.jpg",
     "acrop": [
       0.4,
@@ -769,10 +823,10 @@
       ]
     ],
     "a": "assets/views/F009-A.webp",
-    "b": "assets/views/F009-B.webp",
+    "b": "assets/v002/F009-form.svg",
     "c": "assets/views/F009-C.webp",
     "a_original": "assets/original/A1-p083.jpg",
-    "b_original": "assets/original/A1-p083.jpg",
+    "b_original": "assets/v002/F009-form.svg",
     "c_original": "assets/original/CMP-FRAME-TUOFENG-001--1--axon.webp",
     "master_id": "CMP-FRAME-TUOFENG-001",
     "model_identity": "Master V001 · UPPER_RIDGE_SUPPORT",
@@ -849,7 +903,19 @@
         }
       }
     ],
-    "geometry": []
+    "geometry": [],
+    "v002": {
+      "same_building": "本殿图2-51右侧短柱脚下有展开起伏肩部；图2-41也见同层承托，官方说明该层有驼峰。",
+      "analogy": "独乐寺山门（984）原调查脊部有展开式承托及直立短材；只比较类型，不搬其曲线和尺寸。",
+      "reuse": "可共享展开承托类型，脊部中央对应蜀柱；下层中央对应斗栱，轮廓与接口分别调整。",
+      "source_refs": [
+        "assets/original/A1-p083.jpg",
+        "assets/original/A1-p090.jpg",
+        "assets/original/A1-p106.jpg",
+        "assets/research/DU1932-p055.png",
+        "assets/research/DU1932-p056.png"
+      ]
+    }
   },
   {
     "id": "F013",
@@ -2835,12 +2901,12 @@
     "position": "外檐最外跳横置",
     "count": "28件",
     "count_kind": "实测组数＋方向推导",
-    "level": "可见段可参考",
-    "form": "横置短栱，两端卷杀、中部承托；位置在最外跳，与出跳方向的华栱不同。",
-    "difference": "Master已表达简化下缘曲线；不是方块，但完整端部、顶面接口及隐刻尚未核定。",
-    "keep": "保留897×217.4×155.6mm实测均值，不外推为每件精确尺寸。",
-    "change": "可保留基本卷杀趋势；建议先核对外檐令栱本体，勿与殿内进深／顺身令栱混用。",
-    "unknown": "图B依层位识别最外横栱，可见前面不是去遮挡后的完整单体；全形仍缺。",
+    "level": "基本形制参考 · 候选",
+    "form": "横置短栱，两端下缘卷杀、中段较深；与出跳华栱保持方向区别。",
+    "difference": "Master已有简化卷杀；端头分段、完整顶面交接和隐刻仍需核证。",
+    "keep": "保留897×217.4×155.6mm族均值和既有基本卷杀；内外令栱分开识别。",
+    "change": "可先审核卷杀类型及端部方直收束；精确瓣数、顶部开口和隐刻位置不能据同名栱照搬。",
+    "unknown": "整件为时代形制参考示意，卷杀曲线非逐点实测；顶面开口与背面未知，图B与图C未配准。",
     "bsource": "A1-p087.jpg",
     "bcrop": [
       0.353,
@@ -2848,9 +2914,9 @@
       0.65,
       0.488
     ],
-    "bcite": "A1图2-46最外层横栱近景；结合A1 PDF60最外跳规则定位，身份为推断。",
+    "bcite": "A1 PDF60及PDF87图2-46；FG2022 PDF17标名令栱；DU1932 PDF49山门铺作。 图B为时代形制参考示意。",
     "analog": "WEN2017图19／20直接比较本殿外檐与内界面的令栱；不同位置不能冒作同一单件。",
-    "bkind": "本殿实证",
+    "bkind": "工程候选",
     "araw": "research:WEN2017-19.jpg",
     "acrop": [
       0.48,
@@ -2866,10 +2932,10 @@
       ]
     ],
     "a": "assets/views/F030-A.webp",
-    "b": "assets/views/F030-B.webp",
+    "b": "assets/v002/F030-form.svg",
     "c": "assets/views/F030-C.webp",
     "a_original": "assets/research/WEN2017-19.jpg",
-    "b_original": "assets/original/A1-p087.jpg",
+    "b_original": "assets/v002/F030-form.svg",
     "c_original": "assets/original/CMP-GONG-LINGGONG-001--0--axon.webp",
     "master_id": "CMP-GONG-LINGGONG-001",
     "model_identity": "Master V001",
@@ -3295,7 +3361,18 @@
         "faces": 16,
         "body": "LINGGONG"
       }
-    ]
+    ],
+    "v002": {
+      "same_building": "本殿外檐最外跳横栱可见两端卷杀；内界面照片只辅助位置识别，不替代外檐单件。",
+      "analogy": "佛光寺东大殿（857）标名令栱图和独乐寺山门（984）外端横栱，支持朴素横栱与卷杀类型。",
+      "reuse": "同类可复用横栱卷杀原型；长度、材高、端头瓣数、顶面交接与内外位置独立。",
+      "source_refs": [
+        "assets/original/A1-p060.jpg",
+        "assets/original/A1-p087.jpg",
+        "assets/research/FG2021-p017.png",
+        "assets/research/DU1932-p049.png"
+      ]
+    }
   },
   {
     "id": "F035",
