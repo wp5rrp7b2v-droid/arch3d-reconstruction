@@ -1,0 +1,17 @@
+{
+  "canonical_failures": [],
+  "canonical_hard_fail_count": 0,
+  "negative_fixtures": {
+    "BAKED_MANUAL_BUILDING": "EXPECTED_REJECTION",
+    "BROKEN_COMPONENT_IDENTITY": "EXPECTED_REJECTION",
+    "REFERENCE_LENGTH_LEAKS_INTO_BUILDING": "EXPECTED_REJECTION",
+    "SILENT_BUILDING_OMISSION": "EXPECTED_REJECTION",
+    "SILENT_HISTORICIZATION": "EXPECTED_REJECTION"
+  },
+  "observed_placement_authority_usage": 0,
+  "prohibited_p2_transform_usage": 0,
+  "runtime_accounting": "365/365",
+  "semantic_snapshot_sha256": "e6a5262e6d390015e75f8d4453cb5f199c0d7f3a9ebc93efc46b38509becc60d",
+  "status": "PASS",
+  "task": "T-018"
+}

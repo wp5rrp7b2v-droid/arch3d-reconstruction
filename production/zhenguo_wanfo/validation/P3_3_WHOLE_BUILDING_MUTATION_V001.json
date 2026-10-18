@@ -1,0 +1,13 @@
+{
+  "canonical_value_mm": 3505.7,
+  "delta_mm": 100.0,
+  "evidence_classification_changed": false,
+  "mutation_does_not_override_reconstructed_design_placement": true,
+  "mutated_value_mm": 3605.7,
+  "parameter": "PM-005",
+  "placement_response": "NO_AUTHORIZED_PLACEMENT_TARGET / OBSERVED_REFERENCE_ONLY",
+  "restore_snapshot_match": true,
+  "source_unchanged": true,
+  "status": "PASS",
+  "task": "T-018"
+}
