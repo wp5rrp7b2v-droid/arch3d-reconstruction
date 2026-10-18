@@ -1,4 +1,10 @@
-# 万佛殿构件形制参考展示 V001
+# 万佛殿构件形制参考展示 V002
+
+本次在原PR #74中补强指定7页：5项基本形制参考、山面平梁1项候选级参考，下层驼峰1项证据FAIL保留。图B增加独立轴测、侧面及端部／承托图，来源放在页面下方；其余9页和全部模型身份、位置、数量记录保持。
+
+当前交付：`V002_DELIVERY_ZH.md`；逐项依据：`V002_EVIDENCE_ZH.md`；逐页PASS／FAIL：`qa/V002_ACCEPTANCE.json`。实际Chrome完整运行：[39124306952](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/39124306952)，19页、桌面及窄屏、放大和搜索筛选PASS。PASS不代表历史精确几何或工程模型批准。
+
+下面的Mac打开命令仍适用，会取得此分支最新V002。后半部分V001交付说明与旧验证结果保留为历史记录；当前结果以上述V002文件为准。
 
 首页：`docs/component_form_reference_v001/index.html`
 

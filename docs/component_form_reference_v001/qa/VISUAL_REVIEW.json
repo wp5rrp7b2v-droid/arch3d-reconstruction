@@ -1,51 +1,47 @@
 {
   "status": "PASS_LAYOUT_AND_COMPARISON_WITH_EVIDENCE_GAPS_RETAINED",
-  "chrome_run_id": 39097532511,
+  "version": "V002",
+  "chrome_run_id": 39124306952,
+  "v001_review_preserved_at_commit": "83cee5522b6f468677b2b42ced9f1f821500b9db",
+  "current_acceptance_record": "V002_ACCEPTANCE.json",
   "chrome_version": "155.0.8059.39",
   "browser_platform": "Linux",
   "desktop_contact_pages_reviewed": [
     "F003",
     "F004",
     "F005",
-    "F006",
     "F007",
     "F008",
     "F009",
-    "F013",
-    "F020",
-    "F021",
-    "F026",
-    "F028",
-    "F029",
-    "F030",
-    "F035",
-    "F036"
+    "F030"
   ],
   "desktop_individual_first_screens_reviewed": [
     "F003",
+    "F004",
+    "F005",
     "F007",
-    "F026",
-    "F028"
-  ],
-  "desktop_full_pages_reviewed": [
+    "F008",
     "F009",
-    "F026",
-    "F035"
+    "F030"
   ],
-  "homepage_review": "desktop first 1800px plus all16 comparison contact images; mobile first1650px",
+  "desktop_full_pages_reviewed": [],
+  "homepage_review": "Actual Chrome automatic checks; manual V002 scope is the seven detail first screens, mobile B/C regions and native drawing contact sheet.",
   "mobile_screenshots_reviewed": [
-    "index",
+    "F003",
+    "F004",
+    "F005",
     "F007",
-    "F026",
-    "F035"
+    "F008",
+    "F009",
+    "F030"
   ],
   "observed_results": [
     "A/B/C readable and no collapsed main image areas",
-    "Distinct images for required variants",
+    "Seven independent axon/side/detail candidate drawings are visible; no candidate is presented as a measured original",
     "Model axon views show dimensional simplification clearly",
     "Gap badges and source limits remain prominent",
     "No clipped CJK text or horizontal overflow seen in reviewed screenshots",
-    "Open-source, size and location information remain secondary to images"
+    "Sources are folded below the principal images; F008 evidence FAIL remains prominent"
   ],
   "historical_form_approval": false,
   "limitations": [
@@ -54,8 +50,14 @@
     "No independent complete geometry truth and no model edits",
     "Actual user macOS Chrome session was not controlled"
   ],
-  "app_content_unchanged_since_first_screenshot_run": "git diff 9177eeb272758077360cc4c1b955f11dfb56437a..cc13945a818e18e41af96e77b6f143d6324031a6 for pages/index/style/app/data/assets returned no changes",
+  "app_content_identity": "Pages, index, styles, app and drawings unchanged between d36f8c47d629cd863bb642061d8de9e0ab73cc36 and successful Chrome-tested 21ca72e0faf9722758b37c9575a9c256c0b0bd19; the latter only fixes QA capture.",
+  "mobile_manual_scope": "Actual Chrome screenshot regions y=700..1850, all seven target IDs; not every pixel of every full-length mobile image",
+  "native_drawing_rasters_reviewed": ["F003","F004","F005","F007","F008","F009","F030"],
   "earlier_qa_attempts": [
+    {
+      "run_id": 39124137075,
+      "reason": "All content tests passed, then direct standalone-SVG full-page screenshot timed out. HTML-img capture fixed and full suite rerun successfully as 39124306952."
+    },
     {
       "run_id": 39097191472,
       "reason": "Quoted Chinese filenames caused scope-check false positive; corrected with NUL-separated paths."
