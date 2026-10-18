@@ -1,0 +1,193 @@
+{
+  "status": "FAIL",
+  "engine": "Google Chrome",
+  "pages": [
+    {
+      "file": "index.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 32
+      },
+      "file_scheme": "PASS",
+      "lightbox": "N/A"
+    },
+    {
+      "file": "sources.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 0
+      },
+      "file_scheme": "PASS",
+      "lightbox": "N/A"
+    },
+    {
+      "file": "pages/F003.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F004.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F005.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F006.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F007.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 3
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F008.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F009.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 4
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F013.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F020.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F021.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F026.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F028.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F029.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F030.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F035.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    },
+    {
+      "file": "pages/F036.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "file_scheme": "PASS",
+      "lightbox": "PASS"
+    }
+  ],
+  "errors": [
+    "Traceback (most recent call last):\n  File \"/home/runner/work/arch3d-reconstruction/arch3d-reconstruction/docs/component_form_reference_v001/tools/browser_qa.py\", line 78, in <module>\n    try:main()\n        ^^^^^^\n  File \"/home/runner/work/arch3d-reconstruction/arch3d-reconstruction/docs/component_form_reference_v001/tools/browser_qa.py\", line 38, in main\n    p.locator('#search').fill('华栱');assert p.locator('.gallery tbody tr:visible').count()==2\n                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+  ],
+  "version": "155.0.8059.39",
+  "executable": "/usr/bin/google-chrome",
+  "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+  "tested_at_utc": "2026-10-18T04:30:16Z"
+}
