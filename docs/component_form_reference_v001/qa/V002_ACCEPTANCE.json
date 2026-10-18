@@ -1,0 +1,47 @@
+{
+  "version": "V002",
+  "baseline": "83cee5522b6f468677b2b42ced9f1f821500b9db",
+  "app_commit": "d36f8c47d629cd863bb642061d8de9e0ab73cc36",
+  "tested_commit": "21ca72e0faf9722758b37c9575a9c256c0b0bd19",
+  "qa_archive_commit": "469b5964f5516985baee1eb304197612700b044e",
+  "chrome_run": "https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/39124306952",
+  "chrome": "Google Chrome 155.0.8059.39 / Linux",
+  "criteria": "V002_ACCEPTANCE_CRITERIA.md",
+  "rows": [
+    {"id":"F003","name":"下六椽栿","visual":"PASS","evidence":"PASS","overall":"PASS","scope":"深梁身、局部收削与端区厚度变化的类型候选；全长与隐藏接口未知"},
+    {"id":"F004","name":"上六椽栿","visual":"PASS","evidence":"PASS","overall":"PASS","scope":"独立素平上梁类型；不改变已批准C01，后端与全长未知"},
+    {"id":"F005","name":"四椽栿","visual":"PASS","evidence":"PASS","overall":"PASS","scope":"朴素深梁、承托端区候选；具体收削曲线与接口未知"},
+    {"id":"F007","name":"山面平梁","visual":"PASS","evidence":"PASS","overall":"PASS","scope":"仅朴素短梁候选级通过；本殿山面完整单体、厚度、全长与端区仍未证明"},
+    {"id":"F008","name":"下层驼峰","visual":"PASS","evidence":"FAIL","overall":"FAIL","scope":"作用和层位有据；同作用单体轮廓不足，图B仅解释探索性候选范围"},
+    {"id":"F009","name":"脊部驼峰","visual":"PASS","evidence":"PASS","overall":"PASS","scope":"低矮展肩、中央承蜀柱的基本方向；名称对应仍是推断，背面与深度未知"},
+    {"id":"F030","name":"令栱","visual":"PASS","evidence":"PASS","overall":"PASS","scope":"独立横栱、两端卷杀、中段较深的类型；顶面槽孔、精确瓣数与隐刻未定"}
+  ],
+  "automatic": {
+    "html_pages_file_desktop_and_mobile": 19,
+    "content_pages_http": 18,
+    "desktop_viewport": [1440,1100],
+    "mobile_viewport": [390,844],
+    "all_16_detail_ABC_lightbox_zoom_escape": "PASS",
+    "search_filters": "PASS",
+    "image_loading_and_overflow": "PASS",
+    "seven_vector_drawings_chrome_rasterized": "PASS",
+    "nine_detail_pages": "BYTE_IDENTICAL_TO_BASELINE",
+    "all_16_model_and_quantity_records": "IDENTICAL_TO_BASELINE",
+    "formal_engineering_changes": "NONE"
+  },
+  "manual_visual_review": {
+    "all_seven_individual_desktop_first_screens": "REVIEWED",
+    "all_seven_mobile_B_C_regions": "REVIEWED_FROM_ACTUAL_CHROME_SCREENSHOTS_Y700_TO1850",
+    "all_seven_native_form_rasters": "REVIEWED_AS_CONTACT_SHEET",
+    "observed": "Independent forms, side profiles and details visible; no clipped figure text observed; F008 failure and candidate boundaries visible; C identities retained.",
+    "limits": "Not a pixel-by-pixel review of every full-length screenshot; mobile drawing annotations require the working lightbox for comfortable reading. User Mac was not remotely operated."
+  },
+  "earlier_attempt": {
+    "run_id":39124137075,
+    "result":"FAIL",
+    "reason":"All content browsing and interactions passed, then standalone-SVG full-page screenshot timed out. Fixed by using the gallery's HTML img rendering path and rerunning the complete suite. App pages and diagrams unchanged."
+  },
+  "historical_exact_geometry_verified": false,
+  "po_approval": false,
+  "summary": "6 limited-use type references PASS, including one candidate-only gable beam; lower hump FAIL retained. Browser success does not establish historical geometry."
+}

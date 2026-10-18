@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "main_commit": "414be293918fea2bf4138b1a8f4345272e8764a8",
+  "registry_git_blob_sha": "c2e7850afb32a654f8450a2295c148e49b39e144",
+  "displayed_records": 185,
+  "unique_displayed_records": 184,
+  "all_selected_registry_rows_exact": true,
+  "notes": "Both hump role pages intentionally share one UNKNOWN family record; no arithmetic physical total is inferred."
+}

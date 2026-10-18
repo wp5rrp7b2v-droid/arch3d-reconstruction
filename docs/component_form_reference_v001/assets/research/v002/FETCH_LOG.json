@@ -1,0 +1,45 @@
+[
+  {
+    "id": "DAYUN2011",
+    "url": "https://blog.sina.com.cn/s/blog_4a877d4d0102e10e.html",
+    "time_utc": "2026-10-18T11:29:19Z",
+    "status": "FETCHED",
+    "bytes": 40262,
+    "sha256": "abbd94608683792322e698407d0719a9e7f2bcf0183b3d9d3f1831adec642c58",
+    "file": "DAYUN2011.html"
+  },
+  {
+    "id": "DAYUN2011-09",
+    "url": "https://s10.sinaimg.cn/middle/4a877d4dgb36cba93b619&690",
+    "time_utc": "2026-10-18T11:29:21Z",
+    "status": "FETCHED",
+    "bytes": 7092,
+    "sha256": "d2b5a30568572332968808f1fd3d0218cd8a8ca41889627168fc6d9ca487e766",
+    "file": "DAYUN2011-09.jpg"
+  },
+  {
+    "id": "DAYUN2011-11",
+    "url": "https://s3.sinaimg.cn/middle/4a877d4dgb36cbae00222&690",
+    "time_utc": "2026-10-18T11:29:22Z",
+    "status": "FETCHED",
+    "bytes": 7092,
+    "sha256": "d2b5a30568572332968808f1fd3d0218cd8a8ca41889627168fc6d9ca487e766",
+    "file": "DAYUN2011-11.jpg"
+  },
+  {
+    "id": "DAYUN2011-13",
+    "url": "https://s6.sinaimg.cn/middle/4a877d4dgb36cbb1cff85&690",
+    "time_utc": "2026-10-18T11:29:23Z",
+    "status": "FETCHED",
+    "bytes": 7092,
+    "sha256": "d2b5a30568572332968808f1fd3d0218cd8a8ca41889627168fc6d9ca487e766",
+    "file": "DAYUN2011-13.jpg"
+  },
+  {
+    "id": "NC1980",
+    "url": "https://www.3d-wonders.com/wp-content/uploads/2020/02/南禅寺大殿修复_祁英涛.pdf",
+    "time_utc": "2026-10-18T11:29:25Z",
+    "status": "FAILED",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)>"
+  }
+]

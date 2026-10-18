@@ -1,0 +1,78 @@
+{
+  "status": "PASS_LAYOUT_AND_COMPARISON_WITH_EVIDENCE_GAPS_RETAINED",
+  "version": "V002",
+  "chrome_run_id": 39124306952,
+  "v001_review_preserved_at_commit": "83cee5522b6f468677b2b42ced9f1f821500b9db",
+  "current_acceptance_record": "V002_ACCEPTANCE.json",
+  "chrome_version": "155.0.8059.39",
+  "browser_platform": "Linux",
+  "desktop_contact_pages_reviewed": [
+    "F003",
+    "F004",
+    "F005",
+    "F007",
+    "F008",
+    "F009",
+    "F030"
+  ],
+  "desktop_individual_first_screens_reviewed": [
+    "F003",
+    "F004",
+    "F005",
+    "F007",
+    "F008",
+    "F009",
+    "F030"
+  ],
+  "desktop_full_pages_reviewed": [],
+  "homepage_review": "Actual Chrome automatic checks; manual V002 scope is the seven detail first screens, mobile B/C regions and native drawing contact sheet.",
+  "mobile_screenshots_reviewed": [
+    "F003",
+    "F004",
+    "F005",
+    "F007",
+    "F008",
+    "F009",
+    "F030"
+  ],
+  "observed_results": [
+    "A/B/C readable and no collapsed main image areas",
+    "Seven independent axon/side/detail candidate drawings are visible; no candidate is presented as a measured original",
+    "Model axon views show dimensional simplification clearly",
+    "Gap badges and source limits remain prominent",
+    "No clipped CJK text or horizontal overflow seen in reviewed screenshots",
+    "Sources are folded below the principal images; F008 evidence FAIL remains prominent"
+  ],
+  "historical_form_approval": false,
+  "limitations": [
+    "Not a manual pixel-by-pixel review of every full screenshot",
+    "Photo occlusions and limited source resolution remain; enlarging adds no missing evidence",
+    "No independent complete geometry truth and no model edits",
+    "Actual user macOS Chrome session was not controlled"
+  ],
+  "app_content_identity": "Pages, index, styles, app and drawings unchanged between d36f8c47d629cd863bb642061d8de9e0ab73cc36 and successful Chrome-tested 21ca72e0faf9722758b37c9575a9c256c0b0bd19; the latter only fixes QA capture.",
+  "mobile_manual_scope": "Actual Chrome screenshot regions y=700..1850, all seven target IDs; not every pixel of every full-length mobile image",
+  "native_drawing_rasters_reviewed": ["F003","F004","F005","F007","F008","F009","F030"],
+  "earlier_qa_attempts": [
+    {
+      "run_id": 39124137075,
+      "reason": "All content tests passed, then direct standalone-SVG full-page screenshot timed out. HTML-img capture fixed and full suite rerun successfully as 39124306952."
+    },
+    {
+      "run_id": 39097191472,
+      "reason": "Quoted Chinese filenames caused scope-check false positive; corrected with NUL-separated paths."
+    },
+    {
+      "run_id": 39097266236,
+      "reason": "Full-text search legitimately returned 3 rows, including Linggong comparison text; test expected 2. Product behavior retained."
+    },
+    {
+      "run_id": 39097404883,
+      "reason": "Partial failure report referenced contact sheets not yet generated; report now links only existing files."
+    },
+    {
+      "run_id": 39097495446,
+      "reason": "Run started before repaired report entry was committed; final full regression executed from repaired commit."
+    }
+  ]
+}
