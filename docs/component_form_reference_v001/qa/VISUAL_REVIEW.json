@@ -1,5 +1,76 @@
 {
-  "status": "PENDING_ACTUAL_CHROME_SCREENSHOTS",
-  "reviewed_source_images": "本轮已检查本殿梁架、檐部、官方提取图，独乐寺PDF56脊部照片及佛光寺原报告索引；这不是Chrome页面视觉验收。",
-  "browser_visual_review_claim": false
+  "status": "PASS_LAYOUT_AND_COMPARISON_WITH_EVIDENCE_GAPS_RETAINED",
+  "chrome_run_id": 39097532511,
+  "chrome_version": "155.0.8059.39",
+  "browser_platform": "Linux",
+  "desktop_contact_pages_reviewed": [
+    "F003",
+    "F004",
+    "F005",
+    "F006",
+    "F007",
+    "F008",
+    "F009",
+    "F013",
+    "F020",
+    "F021",
+    "F026",
+    "F028",
+    "F029",
+    "F030",
+    "F035",
+    "F036"
+  ],
+  "desktop_individual_first_screens_reviewed": [
+    "F003",
+    "F007",
+    "F026",
+    "F028"
+  ],
+  "desktop_full_pages_reviewed": [
+    "F009",
+    "F026",
+    "F035"
+  ],
+  "homepage_review": "desktop first 1800px plus all16 comparison contact images; mobile first1650px",
+  "mobile_screenshots_reviewed": [
+    "index",
+    "F007",
+    "F026",
+    "F035"
+  ],
+  "observed_results": [
+    "A/B/C readable and no collapsed main image areas",
+    "Distinct images for required variants",
+    "Model axon views show dimensional simplification clearly",
+    "Gap badges and source limits remain prominent",
+    "No clipped CJK text or horizontal overflow seen in reviewed screenshots",
+    "Open-source, size and location information remain secondary to images"
+  ],
+  "historical_form_approval": false,
+  "limitations": [
+    "Not a manual pixel-by-pixel review of every full screenshot",
+    "Photo occlusions and limited source resolution remain; enlarging adds no missing evidence",
+    "No independent complete geometry truth and no model edits",
+    "Actual user macOS Chrome session was not controlled"
+  ],
+  "app_content_unchanged_since_first_screenshot_run": "git diff 9177eeb272758077360cc4c1b955f11dfb56437a..cc13945a818e18e41af96e77b6f143d6324031a6 for pages/index/style/app/data/assets returned no changes",
+  "earlier_qa_attempts": [
+    {
+      "run_id": 39097191472,
+      "reason": "Quoted Chinese filenames caused scope-check false positive; corrected with NUL-separated paths."
+    },
+    {
+      "run_id": 39097266236,
+      "reason": "Full-text search legitimately returned 3 rows, including Linggong comparison text; test expected 2. Product behavior retained."
+    },
+    {
+      "run_id": 39097404883,
+      "reason": "Partial failure report referenced contact sheets not yet generated; report now links only existing files."
+    },
+    {
+      "run_id": 39097495446,
+      "reason": "Run started before repaired report entry was committed; final full regression executed from repaired commit."
+    }
+  ]
 }

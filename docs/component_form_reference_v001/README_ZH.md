@@ -34,6 +34,8 @@ bash /tmp/wanfo_component_form_open.sh
 - `qa/CHROME_VALIDATION.json`：实际浏览结果。实际测试Linux Google Chrome；未远程控制用户Mac。
 - `qa/STATIC_VALIDATION.json`：页面、图片、必要变体、数量语义、模型身份及保护路径验证。
 
+实际验证已完成：[Google Chrome完整运行](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/39097532511)，Chrome 155.0.8059.39，Linux；19页本地文件浏览、桌面／390px窄屏、18内容页HTTP访问及图片放大通过。人工检查16个详情页首屏，并抽查完整页和窄屏，范围与限制见 `qa/VISUAL_REVIEW.json`。最终静态核对532条本地引用、165张原图及派生图解码通过。形制真实性不因浏览通过而升级。
+
 ## 边界
 
 基于main `414be293918fea2bf4138b1a8f4345272e8764a8`，读取正式状态R366；复核PR72 `54fac54578340918c78d65e973933b54090893a1`、PR73 `c770088e04216588eb9bcae02fa16a2b54199697`。只新增本目录及两个只作用于指定工作分支的取图／浏览验证工作流。
