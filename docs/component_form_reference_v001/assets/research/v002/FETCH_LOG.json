@@ -1,0 +1,18 @@
+[
+  {
+    "id": "DAYUN2011",
+    "url": "https://blog.sina.com.cn/s/blog_4a877d4d0102e10e.html",
+    "time_utc": "2026-10-18T11:27:49Z",
+    "status": "FETCHED",
+    "bytes": 40262,
+    "sha256": "abbd94608683792322e698407d0719a9e7f2bcf0183b3d9d3f1831adec642c58",
+    "file": "DAYUN2011.html"
+  },
+  {
+    "id": "NC1980",
+    "url": "https://www.3d-wonders.com/wp-content/uploads/2020/02/南禅寺大殿修复_祁英涛.pdf",
+    "time_utc": "2026-10-18T11:27:51Z",
+    "status": "FAILED",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1010)>"
+  }
+]
