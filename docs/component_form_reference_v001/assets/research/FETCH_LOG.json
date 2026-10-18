@@ -1,0 +1,42 @@
+[
+  {
+    "id": "DU1932",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/NLC404-01J000317-23024_中國營造學社彙刊_1932年3卷2期.pdf",
+    "retrieved_at_utc": "2026-10-18T04:03:50Z",
+    "bytes": 6407670,
+    "sha256": "7ecfaeaa2014ce9ac568d100a568b7c0eda07515f2e25787f9432a79362a0314",
+    "status": "FETCHED",
+    "pages": 203
+  },
+  {
+    "id": "WEN2017-19",
+    "url": "https://www.archiposition.com/images/lecture/foguangsi_80/佛光寺_温静_19.jpg",
+    "retrieved_at_utc": "2026-10-18T04:03:55Z",
+    "bytes": 235492,
+    "sha256": "d05ed8b20edacc33ef61e6d997097f07ddfcab6850afe71c501ae668ee1d8530",
+    "status": "FETCHED"
+  },
+  {
+    "id": "WEN2017-20",
+    "url": "https://www.archiposition.com/images/lecture/foguangsi_80/佛光寺_温静_20.JPG",
+    "retrieved_at_utc": "2026-10-18T04:03:58Z",
+    "bytes": 278103,
+    "sha256": "034ec011525f4e070b2c18f12cdb91cb50f5a2178bbe3355fdc280ba87b5c9f6",
+    "status": "FETCHED"
+  },
+  {
+    "id": "WEN2017-29",
+    "url": "https://www.archiposition.com/images/lecture/foguangsi_80/佛光寺_温静_29.JPG",
+    "retrieved_at_utc": "2026-10-18T04:03:59Z",
+    "bytes": 154310,
+    "sha256": "8597cfeca7bcb6f467b7742524e3c327ca8c8749a0cfbb1c733081b0a3e03ea1",
+    "status": "FETCHED"
+  },
+  {
+    "id": "OFFICIAL",
+    "url": "https://szbwgvue.chwhyun.cn/wanfodian/",
+    "retrieved_at_utc": "2026-10-18T04:04:00Z",
+    "status": "FAILED",
+    "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1010)>"
+  }
+]
