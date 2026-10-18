@@ -3,7 +3,7 @@ on:
   push:
     branches: [evidence/component-form-reference-v001]
     paths:
-      - docs/component_form_reference_v001/tools/collect_sources.py
+      - docs/component_form_reference_v001/tools/collect_v002.py
       - .github/workflows/wanfo_component_form_sources.yml
 permissions:
   contents: write
@@ -17,7 +17,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install pymupdf pillow
-      - run: python docs/component_form_reference_v001/tools/collect_sources.py
+      - run: python docs/component_form_reference_v001/tools/collect_v002.py
       - name: Save source extracts to this evidence branch only
         run: |
           test "$GITHUB_REF_NAME" = evidence/component-form-reference-v001
