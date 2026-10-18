@@ -1,5 +1,5 @@
 {
-  "status": "FAIL",
+  "status": "PASS",
   "engine": "Google Chrome",
   "pages": [
     {
@@ -10,7 +10,13 @@
         "images": 32
       },
       "file_scheme": "PASS",
-      "lightbox": "N/A"
+      "lightbox": "N/A",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 32
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "sources.html",
@@ -20,7 +26,13 @@
         "images": 0
       },
       "file_scheme": "PASS",
-      "lightbox": "N/A"
+      "lightbox": "N/A",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 0
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F003.html",
@@ -30,7 +42,13 @@
         "images": 5
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F004.html",
@@ -40,7 +58,13 @@
         "images": 5
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F005.html",
@@ -50,7 +74,13 @@
         "images": 6
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F006.html",
@@ -60,7 +90,13 @@
         "images": 6
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F007.html",
@@ -70,7 +106,13 @@
         "images": 3
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 3
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F008.html",
@@ -80,7 +122,13 @@
         "images": 6
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F009.html",
@@ -90,7 +138,13 @@
         "images": 4
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 4
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F013.html",
@@ -100,7 +154,13 @@
         "images": 5
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F020.html",
@@ -110,7 +170,13 @@
         "images": 6
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F021.html",
@@ -120,7 +186,13 @@
         "images": 6
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F026.html",
@@ -130,7 +202,13 @@
         "images": 6
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F028.html",
@@ -140,7 +218,13 @@
         "images": 5
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F029.html",
@@ -150,7 +234,13 @@
         "images": 5
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F030.html",
@@ -160,7 +250,13 @@
         "images": 6
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 6
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F035.html",
@@ -170,7 +266,13 @@
         "images": 5
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "HTTP": "PASS"
     },
     {
       "file": "pages/F036.html",
@@ -180,14 +282,45 @@
         "images": 5
       },
       "file_scheme": "PASS",
-      "lightbox": "PASS"
+      "lightbox": "PASS",
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 5
+      },
+      "HTTP": "PASS"
+    },
+    {
+      "file": "qa/index.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 4
+      },
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 4
+      },
+      "file_scheme": "PASS",
+      "screenshot_stem": "index-qa"
     }
   ],
-  "errors": [
-    "Traceback (most recent call last):\n  File \"/home/runner/work/arch3d-reconstruction/arch3d-reconstruction/docs/component_form_reference_v001/tools/browser_qa.py\", line 78, in <module>\n    try:main()\n        ^^^^^^\n  File \"/home/runner/work/arch3d-reconstruction/arch3d-reconstruction/docs/component_form_reference_v001/tools/browser_qa.py\", line 38, in main\n    p.locator('#search').fill('华栱');assert p.locator('.gallery tbody tr:visible').count()==2\n                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
-  ],
+  "errors": [],
   "version": "155.0.8059.39",
   "executable": "/usr/bin/google-chrome",
   "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
-  "tested_at_utc": "2026-10-18T04:30:16Z"
+  "tested_at_utc": "2026-10-18T04:34:32Z",
+  "search_and_filters": "PASS",
+  "viewports": [
+    [
+      1440,
+      1100
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "limitations": "Linux Google Chrome verified, all content pages and images. User macOS Chrome was not remotely operated. Passing browser checks does not establish historical authenticity."
 }
