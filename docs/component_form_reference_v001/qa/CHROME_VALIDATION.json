@@ -1,5 +1,5 @@
 {
-  "status": "FAIL",
+  "status": "PASS",
   "engine": "Google Chrome",
   "pages": [
     {
@@ -289,14 +289,38 @@
         "images": 5
       },
       "HTTP": "PASS"
+    },
+    {
+      "file": "qa/index.html",
+      "desktop": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 4
+      },
+      "mobile": {
+        "broken": [],
+        "horizontalOverflow": false,
+        "images": 4
+      },
+      "file_scheme": "PASS",
+      "screenshot_stem": "index-qa"
     }
   ],
-  "errors": [
-    "Traceback (most recent call last):\n  File \"/home/runner/work/arch3d-reconstruction/arch3d-reconstruction/docs/component_form_reference_v001/tools/browser_qa.py\", line 94, in <module>\n    try:main()\n        ^^^^^^\n  File \"/home/runner/work/arch3d-reconstruction/arch3d-reconstruction/docs/component_form_reference_v001/tools/browser_qa.py\", line 62, in main\n    p.screenshot(path=str(QA/'screenshots'/f'{fid}-form.png'),full_page=True)\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/sync_api/_generated.py\", line 20239, in screenshot\n    self._sync(\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_sync_base.py\", line 111, in _sync\n    return task.result()\n           ^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_page.py\", line 832, in screenshot\n    encoded_binary = await self._channel.send(\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py\", line 78, in send\n    return await self._connection.wrap_api_call(\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/playwright/_impl/_connection.py\", line 636, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.TimeoutError: Page.screenshot: Timeout 30000ms exceeded.\nCall log:\n  - taking page screenshot\n  - waiting for fonts to load...\n  - fonts loaded\n\n"
-  ],
+  "errors": [],
   "version": "155.0.8059.39",
   "executable": "/usr/bin/google-chrome",
   "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
-  "tested_at_utc": "2026-10-18T11:40:18Z",
-  "search_and_filters": "PASS"
+  "tested_at_utc": "2026-10-18T11:42:45Z",
+  "search_and_filters": "PASS",
+  "viewports": [
+    [
+      1440,
+      1100
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "limitations": "Linux Google Chrome verified, all content pages and images. User macOS Chrome was not remotely operated. Passing browser checks does not establish historical authenticity."
 }

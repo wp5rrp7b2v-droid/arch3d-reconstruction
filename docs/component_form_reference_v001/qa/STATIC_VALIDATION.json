@@ -2,7 +2,7 @@
   "status": "PASS",
   "scope": "16 views / 12 categories; static QA only",
   "html_pages": 19,
-  "local_references_checked": 639,
+  "local_references_checked": 637,
   "distinct_page_images_decoded": 91,
   "all_asset_images_decoded": 169,
   "source_images_exact": 66,
