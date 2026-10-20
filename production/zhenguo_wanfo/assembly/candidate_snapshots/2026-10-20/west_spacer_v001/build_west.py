@@ -99,20 +99,65 @@ if sys.argv[sys.argv.index("--")+1]=="build":
  target=out/"WANFO_WEST_SPACER_TRIAL_V001.blend"
  bpy.ops.wm.save_as_mainfile(filepath=str(target),compress=True)
  print("WEST_TRIAL_89_SAVED",str(target))
- # Generate an actual headless Blender Workbench preview. Visual approval is separate.
+ # After the BLEND is saved, set up TEMPORARY CPU-only render materials and lights.
+ # This never changes the saved source geometry or approval metadata.
+ # Workbench on this Linux runner produced all-black images, so use Cycles CPU.
  try:
+  scene.render.engine="CYCLES"
+  scene.cycles.device="CPU"
+  scene.cycles.samples=12
+  scene.render.film_transparent=False
+  scene.render.resolution_x=1600;scene.render.resolution_y=1000
+  scene.render.resolution_percentage=100
+  scene.render.image_settings.file_format="PNG"
+  scene.render.image_settings.color_mode="RGB"
+  scene.view_settings.view_transform="Standard"
+  if scene.world is None: scene.world=bpy.data.worlds.new("TEMP_QA_SKY")
+  scene.world.use_nodes=True
+  background=scene.world.node_tree.nodes.get("Background")
+  background.inputs["Color"].default_value=(0.68,0.73,0.8,1)
+  background.inputs["Strength"].default_value=0.75
+  palette={
+   "new":(0.91,0.35,0.08,1),
+   "west":(0.37,0.57,0.65,1),
+   "east":(0.75,0.61,0.42,1),
+   "purlin":(0.57,0.65,0.52,1)
+  }
+  render_materials={}
+  for key,color in palette.items():
+   mat=bpy.data.materials.new("TEMP_QA_"+key)
+   mat.use_nodes=True
+   bsdf=mat.node_tree.nodes.get("Principled BSDF")
+   bsdf.inputs["Base Color"].default_value=color
+   bsdf.inputs["Roughness"].default_value=0.86
+   render_materials[key]=mat
+  for obj in scene.objects:
+   if obj.type!="MESH": continue
+   key=("new" if obj.name in pairs.values() else
+        "west" if obj.name.startswith("west:") else
+        "east" if obj.name.startswith("east:") else "purlin")
+   obj.data.materials.clear()
+   obj.data.materials.append(render_materials[key])
+  def light(name,point,power,size):
+   dat=bpy.data.lights.new(name,"AREA")
+   dat.energy=power;dat.shape="DISK";dat.size=size
+   thing=bpy.data.objects.new(name,dat);scene.collection.objects.link(thing)
+   thing.location=point
+   thing.rotation_euler=(Vector((1800,0,-300))-thing.location).to_track_quat("-Z","Y").to_euler()
+  light("TEMP_QA_KEY",(-2000,-4500,9000),8000,8000)
+  light("TEMP_QA_FILL",(7000,6500,6500),6000,9000)
   def view(name,loc,aim,scale):
-   cam_data=bpy.data.cameras.new(name);cam=bpy.data.objects.new(name,cam_data);scene.collection.objects.link(cam)
-   cam.location=loc;cam.rotation_euler=(Vector(aim)-cam.location).to_track_quat("-Z","Y").to_euler()
+   cam_data=bpy.data.cameras.new(name)
+   cam=bpy.data.objects.new(name,cam_data);scene.collection.objects.link(cam)
+   cam.location=loc
+   cam.rotation_euler=(Vector(aim)-cam.location).to_track_quat("-Z","Y").to_euler()
    cam_data.type="ORTHO";cam_data.ortho_scale=scale;scene.camera=cam
-   scene.render.engine="BLENDER_WORKBENCH";scene.display.shading.light="STUDIO"
-   scene.display.shading.color_type="OBJECT"
-   scene.render.resolution_x=1600;scene.render.resolution_y=1000;scene.render.resolution_percentage=100
-   scene.render.image_settings.file_format="PNG";scene.render.filepath=str(out/(name+".png"))
+   scene.render.filepath=str(out/(name+".png"))
    bpy.ops.render.render(write_still=True)
    bpy.data.objects.remove(cam,do_unlink=True)
-  view("WEST_SPACER_DETAIL",(-5500,-8500,3400),(0,0,-600),12000)
-  view("TWO_FRAME_OVERVIEW",(-8500,-14000,8500),(1800,0,-200),19000)
+   print("RENDER_CPU_CYCLES",name)
+  view("WEST_SPACER_DETAIL",(-5400,-7200,3300),(0,0,-650),10200)
+  view("TWO_FRAME_OVERVIEW",(-8200,-13800,7600),(1800,0,-350),17500)
  except Exception as exc:
   (out/"RENDER_FAILURE.txt").write_text(type(exc).__name__+": "+str(exc))
   print("PREVIEW_RENDER_FAILED",str(exc))
