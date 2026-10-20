@@ -47,6 +47,15 @@ if sys.argv[sys.argv.index("--")+1]=="build":
                ((wb[0][1]+wb[1][1])-(eb[0][1]+eb[1][1]))/2,wb[0][2]-eb[0][2]))
  assert abs(delta.x+4437)<1 and abs(delta.y)<1 and abs(delta.z+27)<1, \
         ("UNEXPECTED_WEST_FRAME_DATUM",tuple(delta),eb,wb)
+ # The west beam is 309mm wide; the east beam is 295mm wide.
+ # On direct reuse of east sandou, west beam enters each 20mm raised ear by 7mm.
+ # Expand only the two new sandou seat openings by 7mm each side;
+ # do not reshape the approved east objects, and retain this as a trial adaptation.
+ east_beam_width=eb[1][0]-eb[0][0]
+ west_beam_width=wb[1][0]-wb[0][0]
+ lip_shift=(west_beam_width-east_beam_width)/2
+ assert abs(east_beam_width-295)<1e-6 and abs(west_beam_width-309)<1e-6
+ assert abs(lip_shift-7)<1e-6
  for src_name,dst_name in pairs.items():
   assert dst_name not in bpy.data.objects and src_name in bpy.data.objects
   src=bpy.data.objects[src_name]
@@ -57,6 +66,13 @@ if sys.argv[sys.argv.index("--")+1]=="build":
   matrix=src.matrix_world.copy()
   matrix.translation+=delta
   dst.matrix_world=matrix
+  if dst_name in ("trial:WEST_FRONT_SANDOU","trial:WEST_REAR_SANDOU"):
+   for vertex in dst.data.vertices:
+    if abs(vertex.co.x)>=east_beam_width/2-1e-6:
+     vertex.co.x += math.copysign(lip_shift,vertex.co.x)
+   dst.data.update()
+   dst["west_sandou_seat_width_delta_mm"]=west_beam_width-east_beam_width
+   dst["west_sandou_form"]="ADAPTED_TRIAL_NOT_HISTORICALLY_VERIFIED"
   dst["effective_approval_status"]="PENDING_WEST_SPACER_V001_REVIEW"
   dst["approval_record"]="NO_NEW_PO_FORM_APPROVAL / COPY_FOR_ASSEMBLY_TEST_ONLY"
   dst["source_east_trial"]=src_name
@@ -71,11 +87,13 @@ if sys.argv[sys.argv.index("--")+1]=="build":
  scene["canonical_master_change"]="NONE"
  scene["west_placement_hypothesis"]="mirror family geometry only; x/y beam centre, z underside shift; requires contact test"
  note=bpy.data.texts.new("WEST_SPACER_TRIAL_SCOPE_ZH")
- note.write("西缝上六椽栿及前后隔架：仅将东缝7件试装几何按两榀四椽栿中轴和底面关系转移。\n原82件不修改；西缝7件均为新候选，不自动批准。\n不得把东西缝同形当作历史实测，不得把当前模型中的其余待审件升级批准。\n")
+ note.write("西缝上六椽栿及前后隔架：东缝5件试装几何平移；西缝前后两散斗按四椽栿材广295至309mm差异将承托凹口两侧各扩大7mm。\n原82件不修改；西缝7件均为新候选，不自动批准。\n不得把东西缝同形当作历史实测，不得把当前模型中的其余待审件升级批准。\n")
  (out/"BUILD_INPUT_REPORT.json").write_text(json.dumps(
   {"baseline_sha256":expected,"source_count":82,"added_count":7,
    "total_meshes":89,"delta_mm":list(delta),
    "beam_east_bounds_mm":eb,"beam_west_bounds_mm":wb,
+   "west_sandou_lip_shift_each_side_mm":lip_shift,
+   "west_sandou_adjusted_ids":["trial:WEST_FRONT_SANDOU","trial:WEST_REAR_SANDOU"],
    "copy_map":pairs,"evidence_class":"ENGINEERING_TRIAL_NOT_HISTORICAL_GEOMETRY"},
   ensure_ascii=False,indent=2)+"\n")
  target=out/"WANFO_WEST_SPACER_TRIAL_V001.blend"
