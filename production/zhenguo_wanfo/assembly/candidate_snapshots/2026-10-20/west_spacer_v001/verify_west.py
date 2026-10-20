@@ -28,12 +28,26 @@ for key,src in aa.items():
  d=float(np.max(abs(np.asarray(src["vertices"])-np.asarray(dst["vertices"]))))
  assert d<.001, ("ORIGINAL_WORLD_COORDINATE_DRIFT",key,d)
  max_error=max(max_error,d)
+sandou_adjustments={"trial:WEST_FRONT_SANDOU","trial:WEST_REAR_SANDOU"}
+lip_shift=float(build["west_sandou_lip_shift_each_side_mm"])
+assert set(build["west_sandou_adjusted_ids"])==sandou_adjustments and abs(lip_shift-7)<1e-6
 for src,dst in mapping.items():
  one,two=aa[src],bb[dst]
- assert one["faces"]==two["faces"] and one["local"]==two["local"], ("COPY_NOT_SAME_MESH",dst)
- actual=np.array(two["vertices"]);expected=np.array(one["vertices"])+delta
+ assert one["faces"]==two["faces"], ("COPY_FACES_CHANGED",dst)
+ source_local=np.array(one["local"]);target_local=np.array(two["local"])
+ local_expected=source_local.copy()
+ shift=np.zeros(len(source_local))
+ if dst in sandou_adjustments:
+  # Only upper side ears are moved outwards; lower centre and full Z remain.
+  mask=np.abs(source_local[:,0]) >= 147.5-1e-6
+  shift[mask]=np.sign(source_local[mask,0])*lip_shift
+  local_expected[:,0]+=shift
+ assert np.max(np.abs(target_local-local_expected))<1e-6, ("WEST_LOCAL_ADAPTATION_WRONG",dst)
+ actual=np.array(two["vertices"])
+ expected=np.array(one["vertices"])+delta
+ expected[:,0]+=shift
  d=float(np.max(abs(actual-expected)))
- assert d<.001, ("WEST_CLONE_OFFSET_WRONG",dst,d)
+ assert d<.001, ("WEST_CANDIDATE_OFFSET_OR_SEAT_WRONG",dst,d)
  max_error=max(max_error,d)
 assert abs(delta[0]+4437)<1 and abs(delta[1])<1 and abs(delta[2]+27)<1,delta
 
@@ -99,7 +113,8 @@ report={
  "new_blend_sha256":current["blend_sha256"],
  "blender":current["blender"],
  "base_meshes":82,"added_new_candidate_meshes":7,"total_meshes":89,
- "original_82_exact_mesh_and_matrix":True,"new_seven_derived_rigid_copy":True,
+ "original_82_exact_mesh_and_matrix":True,"new_five_derived_rigid_copy":True,
+ "new_two_sandou_local_seat_adapted":True,"adaptation_lip_shift_mm_each_side":lip_shift,
  "max_world_delta_error_mm":max_error,"world_tolerance_mm":.001,
  "source_to_target_translation_mm":list(delta),
  "pair_count":n,"max_overlap_mm3":greatest,"max_permitted_overlap_mm3":1,
