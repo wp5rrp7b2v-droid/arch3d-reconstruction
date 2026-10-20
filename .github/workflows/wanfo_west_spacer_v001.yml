@@ -6,6 +6,7 @@ on:
       - .github/workflows/wanfo_west_spacer_v001.yml
       - production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-20/west_spacer_v001/build_west.py
       - production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-20/west_spacer_v001/verify_west.py
+      - production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-20/west_spacer_v001/render_qa.py
 permissions:
   contents: write
 jobs:
@@ -23,11 +24,11 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install geometry validation libraries
-        run: python -m pip install numpy==2.5.3 trimesh==5.1.1 manifold3d==3.5.4 shapely==2.1.2 networkx==3.4.2
+        run: python -m pip install numpy==2.5.3 trimesh==5.1.1 manifold3d==3.5.4 shapely==2.1.2 networkx==3.4.2 pillow==11.3.0
       - name: Install Blender 4.5.13 in GitHub Actions runner only
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1 fonts-noto-cjk
           curl --fail --location --show-error --retry 3 -o /tmp/blender.tar.xz https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
           tar -xf /tmp/blender.tar.xz -C /tmp
       - name: Build seven WEST candidates from the exact C01 baseline
@@ -43,13 +44,18 @@ jobs:
           python "$TASK_ROOT/verify_west.py" "$TASK_ROOT"
           test -s "$TASK_ROOT/output/WEST_SPACER_DETAIL.png"
           test -s "$TASK_ROOT/output/TWO_FRAME_OVERVIEW.png"
+      - name: Check actual rendered geometry and add Chinese image annotations
+        run: |
+          python "$TASK_ROOT/render_qa.py" "$TASK_ROOT"
+          test -s "$TASK_ROOT/output/RENDER_QA.json"
       - name: Archive independently validated model and review images on task branch
         run: |
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add "$TASK_ROOT/output/WANFO_WEST_SPACER_TRIAL_V001.blend" \
-                  "$TASK_ROOT/output/WEST_SPACER_VALIDATION.json" \
+          git add -f "$TASK_ROOT/output/WANFO_WEST_SPACER_TRIAL_V001.blend"
+          git add "$TASK_ROOT/output/WEST_SPACER_VALIDATION.json" \
                   "$TASK_ROOT/output/BUILD_INPUT_REPORT.json" \
+                  "$TASK_ROOT/output/RENDER_QA.json" \
                   "$TASK_ROOT/output/WEST_SPACER_DETAIL.png" \
                   "$TASK_ROOT/output/TWO_FRAME_OVERVIEW.png"
           if ! git diff --cached --quiet; then
