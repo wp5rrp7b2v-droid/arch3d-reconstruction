@@ -1,0 +1,54 @@
+name: Wanfo WEST 89 GLB export V001
+on:
+  push:
+    branches: [assembly/west-spacer-from-east-v001-20261020]
+    paths:
+      - .github/workflows/wanfo_west_89_glb_export_v001.yml
+      - production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-20/west_spacer_v001/export_glb_v001.py
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-west-89-glb-v001
+  cancel-in-progress: false
+jobs:
+  convert_and_validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      TASK_ROOT: production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-20/west_spacer_v001
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Install headless Blender 4.5.13
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl --fail --location --show-error --retry 3 -o /tmp/blender.tar.xz https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Export model to GLB without changing source
+        run: |
+          /tmp/blender-4.5.13-linux-x64/blender --background --factory-startup --python-exit-code 10 --python "$TASK_ROOT/export_glb_v001.py" -- export "$TASK_ROOT"
+      - name: Independently reopen GLB and verify all 89 meshes
+        run: |
+          /tmp/blender-4.5.13-linux-x64/blender --background --factory-startup --python-exit-code 10 --python "$TASK_ROOT/export_glb_v001.py" -- validate "$TASK_ROOT"
+      - name: Commit only verified GLB and validation report to PR branch
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -f "$TASK_ROOT/output/WANFO_WEST_SPACER_89_TRIAL_V001.glb"
+          git add "$TASK_ROOT/output/GLB_EXPORT_BASELINE.json" "$TASK_ROOT/output/GLB_EXPORT_VALIDATION.json"
+          if ! git diff --cached --quiet; then
+            git commit -m "export: archive checked 89-component GLB and reimport validation"
+            git push origin HEAD:assembly/west-spacer-from-east-v001-20261020
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_WEST_SPACER_89_GLB_EXPORT_V001
+          path: |
+            production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-20/west_spacer_v001/output/WANFO_WEST_SPACER_89_TRIAL_V001.glb
+            production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-20/west_spacer_v001/output/GLB_EXPORT_BASELINE.json
+            production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-20/west_spacer_v001/output/GLB_EXPORT_VALIDATION.json
+          if-no-files-found: warn
+          retention-days: 90

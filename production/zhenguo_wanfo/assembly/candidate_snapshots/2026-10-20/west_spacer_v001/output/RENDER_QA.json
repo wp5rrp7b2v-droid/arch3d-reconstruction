@@ -1,0 +1,30 @@
+{
+  "status": "PASS_VISIBLE_CPU_RENDER",
+  "records": [
+    {
+      "file": "WEST_SPACER_DETAIL.png",
+      "size_px": [
+        1600,
+        1000
+      ],
+      "raw_render_mean": 176.77332207207206,
+      "raw_render_std_mean": 30.894677644072306,
+      "raw_dark_fraction": 0.0,
+      "chinese_labels_applied": true,
+      "qa": "PASS"
+    },
+    {
+      "file": "TWO_FRAME_OVERVIEW.png",
+      "size_px": [
+        1600,
+        1000
+      ],
+      "raw_render_mean": 186.51571676406135,
+      "raw_render_std_mean": 22.681965943099442,
+      "raw_dark_fraction": 0.0,
+      "chinese_labels_applied": true,
+      "qa": "PASS"
+    }
+  ],
+  "view_only": "Visual images are schematic review renders; no historical or physical approval."
+}
