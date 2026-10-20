@@ -90,7 +90,7 @@ if sys.argv[sys.argv.index("--")+1]=="build":
    scene.render.engine="BLENDER_WORKBENCH";scene.display.shading.light="STUDIO"
    scene.display.shading.color_type="OBJECT"
    scene.render.resolution_x=1600;scene.render.resolution_y=1000;scene.render.resolution_percentage=100
-   scene.render.image_settings.file_format="PNG";scene.render.filepath=str(out/name+".png")
+   scene.render.image_settings.file_format="PNG";scene.render.filepath=str(out/(name+".png"))
    bpy.ops.render.render(write_still=True)
    bpy.data.objects.remove(cam,do_unlink=True)
   view("WEST_SPACER_DETAIL",(-5500,-8500,3400),(0,0,-600),12000)
