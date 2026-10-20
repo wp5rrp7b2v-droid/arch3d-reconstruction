@@ -1,0 +1,1442 @@
+{
+  "status": "EXPORT_SOURCE_VERIFIED",
+  "input_blend_sha256": "5c81c836cc7ca3a229eebe5ac9cb4c62a744b9a1eeb10b0e9683cf0ccd097f13",
+  "glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+  "glb_header": {
+    "magic": "glTF",
+    "glb_version": 2,
+    "byte_length": 759608
+  },
+  "record_count": 89,
+  "mesh_records": {
+    "RIDGE_PURLIN": {
+      "world_bounds_mm": [
+        [
+          -880.48681640625,
+          -130.0,
+          2208.034423828125
+        ],
+        [
+          5317.48681640625,
+          130.0,
+          2455.965576171875
+        ]
+      ],
+      "triangle_count": 384,
+      "source_vertex_count": 194
+    },
+    "UPPER_PURLIN_FRONT": {
+      "world_bounds_mm": [
+        [
+          -880.3505859375,
+          1723.5,
+          964.2239379882812
+        ],
+        [
+          5317.3505859375,
+          1948.5,
+          1208.776123046875
+        ]
+      ],
+      "triangle_count": 512,
+      "source_vertex_count": 258
+    },
+    "UPPER_PURLIN_REAR": {
+      "world_bounds_mm": [
+        [
+          -880.3505859375,
+          -1948.5,
+          964.2239379882812
+        ],
+        [
+          5317.3505859375,
+          -1723.5,
+          1208.776123046875
+        ]
+      ],
+      "triangle_count": 512,
+      "source_vertex_count": 258
+    },
+    "east:CENTRE_DOU_FRONT": {
+      "world_bounds_mm": [
+        [
+          4267.0,
+          1716.0,
+          418.0
+        ],
+        [
+          4607.0,
+          1956.0,
+          590.0
+        ]
+      ],
+      "triangle_count": 52,
+      "source_vertex_count": 28
+    },
+    "east:CENTRE_DOU_REAR": {
+      "world_bounds_mm": [
+        [
+          4267.0,
+          -1956.0,
+          436.0
+        ],
+        [
+          4607.0,
+          -1716.0,
+          590.0
+        ]
+      ],
+      "triangle_count": 52,
+      "source_vertex_count": 28
+    },
+    "east:FOUR_BEAM": {
+      "world_bounds_mm": [
+        [
+          4289.5,
+          -3596.0,
+          -413.0
+        ],
+        [
+          4584.5,
+          3596.0,
+          0.0
+        ]
+      ],
+      "triangle_count": 12,
+      "source_vertex_count": 8
+    },
+    "east:HEAD_DOU_FRONT": {
+      "world_bounds_mm": [
+        [
+          4267.0,
+          1386.0,
+          426.0
+        ],
+        [
+          4607.0,
+          1626.0,
+          541.0
+        ]
+      ],
+      "triangle_count": 76,
+      "source_vertex_count": 40
+    },
+    "east:HEAD_DOU_REAR": {
+      "world_bounds_mm": [
+        [
+          4267.0,
+          -1626.0,
+          429.0
+        ],
+        [
+          4607.0,
+          -1386.0,
+          541.0
+        ]
+      ],
+      "triangle_count": 76,
+      "source_vertex_count": 40
+    },
+    "east:HUAGONG_FRONT": {
+      "world_bounds_mm": [
+        [
+          4360.5,
+          1416.0,
+          205.0
+        ],
+        [
+          4513.5,
+          2431.73779296875,
+          426.0
+        ]
+      ],
+      "triangle_count": 216,
+      "source_vertex_count": 110
+    },
+    "east:HUAGONG_REAR": {
+      "world_bounds_mm": [
+        [
+          4359.0,
+          -2405.34423828125,
+          219.0
+        ],
+        [
+          4515.0,
+          -1416.0,
+          429.0
+        ]
+      ],
+      "triangle_count": 216,
+      "source_vertex_count": 110
+    },
+    "east:LINGGONG_FRONT": {
+      "world_bounds_mm": [
+        [
+          3929.0,
+          1761.5,
+          205.0
+        ],
+        [
+          4945.0,
+          1910.5,
+          418.0
+        ]
+      ],
+      "triangle_count": 540,
+      "source_vertex_count": 272
+    },
+    "east:LINGGONG_REAR": {
+      "world_bounds_mm": [
+        [
+          3939.5,
+          -1911.0,
+          219.0
+        ],
+        [
+          4934.5,
+          -1761.0,
+          436.0
+        ]
+      ],
+      "triangle_count": 540,
+      "source_vertex_count": 272
+    },
+    "east:LUDOU_FRONT": {
+      "world_bounds_mm": [
+        [
+          4276.5,
+          1658.5,
+          95.0
+        ],
+        [
+          4597.5,
+          2013.5,
+          314.0
+        ]
+      ],
+      "triangle_count": 80,
+      "source_vertex_count": 42
+    },
+    "east:LUDOU_REAR": {
+      "world_bounds_mm": [
+        [
+          4277.0,
+          -2014.5,
+          109.0
+        ],
+        [
+          4597.0,
+          -1657.5,
+          328.0
+        ]
+      ],
+      "triangle_count": 80,
+      "source_vertex_count": 42
+    },
+    "east:PANJIAN_FANG_FRONT": {
+      "world_bounds_mm": [
+        [
+          3557.0,
+          1760.0,
+          525.0
+        ],
+        [
+          5317.0,
+          1912.0,
+          735.0
+        ]
+      ],
+      "triangle_count": 44,
+      "source_vertex_count": 24
+    },
+    "east:PANJIAN_FANG_REAR": {
+      "world_bounds_mm": [
+        [
+          3557.0,
+          -1912.0,
+          525.0
+        ],
+        [
+          5317.0,
+          -1760.0,
+          735.0
+        ]
+      ],
+      "triangle_count": 44,
+      "source_vertex_count": 24
+    },
+    "east:PINGLIANG": {
+      "world_bounds_mm": [
+        [
+          4297.0,
+          -1836.0,
+          521.0
+        ],
+        [
+          4577.0,
+          1836.0,
+          911.0
+        ]
+      ],
+      "triangle_count": 132,
+      "source_vertex_count": 68
+    },
+    "east:RIDGE_SINGLE_GONG": {
+      "world_bounds_mm": [
+        [
+          3934.0,
+          -76.5,
+          1765.0
+        ],
+        [
+          4940.0,
+          76.5,
+          1980.0
+        ]
+      ],
+      "triangle_count": 60,
+      "source_vertex_count": 32
+    },
+    "east:RIDGE_TIEMU": {
+      "world_bounds_mm": [
+        [
+          3557.0,
+          -75.0,
+          2080.0
+        ],
+        [
+          5317.0,
+          75.0,
+          2232.0
+        ]
+      ],
+      "triangle_count": 220,
+      "source_vertex_count": 112
+    },
+    "east:SHUZHU": {
+      "world_bounds_mm": [
+        [
+          4358.0,
+          -109.0,
+          991.0
+        ],
+        [
+          4516.0,
+          109.0,
+          1630.0
+        ]
+      ],
+      "triangle_count": 28,
+      "source_vertex_count": 16
+    },
+    "east:SHUZHU_FOOT_PAD": {
+      "world_bounds_mm": [
+        [
+          4337.0,
+          -325.0,
+          911.0
+        ],
+        [
+          4537.0,
+          325.0,
+          991.0
+        ]
+      ],
+      "triangle_count": 68,
+      "source_vertex_count": 36
+    },
+    "east:TIEMU_FRONT": {
+      "world_bounds_mm": [
+        [
+          3557.0,
+          1761.0,
+          835.0
+        ],
+        [
+          5317.0,
+          1911.0,
+          987.0
+        ]
+      ],
+      "triangle_count": 302,
+      "source_vertex_count": 153
+    },
+    "east:TIEMU_REAR": {
+      "world_bounds_mm": [
+        [
+          3557.0,
+          -1911.0,
+          835.0
+        ],
+        [
+          5317.0,
+          -1761.0,
+          987.0
+        ]
+      ],
+      "triangle_count": 302,
+      "source_vertex_count": 153
+    },
+    "east:TUOFENG_FRONT": {
+      "world_bounds_mm": [
+        [
+          4289.5,
+          1511.0,
+          0.0
+        ],
+        [
+          4584.5,
+          2161.0,
+          95.0
+        ]
+      ],
+      "triangle_count": 756,
+      "source_vertex_count": 380
+    },
+    "east:TUOFENG_REAR": {
+      "world_bounds_mm": [
+        [
+          4289.5,
+          -2161.0,
+          0.0
+        ],
+        [
+          4584.5,
+          -1511.0,
+          121.82176208496094
+        ]
+      ],
+      "triangle_count": 756,
+      "source_vertex_count": 380
+    },
+    "east:TUOJIAO_FRONT": {
+      "world_bounds_mm": [
+        [
+          4361.0,
+          1912.0001220703125,
+          0.0
+        ],
+        [
+          4513.0,
+          3349.5908203125,
+          762.5480346679688
+        ]
+      ],
+      "triangle_count": 36,
+      "source_vertex_count": 20
+    },
+    "east:TUOJIAO_REAR": {
+      "world_bounds_mm": [
+        [
+          4361.0,
+          -3349.5908203125,
+          0.0
+        ],
+        [
+          4513.0,
+          -1912.0001220703125,
+          762.5480346679688
+        ]
+      ],
+      "triangle_count": 36,
+      "source_vertex_count": 20
+    },
+    "east:UPPER_DOU_FRONT": {
+      "world_bounds_mm": [
+        [
+          4267.0,
+          1716.0,
+          735.0
+        ],
+        [
+          4607.0,
+          1956.0,
+          900.0
+        ]
+      ],
+      "triangle_count": 52,
+      "source_vertex_count": 28
+    },
+    "east:UPPER_DOU_REAR": {
+      "world_bounds_mm": [
+        [
+          4267.0,
+          -1956.0,
+          735.0
+        ],
+        [
+          4607.0,
+          -1716.0,
+          900.0
+        ]
+      ],
+      "triangle_count": 52,
+      "source_vertex_count": 28
+    },
+    "west:CENTRE_DOU_FRONT": {
+      "world_bounds_mm": [
+        [
+          -170.0,
+          1716.0,
+          437.0
+        ],
+        [
+          170.0,
+          1956.0,
+          600.0
+        ]
+      ],
+      "triangle_count": 52,
+      "source_vertex_count": 28
+    },
+    "west:CENTRE_DOU_REAR": {
+      "world_bounds_mm": [
+        [
+          -170.0,
+          -1956.0,
+          456.0
+        ],
+        [
+          170.0,
+          -1716.0,
+          600.0
+        ]
+      ],
+      "triangle_count": 52,
+      "source_vertex_count": 28
+    },
+    "west:CHASHOU_FRONT": {
+      "world_bounds_mm": [
+        [
+          -45.5,
+          77.0,
+          922.0
+        ],
+        [
+          45.5,
+          1740.0,
+          2100.0
+        ]
+      ],
+      "triangle_count": 16,
+      "source_vertex_count": 10
+    },
+    "west:CHASHOU_REAR": {
+      "world_bounds_mm": [
+        [
+          -44.5,
+          -1740.0,
+          922.0
+        ],
+        [
+          44.5,
+          -77.0,
+          2100.0
+        ]
+      ],
+      "triangle_count": 16,
+      "source_vertex_count": 10
+    },
+    "west:FOUR_BEAM": {
+      "world_bounds_mm": [
+        [
+          -154.5,
+          -3596.0,
+          -440.0
+        ],
+        [
+          154.5,
+          3596.0,
+          0.0
+        ]
+      ],
+      "triangle_count": 12,
+      "source_vertex_count": 8
+    },
+    "west:HEAD_DOU_FRONT": {
+      "world_bounds_mm": [
+        [
+          -170.0,
+          1386.0,
+          446.0
+        ],
+        [
+          170.0,
+          1626.0,
+          541.0
+        ]
+      ],
+      "triangle_count": 76,
+      "source_vertex_count": 40
+    },
+    "west:HEAD_DOU_REAR": {
+      "world_bounds_mm": [
+        [
+          -170.0,
+          -1626.0,
+          449.0
+        ],
+        [
+          170.0,
+          -1386.0,
+          541.0
+        ]
+      ],
+      "triangle_count": 76,
+      "source_vertex_count": 40
+    },
+    "west:HUAGONG_FRONT": {
+      "world_bounds_mm": [
+        [
+          -76.5,
+          1416.0,
+          225.0
+        ],
+        [
+          76.5,
+          2394.03271484375,
+          446.0
+        ]
+      ],
+      "triangle_count": 216,
+      "source_vertex_count": 110
+    },
+    "west:HUAGONG_REAR": {
+      "world_bounds_mm": [
+        [
+          -78.0,
+          -2367.639404296875,
+          239.0
+        ],
+        [
+          78.0,
+          -1416.0,
+          449.0
+        ]
+      ],
+      "triangle_count": 216,
+      "source_vertex_count": 110
+    },
+    "west:LINGGONG_FRONT": {
+      "world_bounds_mm": [
+        [
+          -500.5,
+          1760.0,
+          225.0
+        ],
+        [
+          500.5,
+          1912.0,
+          437.0
+        ]
+      ],
+      "triangle_count": 540,
+      "source_vertex_count": 272
+    },
+    "west:LINGGONG_REAR": {
+      "world_bounds_mm": [
+        [
+          -497.5,
+          -1911.0,
+          239.0
+        ],
+        [
+          497.5,
+          -1761.0,
+          456.0
+        ]
+      ],
+      "triangle_count": 540,
+      "source_vertex_count": 272
+    },
+    "west:LUDOU_FRONT": {
+      "world_bounds_mm": [
+        [
+          -160.5,
+          1658.5,
+          95.0
+        ],
+        [
+          160.5,
+          2013.5,
+          330.0
+        ]
+      ],
+      "triangle_count": 80,
+      "source_vertex_count": 42
+    },
+    "west:LUDOU_REAR": {
+      "world_bounds_mm": [
+        [
+          -165.0,
+          -2010.5,
+          109.0
+        ],
+        [
+          165.0,
+          -1661.5,
+          344.0
+        ]
+      ],
+      "triangle_count": 80,
+      "source_vertex_count": 42
+    },
+    "west:PANJIAN_FANG_FRONT": {
+      "world_bounds_mm": [
+        [
+          -880.0,
+          1757.5,
+          535.0
+        ],
+        [
+          880.0,
+          1914.5,
+          746.0
+        ]
+      ],
+      "triangle_count": 44,
+      "source_vertex_count": 24
+    },
+    "west:PANJIAN_FANG_REAR": {
+      "world_bounds_mm": [
+        [
+          -880.0,
+          -1914.5,
+          535.0
+        ],
+        [
+          880.0,
+          -1757.5,
+          746.0
+        ]
+      ],
+      "triangle_count": 44,
+      "source_vertex_count": 24
+    },
+    "west:PINGLIANG": {
+      "world_bounds_mm": [
+        [
+          -140.5,
+          -1836.0,
+          521.0
+        ],
+        [
+          140.5,
+          1836.0,
+          922.0
+        ]
+      ],
+      "triangle_count": 132,
+      "source_vertex_count": 68
+    },
+    "west:RIDGE_LOWER_DOU": {
+      "world_bounds_mm": [
+        [
+          -170.0,
+          -120.0,
+          1711.0
+        ],
+        [
+          170.0,
+          120.0,
+          1846.0
+        ]
+      ],
+      "triangle_count": 76,
+      "source_vertex_count": 40
+    },
+    "west:RIDGE_SINGLE_GONG": {
+      "world_bounds_mm": [
+        [
+          -490.0,
+          -77.0,
+          1781.0
+        ],
+        [
+          490.0,
+          77.0,
+          2000.0
+        ]
+      ],
+      "triangle_count": 60,
+      "source_vertex_count": 32
+    },
+    "west:RIDGE_TIEMU": {
+      "world_bounds_mm": [
+        [
+          -877.5,
+          -75.0,
+          2100.0
+        ],
+        [
+          877.5,
+          75.0,
+          2252.0
+        ]
+      ],
+      "triangle_count": 170,
+      "source_vertex_count": 87
+    },
+    "west:RIDGE_UPPER_DOU": {
+      "world_bounds_mm": [
+        [
+          -170.0,
+          -120.0,
+          2000.0
+        ],
+        [
+          170.0,
+          120.0,
+          2165.0
+        ]
+      ],
+      "triangle_count": 92,
+      "source_vertex_count": 48
+    },
+    "west:SHUZHU": {
+      "world_bounds_mm": [
+        [
+          -78.5,
+          -110.0,
+          1002.0
+        ],
+        [
+          78.5,
+          110.0,
+          1711.0
+        ]
+      ],
+      "triangle_count": 28,
+      "source_vertex_count": 16
+    },
+    "west:SHUZHU_FOOT_PAD": {
+      "world_bounds_mm": [
+        [
+          -100.0,
+          -325.0,
+          922.0
+        ],
+        [
+          100.0,
+          325.0,
+          1002.0
+        ]
+      ],
+      "triangle_count": 68,
+      "source_vertex_count": 36
+    },
+    "west:TIEMU_FRONT": {
+      "world_bounds_mm": [
+        [
+          -880.0,
+          1762.0,
+          846.0
+        ],
+        [
+          880.0,
+          1910.0,
+          1001.0
+        ]
+      ],
+      "triangle_count": 202,
+      "source_vertex_count": 103
+    },
+    "west:TIEMU_REAR": {
+      "world_bounds_mm": [
+        [
+          -880.0,
+          -1910.0,
+          846.0
+        ],
+        [
+          880.0,
+          -1762.0,
+          1001.0
+        ]
+      ],
+      "triangle_count": 202,
+      "source_vertex_count": 103
+    },
+    "west:TUOFENG_FRONT": {
+      "world_bounds_mm": [
+        [
+          -154.5,
+          1511.0,
+          0.0
+        ],
+        [
+          154.5,
+          2161.0,
+          95.0
+        ]
+      ],
+      "triangle_count": 756,
+      "source_vertex_count": 380
+    },
+    "west:TUOFENG_REAR": {
+      "world_bounds_mm": [
+        [
+          -154.5,
+          -2161.0,
+          0.0
+        ],
+        [
+          154.5,
+          -1511.0,
+          121.82176208496094
+        ]
+      ],
+      "triangle_count": 756,
+      "source_vertex_count": 380
+    },
+    "west:TUOJIAO_FRONT": {
+      "world_bounds_mm": [
+        [
+          -74.5,
+          1914.5,
+          0.0
+        ],
+        [
+          74.5,
+          3338.92041015625,
+          755.5621337890625
+        ]
+      ],
+      "triangle_count": 36,
+      "source_vertex_count": 20
+    },
+    "west:TUOJIAO_REAR": {
+      "world_bounds_mm": [
+        [
+          -75.5,
+          -3351.724609375,
+          0.0
+        ],
+        [
+          75.5,
+          -1914.5,
+          762.3538818359375
+        ]
+      ],
+      "triangle_count": 40,
+      "source_vertex_count": 22
+    },
+    "west:UPPER_DOU_FRONT": {
+      "world_bounds_mm": [
+        [
+          -170.0,
+          1716.0,
+          746.0
+        ],
+        [
+          170.0,
+          1956.0,
+          911.0
+        ]
+      ],
+      "triangle_count": 52,
+      "source_vertex_count": 28
+    },
+    "west:UPPER_DOU_REAR": {
+      "world_bounds_mm": [
+        [
+          -170.0,
+          -1956.0,
+          746.0
+        ],
+        [
+          170.0,
+          -1716.0,
+          911.0
+        ]
+      ],
+      "triangle_count": 52,
+      "source_vertex_count": 28
+    },
+    "east:CHASHOU_FRONT": {
+      "world_bounds_mm": [
+        [
+          4391.0,
+          76.5,
+          911.0
+        ],
+        [
+          4483.0,
+          1744.0,
+          2080.0
+        ]
+      ],
+      "triangle_count": 12,
+      "source_vertex_count": 8
+    },
+    "east:CHASHOU_REAR": {
+      "world_bounds_mm": [
+        [
+          4392.0,
+          -1744.0,
+          911.0
+        ],
+        [
+          4482.0,
+          -76.5,
+          2080.0
+        ]
+      ],
+      "triangle_count": 12,
+      "source_vertex_count": 8
+    },
+    "east:RIDGE_LOWER_DOU": {
+      "world_bounds_mm": [
+        [
+          4267.0,
+          -120.0,
+          1630.0
+        ],
+        [
+          4607.0,
+          120.0,
+          1830.0
+        ]
+      ],
+      "triangle_count": 88,
+      "source_vertex_count": 46
+    },
+    "east:RIDGE_UPPER_DOU": {
+      "world_bounds_mm": [
+        [
+          4267.0,
+          -120.0,
+          1980.0
+        ],
+        [
+          4607.0,
+          120.0,
+          2145.0
+        ]
+      ],
+      "triangle_count": 112,
+      "source_vertex_count": 58
+    },
+    "trial:EAST_FRONT_SPACER_HUAGONG": {
+      "world_bounds_mm": [
+        [
+          4359.5,
+          3049.0,
+          -753.0
+        ],
+        [
+          4514.5,
+          3943.0,
+          -533.0
+        ]
+      ],
+      "triangle_count": 224,
+      "source_vertex_count": 114
+    },
+    "trial:EAST_FRONT_SPACER_LINGGONG": {
+      "world_bounds_mm": [
+        [
+          3987.0,
+          3419.5,
+          -753.0
+        ],
+        [
+          4887.0,
+          3572.5,
+          -543.0
+        ]
+      ],
+      "triangle_count": 224,
+      "source_vertex_count": 114
+    },
+    "trial:EAST_FRONT_SANDOU": {
+      "world_bounds_mm": [
+        [
+          4259.5,
+          3376.0,
+          -543.0
+        ],
+        [
+          4614.5,
+          3616.0,
+          -393.0
+        ]
+      ],
+      "triangle_count": 36,
+      "source_vertex_count": 20
+    },
+    "trial:EAST_REAR_SPACER_DEPTH_LINGGONG": {
+      "world_bounds_mm": [
+        [
+          4357.5,
+          -3942.5,
+          -753.0
+        ],
+        [
+          4516.5,
+          -3049.5,
+          -539.0
+        ]
+      ],
+      "triangle_count": 224,
+      "source_vertex_count": 114
+    },
+    "trial:EAST_REAR_SPACER_LONGITUDINAL_LINGGONG": {
+      "world_bounds_mm": [
+        [
+          3987.0,
+          -3573.0,
+          -753.0
+        ],
+        [
+          4887.0,
+          -3419.0,
+          -536.0
+        ]
+      ],
+      "triangle_count": 224,
+      "source_vertex_count": 114
+    },
+    "trial:EAST_REAR_SANDOU": {
+      "world_bounds_mm": [
+        [
+          4259.5,
+          -3616.0,
+          -536.0
+        ],
+        [
+          4614.5,
+          -3376.0,
+          -393.0
+        ]
+      ],
+      "triangle_count": 36,
+      "source_vertex_count": 20
+    },
+    "trial:EAST_FRONT_COLUMN_CANDIDATE": {
+      "world_bounds_mm": [
+        [
+          4207.0,
+          5125.0,
+          -6228.03125
+        ],
+        [
+          4667.0,
+          5585.0,
+          -2693.7314453125
+        ]
+      ],
+      "triangle_count": 252,
+      "source_vertex_count": 128
+    },
+    "trial:WEST_FRONT_SPACER_HUAGONG": {
+      "world_bounds_mm": [
+        [
+          -77.5,
+          3049.0,
+          -780.0
+        ],
+        [
+          77.5,
+          3943.0,
+          -560.0
+        ]
+      ],
+      "triangle_count": 224,
+      "source_vertex_count": 114
+    },
+    "trial:WEST_FRONT_SPACER_LINGGONG": {
+      "world_bounds_mm": [
+        [
+          -450.0,
+          3419.5,
+          -780.0
+        ],
+        [
+          450.0,
+          3572.5,
+          -570.0
+        ]
+      ],
+      "triangle_count": 224,
+      "source_vertex_count": 114
+    },
+    "trial:WEST_FRONT_SANDOU": {
+      "world_bounds_mm": [
+        [
+          -184.5,
+          3376.0,
+          -570.0
+        ],
+        [
+          184.5,
+          3616.0,
+          -420.0
+        ]
+      ],
+      "triangle_count": 36,
+      "source_vertex_count": 20
+    },
+    "trial:WEST_REAR_SPACER_DEPTH_LINGGONG": {
+      "world_bounds_mm": [
+        [
+          -79.5,
+          -3942.5,
+          -780.0
+        ],
+        [
+          79.5,
+          -3049.5,
+          -566.0
+        ]
+      ],
+      "triangle_count": 224,
+      "source_vertex_count": 114
+    },
+    "trial:WEST_REAR_SPACER_LONGITUDINAL_LINGGONG": {
+      "world_bounds_mm": [
+        [
+          -450.0,
+          -3573.0,
+          -780.0
+        ],
+        [
+          450.0,
+          -3419.0,
+          -563.0
+        ]
+      ],
+      "triangle_count": 224,
+      "source_vertex_count": 114
+    },
+    "trial:WEST_REAR_SANDOU": {
+      "world_bounds_mm": [
+        [
+          -184.5,
+          -3616.0,
+          -563.0
+        ],
+        [
+          184.5,
+          -3376.0,
+          -420.0
+        ]
+      ],
+      "triangle_count": 36,
+      "source_vertex_count": 20
+    },
+    "trial:EAST_FRONT_ER_ANG_LOCAL": {
+      "world_bounds_mm": [
+        [
+          4360.0,
+          5093.70751953125,
+          -1896.040771484375
+        ],
+        [
+          4514.0,
+          6832.328125,
+          -1088.0
+        ]
+      ],
+      "triangle_count": 24,
+      "source_vertex_count": 14
+    },
+    "trial:EAST_FRONT_TOU_ANG_LOCAL": {
+      "world_bounds_mm": [
+        [
+          4360.0,
+          5093.70751953125,
+          -2020.1904296875
+        ],
+        [
+          4514.0,
+          6485.29248046875,
+          -1260.2086181640625
+        ]
+      ],
+      "triangle_count": 36,
+      "source_vertex_count": 20
+    },
+    "trial:EAST_FRONT_HUA2_LOCAL": {
+      "world_bounds_mm": [
+        [
+          4360.5,
+          4540.0,
+          -2089.131591796875
+        ],
+        [
+          4513.5,
+          6126.7626953125,
+          -1874.9315185546875
+        ]
+      ],
+      "triangle_count": 80,
+      "source_vertex_count": 42
+    },
+    "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL": {
+      "world_bounds_mm": [
+        [
+          4309.39990234375,
+          5235.0,
+          -2185.7314453125
+        ],
+        [
+          4564.60009765625,
+          5475.0,
+          -2037.2314453125
+        ]
+      ],
+      "triangle_count": 156,
+      "source_vertex_count": 80
+    },
+    "trial:EAST_FRONT_HUA1_LOCAL": {
+      "world_bounds_mm": [
+        [
+          4360.5,
+          4905.60009765625,
+          -2409.931396484375
+        ],
+        [
+          4513.5,
+          5804.39990234375,
+          -2185.7314453125
+        ]
+      ],
+      "triangle_count": 84,
+      "source_vertex_count": 44
+    },
+    "trial:EAST_FRONT_COLUMN_LUDOU": {
+      "world_bounds_mm": [
+        [
+          4199.4501953125,
+          5131.85009765625,
+          -2693.7314453125
+        ],
+        [
+          4674.5498046875,
+          5578.14990234375,
+          -2399.931396484375
+        ]
+      ],
+      "triangle_count": 134,
+      "source_vertex_count": 69
+    },
+    "trial:EAST_FRONT_NIDAO_GUAZI": {
+      "world_bounds_mm": [
+        [
+          3933.5,
+          5276.75,
+          -2409.931396484375
+        ],
+        [
+          4940.5,
+          5433.25,
+          -2185.2314453125
+        ]
+      ],
+      "triangle_count": 96,
+      "source_vertex_count": 50
+    },
+    "trial:EAST_FRONT_TRANSVERSE_MANGONG": {
+      "world_bounds_mm": [
+        [
+          3616.5,
+          5276.5498046875,
+          -2093.83154296875
+        ],
+        [
+          5257.5,
+          5433.4501953125,
+          -1874.9315185546875
+        ]
+      ],
+      "triangle_count": 88,
+      "source_vertex_count": 44
+    },
+    "trial:EAST_FRONT_SANDOU_LEFT": {
+      "world_bounds_mm": [
+        [
+          3933.5,
+          5239.7998046875,
+          -2185.2314453125
+        ],
+        [
+          4186.60009765625,
+          5470.2001953125,
+          -2038.031494140625
+        ]
+      ],
+      "triangle_count": 104,
+      "source_vertex_count": 54
+    },
+    "trial:EAST_FRONT_SANDOU_RIGHT": {
+      "world_bounds_mm": [
+        [
+          4687.39990234375,
+          5239.7998046875,
+          -2185.2314453125
+        ],
+        [
+          4940.5,
+          5470.2001953125,
+          -2038.031494140625
+        ]
+      ],
+      "triangle_count": 104,
+      "source_vertex_count": 54
+    },
+    "trial:EAST_FRONT_LOWER6_END_SEGMENT": {
+      "world_bounds_mm": [
+        [
+          4213.0,
+          4655.0,
+          -1874.9315185546875
+        ],
+        [
+          4661.0,
+          6087.39990234375,
+          -1380.9315185546875
+        ]
+      ],
+      "triangle_count": 68,
+      "source_vertex_count": 32
+    },
+    "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE": {
+      "world_bounds_mm": [
+        [
+          4317.0,
+          -5355.0,
+          -1088.0
+        ],
+        [
+          4557.0,
+          5355.0,
+          -753.0
+        ]
+      ],
+      "triangle_count": 28,
+      "source_vertex_count": 16
+    },
+    "trial:WEST_UPPER6_FULL_BEAM_CANDIDATE": {
+      "world_bounds_mm": [
+        [
+          -120.0,
+          -5355.0,
+          -1115.0
+        ],
+        [
+          120.0,
+          5355.0,
+          -780.0
+        ]
+      ],
+      "triangle_count": 28,
+      "source_vertex_count": 16
+    }
+  },
+  "display_colors_are_export_only": true,
+  "source_blend_modified": false,
+  "all_candidates_still_pending_PO_review": true,
+  "geometry_units": "millimetres in construction coordinates",
+  "max_allowed_roundtrip_extent_error_mm": 0.03
+}

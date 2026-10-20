@@ -1,0 +1,23 @@
+{
+  "status": "PASS_GLTF_GLB_IMPORTED_GEOMETRY",
+  "input_blend_sha256": "5c81c836cc7ca3a229eebe5ac9cb4c62a744b9a1eeb10b0e9683cf0ccd097f13",
+  "glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+  "glb_bytes": 759608,
+  "glb_header": {
+    "magic": "glTF",
+    "glb_version": 2,
+    "byte_length": 759608
+  },
+  "blender_version": "4.5.13 LTS",
+  "source_object_count": 89,
+  "reimported_object_count": 89,
+  "all_89_named_meshes_retained": true,
+  "all_triangulated_faces_retained": true,
+  "triangle_total": 14460,
+  "max_world_bounds_error_mm": 0.0,
+  "max_allowed_world_bounds_error_mm": 0.03,
+  "source_blend_original_unchanged": true,
+  "new_geometry_approval": "NO_NEW_APPROVAL",
+  "historical_shape_and_strength_verified": false,
+  "source_validation": "WEST_SPACER_VALIDATION.json"
+}
