@@ -105,6 +105,11 @@ elif mode=="validate":
  assert sha(source)==expected_source_sha
  assert sha(asset)==check["glb_sha256"],"EXPORTED_GLB_CHANGED"
  header=file_header(asset)
+ # Blender --factory-startup opens a default Cube: remove the startup scene before
+ # GLB import, otherwise its default Cube is incorrectly counted as model geometry.
+ bpy.ops.object.select_all(action="SELECT")
+ bpy.ops.object.delete(use_global=False)
+ assert len([o for o in bpy.context.scene.objects if o.type=="MESH"])==0,"DIRTY_VALIDATION_SCENE"
  bpy.ops.import_scene.gltf(filepath=str(asset))
  imported=mesh_records()
  original=check["mesh_records"]
