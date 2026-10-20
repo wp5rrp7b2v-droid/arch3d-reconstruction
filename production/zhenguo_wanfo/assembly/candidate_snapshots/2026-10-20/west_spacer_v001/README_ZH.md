@@ -36,3 +36,15 @@
 验证通过后，GitHub Actions会把`output/WANFO_WEST_SPACER_TRIAL_V001.blend`、`WEST_SPACER_VALIDATION.json`、`BUILD_INPUT_REPORT.json`、`WEST_SPACER_DETAIL.png`及`TWO_FRAME_OVERVIEW.png`提交回当前**工作分支**。未通过的运行日志与临时artifact会保留，以便定位原因，不应标称正式成果。
 
 本目录的源代码、验证条件和运行日志都允许追溯。**不合并main，等待PO审核新增西缝七件在联合模型中的位置和外观。**
+
+## 2026-10-20 最终云端试装结果
+
+- **正式云端运行**：[GitHub Actions #39354404647](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/39354404647)，`completed / success`。
+- **89实体BLEND已在本分支落档**：`output/WANFO_WEST_SPACER_TRIAL_V001.blend`，252275字节。
+- **独立身份核对**：Actions Artifact `12234249152`中的BLEND SHA-256=`5c81c836cc7ca3a229eebe5ac9cb4c62a744b9a1eeb10b0e9683cf0ccd097f13`；与云端验证JSON相同；GitHub已归档Blob SHA-1=`d284c7e799712a4e9a11a3d5ff043a29c6f7d00c`，与Artifact二进制计算值相同。
+- **原基底保护**：原82件网格、面及矩阵完全一致；新5件几何只平移，新2件散斗外唇按西缝四椽栿宽度各外移7mm；最大坐标偏差0，容许小于0.001mm。
+- **装配验证**：3916对碰撞检查，最大交叠`0.753275558898mm³`，小于`1mm³`阈值，无超限穿插；新10项关键接触`10/10 PASS`。未对历史强度与真实隐藏连接进行验证。
+- **画面证据**：`output/WEST_SPACER_DETAIL.png`、`output/TWO_FRAME_OVERVIEW.png`，实际云端Blender Cycles CPU渲染1600×1000并用中文标注；`output/RENDER_QA.json`图像可视性PASS。首轮GPU Workbench曾产生黑屏，QA可有效拦截。
+- 之前失败的试运行（参数解析、计算依赖、局部互穿、图像黑屏与被忽略的BLEND归档）保留在GitHub Actions历史记录；仅对已定位的程序问题和**新增西缝两散斗候选**进行修复，未放宽任何几何阈值。
+
+结论：**局部试装技术验证PASS，仅限89实体候选空间相容及云端交付。等待PO依据两张图片审阅构图与局部外形。** 用户未批准西缝七件外形或完整联合模型；本PR保持Draft，main、Master、505登记及正式已批准BLEND均未修改。
