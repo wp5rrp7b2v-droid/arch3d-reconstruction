@@ -5,7 +5,7 @@ Only copies existing EAST trial geometry. No historical equivalence is claimed.
 import bpy, sys, json, hashlib, math
 from pathlib import Path
 from mathutils import Vector
-root = Path(sys.argv[sys.argv.index("--")+1]).resolve()
+root = Path(sys.argv[sys.argv.index("--")+2]).resolve()
 out = root / "output"
 out.mkdir(parents=True,exist_ok=True)
 base = root / "BASE_APPROVED_FRONT_C01.blend"
