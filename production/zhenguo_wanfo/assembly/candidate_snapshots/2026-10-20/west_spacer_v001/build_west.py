@@ -36,7 +36,7 @@ def bounds(obj):
 def load(path):
  bpy.ops.wm.open_mainfile(filepath=str(path))
  assert len([o for o in bpy.context.scene.objects if o.type=="MESH"]) in (82,89)
-if sys.argv[sys.argv.index("--")+2]=="build":
+if sys.argv[sys.argv.index("--")+1]=="build":
  load(base)
  original=all_meshes()
  assert len(original)==82
@@ -98,7 +98,7 @@ if sys.argv[sys.argv.index("--")+2]=="build":
  except Exception as exc:
   (out/"RENDER_FAILURE.txt").write_text(type(exc).__name__+": "+str(exc))
   print("PREVIEW_RENDER_FAILED",str(exc))
-elif sys.argv[sys.argv.index("--")+2]=="reopen":
+elif sys.argv[sys.argv.index("--")+1]=="reopen":
  load(out/"WANFO_WEST_SPACER_TRIAL_V001.blend")
  (out/"REOPENED89.json").write_text(json.dumps(
    {"objects":all_meshes(),"blend_sha256":hashlib.sha256((out/"WANFO_WEST_SPACER_TRIAL_V001.blend").read_bytes()).hexdigest(),
