@@ -151,7 +151,9 @@ if sys.argv[sys.argv.index("--")+1]=="build":
    cam=bpy.data.objects.new(name,cam_data);scene.collection.objects.link(cam)
    cam.location=loc
    cam.rotation_euler=(Vector(aim)-cam.location).to_track_quat("-Z","Y").to_euler()
-   cam_data.type="ORTHO";cam_data.ortho_scale=scale;scene.camera=cam
+   cam_data.type="ORTHO";cam_data.ortho_scale=scale
+   cam_data.clip_start=0.1;cam_data.clip_end=100000.0
+   scene.camera=cam
    scene.render.filepath=str(out/(name+".png"))
    bpy.ops.render.render(write_still=True)
    bpy.data.objects.remove(cam,do_unlink=True)
