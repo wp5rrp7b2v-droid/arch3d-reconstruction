@@ -1,0 +1,100 @@
+{
+  "status": "PASS_DELIVERY_AND_READ_ONLY_GEOMETRY_ONLY",
+  "images": [
+    {
+      "file": "output/OVERVIEW_ZH.png",
+      "size": [
+        3000,
+        2700
+      ],
+      "sha256": "46d3c986198c3a5797e17bc7f141923ab308fabafacbe64aa23e4275f2f51dd7"
+    },
+    {
+      "file": "output/HUAGONG_COMPARISON_ZH.png",
+      "size": [
+        3000,
+        2180
+      ],
+      "sha256": "2d20686e27b82fe10fbaff700f466ba5677cb7753ab02300ce78c72f314e21a9"
+    },
+    {
+      "file": "output/LINGGONG_COMPARISON_ZH.png",
+      "size": [
+        3000,
+        2180
+      ],
+      "sha256": "ccc684263e88a29179239f9658604ef8f542cc02d17c396f02cdab59b610be73"
+    },
+    {
+      "file": "output/TOUANG_COMPARISON_ZH.png",
+      "size": [
+        3000,
+        2180
+      ],
+      "sha256": "dc4b34c72c36772bf4dbbfa8a88ee9b60b73f8465d29fd1e4fa77bdd93b7ffaf"
+    },
+    {
+      "file": "output/ERANG_COMPARISON_ZH.png",
+      "size": [
+        3000,
+        2180
+      ],
+      "sha256": "ce65c9d650b85d14703d02b191efbf9515e660e212b19b23fa18cc6730ed6e14"
+    }
+  ],
+  "actual_trial_meshes": 8,
+  "formal_master_bodies": 5,
+  "independent_candidate_bodies": 7,
+  "candidate_checks": [
+    {
+      "file": "TOU_ANG_candidate.json",
+      "watertight": true,
+      "positive_volume": true,
+      "portable_glb_max_extent_error_mm": 2.3937988316902192e-05
+    },
+    {
+      "file": "ER_ANG_WORK_LENGTH_candidate.json",
+      "watertight": true,
+      "positive_volume": true,
+      "portable_glb_max_extent_error_mm": 4.256559805071447e-05
+    },
+    {
+      "file": "TOU_ANG_WORK_LENGTH_candidate.json",
+      "watertight": true,
+      "positive_volume": true,
+      "portable_glb_max_extent_error_mm": 1.3783121175947599e-05
+    },
+    {
+      "file": "LINGGONG_candidate.json",
+      "watertight": true,
+      "positive_volume": true,
+      "portable_glb_max_extent_error_mm": 1.4781951904296875e-05
+    },
+    {
+      "file": "JUMP_1_HUAGONG_candidate.json",
+      "watertight": true,
+      "positive_volume": true,
+      "portable_glb_max_extent_error_mm": 1.5449523971255985e-05
+    },
+    {
+      "file": "ER_ANG_candidate.json",
+      "watertight": true,
+      "positive_volume": true,
+      "portable_glb_max_extent_error_mm": 2.3937988316902192e-05
+    },
+    {
+      "file": "JUMP_2_HUAGONG_candidate.json",
+      "watertight": true,
+      "positive_volume": true,
+      "portable_glb_max_extent_error_mm": 4.9352645987710275e-06
+    }
+  ],
+  "source_page_hashes_verified": 4,
+  "original_contact_locations": 14,
+  "west_record_contact_areas_reconfirmed": 8,
+  "protected_paths_changed": [],
+  "original_89_blend_and_glb_exact": true,
+  "po_visual_approval": "PENDING",
+  "historical_exact_form": "NOT_PROVEN",
+  "candidate_installation_collision_and_contacts": "NOT_TESTED_NOT_CLAIMED"
+}

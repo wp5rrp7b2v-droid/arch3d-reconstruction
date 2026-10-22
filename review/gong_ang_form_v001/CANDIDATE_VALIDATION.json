@@ -1,0 +1,92 @@
+[
+  {
+    "id": "JUMP_1_HUAGONG",
+    "preserved_master_dimensions_mm": [
+      898.8,
+      214.2,
+      153.0
+    ],
+    "candidate_dimensions_mm": [
+      898.8,
+      214.2,
+      153.0
+    ],
+    "master_volume_mm3": 22056662.444544,
+    "candidate_volume_mm3": 27844241.068930015,
+    "watertight": true,
+    "geometry_class": "INFERENCE_SOURCE_GUIDED_REVIEW_ONLY",
+    "not_installable_without_further_contact_validation": true
+  },
+  {
+    "id": "JUMP_2_HUAGONG",
+    "preserved_master_dimensions_mm": [
+      1630.0,
+      214.2,
+      153.0
+    ],
+    "candidate_dimensions_mm": [
+      1630.0,
+      214.2,
+      153.0
+    ],
+    "master_volume_mm3": 40000400.2944,
+    "candidate_volume_mm3": 51188631.1654698,
+    "watertight": true,
+    "geometry_class": "INFERENCE_SOURCE_GUIDED_REVIEW_ONLY",
+    "not_installable_without_further_contact_validation": true
+  },
+  {
+    "id": "LINGGONG",
+    "preserved_master_dimensions_mm": [
+      897.0,
+      217.4,
+      155.6
+    ],
+    "candidate_dimensions_mm": [
+      897.0,
+      217.4,
+      155.6
+    ],
+    "master_volume_mm3": 22199095.128288005,
+    "candidate_volume_mm3": 28595510.94829646,
+    "watertight": true,
+    "geometry_class": "INFERENCE_SOURCE_GUIDED_REVIEW_ONLY",
+    "not_installable_without_further_contact_validation": true
+  },
+  {
+    "id": "TOU_ANG",
+    "preserved_master_dimensions_mm": [
+      787.6158,
+      154.0,
+      278.4
+    ],
+    "candidate_dimensions_mm": [
+      787.6158,
+      154.0,
+      278.4
+    ],
+    "master_volume_mm3": 27531956.800039995,
+    "candidate_volume_mm3": 26070962.96738102,
+    "watertight": true,
+    "geometry_class": "INFERENCE_SOURCE_GUIDED_REVIEW_ONLY",
+    "not_installable_without_further_contact_validation": true
+  },
+  {
+    "id": "ER_ANG",
+    "preserved_master_dimensions_mm": [
+      787.6158,
+      154.0,
+      187.0
+    ],
+    "candidate_dimensions_mm": [
+      787.6158,
+      154.0,
+      187.0
+    ],
+    "master_volume_mm3": 22209222.5203464,
+    "candidate_volume_mm3": 21520453.706209924,
+    "watertight": true,
+    "geometry_class": "INFERENCE_SOURCE_GUIDED_REVIEW_ONLY",
+    "not_installable_without_further_contact_validation": true
+  }
+]

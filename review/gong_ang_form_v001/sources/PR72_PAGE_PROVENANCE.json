@@ -1,0 +1,42 @@
+[
+  {
+    "file": "A1-p060.jpg",
+    "source": "A1",
+    "pdf_page": 60,
+    "printed_page": 45,
+    "source_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "rotation_clockwise_deg": 0,
+    "operation": "FULL_PAGE_RASTER_NO_GEOMETRY_REDRAW",
+    "sha256": "452731e3638a896d8ce1f2561ff5b98ce0612f327114f5cf20c0811e22e89d3b"
+  },
+  {
+    "file": "A1-p073.jpg",
+    "source": "A1",
+    "pdf_page": 73,
+    "printed_page": 58,
+    "source_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "rotation_clockwise_deg": 0,
+    "operation": "FULL_PAGE_RASTER_NO_GEOMETRY_REDRAW",
+    "sha256": "67ba7092cf3d81bf1a667858fc9cb052d30048c359250fb5e5fca84fde693ad3"
+  },
+  {
+    "file": "A1-p087.jpg",
+    "source": "A1",
+    "pdf_page": 87,
+    "printed_page": 72,
+    "source_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "rotation_clockwise_deg": 0,
+    "operation": "FULL_PAGE_RASTER_NO_GEOMETRY_REDRAW",
+    "sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03"
+  },
+  {
+    "file": "A1-p106.jpg",
+    "source": "A1",
+    "pdf_page": 106,
+    "printed_page": 91,
+    "source_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+    "rotation_clockwise_deg": 0,
+    "operation": "FULL_PAGE_RASTER_NO_GEOMETRY_REDRAW",
+    "sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af"
+  }
+]

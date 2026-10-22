@@ -1,0 +1,64 @@
+{
+  "PR72": "54fac54578340918c78d65e973933b54090893a1",
+  "PR74": "8a47daa343efde62d28cef62370d0185da3f6abe",
+  "PR75": "f8f72d40dd47ab61abc3103c396c855f5c4c3865",
+  "main": "414be293918fea2bf4138b1a8f4345272e8764a8",
+  "glb_path": "production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-20/west_spacer_v001/output/WANFO_WEST_SPACER_89_TRIAL_V001.glb",
+  "glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+  "source_pdf_sha256": "94c2fedef64fd81ce225e04da4757d33ada34b9413b01baaf023fa72baed3472",
+  "sources": [
+    {
+      "path": "sources/PR74_TARGET_SUMMARY.json",
+      "sha256": "1ea374dc4d01d09612a17c8686addbcb803fa897a55f9505a9d385f9cbf0c97b"
+    },
+    {
+      "path": "sources/A1-p106.jpg",
+      "sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af"
+    },
+    {
+      "path": "sources/A1-p073.jpg",
+      "sha256": "67ba7092cf3d81bf1a667858fc9cb052d30048c359250fb5e5fca84fde693ad3"
+    },
+    {
+      "path": "sources/ANG_MASTER_SEMANTIC.json",
+      "sha256": "4b1695131bf868476aca8b9760ca36b028d59dc6f8a33d9fb378aa04b7fbc084"
+    },
+    {
+      "path": "sources/0d6e55efe9-06_SOURCE_头昂.png",
+      "sha256": "a6fc35f730889bed674411ebaf3ea8213585006b03e7233684f8e2588f7d42e7"
+    },
+    {
+      "path": "sources/A1-p087.jpg",
+      "sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03"
+    },
+    {
+      "path": "sources/HUAGONG_MASTER_SEMANTIC.json",
+      "sha256": "b5ab09f0cb9121ab3d27887d8cff65dc92bb06f6e0b3fe8197f6980820d8b783"
+    },
+    {
+      "path": "sources/LINGGONG_MASTER_SEMANTIC.json",
+      "sha256": "ee0bc2ef02b3e1da43c1d7b6d4a8a5f18269b36bbcd189b52de15112f77abb97"
+    },
+    {
+      "path": "sources/2a94b0e852-07_SOURCE_二昂.png",
+      "sha256": "fac316b3a1b6290c7a6cdaaefd077d409e0d18333628eecf117540499dee0f44"
+    },
+    {
+      "path": "sources/PR72_PAGE_PROVENANCE.json",
+      "sha256": "1064dd58dd557e8a9b3e8ceb102bf72bddeb42f9a16525a315ac9966329bfdaa"
+    },
+    {
+      "path": "sources/6fd13f56b4-05_SOURCE_第二跳华栱.png",
+      "sha256": "4e318d51b447aa2a948a08333e38c754b283617a5d558ae7a6d18da972412049"
+    },
+    {
+      "path": "sources/A1-p060.jpg",
+      "sha256": "452731e3638a896d8ce1f2561ff5b98ce0612f327114f5cf20c0811e22e89d3b"
+    }
+  ],
+  "font_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf",
+  "font_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
+  "candidate_status": "PENDING_PO_REVIEW",
+  "renderer": "CPU_ORTHOGRAPHIC_TRIANGLE_ZBUFFER_2X_AA",
+  "blender_executed": false
+}

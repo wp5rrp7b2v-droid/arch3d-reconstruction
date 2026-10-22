@@ -1,0 +1,597 @@
+{
+  "binding_counts": {
+    "ER_ANG": 16,
+    "TOU_ANG": 16
+  },
+  "blender_version": "4.5.13 LTS",
+  "canonical_blend_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+  "canonical_bodies": [
+    {
+      "body_id": "TOU_ANG",
+      "canonical_asset": true,
+      "component_name_zh": "头昂",
+      "geometry_faces": [
+        [
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        [
+          0,
+          1,
+          11,
+          10
+        ],
+        [
+          1,
+          2,
+          12,
+          11
+        ],
+        [
+          2,
+          3,
+          13,
+          12
+        ],
+        [
+          3,
+          4,
+          14,
+          13
+        ],
+        [
+          4,
+          5,
+          15,
+          14
+        ],
+        [
+          5,
+          6,
+          16,
+          15
+        ],
+        [
+          6,
+          7,
+          17,
+          16
+        ],
+        [
+          7,
+          8,
+          18,
+          17
+        ],
+        [
+          8,
+          9,
+          19,
+          18
+        ],
+        [
+          9,
+          0,
+          10,
+          19
+        ]
+      ],
+      "geometry_vertices_mm": [
+        [
+          -393.8079,
+          -77.0,
+          93.5
+        ],
+        [
+          -98.452,
+          -77.0,
+          93.5
+        ],
+        [
+          98.452,
+          -77.0,
+          139.2
+        ],
+        [
+          295.3559,
+          -77.0,
+          139.2
+        ],
+        [
+          393.8079,
+          -77.0,
+          93.5
+        ],
+        [
+          393.8079,
+          -77.0,
+          -93.5
+        ],
+        [
+          295.3559,
+          -77.0,
+          -139.2
+        ],
+        [
+          98.452,
+          -77.0,
+          -139.2
+        ],
+        [
+          -98.452,
+          -77.0,
+          -93.5
+        ],
+        [
+          -393.8079,
+          -77.0,
+          -93.5
+        ],
+        [
+          -393.8079,
+          77.0,
+          93.5
+        ],
+        [
+          -98.452,
+          77.0,
+          93.5
+        ],
+        [
+          98.452,
+          77.0,
+          139.2
+        ],
+        [
+          295.3559,
+          77.0,
+          139.2
+        ],
+        [
+          393.8079,
+          77.0,
+          93.5
+        ],
+        [
+          393.8079,
+          77.0,
+          -93.5
+        ],
+        [
+          295.3559,
+          77.0,
+          -139.2
+        ],
+        [
+          98.452,
+          77.0,
+          -139.2
+        ],
+        [
+          -98.452,
+          77.0,
+          -93.5
+        ],
+        [
+          -393.8079,
+          77.0,
+          -93.5
+        ]
+      ],
+      "historical_full_timber_length_closed": false,
+      "joinery_cut_count": 0,
+      "local_bbox_mm": {
+        "dimensions": [
+          787.6157057855055,
+          154.0,
+          278.4
+        ],
+        "max": [
+          393.80785289275275,
+          77.0,
+          139.2
+        ],
+        "min": [
+          -393.80785289275275,
+          -77.0,
+          -139.2
+        ]
+      },
+      "local_transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "profile_control_points_sha256": "3e45e7732cf49012cbf8b5e480e76ad2fd986c4aa717dd650e3bf3f9831f7bb5",
+      "profile_point_count": 10,
+      "reference_control_span_only": true,
+      "semantic_geometry_signature": "61a2bbb85fa5fc07ed9c37ce610f2aee0360f280c09f8317614b7a62f7819250",
+      "semantic_profile": "SINGLE_CAI_REGION -> DEEP_HEAD_REGION -> OUTBOARD_TAPER",
+      "thickness_mm": 154.0,
+      "unsupported_detail_count": 0,
+      "variant_id": "TOU_ANG"
+    },
+    {
+      "body_id": "ER_ANG",
+      "canonical_asset": true,
+      "component_name_zh": "二昂",
+      "geometry_faces": [
+        [
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        [
+          0,
+          1,
+          7,
+          6
+        ],
+        [
+          1,
+          2,
+          8,
+          7
+        ],
+        [
+          2,
+          3,
+          9,
+          8
+        ],
+        [
+          3,
+          4,
+          10,
+          9
+        ],
+        [
+          4,
+          5,
+          11,
+          10
+        ],
+        [
+          5,
+          0,
+          6,
+          11
+        ]
+      ],
+      "geometry_vertices_mm": [
+        [
+          -393.8079,
+          -77.0,
+          93.5
+        ],
+        [
+          295.3559,
+          -77.0,
+          93.5
+        ],
+        [
+          393.8079,
+          -77.0,
+          62.3333
+        ],
+        [
+          393.8079,
+          -77.0,
+          -62.3333
+        ],
+        [
+          295.3559,
+          -77.0,
+          -93.5
+        ],
+        [
+          -393.8079,
+          -77.0,
+          -93.5
+        ],
+        [
+          -393.8079,
+          77.0,
+          93.5
+        ],
+        [
+          295.3559,
+          77.0,
+          93.5
+        ],
+        [
+          393.8079,
+          77.0,
+          62.3333
+        ],
+        [
+          393.8079,
+          77.0,
+          -62.3333
+        ],
+        [
+          295.3559,
+          77.0,
+          -93.5
+        ],
+        [
+          -393.8079,
+          77.0,
+          -93.5
+        ]
+      ],
+      "historical_full_timber_length_closed": false,
+      "joinery_cut_count": 0,
+      "local_bbox_mm": {
+        "dimensions": [
+          787.6157057855055,
+          154.0,
+          187.0
+        ],
+        "max": [
+          393.80785289275275,
+          77.0,
+          93.5
+        ],
+        "min": [
+          -393.80785289275275,
+          -77.0,
+          -93.5
+        ]
+      },
+      "local_transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "profile_control_points_sha256": "c4b935c9d445414831f16d949b02ff110f3e336f88c68dd68f58d514bd172778",
+      "profile_point_count": 6,
+      "reference_control_span_only": true,
+      "semantic_geometry_signature": "b778edc208d788c5f9fad0a19849ca33f3334e7c4e2656721279386528979678",
+      "semantic_profile": "CONSTANT_SINGLE_CAI_BODY -> OUTBOARD_TAPER",
+      "thickness_mm": 154.0,
+      "unsupported_detail_count": 0,
+      "variant_id": "ER_ANG"
+    }
+  ],
+  "component_family_id": "CMP-GONG-ANG-001",
+  "count_status": "LOCKED_DERIVED",
+  "definition_sha256": "c3fc881835563e8196bef5cd3f9a25ca2475ca67ecf14034ea855c8a4aa37f5a",
+  "direction_geometry_variant_count": 0,
+  "family_semantic_signature": "a8c3b3757d6f2defd88bcece3fe754979a2c02af4e0de59f3ecc94e9fb6d7a29",
+  "gate_a_contract": {
+    "approval_decision_id": "D-250",
+    "axis_mapping": {
+      "U": "+U Ang longitudinal centreline",
+      "V": "+V Ang thickness",
+      "W": "+W Ang guang / profile depth perpendicular to U in Assembly X-Z plane",
+      "guang_mapping": "278.4 / 187.0 -> local W / NOT generic Assembly Y width",
+      "thickness_mapping": "154.0 -> local V / Assembly Y"
+    },
+    "control_id": "ANG_LENGTH_SLOPE_ASSEMBLY_CONTROL_SET_V001_C01",
+    "observed_crosscheck": {
+      "delta_mm": 0.4,
+      "member_full_length_authority": false,
+      "report_design_run_mm": 719.1,
+      "third_fourth_total_projection_mean_mm": 719.5
+    },
+    "reference_control_spans": {
+      "ER_ANG": {
+        "classification": "CONTROL_SPAN_ONLY / NOT_HISTORICAL_FULL_TIMBER_LENGTH",
+        "span_mm": 787.6157057855055
+      },
+      "TOU_ANG": {
+        "classification": "CONTROL_SPAN_ONLY / NOT_HISTORICAL_FULL_TIMBER_LENGTH",
+        "span_mm": 787.6157057855055
+      }
+    },
+    "report_design_triangle": {
+      "angle_deg": 24.075498255078834,
+      "centreline_span_mm": 787.6157057855055,
+      "classification": "REPORT_INFERRED / REPORT_DESIGN_LOGIC / RECONSTRUCTED_DESIGN / REPLACEABLE",
+      "fen_mm": 15.3,
+      "horizontal_fen": 47,
+      "rise_fen": 21,
+      "rise_mm": 321.3,
+      "run_mm": 719.1
+    },
+    "section_stack_crosscheck": {
+      "ER_calculated_vertical_mm": 204.81732301750733,
+      "ER_report_vertical_mm": 204.9,
+      "TOU_calculated_vertical_mm": 304.92589694157243,
+      "TOU_report_vertical_mm": 305.1,
+      "calculated_sum_mm": 509.74321995907974,
+      "report_sum_mm": 510,
+      "tolerance_mm": 0.5
+    },
+    "semantic_signature_sha256": "6c9b8c5b6ee6715292df5b23b7d8b8d9fdaaf4be7d1558631fea5883528b7096",
+    "source_dimensions": {
+      "ANG_THICKNESS_MM": 154,
+      "ER_ANG_OR_TOU_SINGLE_CAI_GUANG_MM": 187,
+      "TOU_ANG_GUANG_MM": 278.4
+    },
+    "thickness_sample_count_status": "SOURCE_INTERNAL_CONFLICT / narrative=34 / table=16",
+    "validation_fixture_id": "DOUBLE_ANG_ASSEMBLY_FIXTURE_VALIDATION_ONLY"
+  },
+  "gate_b_contract": {
+    "ER_ANG": {
+      "control_points_sha256": "c4b935c9d445414831f16d949b02ff110f3e336f88c68dd68f58d514bd172778",
+      "control_points_uw_mm": [
+        [
+          -393.80785289275275,
+          93.5
+        ],
+        [
+          295.3558896695646,
+          93.5
+        ],
+        [
+          393.80785289275275,
+          62.333333333333336
+        ],
+        [
+          393.80785289275275,
+          -62.333333333333336
+        ],
+        [
+          295.3558896695646,
+          -93.5
+        ],
+        [
+          -393.80785289275275,
+          -93.5
+        ]
+      ],
+      "point_count": 6,
+      "semantic_profile": "CONSTANT_SINGLE_CAI_BODY -> OUTBOARD_TAPER",
+      "taper_ratio": 0.6666666666666666
+    },
+    "TOU_ANG": {
+      "control_points_sha256": "3e45e7732cf49012cbf8b5e480e76ad2fd986c4aa717dd650e3bf3f9831f7bb5",
+      "control_points_uw_mm": [
+        [
+          -393.80785289275275,
+          93.5
+        ],
+        [
+          -98.45196322318819,
+          93.5
+        ],
+        [
+          98.45196322318819,
+          139.2
+        ],
+        [
+          295.3558896695646,
+          139.2
+        ],
+        [
+          393.80785289275275,
+          93.5
+        ],
+        [
+          393.80785289275275,
+          -93.5
+        ],
+        [
+          295.3558896695646,
+          -139.2
+        ],
+        [
+          98.45196322318819,
+          -139.2
+        ],
+        [
+          -98.45196322318819,
+          -93.5
+        ],
+        [
+          -393.80785289275275,
+          -93.5
+        ]
+      ],
+      "point_count": 10,
+      "semantic_profile": "SINGLE_CAI_REGION -> DEEP_HEAD_REGION -> OUTBOARD_TAPER"
+    },
+    "approval_decision_id": "D-252",
+    "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_PROFILE_MEASUREMENT",
+    "control_id": "ANG_LONGITUDINAL_PROFILE_CONTROL_SET_V001_C01",
+    "family_semantic_control_sha256": "dc38ab72be1f5aef3192a48e11621a3288c422475545b56dc5e29fa0102e2ae5",
+    "finished_mesh_uniform_scaling_prohibited": true,
+    "historical_profile_exact_claim": false,
+    "independent_profiles_required": true,
+    "metric_source_image_calibration": "NOT_PERFORMED / NOT_CLAIMED"
+  },
+  "geometry_variant_count": 2,
+  "historical_full_timber_length_status": "UNRESOLVED",
+  "master_family_count": 1,
+  "master_id": "CMP-GONG-ANG-001_MASTER",
+  "master_version": "V001",
+  "registry_binding_count": 32,
+  "sample_to_instance_mapping": "UNKNOWN",
+  "schema_version": "ANG_MASTER_SEMANTIC_V001",
+  "task_id": "T-041",
+  "unsupported_connection_geometry_present": false,
+  "validation_fixture": {
+    "angle_deg": 24.075498255078834,
+    "canonical_asset": false,
+    "catalog_asset": false,
+    "fixture_id": "DOUBLE_ANG_ASSEMBLY_FIXTURE_VALIDATION_ONLY",
+    "historical_joinery_claim": false,
+    "ideal_vs_observed_delta_mm": 0.4,
+    "member_full_length_authority": false,
+    "observed_third_fourth_projection_mean_mm": 719.5,
+    "reference_span_mm": 787.6157057855055,
+    "registry_binding": false,
+    "rise_mm": 321.3,
+    "run_mm": 719.1
+  },
+  "whole_hall_direct_inventory_claim": false,
+  "formalization": {
+    "status": "FORMALIZED / D-257 / PR #37 DRAFT / MERGE NOT AUTHORIZED",
+    "authority": "D-256",
+    "product_owner_approval": "D-255",
+    "first_article_machine_gate": "D-254",
+    "accepted_run_id": 36373958970,
+    "artifact_id": 10950620532,
+    "artifact_zip_sha256": "sha256:a042c6e48a753867a5a74b44c54d0af2750d0f37c33a5f950eb3d9daf4d99d0e",
+    "approved_canonical_blend_sha256": "7a8c2bcdde1fac1f9f7f06bd7c1894237a7bda02a2a38e2b329da4f4b719d0a8",
+    "geometry_match_approved_first_article": true,
+    "formalization_run_id": 36376214515
+  }
+}

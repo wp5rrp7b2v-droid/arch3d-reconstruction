@@ -1,0 +1,322 @@
+[
+  {
+    "member_axis_dimensions_mm": [
+      898.7999877929688,
+      153.0,
+      224.20000457763672
+    ],
+    "id": "trial:EAST_FRONT_HUA1_LOCAL",
+    "glb_node": "trial:EAST_FRONT_HUA1_LOCAL",
+    "source_glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+    "normalized_axes": [
+      1,
+      0,
+      2
+    ],
+    "normalized_axis_signs": [
+      1,
+      -1,
+      1
+    ],
+    "dimensions_mm": [
+      898.7999877929688,
+      153.0,
+      224.20000457763672
+    ],
+    "world_bbox_mm": [
+      [
+        4360.5,
+        4905.600006103516,
+        -2409.9314880371094
+      ],
+      [
+        4513.5,
+        5804.399993896484,
+        -2185.7314834594727
+      ]
+    ],
+    "vertices": 132,
+    "triangles": 84,
+    "local_export": "geometry/EAST_FRONT_HUA1_LOCAL_trial.json"
+  },
+  {
+    "member_axis_dimensions_mm": [
+      1586.7626953125,
+      153.0,
+      214.1999969482422
+    ],
+    "id": "trial:EAST_FRONT_HUA2_LOCAL",
+    "glb_node": "trial:EAST_FRONT_HUA2_LOCAL",
+    "source_glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+    "normalized_axes": [
+      1,
+      0,
+      2
+    ],
+    "normalized_axis_signs": [
+      1,
+      -1,
+      1
+    ],
+    "dimensions_mm": [
+      1586.7626953125,
+      153.0,
+      214.1999969482422
+    ],
+    "world_bbox_mm": [
+      [
+        4360.5,
+        4540.0,
+        -2089.1314849853516
+      ],
+      [
+        4513.5,
+        6126.7626953125,
+        -1874.9314880371094
+      ]
+    ],
+    "vertices": 126,
+    "triangles": 80,
+    "local_export": "geometry/EAST_FRONT_HUA2_LOCAL_trial.json"
+  },
+  {
+    "member_axis_dimensions_mm": [
+      894.0,
+      155.0,
+      220.0
+    ],
+    "id": "trial:WEST_FRONT_SPACER_HUAGONG",
+    "glb_node": "trial:WEST_FRONT_SPACER_HUAGONG",
+    "source_glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+    "normalized_axes": [
+      1,
+      0,
+      2
+    ],
+    "normalized_axis_signs": [
+      1,
+      -1,
+      1
+    ],
+    "dimensions_mm": [
+      894.0,
+      155.0,
+      220.0
+    ],
+    "world_bbox_mm": [
+      [
+        -77.5,
+        3049.0,
+        -780.0
+      ],
+      [
+        77.5,
+        3943.0,
+        -560.0
+      ]
+    ],
+    "vertices": 348,
+    "triangles": 224,
+    "local_export": "geometry/WEST_FRONT_SPACER_HUAGONG_trial.json"
+  },
+  {
+    "member_axis_dimensions_mm": [
+      900.0,
+      153.0,
+      210.0
+    ],
+    "id": "trial:WEST_FRONT_SPACER_LINGGONG",
+    "glb_node": "trial:WEST_FRONT_SPACER_LINGGONG",
+    "source_glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+    "normalized_axes": [
+      0,
+      1,
+      2
+    ],
+    "normalized_axis_signs": [
+      1,
+      1,
+      1
+    ],
+    "dimensions_mm": [
+      900.0,
+      153.0,
+      210.0
+    ],
+    "world_bbox_mm": [
+      [
+        -450.0,
+        3419.5,
+        -780.0
+      ],
+      [
+        450.0,
+        3572.5,
+        -570.0
+      ]
+    ],
+    "vertices": 344,
+    "triangles": 224,
+    "local_export": "geometry/WEST_FRONT_SPACER_LINGGONG_trial.json"
+  },
+  {
+    "member_axis_dimensions_mm": [
+      893.0,
+      159.0,
+      214.0
+    ],
+    "id": "trial:WEST_REAR_SPACER_DEPTH_LINGGONG",
+    "glb_node": "trial:WEST_REAR_SPACER_DEPTH_LINGGONG",
+    "source_glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+    "normalized_axes": [
+      1,
+      0,
+      2
+    ],
+    "normalized_axis_signs": [
+      1,
+      -1,
+      1
+    ],
+    "dimensions_mm": [
+      893.0,
+      159.0,
+      214.0
+    ],
+    "world_bbox_mm": [
+      [
+        -79.5,
+        -3942.5,
+        -780.0
+      ],
+      [
+        79.5,
+        -3049.5,
+        -566.0
+      ]
+    ],
+    "vertices": 348,
+    "triangles": 224,
+    "local_export": "geometry/WEST_REAR_SPACER_DEPTH_LINGGONG_trial.json"
+  },
+  {
+    "member_axis_dimensions_mm": [
+      900.0,
+      154.0,
+      217.0
+    ],
+    "id": "trial:WEST_REAR_SPACER_LONGITUDINAL_LINGGONG",
+    "glb_node": "trial:WEST_REAR_SPACER_LONGITUDINAL_LINGGONG",
+    "source_glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+    "normalized_axes": [
+      0,
+      1,
+      2
+    ],
+    "normalized_axis_signs": [
+      1,
+      1,
+      1
+    ],
+    "dimensions_mm": [
+      900.0,
+      154.0,
+      217.0
+    ],
+    "world_bbox_mm": [
+      [
+        -450.0,
+        -3573.0,
+        -780.0
+      ],
+      [
+        450.0,
+        -3419.0,
+        -563.0
+      ]
+    ],
+    "vertices": 351,
+    "triangles": 224,
+    "local_export": "geometry/WEST_REAR_SPACER_LONGITUDINAL_LINGGONG_trial.json"
+  },
+  {
+    "member_axis_dimensions_mm": [
+      1440.62149385663,
+      154.0,
+      278.3999878908635
+    ],
+    "id": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+    "glb_node": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+    "source_glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+    "normalized_axes": [
+      1,
+      0,
+      2
+    ],
+    "normalized_axis_signs": [
+      1,
+      -1,
+      1
+    ],
+    "dimensions_mm": [
+      1391.584754228592,
+      154.0,
+      759.9818420410156
+    ],
+    "world_bbox_mm": [
+      [
+        4360.0,
+        5093.707604169846,
+        -2020.1904907226562
+      ],
+      [
+        4514.0,
+        6485.2923583984375,
+        -1260.2086486816406
+      ]
+    ],
+    "vertices": 60,
+    "triangles": 36,
+    "local_export": "geometry/EAST_FRONT_TOU_ANG_LOCAL_trial.json"
+  },
+  {
+    "member_axis_dimensions_mm": [
+      1834.6484473864894,
+      154.0,
+      187.00003117672833
+    ],
+    "id": "trial:EAST_FRONT_ER_ANG_LOCAL",
+    "glb_node": "trial:EAST_FRONT_ER_ANG_LOCAL",
+    "source_glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+    "normalized_axes": [
+      1,
+      0,
+      2
+    ],
+    "normalized_axis_signs": [
+      1,
+      -1,
+      1
+    ],
+    "dimensions_mm": [
+      1738.6206665039062,
+      154.0,
+      808.0408020019531
+    ],
+    "world_bbox_mm": [
+      [
+        4360.0,
+        5093.707580566406,
+        -1896.0408020019531
+      ],
+      [
+        4514.0,
+        6832.3282470703125,
+        -1088.0
+      ]
+    ],
+    "vertices": 42,
+    "triangles": 24,
+    "local_export": "geometry/EAST_FRONT_ER_ANG_LOCAL_trial.json"
+  }
+]
