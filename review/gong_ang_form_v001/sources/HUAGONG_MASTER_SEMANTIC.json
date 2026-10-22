@@ -1,0 +1,939 @@
+{
+  "blender_version": "4.5.13 LTS",
+  "canonical_blend_sha256": "0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e",
+  "canonical_bodies": [
+    {
+      "applies_to_registry_instance_exact": false,
+      "body_id": "JUMP_1_HUAGONG",
+      "component_name_zh": "华栱",
+      "geometry_faces": [
+        [
+          15,
+          14,
+          13,
+          12,
+          11,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        [
+          0,
+          1,
+          17,
+          16
+        ],
+        [
+          1,
+          2,
+          18,
+          17
+        ],
+        [
+          2,
+          3,
+          19,
+          18
+        ],
+        [
+          3,
+          4,
+          20,
+          19
+        ],
+        [
+          4,
+          5,
+          21,
+          20
+        ],
+        [
+          5,
+          6,
+          22,
+          21
+        ],
+        [
+          6,
+          7,
+          23,
+          22
+        ],
+        [
+          7,
+          8,
+          24,
+          23
+        ],
+        [
+          8,
+          9,
+          25,
+          24
+        ],
+        [
+          9,
+          10,
+          26,
+          25
+        ],
+        [
+          10,
+          11,
+          27,
+          26
+        ],
+        [
+          11,
+          12,
+          28,
+          27
+        ],
+        [
+          12,
+          13,
+          29,
+          28
+        ],
+        [
+          13,
+          14,
+          30,
+          29
+        ],
+        [
+          14,
+          15,
+          31,
+          30
+        ],
+        [
+          15,
+          0,
+          16,
+          31
+        ]
+      ],
+      "geometry_vertices_mm": [
+        [
+          -449.4,
+          -107.1,
+          76.5
+        ],
+        [
+          449.4,
+          -107.1,
+          76.5
+        ],
+        [
+          449.4,
+          -107.1,
+          39.78
+        ],
+        [
+          417.942,
+          -107.1,
+          24.48
+        ],
+        [
+          364.014,
+          -107.1,
+          0.0
+        ],
+        [
+          292.11,
+          -107.1,
+          -27.54
+        ],
+        [
+          211.218,
+          -107.1,
+          -52.02
+        ],
+        [
+          130.326,
+          -107.1,
+          -67.32000000000001
+        ],
+        [
+          80.892,
+          -107.1,
+          -76.5
+        ],
+        [
+          -80.892,
+          -107.1,
+          -76.5
+        ],
+        [
+          -130.326,
+          -107.1,
+          -67.32000000000001
+        ],
+        [
+          -211.218,
+          -107.1,
+          -52.02
+        ],
+        [
+          -292.11,
+          -107.1,
+          -27.54
+        ],
+        [
+          -364.014,
+          -107.1,
+          0.0
+        ],
+        [
+          -417.942,
+          -107.1,
+          24.48
+        ],
+        [
+          -449.4,
+          -107.1,
+          39.78
+        ],
+        [
+          -449.4,
+          107.1,
+          76.5
+        ],
+        [
+          449.4,
+          107.1,
+          76.5
+        ],
+        [
+          449.4,
+          107.1,
+          39.78
+        ],
+        [
+          417.942,
+          107.1,
+          24.48
+        ],
+        [
+          364.014,
+          107.1,
+          0.0
+        ],
+        [
+          292.11,
+          107.1,
+          -27.54
+        ],
+        [
+          211.218,
+          107.1,
+          -52.02
+        ],
+        [
+          130.326,
+          107.1,
+          -67.32000000000001
+        ],
+        [
+          80.892,
+          107.1,
+          -76.5
+        ],
+        [
+          -80.892,
+          107.1,
+          -76.5
+        ],
+        [
+          -130.326,
+          107.1,
+          -67.32000000000001
+        ],
+        [
+          -211.218,
+          107.1,
+          -52.02
+        ],
+        [
+          -292.11,
+          107.1,
+          -27.54
+        ],
+        [
+          -364.014,
+          107.1,
+          0.0
+        ],
+        [
+          -417.942,
+          107.1,
+          24.48
+        ],
+        [
+          -449.4,
+          107.1,
+          39.78
+        ]
+      ],
+      "joinery_cut_count": 0,
+      "local_bbox_mm": {
+        "dimensions": [
+          898.8,
+          214.2,
+          153.0
+        ],
+        "max": [
+          449.4,
+          107.1,
+          76.5
+        ],
+        "min": [
+          -449.4,
+          -107.1,
+          -76.5
+        ]
+      },
+      "local_transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "reference_specimen_only": true,
+      "resolved_dimensions_mm": {
+        "length": 898.8,
+        "thickness": 153.0,
+        "width": 214.2
+      },
+      "semantic_geometry_signature": "565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a",
+      "unsupported_detail_count": 0,
+      "variant_id": "JUMP_1_HUAGONG"
+    },
+    {
+      "applies_to_registry_instance_exact": false,
+      "body_id": "JUMP_2_HUAGONG",
+      "component_name_zh": "华栱",
+      "geometry_faces": [
+        [
+          15,
+          14,
+          13,
+          12,
+          11,
+          10,
+          9,
+          8,
+          7,
+          6,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ],
+        [
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ],
+        [
+          0,
+          1,
+          17,
+          16
+        ],
+        [
+          1,
+          2,
+          18,
+          17
+        ],
+        [
+          2,
+          3,
+          19,
+          18
+        ],
+        [
+          3,
+          4,
+          20,
+          19
+        ],
+        [
+          4,
+          5,
+          21,
+          20
+        ],
+        [
+          5,
+          6,
+          22,
+          21
+        ],
+        [
+          6,
+          7,
+          23,
+          22
+        ],
+        [
+          7,
+          8,
+          24,
+          23
+        ],
+        [
+          8,
+          9,
+          25,
+          24
+        ],
+        [
+          9,
+          10,
+          26,
+          25
+        ],
+        [
+          10,
+          11,
+          27,
+          26
+        ],
+        [
+          11,
+          12,
+          28,
+          27
+        ],
+        [
+          12,
+          13,
+          29,
+          28
+        ],
+        [
+          13,
+          14,
+          30,
+          29
+        ],
+        [
+          14,
+          15,
+          31,
+          30
+        ],
+        [
+          15,
+          0,
+          16,
+          31
+        ]
+      ],
+      "geometry_vertices_mm": [
+        [
+          -815.0,
+          -107.1,
+          76.5
+        ],
+        [
+          815.0,
+          -107.1,
+          76.5
+        ],
+        [
+          815.0,
+          -107.1,
+          39.78
+        ],
+        [
+          757.95,
+          -107.1,
+          24.48
+        ],
+        [
+          660.1500000000001,
+          -107.1,
+          0.0
+        ],
+        [
+          529.75,
+          -107.1,
+          -27.54
+        ],
+        [
+          383.04999999999995,
+          -107.1,
+          -52.02
+        ],
+        [
+          236.35,
+          -107.1,
+          -67.32000000000001
+        ],
+        [
+          146.7,
+          -107.1,
+          -76.5
+        ],
+        [
+          -146.7,
+          -107.1,
+          -76.5
+        ],
+        [
+          -236.35,
+          -107.1,
+          -67.32000000000001
+        ],
+        [
+          -383.04999999999995,
+          -107.1,
+          -52.02
+        ],
+        [
+          -529.75,
+          -107.1,
+          -27.54
+        ],
+        [
+          -660.1500000000001,
+          -107.1,
+          0.0
+        ],
+        [
+          -757.95,
+          -107.1,
+          24.48
+        ],
+        [
+          -815.0,
+          -107.1,
+          39.78
+        ],
+        [
+          -815.0,
+          107.1,
+          76.5
+        ],
+        [
+          815.0,
+          107.1,
+          76.5
+        ],
+        [
+          815.0,
+          107.1,
+          39.78
+        ],
+        [
+          757.95,
+          107.1,
+          24.48
+        ],
+        [
+          660.1500000000001,
+          107.1,
+          0.0
+        ],
+        [
+          529.75,
+          107.1,
+          -27.54
+        ],
+        [
+          383.04999999999995,
+          107.1,
+          -52.02
+        ],
+        [
+          236.35,
+          107.1,
+          -67.32000000000001
+        ],
+        [
+          146.7,
+          107.1,
+          -76.5
+        ],
+        [
+          -146.7,
+          107.1,
+          -76.5
+        ],
+        [
+          -236.35,
+          107.1,
+          -67.32000000000001
+        ],
+        [
+          -383.04999999999995,
+          107.1,
+          -52.02
+        ],
+        [
+          -529.75,
+          107.1,
+          -27.54
+        ],
+        [
+          -660.1500000000001,
+          107.1,
+          0.0
+        ],
+        [
+          -757.95,
+          107.1,
+          24.48
+        ],
+        [
+          -815.0,
+          107.1,
+          39.78
+        ]
+      ],
+      "joinery_cut_count": 0,
+      "local_bbox_mm": {
+        "dimensions": [
+          1630.0,
+          214.2,
+          153.0
+        ],
+        "max": [
+          815.0,
+          107.1,
+          76.5
+        ],
+        "min": [
+          -815.0,
+          -107.1,
+          -76.5
+        ]
+      },
+      "local_transform": {
+        "location": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotation": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ]
+      },
+      "reference_specimen_only": true,
+      "resolved_dimensions_mm": {
+        "length": 1630.0,
+        "thickness": 153.0,
+        "width": 214.2
+      },
+      "semantic_geometry_signature": "451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001",
+      "unsupported_detail_count": 0,
+      "variant_id": "JUMP_2_HUAGONG"
+    }
+  ],
+  "component_family_id": "CMP-GONG-HUAGONG-001",
+  "deferred_geometry": [
+    "exact_historical_jump_1_full_length_by_location",
+    "exact_historical_jump_2_full_length_by_location",
+    "exact_individual_jump_projection",
+    "exact_hidden_overlap",
+    "historical_contact_datum",
+    "exact_end_notch_shoulder",
+    "exact_historical_profile_curve",
+    "mortise_tenon",
+    "grooves",
+    "slots",
+    "cavities",
+    "hidden_connection_cuts",
+    "unmeasured_chamfers",
+    "wear_damage_warp",
+    "per_instance_deformation",
+    "per_instance_originality_repair_state",
+    "whole_hall_huagong_total",
+    "sample_to_instance_mapping"
+  ],
+  "definition_sha256": "8243f7a44d628653c31564561d0336df738c8af76d09d0fc531482f5ac22e9fd",
+  "direction_distribution_each_jump": {
+    "east": 7,
+    "north": 7,
+    "south": 7,
+    "west": 7
+  },
+  "family_semantic_signature": "0052a572ff7b546ca89ab251a945ad54a1621e0139fb9cabb278a17c1a65ae77",
+  "geometry_variant_count": 2,
+  "instance_historical_full_length_status": "UNRESOLVED",
+  "jump_binding_counts": {
+    "JUMP_1_HUAGONG": 28,
+    "JUMP_2_HUAGONG": 28
+  },
+  "length_assembly_contract": {
+    "approval_decision_id": "D-231",
+    "control_id": "HUAGONG_LENGTH_ASSEMBLY_CONTROL_SET_V001_C01",
+    "control_set_sha256": "ffacd94f5d6c2102a3a2378b3a1529a052a1c9b60d0ebc982d8c3b9c5dac201b",
+    "primary_assembly_constraint": {
+      "classification": "DIRECT_PRIMARY / OBSERVED_MEAN / ASSEMBLY_LEVEL_COMBINED_PROJECTION",
+      "full_length_sum": false,
+      "max_mm": 755,
+      "min_mm": 704,
+      "n": 46,
+      "original_963_design": false,
+      "per_instance_exact": false,
+      "standalone_member_length": false,
+      "total_projection_mean_mm": 732.4,
+      "variance": 115.61
+    },
+    "reference_specimens": {
+      "JUMP_1_HUAGONG": {
+        "applies_to_instance": false,
+        "classification": "RECONSTRUCTED_DESIGN / SECONDARY_HYPOTHESIS_GUIDED / REFERENCE_SPECIMEN_ONLY / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+        "historical_instance_full_length_closed": false,
+        "length_mm": 898.8,
+        "thickness_mm": 153,
+        "width_mm": 214.2
+      },
+      "JUMP_2_HUAGONG": {
+        "applies_to_instance": false,
+        "classification": "SECONDARY_CALCULATED / REFERENCE_SPECIMEN_ONLY / REPLACEABLE / NOT_DIRECT_PRIMARY",
+        "historical_instance_full_length_closed": false,
+        "length_mm": 1630,
+        "thickness_mm": 153,
+        "width_mm": 214.2
+      }
+    },
+    "report_ideal_crosscheck": {
+      "classification": "REPORT_INFERRED / REPORT_IDEAL_MODEL / CROSSCHECK_ONLY / REPLACEABLE",
+      "fen_mm": 15.3,
+      "midpoint_mm": 367.2,
+      "total_projection_fen": 48,
+      "total_projection_mm": 734.4
+    },
+    "section_classification": "REPORT_INFERRED / REPORT_IDEAL_MODEL / FAMILY_DESIGN_CANDIDATE / REPLACEABLE / NOT_DIRECT_HUAGONG_MEASUREMENT",
+    "validation_fixture": {
+      "D1_classification": "RECONSTRUCTED_DESIGN / SECONDARY_HYPOTHESIS_GUIDED_EQUAL_JUMP_RULE / PROJECT_FIXTURE_ONLY / REPLACEABLE",
+      "canonical_asset": false,
+      "catalog_asset": false,
+      "datums_mm": {
+        "D0": 0,
+        "D1": 366.2,
+        "D2": 732.4
+      },
+      "direct_assertion": "D2-D0 = 732.4 mm",
+      "fixture_id": "TWO_JUMP_ASSEMBLY_FIXTURE_VALIDATION_ONLY",
+      "hidden_overlap_used": false,
+      "individual_jump_projection_direct": false,
+      "machine_tolerance_mm": 0.1,
+      "mesh_end_measurement_authority": false,
+      "registry_binding": false
+    }
+  },
+  "master_family_count": 1,
+  "master_id": "CMP-GONG-HUAGONG-001_MASTER",
+  "master_version": "V001",
+  "physical_instance_count": 56,
+  "profile_contract": {
+    "approval_decision_id": "D-233",
+    "authority": "SAME_BUILDING_SOURCE_GUIDED_SIMPLIFIED",
+    "bilateral_symmetry": true,
+    "candidate_id": "HUAGONG_PROFILE_CONTROL_SET_V001_C01",
+    "classification": "SOURCE_GUIDED_SIMPLIFIED / REPLACEABLE / NOT_DIRECT_MEASUREMENT",
+    "control_set_sha256": "f9a96a20466d523a91c13ad85f5678c085963f5b826a35047843fb3ee1d46e8e",
+    "exact_end_geometry": "UNRESOLVED",
+    "exact_historical_control_dimensions": "UNRESOLVED",
+    "exact_historical_curve": "UNRESOLVED",
+    "independent_from_prior_gong_control_sets": true,
+    "metric_scale_calibration": "NOT_PERFORMED / NOT_CLAIMED",
+    "normalized_coordinate_meaning": {
+      "x": "fraction of variant Gate-A reference-specimen full length centered at 0",
+      "z": "fraction of Gate-A reference thickness centered at 0"
+    },
+    "normalized_points": [
+      [
+        -0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.5,
+        0.26
+      ],
+      [
+        0.465,
+        0.16
+      ],
+      [
+        0.405,
+        0
+      ],
+      [
+        0.325,
+        -0.18
+      ],
+      [
+        0.235,
+        -0.34
+      ],
+      [
+        0.145,
+        -0.44
+      ],
+      [
+        0.09,
+        -0.5
+      ],
+      [
+        -0.09,
+        -0.5
+      ],
+      [
+        -0.145,
+        -0.44
+      ],
+      [
+        -0.235,
+        -0.34
+      ],
+      [
+        -0.325,
+        -0.18
+      ],
+      [
+        -0.405,
+        0
+      ],
+      [
+        -0.465,
+        0.16
+      ],
+      [
+        -0.5,
+        0.26
+      ]
+    ],
+    "normalized_points_are_direct_measurements": false,
+    "point_count": 16,
+    "prior_control_reuse": {
+      "averaged": false,
+      "morphed": false,
+      "t037_guazi": false,
+      "t038_mangong": false,
+      "t039_linggong": false
+    },
+    "product_owner_approved": true,
+    "source_pages": [
+      73,
+      74,
+      75,
+      76
+    ],
+    "source_role": "QUALITATIVE_FORM_AND_ENVELOPE_AUTHORITY / NOT_METRIC_CONTROL_POINT_AUTHORITY",
+    "symmetry_classification": "STAGE1_SIMPLIFICATION / NOT_HISTORICAL_ASYMMETRY_CLAIM",
+    "variant_application": {
+      "distinct_historical_profile_claim": false,
+      "independent_body_generation_required": true,
+      "same_normalized_control_set": true,
+      "uniform_3d_scaling": false,
+      "width_thickness_scaled_by_length_ratio": false
+    }
+  },
+  "sample_to_instance_mapping": "UNKNOWN",
+  "schema_version": "HUAGONG_MASTER_SEMANTIC_V001",
+  "task_id": "T-040",
+  "validation_fixture": {
+    "D1_classification": "RECONSTRUCTED_DESIGN / SECONDARY_HYPOTHESIS_GUIDED_EQUAL_JUMP_RULE / PROJECT_FIXTURE_ONLY / REPLACEABLE",
+    "canonical_asset": false,
+    "catalog_asset": false,
+    "combined_projection_mm": 732.4,
+    "datums_mm": {
+      "D0": 0.0,
+      "D1": 366.2,
+      "D2": 732.4
+    },
+    "direct_assertion": "D2-D0 = 732.4 mm",
+    "fixture_id": "TWO_JUMP_ASSEMBLY_FIXTURE_VALIDATION_ONLY",
+    "hidden_overlap_used": false,
+    "individual_jump_projection_direct": false,
+    "machine_tolerance_mm": 0.1,
+    "mesh_end_measurement_authority": false,
+    "midpoint_interval_1_mm": 366.2,
+    "midpoint_interval_2_mm": 366.2,
+    "registry_binding": false
+  },
+  "whole_hall_total_claim": false,
+  "formalization": {
+    "authority": "D-237",
+    "formalization_result": "D-238",
+    "first_article_approval": "D-236",
+    "first_article_machine_gate": "D-235",
+    "accepted_run_id": 36317889355,
+    "artifact_id": 10930899677,
+    "artifact_zip_sha256": "sha256:de25a9031bd096ff2313b4a37d14aa821c480c13e46372113cb40f647a21781f",
+    "approved_canonical_blend_sha256": "0748069370c0c3eb4da6eec26038f2498b7eb2fc8defedb1ebd70486029efb2e",
+    "geometry_match_approved_first_article": true,
+    "formalization_run_id": 36321537733
+  }
+}

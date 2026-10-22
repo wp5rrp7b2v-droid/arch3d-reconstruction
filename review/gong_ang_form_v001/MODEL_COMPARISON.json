@@ -1,0 +1,173 @@
+[
+  {
+    "master": "JUMP_1_HUAGONG",
+    "trial": "trial:EAST_FRONT_HUA1_LOCAL",
+    "master_dimensions_length_sidewidth_displayheight_mm": [
+      898.8,
+      214.2,
+      153.0
+    ],
+    "trial_dimensions_length_sidewidth_displayheight_mm": [
+      898.7999877929688,
+      153.0,
+      224.20000457763672
+    ],
+    "master_vertices": 32,
+    "trial_vertices": 132,
+    "normalized_side_silhouette_iou": 0.8550379645203255,
+    "same_local_geometry": false,
+    "comparison_note": "Size-normalized silhouette comparison only; NOT evidence of historical type equality. Different parameter axes and connection cuts are retained."
+  },
+  {
+    "master": "JUMP_2_HUAGONG",
+    "trial": "trial:EAST_FRONT_HUA2_LOCAL",
+    "master_dimensions_length_sidewidth_displayheight_mm": [
+      1630.0,
+      214.2,
+      153.0
+    ],
+    "trial_dimensions_length_sidewidth_displayheight_mm": [
+      1586.7626953125,
+      153.0,
+      214.1999969482422
+    ],
+    "master_vertices": 32,
+    "trial_vertices": 126,
+    "normalized_side_silhouette_iou": 0.8984153501406563,
+    "same_local_geometry": false,
+    "comparison_note": "Size-normalized silhouette comparison only; NOT evidence of historical type equality. Different parameter axes and connection cuts are retained."
+  },
+  {
+    "master": "JUMP_1_HUAGONG",
+    "trial": "trial:WEST_FRONT_SPACER_HUAGONG",
+    "master_dimensions_length_sidewidth_displayheight_mm": [
+      898.8,
+      214.2,
+      153.0
+    ],
+    "trial_dimensions_length_sidewidth_displayheight_mm": [
+      894.0,
+      155.0,
+      220.0
+    ],
+    "master_vertices": 32,
+    "trial_vertices": 348,
+    "normalized_side_silhouette_iou": 0.766492659759071,
+    "same_local_geometry": false,
+    "comparison_note": "Size-normalized silhouette comparison only; NOT evidence of historical type equality. Different parameter axes and connection cuts are retained."
+  },
+  {
+    "master": "JUMP_2_HUAGONG",
+    "trial": "trial:WEST_FRONT_SPACER_HUAGONG",
+    "master_dimensions_length_sidewidth_displayheight_mm": [
+      1630.0,
+      214.2,
+      153.0
+    ],
+    "trial_dimensions_length_sidewidth_displayheight_mm": [
+      894.0,
+      155.0,
+      220.0
+    ],
+    "master_vertices": 32,
+    "trial_vertices": 348,
+    "normalized_side_silhouette_iou": 0.7664926597590708,
+    "same_local_geometry": false,
+    "comparison_note": "Size-normalized silhouette comparison only; NOT evidence of historical type equality. Different parameter axes and connection cuts are retained."
+  },
+  {
+    "master": "LINGGONG",
+    "trial": "trial:WEST_FRONT_SPACER_LINGGONG",
+    "master_dimensions_length_sidewidth_displayheight_mm": [
+      897.0,
+      217.4,
+      155.6
+    ],
+    "trial_dimensions_length_sidewidth_displayheight_mm": [
+      900.0,
+      153.0,
+      210.0
+    ],
+    "master_vertices": 28,
+    "trial_vertices": 344,
+    "normalized_side_silhouette_iou": 0.7535384964629434,
+    "same_local_geometry": false,
+    "comparison_note": "Size-normalized silhouette comparison only; NOT evidence of historical type equality. Different parameter axes and connection cuts are retained."
+  },
+  {
+    "master": "LINGGONG",
+    "trial": "trial:WEST_REAR_SPACER_DEPTH_LINGGONG",
+    "master_dimensions_length_sidewidth_displayheight_mm": [
+      897.0,
+      217.4,
+      155.6
+    ],
+    "trial_dimensions_length_sidewidth_displayheight_mm": [
+      893.0,
+      159.0,
+      214.0
+    ],
+    "master_vertices": 28,
+    "trial_vertices": 348,
+    "normalized_side_silhouette_iou": 0.7502682214420546,
+    "same_local_geometry": false,
+    "comparison_note": "Size-normalized silhouette comparison only; NOT evidence of historical type equality. Different parameter axes and connection cuts are retained."
+  },
+  {
+    "master": "LINGGONG",
+    "trial": "trial:WEST_REAR_SPACER_LONGITUDINAL_LINGGONG",
+    "master_dimensions_length_sidewidth_displayheight_mm": [
+      897.0,
+      217.4,
+      155.6
+    ],
+    "trial_dimensions_length_sidewidth_displayheight_mm": [
+      900.0,
+      154.0,
+      217.0
+    ],
+    "master_vertices": 28,
+    "trial_vertices": 351,
+    "normalized_side_silhouette_iou": 0.7512986349042294,
+    "same_local_geometry": false,
+    "comparison_note": "Size-normalized silhouette comparison only; NOT evidence of historical type equality. Different parameter axes and connection cuts are retained."
+  },
+  {
+    "master": "TOU_ANG",
+    "trial": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+    "master_dimensions_length_sidewidth_displayheight_mm": [
+      787.6158,
+      154.0,
+      278.4
+    ],
+    "trial_dimensions_length_sidewidth_displayheight_mm": [
+      1440.62149385663,
+      154.0,
+      278.3999878908635
+    ],
+    "master_vertices": 20,
+    "trial_vertices": 60,
+    "normalized_side_silhouette_iou": 0.8984902208425307,
+    "same_local_geometry": false,
+    "comparison_note": "Size-normalized silhouette comparison only; NOT evidence of historical type equality. Different parameter axes and connection cuts are retained."
+  },
+  {
+    "master": "ER_ANG",
+    "trial": "trial:EAST_FRONT_ER_ANG_LOCAL",
+    "master_dimensions_length_sidewidth_displayheight_mm": [
+      787.6158,
+      154.0,
+      187.0
+    ],
+    "trial_dimensions_length_sidewidth_displayheight_mm": [
+      1834.6484473864894,
+      154.0,
+      187.00003117672833
+    ],
+    "master_vertices": 12,
+    "trial_vertices": 42,
+    "normalized_side_silhouette_iou": 0.9610238833908521,
+    "same_local_geometry": false,
+    "comparison_note": "Size-normalized silhouette comparison only; NOT evidence of historical type equality. Different parameter axes and connection cuts are retained."
+  }
+]

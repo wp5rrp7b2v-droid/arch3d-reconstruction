@@ -1,0 +1,46 @@
+{
+  "status": "READY_FOR_PO_VISUAL_REVIEW_NOT_FORM_APPROVAL",
+  "reviewed": [
+    {
+      "file": "output/OVERVIEW_ZH.png",
+      "sha256": "46d3c986198c3a5797e17bc7f141923ab308fabafacbe64aa23e4275f2f51dd7"
+    },
+    {
+      "file": "output/HUAGONG_COMPARISON_ZH.png",
+      "sha256": "2d20686e27b82fe10fbaff700f466ba5677cb7753ab02300ce78c72f314e21a9"
+    },
+    {
+      "file": "output/LINGGONG_COMPARISON_ZH.png",
+      "sha256": "ccc684263e88a29179239f9658604ef8f542cc02d17c396f02cdab59b610be73"
+    },
+    {
+      "file": "output/TOUANG_COMPARISON_ZH.png",
+      "sha256": "dc4b34c72c36772bf4dbbfa8a88ee9b60b73f8465d29fd1e4fa77bdd93b7ffaf"
+    },
+    {
+      "file": "output/ERANG_COMPARISON_ZH.png",
+      "sha256": "ce65c9d650b85d14703d02b191efbf9515e660e212b19b23fa18cc6730ed6e14"
+    }
+  ],
+  "manual_scope": [
+    "全图缩放观察总览与四详情的实际模型、原图及候选",
+    "PDF73原照片网格定位检查，纠正头昂、二昂尖端箭头",
+    "PDF87最外跳横栱两端标注检查",
+    "华栱一跳与二跳分列、真实局部件与隔架件分列",
+    "端视与厚度、轴向长度和投影包络标签检查",
+    "完整工作长昂候选与787.6毫米控制段标签区别"
+  ],
+  "corrections": [
+    "图源箭头曾指向相邻后部横材或空白，已根据原图像素定位修正",
+    "变字体默认细字改为450字重",
+    "新增端视，保留不同比例的视图不能按屏幕长度量尺寸提示",
+    "一个PNG完整解码发现截断；未交付该文件，改为临时文件写完再原子替换，重新生成并独立完整解码通过",
+    "昂的实际工作形体和Master控制段比较前先去除既有斜度，避免把姿态差异算作轮廓差异"
+  ],
+  "limits": [
+    "未逐像素查验全部图像",
+    "完整候选是来源引导的推断，不是独立历史真值",
+    "未证明候选接口或承载力",
+    "不声称最终PO形制验收通过"
+  ]
+}

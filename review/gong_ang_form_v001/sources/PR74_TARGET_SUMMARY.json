@@ -1,0 +1,364 @@
+[
+  {
+    "id": "F028",
+    "category": "华栱",
+    "name": "华栱 · 一跳",
+    "position": "外檐正向第一层出跳",
+    "count": "28件",
+    "count_kind": "明确子集；非全殿总量",
+    "level": "基本方向可参考",
+    "form": "横向出跳短栱，下缘卷杀、端头方直收束，上缘有交接变化；与二跳分开。",
+    "difference": "Master已具简化曲线；柱头足材与单材／局部截段的对应尚未核实。",
+    "keep": "保留一跳独立变体、基本卷杀；不撤销已有局部批准。",
+    "change": "先核对完整材高和截取范围，再决定端部曲线与开口；不得直接拉伸。",
+    "unknown": "214.2mm参考材高与316.4mm柱头足材均值不能视作同一量；完整历史长未知。",
+    "bsource": "official:c3abcd44c2-03_SOURCE_第一跳华栱.png",
+    "bcrop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "bcite": "官方数字展示一跳提取件，身份推断；A2 PDF28区分单材／足材。",
+    "analog": "FG2022 PDF17佛光寺同有一跳华栱；DU1932 PDF45山门一跳剖面只作层位类比。",
+    "bkind": "工程建议",
+    "araw": "A1-p295.jpg",
+    "acrop": [
+      0.15,
+      0.48,
+      0.67,
+      0.66
+    ],
+    "marks": [
+      [
+        0.46,
+        0.57,
+        "1"
+      ]
+    ],
+    "a": "assets/views/F028-A.webp",
+    "b": "assets/views/F028-B.webp",
+    "c": "assets/views/F028-C.webp",
+    "a_original": "assets/original/A1-p295.jpg",
+    "b_original": "assets/original/c3abcd44c2-03_SOURCE_第一跳华栱.png",
+    "c_original": "assets/original/CMP-GONG-HUAGONG-001--0--axon.webp",
+    "master_id": "CMP-GONG-HUAGONG-001",
+    "model_identity": "Master V001 · JUMP_1",
+    "model_provenance": {
+      "source": "assets/models/CMP-GONG-HUAGONG-001--0--axon.png",
+      "sha256": "9c2cde4de59fba3c0b2855286c68d32688be5db0391647505326359554364abe",
+      "render_label": "现有 BLEND · axon",
+      "model_id": "CMP-GONG-HUAGONG-001",
+      "source_commit": "54fac54578340918c78d65e973933b54090893a1"
+    },
+    "model_origin_url": "https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/39010819727",
+    "local_models": [
+      {
+        "image": "assets/views/F028-local1.webp",
+        "label": "trial:EAST_FRONT_HUA1_LOCAL",
+        "identity": "LOCAL_C02",
+        "boundary": "C02六处局部轮廓已批准；不晋升Master。"
+      }
+    ],
+    "geometry": [
+      {
+        "vertices": 32,
+        "faces": 18,
+        "body": "JUMP_1_HUAGONG"
+      }
+    ]
+  },
+  {
+    "id": "F029",
+    "category": "华栱",
+    "name": "华栱 · 二跳",
+    "position": "外檐正向第二层出跳",
+    "count": "28件",
+    "count_kind": "明确子集；非全殿总量",
+    "level": "基本方向可参考",
+    "form": "第二层更长的出跳栱；上缘与卷杀独立展示，不能复用一跳图片替代。",
+    "difference": "现Master有独立二跳形体；完整足材与局部片段的边界依旧未闭合。",
+    "keep": "保留二跳独立变体及已批准记录的原范围。",
+    "change": "先完成二跳实物身份、材高方向与截取范围核验，再改细部。",
+    "unknown": "参考长度1630mm及214.2mm材高不是后端完整实物定案；316.4mm也不可直接套。",
+    "bsource": "official:6fd13f56b4-05_SOURCE_第二跳华栱.png",
+    "bcrop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "bcite": "官方数字展示二跳提取件，身份推断；与一跳使用不同原始图片。",
+    "analog": "FG2022 PDF17佛光寺二跳、DU1932 PDF45山门层位可比较；实例类型不直接互换。",
+    "bkind": "工程建议",
+    "araw": "A1-p295.jpg",
+    "acrop": [
+      0.15,
+      0.43,
+      0.7,
+      0.6
+    ],
+    "marks": [
+      [
+        0.43,
+        0.532,
+        "1"
+      ]
+    ],
+    "a": "assets/views/F029-A.webp",
+    "b": "assets/views/F029-B.webp",
+    "c": "assets/views/F029-C.webp",
+    "a_original": "assets/original/A1-p295.jpg",
+    "b_original": "assets/original/6fd13f56b4-05_SOURCE_第二跳华栱.png",
+    "c_original": "assets/original/CMP-GONG-HUAGONG-001--1--axon.webp",
+    "master_id": "CMP-GONG-HUAGONG-001",
+    "model_identity": "Master V001 · JUMP_2",
+    "model_provenance": {
+      "source": "assets/models/CMP-GONG-HUAGONG-001--1--axon.png",
+      "sha256": "a4d917cc3404288b274d0f45b1e847173f4adf0c4d7586c6e5af04be2ebd0797",
+      "render_label": "现有 BLEND · axon",
+      "model_id": "CMP-GONG-HUAGONG-001",
+      "source_commit": "54fac54578340918c78d65e973933b54090893a1"
+    },
+    "model_origin_url": "https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/39010819727",
+    "local_models": [
+      {
+        "image": "assets/views/F029-local1.webp",
+        "label": "trial:EAST_FRONT_HUA2_LOCAL",
+        "identity": "ASSEMBLY_WORK_V003",
+        "boundary": "main工作V003：含局部批准和待审对象；此图不升级批准。"
+      }
+    ],
+    "geometry": [
+      {
+        "vertices": 32,
+        "faces": 18,
+        "body": "JUMP_2_HUAGONG"
+      }
+    ]
+  },
+  {
+    "id": "F030",
+    "category": "令栱",
+    "name": "令栱",
+    "position": "外檐最外跳横置",
+    "count": "28件",
+    "count_kind": "实测组数＋方向推导",
+    "level": "基本形制参考 · 候选",
+    "form": "横置短栱，两端下缘卷杀、中段较深；与出跳华栱保持方向区别。",
+    "difference": "Master已有简化卷杀；端头分段、完整顶面交接和隐刻仍需核证。",
+    "keep": "保留897×217.4×155.6mm族均值和既有基本卷杀；内外令栱分开识别。",
+    "change": "可先审核卷杀类型及端部方直收束；精确瓣数、顶部开口和隐刻位置不能据同名栱照搬。",
+    "unknown": "整件为时代形制参考示意，卷杀曲线非逐点实测；顶面开口与背面未知，图B与图C未配准。",
+    "bsource": "A1-p087.jpg",
+    "bcrop": [
+      0.353,
+      0.426,
+      0.65,
+      0.488
+    ],
+    "bcite": "A1 PDF60及PDF87图2-46；FG2022 PDF17标名令栱；DU1932 PDF49山门铺作。 图B为时代形制参考示意。",
+    "analog": "WEN2017图19／20直接比较本殿外檐与内界面的令栱；不同位置不能冒作同一单件。",
+    "bkind": "工程候选",
+    "araw": "research:WEN2017-19.jpg",
+    "acrop": [
+      0.48,
+      0.0,
+      1,
+      0.5
+    ],
+    "marks": [
+      [
+        0.79,
+        0.24,
+        "1"
+      ]
+    ],
+    "a": "assets/views/F030-A.webp",
+    "b": "assets/v002/F030-form.svg",
+    "c": "assets/views/F030-C.webp",
+    "a_original": "assets/research/WEN2017-19.jpg",
+    "b_original": "assets/v002/F030-form.svg",
+    "c_original": "assets/original/CMP-GONG-LINGGONG-001--0--axon.webp",
+    "master_id": "CMP-GONG-LINGGONG-001",
+    "model_identity": "Master V001",
+    "model_provenance": {
+      "source": "assets/models/CMP-GONG-LINGGONG-001--0--axon.png",
+      "sha256": "e12407025a8efb14611b1f58206b8d3aa73b3bf1c67dae7a62678ef5ecfdf384",
+      "render_label": "现有 BLEND · axon",
+      "model_id": "CMP-GONG-LINGGONG-001",
+      "source_commit": "54fac54578340918c78d65e973933b54090893a1"
+    },
+    "model_origin_url": "https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/39010819727",
+    "local_models": [
+      {
+        "image": "assets/views/F030-local1.webp",
+        "label": "east:LINGGONG_FRONT",
+        "identity": "ASSEMBLY_WORK_V003",
+        "boundary": "main工作V003：含局部批准和待审对象；此图不升级批准。"
+      },
+      {
+        "image": "assets/views/F030-local2.webp",
+        "label": "west:LINGGONG_FRONT",
+        "identity": "ASSEMBLY_WORK_V003",
+        "boundary": "main工作V003：含局部批准和待审对象；此图不升级批准。"
+      }
+    ],
+    "geometry": [
+      {
+        "vertices": 28,
+        "faces": 16,
+        "body": "LINGGONG"
+      }
+    ],
+    "v002": {
+      "same_building": "本殿外檐最外跳横栱可见两端卷杀；内界面照片只辅助位置识别，不替代外檐单件。",
+      "analogy": "佛光寺东大殿（857）标名令栱图和独乐寺山门（984）外端横栱，支持朴素横栱与卷杀类型。",
+      "reuse": "同类可复用横栱卷杀原型；长度、材高、端头瓣数、顶面交接与内外位置独立。",
+      "source_refs": [
+        "assets/original/A1-p060.jpg",
+        "assets/original/A1-p087.jpg",
+        "assets/research/FG2021-p017.png",
+        "assets/research/DU1932-p049.png"
+      ]
+    }
+  },
+  {
+    "id": "F035",
+    "category": "昂",
+    "name": "昂 · 头昂",
+    "position": "柱头类方向单元，第一层下昂",
+    "count": "16件",
+    "count_kind": "实测＋方向单元推导",
+    "level": "基本方向可参考",
+    "form": "细长斜材，昂头呈斜削尖薄的批竹式；与二昂的层位和轮廓分开。",
+    "difference": "Master有分段斜身，头部较钝；局部工作件与完整昂尾不可混同。",
+    "keep": "保留头昂独立身份及实测截面口径。",
+    "change": "建议比较并细化昂头斜削，保留真实上下关系，不添加清式菊花头。",
+    "unknown": "精确昂长、昂头曲线及后尾连接仍未测定；官方形体只作外观参考。",
+    "bsource": "official:0d6e55efe9-06_SOURCE_头昂.png",
+    "bcrop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "bcite": "官方数字展示头昂提取件，身份推断；A2 PDF39／46补本殿交接及点云。",
+    "analog": "FG2022 PDF17：佛光寺857年以简单批竹式昂头；只支持斜削类型，角度和长度不移植。",
+    "bkind": "工程建议",
+    "araw": "A1-p295.jpg",
+    "acrop": [
+      0.16,
+      0.38,
+      0.85,
+      0.61
+    ],
+    "marks": [
+      [
+        0.49,
+        0.509,
+        "1"
+      ]
+    ],
+    "a": "assets/views/F035-A.webp",
+    "b": "assets/views/F035-B.webp",
+    "c": "assets/views/F035-C.webp",
+    "a_original": "assets/original/A1-p295.jpg",
+    "b_original": "assets/original/0d6e55efe9-06_SOURCE_头昂.png",
+    "c_original": "assets/original/CMP-GONG-ANG-001--0--axon.webp",
+    "master_id": "CMP-GONG-ANG-001",
+    "model_identity": "Master V001 · TOU_ANG",
+    "model_provenance": {
+      "source": "assets/models/CMP-GONG-ANG-001--0--axon.png",
+      "sha256": "b689be998bd31cfbca3e9905fc6407ee65b95cd169b6b2fb1ec6c74635647fe5",
+      "render_label": "现有 BLEND · axon",
+      "model_id": "CMP-GONG-ANG-001",
+      "source_commit": "54fac54578340918c78d65e973933b54090893a1"
+    },
+    "model_origin_url": "https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/39010819727",
+    "local_models": [
+      {
+        "image": "assets/views/F035-local1.webp",
+        "label": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+        "identity": "ASSEMBLY_WORK_V003",
+        "boundary": "main工作V003：含局部批准和待审对象；此图不升级批准。"
+      }
+    ],
+    "geometry": [
+      {
+        "vertices": 20,
+        "faces": 12,
+        "body": "TOU_ANG"
+      }
+    ]
+  },
+  {
+    "id": "F036",
+    "category": "昂",
+    "name": "昂 · 二昂",
+    "position": "柱头类方向单元，第二层下昂",
+    "count": "16件",
+    "count_kind": "实测＋方向单元推导",
+    "level": "基本方向可参考",
+    "form": "第二层下昂，独立的尖削头部与长斜身；后尾关系不能由头昂替代。",
+    "difference": "Master虽有独立二昂形体，但分段简化；整尾与局部截断并非一回事。",
+    "keep": "保留二昂独立变体，保留原资料样本口径及未知字段。",
+    "change": "建议细化二昂前端斜削；后尾与上梁交接先用本殿点云约束。",
+    "unknown": "参考控制跨度非整材历史全长，不能把展示件各段比例直接定为实测。",
+    "bsource": "official:2a94b0e852-07_SOURCE_二昂.png",
+    "bcrop": [
+      0.03,
+      0.2,
+      0.68,
+      0.7
+    ],
+    "bcite": "官方数字展示二昂提取件，独立于头昂原图；身份及精确端部仍有推断。",
+    "analog": "FG2022 PDF17双下昂层次可比较；DU1932的昂尾形式仅作异同参照，不能替代本殿。",
+    "bkind": "工程建议",
+    "araw": "A1-p295.jpg",
+    "acrop": [
+      0.16,
+      0.32,
+      0.89,
+      0.58
+    ],
+    "marks": [
+      [
+        0.53,
+        0.468,
+        "1"
+      ]
+    ],
+    "a": "assets/views/F036-A.webp",
+    "b": "assets/views/F036-B.webp",
+    "c": "assets/views/F036-C.webp",
+    "a_original": "assets/original/A1-p295.jpg",
+    "b_original": "assets/original/2a94b0e852-07_SOURCE_二昂.png",
+    "c_original": "assets/original/CMP-GONG-ANG-001--1--axon.webp",
+    "master_id": "CMP-GONG-ANG-001",
+    "model_identity": "Master V001 · ER_ANG",
+    "model_provenance": {
+      "source": "assets/models/CMP-GONG-ANG-001--1--axon.png",
+      "sha256": "2d61886f3556142f5ef15c1bc9649a662dc62363d9b793ea3cf8c5d30be36cec",
+      "render_label": "现有 BLEND · axon",
+      "model_id": "CMP-GONG-ANG-001",
+      "source_commit": "54fac54578340918c78d65e973933b54090893a1"
+    },
+    "model_origin_url": "https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/39010819727",
+    "local_models": [
+      {
+        "image": "assets/views/F036-local1.webp",
+        "label": "trial:EAST_FRONT_ER_ANG_LOCAL",
+        "identity": "ASSEMBLY_WORK_V003",
+        "boundary": "main工作V003：含局部批准和待审对象；此图不升级批准。"
+      }
+    ],
+    "geometry": [
+      {
+        "vertices": 12,
+        "faces": 8,
+        "body": "ER_ANG"
+      }
+    ]
+  }
+]
