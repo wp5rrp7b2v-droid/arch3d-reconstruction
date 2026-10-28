@@ -152,7 +152,8 @@ def render_views(scene):
   scene.render.filepath=str(path)
   bpy.ops.render.render(write_still=True)
   bpy.data.objects.remove(cam,do_unlink=True)
-  label_image(path,label)
+  # Chinese headers and legends are applied by system Python / Pillow after Blender rendering.
+  # Blender's isolated Python may not have Pillow installed.
 def build():
  scene=init_scene();objs=place();pairs=pair_analysis(objs)
  for k,o in objs.items():
