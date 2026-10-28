@@ -33,7 +33,7 @@ ROT={
  'TOU':Matrix(((0.,-1.,0.),(c,0.,-s),(s,0.,c))),
  'ER':Matrix(((0.,-1.,0.),(c,0.,-s),(s,0.,c))),
 }
-assert all(abs(r.determinant()-1)<1e-9 for r in ROT.values())
+assert all(abs(r.determinant()-1)<1e-5 for r in ROT.values()) # mathutils Matrix is float32
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def mat4(name):
  r=ROT[name];v=centers[name]
