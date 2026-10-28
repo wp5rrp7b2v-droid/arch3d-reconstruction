@@ -1,0 +1,37 @@
+{
+  "status": "PASS_CLOUD_BLENDER_REIMPORT_ONLY_PO_PENDING",
+  "blender_version": "4.5.13 LTS",
+  "models": [
+    {
+      "name": "ER_ANG_ILLUSTRATION_C01_candidate",
+      "file": "ER_ANG_ILLUSTRATION_C01_candidate.glb",
+      "sha256": "1d802a2877df756a30a172d77f64a9b4278b87b4ea9305fb2791535690b402dd",
+      "imported_object_count": 1,
+      "source_vertex_count": 1016,
+      "welded_vertex_count": 1016,
+      "dimensions_error_mm": 2.1283043679432012e-05,
+      "vertex_hausdorff_mm": 2.945772550393617e-05,
+      "watertight": true,
+      "euler_number": 2,
+      "volume_mm3": 50471663.34747628,
+      "status": "PASS"
+    },
+    {
+      "name": "TOU_ANG_ILLUSTRATION_C01_candidate",
+      "file": "TOU_ANG_ILLUSTRATION_C01_candidate.glb",
+      "sha256": "89ff4c4ef1619cd43dfeb72a43d646d5c121d889674107368bdf71276fa6e7cd",
+      "imported_object_count": 1,
+      "source_vertex_count": 1056,
+      "welded_vertex_count": 1056,
+      "dimensions_error_mm": 1.9550323600014963e-06,
+      "vertex_hausdorff_mm": 2.9133627705982658e-05,
+      "watertight": true,
+      "euler_number": 2,
+      "volume_mm3": 42119089.99528522,
+      "status": "PASS"
+    }
+  ],
+  "original_approved_assets": "NOT_OPENED_OR_MODIFIED",
+  "historical_form": "NOT_TESTED",
+  "assembly": "NOT_TESTED"
+}

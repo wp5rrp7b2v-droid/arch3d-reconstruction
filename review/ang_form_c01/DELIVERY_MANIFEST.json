@@ -1,0 +1,67 @@
+{
+  "candidate_review_only": true,
+  "model_count": 2,
+  "original_protected_paths_changed": [],
+  "files": [
+    {
+      "path": "BLENDER_VALIDATION.json",
+      "bytes": 1287,
+      "sha256": "683c490f7e728255ac49c7218ea7783f4d77f81ebd199e848b92546a650a6b2e"
+    },
+    {
+      "path": "GEOMETRY_VALIDATION.json",
+      "bytes": 1272,
+      "sha256": "1ef84cf758c7954317d09214d3ce39359188843a9f7ac31b1ad8ec38bf5832f4"
+    },
+    {
+      "path": "README_ZH.md",
+      "bytes": 3432,
+      "sha256": "f729110c66887078cf2b7a684937bc13ade73d1febc116c5261437120d8dfb16"
+    },
+    {
+      "path": "blender_check_c01.py",
+      "bytes": 4223,
+      "sha256": "33e79a51e9c1763e9179a8876f6fba12451ca354cdade8c2742fe63fcb42c1d7"
+    },
+    {
+      "path": "build_reference_c01.py",
+      "bytes": 7732,
+      "sha256": "ad7400b4e4a0915b7f20298e87be9e3e0c3f2a9fe51d4797544628b0ef272bf9"
+    },
+    {
+      "path": "geometry/ER_ANG_ILLUSTRATION_C01_candidate.glb",
+      "bytes": 65148,
+      "sha256": "1d802a2877df756a30a172d77f64a9b4278b87b4ea9305fb2791535690b402dd"
+    },
+    {
+      "path": "geometry/ER_ANG_ILLUSTRATION_C01_candidate.json",
+      "bytes": 150783,
+      "sha256": "fbce1d3425994b6ed8478d71a24bbda48a457914fcb7432a4bca3bd5f45a571b"
+    },
+    {
+      "path": "geometry/TOU_ANG_ILLUSTRATION_C01_candidate.glb",
+      "bytes": 74268,
+      "sha256": "89ff4c4ef1619cd43dfeb72a43d646d5c121d889674107368bdf71276fa6e7cd"
+    },
+    {
+      "path": "geometry/TOU_ANG_ILLUSTRATION_C01_candidate.json",
+      "bytes": 158446,
+      "sha256": "71b30fb348d7776b34ceb01b1b004333c27f8c422bad805c56ef97ac0d02cdfa"
+    },
+    {
+      "path": "output/ANG_C01_OVERVIEW_ZH.png",
+      "bytes": 136365,
+      "sha256": "648d383a90fbf567678e9c3febd6056fdc640eb4564f1d792c58027c0b73d994"
+    },
+    {
+      "path": "output/ER_ANG_C01_REVIEW_ZH.png",
+      "bytes": 73171,
+      "sha256": "fd2dd7c7d7bb1ca8fca8e5e437fc119253bb5ed26bba75513459d3ac3acd05ed"
+    },
+    {
+      "path": "output/TOU_ANG_C01_REVIEW_ZH.png",
+      "bytes": 77715,
+      "sha256": "f7be731d99b8eeb1445c675aa50524a221469b4e175dbe2ae53d4d90195fca54"
+    }
+  ]
+}
