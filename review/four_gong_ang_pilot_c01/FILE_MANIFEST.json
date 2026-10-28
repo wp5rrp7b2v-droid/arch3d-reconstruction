@@ -1,0 +1,60 @@
+{
+  "file_gate": "PASS",
+  "geometry_gate": "PASS",
+  "assembly_gate": "FAIL_OVERLAP",
+  "number_of_parts": 4,
+  "number_of_pairs": 6,
+  "historical_joinery_and_load": "NOT_VERIFIED",
+  "files": [
+    {
+      "path": "README_ZH.md",
+      "size": 3867,
+      "sha256": "8b6ffafcb400618a175b370b32d7c8aecbe9b85928dafc3ccb4bc0018c573a0c"
+    },
+    {
+      "path": "annotate_views.py",
+      "size": 1554,
+      "sha256": "2f5bfd0b025c539bcebf22506dd0993fb5366a81bf8286ac74213e94e2d83a0a"
+    },
+    {
+      "path": "cloud_build_and_verify.py",
+      "size": 12341,
+      "sha256": "08ad18b4cb7d9afc9caa252d86111b9178d00491e5ef13c73875ff83984b9894"
+    },
+    {
+      "path": "output/ASSEMBLY_VALIDATION.json",
+      "size": 6192,
+      "sha256": "aee802d76f83c66e9b460b829da97b5b52623c65b8be9a7c52001b579d0d2453"
+    },
+    {
+      "path": "output/BINARY_REOPEN_VERIFICATION.json",
+      "size": 1099,
+      "sha256": "9fd4939617e7d6c4d074c1e77d1baaf9e87657fc1c66c9a43efab2751d1b56e0"
+    },
+    {
+      "path": "output/WANFO_FOUR_GONG_ANG_PILOT_C01.blend",
+      "size": 631571,
+      "sha256": "07e30e2258b694894cd2ab21cc151b3b2172bef51e1ca8d23a48c639182f8bbb"
+    },
+    {
+      "path": "output/WANFO_FOUR_GONG_ANG_PILOT_C01.glb",
+      "size": 164020,
+      "sha256": "dfcd8c715e9d4e83f26aea34730ef0b0e6f5ee50afedab7262d2a884d708af2a"
+    },
+    {
+      "path": "output/front_FOUR_COMPONENTS_ZH.png",
+      "size": 961258,
+      "sha256": "9fd54fc876f548be4fd9aeed2775b68b73543219f094a3f5bdf9872ab8ed6742"
+    },
+    {
+      "path": "output/iso_FOUR_COMPONENTS_ZH.png",
+      "size": 951973,
+      "sha256": "2041498ba8ca17f3da26ecfae8c90f7cdb3f604bf234c1b33b9118de9fcf92ed"
+    },
+    {
+      "path": "output/side_FOUR_COMPONENTS_ZH.png",
+      "size": 994735,
+      "sha256": "79d21e18b7086a065ca1269c25c3aa8cea9f07442cecf26a1f17fe4fbc7bc79a"
+    }
+  ]
+}

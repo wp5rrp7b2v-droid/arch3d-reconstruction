@@ -1,0 +1,32 @@
+{
+  "technical_import_gate": "PASS",
+  "blender_version": "4.5.13 LTS",
+  "model_count": 4,
+  "objects": [
+    {
+      "id": "HUA1",
+      "bbox_error_mm": 8.594989776611328e-05,
+      "source_sha256": "e1aa25d3963f5aecacd57579f443c543ed5153e0f0147fc88793ee56598cb7d2"
+    },
+    {
+      "id": "LING",
+      "bbox_error_mm": 7.3909759521484375e-06,
+      "source_sha256": "cfaf18d316a4ee57b34e501bb5aae0d9abb2e9126f28a1e2ca4d3168134049df"
+    },
+    {
+      "id": "TOU",
+      "bbox_error_mm": 5.936622619628906e-05,
+      "source_sha256": "71b30fb348d7776b34ceb01b1b004333c27f8c422bad805c56ef97ac0d02cdfa"
+    },
+    {
+      "id": "ER",
+      "bbox_error_mm": 0.00010180473327636719,
+      "source_sha256": "fbce1d3425994b6ed8478d71a24bbda48a457914fcb7432a4bca3bd5f45a571b"
+    }
+  ],
+  "blend_sha256": "07e30e2258b694894cd2ab21cc151b3b2172bef51e1ca8d23a48c639182f8bbb",
+  "glb_sha256": "dfcd8c715e9d4e83f26aea34730ef0b0e6f5ee50afedab7262d2a884d708af2a",
+  "no_replacement_of_any_source_mesh": true,
+  "assembly_contact_and_collision": "FAIL_OVERLAP",
+  "historical_installation": "NOT_APPROVED"
+}
