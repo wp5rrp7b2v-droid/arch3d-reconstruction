@@ -1,0 +1,53 @@
+{
+  "status": "PASS_GEOMETRY_ONLY_PO_PENDING",
+  "scope": "independent_uninstalled_candidates",
+  "source": "PO_SELECTED_ILLUSTRATION_NOT_OFFICIAL_DATA",
+  "models": [
+    {
+      "id": "TOU_ANG",
+      "dimensions_mm": [
+        1440.62149385663,
+        154.0,
+        278.4
+      ],
+      "vertices": 1056,
+      "faces": 2108,
+      "volume_mm3": 42119089.085,
+      "euler_number": 2,
+      "is_watertight": true,
+      "independent_glb_reimport": "PASS",
+      "glb_bounds_error_mm": 3.9100647200029925e-06,
+      "historical_form_match": "NOT_TESTED",
+      "po_visual": "PENDING"
+    },
+    {
+      "id": "ER_ANG",
+      "dimensions_mm": [
+        1834.6484473864894,
+        154.0,
+        187.0
+      ],
+      "vertices": 1016,
+      "faces": 2028,
+      "volume_mm3": 50471661.313,
+      "euler_number": 2,
+      "is_watertight": true,
+      "independent_glb_reimport": "PASS",
+      "glb_bounds_error_mm": 4.2566087358864024e-05,
+      "historical_form_match": "NOT_TESTED",
+      "po_visual": "PENDING"
+    }
+  ],
+  "unchanged": [
+    "formal Master",
+    "Registry",
+    "89-body BLEND/GLB",
+    "approved Hua/Ling Gong"
+  ],
+  "not_tested": [
+    "historical geometry accuracy",
+    "mortise joints",
+    "assembly contact",
+    "structural strength"
+  ]
+}
