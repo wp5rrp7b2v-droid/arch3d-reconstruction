@@ -23,12 +23,12 @@
     {
       "path": "output/C02_BINARY_REOPEN_VERIFICATION.json",
       "bytes": 2383,
-      "sha256": "24f15e1f410acd0f34b4a4bec2f693e7dacea2ad18f807675c4f4857ab7db0f3"
+      "sha256": "306991b6972023ae27097ab076f095c8c6163be08c9eef50704dd173721e3497"
     },
     {
       "path": "output/C02_INTERFACE_VALIDATION.json",
-      "bytes": 26494,
-      "sha256": "6b24037b779516491c26771df71abfde00459f317b06e01d15ac87b6c0afde89"
+      "bytes": 22013,
+      "sha256": "225d39f69e2f1c14f6bb6e42d303b4ad8af96f6e259111564b0eb8dfe93eb905"
     },
     {
       "path": "output/PR75_EAST_FRONT_INTERFACE_SURVEY.json",
@@ -37,6 +37,11 @@
     },
     {
       "path": "output/WANFO_EAST_FRONT_CONNECTED_C02_SEED.blend",
+      "bytes": 121151,
+      "sha256": "547a701791b7137f2b3b5b220db09716ac3928648d684b68a89a49313fb9bf5f"
+    },
+    {
+      "path": "output/WANFO_EAST_FRONT_CONNECTED_C02_SEED.blend1",
       "bytes": 120817,
       "sha256": "1f0acddeb0e6b8cc97ba52fe20820c6f2ab063b4304517f39b35556e05fe2adf"
     },
@@ -72,8 +77,8 @@
     },
     {
       "path": "validate_connections.py",
-      "bytes": 5529,
-      "sha256": "ee4c90a9f41823961938f6da7683c3c720376ee3b3712c45e267e0138568f5c5"
+      "bytes": 5743,
+      "sha256": "9ff0e460979e2999dd92607cb1e5e524dbac84afa97b41e0148e609a3e5d6537"
     }
   ]
 }

@@ -11,202 +11,8 @@
       "overlap_mm3": 2.3666907104294905
     }
   ],
-  "unknown_boolean_pairs": [
-    {
-      "a": "east:FOUR_BEAM",
-      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
-      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
-      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_SANDOU",
-      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
-      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
-      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
-      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_HUA2_LOCAL",
-      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "b": "trial:EAST_FRONT_HUA1_LOCAL",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "b": "trial:EAST_FRONT_SANDOU_LEFT",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    },
-    {
-      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
-      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
-    }
-  ],
-  "invalid_topology": [
-    {
-      "id": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "watertight": false,
-      "volume": 3725585.5838703276,
-      "bad_edges_count": 8,
-      "bad_edge_samples": [
-        {
-          "a": [
-            -124.5615,
-            -117.1192,
-            18.1685
-          ],
-          "b": [
-            -76.5,
-            -120.0,
-            22.8685
-          ],
-          "uses": 4
-        },
-        {
-          "a": [
-            -127.6,
-            120.0,
-            22.8685
-          ],
-          "b": [
-            -76.5,
-            120.0,
-            22.8685
-          ],
-          "uses": 4
-        },
-        {
-          "a": [
-            76.5,
-            -120.0,
-            22.8685
-          ],
-          "b": [
-            127.6,
-            -120.0,
-            22.8685
-          ],
-          "uses": 4
-        },
-        {
-          "a": [
-            76.5,
-            120.0,
-            22.8685
-          ],
-          "b": [
-            124.5615,
-            117.1192,
-            18.1685
-          ],
-          "uses": 4
-        },
-        {
-          "a": [
-            -76.5,
-            -120.0,
-            22.8685
-          ],
-          "b": [
-            -76.5,
-            -78.45,
-            22.8685
-          ],
-          "uses": 4
-        },
-        {
-          "a": [
-            -76.5,
-            78.45,
-            22.8685
-          ],
-          "b": [
-            -76.5,
-            120.0,
-            22.8685
-          ],
-          "uses": 4
-        },
-        {
-          "a": [
-            76.5,
-            -120.0,
-            22.8685
-          ],
-          "b": [
-            76.5,
-            -78.45,
-            22.8685
-          ],
-          "uses": 4
-        },
-        {
-          "a": [
-            76.5,
-            78.45,
-            22.8685
-          ],
-          "b": [
-            76.5,
-            120.0,
-            22.8685
-          ],
-          "uses": 4
-        }
-      ]
-    }
-  ],
+  "unknown_boolean_pairs": [],
+  "invalid_topology": [],
   "max_overlap_mm3": 2.3666907104294905,
   "all_pairs": [
     {
@@ -247,7 +53,7 @@
     {
       "a": "east:FOUR_BEAM",
       "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "east:FOUR_BEAM",
@@ -322,7 +128,7 @@
     {
       "a": "trial:EAST_FRONT_SPACER_HUAGONG",
       "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_SPACER_HUAGONG",
@@ -392,7 +198,7 @@
     {
       "a": "trial:EAST_FRONT_SPACER_LINGGONG",
       "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_SPACER_LINGGONG",
@@ -457,7 +263,7 @@
     {
       "a": "trial:EAST_FRONT_SANDOU",
       "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_SANDOU",
@@ -517,7 +323,7 @@
     {
       "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
       "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
@@ -572,7 +378,7 @@
     {
       "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
       "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
@@ -622,7 +428,7 @@
     {
       "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
       "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
@@ -667,7 +473,7 @@
     {
       "a": "trial:EAST_FRONT_HUA2_LOCAL",
       "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_HUA2_LOCAL",
@@ -712,42 +518,42 @@
     {
       "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
       "b": "trial:EAST_FRONT_HUA1_LOCAL",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
       "b": "trial:EAST_FRONT_COLUMN_LUDOU",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
       "b": "trial:EAST_FRONT_NIDAO_GUAZI",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
       "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
-      "overlap_mm3": null
+      "overlap_mm3": 0.1491066307070936
     },
     {
       "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
       "b": "trial:EAST_FRONT_SANDOU_LEFT",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
       "b": "trial:EAST_FRONT_SANDOU_RIGHT",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
       "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
       "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
-      "overlap_mm3": null
+      "overlap_mm3": 0.0
     },
     {
       "a": "trial:EAST_FRONT_HUA1_LOCAL",
