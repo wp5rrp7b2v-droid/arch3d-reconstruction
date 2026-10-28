@@ -1,0 +1,54 @@
+name: Wanfo ANG form V002 isolated candidates
+on:
+  push:
+    branches: [review/ang-form-v002-20261028]
+    paths:
+      - .github/workflows/wanfo_ang_form_v002.yml
+      - review/ang_form_v002/build_v002.py
+      - review/ang_form_v002/blender_check.py
+      - review/ang_form_v002/finalize.py
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-ang-form-v002
+  cancel-in-progress: false
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install dependencies and cloud Blender
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          python -m pip install numpy pillow trimesh shapely scipy networkx
+          curl -fL --retry 3 'https://raw.githubusercontent.com/google/fonts/main/ofl/notosanssc/NotoSansSC%5Bwght%5D.ttf' -o /tmp/NotoSansSC.ttf
+          curl -fL --retry 3 https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz -o /tmp/blender.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Verify head ANG pilot then build independent second ANG
+        run: |
+          python review/ang_form_v002/build_v002.py --pilot
+          python review/ang_form_v002/build_v002.py
+      - name: Blender export from candidate geometry only
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/ang_form_v002/blender_check.py -- export
+      - name: Independent Blender process reimport and geometry validation
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/ang_form_v002/blender_check.py -- validate
+      - name: Protect source files and write delivery manifest
+        run: |
+          python review/ang_form_v002/finalize.py
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -f review/ang_form_v002/geometry/*.glb
+          git add review/ang_form_v002
+          git diff --cached --name-only | python -c 'import sys; assert all(p.startswith("review/ang_form_v002/") for p in sys.stdin.read().splitlines())'
+          git commit -m 'review: archive cloud-verified ANG V002 candidates and Chinese comparison plates'
+          git push origin HEAD:review/ang-form-v002-20261028
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_ANG_FORM_V002
+          path: review/ang_form_v002
+          retention-days: 90

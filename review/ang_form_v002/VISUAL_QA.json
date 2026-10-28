@@ -1,0 +1,8 @@
+{
+  "status": "INTERNAL_VISUAL_QA_PASS_NOT_PO_APPROVAL",
+  "head_pilot_completed_before_erang": true,
+  "images_reviewed": ["TOU_ANG_V001_V002_SOURCE_ZH.png", "ER_ANG_V001_V002_SOURCE_ZH.png", "ANG_V002_LEVEL_FORM_OVERVIEW_ZH.png"],
+  "checks": ["完整侧视与轴测无截断", "沿轴端视与有限最外端面分开", "图2-27头昂箭头指向下层外端，二昂箭头指向上层外端", "中文可读", "V001与V002同尺度轮廓叠图显示方向性修正", "头昂深头过渡及二昂独立单材区别可见"],
+  "source_boundary": "A2 PDF46异殿图排除；官方提取件身份和精确端厚仍属推断或未知",
+  "PO_visual_gate": "PENDING"
+}
