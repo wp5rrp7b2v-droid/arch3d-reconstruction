@@ -3,7 +3,7 @@
 DO NOT CALL THIS 'four approved new profiles installed'. Four profile classes have NOT
 all passed PO visual form; this rebuild deliberately restores existing jointed
 source geometry and real SANDOU before any new-shape replacement.
-Source GLB is read-only; exact 89-node hash is validated.
+Source BLEND is read-only; exact 89-node hash is validated.
 """
 import bpy,sys,math,hashlib,json,os
 from pathlib import Path
@@ -11,8 +11,8 @@ from mathutils import Vector
 ROOT=Path(__file__).resolve().parent
 REPO=ROOT.parents[1]
 OUT=ROOT/'output';OUT.mkdir(exist_ok=True,parents=True)
-SOURCE=REPO/'production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-20/west_spacer_v001/output/WANFO_WEST_SPACER_89_TRIAL_V001.glb'
-SOURCE_SHA='ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151'
+SOURCE=REPO/'production/zhenguo_wanfo/assembly/candidate_snapshots/2026-10-20/west_spacer_v001/output/WANFO_WEST_SPACER_TRIAL_V001.blend'
+SOURCE_SHA='5c81c836cc7ca3a229eebe5ac9cb4c62a744b9a1eeb10b0e9683cf0ccd097f13'
 assert hashlib.sha256(SOURCE.read_bytes()).hexdigest()==SOURCE_SHA
 A=['trial:EAST_FRONT_COLUMN_CANDIDATE','trial:EAST_FRONT_COLUMN_LUDOU',
 'trial:EAST_FRONT_HUA1_LOCAL','trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL',
@@ -39,7 +39,7 @@ def bbox(o):
  return [[min(p[i] for p in v) for i in range(3)],[max(p[i] for p in v) for i in range(3)]]
 def setup():
  bpy.ops.wm.read_factory_settings(use_empty=True)
- bpy.ops.import_scene.gltf(filepath=str(SOURCE))
+ bpy.ops.wm.open_mainfile(filepath=str(SOURCE))
  allobj=[x for x in bpy.context.scene.objects if x.type=="MESH"]
  assert len(allobj)==89
  expected=set(A)
@@ -47,7 +47,7 @@ def setup():
   if o.name not in expected:bpy.data.objects.remove(o,do_unlink=True)
  objs={o.name:o for o in bpy.context.scene.objects if o.type=="MESH"}
  assert set(objs)==expected
- # Source GLB stores millimetre numeric coordinates (legacy contract) in Blender coordinates.
+ # Source BLEND stores millimetre numeric coordinates in its original Z-up world frame.
  # Retain exact imported source vertex arrays, all face topology and local object rotations.
  origin=Vector((4437.,5355.,-2112.))
  source_hashes={}
@@ -79,7 +79,7 @@ def mesh_geometry_json(objs,h):
  from mathutils import Vector
  out=[]
  for o in objs.values():
-  # Coordinates are numeric mm, not m; source imported in legacy GLB with 1000 multiplier.
+  # Coordinates are numeric mm, not m; source original BLEND numeric mm, output meters only for GLB.
   world=[list(map(float,o.matrix_world@v.co)) for v in o.data.vertices]
   # triangulate by loop triangles, never overwrite original ngon meshes
   o.data.calc_loop_triangles()
