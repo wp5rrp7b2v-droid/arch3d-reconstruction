@@ -103,6 +103,7 @@ def render(scene,objects):
  scene.cycles.device='CPU'
  scene.cycles.samples=16
  scene.render.image_settings.color_mode='RGBA'
+ if scene.world is None:scene.world=bpy.data.worlds.new('C02 World')
  scene.world.use_nodes=True
  scene.world.node_tree.nodes.get('Background').inputs['Color'].default_value=(0.82,0.84,0.83,1)
  scene.world.node_tree.nodes.get('Background').inputs['Strength'].default_value=0.8
