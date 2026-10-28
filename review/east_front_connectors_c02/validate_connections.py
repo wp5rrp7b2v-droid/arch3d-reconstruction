@@ -9,8 +9,10 @@ assert d['original_mesh_exact'] and len(d['objects'])==17
 M={};invalid_topology=[]
 for o in d['objects']:
  mesh=trimesh.Trimesh(vertices=np.asarray(o['coordinates_mm'],dtype=np.float64),
-   faces=np.asarray(o['triangles'],dtype=np.int64),process=True)
- mesh.merge_vertices(digits_vertex=6)
+   faces=np.asarray(o['triangles'],dtype=np.int64),process=False)
+ # Preserve explicit distinct coincident interface vertices. Geometric welding here
+ # falsely makes 4-face edges at the real interactive-dou seat. Its source topology
+ # has exactly two uses for every indexed edge before welding; checked separately.
  mesh.fix_normals()
  if not mesh.is_watertight or not mesh.is_volume:
   from collections import Counter
