@@ -1,0 +1,88 @@
+{
+  "scope": "CONTROL_AND_WORK_LENGTH_OFFLINE_CANDIDATES",
+  "geometry_gate": "PASS",
+  "blender_gate": "PASS",
+  "PO_visual_gate": "PENDING",
+  "models": [
+    {
+      "id": "TOU_ANG_V002_candidate",
+      "dimensions_mm": [
+        787.6158,
+        154.0,
+        278.4
+      ],
+      "work_dimensions_mm": [
+        1440.62149385663,
+        154.0,
+        278.4
+      ],
+      "volume_mm3": 24297628.17910312,
+      "watertight": true,
+      "positive_volume": true,
+      "winding_consistent": true,
+      "euler_number": 2,
+      "minimum_triangle_area_mm2": 1.3132026675925625,
+      "self_intersection": "PASS_SIMPLE_POLYGON_CONSTANT_WIDTH_EXTRUSION",
+      "section_axes": "X轴向/Y厚度/Z材广；非安装世界坐标",
+      "v001_symmetric_difference_mm2": 43844.331430983664,
+      "v001_profile_IoU": 0.7635870459845535,
+      "terminal_thickness_mm": 8.0,
+      "parameters_class": "INFERENCE",
+      "PO_VISUAL": "PENDING"
+    },
+    {
+      "id": "ER_ANG_V002_candidate",
+      "dimensions_mm": [
+        787.6158,
+        154.0,
+        187.0
+      ],
+      "work_dimensions_mm": [
+        1834.6484473864894,
+        154.0,
+        187.0
+      ],
+      "volume_mm3": 19975161.08920446,
+      "watertight": true,
+      "positive_volume": true,
+      "winding_consistent": true,
+      "euler_number": 2,
+      "minimum_triangle_area_mm2": 1.3879530083786493,
+      "self_intersection": "PASS_SIMPLE_POLYGON_CONSTANT_WIDTH_EXTRUSION",
+      "section_axes": "X轴向/Y厚度/Z材广；非安装世界坐标",
+      "v001_symmetric_difference_mm2": 15604.34277061856,
+      "v001_profile_IoU": 0.8905175011828511,
+      "terminal_thickness_mm": 6.0,
+      "parameters_class": "INFERENCE",
+      "PO_VISUAL": "PENDING"
+    }
+  ],
+  "source_locators": {
+    "TOU_ANG": {
+      "path": "review/gong_ang_form_v001/sources/A1-p073.jpg",
+      "crop_normalized": [
+        0.16,
+        0.128,
+        0.775,
+        0.373
+      ],
+      "anchor_normalized": [
+        0.322,
+        0.309
+      ]
+    },
+    "ER_ANG": {
+      "path": "review/gong_ang_form_v001/sources/A1-p073.jpg",
+      "crop_normalized": [
+        0.16,
+        0.128,
+        0.775,
+        0.373
+      ],
+      "anchor_normalized": [
+        0.237,
+        0.291
+      ]
+    }
+  }
+}

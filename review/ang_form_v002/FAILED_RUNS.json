@@ -1,0 +1,7 @@
+{
+  "failures_preserved": [
+    {"run": 40629020985, "stage": "Blender independent import connectivity validation", "cause": "法线分缝顶点未被原BMesh remove_doubles路径正确焊接", "diagnosis": "下载实际失败GLB，Trimesh按坐标合并并忽略法线分缝后，4/4闭合且Euler=2", "repair": "从重新导入顶点的完全相同坐标显式重建表面拓扑；保持全部三角面与坐标，未放宽几何阈值"},
+    {"run": 40629272596, "stage": "Delivery sensitive-pattern scanner", "cause": "扫描器匹配了自己源码中的私钥标识正则文本", "repair": "等价字符计数正则避免扫描器自匹配；未跳过扫描或降低几何要求", "blender_independent_validation": "4/4 PASS"}
+  ],
+  "PO_visual": "PENDING"
+}

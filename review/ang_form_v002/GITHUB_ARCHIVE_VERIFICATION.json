@@ -1,0 +1,250 @@
+{
+  "status": "PASS",
+  "tested_commit": "bc23b8615d918d1f7866d1936b258b5bfb181983",
+  "count": 28,
+  "total_bytes": 6053375,
+  "http_200": 28,
+  "git_blob_identity_exact": 28,
+  "manifest_sha256_matches": 26,
+  "files": [
+    {
+      "path": ".github/workflows/wanfo_ang_form_v002.yml",
+      "bytes": 2641,
+      "sha256": "f0ae767ae10bae946c9d5b81c88ea150445dfae2045ebc2e312bb371281375e1",
+      "git_blob_sha": "bb6a1fd9dc6c403cfbd54b9409122304b0147e55",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/BLENDER_VALIDATION.json",
+      "bytes": 2001,
+      "sha256": "7afe0f6f5f7219c0f1373e76d8e9c0356aba8a01d7f209e663f23f409e7781de",
+      "git_blob_sha": "a25543353c95328c827a9c0d49d597cf9d63d223",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/DELIVERY_MANIFEST.json",
+      "bytes": 5175,
+      "sha256": "a5f1f62a59265be682f2c35ca19f63e16bdea52d6e91a557c7337112d2893f4c",
+      "git_blob_sha": "0788991f4e812d397f8d20280712b0a43cab43eb",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/FAILED_RUNS.json",
+      "bytes": 765,
+      "sha256": "9bfff4110b31979bb01e1b7e5888ff6324a255d122521713edba738113141f3b",
+      "git_blob_sha": "2182ea5f020e85ab8df8f3dfebf7f994e8f98ceb",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/INPUT_MODEL_VERIFICATION.json",
+      "bytes": 879,
+      "sha256": "1d132171aee1c15aaaba11fb059421eb76dd243ed6484bf3ecf82c4f00cb4877",
+      "git_blob_sha": "4cac896837295710f55aace9955245caf2274e55",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/README_ZH.md",
+      "bytes": 7360,
+      "sha256": "1e505707aca5e9d4148ba983c6aac85ba4fa424aef7130480cf6ad9c13d40075",
+      "git_blob_sha": "88c878240e062cba05238c3f8fc0f1acd20a6f69",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/SOURCE_TRACEABILITY.json",
+      "bytes": 3854,
+      "sha256": "7521b6ed3b7caa3e6b2747241fcf4d0b7127ae8e9ab8fccc61031997dabe6837",
+      "git_blob_sha": "aa485747fce828f73d50360d5bf3eefcc552ce0e",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/TECHNICAL_VALIDATION.json",
+      "bytes": 2268,
+      "sha256": "f260c01db782e851ea13ab05be92e6d7419b95d0190ab3dd2527f338ad401d56",
+      "git_blob_sha": "8074be3f772ffbdbb23c206784886a693c56699c",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/TOU_ANG_PILOT.json",
+      "bytes": 1249,
+      "sha256": "ac67f9501ed684abb96d99be171455362f79c379a8d55a185af2b64403c5ec20",
+      "git_blob_sha": "856feb27bbe4214f2ef596540ba59adf69cf5154",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/VISUAL_QA.json",
+      "bytes": 666,
+      "sha256": "86f473156facc1aa8f61ff057b77396d532ef9db5aa960f6844b115c1ce6c244",
+      "git_blob_sha": "26cf8cd0bb69c53478b680c5002f9190998a7df0",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/blender_check.py",
+      "bytes": 3860,
+      "sha256": "41195b0e8943fe0a3e617a4758c2bd5a34c0493979b3656f9445bca50b57f297",
+      "git_blob_sha": "cf7959451433a0b0d8f7dbd57bdec4a3d9f881c5",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/build_v002.py",
+      "bytes": 12888,
+      "sha256": "b572c3d3ee0140693c0823c32d89b20e3bf131b04d343a604cecb407852dc5ce",
+      "git_blob_sha": "28a0bb12d521d0120872537e537b8a1f35f4c09e",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/finalize.py",
+      "bytes": 2019,
+      "sha256": "8ef4b0cc10fc3a3226a6078ee7b5d135c931fae92251216d00e486010039fe51",
+      "git_blob_sha": "91d9d8b1ba8c95df726eb6b4d74c9ba3e7dd4860",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/geometry/ER_ANG_V002_WORK_LENGTH_candidate.glb",
+      "bytes": 3936,
+      "sha256": "3772a03a09f5c2cdf1afae0c84cb86321020114255428052a44723151ef7f1e6",
+      "git_blob_sha": "eb08afc1487699b7adce7f788d0717fa14307c65",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/geometry/ER_ANG_V002_WORK_LENGTH_candidate.json",
+      "bytes": 12790,
+      "sha256": "6eddcec4dbd099c05d9ae32e45d9f0ba95b8a9298c5cc197ea03f5d0bc971b28",
+      "git_blob_sha": "e188160f00172314d0560df9d94da279f3e1e898",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/geometry/ER_ANG_V002_candidate.glb",
+      "bytes": 3932,
+      "sha256": "5f200b52f33b03c5c56cfea15a4501fb6847adf617570b5c1117fffed5ffd00d",
+      "git_blob_sha": "24ef1f633cdf2bb84437086b5cfe63cc334a517b",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/geometry/ER_ANG_V002_candidate.json",
+      "bytes": 12688,
+      "sha256": "2b9a3a326e7db05b2971222c1a535c0d1674937ef3412479604981d448a69423",
+      "git_blob_sha": "ddfccb368182f306e3ca1675b1f9e05a2e22ea95",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/geometry/TOU_ANG_V002_WORK_LENGTH_candidate.glb",
+      "bytes": 9412,
+      "sha256": "5bdc8c56ce94c42811d26a357ba9269e144bdf7c731f501e1906073484826c6f",
+      "git_blob_sha": "25dc972845cc1901c7948abe18922463c5b10b53",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/geometry/TOU_ANG_V002_WORK_LENGTH_candidate.json",
+      "bytes": 27229,
+      "sha256": "3e041da186a898a9ca6081d097e5f67f5cb7fa6305b801e7dec6ea05edbe057f",
+      "git_blob_sha": "43285e3adf7e8eb6a2d656de447b6f15fe53c586",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/geometry/TOU_ANG_V002_candidate.glb",
+      "bytes": 9408,
+      "sha256": "cdadb8e15936cb49ed27c85a6b2dcd78cd9fada2d2a3e1675fff7fa9f1a3ee6b",
+      "git_blob_sha": "b5777f0d74fafa5d5d2257edf67f36632d7cbd6c",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/geometry/TOU_ANG_V002_candidate.json",
+      "bytes": 26881,
+      "sha256": "6666ba5f935a856d663086c44548807d2a9edca0edc22c7e1767d01d1ebf0294",
+      "git_blob_sha": "ca2067980db95809934eb12cd8b80388f67b4bdd",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/output/ANG_V002_LEVEL_FORM_OVERVIEW_ZH.png",
+      "bytes": 989125,
+      "sha256": "e42db8062a5c8fbe20552193dbe6de06d1a625e9e570fc6ab5a871fc9ad85733",
+      "git_blob_sha": "47465711bc5f2f6c4da2b349b340396a7dc3ad6b",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/output/ER_ANG_V001_V002_SOURCE_ZH.png",
+      "bytes": 1506030,
+      "sha256": "bb5a15987ac20631211e8951b5c2114e6e9dec0edb3068cffb1b97f29e4cfec0",
+      "git_blob_sha": "c76d6d08ad0b317d41f04bcd768b8843e5799569",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/output/TOU_ANG_V001_V002_SOURCE_ZH.png",
+      "bytes": 1508325,
+      "sha256": "ae86167aad01dda6449c89c8c091e6d1898fefa75a6eb02292df601691844b9c",
+      "git_blob_sha": "ca0f83a11b912a0ad80593696c74f29f6915fd48",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/sources/A2-p028.jpg",
+      "bytes": 619989,
+      "sha256": "6776c9f3515590b69a88fcb172f37f506fa15b6c64781d898de3ac50a561ec18",
+      "git_blob_sha": "ef84fb3c21147ff6c6762caf35e12c9cff4d5437",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/sources/A2-p039.jpg",
+      "bytes": 624785,
+      "sha256": "96a3cbc55536618b69ceef62c547bf883a9b2c16d63ff96ea93bcd2756bddb14",
+      "git_blob_sha": "3d878672d9b1a7b51005b3a371c3b06a7183e49c",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/sources/A2-p046.jpg",
+      "bytes": 650961,
+      "sha256": "1c744a174d922fb25eff991bd74a0621b60fef386f4ed1f76b4c7840388c954a",
+      "git_blob_sha": "abd4ca11ab0a348931540a203201e4d6da223413",
+      "http_status": 200
+    },
+    {
+      "path": "review/ang_form_v002/verify_inputs.py",
+      "bytes": 2259,
+      "sha256": "f750a7ce4a7793e83dd56b3e877a73297eff7c71a01d975789486cc120008acb",
+      "git_blob_sha": "d478958dccd223c587d2a18c7d2f3e02be89302a",
+      "http_status": 200
+    }
+  ],
+  "glb_independent_read": [
+    {
+      "file": "ER_ANG_V002_WORK_LENGTH_candidate.glb",
+      "independent_trimesh_read": "PASS",
+      "max_vertex_error_mm": 2.9542643758992236e-05,
+      "watertight": true,
+      "volume_positive": true
+    },
+    {
+      "file": "TOU_ANG_V002_WORK_LENGTH_candidate.glb",
+      "independent_trimesh_read": "PASS",
+      "max_vertex_error_mm": 1.9869433093285016e-05,
+      "watertight": true,
+      "volume_positive": true
+    },
+    {
+      "file": "TOU_ANG_V002_candidate.glb",
+      "independent_trimesh_read": "PASS",
+      "max_vertex_error_mm": 1.3152200837589923e-05,
+      "watertight": true,
+      "volume_positive": true
+    },
+    {
+      "file": "ER_ANG_V002_candidate.glb",
+      "independent_trimesh_read": "PASS",
+      "max_vertex_error_mm": 1.2767549610683521e-05,
+      "watertight": true,
+      "volume_positive": true
+    }
+  ],
+  "all_three_png_decode_and_dimensions": "PASS",
+  "PO_visual": "PENDING",
+  "scope": "All V002 task files and isolated workflow; report itself excluded to avoid self-hash recursion",
+  "original_baseline_files": 816,
+  "original_files_same_blob": 816,
+  "modified_original_files": 0,
+  "deleted_original_files": 0,
+  "cloud_success_run": "https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/actions/runs/40629451646",
+  "technical_delivery_gate": "PASS",
+  "final_archive_count_including_this_audit": 29,
+  "audit_self_hash": "Recorded in Draft PR body to avoid recursive self hashing",
+  "historical_hidden_geometry": "UNKNOWN",
+  "installation_validation": "NOT_PERFORMED_NOT_AUTHORIZED"
+}

@@ -1,0 +1,112 @@
+{
+  "base": "028517cbdada6cb266feae17f58ae0a7888c4a93",
+  "main": "414be293918fea2bf4138b1a8f4345272e8764a8",
+  "PR74": "8a47daa343efde62d28cef62370d0185da3f6abe",
+  "PR75": "f8f72d40dd47ab61abc3103c396c855f5c4c3865",
+  "technical_comment": "https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/76#issuecomment-6459911371",
+  "locators": {
+    "TOU_ANG": {
+      "path": "review/gong_ang_form_v001/sources/A1-p073.jpg",
+      "crop_normalized": [
+        0.16,
+        0.128,
+        0.775,
+        0.373
+      ],
+      "anchor_normalized": [
+        0.322,
+        0.309
+      ]
+    },
+    "ER_ANG": {
+      "path": "review/gong_ang_form_v001/sources/A1-p073.jpg",
+      "crop_normalized": [
+        0.16,
+        0.128,
+        0.775,
+        0.373
+      ],
+      "anchor_normalized": [
+        0.237,
+        0.291
+      ]
+    }
+  },
+  "sources": [
+    {
+      "path": "review/ang_form_v002/sources/A2-p028.jpg",
+      "sha256": "6776c9f3515590b69a88fcb172f37f506fa15b6c64781d898de3ac50a561ec18"
+    },
+    {
+      "path": "review/ang_form_v002/sources/A2-p046.jpg",
+      "sha256": "1c744a174d922fb25eff991bd74a0621b60fef386f4ed1f76b4c7840388c954a"
+    },
+    {
+      "path": "review/ang_form_v002/sources/A2-p039.jpg",
+      "sha256": "96a3cbc55536618b69ceef62c547bf883a9b2c16d63ff96ea93bcd2756bddb14"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/A1-p106.jpg",
+      "sha256": "38a071d51dbb8394a6e1a42445f1d78b4b88d9e6758d33b270e1a7d38e4047af"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/0d6e55efe9-06_SOURCE_头昂.png",
+      "sha256": "a6fc35f730889bed674411ebaf3ea8213585006b03e7233684f8e2588f7d42e7"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/HUAGONG_MASTER_SEMANTIC.json",
+      "sha256": "b5ab09f0cb9121ab3d27887d8cff65dc92bb06f6e0b3fe8197f6980820d8b783"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/A1-p073.jpg",
+      "sha256": "67ba7092cf3d81bf1a667858fc9cb052d30048c359250fb5e5fca84fde693ad3"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/ANG_MASTER_SEMANTIC.json",
+      "sha256": "4b1695131bf868476aca8b9760ca36b028d59dc6f8a33d9fb378aa04b7fbc084"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/PR72_PAGE_PROVENANCE.json",
+      "sha256": "1064dd58dd557e8a9b3e8ceb102bf72bddeb42f9a16525a315ac9966329bfdaa"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/A1-p087.jpg",
+      "sha256": "c30fe2e212a1d040afb9b753967b9db4da61df9d854df687061100ed3b08bf03"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/A1-p060.jpg",
+      "sha256": "452731e3638a896d8ce1f2561ff5b98ce0612f327114f5cf20c0811e22e89d3b"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/LINGGONG_MASTER_SEMANTIC.json",
+      "sha256": "ee0bc2ef02b3e1da43c1d7b6d4a8a5f18269b36bbcd189b52de15112f77abb97"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/6fd13f56b4-05_SOURCE_第二跳华栱.png",
+      "sha256": "4e318d51b447aa2a948a08333e38c754b283617a5d558ae7a6d18da972412049"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/PR74_TARGET_SUMMARY.json",
+      "sha256": "1ea374dc4d01d09612a17c8686addbcb803fa897a55f9505a9d385f9cbf0c97b"
+    },
+    {
+      "path": "review/gong_ang_form_v001/sources/2a94b0e852-07_SOURCE_二昂.png",
+      "sha256": "fac316b3a1b6290c7a6cdaaefd077d409e0d18333628eecf117540499dee0f44"
+    }
+  ],
+  "FACT": [
+    "原归档网格、控制尺寸及两层斜昂照片",
+    "A2 PDF39头下昂与上层下昂交接文字"
+  ],
+  "INFERENCE": [
+    "所有新轮廓控制点、上侧斜削参数、末端有限端厚",
+    "官方展示件身份"
+  ],
+  "UNKNOWN": [
+    "历史整材全长",
+    "精确端厚与斜削起点",
+    "隐藏尾端与榫卯",
+    "安装适配与承载力"
+  ],
+  "excluded": "A2 PDF46图30奉国寺、图31梅庵，不作本殿端部依据"
+}
