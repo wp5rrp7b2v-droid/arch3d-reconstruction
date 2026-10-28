@@ -94,16 +94,28 @@ def add_camera(scene,tag):
  else:raise ValueError(tag)
  camd=bpy.data.cameras.new(tag+'_CAM');cam=bpy.data.objects.new(tag+'_CAM',camd)
  scene.collection.objects.link(cam)
- cam.location=pos
- cam.rotation_euler=(look-pos).to_track_quat('-Z','Y').to_euler()
- camd.type='ORTHO';camd.ortho_scale=size
+ cam.location=pos*0.001
+ cam.rotation_euler=((look-pos)).to_track_quat('-Z','Y').to_euler()
+ camd.type='ORTHO';camd.ortho_scale=size*0.001
  scene.camera=cam;return cam
 def render(scene,objects):
- scene.render.engine='BLENDER_WORKBENCH'
- scene.display.shading.light='STUDIO'
- scene.display.shading.color_type='MATERIAL'
- scene.display.shading.show_cavity=True
- scene.display.shading.show_shadows=True
+ scene.render.engine='CYCLES'
+ scene.cycles.device='CPU'
+ scene.cycles.samples=16
+ scene.render.image_settings.color_mode='RGBA'
+ scene.world.use_nodes=True
+ scene.world.node_tree.nodes.get('Background').inputs['Color'].default_value=(0.82,0.84,0.83,1)
+ scene.world.node_tree.nodes.get('Background').inputs['Strength'].default_value=0.8
+ for obj in objects.values():
+  for mat in obj.data.materials:
+   mat.use_nodes=True
+   node=mat.node_tree.nodes.get('Principled BSDF')
+   if node:node.inputs['Base Color'].default_value=tuple(mat.diffuse_color)
+ for i,(xyz,power,sz) in enumerate([((2.2,-4.,4.),1700,6.),((-3.,1.,5.),1400,7.)]):
+  ld=bpy.data.lights.new('Area'+str(i),'AREA');lo=bpy.data.objects.new('Area'+str(i),ld)
+  scene.collection.objects.link(lo)
+  lo.location=xyz;lo.rotation_euler=(Vector((0.,-0.7,0.4))-lo.location).to_track_quat('-Z','Y').to_euler()
+  ld.energy=power;ld.shape='DISK';ld.size=sz
  scene.render.resolution_x=1600
  scene.render.resolution_y=1000
  scene.render.resolution_percentage=100
@@ -132,12 +144,13 @@ def main():
        support_geometry_kind='REAL_OLD_MESHES_NO_FAKE_CONNECTIONS',
        original_mesh_exact=True,units='millimetres',objects=mesh_geometry_json(objs,h)),
    ensure_ascii=False,indent=2)+'\n')
- render(scene,objs)
- bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'WANFO_EAST_FRONT_CONNECTED_C02_SEED.blend'))
- # Export in meters to valid GLB viewer; saved blend remains in original numeric mm.
+ # Convert ONLY this independent candidate scene from source numeric mm to real metres.
+ # This leaves input BLEND untouched, and makes both saved C02 BLEND and C02 GLB unit-correct.
  for o in objs.values():
   for v in o.data.vertices:v.co *=0.001
   m=o.matrix_world.copy();m.translation *=0.001;o.matrix_world=m
+ render(scene,objs)
+ bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'WANFO_EAST_FRONT_CONNECTED_C02_SEED.blend'))
  bpy.ops.object.select_all(action='DESELECT')
  for o in objs.values():o.select_set(True)
  bpy.context.view_layer.objects.active=next(iter(objs.values()))
