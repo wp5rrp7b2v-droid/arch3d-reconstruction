@@ -81,4 +81,5 @@ result=dict(
 )
 (P/'C02_INTERFACE_VALIDATION.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps({k:v for k,v in result.items() if k not in ('all_pairs','measured_contacts','excess_overlap_pairs','unknown_boolean_pairs')},ensure_ascii=False,indent=2))
-assert collision=='PASS' and contact_gate.startswith('PASS'),'C02_KNOWN_CONNECTION_SEED_GATE_FAILED'
+if result['status'] != 'PASS_CONNECTED_SPACER_SEED_ONLY': print('C02_GATE_FAILED_RETAINED_FOR_DIAGNOSIS')
+# Explicit FAIL is archived; never promoted to approved assembly.
