@@ -8,7 +8,7 @@ from pathlib import Path
 from mathutils import Matrix,Vector
 from mathutils.bvhtree import BVHTree
 TASK=Path(__file__).resolve().parent
-REPO=TASK.parents[2]
+REPO=TASK.parents[1]
 OUT=TASK/'output';OUT.mkdir(parents=True,exist_ok=True)
 MODE=sys.argv[-1];assert MODE in ('build','verify')
 NAMES=[
