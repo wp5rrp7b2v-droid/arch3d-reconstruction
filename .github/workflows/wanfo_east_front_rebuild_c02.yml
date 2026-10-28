@@ -7,6 +7,7 @@ on:
       - review/east_front_connectors_c02/validate_connections.py
       - review/east_front_connectors_c02/reopen_verify.py
       - review/east_front_connectors_c02/annotate.py
+      - review/east_front_connectors_c02/render_qa.py
       - .github/workflows/wanfo_east_front_rebuild_c02.yml
   workflow_dispatch:
 permissions:
@@ -36,6 +37,8 @@ jobs:
         run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/east_front_connectors_c02/reopen_verify.py
       - name: Annotate real render shots in Chinese
         run: python review/east_front_connectors_c02/annotate.py
+      - name: Pixel-level review gate, reject empty 3D renders
+        run: python review/east_front_connectors_c02/render_qa.py
       - name: Create audit manifest and archive ONLY isolated rebuilt subset
         run: |
           python - <<'PY'
