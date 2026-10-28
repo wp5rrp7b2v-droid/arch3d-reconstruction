@@ -1,0 +1,260 @@
+{
+  "scope": "FOUR_FAMILY_SCHEMATIC_PLACEMENT_NO_SOURCE_REPLACEMENT",
+  "origin_world_pr75_mm": [
+    4437.0,
+    5355.0,
+    -2297.831485
+  ],
+  "structure_note": "1x first jump Huagong + 1x Linggong + Touang C01 + Erang C01; excludes second jump and other actual load-bearing members",
+  "posing": "HUA1/ANG anchored approximately to PR75 East Front bbox centers; LING hypothetical cross placement NOT real East Ling instance",
+  "input_manifest": [
+    {
+      "code": "HUA1",
+      "name_zh": "第一跳华栱",
+      "path": "review/gong_ang_form_v001/geometry/JUMP_1_HUAGONG_candidate.json",
+      "sha256": "e1aa25d3963f5aecacd57579f443c543ed5153e0f0147fc88793ee56598cb7d2",
+      "dimensions_mm": [
+        898.8,
+        214.2,
+        153.0
+      ],
+      "transform_world_from_source": [
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "code": "LING",
+      "name_zh": "令栱",
+      "path": "review/gong_ang_form_v001/geometry/LINGGONG_candidate.json",
+      "sha256": "cfaf18d316a4ee57b34e501bb5aae0d9abb2e9126f28a1e2ca4d3168134049df",
+      "dimensions_mm": [
+        897.0,
+        217.4,
+        155.6
+      ],
+      "transform_world_from_source": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          154.3000030517578
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "code": "TOU",
+      "name_zh": "头昂 C01",
+      "path": "review/ang_form_c01/geometry/TOU_ANG_ILLUSTRATION_C01_candidate.json",
+      "sha256": "71b30fb348d7776b34ceb01b1b004333c27f8c422bad805c56ef97ac0d02cdfa",
+      "dimensions_mm": [
+        1440.62149385663,
+        154.0,
+        278.4
+      ],
+      "transform_world_from_source": [
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.9130086898803711,
+          0.0,
+          -0.4079400599002838,
+          434.5
+        ],
+        [
+          0.4079400599002838,
+          0.0,
+          0.9130086898803711,
+          657.6300048828125
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "code": "ER",
+      "name_zh": "二昂 C01",
+      "path": "review/ang_form_c01/geometry/ER_ANG_ILLUSTRATION_C01_candidate.json",
+      "sha256": "fbce1d3425994b6ed8478d71a24bbda48a457914fcb7432a4bca3bd5f45a571b",
+      "dimensions_mm": [
+        1834.6484473864894,
+        154.0,
+        187.0
+      ],
+      "transform_world_from_source": [
+        [
+          0.0,
+          -1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.9130086898803711,
+          0.0,
+          -0.4079400599002838,
+          608.0
+        ],
+        [
+          0.4079400599002838,
+          0.0,
+          0.9130086898803711,
+          805.8300170898438
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "a": "HUA1",
+      "b": "LING",
+      "a_zh": "第一跳华栱",
+      "b_zh": "令栱",
+      "bbox_overlap_dimensions_mm": [
+        214.20007944107056,
+        217.39999949932098,
+        0.0
+      ],
+      "bbox_possible_intersection": false,
+      "surface_triangle_overlap_count": 0,
+      "solid_boolean_intersection_mm3": 0.0,
+      "diagnostic_error": null
+    },
+    {
+      "a": "HUA1",
+      "b": "TOU",
+      "a_zh": "第一跳华栱",
+      "b_zh": "头昂 C01",
+      "bbox_overlap_dimensions_mm": [
+        154.00005877017975,
+        729.3351888656616,
+        0.0
+      ],
+      "bbox_possible_intersection": false,
+      "surface_triangle_overlap_count": 0,
+      "solid_boolean_intersection_mm3": 0.0,
+      "diagnostic_error": null
+    },
+    {
+      "a": "HUA1",
+      "b": "ER",
+      "a_zh": "第一跳华栱",
+      "b_zh": "二昂 C01",
+      "bbox_overlap_dimensions_mm": [
+        154.00007367134094,
+        717.0673608779907,
+        0.0
+      ],
+      "bbox_possible_intersection": false,
+      "surface_triangle_overlap_count": 0,
+      "solid_boolean_intersection_mm3": 0.0,
+      "diagnostic_error": null
+    },
+    {
+      "a": "LING",
+      "b": "TOU",
+      "a_zh": "令栱",
+      "b_zh": "头昂 C01",
+      "bbox_overlap_dimensions_mm": [
+        154.00005877017975,
+        217.39999949932098,
+        0.0
+      ],
+      "bbox_possible_intersection": false,
+      "surface_triangle_overlap_count": 0,
+      "solid_boolean_intersection_mm3": 0.0,
+      "diagnostic_error": null
+    },
+    {
+      "a": "LING",
+      "b": "ER",
+      "a_zh": "令栱",
+      "b_zh": "二昂 C01",
+      "bbox_overlap_dimensions_mm": [
+        154.00007367134094,
+        217.39999949932098,
+        0.0
+      ],
+      "bbox_possible_intersection": false,
+      "surface_triangle_overlap_count": 0,
+      "solid_boolean_intersection_mm3": 0.0,
+      "diagnostic_error": null
+    },
+    {
+      "a": "TOU",
+      "b": "ER",
+      "a_zh": "头昂 C01",
+      "b_zh": "二昂 C01",
+      "bbox_overlap_dimensions_mm": [
+        154.00005877017975,
+        1327.7940154075623,
+        690.5895471572876
+      ],
+      "bbox_possible_intersection": true,
+      "surface_triangle_overlap_count": 2984,
+      "solid_boolean_intersection_mm3": 27096154.654260926,
+      "diagnostic_error": null
+    }
+  ],
+  "collision_gate": "FAIL_OVERLAP",
+  "pairs_over_1mm3": 1,
+  "unresolved_boolean_pairs": 0,
+  "mechanical_support": "NOT_VALIDATED_MISSING_CUPS_BEAMS_AND_OTHER_BRACKET_MEMBERS",
+  "linggong_type_instance_mapping": "UNCONFIRMED; V001 general approved shape is not East verified geometry",
+  "PO_VISUAL": "PENDING",
+  "source_approved_meshes_not_changed": true,
+  "interpretation": "Collision finding is about rigid uncut candidate meshes at pilot pose, not a proof of real historic joinery."
+}

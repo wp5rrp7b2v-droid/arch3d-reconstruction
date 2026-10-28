@@ -1,0 +1,75 @@
+name: Wanfo four Gong/Ang isolated assembly C01
+on:
+  push:
+    branches: [assembly/four-gong-ang-pilot-c01-20261028]
+    paths:
+      - .github/workflows/wanfo_four_gong_ang_pilot_c01.yml
+      - review/four_gong_ang_pilot_c01/cloud_build_and_verify.py
+      - review/four_gong_ang_pilot_c01/annotate_views.py
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-four-gong-ang-pilot-c01
+  cancel-in-progress: false
+jobs:
+  assembly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Cloud Blender and Chinese fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-noto-cjk libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          python -m pip install --upgrade Pillow
+          curl -fL --retry 3 https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz -o /tmp/blender.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Construct exactly four read-only input meshes in Blender
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/four_gong_ang_pilot_c01/cloud_build_and_verify.py -- build
+      - name: Apply Chinese labels to true Blender renders
+        run: python review/four_gong_ang_pilot_c01/annotate_views.py
+      - name: Independently reimport 4-node GLB and verify saved BLEND
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/four_gong_ang_pilot_c01/cloud_build_and_verify.py -- verify
+      - name: Read and classify geometry diagnostics, build audit manifest
+        run: |
+          python - <<'PY'
+          import pathlib,hashlib,json
+          base=pathlib.Path('review/four_gong_ang_pilot_c01')
+          d=base/'output'
+          a=json.loads((d/'ASSEMBLY_VALIDATION.json').read_text())
+          v=json.loads((d/'BINARY_REOPEN_VERIFICATION.json').read_text())
+          assert len(a['input_manifest'])==4 and len(a['pairs'])==6
+          assert v['technical_import_gate']=='PASS'
+          assert len(v['objects'])==4
+          assert len(list(d.glob('*.png')))==3
+          assert (d/'WANFO_FOUR_GONG_ANG_PILOT_C01.blend').stat().st_size>10000
+          assert (d/'WANFO_FOUR_GONG_ANG_PILOT_C01.glb').stat().st_size>10000
+          assert all(p['diagnostic_error'] is None or p['solid_boolean_intersection_mm3'] is None or p['solid_boolean_intersection_mm3']>=0 for p in a['pairs'])
+          files=sorted(p for p in base.rglob('*') if p.is_file() and p.name!='FILE_MANIFEST.json')
+          m={'file_gate':'PASS','geometry_gate':v['technical_import_gate'],
+             'assembly_gate':a['collision_gate'],
+             'number_of_parts':4,'number_of_pairs':6,
+             'historical_joinery_and_load':'NOT_VERIFIED',
+             'files':[{'path':str(p.relative_to(base)),'size':p.stat().st_size,
+               'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in files]}
+          (base/'FILE_MANIFEST.json').write_text(json.dumps(m,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps({'FILE_GATE':m['file_gate'],'ASSEMBLY_GATE':m['assembly_gate'],
+            'pairs_clashing':a['pairs_over_1mm3'],'pairs_unresolved':a['unresolved_boolean_pairs']},ensure_ascii=False))
+          PY
+      - name: Archive only this review pilot; no Master or 89-model changes
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f review/four_gong_ang_pilot_c01/
+          git diff --cached --name-only | python -c 'import sys; a=sys.stdin.read().splitlines(); assert a and all(p.startswith("review/four_gong_ang_pilot_c01/") for p in a),a'
+          git commit -m 'review: archive cloud four-piece spatial trial and measured clash audit'
+          git push origin HEAD:assembly/four-gong-ang-pilot-c01-20261028
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_FOUR_GONG_ANG_PILOT_C01
+          path: review/four_gong_ang_pilot_c01/output
+          retention-days: 90
