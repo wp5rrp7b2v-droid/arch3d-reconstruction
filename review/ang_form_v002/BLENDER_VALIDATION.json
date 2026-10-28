@@ -1,0 +1,55 @@
+{
+  "blender": "4.5.13 LTS",
+  "gate": "PASS",
+  "models": [
+    {
+      "file": "ER_ANG_V002_WORK_LENGTH_candidate.glb",
+      "sha256": "3772a03a09f5c2cdf1afae0c84cb86321020114255428052a44723151ef7f1e6",
+      "bytes": 3936,
+      "bounds_error_mm": 2.1282799025357235e-05,
+      "vertex_set_hausdorff_mm": 3.890855949935634e-05,
+      "watertight": true,
+      "positive_volume_mm3": 50127609.38023491,
+      "volume_relative_error": 4.2124379294207907e-08,
+      "euler_number": 2,
+      "independent_process_reimport": "PASS"
+    },
+    {
+      "file": "ER_ANG_V002_candidate.glb",
+      "sha256": "5f200b52f33b03c5c56cfea15a4501fb6847adf617570b5c1117fffed5ffd00d",
+      "bytes": 3932,
+      "bounds_error_mm": 1.1968994158451096e-05,
+      "vertex_set_hausdorff_mm": 2.2363281232173904e-05,
+      "watertight": true,
+      "positive_volume_mm3": 19975161.063993365,
+      "volume_relative_error": 1.2621222776301821e-09,
+      "euler_number": 2,
+      "independent_process_reimport": "PASS"
+    },
+    {
+      "file": "TOU_ANG_V002_WORK_LENGTH_candidate.glb",
+      "sha256": "5bdc8c56ce94c42811d26a357ba9269e144bdf7c731f501e1906073484826c6f",
+      "bytes": 9412,
+      "bounds_error_mm": 1.9550323600014963e-06,
+      "vertex_set_hausdorff_mm": 4.574606558674035e-05,
+      "watertight": true,
+      "positive_volume_mm3": 43102886.43542725,
+      "volume_relative_error": 6.603755538473158e-09,
+      "euler_number": 2,
+      "independent_process_reimport": "PASS"
+    },
+    {
+      "file": "TOU_ANG_V002_candidate.glb",
+      "sha256": "cdadb8e15936cb49ed27c85a6b2dcd78cd9fada2d2a3e1675fff7fa9f1a3ee6b",
+      "bytes": 9408,
+      "bounds_error_mm": 1.1968994158451096e-05,
+      "vertex_set_hausdorff_mm": 2.2570546585009132e-05,
+      "watertight": true,
+      "positive_volume_mm3": 24297627.943327192,
+      "volume_relative_error": 9.703660258787132e-09,
+      "euler_number": 2,
+      "independent_process_reimport": "PASS"
+    }
+  ],
+  "source_files_never_opened_for_write": true
+}

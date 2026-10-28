@@ -1,0 +1,141 @@
+{
+  "status": "PASS_LOCAL_CLOUD_DELIVERY_PENDING_REMOTE_BYTE_CHECK",
+  "base": "028517cbdada6cb266feae17f58ae0a7888c4a93",
+  "existing_tracked_files_modified": 0,
+  "approved_candidates_and_masters_unchanged": true,
+  "source_invariance_method": "git diff fixed baseline: additions only in task files and isolated workflow",
+  "files": [
+    {
+      "path": "review/ang_form_v002/BLENDER_VALIDATION.json",
+      "bytes": 2001,
+      "sha256": "7afe0f6f5f7219c0f1373e76d8e9c0356aba8a01d7f209e663f23f409e7781de"
+    },
+    {
+      "path": "review/ang_form_v002/FAILED_RUNS.json",
+      "bytes": 765,
+      "sha256": "9bfff4110b31979bb01e1b7e5888ff6324a255d122521713edba738113141f3b"
+    },
+    {
+      "path": "review/ang_form_v002/INPUT_MODEL_VERIFICATION.json",
+      "bytes": 879,
+      "sha256": "1d132171aee1c15aaaba11fb059421eb76dd243ed6484bf3ecf82c4f00cb4877"
+    },
+    {
+      "path": "review/ang_form_v002/README_ZH.md",
+      "bytes": 7360,
+      "sha256": "1e505707aca5e9d4148ba983c6aac85ba4fa424aef7130480cf6ad9c13d40075"
+    },
+    {
+      "path": "review/ang_form_v002/SOURCE_TRACEABILITY.json",
+      "bytes": 3854,
+      "sha256": "7521b6ed3b7caa3e6b2747241fcf4d0b7127ae8e9ab8fccc61031997dabe6837"
+    },
+    {
+      "path": "review/ang_form_v002/TECHNICAL_VALIDATION.json",
+      "bytes": 2268,
+      "sha256": "f260c01db782e851ea13ab05be92e6d7419b95d0190ab3dd2527f338ad401d56"
+    },
+    {
+      "path": "review/ang_form_v002/TOU_ANG_PILOT.json",
+      "bytes": 1249,
+      "sha256": "ac67f9501ed684abb96d99be171455362f79c379a8d55a185af2b64403c5ec20"
+    },
+    {
+      "path": "review/ang_form_v002/VISUAL_QA.json",
+      "bytes": 666,
+      "sha256": "86f473156facc1aa8f61ff057b77396d532ef9db5aa960f6844b115c1ce6c244"
+    },
+    {
+      "path": "review/ang_form_v002/blender_check.py",
+      "bytes": 3860,
+      "sha256": "41195b0e8943fe0a3e617a4758c2bd5a34c0493979b3656f9445bca50b57f297"
+    },
+    {
+      "path": "review/ang_form_v002/build_v002.py",
+      "bytes": 12888,
+      "sha256": "b572c3d3ee0140693c0823c32d89b20e3bf131b04d343a604cecb407852dc5ce"
+    },
+    {
+      "path": "review/ang_form_v002/finalize.py",
+      "bytes": 2019,
+      "sha256": "8ef4b0cc10fc3a3226a6078ee7b5d135c931fae92251216d00e486010039fe51"
+    },
+    {
+      "path": "review/ang_form_v002/geometry/ER_ANG_V002_WORK_LENGTH_candidate.glb",
+      "bytes": 3936,
+      "sha256": "3772a03a09f5c2cdf1afae0c84cb86321020114255428052a44723151ef7f1e6"
+    },
+    {
+      "path": "review/ang_form_v002/geometry/ER_ANG_V002_WORK_LENGTH_candidate.json",
+      "bytes": 12790,
+      "sha256": "6eddcec4dbd099c05d9ae32e45d9f0ba95b8a9298c5cc197ea03f5d0bc971b28"
+    },
+    {
+      "path": "review/ang_form_v002/geometry/ER_ANG_V002_candidate.glb",
+      "bytes": 3932,
+      "sha256": "5f200b52f33b03c5c56cfea15a4501fb6847adf617570b5c1117fffed5ffd00d"
+    },
+    {
+      "path": "review/ang_form_v002/geometry/ER_ANG_V002_candidate.json",
+      "bytes": 12688,
+      "sha256": "2b9a3a326e7db05b2971222c1a535c0d1674937ef3412479604981d448a69423"
+    },
+    {
+      "path": "review/ang_form_v002/geometry/TOU_ANG_V002_WORK_LENGTH_candidate.glb",
+      "bytes": 9412,
+      "sha256": "5bdc8c56ce94c42811d26a357ba9269e144bdf7c731f501e1906073484826c6f"
+    },
+    {
+      "path": "review/ang_form_v002/geometry/TOU_ANG_V002_WORK_LENGTH_candidate.json",
+      "bytes": 27229,
+      "sha256": "3e041da186a898a9ca6081d097e5f67f5cb7fa6305b801e7dec6ea05edbe057f"
+    },
+    {
+      "path": "review/ang_form_v002/geometry/TOU_ANG_V002_candidate.glb",
+      "bytes": 9408,
+      "sha256": "cdadb8e15936cb49ed27c85a6b2dcd78cd9fada2d2a3e1675fff7fa9f1a3ee6b"
+    },
+    {
+      "path": "review/ang_form_v002/geometry/TOU_ANG_V002_candidate.json",
+      "bytes": 26881,
+      "sha256": "6666ba5f935a856d663086c44548807d2a9edca0edc22c7e1767d01d1ebf0294"
+    },
+    {
+      "path": "review/ang_form_v002/output/ANG_V002_LEVEL_FORM_OVERVIEW_ZH.png",
+      "bytes": 989125,
+      "sha256": "e42db8062a5c8fbe20552193dbe6de06d1a625e9e570fc6ab5a871fc9ad85733"
+    },
+    {
+      "path": "review/ang_form_v002/output/ER_ANG_V001_V002_SOURCE_ZH.png",
+      "bytes": 1506030,
+      "sha256": "bb5a15987ac20631211e8951b5c2114e6e9dec0edb3068cffb1b97f29e4cfec0"
+    },
+    {
+      "path": "review/ang_form_v002/output/TOU_ANG_V001_V002_SOURCE_ZH.png",
+      "bytes": 1508325,
+      "sha256": "ae86167aad01dda6449c89c8c091e6d1898fefa75a6eb02292df601691844b9c"
+    },
+    {
+      "path": "review/ang_form_v002/sources/A2-p028.jpg",
+      "bytes": 619989,
+      "sha256": "6776c9f3515590b69a88fcb172f37f506fa15b6c64781d898de3ac50a561ec18"
+    },
+    {
+      "path": "review/ang_form_v002/sources/A2-p039.jpg",
+      "bytes": 624785,
+      "sha256": "96a3cbc55536618b69ceef62c547bf883a9b2c16d63ff96ea93bcd2756bddb14"
+    },
+    {
+      "path": "review/ang_form_v002/sources/A2-p046.jpg",
+      "bytes": 650961,
+      "sha256": "1c744a174d922fb25eff991bd74a0621b60fef386f4ed1f76b4c7840388c954a"
+    },
+    {
+      "path": "review/ang_form_v002/verify_inputs.py",
+      "bytes": 2259,
+      "sha256": "f750a7ce4a7793e83dd56b3e877a73297eff7c71a01d975789486cc120008acb"
+    }
+  ],
+  "count": 26,
+  "PO_visual": "PENDING"
+}
