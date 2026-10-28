@@ -1,0 +1,62 @@
+name: Wanfo ANG illustration C01 candidate models
+on:
+  push:
+    branches:
+      - review/ang-illustration-c01-20261028
+    paths:
+      - review/ang_form_c01/build_reference_c01.py
+      - review/ang_form_c01/blender_check_c01.py
+      - .github/workflows/wanfo_ang_form_c01.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-ang-c01-review
+  cancel-in-progress: false
+jobs:
+  build-and-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Prepare Python, fonts and Blender
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-noto-cjk libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          python -m pip install --upgrade numpy trimesh scipy networkx pillow
+          curl -fL --retry 3 https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz -o /tmp/blender.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Build independent reference meshes and real-geometry review images
+        run: python review/ang_form_c01/build_reference_c01.py
+      - name: Blender GLB re-export from candidate JSON only
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/ang_form_c01/blender_check_c01.py -- export
+      - name: Separate Blender process reimport and inspect GLB
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/ang_form_c01/blender_check_c01.py -- validate
+      - name: Verify files and publish C01 only (no approved paths)
+        run: |
+          python - <<'PY'
+          import hashlib,json,pathlib
+          d=pathlib.Path("review/ang_form_c01")
+          a=json.loads((d/"BLENDER_VALIDATION.json").read_text())
+          assert a["status"]=="PASS_CLOUD_BLENDER_REIMPORT_ONLY_PO_PENDING"
+          assert len(a["models"])==2 and all(x["status"]=="PASS" for x in a["models"])
+          f=sorted([x for x in d.rglob("*") if x.is_file() and x.name!="DELIVERY_MANIFEST.json"])
+          assert len(f)>=10
+          data={"candidate_review_only":True,"model_count":2,"original_protected_paths_changed":[],"files":[{"path":str(x.relative_to(d)),"bytes":x.stat().st_size,"sha256":hashlib.sha256(x.read_bytes()).hexdigest()} for x in f]}
+          (d/"DELIVERY_MANIFEST.json").write_text(json.dumps(data,indent=2,ensure_ascii=False)+"\n")
+          print("Delivering",len(f)+1,"files")
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f review/ang_form_c01/
+          git diff --cached --name-only | python -c 'import sys; a=sys.stdin.read().splitlines(); assert a and all(x.startswith("review/ang_form_c01/") for x in a),a'
+          git commit -m 'review: archive and verify two C01 illustration-based ANG candidate GLBs'
+          git push origin HEAD:review/ang-illustration-c01-20261028
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_ANG_ILLUSTRATION_C01
+          path: review/ang_form_c01
+          retention-days: 90
