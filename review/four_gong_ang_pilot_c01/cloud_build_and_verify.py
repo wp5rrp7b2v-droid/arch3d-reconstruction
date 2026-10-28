@@ -74,7 +74,9 @@ def place():
   obs[key]=obj
  return obs
 def bb(obj):
- w=[obj.matrix_world@Vector(v) for v in obj.bound_box]
+ # Exact transformed mesh bounds; transforming an object-space AABB corner box
+ # overestimates bounds on oblique asymmetric ANG and fails true vertex checks.
+ w=[obj.matrix_world@v.co for v in obj.data.vertices]
  return [[min(v[i] for v in w)*1000 for i in range(3)],[max(v[i] for v in w)*1000 for i in range(3)]]
 def pair_analysis(objs):
  out=[]
