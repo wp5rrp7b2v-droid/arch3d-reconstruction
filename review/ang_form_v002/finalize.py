@@ -14,5 +14,5 @@ assert all(p.startswith('review/ang_form_v002/') or p=='.github/workflows/wanfo_
 files=[p for p in T.rglob('*') if p.is_file() and '__pycache__' not in str(p) and p.name not in ['DELIVERY_MANIFEST.json']]
 for p in files:
  if p.suffix in ['.py','.md','.json','.yml']:
-  s=p.read_text();assert not re.search(r'gh[pousr]_[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16}|-----BEGIN .*PRIVATE KEY',s),p
+  s=p.read_text();assert not re.search(r'gh[pousr]_[A-Za-z0-9]{30,}|AKIA[0-9A-Z]{16}|-{5}BEGIN [A-Z ]*PRIVATE KEY-{5}',s),p
 write(T/'DELIVERY_MANIFEST.json',dict(status='PASS_LOCAL_CLOUD_DELIVERY_PENDING_REMOTE_BYTE_CHECK',base=BASE,existing_tracked_files_modified=0,approved_candidates_and_masters_unchanged=True,source_invariance_method='git diff fixed baseline: additions only in task files and isolated workflow',files=[dict(path=str(p.relative_to(R)),bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(files)],count=len(files),PO_visual='PENDING'))
