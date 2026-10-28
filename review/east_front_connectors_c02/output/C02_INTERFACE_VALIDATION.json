@@ -1,0 +1,1020 @@
+{
+  "status": "FAIL",
+  "input_sha": "5c81c836cc7ca3a229eebe5ac9cb4c62a744b9a1eeb10b0e9683cf0ccd097f13",
+  "object_count": 17,
+  "pair_count": 136,
+  "collision_gate": "FAIL",
+  "excess_overlap_pairs": [
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 2.3666907104294905
+    }
+  ],
+  "unknown_boolean_pairs": [
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "error": "SOURCE_NON_MANIFOLD_NO_BOOLEAN"
+    }
+  ],
+  "invalid_topology": [
+    {
+      "id": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "watertight": false,
+      "volume": 3725585.5838703276,
+      "bad_edges_count": 8,
+      "bad_edge_samples": [
+        {
+          "a": [
+            -124.5615,
+            -117.1192,
+            18.1685
+          ],
+          "b": [
+            -76.5,
+            -120.0,
+            22.8685
+          ],
+          "uses": 4
+        },
+        {
+          "a": [
+            -127.6,
+            120.0,
+            22.8685
+          ],
+          "b": [
+            -76.5,
+            120.0,
+            22.8685
+          ],
+          "uses": 4
+        },
+        {
+          "a": [
+            76.5,
+            -120.0,
+            22.8685
+          ],
+          "b": [
+            127.6,
+            -120.0,
+            22.8685
+          ],
+          "uses": 4
+        },
+        {
+          "a": [
+            76.5,
+            120.0,
+            22.8685
+          ],
+          "b": [
+            124.5615,
+            117.1192,
+            18.1685
+          ],
+          "uses": 4
+        },
+        {
+          "a": [
+            -76.5,
+            -120.0,
+            22.8685
+          ],
+          "b": [
+            -76.5,
+            -78.45,
+            22.8685
+          ],
+          "uses": 4
+        },
+        {
+          "a": [
+            -76.5,
+            78.45,
+            22.8685
+          ],
+          "b": [
+            -76.5,
+            120.0,
+            22.8685
+          ],
+          "uses": 4
+        },
+        {
+          "a": [
+            76.5,
+            -120.0,
+            22.8685
+          ],
+          "b": [
+            76.5,
+            -78.45,
+            22.8685
+          ],
+          "uses": 4
+        },
+        {
+          "a": [
+            76.5,
+            78.45,
+            22.8685
+          ],
+          "b": [
+            76.5,
+            120.0,
+            22.8685
+          ],
+          "uses": 4
+        }
+      ]
+    }
+  ],
+  "max_overlap_mm3": 2.3666907104294905,
+  "all_pairs": [
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_SANDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_HUA2_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "overlap_mm3": null
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "east:FOUR_BEAM",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_SANDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_HUA2_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_SANDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_HUA2_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_HUA2_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_HUA2_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_HUA2_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.9762011836420894
+    },
+    {
+      "a": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_HUA2_LOCAL",
+      "overlap_mm3": 0.04744133847445179
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 2.3666907104294905
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": null
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA1_LOCAL",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA1_LOCAL",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "overlap_mm3": 5.4569682106375694e-12
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA1_LOCAL",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA1_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA1_LOCAL",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA1_LOCAL",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA1_LOCAL",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "b": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "b": "trial:EAST_FRONT_SANDOU_LEFT",
+      "overlap_mm3": 0.02558152844779717
+    },
+    {
+      "a": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.025581528456314118
+    },
+    {
+      "a": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU_LEFT",
+      "b": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU_LEFT",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU_LEFT",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "b": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    },
+    {
+      "a": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "b": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "overlap_mm3": 0.0
+    }
+  ],
+  "measured_contacts": [
+    {
+      "a": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "b": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "area_mm2": 44950.00000000003,
+      "threshold_mm2": 100.0,
+      "classification": "PR75_ALREADY_VERIFIED_SPACER",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "b": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "area_mm2": 13004.999999999993,
+      "threshold_mm2": 100.0,
+      "classification": "PR75_ALREADY_VERIFIED_SPACER",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "b": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "area_mm2": 88395.0,
+      "threshold_mm2": 100.0,
+      "classification": "PR75_ALREADY_VERIFIED_SPACER",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "b": "trial:EAST_FRONT_SANDOU",
+      "area_mm2": 16800.0,
+      "threshold_mm2": 100.0,
+      "classification": "PR75_ALREADY_VERIFIED_SPACER",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU",
+      "b": "east:FOUR_BEAM",
+      "area_mm2": 73700.0,
+      "threshold_mm2": 100.0,
+      "classification": "PR75_ALREADY_VERIFIED_SPACER",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "b": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "area_mm2": 99929.05186462402,
+      "threshold_mm2": 100.0,
+      "classification": "NEW_MEASURE_HEAD_UNVERIFIED_PRIOR",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "b": "trial:EAST_FRONT_HUA1_LOCAL",
+      "area_mm2": 24858.63140869141,
+      "threshold_mm2": 100.0,
+      "classification": "NEW_MEASURE_HEAD_UNVERIFIED_PRIOR",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA1_LOCAL",
+      "b": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "area_mm2": 1315.8009338378906,
+      "threshold_mm2": 100.0,
+      "classification": "NEW_MEASURE_HEAD_UNVERIFIED_PRIOR",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "b": "trial:EAST_FRONT_HUA2_LOCAL",
+      "area_mm2": 21340.081820983905,
+      "threshold_mm2": 100.0,
+      "classification": "NEW_MEASURE_HEAD_UNVERIFIED_PRIOR",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_FRONT_HUA2_LOCAL",
+      "b": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "area_mm2": 17469.72643839923,
+      "threshold_mm2": 100.0,
+      "classification": "NEW_MEASURE_HEAD_UNVERIFIED_PRIOR",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "b": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "area_mm2": 30323.20887232024,
+      "threshold_mm2": 100.0,
+      "classification": "NEW_MEASURE_HEAD_UNVERIFIED_PRIOR",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU_LEFT",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "area_mm2": 57750.97597533778,
+      "threshold_mm2": 100.0,
+      "classification": "NEW_MEASURE_HEAD_UNVERIFIED_PRIOR",
+      "pass_area": true,
+      "error": null
+    },
+    {
+      "a": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "b": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "area_mm2": 57750.97597533778,
+      "threshold_mm2": 100.0,
+      "classification": "NEW_MEASURE_HEAD_UNVERIFIED_PRIOR",
+      "pass_area": true,
+      "error": null
+    }
+  ],
+  "confirmed_spacer_seats": 5,
+  "spacer_contact_gate": "PASS_FIVE_PRIOR_SPACER_SEATS",
+  "full_column_support_chain": "NOT_YET_PROVEN",
+  "visual_form_gate": "NOT_APPROVED_SOURCE_LEGACY_VERSUS_PR76_AND_C01",
+  "real_notched_meshes_present": true,
+  "scatter_dou_instances_present": true,
+  "new_C01_ANG_NOT_INSTALLED": true,
+  "note": "Reconstructed a connected-as-built joint seed from PR75 work geometry. Does not install V001 corrected gongs or C01 ang. No historical joint authenticity or mechanical capacity validation."
+}

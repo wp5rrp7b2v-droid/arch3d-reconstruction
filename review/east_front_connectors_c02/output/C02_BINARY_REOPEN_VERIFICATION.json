@@ -1,0 +1,83 @@
+{
+  "blender_version": "4.5.13 LTS",
+  "model_count": 17,
+  "independent_GLTF_import": "PASS",
+  "independent_BLENDER_reopen": "PASS",
+  "geometry_bounds_checks": [
+    {
+      "name": "east:FOUR_BEAM",
+      "bounds_error_mm": 0.000213623046875
+    },
+    {
+      "name": "trial:EAST_FRONT_SPACER_HUAGONG",
+      "bounds_error_mm": 0.000232696533203125
+    },
+    {
+      "name": "trial:EAST_FRONT_SPACER_LINGGONG",
+      "bounds_error_mm": 0.00014495849609375
+    },
+    {
+      "name": "trial:EAST_FRONT_SANDOU",
+      "bounds_error_mm": 0.0001010894775390625
+    },
+    {
+      "name": "trial:EAST_FRONT_COLUMN_CANDIDATE",
+      "bounds_error_mm": 0.000396728515625
+    },
+    {
+      "name": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "bounds_error_mm": 5.340576171875e-05
+    },
+    {
+      "name": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "bounds_error_mm": 5.7220458984375e-05
+    },
+    {
+      "name": "trial:EAST_FRONT_HUA2_LOCAL",
+      "bounds_error_mm": 5.7220458984375e-05
+    },
+    {
+      "name": "trial:EAST_FRONT_INTERACTIVE_DOU_LOCAL",
+      "bounds_error_mm": 4.76837158203125e-06
+    },
+    {
+      "name": "trial:EAST_FRONT_HUA1_LOCAL",
+      "bounds_error_mm": 1.3828277587890625e-05
+    },
+    {
+      "name": "trial:EAST_FRONT_COLUMN_LUDOU",
+      "bounds_error_mm": 5.2928924560546875e-05
+    },
+    {
+      "name": "trial:EAST_FRONT_NIDAO_GUAZI",
+      "bounds_error_mm": 4.4345855712890625e-05
+    },
+    {
+      "name": "trial:EAST_FRONT_TRANSVERSE_MANGONG",
+      "bounds_error_mm": 2.193450927734375e-05
+    },
+    {
+      "name": "trial:EAST_FRONT_SANDOU_LEFT",
+      "bounds_error_mm": 1.52587890625e-05
+    },
+    {
+      "name": "trial:EAST_FRONT_SANDOU_RIGHT",
+      "bounds_error_mm": 1.52587890625e-05
+    },
+    {
+      "name": "trial:EAST_FRONT_LOWER6_END_SEGMENT",
+      "bounds_error_mm": 7.009506225585938e-05
+    },
+    {
+      "name": "trial:EAST_UPPER6_FULL_BEAM_CANDIDATE",
+      "bounds_error_mm": 8.678436279296875e-05
+    }
+  ],
+  "blend_sha256": "1f0acddeb0e6b8cc97ba52fe20820c6f2ab063b4304517f39b35556e05fe2adf",
+  "glb_sha256": "87712694e82c23ce8fff131de2594164c4c36f91e5d147164595b514b58d039f",
+  "file_source_changed": false,
+  "source_sha256": "5c81c836cc7ca3a229eebe5ac9cb4c62a744b9a1eeb10b0e9683cf0ccd097f13",
+  "structural_seed_gate": "FAIL",
+  "PO_visual_form": "NOT_APPROVED",
+  "updated_gong_ang_installation": "NOT_DONE"
+}

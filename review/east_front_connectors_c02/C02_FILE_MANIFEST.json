@@ -1,0 +1,79 @@
+{
+  "review_only": true,
+  "source_models_modified": false,
+  "geometry_gate": "FAIL",
+  "historical_form": "NOT_APPROVED",
+  "model_count": 17,
+  "files": [
+    {
+      "path": "annotate.py",
+      "bytes": 1315,
+      "sha256": "ec352ebacc4dbe2be23c2a265d05439966fdea748bc4c5658f5918a3da72c62f"
+    },
+    {
+      "path": "build_connected_seed.py",
+      "bytes": 7765,
+      "sha256": "1d08df266c56476781a33330fca0cd88a57ab3d88fe9044499be3bfa9bb8c21b"
+    },
+    {
+      "path": "output/C02_ACTUAL_MESHES.json",
+      "bytes": 206695,
+      "sha256": "3d695a28c561bb91ceff03b9792054bf695c282ab17e6cb653af25dbed6ff979"
+    },
+    {
+      "path": "output/C02_BINARY_REOPEN_VERIFICATION.json",
+      "bytes": 2383,
+      "sha256": "24f15e1f410acd0f34b4a4bec2f693e7dacea2ad18f807675c4f4857ab7db0f3"
+    },
+    {
+      "path": "output/C02_INTERFACE_VALIDATION.json",
+      "bytes": 26494,
+      "sha256": "6b24037b779516491c26771df71abfde00459f317b06e01d15ac87b6c0afde89"
+    },
+    {
+      "path": "output/PR75_EAST_FRONT_INTERFACE_SURVEY.json",
+      "bytes": 48921,
+      "sha256": "640ddb342184a442182775741ecf4ac12b92c719b474051b57e60fe4e2103e3f"
+    },
+    {
+      "path": "output/WANFO_EAST_FRONT_CONNECTED_C02_SEED.blend",
+      "bytes": 120817,
+      "sha256": "1f0acddeb0e6b8cc97ba52fe20820c6f2ab063b4304517f39b35556e05fe2adf"
+    },
+    {
+      "path": "output/WANFO_EAST_FRONT_CONNECTED_C02_SEED.glb",
+      "bytes": 111268,
+      "sha256": "87712694e82c23ce8fff131de2594164c4c36f91e5d147164595b514b58d039f"
+    },
+    {
+      "path": "output/head_CONNECTED_C02_ZH.png",
+      "bytes": 574104,
+      "sha256": "a5899452dea80c7228324796e612084e0a37d177ff66ed1a7faacd4a4f49dcb0"
+    },
+    {
+      "path": "output/overview_CONNECTED_C02_ZH.png",
+      "bytes": 573999,
+      "sha256": "b2282e987c261520d3d5fe4e4a2ec25cf561cd99ad0a05ebc41d0211111cc3c0"
+    },
+    {
+      "path": "output/spacer_CONNECTED_C02_ZH.png",
+      "bytes": 573887,
+      "sha256": "04d87e6e6b73599fbd27d192d077cbaf005e6930e3f63e583550d961f717e862"
+    },
+    {
+      "path": "reopen_verify.py",
+      "bytes": 1980,
+      "sha256": "21ab071f3734cf91149d11be6b291e23cf4cce848f1f5e4d5d95dd16400b3453"
+    },
+    {
+      "path": "survey.py",
+      "bytes": 4319,
+      "sha256": "79bcbcb32b02b25d73162c052f62d3b5de392087fe4e3db91cd30572a719214e"
+    },
+    {
+      "path": "validate_connections.py",
+      "bytes": 5529,
+      "sha256": "ee4c90a9f41823961938f6da7683c3c720376ee3b3712c45e267e0138568f5c5"
+    }
+  ]
+}
