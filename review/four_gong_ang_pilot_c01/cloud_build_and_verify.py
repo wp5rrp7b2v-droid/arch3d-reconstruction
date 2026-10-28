@@ -106,9 +106,9 @@ def pair_analysis(objs):
      bm=bpy.data.meshes.new_from_object(ev,preserve_all_data_layers=True,depsgraph=deps)
      # mesh is in tmp object's local coords; rigid world transform preserves volume
      import bmesh
-     b=bmesh.new();b.from_mesh(bm)
-     overlap_volume_mm3=abs(float(b.calc_volume(signed=True)))*1e9 if b.faces else 0.
-     b.free();bpy.data.meshes.remove(bm)
+     bm_intersection=bmesh.new();bm_intersection.from_mesh(bm)
+     overlap_volume_mm3=abs(float(bm_intersection.calc_volume(signed=True)))*1e9 if bm_intersection.faces else 0.
+     bm_intersection.free();bpy.data.meshes.remove(bm)
      bpy.data.objects.remove(tmp,do_unlink=True)
     except Exception as e:
      error=(error+';' if error else '')+'BOOLEAN:'+str(e)
