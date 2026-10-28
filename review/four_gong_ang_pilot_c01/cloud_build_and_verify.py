@@ -53,6 +53,7 @@ def init_scene():
  scene.render.resolution_x=1600;scene.render.resolution_y=1000;scene.render.resolution_percentage=100
  scene.render.image_settings.file_format='PNG'
  scene.render.film_transparent=False
+ if scene.world is None:scene.world=bpy.data.worlds.new('万佛殿试搭背景')
  scene.world.color=(0.85,0.85,0.83)
  scene.view_settings.view_transform='Standard'
  return scene
