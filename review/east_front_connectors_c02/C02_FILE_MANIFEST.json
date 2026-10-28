@@ -1,0 +1,94 @@
+{
+  "review_only": true,
+  "source_models_modified": false,
+  "geometry_gate": "FAIL",
+  "historical_form": "NOT_APPROVED",
+  "model_count": 17,
+  "files": [
+    {
+      "path": "annotate.py",
+      "bytes": 1315,
+      "sha256": "ec352ebacc4dbe2be23c2a265d05439966fdea748bc4c5658f5918a3da72c62f"
+    },
+    {
+      "path": "build_connected_seed.py",
+      "bytes": 8651,
+      "sha256": "3ac7154959660c0aac98be339ae56c156f152ca2755985c783156d1bb446b70b"
+    },
+    {
+      "path": "output/C02_ACTUAL_MESHES.json",
+      "bytes": 206695,
+      "sha256": "3d695a28c561bb91ceff03b9792054bf695c282ab17e6cb653af25dbed6ff979"
+    },
+    {
+      "path": "output/C02_BINARY_REOPEN_VERIFICATION.json",
+      "bytes": 2383,
+      "sha256": "4ada3e333761568cc2060dd01e888d24eaa48b9f2c6acf945947046c504f2a51"
+    },
+    {
+      "path": "output/C02_INTERFACE_VALIDATION.json",
+      "bytes": 22013,
+      "sha256": "225d39f69e2f1c14f6bb6e42d303b4ad8af96f6e259111564b0eb8dfe93eb905"
+    },
+    {
+      "path": "output/PR75_EAST_FRONT_INTERFACE_SURVEY.json",
+      "bytes": 48921,
+      "sha256": "640ddb342184a442182775741ecf4ac12b92c719b474051b57e60fe4e2103e3f"
+    },
+    {
+      "path": "output/RENDER_QA.json",
+      "bytes": 1238,
+      "sha256": "6b93ce18d89135ba22384190c9f1e73a74bd2ac53dd24bbf4a237a840eaa2508"
+    },
+    {
+      "path": "output/WANFO_EAST_FRONT_CONNECTED_C02_SEED.blend",
+      "bytes": 137755,
+      "sha256": "8b03d11d313e5785f8ff6a28dddc5b081b6e6ccff2905412ea96ae7a70c37a45"
+    },
+    {
+      "path": "output/WANFO_EAST_FRONT_CONNECTED_C02_SEED.blend1",
+      "bytes": 121151,
+      "sha256": "547a701791b7137f2b3b5b220db09716ac3928648d684b68a89a49313fb9bf5f"
+    },
+    {
+      "path": "output/WANFO_EAST_FRONT_CONNECTED_C02_SEED.glb",
+      "bytes": 111016,
+      "sha256": "848e4a6c88b68533242863060512ae8117cd1aca082b880636bf95703a03599f"
+    },
+    {
+      "path": "output/head_CONNECTED_C02_ZH.png",
+      "bytes": 1077151,
+      "sha256": "8cdac7a36778c3c8db6f3c2ca8c869404b5af8c3b88102ed102df7d4032641c0"
+    },
+    {
+      "path": "output/overview_CONNECTED_C02_ZH.png",
+      "bytes": 1070322,
+      "sha256": "eb41af46c70f44c1e1d62536092553552c7f8fe5f6df387347702c45cfae4b25"
+    },
+    {
+      "path": "output/spacer_CONNECTED_C02_ZH.png",
+      "bytes": 1037074,
+      "sha256": "c2da5c68e18a9b23ddf65861c3c4e3bc953ea8611185b9c5ab8ed16ec30832a5"
+    },
+    {
+      "path": "render_qa.py",
+      "bytes": 1199,
+      "sha256": "e6a0fa9a54d13e4eb8d75cec07e4e8c00443b9c6ae37df71250820692bffddb4"
+    },
+    {
+      "path": "reopen_verify.py",
+      "bytes": 1980,
+      "sha256": "21ab071f3734cf91149d11be6b291e23cf4cce848f1f5e4d5d95dd16400b3453"
+    },
+    {
+      "path": "survey.py",
+      "bytes": 4319,
+      "sha256": "79bcbcb32b02b25d73162c052f62d3b5de392087fe4e3db91cd30572a719214e"
+    },
+    {
+      "path": "validate_connections.py",
+      "bytes": 5743,
+      "sha256": "9ff0e460979e2999dd92607cb1e5e524dbac84afa97b41e0148e609a3e5d6537"
+    }
+  ]
+}

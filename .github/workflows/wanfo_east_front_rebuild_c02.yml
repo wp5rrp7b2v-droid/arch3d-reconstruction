@@ -1,0 +1,72 @@
+name: Wanfo connected east front C02 true sockets
+on:
+  push:
+    branches: [assembly/east-front-connectors-c02-20261028]
+    paths:
+      - review/east_front_connectors_c02/build_connected_seed.py
+      - review/east_front_connectors_c02/validate_connections.py
+      - review/east_front_connectors_c02/reopen_verify.py
+      - review/east_front_connectors_c02/annotate.py
+      - review/east_front_connectors_c02/render_qa.py
+      - .github/workflows/wanfo_east_front_rebuild_c02.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-east-front-connected-c02
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 0}
+      - name: Install Blender 4.5.13 and geometry audit dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-noto-cjk libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          python -m pip install 'numpy<3' 'scipy>=1.13' 'trimesh>=4.4,<6' 'manifold3d>=3.1,<4' 'shapely>=2.0,<3' 'pillow>=10'
+          curl -fL --retry 3 https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz -o /tmp/blender.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Build actual east-front bearing meshes and visible views, preserve original inputs
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/east_front_connectors_c02/build_connected_seed.py
+      - name: Calculate 136 pair intersections and 13 selected interface contact areas
+        run: python review/east_front_connectors_c02/validate_connections.py
+      - name: Independently reimport GLB, reopen BLEND and check 17 original object identities
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/east_front_connectors_c02/reopen_verify.py
+      - name: Annotate real render shots in Chinese
+        run: python review/east_front_connectors_c02/annotate.py
+      - name: Pixel-level review gate, reject empty 3D renders
+        run: python review/east_front_connectors_c02/render_qa.py
+      - name: Create audit manifest and archive ONLY isolated rebuilt subset
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json
+          o=Path('review/east_front_connectors_c02');p=o/'output'
+          a=json.loads((p/'C02_INTERFACE_VALIDATION.json').read_text())
+          v=json.loads((p/'C02_BINARY_REOPEN_VERIFICATION.json').read_text())
+          assert a['object_count']==17 and a['pair_count']==136 and len(a['measured_contacts'])==13
+          assert v['independent_GLTF_import']=='PASS' and v['independent_BLENDER_reopen']=='PASS'
+          assert len(list(p.glob('*CONNECTED_C02_ZH.png')))==3
+          files=sorted(f for f in o.rglob('*') if f.is_file() and f.name!='C02_FILE_MANIFEST.json')
+          data={'review_only':True,'source_models_modified':False,'geometry_gate':a['status'],
+            'historical_form':'NOT_APPROVED','model_count':17,
+            'files':[{'path':str(f.relative_to(o)),'bytes':f.stat().st_size,
+             'sha256':hashlib.sha256(f.read_bytes()).hexdigest()} for f in files]}
+          (o/'C02_FILE_MANIFEST.json').write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n')
+          print('C02_REBUILD_GATE',a['status'],'C02_FILES',len(files)+1)
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add -f review/east_front_connectors_c02/
+          git diff --cached --name-only | python -c 'import sys;xs=sys.stdin.read().splitlines(); assert xs and all(p.startswith("review/east_front_connectors_c02/") for p in xs)'
+          git commit -m 'review: archive east-front actual interlock seed and independently tested contacts'
+          git push origin HEAD:assembly/east-front-connectors-c02-20261028
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_EAST_FRONT_C02_CONNECTED_SEED
+          path: review/east_front_connectors_c02/output
+          retention-days: 90

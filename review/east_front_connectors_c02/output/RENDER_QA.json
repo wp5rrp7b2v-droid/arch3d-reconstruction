@@ -1,0 +1,60 @@
+{
+  "gate": "PASS",
+  "method": "RGB channel spatial stddev of 3D viewport only; text headers excluded",
+  "images": [
+    {
+      "file": "head_CONNECTED_C02_ZH.png",
+      "pixels": [
+        1600,
+        1250
+      ],
+      "viewport_stddev_rgb": [
+        15.017607443959667,
+        12.883093663926722,
+        14.30675909148686
+      ],
+      "range_rgb": [
+        187.9305769817073,
+        187.38298780487804,
+        186.77428582317074
+      ],
+      "visible_3d": true
+    },
+    {
+      "file": "spacer_CONNECTED_C02_ZH.png",
+      "pixels": [
+        1600,
+        1250
+      ],
+      "viewport_stddev_rgb": [
+        20.81934082445524,
+        19.760213327387596,
+        22.446171041388034
+      ],
+      "range_rgb": [
+        204.09203201219512,
+        203.54871570121952,
+        207.04969512195123
+      ],
+      "visible_3d": true
+    },
+    {
+      "file": "overview_CONNECTED_C02_ZH.png",
+      "pixels": [
+        1600,
+        1250
+      ],
+      "viewport_stddev_rgb": [
+        15.840677053079686,
+        14.508177431080572,
+        17.06075782922776
+      ],
+      "range_rgb": [
+        187.46550609756096,
+        187.6348818597561,
+        187.86240167682928
+      ],
+      "visible_3d": true
+    }
+  ]
+}

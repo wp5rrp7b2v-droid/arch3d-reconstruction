@@ -1,0 +1,41 @@
+name: Wanfo East-Front Connectors C02 survey
+on:
+  push:
+    branches: [assembly/east-front-connectors-c02-20261028]
+    paths:
+      - review/east_front_connectors_c02/survey.py
+      - .github/workflows/wanfo_east_front_connectors_c02.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-east-front-connectors-c02
+  cancel-in-progress: false
+jobs:
+  survey:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: Install Blender 4.5.13
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl -fL --retry 3 https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz -o /tmp/blender.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Read actual 89-node model and measure east-front interfaces
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/east_front_connectors_c02/survey.py
+      - name: Publish read-only evidence
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add review/east_front_connectors_c02/output/PR75_EAST_FRONT_INTERFACE_SURVEY.json
+          git diff --cached --name-only | python -c 'import sys; xs=sys.stdin.read().splitlines(); assert xs and all(s.startswith("review/east_front_connectors_c02/") for s in xs)'
+          git commit -m 'review: archive PR75 real east-front support/slot survey'
+          git push origin HEAD:assembly/east-front-connectors-c02-20261028
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_EAST_FRONT_INTERFACE_SURVEY_C02
+          path: review/east_front_connectors_c02/output
