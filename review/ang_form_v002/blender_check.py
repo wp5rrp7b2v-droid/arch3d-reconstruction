@@ -21,7 +21,16 @@ for p in sorted(GEO.glob('*candidate.json')):
   expected=[[min(v[i] for v in d['vertices']) for i in range(3)],[max(v[i] for v in d['vertices']) for i in range(3)]]
   error=max(abs(bounds[j][i]-expected[j][i]) for j in range(2) for i in range(3));assert error<.001,(p,error)
   # Blender glTF splits normals/vertices; weld identical surface vertices before topology checks.
-  bm=bmesh.new();bm.from_mesh(obj.data);bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=1e-8);bm.normal_update()
+  # Standard glTF normal seams duplicate positions. Reconstruct surface connectivity by EXACT coordinates.
+  unique={};indices=[];coords=[]
+  for v in obj.data.vertices:
+   co=tuple(v.co)
+   if co not in unique:unique[co]=len(coords);coords.append(co)
+   indices.append(unique[co])
+  bm=bmesh.new();bverts=[bm.verts.new(co) for co in coords]
+  for f in obj.data.polygons:bm.faces.new([bverts[indices[i]] for i in f.vertices])
+  bm.normal_update()
+  print('EXACT_COORDINATE_WELD',p.name,len(obj.data.vertices),len(coords),'bad_edges',sum(not e.is_manifold for e in bm.edges))
   assert all(e.is_manifold for e in bm.edges);vol=bm.calc_volume(signed=True)*1e9;assert vol>0
   assert len(bm.verts)-len(bm.edges)+len(bm.faces)==2
   # Compare complete vertex-coordinate sets after glTF normal seam splits, not only bounds.

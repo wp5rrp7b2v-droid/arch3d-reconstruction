@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "main": "414be293918fea2bf4138b1a8f4345272e8764a8",
+  "PR75": "f8f72d40dd47ab61abc3103c396c855f5c4c3865",
+  "master_semantic_byte_exact": true,
+  "master_vertices_exact": true,
+  "actual_89_glb_hash": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151",
+  "actual_89_meshes": 89,
+  "trial_extracts": [
+    {
+      "id": "trial:EAST_FRONT_TOU_ANG_LOCAL",
+      "vertices_exact": true,
+      "faces_exact": true,
+      "source_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151"
+    },
+    {
+      "id": "trial:EAST_FRONT_ER_ANG_LOCAL",
+      "vertices_exact": true,
+      "faces_exact": true,
+      "source_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151"
+    }
+  ],
+  "method": "Original Git blobs read; actual GLB node transforms and V001 observation transform independently reapplied"
+}
