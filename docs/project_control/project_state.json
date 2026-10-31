@@ -5,7 +5,7 @@
   "project_name": "中国古建筑3D复原",
   "state_revision": "R368",
   "last_updated": "2026-10-31",
-  "session_status": "ENGINEERING_STOPPED / PO_REJECTED_PR80_AND_PR81_ASSEMBLIES / GONG_HUA_LING_VISUAL_PASS_ONLY / ANG_FORM_NOT_APPROVED / STATE_UPDATE_DRAFT_PR77 / MAIN_R366_UNCHANGED / MAC_LOCAL_SYNC_PENDING",
+  "session_status": "ENGINEERING_STOPPED / PO_REJECTED_PR80_AND_PR81_ASSEMBLIES / GONG_HUA_LING_VISUAL_PASS_ONLY / ANG_FORM_NOT_APPROVED / STATE_UPDATE_DRAFT_PR77 / MAIN_R366_UNCHANGED / MAC_MAIN_SYNC_PASS_R366_R368_DRAFT",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -70,7 +70,7 @@
   "current_task": {
     "id": null,
     "name": "2026-10-31 项目状态收尾与Mac从GitHub同步",
-    "status": "GITHUB_R368_CANDIDATE_PUBLICATION / DRAFT_PR77 / ENGINEERING_STOPPED / LOCAL_MAC_TERMINAL_SYNC_PENDING"
+    "status": "GITHUB_R368_CANDIDATE_PUBLICATION / DRAFT_PR77 / ENGINEERING_STOPPED / LOCAL_MAC_MAIN_SYNC_PASS_R366"
   },
   "proposed_next_task": {
     "id": null,
@@ -4044,11 +4044,46 @@
     "new_assembly_approved": false,
     "stage3_closed": false,
     "local_mac_sync": {
-      "status": "PENDING_MAC_TERMINAL_EVIDENCE",
-      "execution_here": "NOT_POSSIBLE_NO_USER_MAC_TERMINAL",
-      "mode": "GITHUB_PULL_ONLY / NO_ZIP / CLEAN_WORKTREE / FF_ONLY_MAIN / FETCH_REVIEW_BRANCHES",
-      "main_sha_target": "414be293918fea2bf4138b1a8f4345272e8764a8"
+      "status": "PASS_AT_MAIN_R366_CHECKPOINT / TRACKED_WORKTREE_CLEAN / ORIGINAL_SOURCES_UNTRACKED_PRESERVED",
+      "evidence": "USER_MAC_TERMINAL_OUTPUT_2026_10_31",
+      "method": "git-proxy-auto fetch origin + git-proxy-auto pull --ff-only origin main + git-proxy-auto lfs pull origin main",
+      "branch": "main",
+      "local_head": "414be293918fea2bf4138b1a8f4345272e8764a8",
+      "remote_main": "414be293918fea2bf4138b1a8f4345272e8764a8",
+      "main_head_equal": true,
+      "terminal_success_marker": "MAIN SYNC PASS",
+      "r368_fetched_remote_tracking_head": "4eeb8aae640ad20783aa6a39a60e0c796b93098f",
+      "r368_not_merged_into_main": true,
+      "tracked_changes": false,
+      "remaining_untracked": "docs/evidence/zhenguo_wanfo/original sources/",
+      "original_sources_preserved": true,
+      "lfs_command_exit_success_in_set_e": true,
+      "lfs_per_file_hash_independently_audited": false,
+      "mac_command_invoked_by_user": true,
+      "mac_direct_execution_by_assistant": false,
+      "remark": "Git同步主线成功；R368候选仍在Draft PR77，更新此记录将使Mac的R368跟踪分支落后新提交，若需读取最新候选需再fetch；不影响main同步结果。"
     },
     "main_merge_authorized": false
+  },
+  "local_sync_2026_10_31": {
+    "status": "PASS_AT_MAIN_R366_CHECKPOINT / TRACKED_WORKTREE_CLEAN / ORIGINAL_SOURCES_UNTRACKED_PRESERVED",
+    "evidence": "USER_MAC_TERMINAL_OUTPUT_2026_10_31",
+    "method": "git-proxy-auto fetch origin + git-proxy-auto pull --ff-only origin main + git-proxy-auto lfs pull origin main",
+    "branch": "main",
+    "local_head": "414be293918fea2bf4138b1a8f4345272e8764a8",
+    "remote_main": "414be293918fea2bf4138b1a8f4345272e8764a8",
+    "main_head_equal": true,
+    "terminal_success_marker": "MAIN SYNC PASS",
+    "r368_fetched_remote_tracking_head": "4eeb8aae640ad20783aa6a39a60e0c796b93098f",
+    "r368_not_merged_into_main": true,
+    "tracked_changes": false,
+    "remaining_untracked": "docs/evidence/zhenguo_wanfo/original sources/",
+    "original_sources_preserved": true,
+    "lfs_command_exit_success_in_set_e": true,
+    "lfs_per_file_hash_independently_audited": false,
+    "mac_command_invoked_by_user": true,
+    "mac_direct_execution_by_assistant": false,
+    "remark": "Git同步主线成功；R368候选仍在Draft PR77，更新此记录将使Mac的R368跟踪分支落后新提交，若需读取最新候选需再fetch；不影响main同步结果。",
+    "scope": "GitHub main R366 / R368 remote tracking fetch; not R368 main publication"
   }
 }
