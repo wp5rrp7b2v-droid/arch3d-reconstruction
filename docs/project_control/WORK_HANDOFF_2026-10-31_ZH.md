@@ -49,8 +49,8 @@
 ## 5. GitHub发布与本地同步状态
 
 - **R368候选及本文件**：在 `governance/wanfo-status-handoff-20261027`（PR #77）维护，正式 main 仍R366，除非今后PO另行批准PR合并。
-- **用户的Mac本地同步：尚无终端证据，不能登记为PASS。** 本会话能改GitHub但不能操作用户Mac的文件系统；不能伪称已执行本地`git pull`。
+- **用户Mac本地 main 已同步并由终端证据核验 PASS（2026-10-31）。** 用户执行 `git-proxy-auto fetch origin`、`pull --ff-only origin main`、`lfs pull origin main`，成功输出 `MAIN SYNC PASS`；本地与远端main均为 `414be293918fea2bf4138b1a8f4345272e8764a8`。R368远端跟踪分支当时为 `4eeb8aae640ad20783aa6a39a60e0c796b93098f`，**已获取但未合并main**。本机仍有未跟踪的 `docs/evidence/zhenguo_wanfo/original sources/`，已保留且不影响main同步；未执行任何删除、清理或重置。
 - 正确方式为本地现有仓库**只从GitHub拉取**，不要求下载ZIP。先确认工作区干净，再对main执行`--ff-only`快进；另`fetch`本状态候选与仍需查看的PR分支，但不切换或合并失败的候选到main。
-- 本地成功验收：Mac终端返回所在分支`main`、`git status --porcelain`为空、`HEAD`与GitHub main SHA完全一致；如需离线浏览R368，则仅在分支或独立worktree中查看，严禁误称其已发布到main。
+- **本地同步验收结果：PASS（已跟踪工作区无变更；原始资料未跟踪目录是已知保留例外）。** 由 `set -e` 严格同步命令可知 Git 与 LFS 命令未报非零退出；这并不等于完成逐个LFS大文件的独立SHA审计。R368仍在Draft，后续本PR元数据更新会推动远端审核分支向前，用户只需在确需阅读最新R368候选时再次fetch，无需重复main pull。
 
 **本轮状态更新不创建新建模任务、工作包或治理体系；只维护既有Project Control及必要交接事实。**
