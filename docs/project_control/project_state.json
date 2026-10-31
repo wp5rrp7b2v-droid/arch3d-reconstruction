@@ -3,9 +3,9 @@
   "project_control_baseline": "2.0",
   "project_id": "ARCH3D-001",
   "project_name": "中国古建筑3D复原",
-  "state_revision": "R366",
-  "last_updated": "2026-10-13",
-  "session_status": "WORK_STOPPED / TWO_LOCAL_APPROVAL_SCOPES_RECORDED / REAR7_FORM_REJECTED / CLOSEOUT_DOCS_MAIN_PUBLICATION / CANDIDATE_BRANCH_ONLY / MAC_SYNC_PENDING",
+  "state_revision": "R368",
+  "last_updated": "2026-10-31",
+  "session_status": "ENGINEERING_STOPPED / PO_REJECTED_PR80_AND_PR81_ASSEMBLIES / GONG_HUA_LING_VISUAL_PASS_ONLY / ANG_FORM_NOT_APPROVED / STATE_UPDATE_DRAFT_PR77 / MAIN_R366_UNCHANGED / MAC_MAIN_SYNC_PASS_R366_R368_DRAFT",
   "phase": {
     "id": "P3",
     "name": "古建筑构件系统化与组合建模",
@@ -28,9 +28,11 @@
   },
   "decision_required": false,
   "blocker": {
-    "id": "REAR_HUA_TYPE_AND_SECTION_BINDING",
-    "scope": "后端候选外形与前端形体种子再复用",
-    "detail": "先核实足材类型、完整材广及局部截取范围；后端七件未批准。"
+    "id": "EAST_FRONT_VALID_ASSEMBLY_AND_ANG_FORM_UNRESOLVED",
+    "scope": "东缝正身柱头：新版华栱、令栱与头昂、二昂及斗/散斗/开槽的真实连接",
+    "detail": "2026-10-31 PO正式不批准PR81 C02整体组装；PR80四件试排亦因缺斗、散斗、槽口及两昂大量穿插而FAIL。PR76华栱、令栱候选仅视觉通过；PR76/78昂形制视觉失败；PR79两昂C01仅技术PASS，PO单件视觉尚未正式批准。必须先明确同一柱头的实例身份、相对层位、真实支承和连接界面，避免再把网格放置当装配。",
+    "technical_assembly_blocker": "PR81 17体独立Boolean检测：头昂与下六椽栿前端2.3666907104mm³ > 1mm³；13组接触面积全部>100mm²不能取代整体连接Gate。",
+    "other_unresolved": "T-018 HOLD / Stage3 NOT CLOSED；后端七件R01形制FAIL，旧后端华栱剖面绑定未解；历史榫卯/强度未知。"
   },
   "temporary_operating_mode": {
     "rule_id": "RC-014",
@@ -67,19 +69,19 @@
   },
   "current_task": {
     "id": null,
-    "name": "2026-10-13收尾登记与本地同步",
-    "status": "ENGINEERING_STOPPED / MAIN_CLOSEOUT_RECORD / MAC_SYNC_PENDING"
+    "name": "2026-10-31 项目状态收尾与Mac从GitHub同步",
+    "status": "GITHUB_R368_CANDIDATE_PUBLICATION / DRAFT_PR77 / ENGINEERING_STOPPED / LOCAL_MAC_MAIN_SYNC_PASS_R366"
   },
   "proposed_next_task": {
     "id": null,
-    "name": "后端二跳华栱实物对应、足材类型及局部截取范围核实",
-    "status": "PROPOSED / NOT_STARTED",
-    "acceptance": "同建筑原图能对应构件身份、剖面方向与材广范围；几何接触通过不能替代外形证明"
+    "name": "同一正身柱头铺作｜真实承托链与新候选接口的最小验证（需另行授权）",
+    "status": "PROPOSED_ONLY / NOT_STARTED / PENDING_PO_SCOPE_AUTHORIZATION",
+    "acceptance": "确认四类目标实例及必要斗、散斗、第二跳和梁的正确层位与原始图纸依据；新候选昂取得PO视觉通过；真实接口/开槽清晰且有可追溯依据；所需接触面积>100mm²并核验法向与间隙；全目标实体穿插≤1mm³；未授权原构件SHA不变；独立BLEND/GLB重读及中文审核图PASS。"
   },
   "last_completed_task": {
     "id": null,
-    "name": "后端七件逐件轮廓复核与多来源补查",
-    "status": "REAR7_R01_FORM_REJECTED / TYPE_SECTION_BLOCKER_IDENTIFIED / NO_MODEL_CHANGE"
+    "name": "PR81 C02整体装配PO审核不通过；本次更新10月31日状态与审批边界",
+    "status": "PO_REJECTED / GEOMETRY_CLASH_FAIL / SOURCE_FILES_PRESERVED / NO_FORMAL_MODEL_PROMOTION"
   },
   "t017_corrected_foundation": {
     "status": "CANONICAL / CORRECTED BY T-019 / D-055 / PARTIAL RULE-GAP DISCOVERED DURING T-018",
@@ -1055,19 +1057,19 @@
       "detail": "后端七件R01非批准候选的完整输入/逐件审核包及多来源核对工作底稿尚未入GitHub；本次无源文件访问，不能宣称全部留存。需在原Work执行环境可再访问时归档至独立非批准工作分支。"
     }
   },
-  "next_action": "先核实后端二跳华栱的实物对应、足材类型、完整材广与局部截取范围；不直接拉伸、镜像扩产。前端种子复用前同步复核。",
+  "next_action": "新窗口先审核PR #76四类栱昂的总览及四张对照图：华栱、令栱、头昂、二昂。PO逐类接受或指出修正，不做开放式调研。获明确形制批准后才启动一处局部试装验证，未批准前不替换89体工作模型。",
   "dashboard": {
     "path": "docs/project_control/dashboard.html",
-    "visualization_version": "v219",
+    "visualization_version": "v220",
     "architecture": "DASHBOARD_V2 / PROJECT_COCKPIT / DERIVED_VISUALIZATION",
     "role": "DERIVED_VISUALIZATION",
     "authoritative": false,
-    "refresh_status": "CLOSEOUT_METADATA_MAIN / CANDIDATE_BINARY_PR69_BRANCH_ONLY / MAC_SYNC_PENDING",
+    "refresh_status": "STATUS_HANDOFF_CANDIDATE_BRANCH_ONLY / MAIN_REMAINS_R366 / NO_NEW_APPROVAL",
     "design_principle": "Show progress, milestone, blocker and next action; keep detailed audit/run/SHA history out of the primary dashboard.",
-    "visualization_snapshot": "v219",
-    "state_revision": "R366",
-    "current_summary": "2026-10-13收尾登记main：两项局部批准仍为分支候选；后端七件退回；缺失候选工作底稿待补档",
-    "historical_section": "COLLAPSED / NOT_CURRENT"
+    "visualization_snapshot": "v220",
+    "state_revision": "R367",
+    "current_summary": "2026-10-27：PR76已上传并核验76文件；五张图待PO视觉审核；PR75 89体几何PASS/外形FAIL；Master/Registry/main不变。",
+    "historical_section": "COLLAPSED / 2026-10-13_R366_CANONICAL_AND_PREVIOUS"
   },
   "superseded_prs": [
     {
@@ -3901,5 +3903,187 @@
     "status": "PENDING_MAC_TERMINAL_EVIDENCE",
     "main_expected_sha": "71b060796ef49de48181d6fa45e0a35c2f8ea199",
     "review_branch": "governance/daily-close-20261013"
+  },
+  "work_handoff_2026_10_27": {
+    "state": "STATUS_RECONCILED_ON_REVIEW_BRANCH / MAIN_PUBLICATION_PENDING",
+    "timestamp_date": "2026-10-27",
+    "source_main_sha": "414be293918fea2bf4138b1a8f4345272e8764a8",
+    "main_state_before": "R366 / 2026-10-13",
+    "proposed_state_on_branch": "R367 / 2026-10-27",
+    "handoff_document": "docs/project_control/WORK_HANDOFF_2026-10-27_ZH.md",
+    "github_repository": "wp5rrp7b2v-droid/arch3d-reconstruction",
+    "current_gate": "P3.3 ACTIVE / P3 GATES 3 OF 4 CLOSED / STAGE3 NOT FORMALLY CLOSED",
+    "approved_master_families": 25,
+    "canonical_registry_record_count": 505,
+    "comparison_registry_not_physical_count": true,
+    "approved_model_scope": "EAST_V011 + WEST_V002 local, and other bounded approved past models; all prior decisions retained",
+    "working_trial_model": {
+      "pr": 75,
+      "status": "DRAFT / GEOMETRY_VALIDATED / PO_FORM_FAIL",
+      "baseline_objects": 82,
+      "added_candidates": 7,
+      "assembly_objects": 89,
+      "new_candidate_brackets": 4,
+      "new_candidate_ang": 0,
+      "original_82_ang_candidates": [
+        "trial:EAST_FRONT_TOU_ANG_LOCAL",
+        "trial:EAST_FRONT_ER_ANG_LOCAL"
+      ],
+      "validation_run": 39354404647,
+      "collision_pairs": 3916,
+      "maximum_overlap_mm3": 0.7532755588978135,
+      "maximum_allowed_overlap_mm3": 1,
+      "contacts_pass": "10/10",
+      "blend_sha256": "5c81c836cc7ca3a229eebe5ac9cb4c62a744b9a1eeb10b0e9683cf0ccd097f13",
+      "glb_sha256": "ed686f2ed81dc0ad0139a320bdd0c99709419c1c401bc1dff3b3635867f5a151"
+    },
+    "form_review": {
+      "pr": 76,
+      "branch": "review/gong-ang-form-v001-20261021",
+      "head_sha": "028517cbdada6cb266feae17f58ae0a7888c4a93",
+      "status": "OPEN DRAFT / PO_VISUAL_APPROVAL_PENDING",
+      "published_files": 76,
+      "published_bytes": 10275157,
+      "github_comparison": "76_ADDED / 0_MODIFIED / 0_DELETED",
+      "published_download_hash_confirmation": "76/76 per PR76 independent re-download record; NOT rerun in this status task",
+      "overview_png": "review/gong_ang_form_v001/output/OVERVIEW_ZH.png",
+      "four_detail_pngs": [
+        "HUAGONG_COMPARISON_ZH.png",
+        "LINGGONG_COMPARISON_ZH.png",
+        "TOUANG_COMPARISON_ZH.png",
+        "ERANG_COMPARISON_ZH.png"
+      ],
+      "source_trial_meshes": 8,
+      "source_master_geometry_bodies": 5,
+      "new_independent_candidate_bodies": 7,
+      "source_materials_and_geometry_changed": false,
+      "post_replacement_contacts": "NOT_TESTED",
+      "candidate_approved": false
+    },
+    "visual_material_prs": {
+      "atlas": 72,
+      "quickview": 73,
+      "form_reference": 74,
+      "all_open_draft": true,
+      "do_not_expand_research": true
+    },
+    "no_new_governance_rules": true,
+    "no_new_po_material_decision": true,
+    "no_new_geometry_or_registry_change": true,
+    "published_to_main": false,
+    "local_mac_git_sync": "NO_NEW_TERMINAL_EVIDENCE",
+    "required_next_review": "PO VISUAL REVIEW / NOT STARTED",
+    "next_build_gate": "CONDITIONAL_ON_PO_VISUAL_ACCEPTANCE"
+  },
+  "closeout_2026_10_31": {
+    "status": "DRAFT_PROJECT_CONTROL_ON_PR77 / PO_ASSEMBLY_REJECTION_RECORDED / MAIN_NOT_MERGED / MAC_SYNC_NOT_EXECUTED",
+    "date": "2026-10-31",
+    "timezone": "Asia/Shanghai",
+    "main_sha_observed": "414be293918fea2bf4138b1a8f4345272e8764a8",
+    "formal_main_revision": "R366",
+    "prior_candidate_revision": "R367",
+    "this_candidate_revision": "R368",
+    "source_pulls": [
+      {
+        "pr": 75,
+        "status": "DRAFT / 89_TRIAL_GEOMETRY_PASS / PO_FORM_FAIL",
+        "new_objects": 7,
+        "original_objects": 82,
+        "full_assembly_approved": false
+      },
+      {
+        "pr": 76,
+        "status": "DRAFT",
+        "hua_gong_visual": "PASS_CANDIDATE_ONLY",
+        "ling_gong_visual": "PASS_CANDIDATE_ONLY",
+        "tou_ang_visual": "FAIL",
+        "er_ang_visual": "FAIL"
+      },
+      {
+        "pr": 78,
+        "status": "DRAFT / ANG_V002_PO_VISUAL_FAIL",
+        "whole_model_replacement": false
+      },
+      {
+        "pr": 79,
+        "status": "DRAFT / ANG_C01_TECH_PASS / PO_VISUAL_PENDING",
+        "historical_full_form": "NOT_PROVEN"
+      },
+      {
+        "pr": 80,
+        "status": "DRAFT / PO_REJECTED_AS_ASSEMBLY / NO_REAL_CONNECTIONS",
+        "ang_pair_overlap_mm3": 27096154.654,
+        "source_mesh_replaced": false
+      },
+      {
+        "pr": 81,
+        "status": "DRAFT / PO_ASSEMBLY_REJECTED_2026_10_31 / STRUCTURE_FAIL",
+        "source": "PR75_LEGACY_17_MEMBER_CONNECTED_SEED",
+        "measured_contact_pairs": 13,
+        "contact_areas_all_gt_100mm2": true,
+        "boolean_pairs": 136,
+        "excess_pair_count": 1,
+        "excess_pair_overlap_mm3": 2.3666907104294905,
+        "allowed_mm3": 1,
+        "cloud_binary_reopen": "PASS",
+        "visual_qa": "PASS",
+        "current_rebuild_approved": false
+      }
+    ],
+    "decision_ref": "https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/81#issuecomment-6540330110",
+    "handoff": "docs/project_control/WORK_HANDOFF_2026-10-31_ZH.md",
+    "protected_assets_unchanged": [
+      "formal Masters 25",
+      "Registry V008 505",
+      "east V011 & west V002 approved local models",
+      "prior approved local C02 Oct13/upper6 front C01",
+      "PR75 original 89 trial binary"
+    ],
+    "master_changes": false,
+    "registry_changes": false,
+    "new_assembly_approved": false,
+    "stage3_closed": false,
+    "local_mac_sync": {
+      "status": "PASS_AT_MAIN_R366_CHECKPOINT / TRACKED_WORKTREE_CLEAN / ORIGINAL_SOURCES_UNTRACKED_PRESERVED",
+      "evidence": "USER_MAC_TERMINAL_OUTPUT_2026_10_31",
+      "method": "git-proxy-auto fetch origin + git-proxy-auto pull --ff-only origin main + git-proxy-auto lfs pull origin main",
+      "branch": "main",
+      "local_head": "414be293918fea2bf4138b1a8f4345272e8764a8",
+      "remote_main": "414be293918fea2bf4138b1a8f4345272e8764a8",
+      "main_head_equal": true,
+      "terminal_success_marker": "MAIN SYNC PASS",
+      "r368_fetched_remote_tracking_head": "4eeb8aae640ad20783aa6a39a60e0c796b93098f",
+      "r368_not_merged_into_main": true,
+      "tracked_changes": false,
+      "remaining_untracked": "docs/evidence/zhenguo_wanfo/original sources/",
+      "original_sources_preserved": true,
+      "lfs_command_exit_success_in_set_e": true,
+      "lfs_per_file_hash_independently_audited": false,
+      "mac_command_invoked_by_user": true,
+      "mac_direct_execution_by_assistant": false,
+      "remark": "Git同步主线成功；R368候选仍在Draft PR77，更新此记录将使Mac的R368跟踪分支落后新提交，若需读取最新候选需再fetch；不影响main同步结果。"
+    },
+    "main_merge_authorized": false
+  },
+  "local_sync_2026_10_31": {
+    "status": "PASS_AT_MAIN_R366_CHECKPOINT / TRACKED_WORKTREE_CLEAN / ORIGINAL_SOURCES_UNTRACKED_PRESERVED",
+    "evidence": "USER_MAC_TERMINAL_OUTPUT_2026_10_31",
+    "method": "git-proxy-auto fetch origin + git-proxy-auto pull --ff-only origin main + git-proxy-auto lfs pull origin main",
+    "branch": "main",
+    "local_head": "414be293918fea2bf4138b1a8f4345272e8764a8",
+    "remote_main": "414be293918fea2bf4138b1a8f4345272e8764a8",
+    "main_head_equal": true,
+    "terminal_success_marker": "MAIN SYNC PASS",
+    "r368_fetched_remote_tracking_head": "4eeb8aae640ad20783aa6a39a60e0c796b93098f",
+    "r368_not_merged_into_main": true,
+    "tracked_changes": false,
+    "remaining_untracked": "docs/evidence/zhenguo_wanfo/original sources/",
+    "original_sources_preserved": true,
+    "lfs_command_exit_success_in_set_e": true,
+    "lfs_per_file_hash_independently_audited": false,
+    "mac_command_invoked_by_user": true,
+    "mac_direct_execution_by_assistant": false,
+    "remark": "Git同步主线成功；R368候选仍在Draft PR77，更新此记录将使Mac的R368跟踪分支落后新提交，若需读取最新候选需再fetch；不影响main同步结果。",
+    "scope": "GitHub main R366 / R368 remote tracking fetch; not R368 main publication"
   }
 }

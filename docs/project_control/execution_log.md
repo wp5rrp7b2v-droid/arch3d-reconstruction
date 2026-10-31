@@ -2257,3 +2257,39 @@ R364/v217；无Master晋升、无505记录变化、无Stage3关闭、历史榫�
 详细记录：docs/assembly/daily_close/2026-10-13/DAILY_CLOSEOUT_ZH.md。
 
 - 2026-10-13晚：Chat接手Work收尾，核对PR69、两条云端运行与二进制哈希绑定；处理仅元数据日终登记分支，候选二进制不晋升main。PR69原CI失败：Dashboard当前首页字段不一致；T039历史断言冲突。没有修改T039批准字段或工程模型。本地Mac同步未验证。
+
+
+## 2026-10-27｜新窗口状态同步执行记录（非工程生产，R367候选）
+
+- 用户指令：将最新项目状态写入GitHub，以便另开窗口开始工作。**本次仅授权项目状态整理与审核分支写入；正式基线变化与main合并不据此推定获批。**
+- GitHub只读回查：main=`414be293918fea2bf4138b1a8f4345272e8764a8`、Project State R366／2026-10-13、Dashboard历史首页；PR #72、#73、#74、#75、#76均为开放Draft。相应具体sha与证据范围载于`WORK_HANDOFF_2026-10-27_ZH.md`。
+- PR #75的89实体、3916对交叠、10/10新增接触及BLEND/GLB身份仅**引用其既有实际验证记录**；本轮不执行新的Blender建模或碰撞重跑。该PR的PO视觉外形结论为FAIL。
+- PR #76已具有公开归档的76个文件（PR文件对比为76新增/0改动/0删除）、五张实际对照图与交付校验记录，当前候选形制PENDING_PO_VISUAL_APPROVAL；本轮不假称重新逐件下载计算76个SHA256。
+- 创建独立状态同步分支 `governance/wanfo-status-handoff-20261027`，拟更新 `project_state.json`至R367候选、Dashboard v220候选及本验收/执行记录，并增加跨窗口交接。既有D-299仍为最后正式物质决策，不伪造新D号。
+- **保护范围**：没有修改正式Master、89实体BLEND/GLB、Registry、历史批准快照、治理规则或主线main。没有合并任何PR、晋升候选或认定Stage3关闭。Mac无本次终端同步证据。
+- 下一步仅待PO审查PR #76四类栱昂；新形制确认后另行启动一处受控局部试装，先解决形制与坐标/类型映射，再做几何接触与穿插复验。
+
+
+## 2026-10-31｜10月下旬栱昂试作、组装失败复核与状态收尾（R368候选）
+
+**2026-10-27至31的实际GitHub成果：** 
+- PR #76：华栱、令栱V001经PO视觉PASS（仅候选形制）；头昂、二昂V001视觉FAIL。
+- PR #78：昂V002（取消零厚度端点，按推断参数生成）技术交付PASS，但PO视觉FAIL；原图A/B/C是下昂交接参考点，不能作为头昂、二昂、耍头编号。
+- PR #79：按选定示意图制作头昂、二昂C01候选，云端 Blender 4.5.13 LTS生成/重读两个GLB和中文图技术PASS；PO单件形制未有明确PASS，端厚与削切长度为工程推断。
+- PR #80：四件刚体排放未设置必要斗／散斗／槽口/可用连接，头昂—二昂Boolean穿插约27,096,154.654mm³；PO将该项组装判FAIL。技术文件回读与哈希PASS仅属于文件Gate。
+- PR #81：连接优先重建，以PR75旧几何提取17件含柱头栌斗、交互斗、散斗、两跳华栱、两道昂及相关梁材；136配对Boolean检查中旧头昂与下六椽栿端段穿插2.3666907104mm³>1mm³；13组预选共面接触面积>100mm²。云端BLEND/GLB独立重读PASS，最终三张审核图非空QA PASS；但旧昂形制未获接受，PR76栱与PR79昂未实际替换入带槽接口。**PO于10月31日明确拒绝整个C02组装**。技术验证PASS不改变该审批结论。
+- 以上PR当前均为OPEN DRAFT，未并入main。其资料、工作模型和失败记录均保留于相应分支，不将旧试排作为新工程基线。
+
+**今日状态动作：** 回查GitHub main `414be293918fea2bf4138b1a8f4345272e8764a8`（R366）及待审PR77 R367候选；补充 `WORK_HANDOFF_2026-10-31_ZH.md`、R368候选状态、Dashboard及此日志、验收矩阵。无新Blender建模、Master/Registry更改、正式模型合并或新工程任务授权。完整来源和事实等级见10月31日交接文档。
+
+**本地同步：** 不能由当前云端会话执行用户Mac上的`git pull`；无终端HEAD和干净工作区证据，**未执行/未验收**。只允许从GitHub拉取main与候选分支，不生成ZIP，不将Draft候选合并本地main。待Mac终端输出核实后方可标PASS。
+
+
+### 2026-10-31｜Mac本地main同步证据验收补记
+
+- 用户Mac终端在 `set -e` 的受保护脚本中执行 `git-proxy-auto fetch origin`、`git-proxy-auto pull --ff-only origin main` 和 `git-proxy-auto lfs pull origin main`，显示 `Already up to date`、`MAIN SYNC PASS`。
+- 本地HEAD和origin/main：`414be293918fea2bf4138b1a8f4345272e8764a8`，**完全一致**；main仍正式R366，未合并PR #77的R368候选。
+- Mac终端输出记录审核分支当时的origin跟踪SHA：`4eeb8aae640ad20783aa6a39a60e0c796b93098f`；用户Mac只执行fetch，没有checkout/merge审核分支。
+- `git status --short`剩余：`?? "docs/evidence/zhenguo_wanfo/original sources/"`。它是未跟踪原始资料，按用户要求保留，不删除、移动、强制reset或clean；所有**已跟踪文件干净**，所以main同步结果判PASS。
+- Git LFS命令随`set -e`正常完成，未单独逐件复核LFS文件哈希；不可宣称所有原始大文件逐字节独立复核。
+- 同步证据由用户Mac输出提供，**本会话未直接访问或操控Mac**；云端PR77分支此后可继续有审计记录提交，不改变main同步结论。
