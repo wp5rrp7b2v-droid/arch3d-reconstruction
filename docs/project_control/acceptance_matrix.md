@@ -1692,3 +1692,26 @@ R364/v217；无Master晋升、无505记录变化、无Stage3关闭、历史榫�
 **下一工作单元验收**：PO对华栱（第一跳/第二跳与隔架区分）、令栱、头昂、二昂分别明确形制方向。未明确批准前不启动新89件替换；获批准后只对一处局部做保存重开、源件不变、接触、交叠及视觉复验。
 
 核查入口：`docs/project_control/WORK_HANDOFF_2026-10-27_ZH.md`、[PR #75](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/75)、[PR #76](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/76)。
+
+
+## 2026-10-31｜四类栱昂与连接重建的 PO Gate 复核（R368候选）
+
+本节记录10月27日后实际PO审核及GitHub已归档的工程事实。**状态更新在Draft PR #77，不变更已批准Master/Registry或main。**
+
+| 对象与依据 | 技术Gate | PO视觉 / 连接Gate | 可作为正式装配输入？ |
+| --- | --- | --- | --- |
+| [PR76华栱、令栱V001](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/76) | 候选GLB等交付验证PASS | **形制方向PO PASS**；具体接口/实例未验 | 仅可作下一轮明确指定实例的视觉参照，不自动替换旧模型 |
+| [PR76头昂、二昂V001](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/76) | 候选技术交付PASS | **视觉FAIL** | 否 |
+| [PR78两昂V002](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/78) | 云端模型与GLB技术PASS | **视觉FAIL** | 否 |
+| [PR79两昂C01](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/79) | Blender4.5 GLB生成/重读PASS | **PO逐类形制PENDING**；参考示意与端部数值不是官方实测 | 否；仅候选 |
+| [PR80四件空间试排](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/80) | 四网格GLB重读及六配对检查完成 | **装配FAIL/PO退回**：无必要散斗、槽口与可用连接；两昂交叠27,096,154.654mm³ | 否 |
+| [PR81连接优先C02旧工作形制17件](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/81) | 13组选定共面面积>100mm²；BLEND/GLB重读PASS；三张图非空QA PASS；136配对测试 | **PO不批准整体组装**；头昂—下六椽栿前端交叠2.3666907104mm³>1mm³；新版四类栱昂尚未实际安装 | 否；仅失败诊断／旧接口参考 |
+| [PR75 89实体](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/75) | 历史记录：3916对最大0.753275559mm³<1mm³；10/10接触、89件重读PASS | PO已否决栱昂外观；不可援引几何PASS视作新版形制批准 | 旧试装保留，不是新的完整装配基线 |
+
+**独立Gate结论：** 现阶段没有一组同时取得“新栱昂PO视觉认可＋真实斗/散斗/开槽接入＋实际连接及接触验证＋全目标穿插≤1mm³＋PO整体审核”完整PASS的正身柱头装配。**PR80与PR81均不得标记Approved或合并main。**
+
+**PO最新明确决议：** 2026-10-31「这个组装不批准」→ [PR81正式审核评论](https://github.com/wp5rrp7b2v-droid/arch3d-reconstruction/pull/81#issuecomment-6540330110)。此结论不撤销此前13组共面接触面积的实际测量结果，但明确否决其作为合格组装的用途。
+
+**下一项独立最小验证（提议，未授权生产）：** 在同一正身柱头选一处接口，先证实正确实例/必要连接件/槽口/承托链，再验证新候选视觉与连接几何。PASS: 原件保护、明确接口接触面积与法向/间隙、实测交叠≤1mm³、Blender保存/重读、PO视觉均满足；FAIL: 缺构件或接触失效/超阈/仍用未批准昂外形，则停止并回报。
+
+**本地Mac同步：PENDING，尚无终端证据；R368仍位于Draft PR77，main正式R366。**
