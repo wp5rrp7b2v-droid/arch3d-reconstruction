@@ -2283,3 +2283,13 @@ R364/v217；无Master晋升、无505记录变化、无Stage3关闭、历史榫�
 **今日状态动作：** 回查GitHub main `414be293918fea2bf4138b1a8f4345272e8764a8`（R366）及待审PR77 R367候选；补充 `WORK_HANDOFF_2026-10-31_ZH.md`、R368候选状态、Dashboard及此日志、验收矩阵。无新Blender建模、Master/Registry更改、正式模型合并或新工程任务授权。完整来源和事实等级见10月31日交接文档。
 
 **本地同步：** 不能由当前云端会话执行用户Mac上的`git pull`；无终端HEAD和干净工作区证据，**未执行/未验收**。只允许从GitHub拉取main与候选分支，不生成ZIP，不将Draft候选合并本地main。待Mac终端输出核实后方可标PASS。
+
+
+### 2026-10-31｜Mac本地main同步证据验收补记
+
+- 用户Mac终端在 `set -e` 的受保护脚本中执行 `git-proxy-auto fetch origin`、`git-proxy-auto pull --ff-only origin main` 和 `git-proxy-auto lfs pull origin main`，显示 `Already up to date`、`MAIN SYNC PASS`。
+- 本地HEAD和origin/main：`414be293918fea2bf4138b1a8f4345272e8764a8`，**完全一致**；main仍正式R366，未合并PR #77的R368候选。
+- Mac终端输出记录审核分支当时的origin跟踪SHA：`4eeb8aae640ad20783aa6a39a60e0c796b93098f`；用户Mac只执行fetch，没有checkout/merge审核分支。
+- `git status --short`剩余：`?? "docs/evidence/zhenguo_wanfo/original sources/"`。它是未跟踪原始资料，按用户要求保留，不删除、移动、强制reset或clean；所有**已跟踪文件干净**，所以main同步结果判PASS。
+- Git LFS命令随`set -e`正常完成，未单独逐件复核LFS文件哈希；不可宣称所有原始大文件逐字节独立复核。
+- 同步证据由用户Mac输出提供，**本会话未直接访问或操控Mac**；云端PR77分支此后可继续有审计记录提交，不改变main同步结论。
