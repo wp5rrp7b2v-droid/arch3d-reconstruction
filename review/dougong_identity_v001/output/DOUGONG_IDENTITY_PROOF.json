@@ -1,0 +1,602 @@
+{
+  "timestamp_utc": "2026-11-07T05:49:07.714733+00:00",
+  "source_url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
+  "source_kind": "public_interactive_museum_exhibit_model",
+  "source_https_identity": "UNVERIFIED_TLS_EXPIRED_FROM_G0",
+  "third_party_license": "UNKNOWN_NOT_AUTHORIZED_FOR_PUBLIC_REDISTRIBUTION",
+  "downloaded_external_source_in_git": false,
+  "downloaded_external_source_in_artifact": false,
+  "model_mesh_redistributed": false,
+  "render_artifact_expiration_days": 7,
+  "A1_reference": "A1-p073.jpg (PDF73/print58), A1-p060.jpg (PDF60/print45), PR76 provenance",
+  "A1_independent_same_member_correspondence": "NOT_PROVEN",
+  "member_approval": "NOT_APPROVED",
+  "result": "VIEWS_PASS_EXACT_IDENTITY_FAIL",
+  "errors": [],
+  "passes": {
+    "public_binary_geometry_retrieved": true,
+    "semantic_identification_of_two_members": false,
+    "same_east_front_physical_instance": false,
+    "two_independent_views": true,
+    "visual_member_evidence_sufficient": false
+  },
+  "downloads": [
+    {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
+      "status": 200,
+      "bytes": 76038,
+      "sha256": "ac0687694715029a7b906bfdaa13578c578a01640e5cfeba1dbd29749dae6f1b",
+      "ephemeral_only": true
+    },
+    {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.bin",
+      "status": 200,
+      "bytes": 477064,
+      "sha256": "940224e259dfcce31f2a11aa58780422a38bcf0de869a2b1c72762321f0abc32",
+      "ephemeral_only": true
+    }
+  ],
+  "node_metadata": {
+    "gltf_version": "2.0",
+    "source_node_count": 97,
+    "source_mesh_count": 96,
+    "scene_count": 1,
+    "root_scenes": 0,
+    "nodes_with_mesh": 96,
+    "node_name_counts": {},
+    "node_names_sample": [
+      {
+        "id": 0,
+        "name": "组003"
+      },
+      {
+        "id": 1,
+        "name": "polySurface9904"
+      },
+      {
+        "id": 2,
+        "name": "polySurface9905"
+      },
+      {
+        "id": 3,
+        "name": "polySurface9906"
+      },
+      {
+        "id": 4,
+        "name": "polySurface9907"
+      },
+      {
+        "id": 5,
+        "name": "polySurface9908"
+      },
+      {
+        "id": 6,
+        "name": "polySurface9909"
+      },
+      {
+        "id": 7,
+        "name": "polySurface9910"
+      },
+      {
+        "id": 8,
+        "name": "polySurface9911"
+      },
+      {
+        "id": 9,
+        "name": "polySurface9912"
+      },
+      {
+        "id": 10,
+        "name": "polySurface9913"
+      },
+      {
+        "id": 11,
+        "name": "polySurface9914"
+      },
+      {
+        "id": 12,
+        "name": "polySurface9915"
+      },
+      {
+        "id": 13,
+        "name": "polySurface9916"
+      },
+      {
+        "id": 14,
+        "name": "polySurface9917"
+      },
+      {
+        "id": 15,
+        "name": "polySurface9918"
+      },
+      {
+        "id": 16,
+        "name": "polySurface9919"
+      },
+      {
+        "id": 17,
+        "name": "polySurface9920"
+      },
+      {
+        "id": 18,
+        "name": "polySurface9921"
+      },
+      {
+        "id": 19,
+        "name": "polySurface9922"
+      },
+      {
+        "id": 20,
+        "name": "polySurface9923"
+      },
+      {
+        "id": 21,
+        "name": "polySurface9924"
+      },
+      {
+        "id": 22,
+        "name": "polySurface9925"
+      },
+      {
+        "id": 23,
+        "name": "polySurface9926"
+      },
+      {
+        "id": 24,
+        "name": "polySurface9927"
+      },
+      {
+        "id": 25,
+        "name": "polySurface9928"
+      },
+      {
+        "id": 26,
+        "name": "polySurface9929"
+      },
+      {
+        "id": 27,
+        "name": "polySurface9930"
+      },
+      {
+        "id": 28,
+        "name": "polySurface9931"
+      },
+      {
+        "id": 29,
+        "name": "polySurface9932"
+      }
+    ],
+    "generic_named_nodes": 96,
+    "semantic_hits": {
+      "ludou": [],
+      "jump1": [],
+      "huagong": [],
+      "dougong": [],
+      "column": []
+    },
+    "notes": "polySurface is an arbitrary DCC name, NOT a reliable historical component ID",
+    "asset_up_axis": "UNKNOWN",
+    "buffer_count": 1,
+    "blender_mesh_objects": 96,
+    "whole_bbox_min_gltf_unit": [
+      -0.5638987421989441,
+      -0.4096205234527588,
+      -0.3220692574977875
+    ],
+    "whole_bbox_max_gltf_unit": [
+      0.5638999938964844,
+      0.4096204340457916,
+      0.25537002086639404
+    ],
+    "whole_bbox_extent_gltf_unit": [
+      1.1277987957000732,
+      0.819240927696228,
+      0.5774393081665039
+    ],
+    "whole_bbox_units_are_historically_calibrated": false,
+    "anonymous_mesh_bounding_summary": [
+      {
+        "source_object_name": "polySurface9941",
+        "local_index": 37,
+        "mesh_vertices": 230,
+        "bbox_min": [
+          0.056838683784008026,
+          -0.06994976103305817,
+          -0.3220692574977875
+        ],
+        "bbox_max": [
+          0.18072554469108582,
+          0.0539223849773407,
+          -0.244649738073349
+        ]
+      },
+      {
+        "source_object_name": "polySurface9986",
+        "local_index": 82,
+        "mesh_vertices": 102,
+        "bbox_min": [
+          0.1071414202451706,
+          -0.02726142853498459,
+          -0.2756141722202301
+        ],
+        "bbox_max": [
+          0.23487579822540283,
+          0.011449584737420082,
+          -0.2214246392250061
+        ]
+      },
+      {
+        "source_object_name": "polySurface9961",
+        "local_index": 57,
+        "mesh_vertices": 356,
+        "bbox_min": [
+          0.09944182634353638,
+          -0.13378028571605682,
+          -0.2756141424179077
+        ],
+        "bbox_max": [
+          0.1381431519985199,
+          0.1178262010216713,
+          -0.20442207157611847
+        ]
+      },
+      {
+        "source_object_name": "polySurface9905",
+        "local_index": 1,
+        "mesh_vertices": 168,
+        "bbox_min": [
+          -0.020592957735061646,
+          -0.027261465787887573,
+          -0.2756139934062958
+        ],
+        "bbox_max": [
+          0.1071414202451706,
+          0.011449545621871948,
+          -0.22142447531223297
+        ]
+      },
+      {
+        "source_object_name": "polySurface9988",
+        "local_index": 84,
+        "mesh_vertices": 60,
+        "bbox_min": [
+          0.12650176882743835,
+          -0.023389358073472977,
+          -0.22723037004470825
+        ],
+        "bbox_max": [
+          0.18843047320842743,
+          0.0075823599472641945,
+          -0.22142454981803894
+        ]
+      },
+      {
+        "source_object_name": "polySurface9982",
+        "local_index": 78,
+        "mesh_vertices": 128,
+        "bbox_min": [
+          0.17875823378562927,
+          -0.038873977959156036,
+          -0.22142478823661804
+        ],
+        "bbox_max": [
+          0.24456389248371124,
+          0.0230608731508255,
+          -0.17884422838687897
+        ]
+      },
+      {
+        "source_object_name": "polySurface9927",
+        "local_index": 23,
+        "mesh_vertices": 128,
+        "bbox_min": [
+          0.08783065527677536,
+          0.06169826537370682,
+          -0.22142471373081207
+        ],
+        "bbox_max": [
+          0.1497546285390854,
+          0.12750640511512756,
+          -0.17884406447410583
+        ]
+      },
+      {
+        "source_object_name": "polySurface9987",
+        "local_index": 83,
+        "mesh_vertices": 92,
+        "bbox_min": [
+          0.12650176882743835,
+          -0.023389358073472977,
+          -0.22142471373081207
+        ],
+        "bbox_max": [
+          0.18843047320842743,
+          0.0075823599472641945,
+          -0.19432014226913452
+        ]
+      },
+      {
+        "source_object_name": "polySurface9963",
+        "local_index": 59,
+        "mesh_vertices": 128,
+        "bbox_min": [
+          0.08783065527677536,
+          -0.14345557987689972,
+          -0.2214246243238449
+        ],
+        "bbox_max": [
+          0.14975447952747345,
+          -0.07765232026576996,
+          -0.17884406447410583
+        ]
+      },
+      {
+        "source_object_name": "polySurface9989",
+        "local_index": 85,
+        "mesh_vertices": 104,
+        "bbox_min": [
+          0.0761747732758522,
+          -0.027261389419436455,
+          -0.2214246243238449
+        ],
+        "bbox_max": [
+          0.13811324536800385,
+          0.011449545621871948,
+          -0.19432014226913452
+        ]
+      },
+      {
+        "source_object_name": "polySurface9923",
+        "local_index": 19,
+        "mesh_vertices": 96,
+        "bbox_min": [
+          0.025857236236333847,
+          -0.023389358073472977,
+          -0.22142454981803894
+        ],
+        "bbox_max": [
+          0.08778594434261322,
+          0.0075823599472641945,
+          -0.1943199783563614
+        ]
+      },
+      {
+        "source_object_name": "polySurface9924",
+        "local_index": 20,
+        "mesh_vertices": 128,
+        "bbox_min": [
+          -0.03027496114373207,
+          -0.038873977959156036,
+          -0.22142447531223297
+        ],
+        "bbox_max": [
+          0.035530854016542435,
+          0.0230608731508255,
+          -0.1788439154624939
+        ]
+      },
+      {
+        "source_object_name": "polySurface9990",
+        "local_index": 86,
+        "mesh_vertices": 104,
+        "bbox_min": [
+          0.10714217275381088,
+          -0.027261465787887573,
+          -0.19432036578655243
+        ],
+        "bbox_max": [
+          0.31229841709136963,
+          0.011449584737420082,
+          -0.14013801515102386
+        ]
+      },
+      {
+        "source_object_name": "polySurface9948",
+        "local_index": 44,
+        "mesh_vertices": 166,
+        "bbox_min": [
+          0.09944213926792145,
+          -0.007974587380886078,
+          -0.1943202167749405
+        ],
+        "bbox_max": [
+          0.13814345002174377,
+          0.1991201788187027,
+          -0.14013801515102386
+        ]
+      },
+      {
+        "source_object_name": "polySurface9936",
+        "local_index": 32,
+        "mesh_vertices": 166,
+        "bbox_min": [
+          0.09944213926792145,
+          -0.21506813168525696,
+          -0.19432014226913452
+        ],
+        "bbox_max": [
+          0.13814345002174377,
+          -0.007974624633789062,
+          -0.14013801515102386
+        ]
+      },
+      {
+        "source_object_name": "polySurface9904",
+        "local_index": 0,
+        "mesh_vertices": 168,
+        "bbox_min": [
+          -0.09800934046506882,
+          -0.027261465787887573,
+          -0.19432006776332855
+        ],
+        "bbox_max": [
+          0.10714217275381088,
+          0.011449584737420082,
+          -0.14013779163360596
+        ]
+      },
+      {
+        "source_object_name": "polySurface9908",
+        "local_index": 4,
+        "mesh_vertices": 458,
+        "bbox_min": [
+          0.09167572110891342,
+          -0.4096205234527588,
+          -0.17934830486774445
+        ],
+        "bbox_max": [
+          0.12258483469486237,
+          0.40888988971710205,
+          0.2003861963748932
+        ]
+      },
+      {
+        "source_object_name": "polySurface9930",
+        "local_index": 26,
+        "mesh_vertices": 30,
+        "bbox_min": [
+          -0.2218860536813736,
+          -0.02726161852478981,
+          -0.1761637032032013
+        ],
+        "bbox_max": [
+          0.46757185459136963,
+          0.011449698358774185,
+          0.13082411885261536
+        ]
+      },
+      {
+        "source_object_name": "polySurface9985",
+        "local_index": 81,
+        "mesh_vertices": 144,
+        "bbox_min": [
+          0.12650251388549805,
+          -0.02338939532637596,
+          -0.14594390988349915
+        ],
+        "bbox_max": [
+          0.27359235286712646,
+          0.0075823599472641945,
+          -0.11303360015153885
+        ]
+      },
+      {
+        "source_object_name": "polySurface9971",
+        "local_index": 67,
+        "mesh_vertices": 128,
+        "bbox_min": [
+          0.08783065527677536,
+          0.14299216866493225,
+          -0.14013808965682983
+        ],
+        "bbox_max": [
+          0.14975447952747345,
+          0.20879791676998138,
+          -0.0975550040602684
+        ]
+      },
+      {
+        "source_object_name": "polySurface9983",
+        "local_index": 79,
+        "mesh_vertices": 180,
+        "bbox_min": [
+          0.2619810700416565,
+          -0.04085029661655426,
+          -0.14013808965682983
+        ],
+        "bbox_max": [
+          0.3239097595214844,
+          0.024957846850156784,
+          -0.09755507856607437
+        ]
+      },
+      {
+        "source_object_name": "polySurface9945",
+        "local_index": 41,
+        "mesh_vertices": 128,
+        "bbox_min": [
+          0.08783096075057983,
+          -0.2247452437877655,
+          -0.14013801515102386
+        ],
+        "bbox_max": [
+          0.14975494146347046,
+          -0.1589413732290268,
+          -0.097555011510849
+        ]
+      },
+      {
+        "source_object_name": "polySurface9984",
+        "local_index": 80,
+        "mesh_vertices": 104,
+        "bbox_min": [
+          0.07617538422346115,
+          -0.027261771261692047,
+          -0.14013801515102386
+        ],
+        "bbox_max": [
+          0.1381138563156128,
+          0.011466979049146175,
+          -0.11303345113992691
+        ]
+      },
+      {
+        "source_object_name": "polySurface9995",
+        "local_index": 91,
+        "mesh_vertices": 96,
+        "bbox_min": [
+          -0.059308167546987534,
+          -0.023389358073472977,
+          -0.1401379406452179
+        ],
+        "bbox_max": [
+          0.08778662979602814,
+          0.007582398131489754,
+          -0.11303337663412094
+        ]
+      },
+      {
+        "source_object_name": "polySurface9926",
+        "local_index": 22,
+        "mesh_vertices": 104,
+        "bbox_min": [
+          -0.10962554812431335,
+          -0.04085029661655426,
+          -0.14013777673244476
+        ],
+        "bbox_max": [
+          -0.047696761786937714,
+          0.024957846850156784,
+          -0.11303321272134781
+        ]
+      }
+    ]
+  },
+  "identity_classification": "FAIL_EXACT_LUDOU_HUA1_IDENTITY_NOT_DERIVABLE_FROM_SOURCE_LABELS",
+  "views": [
+    {
+      "filename": "MUSEUM_DOUGONG_ISOMETRIC.png",
+      "label": "MUSEUM_DOUGONG_ISOMETRIC",
+      "bytes": 1222547,
+      "sha256": "25a6a33f5f4d55b2b6cbcc0b05d1a1b77d8dacfa4b88c8133065642284d80850",
+      "temporary_artifact_only": true,
+      "purpose": "whole unlabelled gong assembly orientation view, NOT approved member evidence"
+    },
+    {
+      "filename": "MUSEUM_DOUGONG_OPPOSITE.png",
+      "label": "MUSEUM_DOUGONG_OPPOSITE",
+      "bytes": 1203007,
+      "sha256": "872537d3e42f323b9d0c2d85296b06160e77aa069098b4ecdeadfdaf3675bfd9",
+      "temporary_artifact_only": true,
+      "purpose": "whole unlabelled gong assembly orientation view, NOT approved member evidence"
+    },
+    {
+      "filename": "MUSEUM_DOUGONG_SIDE.png",
+      "label": "MUSEUM_DOUGONG_SIDE",
+      "bytes": 1177859,
+      "sha256": "57d86cb1f264783cbce1b858b7f286bad3a84c05fa585d387429dca84338b93d",
+      "temporary_artifact_only": true,
+      "purpose": "whole unlabelled gong assembly orientation view, NOT approved member evidence"
+    }
+  ]
+}
