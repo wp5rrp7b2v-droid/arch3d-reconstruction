@@ -1,26 +1,35 @@
 {
   "source": "https://szbwgvue.chwhyun.cn/wanfodian/",
-  "test_date_utc": "2026-11-07T05:09:21.621776+00:00",
+  "test_date_utc": "2026-11-07T05:11:08.884624+00:00",
   "scope": "public site single-visit browser feasibility, no model extraction",
   "browser": "Chromium headless Playwright",
-  "page_reached": false,
-  "page_title": "",
-  "nav_http_status": null,
+  "page_reached": true,
+  "tls_certificate_validation": "FAIL_CERT_DATE_INVALID",
+  "tls_diagnostic_ignore_errors": true,
+  "reference_use_gate": "FAIL_UNVERIFIED_TLS_SOURCE",
+  "certificate_dates": {
+    "notBefore": "Mar 30 06:47:24 2026 GMT",
+    "notAfter": "Oct 15 06:47:23 2026 GMT",
+    "subject": "CN=*.chwhyun.cn",
+    "issuer": "C=CN, O=Beijing Xinchacha Credit Management Co., Ltd., CN=Xcc Trust DV SSL CA"
+  },
+  "page_title": "万佛殿",
+  "nav_http_status": 200,
   "target_text_found": [],
   "target_text_visible": [],
-  "site_media_images_total": 0,
-  "site_media_images_loaded": 0,
+  "site_media_images_total": 270,
+  "site_media_images_loaded": 15,
   "near_target_media_loaded": 0,
   "near_target_media_examples": [],
   "same_instance_east_front_column_head": "NOT_PROVEN",
   "3d_network_candidate_urls": [],
-  "canvas_count": 0,
+  "canvas_count": 5,
   "iframe_count": 0,
   "screenshots": [
     {
       "filename": "01_website_initial_view.png",
-      "bytes": 5591,
-      "sha256": "6cc26ca3793e227693aba5796f46408b7d2e3f6bb841c3a060497a0fc37ec77e"
+      "bytes": 747883,
+      "sha256": "11a5c089cf01e2a3002106e07b1b4ad21629af9ad39eec58cbd23e80d1efa16f"
     }
   ],
   "navigation_errors": [
@@ -35,8 +44,82 @@
     "Only source URLs/hashes; screenshot bytes are NOT committed to public repository",
     "No source 3D assets downloaded or bypassed"
   ],
-  "page_visible_text_sample_chars": 0,
-  "visible_text_sample": "",
-  "target_nodes": [],
-  "navigation_3d_responses": []
+  "page_visible_text_sample_chars": 3,
+  "visible_text_sample": "59%",
+  "target_nodes": [
+    {
+      "text": "结构",
+      "tag": "P",
+      "absoluteTop": 0,
+      "width": 0,
+      "height": 0,
+      "clickable": false
+    },
+    {
+      "text": "铺作",
+      "tag": "P",
+      "absoluteTop": 0,
+      "width": 0,
+      "height": 0,
+      "clickable": false
+    },
+    {
+      "text": "柱头铺作",
+      "tag": "DIV",
+      "absoluteTop": 0,
+      "width": 0,
+      "height": 0,
+      "clickable": false
+    },
+    {
+      "text": "卷杀",
+      "tag": "DIV",
+      "absoluteTop": 0,
+      "width": 0,
+      "height": 0,
+      "clickable": false
+    }
+  ],
+  "navigation_3d_responses": [
+    {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/wfd/wfd.gltf",
+      "status": 200,
+      "content_type": "model/gltf+json"
+    },
+    {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
+      "status": 200,
+      "content_type": "model/gltf+json"
+    },
+    {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dg/bujiandougong.gltf",
+      "status": 200,
+      "content_type": "model/gltf+json"
+    },
+    {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/gd2/gd2.gltf",
+      "status": 200,
+      "content_type": "model/gltf+json"
+    },
+    {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.bin",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dg/bujiandougong.bin",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/gd2/gd2.bin",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    },
+    {
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/wfd/wfd.bin",
+      "status": 200,
+      "content_type": "application/octet-stream"
+    }
+  ]
 }
