@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="600" viewBox="0 0 1050 600">
+<rect width="1050" height="600" fill="#f7f7f4"/>
+<text x="50" y="62" font-family="sans-serif" font-size="27" font-weight="bold" fill="#242c2d">数字博物馆斗栱：相对高度分布（96个匿名网格）</text>
+<text x="50" y="100" font-family="sans-serif" font-size="16" fill="#485459">高度分为5等份，仅为可复核的统计分组，不代表五层真实铺作</text>
+<text x="53" y="186" font-family="sans-serif" font-size="18" fill="#273c42">位置组 1</text>
+<rect x="190" y="156" width="152" height="46" rx="5" fill="#a1c5b6"/>
+<text x="362" y="187" font-family="sans-serif" font-size="20" fill="#273c42">8件</text>
+<text x="53" y="263" font-family="sans-serif" font-size="18" fill="#273c42">位置组 2</text>
+<rect x="190" y="233" width="285" height="46" rx="5" fill="#c6b884"/>
+<text x="495" y="264" font-family="sans-serif" font-size="20" fill="#273c42">15件</text>
+<text x="53" y="340" font-family="sans-serif" font-size="18" fill="#273c42">位置组 3</text>
+<rect x="190" y="310" width="589" height="46" rx="5" fill="#ddb79c"/>
+<text x="799" y="341" font-family="sans-serif" font-size="20" fill="#273c42">31件</text>
+<text x="53" y="417" font-family="sans-serif" font-size="18" fill="#273c42">位置组 4</text>
+<rect x="190" y="387" width="551" height="46" rx="5" fill="#b5b5db"/>
+<text x="761" y="418" font-family="sans-serif" font-size="20" fill="#273c42">29件</text>
+<text x="53" y="494" font-family="sans-serif" font-size="18" fill="#273c42">位置组 5</text>
+<rect x="190" y="464" width="247" height="46" rx="5" fill="#9cb4d1"/>
+<text x="457" y="495" font-family="sans-serif" font-size="20" fill="#273c42">13件</text>
+<text x="50" y="560" font-family="sans-serif" font-size="13" fill="#60656c">只归纳模型相对空间关系；未通过具体构件身份、历史尺寸、真实接触面积验证。</text>
+</svg>
