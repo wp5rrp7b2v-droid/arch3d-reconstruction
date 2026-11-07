@@ -34,7 +34,7 @@ def projected_contact(mesh,z,want_up):
         points=verts[tri]
         if np.max(np.abs(points[:,2]-z))>0.001:continue
         p2=points[:,:2]
-        signed=np.cross(p2[1]-p2[0],p2[2]-p2[0])
+        signed=(p2[1,0]-p2[0,0])*(p2[2,1]-p2[0,1])-(p2[1,1]-p2[0,1])*(p2[2,0]-p2[0,0])
         if (want_up and signed<1e-7) or ((not want_up) and signed>-1e-7): continue
         poly=Polygon([tuple(p) for p in p2])
         if poly.is_valid and poly.area>1e-8:polys.append(poly)
