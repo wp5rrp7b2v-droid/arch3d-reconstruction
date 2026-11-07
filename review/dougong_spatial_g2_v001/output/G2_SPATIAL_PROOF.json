@@ -1,0 +1,582 @@
+{
+  "status": "PASS_RELATIVE_TOPOLOGY_ONLY_MEMBER_IDENTITY_UNPROVEN",
+  "date_utc": "2026-11-07T10:24:03.557701+00:00",
+  "test": "G2 museum anonymous dougong mesh topology, relative strata and adjacency",
+  "source_url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
+  "source_cert_validation": "BYPASSED_AFTER_KNOWN_CERT_EXPIRY_FOR_DIAGNOSTIC_ONLY",
+  "source_hash_pinned_to_previous_G1": true,
+  "source_reuse_permission": "UNKNOWN; NOT COPYING SOURCE MESHES TO GITHUB",
+  "source_instance_correspondence_to_east_seam": "UNKNOWN",
+  "data_categories": {
+    "FACT": "geometry bounds, orientation and count of loaded anonymous meshes, pinned hashes",
+    "INFERENCE": "relative layer clusters and bbox potential support candidate pair",
+    "UNKNOWN": "ludou/first jump mapping, actual contact, tenon, dimensions, construction date accuracy"
+  },
+  "files": {
+    "dougong.gltf": {
+      "bytes": 76038,
+      "sha256": "ac0687694715029a7b906bfdaa13578c578a01640e5cfeba1dbd29749dae6f1b",
+      "pinned_match": true,
+      "stored_only_in_ephemeral_runner": true
+    },
+    "dougong.bin": {
+      "bytes": 477064,
+      "sha256": "940224e259dfcce31f2a11aa58780422a38bcf0de869a2b1c72762321f0abc32",
+      "pinned_match": true,
+      "stored_only_in_ephemeral_runner": true
+    }
+  },
+  "geometry": {
+    "object_count": 96,
+    "vertex_count": 13050,
+    "object_name_example": [
+      "polySurface9904",
+      "polySurface9905",
+      "polySurface9906",
+      "polySurface9907",
+      "polySurface9908",
+      "polySurface9909"
+    ],
+    "generic_names_count": 96,
+    "extent_source_units": [
+      1.127799,
+      0.819241,
+      0.577439
+    ],
+    "historically_calibrated_units": false,
+    "axis_note": "Blender glTF imported Z treated as display up; actual architecture orientation not authenticated",
+    "mesh_data_exported": false
+  },
+  "layers": [
+    {
+      "display_band": 1,
+      "height_range_fraction": [
+        0.0,
+        0.2
+      ],
+      "mesh_centroid_count": 8,
+      "directions": {
+        "X": 6,
+        "XY/MIXED": 1,
+        "Y": 1
+      },
+      "forms": {
+        "elongated horizontal envelope": 3,
+        "compact envelope": 5
+      }
+    },
+    {
+      "display_band": 2,
+      "height_range_fraction": [
+        0.2,
+        0.4
+      ],
+      "mesh_centroid_count": 15,
+      "directions": {
+        "X": 4,
+        "XY/MIXED": 9,
+        "Y": 2
+      },
+      "forms": {
+        "elongated horizontal envelope": 6,
+        "compact envelope": 9
+      }
+    },
+    {
+      "display_band": 3,
+      "height_range_fraction": [
+        0.4,
+        0.6
+      ],
+      "mesh_centroid_count": 31,
+      "directions": {
+        "Y": 12,
+        "X": 12,
+        "XY/MIXED": 7
+      },
+      "forms": {
+        "elongated horizontal envelope": 22,
+        "compact envelope": 9
+      }
+    },
+    {
+      "display_band": 4,
+      "height_range_fraction": [
+        0.6,
+        0.8
+      ],
+      "mesh_centroid_count": 29,
+      "directions": {
+        "X": 5,
+        "Y": 6,
+        "XY/MIXED": 18
+      },
+      "forms": {
+        "elongated horizontal envelope": 11,
+        "compact envelope": 18
+      }
+    },
+    {
+      "display_band": 5,
+      "height_range_fraction": [
+        0.8,
+        1.0
+      ],
+      "mesh_centroid_count": 13,
+      "directions": {
+        "Y": 8,
+        "X": 3,
+        "XY/MIXED": 2
+      },
+      "forms": {
+        "elongated horizontal envelope": 11,
+        "compact envelope": 2
+      }
+    }
+  ],
+  "orientation_counts": {
+    "X": 30,
+    "Y": 29,
+    "XY/MIXED": 37
+  },
+  "form_counts": {
+    "elongated horizontal envelope": 53,
+    "compact envelope": 43
+  },
+  "contact_candidate_count": 98,
+  "contact_candidates": [
+    {
+      "lower_name": "polySurface9904",
+      "upper_name": "polySurface9995",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9905",
+      "upper_name": "polySurface9923",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9923",
+      "upper_name": "polySurface9904",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9926",
+      "upper_name": "polySurface9912",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9929",
+      "upper_name": "polySurface9946",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9979",
+      "upper_name": "polySurface9978",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9980",
+      "upper_name": "polySurface9978",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": 0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9985",
+      "upper_name": "polySurface9980",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9986",
+      "upper_name": "polySurface9987",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9987",
+      "upper_name": "polySurface9990",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9988",
+      "upper_name": "polySurface9987",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9995",
+      "upper_name": "polySurface9912",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9990",
+      "upper_name": "polySurface9928",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": 0.003509,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9980",
+      "upper_name": "polySurface9979",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.010054,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9986",
+      "upper_name": "polySurface9988",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.010054,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9990",
+      "upper_name": "polySurface9985",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.010055,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9935",
+      "upper_name": "polySurface9996",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.010678,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9997",
+      "upper_name": "polySurface9996",
+      "xy_bbox_overlap_ratio": 1.0,
+      "z_top_to_bottom_gap_as_height_fraction": -0.010678,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9980",
+      "upper_name": "polySurface9981",
+      "xy_bbox_overlap_ratio": 0.999993,
+      "z_top_to_bottom_gap_as_height_fraction": 0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9946",
+      "upper_name": "polySurface9931",
+      "xy_bbox_overlap_ratio": 0.931229,
+      "z_top_to_bottom_gap_as_height_fraction": -1e-06,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9904",
+      "upper_name": "polySurface9928",
+      "xy_bbox_overlap_ratio": 0.745304,
+      "z_top_to_bottom_gap_as_height_fraction": 0.003508,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9924",
+      "upper_name": "polySurface9930",
+      "xy_bbox_overlap_ratio": 0.625033,
+      "z_top_to_bottom_gap_as_height_fraction": 0.004642,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9982",
+      "upper_name": "polySurface9930",
+      "xy_bbox_overlap_ratio": 0.625033,
+      "z_top_to_bottom_gap_as_height_fraction": 0.004642,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9957",
+      "upper_name": "polySurface9929",
+      "xy_bbox_overlap_ratio": 0.624989,
+      "z_top_to_bottom_gap_as_height_fraction": -0.001353,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9977",
+      "upper_name": "polySurface9910",
+      "xy_bbox_overlap_ratio": 0.622931,
+      "z_top_to_bottom_gap_as_height_fraction": -1e-06,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9930",
+      "upper_name": "polySurface9910",
+      "xy_bbox_overlap_ratio": 0.589519,
+      "z_top_to_bottom_gap_as_height_fraction": -1e-06,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9931",
+      "upper_name": "polySurface9966",
+      "xy_bbox_overlap_ratio": 0.588253,
+      "z_top_to_bottom_gap_as_height_fraction": 0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9929",
+      "upper_name": "polySurface9970",
+      "xy_bbox_overlap_ratio": 0.588215,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9999",
+      "upper_name": "polySurface9973",
+      "xy_bbox_overlap_ratio": 0.566108,
+      "z_top_to_bottom_gap_as_height_fraction": -2.5e-05,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9975",
+      "upper_name": "polySurface9962",
+      "xy_bbox_overlap_ratio": 0.541672,
+      "z_top_to_bottom_gap_as_height_fraction": -2.6e-05,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9954",
+      "upper_name": "polySurface9956",
+      "xy_bbox_overlap_ratio": 0.541632,
+      "z_top_to_bottom_gap_as_height_fraction": -2.5e-05,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9907",
+      "upper_name": "polySurface9922",
+      "xy_bbox_overlap_ratio": 0.539846,
+      "z_top_to_bottom_gap_as_height_fraction": -0.00137,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9917",
+      "upper_name": "polySurface9918",
+      "xy_bbox_overlap_ratio": 0.539829,
+      "z_top_to_bottom_gap_as_height_fraction": -0.001344,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9998",
+      "upper_name": "polySurface9944",
+      "xy_bbox_overlap_ratio": 0.53952,
+      "z_top_to_bottom_gap_as_height_fraction": -2.5e-05,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9906",
+      "upper_name": "polySurface9994",
+      "xy_bbox_overlap_ratio": 0.533145,
+      "z_top_to_bottom_gap_as_height_fraction": 0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9947",
+      "upper_name": "polySurface9949",
+      "xy_bbox_overlap_ratio": 0.533072,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9936",
+      "upper_name": "polySurface9945",
+      "xy_bbox_overlap_ratio": 0.533071,
+      "z_top_to_bottom_gap_as_height_fraction": 0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9950",
+      "upper_name": "polySurface9937",
+      "xy_bbox_overlap_ratio": 0.533071,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9932",
+      "upper_name": "polySurface9934",
+      "xy_bbox_overlap_ratio": 0.533069,
+      "z_top_to_bottom_gap_as_height_fraction": 0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9933",
+      "upper_name": "polySurface9972",
+      "xy_bbox_overlap_ratio": 0.533069,
+      "z_top_to_bottom_gap_as_height_fraction": 0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9948",
+      "upper_name": "polySurface9971",
+      "xy_bbox_overlap_ratio": 0.533069,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9976",
+      "upper_name": "polySurface9959",
+      "xy_bbox_overlap_ratio": 0.533069,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9905",
+      "upper_name": "polySurface9924",
+      "xy_bbox_overlap_ratio": 0.533068,
+      "z_top_to_bottom_gap_as_height_fraction": 0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9938",
+      "upper_name": "polySurface9968",
+      "xy_bbox_overlap_ratio": 0.533068,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9916",
+      "upper_name": "polySurface9993",
+      "xy_bbox_overlap_ratio": 0.533055,
+      "z_top_to_bottom_gap_as_height_fraction": 0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9917",
+      "upper_name": "polySurface9920",
+      "xy_bbox_overlap_ratio": 0.533039,
+      "z_top_to_bottom_gap_as_height_fraction": -0.005919,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9907",
+      "upper_name": "polySurface9919",
+      "xy_bbox_overlap_ratio": 0.533016,
+      "z_top_to_bottom_gap_as_height_fraction": -0.003273,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9986",
+      "upper_name": "polySurface9982",
+      "xy_bbox_overlap_ratio": 0.53301,
+      "z_top_to_bottom_gap_as_height_fraction": -0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9953",
+      "upper_name": "polySurface9960",
+      "xy_bbox_overlap_ratio": 0.532885,
+      "z_top_to_bottom_gap_as_height_fraction": -2.5e-05,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9952",
+      "upper_name": "polySurface9940",
+      "xy_bbox_overlap_ratio": 0.532885,
+      "z_top_to_bottom_gap_as_height_fraction": -2.6e-05,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9942",
+      "upper_name": "polySurface9943",
+      "xy_bbox_overlap_ratio": 0.53282,
+      "z_top_to_bottom_gap_as_height_fraction": -2.5e-05,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9951",
+      "upper_name": "polySurface9974",
+      "xy_bbox_overlap_ratio": 0.53282,
+      "z_top_to_bottom_gap_as_height_fraction": -2.5e-05,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9981",
+      "upper_name": "polySurface9976",
+      "xy_bbox_overlap_ratio": 0.502877,
+      "z_top_to_bottom_gap_as_height_fraction": 2.1e-05,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9951",
+      "upper_name": "polySurface9981",
+      "xy_bbox_overlap_ratio": 0.502874,
+      "z_top_to_bottom_gap_as_height_fraction": 0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    },
+    {
+      "lower_name": "polySurface9986",
+      "upper_name": "polySurface9989",
+      "xy_bbox_overlap_ratio": 0.500042,
+      "z_top_to_bottom_gap_as_height_fraction": 0.0,
+      "classification": "AABB_POTENTIAL_ONLY"
+    }
+  ],
+  "crosscheck": {
+    "A1_original_page": "精细测绘报告 PDF73 印刷第58页 图2-27",
+    "A1_caption": "万佛殿下昂部位交接关系参考示意图",
+    "A1_evidence": "实物照片+示意图可核对下昂与层间斗栱的相对交接关系",
+    "A1_missing": "没有直接列出博物馆网页中 polySurfaceXXXX 对应的部件索引，不能证明同一柱头实体",
+    "independent_licensing": "UNKNOWN",
+    "status": "A1_RELATIVE_ARCHITECTURAL_LOGIC_ONLY"
+  },
+  "views": [
+    {
+      "name": "AXON_LAYER_COLORS",
+      "filename": "MUSEUM_G2_AXON_LAYER_COLORS.png",
+      "sha256": "7f8b42f71c2c39890324a776c509c97ed5689e557797f3fc8d0b9bc4c39f5ebf",
+      "bytes": 1130238,
+      "source_model_view": true,
+      "retention_days": 7,
+      "distribute_in_public_git": false
+    },
+    {
+      "name": "SIDE_LAYER_COLORS",
+      "filename": "MUSEUM_G2_SIDE_LAYER_COLORS.png",
+      "sha256": "0aeda0ddbc4843e2774f20d9212986472042b4646a1c00b7ba091eb94fc1dd5e",
+      "bytes": 1118423,
+      "source_model_view": true,
+      "retention_days": 7,
+      "distribute_in_public_git": false
+    },
+    {
+      "name": "LOWER_TWO_GROUPS_ONLY",
+      "filename": "MUSEUM_G2_LOWER_TWO_GROUPS_ONLY.png",
+      "sha256": "4baa1f3fd07c3037ccf5a99b2d94145799b96327fae04b4093957a79d40300b6",
+      "bytes": 1068923,
+      "source_model_view": true,
+      "retention_days": 7,
+      "distribute_in_public_git": false
+    }
+  ],
+  "errors": [],
+  "gates": {
+    "source_geometry_exact_hashes_pass": true,
+    "96_nodes_mesh_instances_pass": true,
+    "relative_layer_map_pass": true,
+    "candidate_envelope_adjacency_computed": true,
+    "real_mesh_contact_or_mortise_pass": false,
+    "named_ludou_and_first_hua_gong": false,
+    "A1_same_east_front_instance_proven": false,
+    "three_nonempty_renders": true
+  }
+}

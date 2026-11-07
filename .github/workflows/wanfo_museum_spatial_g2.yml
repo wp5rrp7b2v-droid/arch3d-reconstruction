@@ -1,0 +1,66 @@
+name: Wanfo Museum Dougong Relative Spatial G2
+on:
+  push:
+    branches:
+      - evidence/wanfo-museum-dougong-topology-g2-20261107
+    paths:
+      - review/dougong_spatial_g2_v001/analyze_blender.py
+      - .github/workflows/wanfo_museum_spatial_g2.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-museum-relative-spatial-g2
+  cancel-in-progress: false
+jobs:
+  geometry:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Prepare pinned Blender 4.5.13 for non-intrusive geometric research
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl -fL --retry 3 https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz -o /tmp/blender.tar.xz
+          tar xf /tmp/blender.tar.xz -C /tmp
+      - name: Analyze museum relative layers, directions, adjacency and ephemeral render
+        run: |
+          /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 7 --python review/dougong_spatial_g2_v001/analyze_blender.py
+      - name: Archive only derived research, never original mesh or 3P views
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          path=Path('review/dougong_spatial_g2_v001/output/G2_SPATIAL_PROOF.json')
+          if not path.exists():
+              path.parent.mkdir(exist_ok=True,parents=True)
+              path.write_text(json.dumps({'status':'FAIL_G2_SETUP','gates':{}},ensure_ascii=False,indent=2)+'\n')
+          j=json.loads(path.read_text())
+          print('G2_RESULT',j.get('status'))
+          print('G2_MESH',j.get('geometry',{}).get('object_count'))
+          print('G2_CANDIDATES',j.get('contact_candidate_count'))
+          print('G2_LABEL_GATE',j.get('gates',{}).get('named_ludou_and_first_hua_gong'))
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add review/dougong_spatial_g2_v001/output/G2_SPATIAL_PROOF.json
+          git add review/dougong_spatial_g2_v001/output/G2_RELATIVE_LAYER_COUNTS.svg
+          if ! git diff --cached --quiet; then
+            git diff --cached --name-only | python -c 'import sys;x=sys.stdin.read().splitlines();assert all(p in ("review/dougong_spatial_g2_v001/output/G2_SPATIAL_PROOF.json","review/dougong_spatial_g2_v001/output/G2_RELATIVE_LAYER_COUNTS.svg") for p in x),x'
+            git commit -m 'evidence: museum relative mesh topology counts and potential adjacency, no source mesh'
+            git pull --rebase origin evidence/wanfo-museum-dougong-topology-g2-20261107
+            git push origin HEAD:evidence/wanfo-museum-dougong-topology-g2-20261107
+          fi
+      - name: Ephemeral museum geometry inspection snapshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: WANFO_MUSEUM_DOUGONG_G2_SPATIAL_VIEWS
+          path: |
+            review/dougong_spatial_g2_v001/output/G2_SPATIAL_PROOF.json
+            review/dougong_spatial_g2_v001/_temporary_review_images/*.png
+          retention-days: 7
