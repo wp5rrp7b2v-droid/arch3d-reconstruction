@@ -1,0 +1,45 @@
+{
+  "candidate_only": true,
+  "whole_assembly_NOT_APPROVED": true,
+  "no_master_modified": true,
+  "technical_gate": "GEOMETRY_SINGLE_LOWER_SEAT_PASS",
+  "po_visual_gate": "PENDING",
+  "reopen_gate": "PASS",
+  "files": [
+    {
+      "path": "CANDIDATE_MAPPING.json",
+      "bytes": 1122,
+      "sha256": "fabfe160bc9273f1c2c844fb44b14590ab17fb39f7dac5883b9d6dd0a0200e36"
+    },
+    {
+      "path": "HUA1_SEAT_AXON_ZH.png",
+      "bytes": 636291,
+      "sha256": "723deb2ad0950bedac1af092304128ca90a6ab558f7e7a9e5d918b09db1e9699"
+    },
+    {
+      "path": "HUA1_SEAT_FRONT_ZH.png",
+      "bytes": 643798,
+      "sha256": "2bd14aa71948fee91342c4bc864049fdf38128d4a95f4e0242156ee9425e9179"
+    },
+    {
+      "path": "REOPEN_VERIFICATION.json",
+      "bytes": 595,
+      "sha256": "768e01d3538bd6ea397dcbc199f9b7bd206628040b594f43aa5d9c2308389b28"
+    },
+    {
+      "path": "SINGLE_INTERFACE_VALIDATION.json",
+      "bytes": 1824,
+      "sha256": "4dace50d02c39334e58d7c0fab0be787aefbcfa1a01df9b3d026ab337f7e453f"
+    },
+    {
+      "path": "WANFO_HUA1_ONE_SEAT_CANDIDATE_V001.blend",
+      "bytes": 462786,
+      "sha256": "e2c8b07fdb45d9b1226c3979dff1383f694d0341bb491fe71262a54c91148173"
+    },
+    {
+      "path": "WANFO_HUA1_ONE_SEAT_CANDIDATE_V001.glb",
+      "bytes": 21224,
+      "sha256": "dbb27e791ce060015e7f2650939033ac0adb6c05067e4bbbb8bde9d7494fe796"
+    }
+  ]
+}

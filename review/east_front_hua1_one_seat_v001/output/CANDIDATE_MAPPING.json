@@ -1,0 +1,33 @@
+{
+  "state": "ENGINEERING_CANDIDATE_NOT_APPROVED",
+  "seat": "LUDOU_TO_HUA1_BOTTOM_ONLY",
+  "former_failed_assembly_not_promoted": true,
+  "source_git_blobs": {
+    "review/gong_ang_form_v001/geometry/JUMP_1_HUAGONG_candidate.json": "567b5336f3319a66ff292aee88c57831850bb8a6",
+    "review/east_front_connectors_c02/output/C02_ACTUAL_MESHES.json": "c5a2622065589ed3588c7099f289384686dcb3c5"
+  },
+  "original_geometry_sha256": "5c81c836cc7ca3a229eebe5ac9cb4c62a744b9a1eeb10b0e9683cf0ccd097f13",
+  "source_PR76_candidate_extent_mm": [
+    898.8,
+    214.2,
+    153.0
+  ],
+  "mapped_extent_mm": [
+    153.0,
+    898.8,
+    214.2
+  ],
+  "coordinate_map": {
+    "world_x": "candidate_y * (153/214.2)",
+    "world_y": "-candidate_x",
+    "world_z": "seat_z+(candidate_z+76.5)*(214.2/153)"
+  },
+  "seat_z_mm": -297.9314880371094,
+  "source_hua1_removed": true,
+  "ludou_preserved": true,
+  "silhouette_scale_explicitly_changed": true,
+  "PO_visual_gate": "PENDING",
+  "historical_joint_gate": "UNKNOWN",
+  "upper_interface_gate": "NOT_TESTED",
+  "material_class_for_this_instance": "WORKING_HYPOTHESIS_NOT_ORIGINAL_MEASUREMENT"
+}
