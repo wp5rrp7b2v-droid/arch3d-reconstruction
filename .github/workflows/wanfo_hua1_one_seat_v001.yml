@@ -1,0 +1,67 @@
+name: Wanfo HUA1 one true lower bearing seat V001
+on:
+  push:
+    branches:
+      - assembly/east-front-hua1-one-seat-v001-20261107
+    paths:
+      - review/east_front_hua1_one_seat_v001/build_blender.py
+      - review/east_front_hua1_one_seat_v001/validate.py
+      - review/east_front_hua1_one_seat_v001/reopen_blender.py
+      - .github/workflows/wanfo_hua1_one_seat_v001.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-hua1-one-seat-v001
+  cancel-in-progress: false
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          lfs: true
+      - name: Install Blender 4.5.13 LTS and independent validators
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-noto-cjk libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          python -m pip install 'numpy<3' 'shapely>=2.0,<3' 'trimesh>=4.4,<6' 'manifold3d>=3.1,<4' 'pillow>=10,<13'
+          curl -fL --retry 3 https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz -o /tmp/blender.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Build ONLY the section-mapped HUA1 + original LUDOU candidate in cloud Blender
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/east_front_hua1_one_seat_v001/build_blender.py
+      - name: Independent planar bearing, manifold collision, GLB import and nonempty visuals
+        run: python review/east_front_hua1_one_seat_v001/validate.py
+      - name: Reopen BLEND and GLB in a separate Blender process
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 10 --python review/east_front_hua1_one_seat_v001/reopen_blender.py
+      - name: Archive scope-limited model, evidence and exact file checksums on candidate branch
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib, json
+          out=Path('review/east_front_hua1_one_seat_v001/output')
+          v=json.loads((out/'SINGLE_INTERFACE_VALIDATION.json').read_text())
+          re=json.loads((out/'REOPEN_VERIFICATION.json').read_text())
+          assert re['status']=='PASS', re
+          files=sorted(x for x in out.iterdir() if x.is_file() and x.name!='OUTPUT_MANIFEST.json')
+          assert {'.blend','.glb','.json','.png'}.issubset({f.suffix for f in files}), 'missing output type'
+          manifest={'candidate_only':True,'whole_assembly_NOT_APPROVED':True,'no_master_modified':True,
+           'technical_gate':v['status'],'po_visual_gate':'PENDING','reopen_gate':re['status'],
+           'files':[{'path':f.name,'bytes':f.stat().st_size,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()} for f in files]}
+          (out/'OUTPUT_MANIFEST.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
+          print('MANIFEST',len(files),'GATE',v['status'])
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -f review/east_front_hua1_one_seat_v001/output/
+          git diff --cached --name-only | python -c 'import sys; s=sys.stdin.read().splitlines(); assert s and all(p.startswith("review/east_front_hua1_one_seat_v001/output/") for p in s)'
+          git commit -m 'candidate: archive HUA1 one-seat Blender results and independent test gates'
+          git push origin HEAD:assembly/east-front-hua1-one-seat-v001-20261107
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_HUA1_SINGLE_SEAT_V001
+          path: review/east_front_hua1_one_seat_v001/output/
+          retention-days: 60
