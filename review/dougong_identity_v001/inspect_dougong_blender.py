@@ -203,9 +203,30 @@ try:
     camera("MUSEUM_DOUGONG_ISOMETRIC", (1.35,-1.15,.85))
     camera("MUSEUM_DOUGONG_OPPOSITE",(-1.35,-1.15,.65))
     camera("MUSEUM_DOUGONG_SIDE",(0,1,.25))
-    trace["passes"]["two_independent_views"]=len(trace["views"])>=2
+    # Independent pixel-content and distinct-angle guard, not merely file existence.
+    stats=[]
+    for view in trace["views"]:
+        p=SHOTS/view["filename"]
+        im=bpy.data.images.load(str(p),check_existing=False)
+        nx,ny=im.size
+        px=im.pixels
+        vals=[]
+        for y in range(0,ny,max(1,ny//45)):
+            for x in range(0,nx,max(1,nx//60)):
+                i=4*(y*nx+x)
+                vals.append(.2126*px[i]+.7152*px[i+1]+.0722*px[i+2])
+        m=sum(vals)/len(vals)
+        stdev=math.sqrt(sum((v-m)**2 for v in vals)/len(vals))
+        valid=nx>=1000 and ny>=750 and stdev>0.025
+        stats.append(valid)
+        view["width"]=int(nx);view["height"]=int(ny)
+        view["sample_luminance_stddev"]=round(stdev,6)
+        view["nonempty_pixel_gate"]=valid
+        bpy.data.images.remove(im)
+    trace["passes"]["two_independent_views"]=len(trace["views"])>=2 and len(set(x["sha256"] for x in trace["views"]))==len(trace["views"])
+    trace["passes"]["pixel_content_nonempty"]=bool(stats and all(stats))
     trace["passes"]["visual_member_evidence_sufficient"]=False
-    trace["result"]="VIEWS_PASS_EXACT_IDENTITY_FAIL" if len(trace["views"])>=2 else "FAIL_VIEW_CREATION"
+    trace["result"]="VIEWS_PASS_EXACT_IDENTITY_FAIL" if trace["passes"]["two_independent_views"] and trace["passes"]["pixel_content_nonempty"] else "FAIL_VIEW_CREATION"
 except Exception as e:
     trace["result"]="FAIL_DUE_TO_READ_OR_RENDER_ERROR"
     trace["errors"].append(type(e).__name__+": "+str(e)[:900])
