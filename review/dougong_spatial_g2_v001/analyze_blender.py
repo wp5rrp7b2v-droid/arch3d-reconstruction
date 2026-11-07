@@ -76,8 +76,17 @@ try:
     buf=get_file("dougong.bin")
     report["source_hash_pinned_to_previous_G1"]=True
     bpy.ops.wm.read_factory_settings(use_empty=True)
+    # Geometry-only import copy in temporary runner. Original vertex/index buffers
+    # remain unchanged; no external textures or third-party material downloads.
+    doc=json.loads(src.read_text(encoding="utf-8"))
+    for mesh in doc.get("meshes",[]):
+        for prim in mesh.get("primitives",[]):prim.pop("material",None)
+    doc["images"]=[];doc["textures"]=[];doc["materials"]=[]
+    doc.pop("extensionsUsed",None);doc.pop("extensionsRequired",None)
+    safe=PRIVATE/"dougong.geometry_only.gltf"
+    safe.write_text(json.dumps(doc,ensure_ascii=False),encoding="utf-8")
     # Keep source external binaries temporary. Do not export source material.
-    bpy.ops.import_scene.gltf(filepath=str(src))
+    bpy.ops.import_scene.gltf(filepath=str(safe))
     objs=sorted([o for o in bpy.context.scene.objects if o.type=="MESH"],key=lambda o:o.name)
     if len(objs)!=96:raise RuntimeError("Unexpected mesh count: "+str(len(objs)))
     mesh_rows=[]
