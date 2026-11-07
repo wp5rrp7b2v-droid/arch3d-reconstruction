@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "blend_mesh_count": 2,
+  "glb_mesh_count": 2,
+  "blend_mesh_names": [
+    "HUA1_SECTION_MAP_CANDIDATE",
+    "SOURCE_LUDOU_READONLY"
+  ],
+  "glb_mesh_names": [
+    "HUA1_SECTION_MAP_CANDIDATE",
+    "SOURCE_LUDOU_READONLY"
+  ],
+  "blend_sorted_dimensions_m": [
+    [
+      0.153,
+      0.2142,
+      0.8988
+    ],
+    [
+      0.2938,
+      0.4463,
+      0.4751
+    ]
+  ],
+  "glb_sorted_dimensions_m": [
+    [
+      0.153,
+      0.2142,
+      0.8988
+    ],
+    [
+      0.2938,
+      0.4463,
+      0.4751
+    ]
+  ],
+  "source_is_readonly": true,
+  "po_approval": "PENDING"
+}
