@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-07T05:49:07.714733+00:00",
+  "timestamp_utc": "2026-11-07T05:52:10.571000+00:00",
   "source_url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
   "source_kind": "public_interactive_museum_exhibit_model",
   "source_https_identity": "UNVERIFIED_TLS_EXPIRED_FROM_G0",
@@ -18,6 +18,7 @@
     "semantic_identification_of_two_members": false,
     "same_east_front_physical_instance": false,
     "two_independent_views": true,
+    "pixel_content_nonempty": true,
     "visual_member_evidence_sufficient": false
   },
   "downloads": [
@@ -577,26 +578,38 @@
     {
       "filename": "MUSEUM_DOUGONG_ISOMETRIC.png",
       "label": "MUSEUM_DOUGONG_ISOMETRIC",
-      "bytes": 1222547,
-      "sha256": "25a6a33f5f4d55b2b6cbcc0b05d1a1b77d8dacfa4b88c8133065642284d80850",
+      "bytes": 1222308,
+      "sha256": "c2332c80d28d10791d5fe0c12ef49efbf6297acf200b8af8a93c77edf65ece95",
       "temporary_artifact_only": true,
-      "purpose": "whole unlabelled gong assembly orientation view, NOT approved member evidence"
+      "purpose": "whole unlabelled gong assembly orientation view, NOT approved member evidence",
+      "width": 1280,
+      "height": 960,
+      "sample_luminance_stddev": 0.029829,
+      "nonempty_pixel_gate": true
     },
     {
       "filename": "MUSEUM_DOUGONG_OPPOSITE.png",
       "label": "MUSEUM_DOUGONG_OPPOSITE",
-      "bytes": 1203007,
-      "sha256": "872537d3e42f323b9d0c2d85296b06160e77aa069098b4ecdeadfdaf3675bfd9",
+      "bytes": 1203136,
+      "sha256": "e4356a5bf4c3788a0bdc12a2eb757abd51987eb4b89c07ca1f68dbf76e7c888e",
       "temporary_artifact_only": true,
-      "purpose": "whole unlabelled gong assembly orientation view, NOT approved member evidence"
+      "purpose": "whole unlabelled gong assembly orientation view, NOT approved member evidence",
+      "width": 1280,
+      "height": 960,
+      "sample_luminance_stddev": 0.026666,
+      "nonempty_pixel_gate": true
     },
     {
       "filename": "MUSEUM_DOUGONG_SIDE.png",
       "label": "MUSEUM_DOUGONG_SIDE",
-      "bytes": 1177859,
-      "sha256": "57d86cb1f264783cbce1b858b7f286bad3a84c05fa585d387429dca84338b93d",
+      "bytes": 1177973,
+      "sha256": "658157b01a424666de23dad35f951cd6095708745859c303bbd5f9944dd7f1aa",
       "temporary_artifact_only": true,
-      "purpose": "whole unlabelled gong assembly orientation view, NOT approved member evidence"
+      "purpose": "whole unlabelled gong assembly orientation view, NOT approved member evidence",
+      "width": 1280,
+      "height": 960,
+      "sample_luminance_stddev": 0.033419,
+      "nonempty_pixel_gate": true
     }
   ]
 }
