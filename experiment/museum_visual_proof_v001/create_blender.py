@@ -96,7 +96,7 @@ def place_camera(name,offset):
  scene.collection.objects.link(cam);cam.location=eye
  focal=Vector((0,0,.56))
  cam.rotation_euler=(focal-eye).to_track_quat('-Z','Y').to_euler()
- camd.type='ORTHO';camd.ortho_scale=3.15;scene.camera=cam
+ camd.type='ORTHO';camd.ortho_scale=4.40;scene.camera=cam
  return cam
 for i,offset in enumerate([(3,-4,6),(-4,2,5),(0,2,6)]):
  ld=bpy.data.lights.new('Area'+str(i),'AREA');light=bpy.data.objects.new('Area'+str(i),ld)
