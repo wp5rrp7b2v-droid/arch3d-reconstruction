@@ -1,0 +1,56 @@
+name: Wanfo Museum Referenced Independent Visual Proof
+on:
+  push:
+    branches: [experiment/museum-referenced-dougong-visual-proof-v001-20261107]
+    paths:
+      - experiment/museum_visual_proof_v001/create_blender.py
+      - .github/workflows/wanfo_museum_reference_visual_v001.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-museum-visual-proof-v001
+  cancel-in-progress: false
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install cloud Blender
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl -fL --retry 3 https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz -o /tmp/blender.tar.xz
+          tar xf /tmp/blender.tar.xz -C /tmp
+      - name: Build original candidate model, GLB, BLEND, and 3 view renders
+        run: /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 7 --python experiment/museum_visual_proof_v001/create_blender.py
+      - name: Archive original candidate files as separate branch evidence
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json
+          p=Path('experiment/museum_visual_proof_v001/output/PROOF_REPORT.json')
+          if p.exists():
+              j=json.loads(p.read_text())
+              print('CANDIDATE_GATE',j.get('status'),j.get('gate'))
+          else:
+              p.parent.mkdir(parents=True,exist_ok=True)
+              p.write_text(json.dumps({'status':'FAIL_BUILD_OR_EXPORT','gate':{}},indent=2)+'\n')
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add experiment/museum_visual_proof_v001/output/
+          if ! git diff --cached --quiet; then
+            git commit -m 'candidate: archive original visual geometry and rendering proof for PO review'
+            git push origin HEAD:experiment/museum-referenced-dougong-visual-proof-v001-20261107
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_MUSEUM_REFERENCED_ORIGINAL_VISUAL_PROOF_V001
+          path: experiment/museum_visual_proof_v001/output/
+          retention-days: 14
