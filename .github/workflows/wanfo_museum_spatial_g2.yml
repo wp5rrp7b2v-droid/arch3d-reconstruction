@@ -52,6 +52,7 @@ jobs:
           if ! git diff --cached --quiet; then
             git diff --cached --name-only | python -c 'import sys;x=sys.stdin.read().splitlines();assert all(p in ("review/dougong_spatial_g2_v001/output/G2_SPATIAL_PROOF.json","review/dougong_spatial_g2_v001/output/G2_RELATIVE_LAYER_COUNTS.svg") for p in x),x'
             git commit -m 'evidence: museum relative mesh topology counts and potential adjacency, no source mesh'
+            git pull --rebase origin evidence/wanfo-museum-dougong-topology-g2-20261107
             git push origin HEAD:evidence/wanfo-museum-dougong-topology-g2-20261107
           fi
       - name: Ephemeral museum geometry inspection snapshots
