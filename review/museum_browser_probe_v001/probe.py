@@ -34,6 +34,8 @@ report={
   "reference_use_gate":"NOT_VERIFIED",
   "certificate_dates":{},
   "page_title":None,
+  "entry_control_clicked":False,
+  "navigation_clicks":[],
   "nav_http_status":None,
   "target_text_found":[],
   "target_text_visible":[],
@@ -76,7 +78,7 @@ def safe_url(raw):
 def shoot(page,name):
     try:
         p=PRIVATE/(name+".png")
-        page.screenshot(path=str(p),full_page=False,animations="disabled",timeout=14000)
+        page.screenshot(path=str(p),full_page=False,animations="allow",timeout=25000)
         return True
     except Exception as e:
         report["navigation_errors"].append("screenshot-"+name+": "+str(e)[:300])
@@ -153,6 +155,25 @@ try:
     try:report["page_title"]=page.title()[:200]
     except Exception:pass
 
+    # Minimal first-party UI navigation: enter the public exhibit, then open the bracket-work section.
+    # No login, no hidden API, no controlled-access bypass.
+    try:
+        enter=page.get_by_text("点击进入",exact=True).first
+        if enter.count() and enter.is_visible():
+            enter.click(timeout=8000)
+            report["entry_control_clicked"]=True
+            page.wait_for_timeout(3500)
+    except Exception as e:
+        report["navigation_errors"].append("entry-click: "+str(e)[:350])
+    for label in ("结构","铺作","柱头铺作"):
+        try:
+            loc=page.get_by_text(label,exact=True).first
+            if loc.count() and loc.is_visible():
+                loc.click(timeout=6500)
+                report["navigation_clicks"].append(label)
+                page.wait_for_timeout(1800)
+        except Exception as e:
+            report["navigation_errors"].append("click-"+label+": "+str(e)[:250])
     try:
         data=page.evaluate("""() => {
             const body=document.body;
