@@ -1,6 +1,6 @@
 {
   "source": "https://szbwgvue.chwhyun.cn/wanfodian/",
-  "test_date_utc": "2026-11-07T05:16:07.040204+00:00",
+  "test_date_utc": "2026-11-07T05:20:34.918477+00:00",
   "scope": "public site single-visit browser feasibility, no model extraction",
   "browser": "Chromium headless Playwright",
   "page_reached": true,
@@ -14,6 +14,8 @@
     "issuer": "C=CN, O=Beijing Xinchacha Credit Management Co., Ltd., CN=Xcc Trust DV SSL CA"
   },
   "page_title": "万佛殿",
+  "entry_control_clicked": false,
+  "navigation_clicks": [],
   "nav_http_status": 200,
   "target_text_found": [],
   "target_text_visible": [],
@@ -99,70 +101,6 @@
         "WAIYANDOUGONG00",
         "WAIYANDOUGONG01"
       ],
-      "member_identity_proven": false
-    },
-    {
-      "url_without_query": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
-      "gltf_version": "2.0",
-      "node_count": 97,
-      "mesh_count": 96,
-      "materials_count": 1,
-      "scenes_count": 1,
-      "named_nodes_count": 97,
-      "named_meshes_count": 96,
-      "example_node_names": [
-        "组003",
-        "polySurface9904",
-        "polySurface9905",
-        "polySurface9906",
-        "polySurface9907",
-        "polySurface9908",
-        "polySurface9909",
-        "polySurface9910",
-        "polySurface9911",
-        "polySurface9912",
-        "polySurface9913",
-        "polySurface9914",
-        "polySurface9915",
-        "polySurface9916",
-        "polySurface9917",
-        "polySurface9918",
-        "polySurface9919",
-        "polySurface9920",
-        "polySurface9921",
-        "polySurface9922",
-        "polySurface9923",
-        "polySurface9924",
-        "polySurface9925",
-        "polySurface9926"
-      ],
-      "example_mesh_names": [
-        "polySurface9904",
-        "polySurface9905",
-        "polySurface9906",
-        "polySurface9907",
-        "polySurface9908",
-        "polySurface9909",
-        "polySurface9910",
-        "polySurface9911",
-        "polySurface9912",
-        "polySurface9913",
-        "polySurface9914",
-        "polySurface9915",
-        "polySurface9916",
-        "polySurface9917",
-        "polySurface9918",
-        "polySurface9919",
-        "polySurface9920",
-        "polySurface9921",
-        "polySurface9922",
-        "polySurface9923",
-        "polySurface9924",
-        "polySurface9925",
-        "polySurface9926",
-        "polySurface9927"
-      ],
-      "possibly_semantic_labels": [],
       "member_identity_proven": false
     },
     {
@@ -261,6 +199,70 @@
       "member_identity_proven": false
     },
     {
+      "url_without_query": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
+      "gltf_version": "2.0",
+      "node_count": 97,
+      "mesh_count": 96,
+      "materials_count": 1,
+      "scenes_count": 1,
+      "named_nodes_count": 97,
+      "named_meshes_count": 96,
+      "example_node_names": [
+        "组003",
+        "polySurface9904",
+        "polySurface9905",
+        "polySurface9906",
+        "polySurface9907",
+        "polySurface9908",
+        "polySurface9909",
+        "polySurface9910",
+        "polySurface9911",
+        "polySurface9912",
+        "polySurface9913",
+        "polySurface9914",
+        "polySurface9915",
+        "polySurface9916",
+        "polySurface9917",
+        "polySurface9918",
+        "polySurface9919",
+        "polySurface9920",
+        "polySurface9921",
+        "polySurface9922",
+        "polySurface9923",
+        "polySurface9924",
+        "polySurface9925",
+        "polySurface9926"
+      ],
+      "example_mesh_names": [
+        "polySurface9904",
+        "polySurface9905",
+        "polySurface9906",
+        "polySurface9907",
+        "polySurface9908",
+        "polySurface9909",
+        "polySurface9910",
+        "polySurface9911",
+        "polySurface9912",
+        "polySurface9913",
+        "polySurface9914",
+        "polySurface9915",
+        "polySurface9916",
+        "polySurface9917",
+        "polySurface9918",
+        "polySurface9919",
+        "polySurface9920",
+        "polySurface9921",
+        "polySurface9922",
+        "polySurface9923",
+        "polySurface9924",
+        "polySurface9925",
+        "polySurface9926",
+        "polySurface9927"
+      ],
+      "possibly_semantic_labels": [],
+      "member_identity_proven": false
+    },
+    {
       "url_without_query": "https://szbwgvue.chwhyun.cn/wanfodian/3d/gd2/gd2.gltf",
       "gltf_version": "2.0",
       "node_count": 13,
@@ -296,10 +298,16 @@
   "3d_network_candidate_urls": [],
   "canvas_count": 5,
   "iframe_count": 0,
-  "screenshots": [],
+  "screenshots": [
+    {
+      "filename": "01_website_initial_view.png",
+      "bytes": 1936694,
+      "sha256": "b66a5c5dc82d1519034aac40187f10210bb7042366def15bd48ecbfe3c3d3a5b"
+    }
+  ],
   "navigation_errors": [
     "navigate: Page.goto: net::ERR_CERT_DATE_INVALID at https://szbwgvue.chwhyun.cn/wanfodian/\nCall log:\n  - navigating to \"https://szbwgvue.chwhyun.cn/wanfodian/\", waiting until \"domcontentloaded\"\n",
-    "screenshot-01_website_initial_view: Page.screenshot: Timeout 14000ms exceeded.\nCall log:\n  - taking page screenshot\n    - disabled all CSS animations\n  - waiting for fonts to load...\n  - fonts loaded\n"
+    "entry-click: Locator.click: Timeout 8000ms exceeded.\nCall log:\n  - waiting for get_by_text(\"点击进入\", exact=True).first\n    - locator resolved to <p class=\"p1-nav-t1\">点击进入</p>\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done sc"
   ],
   "console_errors": [],
   "gate": "FAIL_AUTOMATED_BROWSER_REFERENCE",
@@ -353,12 +361,12 @@
       "content_type": "model/gltf+json"
     },
     {
-      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dg/bujiandougong.gltf",
       "status": 200,
       "content_type": "model/gltf+json"
     },
     {
-      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dg/bujiandougong.gltf",
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
       "status": 200,
       "content_type": "model/gltf+json"
     },
@@ -368,7 +376,7 @@
       "content_type": "model/gltf+json"
     },
     {
-      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/wfd/wfd.bin",
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/gd2/gd2.bin",
       "status": 200,
       "content_type": "application/octet-stream"
     },
@@ -378,12 +386,12 @@
       "content_type": "application/octet-stream"
     },
     {
-      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/gd2/gd2.bin",
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dg/bujiandougong.bin",
       "status": 200,
       "content_type": "application/octet-stream"
     },
     {
-      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dg/bujiandougong.bin",
+      "url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/wfd/wfd.bin",
       "status": 200,
       "content_type": "application/octet-stream"
     }
