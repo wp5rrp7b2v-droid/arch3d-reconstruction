@@ -1,0 +1,261 @@
+{
+  "status": "CANDIDATE_VISUAL_ONLY",
+  "gate": {
+    "original_geometry_generated": true,
+    "blender_blend_and_glb_generated": true,
+    "three_views_created": true,
+    "A1_dimensions_verified": false,
+    "real_contact_pass": false,
+    "same_physical_instance_proven": false,
+    "PO_visual_approval": false,
+    "museum_model_reproduced": false
+  },
+  "source_kind": "original parametric geometry using visual composition inferred from museum and A1 2-27",
+  "source_urls": [
+    "https://szbwgvue.chwhyun.cn/wanfodian/",
+    "A1 original survey PDF73 (printed p58), fig 2-27"
+  ],
+  "museum_copyrighted_meshes_used": false,
+  "all_dimensions": "temporary relative visual hypothesis, NOT historical measured dimensions",
+  "component_count": 20,
+  "components": [
+    {
+      "name": "PROOF_COLUMN",
+      "kind": "column_visual",
+      "center_m": [
+        0,
+        0,
+        -0.51
+      ],
+      "bbox_m": [
+        0.31,
+        0.31,
+        1.02
+      ],
+      "source": "ORIGINAL_WORKING_HYPOTHESIS"
+    },
+    {
+      "name": "LUDOU_NECK",
+      "kind": "dou_visual",
+      "center_m": [
+        0,
+        0,
+        0.057
+      ],
+      "bbox_m": [
+        0.27,
+        0.27,
+        0.114
+      ],
+      "source": "ORIGINAL_WORKING_HYPOTHESIS"
+    },
+    {
+      "name": "LUDOU_TOP",
+      "kind": "dou_visual",
+      "center_m": [
+        0,
+        0,
+        0.175
+      ],
+      "bbox_m": [
+        0.43,
+        0.41,
+        0.124
+      ],
+      "source": "ORIGINAL_WORKING_HYPOTHESIS"
+    },
+    {
+      "name": "HUA_1",
+      "kind": "gong_candidate",
+      "source": "ORIGINAL_WORKING_HYPOTHESIS",
+      "vertices": 20
+    },
+    {
+      "name": "SANDOU_1_A",
+      "kind": "dou_visual",
+      "center_m": [
+        -0.32,
+        0,
+        0.469
+      ],
+      "bbox_m": [
+        0.18,
+        0.24,
+        0.118
+      ],
+      "source": "ORIGINAL_WORKING_HYPOTHESIS"
+    },
+    {
+      "name": "TRANSVERSE_1_A",
+      "kind": "gong_candidate",
+      "source": "ORIGINAL_WORKING_HYPOTHESIS",
+      "vertices": 20
+    },
+    {
+      "name": "SANDOU_1_B",
+      "kind": "dou_visual",
+      "center_m": [
+        0.32,
+        0,
+        0.469
+      ],
+      "bbox_m": [
+        0.18,
+        0.24,
+        0.118
+      ],
+      "source": "ORIGINAL_WORKING_HYPOTHESIS"
+    },
+    {
+      "name": "TRANSVERSE_1_B",
+      "kind": "gong_candidate",
+      "source": "ORIGINAL_WORKING_HYPOTHESIS",
+      "vertices": 20
+    },
+    {
+      "name": "HUA_2",
+      "kind": "gong_candidate",
+      "source": "ORIGINAL_WORKING_HYPOTHESIS",
+      "vertices": 20
+    },
+    {
+      "name": "SANDOU_2_A",
+      "kind": "dou_visual",
+      "center_m": [
+        0,
+        -0.29,
+        0.937
+      ],
+      "bbox_m": [
+        0.24,
+        0.18,
+        0.118
+      ],
+      "source": "ORIGINAL_WORKING_HYPOTHESIS"
+    },
+    {
+      "name": "TRANSVERSE_2_A",
+      "kind": "gong_candidate",
+      "source": "ORIGINAL_WORKING_HYPOTHESIS",
+      "vertices": 20
+    },
+    {
+      "name": "SANDOU_2_B",
+      "kind": "dou_visual",
+      "center_m": [
+        0,
+        0.29,
+        0.937
+      ],
+      "bbox_m": [
+        0.24,
+        0.18,
+        0.118
+      ],
+      "source": "ORIGINAL_WORKING_HYPOTHESIS"
+    },
+    {
+      "name": "TRANSVERSE_2_B",
+      "kind": "gong_candidate",
+      "source": "ORIGINAL_WORKING_HYPOTHESIS",
+      "vertices": 20
+    },
+    {
+      "name": "DIAGONAL_ANG_A",
+      "kind": "ang_hypothesis",
+      "source": "ORIGINAL_WORKING_HYPOTHESIS",
+      "vertices": 12
+    },
+    {
+      "name": "DIAGONAL_ANG_B",
+      "kind": "ang_hypothesis",
+      "source": "ORIGINAL_WORKING_HYPOTHESIS",
+      "vertices": 12
+    },
+    {
+      "name": "TOP_SUPPORT_A",
+      "kind": "dou_visual",
+      "center_m": [
+        -0.36,
+        0,
+        1.194
+      ],
+      "bbox_m": [
+        0.18,
+        0.36,
+        0.078
+      ],
+      "source": "ORIGINAL_WORKING_HYPOTHESIS"
+    },
+    {
+      "name": "TOP_SUPPORT_B",
+      "kind": "dou_visual",
+      "center_m": [
+        0.36,
+        0,
+        1.194
+      ],
+      "bbox_m": [
+        0.18,
+        0.36,
+        0.078
+      ],
+      "source": "ORIGINAL_WORKING_HYPOTHESIS"
+    },
+    {
+      "name": "TOP_LONG_GONG",
+      "kind": "gong_candidate",
+      "source": "ORIGINAL_WORKING_HYPOTHESIS",
+      "vertices": 20
+    },
+    {
+      "name": "TOP_SUPPORT_C",
+      "kind": "dou_visual",
+      "center_m": [
+        0,
+        0,
+        1.466
+      ],
+      "bbox_m": [
+        0.3,
+        0.25,
+        0.11
+      ],
+      "source": "ORIGINAL_WORKING_HYPOTHESIS"
+    },
+    {
+      "name": "TOP_CROSS_MEMBER",
+      "kind": "gong_candidate",
+      "source": "ORIGINAL_WORKING_HYPOTHESIS",
+      "vertices": 20
+    }
+  ],
+  "views": [
+    {
+      "filename": "ORIGINAL_VISUAL_PROOF_ISOMETRIC.png",
+      "bytes": 967433,
+      "sha256": "fb0284c4f7fbd0b39abf36db68fe3bb53dbe67fb3f6c048201217e28b0c12023"
+    },
+    {
+      "filename": "ORIGINAL_VISUAL_PROOF_REVERSE.png",
+      "bytes": 982080,
+      "sha256": "a1e53b344853ffbd4d145111168917a6051b2e98f04f753f9879b51354c6bb2e"
+    },
+    {
+      "filename": "ORIGINAL_VISUAL_PROOF_SIDE.png",
+      "bytes": 941256,
+      "sha256": "4decd4c20b64cf52d60ed207344f106d14cc8b4ca6ed46340a75dfc7c917e1ed"
+    }
+  ],
+  "binaries": {
+    "MUSEUM_REFERENCED_VISUAL_PROOF_V001.blend": {
+      "bytes": 572358,
+      "sha256": "4b82c533238b4dcdb9517dfe6d57634a016a9be54b047b54de688ec10b5fffad"
+    },
+    "MUSEUM_REFERENCED_VISUAL_PROOF_V001.glb": {
+      "bytes": 35856,
+      "sha256": "1db5003b46931495019d50be3fcdb18a4be7bb0909dffcd6d2e185b68fb3da6f"
+    }
+  },
+  "status_note": "Do not mount into PR83 or master, no claim of historical correctness; requires PO visual gate and A1/A2 metric reconstruction."
+}
