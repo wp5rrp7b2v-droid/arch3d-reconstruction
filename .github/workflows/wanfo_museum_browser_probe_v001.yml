@@ -1,0 +1,59 @@
+name: Wanfo Museum Automated Browser Reference G0
+on:
+  push:
+    branches:
+      - evidence/wanfo-museum-automated-probe-20261107
+    paths:
+      - review/museum_browser_probe_v001/probe.py
+      - .github/workflows/wanfo_museum_browser_probe_v001.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-museum-browser-probe-v001
+  cancel-in-progress: false
+jobs:
+  browser-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install Playwright and Chromium
+        run: |
+          python -m pip install --user "playwright>=1.56,<1.62"
+          python -m playwright install --with-deps chromium
+      - name: Execute single-site public museum browser G0 probe
+        run: python review/museum_browser_probe_v001/probe.py
+      - name: Archive result JSON with exact SHA-256, never publish third-party screenshots to git
+        if: always()
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          root=Path("review/museum_browser_probe_v001/output")
+          fn=root/"MUSEUM_BROWSER_PROBE.json"
+          if not fn.exists():
+              root.mkdir(parents=True,exist_ok=True)
+              fn.write_text(json.dumps({"gate":"FAIL_AUTOMATED_BROWSER_REFERENCE","reason":"No result JSON: browser setup or test failed before collection"},ensure_ascii=False,indent=2)+"\n")
+          j=json.loads(fn.read_text())
+          print("MUSEUM_GATE",j.get("gate"),"RESULT_SHA256",hashlib.sha256(fn.read_bytes()).hexdigest())
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add review/museum_browser_probe_v001/output/MUSEUM_BROWSER_PROBE.json
+          if ! git diff --cached --quiet; then
+            git diff --cached --name-only | python -c 'import sys;a=sys.stdin.read().splitlines(); assert a == ["review/museum_browser_probe_v001/output/MUSEUM_BROWSER_PROBE.json"],a'
+            git commit -m 'evidence: publish bounded museum browser proof findings without site images'
+            git push origin HEAD:evidence/wanfo-museum-automated-probe-20261107
+          fi
+      - name: Short-lived research screenshots (not Git history)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_MUSEUM_G0_BROWSER_PROOF
+          path: |
+            review/museum_browser_probe_v001/output/MUSEUM_BROWSER_PROBE.json
+            review/museum_browser_probe_v001/screenshots_for_short_retention_artifact/*.png
+          retention-days: 7
