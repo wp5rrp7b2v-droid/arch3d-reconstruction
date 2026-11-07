@@ -41,6 +41,8 @@ report={
   "site_media_images_loaded":0,
   "near_target_media_loaded":0,
   "near_target_media_examples":[],
+  "gltf_structures":[],
+  "gltf_identity_gate":"NOT_CHECKED",
   "same_instance_east_front_column_head":"NOT_PROVEN",
   "3d_network_candidate_urls":[],
   "canvas_count":0,
@@ -88,10 +90,13 @@ try:
     page=context.new_page()
     page.set_default_timeout(7000)
     requests=[]
+    gltf_responses=[]
     def on_response(resp):
         url=safe_url(resp.url)
         if re.search(r"\.(glb|gltf|bin|obj|fbx|ktx2|splat)(?:$)",url,re.I):
             if len(requests)<80:requests.append({"url":url[:300],"status":resp.status,"content_type":resp.headers.get("content-type","")[:80]})
+            if url.endswith(".gltf") and resp.status==200 and len(gltf_responses)<8:
+                gltf_responses.append(resp)
     def on_console(msg):
         if msg.type=="error" and len(report["console_errors"])<12:
             report["console_errors"].append(msg.text[:250])
@@ -135,8 +140,16 @@ try:
             except Exception as retry:
                 report["navigation_errors"].append("diagnostic-retry: "+str(retry)[:500])
         # A timeout can still yield a visually useful page.
-    try:page.wait_for_timeout(3500)
-    except Exception:pass
+    # Site boots by loading real GLTF/BIN assets: wait for the progress screen to clear.
+    # Bounded wait; no human interaction or navigation to other sites.
+    try:
+        for _ in range(10):
+            page.wait_for_timeout(3500)
+            visible=page.evaluate("() => (document.body?.innerText||'').slice(0,2000)")
+            if "柱头铺作" in visible or "铺作" in visible or "建筑概况" in visible:
+                break
+    except Exception as e:
+        report["navigation_errors"].append("wait-loading: "+str(e)[:200])
     try:report["page_title"]=page.title()[:200]
     except Exception:pass
 
@@ -170,6 +183,38 @@ try:
     except Exception as e:
         data={"textSample":"","imgs":[],"targetNodes":[],"canvasCount":0,"iframeCount":0}
         report["navigation_errors"].append("extract-dom: "+str(e)[:400])
+    # Inspect semantic structure of publicly loaded GLTF metadata only.
+    # No mesh vertices, no BIN, no textures, no GLTF document bytes are redistributed.
+    try:
+        for resp in gltf_responses:
+            try:
+                structure=resp.json()
+                node_names=[x.get("name","") for x in structure.get("nodes",[]) if isinstance(x,dict) and x.get("name")]
+                mesh_names=[x.get("name","") for x in structure.get("meshes",[]) if isinstance(x,dict) and x.get("name")]
+                keywords=re.compile(r"华栱|华拱|栌斗|交互斗|柱头|斗栱|斗拱|令栱|下昂|头昂|二昂|[斗栱拱昂梁柱]|dou|gong|ang|bracket|column",re.I)
+                hits=[str(s)[:140] for s in (node_names+mesh_names) if keywords.search(str(s))]
+                report["gltf_structures"].append({
+                    "url_without_query":safe_url(resp.url),
+                    "gltf_version":str(structure.get("asset",{}).get("version","")),
+                    "node_count":len(structure.get("nodes",[])),
+                    "mesh_count":len(structure.get("meshes",[])),
+                    "materials_count":len(structure.get("materials",[])),
+                    "scenes_count":len(structure.get("scenes",[])),
+                    "named_nodes_count":len(node_names),
+                    "named_meshes_count":len(mesh_names),
+                    "example_node_names":[str(s)[:100] for s in node_names[:24]],
+                    "example_mesh_names":[str(s)[:100] for s in mesh_names[:24]],
+                    "possibly_semantic_labels":hits[:30],
+                    "member_identity_proven":False
+                })
+            except Exception as e:
+                report["navigation_errors"].append("gltf-metadata: "+str(e)[:250])
+        if any(x["node_count"]>0 and x["mesh_count"]>0 for x in report["gltf_structures"]):
+            report["gltf_identity_gate"]="GLTF_STRUCTURE_CONFIRMED_MEMBER_IDENTITY_UNKNOWN"
+        else:
+            report["gltf_identity_gate"]="NOT_CONFIRMED"
+    except Exception as e:
+        report["navigation_errors"].append("gltf-parse-batch: "+str(e)[:250])
     text=data.get("textSample","")
     report["page_visible_text_sample_chars"]=len(text)
     report["target_text_found"]=[s for s in TARGETS if s in text]
