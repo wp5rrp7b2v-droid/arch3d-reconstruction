@@ -1,0 +1,63 @@
+name: Wanfo Museum Dougong Exact Member Identity G1
+on:
+  push:
+    branches:
+      - evidence/wanfo-dougong-identity-proof-v001-20261107
+    paths:
+      - review/dougong_identity_v001/inspect_dougong_blender.py
+      - .github/workflows/wanfo_dougong_identity_g1.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-museum-dougong-g1
+  cancel-in-progress: false
+jobs:
+  single-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Prepare Blender 4.5.13 (same cloud route as engineering tests)
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1
+          curl -fL --retry 3 https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz -o /tmp/blender.tar.xz
+          tar -xf /tmp/blender.tar.xz -C /tmp
+      - name: Inspect temporary museum glTF and generate diagnostic views
+        run: |
+          /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 7 --python review/dougong_identity_v001/inspect_dougong_blender.py
+      - name: Persist ONLY model identity test JSON (not source meshes, renders, or textures)
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib
+          p=Path("review/dougong_identity_v001/output/DOUGONG_IDENTITY_PROOF.json")
+          if not p.exists():
+              p.parent.mkdir(parents=True,exist_ok=True)
+              p.write_text(json.dumps({"result":"FAIL_SCRIPT_NOT_EXECUTED","identity_classification":"UNKNOWN"},ensure_ascii=False,indent=2)+"\n")
+          j=json.loads(p.read_text())
+          print("DOUGONG_G1_GATE",j.get("result"),"IDENTITY",j.get("identity_classification"))
+          print("RESULT_SHA256",hashlib.sha256(p.read_bytes()).hexdigest())
+          assert not any(s in str(j) for s in ("data:image/", "BEGIN PRIVATE KEY", "base64,"))
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add review/dougong_identity_v001/output/DOUGONG_IDENTITY_PROOF.json
+          if ! git diff --cached --quiet; then
+            git diff --cached --name-only | python -c 'import sys;p=sys.stdin.read().splitlines();assert p==["review/dougong_identity_v001/output/DOUGONG_IDENTITY_PROOF.json"],p'
+            git commit -m 'evidence: archive museum dougong mesh identity and view gates, no source assets'
+            git push origin HEAD:evidence/wanfo-dougong-identity-proof-v001-20261107
+          fi
+      - name: Short-lived diagnostic views (no museum source files)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: WANFO_MUSEUM_DOUGONG_G1_VIEWS
+          path: |
+            review/dougong_identity_v001/output/DOUGONG_IDENTITY_PROOF.json
+            review/dougong_identity_v001/_private_views_not_git/*.png
+          retention-days: 7
