@@ -29,6 +29,10 @@ report={
   "scope":"public site single-visit browser feasibility, no model extraction",
   "browser":"Chromium headless Playwright",
   "page_reached":False,
+  "tls_certificate_validation":"NOT_CHECKED",
+  "tls_diagnostic_ignore_errors":False,
+  "reference_use_gate":"NOT_VERIFIED",
+  "certificate_dates":{},
   "page_title":None,
   "nav_http_status":None,
   "target_text_found":[],
@@ -99,6 +103,37 @@ try:
         report["page_reached"]=bool(nav and 200<=nav.status<400)
     except Exception as e:
         report["navigation_errors"].append("navigate: "+str(e)[:650])
+        if "ERR_CERT_DATE_INVALID" in str(e):
+            report["tls_certificate_validation"]="FAIL_CERT_DATE_INVALID"
+            # Independent certificate date probe, never sends credentials or cookies.
+            try:
+                import subprocess
+                host="szbwgvue.chwhyun.cn"
+                cp=subprocess.run(["openssl","s_client","-connect",host+":443","-servername",host],
+                     input="",capture_output=True,text=True,timeout=12)
+                cx=subprocess.run(["openssl","x509","-noout","-dates","-subject","-issuer"],
+                     input=cp.stdout,capture_output=True,text=True,timeout=8)
+                report["certificate_dates"]={part.split("=",1)[0]:part.split("=",1)[1][:150] for part in cx.stdout.splitlines() if "=" in part}
+                if cx.returncode:report["navigation_errors"].append("cert-details: "+cx.stderr[:200])
+            except Exception as ce:
+                report["navigation_errors"].append("cert-details: "+str(ce)[:200])
+            # Diagnostic-only isolated retry: HTTPS site identity is NOT verified.
+            # Never use as authoritative evidence without independent cross-validation.
+            try:
+                context.close()
+                context=browser.new_context(viewport={"width":1365,"height":920},device_scale_factor=1,locale="zh-CN",
+                                    java_script_enabled=True,ignore_https_errors=True)
+                page=context.new_page()
+                page.set_default_timeout(7000)
+                page.on("response",on_response)
+                page.on("console",on_console)
+                nav=page.goto(SITE,wait_until="domcontentloaded",timeout=32000)
+                report["nav_http_status"]=nav.status if nav else None
+                report["page_reached"]=bool(nav and 200<=nav.status<400)
+                report["tls_diagnostic_ignore_errors"]=True
+                report["reference_use_gate"]="FAIL_UNVERIFIED_TLS_SOURCE"
+            except Exception as retry:
+                report["navigation_errors"].append("diagnostic-retry: "+str(retry)[:500])
         # A timeout can still yield a visually useful page.
     try:page.wait_for_timeout(3500)
     except Exception:pass
@@ -198,6 +233,9 @@ try:
     else:
         report["gate"]="FAIL_AUTOMATED_BROWSER_REFERENCE"
         report["reason"]="Public page/target column-head could not be verified through browser DOM."
+    if report["tls_diagnostic_ignore_errors"] and report["gate"]=="PASS_AUTO_CAPTURE_SECTION":
+        report["gate"]="PASS_CAPTURE_ONLY_TLS_UNVERIFIED"
+        report["reason"]="Automated browser captured column-head section under diagnostic TLS validation bypass. NOT authoritative source verification."
     browser.close()
 except Exception as exc:
     report["gate"]="FAIL_AUTOMATED_BROWSER_REFERENCE"
