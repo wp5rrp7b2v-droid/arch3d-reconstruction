@@ -1,0 +1,42 @@
+{
+  "source": "https://szbwgvue.chwhyun.cn/wanfodian/",
+  "test_date_utc": "2026-11-07T05:09:21.621776+00:00",
+  "scope": "public site single-visit browser feasibility, no model extraction",
+  "browser": "Chromium headless Playwright",
+  "page_reached": false,
+  "page_title": "",
+  "nav_http_status": null,
+  "target_text_found": [],
+  "target_text_visible": [],
+  "site_media_images_total": 0,
+  "site_media_images_loaded": 0,
+  "near_target_media_loaded": 0,
+  "near_target_media_examples": [],
+  "same_instance_east_front_column_head": "NOT_PROVEN",
+  "3d_network_candidate_urls": [],
+  "canvas_count": 0,
+  "iframe_count": 0,
+  "screenshots": [
+    {
+      "filename": "01_website_initial_view.png",
+      "bytes": 5591,
+      "sha256": "6cc26ca3793e227693aba5796f46408b7d2e3f6bb841c3a060497a0fc37ec77e"
+    }
+  ],
+  "navigation_errors": [
+    "navigate: Page.goto: net::ERR_CERT_DATE_INVALID at https://szbwgvue.chwhyun.cn/wanfodian/\nCall log:\n  - navigating to \"https://szbwgvue.chwhyun.cn/wanfodian/\", waiting until \"domcontentloaded\"\n"
+  ],
+  "console_errors": [],
+  "gate": "FAIL_AUTOMATED_BROWSER_REFERENCE",
+  "reason": "Public page/target column-head could not be verified through browser DOM.",
+  "data_limits": [
+    "Photos do not establish exact first-jump member identity",
+    "Museum captions are not A1/A2 dimensional truth",
+    "Only source URLs/hashes; screenshot bytes are NOT committed to public repository",
+    "No source 3D assets downloaded or bypassed"
+  ],
+  "page_visible_text_sample_chars": 0,
+  "visible_text_sample": "",
+  "target_nodes": [],
+  "navigation_3d_responses": []
+}
