@@ -160,7 +160,16 @@ try:
             page.wait_for_timeout(1500)
             shoot(page,"02_target_columnhead_section")
         except Exception as e:report["navigation_errors"].append("scroll-target: "+str(e)[:300])
-        # Site images nearest to heading; this is VISUAL PROXIMITY, not component identity.
+        # Refresh image loading after scroll: lazy-loaded images may not exist at initial viewport.
+        try:
+            refreshed=page.evaluate("""() => [...document.images].map((im,i)=>{const b=im.getBoundingClientRect();return {
+                id:i,src:im.currentSrc||im.src||'',alt:(im.alt||'').slice(0,160),
+                naturalWidth:im.naturalWidth,naturalHeight:im.naturalHeight,
+                absoluteTop:Math.round(b.top+scrollY),loaded:im.complete&&im.naturalWidth>0};})""")
+            img=refreshed
+            report["site_media_images_loaded"]=sum(1 for x in img if x["loaded"] and x["naturalWidth"]>=220)
+        except Exception as e:report["navigation_errors"].append("refresh-lazy-images: "+str(e)[:300])
+        # Proximity is not proof that an image depicts the exact member.
         candidates=sorted((x for x in img if x["loaded"] and x["naturalWidth"]>=220),
                           key=lambda x:abs(x["absoluteTop"]-hits[0]["absoluteTop"]))
         near=[x for x in candidates if abs(x["absoluteTop"]-hits[0]["absoluteTop"])<=1400]
