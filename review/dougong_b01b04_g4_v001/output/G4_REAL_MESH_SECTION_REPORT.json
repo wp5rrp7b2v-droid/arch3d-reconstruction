@@ -1,6 +1,6 @@
 {
   "status": "PASS_MESH_INTERACTION_OBSERVED__HISTORICAL_JOINT_UNPROVEN",
-  "start_utc": "2026-11-08T01:56:11.608893+00:00",
+  "start_utc": "2026-11-08T02:07:17.874779+00:00",
   "source": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
   "source_tls": "KNOWN_CERT_EXPIRED__DIAGNOSTIC_WITH_PREVIOUS_EXACT_SHA_PIN",
   "museum_model_reproduction_permission": "UNKNOWN; NO_SOURCE_ASSET_OR_RENDER_IN_PUBLIC_GIT",
@@ -551,29 +551,29 @@
     {
       "name": "FOUR_MESHES_AXON",
       "filename": "G4_FOUR_MESHES_AXON.png",
-      "bytes": 1167535,
-      "sha256": "8030b2195d4d07bade6e215b2a1cfa471451dafa1075c2f6d940023e1df7dc8d",
+      "bytes": 1167780,
+      "sha256": "d9a1559e42456fe3568e1fc61175dfe5eff2488c100a38add095fd90675edb00",
       "stored_only_in_ephemeral_actions_artifact": true
     },
     {
       "name": "FOUR_MESHES_OPPOSITE",
       "filename": "G4_FOUR_MESHES_OPPOSITE.png",
-      "bytes": 1173580,
-      "sha256": "155c8d4a5c5f13c9ceb7796d5b7f3dd4f684d760bf414a10f65153016657433f",
+      "bytes": 1172984,
+      "sha256": "260e99041336bbb9aabeb04b8b155aa0f1489ddf742942002c1009b6276d8bf4",
       "stored_only_in_ephemeral_actions_artifact": true
     },
     {
       "name": "CUT_X_AT_B01_CENTER",
       "filename": "G4_CUT_X_AT_B01_CENTER.png",
-      "bytes": 1167100,
-      "sha256": "f07556405add655698e4875ef2cbbfaa13a0fca8ca3812da347b1d351d61d107",
+      "bytes": 1167175,
+      "sha256": "26388cc462fd16362634f8de14e7697d5be78ddc5a2733e478e7dfd76634eed2",
       "stored_only_in_ephemeral_actions_artifact": true
     },
     {
       "name": "CUT_Y_AT_B01_CENTER",
       "filename": "G4_CUT_Y_AT_B01_CENTER.png",
-      "bytes": 1186430,
-      "sha256": "873d85aec8596d97168acb78677bace413c4d970bdedd4f9601ae454c98c4b3b",
+      "bytes": 1186702,
+      "sha256": "e5c46df607637fabc3bfeb38bb447371188e47f71090c3f1c9013121d00c9190",
       "stored_only_in_ephemeral_actions_artifact": true
     }
   ],
@@ -594,5 +594,111 @@
     "Cross-section uses actual triangulated mesh bisection in museum coordinates but unverified historical units.",
     "Even demonstrated surface intersections are not engineering joinery or museum-to-A1 same-instance identification."
   ],
-  "errors": []
+  "errors": [],
+  "section_geometry_check": [
+    {
+      "view_name": "CUT_X_AT_B01_CENTER",
+      "mesh_id": "B01",
+      "original_mesh_vertices": 230,
+      "original_mesh_faces": 168,
+      "remaining_mesh_vertices": 192,
+      "remaining_mesh_faces": 116,
+      "original_signed_side_min": -0.05030274,
+      "original_signed_side_max": 0.07358412,
+      "remaining_signed_side_min": 0.0,
+      "removed_negative_side_all_vertices": true,
+      "some_original_vertices_on_removed_side": true
+    },
+    {
+      "view_name": "CUT_X_AT_B01_CENTER",
+      "mesh_id": "B02",
+      "original_mesh_vertices": 102,
+      "original_mesh_faces": 84,
+      "remaining_mesh_vertices": 102,
+      "remaining_mesh_faces": 84,
+      "original_signed_side_min": 0.0,
+      "original_signed_side_max": 0.12773438,
+      "remaining_signed_side_min": 0.0,
+      "removed_negative_side_all_vertices": true,
+      "some_original_vertices_on_removed_side": false
+    },
+    {
+      "view_name": "CUT_X_AT_B01_CENTER",
+      "mesh_id": "B03",
+      "original_mesh_vertices": 168,
+      "original_mesh_faces": 140,
+      "remaining_mesh_vertices": 12,
+      "remaining_mesh_faces": 2,
+      "original_signed_side_min": -0.12773438,
+      "original_signed_side_max": 0.0,
+      "remaining_signed_side_min": 0.0,
+      "removed_negative_side_all_vertices": true,
+      "some_original_vertices_on_removed_side": true
+    },
+    {
+      "view_name": "CUT_X_AT_B01_CENTER",
+      "mesh_id": "B04",
+      "original_mesh_vertices": 356,
+      "original_mesh_faces": 292,
+      "remaining_mesh_vertices": 241,
+      "remaining_mesh_faces": 172,
+      "original_signed_side_min": -0.00769959,
+      "original_signed_side_max": 0.03100173,
+      "remaining_signed_side_min": 0.0,
+      "removed_negative_side_all_vertices": true,
+      "some_original_vertices_on_removed_side": true
+    },
+    {
+      "view_name": "CUT_Y_AT_B01_CENTER",
+      "mesh_id": "B01",
+      "original_mesh_vertices": 230,
+      "original_mesh_faces": 168,
+      "remaining_mesh_vertices": 200,
+      "remaining_mesh_faces": 120,
+      "original_signed_side_min": -0.06197272,
+      "original_signed_side_max": 0.06189943,
+      "remaining_signed_side_min": -0.0,
+      "removed_negative_side_all_vertices": true,
+      "some_original_vertices_on_removed_side": true
+    },
+    {
+      "view_name": "CUT_Y_AT_B01_CENTER",
+      "mesh_id": "B02",
+      "original_mesh_vertices": 102,
+      "original_mesh_faces": 84,
+      "remaining_mesh_vertices": 102,
+      "remaining_mesh_faces": 64,
+      "original_signed_side_min": -0.01928439,
+      "original_signed_side_max": 0.01942663,
+      "remaining_signed_side_min": 0.0,
+      "removed_negative_side_all_vertices": true,
+      "some_original_vertices_on_removed_side": true
+    },
+    {
+      "view_name": "CUT_Y_AT_B01_CENTER",
+      "mesh_id": "B03",
+      "original_mesh_vertices": 168,
+      "original_mesh_faces": 140,
+      "remaining_mesh_vertices": 109,
+      "remaining_mesh_faces": 81,
+      "original_signed_side_min": -0.01928442,
+      "original_signed_side_max": 0.01942659,
+      "remaining_signed_side_min": 0.0,
+      "removed_negative_side_all_vertices": true,
+      "some_original_vertices_on_removed_side": true
+    },
+    {
+      "view_name": "CUT_Y_AT_B01_CENTER",
+      "mesh_id": "B04",
+      "original_mesh_vertices": 356,
+      "original_mesh_faces": 292,
+      "remaining_mesh_vertices": 239,
+      "remaining_mesh_faces": 185,
+      "original_signed_side_min": -0.12580325,
+      "original_signed_side_max": 0.12580325,
+      "remaining_signed_side_min": -1e-08,
+      "removed_negative_side_all_vertices": true,
+      "some_original_vertices_on_removed_side": true
+    }
+  ]
 }
