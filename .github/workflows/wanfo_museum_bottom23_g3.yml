@@ -1,0 +1,68 @@
+name: Wanfo Museum Bottom23 Exact-ID Visual Review G3
+on:
+  push:
+    branches:
+      - evidence/wanfo-museum-bottom23-object-review-g3-20261108
+    paths:
+      - review/dougong_bottom23_g3_v001/inspect_bottom23.py
+      - review/dougong_bottom23_g3_v001/make_atlas.py
+      - .github/workflows/wanfo_museum_bottom23_g3.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: wanfo-bottom23-g3
+  cancel-in-progress: false
+jobs:
+  source-id-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install Blender and Chinese review typography
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y libegl1 libx11-6 libxi6 libxrender1 libxfixes3 libxxf86vm1 fonts-noto-cjk
+          curl -fL --retry 3 https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz -o /tmp/blender.tar.xz
+          tar xf /tmp/blender.tar.xz -C /tmp
+          python -m pip install --user "Pillow>=10,<13"
+      - name: Import pinned museum geometry, index and render 23 separate objects
+        run: |
+          /tmp/blender-4.5.13-linux-x64/blender -b --factory-startup --python-exit-code 7 --python review/dougong_bottom23_g3_v001/inspect_bottom23.py
+      - name: Build Chinese-labelled visual index from temporary inspection images
+        run: python review/dougong_bottom23_g3_v001/make_atlas.py
+      - name: Store JSON only in bounded review branch (never museum mesh or PNG)
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json,hashlib
+          p=Path("review/dougong_bottom23_g3_v001/output/G3_BOTTOM23_OBJECT_REVIEW.json")
+          if not p.exists():
+              p.parent.mkdir(exist_ok=True,parents=True)
+              p.write_text(json.dumps({"status":"FAIL_BEFORE_REPORT","gates":{}},ensure_ascii=False,indent=2)+"\n")
+          j=json.loads(p.read_text())
+          print("G3_RESULT",j.get("status"))
+          print("G3_SELECTED",j.get("selected_count"),"PAIRS",j.get("possible_support_pairs_count"))
+          print("G3_REPORT_SHA256",hashlib.sha256(p.read_bytes()).hexdigest())
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add review/dougong_bottom23_g3_v001/output/G3_BOTTOM23_OBJECT_REVIEW.json
+          if ! git diff --cached --quiet; then
+            git diff --cached --name-only | python -c 'import sys;p=sys.stdin.read().splitlines();assert p==["review/dougong_bottom23_g3_v001/output/G3_BOTTOM23_OBJECT_REVIEW.json"],p'
+            git commit -m "evidence: preserve anonymous bottom23 index, AABB candidate table and gates"
+            git pull --rebase origin evidence/wanfo-museum-bottom23-object-review-g3-20261108
+            git push origin HEAD:evidence/wanfo-museum-bottom23-object-review-g3-20261108
+          fi
+      - name: Short-lived third-party-mesh-derived review images, no original glTF
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: WANFO_MUSEUM_G3_BOTTOM23_INDEX_IMAGES
+          path: |
+            review/dougong_bottom23_g3_v001/output/G3_BOTTOM23_OBJECT_REVIEW.json
+            review/dougong_bottom23_g3_v001/_temporary_23_thumbnails/*.png
+          retention-days: 7
