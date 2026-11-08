@@ -1,0 +1,71 @@
+{
+  "approved_geometry_modified": false,
+  "candidate_design_dimensions_mm": {
+    "depth": 10710,
+    "width": 11475
+  },
+  "column_count": 12,
+  "component_counts": {
+    "mesh_objects": 227,
+    "temporary_meshes": 164
+  },
+  "datum": {
+    "column_foot_z_mm": -3824.3,
+    "column_top_z_mm": -290.0,
+    "eave_z_mm": 2705.965576171875,
+    "north_eave_y_mm": -6808.5,
+    "ridge_y_mm": 0,
+    "ridge_z_mm": 6240.265576171875,
+    "south_eave_y_mm": 6808.5
+  },
+  "deliverables": {
+    "blend": "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_V001.blend",
+    "glb": "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_V001.glb",
+    "review_images": [
+      "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_AXON.png",
+      "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_EXTERIOR.png",
+      "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_INTERIOR.png",
+      "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_ROOF.png"
+    ]
+  },
+  "hashes": {
+    "blend": "6d03ccf533a9e3d51792f91c0e209f74f95139a7843f283f1d316f69f9f0074e",
+    "glb": "2c2538a126e9caf562082de9e89aff9a1347caeacff520c8dbd232e851934505"
+  },
+  "roof_type": "single_eave_xieshan_proxy",
+  "source_bbox_after_shift_mm": [
+    [
+      -3098.98681640625,
+      -3596.0,
+      -440.0
+    ],
+    [
+      3098.98681640625,
+      3596.0,
+      2455.965576171875
+    ]
+  ],
+  "source_count": 63,
+  "source_identity": "D-285 V002 / D-286",
+  "source_origin_shift_mm": [
+    -2218.5,
+    -0.0,
+    0.0
+  ],
+  "source_sha256": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+  "source_span_mm": [
+    6197.9736328125,
+    7192.0,
+    2895.965576171875
+  ],
+  "stage": "full",
+  "state": "BUILD_CREATED_REOPEN_PENDING",
+  "unverified": [
+    "precise original 963 geometry",
+    "walls and tilework",
+    "all hidden joints",
+    "original common datum from approved local assembly",
+    "load capacity",
+    "detailed dougong identity"
+  ]
+}
