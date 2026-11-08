@@ -182,10 +182,11 @@ def build(stage):
     src0=bounds(src)
     cx=(src0[0][0]+src0[1][0])/2
     cy=(src0[0][1]+src0[1][1])/2
-    shift=[-cx,-cy,0.0]
+    shift=[-cx,-cy,pval(params,"Z-006-RC-01")-(src0[0][2]+150.0)]
     for ob in src:
         ob.location.x += shift[0]
         ob.location.y += shift[1]
+        ob.location.z += shift[2]
         ob["mvp_evidence_class"]="APPROVED_63_ENTITY_RECONSTRUCTED_DESIGN"
         ob["mvp_source_sha256"]=actual
         ob["mvp_scope"]="TWO_FRAMES_THREE_PURLINS_NOT_WHOLE_BUILDING"
@@ -217,6 +218,7 @@ def build(stage):
     assert len(xy)==12
     column_top=srcbox[0][2]+150.0
     z0=column_top-pval(params,"Z-006-RC-01")
+    assert abs(z0) < 0.001, "PROJECT_COLUMN_FOOT_DATUM_NOT_ZERO"
     dgheight=max(1200.0, min(2400.0,srcbox[1][2]-column_top+250.0))
     eave_z=max(column_top+dgheight,srcbox[1][2]+250)
     ridge_z=eave_z+pval(params,"ROOF-011")
