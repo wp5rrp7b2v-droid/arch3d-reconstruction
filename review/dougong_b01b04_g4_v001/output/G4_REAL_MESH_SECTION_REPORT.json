@@ -1,0 +1,598 @@
+{
+  "status": "PASS_MESH_INTERACTION_OBSERVED__HISTORICAL_JOINT_UNPROVEN",
+  "start_utc": "2026-11-08T01:56:11.608893+00:00",
+  "source": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
+  "source_tls": "KNOWN_CERT_EXPIRED__DIAGNOSTIC_WITH_PREVIOUS_EXACT_SHA_PIN",
+  "museum_model_reproduction_permission": "UNKNOWN; NO_SOURCE_ASSET_OR_RENDER_IN_PUBLIC_GIT",
+  "A1_reference": "Survey A1 PDF73 printed58 Figure2-27 lower-ang contact reference; no source mesh-ID mapping",
+  "A1_same_east_front_object_correspondence": "NOT_PROVEN",
+  "source_files": [
+    {
+      "filename": "dougong.gltf",
+      "bytes": 76038,
+      "sha256": "ac0687694715029a7b906bfdaa13578c578a01640e5cfeba1dbd29749dae6f1b",
+      "exact_previous_G1_SHA": true
+    },
+    {
+      "filename": "dougong.bin",
+      "bytes": 477064,
+      "sha256": "940224e259dfcce31f2a11aa58780422a38bcf0de869a2b1c72762321f0abc32",
+      "exact_previous_G1_SHA": true
+    }
+  ],
+  "source_hash_match": true,
+  "selected_identifiers": {
+    "B01": "polySurface9941",
+    "B02": "polySurface9986",
+    "B03": "polySurface9905",
+    "B04": "polySurface9961"
+  },
+  "meshes": [
+    {
+      "id": "B01",
+      "glTF_name": "polySurface9941",
+      "vertices": 230,
+      "triangles": 168,
+      "bbox_min": [
+        0.05683868,
+        -0.06994976,
+        -0.32206926
+      ],
+      "bbox_max": [
+        0.18072554,
+        0.05392238,
+        -0.24464974
+      ],
+      "edges": 367,
+      "faces": 168,
+      "boundary_edges": 230,
+      "nonmanifold_edges": 230,
+      "closed_manifold": false,
+      "signed_mesh_volume_source_units_cubed": null
+    },
+    {
+      "id": "B02",
+      "glTF_name": "polySurface9986",
+      "vertices": 102,
+      "triangles": 84,
+      "bbox_min": [
+        0.10714142,
+        -0.02726143,
+        -0.27561417
+      ],
+      "bbox_max": [
+        0.2348758,
+        0.01144958,
+        -0.22142464
+      ],
+      "edges": 177,
+      "faces": 84,
+      "boundary_edges": 102,
+      "nonmanifold_edges": 102,
+      "closed_manifold": false,
+      "signed_mesh_volume_source_units_cubed": null
+    },
+    {
+      "id": "B03",
+      "glTF_name": "polySurface9905",
+      "vertices": 168,
+      "triangles": 140,
+      "bbox_min": [
+        -0.02059296,
+        -0.02726147,
+        -0.27561399
+      ],
+      "bbox_max": [
+        0.10714142,
+        0.01144955,
+        -0.22142448
+      ],
+      "edges": 294,
+      "faces": 140,
+      "boundary_edges": 168,
+      "nonmanifold_edges": 168,
+      "closed_manifold": false,
+      "signed_mesh_volume_source_units_cubed": null
+    },
+    {
+      "id": "B04",
+      "glTF_name": "polySurface9961",
+      "vertices": 356,
+      "triangles": 292,
+      "bbox_min": [
+        0.09944183,
+        -0.13378029,
+        -0.27561414
+      ],
+      "bbox_max": [
+        0.13814315,
+        0.1178262,
+        -0.20442207
+      ],
+      "edges": 616,
+      "faces": 292,
+      "boundary_edges": 356,
+      "nonmanifold_edges": 356,
+      "closed_manifold": false,
+      "signed_mesh_volume_source_units_cubed": null
+    }
+  ],
+  "pair_checks": [
+    {
+      "pair": "B01-B02",
+      "mesh_a": "polySurface9941",
+      "mesh_b": "polySurface9986",
+      "aabb_3d_overlap": true,
+      "aabb_overlap_axes_source_units": [
+        0.07358412,
+        0.03871101,
+        0.03096443
+      ],
+      "intersection_face_pair_count": 62,
+      "intersection_face_pairs_sample": [
+        [
+          142,
+          52
+        ],
+        [
+          136,
+          52
+        ],
+        [
+          137,
+          52
+        ],
+        [
+          137,
+          29
+        ],
+        [
+          137,
+          53
+        ],
+        [
+          143,
+          48
+        ],
+        [
+          143,
+          52
+        ],
+        [
+          143,
+          42
+        ],
+        [
+          143,
+          41
+        ],
+        [
+          19,
+          29
+        ],
+        [
+          19,
+          3
+        ],
+        [
+          126,
+          29
+        ]
+      ],
+      "min_vertex_to_opposite_surface_source_units": 1e-08,
+      "min_vertex_to_opposite_surface_relative_to_four_mesh_max_extent": 3e-08,
+      "classification": "TRIANGULATED_SURFACES_INTERSECT_OR_COINCIDE__NO_VOLUME_PROOF",
+      "geometry_proof_limit": "triangle-surface candidates; not proven historical mortise-tenon or structural support"
+    },
+    {
+      "pair": "B01-B03",
+      "mesh_a": "polySurface9941",
+      "mesh_b": "polySurface9905",
+      "aabb_3d_overlap": true,
+      "aabb_overlap_axes_source_units": [
+        0.05030274,
+        0.03871101,
+        0.03096426
+      ],
+      "intersection_face_pair_count": 69,
+      "intersection_face_pairs_sample": [
+        [
+          14,
+          101
+        ],
+        [
+          167,
+          10
+        ],
+        [
+          167,
+          113
+        ],
+        [
+          167,
+          82
+        ],
+        [
+          167,
+          112
+        ],
+        [
+          27,
+          90
+        ],
+        [
+          26,
+          101
+        ],
+        [
+          26,
+          96
+        ],
+        [
+          26,
+          95
+        ],
+        [
+          26,
+          90
+        ],
+        [
+          26,
+          100
+        ],
+        [
+          26,
+          99
+        ]
+      ],
+      "min_vertex_to_opposite_surface_source_units": 9e-08,
+      "min_vertex_to_opposite_surface_relative_to_four_mesh_max_extent": 3.5e-07,
+      "classification": "TRIANGULATED_SURFACES_INTERSECT_OR_COINCIDE__NO_VOLUME_PROOF",
+      "geometry_proof_limit": "triangle-surface candidates; not proven historical mortise-tenon or structural support"
+    },
+    {
+      "pair": "B01-B04",
+      "mesh_a": "polySurface9941",
+      "mesh_b": "polySurface9961",
+      "aabb_3d_overlap": true,
+      "aabb_overlap_axes_source_units": [
+        0.03870133,
+        0.12387215,
+        0.0309644
+      ],
+      "intersection_face_pair_count": 99,
+      "intersection_face_pairs_sample": [
+        [
+          142,
+          10
+        ],
+        [
+          134,
+          248
+        ],
+        [
+          134,
+          247
+        ],
+        [
+          134,
+          246
+        ],
+        [
+          134,
+          258
+        ],
+        [
+          149,
+          9
+        ],
+        [
+          149,
+          10
+        ],
+        [
+          149,
+          137
+        ],
+        [
+          149,
+          7
+        ],
+        [
+          148,
+          137
+        ],
+        [
+          148,
+          7
+        ],
+        [
+          147,
+          146
+        ]
+      ],
+      "min_vertex_to_opposite_surface_source_units": 0.0,
+      "min_vertex_to_opposite_surface_relative_to_four_mesh_max_extent": 0.0,
+      "classification": "TRIANGULATED_SURFACES_INTERSECT_OR_COINCIDE__NO_VOLUME_PROOF",
+      "geometry_proof_limit": "triangle-surface candidates; not proven historical mortise-tenon or structural support"
+    },
+    {
+      "pair": "B02-B03",
+      "mesh_a": "polySurface9986",
+      "mesh_b": "polySurface9905",
+      "aabb_3d_overlap": false,
+      "aabb_overlap_axes_source_units": [
+        0.0,
+        0.03871097,
+        0.05418935
+      ],
+      "intersection_face_pair_count": 14,
+      "intersection_face_pairs_sample": [
+        [
+          54,
+          80
+        ],
+        [
+          32,
+          19
+        ],
+        [
+          32,
+          10
+        ],
+        [
+          32,
+          21
+        ],
+        [
+          32,
+          13
+        ],
+        [
+          32,
+          12
+        ],
+        [
+          32,
+          11
+        ],
+        [
+          32,
+          15
+        ],
+        [
+          32,
+          14
+        ],
+        [
+          32,
+          17
+        ],
+        [
+          32,
+          16
+        ],
+        [
+          32,
+          112
+        ]
+      ],
+      "min_vertex_to_opposite_surface_source_units": 0.0,
+      "min_vertex_to_opposite_surface_relative_to_four_mesh_max_extent": 1e-08,
+      "classification": "TRIANGULATED_SURFACES_INTERSECT_OR_COINCIDE__NO_VOLUME_PROOF",
+      "geometry_proof_limit": "triangle-surface candidates; not proven historical mortise-tenon or structural support"
+    },
+    {
+      "pair": "B02-B04",
+      "mesh_a": "polySurface9986",
+      "mesh_b": "polySurface9961",
+      "aabb_3d_overlap": true,
+      "aabb_overlap_axes_source_units": [
+        0.03100173,
+        0.03871101,
+        0.0541895
+      ],
+      "intersection_face_pair_count": 100,
+      "intersection_face_pairs_sample": [
+        [
+          48,
+          146
+        ],
+        [
+          48,
+          136
+        ],
+        [
+          48,
+          7
+        ],
+        [
+          52,
+          146
+        ],
+        [
+          52,
+          136
+        ],
+        [
+          52,
+          7
+        ],
+        [
+          17,
+          147
+        ],
+        [
+          17,
+          251
+        ],
+        [
+          17,
+          250
+        ],
+        [
+          17,
+          249
+        ],
+        [
+          5,
+          147
+        ],
+        [
+          5,
+          146
+        ]
+      ],
+      "min_vertex_to_opposite_surface_source_units": 0.0,
+      "min_vertex_to_opposite_surface_relative_to_four_mesh_max_extent": 0.0,
+      "classification": "TRIANGULATED_SURFACES_INTERSECT_OR_COINCIDE__NO_VOLUME_PROOF",
+      "geometry_proof_limit": "triangle-surface candidates; not proven historical mortise-tenon or structural support"
+    },
+    {
+      "pair": "B03-B04",
+      "mesh_a": "polySurface9905",
+      "mesh_b": "polySurface9961",
+      "aabb_3d_overlap": true,
+      "aabb_overlap_axes_source_units": [
+        0.00769959,
+        0.03871101,
+        0.05418952
+      ],
+      "intersection_face_pair_count": 111,
+      "intersection_face_pairs_sample": [
+        [
+          19,
+          150
+        ],
+        [
+          19,
+          280
+        ],
+        [
+          10,
+          150
+        ],
+        [
+          10,
+          268
+        ],
+        [
+          21,
+          150
+        ],
+        [
+          21,
+          280
+        ],
+        [
+          13,
+          150
+        ],
+        [
+          13,
+          275
+        ],
+        [
+          113,
+          150
+        ],
+        [
+          113,
+          69
+        ],
+        [
+          84,
+          150
+        ],
+        [
+          84,
+          69
+        ]
+      ],
+      "min_vertex_to_opposite_surface_source_units": 7e-08,
+      "min_vertex_to_opposite_surface_relative_to_four_mesh_max_extent": 2.9e-07,
+      "classification": "TRIANGULATED_SURFACES_INTERSECT_OR_COINCIDE__NO_VOLUME_PROOF",
+      "geometry_proof_limit": "triangle-surface candidates; not proven historical mortise-tenon or structural support"
+    }
+  ],
+  "section_planes": [
+    {
+      "view_name": "CUT_X_AT_B01_CENTER",
+      "plane_co_source_coordinates": [
+        0.10714142,
+        -0.00797704,
+        -0.26324567
+      ],
+      "plane_normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "method": "bmesh.ops.bisect_plane on actual triangulated mesh copies; outside cut side removed",
+      "proves": "relative geometry arrangement, not solid wood contact or historical connection"
+    },
+    {
+      "view_name": "CUT_Y_AT_B01_CENTER",
+      "plane_co_source_coordinates": [
+        0.10714142,
+        -0.00797704,
+        -0.26324567
+      ],
+      "plane_normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "method": "bmesh.ops.bisect_plane on actual triangulated mesh copies; outside cut side removed",
+      "proves": "relative geometry arrangement, not solid wood contact or historical connection"
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "FOUR_MESHES_AXON",
+      "filename": "G4_FOUR_MESHES_AXON.png",
+      "bytes": 1167535,
+      "sha256": "8030b2195d4d07bade6e215b2a1cfa471451dafa1075c2f6d940023e1df7dc8d",
+      "stored_only_in_ephemeral_actions_artifact": true
+    },
+    {
+      "name": "FOUR_MESHES_OPPOSITE",
+      "filename": "G4_FOUR_MESHES_OPPOSITE.png",
+      "bytes": 1173580,
+      "sha256": "155c8d4a5c5f13c9ceb7796d5b7f3dd4f684d760bf414a10f65153016657433f",
+      "stored_only_in_ephemeral_actions_artifact": true
+    },
+    {
+      "name": "CUT_X_AT_B01_CENTER",
+      "filename": "G4_CUT_X_AT_B01_CENTER.png",
+      "bytes": 1167100,
+      "sha256": "f07556405add655698e4875ef2cbbfaa13a0fca8ca3812da347b1d351d61d107",
+      "stored_only_in_ephemeral_actions_artifact": true
+    },
+    {
+      "name": "CUT_Y_AT_B01_CENTER",
+      "filename": "G4_CUT_Y_AT_B01_CENTER.png",
+      "bytes": 1186430,
+      "sha256": "873d85aec8596d97168acb78677bace413c4d970bdedd4f9601ae454c98c4b3b",
+      "stored_only_in_ephemeral_actions_artifact": true
+    }
+  ],
+  "gates": {
+    "all_4_meshes_loaded": true,
+    "all_6_pairs_bvh_evaluated": true,
+    "manifold_reported": true,
+    "pair_classification_adequate": true,
+    "2_exact_geometry_sections_rendered": true,
+    "historical_id_verified": false,
+    "true_mortise_and_tenon_verified": false,
+    "A1_dimension_calibrated": false
+  },
+  "notes": [
+    "BVH overlap gives intersecting triangle face PAIRS, not penetration volume.",
+    "3D bounding-box overlap alone cannot identify physical material intersection.",
+    "Nearness based on vertex-to-surface sampling has no guarantee of exact closest face-edge distance.",
+    "Cross-section uses actual triangulated mesh bisection in museum coordinates but unverified historical units.",
+    "Even demonstrated surface intersections are not engineering joinery or museum-to-A1 same-instance identification."
+  ],
+  "errors": []
+}
