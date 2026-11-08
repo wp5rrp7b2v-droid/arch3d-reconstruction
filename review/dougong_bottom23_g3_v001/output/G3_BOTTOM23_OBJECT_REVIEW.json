@@ -1,0 +1,1179 @@
+{
+  "status": "PASS_BOTTOM23_OBJECT_VIEWS__EXACT_MEMBERS_UNKNOWN",
+  "method": "bottom 40 percent of whole model Z extent BY OBJECT BBOX CENTROID (G2 method)",
+  "date_utc": "2026-11-08T01:40:20.319916+00:00",
+  "source_url": "https://szbwgvue.chwhyun.cn/wanfodian/3d/dougong/dougong.gltf",
+  "source_tls": "UNVERIFIED_DIAGNOSTIC_CERT_EXPIRED; SOURCE_HASHES_PINNED",
+  "source_rights": "UNKNOWN; third-party mesh and derived views TEMPORARY only, not public Git",
+  "source_exact_hash_verified": true,
+  "source_files": [
+    {
+      "filename": "dougong.gltf",
+      "bytes": 76038,
+      "sha256": "ac0687694715029a7b906bfdaa13578c578a01640e5cfeba1dbd29749dae6f1b",
+      "exact_match_to_G1": true
+    },
+    {
+      "filename": "dougong.bin",
+      "bytes": 477064,
+      "sha256": "940224e259dfcce31f2a11aa58780422a38bcf0de869a2b1c72762321f0abc32",
+      "exact_match_to_G1": true
+    }
+  ],
+  "whole_meshes": 96,
+  "selected_count": 23,
+  "selected_rows": [
+    {
+      "review_id": "B01",
+      "gltf_mesh_name": "polySurface9941",
+      "relative_band": 1,
+      "orientation_envelope": "XY",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.118782,
+        -0.008014,
+        -0.283359
+      ],
+      "bbox_extent_source_units": [
+        0.123887,
+        0.123872,
+        0.07742
+      ],
+      "bbox_min_source_units": [
+        0.056839,
+        -0.06995,
+        -0.322069
+      ],
+      "bbox_max_source_units": [
+        0.180726,
+        0.053922,
+        -0.24465
+      ],
+      "vertices": 230,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B02",
+      "gltf_mesh_name": "polySurface9986",
+      "relative_band": 1,
+      "orientation_envelope": "X",
+      "form_envelope": "horizontal",
+      "bbox_center_source_units": [
+        0.171009,
+        -0.007906,
+        -0.248519
+      ],
+      "bbox_extent_source_units": [
+        0.127734,
+        0.038711,
+        0.05419
+      ],
+      "bbox_min_source_units": [
+        0.107141,
+        -0.027261,
+        -0.275614
+      ],
+      "bbox_max_source_units": [
+        0.234876,
+        0.01145,
+        -0.221425
+      ],
+      "vertices": 102,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B03",
+      "gltf_mesh_name": "polySurface9905",
+      "relative_band": 1,
+      "orientation_envelope": "X",
+      "form_envelope": "horizontal",
+      "bbox_center_source_units": [
+        0.043274,
+        -0.007906,
+        -0.248519
+      ],
+      "bbox_extent_source_units": [
+        0.127734,
+        0.038711,
+        0.05419
+      ],
+      "bbox_min_source_units": [
+        -0.020593,
+        -0.027261,
+        -0.275614
+      ],
+      "bbox_max_source_units": [
+        0.107141,
+        0.01145,
+        -0.221424
+      ],
+      "vertices": 168,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B04",
+      "gltf_mesh_name": "polySurface9961",
+      "relative_band": 1,
+      "orientation_envelope": "Y",
+      "form_envelope": "horizontal",
+      "bbox_center_source_units": [
+        0.118792,
+        -0.007977,
+        -0.240018
+      ],
+      "bbox_extent_source_units": [
+        0.038701,
+        0.251606,
+        0.071192
+      ],
+      "bbox_min_source_units": [
+        0.099442,
+        -0.13378,
+        -0.275614
+      ],
+      "bbox_max_source_units": [
+        0.138143,
+        0.117826,
+        -0.204422
+      ],
+      "vertices": 356,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B05",
+      "gltf_mesh_name": "polySurface9988",
+      "relative_band": 1,
+      "orientation_envelope": "X",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.157466,
+        -0.007903,
+        -0.224327
+      ],
+      "bbox_extent_source_units": [
+        0.061929,
+        0.030972,
+        0.005806
+      ],
+      "bbox_min_source_units": [
+        0.126502,
+        -0.023389,
+        -0.22723
+      ],
+      "bbox_max_source_units": [
+        0.18843,
+        0.007582,
+        -0.221425
+      ],
+      "vertices": 60,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B06",
+      "gltf_mesh_name": "polySurface9987",
+      "relative_band": 1,
+      "orientation_envelope": "X",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.157466,
+        -0.007903,
+        -0.207872
+      ],
+      "bbox_extent_source_units": [
+        0.061929,
+        0.030972,
+        0.027105
+      ],
+      "bbox_min_source_units": [
+        0.126502,
+        -0.023389,
+        -0.221425
+      ],
+      "bbox_max_source_units": [
+        0.18843,
+        0.007582,
+        -0.19432
+      ],
+      "vertices": 92,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B07",
+      "gltf_mesh_name": "polySurface9989",
+      "relative_band": 1,
+      "orientation_envelope": "X",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.107144,
+        -0.007906,
+        -0.207872
+      ],
+      "bbox_extent_source_units": [
+        0.061938,
+        0.038711,
+        0.027104
+      ],
+      "bbox_min_source_units": [
+        0.076175,
+        -0.027261,
+        -0.221425
+      ],
+      "bbox_max_source_units": [
+        0.138113,
+        0.01145,
+        -0.19432
+      ],
+      "vertices": 104,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B08",
+      "gltf_mesh_name": "polySurface9923",
+      "relative_band": 1,
+      "orientation_envelope": "X",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.056822,
+        -0.007903,
+        -0.207872
+      ],
+      "bbox_extent_source_units": [
+        0.061929,
+        0.030972,
+        0.027105
+      ],
+      "bbox_min_source_units": [
+        0.025857,
+        -0.023389,
+        -0.221425
+      ],
+      "bbox_max_source_units": [
+        0.087786,
+        0.007582,
+        -0.19432
+      ],
+      "vertices": 96,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B09",
+      "gltf_mesh_name": "polySurface9982",
+      "relative_band": 2,
+      "orientation_envelope": "XY",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.211661,
+        -0.007907,
+        -0.200135
+      ],
+      "bbox_extent_source_units": [
+        0.065806,
+        0.061935,
+        0.042581
+      ],
+      "bbox_min_source_units": [
+        0.178758,
+        -0.038874,
+        -0.221425
+      ],
+      "bbox_max_source_units": [
+        0.244564,
+        0.023061,
+        -0.178844
+      ],
+      "vertices": 128,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B10",
+      "gltf_mesh_name": "polySurface9927",
+      "relative_band": 2,
+      "orientation_envelope": "XY",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.118793,
+        0.094602,
+        -0.200134
+      ],
+      "bbox_extent_source_units": [
+        0.061924,
+        0.065808,
+        0.042581
+      ],
+      "bbox_min_source_units": [
+        0.087831,
+        0.061698,
+        -0.221425
+      ],
+      "bbox_max_source_units": [
+        0.149755,
+        0.127506,
+        -0.178844
+      ],
+      "vertices": 128,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B11",
+      "gltf_mesh_name": "polySurface9963",
+      "relative_band": 2,
+      "orientation_envelope": "XY",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.118793,
+        -0.110554,
+        -0.200134
+      ],
+      "bbox_extent_source_units": [
+        0.061924,
+        0.065803,
+        0.042581
+      ],
+      "bbox_min_source_units": [
+        0.087831,
+        -0.143456,
+        -0.221425
+      ],
+      "bbox_max_source_units": [
+        0.149754,
+        -0.077652,
+        -0.178844
+      ],
+      "vertices": 128,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B12",
+      "gltf_mesh_name": "polySurface9924",
+      "relative_band": 2,
+      "orientation_envelope": "XY",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.002628,
+        -0.007907,
+        -0.200134
+      ],
+      "bbox_extent_source_units": [
+        0.065806,
+        0.061935,
+        0.042581
+      ],
+      "bbox_min_source_units": [
+        -0.030275,
+        -0.038874,
+        -0.221424
+      ],
+      "bbox_max_source_units": [
+        0.035531,
+        0.023061,
+        -0.178844
+      ],
+      "vertices": 128,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B13",
+      "gltf_mesh_name": "polySurface9990",
+      "relative_band": 2,
+      "orientation_envelope": "X",
+      "form_envelope": "horizontal",
+      "bbox_center_source_units": [
+        0.20972,
+        -0.007906,
+        -0.167229
+      ],
+      "bbox_extent_source_units": [
+        0.205156,
+        0.038711,
+        0.054182
+      ],
+      "bbox_min_source_units": [
+        0.107142,
+        -0.027261,
+        -0.19432
+      ],
+      "bbox_max_source_units": [
+        0.312298,
+        0.01145,
+        -0.140138
+      ],
+      "vertices": 104,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B14",
+      "gltf_mesh_name": "polySurface9948",
+      "relative_band": 2,
+      "orientation_envelope": "Y",
+      "form_envelope": "horizontal",
+      "bbox_center_source_units": [
+        0.118793,
+        0.095573,
+        -0.167229
+      ],
+      "bbox_extent_source_units": [
+        0.038701,
+        0.207095,
+        0.054182
+      ],
+      "bbox_min_source_units": [
+        0.099442,
+        -0.007975,
+        -0.19432
+      ],
+      "bbox_max_source_units": [
+        0.138143,
+        0.19912,
+        -0.140138
+      ],
+      "vertices": 166,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B15",
+      "gltf_mesh_name": "polySurface9936",
+      "relative_band": 2,
+      "orientation_envelope": "Y",
+      "form_envelope": "horizontal",
+      "bbox_center_source_units": [
+        0.118793,
+        -0.111521,
+        -0.167229
+      ],
+      "bbox_extent_source_units": [
+        0.038701,
+        0.207094,
+        0.054182
+      ],
+      "bbox_min_source_units": [
+        0.099442,
+        -0.215068,
+        -0.19432
+      ],
+      "bbox_max_source_units": [
+        0.138143,
+        -0.007975,
+        -0.140138
+      ],
+      "vertices": 166,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B16",
+      "gltf_mesh_name": "polySurface9904",
+      "relative_band": 2,
+      "orientation_envelope": "X",
+      "form_envelope": "horizontal",
+      "bbox_center_source_units": [
+        0.004566,
+        -0.007906,
+        -0.167229
+      ],
+      "bbox_extent_source_units": [
+        0.205152,
+        0.038711,
+        0.054182
+      ],
+      "bbox_min_source_units": [
+        -0.098009,
+        -0.027261,
+        -0.19432
+      ],
+      "bbox_max_source_units": [
+        0.107142,
+        0.01145,
+        -0.140138
+      ],
+      "vertices": 168,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B17",
+      "gltf_mesh_name": "polySurface9985",
+      "relative_band": 2,
+      "orientation_envelope": "X",
+      "form_envelope": "horizontal",
+      "bbox_center_source_units": [
+        0.200047,
+        -0.007904,
+        -0.129489
+      ],
+      "bbox_extent_source_units": [
+        0.14709,
+        0.030972,
+        0.03291
+      ],
+      "bbox_min_source_units": [
+        0.126503,
+        -0.023389,
+        -0.145944
+      ],
+      "bbox_max_source_units": [
+        0.273592,
+        0.007582,
+        -0.113034
+      ],
+      "vertices": 144,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B18",
+      "gltf_mesh_name": "polySurface9984",
+      "relative_band": 2,
+      "orientation_envelope": "XY",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.107145,
+        -0.007897,
+        -0.126586
+      ],
+      "bbox_extent_source_units": [
+        0.061938,
+        0.038729,
+        0.027105
+      ],
+      "bbox_min_source_units": [
+        0.076175,
+        -0.027262,
+        -0.140138
+      ],
+      "bbox_max_source_units": [
+        0.138114,
+        0.011467,
+        -0.113033
+      ],
+      "vertices": 104,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B19",
+      "gltf_mesh_name": "polySurface9995",
+      "relative_band": 2,
+      "orientation_envelope": "X",
+      "form_envelope": "horizontal",
+      "bbox_center_source_units": [
+        0.014239,
+        -0.007903,
+        -0.126586
+      ],
+      "bbox_extent_source_units": [
+        0.147095,
+        0.030972,
+        0.027105
+      ],
+      "bbox_min_source_units": [
+        -0.059308,
+        -0.023389,
+        -0.140138
+      ],
+      "bbox_max_source_units": [
+        0.087787,
+        0.007582,
+        -0.113033
+      ],
+      "vertices": 96,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B20",
+      "gltf_mesh_name": "polySurface9926",
+      "relative_band": 2,
+      "orientation_envelope": "XY",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        -0.078661,
+        -0.007946,
+        -0.126585
+      ],
+      "bbox_extent_source_units": [
+        0.061929,
+        0.065808,
+        0.027105
+      ],
+      "bbox_min_source_units": [
+        -0.109626,
+        -0.04085,
+        -0.140138
+      ],
+      "bbox_max_source_units": [
+        -0.047697,
+        0.024958,
+        -0.113033
+      ],
+      "vertices": 104,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B21",
+      "gltf_mesh_name": "polySurface9983",
+      "relative_band": 2,
+      "orientation_envelope": "XY",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.292945,
+        -0.007946,
+        -0.118847
+      ],
+      "bbox_extent_source_units": [
+        0.061929,
+        0.065808,
+        0.042583
+      ],
+      "bbox_min_source_units": [
+        0.261981,
+        -0.04085,
+        -0.140138
+      ],
+      "bbox_max_source_units": [
+        0.32391,
+        0.024958,
+        -0.097555
+      ],
+      "vertices": 180,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B22",
+      "gltf_mesh_name": "polySurface9971",
+      "relative_band": 2,
+      "orientation_envelope": "XY",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.118793,
+        0.175895,
+        -0.118847
+      ],
+      "bbox_extent_source_units": [
+        0.061924,
+        0.065806,
+        0.042583
+      ],
+      "bbox_min_source_units": [
+        0.087831,
+        0.142992,
+        -0.140138
+      ],
+      "bbox_max_source_units": [
+        0.149754,
+        0.208798,
+        -0.097555
+      ],
+      "vertices": 128,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    },
+    {
+      "review_id": "B23",
+      "gltf_mesh_name": "polySurface9945",
+      "relative_band": 2,
+      "orientation_envelope": "XY",
+      "form_envelope": "compact",
+      "bbox_center_source_units": [
+        0.118793,
+        -0.191843,
+        -0.118847
+      ],
+      "bbox_extent_source_units": [
+        0.061924,
+        0.065804,
+        0.042583
+      ],
+      "bbox_min_source_units": [
+        0.087831,
+        -0.224745,
+        -0.140138
+      ],
+      "bbox_max_source_units": [
+        0.149755,
+        -0.158941,
+        -0.097555
+      ],
+      "vertices": 128,
+      "historical_member_name": "UNKNOWN",
+      "same_specific_architectural_location_as_A1": "UNKNOWN"
+    }
+  ],
+  "possible_support_pairs": [
+    {
+      "lower": "B02",
+      "upper": "B06",
+      "lower_mesh": "polySurface9986",
+      "upper_mesh": "polySurface9987",
+      "bbox_area_overlap_ratio": 1.0,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B03",
+      "upper": "B08",
+      "lower_mesh": "polySurface9905",
+      "upper_mesh": "polySurface9923",
+      "bbox_area_overlap_ratio": 1.0,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B05",
+      "upper": "B06",
+      "lower_mesh": "polySurface9988",
+      "upper_mesh": "polySurface9987",
+      "bbox_area_overlap_ratio": 1.0,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B06",
+      "upper": "B13",
+      "lower_mesh": "polySurface9987",
+      "upper_mesh": "polySurface9990",
+      "bbox_area_overlap_ratio": 1.0,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B08",
+      "upper": "B16",
+      "lower_mesh": "polySurface9923",
+      "upper_mesh": "polySurface9904",
+      "bbox_area_overlap_ratio": 1.0,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B16",
+      "upper": "B19",
+      "lower_mesh": "polySurface9904",
+      "upper_mesh": "polySurface9995",
+      "bbox_area_overlap_ratio": 1.0,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B02",
+      "upper": "B05",
+      "lower_mesh": "polySurface9986",
+      "upper_mesh": "polySurface9988",
+      "bbox_area_overlap_ratio": 1.0,
+      "gap_as_model_height": -0.010054,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B13",
+      "upper": "B17",
+      "lower_mesh": "polySurface9990",
+      "upper_mesh": "polySurface9985",
+      "bbox_area_overlap_ratio": 1.0,
+      "gap_as_model_height": -0.010055,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B15",
+      "upper": "B23",
+      "lower_mesh": "polySurface9936",
+      "upper_mesh": "polySurface9945",
+      "bbox_area_overlap_ratio": 0.533071,
+      "gap_as_model_height": 0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B14",
+      "upper": "B22",
+      "lower_mesh": "polySurface9948",
+      "upper_mesh": "polySurface9971",
+      "bbox_area_overlap_ratio": 0.533069,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B03",
+      "upper": "B12",
+      "lower_mesh": "polySurface9905",
+      "upper_mesh": "polySurface9924",
+      "bbox_area_overlap_ratio": 0.533068,
+      "gap_as_model_height": 0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B02",
+      "upper": "B09",
+      "lower_mesh": "polySurface9986",
+      "upper_mesh": "polySurface9982",
+      "bbox_area_overlap_ratio": 0.53301,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B02",
+      "upper": "B07",
+      "lower_mesh": "polySurface9986",
+      "upper_mesh": "polySurface9989",
+      "bbox_area_overlap_ratio": 0.500042,
+      "gap_as_model_height": 0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B07",
+      "upper": "B13",
+      "lower_mesh": "polySurface9989",
+      "upper_mesh": "polySurface9990",
+      "bbox_area_overlap_ratio": 0.50003,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B07",
+      "upper": "B16",
+      "lower_mesh": "polySurface9989",
+      "upper_mesh": "polySurface9904",
+      "bbox_area_overlap_ratio": 0.49997,
+      "gap_as_model_height": 0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B03",
+      "upper": "B07",
+      "lower_mesh": "polySurface9905",
+      "upper_mesh": "polySurface9989",
+      "bbox_area_overlap_ratio": 0.499958,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B13",
+      "upper": "B18",
+      "lower_mesh": "polySurface9990",
+      "upper_mesh": "polySurface9984",
+      "bbox_area_overlap_ratio": 0.499811,
+      "gap_as_model_height": 0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B16",
+      "upper": "B18",
+      "lower_mesh": "polySurface9904",
+      "upper_mesh": "polySurface9984",
+      "bbox_area_overlap_ratio": 0.499732,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B13",
+      "upper": "B21",
+      "lower_mesh": "polySurface9990",
+      "upper_mesh": "polySurface9983",
+      "bbox_area_overlap_ratio": 0.477949,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B16",
+      "upper": "B20",
+      "lower_mesh": "polySurface9904",
+      "upper_mesh": "polySurface9926",
+      "bbox_area_overlap_ratio": 0.477903,
+      "gap_as_model_height": 0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B14",
+      "upper": "B18",
+      "lower_mesh": "polySurface9948",
+      "upper_mesh": "polySurface9984",
+      "bbox_area_overlap_ratio": 0.313423,
+      "gap_as_model_height": 0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B07",
+      "upper": "B14",
+      "lower_mesh": "polySurface9989",
+      "upper_mesh": "polySurface9948",
+      "bbox_area_overlap_ratio": 0.313281,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B07",
+      "upper": "B15",
+      "lower_mesh": "polySurface9989",
+      "upper_mesh": "polySurface9936",
+      "bbox_area_overlap_ratio": 0.311065,
+      "gap_as_model_height": 0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B15",
+      "upper": "B18",
+      "lower_mesh": "polySurface9936",
+      "upper_mesh": "polySurface9984",
+      "bbox_area_overlap_ratio": 0.310933,
+      "gap_as_model_height": 0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B05",
+      "upper": "B07",
+      "lower_mesh": "polySurface9988",
+      "upper_mesh": "polySurface9989",
+      "bbox_area_overlap_ratio": 0.187497,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    },
+    {
+      "lower": "B05",
+      "upper": "B09",
+      "lower_mesh": "polySurface9988",
+      "upper_mesh": "polySurface9982",
+      "bbox_area_overlap_ratio": 0.156183,
+      "gap_as_model_height": -0.0,
+      "evidence_status": "INFERENCE_AABB_NOT_REAL_CONTACT"
+    }
+  ],
+  "possible_support_pairs_count": 26,
+  "crosscheck": {
+    "A1_photo": "survey PDF73 (printed 58) fig 2-27 lower ang contact reference",
+    "A1_matching_same_instance": "NOT_PROVEN",
+    "A1_can_identify_polySurface_object": "NO",
+    "memo": "A1 figure supports layering and lower-ang joint logic, not museum mesh IDs"
+  },
+  "gates": {
+    "G3_inventory_23": true,
+    "G3_distinct_object_views_23": true,
+    "G3_positional_bounds": true,
+    "G3_independent_id_ludou": false,
+    "G3_independent_id_hua1": false,
+    "G3_same_east_front_instance": false,
+    "G3_actual_mesh_contact": false,
+    "G3_index_atlas_created": true,
+    "G3_candidate_table_created": true
+  },
+  "images": [
+    {
+      "review_id": "B01",
+      "name": "polySurface9941",
+      "filename": "B01_polySurface9941.png",
+      "size_bytes": 105668,
+      "sha256": "850998329bfcc8496adb1239b71efd6c0183e121d824ff924cf890fc5dad55a9",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B02",
+      "name": "polySurface9986",
+      "filename": "B02_polySurface9986.png",
+      "size_bytes": 63748,
+      "sha256": "1cf9a557cc596827d4eebb3afd91c838edf5938adefdc623c2c8af69d91ed642",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B03",
+      "name": "polySurface9905",
+      "filename": "B03_polySurface9905.png",
+      "size_bytes": 66827,
+      "sha256": "d46afe028235239ab936902203399cfad0f29d88038447ccccc1d05d6a493d26",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B04",
+      "name": "polySurface9961",
+      "filename": "B04_polySurface9961.png",
+      "size_bytes": 58364,
+      "sha256": "9e42fa4c52e4f004b486cbf05e0557cbdcce8f294225d41fa7026343e13341a0",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B05",
+      "name": "polySurface9988",
+      "filename": "B05_polySurface9988.png",
+      "size_bytes": 52657,
+      "sha256": "96d8285261094c90347c304759493135343b0a21344da4b476e5650df5305260",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B06",
+      "name": "polySurface9987",
+      "filename": "B06_polySurface9987.png",
+      "size_bytes": 71733,
+      "sha256": "4e0953f1aa7abf36c635c6f25213cf7c6eeba28a49b0f1d39127d0b53c47b3b8",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B07",
+      "name": "polySurface9989",
+      "filename": "B07_polySurface9989.png",
+      "size_bytes": 76597,
+      "sha256": "11f6375af1b4bb349ccbcc99f031f44dbe02900f1fd0586a9b20b007564c9be0",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B08",
+      "name": "polySurface9923",
+      "filename": "B08_polySurface9923.png",
+      "size_bytes": 72289,
+      "sha256": "d1deb3486b738cc5288947c775009f61c1e632d4001e79f6ec3b283910f11c89",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B09",
+      "name": "polySurface9982",
+      "filename": "B09_polySurface9982.png",
+      "size_bytes": 97190,
+      "sha256": "f93292c70af2863981aac2eb8756d5176da0d74cd58b5ced9a26e1fa11dc1738",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B10",
+      "name": "polySurface9927",
+      "filename": "B10_polySurface9927.png",
+      "size_bytes": 100086,
+      "sha256": "5646e7b7eaa60c682c7fe56b34a2bd2e491e3fd811b04f82b912824167589d09",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B11",
+      "name": "polySurface9963",
+      "filename": "B11_polySurface9963.png",
+      "size_bytes": 99952,
+      "sha256": "98da07f2ca3d271fb9cf59d76119e72222d30740b6eb81077d82063aea5a1223",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B12",
+      "name": "polySurface9924",
+      "filename": "B12_polySurface9924.png",
+      "size_bytes": 97423,
+      "sha256": "47036b5e14e3b721a214b6894f38de98bf34ddf0a93d21c1df36b3aa7664ba20",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B13",
+      "name": "polySurface9990",
+      "filename": "B13_polySurface9990.png",
+      "size_bytes": 52199,
+      "sha256": "d0b934cdb0be2223ebefd5427e997f7fc0dfd22be45b031cd88f36ecdff60865",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B14",
+      "name": "polySurface9948",
+      "filename": "B14_polySurface9948.png",
+      "size_bytes": 57143,
+      "sha256": "7981532049a28e82e36b0ff6269f0847a95ae2934735104bf2d9e8738eb6f775",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B15",
+      "name": "polySurface9936",
+      "filename": "B15_polySurface9936.png",
+      "size_bytes": 56483,
+      "sha256": "34278cf0f69563a55f7417637c412718f8c69738719242c23506df39d35708d0",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B16",
+      "name": "polySurface9904",
+      "filename": "B16_polySurface9904.png",
+      "size_bytes": 55292,
+      "sha256": "5277ee4b7835cd7a16b1d90a7486f335f003ee491d45713a410d4d4983e7f4f8",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B17",
+      "name": "polySurface9985",
+      "filename": "B17_polySurface9985.png",
+      "size_bytes": 52391,
+      "sha256": "2ff0d3ac6af511401c52a8480d1d9de285a580e1c5792f904b502aca076a4234",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B18",
+      "name": "polySurface9984",
+      "filename": "B18_polySurface9984.png",
+      "size_bytes": 76390,
+      "sha256": "783d427650d17e4c7a60b30899130688a9455520b9b39cc21172ba9d39717c40",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B19",
+      "name": "polySurface9995",
+      "filename": "B19_polySurface9995.png",
+      "size_bytes": 49756,
+      "sha256": "c49bd22a025621cc6085e3bd0e63c13b8699b6ec44da17b20f3d857336a51857",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B20",
+      "name": "polySurface9926",
+      "filename": "B20_polySurface9926.png",
+      "size_bytes": 83768,
+      "sha256": "0207bba0a7515a0e5579c251783529eb2523f90442fb364a838db01183404be3",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B21",
+      "name": "polySurface9983",
+      "filename": "B21_polySurface9983.png",
+      "size_bytes": 98720,
+      "sha256": "7fa36acca8759be55898b82fe007271740d3dea08bf8bcca26aafa4db5e7c9da",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B22",
+      "name": "polySurface9971",
+      "filename": "B22_polySurface9971.png",
+      "size_bytes": 100248,
+      "sha256": "c015b4d6e49e06f310fa23538fe68cd58692f774e6911534d12a4e8552cfd96e",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B23",
+      "name": "polySurface9945",
+      "filename": "B23_polySurface9945.png",
+      "size_bytes": 100081,
+      "sha256": "fc673c75a51eadb6d3dcb2d1b62becbe936610ef5bded24af935138b304f1759",
+      "style": "solo normalized axon thumbnail; no comparison of absolute dimensions"
+    },
+    {
+      "review_id": "B00",
+      "filename": "B00_BOTTOM23_CONTEXT.png",
+      "size_bytes": 399336,
+      "sha256": "f98cf0752d4054c2e33b519ea0abb9f91126c8af1be242e224ee2308f537643a",
+      "style": "all bottom 23 grouped view for context"
+    },
+    {
+      "review_id": "BOARD",
+      "filename": "G3_BOTTOM23_INDEX_ATLAS.png",
+      "size_bytes": 866620,
+      "sha256": "9e964e1b1bd6efff3476dc36978a76202d44789fe005024a6143f171a948bb40",
+      "temporary_review_only": true
+    },
+    {
+      "review_id": "BOARD",
+      "filename": "G3_BOTTOM23_AABB_CANDIDATES.png",
+      "size_bytes": 186385,
+      "sha256": "ea8a7bac94eba60804f904868fc10f76ac71a06a4521966a75e35da815ac06f2",
+      "temporary_review_only": true
+    }
+  ],
+  "errors": []
+}
