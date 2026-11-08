@@ -107,6 +107,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "$OUTPUT_PATH/proof" "$OUTPUT_PATH/full"
+          git add -f "$OUTPUT_PATH/proof/WANFO_PROOF_V001.blend" "$OUTPUT_PATH/full/WANFO_FULL_V001.blend"
+          git diff --cached --name-only | grep -F "WANFO_FULL_V001.blend"
+          git diff --cached --name-only | grep -F "WANFO_PROOF_V001.blend"
           if git diff --cached --quiet; then
             echo "No new model assets to archive"
           else
