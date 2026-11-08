@@ -10,12 +10,12 @@
     "temporary_meshes": 20
   },
   "datum": {
-    "column_foot_z_mm": -3824.3,
-    "column_top_z_mm": -290.0,
-    "eave_z_mm": 2705.965576171875,
+    "column_foot_z_mm": 4.882812481810106e-05,
+    "column_top_z_mm": 3534.300048828125,
+    "eave_z_mm": 6530.26513671875,
     "north_eave_y_mm": -6808.5,
     "ridge_y_mm": 0,
-    "ridge_z_mm": 6240.265576171875,
+    "ridge_z_mm": 10064.56513671875,
     "south_eave_y_mm": 6808.5
   },
   "deliverables": {
@@ -27,20 +27,20 @@
     ]
   },
   "hashes": {
-    "blend": "4801e5438dfd48f10c4cc1a3793f81bac8f6adf97f3a3fff900f62fb937f840e",
-    "glb": "7b34d6cee12d91833e4a92768f8bbf82f7e0b5ff25409174208ac438be422852"
+    "blend": "22cac9720dc70a9a0aa948d6ae62d1b4725879d38c890ee3daa56cf3d6c4ab98",
+    "glb": "675d5bc179276d89299be5eccb08db1e3204e839482050304bf2c1edec4fedce"
   },
   "roof_type": "single_eave_xieshan_proxy",
   "source_bbox_after_shift_mm": [
     [
       -3098.98681640625,
       -3596.0,
-      -440.0
+      3384.300048828125
     ],
     [
       3098.98681640625,
       3596.0,
-      2455.965576171875
+      6280.26513671875
     ]
   ],
   "source_count": 63,
@@ -48,13 +48,13 @@
   "source_origin_shift_mm": [
     -2218.5,
     -0.0,
-    0.0
+    3824.3
   ],
   "source_sha256": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
   "source_span_mm": [
     6197.9736328125,
     7192.0,
-    2895.965576171875
+    2895.965087890625
   ],
   "stage": "proof",
   "state": "BUILD_CREATED_REOPEN_PENDING",
