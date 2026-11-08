@@ -25,6 +25,12 @@ jobs:
         with:
           lfs: true
           persist-credentials: true
+      - name: Install Blender headless system libraries
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libegl1 libopengl0 libgl1 libxrender1 libxkbcommon0 libxi6 libsm6 libxext6 libxfixes3
       - name: Download Blender from official distribution
         shell: bash
         run: |
