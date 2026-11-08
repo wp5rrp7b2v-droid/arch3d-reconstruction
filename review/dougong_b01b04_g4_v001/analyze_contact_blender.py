@@ -205,10 +205,24 @@ try:
    clone.matrix_world.identity()
    bm=bmesh.new()
    bm.from_mesh(clone.data)
+   pre_vertices=len(bm.verts);pre_faces=len(bm.faces)
+   pre_signed=[(v.co-co).dot(normal) for v in bm.verts]
    geom=list(bm.verts)+list(bm.edges)+list(bm.faces)
    result=bmesh.ops.bisect_plane(bm,geom=geom,dist=1e-7,
       plane_co=co,plane_no=normal,clear_inner=True,clear_outer=False)
-   # A real intersected-plane mesh: section contours are visible as open edges
+   post_signed=[(v.co-co).dot(normal) for v in bm.verts]
+   # Any surviving vertex on the removed side would invalidate the "true cut" claim.
+   eps=1e-6
+   cut_valid=bool(pre_signed) and bool(post_signed) and min(post_signed)>-eps
+   REPORT.setdefault("section_geometry_check",[]).append({
+      "view_name":name,"mesh_id":key,
+      "original_mesh_vertices":pre_vertices,"original_mesh_faces":pre_faces,
+      "remaining_mesh_vertices":len(bm.verts),"remaining_mesh_faces":len(bm.faces),
+      "original_signed_side_min":P(min(pre_signed)),"original_signed_side_max":P(max(pre_signed)),
+      "remaining_signed_side_min":P(min(post_signed)),
+      "removed_negative_side_all_vertices":cut_valid,
+      "some_original_vertices_on_removed_side":min(pre_signed)<-eps
+   })
    bm.to_mesh(clone.data);bm.free()
    clone.data.materials.clear()
    clone.data.materials.append(make_material("SECTION_"+key,palette[key]))
@@ -228,7 +242,14 @@ try:
  xplane=Vector((center.x,center.y,center.z))
  make_section("CUT_X_AT_B01_CENTER",Vector((1,0,0)),xplane)
  make_section("CUT_Y_AT_B01_CENTER",Vector((0,1,0)),xplane)
- REPORT["gates"]["2_exact_geometry_sections_rendered"]=len(REPORT["section_planes"])==2 and len(REPORT["screenshots"])>=4 and all(x["bytes"]>50000 for x in REPORT["screenshots"])
+ REPORT["gates"]["2_exact_geometry_sections_rendered"]=(
+   len(REPORT["section_planes"])==2 and len(REPORT["screenshots"])>=4
+   and all(x["bytes"]>50000 for x in REPORT["screenshots"])
+   and len(set(x["sha256"] for x in REPORT["screenshots"]))>=4
+   and len(REPORT.get("section_geometry_check",[]))==8
+   and all(x["removed_negative_side_all_vertices"] for x in REPORT["section_geometry_check"])
+   and any(x["some_original_vertices_on_removed_side"] for x in REPORT["section_geometry_check"])
+ )
  REPORT["status"]="PASS_MESH_INTERACTION_OBSERVED__HISTORICAL_JOINT_UNPROVEN"
 except Exception as e:
  REPORT["status"]="FAIL_EXECUTION"
