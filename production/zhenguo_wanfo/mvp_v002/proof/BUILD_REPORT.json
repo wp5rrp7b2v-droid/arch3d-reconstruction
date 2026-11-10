@@ -27,7 +27,7 @@
     ]
   },
   "hashes": {
-    "blend": "a47fff3f88fc446a4c357e726d68924aa23897f5d48cee8b5a31038d587a00a2",
+    "blend": "6d1c5c815e417b1182ceed94966a5ac3ecf9c7f0de5d2c70b9028ac668fe71fc",
     "glb": "cbb465f56d98e4b6f6a2304557f37ac48b3f78acc4b5b5012dd5cdac94f0ec8c"
   },
   "roof_seam_check": {
@@ -81,5 +81,10 @@
     "ridge_height_candidate_mm": 8870.0,
     "t020_canonical_eave_y_mm": 6808.5,
     "temporary_override": true
+  },
+  "visual_proxy_policy": {
+    "bracket": "explicit provisional layered silhouette, NOT a Master",
+    "formal_assets_untouched": true,
+    "windows": "graphic overlays, no geometric apertures, not measured"
   }
 }

@@ -6,8 +6,8 @@
   },
   "column_count": 12,
   "component_counts": {
-    "mesh_objects": 225,
-    "temporary_meshes": 162
+    "mesh_objects": 473,
+    "temporary_meshes": 410
   },
   "datum": {
     "column_foot_z_mm": 4.882812481810106e-05,
@@ -25,12 +25,14 @@
       "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_AXON.png",
       "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_EXTERIOR.png",
       "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_INTERIOR.png",
-      "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_ROOF.png"
+      "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_ROOF.png",
+      "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_FRONT_ELEVATION.png",
+      "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_SIDE_ELEVATION.png"
     ]
   },
   "hashes": {
-    "blend": "4c8837c4840ba6bf04ebaf7ccb7b69097084363daa27c266ba5534639e59c178",
-    "glb": "48ccc3aa3af5a5cd38f8617f1c5a6f8f8a3805c59e10363d209d295148914fb1"
+    "blend": "c5b09648a78567ac7b7d2f95be49aa55902d3ccfa4c7932dcef54465ef364622",
+    "glb": "6846265a27d40c6fed577e703b49bdaab97889e22a442bfc39f532911e959ae0"
   },
   "roof_seam_check": {
     "eave_boundary_edges": 80,
@@ -83,5 +85,10 @@
     "ridge_height_candidate_mm": 8870.0,
     "t020_canonical_eave_y_mm": 6808.5,
     "temporary_override": true
+  },
+  "visual_proxy_policy": {
+    "bracket": "explicit provisional layered silhouette, NOT a Master",
+    "formal_assets_untouched": true,
+    "windows": "graphic overlays, no geometric apertures, not measured"
   }
 }
