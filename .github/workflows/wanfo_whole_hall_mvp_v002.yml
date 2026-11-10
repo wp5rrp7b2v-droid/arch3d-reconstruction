@@ -102,7 +102,7 @@ jobs:
               for name in ("BLEND_REOPEN_CHECK.json","GLB_REOPEN_CHECK.json"):
                   assert json.loads((d/name).read_text())["status"]=="PASS"
               for ext in ("blend","glb"):
-                  p=d/f"WANFO_{stage.upper()}_V001.{ext}"
+                  p=d/f"WANFO_{stage.upper()}_V002.{ext}"
                   actual=hashlib.sha256(p.read_bytes()).hexdigest()
                   assert actual==m["hashes"][ext] and p.stat().st_size>1000
           print("WANFO_V002_PROOF_AND_FULL_REOPEN_PASS")
