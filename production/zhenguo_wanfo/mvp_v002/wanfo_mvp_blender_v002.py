@@ -103,6 +103,37 @@ def roof_panel(name, verts, faces, col, material, role="ROOF_SHELL_XIESHAN_MASSI
     return ob
 
 
+
+def stepped_bracket_visual_proxy(tag, x, y, dx, dy, column_top, col, bracket_mat, is_intercolumn=False):
+    """Visible *provisional* layered bracket silhouette, NOT Master form.
+    Number and sectional profiles are not claimed as surveyed/historic.
+    Kept segregated for later replacement by approved bracket instances.
+    """
+    footprint = 0.74 if is_intercolumn else 1.0
+    levels=[(370,300),(760,595),(1160,925),(1660,1280)]
+    for idx,(reach,rise) in enumerate(levels):
+        reach *= footprint
+        rise *= footprint
+        arm_center=(x+dx*reach,y+dy*reach,column_top+rise)
+        arm_length=500.0 if is_intercolumn else 650.0
+        if abs(dx):
+            block_size=(arm_length,245.0,190.0)
+        else:
+            block_size=(245.0,arm_length,190.0)
+        cube(f"TMP_DG_LAYER_{tag}_{idx}",arm_center,block_size,col,
+             "VISIBLE_DG_LAYER_REPLACEABLE_PROXY",bracket_mat)
+        if idx:
+            prev_reach,prev_rise=levels[idx-1]
+            prev_reach *= footprint
+            prev_rise *= footprint
+            beam(f"TMP_DG_ANG_{tag}_{idx}",
+                 (x+dx*(prev_reach-60),y+dy*(prev_reach-60),column_top+prev_rise),
+                 (x+dx*(reach+100),y+dy*(reach+100),column_top+rise+25),
+                 155.0,col,"VISIBLE_SLOPED_ANG_PROXY_NOT_MASTER",bracket_mat)
+    last_reach=levels[-1][0]*footprint
+    cube(f"TMP_DG_SEAT_{tag}",(x+dx*last_reach,y+dy*last_reach,column_top+1470*footprint),
+         (430,430,170),col,"VISIBLE_BRACKET_SEAT_PROXY",bracket_mat)
+
 def stitched_xieshan_roof(xridge, xeave, yshoulder, yeave, zridge, zshoulder, zeave,
                           roof_col, roof_material, gable_material):
     """Connected hip-and-gable roof skin with a shared vertex graph.
@@ -263,7 +294,9 @@ def review_views(scene, roofcol, camcol, z0, ztop, stage):
     if stage=="full":
         overview.extend([
           ("INTERIOR",(12200,-18500,ztop+8000),(0,0,z0+4200),19000,True),
-          ("ROOF",(16000,-14500,ztop+18000),(0,0,ztop-1000),21500,False)
+          ("ROOF",(16000,-14500,ztop+18000),(0,0,ztop-1000),21500,False),
+          ("FRONT_ELEVATION",(0,-25000,3800),(0,0,4300),18300,False),
+          ("SIDE_ELEVATION",(25000,0,3800),(0,0,4300),18800,False)
         ])
     paths=[]
     for tag,eye,target,scale,hide_roof in overview:
@@ -361,7 +394,24 @@ def build(stage):
             beam(f"TMP_DG_GONG_X_{ix}_{iy}",(x-650,y,column_top+410),(x+650,y,column_top+410),245,dg_col,"BRACKET_CROSS_ARM_X_PROXY",bracketmat)
             beam(f"TMP_DG_GONG_Y_{ix}_{iy}",(x,y-650,column_top+620),(x,y+650,column_top+620),245,dg_col,"BRACKET_CROSS_ARM_Y_PROXY",bracketmat)
             beam(f"TMP_DG_TOP_{ix}_{iy}",(x,y,column_top+730),(x,y,eave_z-100),220,dg_col,"BRACKET_VISUAL_SUPPORT_PROXY",bracketmat)
+            dirs=[]
+            if ix==0: dirs.append((-1,0))
+            if ix==3: dirs.append((1,0))
+            if iy==0: dirs.append((0,-1))
+            if iy==3: dirs.append((0,1))
+            for dx,dy in dirs:
+                stepped_bracket_visual_proxy(f"COLUMN_{ix}_{iy}_{dx}_{dy}",
+                    x,y,dx,dy,column_top,dg_col,bracketmat)
     if stage=="full":
+        # Mid-bay bracket sets: schematic, not identity or Master promotion.
+        for k in range(3):
+            xm=(xgrid[k]+xgrid[k+1])*0.5
+            ym=(ygrid[k]+ygrid[k+1])*0.5
+            for side in (-1,1):
+                stepped_bracket_visual_proxy(f"INFILL_FRONTBACK_{k}_{side}",
+                    xm,side*depth/2,0,side,column_top,dg_col,bracketmat,True)
+                stepped_bracket_visual_proxy(f"INFILL_SIDE_{k}_{side}",
+                    side*width/2,ym,side,0,column_top,dg_col,bracketmat,True)
         for i in (0,3):
             beam("TMP_RIM_X_"+str(i),(xgrid[0],ygrid[i],column_top),
                  (xgrid[3],ygrid[i],column_top),280,proxy_col,"PERIMETER_RIM_BEAM_PROXY",wood)
@@ -424,6 +474,24 @@ def build(stage):
                 cube(f"TMP_SIDE_WALL_{side}_{iy}",(side*(width/2+40),yy,
                      (wall_top+wall_bottom)/2),(165,baylen,wall_height),
                      wall_col,"WALL_PANEL_PROXY",wallmat)
+        # Dark framed rectangles mark visual *window locations*, not cuts,
+        # joinery, measured dimensions or period-exact ornamental patterns.
+        windowmat=mat("Window opening silhouette / TEMP proxy",(0.105,0.115,0.105))
+        windowframemat=mat("Window frame / TEMP proxy",(0.28,0.18,0.11))
+        for facade,yy in (("FRONT",-depth/2-146),("REAR",depth/2+146)):
+            for ix in (0,2):
+                xx=(xgrid[ix]+xgrid[ix+1])*0.5
+                wz=z0+2020
+                cube(f"TMP_{facade}_WINDOW_{ix}",(xx,yy,wz),
+                     (1370,26,1050),wall_col,"WINDOW_RECESS_GRAPHIC_PROXY",windowmat)
+                for v in (-1,0,1):
+                    cube(f"TMP_{facade}_WINDOW_STILE_{ix}_{v}",
+                         (xx+v*440,yy+(8 if yy<0 else -8),wz),
+                         (45,46,1110),wall_col,"WINDOW_LATTICE_PROXY",windowframemat)
+                for h in (-1,1):
+                    cube(f"TMP_{facade}_WINDOW_RAIL_{ix}_{h}",
+                         (xx,yy+(8 if yy<0 else -8),wz+h*365),
+                         (1450,46,46),wall_col,"WINDOW_LATTICE_PROXY",windowframemat)
     output=OUTROOT/stage
     output.mkdir(parents=True,exist_ok=True)
     for ob in bpy.context.selected_objects: ob.select_set(False)
@@ -449,6 +517,7 @@ def build(stage):
     report={
       "state":"BUILD_CREATED_REOPEN_PENDING",
       "roof_seam_check":roof_check,
+      "visual_proxy_policy":{"bracket":"explicit provisional layered silhouette, NOT a Master","windows":"graphic overlays, no geometric apertures, not measured","formal_assets_untouched":True},
       "visual_design_controls":{"eave_projection_from_column_mm":visual_eave_projection_mm,"eave_height_candidate_mm":eave_z,"ridge_height_candidate_mm":ridge_z,"control_source":"EXTERNAL_VISUAL_REFERENCE_PENDING_A1_DIRECT_VALIDATION","t020_canonical_eave_y_mm":original_roof_y_eave,"temporary_override":True},
       "stage":stage,"source_sha256":actual,"source_count":len(src),
       "source_origin_shift_mm":shift,"source_bbox_after_shift_mm":srcbox,
