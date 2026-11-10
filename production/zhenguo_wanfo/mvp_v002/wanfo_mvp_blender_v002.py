@@ -441,8 +441,8 @@ def build(stage):
     # Review images are rendered before saves, with final roof visibility restored.
     imgs=review_views(scene,roof_col,cameras_col,z0,ridge_z,stage)
     for ob in roof_col.objects: ob.hide_render=False
-    blend=output/f"WANFO_{stage.upper()}_V001.blend"
-    glb=output/f"WANFO_{stage.upper()}_V001.glb"
+    blend=output/f"WANFO_{stage.upper()}_V002.blend"
+    glb=output/f"WANFO_{stage.upper()}_V002.glb"
     bpy.ops.wm.save_as_mainfile(filepath=str(blend),check_existing=False,compress=True)
     bpy.ops.export_scene.gltf(filepath=str(glb),export_format="GLB",export_extras=True)
     meshes=[o for o in bpy.data.objects if o.type=="MESH"]
@@ -489,7 +489,7 @@ def check_blend(stage):
     print("MVP_BLEND_REOPEN_PASS",stage,len(objs))
 
 def check_glb(stage):
-    filepath=OUTROOT/stage/f"WANFO_{stage.upper()}_V001.glb"
+    filepath=OUTROOT/stage/f"WANFO_{stage.upper()}_V002.glb"
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.object.delete(use_global=False)
     bpy.ops.import_scene.gltf(filepath=str(filepath))
