@@ -1,0 +1,85 @@
+{
+  "approved_geometry_modified": false,
+  "candidate_design_dimensions_mm": {
+    "depth": 10710,
+    "width": 11475
+  },
+  "column_count": 12,
+  "component_counts": {
+    "mesh_objects": 76,
+    "temporary_meshes": 13
+  },
+  "datum": {
+    "column_foot_z_mm": 4.882812481810106e-05,
+    "column_top_z_mm": 3534.300048828125,
+    "eave_z_mm": 5270.0,
+    "north_eave_y_mm": -8295.0,
+    "ridge_y_mm": 0,
+    "ridge_z_mm": 8870.0,
+    "south_eave_y_mm": 8295.0
+  },
+  "deliverables": {
+    "blend": "production/zhenguo_wanfo/mvp_v002/proof/WANFO_PROOF_V002.blend",
+    "glb": "production/zhenguo_wanfo/mvp_v002/proof/WANFO_PROOF_V002.glb",
+    "review_images": [
+      "production/zhenguo_wanfo/mvp_v002/proof/WANFO_PROOF_AXON.png",
+      "production/zhenguo_wanfo/mvp_v002/proof/WANFO_PROOF_EXTERIOR.png"
+    ]
+  },
+  "hashes": {
+    "blend": "a47fff3f88fc446a4c357e726d68924aa23897f5d48cee8b5a31038d587a00a2",
+    "glb": "cbb465f56d98e4b6f6a2304557f37ac48b3f78acc4b5b5012dd5cdac94f0ec8c"
+  },
+  "roof_seam_check": {
+    "eave_boundary_edges": 80,
+    "non_manifold_overused_edges": 0,
+    "roof_faces": 944,
+    "roof_vertices": 953,
+    "status": "PASS",
+    "unintended_open_internal_seams": 0
+  },
+  "roof_type": "single_eave_xieshan_proxy",
+  "source_bbox_after_shift_mm": [
+    [
+      -3098.98681640625,
+      -3596.0,
+      3384.300048828125
+    ],
+    [
+      3098.98681640625,
+      3596.0,
+      6280.26513671875
+    ]
+  ],
+  "source_count": 63,
+  "source_identity": "D-285 V002 / D-286",
+  "source_origin_shift_mm": [
+    -2218.5,
+    -0.0,
+    3824.3
+  ],
+  "source_sha256": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+  "source_span_mm": [
+    6197.9736328125,
+    7192.0,
+    2895.965087890625
+  ],
+  "stage": "proof",
+  "state": "BUILD_CREATED_REOPEN_PENDING",
+  "unverified": [
+    "precise original 963 geometry",
+    "walls and tilework",
+    "all hidden joints",
+    "original common datum from approved local assembly",
+    "load capacity",
+    "detailed dougong identity"
+  ],
+  "visual_design_controls": {
+    "control_source": "EXTERNAL_VISUAL_REFERENCE_PENDING_A1_DIRECT_VALIDATION",
+    "eave_height_candidate_mm": 5270.0,
+    "eave_projection_from_column_mm": 2940.0,
+    "ridge_height_candidate_mm": 8870.0,
+    "t020_canonical_eave_y_mm": 6808.5,
+    "temporary_override": true
+  }
+}
