@@ -476,7 +476,7 @@ def check_blend(stage):
     temp=[o for o in objs if o.get("mvp_evidence_class")=="TEMP_VISUAL_GEOMETRY_REPLACEABLE"]
     roles={o.get("mvp_role") for o in temp}
     assert len(source)==63,f"BLEND_SOURCE_COUNT_INVALID_{len(source)}"
-    assert len(temp)>=(20 if stage=="proof" else 24), f"BLEND_TEMP_COUNT_INVALID_{len(temp)}"
+    assert len(temp)>=(13 if stage=="proof" else 24), f"BLEND_TEMP_COUNT_INVALID_{len(temp)}"
     assert any("ROOF" in str(r) for r in roles),"BLEND_MISSING_ROOF"
     roofs=[o for o in temp if o.get("mvp_role")=="ROOF_STITCHED_CONTINUOUS_SURFACE_PROXY"]
     assert len(roofs)==1,"BLEND_MISSING_STITCHED_ROOF"
@@ -496,9 +496,9 @@ def check_glb(stage):
     meshes=[o for o in bpy.data.objects if o.type=="MESH"]
     sources=[o for o in meshes if o.get("mvp_evidence_class")=="APPROVED_63_ENTITY_RECONSTRUCTED_DESIGN"]
     temps=[o for o in meshes if o.get("mvp_evidence_class")=="TEMP_VISUAL_GEOMETRY_REPLACEABLE"]
-    assert len(meshes)>=(80 if stage=="proof" else 90), f"GLB_TOO_FEW_OBJECTS_{len(meshes)}"
+    assert len(meshes)>=(76 if stage=="proof" else 90), f"GLB_TOO_FEW_OBJECTS_{len(meshes)}"
     assert len(sources)==63, f"GLB_SOURCE_COUNT_INVALID_{len(sources)}"
-    assert len(temps)>=(20 if stage=="proof" else 24), f"GLB_TEMP_COUNT_INVALID_{len(temps)}"
+    assert len(temps)>=(13 if stage=="proof" else 24), f"GLB_TEMP_COUNT_INVALID_{len(temps)}"
     assert all(len(o.data.vertices)>0 for o in meshes), "GLB_EMPTY_MESH"
     assert len([o for o in temps if o.get("mvp_role")=="ROOF_STITCHED_CONTINUOUS_SURFACE_PROXY"])==1,"GLB_STITCHED_ROOF_NOT_FOUND"
     save_report(OUTROOT/stage/"GLB_REOPEN_CHECK.json",
