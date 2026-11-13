@@ -1,0 +1,124 @@
+{
+  "approval": {
+    "approved_master_registry_updated": false,
+    "main_merge_authorized": false,
+    "main_merged": false,
+    "product_owner_visual_approved": false
+  },
+  "archive_verified_at_utc": "2026-11-13T06:34:27.523627+00:00",
+  "artifact_id": "WANFO_WHOLE_HALL_MVP_V002_CANDIDATE_ARCHIVE",
+  "scope": "WHOLE_HALL_MVP_VISUAL_CANDIDATE_NOT_HISTORIC_RECONSTRUCTION_APPROVAL",
+  "source": {
+    "branch": "feature/wanfo-whole-hall-mvp-v002-20261110",
+    "builder_script": "production/zhenguo_wanfo/mvp_v002/wanfo_mvp_blender_v002.py",
+    "builder_sha256": "a0644b67e1356a5715ede5f69e6514bb67df572f6fc0cb60cfeaabd5934e74f1",
+    "draft_pr": 91,
+    "github_repository": "wp5rrp7b2v-droid/arch3d-reconstruction",
+    "pre_archive_checkout_sha": "d494d655586249114ba506f69f21cfffe25f303e",
+    "technical_generation_run": 42754853528
+  },
+  "stages": {
+    "full": {
+      "approved_source_geometry_hash": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+      "approved_source_meshes": 63,
+      "files": {
+        "production/zhenguo_wanfo/mvp_v002/full/BLEND_REOPEN_CHECK.json": {
+          "bytes": 341,
+          "sha256": "69844ec9c916dacfbdbdac4d105fb202a799234596d51fcb29cf97b5886dd469"
+        },
+        "production/zhenguo_wanfo/mvp_v002/full/BUILD_REPORT.json": {
+          "bytes": 2841,
+          "sha256": "4181720fdc67e428375a4df4faab39c562be1e6885425043a8ca05872699dfc6"
+        },
+        "production/zhenguo_wanfo/mvp_v002/full/GLB_REOPEN_CHECK.json": {
+          "bytes": 123,
+          "sha256": "ba5b3a0180dae04370408441b1d658d5ef3782b2f17a2c6b76a707d7fc16f0ee"
+        },
+        "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_AXON.png": {
+          "bytes": 709680,
+          "sha256": "9c5b6c06fa9110eee0ed1aa18453d9ca8b09c11a1d1455324c49a634162dacc1"
+        },
+        "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_EXTERIOR.png": {
+          "bytes": 785958,
+          "sha256": "d8c36ef2c4e490e7a3afc8bf25f8f2ad8eaec3005421c2c7a743abd578d2926c"
+        },
+        "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_FRONT_ELEVATION.png": {
+          "bytes": 690368,
+          "sha256": "d45b1f29f8e3501defc4fe6aab26c29afe01b81852bc4c5ce6f83762a1b6ac2f"
+        },
+        "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_INTERIOR.png": {
+          "bytes": 1167247,
+          "sha256": "961d502dec8862ac53bf84cf54466336d0988dcdaf2da6dd6bb8a09ff32aff8d"
+        },
+        "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_ROOF.png": {
+          "bytes": 761998,
+          "sha256": "cbc8b739cc541ccba28b1ee99b8e6fa24208cb2074fc35aaf37d4340d923e75c"
+        },
+        "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_SIDE_ELEVATION.png": {
+          "bytes": 643860,
+          "sha256": "f40f9b40823c0b1fb82e331a8b56b251e8f574018f3d5f65d51356a12eb9b8d6"
+        },
+        "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_V002.blend": {
+          "bytes": 358573,
+          "sha256": "c5b09648a78567ac7b7d2f95be49aa55902d3ccfa4c7932dcef54465ef364622"
+        },
+        "production/zhenguo_wanfo/mvp_v002/full/WANFO_FULL_V002.glb": {
+          "bytes": 1356872,
+          "sha256": "6846265a27d40c6fed577e703b49bdaab97889e22a442bfc39f532911e959ae0"
+        }
+      },
+      "full_mesh_count": 473,
+      "roof_topology_check": "PASS, NOT historic structural certification",
+      "status": "PASS",
+      "technical_roundtrip_report": "PASS (checked independent BLEND/GLB reopen records)",
+      "temporary_meshes": 410
+    },
+    "proof": {
+      "approved_source_geometry_hash": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+      "approved_source_meshes": 63,
+      "files": {
+        "production/zhenguo_wanfo/mvp_v002/proof/BLEND_REOPEN_CHECK.json": {
+          "bytes": 341,
+          "sha256": "3fbfbf30ea6062e4c34500b9545962328adcff3c6a35ae7a47113a96bf74d50b"
+        },
+        "production/zhenguo_wanfo/mvp_v002/proof/BUILD_REPORT.json": {
+          "bytes": 2551,
+          "sha256": "965fa6698cfe56afc5866d383642171793ca4b3370bd0dcf2993a7e4d6ace7f0"
+        },
+        "production/zhenguo_wanfo/mvp_v002/proof/GLB_REOPEN_CHECK.json": {
+          "bytes": 122,
+          "sha256": "7684334ea0f352b269da7ec9658b23908eb1ca23203bc9fd99c457f027df9f94"
+        },
+        "production/zhenguo_wanfo/mvp_v002/proof/WANFO_PROOF_AXON.png": {
+          "bytes": 635449,
+          "sha256": "5089b9a4c12b3c4ddea50565d064a26c99317d2c7cf5db99bcc4131debfb83a8"
+        },
+        "production/zhenguo_wanfo/mvp_v002/proof/WANFO_PROOF_EXTERIOR.png": {
+          "bytes": 674265,
+          "sha256": "9c135389954292b513272cc643891b1ccd807246c74613e4f29760f902078396"
+        },
+        "production/zhenguo_wanfo/mvp_v002/proof/WANFO_PROOF_V002.blend": {
+          "bytes": 242679,
+          "sha256": "6d1c5c815e417b1182ceed94966a5ac3ecf9c7f0de5d2c70b9028ac668fe71fc"
+        },
+        "production/zhenguo_wanfo/mvp_v002/proof/WANFO_PROOF_V002.glb": {
+          "bytes": 710832,
+          "sha256": "cbb465f56d98e4b6f6a2304557f37ac48b3f78acc4b5b5012dd5cdac94f0ec8c"
+        }
+      },
+      "full_mesh_count": 76,
+      "roof_topology_check": "PASS, NOT historic structural certification",
+      "status": "PASS",
+      "technical_roundtrip_report": "PASS (checked independent BLEND/GLB reopen records)",
+      "temporary_meshes": 13
+    }
+  },
+  "status": "CANDIDATE_ARCHIVED_TECHNICAL_PASS_VISUAL_UNAPPROVED",
+  "validation_limits": [
+    "Review images exist and have PNG headers, but no source A1 silhouette overlay passed",
+    "Model reopens and object count pass; visible bearing contacts, load and joinery NOT proved",
+    "V002 candidate eave and ridge heights are temporary visual controls, not promoted measurements",
+    "No replacements or changes to approved Master assets, approved East/West snapshots",
+    "Existing PR #92 focused connection failure is separate and remains FAIL"
+  ]
+}
