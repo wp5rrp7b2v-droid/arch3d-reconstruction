@@ -167,7 +167,8 @@ def build():
     tou=next(b for b in src["ang"]["canonical_bodies"] if b["body_id"]=="TOU_ANG")
     er=next(b for b in src["ang"]["canonical_bodies"] if b["body_id"]=="ER_ANG")
     ling=src["ling"]["canonical_body"]
-    dou=src["dou"]["body"]
+    dou=dict(src["dou"]["body"])
+    dou["semantic_geometry_signature"]=src["dou"]["semantic_geometry_signature"]
     assert hua1["semantic_geometry_signature"]=="565fcdef9335691e73dd0cbec5e5d98b561f3bdebdbd367951bcb7826dc8f19a"
     assert hua2["semantic_geometry_signature"]=="451511f0b131e36784baefa2011850a1f9381d3b2dc1fee629951b7f4099e001"
     assert ling["semantic_geometry_signature"]=="e54e0521271ba8f74d66b9f3ac8eb6de9fa2121b20ca6a732725ff55417fac61"
