@@ -1,0 +1,14 @@
+{
+  "corner_master_references": 16,
+  "mesh_objects": 595,
+  "original_approved_source_objects": 63,
+  "roof": {
+    "connected_components": 1,
+    "eave_boundary_edges": 80,
+    "excess_edge_multiplicity": 0,
+    "internal_open_seams": 0,
+    "mesh_faces": 944,
+    "mesh_vertices": 953
+  },
+  "status": "PASS"
+}
