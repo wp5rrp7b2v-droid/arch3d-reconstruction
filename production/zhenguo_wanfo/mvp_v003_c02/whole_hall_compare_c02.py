@@ -292,8 +292,6 @@ def build():
     # not separate component demonstrations.
     bpy.context.view_layer.update()
     assert {o.name:object_digest(o) for o in approved}==approved_before, "SOURCE_APPROVED_ENTITY_CHANGED"
-    rootroofbbox=[[min(o.matrix_world @ Vector(c)[i] for o in [roof] for c in o.bound_box) for i in (0,1,2)],
-                  [max(o.matrix_world @ Vector(c)[i] for o in [roof] for c in o.bound_box) for i in (0,1,2)]]
     # Report what is actually validated rather than claiming complete bearing.
     failures=[
       "A1 does not yet provide a numeric calibrated overlay in this candidate",
