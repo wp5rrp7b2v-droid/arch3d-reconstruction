@@ -28,9 +28,9 @@
       "APPROVED_63_ENTITY_RECONSTRUCTED_DESIGN": 63,
       "APPROVED_MASTER_REFERENCE_WITH_UNAPPROVED_PLACEMENT": 100,
       "TEMP_VISUAL_GEOMETRY_REPLACEABLE": 53,
-      "TEMP_VISUAL_STRUCTURE_REPLACEABLE": 237
+      "TEMP_VISUAL_STRUCTURE_REPLACEABLE": 245
     },
-    "mesh_objects": 453
+    "mesh_objects": 461
   },
   "roof_support": {
     "column_front_y_mm": 5355.0,
@@ -88,8 +88,8 @@
   },
   "scope": "COMPLETE_HALL_ONLY_NO_INDEPENDENT_LOCAL_GATE",
   "sha256": {
-    "blend": "16bcbcb559c23fa17fec453a53a4b443b93d4e902c3de0a328bdfe7afd9bc9fb",
-    "glb": "1b1902ad51ffba14b322dabc05a907ad2f57c39e6db50ca43e9ee80406eb8f5c"
+    "blend": "7d09b70f6f2faefa800f6e5e838d3e97b48ce947468112db3107381d4b24b91f",
+    "glb": "b9515bcc0b11642f3bb52b3f690d593a35a1871abecc0e4325b22d9a8dffac9a"
   },
   "state": "WHOLE_HALL_CANDIDATE_CREATED_REOPEN_PENDING",
   "structural_verification": "NOT_COMPLETE_VISUAL_GLOBAL_TOPOLOGY_CANDIDATE",
