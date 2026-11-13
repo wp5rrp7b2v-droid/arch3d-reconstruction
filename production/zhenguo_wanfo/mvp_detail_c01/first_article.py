@@ -97,7 +97,7 @@ def render(name,eye,target,scale):
     bpy.ops.render.render(write_still=True)
 def verify_master(s):
     for key,expect in SHA.items():
-        assert s[key]["body"]["semantic_geometry_signature"]==expect if key=="COL" else True
+        assert s["COL"]["semantic_geometry_signature"]==SHA["COL"] if key=="COL" else True
     assert s["HUA"]["canonical_bodies"][0]["semantic_geometry_signature"]==SHA["HUA"]
     assert s["LING"]["canonical_body"]["semantic_geometry_signature"]==SHA["LING"]
     assert s["HUA"]["master_id"]=="CMP-GONG-HUAGONG-001_MASTER"
@@ -161,8 +161,8 @@ def build():
     column_foot=mesh_local_low_vertices(ludou)[1]
     lu_support=([xpost-237.55,yfront-223.14999],[xpost+237.55,yfront+223.14999])
     seat_a=bottom_seat_check(hua,top_ludou,lu_support)
-    hfoot=([xpost-huabody["resolved_dimensions_mm"]["width"]/2,yfront-100],
-           [xpost+huabody["resolved_dimensions_mm"]["width"]/2,yfront+100])
+    hfoot=([xpost-huabody["resolved_dimensions_mm"]["width"]/2,yfront-huabody["resolved_dimensions_mm"]["length"]/2],
+           [xpost+huabody["resolved_dimensions_mm"]["width"]/2,yfront+huabody["resolved_dimensions_mm"]["length"]/2])
     seat_b=bottom_seat_check(ling,ztop_hua,hfoot)
     infill_seat=bottom_seat_check(ling_i,infillbase,([xinter-132.5,yfront-117.5],[xinter+132.5,yfront+117.5]))
     gaps={"column_master_stack_to_eave_mm":eave_z-ztop_ling,
