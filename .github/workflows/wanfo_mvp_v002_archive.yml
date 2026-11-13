@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           persist-credentials: true
-          lfs: false
+          lfs: true
       - name: Verify exact binary hashes, headers, review images and previous reopen evidence
         shell: bash
         run: |
