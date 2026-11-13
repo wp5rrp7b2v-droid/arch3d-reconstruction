@@ -275,10 +275,9 @@ def build():
         x=side*width/2
         beam("V003_OUTER_BENT_LOWER_"+label,(x,-depth/2,ztop+560),
              (x,depth/2,ztop+560),260,cbeam,mlink,"OUTER_FRAME_BEAM_DESIGN_PROXY")
-        beam("V003_OUTER_BENT_RAFTER_N_"+label,(x,0,zridge-540),
-             (x,4972.5,6700),160,cbeam,mroof,"OUTER_FRAME_SLOPING_DESIGN_PROXY")
-        beam("V003_OUTER_BENT_RAFTER_S_"+label,(x,0,zridge-540),
-             (x,-4972.5,6700),160,cbeam,mroof,"OUTER_FRAME_SLOPING_DESIGN_PROXY")
+        # Outer perimeter beams terminate below existing eave framing.
+        # Do NOT connect from x=column-line at the ridge: at ridge the
+        # xieshan roof is much narrower, and such rafters protrude outside roof.
 
     # V002 roof is a continuous xieshan surface: keep original mesh untouched.
     # Add 7 project-datum purlin guide lines and tiered rafters below roof:
@@ -301,6 +300,20 @@ def build():
         beam("V003_PURLIN_%02d"%i,(-span,y,z),(span,y,z),
              185,cpurl,mroof,"DATUM_PURLIN_PROXY_Y_"+str(y))
         purlin_positions.append({"y_mm":y,"z_mm":z,"half_span_mm":span})
+    # Hip-end support follows the *actual* roof silhouette under its shell.
+    # These are continuous temporary guides, not proven historical corner joints.
+    for eastwest in (-1,1):
+        for northsouth in (-1,1):
+            points=[
+                (eastwest*xs,0.,zridge-175),
+                (eastwest*xs,northsouth*yshoulder,zshoulder-175),
+                (eastwest*roof_half_x(4972.5),northsouth*4972.5,roof_z(4972.5)-175),
+                (eastwest*xe,northsouth*yout,zeave-175)
+            ]
+            for j,(a,b) in enumerate(zip(points[:-1],points[1:])):
+                beam(f"V003_HIP_UNDER_ROOF_{eastwest}_{northsouth}_{j}",
+                     a,b,135,cpurl,mroof,
+                     "UNDER_ROOF_HIP_GUIDE_REPLACEABLE_NO_HISTORICAL_JOINT_CLAIM")
     # Rafters at 13 intervals per slope, genuinely reach the 2.94 m eave.
     # Hip corner rafters remain candidate; the continuous skin is unchanged.
     nraf=0
