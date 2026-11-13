@@ -1,0 +1,242 @@
+{
+  "A1_basis": {
+    "A1_pdf_pages_visually_checked": [
+      75,
+      76,
+      77,
+      106,
+      153,
+      155
+    ],
+    "A1_primary_document_used_as_qualitative_constraints_only": true,
+    "A1_raster_source_text_layer_available": false,
+    "direct_scaled_overlay": "NOT_CALIBRATED_OR_PASSED",
+    "file_name": "A1_山西平遥镇国寺万佛殿与天王殿精细测绘报告_刘畅_廖慧农_李树盛.pdf"
+  },
+  "approved_entity_mesh_and_transform_sha256_unchanged": true,
+  "approved_source_count": 63,
+  "binary_sha256": {
+    "blend": "f22827ea49771dd0df48fecb70f8fb54c22cf99e9c4c293942b2eaf8f3969ace",
+    "glb": "bbeb4890950d498b2bd1178534d730c8547829343d26c99ccb95db511d39ccb6"
+  },
+  "candidate_id": "WANFO_V003_WHOLE_HALL_COMPARE_C02",
+  "corner": {
+    "45_degree_dirs_all": true,
+    "corners": [
+      {
+        "column_xy_mm": [
+          -5737.5,
+          -5355.0
+        ],
+        "name": "WS",
+        "outward_direction": [
+          -0.707107,
+          -0.707107
+        ]
+      },
+      {
+        "column_xy_mm": [
+          -5737.5,
+          5355.0
+        ],
+        "name": "WN",
+        "outward_direction": [
+          -0.707107,
+          0.707107
+        ]
+      },
+      {
+        "column_xy_mm": [
+          5737.5,
+          -5355.0
+        ],
+        "name": "ES",
+        "outward_direction": [
+          0.707107,
+          -0.707107
+        ]
+      },
+      {
+        "column_xy_mm": [
+          5737.5,
+          5355.0
+        ],
+        "name": "EN",
+        "outward_direction": [
+          0.707107,
+          0.707107
+        ]
+      }
+    ],
+    "count": 4,
+    "historical_connection_validated": false,
+    "master_reference_instances": 16
+  },
+  "files": {
+    "blend": "production/zhenguo_wanfo/mvp_v003_c02/full/WANFO_V003_C02_FULL.blend",
+    "glb": "production/zhenguo_wanfo/mvp_v003_c02/full/WANFO_V003_C02_FULL.glb",
+    "images": [
+      "production/zhenguo_wanfo/mvp_v003_c02/full/WANFO_C02_EXTERIOR.png",
+      "production/zhenguo_wanfo/mvp_v003_c02/full/WANFO_C02_AXON.png",
+      "production/zhenguo_wanfo/mvp_v003_c02/full/WANFO_C02_FRONT_ELEVATION.png",
+      "production/zhenguo_wanfo/mvp_v003_c02/full/WANFO_C02_SIDE_ELEVATION.png",
+      "production/zhenguo_wanfo/mvp_v003_c02/full/WANFO_C02_ROOF.png",
+      "production/zhenguo_wanfo/mvp_v003_c02/full/WANFO_C02_STRUCTURE.png",
+      "production/zhenguo_wanfo/mvp_v003_c02/full/WANFO_C02_CROSS_SECTION.png",
+      "production/zhenguo_wanfo/mvp_v003_c02/full/WANFO_C02_LONG_SECTION.png"
+    ]
+  },
+  "frame": {
+    "layer_records": [
+      {
+        "bent": "W",
+        "end_y_mm": [
+          -5355.0,
+          5355.0
+        ],
+        "type": "LOWER_SIX_CHUANFU",
+        "z_center_mm": 4200.0
+      },
+      {
+        "bent": "W",
+        "end_y_mm": [
+          -5355.0,
+          5355.0
+        ],
+        "type": "UPPER_SIX_CHUANFU",
+        "z_center_mm": 4700.0
+      },
+      {
+        "bent": "W",
+        "end_y_mm": [
+          -3213.0,
+          3213.0
+        ],
+        "type": "FOUR_CHUANFU",
+        "z_center_mm": 6120.0
+      },
+      {
+        "bent": "W",
+        "end_y_mm": [
+          -1500.0,
+          1500.0
+        ],
+        "type": "PINGLIANG",
+        "z_center_mm": 7480.0
+      },
+      {
+        "bent": "E",
+        "end_y_mm": [
+          -5355.0,
+          5355.0
+        ],
+        "type": "LOWER_SIX_CHUANFU",
+        "z_center_mm": 4200.0
+      },
+      {
+        "bent": "E",
+        "end_y_mm": [
+          -5355.0,
+          5355.0
+        ],
+        "type": "UPPER_SIX_CHUANFU",
+        "z_center_mm": 4700.0
+      },
+      {
+        "bent": "E",
+        "end_y_mm": [
+          -3213.0,
+          3213.0
+        ],
+        "type": "FOUR_CHUANFU",
+        "z_center_mm": 6120.0
+      },
+      {
+        "bent": "E",
+        "end_y_mm": [
+          -1500.0,
+          1500.0
+        ],
+        "type": "PINGLIANG",
+        "z_center_mm": 7480.0
+      }
+    ],
+    "layer_set_names": [
+      "LOWER_SIX_CHUANFU",
+      "UPPER_SIX_CHUANFU",
+      "FOUR_CHUANFU",
+      "PINGLIANG"
+    ],
+    "qualified_as_historical_model": false,
+    "two_six_levels_present_in_global_structure": true
+  },
+  "known_limitations": [
+    "A1 does not yet provide a numeric calibrated overlay in this candidate",
+    "63 approved local source entities are kept, but their contacts with C02 frame guides are NOT validated",
+    "Two six-chuanfu layers are visible as provisional global frame geometry; exact elevations remain design hypotheses",
+    "Corner 45-degree Master silhouettes are true Master profile meshes at unapproved placement / tilt",
+    "Intercolumn 5-puzuo contacts and all hidden mortise-tenon, loading and shear were NOT tested",
+    "Roof curvature is a small visual improvement candidate, not a surveyed roof deformation"
+  ],
+  "museum_reference": {
+    "facts": [
+      "三间面阔三间进深无内柱",
+      "单檐歇山顶",
+      "柱头七铺作双杪双下昂",
+      "补间五铺作双杪偷心",
+      "四角转角铺作45度出角华栱",
+      "上下六椽栿叠置",
+      "平梁上设蜀柱和叉手"
+    ],
+    "third_party_mesh_copied": false,
+    "url": "https://szbwgvue.chwhyun.cn/wanfodian/"
+  },
+  "objects": {
+    "C02_replaceable_meshes": 135,
+    "V003_master_reference_instances": 100,
+    "approved_existing": 63,
+    "mesh_count": 595
+  },
+  "purlins_from_V003": {
+    "expected_count": 7,
+    "preserved": true
+  },
+  "roof": {
+    "max_added_vertical_sweep_mm": 100.0,
+    "previous_topology": {
+      "connected_components": 1,
+      "eave_boundary_edges": 80,
+      "excess_edge_multiplicity": 0,
+      "internal_open_seams": 0,
+      "mesh_faces": 944,
+      "mesh_vertices": 953
+    },
+    "roof_geometry_accuracy": "NON_MEASURED_SHAPE_CANDIDATE",
+    "true_gable_and_eave_dimensions_validated_against_A1": false,
+    "updated_topology": {
+      "connected_components": 1,
+      "eave_boundary_edges": 80,
+      "excess_edge_multiplicity": 0,
+      "internal_open_seams": 0,
+      "mesh_faces": 944,
+      "mesh_vertices": 953
+    }
+  },
+  "source_V003_sha256": "7d09b70f6f2faefa800f6e5e838d3e97b48ce947468112db3107381d4b24b91f",
+  "state": "GENERATED_REOPEN_PENDING__PO_VISUAL_UNAPPROVED",
+  "technical_tests": {
+    "A1_pixel_aligned_similarity": "NOT_TESTED",
+    "approved_source_preserved": "PASS",
+    "candidate_object_inventory": "PASS",
+    "real_contact_geometry": "NOT_TESTED",
+    "roof_internal_open_seam": "PASS",
+    "roof_mesh_connected": "PASS",
+    "structural_or_historical_fidelity": "NOT_APPROVED"
+  },
+  "whole_hall_coordinate_basis": {
+    "depth_design_candidate_mm": 10710,
+    "eave_reference_y_mm": 8295,
+    "roof_ridge_design_candidate_mm": 8870,
+    "width_design_candidate_mm": 11475
+  }
+}
