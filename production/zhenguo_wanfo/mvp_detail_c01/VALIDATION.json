@@ -1,0 +1,69 @@
+{
+  "archived_files": {
+    "blend": {
+      "path": "production/zhenguo_wanfo/mvp_detail_c01/C01_BRACKET_EAVE_TRIAL.blend",
+      "sha256": "87d240ec26e1981b541113d7c1279ac7721e65bcc7541b391df3653483142338"
+    },
+    "glb": {
+      "path": "production/zhenguo_wanfo/mvp_detail_c01/C01_BRACKET_EAVE_TRIAL.glb",
+      "sha256": "d23ae85a2d926b0b0bd06c98b7dd0cabb6c5f48494f8ec0ee5c8827cd9676c0e"
+    }
+  },
+  "formal_master_semantic_sha256": {
+    "COL": "f1f514a8a05df3d37a4b89511af8f2b2e71d40fe7252baa0d96c6ee09d862fb6",
+    "HUA": "b5ab09f0cb9121ab3d27887d8cff65dc92bb06f6e0b3fe8197f6980820d8b783",
+    "LING": "ee0bc2ef02b3e1da43c1d7b6d4a8a5f18269b36bbcd189b52de15112f77abb97"
+  },
+  "geometry_import_and_generation": "BUILT",
+  "master_instance_placements": "WORKING_HYPOTHESIS_NOT_APPROVED",
+  "non_pass_meaning": "NO SCALE OUT, no historic load-bearing claim; trial only",
+  "open_items": [
+    "historical column-head geometry beyond first local seat",
+    "source-correct intercolumn small-dou",
+    "upward and outward bearing path to purlin/eave",
+    "A1 original elevation/roof junction overlay not independently verified"
+  ],
+  "physical_checks": {
+    "fully_connected_to_eave": false,
+    "huagong_to_linggong": {
+      "bottom_mm": 3981.099853515625,
+      "foot_vertices": 4,
+      "foot_vertices_inside_support_footprint": 4,
+      "pass": true,
+      "support_delta_mm": -0.00014648437536379788,
+      "support_top_mm": 3981.1000000000004
+    },
+    "intercolumn_small_dou_to_linggong": {
+      "bottom_mm": 3965.0,
+      "foot_vertices": 4,
+      "foot_vertices_inside_support_footprint": 4,
+      "pass": true,
+      "support_delta_mm": 0.0,
+      "support_top_mm": 3965.0
+    },
+    "ludou_to_huagong": {
+      "bottom_mm": 3828.10009765625,
+      "foot_vertices": 4,
+      "foot_vertices_inside_support_footprint": 4,
+      "pass": true,
+      "support_delta_mm": 9.765624963620212e-05,
+      "support_top_mm": 3828.1000000000004
+    },
+    "unsupported_gaps_mm": {
+      "column_master_stack_to_eave_mm": 1133.2999999999993,
+      "infill_master_stack_to_eave_mm": 1149.3999999999996
+    }
+  },
+  "scope": "ONE_COLUMN_HEAD_AND_ONE_INTERCOLUMN_FIRST_ARTICLE_ONLY",
+  "source_silhouettes": [
+    "CMP-LUDOU-COLUMN-001",
+    "CMP-GONG-HUAGONG-001 / JUMP_1",
+    "CMP-GONG-LINGGONG-001"
+  ],
+  "status": "FAIL",
+  "visual_assets": [
+    "C01_AXON.png",
+    "C01_FRONT.png",
+    "C01_SIDE.png"
+  ]
+}
