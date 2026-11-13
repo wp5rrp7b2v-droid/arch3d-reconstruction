@@ -1,0 +1,124 @@
+{
+  "design_axis": {
+    "column_count": 12,
+    "x_width_mm": 11475,
+    "y_depth_mm": 10710
+  },
+  "files": {
+    "blend": "production/zhenguo_wanfo/mvp_v003/full/WANFO_FULL_V003.blend",
+    "glb": "production/zhenguo_wanfo/mvp_v003/full/WANFO_FULL_V003.glb",
+    "views": [
+      "production/zhenguo_wanfo/mvp_v003/full/WANFO_V003_AXON.png",
+      "production/zhenguo_wanfo/mvp_v003/full/WANFO_V003_EXTERIOR.png",
+      "production/zhenguo_wanfo/mvp_v003/full/WANFO_V003_FRONT.png",
+      "production/zhenguo_wanfo/mvp_v003/full/WANFO_V003_SIDE.png",
+      "production/zhenguo_wanfo/mvp_v003/full/WANFO_V003_ROOF.png",
+      "production/zhenguo_wanfo/mvp_v003/full/WANFO_V003_INTERIOR.png",
+      "production/zhenguo_wanfo/mvp_v003/full/WANFO_V003_STRUCTURE.png"
+    ]
+  },
+  "master_semantic_sha256": {
+    "ang": "4b1695131bf868476aca8b9760ca36b028d59dc6f8a33d9fb378aa04b7fbc084",
+    "dou": "f1f514a8a05df3d37a4b89511af8f2b2e71d40fe7252baa0d96c6ee09d862fb6",
+    "hua": "b5ab09f0cb9121ab3d27887d8cff65dc92bb06f6e0b3fe8197f6980820d8b783",
+    "ling": "ee0bc2ef02b3e1da43c1d7b6d4a8a5f18269b36bbcd189b52de15112f77abb97"
+  },
+  "model_count": {
+    "by_evidence_group": {
+      "APPROVED_63_ENTITY_RECONSTRUCTED_DESIGN": 63,
+      "APPROVED_MASTER_REFERENCE_WITH_UNAPPROVED_PLACEMENT": 100,
+      "TEMP_VISUAL_GEOMETRY_REPLACEABLE": 53,
+      "TEMP_VISUAL_STRUCTURE_REPLACEABLE": 237
+    },
+    "mesh_objects": 453
+  },
+  "roof_support": {
+    "column_front_y_mm": 5355.0,
+    "datum_y_mm": [
+      -6808.5,
+      -4972.5,
+      -3213.0,
+      0.0,
+      3213.0,
+      4972.5,
+      6808.5
+    ],
+    "direct_column_to_eave_contact_claim": false,
+    "eave_offset_from_column_mm": 2940.0,
+    "eave_y_mm": 8295.0,
+    "purlins": [
+      {
+        "half_span_mm": 6983.1024203069655,
+        "y_mm": -6808.5,
+        "z_mm": 5776.818978748524
+      },
+      {
+        "half_span_mm": 5137.347992916175,
+        "y_mm": -4972.5,
+        "z_mm": 6600.417798110981
+      },
+      {
+        "half_span_mm": 3368.5,
+        "y_mm": -3213.0,
+        "z_mm": 7389.700000000001
+      },
+      {
+        "half_span_mm": 3368.5,
+        "y_mm": 0.0,
+        "z_mm": 8710.0
+      },
+      {
+        "half_span_mm": 3368.5,
+        "y_mm": 3213.0,
+        "z_mm": 7389.700000000001
+      },
+      {
+        "half_span_mm": 5137.347992916175,
+        "y_mm": 4972.5,
+        "z_mm": 6600.417798110981
+      },
+      {
+        "half_span_mm": 6983.1024203069655,
+        "y_mm": 6808.5,
+        "z_mm": 5776.818978748524
+      }
+    ],
+    "rafter_segment_count": 136,
+    "roof_shell_v002_untouched": true
+  },
+  "scope": "COMPLETE_HALL_ONLY_NO_INDEPENDENT_LOCAL_GATE",
+  "sha256": {
+    "blend": "16bcbcb559c23fa17fec453a53a4b443b93d4e902c3de0a328bdfe7afd9bc9fb",
+    "glb": "1b1902ad51ffba14b322dabc05a907ad2f57c39e6db50ca43e9ee80406eb8f5c"
+  },
+  "state": "WHOLE_HALL_CANDIDATE_CREATED_REOPEN_PENDING",
+  "structural_verification": "NOT_COMPLETE_VISUAL_GLOBAL_TOPOLOGY_CANDIDATE",
+  "technical_checks": {
+    "approved_preservation": "PASS",
+    "bracket_distribution": "PASS",
+    "column_count": "PASS",
+    "loads": "NOT_TESTED",
+    "roof_stitched_surface": "INHERITED_V002_TECHNICAL_PASS",
+    "roof_y_datum": "PASS",
+    "visible_support_contact": "NOT_TESTED"
+  },
+  "unverified_structural_links": [
+    "Perimeter column-head upper bearer to inboard roof-purlin/roof-frame: local joinery unknown",
+    "Full column-head seven-puzuo and intercolumn five-puzuo are visual/topological references only",
+    "Approved 63 entity bents are preserved; their contacts to new proxy roof support unverified",
+    "V002 roof elevations and 2.94m eave are provisional controls pending A1 direct comparison",
+    "Corner assemblies and angled bearing cannot claim accurate historical geometry",
+    "No loading, earthquake, deformation or hidden mortise-tenon structural proof"
+  ],
+  "v002_source_approved_count": 63,
+  "v002_source_approved_signatures_before_after_equal": true,
+  "v002_source_sha256": "c5b09648a78567ac7b7d2f95be49aa55902d3ccfa4c7932dcef54465ef364622",
+  "whole_hall_bracket_topology": {
+    "column_head_count": 12,
+    "column_head_outward_arm_groups": 16,
+    "column_head_puzuo": "七铺作双杪双下昂 - simplified source profile geometries",
+    "front_back_and_side_distribution_complete": true,
+    "intercolumn_puzuo": "五铺作双杪偷心 - simplified placeholder",
+    "intercolumn_sets": 12
+  }
+}
