@@ -1,0 +1,134 @@
+name: Wanfo Whole Hall MVP V002 Roof and Elevation Proof
+on:
+  push:
+    branches:
+      - feature/wanfo-whole-hall-mvp-v002-20261110
+    paths:
+      - 'production/zhenguo_wanfo/mvp_v002/wanfo_mvp_blender_v002.py'
+      - '.github/workflows/wanfo_whole_hall_mvp_v002.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  whole-hall:
+    runs-on: ubuntu-latest
+    timeout-minutes: 70
+    env:
+      BLENDER_VERSION: "4.5.13"
+      BLENDER_ARCHIVE: blender-4.5.13-linux-x64.tar.xz
+      BLENDER_URL: https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
+      BLENDER_SCRIPT: production/zhenguo_wanfo/mvp_v002/wanfo_mvp_blender_v002.py
+      OUTPUT_PATH: production/zhenguo_wanfo/mvp_v002
+    steps:
+      - name: Checkout exact candidate branch with LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          persist-credentials: true
+      - name: Install Blender headless system libraries
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libegl1 libopengl0 libgl1 libxrender1 libxkbcommon0 libxi6 libsm6 libxext6 libxfixes3
+      - name: Download Blender from official distribution
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/wanfo-blender"
+          curl --fail --location --retry 3 --show-error --output "$RUNNER_TEMP/wanfo-blender/$BLENDER_ARCHIVE" "$BLENDER_URL"
+          tar xf "$RUNNER_TEMP/wanfo-blender/$BLENDER_ARCHIVE" -C "$RUNNER_TEMP/wanfo-blender"
+          BLENDER="$RUNNER_TEMP/wanfo-blender/blender-$BLENDER_VERSION-linux-x64/blender"
+          test -x "$BLENDER"
+          "$BLENDER" --version
+          echo "BLENDER_EXECUTABLE=$BLENDER" >> "$GITHUB_ENV"
+      - name: A / Confirm source and branch
+        run: |
+          set -euo pipefail
+          git branch --show-current
+          git rev-parse HEAD
+          sha256sum production/zhenguo_wanfo/assembly/approved_snapshots/2026-10-09/curved_gong_v002/WANFO_TWO_FRAMES_THREE_PURLINS_APPROVED_V002.blend
+      - name: B / Build smallest real 3D scene
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER_EXECUTABLE" --background --factory-startup --python-exit-code 10 --python "$BLENDER_SCRIPT" -- --mode build --stage proof
+      - name: B / Independently reopen proof BLEND
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER_EXECUTABLE" --background "$OUTPUT_PATH/proof/WANFO_PROOF_V002.blend" --python-exit-code 11 --python "$BLENDER_SCRIPT" -- --mode check-blend --stage proof
+      - name: B / Independently import proof GLB
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER_EXECUTABLE" --background --factory-startup --python-exit-code 12 --python "$BLENDER_SCRIPT" -- --mode check-glb --stage proof
+      - name: C / Build complete hall ONLY after B PASS
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER_EXECUTABLE" --background --factory-startup --python-exit-code 13 --python "$BLENDER_SCRIPT" -- --mode build --stage full
+      - name: D / Independently reopen whole-hall BLEND
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER_EXECUTABLE" --background "$OUTPUT_PATH/full/WANFO_FULL_V002.blend" --python-exit-code 14 --python "$BLENDER_SCRIPT" -- --mode check-blend --stage full
+      - name: D / Independently reimport whole-hall GLB
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER_EXECUTABLE" --background --factory-startup --python-exit-code 15 --python "$BLENDER_SCRIPT" -- --mode check-glb --stage full
+      - name: D / Verify hashes, inventory and shape invariants
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib,json,pathlib
+          root=pathlib.Path("production/zhenguo_wanfo/mvp_v002")
+          for stage in ("proof","full"):
+              d=root/stage
+              m=json.loads((d/"BUILD_REPORT.json").read_text())
+              assert m["source_count"]==63
+              assert m["column_count"]==12
+              assert m["roof_seam_check"]["status"]=="PASS"
+              assert m["roof_seam_check"]["unintended_open_internal_seams"]==0
+              assert m["roof_seam_check"]["eave_boundary_edges"]==80
+              assert m["visual_design_controls"]["eave_projection_from_column_mm"]==2940.0
+              assert m["visual_design_controls"]["eave_height_candidate_mm"]==5270.0
+              assert m["visual_design_controls"]["ridge_height_candidate_mm"]==8870.0
+              assert abs(m["datum"]["column_foot_z_mm"])<0.001
+              assert m["approved_geometry_modified"] is False
+              assert m["candidate_design_dimensions_mm"]=={"width":11475,"depth":10710}
+              for name in ("BLEND_REOPEN_CHECK.json","GLB_REOPEN_CHECK.json"):
+                  assert json.loads((d/name).read_text())["status"]=="PASS"
+              for ext in ("blend","glb"):
+                  p=d/f"WANFO_{stage.upper()}_V002.{ext}"
+                  actual=hashlib.sha256(p.read_bytes()).hexdigest()
+                  assert actual==m["hashes"][ext] and p.stat().st_size>1000
+          print("WANFO_V002_PROOF_AND_FULL_REOPEN_PASS")
+          PY
+      - name: Archive candidate binaries and review views on the feature branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$OUTPUT_PATH/proof" "$OUTPUT_PATH/full"
+          git add -f "$OUTPUT_PATH/proof/WANFO_PROOF_V002.blend" "$OUTPUT_PATH/full/WANFO_FULL_V002.blend"
+          git diff --cached --name-only | grep -F "WANFO_FULL_V002.blend"
+          git diff --cached --name-only | grep -F "WANFO_PROOF_V002.blend"
+          if git diff --cached --quiet; then
+            echo "No new model assets to archive"
+          else
+            git commit -m "build(mvp): archive cloud-generated whole-hall proof and editable candidate"
+            git push origin HEAD:feature/wanfo-whole-hall-mvp-v002-20261110
+          fi
+      - name: Upload review artifact as secondary convenience copy
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_WHOLE_HALL_MVP_V002_REVIEW
+          if-no-files-found: warn
+          path: |
+            production/zhenguo_wanfo/mvp_v002/proof/*
+            production/zhenguo_wanfo/mvp_v002/full/*

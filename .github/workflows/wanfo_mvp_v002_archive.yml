@@ -1,0 +1,37 @@
+name: Wanfo MVP V002 Candidate Archive Verification
+on:
+  push:
+    branches:
+      - feature/wanfo-whole-hall-mvp-v002-20261110
+    paths:
+      - production/zhenguo_wanfo/mvp_v002/archive_v002_verify.py
+      - .github/workflows/wanfo_mvp_v002_archive.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  verify-and-archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout existing candidate binaries without rebuilding
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          lfs: true
+      - name: Verify exact binary hashes, headers, review images and previous reopen evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 production/zhenguo_wanfo/mvp_v002/archive_v002_verify.py
+          test -s production/zhenguo_wanfo/mvp_v002/V002_CANDIDATE_ARCHIVE_VERIFIED.json
+      - name: Save candidate archive record to V002 branch only
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add production/zhenguo_wanfo/mvp_v002/V002_CANDIDATE_ARCHIVE_VERIFIED.json
+          git diff --cached --name-only | grep -Fx "production/zhenguo_wanfo/mvp_v002/V002_CANDIDATE_ARCHIVE_VERIFIED.json"
+          git commit -m "archive(v002): verify candidate binaries and scope without approving"
+          git push origin HEAD:feature/wanfo-whole-hall-mvp-v002-20261110
