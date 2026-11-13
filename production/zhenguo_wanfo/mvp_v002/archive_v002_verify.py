@@ -41,7 +41,7 @@ def check_binary_header(path):
     with path.open("rb") as f:
         h=f.read(12)
     if path.suffix == ".blend":
-        assert h.startswith(b"BLENDER"), f"BLEND_HEADER_BAD: {path}"
+        assert (h.startswith(b"BLENDER") or h.startswith(bytes([0x28,0xB5,0x2F,0xFD]))), f"BLEND_HEADER_BAD: {path}"
     elif path.suffix == ".glb":
         assert h[0:4] == b"glTF", f"GLB_HEADER_BAD: {path}"
         assert struct.unpack("<I",h[4:8])[0] == 2, f"GLB_VERSION_BAD: {path}"
