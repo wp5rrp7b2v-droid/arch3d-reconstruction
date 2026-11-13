@@ -1,0 +1,108 @@
+name: Wanfo Whole Hall MVP V003 Whole-Building Coordination
+on:
+  push:
+    branches:
+      - feature/wanfo-whole-hall-mvp-v003-20261113
+    paths:
+      - production/zhenguo_wanfo/mvp_v003/whole_hall_v003.py
+      - .github/workflows/wanfo_whole_hall_mvp_v003.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  whole-hall-v003:
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    env:
+      OUTPUT: "production/zhenguo_wanfo/mvp_v003/full"
+      SCRIPT: "production/zhenguo_wanfo/mvp_v003/whole_hall_v003.py"
+    steps:
+      - name: Checkout exact V002 candidate, approved master semantics and LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          persist-credentials: true
+      - name: Install headless Blender dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libegl1 libopengl0 libgl1 libxrender1 libxkbcommon0 libxi6 libsm6 libxext6 libxfixes3
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl --fail --location --retry 3 --show-error --output "$RUNNER_TEMP/blender/archive.tar.xz" https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
+          tar xf "$RUNNER_TEMP/blender/archive.tar.xz" -C "$RUNNER_TEMP/blender"
+          B="$RUNNER_TEMP/blender/blender-4.5.13-linux-x64/blender"
+          test -x "$B"
+          "$B" --version | head -n 1
+          echo "BLENDER=$B" >> "$GITHUB_ENV"
+      - name: Whole-hall V003 build directly from archived V002
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 12 --python "$SCRIPT" -- --mode build
+      - name: Independently reopen whole-hall editable BLEND
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$OUTPUT/WANFO_FULL_V003.blend" --python-exit-code 13 --python "$SCRIPT" -- --mode check-blend
+      - name: Independently reimport full GLB
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 14 --python "$SCRIPT" -- --mode check-glb
+      - name: Whole-building source preservation, visible inventory, exact hashes
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib,json,pathlib,struct
+          d=pathlib.Path("production/zhenguo_wanfo/mvp_v003/full")
+          b=json.loads((d/"BUILD_REPORT.json").read_text())
+          assert b["scope"]=="COMPLETE_HALL_ONLY_NO_INDEPENDENT_LOCAL_GATE"
+          assert b["v002_source_approved_count"]==63
+          assert b["v002_source_approved_signatures_before_after_equal"]
+          assert b["whole_hall_bracket_topology"]["column_head_count"]==12
+          assert b["whole_hall_bracket_topology"]["column_head_outward_arm_groups"]==16
+          assert b["whole_hall_bracket_topology"]["intercolumn_sets"]==12
+          assert len(b["roof_support"]["datum_y_mm"])==7
+          assert b["roof_support"]["rafter_segment_count"]==136
+          assert b["roof_support"]["direct_column_to_eave_contact_claim"] is False
+          assert b["structural_verification"]=="NOT_COMPLETE_VISUAL_GLOBAL_TOPOLOGY_CANDIDATE"
+          assert json.loads((d/"BLEND_REOPEN_CHECK.json").read_text())["status"]=="PASS"
+          assert json.loads((d/"GLB_REOPEN_CHECK.json").read_text())["status"]=="PASS"
+          for ext in ("blend","glb"):
+              p=d/f"WANFO_FULL_V003.{ext}"
+              assert p.is_file() and p.stat().st_size>1000
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==b["sha256"][ext]
+              head=p.read_bytes()[:12]
+              if ext=="blend": assert head.startswith(b"BLENDER") or head.startswith(b"\x28\xb5\x2f\xfd")
+              else:
+                  assert head[:4]==b"glTF" and struct.unpack("<I",head[8:12])[0]==p.stat().st_size
+          for f in b["files"]["views"]:
+              p=pathlib.Path(f);assert p.is_file() and p.stat().st_size>5000 and p.read_bytes()[:8]==b"\x89PNG\r\n\x1a\n"
+          assert len(b["files"]["views"])>=6
+          print("V003_FULL_HALL_ARTIFACTS_TECHNICAL_PASS")
+          print("V003_HISTORIC_AND_STRUCTURAL_CONTACT_PASS_NOT_CLAIMED")
+          PY
+      - name: Archive full V003 candidate only on separate task branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$OUTPUT"
+          git add -f "$OUTPUT/WANFO_FULL_V003.blend"
+          git diff --cached --name-only | grep -F "WANFO_FULL_V003.blend"
+          if git diff --cached --quiet; then
+            echo "No changed files"
+          else
+            git commit -m "build(v003): archive whole-hall coordination GLB BLEND and visual reviews"
+            git push origin HEAD:feature/wanfo-whole-hall-mvp-v003-20261113
+          fi
+      - name: Secondary artifact copy
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_V003_WHOLE_HALL_CANDIDATE
+          path: production/zhenguo_wanfo/mvp_v003/full/*
+          if-no-files-found: warn
