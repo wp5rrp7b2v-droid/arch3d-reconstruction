@@ -1,0 +1,134 @@
+name: Wanfo V003 C02 Whole-Hall Comparative Correction
+on:
+  push:
+    branches:
+      - feature/wanfo-v003-wholehall-c02-20261113
+    paths:
+      - production/zhenguo_wanfo/mvp_v003_c02/whole_hall_compare_c02.py
+      - .github/workflows/wanfo_v003_wholehall_c02.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  full-hall-c02:
+    runs-on: ubuntu-latest
+    timeout-minutes: 80
+    env:
+      SCRIPT: production/zhenguo_wanfo/mvp_v003_c02/whole_hall_compare_c02.py
+      OUT: production/zhenguo_wanfo/mvp_v003_c02/full
+    steps:
+      - name: Checkout exact V003 complete archived model and Master evidence
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+          persist-credentials: true
+      - name: Install headless Blender 4.5.13 and EGL
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libegl1 libopengl0 libgl1 libxrender1 libxkbcommon0 libxi6 libsm6 libxext6 libxfixes3
+          mkdir -p "$RUNNER_TEMP/blender"
+          curl --fail --location --retry 3 --show-error --output "$RUNNER_TEMP/blender/blender.tar.xz" \
+            https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz
+          tar xf "$RUNNER_TEMP/blender/blender.tar.xz" -C "$RUNNER_TEMP/blender"
+          B="$RUNNER_TEMP/blender/blender-4.5.13-linux-x64/blender"
+          test -x "$B"
+          "$B" --version | head -n 1
+          echo "BLENDER=$B" >> "$GITHUB_ENV"
+      - name: Verify immutable V003 whole-hall source against original report
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import pathlib,hashlib,json
+          d=pathlib.Path("production/zhenguo_wanfo/mvp_v003/full")
+          original=json.loads((d/"BUILD_REPORT.json").read_text())
+          assert hashlib.sha256((d/"WANFO_FULL_V003.blend").read_bytes()).hexdigest()==original["sha256"]["blend"]
+          assert hashlib.sha256((d/"WANFO_FULL_V003.glb").read_bytes()).hexdigest()==original["sha256"]["glb"]
+          assert original["v002_source_approved_count"]==63
+          assert original["model_count"]["mesh_objects"]==461
+          print("C02_SOURCE_ARCHIVE_EXACT_PASS")
+          PY
+      - name: Build full-hall V003 C02 (no local individual component gate)
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 11 \
+            --python "$SCRIPT" -- --mode build
+      - name: Independently reopen editable BLEND
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$OUT/WANFO_V003_C02_FULL.blend" --python-exit-code 12 \
+            --python "$SCRIPT" -- --mode check-blend
+      - name: Independently reimport GLB into fresh Blender scene
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 13 \
+            --python "$SCRIPT" -- --mode check-glb
+      - name: Audit model scope, hashes, geometry and comparative evidence boundaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,hashlib,pathlib,struct
+          d=pathlib.Path("production/zhenguo_wanfo/mvp_v003_c02/full")
+          r=json.loads((d/"BUILD_REPORT.json").read_text())
+          assert r["candidate_id"]=="WANFO_V003_WHOLE_HALL_COMPARE_C02"
+          assert r["approved_source_count"]==63
+          assert r["approved_entity_mesh_and_transform_sha256_unchanged"] is True
+          assert r["museum_reference"]["third_party_mesh_copied"] is False
+          assert r["roof"]["updated_topology"]["connected_components"]==1
+          assert r["roof"]["updated_topology"]["eave_boundary_edges"]==80
+          assert r["roof"]["updated_topology"]["internal_open_seams"]==0
+          assert len(r["corner"]["corners"])==4
+          assert r["corner"]["master_reference_instances"]==16
+          assert r["frame"]["two_six_levels_present_in_global_structure"] is True
+          assert len(r["frame"]["layer_records"])==8
+          assert r["purlins_from_V003"]["expected_count"]==7
+          assert r["technical_tests"]["structural_or_historical_fidelity"]=="NOT_APPROVED"
+          assert r["A1_basis"]["direct_scaled_overlay"]=="NOT_CALIBRATED_OR_PASSED"
+          for f in ("BLEND_REOPEN.json","GLB_REOPEN.json"):
+              assert json.loads((d/f).read_text())["status"]=="PASS"
+          for ext in ("blend","glb"):
+              p=d/f"WANFO_V003_C02_FULL.{ext}"
+              assert p.is_file() and p.stat().st_size>1000
+              assert hashlib.sha256(p.read_bytes()).hexdigest()==r["binary_sha256"][ext]
+              header=p.read_bytes()[:12]
+              if ext=="glb":
+                  assert header[:4]==b"glTF"
+                  assert struct.unpack("<I",header[8:12])[0]==p.stat().st_size
+              else:
+                  assert header[:7]==b"BLENDER" or header[:4]==b"\x28\xb5\x2f\xfd"
+          assert len(r["files"]["images"])==8
+          for name in r["files"]["images"]:
+              p=pathlib.Path(name)
+              assert p.is_file() and p.stat().st_size>1000
+              assert p.read_bytes()[:8]==b"\x89PNG\r\n\x1a\n"
+          print("C02_WHOLE_HALL_ASSET_VERIFICATION_PASS")
+          print("C02_STRUCTURAL_BEARING_AND_A1_OVERLAY_NOT_APPROVED")
+          PY
+      - name: Archive C02 complete candidate to independent branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$OUT"
+          git add -f "$OUT/WANFO_V003_C02_FULL.blend"
+          git diff --cached --name-only | grep -F "WANFO_V003_C02_FULL.blend"
+          if git diff --cached --quiet; then
+            echo "All C02 candidate files already archived"
+          else
+            git commit -m "build(c02): archive whole-hall comparative model and validation"
+            git push origin HEAD:feature/wanfo-v003-wholehall-c02-20261113
+          fi
+      - name: Secondary delivery copy (not the canonical archive)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_V003_C02_COMPLETE_WHOLEHALL_CANDIDATE
+          path: production/zhenguo_wanfo/mvp_v003_c02/full/*
+          if-no-files-found: warn
