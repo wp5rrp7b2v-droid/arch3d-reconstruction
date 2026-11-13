@@ -1,0 +1,99 @@
+name: Wanfo Bracket Eave C01 Minimum Proof
+on:
+  push:
+    branches:
+      - feature/wanfo-mvp-bracket-eave-firstarticle-c01-20261113
+    paths:
+      - 'production/zhenguo_wanfo/mvp_detail_c01/first_article.py'
+      - '.github/workflows/wanfo_bracket_eave_c01.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  c01-minimum-proof:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    env:
+      SCRIPT: "production/zhenguo_wanfo/mvp_detail_c01/first_article.py"
+      OUTPUT: "production/zhenguo_wanfo/mvp_detail_c01"
+    steps:
+      - name: Checkout exact evidence and formal Master signatures
+        uses: actions/checkout@v4
+        with:
+          lfs: false
+          persist-credentials: true
+      - name: Set up headless Blender
+        shell: bash
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends libegl1 libopengl0 libgl1 libxrender1 libxkbcommon0 libxi6 libsm6 libxext6 libxfixes3
+          mkdir -p "$RUNNER_TEMP/wanfo-blender"
+          curl --fail --location --retry 3 --show-error --output "$RUNNER_TEMP/wanfo-blender/blender.tar.xz" "https://download.blender.org/release/Blender4.5/blender-4.5.13-linux-x64.tar.xz"
+          tar xf "$RUNNER_TEMP/wanfo-blender/blender.tar.xz" -C "$RUNNER_TEMP/wanfo-blender"
+          BLENDER="$RUNNER_TEMP/wanfo-blender/blender-4.5.13-linux-x64/blender"
+          test -x "$BLENDER"
+          "$BLENDER" --version | head -n 1
+          echo "BLENDER=$BLENDER" >> "$GITHUB_ENV"
+      - name: Build narrow test scene from formal Master semantic geometries
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 10 --python "$SCRIPT" -- --mode build
+          test -s "$OUTPUT/C01_BRACKET_EAVE_TRIAL.blend"
+          test -s "$OUTPUT/C01_BRACKET_EAVE_TRIAL.glb"
+          test -s "$OUTPUT/VALIDATION.json"
+          test -s "$OUTPUT/C01_AXON.png"
+          test -s "$OUTPUT/C01_FRONT.png"
+          test -s "$OUTPUT/C01_SIDE.png"
+      - name: Independently reopen editable BLEND
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background "$OUTPUT/C01_BRACKET_EAVE_TRIAL.blend" --python-exit-code 11 --python "$SCRIPT" -- --mode check-blend
+      - name: Independently reopen GLB from factory scene
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$BLENDER" --background --factory-startup --python-exit-code 12 --python "$SCRIPT" -- --mode check-glb
+      - name: Verify technical transport and preserve failed structural gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib,json,pathlib
+          d=pathlib.Path("production/zhenguo_wanfo/mvp_detail_c01")
+          v=json.loads((d/"VALIDATION.json").read_text())
+          assert v["scope"]=="ONE_COLUMN_HEAD_AND_ONE_INTERCOLUMN_FIRST_ARTICLE_ONLY"
+          assert v["status"] in ("PASS","FAIL")
+          for f in ("BLEND_REOPEN.json","GLB_REOPEN.json"):
+              assert json.loads((d/f).read_text())["status"]=="PASS"
+          for typ,data in v["archived_files"].items():
+              path=pathlib.Path(data["path"]); assert path.is_file() and path.stat().st_size>500
+              assert hashlib.sha256(path.read_bytes()).hexdigest()==data["sha256"]
+          print("TECHNICAL_ROUNDTRIP_PASS")
+          print("STRUCTURAL_INTERFACE_GATE",v["status"])
+          print("FULL_HALL_SCALE_OUT", "PERMITTED" if v["status"]=="PASS" else "STOP")
+          PY
+      - name: Preserve trial binaries, images, and validation in independent branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$OUTPUT"
+          git add -f "$OUTPUT/C01_BRACKET_EAVE_TRIAL.blend"
+          git diff --cached --name-only | grep -F "C01_BRACKET_EAVE_TRIAL.blend"
+          if git diff --cached --quiet; then
+            echo "No new files"
+          else
+            git commit -m "build(c01): archive minimum bracket-eave connection trial and proof"
+            git push origin HEAD:feature/wanfo-mvp-bracket-eave-firstarticle-c01-20261113
+          fi
+      - name: Attach trial files as secondary convenience copy
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: WANFO_BRACKET_EAVE_C01_MINIMUM_PROOF
+          path: production/zhenguo_wanfo/mvp_detail_c01/C01*
+          if-no-files-found: warn
