@@ -1,0 +1,16 @@
+{
+  "columns": 12,
+  "roof_present": true,
+  "roof_seam_check": {
+    "eave_boundary_edges": 80,
+    "non_manifold_overused_edges": 0,
+    "roof_faces": 944,
+    "roof_vertices": 953,
+    "status": "PASS",
+    "unintended_open_internal_seams": 0
+  },
+  "source_meshes": 63,
+  "stage": "proof",
+  "status": "PASS",
+  "temporary_meshes": 13
+}
