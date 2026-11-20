@@ -1,0 +1,71 @@
+{
+  "approved_geometry_modified": false,
+  "candidate_design_dimensions_mm": {
+    "depth": 10710,
+    "width": 11475
+  },
+  "column_count": 12,
+  "component_counts": {
+    "mesh_objects": 227,
+    "temporary_meshes": 164
+  },
+  "datum": {
+    "column_foot_z_mm": 4.882812481810106e-05,
+    "column_top_z_mm": 3534.300048828125,
+    "eave_z_mm": 6530.26513671875,
+    "north_eave_y_mm": -6808.5,
+    "ridge_y_mm": 0,
+    "ridge_z_mm": 10064.56513671875,
+    "south_eave_y_mm": 6808.5
+  },
+  "deliverables": {
+    "blend": "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_V001.blend",
+    "glb": "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_V001.glb",
+    "review_images": [
+      "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_AXON.png",
+      "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_EXTERIOR.png",
+      "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_INTERIOR.png",
+      "production/zhenguo_wanfo/mvp_v001/full/WANFO_FULL_ROOF.png"
+    ]
+  },
+  "hashes": {
+    "blend": "4d48856712a2479b6c7a9cea7b4c918c9cb59b8346aefd09fdf54c081e652880",
+    "glb": "00efffe29e63cb010df7abceec79b9e3e9cd61700c15ba756405b1ae5afa53a1"
+  },
+  "roof_type": "single_eave_xieshan_proxy",
+  "source_bbox_after_shift_mm": [
+    [
+      -3098.98681640625,
+      -3596.0,
+      3384.300048828125
+    ],
+    [
+      3098.98681640625,
+      3596.0,
+      6280.26513671875
+    ]
+  ],
+  "source_count": 63,
+  "source_identity": "D-285 V002 / D-286",
+  "source_origin_shift_mm": [
+    -2218.5,
+    -0.0,
+    3824.3
+  ],
+  "source_sha256": "fbcc8f4e025da9325fa5bf0d7b76f7c6267e796650eb19e651f0f27a58f70802",
+  "source_span_mm": [
+    6197.9736328125,
+    7192.0,
+    2895.965087890625
+  ],
+  "stage": "full",
+  "state": "BUILD_CREATED_REOPEN_PENDING",
+  "unverified": [
+    "precise original 963 geometry",
+    "walls and tilework",
+    "all hidden joints",
+    "original common datum from approved local assembly",
+    "load capacity",
+    "detailed dougong identity"
+  ]
+}
